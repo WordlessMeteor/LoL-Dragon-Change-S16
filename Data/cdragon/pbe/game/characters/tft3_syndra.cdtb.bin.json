@@ -1,0 +1,671 @@
+{
+    "Characters/TFT3_Syndra/Spells/TFT3_SyndraBasicAttack2": {
+        "ObjectName": "TFT3_SyndraBasicAttack2",
+        "mScriptName": "TFT3_SyndraBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.34850001335144043,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "l_hand",
+                    "mSpeed": 1800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 1800.0,
+            "mMissileEffectKey": "TFT3_Syndra_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Syndra/Spells/TFT3_SyndraCritAttack": {
+        "ObjectName": "TFT3_SyndraCritAttack",
+        "mScriptName": "TFT3_SyndraCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.34850001335144043,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "r_hand",
+                    "mSpeed": 1800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 1800.0,
+            "mMissileEffectKey": "TFT3_Syndra_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Syndra/Spells/TFT3_SyndraR": {
+        "ObjectName": "TFT3_SyndraR",
+        "mScriptName": "TFT3_SyndraR",
+        "mSpell": {
+            "mAffectsTypeFlags": 4106,
+            "mAffectsStatusFlags": 160,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "SyndraR",
+            "mSpellTags": [
+                "Trait_Ultimate"
+            ],
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "mName": "Spheres",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "CastTime",
+                    "mValues": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "Damage",
+                    "mValues": [
+                        0.0,
+                        80.0,
+                        120.0,
+                        200.0,
+                        200.0,
+                        250.0,
+                        300.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "RetargetOnKill",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "RetargetOverkillAmount",
+                    "mValues": [
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "mCastTime": 0.10000000149011612,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayTotalTimePercent": -0.5,
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                1010.0,
+                1010.0,
+                1010.0,
+                1010.0,
+                1010.0,
+                1010.0,
+                1010.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 1100.0,
+            "mHitBoneName": "head",
+            "selectionPriority": 1,
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT3_SyndraR",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT3_SyndraR_Name",
+                        "keyTooltip": "Spell_TFT3_SyndraR_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_TFT3_SyndraR_ListType_Damage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Syndra/Spells/TFT3_SyndraBasicAttack": {
+        "ObjectName": "TFT3_SyndraBasicAttack",
+        "mScriptName": "TFT3_SyndraBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "JannaBasicAttack",
+            "mCastTime": 0.33500000834465027,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.34850001335144043,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "r_hand",
+                    "mSpeed": 1800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 1800.0,
+            "mMissileEffectKey": "TFT3_Syndra_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Syndra/Spells/TFT3_SyndraRSpread": {
+        "ObjectName": "TFT3_SyndraRSpread",
+        "mScriptName": "TFT3_SyndraRSpread",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 15375,
+            "mAffectsStatusFlags": 160,
+            "mCoefficient": 0.4000000059604645,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "mIsDisabledWhileDead": false,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 120.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mStartBoneName": "",
+                    "mSpeed": 800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "mVerticalOffset": 100.0,
+                    "mAmplitude": 1.0,
+                    "mNumberOfPeriods": 3.0,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.974999904632568,
+            "missileSpeed": 800.0,
+            "mMissileEffectKey": "TFT3_Syndra_R_mis_spread",
+            "mLineWidth": 120.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "Buffbone_CSTM_Orb_1",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Syndra/Spells/TFT3_SyndraRMissile": {
+        "ObjectName": "TFT3_SyndraRMissile",
+        "mScriptName": "TFT3_SyndraRMissile",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAffectsStatusFlags": 160,
+            "mAlternateName": "SyndraR",
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mIsDisabledWhileDead": false,
+            "bHaveHitEffect": true,
+            "castRange": [
+                4000.0,
+                4000.0,
+                4000.0,
+                4000.0,
+                4000.0,
+                4000.0,
+                4000.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "spine",
+                    "mAcceleration": 7500.0,
+                    "mMinSpeed": 1.0,
+                    "mMaxSpeed": 10000.0,
+                    "mInitialSpeed": 1.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 1.0,
+            "missileSpeed": 1.0,
+            "mMissileEffectKey": "TFT3_Syndra_R_mis",
+            "mHitEffectKey": "TFT3_Syndra_R_tar",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Syndra/CharacterRecords/Root": {
+        "mCharacterName": "TFT3_Syndra",
+        "baseHP": 650.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 220.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 60.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 45.0,
+        "baseArmor": 25.0,
+        "baseSpellBlock": 25.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 890.0,
+        "attackSpeed": 0.699999988079071,
+        "attackSpeedRatio": 0.699999988079071,
+        "basicAttack": {
+            "mAttackName": "TFT3_SyndraBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT3_SyndraBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT3_SyndraCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT3_SyndraR",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT3_Syndra/Spells/TFT3_SyndraR",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 3,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{5cad0cca}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{ad8a7fd0}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{32cdc033}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 20.0,
+        "mShopData": "{7f7d52b1}",
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFT3_Syndra/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

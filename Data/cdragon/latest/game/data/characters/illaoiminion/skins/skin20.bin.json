@@ -1,0 +1,329 @@
+{
+    "Characters/IllaoiMinion/Skins/Skin20": {
+        "championSkinName": "IllaoiMinionSkin20",
+        "skinParent": 18,
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/IllaoiMinion/Animations/Skin18",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/IllaoiMinion/Skins/Skin18/IllaoiMinion_Skin18.skl",
+            "simpleSkin": "ASSETS/Characters/IllaoiMinion/Skins/Skin18/IllaoiMinion_Skin18.skn",
+            "texture": "ASSETS/Characters/IllaoiMinion/Skins/Skin20/IllaoiMinion_Skin20_TX_CM.tex",
+            "skinScale": 0.8999999761581421,
+            "selfIllumination": 0.699999988079071,
+            "brushAlphaOverride": 0.6000000238418579,
+            "overrideBoundingBox": [
+                100.0,
+                200.0,
+                100.0
+            ],
+            "material": "Characters/IllaoiMinion/Skins/Skin20/Materials/SnowMoon_Minion_inst",
+            "castShadows": false,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "iconCircle": "ASSETS/Characters/IllaoiMinion/HUD/IllaoiMinion_Square_0.tex",
+        "iconSquare": "ASSETS/Characters/IllaoiMinion/HUD/IllaoiMinion_Square_0.tex",
+        "healthBarData": {
+            "hpPerTick": 1.0,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/IllaoiMinion/Skins/Skin20/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/IllaoiMinion/Skins/Skin20/Materials/SnowMoon_Minion_inst": {
+        "name": "Characters/IllaoiMinion/Skins/Skin20/Materials/SnowMoon_Minion_inst",
+        "samplerValues": [
+            {
+                "textureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Illaoi/Skins/Skin20/Particles/Illaoi_Skin20_Tentacles_Mask02.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "textureName": "SS_Texture",
+                "texturePath": "ASSETS/Characters/Illaoi/Skins/Skin20/Particles/Illaoi_Skin20_Tentacles_Mask02.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "textureName": "Mask1",
+                "texturePath": "ASSETS/Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Tentacles_Mask_Bloom01.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "textureName": "Mask2",
+                "texturePath": "ASSETS/Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Tentacles_Mask02.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "SS_Scale",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SS_rate",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Color",
+                "value": [
+                    0.9725490212440491,
+                    1.0,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blue_Scale",
+                "value": [
+                    10.0,
+                    10.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blue_Rate",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomIntensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    16.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dodge_Bias",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_LOCAL_SPACE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Darkstar",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/IllaoiMinion/Skins/Skin20/Resources": {
+        "resourceMap": {
+            "IllaoiBase_E_SpiritTimerA_BV2": "Characters/Illaoi/Skins/Skin0/Particles/IllaoiBase_E_SpiritTimerA",
+            "IllaoiBase_E_SpiritTimerOutline_BV2": "Characters/Illaoi/Skins/Skin0/Particles/IllaoiBase_E_SpiritTimerOutline",
+            "Illaoi_BA_1": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_BA_1",
+            "Illaoi_BA_Crit": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_BA_Crit",
+            "Illaoi_BA_hitsound": "Characters/Illaoi/Skins/Skin0/Particles/Illaoi_Base_BA_hitsound",
+            "Illaoi_BA_Swipe1": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_BA_Swipe1",
+            "Illaoi_BA_Swipe2": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_BA_Swipe2",
+            "Illaoi_BA_Swipe3": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_BA_Swipe3",
+            "Illaoi_BA_Tower": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_BA_Tower",
+            "Illaoi_B_PortalReturn": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_B_PortalReturn",
+            "Illaoi_B_RelicDust": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_B_RelicDust",
+            "Illaoi_B_SpawnPortal": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_B_SpawnPortal",
+            "Illaoi_B_TentacleMat": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_B_TentacleMat",
+            "Illaoi_E_CastAvatar": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_CastAvatar",
+            "Illaoi_E_CastRelic": "{00000000}",
+            "Illaoi_E_CastShadow": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_CastShadow",
+            "Illaoi_E_DeathBeam": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_DeathBeam",
+            "Illaoi_E_LinkBeam": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_LinkBeam",
+            "Illaoi_E_LinkBeamShatter": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_LinkBeamShatter",
+            "Illaoi_E_LinkBeam_Damage": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_LinkBeam_Damage",
+            "Illaoi_E_linkdamage": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_linkdamage",
+            "Illaoi_E_linkdamageAvatar": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_linkdamageAvatar",
+            "Illaoi_E_misImpact": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_misImpact",
+            "Illaoi_E_Miss": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_Miss",
+            "Illaoi_E_Spirit": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_Spirit",
+            "Illaoi_E_SpiritDeath": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritDeath",
+            "Illaoi_E_SpiritDeathDust": "{00000000}",
+            "Illaoi_E_SpiritExpire_Sound": "Characters/Illaoi/Skins/Skin0/Particles/Illaoi_Base_E_SpiritExpire_Sound",
+            "Illaoi_E_SpiritHeal": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritHeal",
+            "Illaoi_E_SpiritReturn": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritReturn",
+            "Illaoi_E_SpiritRing": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritRing",
+            "Illaoi_E_SpiritTimerA": "{00000000}",
+            "Illaoi_E_SpiritTimerB": "{00000000}",
+            "Illaoi_E_SpiritTimerC": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritTimerC",
+            "Illaoi_E_SpiritTimerD": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritTimerD",
+            "Illaoi_E_SpiritTimerE": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritTimerE",
+            "Illaoi_E_SpiritTimerF": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritTimerF",
+            "Illaoi_E_SpiritTimerG": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritTimerG",
+            "Illaoi_E_SpiritTimerH": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritTimerH",
+            "Illaoi_E_SpiritTimerI": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritTimerI",
+            "Illaoi_E_SpiritTimerJ": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritTimerJ",
+            "Illaoi_E_SpiritTimerK": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritTimerK",
+            "Illaoi_E_SpiritTimerOutline": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_SpiritTimerOutline",
+            "Illaoi_E_SpiritTimerShatter": "{00000000}",
+            "Illaoi_E_StunImpact": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_StunImpact",
+            "Illaoi_E_tar_minion": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_tar_minion",
+            "Illaoi_E_TentacleGlow": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_TentacleGlow",
+            "Illaoi_E_TentacleGlowHIT": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_TentacleGlowHIT",
+            "Illaoi_E_TentacleMat": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_TentacleMat",
+            "Illaoi_E_Vessel": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_Vessel",
+            "Illaoi_E_VesselB": "{00000000}",
+            "Illaoi_E_VesselShowAllB": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_VesselShowAllB",
+            "Illaoi_E_Vessel_Cleared": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_Vessel_Cleared",
+            "Illaoi_E_Vessel_DebuffVO": "Characters/Illaoi/Skins/Skin0/Particles/Illaoi_Base_E_Vessel_DebuffVO",
+            "Illaoi_E_Vessel_FailSound": "Characters/Illaoi/Skins/Skin0/Particles/Illaoi_Base_E_Vessel_FailSound",
+            "Illaoi_E_Vessel_IllaoiSelfOnly": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_Vessel_IllaoiSelfOnly",
+            "Illaoi_E_Vessel_Sound": "Characters/Illaoi/Skins/Skin0/Particles/Illaoi_Base_E_Vessel_Sound",
+            "Illaoi_E_Vessel_TentacleKill": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_Vessel_TentacleKill",
+            "Illaoi_E_Vessel_VODisable": "Characters/Illaoi/Skins/Skin0/Particles/Illaoi_Base_E_Vessel_VODisable",
+            "Illaoi_E_Watched": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_E_Watched",
+            "Illaoi_Joke_SpawnPortal": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Joke_SpawnPortal",
+            "Illaoi_Joke_Splash": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Joke_Splash",
+            "Illaoi_P_Enemy": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_Enemy",
+            "Illaoi_P_Heal": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_Heal",
+            "Illaoi_P_impact": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_impact",
+            "Illaoi_P_Slow": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_Slow",
+            "Illaoi_P_SlowGround": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_SlowGround",
+            "Illaoi_P_tar": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_tar",
+            "Illaoi_P_tarAvatarDirectional": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_tarAvatarDirectional",
+            "Illaoi_P_tarDirectional": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_tarDirectional",
+            "Illaoi_P_tarMinion": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_tarMinion",
+            "Illaoi_P_TentacleAvatarActive": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_TentacleAvatarActive",
+            "Illaoi_P_TentacleAvatarDormant": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_TentacleAvatarDormant",
+            "Illaoi_P_TentacleBase": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_TentacleBase",
+            "Illaoi_P_TentacleBaseActive": "{00000000}",
+            "Illaoi_P_TentacleBaseDormant": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_TentacleBaseDormant",
+            "Illaoi_P_TentacleCas": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_TentacleCas",
+            "Illaoi_P_TentacleCasLite": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_TentacleCasLite",
+            "Illaoi_P_TentacleRemove": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_TentacleRemove",
+            "Illaoi_P_TentacleSpawn": "{00000000}",
+            "Illaoi_P_TentacleSpawnTrail": "{00000000}",
+            "Illaoi_Q_cas": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Q_cas",
+            "Illaoi_Q_IndicatorBLU": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Q_IndicatorBLU",
+            "Illaoi_Q_IndicatorRed": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Q_IndicatorRed",
+            "Illaoi_Q_tar": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Q_tar",
+            "Illaoi_Q_tarAvatarDirectional": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Q_tarAvatarDirectional",
+            "Illaoi_Q_tarDirectional": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Q_tarDirectional",
+            "Illaoi_Q_tarMinion": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Q_tarMinion",
+            "Illaoi_Q_tentacle": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Q_tentacle",
+            "Illaoi_R_IllaoiBuff": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_R_IllaoiBuff",
+            "Illaoi_R_IllaoiBuffGlow": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_R_IllaoiBuffGlow",
+            "Illaoi_R_impact": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_R_impact",
+            "Illaoi_R_Indicator": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_R_Indicator",
+            "Illaoi_R_JumpDust": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_R_JumpDust",
+            "Illaoi_R_JumpTrail": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_R_JumpTrail",
+            "Illaoi_R_RelicFlash": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_R_RelicFlash",
+            "Illaoi_R_tar": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_R_tar",
+            "Illaoi_R_tar_minion": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_R_tar_minion",
+            "Illaoi_R_TentacleBurst": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_R_TentacleBurst",
+            "Illaoi_Tentacle_Dance1": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Tentacle_Dance1",
+            "Illaoi_Tentacle_Dance2": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Tentacle_Dance2",
+            "Illaoi_Tentacle_Dance3": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Tentacle_Dance3",
+            "Illaoi_Tentacle_Dance4": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Tentacle_Dance4",
+            "Illaoi_W_AvatarGlow": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_W_AvatarGlow",
+            "Illaoi_W_glow": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_W_glow",
+            "Illaoi_W_LeapSwipe": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_W_LeapSwipe",
+            "Illaoi_W_Relic": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_W_Relic",
+            "Illaoi_W_tar": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_W_tar",
+            "Illaoi_W_tarAvatar": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_W_tarAvatar",
+            "Illaoi_W_Tower_tar": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_W_Tower_tar",
+            "Illaoi_Z_RelicGlow": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_RelicGlow",
+            "Illaoi_Z_TentacleTrail": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_TentacleTrail",
+            "Illaoi_P_IndicatorBLU": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_IndicatorBLU",
+            "Illaoi_P_IndicatorRed": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_P_IndicatorRed",
+            "Illaoi_Z_Landscape_Bloodmoon": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Landscape_Bloodmoon",
+            "Illaoi_Z_Landscape_Ground": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Landscape_Ground",
+            "Illaoi_R_Snow_Moon_Child": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_R_Snow_Moon_Child",
+            "Illaoi_Z_BloodMoon_Souls_Creep": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_BloodMoon_Souls_Creep",
+            "Illaoi_Z_Weapon_Hit": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Weapon_Hit",
+            "Illaoi_Z_Weapon_Cast_Hit": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Weapon_Cast_Hit",
+            "Illaoi_Z_Weapon_Hit01": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Weapon_Hit01",
+            "Illaoi_Z_Magical_Wall": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Magical_Wall",
+            "Illaoi_Z_Magical_Wall01": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Magical_Wall01",
+            "Illaoi_Z_Mirror_Reflection": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Mirror_Reflection",
+            "Illaoi_Z_Fragments": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Fragments",
+            "Illaoi_Z_Fragments_Child": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Fragments_Child",
+            "Illaoi_Z_Leaf_Local_Off_Child": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Leaf_Local_Off_Child",
+            "Illaoi_Z_BloodMoon_Souls_Creep_Child": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_BloodMoon_Souls_Creep_Child",
+            "Illaoi_Z_Spinning_Weapon": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Spinning_Weapon",
+            "Illaoi_Z_Landscape_Bloodmoon_Child": "Characters/Illaoi/Skins/Skin18/Particles/Illaoi_Skin18_Z_Landscape_Bloodmoon_Child"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/IllaoiMinion/IllaoiMinion.bin",
+        "DATA/Characters/IllaoiMinion/Animations/Skin18.bin"
+    ]
+}

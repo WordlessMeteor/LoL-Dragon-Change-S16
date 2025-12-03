@@ -1,0 +1,403 @@
+{
+    "Characters/TFT3_Vi/Spells/TFT3_ViCritAttack": {
+        "ObjectName": "TFT3_ViCritAttack",
+        "mScriptName": "TFT3_ViCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.15279999375343323,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 1000.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Vi/Spells/TFT3_ViR": {
+        "ObjectName": "TFT3_ViR",
+        "mScriptName": "TFT3_ViR",
+        "mSpell": {
+            "mAffectsTypeFlags": 6146,
+            "mAffectsStatusFlags": 160,
+            "DataValues": [
+                {
+                    "mName": "PrimaryDamage",
+                    "mValues": [
+                        100.0,
+                        250.0,
+                        375.0,
+                        625.0,
+                        900.0,
+                        1100.0,
+                        1300.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "CCDuration",
+                    "mValues": [
+                        1.5,
+                        2.0,
+                        2.5,
+                        3.0,
+                        3.5,
+                        4.0,
+                        4.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "MoveSpeed",
+                    "mValues": [
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "OthersCCDuration",
+                    "mValues": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "SecondaryDamage",
+                    "mValues": [
+                        0.0,
+                        125.0,
+                        185.0,
+                        325.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedPrimaryDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "PrimaryDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedSecondaryDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "SecondaryDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "mAnimationWinddownName": "Spell_Run",
+            "mAnimationLeadOutName": "Spell_Hit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.875,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castFrame": 15.0,
+            "selectionPriority": 1,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT3_ViR",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT3_ViR_Name",
+                        "keyTooltip": "Spell_TFT3_ViR_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "PrimaryDamage",
+                                    "nameOverride": "Spell_TFT3_ViR_PrimaryDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SecondaryDamage",
+                                    "nameOverride": "Spell_TFT3_ViR_SecondaryDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "CCDuration",
+                                    "nameOverride": "Spell_ListType_StunDuration",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Vi/Spells/TFT3_ViBasicAttack2": {
+        "ObjectName": "TFT3_ViBasicAttack2",
+        "mScriptName": "TFT3_ViBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.15279999375343323,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 1000.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Vi/Spells/TFT3_ViBasicAttack": {
+        "ObjectName": "TFT3_ViBasicAttack",
+        "mScriptName": "TFT3_ViBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.15279999375343323,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 1000.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Vi/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT3_Vi/CharacterRecords/Root": {
+        "mCharacterName": "TFT3_Vi",
+        "baseHP": 850.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 190.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 140.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 60.0,
+        "baseArmor": 50.0,
+        "baseSpellBlock": 50.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.6499999761581421,
+        "attackSpeedRatio": 0.6499999761581421,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT3_ViR",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT3_Vi/Spells/TFT3_ViR",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionHeight": 160.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "flags": 9446664,
+        "tier": 3,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{c86875cd}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{9eb128cc}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ccf900f}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 70.0,
+        "mShopData": "{bd2f61df}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

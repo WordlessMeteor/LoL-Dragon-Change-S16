@@ -1,0 +1,1556 @@
+{
+    "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolPMissile": {
+        "ObjectName": "TFT3_AurelionSolPMissile",
+        "mScriptName": "TFT3_AurelionSolPMissile",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTargetHeightAugment": 150.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "C_Buffbone_Glb_Center_Loc",
+                    "mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            50.0,
+                            0.0,
+                            -50.0
+                        ],
+                        "mUseMissilePositionAsOrigin": true,
+                        "mControlPoint1": [
+                            -2.75,
+                            0.0,
+                            2.0
+                        ],
+                        "mControlPoint2": [
+                            0.7150126099586487,
+                            0.0,
+                            -0.09267240017652512
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mSpeed": 1200.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "__type": "CurveTheDifferenceHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "mOverrideSpec": {
+                            "mUseHeightOffsetAtEnd": true,
+                            "mTargetHeightAugment": 200.0,
+                            "mStartBoneName": "",
+                            "mTargetBoneName": "Head",
+                            "mSplineInfo": {
+                                "mUseMissilePositionAsOrigin": true,
+                                "mControlPoint1": [
+                                    -2.819812297821045,
+                                    0.0,
+                                    -0.9694113731384277
+                                ],
+                                "mControlPoint2": [
+                                    0.3558986186981201,
+                                    0.0,
+                                    0.33024126291275024
+                                ],
+                                "__type": "HermiteSplineInfo"
+                            },
+                            "mSpeed": 1200.0,
+                            "__type": "FixedSpeedSplineMovement"
+                        },
+                        "__type": "ReturnToCasterOnMovementComplete"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "mOverrideHeightSolver": {
+                                    "mAmplitude": -50.0,
+                                    "mNumberOfPeriods": 0.20000000298023224,
+                                    "__type": "SinusoidalHeightSolver"
+                                },
+                                "__type": "ChangeHeightSolver"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "mMissileEffectKey": "TFT3_AurelionSol_P_MissileLarge",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolP": {
+        "ObjectName": "TFT3_AurelionSolP",
+        "mScriptName": "TFT3_AurelionSolP",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_Ultimate"
+            ],
+            "DataValues": [
+                {
+                    "mName": "Damage",
+                    "mValues": [
+                        0.0,
+                        90.0,
+                        150.0,
+                        3000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "InitialFighters",
+                    "mValues": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        10.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "FightersPerCast",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        10.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ManaDrain",
+                    "mValues": [
+                        0.0,
+                        10.0,
+                        15.0,
+                        50.0,
+                        40.0,
+                        50.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "mChannelDuration": [
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355
+            ],
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mSpellRevealsChampion": false,
+            "mDoNotNeedToFaceTarget": true,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.0,
+            "missileSpeed": 20.0,
+            "mLookAtPolicy": 0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "head",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT3_AurelionSolP",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT3_AurelionSolP_Name",
+                        "keyTooltip": "Spell_TFT3_AurelionSolP_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "Damage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_TFT3_AurelionSolP_ListType_Damage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ManaDrain",
+                                    "nameOverride": "Spell_TFT3_AurelionSolP_ManaDrain",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "InitialFighters",
+                                    "nameOverride": "Spell_TFT3_AurelionSolP_ListType_InitialFighters",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "startLocator": {
+                            "orientationType": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                140.0,
+                                140.0,
+                                140.0,
+                                140.0,
+                                140.0,
+                                140.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                1750.0,
+                                1750.0,
+                                1750.0,
+                                1750.0,
+                                1750.0,
+                                1750.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureBaseOverrideName": "ASSETS/Characters/AurelionSol/HUD/Textures/AurelionSol_R_LineIndicator.tex",
+                        "textureTargetOverrideName": "ASSETS/Characters/AurelionSol/HUD/Textures/blank.tex",
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolBasicAttack": {
+        "ObjectName": "TFT3_AurelionSolBasicAttack",
+        "mScriptName": "TFT3_AurelionSolBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "KarmaBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.34850001335144043,
+            "castRange": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "C_Buffbone_Glb_Head_Loc",
+                    "mAcceleration": -15000.0,
+                    "mMinSpeed": 1500.0,
+                    "mMaxSpeed": 4000.0,
+                    "mInitialSpeed": 4000.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.75,
+            "missileSpeed": 4000.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolCritAttack": {
+        "ObjectName": "TFT3_AurelionSolCritAttack",
+        "mScriptName": "TFT3_AurelionSolCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "KarmaBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.34850001335144043,
+            "castRange": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "C_Buffbone_Glb_Head_Loc",
+                    "mAcceleration": -15000.0,
+                    "mMinSpeed": 1500.0,
+                    "mMaxSpeed": 4000.0,
+                    "mInitialSpeed": 4000.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.75,
+            "missileSpeed": 4000.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolPMissile_Near1": {
+        "ObjectName": "TFT3_AurelionSolPMissile_Near1",
+        "mScriptName": "TFT3_AurelionSolPMissile_Near1",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "bHaveHitEffect": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mStartBoneName": "Head",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            -50.0,
+                            0.0,
+                            0.0
+                        ],
+                        "mControlPoint1": [
+                            -2.70625638961792,
+                            0.0,
+                            2.270219564437866
+                        ],
+                        "mControlPoint2": [
+                            2.8955166339874268,
+                            0.0,
+                            -0.8967347145080566
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mUseMissilePositionAsOrigin": false,
+                    "mSpeed": 1000.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "visibilityComponent": {
+                    "mMissileClientWaitForTargetUpdateBeforeMissileShow": true,
+                    "__type": "EnterFOWVisibility"
+                },
+                "heightSolver": {
+                    "mAmplitude": 100.0,
+                    "mNumberOfPeriods": 0.20000000298023224,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "mOverrideSpec": {
+                            "mUseHeightOffsetAtEnd": true,
+                            "mTargetHeightAugment": 200.0,
+                            "mStartBoneName": "",
+                            "mTargetBoneName": "Head",
+                            "mSplineInfo": {
+                                "mControlPoint1": [
+                                    -3.4257452487945557,
+                                    1.0,
+                                    0.7866597771644592
+                                ],
+                                "mControlPoint2": [
+                                    3.101200819015503,
+                                    0.0,
+                                    -1.9457544088363647
+                                ],
+                                "__type": "HermiteSplineInfo"
+                            },
+                            "mSpeed": 1000.0,
+                            "__type": "FixedSpeedSplineMovement"
+                        },
+                        "__type": "ReturnToCasterOnMovementComplete"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "mOverrideHeightSolver": {
+                                    "__type": "BlendedLinearHeightSolver"
+                                },
+                                "__type": "ChangeHeightSolver"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "mMissileEffectKey": "TFT3_AurelionSol_P_MissileLarge",
+            "mLookAtPolicy": 0,
+            "mHitEffectKey": "TFT3_AurelionSol_P_Tar",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolPMissile_Near2": {
+        "ObjectName": "TFT3_AurelionSolPMissile_Near2",
+        "mScriptName": "TFT3_AurelionSolPMissile_Near2",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "bHaveHitEffect": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mStartBoneName": "Head",
+                    "mSplineInfo": {
+                        "mControlPoint1": [
+                            -2.052839994430542,
+                            0.0,
+                            1.6992955207824707
+                        ],
+                        "mControlPoint2": [
+                            2.3378098011016846,
+                            0.0,
+                            -0.2717135548591614
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mUseMissilePositionAsOrigin": false,
+                    "mSpeed": 1000.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "visibilityComponent": {
+                    "mMissileClientWaitForTargetUpdateBeforeMissileShow": true,
+                    "__type": "EnterFOWVisibility"
+                },
+                "heightSolver": {
+                    "mAmplitude": 250.0,
+                    "mNumberOfPeriods": 0.20000000298023224,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "mOverrideSpec": {
+                            "mUseHeightOffsetAtEnd": true,
+                            "mTargetHeightAugment": 200.0,
+                            "mStartBoneName": "",
+                            "mTargetBoneName": "Head",
+                            "mSplineInfo": {
+                                "mControlPoint1": [
+                                    -3.5022284984588623,
+                                    1.0,
+                                    -0.010201298631727695
+                                ],
+                                "mControlPoint2": [
+                                    5.253342628479004,
+                                    0.0,
+                                    -1.931840419769287
+                                ],
+                                "__type": "HermiteSplineInfo"
+                            },
+                            "mSpeed": 1000.0,
+                            "__type": "FixedSpeedSplineMovement"
+                        },
+                        "__type": "ReturnToCasterOnMovementComplete"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "mOverrideHeightSolver": {
+                                    "__type": "BlendedLinearHeightSolver"
+                                },
+                                "__type": "ChangeHeightSolver"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "mMissileEffectKey": "TFT3_AurelionSol_P_MissileLarge",
+            "mLookAtPolicy": 0,
+            "mHitEffectKey": "TFT3_AurelionSol_P_Tar",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolPMissile_Near3": {
+        "ObjectName": "TFT3_AurelionSolPMissile_Near3",
+        "mScriptName": "TFT3_AurelionSolPMissile_Near3",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "bHaveHitEffect": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mStartBoneName": "Head",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            -25.0,
+                            0.0,
+                            0.0
+                        ],
+                        "mControlPoint1": [
+                            -6.8896307945251465,
+                            0.0,
+                            -4.663372993469238
+                        ],
+                        "mControlPoint2": [
+                            3.4815917015075684,
+                            0.0,
+                            2.578765869140625
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mUseMissilePositionAsOrigin": false,
+                    "mSpeed": 1100.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "visibilityComponent": {
+                    "mMissileClientWaitForTargetUpdateBeforeMissileShow": true,
+                    "__type": "EnterFOWVisibility"
+                },
+                "heightSolver": {
+                    "mAmplitude": 150.0,
+                    "mNumberOfPeriods": 0.20000000298023224,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "mOverrideSpec": {
+                            "mUseHeightOffsetAtEnd": true,
+                            "mTargetHeightAugment": 200.0,
+                            "mStartBoneName": "",
+                            "mTargetBoneName": "Head",
+                            "mSplineInfo": {
+                                "mControlPoint1": [
+                                    -2.9877331256866455,
+                                    1.0,
+                                    -4.505269527435303
+                                ],
+                                "mControlPoint2": [
+                                    4.103633403778076,
+                                    0.0,
+                                    -5.397279262542725
+                                ],
+                                "__type": "HermiteSplineInfo"
+                            },
+                            "mSpeed": 1000.0,
+                            "__type": "FixedSpeedSplineMovement"
+                        },
+                        "__type": "ReturnToCasterOnMovementComplete"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "mOverrideHeightSolver": {
+                                    "__type": "BlendedLinearHeightSolver"
+                                },
+                                "__type": "ChangeHeightSolver"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "mMissileEffectKey": "TFT3_AurelionSol_P_MissileLarge",
+            "mLookAtPolicy": 0,
+            "mHitEffectKey": "TFT3_AurelionSol_P_Tar",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolPMissile3": {
+        "ObjectName": "TFT3_AurelionSolPMissile3",
+        "mScriptName": "TFT3_AurelionSolPMissile3",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "bHaveHitEffect": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mStartBoneName": "Head",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            -10.0,
+                            0.0,
+                            -50.0
+                        ],
+                        "mControlPoint1": [
+                            -4.113166332244873,
+                            0.0,
+                            0.2166917473077774
+                        ],
+                        "mControlPoint2": [
+                            2.528667449951172,
+                            0.0,
+                            -3.195110559463501
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mUseMissilePositionAsOrigin": false,
+                    "mSpeed": 1200.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "mAmplitude": 250.0,
+                    "mNumberOfPeriods": 0.4000000059604645,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "mOverrideSpec": {
+                            "mUseHeightOffsetAtEnd": true,
+                            "mTargetHeightAugment": 200.0,
+                            "mStartBoneName": "",
+                            "mTargetBoneName": "Head",
+                            "mSplineInfo": {
+                                "mControlPoint1": [
+                                    -1.831478238105774,
+                                    1.0,
+                                    -0.15375865995883942
+                                ],
+                                "mControlPoint2": [
+                                    0.20126135647296906,
+                                    0.0,
+                                    2.106675386428833
+                                ],
+                                "__type": "HermiteSplineInfo"
+                            },
+                            "mSpeed": 1200.0,
+                            "__type": "FixedSpeedSplineMovement"
+                        },
+                        "__type": "ReturnToCasterOnMovementComplete"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "mOverrideHeightSolver": {
+                                    "mAmplitude": -100.0,
+                                    "mNumberOfPeriods": 0.20000000298023224,
+                                    "__type": "SinusoidalHeightSolver"
+                                },
+                                "__type": "ChangeHeightSolver"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "mMissileEffectKey": "TFT3_AurelionSol_P_MissileLarge",
+            "mHitEffectKey": "TFT3_AurelionSol_P_Tar",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolPMissile_Mid1": {
+        "ObjectName": "TFT3_AurelionSolPMissile_Mid1",
+        "mScriptName": "TFT3_AurelionSolPMissile_Mid1",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "bHaveHitEffect": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mStartBoneName": "Head",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            -50.0,
+                            0.0,
+                            0.0
+                        ],
+                        "mControlPoint1": [
+                            -2.3991613388061523,
+                            0.0,
+                            -0.41158929467201233
+                        ],
+                        "mControlPoint2": [
+                            2.6278040409088135,
+                            0.0,
+                            1.8312450647354126
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mUseMissilePositionAsOrigin": false,
+                    "mSpeed": 1300.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "visibilityComponent": {
+                    "mMissileClientWaitForTargetUpdateBeforeMissileShow": true,
+                    "__type": "EnterFOWVisibility"
+                },
+                "heightSolver": {
+                    "mAmplitude": 350.0,
+                    "mNumberOfPeriods": 0.20000000298023224,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "mOverrideSpec": {
+                            "mUseHeightOffsetAtEnd": true,
+                            "mTargetHeightAugment": 200.0,
+                            "mStartBoneName": "",
+                            "mTargetBoneName": "Head",
+                            "mSplineInfo": {
+                                "mControlPoint1": [
+                                    -2.963597297668457,
+                                    1.0,
+                                    -2.3477256298065186
+                                ],
+                                "mControlPoint2": [
+                                    0.9118761420249939,
+                                    0.0,
+                                    0.364912748336792
+                                ],
+                                "__type": "HermiteSplineInfo"
+                            },
+                            "mSpeed": 1300.0,
+                            "__type": "FixedSpeedSplineMovement"
+                        },
+                        "__type": "ReturnToCasterOnMovementComplete"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "mOverrideHeightSolver": {
+                                    "mAmplitude": -100.0,
+                                    "mNumberOfPeriods": 0.20000000298023224,
+                                    "__type": "SinusoidalHeightSolver"
+                                },
+                                "__type": "ChangeHeightSolver"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "mMissileEffectKey": "TFT3_AurelionSol_P_MissileLarge",
+            "mLookAtPolicy": 0,
+            "mHitEffectKey": "TFT3_AurelionSol_P_Tar",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolPMissile2": {
+        "ObjectName": "TFT3_AurelionSolPMissile2",
+        "mScriptName": "TFT3_AurelionSolPMissile2",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "bHaveHitEffect": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mStartBoneName": "Head",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            25.0,
+                            0.0,
+                            -50.0
+                        ],
+                        "mControlPoint1": [
+                            -1.8463703393936157,
+                            0.0,
+                            -0.7340474724769592
+                        ],
+                        "mControlPoint2": [
+                            1.7265232801437378,
+                            0.0,
+                            1.6186069250106812
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mUseMissilePositionAsOrigin": false,
+                    "mSpeed": 1200.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "visibilityComponent": {
+                    "mMissileClientWaitForTargetUpdateBeforeMissileShow": true,
+                    "__type": "EnterFOWVisibility"
+                },
+                "heightSolver": {
+                    "mAmplitude": 50.0,
+                    "mNumberOfPeriods": 0.10000000149011612,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "mOverrideHeightSolver": {
+                                    "mAmplitude": -100.0,
+                                    "mNumberOfPeriods": 0.20000000298023224,
+                                    "__type": "SinusoidalHeightSolver"
+                                },
+                                "__type": "ChangeHeightSolver"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    },
+                    {
+                        "mOverrideSpec": {
+                            "mUseHeightOffsetAtEnd": true,
+                            "mTargetHeightAugment": 200.0,
+                            "mStartBoneName": "",
+                            "mTargetBoneName": "Head",
+                            "mSplineInfo": {
+                                "mControlPoint1": [
+                                    -1.3244115114212036,
+                                    1.0,
+                                    -1.9367386102676392
+                                ],
+                                "mControlPoint2": [
+                                    1.7274932861328125,
+                                    0.0,
+                                    1.7562849521636963
+                                ],
+                                "__type": "HermiteSplineInfo"
+                            },
+                            "mSpeed": 1200.0,
+                            "__type": "FixedSpeedSplineMovement"
+                        },
+                        "__type": "ReturnToCasterOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "mMissileEffectKey": "TFT3_AurelionSol_P_MissileLarge",
+            "mHitEffectKey": "TFT3_AurelionSol_P_Tar",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolPMissile_Mid2": {
+        "ObjectName": "TFT3_AurelionSolPMissile_Mid2",
+        "mScriptName": "TFT3_AurelionSolPMissile_Mid2",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "bHaveHitEffect": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mStartBoneName": "Head",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            -50.0,
+                            0.0,
+                            0.0
+                        ],
+                        "mControlPoint1": [
+                            -5.960704326629639,
+                            0.0,
+                            1.1644504070281982
+                        ],
+                        "mControlPoint2": [
+                            0.10540113598108292,
+                            0.0,
+                            -4.47318696975708
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mUseMissilePositionAsOrigin": false,
+                    "mSpeed": 1200.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "visibilityComponent": {
+                    "mMissileClientWaitForTargetUpdateBeforeMissileShow": true,
+                    "__type": "EnterFOWVisibility"
+                },
+                "heightSolver": {
+                    "mVerticalOffset": -250.0,
+                    "mAmplitude": 500.0,
+                    "mNumberOfPeriods": 0.30000001192092896,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "mOverrideSpec": {
+                            "mUseHeightOffsetAtEnd": true,
+                            "mTargetHeightAugment": 200.0,
+                            "mStartBoneName": "",
+                            "mTargetBoneName": "Head",
+                            "mSplineInfo": {
+                                "mControlPoint1": [
+                                    -1.461729884147644,
+                                    1.0,
+                                    1.5041499137878418
+                                ],
+                                "mControlPoint2": [
+                                    -1.1037553548812866,
+                                    0.0,
+                                    1.8614704608917236
+                                ],
+                                "__type": "HermiteSplineInfo"
+                            },
+                            "mSpeed": 1200.0,
+                            "__type": "FixedSpeedSplineMovement"
+                        },
+                        "__type": "ReturnToCasterOnMovementComplete"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "mOverrideHeightSolver": {
+                                    "__type": "BlendedLinearHeightSolver"
+                                },
+                                "__type": "ChangeHeightSolver"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "mMissileEffectKey": "TFT3_AurelionSol_P_MissileLarge",
+            "mLookAtPolicy": 0,
+            "mHitEffectKey": "TFT3_AurelionSol_P_Tar",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolPMissile_Mid3": {
+        "ObjectName": "TFT3_AurelionSolPMissile_Mid3",
+        "mScriptName": "TFT3_AurelionSolPMissile_Mid3",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "bHaveHitEffect": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": -200.0,
+                    "mStartBoneName": "",
+                    "mSplineInfo": {
+                        "mStartPositionOffset": [
+                            -50.0,
+                            0.0,
+                            0.0
+                        ],
+                        "mControlPoint1": [
+                            -1.2338188886642456,
+                            0.0,
+                            0.0918838158249855
+                        ],
+                        "mControlPoint2": [
+                            3.187893867492676,
+                            0.0,
+                            -0.016154205426573753
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mUseMissilePositionAsOrigin": false,
+                    "mSpeed": 1300.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "visibilityComponent": {
+                    "mMissileClientWaitForTargetUpdateBeforeMissileShow": true,
+                    "__type": "EnterFOWVisibility"
+                },
+                "heightSolver": {
+                    "mAmplitude": 200.0,
+                    "mNumberOfPeriods": 0.20000000298023224,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "mOverrideSpec": {
+                            "mUseHeightOffsetAtEnd": true,
+                            "mTargetHeightAugment": 200.0,
+                            "mStartBoneName": "",
+                            "mTargetBoneName": "Head",
+                            "mSplineInfo": {
+                                "mControlPoint1": [
+                                    -3.972153902053833,
+                                    0.0,
+                                    -0.15634430944919586
+                                ],
+                                "mControlPoint2": [
+                                    1.4332513809204102,
+                                    0.0,
+                                    1.0959079265594482
+                                ],
+                                "__type": "HermiteSplineInfo"
+                            },
+                            "mSpeed": 1300.0,
+                            "__type": "FixedSpeedSplineMovement"
+                        },
+                        "__type": "ReturnToCasterOnMovementComplete"
+                    },
+                    {
+                        "mActions": [
+                            {
+                                "mOverrideHeightSolver": {
+                                    "mAmplitude": -50.0,
+                                    "mNumberOfPeriods": 0.20000000298023224,
+                                    "__type": "SinusoidalHeightSolver"
+                                },
+                                "__type": "ChangeHeightSolver"
+                            }
+                        ],
+                        "__type": "TriggerOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "mMissileEffectKey": "TFT3_AurelionSol_P_MissileLarge",
+            "mLookAtPolicy": 0,
+            "mHitEffectKey": "TFT3_AurelionSol_P_Tar",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_AurelionSol/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT3_AurelionSol/CharacterRecords/Root": {
+        "mCharacterName": "TFT3_AurelionSol",
+        "baseHP": 1100.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 240.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 120.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseArmor": 55.0,
+        "baseSpellBlock": 40.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 175.0,
+        "RotationSmoothing": 6.0,
+        "attackRange": 225.0,
+        "attackSpeed": 0.20000000298023224,
+        "attackSpeedRatio": 0.20000000298023224,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT3_AurelionSolP",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT3_AurelionSol/Spells/TFT3_AurelionSolP",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "passiveRange": 4.0,
+        "selectionHeight": 220.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "tier": 5,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{e070c997}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{b6f6ec23}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{32cdc033}",
+        "mMoveInterval": -0.30000001192092896,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 120.0,
+        "mShopData": "{c589c777}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

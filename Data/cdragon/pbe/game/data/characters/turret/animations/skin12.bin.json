@@ -1,0 +1,666 @@
+{
+    "Characters/Turret/Animations/Skin12": {
+        "mCascadeBlendValue": 0.0,
+        "mClipDataMap": {
+            "Idle1": {
+                "mFlags": 1,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "ShowBase": {
+                        "mName": "ShowBase",
+                        "mShowSubmeshList": [
+                            "Base"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Turret/Skins/base/animations/Idle1.2025_S3_BaseSR_Env.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "State3": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "HideBase": {
+                        "mName": "HideBase",
+                        "mHideSubmeshList": [
+                            "Base"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{d87f9f9c}": {
+                        "mName": "{d87f9f9c}",
+                        "mHideSubmeshList": [
+                            "Stage1"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{39efaf58}": {
+                        "mName": "{39efaf58}",
+                        "mShowSubmeshList": [
+                            "Stage2"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Turret/Skins/base/animations/Idle1.2025_S3_BaseSR_Env.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Destroyed": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{07030a82}": {
+                        "mName": "{3aefb0eb}",
+                        "mShowSubmeshList": [
+                            "Rubble"
+                        ],
+                        "mHideSubmeshList": [
+                            "Base",
+                            "Stage1",
+                            "Stage2",
+                            "Stage3",
+                            "Broken1",
+                            "Broken2",
+                            "Broken3"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{48d26e55}": {
+                        "mHideSubmeshList": [
+                            "Urf_Mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Turret/Skins/base/animations/Respawn.2025_S3_BaseSR_Env.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{aa006aba}": {
+                "mClipNameList": [
+                    "Destroyed"
+                ],
+                "__type": "ParallelClipData"
+            },
+            "{cc2030a0}": {
+                "mFlags": 8,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Break1": {
+                        "mName": "Break1",
+                        "mEffectKey": "{dfe82739}",
+                        "mEnemyEffectKey": "{dfe82739}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "root_break",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "HideBase": {
+                        "mName": "HideBase",
+                        "mStartFrame": 1.0,
+                        "mHideSubmeshList": [
+                            "Base"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{3cefb411}": {
+                        "mName": "{3cefb411}",
+                        "mStartFrame": 1.0,
+                        "mShowSubmeshList": [
+                            "Stage1"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Turret/Skins/base/animations/Idle1.2025_S3_BaseSR_Env.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "State2": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "HideBase": {
+                        "mName": "HideBase",
+                        "mHideSubmeshList": [
+                            "Base"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{3cefb411}": {
+                        "mName": "{3cefb411}",
+                        "mShowSubmeshList": [
+                            "Stage1"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Turret/Skins/base/animations/Idle1.2025_S3_BaseSR_Env.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{f5c65fef}": {
+                "mFlags": 8,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Break2": {
+                        "mName": "Break2",
+                        "mEffectKey": "{dce82280}",
+                        "mEnemyEffectKey": "{dce82280}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "root_break",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "mIsDetachable": true,
+                        "__type": "ParticleEventData"
+                    },
+                    "HideBase": {
+                        "mName": "HideBase",
+                        "mHideSubmeshList": [
+                            "Base"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{39efaf58}": {
+                        "mName": "{3cefb411}",
+                        "mStartFrame": 1.0,
+                        "mShowSubmeshList": [
+                            "Stage2"
+                        ],
+                        "mHideSubmeshList": [
+                            "Stage1"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{aa2569e8}": {
+                        "mEndFrame": 2.0,
+                        "mShowSubmeshList": [
+                            "Stage1"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mTickDuration": 0.10000000149011612,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Turret/Skins/base/animations/Idle1.2025_S3_BaseSR_Env.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{35f43992}": {
+                "mFlags": 8,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Break3": {
+                        "mName": "Break3",
+                        "mEffectKey": "{dde82413}",
+                        "mEnemyEffectKey": "{dde82413}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "root_break",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "Audio_Break": {
+                        "mSoundName": "Play_sfx_ENV_OrderTurret_break03",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    },
+                    "DeathVfx": {
+                        "mEffectKey": "{0f22b8cd}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{07030a82}": {
+                        "mShowSubmeshList": [
+                            "Rubble"
+                        ],
+                        "mHideSubmeshList": [
+                            "Base",
+                            "Stage1",
+                            "Stage2",
+                            "Stage3",
+                            "Broken1",
+                            "Broken2",
+                            "Broken3"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{48d26e55}": {
+                        "mHideSubmeshList": [
+                            "Urf_Mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{3aefb0eb}": {
+                        "mShowSubmeshList": [
+                            "Stage3"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Turret/Skins/base/animations/Idle1.2025_S3_BaseSR_Env.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{a9522ec4}": {
+                "mFlags": 8,
+                "mClipNameList": [
+                    "{f5c65fef}",
+                    "State3"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "Respawn": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Submeshes": {
+                        "mShowSubmeshList": [
+                            "Broken1",
+                            "Broken2",
+                            "Broken3",
+                            "Rubble"
+                        ],
+                        "mHideSubmeshList": [
+                            "Base"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{9ae82a0e}": {
+                        "mStartFrame": 438.0,
+                        "mShowSubmeshList": [
+                            "Stage1",
+                            "Stage2",
+                            "Stage3",
+                            "Base"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{a07709a2}": {
+                        "mStartFrame": 435.0,
+                        "mEffectKey": "Turret_Z_Respawn_Crystal",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "joint2",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{4131eca0}": {
+                        "mStartFrame": 435.0,
+                        "mEffectKey": "Turret_Z_Respawn_Statue",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_Glb_Center_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{121a07dc}": {
+                        "mEndFrame": 440.0,
+                        "mEffectKey": "Turret_Z_RespawnTimer_Turret",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_Glb_Center_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{47f0c55e}": {
+                        "mStartFrame": 190.0,
+                        "mEffectKey": "Turret_Z_Respawn_Rocks",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Break3_009",
+                                "__type": "ParticleEventDataPair"
+                            },
+                            {
+                                "mBoneName": "Break3_010",
+                                "__type": "ParticleEventDataPair"
+                            },
+                            {
+                                "mBoneName": "Break3_001",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{ac06c904}": {
+                        "mStartFrame": 240.0,
+                        "mEffectKey": "Turret_Z_Respawn_Rocks",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Break3_011",
+                                "__type": "ParticleEventDataPair"
+                            },
+                            {
+                                "mBoneName": "Break3_003",
+                                "__type": "ParticleEventDataPair"
+                            },
+                            {
+                                "mBoneName": "Break3_005",
+                                "__type": "ParticleEventDataPair"
+                            },
+                            {
+                                "mBoneName": "Break2_005",
+                                "__type": "ParticleEventDataPair"
+                            },
+                            {
+                                "mBoneName": "Break3_001",
+                                "__type": "ParticleEventDataPair"
+                            },
+                            {
+                                "mBoneName": "Break3_010",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{ad06ca97}": {
+                        "mStartFrame": 280.0,
+                        "mEffectKey": "Turret_Z_Respawn_Rocks",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Break3_012",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "audio_respawn": {
+                        "mSoundName": "Play_sfx_Env_NexusTurret_Order_Respawn",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Turret/Skins/base/animations/Respawn.2025_S3_BaseSR_Env.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Death": {
+                "mClipNameList": [
+                    "{35f43992}"
+                ],
+                "__type": "ParallelClipData"
+            }
+        },
+        "mTrackDataMap": {
+            "Default": {
+                "__type": "TrackData"
+            }
+        },
+        "mBlendDataTable": {
+            "5395870133658975052": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5395870133307849106": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5395870135050951686": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5395870135827312800": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5395870136526069743": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5395870136587709068": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5395870136604486687": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3887795678811913036": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3887795678460787090": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3887795680203889670": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3887795680980250784": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3887795681679007727": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3887795681740647052": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3887795681757424671": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253485136716": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253134010770": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364254877113350": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364255653474464": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364256352231407": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364256413870732": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364256430648351": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14708809848001264460": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14708809847650138514": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14708809849393241094": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14708809850169602208": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14708809850868359151": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14708809850929998476": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14708809850946776095": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17709948066039200588": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17709948065688074642": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17709948067431177222": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17709948068207538336": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17709948068906295279": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17709948068967934604": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17709948068984712223": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17974686951061715788": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17974686950710589842": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17974686952453692422": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17974686953230053536": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17974686953928810479": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17974686953990449804": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17974686954007227423": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18046746275971464012": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18046746275620338066": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18046746277363440646": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18046746278139801760": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18046746278838558703": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18046746278900198028": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18046746278916975647": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "5395870135078037567": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3887795680230975551": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364254904199231": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11490697227982547007": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17974686952480778303": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14708809849420326975": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18046746277390526527": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "17709948067458263103": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "12200865762523949119": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            }
+        },
+        "__type": "AnimationGraphData"
+    },
+    "__linked": []
+}

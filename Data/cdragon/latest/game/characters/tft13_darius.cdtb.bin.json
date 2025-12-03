@@ -1,0 +1,443 @@
+{
+    "Characters/TFT13_Darius/Spells/TFT13_DariusBasicAttack": {
+        "ObjectName": "TFT13_DariusBasicAttack",
+        "mScriptName": "TFT13_DariusBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "RenektonBasicAttack",
+            "mCastTime": 0.3666999936103821,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.30000001192092896,
+            "mCantCancelWhileChanneling": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Darius/Spells/TFT13_DariusBasicAttack2": {
+        "ObjectName": "TFT13_DariusBasicAttack2",
+        "mScriptName": "TFT13_DariusBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "RenektonBasicAttack2",
+            "mAnimationName": "Attack2",
+            "mCastTime": 0.30000001192092896,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.30000001192092896,
+            "mCantCancelWhileChanneling": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Darius/Spells/TFT13_DariusCritAttack": {
+        "ObjectName": "TFT13_DariusCritAttack",
+        "mScriptName": "TFT13_DariusCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "RenektonCritAttack",
+            "mAnimationName": "Crit",
+            "mCastTime": 0.30000001192092896,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.30000001192092896,
+            "mCantCancelWhileChanneling": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Darius/Spells/TFT13_DariusSpell": {
+        "ObjectName": "TFT13_DariusSpell",
+        "mScriptName": "TFT13_DariusSpell",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 11333,
+            "mAffectsStatusFlags": 48,
+            "DataValues": [
+                {
+                    "mName": "BleedDuration",
+                    "mValues": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "PercentAttackDamage",
+                    "mValues": [
+                        2.4000000953674316,
+                        2.4000000953674316,
+                        2.4000000953674316,
+                        2.4000000953674316,
+                        2.4000000953674316,
+                        2.4000000953674316,
+                        2.4000000953674316
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "Heal",
+                    "mValues": [
+                        0.0,
+                        150.0,
+                        175.0,
+                        200.0,
+                        225.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BleedPercentAttackDamage",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mDataValue": "PercentAttackDamage",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedBleedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mDataValue": "BleedPercentAttackDamage",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedHeal": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Heal",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT13_DariusSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT13_DariusSpell_Name",
+                        "keyTooltip": "Spell_TFT13_DariusSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "PercentAttackDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "TFT_AD_PhysicalDamage_Scale",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Heal",
+                                    "nameOverride": "TFT_AP_Heal",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BleedPercentAttackDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT13_DariusSpell_BleedDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Darius/CharacterRecords/Root": {
+        "mCharacterName": "TFT13_Darius",
+        "baseHP": 600.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 220.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 70.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 55.0,
+        "baseArmor": 40.0,
+        "baseSpellBlock": 40.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.699999988079071,
+        "attackSpeedRatio": 0.6000000238418579,
+        "basicAttack": {
+            "mAttackName": "TFT13_DariusBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT13_DariusBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT13_DariusCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT13_DariusSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT13_Darius/Spells/TFT13_DariusSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446664,
+        "tier": 1,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{3b0da442}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{0fc6197b}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{53d104ac}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 30.0,
+        "mShopData": "{1eb80060}",
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFT13_Darius/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

@@ -1,0 +1,286 @@
+{
+    "Characters/TFT5_KindredWolfCombat/Spells/TFT5_KindredWolfCombat_Spell": {
+        "ObjectName": "TFT5_KindredWolfCombat_Spell",
+        "mScriptName": "TFT5_KindredWolfCombat_Spell",
+        "mSpell": {
+            "flags": 36,
+            "mAffectsTypeFlags": 4618,
+            "DataValues": [
+                {
+                    "mName": "Damage",
+                    "mValues": [
+                        0.0,
+                        300.0,
+                        400.0,
+                        9999.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "Heal",
+                    "mValues": [
+                        0.0,
+                        150.0,
+                        200.0,
+                        9999.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedHeal": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Heal",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT5_KindredWolfCombat_Spell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT5_KindredWolfCombat_Spell_Name",
+                        "keyTooltip": "Spell_TFT5_KindredWolfCombat_Spell_Summary"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Heal",
+                                    "nameOverride": "Spell_ListType_Heal",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_KindredWolfCombat/Spells/TFT5_KindredWolfCombatBasicAttack": {
+        "ObjectName": "TFT5_KindredWolfCombatBasicAttack",
+        "mScriptName": "TFT5_KindredWolfCombatBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3677999973297119,
+            "mSpellRevealsChampion": false,
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 5.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_KindredWolfCombat/Spells/TFT5_KindredWolfCombatBasicAttack_Crit": {
+        "ObjectName": "TFT5_KindredWolfCombatBasicAttack_Crit",
+        "mScriptName": "TFT5_KindredWolfCombatBasicAttack_Crit",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3677999973297119,
+            "mSpellRevealsChampion": false,
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 5.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_KindredWolfCombat/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT5_KindredWolfCombat/CharacterRecords/Root": {
+        "mCharacterName": "TFT5_KindredWolfCombat",
+        "baseHP": 850.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 200.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 20.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 60.0,
+        "baseArmor": 20.0,
+        "baseSpellBlock": 20.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.2999999523162842,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.75,
+        "attackSpeedRatio": 0.75,
+        "basicAttack": {
+            "mAttackName": "TFT5_KindredWolfCombatBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "critAttacks": [
+            {
+                "mAttackName": "TFT5_KindredWolfCombatBasicAttack_Crit",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT5_KindredWolfCombat_Spell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT5_KindredWolfCombat/Spells/TFT5_KindredWolfCombat_Spell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "mLinkedTraits": [
+            {
+                "TraitData": "{02aa2ad8}",
+                "Amount": 0,
+                "mShowInTraitTooltip": false,
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{5d7c669f}",
+        "mUnitInfoCardAttachToBone": "Root",
+        "OmitFromMatchHistory": true,
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

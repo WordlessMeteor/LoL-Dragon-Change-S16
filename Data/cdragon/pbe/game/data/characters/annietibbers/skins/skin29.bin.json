@@ -1,0 +1,549 @@
+{
+    "Characters/AnnieTibbers/Skins/Skin29": {
+        "championSkinName": "AnnieTibbersSkin29",
+        "skinParent": 22,
+        "skinAudioProperties": {
+            "tagEventList": [
+                "AnnieTibbers",
+                "AnnieTibbersSkin22"
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/AnnieTibbers/Animations/Skin22",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/AnnieTibbers/Skins/Skin22/AnnieTibbers_Skin22.skl",
+            "simpleSkin": "ASSETS/Characters/AnnieTibbers/Skins/Skin22/AnnieTibbers_Skin22.skn",
+            "texture": "ASSETS/Characters/AnnieTibbers/Skins/Skin29/AnnieTibbers_Skin29_TX_CM.tex",
+            "skinScale": 1.2000000476837158,
+            "selfIllumination": 0.800000011920929,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "submeshRenderOrder": "Apple, Body, Cloth",
+            "materialOverride": [
+                {
+                    "Material": "Characters/AnnieTibbers/Skins/Skin29/Materials/HKG_MatCap_Translucent_Jelly_inst",
+                    "submesh": "Body",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "Characters/AnnieTibbers/Skins/Skin29/Materials/HKG_MatCap_Translucent_VsSimRef_inst",
+                    "submesh": "Apple",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "defaultAnimations": [
+            "Buffbones",
+            "Healthbar_Shift"
+        ],
+        "idleParticlesEffects": [
+            {
+                "effectKey": "AnnieTibbers_Idle_head",
+                "boneName": "head",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "AnnieTibbers_Idle_body",
+                "boneName": "spine1",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "AnnieTibbers_Idle_arm",
+                "boneName": "R_Elbow",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "AnnieTibbers_Idle_arm",
+                "boneName": "L_Elbow",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "AnnieTibbers_Idle_hand",
+                "boneName": "R_Buffbone_Glb_hand_Loc",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "AnnieTibbers_Idle_hand",
+                "boneName": "L_Buffbone_Glb_hand_Loc",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "AnnieTibbers_Idle_leg",
+                "boneName": "R_KneeLower",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "AnnieTibbers_Idle_leg",
+                "boneName": "L_KneeLower",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "AnnieTibbers_Idle_foot",
+                "boneName": "R_foot",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "AnnieTibbers_Idle_foot",
+                "boneName": "L_foot",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "AnnieTibbers_Idle_Ground",
+                "boneName": "Buffbone_Glb_Ground_Loc",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "iconCircle": "ASSETS/Characters/AnnieTibbers/HUD/bear_Circle.tex",
+        "iconSquare": "ASSETS/Characters/AnnieTibbers/HUD/bear_Square.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 5,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/AnnieTibbers/Skins/Skin29/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/AnnieTibbers/Skins/Skin29/Materials/HKG_MatCap_Translucent_Jelly_inst": {
+        "name": "Characters/AnnieTibbers/Skins/Skin29/Materials/HKG_MatCap_Translucent_Jelly_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/AnnieTibbers/Skins/Skin29/AnnieTibbers_Skin29_TX_CM.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "ASSETS/Characters/AnnieTibbers/Skins/Skin22/AnnieTibbers_Skin22_Apple_MC.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Trans_Color_Tex",
+                "texturePath": "ASSETS/Characters/AnnieTibbers/Skins/Skin29/AnnieTibbers_Skin29_TransCol.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Jelly_Diff_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "BlendMod",
+                "value": [
+                    1.409999966621399,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    6.720160007476807,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Translucent_Val",
+                "value": [
+                    1.6749999523162842,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Nor_Direction",
+                "value": [
+                    -0.20000000298023224,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Nor_Distortion",
+                "value": [
+                    0.6775000095367432,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Nor_Lambert",
+                "value": [
+                    0.8550000190734863,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "BLEND_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_MatCap_Translucent_Jelly",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/AnnieTibbers/Skins/Skin29/Materials/HKG_MatCap_Translucent_VsSimRef_inst": {
+        "name": "Characters/AnnieTibbers/Skins/Skin29/Materials/HKG_MatCap_Translucent_VsSimRef_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Vertex_Deform_Tex",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "BloomMask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "ASSETS/Shared/Materials/MatCap_ToonPlastic.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/AnnieTibbers/Skins/Skin29/AnnieTibbers_Skin29_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "OutlineMask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "iridescentTex",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Bloom_Color",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomValue",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SpecularTintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineController",
+                "value": [
+                    0.10000000149011612,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SpecularPower",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveController",
+                "value": [
+                    1.0,
+                    3.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveStrength",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTexUV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FlipbookSize",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Flipbook_NumberSpeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineBlendValue",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionValue",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "IridescentControl",
+                "value": [
+                    1.0,
+                    0.5,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "VERTEX_DEFORM_TEX_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MATCAP_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEFORM_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TWO_D_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ANIMATION_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MATCAP_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "IRIDESCENCE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_R_MASK_ON_DEFORM",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Outline_MatCap_RMA_VertexDeform",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/AnnieTibbers/Skins/Skin29/Resources": {
+        "resourceMap": {
+            "AnnieTibbers_BA": "Characters/AnnieTibbers/Skins/Skin22/Particles/AnnieTibbers_Skin22_BA",
+            "AnnieTibbers_Idle_arm": "Characters/AnnieTibbers/Skins/Skin22/Particles/AnnieTibbers_Skin22_Idle_arm",
+            "AnnieTibbers_Idle_Avatar": "Characters/AnnieTibbers/Skins/Skin22/Particles/AnnieTibbers_Skin22_Idle_Avatar",
+            "AnnieTibbers_Idle_body": "Characters/AnnieTibbers/Skins/Skin22/Particles/AnnieTibbers_Skin22_Idle_body",
+            "AnnieTibbers_Idle_foot": "Characters/AnnieTibbers/Skins/Skin22/Particles/AnnieTibbers_Skin22_Idle_foot",
+            "AnnieTibbers_Idle_hand": "Characters/AnnieTibbers/Skins/Skin22/Particles/AnnieTibbers_Skin22_Idle_hand",
+            "AnnieTibbers_Idle_head": "Characters/AnnieTibbers/Skins/Skin22/Particles/AnnieTibbers_Skin22_Idle_head",
+            "AnnieTibbers_Idle_leg": "Characters/AnnieTibbers/Skins/Skin22/Particles/AnnieTibbers_Skin22_Idle_leg",
+            "AnnieTibbers_Idle_Ground": "Characters/AnnieTibbers/Skins/Skin22/Particles/AnnieTibbers_Skin22_Idle_Ground",
+            "AnnieTibbers_BA_ArmSwipe_01": "Characters/AnnieTibbers/Skins/Skin22/Particles/AnnieTibbers_Skin22_BA_ArmSwipe_01",
+            "AnnieTibbers_BA_ArmSwipe_02": "Characters/AnnieTibbers/Skins/Skin22/Particles/AnnieTibbers_Skin22_BA_ArmSwipe_02"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/AnnieTibbers/AnnieTibbers.bin",
+        "DATA/Characters/AnnieTibbers/Animations/Skin22.bin",
+        "DATA/AnnieTibbers_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin30.bin"
+    ]
+}

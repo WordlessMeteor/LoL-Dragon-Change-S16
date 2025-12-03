@@ -1,0 +1,697 @@
+{
+    "Characters/Nexus/Skins/Skin25": {
+        "championSkinName": "Nexus_HA_Red",
+        "skinAnimationProperties": {
+            "animationGraphData": "{e2f3c678}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Nexus/Skins/Skin24/Skin01.skl",
+            "simpleSkin": "ASSETS/Characters/Nexus/Skins/Skin24/Skin01.skn",
+            "ReducedBoneSkinning": true,
+            "texture": "ASSETS/Characters/Nexus/Skins/Skin24/HA_nexus_Red.tex",
+            "selfIllumination": 0.5,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "initialSubmeshToHide": "Khai_Destroyed",
+            "materialOverride": [
+                {
+                    "texture": "ASSETS/Characters/Nexus/Skins/Skin24/HA_nexus_red_destroyed.tex",
+                    "submesh": "Khai_Destroyed",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Stone",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "HA_Chaos_Nexus_Idle",
+                "boneName": "Root",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "particleOverride_DeathParticle": "SRU_Chaos_Nexus_Explosion.troy",
+        "iconCircle": "ASSETS/Characters/Nexus/HUD/Nexus_Red_Square.tex",
+        "iconSquare": "ASSETS/Characters/Nexus/HUD/Nexus_Red_Square.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 8,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/Nexus/Skins/Skin25/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/Nexus/Skins/Skin25/Particles/HA_Chaos_Nexus_Idle": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 10.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.800000011920929,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.6000000238418579,
+                                    0.699999988079071,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            10.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 20.0,
+                "emitterName": "sparkles1",
+                "birthOrbitalVelocity": {
+                    "constantValue": [
+                        0.0,
+                        -0.5,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.10000000149011612,
+                                    0.30000001192092896,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.5,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthVelocity": {
+                    "constantValue": [
+                        20.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                20.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        3.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                3.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "emissionMeshScale": 1.100000023841858,
+                "emissionMeshName": "ASSETS/Characters/Nexus/Skins/Skin25/Particles/sru_order_crystalemitter.scb",
+                "blendMode": 4,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        45.0,
+                        45.0,
+                        45.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.800000011920929,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    0.4000000059604645,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                45.0,
+                                45.0,
+                                45.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Nexus/Skins/Skin25/Particles/SRU_Chaos_Sparks.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 0.4000000059604645,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            5.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 15.0,
+                "emitterName": "structureGlow",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Nexus/Skins/Skin25/Particles/sru_structureglow.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.14901961386203766
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Nexus/Skins/Skin25/Particles/SRU_Chaos_Color.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 10.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.6000000238418579,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            10.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 20.0,
+                "emitterName": "Temp_Mesh",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        200.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Nexus/Skins/Skin25/Particles/sru_order_nexus_ambientglowgeo.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "reflectionDefinition": {
+                    "fresnelColor": [
+                        -1.0,
+                        -1.0,
+                        -1.0,
+                        0.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                5.0,
+                                5.0,
+                                5.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Nexus/Skins/Skin25/Particles/SRU_Chaos_wispies.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        -0.10000000149011612,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                -0.10000000149011612,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        1.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "HA_Chaos_Nexus_Idle",
+        "particlePath": "Characters/Nexus/Skins/Skin25/Particles/HA_Chaos_Nexus_Idle",
+        "flags": 193,
+        "buildUpTime": 5.0,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Nexus/Skins/Skin25/Resources": {
+        "resourceMap": {
+            "HA_Order_Nexus_Idle": "Characters/Nexus/Skins/Skin24/Particles/HA_Order_Nexus_Idle",
+            "HA_Order_Nexus_Explosion": "Characters/Nexus/Skins/Skin24/Particles/HA_Order_Nexus_Explosion",
+            "HA_Order_Nexus_ExplosionReduced": "Characters/Nexus/Skins/Skin24/Particles/HA_Order_Nexus_ExplosionReduced",
+            "HA_Chaos_Nexus_Idle": "Characters/Nexus/Skins/Skin25/Particles/HA_Chaos_Nexus_Idle"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/Nexus/Nexus.bin",
+        "DATA/Characters/Nexus/Animations/Root/Skin24.bin",
+        "DATA/Nexus_Skins_Skin24_Skins_Skin25.bin"
+    ]
+}

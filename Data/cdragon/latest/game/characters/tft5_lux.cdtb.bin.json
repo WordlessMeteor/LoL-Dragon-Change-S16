@@ -1,0 +1,1030 @@
+{
+    "Characters/TFT5_Lux/Spells/TFT5_LuxWEmpoweredAttack": {
+        "ObjectName": "TFT5_LuxWEmpoweredAttack",
+        "mScriptName": "TFT5_LuxWEmpoweredAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "LuxBasicAttack",
+            "mAnimationName": "SpellAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.14374999701976776,
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mSpeed": 1600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "TFT5_Lux_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lux/Spells/TFT5_LuxCritAttack": {
+        "ObjectName": "TFT5_LuxCritAttack",
+        "mScriptName": "TFT5_LuxCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "LuxBasicAttack",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.14374999701976776,
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mSpeed": 1600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "TFT5_Lux_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lux/Spells/TFT5_LuxBasicAttack": {
+        "ObjectName": "TFT5_LuxBasicAttack",
+        "mScriptName": "TFT5_LuxBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "LuxBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.1437000036239624,
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "r_hand",
+                    "mSpeed": 1600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "TFT5_Lux_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lux/Spells/TFT5_LuxW": {
+        "ObjectName": "TFT5_LuxW",
+        "mScriptName": "TFT5_LuxW",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAlternateName": "EnchantedCrystalArrow",
+            "mSpellTags": [
+                "Trait_Ultimate"
+            ],
+            "DataValues": [
+                {
+                    "mName": "ShieldAmount",
+                    "mValues": [
+                        200.0,
+                        120.0,
+                        150.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ShieldDuration",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HitDamage",
+                    "mValues": [
+                        40.0,
+                        400.0,
+                        600.0,
+                        1000.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedShieldAmount": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "ShieldAmount",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedHitDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "HitDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "mMinimapIconRotation": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 10.0,
+            "mMissileSpec": {
+                "mMissileWidth": 80.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mStartBoneName": "R_hand",
+                    "mSpeed": 1300.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "mMaximumDistance": 2200.0,
+                        "mTargeterDefinition": {
+                            "__type": "TargeterDefinitionSkipTerrain"
+                        },
+                        "__type": "FixedDistanceIgnoringTerrain"
+                    },
+                    {
+                        "__type": "DestroyOnExitMap"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.5,
+            "missileSpeed": 1600.0,
+            "mLineWidth": 80.0,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT5_LuxW",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT5_LuxW_Name",
+                        "keyTooltip": "Spell_TFT5_LuxW_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "ShieldAmount",
+                                    "nameOverride": "Spell_TFT5_LuxW_Shield",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "HitDamage",
+                                    "nameOverride": "Spell_TFT5_LuxW_TooltipDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_EnchantedCrystalArrow",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lux/Spells/TFT5_LuxPrismaticWaveReturn": {
+        "ObjectName": "TFT5_LuxPrismaticWaveReturn",
+        "mScriptName": "TFT5_LuxPrismaticWaveReturn",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 1029,
+            "mAffectsStatusFlags": 32,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "SpiralBladeMissile",
+            "mCoefficient": 0.75,
+            "mAnimationName": "Spell1",
+            "cooldownTime": [
+                9.0,
+                9.0,
+                9.0,
+                9.0,
+                9.0,
+                9.0,
+                9.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 110.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mProjectTargetToCastRange": true,
+                    "mAcceleration": 1800.0,
+                    "mMinSpeed": 400.0,
+                    "mMaxSpeed": 2400.0,
+                    "mInitialSpeed": 400.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "visibilityComponent": {
+                    "__type": "EnterFOWVisibility"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 10.845000267028809,
+            "missileSpeed": 50.0,
+            "mMissileEffectKey": "TFT5_Lux_W_mis_return",
+            "mLineWidth": 110.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lux/Spells/TFT5_LuxQ": {
+        "ObjectName": "TFT5_LuxQ",
+        "mScriptName": "TFT5_LuxQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAlternateName": "EnchantedCrystalArrow",
+            "mSpellTags": [
+                "Trait_Ultimate"
+            ],
+            "DataValues": [
+                {
+                    "mName": "Damage",
+                    "mValues": [
+                        300.0,
+                        300.0,
+                        400.0,
+                        700.0,
+                        800.0,
+                        800.0,
+                        800.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "StunDuration",
+                    "mValues": [
+                        1.0,
+                        1.5,
+                        2.0,
+                        3.0,
+                        3.0,
+                        3.5,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayTotalTimePercent": -0.75,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "mMinimapIconRotation": true,
+            "castRange": [
+                2200.0,
+                2200.0,
+                2200.0,
+                2200.0,
+                2200.0,
+                2200.0,
+                2200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 10.0,
+            "mMissileSpec": {
+                "mMissileWidth": 80.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mStartBoneName": "R_hand",
+                    "mSpeed": 1300.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "mMaximumDistance": 2200.0,
+                        "mTargeterDefinition": {
+                            "__type": "TargeterDefinitionSkipTerrain"
+                        },
+                        "__type": "FixedDistanceIgnoringTerrain"
+                    },
+                    {
+                        "__type": "DestroyOnExitMap"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.5,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "TFT5_Lux_Q_mis",
+            "mLineWidth": 80.0,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT5_LuxQ",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT5_LuxQ_Name",
+                        "keyTooltip": "Spell_TFT5_LuxQ_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "Damage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "StunDuration",
+                                    "nameOverride": "Spell_ListType_StunDuration",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_EnchantedCrystalArrow",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lux/Spells/TFT5_LuxPrismaticWaveReturnDead": {
+        "ObjectName": "TFT5_LuxPrismaticWaveReturnDead",
+        "mScriptName": "TFT5_LuxPrismaticWaveReturnDead",
+        "mSpell": {
+            "mAffectsTypeFlags": 1029,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "SpiralBladeMissile",
+            "mCoefficient": 0.75,
+            "mAnimationName": "Spell1",
+            "cooldownTime": [
+                9.0,
+                9.0,
+                9.0,
+                9.0,
+                9.0,
+                9.0,
+                9.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "mIsDisabledWhileDead": false,
+            "canOnlyCastWhileDead": true,
+            "mProjectTargetToCastRange": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 110.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mAcceleration": 1800.0,
+                    "mMinSpeed": 400.0,
+                    "mMaxSpeed": 2400.0,
+                    "mInitialSpeed": 400.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "visibilityComponent": {
+                    "__type": "EnterFOWVisibility"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 10.845000267028809,
+            "missileSpeed": 50.0,
+            "mMissileEffectKey": "TFT5_Lux_W_mis_return",
+            "mLineWidth": 110.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lux/Spells/TFT5_LuxPrismaticWaveMissile": {
+        "ObjectName": "TFT5_LuxPrismaticWaveMissile",
+        "mScriptName": "TFT5_LuxPrismaticWaveMissile",
+        "mSpell": {
+            "mAffectsTypeFlags": 1029,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "SpiralBladeMissile",
+            "mCoefficient": 0.75,
+            "mAnimationName": "Spell1",
+            "cooldownTime": [
+                9.0,
+                9.0,
+                9.0,
+                9.0,
+                9.0,
+                9.0,
+                9.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 110.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mAcceleration": -2300.0,
+                    "mMinSpeed": 1000.0,
+                    "mMaxSpeed": 2200.0,
+                    "mInitialSpeed": 2200.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 10.845000267028809,
+            "missileSpeed": 2200.0,
+            "mMissileEffectKey": "TFT5_Lux_W_mis",
+            "mLineWidth": 110.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lux/Spells/TFT5_LuxBasicAttack2": {
+        "ObjectName": "TFT5_LuxBasicAttack2",
+        "mScriptName": "TFT5_LuxBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "LuxBasicAttack",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.1437000036239624,
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "r_hand",
+                    "mSpeed": 1600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "TFT5_Lux_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lux/CharacterRecords/Root": {
+        "mCharacterName": "TFT5_Lux",
+        "baseHP": 650.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 200.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 80.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 40.0,
+        "baseArmor": 25.0,
+        "baseSpellBlock": 25.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 890.0,
+        "attackSpeed": 0.75,
+        "attackSpeedRatio": 0.75,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT5_LuxW",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT5_Lux/Spells/TFT5_LuxW",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "extraSpells": [
+            "TFT5_LuxWEmpoweredAttack",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "{c1984296}": [
+            "Characters/TFT5_Lux/Spells/TFT5_LuxWEmpoweredAttack",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "passiveRange": 2.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 3,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{68e7e492}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{b36c59a6}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{8377a680}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 40.0,
+        "mShopData": "{d290064b}",
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFT5_Lux/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

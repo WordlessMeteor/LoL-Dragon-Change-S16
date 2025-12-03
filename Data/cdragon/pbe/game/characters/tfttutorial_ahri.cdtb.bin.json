@@ -1,0 +1,839 @@
+{
+    "Characters/TFTTutorial_Ahri/Spells/TFTTutorial_AhriBasicAttack": {
+        "ObjectName": "TFTTutorial_AhriBasicAttack",
+        "mScriptName": "TFTTutorial_AhriBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.23579999804496765,
+            "mApplyAttackDamage": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "R_hand",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 1750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.5,
+            "missileSpeed": 1750.0,
+            "mMissileEffectKey": "TFTTutorial_Ahri_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTTutorial_Ahri/Spells/TFTTutorial_AhriCritAttack": {
+        "ObjectName": "TFTTutorial_AhriCritAttack",
+        "mScriptName": "TFTTutorial_AhriCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.23579999804496765,
+            "mApplyAttackDamage": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "R_hand",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 1750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 1750.0,
+            "mMissileEffectKey": "TFTTutorial_Ahri_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTTutorial_Ahri/Spells/TFTTutorial_AhriOrbofDeception": {
+        "ObjectName": "TFTTutorial_AhriOrbofDeception",
+        "mScriptName": "TFTTutorial_AhriOrbofDeception",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        65.0,
+                        90.0,
+                        115.0,
+                        140.0,
+                        165.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "mName": "Damage",
+                    "mValues": [
+                        50.0,
+                        100.0,
+                        200.0,
+                        300.0,
+                        400.0,
+                        500.0,
+                        475.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HexRange",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "mCastTime": 0.5,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayTotalTimePercent": -0.5,
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeDisplayOverride": [
+                880.0,
+                880.0,
+                880.0,
+                880.0,
+                880.0,
+                880.0,
+                880.0
+            ],
+            "castRadius": [
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 1100.0,
+            "mLineWidth": 100.0,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFTTutorial_AhriOrbofDeception",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "tft_character_ahri_ability_name",
+                        "keyTooltip": "tft_character_ahri_ability_description"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "Damage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTTutorial_Ahri/Spells/TFTTutorial_AhriBasicAttack2": {
+        "ObjectName": "TFTTutorial_AhriBasicAttack2",
+        "mScriptName": "TFTTutorial_AhriBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.23579999804496765,
+            "mApplyAttackDamage": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "R_hand",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 1750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.5,
+            "missileSpeed": 1750.0,
+            "mMissileEffectKey": "TFTTutorial_Ahri_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTTutorial_Ahri/Spells/TFTTutorial_AhriOrbReturn": {
+        "ObjectName": "TFTTutorial_AhriOrbReturn",
+        "mScriptName": "TFTTutorial_AhriOrbReturn",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8194,
+            "mAffectsStatusFlags": 32,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        35.0,
+                        55.0,
+                        75.0,
+                        95.0,
+                        115.0,
+                        135.0,
+                        155.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6000000238418579,
+            "cooldownTime": [
+                11.0,
+                11.0,
+                11.0,
+                11.0,
+                11.0,
+                11.0,
+                11.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 100.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mStartBoneName": "root",
+                    "mProjectTargetToCastRange": true,
+                    "mAcceleration": 1900.0,
+                    "mMinSpeed": 60.0,
+                    "mMaxSpeed": 2600.0,
+                    "mInitialSpeed": 60.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "visibilityComponent": {
+                    "__type": "EnterFOWVisibility"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.5,
+            "missileSpeed": 60.0,
+            "mMissileEffectKey": "TFTTutorial_Ahri_Q_mis_02",
+            "mLineWidth": 100.0,
+            "selectionPriority": 1,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTTutorial_Ahri/Spells/TFTTutorial_AhriDefaultOrbVFXBuff": {
+        "ObjectName": "TFTTutorial_AhriDefaultOrbVFXBuff",
+        "mScriptName": "TFTTutorial_AhriDefaultOrbVFXBuff",
+        "__type": "SpellObject"
+    },
+    "Characters/TFTTutorial_Ahri/Spells/TFTTutorial_AhriOrbMissile": {
+        "ObjectName": "TFTTutorial_AhriOrbMissile",
+        "mScriptName": "TFTTutorial_AhriOrbMissile",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        20.0,
+                        50.0,
+                        80.0,
+                        110.0,
+                        140.0,
+                        170.0,
+                        200.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.4000000059604645,
+            "mAnimationName": "Spell1",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 100.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mStartBoneName": "R_hand",
+                    "mAcceleration": -3200.0,
+                    "mMinSpeed": 400.0,
+                    "mMaxSpeed": 2500.0,
+                    "mInitialSpeed": 2500.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.5,
+            "missileSpeed": 2500.0,
+            "mMissileEffectKey": "TFTTutorial_Ahri_Q_mis",
+            "mLineWidth": 100.0,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": true,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTTutorial_Ahri/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFTTutorial_Ahri/CharacterRecords/Root": {
+        "mCharacterName": "TFTTutorial_Ahri",
+        "baseHP": 450.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 65.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 75.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 50.0,
+        "baseArmor": 20.0,
+        "baseSpellBlock": 20.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.5,
+        "baseMoveSpeed": 550.0,
+        "attackRange": 610.0,
+        "attackSpeed": 0.550000011920929,
+        "attackSpeedRatio": 0.550000011920929,
+        "basicAttack": {
+            "mAttackCastTime": 0.75,
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.5,
+                "mAttackName": "TFTTutorial_AhriBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.09946499764919281,
+                "mAttackName": "TFTTutorial_AhriCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFTTutorial_AhriOrbofDeception",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFTTutorial_Ahri/Spells/TFTTutorial_AhriOrbofDeception",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "extraSpells": [
+            "TFTTutorial_AhriOrbMissile",
+            "TFTTutorial_AhriOrbReturn",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "{c1984296}": [
+            "Characters/TFTTutorial_Ahri/Spells/TFTTutorial_AhriOrbMissile",
+            "Characters/TFTTutorial_Ahri/Spells/TFTTutorial_AhriOrbReturn",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "passiveRange": 2.0,
+        "unitTagsString": "Champion",
+        "tier": 2,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{5be47509}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{5ec84734}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{54ffe332}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

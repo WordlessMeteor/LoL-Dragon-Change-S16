@@ -1,0 +1,376 @@
+{
+    "Characters/TFT3_Malphite/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT3_Malphite/Spells/TFT3_MalphiteCritAttack": {
+        "ObjectName": "TFT3_MalphiteCritAttack",
+        "mScriptName": "TFT3_MalphiteCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.15279999375343323,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.149999618530273,
+            "missileSpeed": 1000.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Malphite/Spells/TFT3_MalphiteP": {
+        "ObjectName": "TFT3_MalphiteP",
+        "mScriptName": "TFT3_MalphiteP",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "mName": "PercentHealth",
+                    "mValues": [
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104,
+                        0.699999988079071,
+                        0.550000011920929,
+                        0.6000000238418579,
+                        0.6499999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "SecondsPerRefresh",
+                    "mValues": [
+                        0.0,
+                        9.0,
+                        9.0,
+                        9.0,
+                        9.0,
+                        9.0,
+                        9.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedPercentHealth": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "PercentHealth",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "TooltipShield": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 12,
+                            "mSubpart": {
+                                "mSpellCalculationKey": "ModifiedPercentHealth",
+                                "__type": "{f3cbe7b2}"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mAmmoUsed": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT3_MalphiteP",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT3_MalphiteP_Name",
+                        "keyTooltip": "Spell_TFT3_MalphiteP_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "PercentHealth",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT3_MalphiteP_ShieldAmount",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PercentHealth",
+                                    "nameOverride": "Spell_TFT3_MalphiteP_ShieldTotal",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_MalphiteShield",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Malphite/Spells/TFT3_MalphiteBasicAttack": {
+        "ObjectName": "TFT3_MalphiteBasicAttack",
+        "mScriptName": "TFT3_MalphiteBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "mAlternateName": "MalphiteBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.15279999375343323,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.744999885559082,
+            "missileSpeed": 1000.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Malphite/Spells/TFT3_MalphiteBasicAttack2": {
+        "ObjectName": "TFT3_MalphiteBasicAttack2",
+        "mScriptName": "TFT3_MalphiteBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "mAlternateName": "MalphiteBasicAttack2",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.15279999375343323,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.569999694824219,
+            "missileSpeed": 1000.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Malphite/CharacterRecords/Root": {
+        "mCharacterName": "TFT3_Malphite",
+        "baseHP": 700.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 220.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arBase": 0.0,
+            "arBaseStaticRegen": 0.0,
+            "arHasRegenText": false,
+            "arAllowMaxValueToBeOverridden": true,
+            "arIsShown": false,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 70.0,
+        "baseArmor": 35.0,
+        "baseSpellBlock": 35.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.550000011920929,
+        "attackSpeedRatio": 0.550000011920929,
+        "basicAttack": {
+            "mAttackName": "TFT3_MalphiteBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT3_MalphiteBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT3_MalphiteCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT3_MalphiteP",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT3_Malphite/Spells/TFT3_MalphiteP",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "passiveRange": 3.0,
+        "selectionHeight": 175.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "flags": 9446664,
+        "tier": 1,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{e070c997}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{9eb128cc}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ccf900f}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{6c8732c8}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

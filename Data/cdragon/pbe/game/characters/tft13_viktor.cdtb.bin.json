@@ -1,0 +1,997 @@
+{
+    "{111e4911}": {
+        "ObjectName": "TFT13_ViktorBasicAttack2",
+        "mScriptName": "TFT13_ViktorBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "HexMageBasicAttack",
+            "mAnimationName": "Attack2",
+            "delayCastOffsetPercent": -0.8999999761581421,
+            "bHaveHitEffect": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
+                    "mSpeed": 2300.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 2300.0,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{1f20d3f5}": {
+        "ObjectName": "TFT13_ViktorThreeStarMissile",
+        "mScriptName": "TFT13_ViktorThreeStarMissile",
+        "mSpell": {
+            "flags": 4194556,
+            "mAffectsTypeFlags": 8191,
+            "mAffectsStatusFlags": 120,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        0.0,
+                        80.0,
+                        110.0,
+                        140.0,
+                        170.0,
+                        200.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.0,
+                        12.0,
+                        11.0,
+                        10.0,
+                        9.0,
+                        8.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6000000238418579,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "mCanTriggerChargeSpellWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileChanneling": true,
+            "mIsDisabledWhileDead": false,
+            "mCanMoveWhileChanneling": true,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "{03046674}": true,
+                    "mStartBoneName": "Head",
+                    "mTargetBoneName": "Head",
+                    "mSplineInfo": {
+                        "mUseMissilePositionAsOrigin": true,
+                        "mControlPoint1": [
+                            0.8871554136276245,
+                            0.0,
+                            -0.207866832613945
+                        ],
+                        "mControlPoint2": [
+                            -2.7433574199676514,
+                            0.0,
+                            0.8121177554130554
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mTravelTime": 0.8999999761581421,
+                    "__type": "FixedTimeSplineMovement"
+                },
+                "heightSolver": {
+                    "mAmplitude": 0.699999988079071,
+                    "mNumberOfPeriods": 1.0,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "missileSpeed": 180.0,
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "mTargetingTypeData": {
+                "__type": "TargetOrLocation"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Viktor/Spells/TFT13_ViktorSpell": {
+        "ObjectName": "TFT13_ViktorSpell",
+        "mScriptName": "TFT13_ViktorSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 11269,
+            "mAffectsStatusFlags": 32,
+            "DataValues": [
+                {
+                    "mName": "LaserHexLength",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "LaserMagicDamage",
+                    "mValues": [
+                        40.0,
+                        75.0,
+                        300.0,
+                        2400.0,
+                        9001.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "LaserTrueDamage",
+                    "mValues": [
+                        0.0,
+                        25.0,
+                        90.0,
+                        1000.0,
+                        9001.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "StunDuration",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        3.0,
+                        30.0,
+                        30.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "SpellDamage",
+                    "mValues": [
+                        150.0,
+                        175.0,
+                        700.0,
+                        9999.0,
+                        9999.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "PercentMaxHealthDamage",
+                    "mValues": [
+                        0.10000000149011612,
+                        0.029999999329447746,
+                        0.10000000149011612,
+                        1.0,
+                        1.0,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDeathRayDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "LaserMagicDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedSpellDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "SpellDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "mCastTime": 1.0,
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castConeDistance": 100.0,
+            "missileSpeed": 1400.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT13_ViktorSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT13_ViktorSpell_Name",
+                        "keyTooltip": "Spell_TFT13_ViktorSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "LaserMagicDamage",
+                                    "nameOverride": "Spell_TFT13_ViktorSpell_BADamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "LaserTrueDamage",
+                                    "nameOverride": "Spell_TFT13_ViktorSpell_BaseTrueDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SpellDamage",
+                                    "nameOverride": "Spell_TFT13_ViktorSpell_SpellDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PercentMaxHealthDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT13_ViktorSpell_ChannelDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Viktor/Spells/TFT13_ViktorSpellAttack": {
+        "ObjectName": "TFT13_ViktorSpellAttack",
+        "mScriptName": "TFT13_ViktorSpellAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "HexMageBasicAttack",
+            "mAnimationName": "SpellAttackSelector",
+            "delayCastOffsetPercent": -0.8999999761581421,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 2300.0,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{741ac179}": {
+        "ObjectName": "TFT13_ViktorBasicAttack",
+        "mScriptName": "TFT13_ViktorBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "HexMageBasicAttack",
+            "delayCastOffsetPercent": -0.8999999761581421,
+            "bHaveHitEffect": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
+                    "mSpeed": 2300.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 2300.0,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{90802179}": {
+        "ObjectName": "TFT13_ViktorCritAttack",
+        "mScriptName": "TFT13_ViktorCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "HexMageCritAttack",
+            "mAnimationName": "Crit",
+            "delayCastOffsetPercent": -0.8999999761581421,
+            "bHaveHitEffect": true,
+            "castRange": [
+                402.0,
+                402.0,
+                402.0,
+                402.0,
+                402.0,
+                402.0,
+                402.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
+                    "mSpeed": 2300.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 2300.0,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{adb10aa4}": {
+        "ObjectName": "TFT13_ViktorSpellLaserMissile",
+        "mScriptName": "TFT13_ViktorSpellLaserMissile",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 80.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "C_ClawMain",
+                    "mSpeed": 100.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "visibilityComponent": {
+                    "mPerceptionBubbleRadius": 750.0,
+                    "__type": "Defaultvisibility"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 16.15999984741211,
+            "missileSpeed": 1050.0,
+            "mMissileEffectKey": "TFT13_Viktor_BA_Laser_Mis",
+            "mLineWidth": 90.0,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{c6ad60b2}": {
+        "ObjectName": "TFT13_ViktorThreeStarMissile3",
+        "mScriptName": "TFT13_ViktorThreeStarMissile3",
+        "mSpell": {
+            "flags": 4194556,
+            "mAffectsTypeFlags": 8191,
+            "mAffectsStatusFlags": 120,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        0.0,
+                        80.0,
+                        110.0,
+                        140.0,
+                        170.0,
+                        200.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.0,
+                        12.0,
+                        11.0,
+                        10.0,
+                        9.0,
+                        8.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6000000238418579,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "mCanTriggerChargeSpellWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileChanneling": true,
+            "mIsDisabledWhileDead": false,
+            "mCanMoveWhileChanneling": true,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "{03046674}": true,
+                    "mOffsetInitialTargetHeight": 50.0,
+                    "mStartBoneName": "",
+                    "mTravelTime": 0.30000001192092896,
+                    "__type": "FixedTimeMovement"
+                },
+                "heightSolver": {
+                    "mAmplitude": 0.699999988079071,
+                    "mNumberOfPeriods": 1.0,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "missileSpeed": 180.0,
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{c7ad6245}": {
+        "ObjectName": "TFT13_ViktorThreeStarMissile2",
+        "mScriptName": "TFT13_ViktorThreeStarMissile2",
+        "mSpell": {
+            "flags": 4194556,
+            "mAffectsTypeFlags": 8191,
+            "mAffectsStatusFlags": 120,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        0.0,
+                        80.0,
+                        110.0,
+                        140.0,
+                        170.0,
+                        200.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.0,
+                        12.0,
+                        11.0,
+                        10.0,
+                        9.0,
+                        8.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6000000238418579,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "mCanTriggerChargeSpellWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileChanneling": true,
+            "mIsDisabledWhileDead": false,
+            "mCanMoveWhileChanneling": true,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "{03046674}": true,
+                    "mOffsetInitialTargetHeight": 50.0,
+                    "mStartBoneName": "Head",
+                    "mTargetBoneName": "Head",
+                    "mSplineInfo": {
+                        "mUseMissilePositionAsOrigin": true,
+                        "mControlPoint1": [
+                            0.8871554136276245,
+                            0.0,
+                            -0.207866832613945
+                        ],
+                        "mControlPoint2": [
+                            -4.235696315765381,
+                            0.0,
+                            1.3183839321136475
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mTravelTime": 0.8999999761581421,
+                    "__type": "FixedTimeSplineMovement"
+                },
+                "heightSolver": {
+                    "mAmplitude": 0.699999988079071,
+                    "mNumberOfPeriods": 1.0,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "missileSpeed": 180.0,
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "mTargetingTypeData": {
+                "__type": "TargetOrLocation"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Viktor/CharacterRecords/Root": {
+        "mCharacterName": "TFT13_Viktor",
+        "baseHP": 1600.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 300.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 7,
+            "arBaseStaticRegen": 0.0,
+            "arIncrements": 1.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "arDisplayAsPips": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "secondaryAbilityResource": {
+            "arIncrements": 1.0,
+            "arIsShown": false,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 100.0,
+        "baseArmor": 40.0,
+        "baseSpellBlock": 40.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 890.0,
+        "attackSpeed": 0.550000011920929,
+        "attackSpeedRatio": 0.550000011920929,
+        "basicAttack": {
+            "mAttackName": "TFT13_ViktorSpellAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT13_ViktorSpellAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT13_ViktorSpellAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT13_ViktorSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT13_Viktor/Spells/TFT13_ViktorSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 6,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{01bec4e0}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{70ebff95}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{b4621775}",
+        "mManaPerAttack": 0.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFT13_Viktor/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

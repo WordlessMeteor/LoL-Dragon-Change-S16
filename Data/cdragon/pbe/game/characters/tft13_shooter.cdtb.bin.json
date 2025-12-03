@@ -1,0 +1,559 @@
+{
+    "Characters/TFT13_Shooter/Spells/TFT13_ShooterCritAttack": {
+        "ObjectName": "TFT13_ShooterCritAttack",
+        "mScriptName": "TFT13_ShooterCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "JhinCritAttack",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.029999999329447746,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "C_Barrel_Root",
+                    "mSpeed": 3000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.0,
+            "missileSpeed": 3000.0,
+            "mMissileEffectKey": "TFT13_Shooter_BA_Mis_01",
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Shooter/Spells/TFT13_ShooterBasicAttack": {
+        "ObjectName": "TFT13_ShooterBasicAttack",
+        "mScriptName": "TFT13_ShooterBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "JhinBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.029999999329447746,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "C_Barrel_Root",
+                    "mSpeed": 2600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.0,
+            "missileSpeed": 2600.0,
+            "mMissileEffectKey": "TFT13_Shooter_BA_Mis_01",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Shooter/Spells/TFT13_ShooterBasicAttack2": {
+        "ObjectName": "TFT13_ShooterBasicAttack2",
+        "mScriptName": "TFT13_ShooterBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "JhinBasicAttack2",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.029999999329447746,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "C_Barrel_Root",
+                    "mSpeed": 2600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.0,
+            "missileSpeed": 2600.0,
+            "mMissileEffectKey": "TFT13_Shooter_BA_Mis_01",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Shooter/Spells/TFT13_ShooterSpell": {
+        "ObjectName": "TFT13_ShooterSpell",
+        "mScriptName": "TFT13_ShooterSpell",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8192,
+            "DataValues": [
+                {
+                    "mName": "PercentAttackDamage",
+                    "mValues": [
+                        1.350000023841858,
+                        1.25,
+                        1.25,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.350000023841858,
+                        1.350000023841858
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "APDamage",
+                    "mValues": [
+                        0.0,
+                        10.0,
+                        15.0,
+                        25.0,
+                        35.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumOfShots",
+                    "mValues": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "TotalSpellTime",
+                    "mValues": [
+                        1.149999976158142,
+                        1.149999976158142,
+                        1.149999976158142,
+                        1.149999976158142,
+                        1.149999976158142,
+                        1.149999976158142,
+                        1.149999976158142
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ShotsPerSimulatedLaunchAttack",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mSubpart": {
+                                        "mDataValue": "PercentAttackDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "__type": "StatBySubPartCalculationPart"
+                                },
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "APDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castConeDistance": 100.0,
+            "mCastType": 1,
+            "missileSpeed": 1400.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 1,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT13_ShooterSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT13_ShooterSpell_Name",
+                        "keyTooltip": "Spell_TFT13_ShooterSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "APDamage",
+                                    "nameOverride": "TFT_AP_Damage_NoCalculation",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PercentAttackDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "TFT_ADAP_PhysicalDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{60ecca58}": {
+        "ObjectName": "TFT13_ShooterSpellMis",
+        "mScriptName": "TFT13_ShooterSpellMis",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mPreCastLockoutDeltaTime": 0.6000000238418579,
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mApplyAttackDamage": true,
+            "mIsDisabledWhileDead": false,
+            "mCanMoveWhileChanneling": true,
+            "bHaveHitEffect": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                200000.0,
+                200000.0,
+                200000.0,
+                200000.0,
+                200000.0,
+                200000.0,
+                200000.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 40.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTargetHeightAugment": 100.0,
+                    "mStartBoneName": "C_Barrel_Root",
+                    "mProjectTargetToCastRange": true,
+                    "mUseGroundHeightAtTarget": false,
+                    "mAcceleration": -4000.0,
+                    "mMinSpeed": 2500.0,
+                    "mMaxSpeed": 20000.0,
+                    "mInitialSpeed": 2400.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "behaviors": [
+                    {
+                        "__type": "DestroyOnHit"
+                    },
+                    {
+                        "__type": "CastOnHit"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "missileSpeed": 1500.0,
+            "mMissileEffectKey": "TFT13_Shooter_R_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT13_Shooter_R_tar",
+            "mTargetingTypeData": {
+                "__type": "TargetOrLocation"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Shooter/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT13_Shooter/CharacterRecords/Root": {
+        "mCharacterName": "TFT13_Shooter",
+        "baseHP": 500.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 195.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 120.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 50.0,
+        "baseArmor": 15.0,
+        "baseSpellBlock": 15.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 1130.0,
+        "attackSpeed": 0.699999988079071,
+        "attackSpeedRatio": 0.699999988079071,
+        "basicAttack": {
+            "mAttackName": "TFT13_ShooterBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT13_ShooterBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT13_ShooterCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT13_ShooterSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT13_Shooter/Spells/TFT13_ShooterSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 1,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{bfdb1555}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{cd19ca42}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ae695df}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 20.0,
+        "mShopData": "{45fdf186}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

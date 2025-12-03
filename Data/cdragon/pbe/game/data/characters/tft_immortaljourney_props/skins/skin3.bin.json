@@ -1,0 +1,236 @@
+{
+    "Characters/TFT_ImmortalJourney_Props/Skins/Skin3": {
+        "championSkinName": "TFT_ImmortalJourney_Props3",
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/TFT_ImmortalJourney_Props/Animations/Skin3",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TFT_ImmortalJourney_Props/Skins/Skin03/TFT_ImmortalJourney_Props_Skin03.skl",
+            "simpleSkin": "ASSETS/Characters/TFT_ImmortalJourney_Props/Skins/Skin03/TFT_ImmortalJourney_Props_Skin03.skn",
+            "selfIllumination": 2.0,
+            "Material": "Characters/TFT_ImmortalJourney_Props/Skins/Skin3/Materials/Dowsie_Hat02_Base",
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Metal",
+        "mResourceResolver": "Characters/TFT_ImmortalJourney_Props/Skins/Skin3/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/TFT_ImmortalJourney_Props/Skins/Skin3/Materials/Dowsie_Hat02_Base": {
+        "name": "Characters/TFT_ImmortalJourney_Props/Skins/Skin3/Materials/Dowsie_Hat02_Base",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT_ImmortalJourney_Props/Skins/Skin03/TFT_ImmortalJourney_Props_Skin03_TX_01.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Scroll_Texture",
+                "texturePath": "ASSETS/Characters/TFT_ImmortalJourney_Props/Skins/Skin03/TFT_ImmortalJourney_Props_Skin03_TX_02.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Tex",
+                "texturePath": "ASSETS/Characters/TFT_ImmortalJourney_Props/Skins/Skin03/TFT_ImmortalJourney_Props_Skin03Mask01.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "ASSETS/Characters/TFT_ImmortalJourney_Props/Skins/Skin03/TFT_ImmortalJourney_Props_Skin03MatCap.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Vert_Anm_Size",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anm_Offset",
+                "value": [
+                    1.25,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Vert_Ani_Speed",
+                "value": [
+                    0.8500000238418579,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Vert_Anm_Intensity",
+                "value": [
+                    1.7999999523162842,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Speed",
+                "value": [
+                    -0.15000000596046448,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Noisel_Speed",
+                "value": [
+                    -0.15000000596046448,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Noise_Color",
+                "value": [
+                    0.2081483155488968,
+                    0.2890669107437134,
+                    0.6217288374900818,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomIntensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color",
+                "value": [
+                    0.0,
+                    0.6500037908554077,
+                    0.919996976852417,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Sec_Offset",
+                "value": [
+                    0.42750000953674316,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_Jelly",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/TFT_ImmortalJourney_Props/Skins/Skin3/Materials/bunny_MatCap_Glass": {
+        "name": "Characters/TFT_ImmortalJourney_Props/Skins/Skin3/Materials/bunny_MatCap_Glass",
+        "samplerValues": [
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "ASSETS/Characters/TFT_ImmortalJourney_Props/Skins/Skin02/TFT_ImmortalJourney_Props_Skin02MatCap.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_MatCap_Only",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "writeMask": 15,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/TFT_ImmortalJourney_Props/Skins/Skin3/Resources": {
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/TFT_ImmortalJourney_Props/TFT_ImmortalJourney_Props.bin",
+        "DATA/Characters/TFT_ImmortalJourney_Props/Animations/Skin3.bin"
+    ]
+}

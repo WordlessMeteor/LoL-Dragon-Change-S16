@@ -1,0 +1,148 @@
+{
+    "Characters/TFT12_EliseSpider/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT12_EliseSpider/Spells/TFT12_EliseSpiderCritAttack": {
+        "ObjectName": "TFT12_EliseSpiderCritAttack",
+        "mScriptName": "TFT12_EliseSpiderCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "SkarnerCritAttack",
+            "mAnimationName": "Crit",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_EliseSpider/Spells/TFT12_EliseSpiderBasicAttack2": {
+        "ObjectName": "TFT12_EliseSpiderBasicAttack2",
+        "mScriptName": "TFT12_EliseSpiderBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "SkarnerBasicAttack2",
+            "mAnimationName": "Attack2",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_EliseSpider/Spells/TFT12_EliseSpiderBasicAttack": {
+        "ObjectName": "TFT12_EliseSpiderBasicAttack",
+        "mScriptName": "TFT12_EliseSpiderBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "SkarnerBasicAttack",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRadius": [
+                385.0,
+                385.0,
+                385.0,
+                385.0,
+                385.0,
+                385.0,
+                385.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_EliseSpider/CharacterRecords/Root": {
+        "mCharacterName": "TFT12_EliseSpider",
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 200.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 55.0,
+        "baseSpellBlock": 20.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.800000011920929,
+        "attackSpeedRatio": 0.800000011920929,
+        "basicAttack": {
+            "mAttackName": "TFT12_EliseSpiderBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT12_EliseSpiderBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT12_EliseSpiderCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "useRiotRelationships": true,
+        "flags": 9446656,
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

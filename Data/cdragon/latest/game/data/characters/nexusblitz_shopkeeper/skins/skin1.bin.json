@@ -1,0 +1,65 @@
+{
+    "Characters/NexusBlitz_Shopkeeper/Skins/Skin1": {
+        "championSkinName": "NexusBlitz_ShopkeeperChaos",
+        "loadscreen": {
+            "image": "ASSETS/Characters/PetTurtle/HUD/LoadScreen_Turtle_Jade_Tier2.tex",
+            "__type": "CensoredImage"
+        },
+        "skinAudioProperties": {
+            "tagEventList": [
+                "pet_littlelegend",
+                "pet_turtle",
+                "NexusBlitz_ShopkeeperChaos"
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/NexusBlitz_Shopkeeper/Animations/Skin1",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/NexusBlitz_Shopkeeper/PetTurtle_Tier2.skl",
+            "simpleSkin": "ASSETS/Characters/NexusBlitz_Shopkeeper/PetTurtle_Tier2.skn",
+            "texture": "ASSETS/Characters/NexusBlitz_Shopkeeper/NPC_Pet_Turtle_Base_TX_CM.tex",
+            "skinScale": 0.8999999761581421,
+            "selfIllumination": 0.8999999761581421,
+            "initialSubmeshToHide": "Big_Bubble Bubble",
+            "materialOverride": [
+                {
+                    "texture": "ASSETS/Characters/NexusBlitz_Shopkeeper/NPC_Pet_Turtle_Bubble_Base_TX_CM.tex",
+                    "submesh": "Bubble",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/NexusBlitz_Shopkeeper/NPC_Pet_Turtle_Bubble_Base_TX_CM.tex",
+                    "submesh": "Big_Bubble",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "iconCircle": "ASSETS/Characters/PetTurtle/HUD/Icon_Turtle_Jade_Tier2.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 21,
+            "AlphaOutWhileUntargetable": false,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/NexusBlitz_Shopkeeper/Skins/Skin1/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/NexusBlitz_Shopkeeper/Skins/Skin1/Resources": {
+        "resourceMap": {
+            "Pet_Turtle_Base_Emote_Celebrate_Confetti": "Characters/PetTurtle/Themes/Base/Root/Particles/Pet_Turtle_Base_Emote_Celebrate_Confetti",
+            "Pet_Turtle_Base_Emote_Recall_Dust": "Characters/PetTurtle/Themes/Base/Root/Particles/Pet_Turtle_Base_Emote_Recall_Dust",
+            "Pet_Turtle_Base_Emote_RunVariant1": "Characters/PetTurtle/Themes/Base/Root/Particles/Pet_Turtle_Base_Emote_RunVariant1",
+            "Pet_Turtle_Base_Emote_Taunt_Dust": "Characters/PetTurtle/Themes/Base/Root/Particles/Pet_Turtle_Base_Emote_Taunt_Dust",
+            "PetTurtle_Dance_Bubble": "Characters/PetTurtle/Themes/Base/Tier3/Particles/PetTurtle_Dance_Bubble",
+            "{7ac8c760}": "Characters/PetTurtle/Themes/Base/Tier3/Particles/PetTurtle_Tier3_Idle_Pet_Turtle_Dance"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/NexusBlitz_Shopkeeper/NexusBlitz_Shopkeeper.bin",
+        "DATA/Characters/NexusBlitz_Shopkeeper/Animations/Skin1.bin"
+    ]
+}

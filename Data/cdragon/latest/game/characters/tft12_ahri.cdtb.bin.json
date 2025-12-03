@@ -1,0 +1,1056 @@
+{
+    "Characters/TFT12_Ahri/Spells/TFT12_AhriBasicAttack2": {
+        "ObjectName": "TFT12_AhriBasicAttack2",
+        "mScriptName": "TFT12_AhriBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.23579999804496765,
+            "mApplyAttackDamage": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "R_hand",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 1750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 1750.0,
+            "mMissileEffectKey": "TFT12_Ahri_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{6542cc2e}": {
+        "ObjectName": "TFT12_AhriSpellFoxfireDamageMis",
+        "mScriptName": "TFT12_AhriSpellFoxfireDamageMis",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "AhriFoxFire",
+            "mAnimationName": "",
+            "mImgIconName": [
+                "Annie_Disintegrate.dds"
+            ],
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "canCastOrQueueWhileCasting": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "spine",
+                    "ParametricMovementType": {
+                        "__type": "ParametricMovementType_AngleFromTarget"
+                    },
+                    "MovementEntries": [
+                        {
+                            "MovementSpec": {
+                                "mTargetHeightAugment": 100.0,
+                                "mOffsetInitialTargetHeight": 100.0,
+                                "mStartBoneName": "spine",
+                                "mSplineInfo": {
+                                    "mControlPoint1": [
+                                        -1.325581431388855,
+                                        0.0,
+                                        0.20828114449977875
+                                    ],
+                                    "mControlPoint2": [
+                                        0.9069766998291016,
+                                        0.0,
+                                        0.278048574924469
+                                    ],
+                                    "__type": "HermiteSplineInfo"
+                                },
+                                "mSpeed": 1400.0,
+                                "__type": "FixedSpeedSplineMovement"
+                            },
+                            "__type": "ParametricMovementEntry"
+                        },
+                        {
+                            "value": 90.0,
+                            "MovementSpec": {
+                                "mTargetHeightAugment": 100.0,
+                                "mOffsetInitialTargetHeight": 100.0,
+                                "mStartBoneName": "spine",
+                                "mSplineInfo": {
+                                    "mControlPoint1": [
+                                        -2.04651141166687,
+                                        0.0,
+                                        0.07441860437393188
+                                    ],
+                                    "mControlPoint2": [
+                                        0.11162790656089783,
+                                        0.0,
+                                        -1.1488372087478638
+                                    ],
+                                    "__type": "HermiteSplineInfo"
+                                },
+                                "mSpeed": 1400.0,
+                                "__type": "FixedSpeedSplineMovement"
+                            },
+                            "__type": "ParametricMovementEntry"
+                        },
+                        {
+                            "value": -90.0,
+                            "MovementSpec": {
+                                "mTargetHeightAugment": 100.0,
+                                "mOffsetInitialTargetHeight": 100.0,
+                                "mStartBoneName": "spine",
+                                "mSplineInfo": {
+                                    "mControlPoint1": [
+                                        -0.5930232405662537,
+                                        0.0,
+                                        0.4441860318183899
+                                    ],
+                                    "mControlPoint2": [
+                                        0.48139533400535583,
+                                        0.0,
+                                        -0.09534883499145508
+                                    ],
+                                    "__type": "HermiteSplineInfo"
+                                },
+                                "mSpeed": 1400.0,
+                                "__type": "FixedSpeedSplineMovement"
+                            },
+                            "__type": "ParametricMovementEntry"
+                        },
+                        {
+                            "value": 180.0,
+                            "MovementSpec": {
+                                "mTargetHeightAugment": 100.0,
+                                "mOffsetInitialTargetHeight": 100.0,
+                                "mStartBoneName": "spine",
+                                "mSplineInfo": {
+                                    "mControlPoint1": [
+                                        -1.469767451286316,
+                                        0.0,
+                                        0.35116276144981384
+                                    ],
+                                    "mControlPoint2": [
+                                        1.0976743698120117,
+                                        0.0,
+                                        -0.20232558250427246
+                                    ],
+                                    "__type": "HermiteSplineInfo"
+                                },
+                                "mSpeed": 1400.0,
+                                "__type": "FixedSpeedSplineMovement"
+                            },
+                            "__type": "ParametricMovementEntry"
+                        },
+                        {
+                            "value": -180.0,
+                            "MovementSpec": {
+                                "mTargetHeightAugment": 100.0,
+                                "mOffsetInitialTargetHeight": 100.0,
+                                "mStartBoneName": "spine",
+                                "mSplineInfo": {
+                                    "mControlPoint1": [
+                                        -2.1953487396240234,
+                                        0.0,
+                                        -0.020930230617523193
+                                    ],
+                                    "mControlPoint2": [
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "__type": "HermiteSplineInfo"
+                                },
+                                "mSpeed": 1400.0,
+                                "__type": "FixedSpeedSplineMovement"
+                            },
+                            "__type": "ParametricMovementEntry"
+                        }
+                    ],
+                    "__type": "ParametricMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 1400.0,
+            "mMissileEffectKey": "TFT12_Ahri_W_mis_02",
+            "mHitEffectKey": "TFT12_Ahri_Q_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{7bc4c1ef}": {
+        "ObjectName": "TFT12_AhriSpell_ReturnMis",
+        "mScriptName": "TFT12_AhriSpell_ReturnMis",
+        "mSpell": {
+            "flags": 12,
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "",
+            "mCastTime": 0.25,
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 100.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "root",
+                    "mUseGroundHeightAtTarget": false,
+                    "mAcceleration": 2500.0,
+                    "mMinSpeed": 500.0,
+                    "mMaxSpeed": 2500.0,
+                    "mInitialSpeed": 500.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "missileSpeed": 900.0,
+            "mMissileEffectKey": "TFT12_Ahri_Q_ReturnMis",
+            "mLookAtPolicy": 0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT12_Ahri_Q_tar_02",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_AhriSpell_ReturnMis",
+                    "mFormat": "{fffee0e7}",
+                    "mLists": {
+                        "LevelUp": {
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{8edea7dc}": {
+        "ObjectName": "TFT12_AhriSpellMis",
+        "mScriptName": "TFT12_AhriSpellMis",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "",
+            "mCastTime": 0.25,
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "root",
+                    "mUseGroundHeightAtTarget": false,
+                    "mAcceleration": -1500.0,
+                    "mMinSpeed": 1000.0,
+                    "mMaxSpeed": 2000.0,
+                    "mInitialSpeed": 2000.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "missileSpeed": 1400.0,
+            "mMissileEffectKey": "TFT12_Ahri_Q_mis",
+            "mLookAtPolicy": 0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT12_Ahri_Q_tar_02",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 1,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_AhriSpellMis",
+                    "mFormat": "{fffee0e7}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Ahri/Spells/TFT12_AhriBasicAttack": {
+        "ObjectName": "TFT12_AhriBasicAttack",
+        "mScriptName": "TFT12_AhriBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.23579999804496765,
+            "mApplyAttackDamage": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "R_hand",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 1750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 1750.0,
+            "mMissileEffectKey": "TFT12_Ahri_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Ahri/Spells/TFT12_AhriSpell": {
+        "ObjectName": "TFT12_AhriSpell",
+        "mScriptName": "TFT12_AhriSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 32,
+            "DataValues": [
+                {
+                    "mName": "OrbDamage",
+                    "mValues": [
+                        170.0,
+                        230.0,
+                        345.0,
+                        520.0,
+                        695.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BaseTrueDamage",
+                    "mValues": [
+                        12.0,
+                        15.0,
+                        25.0,
+                        35.0,
+                        45.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BaseFoxfires",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedOrbDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "OrbDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedTrueDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "BaseTrueDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedFoxfires": {
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mDataValue": "BaseFoxfires",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mBuffName": "{5e0526d7}",
+                                    "mCoefficient": 1.0,
+                                    "__type": "BuffCounterByCoefficientCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "mCastTime": 0.25,
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                1250.0,
+                1250.0,
+                1250.0,
+                1250.0,
+                1250.0,
+                1250.0,
+                1250.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 100.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "root",
+                    "mUseGroundHeightAtTarget": false,
+                    "mSpeed": 1400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "castFrame": 11.0,
+            "missileSpeed": 1400.0,
+            "mMissileEffectKey": "TFT12_Ahri_Q_mis",
+            "mHitEffectKey": "TFT12_Ahri_Q_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_AhriSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT12_AhriSpell_Name",
+                        "keyTooltip": "Spell_TFT12_AhriSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "OrbDamage",
+                                    "nameOverride": "Spell_TFT12_AhriSpell_OrbDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseTrueDamage",
+                                    "nameOverride": "Spell_TFT12_AhriSpell_EssenceFlareDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{c5da8096}": {
+        "ObjectName": "TFT12_AhriSpellFoxfireOrbit",
+        "mScriptName": "TFT12_AhriSpellFoxfireOrbit",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 15375,
+            "mAffectsStatusFlags": 32,
+            "mAlternateName": "AhriFoxFire",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        40.0,
+                        90.0,
+                        140.0,
+                        190.0,
+                        240.0,
+                        290.0,
+                        340.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.699999988079071,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castRadius": [
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "chest",
+                    "mAngularVelocity": -1.600000023841858,
+                    "mLinearVelocity": 900.0,
+                    "mLifetime": 30.0,
+                    "__type": "CircleMovement"
+                },
+                "visibilityComponent": {
+                    "mTargetControlsVisibility": true,
+                    "__type": "Defaultvisibility"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 4,
+            "castFrame": 7.5,
+            "missileSpeed": 900.0,
+            "mMissileEffectKey": "TFT12_Ahri_W_mis",
+            "bHaveHitBone": true,
+            "mHitBoneName": "spine",
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Ahri/Spells/TFT12_AhriCritAttack": {
+        "ObjectName": "TFT12_AhriCritAttack",
+        "mScriptName": "TFT12_AhriCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.23579999804496765,
+            "mApplyAttackDamage": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "R_hand",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 1750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 1750.0,
+            "mMissileEffectKey": "TFT12_Ahri_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Ahri/CharacterRecords/Root": {
+        "mCharacterName": "TFT12_Ahri",
+        "baseHP": 550.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 180.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 35.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 35.0,
+        "baseArmor": 20.0,
+        "baseSpellBlock": 20.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 890.0,
+        "attackSpeed": 0.75,
+        "attackSpeedRatio": 0.75,
+        "basicAttack": {
+            "mAttackName": "TFT12_AhriBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT12_AhriBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT12_AhriCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT12_AhriSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT12_Ahri/Spells/TFT12_AhriSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "useRiotRelationships": true,
+        "flags": 9446656,
+        "tier": 2,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{3c9a7e81}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{d02f07af}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{32cdc033}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{eef5fc38}",
+        "MobileHealthBarHeightOverride": 160.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFT12_Ahri/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

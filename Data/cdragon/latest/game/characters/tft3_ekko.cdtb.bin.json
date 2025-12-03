@@ -1,0 +1,487 @@
+{
+    "Characters/TFT3_Ekko/Spells/TFT3_EkkoBasicAttack2": {
+        "ObjectName": "TFT3_EkkoBasicAttack2",
+        "mScriptName": "TFT3_EkkoBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.30000001192092896,
+            "mCantCancelWhileChanneling": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "Spine",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Ekko/Spells/TFT3_EkkoCritAttack": {
+        "ObjectName": "TFT3_EkkoCritAttack",
+        "mScriptName": "TFT3_EkkoCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.30000001192092896,
+            "mCantCancelWhileChanneling": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Ekko/Spells/TFT3_EkkoRDash": {
+        "ObjectName": "TFT3_EkkoRDash",
+        "mScriptName": "TFT3_EkkoRDash",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock"
+            ],
+            "mAnimationName": "Spell3_Attack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castConeAngle": 0.0,
+            "castConeDistance": 0.0,
+            "castFrame": 8.0,
+            "missileSpeed": 0.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "selectionPriority": 1,
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mCastingBreaksStealth": true,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Ekko/Spells/TFT3_EkkoR": {
+        "ObjectName": "TFT3_EkkoR",
+        "mScriptName": "TFT3_EkkoR",
+        "mSpell": {
+            "mAffectsTypeFlags": 6351,
+            "mSpellTags": [
+                ""
+            ],
+            "DataValues": [
+                {
+                    "mName": "BonusDamage",
+                    "mValues": [
+                        200.0,
+                        120.0,
+                        175.0,
+                        2000.0,
+                        1200.0,
+                        1000.0,
+                        1000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BaseDelayBetweenAttacks",
+                    "mValues": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.30000001192092896,
+                        0.15000000596046448,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumAttacks",
+                    "mValues": [
+                        5.0,
+                        5.0,
+                        7.0,
+                        20.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ASSlow",
+                    "mValues": [
+                        0.0,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "SlowDuration",
+                    "mValues": [
+                        7.0,
+                        1.5,
+                        2.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "TooltipDamage",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "BonusDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "FinalAttackDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mDataValue": "TooltipDamage",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mCastTime": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castFrame": 14.0,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT3_EkkoR",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT3_EkkoR_Name",
+                        "keyTooltip": "Spell_TFT3_EkkoR_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "BonusDamage",
+                                    "nameOverride": "Spell_TFT3_EkkoR_BonusDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "NumAttacks",
+                                    "nameOverride": "Spell_TFT3_EkkoR_NumHits",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SlowDuration",
+                                    "nameOverride": "Spell_TFT3_EkkoR_SlowDuration",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Ekko/Spells/TFT3_EkkoBasicAttack": {
+        "ObjectName": "TFT3_EkkoBasicAttack",
+        "mScriptName": "TFT3_EkkoBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.30000001192092896,
+            "mCantCancelWhileChanneling": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "Spine",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Ekko/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT3_Ekko/CharacterRecords/Root": {
+        "mCharacterName": "TFT3_Ekko",
+        "baseHP": 850.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 200.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 150.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 60.0,
+        "baseArmor": 30.0,
+        "baseSpellBlock": 20.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.8999999761581421,
+        "attackSpeedRatio": 0.8999999761581421,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT3_EkkoR",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT3_Ekko/Spells/TFT3_EkkoR",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionHeight": 145.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "flags": 9446664,
+        "tier": 5,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{c86875cd}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{f3cff87b}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{44de5928}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 80.0,
+        "mShopData": "{3a0930e4}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

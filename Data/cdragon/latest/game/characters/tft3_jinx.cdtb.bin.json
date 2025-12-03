@@ -1,0 +1,622 @@
+{
+    "Characters/TFT3_Jinx/Spells/TFT3_JinxPassive": {
+        "ObjectName": "TFT3_JinxPassive",
+        "mScriptName": "TFT3_JinxPassive",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6794,
+            "mAffectsStatusFlags": 8,
+            "mSpellTags": [
+                "Trait_MultiTargetAttack"
+            ],
+            "DataValues": [
+                {
+                    "mName": "HitWindow",
+                    "mValues": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BuffDuration",
+                    "mValues": [
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "AttackSpeedBonus",
+                    "mValues": [
+                        0.4000000059604645,
+                        0.6000000238418579,
+                        0.8500000238418579,
+                        1.25,
+                        1.2000000476837158,
+                        1.399999976158142,
+                        1.600000023841858
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "RocketDamage",
+                    "mValues": [
+                        0.0,
+                        110.0,
+                        165.0,
+                        550.0,
+                        1000.0,
+                        500.0,
+                        600.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "PercentAttackSpeed": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "AttackSpeedBonus",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "RocketDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "None",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mProjectTargetToCastRange": true,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeDisplayOverride": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "castConeAngle": 1.0,
+            "castConeDistance": 10.0,
+            "mCastType": 3,
+            "missileSpeed": 3800.0,
+            "mLineWidth": 20.0,
+            "mLookAtPolicy": 0,
+            "mHitEffectOrientType": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT3_JinxPassive",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT3_JinxPassive_Name",
+                        "keyTooltip": "Spell_TFT3_JinxPassive_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "AttackSpeedBonus",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT3_JinxPassive_AttackSpeedBonus",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "RocketDamage",
+                                    "nameOverride": "Spell_TFT3_JinxPassive_RocketDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Jinx/Spells/TFT3_JinxCritAttack": {
+        "ObjectName": "TFT3_JinxCritAttack",
+        "mScriptName": "TFT3_JinxCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "JinxBasicAttack",
+            "delayCastOffsetPercent": -0.08070175349712372,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Buffbone_Glb_Weapon_1",
+                    "mSpeed": 2750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.5,
+            "missileSpeed": 2750.0,
+            "mMissileEffectKey": "TFT3_Jinx_BA_Minigun_Mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Jinx/Spells/TFT3_JinxBasicAttack": {
+        "ObjectName": "TFT3_JinxBasicAttack",
+        "mScriptName": "TFT3_JinxBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "JinxBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "canCastWhileDisabled": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Buffbone_Glb_Weapon_1",
+                    "mSpeed": 2750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.5,
+            "missileSpeed": 2750.0,
+            "mMissileEffectKey": "TFT3_Jinx_BA_Minigun_Mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Jinx/Spells/TFT3_JinxBasicAttack2": {
+        "ObjectName": "TFT3_JinxBasicAttack2",
+        "mScriptName": "TFT3_JinxBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "JinxBasicAttack",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "canCastWhileDisabled": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Buffbone_Glb_Weapon_1",
+                    "mSpeed": 2750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.5,
+            "missileSpeed": 2750.0,
+            "mMissileEffectKey": "TFT3_Jinx_BA_Minigun_Mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Jinx/Spells/TFT3_JinxQAttack": {
+        "ObjectName": "TFT3_JinxQAttack",
+        "mScriptName": "TFT3_JinxQAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 6794,
+            "mAlternateName": "JinxQAttack",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        60.0,
+                        90.0,
+                        120.0,
+                        150.0,
+                        180.0,
+                        210.0,
+                        240.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6000000238418579,
+            "mAnimationName": "R_Attack1",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "canCastWhileDisabled": true,
+            "mUseAutoattackCastTimeData": {
+                "__type": "UseAutoattackCastTimeData"
+            },
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "castRadius": [
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0
+            ],
+            "castRadiusSecondary": [
+                280.0,
+                280.0,
+                280.0,
+                280.0,
+                280.0,
+                280.0,
+                280.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 75.0,
+            "mMissileSpec": {
+                "mMissileWidth": 20.0,
+                "movementComponent": {
+                    "mStartBoneName": "Cstm_Buffbone_Rocket_Launcher",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 1650.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "mGravity": 2500.0,
+                    "__type": "GravityHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "TFT3_Jinx_BA_Rocket_mis",
+            "mLineWidth": 20.0,
+            "mHitEffectOrientType": 2,
+            "mHitBoneName": "R_hand",
+            "selectionPriority": 1,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 2,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "overrideRadius": {
+                            "mPerLevelValues": [
+                                280.0,
+                                280.0,
+                                280.0,
+                                280.0,
+                                280.0,
+                                280.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Jinx/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT3_Jinx/CharacterRecords/Root": {
+        "mCharacterName": "TFT3_Jinx",
+        "baseHP": 600.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 170.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arBase": 0.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 75.0,
+        "baseArmor": 25.0,
+        "baseSpellBlock": 25.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 890.0,
+        "attackSpeed": 0.800000011920929,
+        "attackSpeedRatio": 0.800000011920929,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT3_JinxPassive",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT3_Jinx/Spells/TFT3_JinxPassive",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionHeight": 160.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 4,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{e070c997}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{ba23a3ea}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{7009cb66}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{034cfaad}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

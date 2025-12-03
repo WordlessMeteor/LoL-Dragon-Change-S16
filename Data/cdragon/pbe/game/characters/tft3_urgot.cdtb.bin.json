@@ -1,0 +1,520 @@
+{
+    "Characters/TFT3_Urgot/Spells/TFT3_UrgotCritAttack": {
+        "ObjectName": "TFT3_UrgotCritAttack",
+        "mScriptName": "TFT3_UrgotCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Crit",
+            "bHaveHitEffect": true,
+            "castRange": [
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 150.0,
+                    "mOffsetInitialTargetHeight": 150.0,
+                    "mStartBoneName": "UpperBarrel",
+                    "mSpeed": 2500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 2500.0,
+            "mMissileEffectKey": "TFT3_Urgot_BA_mis2",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Urgot/Spells/TFT3_UrgotR": {
+        "ObjectName": "TFT3_UrgotR",
+        "mScriptName": "TFT3_UrgotR",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "DataValues": [
+                {
+                    "mName": "ManaCostReduction",
+                    "mValues": [
+                        0.0,
+                        20.0,
+                        30.0,
+                        120.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ChannelDuration",
+                    "mValues": [
+                        0.0,
+                        3.0,
+                        2.0,
+                        1.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "FearDuration",
+                    "mValues": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.100000023841858,
+                        1.100000023841858,
+                        1.100000023841858,
+                        1.100000023841858
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "TrueDamage",
+                    "mValues": [
+                        2000.0,
+                        2000.0,
+                        2000.0,
+                        10000.0,
+                        10000.0,
+                        10000.0,
+                        10000.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedManaCostReduction": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "ManaCostReduction",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 1.0,
+            "mAnimationName": "Spell4",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeDisplayOverride": [
+                1150.0,
+                1150.0,
+                1150.0,
+                1150.0,
+                1150.0,
+                1150.0,
+                1150.0
+            ],
+            "castRadius": [
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 50.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "neck",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnHit"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.699999809265137,
+            "missileSpeed": 1400.0,
+            "mMissileEffectKey": "TFT3_Urgot_R_Tracker_mis",
+            "selectionPriority": 1,
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT3_UrgotR",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyTooltip": "Spell_TFT3_UrgotR_Tooltip",
+                        "keyName": "Spell_TFT3_UrgotR_Name"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "ChannelDuration",
+                                    "nameOverride": "Spell_TFT3_UrgotR_ReelDuration",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ManaCostReduction",
+                                    "nameOverride": "Spell_TFT3_UrgotR_ManaCostReduction",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Urgot/Spells/TFT3_UrgotBasicAttack2": {
+        "ObjectName": "TFT3_UrgotBasicAttack2",
+        "mScriptName": "TFT3_UrgotBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack2",
+            "castRangeUseBoundingBoxes": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 150.0,
+                    "mOffsetInitialTargetHeight": 150.0,
+                    "mStartBoneName": "UpperBarrel",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+                    "mSpeed": 2500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 2500.0,
+            "mMissileEffectKey": "TFT3_Urgot_BA_mis2",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Urgot/Spells/TFT3_UrgotRRecastMissile": {
+        "ObjectName": "TFT3_UrgotRRecastMissile",
+        "mScriptName": "TFT3_UrgotRRecastMissile",
+        "mSpell": {
+            "flags": 4194468,
+            "mAffectsTypeFlags": 4106,
+            "mAffectsStatusFlags": 160,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAnimationName": "Spell2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mDoesntBreakChannels": true,
+            "mShowChannelBar": false,
+            "alwaysSnapFacing": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 80.0,
+                "movementComponent": {
+                    "mStartBoneName": "Root_Body",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mAcceleration": 3000.0,
+                    "mMinSpeed": 3000.0,
+                    "mMaxSpeed": 3000.0,
+                    "mInitialSpeed": 3000.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "heightSolver": {
+                    "__type": "FollowTerrainHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.5,
+            "missileSpeed": 3000.0,
+            "mMissileEffectKey": "TFT3_Urgot_R_mis",
+            "mLineWidth": 80.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Urgot/Spells/TFT3_UrgotBasicAttack": {
+        "ObjectName": "TFT3_UrgotBasicAttack",
+        "mScriptName": "TFT3_UrgotBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "castRangeUseBoundingBoxes": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 150.0,
+                    "mOffsetInitialTargetHeight": 150.0,
+                    "mStartBoneName": "UpperBarrel",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+                    "mSpeed": 2500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 2500.0,
+            "mMissileEffectKey": "TFT3_Urgot_BA_mis2",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Urgot/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT3_Urgot/CharacterRecords/Root": {
+        "mCharacterName": "TFT3_Urgot",
+        "baseHP": 950.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 210.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 120.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 80.0,
+        "baseArmor": 40.0,
+        "baseSpellBlock": 40.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 420.0,
+        "attackSpeed": 0.699999988079071,
+        "attackSpeedRatio": 0.699999988079071,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT3_UrgotR",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT3_Urgot/Spells/TFT3_UrgotR",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "passiveRange": 4.0,
+        "selectionHeight": 0.0,
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "tier": 5,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{36e3b5a0}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{5afc3539}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{32cdc033}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 50.0,
+        "mShopData": "{af930d5d}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

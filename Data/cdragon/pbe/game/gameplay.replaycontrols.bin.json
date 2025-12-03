@@ -1,0 +1,234 @@
+{
+    "ClientStates/Gameplay/UX/LoL/ReplayControls": {
+        "PathHashToSelf": "clientstates/gameplay/ux/lol/replaycontrols",
+        "BaseLoadable": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase",
+        "Record": {
+            "Button": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/Record_Button",
+            "HotkeyEventString": "evtToggleVC",
+            "DefaultTooltipKey": "MomentsUI_tooltip_RecordStart",
+            "SelectedTooltipKey": "MomentsUI_tooltip_RecordStop",
+            "__type": "ReplayControlsButton"
+        },
+        "Play": {
+            "Button": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/Play_Button",
+            "HotkeyEventString": "evtToggleReplayPause",
+            "DefaultTooltipKey": "MomentsUI_tooltip_Play",
+            "SelectedTooltipKey": "MomentsUI_tooltip_Pause",
+            "__type": "ReplayControlsButton"
+        },
+        "SpeedUp": {
+            "Button": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/SpeedUp_Button",
+            "HotkeyEventString": "evtIncreaseReplaySpeed",
+            "DefaultTooltipKey": "MomentsUI_tooltip_SpeedUp",
+            "__type": "ReplayControlsButton"
+        },
+        "SpeedDown": {
+            "Button": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/SpeedDown_Button",
+            "HotkeyEventString": "evtDecreaseReplaySpeed",
+            "DefaultTooltipKey": "MomentsUI_tooltip_SlowDown",
+            "__type": "ReplayControlsButton"
+        },
+        "SkipBack": {
+            "Button": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/SkipBack_Button",
+            "HotkeyEventString": "evtJumpBack",
+            "DefaultTooltipKey": "MomentsUI_tooltip_JumpBack",
+            "__type": "ReplayControlsButton"
+        },
+        "ReplaySlider": {
+            "Slider": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/ReplaySlider",
+            "SliderBackdrop": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/ReplaySlider/ReplaySlider_Backdrop",
+            "SliderProgressBar": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_FurthestViewedProgress",
+            "Tooltip": {
+                "EventBackdrop": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip/TimeLineTooltipBg",
+                "SceneHandle": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip",
+                "TimeBackdropHandle": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip/TimeLineTooltipBg_Time",
+                "TimeTextHandle": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip/TimeLineTooltip_TimeText",
+                "ReplayEventLineBaseIcons": {
+                    "TeamHighlight0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip/TimeLineTooltip_HighlightT0",
+                    "TeamHighlight1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip/TimeLineTooltip_HighlightT1",
+                    "FrameLeft": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip/TimeLineTooltip_FrameLeft",
+                    "FrameRight": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip/TimeLineTooltip_FrameRight",
+                    "FrameCenter": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip/TimeLineTooltip_FrameCenter",
+                    "IconLeft": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip/TimeLineTooltip_IconLeft",
+                    "IconRight": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip/TimeLineTooltip_IconRight",
+                    "IconCenter": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip/TimeLineTooltip_IconCenter",
+                    "IconKill": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLineTooltip/TimeLineTooltip_IconKill",
+                    "__type": "HudReplayEventLineBaseIcons"
+                },
+                "__type": "HudReplayEventTooltip"
+            },
+            "__type": "HudReplaySlider"
+        },
+        "SceneHandle": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls",
+        "BackdropLite": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/ReplayControlsBgLite",
+        "BackdropFull": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/ReplayControlsBgFull",
+        "PlaybackSpeedTextHandle": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/PlaybackSpeed_Text",
+        "MessageTextHandle": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/ReplayControlsMessageText",
+        "RecordingActiveMessage": "MomentsUI_RecMsg_Active",
+        "RecordingCompleteToPathMessage": "MomentsUI_RecMsg_CompleteToPath",
+        "RecordingErrorMessage": "MomentsUI_RecMsg_Error",
+        "TooltipHandle": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/ReplayControlsTooltip",
+        "__type": "ReplayControlsViewController"
+    },
+    "{00b8c752}": {
+        "mIconDataPriorityList": [
+            {
+                "mType": "OnChampionKill",
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_KillTick_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_KillTick_T1",
+                "mElementSpacer": -1.0,
+                "mElementAlphaDefault": 80.0,
+                "mElementAlphaSelected": 200.0,
+                "mElementAlphaUnselected": 40.0,
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "OnChampionTripleKill",
+                "mTooltipStyle": 0,
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_TripleKill_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_TripleKill_T1",
+                "mElementSpacer": 1.399999976158142,
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "OnChampionQuadraKill",
+                "mTooltipStyle": 0,
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_QuadraKill_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_QuadraKill_T1",
+                "mElementSpacer": 1.600000023841858,
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "OnChampionPentaKill",
+                "mTooltipStyle": 0,
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_PentaKill_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_PentaKill_T1",
+                "mElementSpacer": 1.7999999523162842,
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "OnTurretKill",
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_TurretIcon_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_TurretIcon_T1",
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "Dragon",
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_DragonIcon_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_DragonIcon_T1",
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "Baron",
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_BaronIcon_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_BaronIcon_T1",
+                "mElementSpacer": 1.2000000476837158,
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "OnDampenerKill",
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_InhibitorIcon_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_InhibitorIcon_T1",
+                "mElementSpacer": 1.2000000476837158,
+                "mTooltipIconNames": [
+                    "ASSETS/UX/Spectator/Inhibitor_Red_Square.tex",
+                    "ASSETS/UX/Spectator/Inhibitor_Blue_Square.tex"
+                ],
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "KINGPORO",
+                "mTooltipStyle": 1,
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_PoroKingIcon_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_PoroKingIcon_T1",
+                "mElementSpacer": 1.2000000476837158,
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "AscXerath",
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_AscXerath_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_AscXerath_T1",
+                "mElementSpacer": 1.2000000476837158,
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "{58c9cf49}",
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_AssassinMode_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_AssassinMode_T1",
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "{929b5084}",
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_AssassinMode_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_AssassinMode_T1",
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "{229a1bac}",
+                "mTooltipStyle": 0,
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_DarkStar_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_DarkStar_T1",
+                "mElementSpacer": 1.2000000476837158,
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "{a2f5a276}",
+                "mTooltipStyle": 0,
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_Event_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_Event_T1",
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "{875e9d15}",
+                "mTooltipStyle": 0,
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_EventSmall_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_EventSmall_T1",
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "{a1434f02}",
+                "mTooltipStyle": 0,
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_EncounterStart_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_EncounterStart_T1",
+                "mElementSpacer": 1.2000000476837158,
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "{4bfbe705}",
+                "mTooltipStyle": 0,
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_EncounterFinish_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_EncounterFinish_T1",
+                "mElementSpacer": 1.2000000476837158,
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "{9ae9b0a6}",
+                "mTooltipStyle": 0,
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_EncounterKaynFinish_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_EncounterKaynFinish_T1",
+                "mElementSpacer": 1.2000000476837158,
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "CherryOnCombatRoundStart",
+                "mTooltipStyle": 0,
+                "ElementT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_CherryOnCombatRoundStart_T0",
+                "ElementT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_CherryOnCombatRoundStart_T0",
+                "__type": "HudReplaySliderIconData"
+            },
+            {
+                "mType": "{739f6998}",
+                "mTooltipStyle": 0,
+                "ElementTextT0": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_Round_T1",
+                "ElementTextT1": "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase/ReplayControls/TimeLine_Round_T1",
+                "__type": "HudReplaySliderIconData"
+            }
+        ],
+        "__type": "HudReplaySliderData"
+    },
+    "ClientStates/Gameplay/UX/LoL/ReplayControls/UIBase": {
+        "FilepathHash": "clientstates/gameplay/ux/lol/replaycontrols/uibase",
+        "__type": "UiPropertyLoadable"
+    },
+    "__linked": []
+}

@@ -1,0 +1,1157 @@
+{
+    "{2afcbf3b}": {
+        "ObjectName": "TFT12_AkaliCritAttack",
+        "mScriptName": "TFT12_AkaliCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "AkaliBasicAttack",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3506999909877777,
+            "mPostCastLockoutDeltaTime": 0.10000000149011612,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 467.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{5f38b16f}": {
+        "ObjectName": "TFT12_AkaliSpellAttack",
+        "mScriptName": "TFT12_AkaliSpellAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "AkaliBasicAttack",
+            "mAnimationName": "SpellAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3506999909877777,
+            "mPostCastLockoutDeltaTime": 0.10000000149011612,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 467.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Akali/Spells/TFT12_AkaliSpell": {
+        "ObjectName": "TFT12_AkaliSpell",
+        "mScriptName": "TFT12_AkaliSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 13327,
+            "mAffectsStatusFlags": 32,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "DataValues": [
+                {
+                    "mName": "ADScaleDamage",
+                    "mValues": [
+                        2.799999952316284,
+                        2.799999952316284,
+                        2.799999952316284,
+                        2.799999952316284,
+                        2.799999952316284,
+                        2.799999952316284,
+                        2.799999952316284
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "DashHexRange",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "AutoDamageAP",
+                    "mValues": [
+                        20.0,
+                        30.0,
+                        45.0,
+                        70.0,
+                        95.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumAttacks",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "AutoDamageAD",
+                    "mValues": [
+                        1.350000023841858,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.7000000476837158,
+                        1.7000000476837158
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{4f4d8cb1}": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "AutoDamageAP",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedDashDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mSubpart": {
+                                "mDataValue": "ADScaleDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalAutoDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mSubpart": {
+                                        "mDataValue": "AutoDamageAD",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "__type": "StatBySubPartCalculationPart"
+                                },
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "AutoDamageAP",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.5,
+            "mCoefficient2": 0.699999988079071,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayTotalTimePercent": -0.75,
+            "mAmmoUsed": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mAmmoNotAffectedByCDR": true,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "mSpellRevealsChampion": false,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                2650.0,
+                2650.0,
+                2650.0,
+                2650.0,
+                2650.0,
+                2650.0,
+                2650.0
+            ],
+            "castRangeDisplayOverride": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 1200.0,
+            "mLineWidth": 70.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "selectionPriority": 2,
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_AkaliSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT12_AkaliSpell_Name",
+                        "keyTooltip": "Spell_TFT12_AkaliSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "ADScaleDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT12_AkaliSpell_Damage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "AutoDamageAD",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT12_AkaliSpell_AutoAD",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "AutoDamageAP",
+                                    "nameOverride": "Spell_TFT12_AkaliSpell_AutoDamageAP",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "nameOverride": "Spell_TFT12_AkaliSpell_BonusDamage",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "centerLocator": {
+                            "basePosition": 6,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                145.0,
+                                145.0,
+                                145.0,
+                                145.0,
+                                145.0,
+                                145.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                740.0,
+                                740.0,
+                                740.0,
+                                740.0,
+                                740.0,
+                                740.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureTargetOverrideName": "ASSETS/Spells/Textures/Blank_Indicator.tex",
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{b4b29c90}": {
+        "ObjectName": "TFT12_AkaliSpell_Mis3",
+        "mScriptName": "TFT12_AkaliSpell_Mis3",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "EzrealMysticShotMissile",
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castRangeDisplayOverride": [
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mStartBoneName": "R_Kunai_Spawn_b",
+                    "mSpeed": 3200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.53000020980835,
+            "missileSpeed": 3200.0,
+            "mMissileEffectKey": "TFT12_Akali_Q_Mis",
+            "mLineWidth": 60.0,
+            "mHitEffectName": "Ezreal_base_Q_tar.troy",
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{b5b29e23}": {
+        "ObjectName": "TFT12_AkaliSpell_Mis2",
+        "mScriptName": "TFT12_AkaliSpell_Mis2",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "EzrealMysticShotMissile",
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castRangeDisplayOverride": [
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mStartBoneName": "L_Kunai_Spawn_b",
+                    "mSpeed": 3200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.53000020980835,
+            "missileSpeed": 3200.0,
+            "mMissileEffectKey": "TFT12_Akali_Q_Mis",
+            "mLineWidth": 60.0,
+            "mHitEffectName": "Ezreal_base_Q_tar.troy",
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{b6b29fb6}": {
+        "ObjectName": "TFT12_AkaliSpell_Mis1",
+        "mScriptName": "TFT12_AkaliSpell_Mis1",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "EzrealMysticShotMissile",
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castRangeDisplayOverride": [
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mStartBoneName": "R_Kunai_Spawn_a",
+                    "mSpeed": 3200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.53000020980835,
+            "missileSpeed": 3200.0,
+            "mMissileEffectKey": "TFT12_Akali_Q_Mis",
+            "mLineWidth": 60.0,
+            "mHitEffectName": "Ezreal_base_Q_tar.troy",
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{b7b2a149}": {
+        "ObjectName": "TFT12_AkaliSpell_Mis0",
+        "mScriptName": "TFT12_AkaliSpell_Mis0",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "EzrealMysticShotMissile",
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castRangeDisplayOverride": [
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mStartBoneName": "L_Kunai_Spawn_a",
+                    "mSpeed": 3200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.53000020980835,
+            "missileSpeed": 3200.0,
+            "mMissileEffectKey": "TFT12_Akali_Q_Mis",
+            "mLineWidth": 60.0,
+            "mHitEffectName": "Ezreal_base_Q_tar.troy",
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "15": "Play_sfx_tft12_AkaliSpell_Mis_OnCast",
+                "13": "Play_sfx_tft12_AkaliSpell_Mis_OnHit"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{bab2a602}": {
+        "ObjectName": "TFT12_AkaliSpell_Mis5",
+        "mScriptName": "TFT12_AkaliSpell_Mis5",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "EzrealMysticShotMissile",
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castRangeDisplayOverride": [
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mStartBoneName": "R_Kunai_Spawn_c",
+                    "mSpeed": 3200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.53000020980835,
+            "missileSpeed": 3200.0,
+            "mMissileEffectKey": "TFT12_Akali_Q_Mis",
+            "mLineWidth": 60.0,
+            "mHitEffectName": "Ezreal_base_Q_tar.troy",
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{bbb2a795}": {
+        "ObjectName": "TFT12_AkaliSpell_Mis4",
+        "mScriptName": "TFT12_AkaliSpell_Mis4",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "EzrealMysticShotMissile",
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castRangeDisplayOverride": [
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mStartBoneName": "L_Kunai_Spawn_c",
+                    "mSpeed": 3200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.53000020980835,
+            "missileSpeed": 3200.0,
+            "mMissileEffectKey": "TFT12_Akali_Q_Mis",
+            "mLineWidth": 60.0,
+            "mHitEffectName": "Ezreal_base_Q_tar.troy",
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{ea1e0f53}": {
+        "ObjectName": "TFT12_AkaliBasicAttack",
+        "mScriptName": "TFT12_AkaliBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "AkaliBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3500000238418579,
+            "delayTotalTimePercent": -1.0,
+            "mPostCastLockoutDeltaTime": 0.10000000149011612,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.600000381469727,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{ee5235b3}": {
+        "ObjectName": "TFT12_AkaliBasicAttack2",
+        "mScriptName": "TFT12_AkaliBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "AkaliBasicAttack",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3500000238418579,
+            "mPostCastLockoutDeltaTime": 0.10000000149011612,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.600000381469727,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Akali/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT12_Akali/CharacterRecords/Root": {
+        "mCharacterName": "TFT12_Akali",
+        "baseHP": 700.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 195.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 60.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 65.0,
+        "baseArmor": 45.0,
+        "baseSpellBlock": 45.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.75,
+        "attackSpeedRatio": 0.75,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT12_AkaliSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT12_Akali/Spells/TFT12_AkaliSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "passiveRange": 2.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "useRiotRelationships": true,
+        "flags": 9446664,
+        "tier": 2,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{48f0c17f}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{81482cbb}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{e117c7b0}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{14a36a9c}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{8fcb94bc}",
+        "MobileHealthBarHeightOverride": 175.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

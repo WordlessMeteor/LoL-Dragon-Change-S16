@@ -1,0 +1,113 @@
+{
+    "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry": {
+        "PathHashToSelf": "clientstates/loadingscreen/ux/loadingscreenstrawberry",
+        "BaseLoadable": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase",
+        "Scene": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen",
+        "Version": {
+            "VersionText": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LoadingScreen_VersionText",
+            "__type": "VersionString"
+        },
+        "Background": {
+            "Background": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LoadingScreen_Background",
+            "__type": "LoadingScreenGameModeBackground"
+        },
+        "ProgressMeter": {
+            "Meter": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LS_ProgressMeter/LoadingScreen_ProgressMeter",
+            "Text": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LS_ProgressMeter/LoadingScreen_ProgressMeter/LoadingScreen_Progress_Text",
+            "__type": "LoadingScreenProgressMeter"
+        },
+        "Latency": {
+            "Thresholds": [
+                {
+                    "textColor": [
+                        90,
+                        130,
+                        30,
+                        255
+                    ],
+                    "image": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LoadingScreen_Latency/LoadingScreen_LatencyIconGreen",
+                    "__type": "LoadingScreenLatencyThreshold"
+                },
+                {
+                    "Threshold": 150,
+                    "textColor": [
+                        26,
+                        183,
+                        244,
+                        255
+                    ],
+                    "image": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LoadingScreen_Latency/LoadingScreen_LatencyIconYellow",
+                    "__type": "LoadingScreenLatencyThreshold"
+                },
+                {
+                    "Threshold": 250,
+                    "textColor": [
+                        26,
+                        123,
+                        255,
+                        255
+                    ],
+                    "image": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LoadingScreen_Latency/LoadingScreen_LatencyIconOrange",
+                    "__type": "LoadingScreenLatencyThreshold"
+                },
+                {
+                    "Threshold": 350,
+                    "textColor": [
+                        34,
+                        39,
+                        163,
+                        255
+                    ],
+                    "image": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LoadingScreen_Latency/LoadingScreen_LatencyIconRed",
+                    "__type": "LoadingScreenLatencyThreshold"
+                },
+                {
+                    "Threshold": 10000,
+                    "textColor": [
+                        86,
+                        90,
+                        91,
+                        255
+                    ],
+                    "image": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LoadingScreen_Latency/LoadingScreen_LatencyIconGrey",
+                    "__type": "LoadingScreenLatencyThreshold"
+                }
+            ],
+            "Text": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LoadingScreen_Latency/LoadingScreen_LatencyText",
+            "__type": "LoadingScreenLatency"
+        },
+        "Tips": {
+            "TipBodyText": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LoadingScreen_TipBodyText",
+            "CondensedTipIcon": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/CondensedTipIcon",
+            "__type": "LoadingScreenTips"
+        },
+        "VietnameseRatingLabel": {
+            "DeviceUx": 6,
+            "Label": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LS_Watermarks/LoadingScreen_VietnameseRatingLabel",
+            "__type": "UiMetricVietnameseRatingLabel"
+        },
+        "ClashLoadable": "ClientStates/LoadingScreen/UX/LoadingScreenClassic/UIClash",
+        "Clash": {
+            "OrderTeam": {
+                "TeamNameText": "ClientStates/LoadingScreen/UX/LoadingScreenClassic/UIClash/LS_Clash/LS_Clash_T1_TeamName",
+                "TeamtagText": "ClientStates/LoadingScreen/UX/LoadingScreenClassic/UIClash/LS_Clash/LS_Clash_T1_TeamTag",
+                "TeamLogoIcon": "ClientStates/LoadingScreen/UX/LoadingScreenClassic/UIClash/LS_Clash/LS_Clash_T1_TeamLogo",
+                "__type": "LoadingScreenClashTeam"
+            },
+            "ChaosTeam": {
+                "TeamNameText": "ClientStates/LoadingScreen/UX/LoadingScreenClassic/UIClash/LS_Clash/LS_Clash_T2_TeamName",
+                "TeamtagText": "ClientStates/LoadingScreen/UX/LoadingScreenClassic/UIClash/LS_Clash/LS_Clash_T2_TeamTag",
+                "TeamLogoIcon": "ClientStates/LoadingScreen/UX/LoadingScreenClassic/UIClash/LS_Clash/LS_Clash_T2_TeamLogo",
+                "__type": "LoadingScreenClashTeam"
+            },
+            "__type": "LoadingScreenClash"
+        },
+        "{f2af7d00}": "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase/LoadingScreen/LaneAssignmentIconGroup",
+        "__type": "LoadingScreenClassicViewController"
+    },
+    "ClientStates/LoadingScreen/UX/LoadingScreenStrawberry/UIBase": {
+        "FilepathHash": "clientstates/loadingscreen/ux/loadingscreenstrawberry/uibase",
+        "__type": "UiPropertyLoadable"
+    },
+    "__linked": []
+}

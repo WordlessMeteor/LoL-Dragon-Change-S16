@@ -1,0 +1,748 @@
+{
+    "Characters/TFT12_Tristana/Spells/TFT12_TristanaBasicAttack": {
+        "ObjectName": "TFT12_TristanaBasicAttack",
+        "mScriptName": "TFT12_TristanaBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "TristanaBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Buffbone_Glb_Weapon_1",
+                    "mSpeed": 2250.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 6.462500095367432,
+            "missileSpeed": 2250.0,
+            "mMissileEffectKey": "TFT12_Tristana_BA_Mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Tristana/Spells/TFT12_TristanaCritAttack": {
+        "ObjectName": "TFT12_TristanaCritAttack",
+        "mScriptName": "TFT12_TristanaCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "TristanaCritAttack",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Buffbone_Glb_Weapon_1",
+                    "mSpeed": 2250.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 6.462500095367432,
+            "missileSpeed": 2250.0,
+            "mMissileEffectKey": "TFT12_Tristana_BA_Mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{30226590}": {
+        "ObjectName": "TFT12_TristanaRMis",
+        "mScriptName": "TFT12_TristanaRMis",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6282,
+            "mAlternateName": "TristanaCritAttack",
+            "DataValues": [
+                {
+                    "mName": "PercentAD",
+                    "mValues": [
+                        0.0,
+                        2.0,
+                        2.0999999046325684,
+                        2.25,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BonusDamage",
+                    "mValues": [
+                        0.0,
+                        125.0,
+                        150.0,
+                        175.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HexKnockback",
+                    "mValues": [
+                        0.5,
+                        1.0,
+                        2.0,
+                        3.0,
+                        8.0,
+                        16.0,
+                        32.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "StunDuration",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "KnockbackRadius",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "BonusDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "PercentAD",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 1.0,
+                            "mStat": 2,
+                            "__type": "SubPartScaledProportionalToStat"
+                        },
+                        {
+                            "mSubpart": {
+                                "mDataValue": "BonusDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell_Attack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "canCastOrQueueWhileCasting": true,
+            "mApplyMaterialOnHitSound": true,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 75.0,
+                "movementComponent": {
+                    "mTracksTarget": false,
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "weapon",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnHit"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.260000228881836,
+            "missileSpeed": 2250.0,
+            "mMissileEffectKey": "TFT12_Tristana_R_mis",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "TargetOrLocation"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_TristanaRMis",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT6_TristanaR_Name",
+                        "keyTooltip": "Spell_TFT6_TristanaR_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "PercentAD",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_ADScaling",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BonusDamage",
+                                    "nameOverride": "Spell_ListType_BonusDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "HexKnockback",
+                                    "nameOverride": "Spell_TFT6_TristanaR_Knockback",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Tristana/Spells/TFT12_TristanaBasicAttack2": {
+        "ObjectName": "TFT12_TristanaBasicAttack2",
+        "mScriptName": "TFT12_TristanaBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "TristanaBasicAttack2",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Buffbone_Glb_Weapon_1",
+                    "mSpeed": 2250.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 6.462500095367432,
+            "missileSpeed": 2250.0,
+            "mMissileEffectKey": "TFT12_Tristana_BA_Mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Tristana/Spells/TFT12_TristanaSpell": {
+        "ObjectName": "TFT12_TristanaSpell",
+        "mScriptName": "TFT12_TristanaSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 14347,
+            "DataValues": [
+                {
+                    "mName": "PercentAD",
+                    "mValues": [
+                        3.5999999046325684,
+                        3.5999999046325684,
+                        3.5999999046325684,
+                        3.5999999046325684,
+                        3.5999999046325684,
+                        3.5999999046325684,
+                        3.5999999046325684
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BonusDamage",
+                    "mValues": [
+                        25.0,
+                        40.0,
+                        60.0,
+                        90.0,
+                        125.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HexKnockback",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        16.0,
+                        32.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "StunDuration",
+                    "mValues": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "KnockbackRadius",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mSubpart": {
+                                        "mDataValue": "PercentAD",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "__type": "StatBySubPartCalculationPart"
+                                },
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "BonusDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell_Attack",
+            "mCastTime": 0.25,
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.260000228881836,
+            "missileSpeed": 1400.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_TristanaSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT12_TristanaSpell_Name",
+                        "keyTooltip": "Spell_TFT12_TristanaSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "PercentAD",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "TFT_AD_Damage_NoCalculation",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BonusDamage",
+                                    "nameOverride": "TFT_AP_Damage_NoCalculation",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PercentAD",
+                                    "nameOverride": "Spell_TFT12_TristanaSpell_TotalDamage",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Tristana/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT12_Tristana/CharacterRecords/Root": {
+        "mCharacterName": "TFT12_Tristana",
+        "baseHP": 550.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 180.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 45.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 55.0,
+        "baseArmor": 20.0,
+        "baseSpellBlock": 20.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 890.0,
+        "attackSpeed": 0.75,
+        "attackSpeedRatio": 0.75,
+        "basicAttack": {
+            "mAttackName": "TFT12_TristanaBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT12_TristanaBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT12_TristanaCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT12_TristanaSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT12_Tristana/Spells/TFT12_TristanaSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "useRiotRelationships": true,
+        "flags": 9446656,
+        "tier": 2,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{988466bf}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{c39fed5c}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ae695df}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{e5959ac0}",
+        "MobileHealthBarHeightOverride": 140.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

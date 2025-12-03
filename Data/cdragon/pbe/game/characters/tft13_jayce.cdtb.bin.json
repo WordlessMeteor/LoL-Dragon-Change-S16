@@ -1,0 +1,1195 @@
+{
+    "{113c9b5d}": {
+        "ObjectName": "TFT13_JayceSpell_Ranged",
+        "mScriptName": "TFT13_JayceSpell_Ranged",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "mName": "ClosestEnemyPercentAD",
+                    "mValues": [
+                        1.5,
+                        6.25,
+                        6.25,
+                        80.0,
+                        80.0,
+                        2.6500000953674316,
+                        2.6500000953674316
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "AttackSpeed",
+                    "mValues": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.4000000059604645,
+                        3.0,
+                        3.0,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumOfCrystals",
+                    "mValues": [
+                        5.0,
+                        3.0,
+                        3.0,
+                        20.0,
+                        20.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "PercentAttackDamage",
+                    "mValues": [
+                        0.0,
+                        4.0,
+                        4.0,
+                        80.0,
+                        80.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumAlliesAS",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ASDuration",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ReducedSummonHealth",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "FalloffDamagePct",
+                    "mValues": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mDataValue": "PercentAttackDamage",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedTargetDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mSubpart": {
+                                        "mDataValue": "ClosestEnemyPercentAD",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "__type": "StatBySubPartCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedAttackSpeed": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "AttackSpeed",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "mImgIconName": [
+                "ASSETS/Characters/TFT13_Jayce/HUD/Icons2D/Jayce_Ranged.TFT_Set13.dds"
+            ],
+            "mCastTime": 0.25,
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castConeDistance": 100.0,
+            "missileSpeed": 1400.0,
+            "mHitEffectOrientType": 0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT13_JayceSpell_Ranged",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT13_JayceSpell_Ranged_Name",
+                        "keyTooltip": "Spell_TFT13_JayceSpell_Ranged_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "AttackSpeed",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "TFT_AP_AttackSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ClosestEnemyPercentAD",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT13_JayceSpell_Ranged_ClosestEnemyDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PercentAttackDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT13_JayceSpell_Ranged_AOEDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Jayce/Spells/TFT13_JayceCritAttack": {
+        "ObjectName": "TFT13_JayceCritAttack",
+        "mScriptName": "TFT13_JayceCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "GravesBasicAttack",
+            "mAnimationName": "Crit",
+            "mCastTime": 0.10670000314712524,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.05000000074505806,
+            "mApplyAttackDamage": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                485.6000061035156,
+                485.6000061035156,
+                485.6000061035156,
+                485.6000061035156,
+                485.6000061035156,
+                485.6000061035156,
+                284.6000061035156
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mSpeed": 2500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 2500.0,
+            "mMissileEffectName": "rampage.troy",
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Jayce/Spells/TFT13_JayceSpell": {
+        "ObjectName": "TFT13_JayceSpell",
+        "mScriptName": "TFT13_JayceSpell",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 14337,
+            "mAffectsStatusFlags": 192,
+            "DataValues": [
+                {
+                    "mName": "PercentAttackDamage",
+                    "mValues": [
+                        0.0,
+                        6.0,
+                        6.0,
+                        80.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "PercentADSecondaryDamage",
+                    "mValues": [
+                        0.0,
+                        2.5,
+                        2.5,
+                        80.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumAlliesShield",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "Shield",
+                    "mValues": [
+                        0.0,
+                        200.0,
+                        275.0,
+                        1800.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ShieldDuration",
+                    "mValues": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "InitialGateDistanceBehindTheTarget",
+                    "mValues": [
+                        480.0,
+                        480.0,
+                        480.0,
+                        480.0,
+                        480.0,
+                        480.0,
+                        480.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "EnemyFlightDuration",
+                    "mValues": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "FlyingEnemyDamageRadius",
+                    "mValues": [
+                        290.0,
+                        290.0,
+                        290.0,
+                        290.0,
+                        290.0,
+                        290.0,
+                        290.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "MaxEnemySpeed",
+                    "mValues": [
+                        2300.0,
+                        2300.0,
+                        2300.0,
+                        2300.0,
+                        2300.0,
+                        2300.0,
+                        2300.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "MinEnemySpeed",
+                    "mValues": [
+                        1650.0,
+                        1650.0,
+                        1650.0,
+                        1650.0,
+                        1650.0,
+                        1650.0,
+                        1650.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ReducedSummonHealth",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mDataValue": "PercentAttackDamage",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedShield": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Shield",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedSecondaryDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mDataValue": "PercentADSecondaryDamage",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "mImgIconName": [
+                "ASSETS/Characters/TFT13_Jayce/HUD/Icons2D/Jayce_Melee2.TFT_Set13.dds"
+            ],
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castConeDistance": 100.0,
+            "missileSpeed": 1400.0,
+            "mHitEffectOrientType": 0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT13_JayceSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT13_JayceSpell_Name",
+                        "keyTooltip": "Spell_TFT13_JayceSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "Shield",
+                                    "nameOverride": "TFT_AP_Shield",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PercentAttackDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "TFT_AD_PhysicalDamage_Scale",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PercentADSecondaryDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT13_JayceSpell_SecondaryDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{612d5ea1}": {
+        "ObjectName": "TFT13_JayceBasicAttack_Ranged",
+        "mScriptName": "TFT13_JayceBasicAttack_Ranged",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "SamiraBasicAttack",
+            "mAnimationName": "Attack1_Ranged",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mApplyAttackDamage": true,
+            "bHaveHitEffect": true,
+            "mTurnSpeedScalar": 1.7999999523162842,
+            "castRange": [
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
+                    "mSpeed": 2800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 2800.0,
+            "mMissileEffectKey": "TFT13_Jayce_BA_Range",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{6e9e0d49}": {
+        "ObjectName": "TFT13_JayceSpell_RangedMis_DestroyCrystal",
+        "mScriptName": "TFT13_JayceSpell_RangedMis_DestroyCrystal",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 15701,
+            "mAffectsStatusFlags": 240,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "canCastOrQueueWhileCasting": true,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "mMissileSpec": {
+                "mMissileWidth": 70.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
+                    "mTravelTime": 0.20000000298023224,
+                    "__type": "FixedTimeMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 8,
+            "mMissileEffectKey": "TFT13_Jayce_R_Ranged_CrystalDestroyMissile",
+            "mLineWidth": 60.0,
+            "mHitEffectOrientType": 2,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT13_JayceSpell_RangedMis_DestroyCrystal",
+                    "mFormat": "{fffee0e7}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Jayce/Spells/TFT13_JayceBasicAttack2": {
+        "ObjectName": "TFT13_JayceBasicAttack2",
+        "mScriptName": "TFT13_JayceBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "JayceBasicAttack2",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Jayce/Spells/TFT13_JayceBasicAttack": {
+        "ObjectName": "TFT13_JayceBasicAttack",
+        "mScriptName": "TFT13_JayceBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "GarenBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{9e678718}": {
+        "ObjectName": "TFT13_JayceSpell_RangedMis",
+        "mScriptName": "TFT13_JayceSpell_RangedMis",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "canCastOrQueueWhileCasting": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "mMissileSpec": {
+                "mMissileWidth": 70.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
+                    "mTargetBoneName": "C_Buffbone_Glb_Overhead_Loc",
+                    "mTravelTime": 0.5,
+                    "__type": "FixedTimeMovement"
+                },
+                "heightSolver": {
+                    "mGravity": 9000.0,
+                    "__type": "GravityHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "mMissileEffectKey": "TFT13_Jayce_R_Crystal",
+            "mLineWidth": 60.0,
+            "mHitEffectOrientType": 2,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+            "selectionPriority": 1,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT13_JayceSpell_RangedMis",
+                    "mFormat": "{fffee0e7}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{d4873370}": {
+        "ObjectName": "TFT13_JayceEnemyFlightMis",
+        "mScriptName": "TFT13_JayceEnemyFlightMis",
+        "mSpell": {
+            "flags": 12,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 32,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mAmmoUsed": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mShowChannelBar": false,
+            "castRange": [
+                2200.0,
+                2200.0,
+                2200.0,
+                2200.0,
+                2200.0,
+                2200.0,
+                2200.0
+            ],
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 10.0,
+                "movementComponent": {
+                    "mStartBoneName": "",
+                    "mTravelTime": 1.0,
+                    "__type": "FixedTimeMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "TargetOrLocation"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{f1c33fa1}": {
+        "ObjectName": "TFT13_JayceCritAttack_Ranged",
+        "mScriptName": "TFT13_JayceCritAttack_Ranged",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "SamiraCritAttack",
+            "mAnimationName": "Crit_Ranged",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "bHaveHitEffect": true,
+            "mTurnSpeedScalar": 1.7999999523162842,
+            "castRange": [
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
+                    "mSpeed": 2800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 2800.0,
+            "mMissileEffectKey": "TFT13_Jayce_BA_Range",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Jayce/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT13_Jayce/CharacterRecords/Root": {
+        "mCharacterName": "TFT13_Jayce",
+        "baseHP": 900.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 210.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 10.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 50.0,
+        "baseArmor": 0.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.5,
+        "attackSpeedRatio": 0.5,
+        "basicAttack": {
+            "mAttackName": "TFT13_JayceBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT13_JayceBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT13_JayceCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT13_JayceSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT13_Jayce/Spells/TFT13_JayceSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 5,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{f0c36949}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{f255fca3}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{53d104ac}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{9459fcb2}",
+        "{184999c3}": 1,
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

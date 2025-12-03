@@ -1,0 +1,225 @@
+{
+    "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0": {
+        "championSkinName": "NEXUSBLITZ_LootGoblinBase",
+        "metaDataTags": "faction:bandlecity,race:yordle,gender:male",
+        "emoteLoadout": "{133acccf}",
+        "loadscreen": {
+            "image": "ASSETS/Characters/NEXUSBLITZ_LootGoblin/Skins/Base/NEXUSBLITZ_LootGoblinLoadScreen.tex",
+            "__type": "CensoredImage"
+        },
+        "skinAudioProperties": {
+            "tagEventList": [
+                "NexusBlitz_LootGoblin"
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/NEXUSBLITZ_LootGoblin/Animations/Skin0",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/NEXUSBLITZ_LootGoblin/Skins/Base/NEXUSBLITZ_LootGoblin.skl",
+            "simpleSkin": "ASSETS/Characters/NEXUSBLITZ_LootGoblin/Skins/Base/NEXUSBLITZ_LootGoblin.skn",
+            "texture": "ASSETS/Characters/NEXUSBLITZ_LootGoblin/Skins/Base/NEXUSBLITZ_LootGoblin.tex",
+            "skinScale": 1.600000023841858,
+            "selfIllumination": 0.699999988079071,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "initialSubmeshToHide": "Recall",
+            "submeshRenderOrder": "Leaf Hat Body Recall",
+            "materialOverride": [
+                {
+                    "Material": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Materials/NEXUSBLITZ_LootGoblin_Leaf_inst",
+                    "submesh": "Leaf",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "NEXUSBLITZ_LootGoblin_Idle_Leaf",
+                "boneName": "Leaf3",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "NEXUSBLITZ_LootGoblin_Idle_Leaf_2",
+                "boneName": "LeafStem1",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "iconCircle": "ASSETS/Characters/NEXUSBLITZ_LootGoblin/HUD/NEXUSBLITZ_LootGoblin_Circle_0.tex",
+        "iconSquare": "ASSETS/Characters/NEXUSBLITZ_LootGoblin/HUD/NEXUSBLITZ_LootGoblin_Square_0.tex",
+        "emoteBuffbone": "C_BUFFBONE_GLB_HEAD_LOC",
+        "healthBarData": {
+            "hpPerTick": 1000.0,
+            "unitHealthBarStyle": 5,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Materials/NEXUSBLITZ_LootGoblin_Leaf_inst": {
+        "name": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Materials/NEXUSBLITZ_LootGoblin_Leaf_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/NEXUSBLITZ_LootGoblin/Skins/Base/NEXUSBLITZ_LootGoblin.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "ASSETS/Characters/NEXUSBLITZ_LootGoblin/Skins/Base/Particles/Teemo_Skin25_MaterialMask_NexusBlitzSummer2020.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Additive_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Noise_Scale",
+                "value": [
+                    1.0,
+                    3.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Speed",
+                "value": [
+                    0.0,
+                    0.25,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Addative_Color",
+                "value": [
+                    0.0,
+                    0.6823529601097107,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    10.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_color",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "OVERLAY_ADDATIVE",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/ScrollingUVs_Simple",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Resources": {
+        "resourceMap": {
+            "{6449fd99}": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/chill_glb",
+            "NEXUSBLITZ_LootGoblin_BA_cas": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_BA_cas",
+            "NEXUSBLITZ_LootGoblin_BA_mis": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_BA_mis",
+            "NEXUSBLITZ_LootGoblin_BA_tar": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_BA_tar",
+            "NEXUSBLITZ_LootGoblin_E_cas": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_E_cas",
+            "NEXUSBLITZ_LootGoblin_E_mis": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_E_mis",
+            "NEXUSBLITZ_LootGoblin_E_Poison_Child_Explode": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_E_Poison_Child_Explode",
+            "NEXUSBLITZ_LootGoblin_E_Poison": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_E_Poison",
+            "NEXUSBLITZ_LootGoblin_E_tar": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_E_tar",
+            "NEXUSBLITZ_LootGoblin_P_Buf": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_P_Buf",
+            "NEXUSBLITZ_LootGoblin_P_cas": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_P_cas",
+            "NEXUSBLITZ_LootGoblin_Q_cas": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_Q_cas",
+            "NEXUSBLITZ_LootGoblin_Q_debuf": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_Q_debuf",
+            "NEXUSBLITZ_LootGoblin_Q_mis": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_Q_mis",
+            "NEXUSBLITZ_LootGoblin_Q_tar": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_Q_tar",
+            "NEXUSBLITZ_LootGoblin_R_bounce_sound": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_R_bounce_sound",
+            "NEXUSBLITZ_LootGoblin_R_CollisionBox_Ring": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_R_CollisionBox_Ring",
+            "NEXUSBLITZ_LootGoblin_R_CollisionBox_RingEnemy": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_R_CollisionBox_RingEnemy",
+            "NEXUSBLITZ_LootGoblin_R_GroundImpact_Dust": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_R_GroundImpact_Dust",
+            "NEXUSBLITZ_LootGoblin_R_Mis": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_R_Mis",
+            "NEXUSBLITZ_LootGoblin_R_Mis_Bounce": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_R_Mis_Bounce",
+            "NEXUSBLITZ_LootGoblin_R_Mis_Short": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_R_Mis_Short",
+            "NEXUSBLITZ_LootGoblin_R_tar": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_R_tar",
+            "NEXUSBLITZ_LootGoblin_W_buf": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_W_buf",
+            "NEXUSBLITZ_LootGoblin_W_buf2": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_W_buf2",
+            "NEXUSBLITZ_LootGoblin_W_Buf_Weapon": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_W_Buf_Weapon",
+            "NEXUSBLITZ_LootGoblin_Idle_Gold": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Idle_Gold",
+            "NEXUSBLITZ_LootGoblin_Idle_Gold_Child": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Idle_Gold_Child",
+            "NEXUSBLITZ_LootGoblin_Idle_Leaf": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_Idle_Leaf",
+            "NEXUSBLITZ_LootGoblin_Idle_Leaf_2": "Characters/NEXUSBLITZ_LootGoblin/Skins/Skin0/Particles/NEXUSBLITZ_LootGoblin_Base_Idle_Leaf_2"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/NEXUSBLITZ_LootGoblin/NEXUSBLITZ_LootGoblin.bin",
+        "DATA/Characters/NEXUSBLITZ_LootGoblin/Animations/Skin0.bin",
+        "DATA/NEXUSBLITZ_LootGoblin_Skins_Skin0_Skins_Skin14_Skins_Skin3.bin",
+        "DATA/NEXUSBLITZ_LootGoblin_Skins_Skin0_Skins_Skin3.bin"
+    ]
+}

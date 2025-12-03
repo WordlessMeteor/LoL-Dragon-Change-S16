@@ -1,0 +1,595 @@
+{
+    "ClientStates/Gameplay/UX/LoL/KillCallouts": {
+        "PathHashToSelf": "clientstates/gameplay/ux/lol/killcallouts",
+        "BaseLoadable": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase",
+        "ItemSceneTemplate": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0",
+        "MessageTemplate": {
+            "Source": {
+                "Frame": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_KillerFrame",
+                "Portrait": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_KillerPortrait",
+                "__type": "HudCalloutIdentifier"
+            },
+            "Target": {
+                "Frame": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_TargetFrame",
+                "Portrait": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_TargetPortrait",
+                "__type": "HudCalloutIdentifier"
+            },
+            "Assisters": [
+                {
+                    "Frame": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_Assister0Frame",
+                    "Portrait": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_Assister0Portrait",
+                    "__type": "HudCalloutIdentifier"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_Assister1Frame",
+                    "Portrait": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_Assister1Portrait",
+                    "__type": "HudCalloutIdentifier"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_Assister2Frame",
+                    "Portrait": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_Assister2Portrait",
+                    "__type": "HudCalloutIdentifier"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_Assister3Frame",
+                    "Portrait": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_Assister3Portrait",
+                    "__type": "HudCalloutIdentifier"
+                }
+            ],
+            "Background": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_Background",
+            "SlotArea": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_SlotArea",
+            "EventIconKillNormal": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_KillIconNormal",
+            "EventIconKillStreak": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_KillIconStreak",
+            "EventIconKillShutdown": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_KillIconShutdown",
+            "EventIconAltarCapture": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_AltarCaptureIcon",
+            "EventIconReviveAlly": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_ReviveAllyIcon",
+            "EventIconKillBounty": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_KillIconBounty",
+            "{01f03d8c}": {
+                "Frame": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_NotificationFrame",
+                "Portrait": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_NotificationPortrait",
+                "__type": "HudCalloutIdentifier"
+            },
+            "GlobalSpellIcon": {
+                "Frame": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_NotificationTargetFrame",
+                "Portrait": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_NotificationTargetPortrait",
+                "__type": "HudCalloutIdentifier"
+            },
+            "{848b3faa}": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_NotificationFrame_Black",
+            "{20e913e7}": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_NotificationTargetFrame_Black",
+            "{cef418bd}": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_NotificationIcon",
+            "{25799a22}": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_NotificationPulseVFXAlly",
+            "{40cfe5a8}": "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase/KillCallout0/KillCallout0_NotificationPulseVFXEnemy",
+            "__type": "HudKillCalloutTemplateData"
+        },
+        "__type": "KillCalloutsViewController"
+    },
+    "ClientStates/Gameplay/UX/LoL/KillCallouts/Particles/KillCallout0_Enemy_PulseVFX": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 0.800000011920929,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.800000011920929,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 5.0,
+                "emitterName": "silver-ring 1",
+                "colorblindVisibility": 1,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveCameraUnitQuad"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.7490196228027344
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.7538200616836548,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.8901960849761963,
+                                0.0,
+                                0.0,
+                                0.686274528503418
+                            ],
+                            [
+                                0.8899977207183838,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        75.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        76.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.6600000262260437,
+                                0.6600000262260437
+                            ],
+                            [
+                                1.399999976158142,
+                                0.38937827944755554,
+                                0.6183297038078308
+                            ],
+                            [
+                                1.600000023841858,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/UX/Popups/VFX/Ripple_NoShadow.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.18000000715255737,
+                "rate": {
+                    "constantValue": 0.800000011920929,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.4000000059604645,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 5.0,
+                "emitterName": "silver-ring 2",
+                "colorblindVisibility": 1,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveCameraUnitQuad"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.7490196228027344
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.7538200616836548,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.8901960849761963,
+                                0.0,
+                                0.0,
+                                0.686274528503418
+                            ],
+                            [
+                                0.8899977207183838,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        75.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        76.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.4000000059604645,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.6600000262260437,
+                                0.6600000262260437
+                            ],
+                            [
+                                1.2999999523162842,
+                                0.38937827944755554,
+                                0.6183297038078308
+                            ],
+                            [
+                                1.600000023841858,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/UX/Popups/VFX/Ripple_NoShadow.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "KillCallout0_Enemy_PulseVFX",
+        "particlePath": "ClientStates/Gameplay/UX/LoL/KillCallouts/Particles/KillCallout0_Enemy_PulseVFX",
+        "{9836cd87}": 7,
+        "flags": 908,
+        "assetRemappingTable": [
+            {
+                "type": 1,
+                "oldAsset": "{2c98f08a}",
+                "newAsset": "ASSETS/Shared/Particles/PingUpdate/Need/Retreat_CB_128x128.tex",
+                "__type": "VfxAssetRemap"
+            },
+            {
+                "type": 1,
+                "__type": "VfxAssetRemap"
+            }
+        ],
+        "drawingLayer": 1,
+        "hudAnchorPositionFromWorldProjection": false,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/KillCallouts/Particles/KillCallout0_Ally_PulseVFX": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 0.800000011920929,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.800000011920929,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 5.0,
+                "emitterName": "silver-ring 1",
+                "colorblindVisibility": 1,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveCameraUnitQuad"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.7490196228027344
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.7538200616836548,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.6000000238418579,
+                                1.0,
+                                0.686274528503418
+                            ],
+                            [
+                                0.0,
+                                0.6000000238418579,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        75.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        76.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.6600000262260437,
+                                0.6600000262260437
+                            ],
+                            [
+                                1.399999976158142,
+                                0.38937827944755554,
+                                0.6183297038078308
+                            ],
+                            [
+                                1.600000023841858,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/UX/Popups/VFX/Ripple_NoShadow.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.18000000715255737,
+                "rate": {
+                    "constantValue": 0.800000011920929,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.4000000059604645,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 5.0,
+                "emitterName": "silver-ring 2",
+                "colorblindVisibility": 1,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveCameraUnitQuad"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.7490196228027344
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.7538200616836548,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.6000000238418579,
+                                1.0,
+                                0.686274528503418
+                            ],
+                            [
+                                0.0,
+                                0.6000000238418579,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        75.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        76.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.4000000059604645,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.6600000262260437,
+                                0.6600000262260437
+                            ],
+                            [
+                                1.2999999523162842,
+                                0.38937827944755554,
+                                0.6183297038078308
+                            ],
+                            [
+                                1.600000023841858,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/UX/Popups/VFX/Ripple_NoShadow.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "KillCallout0_Ally_PulseVFX",
+        "particlePath": "ClientStates/Gameplay/UX/LoL/KillCallouts/Particles/KillCallout0_Ally_PulseVFX",
+        "{9836cd87}": 7,
+        "flags": 908,
+        "assetRemappingTable": [
+            {
+                "type": 1,
+                "oldAsset": "{2c98f08a}",
+                "newAsset": "ASSETS/Shared/Particles/PingUpdate/Need/Retreat_CB_128x128.tex",
+                "__type": "VfxAssetRemap"
+            },
+            {
+                "type": 1,
+                "__type": "VfxAssetRemap"
+            }
+        ],
+        "drawingLayer": 1,
+        "hudAnchorPositionFromWorldProjection": false,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/KillCallouts/UIBase": {
+        "FilepathHash": "clientstates/gameplay/ux/lol/killcallouts/uibase",
+        "__type": "UiPropertyLoadable"
+    },
+    "__linked": []
+}

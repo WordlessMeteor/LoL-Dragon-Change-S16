@@ -1,0 +1,89 @@
+{
+    "Characters/PetMiner/Skins/Skin16": {
+        "championSkinName": "Pet_Miner_Yellow_Tier1",
+        "loadscreen": {
+            "image": "ASSETS/Characters/PetMiner/HUD/LoadScreen_Miner_Yellow_Tier1.tex",
+            "__type": "CensoredImage"
+        },
+        "skinAudioProperties": {
+            "tagEventList": [
+                "pet_littlelegend",
+                "pet_miner"
+            ],
+            "bankUnits": [
+                {
+                    "name": "Pet_Miner_Base_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Companions/Pets/PetMiner/Base/Pet_Miner_Base_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Companions/Pets/PetMiner/Base/Pet_Miner_Base_SFX_events.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Companions/Pets/PetMiner/Base/Pet_Miner_Base_SFX_audio.wpk"
+                    ],
+                    "events": [
+                        "Play_sfx_Pet_Miner_cast3d",
+                        "Play_sfx_Pet_Miner_celebrate3d",
+                        "Play_sfx_Pet_Miner_damage_hurt3d",
+                        "Play_sfx_Pet_Miner_dance3d_feet",
+                        "Play_sfx_Pet_Miner_danceinto3d",
+                        "Play_sfx_Pet_Miner_death3d",
+                        "Play_sfx_Pet_Miner_idlevar1_3d",
+                        "Play_sfx_Pet_Miner_idlevar2_3d",
+                        "Play_sfx_Pet_Miner_interact3d",
+                        "Play_sfx_Pet_Miner_joke3d",
+                        "Play_sfx_Pet_Miner_laugh3d",
+                        "Play_sfx_Pet_Miner_recall3d",
+                        "Play_sfx_Pet_Miner_taunt3d"
+                    ],
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/PetMiner/Animations/Base",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/PetMiner/Miner_Tier1.skl",
+            "simpleSkin": "ASSETS/Characters/PetMiner/Miner_Tier1.skn",
+            "texture": "ASSETS/Characters/PetMiner/NPC_Pet_Mole_Skin06_TX_CM.tex",
+            "selfIllumination": 0.8999999761581421,
+            "initialSubmeshToHide": "Tomb_Stone_MAT Mole_Hill_MAT",
+            "materialOverride": [
+                {
+                    "texture": "ASSETS/Characters/PetMiner/NPC_Pet_Mole_Tomb06_TX_CM.tex",
+                    "submesh": "Tomb_Stone_MAT",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/PetMiner/NPC_Pet_Mole_Tomb06_TX_CM.tex",
+                    "submesh": "Mole_Hill_MAT",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "EnablePicking": false,
+            "__type": "SkinMeshDataProperties"
+        },
+        "iconCircle": "ASSETS/Characters/PetMiner/HUD/Icon_Miner_Yellow_Tier1.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 21,
+            "AlphaOutWhileUntargetable": false,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/PetMiner/Skins/Skin16/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/PetMiner/Skins/Skin16/Resources": {
+        "resourceMap": {
+            "{2a23b608}": "Characters/PetMiner/Themes/Base/Root/Particles/NPC_PET_Mole_Base_Emote_Celebrate_Confetti",
+            "{bfe8d93c}": "Characters/PetMiner/Themes/Base/Root/Particles/NPC_PET_Mole_Base_Emote_Recall_Dust",
+            "{ecfa52f7}": "Characters/PetMiner/Themes/Base/Root/Particles/NPC_PET_Mole_Base_Emote_RunVariant1",
+            "{56d528df}": "Characters/PetMiner/Themes/Base/Root/Particles/NPC_PET_Mole_Base_Emote_Taunt_Dust"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/PetMiner/Animations/Base.bin",
+        "Characters/PetMiner",
+        "DATA/PetMiner_Astronaut_Root_Astronaut_Tier1_Astronaut_Tier2_Astronaut_Tier3_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_RPG_Root_RPG_Tier1_RPG_Tier2_RPG_Tier3_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin"
+    ]
+}

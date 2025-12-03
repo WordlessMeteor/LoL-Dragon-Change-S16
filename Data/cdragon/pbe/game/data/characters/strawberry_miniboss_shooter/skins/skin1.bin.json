@@ -1,0 +1,88 @@
+{
+    "Characters/Strawberry_MiniBoss_Shooter/Skins/Skin1": {
+        "championSkinName": "Strawberry_MiniBoss_Shooter",
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Urgot",
+                "TFT_Template",
+                "Strawberry_MiniBoss_Shooter",
+                "Strawberry_MiniBoss_ShooterSkin01"
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/Strawberry_MiniBoss_Shooter/Animations/Skin0",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Strawberry_MiniBoss_Shooter/Skins/Base/Strawberry_MiniBoss_Shooter_Base.StrawberryRebuild.skl",
+            "simpleSkin": "ASSETS/Characters/Strawberry_MiniBoss_Shooter/Skins/Base/Strawberry_MiniBoss_Shooter_Base.StrawberryRebuild.skn",
+            "texture": "ASSETS/Characters/Strawberry_MiniBoss_Shooter/Skins/Skin01/Strawberry_MiniBoss_Shooter_ELITE_TX_CM.StrawberryRebuild.tex",
+            "skinScale": 2.0,
+            "selfIllumination": 2.5,
+            "overrideBoundingBox": [
+                500.0,
+                350.0,
+                500.0
+            ],
+            "materialOverride": [
+                {
+                    "texture": "ASSETS/Shared/Particles/Strawberry_MobShadow_TX.tex",
+                    "submesh": "GroundShadow",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "idleParticlesEffects": [
+            {
+                "effectKey": "Strawberry_MiniBoss_Shooter_Idle_Ground",
+                "boneName": "Buffbone_Glb_Ground_Loc",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "Strawberry_MiniBoss_Shooter_Idle_Claw",
+                "boneName": "R_Buffbone_Glb_Hand_Loc",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "Strawberry_MiniBoss_Shooter_Idle_Claw",
+                "boneName": "L_Buffbone_Glb_Hand_Loc",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "Strawberry_MiniBoss_Shooter_Idle_Eyes",
+                "boneName": "C_Buffbone_Glb_Head_Loc",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "iconCircle": "ASSETS/Characters/Strawberry_MiniBoss_Shooter/HUD/Strawberry_MiniBoss_Shooter_Circle.StrawberryRebuild.tex",
+        "iconSquare": "ASSETS/UX/Strawberry/DetailView/Enemy_Square.StrawberryRebuild.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 7,
+            "showWhileUntargetable": true,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/Strawberry_MiniBoss_Shooter/Skins/Skin1/Resources",
+        "mAdditionalResourceResolvers": [
+            "Maps/Shipping/Map22/MapSkins/Default/Resources"
+        ],
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/Strawberry_MiniBoss_Shooter/Skins/Skin1/Resources": {
+        "resourceMap": {
+            "Strawberry_MiniBoss_Shooter_Base_Mouth": "Characters/Strawberry_MiniBoss_Shooter/Skins/Skin0/Particles/Strawberry_MiniBoss_Shooter_Base_Mouth",
+            "Strawberry_MiniBoss_Shooter_Idle_Ground": "Characters/Strawberry_MiniBoss_Shooter/Skins/Skin0/Particles/Strawberry_MiniBoss_Shooter_Base_Idle_Ground",
+            "Strawberry_MiniBoss_Shooter_Idle_Claw": "Characters/Strawberry_MiniBoss_Shooter/Skins/Skin0/Particles/Strawberry_MiniBoss_Shooter_Base_Idle_Claw",
+            "Strawberry_MiniBoss_Shooter_Idle_Eyes": "Characters/Strawberry_MiniBoss_Shooter/Skins/Skin0/Particles/Strawberry_MiniBoss_Shooter_Base_Idle_Eyes",
+            "Strawberry_MiniBoss_Shooter_Shot_Missile": "Characters/Strawberry_MiniBoss_Shooter/Skins/Skin0/Particles/Strawberry_MiniBoss_Shooter_Base_Shot_Missile",
+            "Strawberry_MiniBoss_Shooter_Shot_Tar": "Characters/Strawberry_MiniBoss_Shooter/Skins/Skin0/Particles/Strawberry_MiniBoss_Shooter_Base_Shot_Tar"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/Strawberry_MiniBoss_Shooter/Strawberry_MiniBoss_Shooter.bin",
+        "DATA/Strawberry_MiniBoss_Shooter_Skins_Skin0_Skins_Skin1.bin",
+        "DATA/Characters/Strawberry_MiniBoss_Shooter/Animations/Skin0.bin"
+    ]
+}

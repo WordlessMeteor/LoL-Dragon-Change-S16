@@ -1,0 +1,624 @@
+{
+    "{0b97d8df}": {
+        "ObjectName": "TFT12_RakanQMis",
+        "mScriptName": "TFT12_RakanQMis",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        40.0,
+                        60.0,
+                        80.0,
+                        100.0,
+                        120.0,
+                        140.0,
+                        160.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        -0.05000000074505806,
+                        -0.10000000149011612,
+                        -0.15000000596046448,
+                        -0.20000000298023224,
+                        -0.25,
+                        -0.30000001192092896,
+                        -0.3499999940395355
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_Q.dds"
+            ],
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castConeAngle": 0.0,
+            "castConeDistance": 0.0,
+            "mMissileSpec": {
+                "mMissileWidth": 65.0,
+                "movementComponent": {
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+                    "mSpeed": 1850.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "missileSpeed": 1850.0,
+            "mMissileEffectKey": "TFT12_Rakan_Q_mis",
+            "mLineWidth": 65.0,
+            "mTargetingTypeData": {
+                "__type": "TargetOrLocation"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{5458b4fd}": {
+        "ObjectName": "TFT12_RakanCritAttack",
+        "mScriptName": "TFT12_RakanCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.6000000238418579,
+            "canCastWhileDisabled": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "mIgnoreAnimContinueUntilCastFrame": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 1000.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{8bc7051d}": {
+        "ObjectName": "TFT12_RakanBasicAttack2",
+        "mScriptName": "TFT12_RakanBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.6000000238418579,
+            "canCastWhileDisabled": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "mIgnoreAnimContinueUntilCastFrame": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 1000.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{9d87ccbd}": {
+        "ObjectName": "TFT12_RakanBasicAttack",
+        "mScriptName": "TFT12_RakanBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.6000000238418579,
+            "canCastWhileDisabled": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "mIgnoreAnimContinueUntilCastFrame": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 1000.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Rakan/Spells/TFT12_RakanSpell": {
+        "ObjectName": "TFT12_RakanSpell",
+        "mScriptName": "TFT12_RakanSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 32,
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "PositiveEffect_MoveBlock"
+            ],
+            "DataValues": [
+                {
+                    "mName": "ShieldRatio",
+                    "mValues": [
+                        0.18000000715255737,
+                        0.18000000715255737,
+                        0.18000000715255737,
+                        0.18000000715255737,
+                        0.18000000715255737,
+                        0.18000000715255737,
+                        0.18000000715255737
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ShieldBase",
+                    "mValues": [
+                        0.0,
+                        160.0,
+                        180.0,
+                        1000.0,
+                        1200.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ShieldDuration",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "MagicDamage",
+                    "mValues": [
+                        0.0,
+                        150.0,
+                        225.0,
+                        1200.0,
+                        1500.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "AllyShieldAmount",
+                    "mValues": [
+                        0.0,
+                        100.0,
+                        130.0,
+                        1000.0,
+                        1200.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "AllyShieldDuration",
+                    "mValues": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumFeathers",
+                    "mValues": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ConeAngle",
+                    "mValues": [
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedShieldAmount": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "ShieldBase",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                },
+                                {
+                                    "mStat": 12,
+                                    "mDataValue": "ShieldRatio",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedMagicDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "MagicDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedAllyShieldAmount": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "AllyShieldAmount",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayTotalTimePercent": -0.5,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                270.0,
+                270.0,
+                270.0,
+                270.0,
+                270.0,
+                270.0,
+                270.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 19.0,
+            "missileSpeed": 700.0,
+            "mLineWidth": 160.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_RakanSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT12_RakanSpell_Name",
+                        "keyTooltip": "Spell_TFT12_RakanSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "ShieldBase",
+                                    "nameOverride": "Spell_TFT12_RakanSpell_ShieldAmount",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MagicDamage",
+                                    "nameOverride": "Spell_TFT12_RakanSpell_MagicDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "AllyShieldAmount",
+                                    "nameOverride": "Spell_TFT12_RakanSpell_AllyShieldAmount",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Rakan/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT12_Rakan/CharacterRecords/Root": {
+        "mCharacterName": "TFT12_Rakan",
+        "baseHP": 1050.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 205.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 120.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 60.0,
+        "baseArmor": 60.0,
+        "baseSpellBlock": 60.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.699999988079071,
+        "attackSpeedRatio": 0.699999988079071,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT12_RakanSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT12_Rakan/Spells/TFT12_RakanSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "useRiotRelationships": true,
+        "flags": 9446664,
+        "tier": 4,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{988466bf}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{fef85c43}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ccf900f}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 40.0,
+        "mShopData": "{2631ad45}",
+        "MobileHealthBarHeightOverride": 170.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

@@ -1,0 +1,201 @@
+{
+    "Characters/RammusPB/Skins/Skin16": {
+        "championSkinName": "RammusPBSkin16",
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/RammusPB/Animations/Skin16",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/rammuspb/skins/Skin16/RammusPB_Skin16.skl",
+            "simpleSkin": "ASSETS/Characters/rammuspb/skins/Skin16/RammusPB_Skin16.skn",
+            "texture": "ASSETS/Characters/rammuspb/skins/Skin16/Rammus_PB_Skin16_TX_CM.tex",
+            "skinScale": 1.600000023841858,
+            "selfIllumination": 0.699999988079071,
+            "overrideBoundingBox": [
+                100.0,
+                100.0,
+                100.0
+            ],
+            "material": "Characters/RammusPB/Skins/Skin16/Materials/Rammus_Q_WheelGlow_inst",
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "iconCircle": "ASSETS/Characters/rammuspb/HUD/Armordillo_Circle.tex",
+        "iconSquare": "ASSETS/Characters/rammuspb/HUD/Armordillo_Square.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/RammusPB/Skins/Skin16/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/RammusPB/Skins/Skin16/Materials/Rammus_Q_WheelGlow_inst": {
+        "name": "Characters/RammusPB/Skins/Skin16/Materials/Rammus_Q_WheelGlow_inst",
+        "samplerValues": [
+            {
+                "textureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Rammus/skins/Skin16/Rammus_Recall_PB_Skin16_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "textureName": "Mask_Texture",
+                "texturePath": "ASSETS/Characters/Rammus/skins/Skin16/Particles/Rammus_Skin16_TX_Q_WheelMask.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Additive_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Noise_Scale",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Speed",
+                "value": [
+                    0.0,
+                    -0.20000000298023224,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Addative_Color",
+                "value": [
+                    0.003921568859368563,
+                    0.3529411852359772,
+                    1.0,
+                    0.3607843220233917
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    1.149999976158142,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_color",
+                "value": [
+                    0.23137255012989044,
+                    0.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "OVERLAY_ADDATIVE",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/ScrollingUVs_Simple",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/RammusPB/Skins/Skin16/Resources": {
+        "resourceMap": {
+            "Rammus_BA_tar_crit_01": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_BA_tar_crit_01",
+            "Rammus_E_Buf": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_E_Buf",
+            "Rammus_PB_buff": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_PB_buff",
+            "Rammus_Q_hit_01": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Q_hit_01",
+            "Rammus_Q_spikedshell_tar_01": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Q_spikedshell_tar_01",
+            "Rammus_Q_stop_01": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Q_stop_01",
+            "Rammus_Q_tar_01": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Q_tar_01",
+            "Rammus_R_AOE_1": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_R_AOE_1",
+            "Rammus_W_buf_01": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_W_buf_01",
+            "Rammus_W_out_01": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_W_out_01",
+            "Rammus_W_RAA_tar_01": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_W_RAA_tar_01",
+            "Rammus_BA_tar": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_BA_tar",
+            "{62576cbc}": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Empty",
+            "Rammus_R_LandPositionIndicator": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_R_LandPositionIndicator",
+            "Rammus_R_Tar_green": "Characters/Rammus/Skins/Skin0/Particles/Rammus_Base_R_Tar_green",
+            "Rammus_R_Tar_red": "Characters/Rammus/Skins/Skin0/Particles/Rammus_Base_R_Tar_red",
+            "Rammus_R_Range_Ring_Grow": "Characters/Rammus/Skins/Skin0/Particles/Rammus_Base_R_Range_Ring_Grow",
+            "Rammus_R_Range_Ring_Shrink": "Characters/Rammus/Skins/Skin0/Particles/Rammus_Base_R_Range_Ring_Shrink",
+            "Rammus_R_Range_Ring": "Characters/Rammus/Skins/Skin0/Particles/Rammus_Base_R_Range_Ring",
+            "Rammus_R_dash_trail": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_R_dash_trail",
+            "Rammus_R_PBLandPositionIndicator": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_R_PBLandPositionIndicator",
+            "Rammus_R_TremorAftershocks": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_R_TremorAftershocks",
+            "Rammus_E_Beam": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_E_Beam",
+            "Rammus_Q_AOE": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Q_AOE",
+            "Rammus_R_LandPositionIndicator_Enemy": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_R_LandPositionIndicator_Enemy",
+            "Rammus_R_PBLandPositionIndicator_Enemy": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_R_PBLandPositionIndicator_Enemy",
+            "Rammus_R_AOE_2": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_R_AOE_2",
+            "Rammus_R_Tremors_Hit": "Characters/Rammus/Skins/Skin0/Particles/Rammus_Base_R_Tremors_Hit",
+            "Rammus_R_Jump": "Characters/Rammus/Skins/Skin0/Particles/Rammus_Base_R_Jump",
+            "Rammus_R_PB_glow": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_R_PB_glow",
+            "Rammus_Z_Recall_SmallTrail": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Z_Recall_SmallTrail",
+            "Rammus_Z_Recall_Impact": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Z_Recall_Impact",
+            "Rammus_Z_Recall_EndEnergy": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Z_Recall_EndEnergy",
+            "Rammus_Z_Recall_FingerGlow": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Z_Recall_FingerGlow",
+            "Rammus_Z_Recall_SmallImpact": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Z_Recall_SmallImpact",
+            "Rammus_Z_Recall_SlowGlow": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Z_Recall_SlowGlow",
+            "Rammus_Z_Recall_FingerFlash": "Characters/Rammus/Skins/Skin16/Particles/Rammus_Skin16_Z_Recall_FingerFlash"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/RammusPB/RammusPB.bin",
+        "DATA/Characters/RammusPB/Animations/Skin16.bin"
+    ]
+}

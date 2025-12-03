@@ -1,0 +1,611 @@
+{
+    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios": {
+        "PathHashToSelf": "clientstates/gameplay/ux/lol/champ/aphelios",
+        "BaseLoadable": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase",
+        "RootScene": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot",
+        "CenterTooltipRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/ACenterTooltip",
+        "{1c05ee9d}": [
+            {
+                "StatPageViewController": "ClientStates/Gameplay/UX/LoL/PlayerStats",
+                "Button": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/AStats_Button",
+                "__type": "{c3f95838}"
+            },
+            {
+                "StatPageViewController": "ClientStates/Gameplay/UX/LoL/PlayerPerks",
+                "Button": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/APerks_Button",
+                "{cfb90a94}": {
+                    "cherry": {
+                        "StatPageViewController": "ClientStates/Gameplay/UX/LoL/Cherry/PlayerAugments",
+                        "Button": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/AAugments_Button",
+                        "__type": "{1e2d1428}"
+                    },
+                    "{bffdf499}": {
+                        "StatPageViewController": "ClientStates/Gameplay/UX/LoL/Cherry/PlayerAugments",
+                        "Button": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/AAugments_Button",
+                        "{5b5f63b5}": true,
+                        "__type": "{1e2d1428}"
+                    }
+                },
+                "__type": "{c3f95838}"
+            },
+            {
+                "StatPageViewController": "ClientStates/Gameplay/UX/LoL/PlayerStatStones",
+                "Button": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/AStatStones_Button",
+                "__type": "{c3f95838}"
+            }
+        ],
+        "PortraitUiData": {
+            "Icon": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/APlayerIcon_Root",
+            "LevelText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/APlayerLevel",
+            "RespawnTimer": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/APlayerRespawnTimer",
+            "VoiceChatHalo": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/APlayerVoiceChatHalo",
+            "TooltipRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/ACenterTooltip",
+            "__type": "PlayerPortraitUiData"
+        },
+        "ResourceBars": {
+            "HealthMeter": {
+                "Meter": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosHPMeter",
+                "ValueText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosHPMeter/ApheliosHP_ValueText",
+                "FadeBar": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosHPMeter/ApheliosHP_BarFade",
+                "__type": "HealthMeter"
+            },
+            "HealthAnimatedMeterSkin": {
+                "BarElements": [
+                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosHPMeter/ApheliosHP_AnimationGreen"
+                ],
+                "__type": "UiElementMeterSkin"
+            },
+            "HealthRegenText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosHPMeter/ApheliosHP_RegenText",
+            "HealthHitRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosHPMeter/ApheliosHP_Backdrop",
+            "ParMeterData": {
+                "AbilityResourceBars": {
+                    "Meter": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosPARMeter",
+                    "MeterSkins": {
+                        "DefaultMeterSkin": {
+                            "BarElements": [
+                                "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosPARMeter/ApheliosPar_BarTextureBlue"
+                            ],
+                            "__type": "UiElementMeterSkin"
+                        },
+                        "AdditionalMeterSkins": {
+                            "Blue": {
+                                "BarElements": [
+                                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosPARMeter/ApheliosPar_BarTextureBlue"
+                                ],
+                                "__type": "UiElementMeterSkin"
+                            },
+                            "{2bf0c714}": {
+                                "BarElements": [
+                                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosPARMeter/ApheliosPar_BarTextureBlue",
+                                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosPARMeterSkins/ApheliosPar_AnimationBlue"
+                                ],
+                                "__type": "UiElementMeterSkin"
+                            }
+                        },
+                        "__type": "ResourceMeterSkinData"
+                    },
+                    "__type": "ResourceMeterGroupData"
+                },
+                "UseAnimatedSkins": true,
+                "Backdrop": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosPARMeter/ApheliosPar_Backdrop",
+                "ValueText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosPARMeter/ApheliosPar_ValueText",
+                "__type": "AbilityResourceBarData"
+            },
+            "ParRegenText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosPARMeter/ApheliosPar_RegenText",
+            "ParHitRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosPARMeter/ApheliosPar_Backdrop",
+            "SarText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceBars/ApheliosSAR_ValueText",
+            "ArThresholdIndicator": {
+                "ThresholdIndicatorElements": [
+                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceThreshold/ApheliosResource_ThresholdIndicator0",
+                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceThreshold/ApheliosResource_ThresholdIndicator1",
+                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceThreshold/ApheliosResource_ThresholdIndicator2",
+                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceThreshold/ApheliosResource_ThresholdIndicator3",
+                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceThreshold/ApheliosResource_ThresholdIndicator4",
+                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceThreshold/ApheliosResource_ThresholdIndicator5",
+                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceThreshold/ApheliosResource_ThresholdIndicator6",
+                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceThreshold/ApheliosResource_ThresholdIndicator7",
+                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceThreshold/ApheliosResource_ThresholdIndicator8",
+                    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosResourceThreshold/ApheliosResource_ThresholdIndicator9"
+                ],
+                "__type": "HudAbilityResourceThresholdIndicator"
+            },
+            "ExperienceBar": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/APlayerExp_BarTexture",
+            "ExperienceHitRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/APlayerExp_Backdrop",
+            "__type": "HudPlayerResourceBars"
+        },
+        "StatusMessage": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/AStatusMessageToolTip",
+        "SpellCastMessage": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosFrame/ASpellToolTip",
+        "AbilitiesUiData": {
+            "ChampionSpells": [
+                {
+                    "ContentElement": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_",
+                    "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_Mouseover",
+                    "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_BorderAvailable",
+                    "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_BorderUnavailable",
+                    "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_OverlayUnavailable",
+                    "CooldownUiData": {
+                        "CooldownText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_Cooldown",
+                        "RadialEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_CooldownFX",
+                        "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_SheenFX",
+                        "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_GlintFX",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "OverlayCced": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_IconLoc",
+                    "OverlayOom": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_IconOom",
+                    "AmmoText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_Ammo",
+                    "AmmoFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_AmmoFX",
+                    "Hotkey": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_HotKey",
+                    "ToggleFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_ToggleFX",
+                    "Cost": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_Cost",
+                    "CostBg": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability0/AAbility0_CostBg",
+                    "__type": "SpellSlotDetailedUiDefinition"
+                },
+                {
+                    "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability1/AAbility1_BorderAvailable",
+                    "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability1/AAbility1_BorderUnavailable",
+                    "CooldownUiData": {
+                        "CooldownText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability1/AAbility1_Cooldown",
+                        "RadialEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability1/AAbility1_CooldownFX",
+                        "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability1/AAbility1_SheenFX",
+                        "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability1/AAbility1_GlintFX",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "Hotkey": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability1/AAbility1_HotKey",
+                    "ToggleFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability1/AAbility1_ToggleFX",
+                    "__type": "SpellSlotDetailedUiDefinition"
+                },
+                {
+                    "ContentElement": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_",
+                    "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_Mouseover",
+                    "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_BorderAvailable",
+                    "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_BorderUnavailable",
+                    "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_OverlayUnavailable",
+                    "CooldownUiData": {
+                        "CooldownText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_Cooldown",
+                        "RadialEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_CooldownFX",
+                        "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_SheenFX",
+                        "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_GlintFX",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "OverlayCced": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_IconLoc",
+                    "OverlayOom": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_IconOom",
+                    "AmmoText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_Ammo",
+                    "AmmoFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_AmmoFX",
+                    "Hotkey": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_HotKey",
+                    "ToggleFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_ToggleFX",
+                    "Cost": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_Cost",
+                    "CostBg": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability2/AAbility2_CostBg",
+                    "__type": "SpellSlotDetailedUiDefinition"
+                },
+                {
+                    "ContentElement": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_",
+                    "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_Mouseover",
+                    "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_BorderAvailable",
+                    "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_BorderUnavailable",
+                    "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_OverlayUnavailable",
+                    "CooldownUiData": {
+                        "CooldownText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_Cooldown",
+                        "RadialEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_CooldownFX",
+                        "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_SheenFX",
+                        "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_GlintFX",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "OverlayCced": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_IconLoc",
+                    "OverlayOom": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_IconOom",
+                    "AmmoText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_Ammo",
+                    "AmmoFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_AmmoFX",
+                    "Hotkey": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_HotKey",
+                    "ToggleFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_ToggleFX",
+                    "Cost": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_Cost",
+                    "CostBg": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/AAbility3_CostBg",
+                    "__type": "SpellSlotDetailedUiDefinition"
+                }
+            ],
+            "SpellRankPips": {
+                "RankPips": [
+                    null,
+                    null,
+                    null,
+                    {
+                        "PipTargetRect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_PipRect",
+                        "EmptyPips": [
+                            "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_EmptyPip0",
+                            "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_EmptyPip1",
+                            "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_EmptyPip2",
+                            "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_EmptyPip3",
+                            "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_EmptyPip4",
+                            "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_EmptyPip5"
+                        ],
+                        "FullPips": [
+                            "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_FullPip0",
+                            "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_FullPip1",
+                            "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_FullPip2",
+                            "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_FullPip3",
+                            "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_FullPip4",
+                            "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Ability3/Pips/AAbility3_FullPip5"
+                        ],
+                        "__type": "SpellPipsUiData"
+                    }
+                ],
+                "__type": "SpellRankPipsUiData"
+            },
+            "SummonerSpells": [
+                {
+                    "ContentElement": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_",
+                    "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_Mouseover",
+                    "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_BorderAvailable",
+                    "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_BorderUnavailable",
+                    "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_OverlayUnavailable",
+                    "CooldownUiData": {
+                        "CooldownText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_Cooldown",
+                        "RadialEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_CooldownFX",
+                        "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_SheenFX",
+                        "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_GlintFX",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "OverlayCced": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_IconLoc",
+                    "OverlayOom": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_IconOom",
+                    "AmmoText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_Ammo",
+                    "AmmoFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_AmmoFX",
+                    "Hotkey": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_HotKey",
+                    "CooldownGem": {
+                        "AllyGem": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_CooldownGem",
+                        "GemBackground": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_CooldownGemAvailable",
+                        "CooldownEffects": {
+                            "RadialEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_CooldownGemCooldownFX",
+                            "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner0/ASummoner0_CooldownGemSheenFX",
+                            "__type": "CooldownEffectUiData"
+                        },
+                        "__type": "CooldownGemUiData"
+                    },
+                    "__type": "SpellSlotDetailedUiDefinition"
+                },
+                {
+                    "ContentElement": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_",
+                    "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_Mouseover",
+                    "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_BorderAvailable",
+                    "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_BorderUnavailable",
+                    "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_OverlayUnavailable",
+                    "CooldownUiData": {
+                        "CooldownText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_Cooldown",
+                        "RadialEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_CooldownFX",
+                        "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_SheenFX",
+                        "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_GlintFX",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "OverlayCced": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_IconLoc",
+                    "OverlayOom": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_IconOom",
+                    "AmmoText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_Ammo",
+                    "AmmoFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_AmmoFX",
+                    "Hotkey": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_HotKey",
+                    "CooldownGem": {
+                        "AllyGem": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_CooldownGem",
+                        "GemBackground": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_CooldownGemAvailable",
+                        "CooldownEffects": {
+                            "RadialEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_CooldownGemCooldownFX",
+                            "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Summoner1/ASummoner1_CooldownGemSheenFX",
+                            "__type": "CooldownEffectUiData"
+                        },
+                        "__type": "CooldownGemUiData"
+                    },
+                    "__type": "SpellSlotDetailedUiDefinition"
+                }
+            ],
+            "Passive": {
+                "ContentElement": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Passive/APassive_",
+                "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Passive/APassive_Mouseover",
+                "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Passive/APassive_BorderAvailable",
+                "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Passive/APassive_BorderUnavailable",
+                "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Passive/APassive_OverlayUnavailable",
+                "AmmoText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Passive/APassive_Ammo",
+                "AmmoFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Passive/APassive_AmmoFX",
+                "__type": "SpellSlotDetailedUiDefinition"
+            },
+            "CustomAbilities": {
+                "ExtraAbilities": {
+                    "2": {
+                        "ContentElement": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_",
+                        "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_Mouseover",
+                        "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_BorderAvailable",
+                        "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_BorderUnavailable",
+                        "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_OverlayUnavailable",
+                        "CooldownUiData": {
+                            "CooldownText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_Cooldown",
+                            "RadialEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_CooldownFX",
+                            "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_SheenFX",
+                            "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_GlintFX",
+                            "__type": "CooldownEffectUiData"
+                        },
+                        "OverlayCced": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_IconLoc",
+                        "OverlayOom": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_IconOom",
+                        "AmmoText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_Ammo",
+                        "AmmoFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra2/Extra2_AmmoFX",
+                        "__type": "SpellSlotDetailedUiDefinition"
+                    },
+                    "3": {
+                        "ContentElement": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_",
+                        "MouseoverRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_Mouseover",
+                        "BorderEnabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_BorderAvailable",
+                        "BorderDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_BorderUnavailable",
+                        "OverlayDisabled": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_OverlayUnavailable",
+                        "CooldownUiData": {
+                            "CooldownText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_Cooldown",
+                            "RadialEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_CooldownFX",
+                            "CooldownCompleteEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_SheenFX",
+                            "CooldownJumpEffect": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_GlintFX",
+                            "__type": "CooldownEffectUiData"
+                        },
+                        "OverlayCced": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_IconLoc",
+                        "OverlayOom": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_IconOom",
+                        "AmmoText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_Ammo",
+                        "AmmoFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosSpells/Extra3/Extra3_AmmoFX",
+                        "__type": "SpellSlotDetailedUiDefinition"
+                    }
+                },
+                "__type": "CustomAbilitiesUiData"
+            },
+            "__type": "AbilitiesUiData"
+        },
+        "SummonerSpellSpecialist": {
+            "Scene": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ASummonerSpecialistToggles",
+            "ToggleButtons": [
+                "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ASummonerSpecialistToggles/ASummonerSpecialistToggle0",
+                "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ASummonerSpecialistToggles/ASummonerSpecialistToggle1"
+            ],
+            "SelectorMenu": {
+                "Scene": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ASummonerSpecialistSelector",
+                "Layout": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ASummonerSpecialistSelector/ASummonerSpecialist_Layout",
+                "SelectorButtonTemplate": {
+                    "Button": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ASummonerSpecialistSelector/ASummonerSpecialistSpell",
+                    "SpellIcon": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ASummonerSpecialistSelector/ASummonerSpecialistSpell/ASummonerSpecialistSpell_Icon",
+                    "__type": "UiPerkSummonerSpecialistSelectorButtonData"
+                },
+                "__type": "UIPerkSummonerSpecialistSelector"
+            },
+            "__type": "UiPerkSummonerSpecialistToggles"
+        },
+        "LevelUpDisplay": {
+            "title": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUp/ALevelUp_Text",
+            "ButtonsScene": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUp",
+            "FxInScene": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxIn",
+            "spells": [
+                {
+                    "AbilityFxIn": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxIn/ALevelUp0_AbilityIn",
+                    "ButtonFxIn": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxIn/ALevelUp0_ButtonIn",
+                    "ButtonPostFxIn": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxIn/ALevelUp0_ButtonAfterFXIn",
+                    "ButtonFxOutSelected": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxOut/ALevelUp0_SelectedOut",
+                    "ButtonFxOutUnselected": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxOut/ALevelUp0_UnselectedOut",
+                    "ButtonIdleGlowFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxOut/ALevelUp0_IdleGlow",
+                    "ButtonIdleSheenFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxOut/ALevelUp0_IdleSheen",
+                    "SkillUpButton": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUp/ALevelUp0_Button",
+                    "__type": "SpellLevelUpUiData"
+                },
+                {
+                    "AbilityFxIn": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxIn/ALevelUp1_AbilityIn",
+                    "ButtonFxIn": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxIn/ALevelUp1_ButtonIn",
+                    "ButtonPostFxIn": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxIn/ALevelUp1_ButtonAfterFXIn",
+                    "ButtonFxOutSelected": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxOut/ALevelUp1_SelectedOut",
+                    "ButtonFxOutUnselected": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxOut/ALevelUp1_UnselectedOut",
+                    "ButtonIdleGlowFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxOut/ALevelUp1_IdleGlow",
+                    "ButtonIdleSheenFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxOut/ALevelUp1_IdleSheen",
+                    "SkillUpButton": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUp/ALevelUp1_Button",
+                    "__type": "SpellLevelUpUiData"
+                },
+                {
+                    "AbilityFxIn": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxIn/ALevelUp2_AbilityIn",
+                    "ButtonFxIn": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxIn/ALevelUp2_ButtonIn",
+                    "ButtonPostFxIn": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxIn/ALevelUp2_ButtonAfterFXIn",
+                    "ButtonFxOutSelected": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxOut/ALevelUp2_SelectedOut",
+                    "ButtonFxOutUnselected": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxOut/ALevelUp2_UnselectedOut",
+                    "ButtonIdleGlowFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxOut/ALevelUp2_IdleGlow",
+                    "ButtonIdleSheenFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUpFxOut/ALevelUp2_IdleSheen",
+                    "SkillUpButton": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosLevelUp/ALevelUp2_Button",
+                    "__type": "SpellLevelUpUiData"
+                },
+                null
+            ],
+            "__type": "UiLevelUp"
+        },
+        "PlayerBuffsScene": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs",
+        "PositiveBuffs": {
+            "BuffDisplayTemplate": {
+                "Group": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate",
+                "Icon": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate/APlayerBuffIcon",
+                "IconBorderPositive": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate/APlayerBuffBorderPositive",
+                "IconBorderNegative": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate/APlayerBuffBorderNegative",
+                "StacksText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate/APlayerBuffStacks",
+                "CooldownFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate/APlayerBuffCooldownFX",
+                "HitRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate/APlayerBuffHitRegion",
+                "__type": "BuffDisplayData"
+            },
+            "Layout": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerPositiveBuffLayout",
+            "MaxBuffDisplayCount": 12,
+            "__type": "BuffDisplayList"
+        },
+        "NegativeBuffs": {
+            "BuffDisplayTemplate": {
+                "Group": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate",
+                "Icon": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate/APlayerBuffIcon",
+                "IconBorderPositive": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate/APlayerBuffBorderPositive",
+                "IconBorderNegative": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate/APlayerBuffBorderNegative",
+                "StacksText": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate/APlayerBuffStacks",
+                "CooldownFx": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate/APlayerBuffCooldownFX",
+                "HitRegion": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerBuffTemplate/APlayerBuffHitRegion",
+                "__type": "BuffDisplayData"
+            },
+            "Layout": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/ApheliosBuffs/APlayerNegativeBuffLayout",
+            "MaxBuffDisplayCount": 10,
+            "__type": "BuffDisplayList"
+        },
+        "LevelUpLinks": [
+            "ClientStates/Gameplay/UX/LoL/Highlighter/UIBase/HighlightFX/AHighlightLevelUp0",
+            "ClientStates/Gameplay/UX/LoL/Highlighter/UIBase/HighlightFX/AHighlightLevelUp1",
+            "ClientStates/Gameplay/UX/LoL/Highlighter/UIBase/HighlightFX/AHighlightLevelUp2"
+        ],
+        "HudCenterFrameGlowData": {
+            "Icon": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase/ApheliosRoot/HUDCenterFrameGlow",
+            "__type": "HudCenterFrameGlowData"
+        },
+        "__type": "PlayerFrameViewController"
+    },
+    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/Particles/AbilityResourceThresholdIndicator_Moonlight": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "moon2",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "__type": "ValueFloat"
+                        },
+                        {
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.7176470756530762,
+                        0.9137254953384399,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 1,
+                "miscRenderFlags": 5,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        90.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        30.0,
+                        13.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/UX/Menu/Particles/AbilityResourceThresholdIndicator_Moonlight.tex",
+                "startFrame": 1,
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": -1.0,
+        "particleName": "AbilityResourceThresholdIndicator_Moonlight",
+        "particlePath": "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/Particles/AbilityResourceThresholdIndicator_Moonlight",
+        "{9836cd87}": 7,
+        "flags": 193,
+        "drawingLayer": 1,
+        "hudAnchorPositionFromWorldProjection": false,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Champ/Aphelios/UIBase": {
+        "FilepathHash": "clientstates/gameplay/ux/lol/champ/aphelios/uibase",
+        "{e50d4da6}": {
+            "__type": "{797fe1c2}"
+        },
+        "__type": "UiPropertyLoadable"
+    },
+    "{9c31497f}": {
+        "FilepathHash": "{9ae0001f200760db}",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/lol/champ/aphelios/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "__linked": []
+}

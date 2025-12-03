@@ -1,0 +1,752 @@
+{
+    "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars": {
+        "PathHashToSelf": "{89e911e1b787b9aa}",
+        "BaseLoadable": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase",
+        "UnitStatusPriorityList": "{1a73e035}",
+        "InfoBarStyleSourceMap": {
+            "21": "{40a5cb73}",
+            "14": "{02d57e9b}",
+            "15": "{67877c7f}",
+            "16": "{ccf51459}",
+            "17": "{4df7a53b}",
+            "18": "{cf8b2985}",
+            "19": "{b4fe998b}",
+            "20": "{83fd13e3}"
+        },
+        "MobileLoadable": "{b641955c}",
+        "__type": "TftFloatingInfoBarViewController"
+    },
+    "{02d57e9b}": {
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar",
+        "Anchor": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/TFTUnitZeroStarFHB_AnchorBase",
+        "border": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/TFTUnitZeroStarFHB_Border_Default",
+        "AttachmentSlots": {
+            "StandardSlots": [
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/AttachmentSlots/TFTUnitZeroStar_AttachmentSlot0_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/AttachmentSlots/TFTUnitZeroStar_AttachmentSlot0_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/AttachmentSlots/TFTUnitZeroStar_AttachmentSlot0_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/AttachmentSlots/TFTUnitZeroStar_AttachmentSlot0_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/AttachmentSlots/TFTUnitZeroStar_AttachmentSlot1_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/AttachmentSlots/TFTUnitZeroStar_AttachmentSlot1_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/AttachmentSlots/TFTUnitZeroStar_AttachmentSlot1_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/AttachmentSlots/TFTUnitZeroStar_AttachmentSlot1_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/AttachmentSlots/TFTUnitZeroStar_AttachmentSlot2_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/AttachmentSlots/TFTUnitZeroStar_AttachmentSlot2_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/AttachmentSlots/TFTUnitZeroStar_AttachmentSlot2_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/AttachmentSlots/TFTUnitZeroStar_AttachmentSlot2_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                }
+            ],
+            "__type": "TftUnitAttachmentSlotsData"
+        },
+        "Healthbar": {
+            "Healthbar": {
+                "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/TFTUnitZeroStarHP_BarTexture",
+                "__type": "BarTypeMap"
+            },
+            "TickStyle": {
+                "StandardTick": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/TFTUnitZeroStarHP_Tick",
+                "__type": "HealthBarTickStyleUnit"
+            },
+            "fadeData": {
+                "FadeBar": {
+                    "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/TFTUnitZeroStarHP_BarFade",
+                    "__type": "BarTypeMap"
+                },
+                "fadeSpeed": 0.0,
+                "__type": "HealthBarFadeData"
+            },
+            "ExtraBars": {
+                "AllShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/TFTUnitZeroStarHP_AShieldBarTexture",
+                "PhysicalShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/TFTUnitZeroStarHP_PShieldBarTexture",
+                "MagicShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/TFTUnitZeroStarHP_MShieldBarTexture",
+                "__type": "HealthBarExtraBarsData"
+            },
+            "__type": "HealthBarData"
+        },
+        "ParBar": {
+            "AbilityResourceBars": {
+                "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/TFTUnitZeroStarPAR_BarTexture",
+                "__type": "ResourceMeterIconData"
+            },
+            "StandardTick": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitZeroStar/TFTUnitZeroStarPAR_Tick",
+            "__type": "AbilityResourceBarData"
+        },
+        "__type": "TftUnitFloatingInfoBarData"
+    },
+    "{40a5cb73}": {
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars",
+        "Anchor": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Borders/ChampFHB_AnchorBase",
+        "ScriptedThresholdTypes": {
+            "{19e403e6}": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/TicksTips/ChampHP_PykeExecuteTickAbove",
+            "{5fc8ef96}": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/TicksTips/ChampHP_PykeExecuteTickBelow"
+        },
+        "BurstFadeMeterSelf": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Meters/ChampHP_BarFadeBurstRed",
+        "BurstFadeMeterOther": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Meters/ChampHP_BarFadeBurst",
+        "DamageFlashMeter": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Meters/ChampHP_BarFlash",
+        "BurstHealMeterSelf": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Meters/ChampHP_BarFadeHealGreen",
+        "BurstHealMeterSelfColorblind": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Meters/ChampHP_BarFadeHealYellow",
+        "BurstHealMeterAlly": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Meters/ChampHP_BarFadeHealBlue",
+        "BurstHealMeterEnemy": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Meters/ChampHP_BarFadeHealRed",
+        "Divider": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/TicksTips/ChampHP_Divider",
+        "DeathAnimAlly": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/ChampFHB_DeathBlue",
+        "DeathAnimEnemy": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/ChampFHB_DeathRed",
+        "Borders": {
+            "DefaultBorder": {
+                "border": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Borders/ChampFHB_Border_Default",
+                "Highlight": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Borders/ChampFHB_Highlight_Default",
+                "__type": "HeroFloatingInfoBorderTypeData"
+            },
+            "ExecutableBorder": {
+                "border": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Borders/ChampFHB_Border_Executable",
+                "Highlight": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Borders/ChampFHB_Highlight_Executable",
+                "__type": "HeroFloatingInfoBorderTypeData"
+            },
+            "LevelText": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Text/ChampFHB_Text_Level",
+            "__type": "HeroFloatingInfoBorderData"
+        },
+        "UnitStatus": {
+            "StatusIcon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Icons/ChampFHB_Icon_Status",
+            "StatusText": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Text/ChampFHB_Text_Status",
+            "CenterJustifyStatusIconAndText": true,
+            "NameText": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Text/ChampFHB_Text_Name",
+            "__type": "UiUnitStatusData"
+        },
+        "icons": {
+            "icons": [
+                {
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Icons/ChampFHB_effecticon_misc1",
+                    "border": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/ChampFHB_Icon_ActiveBorder1",
+                    "__type": "HeroFloatingInfoIconData"
+                }
+            ],
+            "__type": "HeroFloatingInfoIconsData"
+        },
+        "Healthbar": {
+            "Healthbar": {
+                "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Meters/ChampHP_BarTextureWhite",
+                "__type": "BarTypeMap"
+            },
+            "TickStyle": {
+                "StandardTick": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/TicksTips/ChampHP_Tick",
+                "__type": "HealthBarTickStyleTftCompanion"
+            },
+            "fadeData": {
+                "FadeBar": {
+                    "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/ChampBars/Meters/ChampHP_BarFade",
+                    "__type": "BarTypeMap"
+                },
+                "fadeSpeed": 0.05000000074505806,
+                "__type": "HealthBarFadeData"
+            },
+            "__type": "HealthBarData"
+        },
+        "__type": "HeroFloatingInfoBarData"
+    },
+    "{4df7a53b}": {
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar",
+        "Anchor": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/TFTUnitThreeStarFHB_AnchorBase",
+        "border": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/TFTUnitThreeStarFHB_Border_Default",
+        "AttachmentSlots": {
+            "StandardSlots": [
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/AttachmentSlots/TFTUnitThreeStar_AttachmentSlot0_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/AttachmentSlots/TFTUnitThreeStar_AttachmentSlot0_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/AttachmentSlots/TFTUnitThreeStar_AttachmentSlot0_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/AttachmentSlots/TFTUnitThreeStar_AttachmentSlot0_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/AttachmentSlots/TFTUnitThreeStar_AttachmentSlot1_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/AttachmentSlots/TFTUnitThreeStar_AttachmentSlot1_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/AttachmentSlots/TFTUnitThreeStar_AttachmentSlot1_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/AttachmentSlots/TFTUnitThreeStar_AttachmentSlot1_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/AttachmentSlots/TFTUnitThreeStar_AttachmentSlot2_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/AttachmentSlots/TFTUnitThreeStar_AttachmentSlot2_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/AttachmentSlots/TFTUnitThreeStar_AttachmentSlot2_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/AttachmentSlots/TFTUnitThreeStar_AttachmentSlot2_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                }
+            ],
+            "__type": "TftUnitAttachmentSlotsData"
+        },
+        "Healthbar": {
+            "Healthbar": {
+                "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/TFTUnitThreeStarHP_BarTexture",
+                "__type": "BarTypeMap"
+            },
+            "TickStyle": {
+                "StandardTick": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/TFTUnitThreeStarHP_Tick",
+                "__type": "HealthBarTickStyleUnit"
+            },
+            "fadeData": {
+                "FadeBar": {
+                    "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/TFTUnitThreeStarHP_BarFade",
+                    "__type": "BarTypeMap"
+                },
+                "__type": "HealthBarFadeData"
+            },
+            "ExtraBars": {
+                "AllShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/TFTUnitThreeStarHP_AShieldBarTexture",
+                "PhysicalShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/TFTUnitThreeStarHP_PShieldBarTexture",
+                "MagicShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/TFTUnitThreeStarHP_MShieldBarTexture",
+                "__type": "HealthBarExtraBarsData"
+            },
+            "__type": "HealthBarData"
+        },
+        "ParBar": {
+            "AbilityResourceBars": {
+                "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/TFTUnitThreeStarPAR_BarTexture",
+                "__type": "ResourceMeterIconData"
+            },
+            "StandardTick": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitThreeStar/TFTUnitThreeStarPAR_Tick",
+            "__type": "AbilityResourceBarData"
+        },
+        "__type": "TftUnitFloatingInfoBarData"
+    },
+    "{67877c7f}": {
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar",
+        "Anchor": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/TFTUnitOneStarFHB_AnchorBase",
+        "border": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/TFTUnitOneStarFHB_Border_Default",
+        "AttachmentSlots": {
+            "StandardSlots": [
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/AttachmentSlots/TFTUnitOneStar_AttachmentSlot0_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/AttachmentSlots/TFTUnitOneStar_AttachmentSlot0_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/AttachmentSlots/TFTUnitOneStar_AttachmentSlot0_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/AttachmentSlots/TFTUnitOneStar_AttachmentSlot0_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/AttachmentSlots/TFTUnitOneStar_AttachmentSlot1_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/AttachmentSlots/TFTUnitOneStar_AttachmentSlot1_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/AttachmentSlots/TFTUnitOneStar_AttachmentSlot1_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/AttachmentSlots/TFTUnitOneStar_AttachmentSlot1_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/AttachmentSlots/TFTUnitOneStar_AttachmentSlot2_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/AttachmentSlots/TFTUnitOneStar_AttachmentSlot2_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/AttachmentSlots/TFTUnitOneStar_AttachmentSlot2_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/AttachmentSlots/TFTUnitOneStar_AttachmentSlot2_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                }
+            ],
+            "__type": "TftUnitAttachmentSlotsData"
+        },
+        "Healthbar": {
+            "Healthbar": {
+                "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/TFTUnitOneStarHP_BarTexture",
+                "__type": "BarTypeMap"
+            },
+            "TickStyle": {
+                "StandardTick": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/TFTUnitOneStarHP_Tick",
+                "__type": "HealthBarTickStyleUnit"
+            },
+            "fadeData": {
+                "FadeBar": {
+                    "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/TFTUnitOneStarHP_BarFade",
+                    "__type": "BarTypeMap"
+                },
+                "__type": "HealthBarFadeData"
+            },
+            "ExtraBars": {
+                "AllShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/TFTUnitOneStarHP_AShieldBarTexture",
+                "PhysicalShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/TFTUnitOneStarHP_PShieldBarTexture",
+                "MagicShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/TFTUnitOneStarHP_MShieldBarTexture",
+                "__type": "HealthBarExtraBarsData"
+            },
+            "__type": "HealthBarData"
+        },
+        "ParBar": {
+            "AbilityResourceBars": {
+                "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/TFTUnitOneStarPAR_BarTexture",
+                "__type": "ResourceMeterIconData"
+            },
+            "StandardTick": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitOneStar/TFTUnitOneStarPAR_Tick",
+            "__type": "AbilityResourceBarData"
+        },
+        "__type": "TftUnitFloatingInfoBarData"
+    },
+    "{83fd13e3}": {
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp",
+        "Anchor": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/TFTAugmentPropFHB_AnchorBase",
+        "AttachmentSlots": {
+            "StandardSlots": [
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/AttachmentSlotGrid/AttachmentSlot0/AttachmentSlot0_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/AttachmentSlotGrid/AttachmentSlot0/AttachmentSlot0_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/AttachmentSlotGrid/AttachmentSlot0/AttachmentSlot0_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/AttachmentSlotGrid/AttachmentSlot1/AttachmentSlot1_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/AttachmentSlotGrid/AttachmentSlot1/AttachmentSlot1_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/AttachmentSlotGrid/AttachmentSlot1/AttachmentSlot1_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/AttachmentSlotGrid/AttachmentSlot2/AttachmentSlot2_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/AttachmentSlotGrid/AttachmentSlot2/AttachmentSlot2_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/AttachmentSlotGrid/AttachmentSlot2/AttachmentSlot2_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/AttachmentSlotGrid/AttachmentSlot3/AttachmentSlot3_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/AttachmentSlotGrid/AttachmentSlot3/AttachmentSlot3_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/AttachmentSlotGrid/AttachmentSlot3/AttachmentSlot3_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                }
+            ],
+            "__type": "TftUnitAttachmentSlotsData"
+        },
+        "InspectButton": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTAugmentProp/InspectButton",
+        "__type": "TftUnitFloatingInfoBarData"
+    },
+    "{b4fe998b}": {
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitSharedDraft",
+        "Anchor": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitSharedDraft/TFTUnitSharedDraftFHB_AnchorBase",
+        "AttachmentSlots": {
+            "StandardSlots": [
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitSharedDraft/AttachmentSlotGrid/AttachmentSlot0/AttachmentSlot0_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitSharedDraft/AttachmentSlotGrid/AttachmentSlot0/AttachmentSlot0_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitSharedDraft/AttachmentSlotGrid/AttachmentSlot0/AttachmentSlot0_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitSharedDraft/AttachmentSlotGrid/AttachmentSlot1/AttachmentSlot1_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitSharedDraft/AttachmentSlotGrid/AttachmentSlot1/AttachmentSlot1_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitSharedDraft/AttachmentSlotGrid/AttachmentSlot1/AttachmentSlot1_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitSharedDraft/AttachmentSlotGrid/AttachmentSlot2/AttachmentSlot2_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitSharedDraft/AttachmentSlotGrid/AttachmentSlot2/AttachmentSlot2_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitSharedDraft/AttachmentSlotGrid/AttachmentSlot2/AttachmentSlot2_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                }
+            ],
+            "__type": "TftUnitAttachmentSlotsData"
+        },
+        "InspectButton": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitSharedDraft/InspectButton",
+        "__type": "TftUnitFloatingInfoBarData"
+    },
+    "{ccf51459}": {
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar",
+        "Anchor": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/TFTUnitTwoStarFHB_AnchorBase",
+        "border": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/TFTUnitTwoStarFHB_Border_Default",
+        "AttachmentSlots": {
+            "StandardSlots": [
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/AttachmentSlots/TFTUnitTwoStar_AttachmentSlot0_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/AttachmentSlots/TFTUnitTwoStar_AttachmentSlot0_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/AttachmentSlots/TFTUnitTwoStar_AttachmentSlot0_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/AttachmentSlots/TFTUnitTwoStar_AttachmentSlot0_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/AttachmentSlots/TFTUnitTwoStar_AttachmentSlot1_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/AttachmentSlots/TFTUnitTwoStar_AttachmentSlot1_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/AttachmentSlots/TFTUnitTwoStar_AttachmentSlot1_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/AttachmentSlots/TFTUnitTwoStar_AttachmentSlot1_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/AttachmentSlots/TFTUnitTwoStar_AttachmentSlot2_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/AttachmentSlots/TFTUnitTwoStar_AttachmentSlot2_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/AttachmentSlots/TFTUnitTwoStar_AttachmentSlot2_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/AttachmentSlots/TFTUnitTwoStar_AttachmentSlot2_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                }
+            ],
+            "__type": "TftUnitAttachmentSlotsData"
+        },
+        "Healthbar": {
+            "Healthbar": {
+                "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/TFTUnitTwoStarHP_BarTexture",
+                "__type": "BarTypeMap"
+            },
+            "TickStyle": {
+                "StandardTick": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/TFTUnitTwoStarHP_Tick",
+                "__type": "HealthBarTickStyleUnit"
+            },
+            "fadeData": {
+                "FadeBar": {
+                    "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/TFTUnitTwoStarHP_BarFade",
+                    "__type": "BarTypeMap"
+                },
+                "__type": "HealthBarFadeData"
+            },
+            "ExtraBars": {
+                "AllShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/TFTUnitTwoStarHP_AShieldBarTexture",
+                "PhysicalShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/TFTUnitTwoStarHP_PShieldBarTexture",
+                "MagicShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/TFTUnitTwoStarHP_MShieldBarTexture",
+                "__type": "HealthBarExtraBarsData"
+            },
+            "__type": "HealthBarData"
+        },
+        "ParBar": {
+            "AbilityResourceBars": {
+                "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/TFTUnitTwoStarPAR_BarTexture",
+                "__type": "ResourceMeterIconData"
+            },
+            "StandardTick": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitTwoStar/TFTUnitTwoStarPAR_Tick",
+            "__type": "AbilityResourceBarData"
+        },
+        "__type": "TftUnitFloatingInfoBarData"
+    },
+    "{cf8b2985}": {
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar",
+        "Anchor": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/TFTUnitFourStarFHB_AnchorBase",
+        "border": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/TFTUnitFourStarFHB_Border_Default",
+        "AttachmentSlots": {
+            "StandardSlots": [
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/AttachmentSlots/TFTUnitFourStar_AttachmentSlot0_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/AttachmentSlots/TFTUnitFourStar_AttachmentSlot0_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/AttachmentSlots/TFTUnitFourStar_AttachmentSlot0_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/AttachmentSlots/TFTUnitFourStar_AttachmentSlot0_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/AttachmentSlots/TFTUnitFourStar_AttachmentSlot1_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/AttachmentSlots/TFTUnitFourStar_AttachmentSlot1_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/AttachmentSlots/TFTUnitFourStar_AttachmentSlot1_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/AttachmentSlots/TFTUnitFourStar_AttachmentSlot1_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                },
+                {
+                    "Frame": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/AttachmentSlots/TFTUnitFourStar_AttachmentSlot2_Frame",
+                    "Icon": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/AttachmentSlots/TFTUnitFourStar_AttachmentSlot2_Icon",
+                    "Overlay": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/AttachmentSlots/TFTUnitFourStar_AttachmentSlot2_Overlay",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/AttachmentSlots/TFTUnitFourStar_AttachmentSlot2_Text",
+                    "__type": "TftUnitAttachmentStandardSlotData"
+                }
+            ],
+            "__type": "TftUnitAttachmentSlotsData"
+        },
+        "Healthbar": {
+            "Healthbar": {
+                "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/TFTUnitFourStarHP_BarTexture",
+                "__type": "BarTypeMap"
+            },
+            "TickStyle": {
+                "StandardTick": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/TFTUnitFourStarHP_Tick",
+                "__type": "HealthBarTickStyleUnit"
+            },
+            "fadeData": {
+                "FadeBar": {
+                    "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/TFTUnitFourStarHP_BarFade",
+                    "__type": "BarTypeMap"
+                },
+                "__type": "HealthBarFadeData"
+            },
+            "ExtraBars": {
+                "AllShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/TFTUnitFourStarHP_AShieldBarTexture",
+                "PhysicalShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/TFTUnitFourStarHP_PShieldBarTexture",
+                "MagicShieldBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/TFTUnitFourStarHP_MShieldBarTexture",
+                "__type": "HealthBarExtraBarsData"
+            },
+            "__type": "HealthBarData"
+        },
+        "ParBar": {
+            "AbilityResourceBars": {
+                "DefaultBar": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/TFTUnitFourStarPAR_BarTexture",
+                "__type": "ResourceMeterIconData"
+            },
+            "StandardTick": "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase/FHBTFTUnitFourStar/TFTUnitFourStarPAR_Tick",
+            "__type": "AbilityResourceBarData"
+        },
+        "__type": "TftUnitFloatingInfoBarData"
+    },
+    "{1a73e035}": {
+        "TextureName": "ASSETS/UX/FloatingHealthBars/HealthbarIcons.tex",
+        "mPrioritizedUnitStatusData": [
+            {
+                "attackableUnitStatusType": 5,
+                "statusName": "game_unitstatus_res",
+                "TextureUvs": [
+                    6.0,
+                    321.0,
+                    25.0,
+                    342.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "attackableUnitStatusType": 2,
+                "statusName": "game_unitstatus_unstoppable",
+                "TextureUvs": [
+                    6.0,
+                    250.0,
+                    25.0,
+                    270.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "attackableUnitStatusType": 10,
+                "statusName": "game_unitstatus_interruptiblechannel",
+                "TextureUvs": [
+                    8.0,
+                    407.0,
+                    29.0,
+                    434.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 3,
+                "statusName": "game_unitstatus_airborne",
+                "TextureUvs": [
+                    8.0,
+                    105.0,
+                    24.0,
+                    127.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 4,
+                "statusName": "game_unitstatus_airborne",
+                "TextureUvs": [
+                    8.0,
+                    105.0,
+                    24.0,
+                    127.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 2,
+                "statusName": "game_unitstatus_suppressed",
+                "TextureUvs": [
+                    5.0,
+                    33.0,
+                    26.0,
+                    55.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 10,
+                "statusName": "game_unitstatus_fleeing",
+                "TextureUvs": [
+                    5.0,
+                    58.0,
+                    26.0,
+                    79.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 13,
+                "statusName": "game_unitstatus_charmed",
+                "TextureUvs": [
+                    7.0,
+                    152.0,
+                    26.0,
+                    175.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 11,
+                "statusName": "game_unitstatus_berserk",
+                "TextureUvs": [
+                    4.0,
+                    181.0,
+                    29.0,
+                    196.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 12,
+                "statusName": "game_unitstatus_taunted",
+                "TextureUvs": [
+                    4.0,
+                    181.0,
+                    29.0,
+                    196.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 20,
+                "statusName": "game_unitstatus_asleep",
+                "TextureUvs": [
+                    9.0,
+                    377.0,
+                    27.0,
+                    400.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 5,
+                "statusName": "game_unitstatus_stunned",
+                "TextureUvs": [
+                    6.0,
+                    225.0,
+                    26.0,
+                    246.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 9,
+                "statusName": "game_unitstatus_rooted",
+                "TextureUvs": [
+                    5.0,
+                    200.0,
+                    24.0,
+                    222.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 6,
+                "statusName": "game_unitstatus_polymorphed",
+                "TextureUvs": [
+                    5.0,
+                    9.0,
+                    27.0,
+                    32.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 7,
+                "statusName": "game_unitstatus_silenced",
+                "TextureUvs": [
+                    5.0,
+                    9.0,
+                    27.0,
+                    32.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 17,
+                "statusName": "game_unitstatus_blinded",
+                "TextureUvs": [
+                    4.0,
+                    128.0,
+                    27.0,
+                    150.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 8,
+                "statusName": "game_unitstatus_disarmed",
+                "TextureUvs": [
+                    5.0,
+                    81.0,
+                    26.0,
+                    102.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 18,
+                "statusName": "game_unitstatus_grounded",
+                "TextureUvs": [
+                    5.0,
+                    200.0,
+                    24.0,
+                    222.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 19,
+                "statusName": "game_unitstatus_nearsighted",
+                "TextureUvs": [
+                    4.0,
+                    128.0,
+                    27.0,
+                    150.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "locType": 21,
+                "statusName": "game_unitstatus_drowsy",
+                "TextureUvs": [
+                    4.0,
+                    348.0,
+                    26.0,
+                    370.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "attackableUnitStatusType": 3,
+                "statusName": "game_unitstatus_unslowable",
+                "TextureUvs": [
+                    7.0,
+                    298.0,
+                    24.0,
+                    318.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "attackableUnitStatusType": 9,
+                "statusName": "game_unitstatus_ccimmune",
+                "TextureUvs": [
+                    6.0,
+                    250.0,
+                    25.0,
+                    270.0
+                ],
+                "__type": "UnitStatusData"
+            },
+            {
+                "attackableUnitStatusType": 13,
+                "statusName": "game_unitstatus_withdrawing",
+                "TextureUvs": [
+                    6.0,
+                    321.0,
+                    25.0,
+                    342.0
+                ],
+                "__type": "UnitStatusData"
+            }
+        ],
+        "__type": "UnitStatusPriorityList"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTFloatingInfoBars/UIBase": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftfloatinginfobars/uibase",
+        "__type": "UiPropertyLoadable"
+    },
+    "{979e6044}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftfloatinginfobars/uimobilesoulfighter",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftfloatinginfobars/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{b641955c}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftfloatinginfobars/uimobile",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftfloatinginfobars/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{e930b6f1}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftfloatinginfobars/uibasesoulfighter",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftfloatinginfobars/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "__linked": []
+}

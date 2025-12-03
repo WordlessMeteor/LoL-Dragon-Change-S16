@@ -1,0 +1,114 @@
+{
+    "Characters/Kassadin/Skins/Root": {
+        "skinClassification": 1,
+        "metaDataTags": "faction:void,gender:male,element:dark",
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Kassadin"
+            ],
+            "bankUnits": [
+                {
+                    "name": "Kassadin_Base_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Kassadin/Skins/Base/Kassadin_Base_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Kassadin/Skins/Base/Kassadin_Base_SFX_events.bnk"
+                    ],
+                    "events": [
+                        "Play_sfx_Kassadin_ForcePulse_loop_buffactivate",
+                        "Play_sfx_Kassadin_ForcePulse_OnCast",
+                        "Play_sfx_Kassadin_ForcePulse_OnHit",
+                        "Play_sfx_Kassadin_KassadinBasicAttack2_OnCast",
+                        "Play_sfx_Kassadin_KassadinBasicAttack2_OnHit",
+                        "Play_sfx_Kassadin_KassadinBasicAttack3_OnCast",
+                        "Play_sfx_Kassadin_KassadinBasicAttack3_OnHit",
+                        "Play_sfx_Kassadin_KassadinBasicAttack_OnCast",
+                        "Play_sfx_Kassadin_KassadinBasicAttack_OnHit",
+                        "Play_sfx_Kassadin_KassadinCritAttack_OnCast",
+                        "Play_sfx_Kassadin_KassadinCritAttack_OnHit",
+                        "Play_sfx_Kassadin_NetherBlade_hit",
+                        "Play_sfx_Kassadin_NetherBlade_OnBuffActivate",
+                        "Play_sfx_Kassadin_NetherBlade_OnBuffDeactivate",
+                        "Play_sfx_Kassadin_NetherBlade_OnCast",
+                        "Play_sfx_Kassadin_NullLance_OnBuffActivate",
+                        "Play_sfx_Kassadin_NullLance_OnBuffDeactivate",
+                        "Play_sfx_Kassadin_NullLance_OnCast",
+                        "Play_sfx_Kassadin_NullLance_OnHit",
+                        "Play_sfx_Kassadin_NullLance_OnMissileLaunch",
+                        "Play_sfx_Kassadin_Recall3D_buffactivate",
+                        "Play_sfx_Kassadin_RiftWalk_buffactivate",
+                        "Play_sfx_Kassadin_RiftWalk_OnCast",
+                        "Stop_sfx_Kassadin_ForcePulse_loop_buffactivate",
+                        "Stop_sfx_Kassadin_NetherBlade_OnBuffActivate",
+                        "Stop_sfx_Kassadin_NullLance_OnBuffActivate",
+                        "Stop_sfx_Kassadin_NullLance_OnMissileLaunch"
+                    ],
+                    "__type": "BankUnit"
+                },
+                {
+                    "name": "Kassadin_Base_VO",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Kassadin/Skins/Base/Kassadin_Base_VO_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Kassadin/Skins/Base/Kassadin_Base_VO_events.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Kassadin/Skins/Base/Kassadin_Base_VO_audio.wpk"
+                    ],
+                    "events": [
+                        "Play_vo_Kassadin_Attack2DGeneral",
+                        "Play_vo_Kassadin_Death3D",
+                        "Play_vo_Kassadin_Joke3DGeneral",
+                        "Play_vo_Kassadin_Laugh3DGeneral",
+                        "Play_vo_Kassadin_Move2DStandard",
+                        "Play_vo_Kassadin_Taunt3DGeneral"
+                    ],
+                    "voiceOver": true,
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/Kassadin/Animations/Skin0",
+            "__type": "SkinAnimationProperties"
+        },
+        "armorMaterial": "Flesh",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "Kassadin_idle_lines",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "mContextualActionData": "Characters/Kassadin/CAC/Kassadin_Base",
+        "iconCircle": "ASSETS/Characters/Kassadin/HUD/Kassadin_Circle_0.tex",
+        "iconSquare": "ASSETS/Characters/Kassadin/HUD/Kassadin_Square_0.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "Spell": "Characters/Kassadin/Spells/NetherBladeAbility/NetherBlade",
+                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "weapon",
+                        "effectKey": "Kassadin_W_buf_Sword",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "head",
+                        "effectKey": "Kassadin_W_buf_Face",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
+        "__type": "SkinCharacterDataProperties"
+    },
+    "__linked": [
+        "DATA/Characters/Kassadin/Kassadin.bin",
+        "DATA/Characters/Kassadin/Animations/Skin0.bin",
+        "DATA/Kassadin_Skins_Root_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin8_Skins_Skin9.bin"
+    ]
+}

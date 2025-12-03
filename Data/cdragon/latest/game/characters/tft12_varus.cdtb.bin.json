@@ -1,0 +1,797 @@
+{
+    "Characters/TFT12_Varus/Spells/TFT12_VarusBasicAttack": {
+        "ObjectName": "TFT12_VarusBasicAttack",
+        "mScriptName": "TFT12_VarusBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "VayneBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.029999999329447746,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "r_finger",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "TFT12_Varus_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{4c8c723f}": {
+        "ObjectName": "TFT12_VarusSpell_ClusterMis",
+        "mScriptName": "TFT12_VarusSpell_ClusterMis",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "mCastTime": 0.30000001192092896,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mIsDisabledWhileDead": false,
+            "mProjectTargetToCastRange": true,
+            "mSpellRevealsChampion": false,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "mIgnoreRangeCheck": true,
+            "mMinimapIconDisplayFlag": 0,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeDisplayOverride": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 120.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": -10.0,
+                    "mOffsetInitialTargetHeight": -10.0,
+                    "mStartBoneName": "",
+                    "mSpeed": 660.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "mGravity": 7000.0,
+                    "__type": "GravityHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 3000.0,
+            "mMissileEffectKey": "TFT12_Varus_Q_Cluster_mis",
+            "mLineWidth": 120.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "mTargetingTypeData": {
+                "__type": "TargetOrLocation"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_VarusSpell_ClusterMis",
+                    "mFormat": "{fffee0e7}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Varus/Spells/TFT12_VarusBasicAttack2": {
+        "ObjectName": "TFT12_VarusBasicAttack2",
+        "mScriptName": "TFT12_VarusBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "VayneBasicAttack",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.029999999329447746,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "r_finger",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "TFT12_Varus_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Varus/Spells/TFT12_VarusSpell": {
+        "ObjectName": "TFT12_VarusSpell",
+        "mScriptName": "TFT12_VarusSpell",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 32,
+            "DataValues": [
+                {
+                    "mName": "InitialADRatio",
+                    "mValues": [
+                        3.0,
+                        5.0,
+                        5.0,
+                        10.0,
+                        11.0,
+                        1.7999999523162842,
+                        1.7999999523162842
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BonusDamage",
+                    "mValues": [
+                        3.0,
+                        50.0,
+                        75.0,
+                        200.0,
+                        300.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "InitialAOERadius",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ClusterAOERadius",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ClusterDamageRatio",
+                    "mValues": [
+                        0.0,
+                        0.5,
+                        0.5,
+                        1.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedPhysicalDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mSubpart": {
+                                "mDataValue": "InitialADRatio",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mSubpart": {
+                                        "mDataValue": "InitialADRatio",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "__type": "StatBySubPartCalculationPart"
+                                },
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "BonusDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedBonusDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "BonusDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ClusterDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mSubparts": [
+                                    {
+                                        "mStat": 2,
+                                        "mSubpart": {
+                                            "mDataValue": "InitialADRatio",
+                                            "__type": "NamedDataValueCalculationPart"
+                                        },
+                                        "__type": "StatBySubPartCalculationPart"
+                                    },
+                                    {
+                                        "mSubpart": {
+                                            "mDataValue": "BonusDamage",
+                                            "__type": "NamedDataValueCalculationPart"
+                                        },
+                                        "mRatio": 0.009999999776482582,
+                                        "__type": "SubPartScaledProportionalToStat"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "mPart2": {
+                                "mDataValue": "ClusterDamageRatio",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedCastRange": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 31,
+                                    "mCoefficient": 0.004999999888241291,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                },
+                                {
+                                    "mNumber": 1.0,
+                                    "__type": "NumberCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castConeDistance": 100.0,
+            "missileSpeed": 1400.0,
+            "mHitEffectOrientType": 2,
+            "bHaveHitBone": true,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_VarusSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT12_VarusSpell_Name",
+                        "keyTooltip": "Spell_TFT12_VarusSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "InitialADRatio",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT12_VarusSpell_Physical",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BonusDamage",
+                                    "nameOverride": "Spell_TFT12_VarusSpell_Magic",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BonusDamage",
+                                    "nameOverride": "Spell_TFT12_VarusSpell_TotalDamage",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ClusterDamageRatio",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT12_VarusSpell_ClusterDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "CastRange",
+                                    "nameOverride": "Spell_TFT12_VarusSpell_CastRange",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{a76573f4}": {
+        "ObjectName": "TFT12_VarusSpellMis",
+        "mScriptName": "TFT12_VarusSpellMis",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "",
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": 2.0,
+            "delayTotalTimePercent": 0.3500000238418579,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 3000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 63.0,
+            "missileSpeed": 1400.0,
+            "mMissileEffectKey": "TFT12_Varus_Q_Initial_Mis",
+            "mHitEffectOrientType": 2,
+            "bHaveHitBone": true,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 1,
+            "mCastingBreaksStealth": true,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Varus/Spells/TFT12_VarusCritAttack": {
+        "ObjectName": "TFT12_VarusCritAttack",
+        "mScriptName": "TFT12_VarusCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "VayneBasicAttack",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.029999999329447746,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "r_finger",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "TFT12_Varus_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Varus/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT12_Varus/CharacterRecords/Root": {
+        "mCharacterName": "TFT12_Varus",
+        "baseHP": 850.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 200.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 52.0,
+        "baseArmor": 30.0,
+        "baseSpellBlock": 30.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 890.0,
+        "attackSpeed": 0.800000011920929,
+        "attackSpeedRatio": 0.75,
+        "basicAttack": {
+            "mAttackName": "TFT12_VarusBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT12_VarusBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT12_VarusCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT12_VarusSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT12_Varus/Spells/TFT12_VarusSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "useRiotRelationships": true,
+        "flags": 9446656,
+        "tier": 4,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{48f0c17f}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{c39fed5c}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ae695df}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 20.0,
+        "mShopData": "{8d7aec95}",
+        "MobileHealthBarHeightOverride": 170.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

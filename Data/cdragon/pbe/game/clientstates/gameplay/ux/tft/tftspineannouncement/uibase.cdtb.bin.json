@@ -1,0 +1,50 @@
+{
+    "ClientStates/Gameplay/UX/TFT/TFTSpineAnnouncement/UIBase/Scene": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTSpineAnnouncement/UIBase/Scene",
+        "Layer": 50,
+        "SceneTransitionIn": {
+            "TransitionTime": 1.0,
+            "EasingType": 8,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "SceneTransitionOut": {
+            "EasingType": 8,
+            "startAlpha": 255,
+            "endAlpha": 0,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTSpineAnnouncement/UIBase/Scene/Background_VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTSpineAnnouncement/UIBase/Scene/Background_VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTSpineAnnouncement/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 101,
+        "Position": {
+            "__type": "UiPositionFullScreen"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/TFT/TFTSpineAnnouncement/Particles/TFT14_HackBG",
+        "__type": "UiElementParticleSystemData"
+    },
+    "{c137d655}": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTSpineAnnouncement/UIBase/Scene/hack-ceremony",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTSpineAnnouncement/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 100,
+        "Position": {
+            "__type": "UiPositionFullScreen"
+        },
+        "SpineSkelFile": "ASSETS/UX/TFT/Mograph/Sets/Set14/HackCeremony/hack-ceremony.skel",
+        "SpineAtlasFile": "ASSETS/UX/TFT/Mograph/Sets/Set14/HackCeremony/hack-ceremony.atlas",
+        "AnimationItems": [
+            {
+                "AnimationName": "Intro",
+                "SpeedScale": 0.5,
+                "__type": "{d31bbf89}"
+            }
+        ],
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set14/UI_PixelateGlitch_D",
+        "__type": "{104afcda}"
+    },
+    "__linked": []
+}

@@ -1,0 +1,197 @@
+{
+    "Characters/Strawberry_IllaoiMinion/Skins/Skin0": {
+        "championSkinName": "Strawberry_IllaoiMinion",
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/Strawberry_IllaoiMinion/Animations/Skin0",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Strawberry_IllaoiMinion/Skins/Base/IllaoiMinion_Skin27.StrawberryRebuild.skl",
+            "simpleSkin": "ASSETS/Characters/Strawberry_IllaoiMinion/Skins/Base/IllaoiMinion_Skin27.StrawberryRebuild.skn",
+            "texture": "ASSETS/Characters/Strawberry_IllaoiMinion/Skins/Base/IllaoiMinion_Skin27_TX_CM.StrawberryRebuild.tex",
+            "skinScale": 0.8999999761581421,
+            "selfIllumination": 2.5,
+            "brushAlphaOverride": 0.6000000238418579,
+            "overrideBoundingBox": [
+                100.0,
+                200.0,
+                100.0
+            ],
+            "castShadows": false,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "materialOverride": [
+                {
+                    "Material": "Characters/Strawberry_IllaoiMinion/Skins/Skin0/Materials/Skin27_Minion_inst",
+                    "submesh": "Tentacle",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "iconCircle": "ASSETS/Characters/Strawberry_IllaoiMinion/HUD/Illaoi_P.StrawberryRebuild.tex",
+        "iconSquare": "ASSETS/Characters/Strawberry_IllaoiMinion/HUD/Illaoi_P.StrawberryRebuild.tex",
+        "healthBarData": {
+            "hpPerTick": 1.0,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/Strawberry_IllaoiMinion/Skins/Skin0/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/Strawberry_IllaoiMinion/Skins/Skin0/Materials/Skin27_Minion_inst": {
+        "name": "Characters/Strawberry_IllaoiMinion/Skins/Skin0/Materials/Skin27_Minion_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Strawberry_IllaoiMinion/Skins/Base/IllaoiMinion_Skin27_TX_CM.StrawberryRebuild.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "SS_Texture",
+                "texturePath": "ASSETS/Shared/Particles/white_RGB.StrawberryRebuild.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask1",
+                "texturePath": "ASSETS/Characters/Strawberry_IllaoiMinion/Skins/Base/Illaoi_Skin18_E_SpiritMat.StrawberryRebuild.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask2",
+                "texturePath": "ASSETS/Characters/Strawberry_IllaoiMinion/Skins/Base/IllaoiMinion_Skin27_TX_CM.StrawberryRebuild.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "SS_Scale",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SS_rate",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Color",
+                "value": [
+                    0.5000076293945312,
+                    0.050003815442323685,
+                    0.2500038146972656,
+                    0.3499961793422699
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blue_Scale",
+                "value": [
+                    10.0,
+                    10.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blue_Rate",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomIntensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    0.75,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dodge_Bias",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_LOCAL_SPACE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Darkstar",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Strawberry_IllaoiMinion/Skins/Skin0/Resources": {
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/Strawberry_IllaoiMinion/Strawberry_IllaoiMinion.bin",
+        "DATA/Characters/Strawberry_IllaoiMinion/Animations/Skin0.bin"
+    ]
+}

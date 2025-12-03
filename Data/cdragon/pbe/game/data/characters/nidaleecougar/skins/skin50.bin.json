@@ -1,0 +1,828 @@
+{
+    "Characters/NidaleeCougar/Skins/Skin50": {
+        "championSkinName": "NidaleeCougarSkin50",
+        "skinParent": 48,
+        "metaDataTags": "gender:female,faction:ixtal",
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Nidalee",
+                "NidaleeCougar",
+                "NidaleeSkin48",
+                "NidaleeCougarSkin48"
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/NidaleeCougar/Animations/Skin48",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/NidaleeCougar/Skins/Skin48/NidaleeCougar_Skin48.skl",
+            "simpleSkin": "ASSETS/Characters/NidaleeCougar/Skins/Skin48/NidaleeCougar_Skin48.skn",
+            "texture": "ASSETS/Characters/NidaleeCougar/Skins/Skin50/NidaleeCougar_Skin50_Cougar_TX_CM.tex",
+            "selfIllumination": 0.699999988079071,
+            "Material": "Characters/NidaleeCougar/Skins/Skin50/Materials/Nidalee_Skin50_Cougar_Body_Metal_inst",
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "materialOverride": [
+                {
+                    "Material": "Characters/NidaleeCougar/Skins/Skin50/Materials/Nidalee_Skin50_Flame_inst",
+                    "submesh": "VFXFire",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "Characters/NidaleeCougar/Skins/Skin50/Materials/NidaleeCougar_Skin50_Outline_Inst",
+                    "submesh": "Body_Outline",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "Nidalee_idle1",
+                "boneName": "Tail5",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "iconCircle": "ASSETS/Characters/Nidalee/HUD/Nidalee_Circle.tex",
+        "iconSquare": "ASSETS/Characters/Nidalee/HUD/Nidalee_Square.tex",
+        "iconAvatar": "ASSETS/Characters/Nidalee/HUD/Nidalee_Circle_48.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/NidaleeCougar/Skins/Skin50/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/NidaleeCougar/Skins/Skin50/Materials/Nidalee_Skin50_Cougar_Body_Metal_inst": {
+        "name": "Characters/NidaleeCougar/Skins/Skin50/Materials/Nidalee_Skin50_Cougar_Body_Metal_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Outline_Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/NidaleeCougar/Skins/Skin50/NidaleeCougar_Skin50_Cougar_TX_CM.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Scroll_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "EmissionR_DistortionG_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "RMA_Texture",
+                "texturePath": "ASSETS/Characters/Nidalee/Skins/Skin48/Nidalee_Skin48_RMA.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpaceTex",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Mask",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Exclude_Mask_from_TintColor_Value",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScreenSpaceTex_UV_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RMA_Value",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.800000011920929,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Outline_Color",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Outline_Control",
+                "value": [
+                    0.44999998807907104,
+                    0.009999999776482582,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineBlendValue",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_R_UV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_R_UV_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_G_UV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_G_UV_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_B_UV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_B_UV_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    0.8100404143333435,
+                    0.8100404143333435,
+                    0.8100404143333435,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveValue",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveEdgePowObjSize",
+                "value": [
+                    10.0,
+                    500.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveEdgeColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveWaveStrengthLength",
+                "value": [
+                    0.10000000149011612,
+                    5.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformWaveController",
+                "value": [
+                    0.5,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformWaveStrength",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_R_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_G_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_MaskStrength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomPow_RGB",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EdgeBloomColor_RGB",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveLocationOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DistortionStrength",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveWaveDirNoiseA",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveWaveDirNoiseB",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "All_Additive_Strength",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScreenSpace_Mask_Strength",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScreenSpaceTex_UV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_Simple_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelOutlineOnly_Color",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelOutlineOnly_BaseColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelOutlineOnly_Control",
+                "value": [
+                    0.10000000149011612,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "BLOOM_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "EXCLUDE_MASK_FROM_TINTCOLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCREENSPACETEX_SCROLL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_ALPHA_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCROLLTEX_G_ADDITIVE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCROLLTEX_R_ADDITIVE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TWO_D_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALL_ADDITIVE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCROLLTEX_SIMPLE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCREENSPACE_TEX_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "FRESNEL_OUTLINE_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCROLLTEX_SIMPLE_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4",
+            "DISABLE_SHADOWS": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/PBR_VFX",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/NidaleeCougar/Skins/Skin50/Materials/NidaleeCougar_Skin50_Outline_Inst": {
+        "name": "Characters/NidaleeCougar/Skins/Skin50/Materials/NidaleeCougar_Skin50_Outline_Inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/NidaleeCougar/Skins/Skin50/Nidalee_Skin50_Outline_TX_CM.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Bloom_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Outline_Thickness",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Outline_Color",
+                "value": [
+                    1.0,
+                    0.7298542857170105,
+                    0.11911192536354065,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color",
+                "value": [
+                    0.9108567833900452,
+                    0.18768596649169922,
+                    0.7959868907928467,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_GRADIENT_COLOR",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_BLOOM_MAP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALPHA_CHANNEL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_Outline",
+                        "blendEnable": true,
+                        "PolygonDepthBiasEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "windingToCull": 0,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/NidaleeCougar/Skins/Skin50/Materials/Nidalee_Skin50_Flame_inst": {
+        "name": "Characters/NidaleeCougar/Skins/Skin50/Materials/Nidalee_Skin50_Flame_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Material_Texture_10.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Panning_Texture",
+                "texturePath": "ASSETS/Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Material_Texture_09.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Panning_Scale",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Panning_Speed",
+                "value": [
+                    0.0,
+                    -0.699999988079071,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    0.6499999761581421,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Control",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/ScrollingMaskedDiffuseBloom",
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/NidaleeCougar/Skins/Skin50/Resources": {
+        "resourceMap": {
+            "Nidalee_BA_Crit": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_BA_Crit",
+            "Nidalee_BA_Mis": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_BA_Mis",
+            "Nidalee_BA_Tar": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_BA_Tar",
+            "Nidalee_Cougar_Dance_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Cougar_Dance_Sound",
+            "Nidalee_Cougar_Dance_Sound_Loop": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Cougar_Dance_Sound_Loop",
+            "{8acb3dd6}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_E",
+            "{b17a33d4}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_E_Cougar_Buf",
+            "{f2f858c2}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_E_Cougar_Tar",
+            "Nidalee_Cougar_Joke_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Cougar_Joke_Sound",
+            "Nidalee_Cougar_Laugh_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Cougar_Laugh_Sound",
+            "{71435318}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Q_Cougar_Buf",
+            "{d6c8ef6e}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Q_Cougar_Tar",
+            "{065f7ad7}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Q_Tar_Marked",
+            "Nidalee_Cougar_Taunt_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Cougar_Taunt_Sound",
+            "{78cb2180}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_W",
+            "{540d4c67}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_W_Buf_Circle",
+            "{91e35746}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_W_Cougar_Cas",
+            "{f61fca1f}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_W_Marked_Cas",
+            "{5589e194}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_W_Cougar_Tar",
+            "Nidalee_Dance_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Dance_Sound",
+            "Nidalee_E_Buf": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_E_Buf",
+            "Nidalee_E_Tar": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_E_Tar",
+            "Nidalee_idle1": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_idle1",
+            "Nidalee_P": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_P",
+            "Nidalee_primal_surge_attack_buf_cas": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_primal_surge_attack_buf_cas",
+            "Nidalee_P_Buf": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_P_Buf",
+            "Nidalee_Q_Buf": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Q_Buf",
+            "Nidalee_Q_buff_indicator": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Q_buff_indicator",
+            "Nidalee_Q_Cas": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Q_Cas",
+            "Nidalee_Q_Mis": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Q_Mis",
+            "Nidalee_Q_Tar": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Q_Tar",
+            "Nidalee_Recall_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Recall_Sound",
+            "Nidalee_R_Cas": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_R_Cas",
+            "Nidalee_Taunt_Sound": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Taunt_Sound",
+            "Nidalee_W_Cas": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_W_Cas",
+            "Nidalee_W_Tar": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_W_Tar",
+            "Nidalee_W_TC_Green": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_W_TC_Green",
+            "Nidalee_W_TC_Red": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_W_TC_Red",
+            "Volibear_maxStack_indicator_cast_BV2": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Volibear_maxStack_indicator_cast",
+            "Nidalee_Q_Cougar_Trail": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Q_Cougar_Trail",
+            "Nidalee_BA_Cougar_Swipe_01": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_BA_Cougar_Swipe_01",
+            "Nidalee_BA_Cougar_Swipe_02": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_BA_Cougar_Swipe_02",
+            "{9331628d}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Q_Cougar_Tar",
+            "{47f59729}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_E_Cougar_Tar",
+            "{ff9dc851}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_E_Tar_Candle",
+            "{37d689ef}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Q_Cougar_Buf",
+            "{8a72263f}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_W_Cougar_Tar",
+            "{f253e9f1}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_W_Cougar_Cas",
+            "{c08766d4}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Z_Recall_Cougar_Ground",
+            "{fbd20766}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Cougar_Candles_Child",
+            "{9f0f7038}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Z_Recall_Cougar_Flying_Petals",
+            "{cdf85399}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Cougar_Smash",
+            "{c0c2e022}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Human_Hands_Trail",
+            "{f923455d}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Human_Spin",
+            "{1de8a646}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Z_Recall_Human_Environment",
+            "{ac7925c5}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Z_Recall_Cougar_Petal",
+            "{c1fcc191}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Z_Recall_Cougar_Petal_01",
+            "{b70edc5d}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Z_Recall_Cougar_Wind",
+            "{db541ca0}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Cougar_Candles_Child_01",
+            "{e9e99a96}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Z_Recall_Human_Spear_Tar",
+            "{6a890840}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Human_Cougar",
+            "{97e04fab}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Human_Nidalee_Soul",
+            "{6fbbb547}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Human_Winddown",
+            "{8a5255d3}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Z_Butterfly_Glow_Child",
+            "{1a032dd7}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Human_Nidalee_Soul_1",
+            "{100b9a81}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Human_Candle_Flame_Child",
+            "{b285e334}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Z_Recall_Human_Candle_Flame",
+            "{e8d573c1}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Human_Energy",
+            "{6a786c23}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Cougar_Roar_01",
+            "{48c2da4f}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Cougar_Roar",
+            "{fb01f22c}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Human_Cougar_Steps",
+            "{38874bf3}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Z_Recall_Cougar_Petals_Burst",
+            "{5fddf917}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Z_Recall_Cougar_Drone",
+            "{44521126}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Human_Smoke_Temple_Appear",
+            "{52877af4}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Z_Recall_Human_Cougar_Incatnate",
+            "{ad837c12}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Cougar_Avatar",
+            "{085ac4f3}": "Characters/Nidalee/Skins/Skin50/Particles/Nidalee_Skin50_Idle_Weapon",
+            "{4d74a98e}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Spear_Disappear",
+            "{b8a3fb5b}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_Z_Recall_Human_Altar_FlowersSparkles",
+            "{fe27b3c3}": "Characters/Nidalee/Skins/Skin48/Particles/Nidalee_Skin48_E_Cougar_Buf"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/NidaleeCougar/NidaleeCougar.bin",
+        "DATA/Characters/NidaleeCougar/Animations/Skin48.bin"
+    ]
+}

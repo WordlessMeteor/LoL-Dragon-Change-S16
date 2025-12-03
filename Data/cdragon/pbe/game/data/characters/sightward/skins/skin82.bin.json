@@ -1,0 +1,4243 @@
+{
+    "Characters/SightWard/Skins/Skin82": {
+        "championSkinName": "SightWardSkin82",
+        "skinAudioProperties": {
+            "bankUnits": [
+                {
+                    "name": "SightWard_Skin82",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/ITEMS_SightWard_Skin82_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/ITEMS_SightWard_Skin82_events.bnk"
+                    ],
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/SightWard/Animations/Skin82",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/SightWard/Skins/Skin82/Sightward_Skin82.skl",
+            "simpleSkin": "ASSETS/Characters/SightWard/Skins/Skin82/Sightward_Skin82.skn",
+            "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Sightward_Skin82_TX_CM.tex",
+            "skinScale": 0.75,
+            "selfIllumination": 0.699999988079071,
+            "__type": "SkinMeshDataProperties"
+        },
+        "idleParticlesEffects": [
+            {
+                "effectKey": "SightWard_Idle",
+                "boneName": "Root",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "Sightward_idle_mini_01",
+                "boneName": "Top_Ring_Prop2",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "iconCircle": "ASSETS/Characters/SightWard/HUD/SightWard_Square.tex",
+        "iconSquare": "ASSETS/Characters/SightWard/HUD/SightWard_Square.tex",
+        "healthBarData": {
+            "hpPerTick": 1.0,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/SightWard/Skins/Skin82/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/SightWard/Skins/Skin82/Resources": {
+        "resourceMap": {
+            "SightWard_Death": "Characters/SightWard/Skins/Skin0/Particles/Sightward_Base_death",
+            "SightWard_Idle": "Characters/SightWard/Skins/Skin82/Particles/Sightward_Skin82_idle_01",
+            "SightWard_Spawn": "Characters/SightWard/Skins/Skin82/Particles/Sightward_Skin82_spawn_01",
+            "Sightward_Spawn_02": "Characters/SightWard/Skins/Skin82/Particles/Sightward_Skin82_spawn_02",
+            "Sightward_Idle_02": "{00000000}",
+            "{02eb9e3d}": "{00000000}",
+            "Sightward_Death_02": "{00000000}",
+            "Sightward_Hit_01": "{00000000}",
+            "Sightward_Ambient_01": "{00000000}",
+            "Sightward_idle_mini_01": "Characters/SightWard/Skins/Skin82/Particles/Sightward_Skin82_idle_mini_01"
+        },
+        "__type": "ResourceResolver"
+    },
+    "Characters/SightWard/Skins/Skin82/Particles/Sightward_Skin82_idle_01": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.5,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "RingIn",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.12941177189350128
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.4000000059604645,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.3803919851779938,
+                                0.2509799897670746,
+                                0.800000011920929,
+                                0.0
+                            ],
+                            [
+                                0.8588240146636963,
+                                0.1333329975605011,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.450980007648468,
+                                0.00392200006172061,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.007842999882996082,
+                                0.11764699965715408,
+                                0.7411760091781616,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -10,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        100.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        40.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Ring_03.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.5,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "FlareBack",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.4000000059604645,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.7215690016746521,
+                                0.3294120132923126,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.800000011920929,
+                                0.2941179871559143,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -10,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        100.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        120.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_LensFlare_02.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.5,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "GalaxyOut",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.49803900718688965,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -10,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        100.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.699999988079071,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                100.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        120.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Space_01.tex",
+                "uvScale": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                2.0,
+                                2.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Glow_03.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "GalaxyOut1",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 5,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.4000000059604645,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.48235300183296204,
+                                1.0,
+                                0.9568629860877991,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.6666669845581055,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 20,
+                "modulationFactor": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    1.0
+                ],
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        150.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.699999988079071,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                150.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        45.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.800000011920929,
+                                0.800000011920929,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Space_01.tex",
+                "uvScale": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.4000000059604645,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.100000023841858,
+                                1.100000023841858
+                            ],
+                            [
+                                5.0,
+                                5.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Glow_01.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.699999988079071,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            2.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "emitterName": "DarkCore",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.917647123336792
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.24705900251865387,
+                                0.0,
+                                0.5372549891471863,
+                                0.0
+                            ],
+                            [
+                                0.564706027507782,
+                                0.09019599854946136,
+                                0.564706027507782,
+                                1.0
+                            ],
+                            [
+                                0.06666699796915054,
+                                0.0,
+                                0.2666670083999634,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -15,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        45.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.6000000238418579,
+                                0.6000000238418579,
+                                0.6000000238418579
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Glow_02.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.699999988079071,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            2.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "emitterName": "DarkFlare",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.4862745404243469
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.19607800245285034,
+                                0.0,
+                                0.16862699389457703,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.17254899442195892,
+                                0.2588239908218384,
+                                1.0
+                            ],
+                            [
+                                0.2666670083999634,
+                                0.0,
+                                0.1411760002374649,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -3,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        70.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.6000000238418579,
+                                0.6000000238418579,
+                                0.6000000238418579
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Glow_04.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.800000011920929,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    1.0,
+                                    1.5
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.800000011920929
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "emitterName": "Sparkles1",
+                "birthOrbitalVelocity": {
+                    "constantValue": [
+                        0.0,
+                        2.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthVelocity": {
+                    "constantValue": [
+                        -35.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 0.5,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            80.0,
+                            0.0,
+                            0.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.20000000298023224,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    80.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        },
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            1.0000001192092896,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            1.0000001192092896
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.37254902720451355
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.6392160058021545,
+                                0.137254998087883,
+                                1.0
+                            ],
+                            [
+                                0.4274510145187378,
+                                0.01960800029337406,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 5,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        -300.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        20.0,
+                        65.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                20.0,
+                                65.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Specs_02.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.800000011920929,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            1.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "emitterName": "SpecsHot_1",
+                "birthOrbitalVelocity": {
+                    "constantValue": [
+                        0.0,
+                        0.5,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthVelocity": {
+                    "constantValue": [
+                        -1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 0.5,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            20.0,
+                            0.0,
+                            1.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        },
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            1.0000001192092896,
+                            0.0,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            0.7071068286895752,
+                            0.7071068286895752
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.4000000059604645,
+                                0.21960799396038055,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.5372549891471863,
+                                0.9176470041275024,
+                                1.0
+                            ],
+                            [
+                                0.8745099902153015,
+                                0.05098000168800354,
+                                0.5176470279693604,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 4,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        12.0,
+                        12.0,
+                        12.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                12.0,
+                                12.0,
+                                12.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Specs_02.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "emitterName": "StarsCore_ab",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.8235294818878174
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.4000000059604645,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.8666669726371765,
+                                0.2705880105495453,
+                                0.015685999765992165,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.5058820247650146,
+                                0.09803900122642517,
+                                1.0
+                            ],
+                            [
+                                0.784313976764679,
+                                0.23137299716472626,
+                                0.04705899953842163,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 4,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        50.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    0.5099999904632568,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    -0.5,
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                50.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        52.0,
+                        35.0,
+                        35.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.6000000238418579,
+                                0.6000000238418579,
+                                0.6000000238418579
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Specs_02.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "emitterName": "StarsCore_add",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.8235294818878174
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.4000000059604645,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.8666669726371765,
+                                0.2705880105495453,
+                                0.015685999765992165,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.6274510025978088,
+                                0.16862699389457703,
+                                1.0
+                            ],
+                            [
+                                0.784313976764679,
+                                0.23137299716472626,
+                                0.04705899953842163,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 5,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        50.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    0.5099999904632568,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    -0.5,
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                50.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        43.0,
+                        35.0,
+                        35.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.6000000238418579,
+                                0.6000000238418579,
+                                0.6000000238418579
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Specs_02.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.8500000238418579,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            2.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "emitterName": "RadialBursts",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.3450980484485626
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.30000001192092896,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.7411760091781616,
+                                0.16078400611877441,
+                                0.9019610285758972,
+                                0.0
+                            ],
+                            [
+                                0.5137249827384949,
+                                0.02745099924504757,
+                                0.6745100021362305,
+                                1.0
+                            ],
+                            [
+                                0.4745100140571594,
+                                0.1411760002374649,
+                                0.9372550249099731,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 6,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        40.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Radial_01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Sightward_Skin82_idle_01",
+        "particlePath": "Characters/SightWard/Skins/Skin82/Particles/Sightward_Skin82_idle_01",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/SightWard/Skins/Skin82/Particles/Sightward_Skin82_spawn_02": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "groundPortal",
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        15.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.6666666865348816,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.029999999329447746,
+                            0.8999999761581421,
+                            0.949999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.49799299240112305
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            0.949999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_W_Einstein_02.tex",
+                "uvMode": 2,
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        -0.029999999329447746,
+                        0.029999999329447746
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        1.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_R_Portal_Mult.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "groundPortalHighlight",
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        15.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "Color": {
+                    "constantValue": [
+                        0.01960800029337406,
+                        0.06666699796915054,
+                        1.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.01960800029337406,
+                                0.06666699796915054,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.01960800029337406,
+                                0.06666699796915054,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.01960800029337406,
+                                0.06666699796915054,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.01960800029337406,
+                                0.06666699796915054,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            0.949999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Portal_Highlight.tex",
+                "uvMode": 2,
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.009999999776482582,
+                        0.009999999776482582
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        1.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "groundPortalShadow",
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        15.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "Color": {
+                    "constantValue": [
+                        0.18431399762630463,
+                        0.18431399762630463,
+                        0.4039219915866852,
+                        0.3804070055484772
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.18431399762630463,
+                                0.18431399762630463,
+                                0.4039219915866852,
+                                0.0
+                            ],
+                            [
+                                0.18431399762630463,
+                                0.18431399762630463,
+                                0.4039219915866852,
+                                0.3804070055484772
+                            ],
+                            [
+                                0.18431399762630463,
+                                0.18431399762630463,
+                                0.4039219915866852,
+                                0.3804070055484772
+                            ],
+                            [
+                                0.18431399762630463,
+                                0.18431399762630463,
+                                0.4039219915866852,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 5,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            0.949999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_R_Portal_Shadow.tex",
+                "uvMode": 2,
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.4000000059604645,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.4000000059604645
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.399999618530273,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Praxis",
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        15.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.5000079870223999
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.6666669845581055,
+                                0.0,
+                                0.5000079870223999
+                            ],
+                            [
+                                0.6666669845581055,
+                                0.0,
+                                0.49803900718688965,
+                                0.5000079870223999
+                            ],
+                            [
+                                0.0,
+                                0.3294120132923126,
+                                1.0,
+                                0.08825191110372543
+                            ],
+                            [
+                                0.0,
+                                0.33333298563957214,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 10,
+                "disableBackfaceCull": true,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_PraxisWave.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        1.7999999523162842
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.699999988079071,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.7999999523162842
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        -0.10000000149011612
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.20000000298023224,
+                "rate": {
+                    "constantValue": 2.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.8999999761581421,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.8999999761581421
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.899999618530273,
+                "lifetime": 4.199999809265137,
+                "emitterLinger": null,
+                "emitterName": "Wisps_Add",
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        15.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.5000079870223999
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.4000000059604645,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.807843029499054,
+                                0.35294100642204285,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.33333298563957214,
+                                1.0,
+                                0.5000079870223999
+                            ],
+                            [
+                                0.2901960015296936,
+                                0.0,
+                                0.792156994342804,
+                                0.3000048100948334
+                            ],
+                            [
+                                0.0,
+                                0.10980399698019028,
+                                0.49411800503730774,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 10,
+                "disableBackfaceCull": true,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_R_PortalRing_01.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        1.7000000476837158
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.699999988079071,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.7000000476837158
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        -0.10000000149011612
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_PortalRing_Ramp.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.20000000298023224,
+                "rate": {
+                    "constantValue": 2.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.8999999761581421,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.8999999761581421
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.899999618530273,
+                "lifetime": 4.199999809265137,
+                "emitterLinger": null,
+                "emitterName": "Wisps_Alpha",
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        15.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.5000079870223999
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.4000000059604645,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.807843029499054,
+                                0.35294100642204285,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.33333298563957214,
+                                1.0,
+                                0.5000079870223999
+                            ],
+                            [
+                                0.2901960015296936,
+                                0.0,
+                                0.792156994342804,
+                                0.3000048100948334
+                            ],
+                            [
+                                0.0,
+                                0.10980399698019028,
+                                0.49411800503730774,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 11,
+                "disableBackfaceCull": true,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_R_PortalRing_01.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        1.5
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.699999988079071,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.5
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        -0.10000000149011612
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_PortalRing_Ramp.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Sightward_Skin82_spawn_02",
+        "particlePath": "Characters/SightWard/Skins/Skin82/Particles/Sightward_Skin82_spawn_02",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/SightWard/Skins/Skin82/Particles/Sightward_Skin82_spawn_01": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 48.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.5,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    1.0,
+                                    1.5
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.5
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "lifetime": 0.20000000298023224,
+                "emitterName": "Sparkles",
+                "birthVelocity": {
+                    "constantValue": [
+                        100.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            80.0,
+                            0.0,
+                            0.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.20000000298023224,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    80.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        },
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            1.0000001192092896,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            1.0000001192092896
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.9254900217056274,
+                                0.6196079850196838,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.1568630039691925,
+                                0.3294120132923126,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 5,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        -300.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        40.0,
+                        65.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                40.0,
+                                65.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.20000000298023224,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Specs_02.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.3499999940395355,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.350000381469727,
+                "lifetime": 2.0,
+                "isSingleParticle": 1,
+                "emitterName": "Radial",
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            0.6000000238418579,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.6666669845581055,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.6666669845581055,
+                                0.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 11,
+                "disableBackfaceCull": true,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Radial_01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.20000000298023224,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Core_Glow_Small2",
+                "importance": 3,
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        75.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.49803924560546875,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 80,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        30.0,
+                        100.0,
+                        60.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.5,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                1.5,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Slash_01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Sightward_Skin82_spawn_01",
+        "particlePath": "Characters/SightWard/Skins/Skin82/Particles/Sightward_Skin82_spawn_01",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/SightWard/Skins/Skin82/Particles/Sightward_Skin82_idle_mini_01": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 3.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "emitterName": "Glow",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        0.0,
+                        -35.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.2666666805744171
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                0.4156860113143921,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.10980399698019028,
+                                1.0
+                            ],
+                            [
+                                0.6666669845581055,
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -1,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        50.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.8999999761581421,
+                                    1.2999999523162842
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                50.0,
+                                50.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
+                            ],
+                            [
+                                1.2000000476837158,
+                                1.2000000476837158,
+                                1.2000000476837158
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_LensFlare_02desat.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "Center_ALpha",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        0.0,
+                        -35.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Sphere_01.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.8274510502815247,
+                        0.2980392277240753,
+                        0.09019608050584793,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        0.16500000655651093,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Flat_01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "Center_ALpha1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        0.0,
+                        -35.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Sphere_01.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.8274510502815247,
+                        0.2980392277240753,
+                        0.09019608050584793,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        0.16500000655651093,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Flat_01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 0.10000000149011612,
+                "isSingleParticle": 1,
+                "emitterName": "SphereGradientAlpha1",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        0.0,
+                        -33.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Sphere_01.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "particleColorTexture": "ASSETS/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.7568628191947937,
+                        0.5921568870544434,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 2,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        0.17499999701976776,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SightWard/Skins/Skin82/Particles/Ward_Skin82_Z_Gradient_01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Sightward_Skin82_idle_mini_01",
+        "particlePath": "Characters/SightWard/Skins/Skin82/Particles/Sightward_Skin82_idle_mini_01",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": [
+        "DATA/Characters/SightWard/SightWard.bin",
+        "DATA/Characters/SightWard/Animations/Skin82.bin",
+        "DATA/SightWard_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin101_Skins_Skin102_Skins_Skin103_Skins_Skin104_Skins_Skin106_Skins_Skin107_Skins_Skin108_Skins_Skin11_Skins_Skin112_Skins_Skin113_Skins_Skin114_Skins_Skin12_Skins_Skin120_Skins_Skin13_Skins_Skin132_Skins_Skin133_Skins_Skin134_Skins_Skin135_Skins_Skin136_Skins_Skin137_Skins_Skin138_Skins_Skin139_Skins_Skin14_Skins_Skin140_Skins_Skin142_Skins_Skin143_Skins_Skin144_Skins_Skin145_Skins_Skin146_Skins_Skin147_Skins_Skin148_Skins_Skin149_Skins_Skin15_Skins_Skin150_Skins_Skin151_Skins_Skin152_Skins_Skin153_Skins_Skin154_Skins_Skin155_Skins_Skin156_Skins_Skin157_Skins_Skin158_Skins_Skin159_Skins_Skin16_Skins_Skin160_Skins_Skin161_Skins_Skin162_Skins_Skin163_Skins_Skin164_Skins_Skin165_Skins_Skin166_Skins_Skin167_Skins_Skin168_Skins_Skin169_Skins_Skin17_Skins_Skin170_Skins_Skin171_Skins_Skin172_Skins_Skin173_Skins_Skin174_Skins_Skin175_Skins_Skin176_Skins_Skin177_Skins_Skin178_Skins_Skin179_Skins_Skin18_Skins_Skin180_Skins_Skin181_Skins_Skin182_Skins_Skin183_Skins_Skin184_Skins_Skin185_Skins_Skin186_Skins_Skin187_Skins_Skin188_Skins_Skin189_Skins_Skin19_Skins_Skin190_Skins_Skin191_Skins_Skin193_Skins_Skin194_Skins_Skin196_Skins_Skin197_Skins_Skin198_Skins_Skin199_Skins_Skin2_Skins_Skin20_Skins_Skin200_Skins_Skin201_Skins_Skin202_Skins_Skin204_Skins_Skin206_Skins_Skin21_Skins_Skin22_Skins_Skin226_Skins_Skin227_Skins_Skin23_Skins_Skin230_Skins_Skin234_Skins_Skin24_Skins_Skin240_Skins_Skin245_Skins_Skin247_Skins_Skin248_Skins_Skin25_Skins_Skin250_Skins_Skin259_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin4_Skins_Skin41_Skins_Skin42_Skins_Skin43_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin56_Skins_Skin57_Skins_Skin58_Skins_Skin59_Skins_Skin6_Skins_Skin64_Skins_Skin66_Skins_Skin67_Skins_Skin68_Skins_Skin7_Skins_Skin70_Skins_Skin71_Skins_Skin72_Skins_Skin73_Skins_Skin74_Skins_Skin75_Skins_Skin76_Skins_Skin78_Skins_Skin79_Skins_Skin8_Skins_Skin80_Skins_Skin81_Skins_Skin82_Skins_Skin83_Skins_Skin84_Skins_Skin85_Skins_Skin86_Skins_Skin87_Skins_Skin88_Skins_Skin9_Skins_Skin90_Skins_Skin91_Skins_Skin92_Skins_Skin93_Skins_Skin94_Skins_Skin95_Skins_Skin97_Skins_Skin98_Skins_Skin99.bin"
+    ]
+}

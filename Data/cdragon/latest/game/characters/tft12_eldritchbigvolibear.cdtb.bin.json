@@ -1,0 +1,382 @@
+{
+    "Characters/TFT12_EldritchBigVolibear/Spells/TFT12_EldritchBigVolibearSpell": {
+        "ObjectName": "TFT12_EldritchBigVolibearSpell",
+        "mScriptName": "TFT12_EldritchBigVolibearSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "mName": "FearRange",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "FearDuration",
+                    "mValues": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "StunDuration",
+                    "mValues": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumLightningStrikes",
+                    "mValues": [
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "LightningDuration",
+                    "mValues": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "LightningDamage",
+                    "mValues": [
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedLightningDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "LightningDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "SpellSequencer",
+            "delayCastOffsetPercent": 0.5,
+            "delayTotalTimePercent": -0.25,
+            "castRange": [
+                8000.0,
+                8000.0,
+                8000.0,
+                8000.0,
+                8000.0,
+                8000.0,
+                8000.0
+            ],
+            "castFrame": 14.0,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_EldritchBigVolibearSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT12_EldritchBigVolibearSpell_Name",
+                        "keyTooltip": "Spell_TFT12_EldritchBigVolibearSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "elements": [
+                                {
+                                    "type": "LightningDamage",
+                                    "nameOverride": "Spell_TFT12_EldritchBigVolibearSpell_LightningDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_EldritchBigVolibear/Spells/TFT12_EldritchBigVolibearCritAttack": {
+        "ObjectName": "TFT12_EldritchBigVolibearCritAttack",
+        "mScriptName": "TFT12_EldritchBigVolibearCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "BigVolibearCritAttack",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.17389999330043793,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_EldritchBigVolibear/Spells/TFT12_EldritchBigVolibearBasicAttack": {
+        "ObjectName": "TFT12_EldritchBigVolibearBasicAttack",
+        "mScriptName": "TFT12_EldritchBigVolibearBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "BigVolibearBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castRadius": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 467.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_EldritchBigVolibear/Spells/TFT12_EldritchBigVolibearBasicAttack2": {
+        "ObjectName": "TFT12_EldritchBigVolibearBasicAttack2",
+        "mScriptName": "TFT12_EldritchBigVolibearBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "BigVolibearBasicAttack2",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.17389999330043793,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_LAYOUT_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_EldritchBigVolibear/CharacterRecords/Root": {
+        "mCharacterName": "TFT12_EldritchBigVolibear",
+        "baseHP": 2000.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 450.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 70.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 400.0,
+        "baseArmor": 250.0,
+        "baseSpellBlock": 250.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 1.0,
+        "basicAttack": {
+            "mAttackName": "TFT12_EldritchBigVolibearBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT12_EldritchBigVolibearBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT12_EldritchBigVolibearCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT12_EldritchBigVolibearSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT12_EldritchBigVolibear/Spells/TFT12_EldritchBigVolibearSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "useRiotRelationships": true,
+        "flags": 9446664,
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 70.0,
+        "mShopData": "{637ed857}",
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFT12_EldritchBigVolibear/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

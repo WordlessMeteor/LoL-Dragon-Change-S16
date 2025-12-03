@@ -1,0 +1,835 @@
+{
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay",
+        "Layer": 35,
+        "SceneTransitionIn": {
+            "TransitionTime": 1.0,
+            "EasingType": 5,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "SceneTransitionOut": {
+            "TransitionTime": 1.0,
+            "EasingType": 11,
+            "startAlpha": 255,
+            "endAlpha": 0,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1",
+        "Enabled": true,
+        "Layer": 36,
+        "ParentScene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay",
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1/Team_Icon": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1/Team_Icon",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    568.0,
+                    23.0
+                ],
+                "Size": [
+                    48.0,
+                    48.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1/Team_TooltipAnchor": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1/Team_TooltipAnchor",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    520.0,
+                    47.0
+                ],
+                "Size": [
+                    1.0,
+                    1.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1/Team_HitRegion": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1/Team_HitRegion",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    545.0,
+                    0.0
+                ],
+                "Size": [
+                    94.0,
+                    94.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1/Team_Critical_Frame": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1/Team_Critical_Frame",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    545.0,
+                    0.0
+                ],
+                "Size": [
+                    94.0,
+                    94.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Cherry/CombatInfoDisplay/CombatInfoDisplay_TeamLabel_Critical_Frame.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1/Team_HealthMeter": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1/Team_HealthMeter",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T1",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    545.0,
+                    0.0
+                ],
+                "Size": [
+                    94.0,
+                    94.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Cherry/TeamFlyoutPanel/Team_HealthMeter.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementEffectArcFillData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionPortraitTemplate": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionPortraitTemplate",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay",
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionPortraitTemplate/Portrait_Icon",
+            "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionPortraitTemplate/Portrait_Frame"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionPortraitTemplate/Portrait_Frame": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionPortraitTemplate/Portrait_Frame",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    697.0,
+                    12.0
+                ],
+                "Size": [
+                    44.0,
+                    44.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Cherry/TeamFlyoutPanel/Portrait_Frame.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionPortraitTemplate/Portrait_Icon": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionPortraitTemplate/Portrait_Icon",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay",
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    701.0,
+                    16.0
+                ],
+                "Size": [
+                    36.0,
+                    36.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/Background_T2": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/Background_T2",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    800.0,
+                    0.0
+                ],
+                "Size": [
+                    255.0,
+                    94.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Cherry/CombatInfoDisplay/CombatInfoDisplay_Frame_Half_Flipped.png",
+            "EdgeSizesLeftRight": [
+                70.0,
+                115.0
+            ],
+            "__type": "LooseUiTextureData3SliceH"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/Background_T1": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/Background_T1",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    545.0,
+                    0.0
+                ],
+                "Size": [
+                    255.0,
+                    94.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Cherry/CombatInfoDisplay/CombatInfoDisplay_Frame_Half.png",
+            "EdgeSizesLeftRight": [
+                115.0,
+                70.0
+            ],
+            "__type": "LooseUiTextureData3SliceH"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2",
+        "Enabled": true,
+        "Layer": 36,
+        "ParentScene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay",
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2/Team_Icon": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2/Team_Icon",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    984.0,
+                    23.0
+                ],
+                "Size": [
+                    48.0,
+                    48.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2/Team_HitRegion": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2/Team_HitRegion",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    961.0,
+                    0.0
+                ],
+                "Size": [
+                    94.0,
+                    94.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2/Team_Critical_Frame": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2/Team_Critical_Frame",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    961.0,
+                    0.0
+                ],
+                "Size": [
+                    94.0,
+                    94.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FlipX": true,
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Cherry/CombatInfoDisplay/CombatInfoDisplay_TeamLabel_Critical_Frame.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2/Team_HealthMeter": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2/Team_HealthMeter",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    961.0,
+                    0.0
+                ],
+                "Size": [
+                    94.0,
+                    94.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "mFlipX": true,
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Cherry/TeamFlyoutPanel/Team_HealthMeter.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementEffectArcFillData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2/Team_TooltipAnchor": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2/Team_TooltipAnchor",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/TeamIconScene_T2",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1080.0,
+                    47.0
+                ],
+                "Size": [
+                    1.0,
+                    1.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionLayout_T2": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionLayout_T2",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay",
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionLayout_T2/ChampionLayout_Region"
+        ],
+        "Region": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionLayout_T2/ChampionLayout_Region",
+        "LayoutStyle": {
+            "HorizontalJustification": 3,
+            "__type": "LayoutStyleHorizontalList"
+        },
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionLayout_T2/ChampionLayout_Region": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionLayout_T2/ChampionLayout_Region",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    850.0,
+                    12.0
+                ],
+                "Size": [
+                    112.0,
+                    44.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionLayout_T1": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionLayout_T1",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay",
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionLayout_T1/ChampionLayout_Region"
+        ],
+        "Region": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionLayout_T1/ChampionLayout_Region",
+        "LayoutStyle": {
+            "HorizontalJustification": 3,
+            "HorizontalFillDirection": 1,
+            "__type": "LayoutStyleHorizontalList"
+        },
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionLayout_T1/ChampionLayout_Region": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay/ChampionLayout_T1/ChampionLayout_Region",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/CombatInfoDisplay",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    638.0,
+                    12.0
+                ],
+                "Size": [
+                    112.0,
+                    44.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Won": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Won",
+        "Layer": 35,
+        "SceneTransitionIn": {
+            "TransitionTime": 0.5,
+            "EasingType": 5,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "SceneTransitionOut": {
+            "TransitionTime": 2.0,
+            "EasingType": 5,
+            "startAlpha": 255,
+            "endAlpha": 0,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Won/RoundWon_Text": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Won/RoundWon_Text",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Won",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    667.0,
+                    252.0
+                ],
+                "Size": [
+                    266.0,
+                    48.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "cherry_announcement_round_won",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Cherry_Beaufort_27_Gold3",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Won/CrossedSwords_Icon": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Won/CrossedSwords_Icon",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Won",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    773.0,
+                    192.0
+                ],
+                "Size": [
+                    55.0,
+                    55.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Cherry/CombatInfoDisplay/CrossedSwords_Icon.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Won/RoundWon_Frame": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Won/RoundWon_Frame",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Won",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    363.0,
+                    97.0
+                ],
+                "Size": [
+                    875.0,
+                    363.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Cherry/CombatInfoDisplay/RoundWon_Frame.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Loss": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Loss",
+        "Layer": 35,
+        "SceneTransitionIn": {
+            "TransitionTime": 0.5,
+            "EasingType": 5,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "SceneTransitionOut": {
+            "TransitionTime": 2.0,
+            "EasingType": 5,
+            "startAlpha": 255,
+            "endAlpha": 0,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Loss/RoundLost_Frame": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Loss/RoundLost_Frame",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Loss",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    363.0,
+                    97.0
+                ],
+                "Size": [
+                    875.0,
+                    363.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Cherry/CombatInfoDisplay/RoundLost_Frame.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Loss/RoundLost_Text": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Loss/RoundLost_Text",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Loss",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    667.0,
+                    252.0
+                ],
+                "Size": [
+                    266.0,
+                    48.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "cherry_announcement_round_lost",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Cherry_Beaufort_27_Gold3",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Loss/CrossedSwords_Icon": {
+        "name": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Loss/CrossedSwords_Icon",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/CombatInfoDisplay/UIBase/Announcement_Fight_End_Loss",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    773.0,
+                    192.0
+                ],
+                "Size": [
+                    55.0,
+                    55.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Cherry/CombatInfoDisplay/CrossedSwords_Icon.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "__linked": []
+}

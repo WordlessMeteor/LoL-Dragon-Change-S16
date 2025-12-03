@@ -1,0 +1,472 @@
+{
+    "Characters/TFT12_Nomsy/CharacterRecords/Root": {
+        "mCharacterName": "TFT12_Nomsy",
+        "baseHP": 500.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 110.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 50.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 48.0,
+        "baseArmor": 15.0,
+        "baseSpellBlock": 15.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 890.0,
+        "attackSpeed": 0.699999988079071,
+        "attackSpeedRatio": 0.699999988079071,
+        "basicAttack": {
+            "mAttackName": "TFT12_NomsyBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT12_NomsyCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT12_NomsySpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT12_Nomsy/Spells/TFT12_NomsySpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "useRiotRelationships": true,
+        "tier": 1,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{1ce76968}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{acbd3a1d}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ae695df}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 10.0,
+        "mShopData": "{3f9e52da}",
+        "MobileHealthBarHeightOverride": 100.0,
+        "mIsDiscoverable": false,
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFT12_Nomsy/Spells/TFT12_NomsyCritAttack": {
+        "ObjectName": "TFT12_NomsyCritAttack",
+        "mScriptName": "TFT12_NomsyCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.15279999375343323,
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "WEAPON",
+                    "mSpeed": 1900.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 11.0,
+            "missileSpeed": 1500.0,
+            "mMissileEffectKey": "TFT12_Nomsy_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Nomsy/Spells/TFT12_NomsySpell": {
+        "ObjectName": "TFT12_NomsySpell",
+        "mScriptName": "TFT12_NomsySpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 14346,
+            "mAffectsStatusFlags": 160,
+            "DataValues": [
+                {
+                    "mName": "SpellBaseDamage",
+                    "mValues": [
+                        30.0,
+                        40.0,
+                        60.0,
+                        100.0,
+                        140.0,
+                        45.0,
+                        45.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "SpellADRatio",
+                    "mValues": [
+                        3.450000047683716,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        3.299999952316284,
+                        3.299999952316284
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "UpgradeSpellADRatio",
+                    "mValues": [
+                        5.550000190734863,
+                        5.550000190734863,
+                        5.550000190734863,
+                        5.550000190734863,
+                        5.550000190734863,
+                        5.550000190734863,
+                        5.550000190734863
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "PercentOverkill",
+                    "mValues": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BaseOverkillNumTargets",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "UpgradeOverkillNumTargets",
+                    "mValues": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "SpellDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mDataValue": "SpellADRatio",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "SpellBaseDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "UpgradeSpellDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mDataValue": "UpgradeSpellADRatio",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "SpellBaseDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3999999761581421,
+            "delayTotalTimePercent": -1.0,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "mSpellRevealsChampion": false,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "mIgnoreRangeCheck": true,
+            "mMinimapIconDisplayFlag": 0,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeDisplayOverride": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 3000.0,
+            "mLineWidth": 120.0,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_NomsySpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT12_NomsySpell_Name",
+                        "keyTooltip": "Spell_TFT12_NomsySpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "SpellADRatio",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT12_NomsySpell_ADRatio",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SpellBaseDamage",
+                                    "nameOverride": "Spell_TFT12_NomsySpell_BaseDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SpellADRatio",
+                                    "nameOverride": "Spell_TFT12_NomsySpell_SpellDamage",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "UpgradeSpellADRatio",
+                                    "nameOverride": "Spell_TFT12_NomsySpell_UpgradeSpellDamage",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Nomsy/Spells/TFT12_NomsyBasicAttack": {
+        "ObjectName": "TFT12_NomsyBasicAttack",
+        "mScriptName": "TFT12_NomsyBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "root",
+                    "mSpeed": 1900.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 11.0,
+            "missileSpeed": 1500.0,
+            "mMissileEffectKey": "TFT12_Nomsy_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Nomsy/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

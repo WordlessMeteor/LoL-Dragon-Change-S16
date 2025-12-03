@@ -1,0 +1,465 @@
+{
+    "Characters/TFT5_Hecarim/Spells/TFT5_HecarimCritAttack": {
+        "ObjectName": "TFT5_HecarimCritAttack",
+        "mScriptName": "TFT5_HecarimCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "SejuaniBasicAttack",
+            "mAnimationName": "Crit",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Hecarim/Spells/TFT5_HecarimWVFX": {
+        "ObjectName": "TFT5_HecarimWVFX",
+        "mScriptName": "TFT5_HecarimWVFX",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "VladimirTransfusionHeal",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "castRange": [
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "spine",
+                    "mSpeed": 1000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 1.0,
+            "missileSpeed": 1000.0,
+            "mMissileEffectKey": "TFT5_Hecarim_W_syphon",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Hecarim/Spells/TFT5_HecarimBasicAttack": {
+        "ObjectName": "TFT5_HecarimBasicAttack",
+        "mScriptName": "TFT5_HecarimBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "SejuaniBasicAttack",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Hecarim/Spells/TFT5_HecarimW": {
+        "ObjectName": "TFT5_HecarimW",
+        "mScriptName": "TFT5_HecarimW",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 9221,
+            "mSpellTags": [
+                "Trait_Ultimate"
+            ],
+            "DataValues": [
+                {
+                    "mName": "Damage",
+                    "mValues": [
+                        40.0,
+                        250.0,
+                        375.0,
+                        600.0,
+                        520.0,
+                        640.0,
+                        760.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "Healing",
+                    "mValues": [
+                        40.0,
+                        200.0,
+                        225.0,
+                        250.0,
+                        520.0,
+                        640.0,
+                        760.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "Duration",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "Radius",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "TickRate",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedHealing": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Healing",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "mCastTime": 0.5,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.75,
+            "missileSpeed": 779.9000244140625,
+            "bHaveHitBone": true,
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT5_HecarimW",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT5_HecarimW_Name",
+                        "keyTooltip": "Spell_TFT5_HecarimW_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "Healing",
+                                    "nameOverride": "Spell_TFT5_HecarimW_Healing",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_TFT5_Footer_ModifiedDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_NasusR",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Hecarim/Spells/TFT5_HecarimBasicAttack2": {
+        "ObjectName": "TFT5_HecarimBasicAttack2",
+        "mScriptName": "TFT5_HecarimBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "SejuaniBasicAttack",
+            "mAnimationName": "Attack2",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Hecarim/CharacterRecords/Root": {
+        "mCharacterName": "TFT5_Hecarim",
+        "baseHP": 750.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 170.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 125.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 55.0,
+        "baseArmor": 45.0,
+        "baseSpellBlock": 45.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.550000011920929,
+        "attackSpeedRatio": 0.550000011920929,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT5_HecarimW",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT5_Hecarim/Spells/TFT5_HecarimW",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "extraSpells": [
+            "",
+            "",
+            "",
+            "",
+            "TFT5_HecarimWVFX",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "{c1984296}": [
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "Characters/TFT5_Hecarim/Spells/TFT5_HecarimWVFX",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "passiveRange": 4.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "flags": 9446664,
+        "tier": 2,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{4393e5fb}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{0926d866}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ccf900f}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 75.0,
+        "mShopData": "{ad1b7737}",
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFT5_Hecarim/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

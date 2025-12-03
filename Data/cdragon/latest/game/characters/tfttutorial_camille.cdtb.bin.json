@@ -1,0 +1,368 @@
+{
+    "Characters/TFTTutorial_Camille/CharacterRecords/Root": {
+        "mCharacterName": "TFTTutorial_Camille",
+        "baseHP": 550.0,
+        "baseStaticHPRegen": 0.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 125.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 55.0,
+        "baseArmor": 30.0,
+        "baseSpellBlock": 20.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.5,
+        "baseMoveSpeed": 550.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.6000000238418579,
+        "attackSpeedRatio": 0.6000000238418579,
+        "basicAttack": {
+            "mAttackCastTime": 0.6000000238418579,
+            "mAttackName": "TFTTutorial_CamilleBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFTTutorial_CamilleBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackCastTime": 0.6000000238418579,
+                "mAttackName": "TFTTutorial_CamilleCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFTTutorial_CamilleR",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFTTutorial_Camille/Spells/TFTTutorial_CamilleR",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "passiveRange": 2.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 1,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{a73b6e22}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{31c8de2b}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 75.0,
+        "mShopData": "{2e6df67b}",
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFTTutorial_Camille/Spells/TFTTutorial_CamilleR": {
+        "ObjectName": "TFTTutorial_CamilleR",
+        "mScriptName": "TFTTutorial_CamilleR",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "mName": "Duration",
+                    "mValues": [
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0,
+                        7.0,
+                        8.0,
+                        9.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "Damage",
+                    "mValues": [
+                        75.0,
+                        200.0,
+                        325.0,
+                        450.0,
+                        575.0,
+                        700.0,
+                        825.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayTotalTimePercent": -0.75,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castFrame": 15.0,
+            "selectionPriority": 1,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFTTutorial_CamilleR",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFTTutorial_CamilleR_Name",
+                        "keyTooltip": "Spell_TFTTutorial_CamilleR_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Duration",
+                                    "nameOverride": "Spell_ListType_RootDuration",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTTutorial_Camille/Spells/TFTTutorial_CamilleBasicAttack": {
+        "ObjectName": "TFTTutorial_CamilleBasicAttack",
+        "mScriptName": "TFTTutorial_CamilleBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 4234,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3506999909877777,
+            "mMaxAmmo": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "castRange": [
+                185.0,
+                185.0,
+                185.0,
+                185.0,
+                185.0,
+                185.0,
+                185.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.25,
+            "missileSpeed": 467.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTTutorial_Camille/Spells/TFTTutorial_CamilleCritAttack": {
+        "ObjectName": "TFTTutorial_CamilleCritAttack",
+        "mScriptName": "TFTTutorial_CamilleCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 4234,
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3506999909877777,
+            "mMaxAmmo": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "castRange": [
+                185.0,
+                185.0,
+                185.0,
+                185.0,
+                185.0,
+                185.0,
+                185.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 467.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTTutorial_Camille/Spells/TFTTutorial_CamilleBasicAttack2": {
+        "ObjectName": "TFTTutorial_CamilleBasicAttack2",
+        "mScriptName": "TFTTutorial_CamilleBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 4234,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3506999909877777,
+            "mMaxAmmo": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "castRange": [
+                185.0,
+                185.0,
+                185.0,
+                185.0,
+                185.0,
+                185.0,
+                185.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.5,
+            "missileSpeed": 467.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTTutorial_Camille/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

@@ -1,0 +1,1284 @@
+{
+    "Characters/TFT5_Lucian/Spells/TFT5_LucianRMissile": {
+        "ObjectName": "TFT5_LucianRMissile",
+        "mScriptName": "TFT5_LucianRMissile",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "LucianR",
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mProjectTargetToCastRange": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "mMissileSpec": {
+                "mMissileWidth": 75.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mTargetHeightAugment": -50.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_Pinky2",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "missileSpeed": 2800.0,
+            "mMissileEffectKey": "TFT5_Lucian_R_mis",
+            "mLineWidth": 75.0,
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                75.0,
+                                75.0,
+                                75.0,
+                                75.0,
+                                75.0,
+                                75.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lucian/Spells/TFT5_LucianR": {
+        "ObjectName": "TFT5_LucianR",
+        "mScriptName": "TFT5_LucianR",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "Trait_Ultimate"
+            ],
+            "DataValues": [
+                {
+                    "mName": "Duration",
+                    "mValues": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BaseDamage",
+                    "mValues": [
+                        30.0,
+                        45.0,
+                        70.0,
+                        210.0,
+                        100.0,
+                        80.0,
+                        90.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "TADRatio",
+                    "mValues": [
+                        0.5,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        1.2000000476837158,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "AttacksPerSecondCoefficient",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumShots",
+                    "mValues": [
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "BaseDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ShotsFromAS": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "AttacksPerSecondCoefficient",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mPart1": {
+                                    "mDataValue": "Duration",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                "mPart2": {
+                                    "mStat": 4,
+                                    "mCoefficient": 1.0,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                },
+                                "__type": "ProductOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedShots": {
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mDataValue": "NumShots",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mPart1": {
+                                        "mDataValue": "AttacksPerSecondCoefficient",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mPart2": {
+                                        "mPart1": {
+                                            "mDataValue": "Duration",
+                                            "__type": "NamedDataValueCalculationPart"
+                                        },
+                                        "mPart2": {
+                                            "mStat": 4,
+                                            "mCoefficient": 1.0,
+                                            "__type": "StatByCoefficientCalculationPart"
+                                        },
+                                        "__type": "ProductOfSubPartsCalculationPart"
+                                    },
+                                    "__type": "ProductOfSubPartsCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedAttackDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "tADRatio",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 1.0,
+                            "mStat": 2,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "mCastTime": 0.009999999776482582,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mCanMoveWhileChanneling": true,
+            "bIsToggleSpell": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeDisplayOverride": [
+                1400.0,
+                1400.0,
+                1400.0,
+                1400.0,
+                1400.0,
+                1400.0,
+                1400.0
+            ],
+            "mLineWidth": 60.0,
+            "mLookAtPolicy": 1,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "mDimensionBehavior": 1,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT5_LucianR",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT5_LucianR_Name",
+                        "keyTooltip": "Spell_TFT5_LucianR_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_TFT5_LucianR_MagicDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_TFT5_LucianR_PhysicalDamage",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "NumShots",
+                                    "nameOverride": "Spell_TFT5_LucianR_TotalShots",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "distanceOffset": 100.0,
+                            "orientationType": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                110.0,
+                                110.0,
+                                110.0,
+                                110.0,
+                                110.0,
+                                110.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                1200.0,
+                                1200.0,
+                                1200.0,
+                                1200.0,
+                                1200.0,
+                                1200.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureBaseOverrideName": "ASSETS/Spells/Textures/Reticle_Gradient_Base_Q_01.tex",
+                        "textureTargetOverrideName": "ASSETS/Spells/Textures/Reticle_Gradient_Base_Q_02.tex",
+                        "__type": "TargeterDefinitionLine"
+                    },
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_LucianR",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lucian/Spells/TFT5_LucianE": {
+        "ObjectName": "TFT5_LucianE",
+        "mScriptName": "TFT5_LucianE",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 15567,
+            "mAlternateName": "TFT5_LucianE",
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock",
+                "Trait_AttackReset"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "mName": "FirstShotRatio",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "SecondShotDamage",
+                    "mValues": [
+                        0.0,
+                        125.0,
+                        250.0,
+                        375.0,
+                        500.0,
+                        625.0,
+                        750.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "DashSpeed",
+                    "mValues": [
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "SecondShotDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.6000000238418579,
+            "mAnimationName": "Run",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.699999988079071,
+            "delayTotalTimePercent": -0.699999988079071,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoesntBreakChannels": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeDisplayOverride": [
+                445.0,
+                445.0,
+                445.0,
+                445.0,
+                445.0,
+                445.0,
+                445.0
+            ],
+            "castConeDistance": 100.0,
+            "mLineWidth": 50.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT5_LucianE",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "tft_character_lucian_ability_name",
+                        "keyTooltip": "tft_character_lucian_ability_description"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "SecondShotDamage",
+                                    "nameOverride": "Spell_TFT_LucianE_SpellDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_TFT5_LucianE",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lucian/Spells/TFT5_LucianBasicAttack": {
+        "ObjectName": "TFT5_LucianBasicAttack",
+        "mScriptName": "TFT5_LucianBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "LucianBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mApplyAttackDamage": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "buffbone_cstm_Darkgun",
+                    "mSpeed": 2800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 2800.0,
+            "mMissileEffectKey": "TFT5_Lucian_AA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lucian/Spells/TFT5_LucianPassiveAttack": {
+        "ObjectName": "TFT5_LucianPassiveAttack",
+        "mScriptName": "TFT5_LucianPassiveAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "TFT5_LucianBasicAttack",
+            "mAnimationName": "Passive",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "mApplyAttackDamage": true,
+            "bHaveHitEffect": true,
+            "mRollForCriticalHit": true,
+            "castRange": [
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "buffbone_cstm_Darkgun",
+                    "mSpeed": 2800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 2800.0,
+            "mMissileEffectKey": "TFT5_Lucian_AA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{e0dd0a90}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lucian/Spells/TFT5_LucianPassiveShot": {
+        "ObjectName": "TFT5_LucianPassiveShot",
+        "mScriptName": "TFT5_LucianPassiveShot",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 15018,
+            "mAlternateName": "_BasicAttack",
+            "mCoefficient": 1.2000000476837158,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "mRollForCriticalHit": true,
+            "castRange": [
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0
+            ],
+            "mMissileSpec": {
+                "mMissileWidth": 50.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "buffbone_cstm_Lightgun",
+                    "mSpeed": 2800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "visibilityComponent": {
+                    "mPerceptionBubbleRadius": 100.0,
+                    "__type": "Defaultvisibility"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "missileSpeed": 2800.0,
+            "mMissileEffectKey": "TFT5_Lucian_AA_mis",
+            "mLineWidth": 50.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{e0dd0a90}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lucian/Spells/TFT5_LucianCritAttack": {
+        "ObjectName": "TFT5_LucianCritAttack",
+        "mScriptName": "TFT5_LucianCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "LucianCritAttack",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "buffbone_cstm_Darkgun",
+                    "mSpeed": 2800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 2800.0,
+            "mMissileEffectKey": "TFT5_Lucian_AA_mis_Crit",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lucian/Spells/TFT5_LucianBasicAttack2": {
+        "ObjectName": "TFT5_LucianBasicAttack2",
+        "mScriptName": "TFT5_LucianBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "LucianBasicAttack",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mApplyAttackDamage": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375,
+                552.0999755859375
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "buffbone_cstm_Lightgun",
+                    "mSpeed": 2800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 2800.0,
+            "mMissileEffectKey": "TFT5_Lucian_AA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lucian/Spells/TFT5_LucianRMissileOffhand": {
+        "ObjectName": "TFT5_LucianRMissileOffhand",
+        "mScriptName": "TFT5_LucianRMissileOffhand",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "LucianR",
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mProjectTargetToCastRange": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "mMissileSpec": {
+                "mMissileWidth": 75.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mTargetHeightAugment": -50.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "L_Pinky2",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "missileSpeed": 2800.0,
+            "mMissileEffectKey": "TFT5_Lucian_R_mis",
+            "mLineWidth": 75.0,
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                75.0,
+                                75.0,
+                                75.0,
+                                75.0,
+                                75.0,
+                                75.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Lucian/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT5_Lucian/CharacterRecords/Root": {
+        "mCharacterName": "TFT5_Lucian",
+        "baseHP": 850.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 70.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 50.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 75.0,
+        "baseArmor": 30.0,
+        "baseSpellBlock": 30.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 890.0,
+        "attackSpeed": 0.75,
+        "attackSpeedRatio": 0.75,
+        "basicAttack": {
+            "mAttackCastTime": 0.6499999761581421,
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 1.0,
+                "mAttackName": "TFT5_LucianBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.15000000596046448,
+                "mAttackName": "TFT5_LucianCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT5_LucianR",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT5_Lucian/Spells/TFT5_LucianR",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "extraSpells": [
+            "",
+            "",
+            "TFT5_LucianBasicAttack",
+            "TFT5_LucianBasicAttack2",
+            "TFT5_LucianCritAttack",
+            "",
+            "TFT5_LucianPassiveShot",
+            "",
+            "TFT5_LucianPassiveAttack",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "{c1984296}": [
+            "{00000000}",
+            "{00000000}",
+            "Characters/TFT5_Lucian/Spells/TFT5_LucianBasicAttack",
+            "Characters/TFT5_Lucian/Spells/TFT5_LucianBasicAttack2",
+            "Characters/TFT5_Lucian/Spells/TFT5_LucianCritAttack",
+            "{00000000}",
+            "Characters/TFT5_Lucian/Spells/TFT5_LucianPassiveShot",
+            "{00000000}",
+            "Characters/TFT5_Lucian/Spells/TFT5_LucianPassiveAttack",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "passiveRange": 2.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 4,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{9d4d207b}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{84fcc73e}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{34ed6daa}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{a6cfa19e}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

@@ -1,0 +1,456 @@
+{
+    "Characters/TFT3_Thresh/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT3_Thresh/Spells/TFT3_ThreshW": {
+        "ObjectName": "TFT3_ThreshW",
+        "mScriptName": "TFT3_ThreshW",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 7183,
+            "mAffectsStatusFlags": 32,
+            "DataValues": [
+                {
+                    "mName": "UnitCount",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        9.0,
+                        9.0,
+                        9.0,
+                        9.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ManaBonus",
+                    "mValues": [
+                        10.0,
+                        25.0,
+                        50.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "FourCostSummonOdds",
+                    "mValues": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.699999988079071,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ThreeCostSummonOdds",
+                    "mValues": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.30000001192092896,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BaseStarLevelSummon",
+                    "mValues": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        3.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedMana": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "ManaBonus",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell2",
+            "mCastTime": 0.25,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.5,
+            "delayTotalTimePercent": -0.5,
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "alwaysSnapFacing": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 120.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 60.0,
+                    "mOffsetInitialTargetHeight": 60.0,
+                    "mStartBoneName": "L_Hand",
+                    "mTravelTime": 0.800000011920929,
+                    "__type": "FixedTimeMovement"
+                },
+                "heightSolver": {
+                    "mGravity": 4000.0,
+                    "__type": "GravityHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.974999904632568,
+            "missileSpeed": 800.0,
+            "mMissileEffectKey": "TFT3_Thresh_W_Lantern_mis",
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 0,
+            "bHaveHitBone": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT3_ThreshW",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT3_ThreshW_Name",
+                        "keyTooltip": "Spell_TFT3_ThreshW_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "ManaBonus",
+                                    "nameOverride": "Spell_TFT3_ThreshW_LevelUpMana",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "UnitCount",
+                                    "nameOverride": "Spell_TFT3_ThreshW_LevelUp",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Thresh/Spells/TFT3_ThreshBasicAttack": {
+        "ObjectName": "TFT3_ThreshBasicAttack",
+        "mScriptName": "TFT3_ThreshBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "mCastTime": 0.25,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.15279999375343323,
+            "canCastWhileDisabled": true,
+            "mApplyAttackDamage": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "mIgnoreAnimContinueUntilCastFrame": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.5,
+            "missileSpeed": 1000.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Thresh/Spells/TFT3_ThreshCritAttack": {
+        "ObjectName": "TFT3_ThreshCritAttack",
+        "mScriptName": "TFT3_ThreshCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "mAnimationName": "Crit",
+            "mCastTime": 0.25,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.15279999375343323,
+            "canCastWhileDisabled": true,
+            "mApplyAttackDamage": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "mIgnoreAnimContinueUntilCastFrame": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.5,
+            "missileSpeed": 1000.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Thresh/Spells/TFT3_ThreshBasicAttack2": {
+        "ObjectName": "TFT3_ThreshBasicAttack2",
+        "mScriptName": "TFT3_ThreshBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "mAnimationName": "Attack2",
+            "mCastTime": 0.25,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.15279999375343323,
+            "canCastWhileDisabled": true,
+            "mApplyAttackDamage": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "mIgnoreAnimContinueUntilCastFrame": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.5,
+            "missileSpeed": 1000.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Thresh/CharacterRecords/Root": {
+        "mCharacterName": "TFT3_Thresh",
+        "baseHP": 950.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 220.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 90.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 50.0,
+        "baseArmor": 55.0,
+        "baseSpellBlock": 40.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 420.0,
+        "attackSpeed": 0.949999988079071,
+        "attackSpeedRatio": 0.949999988079071,
+        "basicAttack": {
+            "mAttackName": "TFT3_ThreshBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT3_ThreshBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT3_ThreshCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT3_ThreshW",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT3_Thresh/Spells/TFT3_ThreshW",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionHeight": 200.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 5,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{6e3d922e}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{cb5c7b63}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ccf900f}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 660.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 50.0,
+        "mShopData": "{7fb1b928}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

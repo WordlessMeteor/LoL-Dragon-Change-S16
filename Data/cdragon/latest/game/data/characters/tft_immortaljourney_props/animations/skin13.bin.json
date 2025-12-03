@@ -1,0 +1,163 @@
+{
+    "{206a76bb}": {
+        "mCascadeBlendValue": 0.0,
+        "mClipDataMap": {
+            "Intro": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "VFX_1": {
+                        "mEndFrame": 180.0,
+                        "mEffectKey": "TFT_ImmortalJourney_Props_Skin13_Intro_Fish",
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "VFX_2": {
+                        "mStartFrame": 110.0,
+                        "mEndFrame": 180.0,
+                        "mEffectKey": "TFT_ImmortalJourney_Props_Skin13_Intro_Fish_1",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "tail1",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "VFX_3": {
+                        "mStartFrame": 100.0,
+                        "mEndFrame": 180.0,
+                        "mEffectKey": "{e53351f1}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "tail4",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT_ImmortalJourney_Props/Skins/Skin13/Animations/TFT_ImmortalJourney_Props_Skin13_Main_Intro.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Effect": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT_ImmortalJourney_Props/Skins/Skin13/Animations/TFT_ImmortalJourney_Props_Skin13_Main_Intro.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{281b581a}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Show": {
+                        "mShowSubmeshList": [
+                            "Fish_A"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "VFX_1": {
+                        "mEffectKey": "TFT_ImmortalJourney_Props_Skin13_Water",
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "VFX_2": {
+                        "mEffectKey": "TFT_ImmortalJourney_Props_Skin13_Water_1",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "tail2",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{46eef083}": {
+                        "mSoundName": "Play_sfx_tft_env_immortaljourney_click_fish_daytime",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT_ImmortalJourney_Props/Skins/Skin13/Animations/TFT_ImmortalJourney_Props_Skin13_clickables.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Click": {
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "{281b581a}",
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "{8134c296}",
+                        "mValue": 7.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "TftArenaOwnerLevelParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
+            },
+            "{8134c296}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Show": {
+                        "mShowSubmeshList": [
+                            "Fish_A"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "VFX_1": {
+                        "mEffectKey": "TFT_ImmortalJourney_Props_Skin13_Water",
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "VFX_2": {
+                        "mEffectKey": "TFT_ImmortalJourney_Props_Skin13_Water_1",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "tail2",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{46eef083}": {
+                        "mSoundName": "Play_sfx_tft_env_immortaljourney_click_fish_night",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT_ImmortalJourney_Props/Skins/Skin13/Animations/TFT_ImmortalJourney_Props_Skin13_clickables.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            }
+        },
+        "mTrackDataMap": {
+            "Default": {
+                "__type": "TrackData"
+            }
+        },
+        "__type": "AnimationGraphData"
+    }
+}

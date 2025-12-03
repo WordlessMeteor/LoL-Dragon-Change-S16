@@ -1,0 +1,378 @@
+{
+    "Characters/TFT3_Irelia/Spells/TFT3_IreliaQ": {
+        "ObjectName": "TFT3_IreliaQ",
+        "mScriptName": "TFT3_IreliaQ",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock"
+            ],
+            "DataValues": [
+                {
+                    "mName": "PercentADDamage",
+                    "mValues": [
+                        0.0,
+                        2.1500000953674316,
+                        2.1500000953674316,
+                        4.300000190734863,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedPercentAD": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "PercentADDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "TooltipDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mSubpart": {
+                                "mSubpart": {
+                                    "mDataValue": "PercentADDamage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                "mRatio": 0.009999999776482582,
+                                "mStyleTag": "noScale",
+                                "mStyleTagIfScaled": "scaleAP",
+                                "__type": "SubPartScaledProportionalToStat"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castConeAngle": 0.0,
+            "castConeDistance": 0.0,
+            "castFrame": 7.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "TFT3_Irelia_Q_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "selectionPriority": 1,
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT3_IreliaQ",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT3_IreliaQ_Name",
+                        "keyTooltip": "Spell_TFT3_IreliaQ_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "PercentADDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT3_IreliaQ_",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PercentADDamage",
+                                    "nameOverride": "Spell_TFT3_IreliaQ_DamageCalc",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Irelia/Spells/TFT3_IreliaBasicAttack2": {
+        "ObjectName": "TFT3_IreliaBasicAttack2",
+        "mScriptName": "TFT3_IreliaBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 4234,
+            "mAlternateName": "IreliaBasicAttack2",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3506999909877777,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 16.0,
+            "missileSpeed": 467.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Irelia/Spells/TFT3_IreliaBasicAttack": {
+        "ObjectName": "TFT3_IreliaBasicAttack",
+        "mScriptName": "TFT3_IreliaBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 4234,
+            "mAlternateName": "IreliaBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3506999909877777,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 467.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Irelia/Spells/TFT3_IreliaCritAttack": {
+        "ObjectName": "TFT3_IreliaCritAttack",
+        "mScriptName": "TFT3_IreliaCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3999999761581421,
+            "delayTotalTimePercent": -0.25,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Irelia/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT3_Irelia/CharacterRecords/Root": {
+        "mCharacterName": "TFT3_Irelia",
+        "baseHP": 900.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 200.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 30.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 80.0,
+        "baseArmor": 45.0,
+        "baseSpellBlock": 45.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.8500000238418579,
+        "attackSpeedRatio": 0.8500000238418579,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT3_IreliaQ",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT3_Irelia/Spells/TFT3_IreliaQ",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionHeight": 160.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "flags": 9446664,
+        "tier": 4,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{c86875cd}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{cb5c7b63}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{687503a7}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{53d104ac}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{c45fec66}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

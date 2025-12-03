@@ -1,0 +1,721 @@
+{
+    "Characters/TFT12_Briar/Spells/TFT12_BriarBasicAttack": {
+        "ObjectName": "TFT12_BriarBasicAttack",
+        "mScriptName": "TFT12_BriarBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "BriarBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3677999973297119,
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Briar_BriarBasicAttack_OnCast",
+                "13": "Play_sfx_Briar_BriarBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Briar/Spells/TFT12_BriarSpell": {
+        "ObjectName": "TFT12_BriarSpell",
+        "mScriptName": "TFT12_BriarSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 8192,
+            "mAffectsStatusFlags": 32,
+            "DataValues": [
+                {
+                    "mName": "LeapADRatio",
+                    "mValues": [
+                        0.0,
+                        1.0,
+                        1.0,
+                        5.0,
+                        5.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "LeapStunHexRadius",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "LeapStunDuration",
+                    "mValues": [
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "FrenzyAttackSpeed",
+                    "mValues": [
+                        0.0,
+                        0.75,
+                        0.75,
+                        6.659999847412109,
+                        7.769999980926514,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "FrenzyOmnivamp",
+                    "mValues": [
+                        0.0,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        1.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "FrenzyCleaveADRatio",
+                    "mValues": [
+                        0.0,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        2.0,
+                        2.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BiteADRatio",
+                    "mValues": [
+                        2.0,
+                        2.5,
+                        2.5,
+                        20.0,
+                        20.0,
+                        3.5,
+                        3.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "SnackHealthGain",
+                    "mValues": [
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "SnackHealthGainHR",
+                    "mValues": [
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "SnackHealthGainDU",
+                    "mValues": [
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "DamageAmpPerHealth",
+                    "mValues": [
+                        0.007000000216066837,
+                        0.007000000216066837,
+                        0.007000000216066837,
+                        0.007000000216066837,
+                        0.007000000216066837,
+                        0.007000000216066837,
+                        0.007000000216066837
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "DamageAmpPerHealthHR",
+                    "mValues": [
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "DamageAmpPerHealthDU",
+                    "mValues": [
+                        0.007000000216066837,
+                        0.007000000216066837,
+                        0.007000000216066837,
+                        0.007000000216066837,
+                        0.007000000216066837,
+                        0.007000000216066837,
+                        0.007000000216066837
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "DamageAmpPvE",
+                    "mValues": [
+                        0.0,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "LeapDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mDataValue": "LeapADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedFrenzyAttackSpeed": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "FrenzyAttackSpeed",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "FrenzyCleaveDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mDataValue": "FrenzyCleaveADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedBiteDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mDataValue": "BiteADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell_Transform",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": 0.6000000238418579,
+            "delayTotalTimePercent": -0.6000000238418579,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castFrame": 41.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_BriarSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT12_BriarSpell_Name",
+                        "keyTooltip": "Spell_TFT12_BriarSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "LeapADRatio",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT12_BriarSpell_LeapADRatio",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "FrenzyAttackSpeed",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT12_BriarSpell_FrenzyAttackSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "FrenzyCleaveADRatio",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT12_BriarSpell_FrenzyCleavePercent",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BiteADRatio",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT12_BriarSpell_BiteDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{77ee8135}": {
+        "ObjectName": "TFT12_BriarSpellBiteAttack",
+        "mScriptName": "TFT12_BriarSpellBiteAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Omnomnom",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3677999973297119,
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 5.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Briar_BriarCritAttack_OnCast",
+                "13": "Play_sfx_Briar_BriarCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Briar/Spells/TFT12_BriarCritAttack": {
+        "ObjectName": "TFT12_BriarCritAttack",
+        "mScriptName": "TFT12_BriarCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "BriarCritAttack",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3677999973297119,
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Briar_BriarCritAttack_OnCast",
+                "13": "Play_sfx_Briar_BriarCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Briar/Spells/TFT12_BriarBasicAttack3": {
+        "ObjectName": "TFT12_BriarBasicAttack3",
+        "mScriptName": "TFT12_BriarBasicAttack3",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "BriarBasicAttack",
+            "mAnimationName": "Attack3",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3677999973297119,
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Briar_BriarBasicAttack2_OnCast",
+                "13": "Play_sfx_Briar_BriarBasicAttack2_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Briar/Spells/TFT12_BriarBasicAttack2": {
+        "ObjectName": "TFT12_BriarBasicAttack2",
+        "mScriptName": "TFT12_BriarBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "BriarBasicAttack",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3677999973297119,
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Briar_BriarBasicAttack2_OnCast",
+                "13": "Play_sfx_Briar_BriarBasicAttack2_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Briar/CharacterRecords/Root": {
+        "mCharacterName": "TFT12_Briar",
+        "baseHP": 1200.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 220.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 80.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 65.0,
+        "baseArmor": 60.0,
+        "baseSpellBlock": 60.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.800000011920929,
+        "attackSpeedRatio": 0.800000011920929,
+        "basicAttack": {
+            "mAttackName": "TFT12_BriarBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT12_BriarBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "TFT12_BriarBasicAttack3",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT12_BriarCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT12_BriarSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT12_Briar/Spells/TFT12_BriarSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "useRiotRelationships": true,
+        "flags": 9446664,
+        "tier": 5,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{68293464}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{48f54c5a}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{5381075b}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{53d104ac}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{ca2d0e80}",
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFT12_Briar/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

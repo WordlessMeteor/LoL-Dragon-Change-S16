@@ -1,0 +1,89 @@
+{
+    "ClientStates/Gameplay/UX/TFT/TFTCombatRecap": {
+        "PathHashToSelf": "clientstates/gameplay/ux/tft/tftcombatrecap",
+        "BaseLoadable": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap",
+        "MobileOverrideLoadable": "{c9cbad57}",
+        "ToggleLeftPanelButtonScene": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_ToggleLeftPanelButton",
+        "ToggleLeftPanelButton": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_ToggleLeftPanelButton/CR_TogglePanelButton",
+        "ButtonScene": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Button",
+        "OffensiveModeButton": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Button/CR_Button_Offensive",
+        "DefensiveModeButton": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Button/CR_Button_Defensive",
+        "UtilityModeButton": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Button/CR_Button_Utility",
+        "VsBadgeScene": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_VsBadge",
+        "CombatRecapPanelTemplate": {
+            "Scene": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel",
+            "PlayerName": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_Text_PlayerName",
+            "ModeLabel": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_Text_Label",
+            "OpponentIcon": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_Opponent_Icon",
+            "OpponentBackground": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_Opponent_Health_BG",
+            "OpponentHealthText": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_Opponent_HealthText",
+            "OpponentFillMeter": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_Opponent_FillMeter",
+            "OpponentFrame": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_Opponent_Frame",
+            "ViewPaneLink": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Scroll",
+            "LeftViewPanelink": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_L_Scroll",
+            "__type": "TftCombatRecapPanelTemplate"
+        },
+        "CombatRecapLineTemplate": {
+            "Scene": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line",
+            "UnitIcon": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Portrait/CR_Panel_Line_UnitIcon",
+            "MeterFillMagicDealt": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Tracker/CR_Panel_Line_Fill_DealtMagic",
+            "MeterFillPhysicalDealt": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Tracker/CR_Panel_Line_Fill_DealtPhys",
+            "MeterFillTrueDealt": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Tracker/CR_Panel_Line_Fill_DealtTrue",
+            "MeterFillMagicBlocked": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Tracker/CR_Panel_Line_Fill_BlockedMagic",
+            "MeterFillPhysicalBlocked": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Tracker/CR_Panel_Line_Fill_BlockedPhys",
+            "MeterFillTrueBlocked": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Tracker/CR_Panel_Line_Fill_BlockedTrue",
+            "MeterFillShieldGranted": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Tracker/CR_Panel_Line_Fill_GrantedShield",
+            "MeterFillHealCasted": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Tracker/CR_Panel_Line_Fill_CastedHeal",
+            "TextAmountTotal": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Tracker/CR_Panel_Line_Text_Damage",
+            "StarBadges": [
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Portrait/CR_Panel_Line_1StarBadge",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Portrait/CR_Panel_Line_2StarBadge",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Portrait/CR_Panel_Line_3StarBadge",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Portrait/CR_Panel_Line_4StarBadge"
+            ],
+            "StarBorders": [
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Portrait/CR_Panel_Line_UnitThumbBorder_1Star",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Portrait/CR_Panel_Line_UnitThumbBorder_2Star",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Portrait/CR_Panel_Line_UnitThumbBorder_3Star",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Portrait/CR_Panel_Line_UnitThumbBorder_4Star"
+            ],
+            "UnitEmptySlot": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/CR_Panel_Line_UnitEmptySlot",
+            "UnitSlotRegions": [
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_UnitSlot_0",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_UnitSlot_1",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_UnitSlot_2",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_UnitSlot_3",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_UnitSlot_4",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_UnitSlot_5",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_UnitSlot_6",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_UnitSlot_7",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_UnitSlot_8",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_UnitSlot_9",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_UnitSlot_10",
+                "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel/CR_Panel_UnitSlot_11"
+            ],
+            "HitRegion": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/CR_Panel_Line_HitRegion",
+            "TooltipRegion": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/CR_Panel_Line_TooltipRegion",
+            "SelectedIcon": "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase/TFT_CombatRecap/CR_Panel_Line/Layout/Portrait/CR_Panel_Line_UnitSelectedIcon",
+            "__type": "TftCombatRecapLineTemplate"
+        },
+        "PanelTransition": {
+            "TransitionTime": 0.30000001192092896,
+            "minAlpha": 255,
+            "EasingType": 20,
+            "__type": "HudMenuTransitionData"
+        },
+        "__type": "TFTCombatRecapViewController"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTCombatRecap/UIBase": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftcombatrecap/uibase",
+        "__type": "UiPropertyLoadable"
+    },
+    "{c9cbad57}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftcombatrecap/uimobile",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftcombatrecap/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "__linked": []
+}

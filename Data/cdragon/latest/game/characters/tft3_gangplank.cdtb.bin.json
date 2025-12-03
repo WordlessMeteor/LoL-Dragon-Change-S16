@@ -1,0 +1,326 @@
+{
+    "Characters/TFT3_Gangplank/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT3_Gangplank/Spells/TFT3_GangplankR": {
+        "ObjectName": "TFT3_GangplankR",
+        "mScriptName": "TFT3_GangplankR",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "mName": "Damage",
+                    "mValues": [
+                        0.0,
+                        450.0,
+                        675.0,
+                        9001.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ImpactDelayTime",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "UpgradeDelayTime",
+                    "mValues": [
+                        0.0,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "DoubleImpactDamagePercent",
+                    "mValues": [
+                        0.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumBombardments",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        9.0,
+                        9.0,
+                        9.0,
+                        9.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "mCastTime": 0.5,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "mUseMinimapTargeting": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                30000.0,
+                30000.0,
+                30000.0,
+                30000.0,
+                30000.0,
+                30000.0,
+                30000.0
+            ],
+            "castRadius": [
+                525.0,
+                525.0,
+                525.0,
+                525.0,
+                525.0,
+                525.0,
+                525.0
+            ],
+            "castFrame": 10.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT3_GangplankR",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT3_GangplankR_Name",
+                        "keyTooltip": "Spell_TFT3_GangplankR_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_TFT3_GangplankR_DamagePerWave",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "NumBombardments",
+                                    "nameOverride": "Spell_TFT3_GangplankR_NumBombardments",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "__type": "TargeterDefinitionMinimap"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Gangplank/Spells/TFT3_GangplankBasicAttack": {
+        "ObjectName": "TFT3_GangplankBasicAttack",
+        "mScriptName": "TFT3_GangplankBasicAttack",
+        "mSpell": {
+            "bHaveHitEffect": true,
+            "castFrame": 8.710000038146973,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Gangplank/Spells/TFT3_GangplankBasicAttack2": {
+        "ObjectName": "TFT3_GangplankBasicAttack2",
+        "mScriptName": "TFT3_GangplankBasicAttack2",
+        "mSpell": {
+            "mAnimationName": "Attack2",
+            "bHaveHitEffect": true,
+            "castFrame": 8.710000038146973,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Gangplank/Spells/TFT3_GangplankCritAttack": {
+        "ObjectName": "TFT3_GangplankCritAttack",
+        "mScriptName": "TFT3_GangplankCritAttack",
+        "mSpell": {
+            "mAnimationName": "Crit",
+            "bHaveHitEffect": true,
+            "castFrame": 8.710000038146973,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Gangplank/CharacterRecords/Root": {
+        "mCharacterName": "TFT3_Gangplank",
+        "baseHP": 1000.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 220.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 160.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 60.0,
+        "baseArmor": 30.0,
+        "baseSpellBlock": 20.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 1.0,
+        "basicAttack": {
+            "mAttackName": "TFT3_GangplankBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT3_GangplankBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT3_GangplankCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT3_GangplankR",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT3_Gangplank/Spells/TFT3_GangplankR",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionHeight": 185.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "flags": 9446664,
+        "tier": 5,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{95729398}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{4f65cc53}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{86c572f5}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{44de5928}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 70.0,
+        "mShopData": "{5fb040ef}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

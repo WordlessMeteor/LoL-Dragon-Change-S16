@@ -1,0 +1,127 @@
+{
+    "Characters/PetUmbra/Themes/Base/Root": {
+        "championSkinName": "PetUmbra",
+        "skinAudioProperties": {
+            "tagEventList": [
+                "pet_littlelegend",
+                "pet_umbra"
+            ],
+            "bankUnits": [
+                {
+                    "name": "Pet_Umbra_Base_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Companions/Pets/PetUmbra/Base/Pet_Umbra_Base_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Companions/Pets/PetUmbra/Base/Pet_Umbra_Base_SFX_events.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Companions/Pets/PetUmbra/Base/Pet_Umbra_Base_SFX_audio.wpk"
+                    ],
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/PetUmbra/Animations/Base",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/PetUmbra/Themes/Base/Tier1/Umbra_T1.skl",
+            "simpleSkin": "ASSETS/Characters/PetUmbra/Themes/Base/Tier1/Umbra_T1.skn",
+            "texture": "ASSETS/Characters/PetUmbra/Themes/Base/PetUmbra_Base_Classic_TX_CM.tex",
+            "selfIllumination": 1.0,
+            "initialSubmeshToHide": "Egg, Guitar, Fresh_Fish, Cooked_Fish, EyeHappy, EyeSad",
+            "submeshRenderOrder": "Egg, Guitar, Tier1_Body, Tier1_Sigil, EyeIdle, EyeHappy, EyeSad",
+            "materialOverride": [
+                {
+                    "texture": "ASSETS/Characters/PetUmbra/Themes/Base/PetUmbra_Base_Classic_Eyes_TX_CM.tex",
+                    "submesh": "EyeIdle",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/PetUmbra/Themes/Base/PetUmbra_Base_Classic_Eyes_TX_CM.tex",
+                    "submesh": "EyeHappy",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/PetUmbra/Themes/Base/PetUmbra_Base_Classic_Eyes_TX_CM.tex",
+                    "submesh": "EyeSad",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/PetUmbra/Themes/Base/PetUmbra_Base_Classic_Props_TX_CM.tex",
+                    "submesh": "Guitar",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "Characters/PetUmbra/Themes/Base/Root/Materials/Egg_Dissolve_Alpha_Add_Noise_Pan_inst",
+                    "submesh": "Egg",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/PetUmbra/Themes/Base/PetUmbra_Base_Classic_Props_TX_CM.tex",
+                    "submesh": "Fresh_Fish",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/PetUmbra/Themes/Base/PetUmbra_Base_Classic_Props_TX_CM.tex",
+                    "submesh": "Cooked_Fish",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "rigPoseModifierData": [
+                {
+                    "mStartingJointName": "Tail_1",
+                    "mEndingJointName": "Tail_end",
+                    "mDefaultMaskName": "{7136e1bc}",
+                    "mMaxBoneAngle": 45.0,
+                    "__type": "ConformToPathRigPoseModifierData"
+                }
+            ],
+            "EnablePicking": false,
+            "__type": "SkinMeshDataProperties"
+        },
+        "healthBarData": {
+            "unitHealthBarStyle": 21,
+            "AlphaOutWhileUntargetable": false,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/PetUmbra/Themes/Base/Root/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/PetUmbra/Themes/Base/Root/Resources": {
+        "resourceMap": {
+            "{ec1e83b4}": "{00000000}",
+            "{f7319db1}": "{00000000}",
+            "{c50880de}": "{00000000}",
+            "{535acda1}": "{00000000}",
+            "{e5ec0ee5}": "{00000000}",
+            "PetUmbra_Emote_Greeting": "Characters/PetUmbra/Skins/Root/Particles/PetUmbra_Emote_Greeting",
+            "PetUmbra_Emote_Joke": "Characters/PetUmbra/Skins/Root/Particles/PetUmbra_Emote_Joke",
+            "PetUmbra_Emote_Taunt": "Characters/PetUmbra/Skins/Root/Particles/PetUmbra_Emote_Taunt",
+            "PetUmbra_Emote_Greeting_EggTop": "Characters/PetUmbra/Skins/Root/Particles/PetUmbra_Emote_Greeting_EggTop",
+            "PetUmbra_Emote_Greeting_EggBottom": "Characters/PetUmbra/Skins/Root/Particles/PetUmbra_Emote_Greeting_EggBottom",
+            "PetUmbra_Emote_Laugh": "Characters/PetUmbra/Skins/Root/Particles/PetUmbra_Emote_Laugh",
+            "PetUmbra_Emote_Laugh_Smoke": "Characters/PetUmbra/Skins/Root/Particles/PetUmbra_Emote_Laugh_Smoke",
+            "PetUmbra_Emote_Cast": "Characters/PetUmbra/Skins/Root/Particles/PetUmbra_Emote_Cast",
+            "PetUmbra_Emote_Laugh_Fish_Avatar": "Characters/PetUmbra/Skins/Root/Particles/PetUmbra_Emote_Laugh_Fish_Avatar",
+            "PetUmbra_Emote_Dance": "Characters/PetUmbra/Skins/Root/Particles/PetUmbra_Emote_Dance",
+            "PetUmbra_Emote_Dance_Fire": "Characters/PetUmbra/Skins/Root/Particles/PetUmbra_Emote_Dance_Fire",
+            "PetUmbra_Emote_Dance_Ring": "Characters/PetUmbra/Skins/Root/Particles/PetUmbra_Emote_Dance_Ring"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/PetUmbra/Animations/Base.bin",
+        "Characters/PetUmbra",
+        "DATA/PetUmbra_Band_Root_Band_Tier1_Band_Tier2_Band_Tier3_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_RPG_Root_RPG_Tier1_RPG_Tier2_RPG_Tier3_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/PetUmbra_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_RPG_Root_RPG_Tier1_RPG_Tier2_RPG_Tier3_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/PetUmbra_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_RPG_Root_RPG_Tier1_RPG_Tier2_RPG_Tier3_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/PetUmbra_Band_Root_Band_Tier1_Band_Tier2_Band_Tier3_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_RPG_Root_RPG_Tier1_RPG_Tier2_RPG_Tier3_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/PetUmbra_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_RPG_Root_RPG_Tier1_RPG_Tier2_RPG_Tier3_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/PetUmbra_Band_Root_Band_Tier1_Band_Tier2_Band_Tier3_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_RPG_Root_RPG_Tier1_RPG_Tier2_RPG_Tier3_Skins_Root_Skins_Skin1_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin2_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin3.bin",
+        "DATA/PetUmbra_Band_Root_Band_Tier1_Band_Tier2_Band_Tier3_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_RPG_Root_RPG_Tier1_RPG_Tier2_RPG_Tier3_Skins_Root_Skins_Skin1_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin2_Skins_Skin3.bin",
+        "DATA/PetUmbra_Band_Root_Band_Tier1_Band_Tier2_Band_Tier3_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_RPG_Root_RPG_Tier1_RPG_Tier2_RPG_Tier3_Skins_Root_Skins_Skin1_Skins_Skin2_Skins_Skin26_Skins_Skin3.bin",
+        "DATA/PetUmbra_Band_Root_Band_Tier1_Band_Tier2_Band_Tier3_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_RPG_Root_RPG_Tier1_RPG_Tier2_RPG_Tier3_Skins_Root_Skins_Skin1_Skins_Skin14_Skins_Skin2_Skins_Skin3.bin",
+        "DATA/PetUmbra_Band_Root_Band_Tier1_Band_Tier2_Band_Tier3_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_RPG_Root_RPG_Tier1_RPG_Tier2_RPG_Tier3_Skins_Root_Skins_Skin1_Skins_Skin2_Skins_Skin3.bin",
+        "DATA/PetUmbra_Band_Root_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_PoolParty_Root_PoolParty_Tier1_PoolParty_Tier2_PoolParty_Tier3_RPG_Root_RPG_Tier1_RPG_Tier2_RPG_Tier3.bin"
+    ]
+}

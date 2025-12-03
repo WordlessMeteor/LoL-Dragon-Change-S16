@@ -1,0 +1,448 @@
+{
+    "ClientStates/Gameplay/UX/TFT/TFTUnitShop": {
+        "PathHashToSelf": "clientstates/gameplay/ux/tft/tftunitshop",
+        "BaseLoadable": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase",
+        "TopLevelSceneHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop",
+        "MobileOverrideLoadable": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIMobile",
+        "MainShopSceneHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView",
+        "GoldDisplaySceneHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/TFT_GoldDisplay",
+        "GoldFrame": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/TFT_GoldDisplay/TFT_UnitShop_GoldFrame",
+        "StreakUi": {
+            "Scene": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/TFT_Streak",
+            "StreakIcons": [
+                "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/TFT_Streak/TFT_Streak_Icon_Inactive",
+                "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/TFT_Streak/TFT_Streak_Icon_AlmostActive_Loss",
+                "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/TFT_Streak/TFT_Streak_Icon_AlmostActive_Win",
+                "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/TFT_Streak/TFT_Streak_Icon_Active_Loss",
+                "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/TFT_Streak/TFT_Streak_Icon_Active_Win"
+            ],
+            "StreakText": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/TFT_Streak/TFT_Streak_Text",
+            "StreakHitTarget": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/TFT_Streak/TFT_Streak_Bounds",
+            "__type": "TftHudStreakUi"
+        },
+        "SellAreas": [
+            {
+                "SceneHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/UnitShop_SellArea",
+                "DefaultSceneHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/UnitShop_SellArea/UnitShop_SellArea_Default",
+                "HoverSceneHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/UnitShop_SellArea/UnitShop_SellArea_Hover",
+                "HitTargetHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/UnitShop_SellArea/UnitShop_SellAreaTarget",
+                "SellTextHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/UnitShop_SellArea/UnitShop_SellText_Gold_Amount",
+                "__type": "TftSellArea"
+            },
+            {
+                "SceneHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/UnitShop_SellArea_2",
+                "DefaultSceneHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/UnitShop_SellArea_2/UnitShop_SellArea_Default_2",
+                "HoverSceneHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/UnitShop_SellArea_2/UnitShop_SellArea_Hover_2",
+                "HitTargetHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIMobile/TFT_UnitShop/UnitShop_SellArea_2/UnitShop_SellAreaTarget_2",
+                "SellTextHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIMobile/TFT_UnitShop/UnitShop_SellArea_2/UnitShop_SellText_Gold_Amount_2",
+                "__type": "TftSellArea"
+            }
+        ],
+        "GoldTextHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/TFT_GoldDisplay/TFT_UnitShop_GoldText",
+        "DragAreaHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_UnitShop_Bg",
+        "ItemSlotHandles": [
+            "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_UnitShop_Item0_Slot",
+            "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_UnitShop_Item1_Slot",
+            "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_UnitShop_Item2_Slot",
+            "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_UnitShop_Item3_Slot",
+            "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_UnitShop_Item4_Slot"
+        ],
+        "ToggleShopButtonScene": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIMobile/TFT_UnitShop/TFT_ToggleShopScene",
+        "ToggleShopButton": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIMobile/TFT_UnitShop/TFT_ToggleShopScene/ToggleShopButton",
+        "CloseShopReminderVfxHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIMobile/TFT_UnitShop/TFT_ToggleShopScene/ToggleShopButton_CloseReminder_VFX",
+        "GoldGainVfxHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIMobile/TFT_UnitShop/TFT_GoldDisplay/TFT_UnitShop_GoldIncreaseVFX",
+        "ModalShroudHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIMobile/TFT_UnitShop/TFTM_UnitShop_ModalShroud",
+        "ToggleShopReminderVfxHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIMobile/TFT_UnitShop/TFT_ToggleShopScene/ToggleShopButton_RefreshReminder_VFX",
+        "LevelTextHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/ShopLevelDisplay/TFT_UnitShop_LevelText",
+        "LockButton": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_LockButton",
+        "BuyExpButtonScene": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene",
+        "BuyExpButton": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpButton",
+        "BuyExpButtonTextHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpButton/TFT_BuyExp_ButtonText",
+        "BuyExpCostTextHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpButton/TFT_BuyExp_CostText",
+        "BuyExpIconData": {
+            "BaseIcon": {
+                "ActiveIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpButton/TFT_BuyExp_Icon",
+                "DisabledIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpButton/TFT_BuyExp_IconDisabled",
+                "ClickedIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpButton/TFT_BuyExp_IconClicked",
+                "__type": "IconLink"
+            },
+            "IconsForCurrency": {
+                "0": {
+                    "ActiveIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpIcon/TFT_BuyExp_CostIcon",
+                    "DisabledIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpIcon/TFT_BuyExp_CostIconDisabled",
+                    "ClickedIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpIcon/TFT_BuyExp_CostIconClicked",
+                    "__type": "IconLink"
+                },
+                "2": {
+                    "ActiveIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpIcon/TFT_BuyExp_HealthIcon",
+                    "DisabledIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpIcon/TFT_BuyExp_HealthIconDisabled",
+                    "ClickedIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpIcon/TFT_BuyExp_HealthIconClicked",
+                    "__type": "IconLink"
+                }
+            },
+            "__type": "IconData"
+        },
+        "RerollButton": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_RerollButton",
+        "RerollButtonTextHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_Reroll_ButtonText",
+        "RerollCostTextHandle": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_Reroll_CostText",
+        "{59b4e436}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_RerollButton/FreeRerollReminderGroup",
+        "{8bf5e123}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_RerollButton/FreeRerollReminderGroup/Text",
+        "RerollTraitCounterText": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_RerollTraitButton_CounterText",
+        "{a9e4a8cb}": {
+            "{7c288b71}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_UnitShop_PunkRefresh",
+            "{12255b6e}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/TFT_Streak/Custom_Streak_Style",
+            "{789b8eb2}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/Tier6Group/DropRate_VFX"
+        },
+        "InfoNubButton": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_UnitShop_InfoNub",
+        "InfoNubTooltipRegion": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_UnitShop_InfoNub/TFT_UnitShop_InfoNub_TooltipRegion",
+        "BuyExpClickElement": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/TFT_BuyExpButton/TFT_BuyExp_ClickReleaseVFX",
+        "RerollClickElement": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_RerollButton/TFT_Reroll_ClickReleaseParticle",
+        "BuyExpClickDefaultVfx": "UX/Particles/TFT/TFTM_UI_ButtonFX_BuyXP",
+        "RerollClickDefaultVfx": "UX/Particles/TFT/TFTM_UI_ButtonFX_Shop_Refresh",
+        "ShopClickRejectedVfx": "UX/Particles/TFT/TFT_Tutorial_ClickFeedback_Negative",
+        "GoldTooltipTraKeys": {
+            "2": {
+                "TitleKey": "TFT_shop_gold_tooltip_title",
+                "BodyKey": "TFT_shop_gold_tooltip_body_partial",
+                "__type": "GoldTooltipTraKeys"
+            },
+            "1": {
+                "TitleKey": "TFT_shop_gold_tooltip_title",
+                "BodyKey": "TFT_shop_gold_tooltip_body",
+                "__type": "GoldTooltipTraKeys"
+            },
+            "0": {
+                "TitleKey": "TFT_shop_gold_tooltip_title",
+                "BodyKey": "TFT_shop_gold_tooltip_body",
+                "__type": "GoldTooltipTraKeys"
+            },
+            "3": {
+                "TitleKey": "TFT_shop_gold_tooltip_title",
+                "BodyKey": "TFT_shop_gold_tooltip_body",
+                "__type": "GoldTooltipTraKeys"
+            },
+            "4": {
+                "TitleKey": "TFT_shop_gold_tooltip_title",
+                "BodyKey": "TFT_pve_shop_gold_tooltip_body",
+                "__type": "GoldTooltipTraKeys"
+            }
+        },
+        "{e3f7224b}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_QuestTrackerButton",
+        "ExpBar": {
+            "ExpScene": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene",
+            "ExpBar": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/ShopLevelDisplay/ExpBar",
+            "Backdrop": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/ShopLevelDisplay/ExpBar/TFT_UnitShop_ExpBar_Backdrop",
+            "ExpBarDivider": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/ShopLevelDisplay/ExpBar/TFT_UnitShop_ExpBar_Divider",
+            "ValueText": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/ShopLevelDisplay/ExpBar/TFT_UnitShop_ExpBar_ValueText",
+            "{234f4a0c}": "TFT_gold_to_next_level",
+            "RadialExpBar": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIMobile/TFT_UnitShop/MainShopView/TFT_ExpScene/ShopLevelDisplay/ExpBar/ExpRadialBar",
+            "RadialBackdrop": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_ExpScene/ShopLevelDisplay/ExpBar/TFT_UnitShop_ExpBar_Backdrop",
+            "__type": "TftHudExpBar"
+        },
+        "DropRate": {
+            "{e2c6ffc9}": "Shop",
+            "DropRateSlotsList": [
+                {
+                    "TierIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/HorizontalList/Tier1Group/DropRate_Tier1_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/HorizontalList/Tier1Group/DropRate1_Text",
+                    "__type": "TftDropRateSlot"
+                },
+                {
+                    "TierIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/HorizontalList/Tier2Group/DropRate_Tier2_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/HorizontalList/Tier2Group/DropRate2_Text",
+                    "__type": "TftDropRateSlot"
+                },
+                {
+                    "TierIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/HorizontalList/Tier3Group/DropRate_Tier3_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/HorizontalList/Tier3Group/DropRate3_Text",
+                    "__type": "TftDropRateSlot"
+                },
+                {
+                    "TierIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/HorizontalList/Tier4Group/DropRate_Tier4_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/HorizontalList/Tier4Group/DropRate4_Text",
+                    "__type": "TftDropRateSlot"
+                },
+                {
+                    "TierIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/HorizontalList/Tier5Group/DropRate_Tier5_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/HorizontalList/Tier5Group/DropRate5_Text",
+                    "__type": "TftDropRateSlot"
+                },
+                {
+                    "TierIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/Tier6Group/DropRate_Tier6_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/Tier6Group/DropRate6_Text",
+                    "__type": "TftDropRateSlot"
+                }
+            ],
+            "{69b0a839}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/Tier6Group/DropRate6_Text",
+            "__type": "TftHudUnitShopDropRate"
+        },
+        "{5c25a39e}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate",
+        "{b78bcf1a}": {
+            "HitTarget": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/Tier6Group/HitTargetRegion",
+            "TooltipRegion": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/Tier6Group/TooltipRegion",
+            "Background": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/Tier6Group/DropRate6_bg",
+            "__type": "{9925c3c2}"
+        },
+        "{044358b5}": {
+            "{e2c6ffc9}": "{a55841e1}",
+            "DropRateSlotsList": [
+                {
+                    "TierIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_Chosen_DropRates/TFT_Chosen_DropRate0/TFT_Chosen_DropRate0_Tier1_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_Chosen_DropRates/TFT_Chosen_DropRate0/InfoNub_DropRate1_Text",
+                    "__type": "TftDropRateSlot"
+                },
+                {
+                    "TierIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_Chosen_DropRates/TFT_Chosen_DropRate0/TFT_Chosen_DropRate0_Tier2_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_Chosen_DropRates/TFT_Chosen_DropRate0/InfoNub_DropRate2_Text",
+                    "__type": "TftDropRateSlot"
+                },
+                {
+                    "TierIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_Chosen_DropRates/TFT_Chosen_DropRate0/TFT_Chosen_DropRate0_Tier3_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_Chosen_DropRates/TFT_Chosen_DropRate0/InfoNub_DropRate3_Text",
+                    "__type": "TftDropRateSlot"
+                },
+                {
+                    "TierIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_Chosen_DropRates/TFT_Chosen_DropRate0/TFT_Chosen_DropRate0_Tier4_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_Chosen_DropRates/TFT_Chosen_DropRate0/InfoNub_DropRate4_Text",
+                    "__type": "TftDropRateSlot"
+                },
+                {
+                    "TierIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_Chosen_DropRates/TFT_Chosen_DropRate0/TFT_Chosen_DropRate0_Tier5_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_Chosen_DropRates/TFT_Chosen_DropRate0/InfoNub_DropRate5_Text",
+                    "__type": "TftDropRateSlot"
+                },
+                {
+                    "TierIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/Tier6Group/DropRate_Tier6_Icon",
+                    "Text": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_DropRate/UnitShop_DropRate/Tier6Group/DropRate6_Text",
+                    "__type": "TftDropRateSlot"
+                }
+            ],
+            "__type": "TftHudUnitShopDropRate"
+        },
+        "ShopDragArea": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/TFT_UnitShop_Bg",
+        "{5e800761}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene",
+        "ItemTemplate": {
+            "Scene": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0",
+            "GoldCostIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_CostIcon",
+            "GoldCostIconDisabled": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_CostIconDisabled",
+            "HealthCostIcon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_CostIconHealth",
+            "HealthCostIconDisabled": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_CostIconHealthDisabled",
+            "HighlightOnestar": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_HighlightOne",
+            "HighlightTwostar": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_HighlightTwo",
+            "HighlightThreestar": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_HighlightThree",
+            "HitTarget": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_DragHitTarget",
+            "frames": {
+                "0": {
+                    "Button": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Frame/Rarity1",
+                    "__type": "{6c66eae4}"
+                },
+                "1": {
+                    "Button": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Frame/Rarity2",
+                    "__type": "{6c66eae4}"
+                },
+                "2": {
+                    "Button": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Frame/Rarity3",
+                    "__type": "{6c66eae4}"
+                },
+                "4": {
+                    "Button": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Frame/Rarity4",
+                    "__type": "{6c66eae4}"
+                },
+                "6": {
+                    "Button": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Frame/Rarity5",
+                    "__type": "{6c66eae4}"
+                },
+                "8": {
+                    "Button": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Frame/Rarity6",
+                    "__type": "{6c66eae4}"
+                },
+                "3": {
+                    "Button": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Frame/Special3",
+                    "{f688ec43}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Frame/Special3/Disabled_BG",
+                    "__type": "{6c66eae4}"
+                },
+                "5": {
+                    "Button": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Frame/Special4",
+                    "{f688ec43}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Frame/Special4/Disabled_BG",
+                    "__type": "{6c66eae4}"
+                },
+                "7": {
+                    "Button": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Frame/Special5",
+                    "{f688ec43}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Frame/Special5/Disabled_BG",
+                    "__type": "{6c66eae4}"
+                }
+            },
+            "styles": {
+                "Badge": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_Badge",
+                "{2ce97d34}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/BadgeVFX",
+                "HeadlinerDisabled": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_TFT10_Headliner_Disabled",
+                "{1c7436ab}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/BadgeInactiveVFX",
+                "{5a8add18}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait0/MultiTalentedOne",
+                "{5d8ae1d1}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait1/MultiTalentedTwo",
+                "{5c8ae03e}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait2/MultiTalentedThree",
+                "{ad01a5ed}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT12_Zap_Styles/TraitButton",
+                "{b2bb5786}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT12_Zap_Styles/AscendantButton",
+                "{ed170a2f}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT12_Zap_Styles/CombatButton",
+                "{87d6a676}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT12_Zap_Styles/ShopButton",
+                "{d68bace3}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT12_Zap_Styles/MiscButton",
+                "{69170336}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT12_Zap_Styles/HighCost_AllCat",
+                "{3da5b376}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT12_Zap_Styles/HighCost_Ascendant",
+                "{516cb29c}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT14_Hack/Hack",
+                "{b8cd1a89}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT14_Hack/Hack",
+                "{44cd5057}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT14_Hack/HackLuckyShop",
+                "{aae47b9a}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT15_ST/ST_ShopCard",
+                "{9de3d855}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT15_MonsterTrainer/MonsterTrainer_ShopCard_KogMaw",
+                "{58989660}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT15_MonsterTrainer/MonsterTrainer_ShopCard_Rammus",
+                "{e69befff}": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT15_MonsterTrainer/MonsterTrainer_ShopCard_Smolder"
+            },
+            "traits": [
+                {
+                    "styles": {
+                        "0": {
+                            "Background": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait0/Bg",
+                            "TraitNub": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait0/SpecialNub",
+                            "Highlight": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait0/Highlight",
+                            "NameText": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait0/Name",
+                            "Icon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait0/Icon",
+                            "__type": "UnitShopItemTraitData"
+                        }
+                    },
+                    "__type": "UnitShopDisplayTraitData"
+                },
+                {
+                    "styles": {
+                        "0": {
+                            "Background": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait1/Bg",
+                            "TraitNub": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait1/SpecialNub",
+                            "Highlight": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait1/Highlight",
+                            "NameText": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait1/Name",
+                            "Icon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait1/Icon",
+                            "__type": "UnitShopItemTraitData"
+                        }
+                    },
+                    "__type": "UnitShopDisplayTraitData"
+                },
+                {
+                    "styles": {
+                        "0": {
+                            "Background": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait2/Bg",
+                            "TraitNub": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait2/SpecialNub",
+                            "Highlight": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait2/Highlight",
+                            "NameText": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait2/Name",
+                            "Icon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait2/Icon",
+                            "__type": "UnitShopItemTraitData"
+                        }
+                    },
+                    "__type": "UnitShopDisplayTraitData"
+                },
+                {
+                    "styles": {
+                        "0": {
+                            "Background": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait3/Bg",
+                            "TraitNub": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait3/SpecialNub",
+                            "Highlight": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait3/Highlight",
+                            "NameText": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait3/Name",
+                            "Icon": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/Traits/Style_Default/Trait3/Icon",
+                            "__type": "UnitShopItemTraitData"
+                        }
+                    },
+                    "__type": "UnitShopDisplayTraitData"
+                }
+            ],
+            "description": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/DescriptionText",
+            "Rarity6CostHealthVfx": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_Rarity6_CostHealth_VFX",
+            "UnitNameText": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_Name",
+            "UnitCostText": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_Cost",
+            "UnitPortrait": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_Icon",
+            "TeamPlanReminder": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/TFT_UnitShop_Item0_TeamPlanReminder",
+            "ClickRejectedVFX": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIMobile/TFT_UnitShop/MainShopView/ShopItemsScene/TFT_UnitShop_Item0/ClickRejectedVFX",
+            "__type": "UnitShopItemData"
+        },
+        "{52f434cd}": {
+            "{69170336}": {
+                "effect": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopPurchaseEffects/SelectedVFX",
+                "{8f6df5b2}": {
+                    "TransitionTime": 0.5,
+                    "EasingType": 23,
+                    "__type": "HudMenuTransitionData"
+                },
+                "__type": "{b609aae3}"
+            },
+            "{3da5b376}": {
+                "effect": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/ShopPurchaseEffects/SelectedVFX",
+                "{8f6df5b2}": {
+                    "TransitionTime": 0.5,
+                    "EasingType": 23,
+                    "__type": "HudMenuTransitionData"
+                },
+                "__type": "{b609aae3}"
+            }
+        },
+        "ZoomTransitionIn": {
+            "TransitionTime": 0.5,
+            "__type": "HudMenuTransitionData"
+        },
+        "ZoomTransitionOut": {
+            "TransitionTime": 0.5,
+            "minAlpha": 255,
+            "maxAlpha": 0,
+            "__type": "HudMenuTransitionData"
+        },
+        "__type": "TftUnitShopViewController"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftunitshop/uibase",
+        "__type": "UiPropertyLoadable"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIMobile": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftunitshop/uimobile",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftunitshop/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{5b236e80}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftunitshop/uibase_tft4",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftunitshop/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{5c237013}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftunitshop/uibase_tft5",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftunitshop/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{5e237339}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftunitshop/uibase_tft7",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftunitshop/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{7d356ad2}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftunitshop/uimobile_tft10",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftunitshop/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{93af783c}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftunitshop/uimobile_tft7",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftunitshop/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{95af7b62}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftunitshop/uimobile_tft5",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftunitshop/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{96af7cf5}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftunitshop/uimobile_tft4",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftunitshop/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{c1d368de}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftunitshop/uibase_tft15",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftunitshop/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{c6d370bd}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftunitshop/uibase_tft10",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftunitshop/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "__linked": []
+}

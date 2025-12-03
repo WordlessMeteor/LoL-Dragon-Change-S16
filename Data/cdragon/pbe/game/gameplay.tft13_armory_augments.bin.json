@@ -1,0 +1,556 @@
+{
+    "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments": {
+        "PathHashToSelf": "clientstates/gameplay/ux/tft/tft13_armory_augments",
+        "BaseLoadable": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase",
+        "MobileOverrideLoadable": "{10b359e4}",
+        "UseSequencer": true,
+        "ArmoryStyle": 4,
+        "UseToggleButtonOnPc": true,
+        "RecipeHintTraKey": "tft_shadowitem_mobile_ui_recipehints",
+        "FullDescriptionTraKey": "tft_shadowitem_mobile_ui_fulldescription",
+        "ClickShowRecipeHintTraKey": "tft_armory_pc_component_item_hint",
+        "TitleText": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/background/Title",
+        "ItemSpace": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/ItemSpace",
+        "ItemSlotData": {
+            "ElementGroup": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0",
+            "ItemIcon": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/ItemIcon",
+            "ItemIconBordered": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/ItemIconShadow",
+            "ItemFootprintSelectedVfx": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/ItemFootprint_Selected_VFX",
+            "ItemFootprintUnselectedVfx": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/ItemFootprint_Unselected_VFX",
+            "ItemActionButton": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/RerollButton",
+            "ItemAction": 1,
+            "{bc8f3dd5}": 2,
+            "DefaultButtonStyle": {
+                "ItemButton": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment",
+                "description": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/ItemDesc",
+                "__type": "TftArmoryButtonStyleData"
+            },
+            "{b5063433}": {
+                "1": "{8ce5d5ea}",
+                "2": "{62b45ae6}",
+                "0": "{6039b600}",
+                "3": "{6d59749f}",
+                "4": "{50e2dab4}"
+            },
+            "{692794b6}": "{45c6389c}",
+            "__type": "TftArmorySlotData"
+        },
+        "MainScene": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments",
+        "HideButtonScene": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_ToggleArmoryScene_Augments",
+        "ToggleMainViewButton": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_ToggleArmoryScene_Augments/ToggleArmoryButton",
+        "TimeoutVfxDuration": 10.0,
+        "TimeoutVfxOnToggleButton": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_ToggleArmoryScene_Augments/TimeoutVFX_OnToggleButton",
+        "TimeoutDoubleClickPrevention": 0.25,
+        "ShouldHideButtonsOnChoice": true,
+        "__type": "TFTArmoryViewController"
+    },
+    "{10b359e4}": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tft13_armory_augments/uimobile",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tft13_armory_augments/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{45c6389c}": {
+        "name": "TFTArmoryTemplateSelector",
+        "Hash": "{45c6389c}",
+        "__type": "SequenceObjectSelector"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/Particles/TFTM_UI_AugmentCard_Set13_StaticVFX": {
+        "particleName": "TFTM_UI_AugmentCard_Set13_StaticVFX",
+        "particlePath": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/Particles/TFTM_UI_AugmentCard_Set13_StaticVFX",
+        "{9836cd87}": 7,
+        "drawingLayer": 1,
+        "hudAnchorPositionFromWorldProjection": false,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{50e2dab4}": {
+        "category": "{d5bc155c}",
+        "Actions": [
+            {
+                "End": {
+                    "offset": 1.0,
+                    "__type": "SequenceTiming"
+                },
+                "priority": 1,
+                "element": {
+                    "value": "{73f574b3}",
+                    "__type": "{038d7429}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "{25fdb38f}": {
+                    "AnimationName": "Unselected",
+                    "__type": "{d31bbf89}"
+                },
+                "EnableOnStart": false,
+                "DisableOnEnd": false,
+                "__type": "{b213e4ff}"
+            },
+            {
+                "End": {
+                    "offset": 1.0,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/ItemDesc",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            },
+            {
+                "End": {
+                    "offset": 1.0,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/ItemName",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            },
+            {
+                "End": {
+                    "offset": 1.0,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/ItemIcon",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            },
+            {
+                "End": {
+                    "offset": 1.0,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/RerollButton",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            }
+        ],
+        "PathHash": "{50e2dab4}",
+        "path": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/Sequences/UnSelectedSequence",
+        "__type": "Sequence"
+    },
+    "{6039b600}": {
+        "category": "{9b149d2c}",
+        "Actions": [
+            {
+                "End": {
+                    "offset": 1.0,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardBuild_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "DisableOnEnd": false,
+                "__type": "{c2b1af7f}"
+            },
+            {
+                "End": {
+                    "offset": 1.0,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "{73f574b3}",
+                    "__type": "{038d7429}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "{25fdb38f}": {
+                    "AnimationName": "Idle",
+                    "Loop": true,
+                    "__type": "{d31bbf89}"
+                },
+                "EnableOnStart": false,
+                "DisableOnEnd": false,
+                "__type": "{b213e4ff}"
+            },
+            {
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardFlashIn_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            },
+            {
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardHover_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            }
+        ],
+        "PhaseOverrides": [
+            {
+                "OverrideDuration": true,
+                "duration": 1.0,
+                "__type": "SequencePhaseOverride"
+            }
+        ],
+        "PathHash": "{6039b600}",
+        "path": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/Sequences/IdleSequence",
+        "__type": "Sequence"
+    },
+    "{62b45ae6}": {
+        "category": "{d5bc155c}",
+        "Actions": [
+            {
+                "SoundEvent": {
+                    "value": "Play_sfx_tft13_action_aug_hover",
+                    "__type": "{67406e7f}"
+                },
+                "__type": "{755cf26f}"
+            },
+            {
+                "Start": {
+                    "offset": 0.007329843007028103,
+                    "__type": "SequenceTiming"
+                },
+                "End": {
+                    "offset": 0.9183245897293091,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardHover_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "DisableOnEnd": false,
+                "__type": "{c2b1af7f}"
+            },
+            {
+                "End": {
+                    "offset": 1.0,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "{73f574b3}",
+                    "__type": "{038d7429}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "{25fdb38f}": {
+                    "AnimationName": "Hover",
+                    "Loop": true,
+                    "__type": "{d31bbf89}"
+                },
+                "EnableOnStart": false,
+                "DisableOnEnd": false,
+                "__type": "{b213e4ff}"
+            },
+            {
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardBuild_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            },
+            {
+                "Start": {
+                    "offset": 0.0010471204295754433,
+                    "__type": "SequenceTiming"
+                },
+                "End": {
+                    "offset": 0.0010471204295754433,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardHover_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            },
+            {
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardFlashIn_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            }
+        ],
+        "PhaseOverrides": [
+            {
+                "OverrideDuration": true,
+                "duration": 1.0,
+                "__type": "SequencePhaseOverride"
+            }
+        ],
+        "PathHash": "{62b45ae6}",
+        "path": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/Sequences/HoverSequence",
+        "__type": "Sequence"
+    },
+    "{6d59749f}": {
+        "category": "{d5bc155c}",
+        "Actions": [
+            {
+                "SoundEvent": {
+                    "value": "Play_sfx_tft13_action_aug_select",
+                    "__type": "{67406e7f}"
+                },
+                "__type": "{755cf26f}"
+            },
+            {
+                "End": {
+                    "offset": 0.5,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/ItemFootprint_Selected_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "DisableOnEnd": false,
+                "__type": "{c2b1af7f}"
+            },
+            {
+                "End": {
+                    "offset": 1.0,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "{73f574b3}",
+                    "__type": "{038d7429}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "{25fdb38f}": {
+                    "AnimationName": "Selected",
+                    "SpeedScale": 0.75,
+                    "__type": "{d31bbf89}"
+                },
+                "EnableOnStart": false,
+                "DisableOnEnd": false,
+                "__type": "{b213e4ff}"
+            },
+            {
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardHover_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            },
+            {
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardBuild_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            },
+            {
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardFlashIn_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            },
+            {
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/ItemFootprint_Unselected_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            }
+        ],
+        "PathHash": "{6d59749f}",
+        "path": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/Sequences/SelectedSequence",
+        "__type": "Sequence"
+    },
+    "{8ce5d5ea}": {
+        "category": "{da8f85a4}",
+        "Actions": [
+            {
+                "SoundEvent": {
+                    "value": "Play_sfx_tft13_action_aug_intro",
+                    "__type": "{67406e7f}"
+                },
+                "__type": "{755cf26f}"
+            },
+            {
+                "Start": {
+                    "PhaseIndex": 1,
+                    "__type": "SequenceTiming"
+                },
+                "End": {
+                    "offset": 1.0,
+                    "PhaseIndex": 1,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardBuild_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "DisableOnEnd": false,
+                "__type": "{c2b1af7f}"
+            },
+            {
+                "End": {
+                    "offset": 1.0,
+                    "PhaseIndex": 1,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardFlashIn_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "__type": "{c2b1af7f}"
+            },
+            {
+                "End": {
+                    "offset": 1.2000000476837158,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "{73f574b3}",
+                    "__type": "{038d7429}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "{25fdb38f}": {
+                    "AnimationName": "Flash-In",
+                    "__type": "{d31bbf89}"
+                },
+                "EnableOnStart": false,
+                "DisableOnEnd": false,
+                "__type": "{b213e4ff}"
+            },
+            {
+                "Start": {
+                    "PhaseIndex": 1,
+                    "__type": "SequenceTiming"
+                },
+                "End": {
+                    "offset": 0.9999999403953552,
+                    "PhaseIndex": 1,
+                    "__type": "SequenceTiming"
+                },
+                "element": {
+                    "value": "{73f574b3}",
+                    "__type": "{038d7429}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "{25fdb38f}": {
+                    "AnimationName": "Idle",
+                    "Loop": true,
+                    "__type": "{d31bbf89}"
+                },
+                "EnableOnStart": false,
+                "DisableOnEnd": false,
+                "__type": "{b213e4ff}"
+            },
+            {
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardBuild_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            },
+            {
+                "element": {
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment/CardHover_VFX",
+                    "__type": "{37841b56}"
+                },
+                "{76df2a8b}": "{45c6389c}",
+                "EnableOnEnd": false,
+                "__type": "{1a4d18fe}"
+            }
+        ],
+        "PhaseOverrides": [
+            {
+                "OverrideDuration": true,
+                "duration": 1.2000000476837158,
+                "__type": "SequencePhaseOverride"
+            },
+            {
+                "OverrideDuration": true,
+                "duration": 1.0,
+                "__type": "SequencePhaseOverride"
+            }
+        ],
+        "PathHash": "{8ce5d5ea}",
+        "path": "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/Sequences/IntroSequence",
+        "__type": "Sequence"
+    },
+    "{9b149d2c}": {
+        "name": "TFTArmoryIdleCategory",
+        "Hash": "{9b149d2c}",
+        "Phases": [
+            {
+                "name": "Idle",
+                "__type": "SequencePhase"
+            }
+        ],
+        "__type": "SequenceCategory"
+    },
+    "{d5bc155c}": {
+        "name": "TFTArmoryHoverCategory",
+        "Hash": "{d5bc155c}",
+        "Phases": [
+            {
+                "name": "Hover",
+                "__type": "SequencePhase"
+            }
+        ],
+        "__type": "SequenceCategory"
+    },
+    "{da8f85a4}": {
+        "name": "TFTArmoryIntroCategory",
+        "Hash": "{da8f85a4}",
+        "Phases": [
+            {
+                "name": "Intro",
+                "__type": "SequencePhase"
+            },
+            {
+                "name": "Idle",
+                "__type": "SequencePhase"
+            }
+        ],
+        "__type": "SequenceCategory"
+    },
+    "{e9d84ecc}": {
+        "name": "TFTArmorySelectionCategory",
+        "Hash": "{e9d84ecc}",
+        "Phases": [
+            {
+                "name": "Hover",
+                "__type": "SequencePhase"
+            }
+        ],
+        "__type": "SequenceCategory"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT13_Armory_Augments/UIBase": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tft13_armory_augments/uibase",
+        "__type": "UiPropertyLoadable"
+    },
+    "__linked": []
+}

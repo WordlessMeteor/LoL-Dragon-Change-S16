@@ -1,0 +1,283 @@
+{
+    "Characters/Nexus/Skins/Skin14": {
+        "championSkinName": "Nexus_URF_Chaos_Blue",
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/Nexus/Animations/Skin15",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Nexus/Skins/Skin14/URF_Nexus.skl",
+            "simpleSkin": "ASSETS/Characters/Nexus/Skins/Skin14/URF_Nexus.skn",
+            "ReducedBoneSkinning": true,
+            "texture": "ASSETS/Characters/Nexus/Skins/Skin15/SRUAP_chaosNexus_TX_CM_blue.tex",
+            "selfIllumination": 0.699999988079071,
+            "Material": "Characters/Nexus/Skins/Skin15/Materials/DirtyMetal_ChaosNexus_Blue",
+            "initialSubmeshToHide": "Destroyed",
+            "materialOverride": [
+                {
+                    "texture": "ASSETS/Characters/Nexus/Skins/Skin15/SRUAP_chaosNexus_destroyed_TX_CM_blue.tex",
+                    "submesh": "Destroyed",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "Characters/Nexus/Skins/Skin15/Materials/DirtyMetal_Urf_Feeneypult",
+                    "submesh": "Urf_Mat",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Stone",
+        "idleParticlesEffects": [
+            {
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "particleOverride_DeathParticle": "Nexus_Explosion_Blue.troy",
+        "iconCircle": "ASSETS/Characters/Nexus/HUD/Nexus_Blue_Circle.tex",
+        "iconSquare": "ASSETS/Characters/Nexus/HUD/Nexus_Blue_Square.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 8,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/Nexus/Skins/Skin15/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/Nexus/Skins/Skin15/Materials/DirtyMetal_ChaosNexus_Blue": {
+        "name": "Characters/Nexus/Skins/Skin15/Materials/DirtyMetal_ChaosNexus_Blue",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Nexus/Skins/Skin15/SRUAP_chaosNexus_TX_CM_blue.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Gradient_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Iridescence/gold_gradient.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "ASSETS/Characters/Nexus/Skins/Skin15/SRUAP_ChaosNexus_URF_Mask.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Secondary_Texture",
+                "texturePath": "ASSETS/Shared/Materials/marble_Med_1024.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Specular_Power",
+                "value": [
+                    8.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SpecularColor",
+                "value": [
+                    0.5529412031173706,
+                    0.5529412031173706,
+                    0.5529412031173706,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ENV_BlurAmount",
+                "value": [
+                    3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Reflectivity",
+                "value": [
+                    0.2475000023841858,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ENV_TotalMips",
+                "value": [
+                    3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Energy_Conservation",
+                "value": [
+                    0.5000076293945312,
+                    0.20000000298023224,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Roughness",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Film_Depth",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Spec_Global",
+                "value": [
+                    0.7950000166893005,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anodization",
+                "value": [
+                    0.4025000035762787,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Highlight_Direction",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Tint",
+                "value": [
+                    0.6509804129600525,
+                    0.45490196347236633,
+                    0.05882352963089943,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Secondary_Blend",
+                "value": [
+                    0.8999999761581421,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OcclusionColor",
+                "value": [
+                    0.05882352963089943,
+                    0.07450980693101883,
+                    0.0941176488995552,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OcclusionPower",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Opacity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "LOCK_HIGHLIGHT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/DirtyMetal",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": [
+        "DATA/Nexus_Skins_Skin10_Skins_Skin11_Skins_Skin14_Skins_Skin15_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin3_Skins_Skin6_Skins_Skin7.bin",
+        "DATA/Characters/Nexus/Nexus.bin",
+        "DATA/Characters/Nexus/Animations/Skin15.bin",
+        "DATA/Nexus_Skins_Skin14_Skins_Skin15.bin"
+    ]
+}

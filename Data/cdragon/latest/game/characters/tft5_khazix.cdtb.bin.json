@@ -1,0 +1,329 @@
+{
+    "Characters/TFT5_Khazix/Spells/TFT5_KhazixCritAttack": {
+        "ObjectName": "TFT5_KhazixCritAttack",
+        "mScriptName": "TFT5_KhazixCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Crit",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 7.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Khazix/Spells/TFT5_KhazixQ": {
+        "ObjectName": "TFT5_KhazixQ",
+        "mScriptName": "TFT5_KhazixQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "mName": "Damage",
+                    "mValues": [
+                        50.0,
+                        250.0,
+                        375.0,
+                        560.0,
+                        450.0,
+                        550.0,
+                        650.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "IsolationDamage",
+                    "mValues": [
+                        200.0,
+                        600.0,
+                        900.0,
+                        1350.0,
+                        1000.0,
+                        1200.0,
+                        1400.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedIsolationDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "IsolationDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayTotalTimePercent": -0.5,
+            "mCantCancelWhileWindingUp": true,
+            "alwaysSnapFacing": true,
+            "castRange": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.25,
+            "missileSpeed": 20.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 1,
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT5_KhazixQ",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT5_KhazixQ_Name",
+                        "keyTooltip": "Spell_TFT5_KhazixQ_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_ListType_ModifiedMagicDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "IsolationDamage",
+                                    "nameOverride": "Spell_TFT5_Khazix_IsolationDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Khazix/Spells/TFT5_KhazixBasicAttack": {
+        "ObjectName": "TFT5_KhazixBasicAttack",
+        "mScriptName": "TFT5_KhazixBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 9.25,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Khazix/Spells/TFT5_KhazixBasicAttack2": {
+        "ObjectName": "TFT5_KhazixBasicAttack2",
+        "mScriptName": "TFT5_KhazixBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Attack2",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 9.25,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT5_Khazix/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT5_Khazix/CharacterRecords/Root": {
+        "mCharacterName": "TFT5_Khazix",
+        "baseHP": 600.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 150.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 60.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 45.0,
+        "baseArmor": 35.0,
+        "baseSpellBlock": 35.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.699999988079071,
+        "attackSpeedRatio": 0.699999988079071,
+        "basicAttack": {
+            "mAttackCastTime": 0.75,
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.5,
+                "mAttackName": "TFT5_KhazixBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.09946524351835251,
+                "mAttackName": "TFT5_KhazixCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT5_KhazixQ",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT5_Khazix/Spells/TFT5_KhazixQ",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "passiveRange": 2.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "flags": 9446664,
+        "mPreferredPerkStyle": "Perks/Styles/Inspiration",
+        "tier": 1,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{df99dcfc}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{1b889f5a}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{402a9680}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{8b881063}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

@@ -1,0 +1,153 @@
+{
+    "Characters/Cherry_Shopkeeper/Skins/Skin1": {
+        "championSkinName": "Empyrean Cherry_Shopkeeper",
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/Cherry_Shopkeeper/Animations/Skin0",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Cherry_Shopkeeper/Skins/Skin01/Cherry_Shopkeeper_Skin01.skl",
+            "simpleSkin": "ASSETS/Characters/Cherry_Shopkeeper/Skins/Skin01/Cherry_Shopkeeper_Skin01.skn",
+            "texture": "ASSETS/Characters/Cherry_Shopkeeper/Skins/Skin01/Cherry_Shopkeeper_Skin01_TX_CM.tex",
+            "skinScale": 1.2000000476837158,
+            "selfIllumination": 1.0,
+            "initialSubmeshToHide": "EyeHappy, EyeClosed, EyeSurprised, EyeAngry, EyeSad, Food_Meat, Food_Veggie, Food_Fruit ",
+            "submeshRenderOrder": "Body, FireMeshes",
+            "materialOverride": [
+                {
+                    "Material": "Characters/Cherry_Shopkeeper/Skins/Skin1/Materials/Cherry_Shopkeeper_Skin01_Flames",
+                    "submesh": "FireMeshes",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "rigPoseModifierData": [
+                {
+                    "mStartingJointName": "tail1",
+                    "mEndingJointName": "tail4",
+                    "mDefaultMaskName": "{7136e1bc}",
+                    "mMaxBoneAngle": 45.0,
+                    "mDampingValue": 30.0,
+                    "mVelMultiplier": -0.25,
+                    "__type": "ConformToPathRigPoseModifierData"
+                }
+            ],
+            "EnablePicking": false,
+            "__type": "SkinMeshDataProperties"
+        },
+        "iconCircle": "ASSETS/Characters/PetChoncc/HUD/Icon_Choncc_Classic_Tier3.tex",
+        "mResourceResolver": "Characters/Cherry_Shopkeeper/Skins/Skin1/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/Cherry_Shopkeeper/Skins/Skin1/Materials/Cherry_Shopkeeper_Skin01_Flames": {
+        "name": "Characters/Cherry_Shopkeeper/Skins/Skin1/Materials/Cherry_Shopkeeper_Skin01_Flames",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Panning_Texture",
+                "texturePath": "ASSETS/Maps/Particles/Cherry/Cherry_Shopkeeper_Flames.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Panning_Scale",
+                "value": [
+                    1.0,
+                    0.8999999761581421,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Panning_Speed",
+                "value": [
+                    0.0,
+                    0.75,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    4.449999809265137,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Control",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/ScrollingMaskedDiffuseBloom",
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Cherry_Shopkeeper/Skins/Skin1/Resources": {
+        "resourceMap": {
+            "PetChoncc_Dance": "Characters/Cherry_Shopkeeper/Skins/Skin0/Particles/Cherry_Shopkeeper_Base_Dance",
+            "PetChoncc_Joke": "Characters/PetChoncc/Themes/Base/Root/Particles/PetChoncc_Base_Joke",
+            "PetChoncc_Joke_RightStomp": "Characters/PetChoncc/Themes/Base/Root/Particles/PetChoncc_Base_Joke_RightStomp",
+            "PetChoncc_Joke_LeftStomp": "Characters/PetChoncc/Themes/Base/Root/Particles/PetChoncc_Base_Joke_LeftStomp",
+            "PetChoncc_Taunt": "Characters/PetChoncc/Themes/Base/Root/Particles/PetChoncc_Base_Taunt",
+            "PetChoncc_Taunt2": "Characters/PetChoncc/Themes/Base/Root/Particles/PetChoncc_Base_Taunt2",
+            "PetChoncc_TailSlap": "Characters/Cherry_Shopkeeper/Skins/Skin0/Particles/Cherry_Shopkeeper_Base_TailSlap",
+            "PetChoncc_Dance_Clap": "Characters/Cherry_Shopkeeper/Skins/Skin0/Particles/Cherry_Shopkeeper_Base_Dance_Clap",
+            "PetChoncc_Laugh_Poof": "Characters/PetChoncc/Themes/Base/Root/Particles/PetChoncc_Base_Laugh_Poof",
+            "PetChoncc_Greeting_NoseBubble": "Characters/PetChoncc/Themes/Base/Root/Particles/PetChoncc_Base_Greeting_NoseBubble",
+            "PetChoncc_DiveOut_Landing": "Characters/PetChoncc/Themes/Base/Root/Particles/PetChoncc_Base_DiveOut_Landing",
+            "PetChoncc_Greeting_BubblePop": "Characters/PetChoncc/Themes/Base/Root/Particles/PetChoncc_Base_Greeting_BubblePop",
+            "PetChoncc_Idle_FlagTrail": "Characters/PetChoncc/Themes/Base/Root/Particles/PetChoncc_Base_Idle_FlagTrail",
+            "PetChoncc_Emote_Dance_Ring": "Characters/Cherry_Shopkeeper/Skins/Skin0/Particles/Cherry_Shopkeeper_Base_Emote_Dance_Ring",
+            "{47d31715}": "Maps/Shipping/Map30/Particles/Cherry_Env_Shopkeeper_Bloom"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/Cherry_Shopkeeper/Cherry_Shopkeeper.bin",
+        "DATA/Characters/Cherry_Shopkeeper/Animations/Skin0.bin",
+        "DATA/Cherry_Shopkeeper_Skins_Skin0_Skins_Skin1_Skins_Skin2.bin"
+    ]
+}

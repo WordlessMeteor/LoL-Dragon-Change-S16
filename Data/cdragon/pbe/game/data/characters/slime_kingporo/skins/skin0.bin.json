@@ -1,0 +1,69 @@
+{
+    "Characters/SLIME_KingPoro/Skins/Skin0": {
+        "championSkinName": "King_Poro",
+        "skinAudioProperties": {
+            "tagEventList": [
+                "KingPoro",
+                "SLIME"
+            ],
+            "bankUnits": [
+                {
+                    "name": "MODE_KingPoro_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/MODE_KingPoro_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/MODE_KingPoro_SFX_events.bnk"
+                    ],
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/SLIME_KingPoro/Animations/Skin0",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/SLIME_KingPoro/Skins/Base/King_Poro.skl",
+            "simpleSkin": "ASSETS/Characters/SLIME_KingPoro/Skins/Base/King_Poro.skn",
+            "texture": "ASSETS/Characters/SLIME_KingPoro/Skins/Base/King_Poro_Blue.tex",
+            "skinScale": 1.2000000476837158,
+            "selfIllumination": 0.699999988079071,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "defaultAnimations": [
+            "Buffbones"
+        ],
+        "iconCircle": "ASSETS/Characters/SLIME_KingPoro/HUD/SLIME_KingPoro_Circle.tex",
+        "iconSquare": "ASSETS/Characters/SLIME_KingPoro/HUD/SLIME_KingPoro_Square.tex",
+        "healthBarData": {
+            "hpPerTick": 1000.0,
+            "unitHealthBarStyle": 5,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/SLIME_KingPoro/Skins/Skin0/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/SLIME_KingPoro/Skins/Skin0/Resources": {
+        "resourceMap": {
+            "SLIME_KingPoro_Jump01": "Characters/SLIME_KingPoro/Skins/Skin0/Particles/SLIME_KingPoro_Base_Jump01"
+        },
+        "__type": "ResourceResolver"
+    },
+    "Characters/SLIME_KingPoro/Skins/Skin0/Particles/SLIME_KingPoro_Base_Jump01": {
+        "particleName": "SLIME_KingPoro_Base_Jump01",
+        "particlePath": "Characters/SLIME_KingPoro/Skins/Skin0/Particles/SLIME_KingPoro_Base_Jump01",
+        "soundOnCreateDefault": "Play_sfx_env_map12_ha_ap_poro_base_jump",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": [
+        "DATA/Characters/SLIME_KingPoro/SLIME_KingPoro.bin",
+        "DATA/Characters/SLIME_KingPoro/Animations/Skin0.bin"
+    ]
+}

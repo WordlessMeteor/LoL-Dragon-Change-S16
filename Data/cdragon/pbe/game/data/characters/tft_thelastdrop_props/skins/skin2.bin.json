@@ -1,0 +1,104 @@
+{
+    "Characters/TFT_TheLastDrop_Props/Skins/Skin2": {
+        "championSkinName": "TFT_TheLastDrop_Props",
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/TFT_TheLastDrop_Props/Animations/Skin2",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TFT_TheLastDrop_Props/Skins/Skin02/TFT_TheLastDrop_Props_Skin02.TFT_Arena_TheLastDrop.skl",
+            "simpleSkin": "ASSETS/Characters/TFT_TheLastDrop_Props/Skins/Skin02/TFT_TheLastDrop_Props_Skin02.TFT_Arena_TheLastDrop.skn",
+            "texture": "ASSETS/Characters/TFT_Template_AnimProp/Skins/Base/TFT_Template_AnimProp_TX_CM.tex",
+            "selfIllumination": 1.5,
+            "Material": "Characters/TFT_TheLastDrop_Props/Skins/Skin2/Materials/Diffuse_Tint_baseMat",
+            "castShadows": false,
+            "initialSubmeshToHide": "GoldA",
+            "initialSubmeshShadowsToHide": "GoldA",
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Metal",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "TheLastDrop_Skin2_Idle",
+                "boneName": "Cup",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
+        "mResourceResolver": "Characters/TFT_TheLastDrop_Props/Skins/Skin2/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/TFT_TheLastDrop_Props/Skins/Skin2/Resources": {
+        "resourceMap": {
+            "TheLastDrop_Skin2_Idle": "Characters/TFT_TheLastDrop_Props/Skins/Skin2/TheLastDrop_Skin2_Idle",
+            "TheLastDrop_Skin2_Click": "Characters/TFT_TheLastDrop_Props/Skins/Skin2/TheLastDrop_Skin2_Click"
+        },
+        "__type": "ResourceResolver"
+    },
+    "Characters/TFT_TheLastDrop_Props/Skins/Skin2/Materials/Diffuse_Tint_baseMat": {
+        "name": "Characters/TFT_TheLastDrop_Props/Skins/Skin2/Materials/Diffuse_Tint_baseMat",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT_TheLastDrop_Props/Skins/Skin02/TheLastDrop_Level1_SlotMachineA.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Tint_Color",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Tint",
+                        "stencilEnable": true,
+                        "blendEnable": true,
+                        "stencilCompareFunc": 6,
+                        "stencilMask": 255,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": [
+        "DATA/Characters/TFT_TheLastDrop_Props/TFT_TheLastDrop_Props.bin",
+        "DATA/Characters/TFT_TheLastDrop_Props/Animations/Skin2.bin",
+        "DATA/TFT_TheLastDrop_Props_Skins_Skin13_Skins_Skin2.bin"
+    ]
+}

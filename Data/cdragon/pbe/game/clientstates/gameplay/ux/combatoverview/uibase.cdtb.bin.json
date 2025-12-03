@@ -1,0 +1,4207 @@
+{
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview",
+        "Enabled": true,
+        "Layer": 499,
+        "SceneTransitionIn": {
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO",
+        "Enabled": true,
+        "Layer": 500,
+        "ParentScene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview",
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 499,
+        "ParentScene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO",
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/HoverRegion",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/Slice_Magic",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/Slice_Physical",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/Slice_True",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/RadialChart_Frame",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TotalDamageRadial",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/CO_RadialChart_InnerFrame"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/Background",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TotalDamage",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/MagicDamage_Tooltip",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/PhysicalDamage",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TrueDamage_Tooltip",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TotalDamage_Value",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/PhysicalDamage_Value",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/MagicDamage_Value",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TrueDamage_Value",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/MagicDamage_Percent",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/PhysicalDamage_Percent",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TrueDamage_Percent"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TotalDamage_Value": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TotalDamage_Value",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    310.0,
+                    48.0
+                ],
+                "Size": [
+                    100.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_ValueTinyWhite",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/PhysicalDamage_Percent": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/PhysicalDamage_Percent",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    210.0,
+                    133.0
+                ],
+                "Size": [
+                    100.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_ValueTinyRed",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TrueDamage_Value": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TrueDamage_Value",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    410.0,
+                    109.0
+                ],
+                "Size": [
+                    100.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_ValueTinyWhite",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TotalDamage": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TotalDamage",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    311.0,
+                    23.0
+                ],
+                "Size": [
+                    100.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "UI_CombatOverview_TotalDamageTaken_Hover_Text",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_HeaderTiny",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TrueDamage_Percent": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TrueDamage_Percent",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    410.0,
+                    133.0
+                ],
+                "Size": [
+                    100.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_ValueTinyWhite",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/MagicDamage_Percent": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/MagicDamage_Percent",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    311.0,
+                    133.0
+                ],
+                "Size": [
+                    99.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_ValueTinyBlue",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/MagicDamage_Value": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/MagicDamage_Value",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    311.0,
+                    108.0
+                ],
+                "Size": [
+                    99.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_ValueTinyBlue",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/PhysicalDamage": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/PhysicalDamage",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    210.0,
+                    86.0
+                ],
+                "Size": [
+                    100.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "UI_CombatOverview_PhysicalDamageTaken_Hover_Text",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_HeaderTinyRed",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/Background": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/Background",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 30,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    179.0,
+                    2.0
+                ],
+                "Size": [
+                    363.0,
+                    180.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_RadialChart_Tooltip.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/PhysicalDamage_Value": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/PhysicalDamage_Value",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    210.0,
+                    109.0
+                ],
+                "Size": [
+                    100.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_ValueTinyRed",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TrueDamage_Tooltip": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/TrueDamage_Tooltip",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    410.0,
+                    85.0
+                ],
+                "Size": [
+                    100.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "UI_CombatOverview_TrueDamageTaken_HoverText",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_HeaderTinyWhite",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/MagicDamage_Tooltip": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TooltipGroup/MagicDamage_Tooltip",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    310.0,
+                    85.0
+                ],
+                "Size": [
+                    100.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "UI_CombatOverview_MagicDamageTaken_Hover_Text",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_HeaderTinyBlue",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/CO_RadialChart_InnerFrame": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/CO_RadialChart_InnerFrame",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    109.0,
+                    46.0
+                ],
+                "Size": [
+                    52.0,
+                    52.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_RadialChart_InnerFrame.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/HoverRegion": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/HoverRegion",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    104.0,
+                    44.0
+                ],
+                "Size": [
+                    62.0,
+                    56.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/RadialChart_Frame": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/RadialChart_Frame",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    94.0,
+                    30.0
+                ],
+                "Size": [
+                    83.0,
+                    84.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_RadialChart_Frame.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TotalDamageRadial": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/TotalDamageRadial",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 14,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    114.0,
+                    63.0
+                ],
+                "Size": [
+                    45.0,
+                    19.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{50eb9fa3}",
+        "TextAlignmentHorizontal": 1,
+        "WrappingMode": 5,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/Slice_Magic": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/Slice_Magic",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    98.0,
+                    34.0
+                ],
+                "Size": [
+                    75.0,
+                    76.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_RadialFill.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementEffectArcFillData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/Slice_True": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/Slice_True",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    98.0,
+                    34.0
+                ],
+                "Size": [
+                    75.0,
+                    76.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_RadialFill.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementEffectArcFillData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/Slice_Physical": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/RadialChart/Slice_Physical",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    98.0,
+                    34.0
+                ],
+                "Size": [
+                    75.0,
+                    76.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_RadialFill.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementEffectArcFillData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Frame",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout"
+        ],
+        "FrameElement": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Frame",
+        "__type": "UiElementGroupFramedData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Cards_Region",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Enemy_Layout",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/SelfHeader_Spacer",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Self_Layout",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group"
+        ],
+        "Region": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Cards_Region",
+        "LayoutStyle": {
+            "HorizontalJustification": 1,
+            "ColumnHorizontalAlignment": 1,
+            "__type": "LayoutStyleVerticalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Income_Group",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Footer_Region"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/Gold_Text",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/HitRegion",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/Title_Text",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/BG_Hover",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/BG_Clicked",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/BG_Default",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/ShopGold_Icon"
+        ],
+        "IsEnabled": true,
+        "HitRegionElement": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/HitRegion",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/Title_Text",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/BG_Default",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/ShopGold_Icon",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/Gold_Text"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/Title_Text",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/BG_Hover",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/ShopGold_Icon",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/Gold_Text"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/Title_Text",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/BG_Clicked",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/ShopGold_Icon",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/Gold_Text"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/ShopGold_Icon": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/ShopGold_Icon",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    382.0,
+                    470.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Icon_Gold.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/Gold_Text": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/Gold_Text",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    334.0,
+                    467.0
+                ],
+                "Size": [
+                    58.0,
+                    19.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/Clash_14_BeaufortItalic_Gold3",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/BG_Clicked": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/BG_Clicked",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    306.0,
+                    446.0
+                ],
+                "Size": [
+                    115.0,
+                    45.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            200,
+            200,
+            200,
+            255
+        ],
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Shop_BtnPressed.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/BG_Hover": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/BG_Hover",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    306.0,
+                    446.0
+                ],
+                "Size": [
+                    115.0,
+                    45.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            245,
+            245,
+            245,
+            255
+        ],
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Shop_BtnHover.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/HitRegion": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/HitRegion",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 60,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    306.0,
+                    446.0
+                ],
+                "Size": [
+                    115.0,
+                    45.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/BG_Default": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/BG_Default",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    306.0,
+                    446.0
+                ],
+                "Size": [
+                    115.0,
+                    45.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Shop_BtnDefault.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/Title_Text": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/COShop_Button/Title_Text",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    306.0,
+                    451.0
+                ],
+                "Size": [
+                    115.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "UI_CombatOverview_Shop",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Objective_Planning_Beaufort_10_Gold1",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Footer_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Footer_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    239.0,
+                    404.0
+                ],
+                "Size": [
+                    253.0,
+                    102.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Income_Group": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Income_Group",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Income_Group/IncomeGold_BG",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Income_Group/Income_Text",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Income_Group/IncomeGold_Icon"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Income_Group/IncomeGold_Icon": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Income_Group/IncomeGold_Icon",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    382.0,
+                    422.0
+                ],
+                "Size": [
+                    17.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Icon_Gold.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Income_Group/IncomeGold_BG": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Income_Group/IncomeGold_BG",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    282.0,
+                    415.0
+                ],
+                "Size": [
+                    157.0,
+                    28.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_BGIncome.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Income_Group/Income_Text": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Footer_Group/Income_Group/Income_Text",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    322.0,
+                    420.0
+                ],
+                "Size": [
+                    55.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/Clash_14_BeaufortItalic_Gold3",
+        "TextAlignmentHorizontal": 2,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Enemy_Layout": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Enemy_Layout",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Enemy_Layout/Enemy_Region"
+        ],
+        "Region": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Enemy_Layout/Enemy_Region",
+        "LayoutStyle": {
+            "__type": "LayoutStyleVerticalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Enemy_Layout/Enemy_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Enemy_Layout/Enemy_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    224.0
+                ],
+                "Size": [
+                    253.0,
+                    58.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Self_Layout": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Self_Layout",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Self_Layout/Region"
+        ],
+        "Region": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Self_Layout/Region",
+        "LayoutStyle": {
+            "__type": "LayoutStyleVerticalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Self_Layout/Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Self_Layout/Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    73.0
+                ],
+                "Size": [
+                    253.0,
+                    58.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Cards_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/Cards_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    110.0
+                ],
+                "Size": [
+                    253.0,
+                    1.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/SelfHeader_Spacer": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Cards_Layout/SelfHeader_Spacer",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    175.0
+                ],
+                "Size": [
+                    253.0,
+                    6.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Frame": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/COFramedGroup/Frame",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Size": [
+                    270.0,
+                    110.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Bg.png",
+            "EdgeSizesTopBottom": [
+                100.0,
+                92.0
+            ],
+            "__type": "LooseUiTextureData3SliceV"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/COCC_HoverRegion",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/COCCSelf_Text",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/COCCEnemy_Text",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/CODuration_Text",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/COCC_Icon",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/CODuration_Icon",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/Header_BG"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/CODuration_Icon": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/CODuration_Icon",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    38.0,
+                    80.0
+                ],
+                "Size": [
+                    11.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Icon_Clock.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/COCC_Icon": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/COCC_Icon",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    187.0,
+                    79.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Icon_CC.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/COCCEnemy_Text": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/COCCEnemy_Text",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    178.0,
+                    74.0
+                ],
+                "Size": [
+                    28.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Cherry_Beaufort_10(16)_0_0_Gold1",
+        "TextAlignmentHorizontal": 2,
+        "WrappingMode": 5,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/COCCSelf_Text": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/COCCSelf_Text",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    211.0,
+                    74.0
+                ],
+                "Size": [
+                    26.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Cherry_Beaufort_10(16)_0_0_Gold1",
+        "WrappingMode": 5,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/CODuration_Text": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/CODuration_Text",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    54.0,
+                    74.0
+                ],
+                "Size": [
+                    38.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Cherry_Beaufort_10(16)_0_0_Gold1",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/Header_BG": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/Header_BG",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    12.0,
+                    62.0
+                ],
+                "Size": [
+                    244.0,
+                    54.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_HeaderBG.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/COCC_HoverRegion": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/Title_Group/COCC_HoverRegion",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    181.0,
+                    79.0
+                ],
+                "Size": [
+                    60.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_EnemyAccents",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_SelfAccents",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_NotableSpellLayout",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_Portrait",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_Region",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_BgEnemy",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_KillerIcon",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterLayout",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/Meter_Bg",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/Meter_Value",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/Magic",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/Physical",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/True"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/Physical": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/Physical",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    716.0,
+                    135.0
+                ],
+                "Size": [
+                    114.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_DamageMeter_Physical.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/Meter_Value": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/Meter_Value",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    715.0,
+                    120.0
+                ],
+                "Size": [
+                    54.0,
+                    10.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Cherry_Beaufort_8(12)_Grey1",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/True": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/True",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    716.0,
+                    135.0
+                ],
+                "Size": [
+                    114.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_DamageMeter_True.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/Magic": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/Magic",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    716.0,
+                    135.0
+                ],
+                "Size": [
+                    114.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_DamageMeter_Magic.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/Meter_Bg": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterElements/Meter_Bg",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    714.0,
+                    133.0
+                ],
+                "Size": [
+                    117.0,
+                    19.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_DamageMeter_Bg.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_EnemyAccents": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_EnemyAccents",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_EnemyAccents/PlayerCard_ColorEnemy"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_EnemyAccents/PlayerCard_ColorEnemy": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_EnemyAccents/PlayerCard_ColorEnemy",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    673.0,
+                    118.0
+                ],
+                "Size": [
+                    36.0,
+                    36.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Champ_BorderEnemy.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_NotableSpellLayout": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_NotableSpellLayout",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_NotableSpellLayout/NotableSpell_Region"
+        ],
+        "Region": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_NotableSpellLayout/NotableSpell_Region",
+        "LayoutStyle": {
+            "HorizontalJustification": 2,
+            "HorizontalFillDirection": 1,
+            "__type": "LayoutStyleHorizontalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_SelfAccents": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_SelfAccents",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_SelfAccents/PlayerCard_ColorSelf",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_SelfAccents/PlayerCard_BannerSelf"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_SelfAccents/PlayerCard_ColorSelf": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_SelfAccents/PlayerCard_ColorSelf",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    673.0,
+                    118.0
+                ],
+                "Size": [
+                    36.0,
+                    36.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Champ_BorderSelf.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_SelfAccents/PlayerCard_BannerSelf": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_SelfAccents/PlayerCard_BannerSelf",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    666.0,
+                    108.0
+                ],
+                "Size": [
+                    249.0,
+                    52.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_BG_Self.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_BgEnemy": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_BgEnemy",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    665.0,
+                    108.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Champ_Row.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterLayout": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterLayout",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterLayout/Meter_Region"
+        ],
+        "Region": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterLayout/Meter_Region",
+        "LayoutStyle": {
+            "VerticalJustification": 1,
+            "RowVerticalAlignment": 1,
+            "__type": "LayoutStyleHorizontalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_NotableSpellLayout/NotableSpell_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_NotableSpellLayout/NotableSpell_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    835.0,
+                    120.0
+                ],
+                "Size": [
+                    79.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_KillerIcon": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_KillerIcon",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    677.0,
+                    137.0
+                ],
+                "Size": [
+                    27.0,
+                    27.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Icon_Killer.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_Portrait": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_Portrait",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    676.0,
+                    119.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    665.0,
+                    105.0
+                ],
+                "Size": [
+                    253.0,
+                    58.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterLayout/Meter_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard/PlayerCard_MeterLayout/Meter_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    714.0,
+                    133.0
+                ],
+                "Size": [
+                    115.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_Border",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_HoverRegion",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_Region",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_ValueText",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_Icon",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_HoverOverlay"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_HoverRegion",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_Icon"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_Icon",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_HoverOverlay"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_Icon",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_HoverOverlay"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    886.0,
+                    120.0
+                ],
+                "Size": [
+                    27.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_HoverOverlay": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_HoverOverlay",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    889.0,
+                    121.0
+                ],
+                "Size": [
+                    22.0,
+                    23.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Notable_Hover.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_Icon": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_Icon",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    889.0,
+                    121.0
+                ],
+                "Size": [
+                    22.0,
+                    23.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Extension": {
+            "__type": "IconElementCircleMaskeExtension"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_ValueText": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_ValueText",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    898.0,
+                    129.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_SpellHotkeyText",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_Border": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_Border",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    888.0,
+                    121.0
+                ],
+                "Size": [
+                    24.0,
+                    24.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Notable_Border.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_HoverRegion": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_NotableSpell/NotableSpell_HoverRegion",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 30,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    889.0,
+                    121.0
+                ],
+                "Size": [
+                    22.0,
+                    23.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_Border",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_HotKeyText",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_Icon",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_ValueText",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_Region",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_HoverRegion"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    946.0,
+                    117.0
+                ],
+                "Size": [
+                    33.0,
+                    30.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_Icon": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_Icon",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    946.0,
+                    117.0
+                ],
+                "Size": [
+                    27.0,
+                    28.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_Border": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_Border",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    944.0,
+                    116.0
+                ],
+                "Size": [
+                    31.0,
+                    30.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Spell_Border.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_HotKeyText": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_HotKeyText",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    948.0,
+                    135.0
+                ],
+                "Size": [
+                    8.0,
+                    8.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_SpellHotkeyText",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_ValueText": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_ValueText",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    946.0,
+                    148.0
+                ],
+                "Size": [
+                    27.0,
+                    8.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_DeathRecap_SpellHotkeyText",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_HoverRegion": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Spell/Spell_HoverRegion",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    946.0,
+                    117.0
+                ],
+                "Size": [
+                    27.0,
+                    28.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/Frame",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout"
+        ],
+        "FrameElement": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/Frame",
+        "__type": "UiElementGroupFramedData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Cards_Region",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Enemy_Layout",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Self_Layout"
+        ],
+        "Region": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Cards_Region",
+        "LayoutStyle": {
+            "__type": "LayoutStyleVerticalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Self_Layout": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Self_Layout",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Self_Layout/SelfHeader_Spacer",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Self_Layout/Self_Region"
+        ],
+        "Region": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Self_Layout/Self_Region",
+        "LayoutStyle": {
+            "__type": "LayoutStyleVerticalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Self_Layout/SelfHeader_Spacer": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Self_Layout/SelfHeader_Spacer",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    247.0,
+                    246.0
+                ],
+                "Size": [
+                    37.0,
+                    0.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Self_Layout/Self_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Self_Layout/Self_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    247.0,
+                    46.0
+                ],
+                "Size": [
+                    37.0,
+                    0.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Enemy_Layout": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Enemy_Layout",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Enemy_Layout/Enemy_Region"
+        ],
+        "Region": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Enemy_Layout/Enemy_Region",
+        "LayoutStyle": {
+            "__type": "LayoutStyleVerticalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Cards_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Cards_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    279.0,
+                    110.0
+                ],
+                "Size": [
+                    37.0,
+                    1.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Enemy_Layout/Enemy_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/SpellCards_Layout/Enemy_Layout/Enemy_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    247.0,
+                    193.0
+                ],
+                "Size": [
+                    37.0,
+                    5.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/Frame": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailsFramedGroup/Frame",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    261.0,
+                    98.0
+                ],
+                "Size": [
+                    87.0,
+                    38.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CODetails_Bg.png",
+            "EdgeSizesLeftRight": [
+                25.0,
+                30.0
+            ],
+            "EdgeSizesTopBottom": [
+                38.0,
+                38.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Default_ButtonDefault",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Default_ButtonHover",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Active_ButtonDefault",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Active_ButtonHover",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Toggle_HitRegion",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Default_ButtonClicked",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Active_ButtonClicked"
+        ],
+        "IsEnabled": true,
+        "HitRegionElement": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Toggle_HitRegion",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Default_ButtonDefault"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Default_ButtonHover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Default_ButtonClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Active_ButtonDefault"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Active_ButtonHover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Active_ButtonClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
+            "MouseUpSelected": "play_sfx_hud_base_Generic_Button_Click",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Default_ButtonHover": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Default_ButtonHover",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    229.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Details_BtnHover.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Active_ButtonClicked": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Active_ButtonClicked",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    229.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_DetailsActive_BtnPressed.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Default_ButtonClicked": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Default_ButtonClicked",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    229.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Details_BtnPressed.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Default_ButtonDefault": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Default_ButtonDefault",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    229.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Details_BtnDefault.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Active_ButtonDefault": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Active_ButtonDefault",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    229.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_DetailsActive_BtnDefault.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Toggle_HitRegion": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Toggle_HitRegion",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    229.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Active_ButtonHover": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/CODetailed_DetailButton/Active_ButtonHover",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Enabled": true,
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    229.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_DetailsActive_BtnHover.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Detail/PlayerCard_SpellLayout": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Detail/PlayerCard_SpellLayout",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Detail/PlayerCard_SpellLayout/Spell_Region"
+        ],
+        "Region": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Detail/PlayerCard_SpellLayout/Spell_Region",
+        "LayoutStyle": {
+            "__type": "LayoutStyleHorizontalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Detail/PlayerCard_SpellLayout/Spell_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard_Detail/PlayerCard_SpellLayout/Spell_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    933.0,
+                    115.0
+                ],
+                "Size": [
+                    86.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard1": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard1",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard1/PlayerCard_Region",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard1/PlayerCard_SpellLayout"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard1/PlayerCard_SpellLayout": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard1/PlayerCard_SpellLayout",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard1/PlayerCard_SpellLayout/Spell_Region"
+        ],
+        "Region": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard1/PlayerCard_SpellLayout/Spell_Region",
+        "LayoutStyle": {
+            "__type": "LayoutStyleHorizontalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard1/PlayerCard_SpellLayout/Spell_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard1/PlayerCard_SpellLayout/Spell_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    933.0,
+                    115.0
+                ],
+                "Size": [
+                    36.0,
+                    25.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard1/PlayerCard_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed/PlayerCard1/PlayerCard_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    933.0,
+                    105.0
+                ],
+                "Size": [
+                    86.0,
+                    58.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CO_Drag_RegionOpened": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CO_Drag_RegionOpened",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    46.0,
+                    2.0
+                ],
+                "Size": [
+                    179.0,
+                    103.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "DragType": {
+            "__type": "UiDraggableSceneDrag"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Hide_ButtonDefault",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Hide_ButtonHover",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Toggle_HitRegion",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Hide_ButtonClicked"
+        ],
+        "IsActive": false,
+        "HitRegionElement": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Toggle_HitRegion",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Hide_ButtonDefault"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Hide_ButtonHover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Hide_ButtonClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
+            "MouseUpSelected": "play_sfx_hud_base_Generic_Button_Click",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Hide_ButtonHover": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Hide_ButtonHover",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO",
+        "Enabled": true,
+        "Layer": 34,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Collapse_BtnHover.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Hide_ButtonClicked": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Hide_ButtonClicked",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO",
+        "Enabled": true,
+        "Layer": 34,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Collapse_BtnPressed.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Hide_ButtonDefault": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Hide_ButtonDefault",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO",
+        "Enabled": true,
+        "Layer": 33,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Collapse_BtnDefault.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Toggle_HitRegion": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO/CODetailed_ToggleButton/Toggle_HitRegion",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Layer": 505,
+        "ParentScene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview",
+        "SceneTransitionIn": {
+            "TransitionTime": 0.5,
+            "EasingType": 9,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "SceneTransitionOut": {
+            "TransitionTime": 0.4000000059604645,
+            "EasingType": 9,
+            "startAlpha": 255,
+            "endAlpha": 0,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/RespawnTimer": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/RespawnTimer",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    699.0,
+                    828.0
+                ],
+                "Size": [
+                    200.0,
+                    50.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_TeammateSpectate_RespawnTimer",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_ButtonDefault",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_ButtonClicked",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_ButtonHovered",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_Region"
+        ],
+        "IsActive": false,
+        "HitRegionElement": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_Region",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_ButtonDefault"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_ButtonHovered"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_ButtonClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseDownEvent": "Play_sfx_UIKit_Button_Checkbox_Click",
+            "MouseUpEvent": "Play_sfx_UIKit_Button_CircleGold_Click",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_ButtonDefault": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_ButtonDefault",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    746.0,
+                    960.0
+                ],
+                "Size": [
+                    108.0,
+                    30.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/LoL/TeammateSpectate_Button_Resting.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    746.0,
+                    960.0
+                ],
+                "Size": [
+                    108.0,
+                    30.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_ButtonClicked": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_ButtonClicked",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    746.0,
+                    960.0
+                ],
+                "Size": [
+                    108.0,
+                    30.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/LoL/TeammateSpectate_Button_Clicked.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_ButtonHovered": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateExit_Button/TeammateSpectateExit_ButtonHovered",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    746.0,
+                    960.0
+                ],
+                "Size": [
+                    108.0,
+                    30.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/LoL/TeammateSpectate_Button_Hover.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonPortrait",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonSelected",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_Region",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_Padding",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonHovered",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonClicked",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonDefaultFrame"
+        ],
+        "IsActive": false,
+        "HitRegionElement": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_Region",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonPortrait",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonDefaultFrame"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonHovered",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonPortrait"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonClicked",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonPortrait"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonSelected",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonPortrait"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonSelected",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonPortrait"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonSelected",
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonPortrait"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseDownEvent": "Play_sfx_UIKit_Dropdown_Select",
+            "MouseUpEvent": "Play_sfx_UIKit_Dropdown_Click",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/PlayerIcon_BaseMaterial": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/PlayerIcon_BaseMaterial",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "UI_Secondary_Texture",
+                "texturePath": "ASSETS/Shared/Materials/BC_TestTexture.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "UI_ShapeMaskColor_SliceUV_Offset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_ShapeMaskColor_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_ShapeMaskColor_SliceUV",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_ShapeMaskColor_SmoothMinMax",
+                "value": [
+                    1.0,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_ShapeMaskColor_Sides_Rotation",
+                "value": [
+                    16.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_ShapeMask_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_ShapeMask_Sides_Rotation",
+                "value": [
+                    16.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_ShapeMask_Color",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_ShapeMask_SliceUV_Offset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_ShapeMask_SliceUV",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_ShapeMask_SmoothMinMax",
+                "value": [
+                    1.0,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_G_RotationAngle",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_B_RotationAngle",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Primary_RotationAngle",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_R_RotationAngle",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Primary_UVRotation_Offset",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Primary_UVRorationSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Flipbook_Frame",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Primary_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Flibook_TileSize",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Flipbook_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_DistortionControl",
+                "value": [
+                    0.20000000298023224,
+                    0.20000000298023224,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_R_UVRorationSpeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_R_Tint",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_UVRotation_Offset",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_R_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_R_ScrollSpeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_G_UVRorationSpeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_B_UVRorationSpeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_G_Tint",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_G_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_G_ScrollSpeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondady_B_MaskStrength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_Tex_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DesaturationValue",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "GlowPulseFrequency",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RGBGlowMinMaxValue",
+                "value": [
+                    1.0,
+                    2.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaGlowMinMaxValue",
+                "value": [
+                    0.5,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_B_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_B_ScrollSpeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_B_Mask_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_B_Mask_ScrollSpeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UI_Secondary_B_Mask_UVRorationSpeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Shine_FrequencySpeed",
+                "value": [
+                    10.0,
+                    5.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Shine_Direction",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Shine_Strength",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Shine_Color",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "UI_SHAPESMASK_ALPHA_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_SHAPESMASK_COLOR_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_SECONDARY_RGB_ROTATION_ANIMATION",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_PRIMARY_ROTATION_ANIMATION",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SHINE_ADDITIVE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DESATURATION_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "GLOW_PULSE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_SECONDARY_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_SECONDARY_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_SECONDAY_G_DISTORTION_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_SECONDAY_R_DISTORTION_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_PRIMARY_FLIPBOOKANIM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_SECONDARY_B_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_SECONDARY_B_MASK_ROTATION_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_SECONDARY_RGB_SCROLL_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_PRIMARY_ROTATION_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_SECONDARY_B_MASK_ON_UI_PRIMARY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_SECONDARY_B_MASK_SCROLL_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_SECONDARY_RGB_ROTATION_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "UI_PRIMARY_FLIPBOOK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SHINE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_ON_PRIMARY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/UI_BaseShader",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonSelected": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonSelected",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    762.0,
+                    563.0
+                ],
+                "Size": [
+                    76.0,
+                    82.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/LoL/TeammateSpectate_Portrait_Selected.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonDefaultFrame": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonDefaultFrame",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    767.0,
+                    568.0
+                ],
+                "Size": [
+                    66.0,
+                    66.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/LoL/TeammateSpectate_Portrait_Resting.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/PlayerIcon_BaseMaterial",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_Padding": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_Padding",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    762.0,
+                    562.0
+                ],
+                "Size": [
+                    76.0,
+                    83.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    767.0,
+                    562.0
+                ],
+                "Size": [
+                    66.0,
+                    83.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonClicked": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonClicked",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    767.0,
+                    568.0
+                ],
+                "Size": [
+                    66.0,
+                    66.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/LoL/TeammateSpectate_Portrait_Clicked.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonPortrait": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonPortrait",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    767.0,
+                    568.0
+                ],
+                "Size": [
+                    66.0,
+                    66.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Material": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/PlayerIcon_BaseMaterial",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonHovered": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammatePortrait_Button/TeammatePortrait_ButtonHovered",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    767.0,
+                    568.0
+                ],
+                "Size": [
+                    66.0,
+                    66.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/LoL/TeammateSpectate_Portrait_Hover.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/RespawnText": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/RespawnText",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    700.0,
+                    801.0
+                ],
+                "Size": [
+                    200.0,
+                    50.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "UI_DeathRecap_RespawnText",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_TeammateSpectate_Respawn",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateLayout": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateLayout",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateLayout/TeammateSpectateRegion"
+        ],
+        "Region": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateLayout/TeammateSpectateRegion",
+        "LayoutStyle": {
+            "HorizontalJustification": 1,
+            "VerticalJustification": 1,
+            "RowVerticalAlignment": 1,
+            "__type": "LayoutStyleHorizontalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/DRTeammateSpectate_DragRegion": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/DRTeammateSpectate_DragRegion",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    584.0,
+                    855.0
+                ],
+                "Size": [
+                    432.0,
+                    135.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "DragType": {
+            "__type": "UiDraggableSceneDrag"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectate_KeyLine2": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectate_KeyLine2",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    625.0,
+                    957.0
+                ],
+                "Size": [
+                    140.0,
+                    36.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FlipX": true,
+        "TextureData": {
+            "TextureName": "ASSETS/UX/LoL/TeammateSpectate_KeyLine.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectate_KeyLine": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectate_KeyLine",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    835.0,
+                    957.0
+                ],
+                "Size": [
+                    140.0,
+                    36.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/LoL/TeammateSpectate_KeyLine.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateLayout/TeammateSpectateRegion": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateLayout/TeammateSpectateRegion",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    500.0,
+                    815.0
+                ],
+                "Size": [
+                    600.0,
+                    200.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateBackground": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate/TeammateSpectateBackground",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/COTeammateSpectate",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    584.0,
+                    855.0
+                ],
+                "Size": [
+                    432.0,
+                    135.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/LoL/TeammateSpectate_DropShadow.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview",
+        "Elements": [
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Show_ButtonDefault",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Show_ButtonHover",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Toggle_HitRegion",
+            "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Show_ButtonClicked"
+        ],
+        "IsEnabled": true,
+        "HitRegionElement": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Toggle_HitRegion",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Show_ButtonDefault"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Show_ButtonHover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Show_ButtonClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
+            "MouseUpSelected": "play_sfx_hud_base_Generic_Button_Click",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Toggle_HitRegion": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Toggle_HitRegion",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Show_ButtonHover": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Show_ButtonHover",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview",
+        "Enabled": true,
+        "Layer": 34,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Open_BtnHover.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Show_ButtonDefault": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Show_ButtonDefault",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview",
+        "Enabled": true,
+        "Layer": 33,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Open_BtnDefault.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Show_ButtonClicked": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_ToggleButton/Show_ButtonClicked",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview",
+        "Enabled": true,
+        "Layer": 34,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    7.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/CombatOverview/CO_Open_BtnPressed.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_DragSnap_Region": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_DragSnap_Region",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    0.0,
+                    2.0
+                ],
+                "Size": [
+                    241.0,
+                    69.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_TargetFrame_Offsets/TargetFrameOffsetRegionOpened": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_TargetFrame_Offsets/TargetFrameOffsetRegionOpened",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    266.0,
+                    2.0
+                ],
+                "Size": [
+                    100.0,
+                    100.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_TargetFrame_Offsets/TargetFrameOffsetRegionClosed": {
+        "name": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview/CO_TargetFrame_Offsets/TargetFrameOffsetRegionClosed",
+        "Scene": "ClientStates/Gameplay/UX/CombatOverview/UIBase/CombatOverview",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    42.0,
+                    2.0
+                ],
+                "Size": [
+                    100.0,
+                    101.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "__linked": []
+}

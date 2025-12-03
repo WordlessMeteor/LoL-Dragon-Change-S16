@@ -1,0 +1,2759 @@
+{
+    "Characters/Tryndamere/Skins/Skin18": {
+        "skinClassification": 1,
+        "championSkinName": "TryndamereSkin18",
+        "metaDataTags": "faction:freljord,gender:male,race:human,skinline:nightbringer",
+        "loadscreen": {
+            "image": "ASSETS/Characters/Tryndamere/Skins/Skin18/TryndamereLoadScreen_18.tex",
+            "__type": "CensoredImage"
+        },
+        "loadscreenVintage": {
+            "image": "ASSETS/Characters/Tryndamere/Skins/Skin18/TryndamereLoadscreen_18_LE.tex",
+            "__type": "CensoredImage"
+        },
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Tryndamere",
+                "TryndamereSkin18"
+            ],
+            "bankUnits": [
+                {
+                    "name": "Tryndamere_Base_VO",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Tryndamere/Skins/Base/Tryndamere_Base_VO_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Tryndamere/Skins/Base/Tryndamere_Base_VO_events.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Tryndamere/Skins/Base/Tryndamere_Base_VO_audio.wpk"
+                    ],
+                    "events": [
+                        "Play_vo_Tryndamere_Attack2DGeneral",
+                        "Play_vo_Tryndamere_Death3D",
+                        "Play_vo_Tryndamere_Joke3DGeneral",
+                        "Play_vo_Tryndamere_Laugh3DGeneral",
+                        "Play_vo_Tryndamere_Move2DStandard",
+                        "Play_vo_Tryndamere_Taunt3DGeneral",
+                        "Play_vo_Tryndamere_TryndamereBasicAttack2_cast3D",
+                        "Play_vo_Tryndamere_TryndamereBasicAttack_cast3D",
+                        "Play_vo_Tryndamere_TryndamereCritAttack_cast3D"
+                    ],
+                    "voiceOver": true,
+                    "__type": "BankUnit"
+                },
+                {
+                    "name": "Tryndamere_Skin18_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Tryndamere/Skins/Skin18/Tryndamere_Skin18_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Tryndamere/Skins/Skin18/Tryndamere_Skin18_SFX_events.bnk"
+                    ],
+                    "events": [
+                        "Play_sfx_TryndamereSkin18_BloodlustParticle_OnBuffActivate",
+                        "Play_sfx_TryndamereSkin18_BloodlustParticle_OnBuffDeactivate",
+                        "Play_sfx_TryndamereSkin18_Recall3D_buffactivate",
+                        "Play_sfx_TryndamereSkin18_TryndamereBasicAttack2_OnCast",
+                        "Play_sfx_TryndamereSkin18_TryndamereBasicAttack2_OnHit",
+                        "Play_sfx_TryndamereSkin18_TryndamereBasicAttack_OnCast",
+                        "Play_sfx_TryndamereSkin18_TryndamereBasicAttack_OnHit",
+                        "Play_sfx_TryndamereSkin18_TryndamereCritAttack_OnCast",
+                        "Play_sfx_TryndamereSkin18_TryndamereCritAttack_OnHit",
+                        "Play_sfx_TryndamereSkin18_TryndamereE_hit",
+                        "Play_sfx_TryndamereSkin18_TryndamereE_OnCast",
+                        "Play_sfx_TryndamereSkin18_TryndamereQ_OnCast",
+                        "Play_sfx_TryndamereSkin18_TryndamereW_OnHit",
+                        "Play_sfx_TryndamereSkin18_UndyingRage_OnBuffActivate",
+                        "Play_sfx_TryndamereSkin18_UndyingRage_OnBuffDeactivate",
+                        "Play_sfx_TryndamereSkin18_UndyingRage_OnCast",
+                        "Stop_sfx_TryndamereSkin18_BloodlustParticle_OnBuffActivate",
+                        "Stop_sfx_TryndamereSkin18_Recall3D_buffactivate",
+                        "Stop_sfx_TryndamereSkin18_UndyingRage_OnBuffActivate"
+                    ],
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/Tryndamere/Animations/Skin18",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Tryndamere/Skins/Skin18/Tryndamere_Skin18.skl",
+            "simpleSkin": "ASSETS/Characters/Tryndamere/Skins/Skin18/Tryndamere_Skin18.skn",
+            "texture": "ASSETS/Characters/Tryndamere/Skins/Skin18/Tryndamere_Skin18_TX_CM.tex",
+            "skinScale": 2.0,
+            "selfIllumination": 0.699999988079071,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "initialSubmeshToHide": "Recall",
+            "materialOverride": [
+                {
+                    "texture": "ASSETS/Characters/Tryndamere/Skins/Skin18/Tryndamere_Skin18_Recall_TX_CM.tex",
+                    "submesh": "Recall",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "Characters/Tryndamere/Skins/Skin18/Materials/Bloom_Parts_Tryndamere_inst",
+                    "submesh": "Weapon",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "Characters/Tryndamere/Skins/Skin18/Materials/MultiMask_Panner_Bloom_inst",
+                    "submesh": "Body",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "Tryndamere_Idle_Weapon",
+                "boneName": "Weapon",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "Tryndamere_Idle_Body",
+                "boneName": "C_Buffbone_Glb_Head_Loc",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "Tryndamere_Idle_Hair",
+                "boneName": "M_Hair2",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "mContextualActionData": "Characters/Tryndamere/CAC/Tryndamere_Base",
+        "iconCircle": "ASSETS/Characters/Tryndamere/HUD/Tryndamere_Circle.tex",
+        "iconSquare": "ASSETS/Characters/Tryndamere/HUD/Tryndamere_Square.tex",
+        "iconAvatar": "ASSETS/Characters/Tryndamere/HUD/Tryndamere_Circle_18.tex",
+        "healthBarData": {
+            "attachToBone": "Buffbone_Cstm_Healthbar",
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/Tryndamere/Skins/Skin18/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Idle_Body": {
+        "complexEmitterDefinitionData": [
+            {
+                "timeBeforeFirstEmission": 0.10000000149011612,
+                "rate": {
+                    "constantValue": 7.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0,
+                                    1.2999999523162842
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            1.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "fieldCollectionDefinition": {
+                    "fieldNoiseDefinitions": [
+                        {
+                            "radius": {
+                                "constantValue": 500.0,
+                                "__type": "ValueFloat"
+                            },
+                            "frequency": {
+                                "constantValue": 10.0,
+                                "__type": "ValueFloat"
+                            },
+                            "velocityDelta": {
+                                "constantValue": 40.0,
+                                "__type": "ValueFloat"
+                            },
+                            "axisFraction": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "__type": "VfxFieldNoiseDefinitionData"
+                        }
+                    ],
+                    "__type": "VfxFieldCollectionDefinitionData"
+                },
+                "emitterName": "DarkSparks",
+                "birthVelocity": {
+                    "constantValue": [
+                        100.0,
+                        200.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                100.0,
+                                200.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        5.0,
+                        5.0,
+                        3.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        300.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "acceleration": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        5.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        10.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                10.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 0.20000000298023224,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            20.0,
+                            20.0,
+                            -15.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        -1.0,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.5,
+                                        1.2000000476837158
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    20.0,
+                                    20.0,
+                                    -15.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -25.0,
+                        20.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.003000000026077032,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.9607843160629272,
+                        0.8980392217636108,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.45490196347236633,
+                                0.13333334028720856,
+                                0.0235294122248888,
+                                1.0
+                            ],
+                            [
+                                0.2549019753932953,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.12941177189350128,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 15,
+                "depthBiasFactors": [
+                    -1.0,
+                    -50.0
+                ],
+                "isDirectionOriented": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        200.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        5.0,
+                        5.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    1.600000023841858
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                5.0,
+                                5.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.2000000476837158,
+                                1.2000000476837158,
+                                1.2000000476837158
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Sparks_2x2_Alpha.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 4.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterLinger": 1.0,
+                "emitterName": "Body_2",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "BODY"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "BODY"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "particleColorTexture": "ASSETS/Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_R_color-hold.tex",
+                "blendMode": 1,
+                "Color": {
+                    "constantValue": [
+                        0.11000228673219681,
+                        0.05999847501516342,
+                        0.20000000298023224,
+                        0.5000076293945312
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 1,
+                "meshRenderFlags": 0,
+                "reflectionDefinition": {
+                    "fresnel": 0.15000000596046448,
+                    "fresnelColor": [
+                        1.0,
+                        0.42000457644462585,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "depthBiasFactors": [
+                    -1.0,
+                    -1.0
+                ],
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Idle_Hand.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Tryndamere_Skin18_Idle_Body",
+        "particlePath": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Idle_Body",
+        "flags": 197,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Idle_Hair": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 100.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.30000001192092896,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "Hair_RED03",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        -500.0,
+                        50.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        3.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "emissionMeshScale": 0.0,
+                "SpawnShape": {
+                    "emitOffset": [
+                        25.0,
+                        5.0,
+                        -15.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 800.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                800.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "mSmoothingMode": 1,
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveCameraTrail"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "constantValue": [
+                        0.9921568632125854,
+                        0.8313725590705872,
+                        0.5803921818733215,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.046199701726436615,
+                            0.20417287945747375,
+                            0.5201192498207092,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.9921568632125854,
+                                0.3749327063560486,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.9921568632125854,
+                                0.2327868491411209,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.9921568632125854,
+                                0.26408305764198303,
+                                0.002276047831401229,
+                                1.0
+                            ],
+                            [
+                                0.5060023069381714,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.18851511180400848,
+                                0.0,
+                                0.1915334016084671,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 10,
+                "alphaRef": 0,
+                "depthBiasFactors": [
+                    -1.0,
+                    -50.0
+                ],
+                "isUniformScale": 1,
+                "uvScrollClamp": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.009999999776482582,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
+                            ],
+                            [
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_R_Trail_03.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        1.7999999523162842,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texDiv": [
+                    1.5,
+                    1.0
+                ],
+                "emitterUvScrollRate": [
+                    -1.5,
+                    0.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 100.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.3499999940395355,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "Hair_RED02",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        -500.0,
+                        50.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        3.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "emissionMeshScale": 0.0,
+                "SpawnShape": {
+                    "emitOffset": [
+                        20.0,
+                        0.0,
+                        12.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 800.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                800.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "mSmoothingMode": 1,
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveCameraTrail"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "constantValue": [
+                        0.9921568632125854,
+                        0.8313725590705872,
+                        0.5803921818733215,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.046199701726436615,
+                            0.20417287945747375,
+                            0.5201192498207092,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.9921568632125854,
+                                0.3749327063560486,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.9921568632125854,
+                                0.2327868491411209,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.9921568632125854,
+                                0.26408305764198303,
+                                0.002276047831401229,
+                                1.0
+                            ],
+                            [
+                                0.5060023069381714,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.18851511180400848,
+                                0.0,
+                                0.1915334016084671,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 10,
+                "alphaRef": 0,
+                "depthBiasFactors": [
+                    -1.0,
+                    -50.0
+                ],
+                "isUniformScale": 1,
+                "uvScrollClamp": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        30.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.009999999776482582,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
+                            ],
+                            [
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_R_Trail_03.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        1.7999999523162842,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texDiv": [
+                    1.5,
+                    1.0
+                ],
+                "emitterUvScrollRate": [
+                    -1.5,
+                    0.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 100.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.44999998807907104,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "Hair_RED",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        -500.0,
+                        50.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        3.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "emissionMeshScale": 0.0,
+                "SpawnShape": {
+                    "emitOffset": [
+                        20.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 800.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                800.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "mSmoothingMode": 1,
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveCameraTrail"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "constantValue": [
+                        0.9921568632125854,
+                        0.8313725590705872,
+                        0.5803921818733215,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.046199701726436615,
+                            0.20417287945747375,
+                            0.5201192498207092,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.9921568632125854,
+                                0.3749327063560486,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.9921568632125854,
+                                0.2327868491411209,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.9921568632125854,
+                                0.26408305764198303,
+                                0.002276047831401229,
+                                1.0
+                            ],
+                            [
+                                0.5060023069381714,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.18851511180400848,
+                                0.0,
+                                0.1915334016084671,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 10,
+                "alphaRef": 0,
+                "depthBiasFactors": [
+                    -1.0,
+                    -50.0
+                ],
+                "isUniformScale": 1,
+                "uvScrollClamp": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        30.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.009999999776482582,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
+                            ],
+                            [
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_R_Trail_03.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        1.7999999523162842,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texDiv": [
+                    1.5,
+                    1.0
+                ],
+                "emitterUvScrollRate": [
+                    -1.5,
+                    0.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 100.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.10000000149011612,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "Hair_Black",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        -500.0,
+                        50.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        3.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "emissionMeshScale": 0.0,
+                "SpawnShape": {
+                    "emitOffset": [
+                        25.0,
+                        5.0,
+                        -15.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 800.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                800.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "mSmoothingMode": 1,
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveCameraTrail"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "constantValue": [
+                        0.06666667014360428,
+                        0.03529411926865578,
+                        0.125490203499794,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.046199701726436615,
+                            0.20417287945747375,
+                            0.5201192498207092,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.06666667014360428,
+                                0.01591695472598076,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.06666667014360428,
+                                0.009882460348308086,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.06666667014360428,
+                                0.011211073026061058,
+                                0.0004921184736303985,
+                                1.0
+                            ],
+                            [
+                                0.034000150859355927,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.01266702264547348,
+                                0.0,
+                                0.04141262546181679,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 20,
+                "alphaRef": 0,
+                "depthBiasFactors": [
+                    -1.0,
+                    -50.0
+                ],
+                "isUniformScale": 1,
+                "uvScrollClamp": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.009999999776482582,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
+                            ],
+                            [
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_R_Trail_03.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        1.7999999523162842,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texDiv": [
+                    1.5,
+                    1.0
+                ],
+                "emitterUvScrollRate": [
+                    -1.5,
+                    0.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 100.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.25,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "Hair_Black02",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        -500.0,
+                        50.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        3.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "emissionMeshScale": 0.0,
+                "SpawnShape": {
+                    "emitOffset": [
+                        20.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 800.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                800.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "mSmoothingMode": 1,
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveCameraTrail"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "constantValue": [
+                        0.06666667014360428,
+                        0.03529411926865578,
+                        0.125490203499794,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.046199701726436615,
+                            0.20417287945747375,
+                            0.5201192498207092,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.06666667014360428,
+                                0.01591695472598076,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.06666667014360428,
+                                0.009882460348308086,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.06666667014360428,
+                                0.011211073026061058,
+                                0.0004921184736303985,
+                                1.0
+                            ],
+                            [
+                                0.034000154584646225,
+                                0.0,
+                                0.0,
+                                0.809994637966156
+                            ],
+                            [
+                                0.01281045749783516,
+                                0.0,
+                                0.041830066591501236,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 20,
+                "alphaRef": 0,
+                "depthBiasFactors": [
+                    -1.0,
+                    -50.0
+                ],
+                "isUniformScale": 1,
+                "uvScrollClamp": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        30.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.009999999776482582,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
+                            ],
+                            [
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_R_Trail_03.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        1.7999999523162842,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texDiv": [
+                    1.5,
+                    1.0
+                ],
+                "emitterUvScrollRate": [
+                    -1.5,
+                    0.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Tryndamere_Skin18_Idle_Hair",
+        "particlePath": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Idle_Hair",
+        "flags": 197,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Idle_Weapon": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Body_",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "weapon",
+                            "BODY"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "weapon",
+                            "BODY"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "particleColorTexture": "ASSETS/Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_R_color-hold.tex",
+                "blendMode": 4,
+                "Color": {
+                    "constantValue": [
+                        0.8899977207183838,
+                        0.2899976968765259,
+                        0.050003815442323685,
+                        0.5000076293945312
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 5,
+                "meshRenderFlags": 0,
+                "reflectionDefinition": {
+                    "fresnelColor": [
+                        1.0,
+                        0.5058823823928833,
+                        0.07450980693101883,
+                        0.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "depthBiasFactors": [
+                    -1.0,
+                    -5.0
+                ],
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Idle_Weapon.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Mul.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            2.0,
+                            10.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.30000001192092896,
+                            -0.30000001192092896
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "ParticleIntegratedUvRotateMult": {
+                        "dynamics": {
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                0.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "IntegratedValueFloat"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Tryndamere_Skin18_Idle_Weapon",
+        "particlePath": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Idle_Weapon",
+        "flags": 197,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Tryndamere/Skins/Skin18/Materials/MultiMask_Panner_Bloom_inst": {
+        "name": "Characters/Tryndamere/Skins/Skin18/Materials/MultiMask_Panner_Bloom_inst",
+        "samplerValues": [
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Tryndamere/Skins/Skin18/Tryndamere_Skin18_Mask_TX_CM.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Main_Texture",
+                "texturePath": "ASSETS/Characters/Tryndamere/Skins/Skin18/Tryndamere_Skin18_TX_CM.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "OutlineMask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "addressU": 2,
+                "addressV": 2,
+                "addressW": 2,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Maintex_Alpha_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Size",
+                "value": [
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Value",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Location",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Diffuse_Tex_B_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Diffuse_Tex_RG_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Main_Tex_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Texture_B_UV",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedBase",
+                "value": [
+                    -1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedBlend",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Base_Tile",
+                "value": [
+                    2.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blend_Tile",
+                "value": [
+                    2.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BaseMat_Tint",
+                "value": [
+                    1.0,
+                    0.27000001072883606,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BlendMat_Tint",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaskStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomValue",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTex_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineControl",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveController",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaClipValue",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaClipNoiseStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_TintColor",
+                "value": [
+                    1.0,
+                    0.27000001072883606,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "NoiseUV",
+                "value": [
+                    5.0,
+                    5.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedMainTex",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTex_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Control",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_OUTLINE_W_DISCARD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_DIFFUSE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_OUTLINE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHA_MAIN_SCROLL_OUTLINE_ADD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_DIFFUSE_TEX_RG",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_DIFFUSE_TEX_B",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_MAIN_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MATCAP_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_OUTLINEMASK_B_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLENDCOLOR_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ADDITIVEALPHA_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MASK_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MAINTEX_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_MAIN",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_MAINTEXCOLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TWO_D_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_MAINTEXALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHACLIP_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_TINTCOLOR_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SCROLL_MAIN_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/AlphaBlend_Additive_Scroll_Packed",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "MaskStrength",
+                    "driver": {
+                        "mValueA": {
+                            "mScriptName": "UndyingRage",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mValueB": {
+                            "mValue": 1.0,
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "FloatComparisonMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Tryndamere/Skins/Skin18/Materials/Bloom_Parts_Tryndamere_inst": {
+        "name": "Characters/Tryndamere/Skins/Skin18/Materials/Bloom_Parts_Tryndamere_inst",
+        "samplerValues": [
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_bloom.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Main_Texture",
+                "texturePath": "ASSETS/Characters/Tryndamere/Skins/Skin18/Tryndamere_Skin18_TX_CM.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "OutlineMask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "addressU": 2,
+                "addressV": 2,
+                "addressW": 2,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Maintex_Alpha_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Size",
+                "value": [
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Value",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Location",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Diffuse_Tex_B_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Diffuse_Tex_RG_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Main_Tex_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Texture_B_UV",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedBase",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedBlend",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Base_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blend_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BaseMat_Tint",
+                "value": [
+                    0.10000000149011612,
+                    0.019999999552965164,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BlendMat_Tint",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaskStrength",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomValue",
+                "value": [
+                    1.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTex_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineControl",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveController",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaClipValue",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaClipNoiseStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_TintColor",
+                "value": [
+                    0.7799999713897705,
+                    0.1899999976158142,
+                    0.03999999910593033,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "NoiseUV",
+                "value": [
+                    5.0,
+                    5.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedMainTex",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTex_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Control",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_OUTLINE_W_DISCARD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_DIFFUSE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_OUTLINE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHA_MAIN_SCROLL_OUTLINE_ADD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_DIFFUSE_TEX_RG",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_DIFFUSE_TEX_B",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_MAIN_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MATCAP_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_OUTLINEMASK_B_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLENDCOLOR_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ADDITIVEALPHA_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MASK_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MAINTEX_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_MAIN",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_MAINTEXCOLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TWO_D_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_MAINTEXALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHACLIP_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_TINTCOLOR_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SCROLL_MAIN_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/AlphaBlend_Additive_Scroll_Packed",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Tryndamere/Skins/Skin18/Resources": {
+        "resourceMap": {
+            "Tryndamere_BA_Crit_tar_01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_BA_Crit_tar_01",
+            "Tryndamere_BA_tar_01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_BA_tar_01",
+            "Tryndamere_BA_Weapontrail_01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_BA_Weapontrail_01",
+            "Tryndamere_BA_Weapontrail_02": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_BA_Weapontrail_02",
+            "Tryndamere_BA_Weapontrail_03": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_BA_Weapontrail_03",
+            "Tryndamere_E_BloodSlash_01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_E_BloodSlash_01",
+            "Tryndamere_E_Slash": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_E_Slash",
+            "Tryndamere_E_Slash_01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_E_Slash_01",
+            "Tryndamere_P_Flame_01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_P_Flame_01",
+            "Tryndamere_P_Flame_02": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_P_Flame_02",
+            "Tryndamere_P_Flame_03": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_P_Flame_03",
+            "Tryndamere_Q_Heal_01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Q_Heal_01",
+            "Tryndamere_R_buf_01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_R_buf_01",
+            "Tryndamere_R_glowSpine_01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_R_glowSpine_01",
+            "Tryndamere_R_glow_01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_R_glow_01",
+            "Tryndamere_Taunt_01": "Characters/Tryndamere/Skins/Skin0/Particles/Tryndamere_Base_Taunt_01",
+            "Tryndamere_W_Buf_Chicken_01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_W_Buf_Chicken_01",
+            "Tryndamere_W_Tar_01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_W_Tar_01",
+            "Tryndamere_Run_SwordDust_01": "{00000000}",
+            "Tryndamere_W_Cas": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_W_Cas",
+            "Tryndamere_Run_Trail": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Run_Trail",
+            "Tryndamere_Idle_Weapon": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Idle_Weapon",
+            "Tryndamere_Idle_Body": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Idle_Body",
+            "Tryndamere_Idle_Hair": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Idle_Hair",
+            "Tryndamere_Z_Crystal": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Z_Crystal",
+            "Tryndamere_Z_Child": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Z_Child",
+            "Tryndamere_Z_Crack": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Z_Crack",
+            "Tryndamere_Z_trail01": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Z_trail01",
+            "Tryndamere_Z_Shield": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Z_Shield",
+            "Tryndamere_Z_Weapon": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Z_Weapon",
+            "Tryndamere_Z_Ground": "Characters/Tryndamere/Skins/Skin18/Particles/Tryndamere_Skin18_Z_Ground"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Tryndamere_Skins_Skin18_Skins_Skin19_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26.bin",
+        "DATA/Tryndamere_Skins_Root_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin40_Skins_Skin41_Skins_Skin42_Skins_Skin43_Skins_Skin44_Skins_Skin45_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Tryndamere/Tryndamere.bin",
+        "DATA/Characters/Tryndamere/Animations/Skin18.bin",
+        "DATA/Tryndamere_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin3_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin"
+    ]
+}

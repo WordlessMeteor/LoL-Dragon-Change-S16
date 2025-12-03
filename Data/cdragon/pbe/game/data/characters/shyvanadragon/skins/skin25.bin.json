@@ -1,0 +1,482 @@
+{
+    "Characters/ShyvanaDragon/Skins/Skin25": {
+        "championSkinName": "ShyvanaDragonSkin25",
+        "skinParent": 17,
+        "skinAudioProperties": {
+            "tagEventList": [
+                "ShyvanaDragon",
+                "ShyvanaDragonSkin17"
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/ShyvanaDragon/Animations/Skin17",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/ShyvanaDragon/Skins/Skin17/ShyvanaDragon_Skin17.skl",
+            "simpleSkin": "ASSETS/Characters/ShyvanaDragon/Skins/Skin17/ShyvanaDragon_Skin17.skn",
+            "texture": "ASSETS/Characters/ShyvanaDragon/Skins/Skin25/Shyvana_Dragon_Skin25_TX_CM.tex",
+            "selfIllumination": 0.699999988079071,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "materialOverride": [
+                {
+                    "texture": "ASSETS/Characters/ShyvanaDragon/Skins/Skin25/Shyvana_Dragon_Skin25_TX_CM.tex",
+                    "submesh": "Horns",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/ShyvanaDragon/Skins/Skin25/Shyvana_Dragon_Skin25_TX_CM.tex",
+                    "submesh": "Wings",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/ShyvanaDragon/Skins/Skin25/Shyvana_Dragon_Skin25_TX_CM.tex",
+                    "submesh": "Flame",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "Characters/ShyvanaDragon/Skins/Skin25/Materials/ShyvanaDragon_Skin25_FlowMap_Bloom_inst",
+                    "submesh": "Body",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "rigPoseModifierData": [
+                {
+                    "mStartingJointName": "Tail_a",
+                    "mEndingJointName": "tail_f",
+                    "mDefaultMaskName": "{9aa3e347}",
+                    "mMaxBoneAngle": 90.0,
+                    "mDampingValue": 5.0,
+                    "mVelMultiplier": 0.0,
+                    "mFrequency": 1.0,
+                    "__type": "ConformToPathRigPoseModifierData"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Metal",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "Shyvana_R_idle",
+                "boneName": "Buffbone_L_horn",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "Shyvana_R_idle",
+                "boneName": "Buffbone_R_horn",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "iconCircle": "ASSETS/Characters/Shyvana/HUD/Shyvana_Circle_0.tex",
+        "iconSquare": "ASSETS/Characters/Shyvana/HUD/Shyvana_Square_0.tex",
+        "iconAvatar": "ASSETS/Characters/Shyvana/HUD/Shyvana_Circle_17.tex",
+        "healthBarData": {
+            "attachToBone": "Buffbone_Cstm_Healthbar",
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/ShyvanaDragon/Skins/Skin25/Resources",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "Spell": "Characters/Shyvana/Spells/ShyvanaDoubleAttackAbility/ShyvanaDoubleAttackDragon",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "L_BUFFBONE_GLB_HAND_LOC",
+                        "effectKey": "{a73cfb6b}",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "Buffbone_Glb_Weapon_1",
+                        "effectKey": "{b53d1175}",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/ShyvanaDragon/Skins/Skin25/Resources": {
+        "resourceMap": {
+            "Shyvana_BA_Dragon_tar_01": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_BA_Dragon_tar_01",
+            "Shyvana_BA_tar_crit_01": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_BA_tar_crit_01",
+            "Shyvana_Death_sfx_01": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Death_sfx_01",
+            "Shyvana_Emote_Dance_sfx_01": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Emote_Dance_sfx_01",
+            "Shyvana_Emote_Joke_sfx_01": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Emote_Joke_sfx_01",
+            "Shyvana_E_impact": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_E_impact",
+            "Shyvana_E_indicator": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_E_indicator",
+            "Shyvana_E_mis": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_E_mis",
+            "Shyvana_E_reignite": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_E_reignite",
+            "Shyvana_E_tar": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_E_tar",
+            "Shyvana_human_idle_left": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_human_idle_left",
+            "Shyvana_human_idle_right": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_human_idle_right",
+            "Shyvana_Q_buf_L": "{00000000}",
+            "Shyvana_Q_buf_R": "{00000000}",
+            "Shyvana_Q_Tar": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Q_Tar",
+            "Shyvana_R_cas": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_R_cas",
+            "Shyvana_R_end": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_r_end",
+            "Shyvana_R_E_cas": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_R_E_cas",
+            "Shyvana_R_E_groundburn": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_R_E_groundburn",
+            "Shyvana_R_E_groundburn_Enemy": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_R_E_groundburn_Enemy",
+            "Shyvana_R_E_impact": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_R_E_impact",
+            "Shyvana_R_E_mis": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_R_E_mis",
+            "Shyvana_R_E_mis_big": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_R_E_mis_big",
+            "Shyvana_R_E_mis_max": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_R_E_mis_max",
+            "Shyvana_R_idle": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_R_idle",
+            "Shyvana_R_impact": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_r_impact",
+            "Shyvana_R_skin": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_R_skin",
+            "Shyvana_W_Burnout": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_W_Burnout",
+            "Shyvana_W_tar": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_W_tar",
+            "Shyvana_E_burn": "{00000000}",
+            "Shyvana_BA_tar": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_BA_tar",
+            "Shyvana_E_mis_Child": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_E_mis_Child",
+            "Shyvana_E_mis_Child_L": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_E_mis_Child_L",
+            "Shyvana_R_E_mis_Child": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_R_E_mis_Child",
+            "Shyvana_R_E_mis_Child_L": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_R_E_mis_Child_L",
+            "Shyvana_Q_Tar_child": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Q_Tar_child",
+            "Shyvana_Q_Tar_child_L": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Q_Tar_child_L",
+            "Shyvana_Recall_Ground": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Recall_Ground",
+            "Shyvana_Recall_Ground_L": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Recall_Ground_L",
+            "Shyvana_Recall_Ground_R": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Recall_Ground_R",
+            "{a240568f}": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Q_buf_L",
+            "{583c15dd}": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Q_buf_R",
+            "Shyvana_Recall_Ground_01": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Recall_Ground_01",
+            "Shyvana_Q_R_buf_L": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Q_R_buf_L",
+            "Shyvana_Q_R_buf_R": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Q_R_buf_R",
+            "Shyvana_Passive_speed": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Passive_speed",
+            "Shyvana_Passive_Child": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Passive_Child",
+            "Shyvana_Passive_Child_01": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Passive_Child_01",
+            "Shyvana_Recall_Ground_02": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Recall_Ground_02",
+            "Shyvana_Recall_Ground_Dragon": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Recall_Ground_Dragon",
+            "Shyvana_Recall_Ground_03": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Recall_Ground_03",
+            "Shyvana_Recall_Ground_04": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Recall_Ground_04",
+            "Shyvana_R_cas_child": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_R_cas_child",
+            "Shyvana_Idle_Hom": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Idle_Hom",
+            "Shyvana_Idle_Hand": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Idle_Hand",
+            "Shyvana_Recall_Ground_foot": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Recall_Ground_foot",
+            "{a73cfb6b}": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Q_R_buf_L",
+            "{b53d1175}": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Q_R_buf_R"
+        },
+        "__type": "ResourceResolver"
+    },
+    "Characters/ShyvanaDragon/Skins/Skin25/Materials/ShyvanaDragon_Skin25_FlowMap_Bloom_inst": {
+        "name": "Characters/ShyvanaDragon/Skins/Skin25/Materials/ShyvanaDragon_Skin25_FlowMap_Bloom_inst",
+        "samplerValues": [
+            {
+                "TextureName": "FlowMap",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/ShyvanaDragon/Skins/Skin25/Shyvana_Dragon_Skin25_TX_CM.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Specular_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "SpecularColor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaxSpec",
+                "value": [
+                    64.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LQ_Lighting_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Scale_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Scale_Frequency",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Scale_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Speed",
+                "value": [
+                    0.512499988079071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Dir",
+                "value": [
+                    5.0,
+                    5.0,
+                    5.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Frequency",
+                "value": [
+                    0.3499999940395355,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FlowIntensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FlowSpeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomColorIntensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomColor",
+                "value": [
+                    1.0,
+                    0.330006867647171,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Noise_Tiling_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Dir_Intensity",
+                "value": [
+                    0.16249999403953552,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "HardOutlineSize",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutLine_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutLine_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Control",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "APPLY_FLOWMAP_TO_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "FLOWDIRECTIONSWITCH",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SPECULAR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_Diff_Flowmap_Bloom",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Anim_Wave_Speed",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "Spell": "Shared/Spells/ZhonyasRingShield",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "driver": {
+                                        "Spell": "Shared/Spells/ZhonyasRingShield",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "graph": {
+                                        "times": [
+                                            0.0,
+                                            0.04251012206077576
+                                        ],
+                                        "values": [
+                                            1.0,
+                                            0.0
+                                        ],
+                                        "__type": "VfxAnimatedFloatVariableData"
+                                    },
+                                    "__type": "FloatGraphMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mAnimationNames": [
+                                        "Death"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "driver": {
+                                        "mAnimationName": "Death",
+                                        "__type": "AnimationFractionDynamicMaterialFloatDriver"
+                                    },
+                                    "graph": {
+                                        "times": [
+                                            0.0,
+                                            0.03846153989434242
+                                        ],
+                                        "values": [
+                                            1.0,
+                                            0.0
+                                        ],
+                                        "__type": "VfxAnimatedFloatVariableData"
+                                    },
+                                    "__type": "FloatGraphMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "mValue": 1.0,
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": [
+        "DATA/Characters/ShyvanaDragon/ShyvanaDragon.bin",
+        "DATA/Characters/ShyvanaDragon/Animations/Skin17.bin"
+    ]
+}

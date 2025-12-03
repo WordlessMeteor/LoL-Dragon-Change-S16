@@ -1,0 +1,231 @@
+{
+    "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel": {
+        "PathHashToSelf": "clientstates/gameplay/ux/lol/cherry/teamflyoutpanel",
+        "BaseLoadable": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel",
+        "TeamSelfTemplate": {
+            "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team",
+            "Bounds": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Bounds",
+            "TeamIcon": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Icon",
+            "HealthText": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Health_Text_Scene/Health_Text",
+            "HealthTextScene": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Health_Text_Scene",
+            "DefaultHealthTextColor": [
+                210,
+                230,
+                240,
+                255
+            ],
+            "FillMeter": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_HealthMeter",
+            "DefaultFillMeterColor": [
+                10,
+                190,
+                250,
+                255
+            ],
+            "TeamButton": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Button",
+            "TeamChampionsButton": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_Champions_Button",
+            "frames": {
+                "DefaultState": {
+                    "{5786f895}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Normal",
+                    "IconInactiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Normal_Hover",
+                    "{cf3d6a50}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Normal_Selected",
+                    "IconActiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Normal_Selected_Hover",
+                    "__type": "IconStateData"
+                },
+                "CriticalState": {
+                    "{5786f895}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Critical",
+                    "IconInactiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Critical_Hover",
+                    "{cf3d6a50}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Critical_Selected",
+                    "IconActiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Critical_Selected_Hover",
+                    "__type": "IconStateData"
+                },
+                "EliminatedState": {
+                    "{5786f895}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Eliminated",
+                    "IconInactiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Eliminated_Hover",
+                    "{cf3d6a50}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Eliminated_Selected",
+                    "IconActiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Eliminated_Selected_Hover",
+                    "__type": "IconStateData"
+                },
+                "__type": "CherryTeamFlyoutPanelTeamFrame"
+            },
+            "{a4577e5a}": {
+                "DefeatFX": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/StatusMarker_Scene/DefeatFX",
+                "ByeFx": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/StatusMarker_Scene/DraworNoFightFX",
+                "FightingFX": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/StatusMarker_Scene/FightingFX",
+                "VictoryFX": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/StatusMarker_Scene/VictoryFX",
+                "__type": "{6a68b4f1}"
+            },
+            "{05388a5b}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/StatusMarker_Scene",
+            "ChampionTemplate": {
+                "PortraitIcon": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionPortrait/Portrait_Icon",
+                "PortraitFrames": {
+                    "FrameSelf": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionPortrait/Portrait_Frame_Self",
+                    "FrameAlly": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionPortrait/Portrait_Frame_Ally",
+                    "FrameEnemy": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionPortrait/Portrait_Frame_Enemy",
+                    "__type": "{c7ca4925}"
+                },
+                "PortraitReference": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionPortrait/Portrait_Region",
+                "PortraitGridItem": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionPortrait",
+                "__type": "CherryTeamFlyoutPanelTeamTemplateChampion"
+            },
+            "ChampionLayout": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionLayout",
+            "ChampionScene": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene",
+            "{4ea12677}": {
+                "{5786f895}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionBg",
+                "IconInactiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionBg_Hover",
+                "{cf3d6a50}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionBg_Selected",
+                "IconActiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionBg_Selected_Hover",
+                "__type": "IconStateData"
+            },
+            "FightTeamFrame": {
+                "{100be200}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Fight_Team_Scene",
+                "{bb99c3fc}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Fight_Icon_Scene",
+                "OpponentIcon": "{7f7da39b}",
+                "FightTeamBackground": {
+                    "{5786f895}": "{e856339c}",
+                    "IconInactiveHover": "{9af729a3}",
+                    "{cf3d6a50}": "{67930dba}",
+                    "IconActiveHover": "{d1831899}",
+                    "__type": "IconStateData"
+                },
+                "__type": "CherryTeamFlyoutPanelFightTeamFrame"
+            },
+            "{337254f3}": {
+                "{5786f895}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/OpponenetMarker/OpponentMarker",
+                "IconInactiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/OpponenetMarker/OpponentMarker_Hover",
+                "{cf3d6a50}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/OpponenetMarker/OpponentMarker_Selected",
+                "IconActiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/OpponenetMarker/OpponentMarker_Selected_Hover",
+                "__type": "IconStateData"
+            },
+            "HoverGlow": {
+                "BaseHoverGlow": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModuleGlow/TeamModule_Hover_Glow",
+                "{d3467f57}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModuleGlow/TeamModule_FightTeam_Hover_Glow",
+                "__type": "{cc2c0827}"
+            },
+            "__type": "CherryTeamFlyoutPanelTeamTemplate"
+        },
+        "TeamOpponentTemplate": {
+            "Scene": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team",
+            "Bounds": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Bounds",
+            "TeamIcon": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Icon",
+            "HealthText": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Health_Text_Scene/Health_Text",
+            "HealthTextScene": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Health_Text_Scene",
+            "DefaultHealthTextColor": [
+                210,
+                230,
+                240,
+                255
+            ],
+            "FillMeter": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_HealthMeter",
+            "DefaultFillMeterColor": [
+                55,
+                30,
+                190,
+                255
+            ],
+            "TeamButton": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Button",
+            "TeamChampionsButton": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_Champions_Button",
+            "frames": {
+                "DefaultState": {
+                    "{5786f895}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Normal",
+                    "IconInactiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Normal_Hover",
+                    "{cf3d6a50}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Normal_Selected",
+                    "IconActiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Normal_Selected_Hover",
+                    "__type": "IconStateData"
+                },
+                "CriticalState": {
+                    "{5786f895}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Critical",
+                    "IconInactiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Critical_Hover",
+                    "{cf3d6a50}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Critical_Selected",
+                    "IconActiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Critical_Selected_Hover",
+                    "__type": "IconStateData"
+                },
+                "EliminatedState": {
+                    "{5786f895}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Eliminated",
+                    "IconInactiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Eliminated_Hover",
+                    "{cf3d6a50}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Eliminated_Selected",
+                    "IconActiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModule_Frame_Eliminated_Selected_Hover",
+                    "__type": "IconStateData"
+                },
+                "__type": "CherryTeamFlyoutPanelTeamFrame"
+            },
+            "{a4577e5a}": {
+                "DefeatFX": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/StatusMarker_Scene/DefeatFX",
+                "ByeFx": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/StatusMarker_Scene/DraworNoFightFX",
+                "FightingFX": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/StatusMarker_Scene/FightingFX",
+                "VictoryFX": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/StatusMarker_Scene/VictoryFX",
+                "__type": "{6a68b4f1}"
+            },
+            "{05388a5b}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/StatusMarker_Scene",
+            "ChampionTemplate": {
+                "PortraitIcon": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionPortrait/Portrait_Icon",
+                "PortraitFrames": {
+                    "FrameSelf": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionPortrait/Portrait_Frame_Self",
+                    "FrameAlly": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionPortrait/Portrait_Frame_Ally",
+                    "FrameEnemy": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionPortrait/Portrait_Frame_Enemy",
+                    "__type": "{c7ca4925}"
+                },
+                "PortraitReference": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionPortrait/Portrait_Region",
+                "PortraitGridItem": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionPortrait",
+                "__type": "CherryTeamFlyoutPanelTeamTemplateChampion"
+            },
+            "ChampionLayout": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionLayout",
+            "ChampionScene": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene",
+            "{4ea12677}": {
+                "{5786f895}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionBg",
+                "IconInactiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionBg_Hover",
+                "{cf3d6a50}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionBg_Selected",
+                "IconActiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Team_ChampionBg_Selected_Hover",
+                "__type": "IconStateData"
+            },
+            "FightTeamFrame": {
+                "{100be200}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Fight_Team_Scene",
+                "{bb99c3fc}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/Team_Champions_Scene/Fight_Icon_Scene",
+                "OpponentIcon": "{7f7da39b}",
+                "FightTeamBackground": {
+                    "{5786f895}": "{e856339c}",
+                    "IconInactiveHover": "{9af729a3}",
+                    "{cf3d6a50}": "{67930dba}",
+                    "IconActiveHover": "{d1831899}",
+                    "__type": "IconStateData"
+                },
+                "__type": "CherryTeamFlyoutPanelFightTeamFrame"
+            },
+            "{337254f3}": {
+                "{5786f895}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/OpponenetMarker/OpponentMarker",
+                "IconInactiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/OpponenetMarker/OpponentMarker_Hover",
+                "{cf3d6a50}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/OpponenetMarker/OpponentMarker_Selected",
+                "IconActiveHover": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/OpponenetMarker/OpponentMarker_Selected_Hover",
+                "__type": "IconStateData"
+            },
+            "HoverGlow": {
+                "BaseHoverGlow": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModuleGlow/TeamModule_Hover_Glow",
+                "{d3467f57}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Team/TeamModuleGlow/TeamModule_FightTeam_Hover_Glow",
+                "__type": "{cc2c0827}"
+            },
+            "__type": "CherryTeamFlyoutPanelTeamTemplate"
+        },
+        "BackgroundFrame": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/TeamFlyoutPanel_Frame",
+        "{1bb70a95}": 1.5,
+        "{93a6a62b}": {
+            "{d3a91466}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/GoH_Tracker",
+            "SlotTemplate": {
+                "Group": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/GoH_Tracker/GoH_Frame",
+                "Icon": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/GoH_Tracker/GoH_Frame/VerticalLayout/TopLayout/HeaderFrame/Icon",
+                "title": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/GoH_Tracker/GoH_Frame/VerticalLayout/TopLayout/HeaderFrame/Title",
+                "Subtitle": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/GoH_Tracker/GoH_Frame/VerticalLayout/TopLayout/HeaderFrame/Subtitle",
+                "description": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/GoH_Tracker/GoH_Frame/VerticalLayout/TopLayout/DescriptionLayout/Description",
+                "__type": "{5841e5bd}"
+            },
+            "SlotsLayout": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/GoH_Tracker/GoH_Layout",
+            "{d04a0fe6}": "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase/TeamFlyoutPanel/Buttons/GoH_Button",
+            "__type": "{393df345}"
+        },
+        "__type": "CherryTeamFlyoutPanelViewController"
+    },
+    "ClientStates/Gameplay/UX/LoL/Cherry/TeamFlyoutPanel/UIBase": {
+        "FilepathHash": "clientstates/gameplay/ux/lol/cherry/teamflyoutpanel/uibase",
+        "__type": "UiPropertyLoadable"
+    },
+    "__linked": []
+}

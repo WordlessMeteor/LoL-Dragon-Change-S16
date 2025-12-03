@@ -1,0 +1,675 @@
+{
+    "{21d7799b}": {
+        "ObjectName": "TFT14_Naafiri_Giga_DogMissile",
+        "mScriptName": "TFT14_Naafiri_Giga_DogMissile",
+        "mSpell": {
+            "flags": 132,
+            "mAffectsTypeFlags": 6826,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mApplyMaterialOnHitSound": true,
+            "mTurnSpeedScalar": 5.0,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mStartBoneName": "",
+                    "mSpeed": 10.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "TFT14_Naafiri_Giga_DogMissile",
+            "mHitEffectOrientType": 2,
+            "mDimensionBehavior": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT14_Naafiri/Spells/TFT14_NaafiriCritAttack": {
+        "ObjectName": "TFT14_NaafiriCritAttack",
+        "mScriptName": "TFT14_NaafiriCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 22538,
+            "mAlternateName": "Crit",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3677999973297119,
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectOrientType": 3,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT14_Naafiri/Spells/TFT14_NaafiriSpell": {
+        "ObjectName": "TFT14_NaafiriSpell",
+        "mScriptName": "TFT14_NaafiriSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 6282,
+            "mAffectsStatusFlags": 32,
+            "DataValues": [
+                {
+                    "mName": "ADRatio",
+                    "mValues": [
+                        2.75,
+                        2.75,
+                        2.75,
+                        2.75,
+                        2.75,
+                        2.75,
+                        2.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "OmnivampPercent",
+                    "mValues": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumPackmates",
+                    "mValues": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumGigaDogs",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BonusPackmatesPerAmp",
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BonusGigaDogsPerAmp",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ADPerPackmate",
+                    "mValues": [
+                        0.0,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ADPerGigaDog",
+                    "mValues": [
+                        0.0,
+                        1.649999976158142,
+                        1.649999976158142,
+                        1.649999976158142,
+                        1.649999976158142,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mDataValue": "ADRatio",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "PackmateDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mDataValue": "ADPerPackmate",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedNumGigaDogs": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mDataValue": "NumGigaDogs",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mBuffName": "{c440c6fd}",
+                                    "mIconKey": "%i:scaleAdaptiveForce%",
+                                    "mDataValue": "BonusGigaDogsPerAmp",
+                                    "__type": "BuffCounterByNamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedGigaDogDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mDataValue": "ADPerGigaDog",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedNumPackmates": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mDataValue": "NumPackmates",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mBuffName": "{c440c6fd}",
+                                    "mIconKey": "%i:scaleAdaptiveForce%",
+                                    "mDataValue": "BonusPackmatesPerAmp",
+                                    "__type": "BuffCounterByNamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedOmnivamp": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "OmnivampPercent",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT14_NaafiriSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT14_NaafiriSpell_Name",
+                        "keyTooltip": "Spell_TFT14_NaafiriSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "ADRatio",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "TFT_AD_PhysicalDamage_Scale",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ADPerPackmate",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT14_Naafiri_PackmateDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ADPerGigaDog",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT14_NaafiriSpell_GigadogDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "NumGigaDogs",
+                                    "nameOverride": "Spell_TFT14_NaafiriSpell_NumGigaDogs",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT14_Naafiri/Spells/TFT14_NaafiriBasicAttack2": {
+        "ObjectName": "TFT14_NaafiriBasicAttack2",
+        "mScriptName": "TFT14_NaafiriBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3677999973297119,
+            "bHaveHitEffect": true,
+            "mTurnSpeedScalar": 2.0,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectOrientType": 3,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT14_Naafiri/Spells/TFT14_NaafiriBasicAttack": {
+        "ObjectName": "TFT14_NaafiriBasicAttack",
+        "mScriptName": "TFT14_NaafiriBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 6666,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3677999973297119,
+            "bHaveHitEffect": true,
+            "mTurnSpeedScalar": 2.0,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectOrientType": 3,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{b975cefa}": {
+        "ObjectName": "TFT14_Naafiri_DogMissile",
+        "mScriptName": "TFT14_Naafiri_DogMissile",
+        "mSpell": {
+            "flags": 132,
+            "mAffectsTypeFlags": 6826,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mApplyMaterialOnHitSound": true,
+            "mTurnSpeedScalar": 5.0,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0,
+                3000.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mStartBoneName": "",
+                    "mSpeed": 10.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "TFT14_Naafiri_DogMissile",
+            "mHitEffectOrientType": 2,
+            "mDimensionBehavior": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT14_Naafiri/CharacterRecords/Root": {
+        "mCharacterName": "TFT14_Naafiri",
+        "baseHP": 700.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 90.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 50.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 52.0,
+        "baseArmor": 50.0,
+        "baseSpellBlock": 50.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.8500000238418579,
+        "attackSpeedRatio": 0.75,
+        "basicAttack": {
+            "mAttackName": "TFT14_NaafiriBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT14_NaafiriBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT14_NaafiriCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT14_NaafiriSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT14_Naafiri/Spells/TFT14_NaafiriSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446664,
+        "tier": 2,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{8226a14c}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{85ca269a}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{53d104ac}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{2e19a39c}",
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFT14_Naafiri/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

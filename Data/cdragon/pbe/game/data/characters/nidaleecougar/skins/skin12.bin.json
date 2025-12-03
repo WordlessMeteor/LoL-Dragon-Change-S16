@@ -1,0 +1,593 @@
+{
+    "Characters/NidaleeCougar/Skins/Skin12": {
+        "championSkinName": "NidaleeCougarSkin12",
+        "skinParent": 11,
+        "metaDataTags": "gender:female,faction:ixtal",
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Nidalee",
+                "NidaleeCougar",
+                "NidaleeSkin11",
+                "NidaleeCougarSkin11"
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/NidaleeCougar/Animations/Skin11",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/NidaleeCougar/Skins/Skin11/NidaleeCougar_Skin11.skl",
+            "simpleSkin": "ASSETS/Characters/NidaleeCougar/Skins/Skin11/NidaleeCougar_Skin11.skn",
+            "texture": "ASSETS/Characters/NidaleeCougar/Skins/Skin12/NidaleeCougar_Skin12_Nidalee_Dawnbringer_Cougar_TX_CM.tex",
+            "selfIllumination": 0.699999988079071,
+            "Material": "Characters/NidaleeCougar/Skins/Skin12/Materials/MagicalGlowCougar_inst",
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "initialSubmeshToHide": "Firebro_Body_MAT, fb02_Firebro_Body_MAT",
+            "materialOverride": [
+                {
+                    "texture": "ASSETS/Characters/NidaleeCougar/Skins/Skin12/NidaleeCougar_Skin12_Firebro_CM_TX.tex",
+                    "submesh": "Firebro_Body_MAT",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/NidaleeCougar/Skins/Skin12/NidaleeCougar_Skin12_Firebro_CM_TX.tex",
+                    "submesh": "fb02_Firebro_Body_MAT",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/NidaleeCougar/Skins/Skin12/NidaleeCougar_Skin12_Firebro_CM_TX.tex",
+                    "submesh": "fb03_Firebro_Body_MAT",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/NidaleeCougar/Skins/Skin12/NidaleeCougar_Skin12_Firebro_CM_TX.tex",
+                    "submesh": "fb04_Firebro_Body_MAT",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "iconCircle": "ASSETS/Characters/Nidalee/HUD/Nidalee_Circle.tex",
+        "iconSquare": "ASSETS/Characters/Nidalee/HUD/Nidalee_Square.tex",
+        "iconAvatar": "ASSETS/Characters/Nidalee/HUD/Nidalee_Circle_11.tex",
+        "healthBarData": {
+            "attachToBone": "Buffbone_Cstm_Healthbar",
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/NidaleeCougar/Skins/Skin12/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/NidaleeCougar/Skins/Skin12/Materials/MagicalGlowCougar_inst": {
+        "name": "Characters/NidaleeCougar/Skins/Skin12/Materials/MagicalGlowCougar_inst",
+        "samplerValues": [
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "ASSETS/Shared/Materials/matcap_iridescent.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Mask",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/NidaleeCougar/Skins/Skin11/Nidalee_Dawnbringer_Cougar_ScrollTex.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Main_Texture",
+                "texturePath": "ASSETS/Characters/NidaleeCougar/Skins/Skin12/NidaleeCougar_Skin12_Nidalee_Dawnbringer_Cougar_TX_CM.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "OutlineMask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "addressU": 2,
+                "addressV": 2,
+                "addressW": 2,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Maintex_Alpha_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Size",
+                "value": [
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Value",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Location",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Diffuse_Tex_B_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Diffuse_Tex_RG_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Main_Tex_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_TintColor",
+                "value": [
+                    0.505653440952301,
+                    0.7956664562225342,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_Control",
+                "value": [
+                    0.10000000149011612,
+                    1.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Texture_B_UV",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedBase",
+                "value": [
+                    0.20000000298023224,
+                    0.20000000298023224,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedBlend",
+                "value": [
+                    -0.10000000149011612,
+                    -0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Base_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blend_Tile",
+                "value": [
+                    2.0,
+                    2.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BaseMat_Tint",
+                "value": [
+                    1.0,
+                    0.7513389587402344,
+                    0.14551003277301788,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BlendMat_Tint",
+                "value": [
+                    1.0,
+                    0.5654383301734924,
+                    0.21107804775238037,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaskStrength",
+                "value": [
+                    0.8999999761581421,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomValue",
+                "value": [
+                    1.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineColor",
+                "value": [
+                    0.5082322359085083,
+                    0.4766613245010376,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTex_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineControl",
+                "value": [
+                    0.009999999776482582,
+                    0.800000011920929,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveController",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaClipValue",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaClipNoiseStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_TintColor",
+                "value": [
+                    1.0,
+                    0.7827725410461426,
+                    0.13109025359153748,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "NoiseUV",
+                "value": [
+                    5.0,
+                    5.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedMainTex",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTex_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Control",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_OUTLINE_W_DISCARD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_DIFFUSE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_OUTLINE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHA_MAIN_SCROLL_OUTLINE_ADD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_DIFFUSE_TEX_RG",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_DIFFUSE_TEX_B",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_MAIN_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MATCAP_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_OUTLINEMASK_B_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLENDCOLOR_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ADDITIVEALPHA_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MASK_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MAINTEX_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_MAIN",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_MAINTEXCOLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TWO_D_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_MAINTEXALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHACLIP_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_TINTCOLOR_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SCROLL_MAIN_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/AlphaBlend_Additive_Scroll_Packed",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/NidaleeCougar/Skins/Skin12/Resources": {
+        "resourceMap": {
+            "Nidalee_BA_Crit": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_BA_Crit",
+            "Nidalee_BA_Mis": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_BA_Mis",
+            "Nidalee_BA_Tar": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_BA_Tar",
+            "Nidalee_Cougar_Dance_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Cougar_Dance_Sound",
+            "Nidalee_Cougar_Dance_Sound_Loop": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Cougar_Dance_Sound_Loop",
+            "{8acb3dd6}": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_E",
+            "{b17a33d4}": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_CougarBuff",
+            "{f2f858c2}": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_E_CougarTar",
+            "Nidalee_Cougar_Joke_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Cougar_Joke_Sound",
+            "Nidalee_Cougar_Laugh_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Cougar_Laugh_Sound",
+            "{71435318}": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Q_CougarBuff",
+            "{d6c8ef6e}": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Q_CougarTar",
+            "{065f7ad7}": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Q_Tar_Marked",
+            "Nidalee_Cougar_Taunt_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Cougar_Taunt_Sound",
+            "{78cb2180}": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_CougarUniqueTar",
+            "{540d4c67}": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Cougar_W_Buf_Circle",
+            "{91e35746}": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_CougarCast",
+            "{f61fca1f}": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_Marked_Cas",
+            "{5589e194}": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_CougarTar",
+            "Nidalee_Dance_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Dance_Sound",
+            "Nidalee_E_Buf": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_E_Buf",
+            "Nidalee_E_Tar": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_E_Tar",
+            "Nidalee_idle1": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_idle1",
+            "Nidalee_P": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_P",
+            "Nidalee_primal_surge_attack_buf_cas": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_primal_surge_attack_buf_cas",
+            "Nidalee_P_Buf": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_P_Buf",
+            "Nidalee_Q_Buf": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Q_Buf",
+            "Nidalee_Q_buff_indicator": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Q_buff_indicator",
+            "Nidalee_Q_Cas": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Q_Cas",
+            "Nidalee_Q_Mis": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Q_Mis",
+            "Nidalee_Q_Tar": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Q_Tar",
+            "Nidalee_Recall_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Recall_Sound",
+            "Nidalee_R_Cas": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_R_Cas",
+            "Nidalee_Taunt_Sound": "Characters/Nidalee/Skins/Skin0/Particles/Nidalee_Base_Taunt_Sound",
+            "Nidalee_W_Cas": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_Cas",
+            "Nidalee_W_Tar": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_Tar",
+            "Nidalee_W_TC_Green": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_TC_Green",
+            "Nidalee_W_TC_Red": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_TC_Red",
+            "Volibear_maxStack_indicator_cast_BV2": "Characters/Nidalee/Skins/Skin0/Particles/Volibear_maxStack_indicator_cast",
+            "Nidalee_Q_Cougar_Trail": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Q_Cougar_Trail",
+            "Nidalee_BA_Cougar_Swipe_01": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_BA_Cougar_Swipe_01",
+            "Nidalee_BA_Cougar_Swipe_02": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_BA_Cougar_Swipe_02",
+            "Nidalee_BA_WeaponSpawn": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_BA_WeaponSpawn",
+            "Nidalee_W_JumpTrails": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_JumpTrails",
+            "Nidalee_W_CougarCast": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_CougarCast",
+            "Nidalee_W_CougarTar": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_CougarTar",
+            "Nidalee_W_CougarUniqueTar": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_CougarUniqueTar",
+            "Nidalee_E_CougarTar": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_E_CougarTar",
+            "Nidalee_Q_CougarTar": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Q_CougarTar",
+            "Nidalee_Q_CougarBuff": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Q_CougarBuff",
+            "Nidalee_W_CougarBuff": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_W_CougarBuff",
+            "Nidalee_Q_CougarSwipeMesh": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Q_CougarSwipeMesh",
+            "Nidalee_Z_Recall_CreepingSmoke": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Z_Recall_CreepingSmoke",
+            "Nidalee_Z_Recall_SmokeExplosion": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Z_Recall_SmokeExplosion",
+            "Nidalee_Z_Recall_SpearCharge": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Z_Recall_SpearCharge",
+            "Nidalee_Z_Recall_SpearExplosion": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Z_Recall_SpearExplosion",
+            "Nidalee_Z_Recall_WeaponSwirl": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Z_Recall_WeaponSwirl",
+            "Nidalee_Z_RecallFireBroAppear": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Z_RecallFireBroAppear",
+            "Nidalee_Z_RecallFireBroIdle": "Characters/Nidalee/Skins/Skin11/Particles/Nidalee_Skin11_Z_RecallFireBroIdle"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/NidaleeCougar/NidaleeCougar.bin",
+        "DATA/Characters/NidaleeCougar/Animations/Skin11.bin"
+    ]
+}

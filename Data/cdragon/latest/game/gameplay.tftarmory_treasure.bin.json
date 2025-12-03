@@ -1,0 +1,73 @@
+{
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure": {
+        "PathHashToSelf": "{7f2486a2dff5a1cb}",
+        "BaseLoadable": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase",
+        "MobileOverrideLoadable": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIMobile",
+        "ArmoryStyle": 5,
+        "ArmoryActionButtons": {
+            "1": {
+                "ActionButton": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/SelectAllButton",
+                "__type": "TftArmoryActionButtonData"
+            },
+            "2": {
+                "ActionButton": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/RefreshButton",
+                "NumericTextDefault": 1,
+                "DynamicNumericText": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/RefreshButton/CostText",
+                "DynamicNumericTextColor": [
+                    255,
+                    255,
+                    255,
+                    255
+                ],
+                "DynamicNumericTextDisabledColor": [
+                    0,
+                    0,
+                    170,
+                    255
+                ],
+                "IsActiveByDefault": false,
+                "__type": "TftArmoryActionButtonData"
+            }
+        },
+        "RecipeHintTraKey": "tft_shadowitem_mobile_ui_recipehints",
+        "FullDescriptionTraKey": "tft_shadowitem_mobile_ui_fulldescription",
+        "ClickShowRecipeHintTraKey": "tft_armory_pc_component_item_hint",
+        "TitleText": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/background/Title",
+        "ItemSpace": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/ItemSpace",
+        "ItemSlotData": {
+            "ElementGroup": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/Armory_Slot0",
+            "ItemIcon": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/Armory_Slot0/ItemIcon",
+            "ItemIconBordered": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/Armory_Slot0/ItemIconShadow",
+            "ItemFootprintSelectedVfx": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/Armory_Slot0/ItemFootprint_Selected_VFX",
+            "ItemFootprintUnselectedVfx": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/Armory_Slot0/ItemFootprint_Unselected_VFX",
+            "DefaultButtonStyle": {
+                "ItemButton": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/Armory_Slot0/ItemButton",
+                "UseBorderedIcon": false,
+                "__type": "TftArmoryButtonStyleData"
+            },
+            "RecipeHintButton": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/Armory_Slot0/RecipeButton",
+            "__type": "TftArmorySlotData"
+        },
+        "MainScene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure",
+        "HideButtonScene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_ToggleArmoryScene_Treasure",
+        "ToggleMainViewButton": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIMobile/TFT_ToggleArmoryScene_Treasure/ToggleArmoryButton",
+        "CurrentGoldText": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/CurrentGoldText",
+        "CurrentGoldIcon": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_Armory_Treasure/CurrentGoldIcon",
+        "TimeoutVfxDuration": 10.0,
+        "TimeoutVfxOnToggleButton": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIMobile/TFT_ToggleArmoryScene_Treasure/TimeoutVFX_OnToggleButton",
+        "TimeoutPreventClicksOnShow": 0.800000011920929,
+        "TimeoutDoubleClickPrevention": 0.25,
+        "AllowSingleItemSelection": false,
+        "GoldScene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase/TFT_GoldScene_Treasure",
+        "__type": "TFTArmoryViewController"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIMobile": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftarmory_treasure/uimobile",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tftarmory_treasure/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Treasure/UIBase": {
+        "FilepathHash": "clientstates/gameplay/ux/tft/tftarmory_treasure/uibase",
+        "__type": "UiPropertyLoadable"
+    }
+}

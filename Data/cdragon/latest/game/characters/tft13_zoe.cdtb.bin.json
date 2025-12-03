@@ -1,0 +1,573 @@
+{
+    "Characters/TFT13_Zoe/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT13_Zoe/Spells/TFT13_ZoeCritAttack": {
+        "ObjectName": "TFT13_ZoeCritAttack",
+        "mScriptName": "TFT13_ZoeCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "ZoeCritAttack",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.34850001335144043,
+            "bHaveHitEffect": true,
+            "castRange": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mTargetBoneName": "C_buffbone_Glb_Center_Loc",
+                    "mSpeed": 1600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "mInitialTargetHeightOffset": 25.0,
+                    "__type": "CurveTheDifferenceHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 2200.0,
+            "mMissileEffectKey": "TFT13_Zoe_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_buffbone_Glb_Center_Loc",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{a08a8f60}": {
+        "ObjectName": "TFT13_ZoeSpell_Missile_SameTarget",
+        "mScriptName": "TFT13_ZoeSpell_Missile_SameTarget",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 4106,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "bHaveHitEffect": true,
+            "mMinimapIconDisplayFlag": 0,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "luaOnMissileUpdateDistanceInterval": 60.0,
+            "mMissileSpec": {
+                "mMissileWidth": 110.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mTargetHeightAugment": 10.0,
+                    "mUseGroundHeightAtTarget": false,
+                    "mTravelTime": 0.800000011920929,
+                    "__type": "FixedTimeMovement"
+                },
+                "heightSolver": {
+                    "mGravity": 6000.0,
+                    "__type": "GravityHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "CastOnHit"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "mMissileEffectKey": "TFT13_Zoe_Q_mis_01",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT13_Zoe_Q_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{ae84500e}": {
+        "ObjectName": "TFT13_ZoeSpell_Missile",
+        "mScriptName": "TFT13_ZoeSpell_Missile",
+        "mSpell": {
+            "flags": 12,
+            "mAffectsTypeFlags": 4106,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mMinimapIconDisplayFlag": 0,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mUseGroundHeightAtTarget": false,
+                    "mMinSpeed": 2300.0,
+                    "mMaxSpeed": 9000.0,
+                    "mInitialSpeed": 2300.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "heightSolver": {
+                    "mHeightOffset": 230.0,
+                    "__type": "FollowTerrainHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "CastOnHit"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "mMissileEffectKey": "TFT13_Zoe_Q_mis_01",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT13_Zoe_Q_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Zoe/Spells/TFT13_ZoeBasicAttack": {
+        "ObjectName": "TFT13_ZoeBasicAttack",
+        "mScriptName": "TFT13_ZoeBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "ZoeBasicAttack",
+            "mCastTime": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mPreCastLockoutDeltaTime": 0.05000000074505806,
+            "bHaveHitEffect": true,
+            "castRange": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mTargetBoneName": "C_buffbone_Glb_Center_Loc",
+                    "mSpeed": 1600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "mInitialTargetHeightOffset": 25.0,
+                    "__type": "CurveTheDifferenceHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "TFT13_Zoe_BA_mis",
+            "mLineWidth": 60.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_buffbone_Glb_Center_Loc",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Zoe/Spells/TFT13_ZoeBasicAttack2": {
+        "ObjectName": "TFT13_ZoeBasicAttack2",
+        "mScriptName": "TFT13_ZoeBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack2",
+            "mCastTime": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mPreCastLockoutDeltaTime": 0.05000000074505806,
+            "bHaveHitEffect": true,
+            "castRange": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "luaOnMissileUpdateDistanceInterval": 51.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mTargetBoneName": "C_buffbone_Glb_Center_Loc",
+                    "mSpeed": 1900.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "mInitialTargetHeightOffset": 25.0,
+                    "__type": "CurveTheDifferenceHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 1900.0,
+            "mMissileEffectKey": "TFT13_Zoe_BA_mis",
+            "mLineWidth": 60.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_buffbone_Glb_Center_Loc",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Zoe/Spells/TFT13_ZoeSpell": {
+        "ObjectName": "TFT13_ZoeSpell",
+        "mScriptName": "TFT13_ZoeSpell",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8221,
+            "mAffectsStatusFlags": 240,
+            "DataValues": [
+                {
+                    "mName": "Damage",
+                    "mValues": [
+                        0.0,
+                        140.0,
+                        210.0,
+                        450.0,
+                        700.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NumRepeats",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        4.0,
+                        4.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HexLimiter",
+                    "mValues": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mPostCastLockoutDeltaTime": 60.0,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castConeDistance": 100.0,
+            "missileSpeed": 1400.0,
+            "mHitEffectOrientType": 0,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT13_ZoeSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT13_ZoeSpell_Name",
+                        "keyTooltip": "Spell_TFT13_ZoeSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "elements": [
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "TFT_AP_MagicDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "NumRepeats",
+                                    "nameOverride": "Spell_TFT13_ZoeSpell_Repeats",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT13_Zoe/CharacterRecords/Root": {
+        "mCharacterName": "TFT13_Zoe",
+        "baseHP": 800.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 195.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 80.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 40.0,
+        "baseArmor": 30.0,
+        "baseSpellBlock": 30.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 890.0,
+        "attackSpeed": 0.75,
+        "attackSpeedRatio": 0.75,
+        "basicAttack": {
+            "mAttackName": "TFT13_ZoeBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT13_ZoeBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT13_ZoeCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT13_ZoeSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT13_Zoe/Spells/TFT13_ZoeSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 4,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{9c87c24b}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{2b105614}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{8377a680}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 20.0,
+        "mShopData": "{715e1e8c}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

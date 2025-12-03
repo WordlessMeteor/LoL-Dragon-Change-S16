@@ -1,0 +1,569 @@
+{
+    "Characters/TFT3_Blitzcrank/Spells/TFT3_BlitzcrankPowerFist": {
+        "ObjectName": "TFT3_BlitzcrankPowerFist",
+        "mScriptName": "TFT3_BlitzcrankPowerFist",
+        "mSpell": {
+            "mAffectsTypeFlags": 8143,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.31220000982284546,
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.960000038146973,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "mClientData": {
+                "mUseTooltipFromAnotherSpell": "Characters/Blitzcrank/Spells/PowerFistAbility/PowerFist",
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Blitzcrank/Spells/TFT3_BlitzcrankRocketGrab": {
+        "ObjectName": "TFT3_BlitzcrankRocketGrab",
+        "mScriptName": "TFT3_BlitzcrankRocketGrab",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 160,
+            "mAlternateName": "TFT_Blitzcrank_RocketGrabMissile",
+            "DataValues": [
+                {
+                    "mName": "Damage",
+                    "mValues": [
+                        -50.0,
+                        200.0,
+                        300.0,
+                        475.0,
+                        950.0,
+                        1200.0,
+                        1450.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "StunDuration",
+                    "mValues": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "PhysicalDamage",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TooltipDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mDataValue": "PhysicalDamage",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayTotalTimePercent": -0.5,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2650.0,
+                2650.0,
+                2650.0,
+                2650.0,
+                2650.0,
+                2650.0,
+                2650.0
+            ],
+            "castRangeDisplayOverride": [
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 70.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 3000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 6.75,
+            "missileSpeed": 1800.0,
+            "mMissileEffectKey": "TFT3_Blitzcrank_Q_mis",
+            "mLineWidth": 70.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT3_BlitzcrankRocketGrab",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT3_BlitzcrankRocketGrab_Name",
+                        "keyTooltip": "Spell_TFT3_BlitzcrankRocketGrab_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_TFT3_BlitzcrankRocketGrab_Damage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Blitzcrank/Spells/TFT3_BlitzcrankBasicAttack": {
+        "ObjectName": "TFT3_BlitzcrankBasicAttack",
+        "mScriptName": "TFT3_BlitzcrankBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 8143,
+            "mAlternateName": "BlitzcrankBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.31220000982284546,
+            "bHaveHitEffect": true,
+            "castRange": [
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.960000038146973,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Blitzcrank/Spells/TFT3_BlitzcrankCritAttack": {
+        "ObjectName": "TFT3_BlitzcrankCritAttack",
+        "mScriptName": "TFT3_BlitzcrankCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 8143,
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.31220000982284546,
+            "bHaveHitEffect": true,
+            "castRange": [
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.824999809265137,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Blitzcrank/Spells/TFT3_BlitzcrankBasicAttack2": {
+        "ObjectName": "TFT3_BlitzcrankBasicAttack2",
+        "mScriptName": "TFT3_BlitzcrankBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 8143,
+            "mAlternateName": "BlitzcrankBasicAttack2",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.31220000982284546,
+            "bHaveHitEffect": true,
+            "castRange": [
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.960000038146973,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT3_Blitzcrank/CharacterRecords/Root": {
+        "mCharacterName": "TFT3_Blitzcrank",
+        "baseHP": 750.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 160.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBase": 175.0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 65.0,
+        "baseArmor": 45.0,
+        "baseSpellBlock": 45.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.550000011920929,
+        "attackSpeedRatio": 0.550000011920929,
+        "basicAttack": {
+            "mAttackName": "TFT3_BlitzcrankBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT3_BlitzcrankBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT3_BlitzcrankCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT3_BlitzcrankRocketGrab",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT3_Blitzcrank/Spells/TFT3_BlitzcrankRocketGrab",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "extraSpells": [
+            "",
+            "TFT3_BlitzcrankPowerFist",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "{c1984296}": [
+            "{00000000}",
+            "Characters/TFT3_Blitzcrank/Spells/TFT3_BlitzcrankPowerFist",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "passiveRange": 3.0,
+        "selectionRadius": 120.0,
+        "unitTagsString": "Champion",
+        "flags": 9446664,
+        "tier": 2,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{6e3d922e}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{9eb128cc}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ccf900f}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 175.0,
+        "mShopData": "{0b5d0ed8}",
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFT3_Blitzcrank/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

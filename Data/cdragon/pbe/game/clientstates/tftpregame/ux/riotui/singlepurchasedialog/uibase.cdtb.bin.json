@@ -1,0 +1,2320 @@
+{
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 30000,
+        "__type": "UISceneData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Elements": [
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Descriptor_Region",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/DisclaimerTopSpacer",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/StoreCompliance_Text",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/StoreComplianceTopSpacer",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/BottomInfoText",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons"
+        ],
+        "Region": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Descriptor_Region",
+        "LayoutStyle": {
+            "HorizontalJustification": 1,
+            "VerticalJustification": 4,
+            "ColumnHorizontalAlignment": 1,
+            "__type": "LayoutStyleVerticalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Elements": [
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Elements": [
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonClicked",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonDefault",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonHover",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ClickRegion",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Clicked",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Default",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Hover"
+        ],
+        "HitRegionElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ClickRegion",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonDefault"
+            ],
+            "TextElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Default",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonHover"
+            ],
+            "TextElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Hover",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonClicked"
+            ],
+            "TextElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Clicked",
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonClicked"
+            ],
+            "TextElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Clicked",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseDownEvent": "Play_sfx_PreGameUI_button_selection_tap",
+            "MouseUpEvent": "Play_sfx_PreGameUI_store_button_purchase_confirmation_release",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Clicked": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Clicked",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 36,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    573.0,
+                    580.0
+                ],
+                "Size": [
+                    188.0,
+                    24.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "standalone_tftbattlepass_CompleteTag",
+        "FontDescription": "{ff192935}",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonDefault": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonDefault",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 35,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    566.0,
+                    556.0
+                ],
+                "Size": [
+                    202.0,
+                    70.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Global/TFTM_Global_Buttons.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "TextureUs": [
+                1.0,
+                25.0,
+                50.0,
+                75.0
+            ],
+            "TextureVs": [
+                72.0,
+                142.0
+            ],
+            "LeftRightWidths": [
+                24.0,
+                24.0
+            ],
+            "__type": "AtlasData3SliceH"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonClicked": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonClicked",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 35,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    566.0,
+                    556.0
+                ],
+                "Size": [
+                    202.0,
+                    70.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Global/TFTM_Global_Buttons.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "TextureUs": [
+                1.0,
+                25.0,
+                50.0,
+                75.0
+            ],
+            "TextureVs": [
+                1.0,
+                71.0
+            ],
+            "LeftRightWidths": [
+                24.0,
+                24.0
+            ],
+            "__type": "AtlasData3SliceH"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonHover": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ButtonHover",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 35,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    566.0,
+                    556.0
+                ],
+                "Size": [
+                    202.0,
+                    70.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Global/TFTM_Global_Buttons.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "TextureUs": [
+                76.0,
+                100.0,
+                125.0,
+                150.0
+            ],
+            "TextureVs": [
+                1.0,
+                71.0
+            ],
+            "LeftRightWidths": [
+                24.0,
+                24.0
+            ],
+            "__type": "AtlasData3SliceH"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ClickRegion": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/ClickRegion",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 80100,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    566.0,
+                    558.0
+                ],
+                "Size": [
+                    202.0,
+                    70.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Default": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Default",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 36,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    573.0,
+                    578.0
+                ],
+                "Size": [
+                    188.0,
+                    24.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "standalone_tftbattlepass_CompleteTag",
+        "FontDescription": "{8510b412}",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Hover": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Confirm/Text_Hover",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 36,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    573.0,
+                    578.0
+                ],
+                "Size": [
+                    188.0,
+                    24.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "standalone_tftbattlepass_CompleteTag",
+        "FontDescription": "{196db771}",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Elements": [
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonClicked",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonDefault",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonHover",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ClickRegion",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Idle_VFX",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Spinner",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/TextClicked",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/TextDefault",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/TextHover"
+        ],
+        "HitRegionElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ClickRegion",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonDefault",
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Idle_VFX"
+            ],
+            "TextElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/TextDefault",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonHover",
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Idle_VFX"
+            ],
+            "TextElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/TextHover",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonClicked"
+            ],
+            "TextElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/TextClicked",
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Spinner",
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Spinner",
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Spinner",
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Spinner",
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Spinner",
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseDownEvent": "Play_sfx_PreGameUI_button_selection_tap",
+            "MouseUpEvent": "Play_sfx_PreGameUI_button_rounded_tap",
+            "MouseDownSelected": "Play_sfx_PreGameUI_button_selection_tap",
+            "MouseUpSelected": "Play_sfx_PreGameUI_button_rounded_tap",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Idle_VFX": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Idle_VFX",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 36,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    566.0,
+                    556.0
+                ],
+                "Size": [
+                    202.0,
+                    70.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/TFTPreGame/Particles/TFTM_PurchaseButton_Idle_VFX",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonDefault": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonDefault",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 35,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    566.0,
+                    559.0
+                ],
+                "Size": [
+                    202.0,
+                    70.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Global/TFTM_Global_Buttons.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "TextureUs": [
+                1.0,
+                25.0,
+                50.0,
+                75.0
+            ],
+            "TextureVs": [
+                72.0,
+                142.0
+            ],
+            "LeftRightWidths": [
+                24.0,
+                24.0
+            ],
+            "__type": "AtlasData3SliceH"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/TextHover": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/TextHover",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 37,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    573.0,
+                    570.0
+                ],
+                "Size": [
+                    188.0,
+                    44.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{196db771}",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 5,
+        "IconScale": 1.4500000476837158,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/TextDefault": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/TextDefault",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 37,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    573.0,
+                    570.0
+                ],
+                "Size": [
+                    188.0,
+                    44.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{8510b412}",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 5,
+        "IconScale": 1.4500000476837158,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonHover": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonHover",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 35,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    566.0,
+                    558.0
+                ],
+                "Size": [
+                    202.0,
+                    70.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Global/TFTM_Global_Buttons.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "TextureUs": [
+                76.0,
+                100.0,
+                125.0,
+                150.0
+            ],
+            "TextureVs": [
+                1.0,
+                71.0
+            ],
+            "LeftRightWidths": [
+                24.0,
+                24.0
+            ],
+            "__type": "AtlasData3SliceH"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonClicked": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ButtonClicked",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 35,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    566.0,
+                    558.0
+                ],
+                "Size": [
+                    202.0,
+                    70.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Global/TFTM_Global_Buttons.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "TextureUs": [
+                1.0,
+                25.0,
+                50.0,
+                75.0
+            ],
+            "TextureVs": [
+                1.0,
+                71.0
+            ],
+            "LeftRightWidths": [
+                24.0,
+                24.0
+            ],
+            "__type": "AtlasData3SliceH"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ClickRegion": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/ClickRegion",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 80100,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    566.0,
+                    557.0
+                ],
+                "Size": [
+                    202.0,
+                    70.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/TextClicked": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/TextClicked",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 37,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    573.0,
+                    570.0
+                ],
+                "Size": [
+                    188.0,
+                    44.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{ff192935}",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 5,
+        "IconScale": 1.4500000476837158,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Spinner": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Buttons/Purchase/Spinner",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 39,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    644.0,
+                    570.0
+                ],
+                "Size": [
+                    49.0,
+                    49.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/TFTPreGame/Particles/TFTM_PurchaseSpinner",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/StoreCompliance_Text": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/StoreCompliance_Text",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -159.0,
+                    1111.0
+                ],
+                "Size": [
+                    501.0,
+                    40.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "store_compliance_text",
+        "FontDescription": "{4a6d94de}",
+        "FlipForRTL": true,
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 2,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Elements": [
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/ItemDisclaimerRegion",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxSpacer",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxText"
+        ],
+        "Region": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/ItemDisclaimerRegion",
+        "LayoutStyle": {
+            "HorizontalJustification": 1,
+            "RowVerticalAlignment": 1,
+            "__type": "LayoutStyleHorizontalList"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/ItemDisclaimerRegion": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/ItemDisclaimerRegion",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    368.0,
+                    1674.0
+                ],
+                "Size": [
+                    597.0,
+                    10.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Elements": [
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_Checkbox_Region",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OffClicked",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OffDefault",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OffInactive",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OnClicked",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OnDefault",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OnInactive"
+        ],
+        "IsActive": false,
+        "HitRegionElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_Checkbox_Region",
+        "AddTextSizeToHitRegion": true,
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OffDefault"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OffClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OffInactive"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OnDefault"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OnClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OnInactive"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OffClicked": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OffClicked",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    339.0,
+                    554.0
+                ],
+                "Size": [
+                    18.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "DisablePixelSnappingX": true,
+            "DisablePixelSnappingY": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFTMobile/Modal/Checkbox_OffClicked.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OnInactive": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OnInactive",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    339.0,
+                    554.0
+                ],
+                "Size": [
+                    18.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "DisablePixelSnappingX": true,
+            "DisablePixelSnappingY": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            255,
+            255,
+            255,
+            80
+        ],
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFTMobile/Modal/Checkbox_Clicked.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OffDefault": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OffDefault",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    339.0,
+                    554.0
+                ],
+                "Size": [
+                    18.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "DisablePixelSnappingX": true,
+            "DisablePixelSnappingY": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFTMobile/Modal/Checkbox_OffClicked.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OffInactive": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OffInactive",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    339.0,
+                    554.0
+                ],
+                "Size": [
+                    18.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "DisablePixelSnappingX": true,
+            "DisablePixelSnappingY": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            255,
+            255,
+            255,
+            80
+        ],
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFTMobile/Modal/Checkbox_OffClicked.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OnDefault": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OnDefault",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    339.0,
+                    554.0
+                ],
+                "Size": [
+                    18.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "DisablePixelSnappingX": true,
+            "DisablePixelSnappingY": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFTMobile/Modal/Checkbox_Clicked.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OnClicked": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_OnClicked",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    339.0,
+                    554.0
+                ],
+                "Size": [
+                    18.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "DisablePixelSnappingX": true,
+            "DisablePixelSnappingY": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFTMobile/Modal/Checkbox_Clicked.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_Checkbox_Region": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxBtn/ShowAgain_Checkbox_Region",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    334.0,
+                    550.0
+                ],
+                "Size": [
+                    28.0,
+                    28.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "DisablePixelSnappingX": true,
+            "DisablePixelSnappingY": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxText": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxText",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    818.0,
+                    789.0
+                ],
+                "Size": [
+                    469.0,
+                    40.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{4a6d94de}",
+        "FlipForRTL": true,
+        "WrappingMode": 2,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxSpacer": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/ItemDisclaimer/CheckboxSpacer",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    368.0,
+                    636.0
+                ],
+                "Size": [
+                    10.0,
+                    5.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Descriptor_Region": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/Descriptor_Region",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    368.0,
+                    527.0
+                ],
+                "Size": [
+                    600.0,
+                    149.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/DisclaimerTopSpacer": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/DisclaimerTopSpacer",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    368.0,
+                    1777.0
+                ],
+                "Size": [
+                    10.0,
+                    8.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/BottomInfoText": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/BottomInfoText",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    421.0,
+                    103.0
+                ],
+                "Size": [
+                    495.0,
+                    15.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{022913d7}",
+        "TextAlignmentHorizontal": 1,
+        "WrappingMode": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/StoreComplianceTopSpacer": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Descriptor_Layout/StoreComplianceTopSpacer",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    368.0,
+                    527.0
+                ],
+                "Size": [
+                    10.0,
+                    8.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame",
+        "Enabled": true,
+        "Layer": 40002,
+        "ParentScene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Slider": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider",
+        "DragRegionElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/DragRegion",
+        "scrollRegionElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/ScrollRegion",
+        "scissorRegionElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/ScissorRegion",
+        "scrollingScene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/TextArea",
+        "__type": "UiSceneViewPaneData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame",
+        "Elements": [
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SingleBodyScroll_Slider_BarHitRegion",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SinglePurchaseBodyScroll_Slider_DragTarget",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SinglePurchaseBodyScroll_Slider_Slider"
+        ],
+        "DefaultState": {
+            "sliderIcon": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SinglePurchaseBodyScroll_Slider_Slider",
+            "__type": "UiElementGroupSliderState"
+        },
+        "SliderClickedState": {
+            "sliderIcon": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SinglePurchaseBodyScroll_Slider_Slider",
+            "__type": "UiElementGroupSliderState"
+        },
+        "SliderHoveredState": {
+            "sliderIcon": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SinglePurchaseBodyScroll_Slider_Slider",
+            "__type": "UiElementGroupSliderState"
+        },
+        "BarHoveredState": {
+            "sliderIcon": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SinglePurchaseBodyScroll_Slider_Slider",
+            "__type": "UiElementGroupSliderState"
+        },
+        "BarHitRegion": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SingleBodyScroll_Slider_BarHitRegion",
+        "SliderHitRegion": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SinglePurchaseBodyScroll_Slider_DragTarget",
+        "direction": 1,
+        "__type": "UiElementGroupSliderData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SinglePurchaseBodyScroll_Slider_Slider": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SinglePurchaseBodyScroll_Slider_Slider",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame",
+        "Layer": 34,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    925.0,
+                    478.0
+                ],
+                "Size": [
+                    9.0,
+                    30.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFTMobile/Global/TFTM_Global_Slider.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SinglePurchaseBodyScroll_Slider_DragTarget": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SinglePurchaseBodyScroll_Slider_DragTarget",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame",
+        "Enabled": true,
+        "Layer": 34,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    920.0,
+                    478.0
+                ],
+                "Size": [
+                    24.0,
+                    30.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "DragType": {
+            "__type": "UiDraggableBasic"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SingleBodyScroll_Slider_BarHitRegion": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/Slider/SingleBodyScroll_Slider_BarHitRegion",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame",
+        "Layer": 33,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    920.0,
+                    478.0
+                ],
+                "Size": [
+                    24.0,
+                    55.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/ScrollRegion": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/ScrollRegion",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    417.0,
+                    475.0
+                ],
+                "Size": [
+                    501.0,
+                    100.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/TextArea": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/TextArea",
+        "Enabled": true,
+        "Layer": 30002,
+        "ParentScene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame",
+        "__type": "UISceneData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/DragRegion": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/DragRegion",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    417.0,
+                    475.0
+                ],
+                "Size": [
+                    501.0,
+                    45.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "DragType": {
+            "__type": "UiDraggableBasic"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/ScissorRegion": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/ScissorRegion",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    417.0,
+                    475.0
+                ],
+                "Size": [
+                    501.0,
+                    38.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "SceneToScissor": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/TextArea",
+        "__type": "UiElementScissorRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/TextArea/BodyText": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/TextArea/BodyText",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/DescriptionFrame/TextArea",
+        "Enabled": true,
+        "Layer": 500,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    417.0,
+                    475.0
+                ],
+                "Size": [
+                    501.0,
+                    55.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{f167f36e}",
+        "TextAlignmentHorizontal": 1,
+        "TextAlignmentVertical": 0,
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/SinglePurchaseBodyScroll_DragRegion": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/SinglePurchaseBodyScroll_DragRegion",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 80005,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    417.0,
+                    478.0
+                ],
+                "Size": [
+                    501.0,
+                    68.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "DragType": {
+            "__type": "UiDraggableBasic"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Modal_BottomBar_Left": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Modal_BottomBar_Left",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 50,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    373.0,
+                    669.0
+                ],
+                "Size": [
+                    288.0,
+                    4.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Modal/TFTM_ModalAtlas_General.tex",
+            "mTextureSourceResolutionWidth": 512,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                499.0,
+                200.0,
+                503.0,
+                204.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Elements": [
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonClicked",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonDefault",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonDisabled",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonHover",
+            "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ClickRegion"
+        ],
+        "HitRegionElement": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ClickRegion",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonDefault"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonHover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonDisabled"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseDownEvent": "Play_sfx_CommonUI_button_standard_tap",
+            "MouseUpEvent": "Play_sfx_PreGameUI_button_standard_release",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonClicked": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonClicked",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    940.0,
+                    80.0
+                ],
+                "Size": [
+                    28.0,
+                    28.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Global/TFTM_Global_CloseButton.tex",
+            "mTextureSourceResolutionWidth": 64,
+            "mTextureSourceResolutionHeight": 64,
+            "mTextureUV": [
+                1.0,
+                1.0,
+                30.0,
+                30.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonDisabled": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonDisabled",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 39,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    940.0,
+                    80.0
+                ],
+                "Size": [
+                    28.0,
+                    28.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Global/TFTM_Global_CloseButton.tex",
+            "mTextureSourceResolutionWidth": 64,
+            "mTextureSourceResolutionHeight": 64,
+            "mTextureUV": [
+                1.0,
+                32.0,
+                30.0,
+                61.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonDefault": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonDefault",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 39,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    940.0,
+                    80.0
+                ],
+                "Size": [
+                    28.0,
+                    28.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Global/TFTM_Global_CloseButton.tex",
+            "mTextureSourceResolutionWidth": 64,
+            "mTextureSourceResolutionHeight": 64,
+            "mTextureUV": [
+                32.0,
+                1.0,
+                61.0,
+                30.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonHover": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ButtonHover",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 100,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    940.0,
+                    80.0
+                ],
+                "Size": [
+                    28.0,
+                    28.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Global/TFTM_Global_CloseButton.tex",
+            "mTextureSourceResolutionWidth": 64,
+            "mTextureSourceResolutionHeight": 64,
+            "mTextureUV": [
+                32.0,
+                32.0,
+                61.0,
+                61.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ClickRegion": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_CloseButton/PurchaseDialog_CloseButton_ClickRegion",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    880.0,
+                    67.0
+                ],
+                "Size": [
+                    98.0,
+                    89.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Modal_BottomBar_Right": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Modal_BottomBar_Right",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 50,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    661.0,
+                    669.0
+                ],
+                "Size": [
+                    300.0,
+                    4.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Modal/TFTM_ModalAtlas_General.tex",
+            "mTextureSourceResolutionWidth": 512,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                499.0,
+                200.0,
+                503.0,
+                204.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Modal_SideBar_Left": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Modal_SideBar_Left",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 50,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    369.0,
+                    473.0
+                ],
+                "Size": [
+                    4.0,
+                    200.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Modal/TFTM_ModalAtlas_General.tex",
+            "mTextureSourceResolutionWidth": 512,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                503.0,
+                4.0,
+                507.0,
+                204.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Modal_SideBar_Right": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/Modal_SideBar_Right",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 50,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    961.0,
+                    473.0
+                ],
+                "Size": [
+                    4.0,
+                    200.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Modal/TFTM_ModalAtlas_General.tex",
+            "mTextureSourceResolutionWidth": 512,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                503.0,
+                4.0,
+                507.0,
+                204.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_TopRight_Gradient": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_TopRight_Gradient",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 31,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    675.0,
+                    73.0
+                ],
+                "Size": [
+                    294.0,
+                    137.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Modal/TFTM_Modals_Texture_Atlas.tex",
+            "mTextureSourceResolutionWidth": 1024,
+            "mTextureSourceResolutionHeight": 512,
+            "mTextureUV": [
+                726.0,
+                233.0,
+                1020.0,
+                370.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/SinglePurchaseDialog_Frame": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/SinglePurchaseDialog_Frame",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "BlockInputEvents": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    357.0,
+                    65.0
+                ],
+                "Size": [
+                    620.0,
+                    620.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Modal/TFTM_Modals_Texture_Atlas.tex",
+            "mTextureSourceResolutionWidth": 1024,
+            "mTextureSourceResolutionHeight": 512,
+            "TextureUs": [
+                0.0,
+                8.0,
+                503.0,
+                511.0
+            ],
+            "TextureVs": [
+                0.0,
+                8.0,
+                503.0,
+                511.0
+            ],
+            "TopBottomHeights": [
+                8.0,
+                8.0
+            ],
+            "LeftRightWidths": [
+                8.0,
+                8.0
+            ],
+            "__type": "AtlasData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/RarityGem": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/RarityGem",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 200,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    596.0,
+                    49.0
+                ],
+                "Size": [
+                    140.0,
+                    70.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_Bottom_Gradient": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_Bottom_Gradient",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 31,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    365.0,
+                    402.0
+                ],
+                "Size": [
+                    604.0,
+                    275.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFTMobile/Modal/TFTM_ModalAtlas_General.tex",
+            "mTextureSourceResolutionWidth": 512,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                390.0,
+                2.0,
+                479.0,
+                235.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_ItemIcon": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_ItemIcon",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 30,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    369.0,
+                    77.0
+                ],
+                "Size": [
+                    596.0,
+                    596.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_TitleText": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/PurchaseDialog_TitleText",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    470.0,
+                    435.0
+                ],
+                "Size": [
+                    400.0,
+                    42.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{d377045f}",
+        "TextAlignmentHorizontal": 1,
+        "TextAlignmentVertical": 2,
+        "FlipForRTL": true,
+        "WrappingMode": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/SingleCloseButtonRegion": {
+        "name": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene/SingleCloseButtonRegion",
+        "Scene": "ClientStates/TFTPreGame/UX/RiotUI/SinglePurchaseDialog/UIBase/Scene",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    862.0,
+                    72.0
+                ],
+                "Size": [
+                    105.0,
+                    102.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "__linked": []
+}

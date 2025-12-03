@@ -1,0 +1,615 @@
+{
+    "Characters/TFT12_Lillia/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{561ce8b5}": {
+        "ObjectName": "TFT12_LilliaSpellHero",
+        "mScriptName": "TFT12_LilliaSpellHero",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 32,
+            "DataValues": [
+                {
+                    "mName": "BaseInstantDamage",
+                    "mValues": [
+                        115.0,
+                        170.0,
+                        255.0,
+                        385.0,
+                        515.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BaseHeal",
+                    "mValues": [
+                        200.0,
+                        250.0,
+                        290.0,
+                        330.0,
+                        380.0,
+                        340.0,
+                        380.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HEROBonusDamage",
+                    "mValues": [
+                        2.4000000953674316,
+                        2.4000000953674316,
+                        2.4000000953674316,
+                        2.4000000953674316,
+                        2.4000000953674316,
+                        2.4000000953674316,
+                        2.4000000953674316
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HEROBonusAS",
+                    "mValues": [
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HEROBonusMS",
+                    "mValues": [
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "BaseInstantDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedHeal": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "BaseHeal",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "HEROModifiedDamage": {
+                    "mMultiplier": {
+                        "mDataValue": "HEROBonusDamage",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mModifiedGameCalculation": "ModifiedDamage",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mAnimationName": "SpellHero",
+            "mCastTime": 0.75,
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 22.0,
+            "missileSpeed": 1400.0,
+            "mHitEffectOrientType": 0,
+            "{abe507b9}": "ClientStates/Gameplay/UX/TFT/UiMaterials/Augments/Set12/Hexcore/HighHorsepower_II",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_LilliaSpellHero",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "TFT12_LilliaSpellHero_Name",
+                        "keyTooltip": "TFT12_LilliaSpellHero_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseHeal",
+                                    "nameOverride": "Spell_TFT12_LilliaSpell_",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseInstantDamage",
+                                    "nameOverride": "Spell_TFT12_LilliaSpell_InitialDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Lillia/Spells/TFT12_LilliaSpell": {
+        "ObjectName": "TFT12_LilliaSpell",
+        "mScriptName": "TFT12_LilliaSpell",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 32,
+            "DataValues": [
+                {
+                    "mName": "BaseInstantDamage",
+                    "mValues": [
+                        115.0,
+                        170.0,
+                        255.0,
+                        385.0,
+                        515.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "BaseHeal",
+                    "mValues": [
+                        200.0,
+                        250.0,
+                        290.0,
+                        330.0,
+                        380.0,
+                        340.0,
+                        380.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HEROBonusDamage",
+                    "mValues": [
+                        2.5999999046325684,
+                        2.5999999046325684,
+                        2.5999999046325684,
+                        2.5999999046325684,
+                        2.5999999046325684,
+                        2.5999999046325684,
+                        2.5999999046325684
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HEROBonusAS",
+                    "mValues": [
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HEROBonusMS",
+                    "mValues": [
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "BaseInstantDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedHeal": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "BaseHeal",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "HEROModifiedDamage": {
+                    "mMultiplier": {
+                        "mDataValue": "HEROBonusDamage",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mModifiedGameCalculation": "ModifiedDamage",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mAnimationName": "Spell",
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castConeDistance": 100.0,
+            "missileSpeed": 1400.0,
+            "mHitEffectOrientType": 0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT12_LilliaSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT12_LilliaSpell_Name",
+                        "keyTooltip": "Spell_TFT12_LilliaSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseHeal",
+                                    "nameOverride": "Spell_TFT12_LilliaSpell_",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseInstantDamage",
+                                    "nameOverride": "Spell_TFT12_LilliaSpell_InitialDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Lillia/Spells/TFT12_LilliaBasicAttack": {
+        "ObjectName": "TFT12_LilliaBasicAttack",
+        "mScriptName": "TFT12_LilliaBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.17399999499320984,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Lillia/Spells/TFT12_LilliaCritAttack": {
+        "ObjectName": "TFT12_LilliaCritAttack",
+        "mScriptName": "TFT12_LilliaCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.17399999499320984,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Lillia/Spells/TFT12_LilliaBasicAttack2": {
+        "ObjectName": "TFT12_LilliaBasicAttack2",
+        "mScriptName": "TFT12_LilliaBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.17399999499320984,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT12_Lillia/CharacterRecords/Root": {
+        "mCharacterName": "TFT12_Lillia",
+        "baseHP": 650.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 220.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 45.0,
+        "baseArmor": 40.0,
+        "baseSpellBlock": 40.0,
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeed": 500.0,
+        "attackRange": 180.0,
+        "attackSpeed": 0.6000000238418579,
+        "attackSpeedRatio": 0.6000000238418579,
+        "basicAttack": {
+            "mAttackName": "TFT12_LilliaBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT12_LilliaBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT12_LilliaCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT12_LilliaSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT12_Lillia/Spells/TFT12_LilliaSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "useRiotRelationships": true,
+        "flags": 9446664,
+        "tier": 1,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{988466bf}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{0e8ad85d}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ccf900f}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 40.0,
+        "mShopData": "{f7ce8f89}",
+        "MobileHealthBarHeightOverride": 170.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

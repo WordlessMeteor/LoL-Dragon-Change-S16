@@ -1,0 +1,1509 @@
+[
+    {
+        "id": 8369,
+        "name": "先发制人",
+        "majorChangePatchVersion": "11.23",
+        "tooltip": "进入与英雄战斗状态的@GraceWindow.2@秒内，对一名敌方英雄使用普攻或技能，可获得@GoldProcBonus@金钱与持续@Duration@秒的<b>先发制人</b>效果，使你对英雄造成 <truedamage>@DamageAmp*100@%</truedamage>额外<truedamage>伤害</truedamage>，并获得等同于<gold>{{ Item_Melee_Ranged_Split }}</gold>造成额外伤害的<gold>金钱</gold>。<br><br>冷却时间：<scaleLevel>@Cooldown@</scaleLevel>秒<br><hr><br>造成的伤害：@f1@<br>获得的金钱：@f2@",
+        "shortDesc": "当你发起与英雄的战斗，造成 7% 额外伤害，持续 3 秒，并根据造成的伤害获得金钱。",
+        "longDesc": "进入与英雄战斗状态的0.25秒内，对一名敌方英雄使用普攻或技能，可获得10金钱与持续3秒的<b>先发制人</b>效果，使你对英雄造成 <truedamage>7%</truedamage>额外<truedamage>伤害</truedamage>，并获得等同于<gold>50%（远程英雄则为35%）</gold>造成额外伤害的<gold>金钱</gold>。<br><br>冷却时间：<scaleLevel>25-15</scaleLevel>秒",
+        "recommendationDescriptor": "真实伤害，收入",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "endOfGameStatDescs": [
+            "造成伤害： @eogvar1@",
+            "获得金钱： @eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8446,
+        "name": "爆破",
+        "majorChangePatchVersion": "",
+        "tooltip": "位于敌方防御塔600距离内时，在3秒内蓄力一次针对防御塔的强力攻击。蓄力攻击将造成<scaleAD>@DamageCalc@</scaleAD>额外物理伤害。<br><br>总计额外伤害：<scaleAD>@f1@</scaleAD><br>总计触发次数：<scaleAD>@f3@</scaleAD><br>剩余冷却时间：@f2@秒",
+        "shortDesc": "位于敌方防御塔附近时对其进行强大的蓄力攻击。",
+        "longDesc": "位于敌方防御塔周围 600 单位之内时，于 3 秒内蓄力一次对敌方防御塔的强大攻击。蓄力攻击将造成 100 (+35% 自身最大生命) 额外物理伤害。<br><br>冷却时间：45 秒",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/Demolish/Demolish.png",
+        "endOfGameStatDescs": [
+            "总额外伤害：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kUtility": 10
+        }
+    },
+    {
+        "id": 8126,
+        "name": "凌虐",
+        "majorChangePatchVersion": "9.9",
+        "tooltip": "对<b>移动或行动受损</b>的英雄造成<trueDamage>@DamageCalc@额外真实伤害</trueDamage>。<br>冷却时间：4秒<br><rules>会在移动受损之后触发伤害。</rules><br><br>总计造成额外伤害：@f1@",
+        "shortDesc": "伤害<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_ImpairAct'>移动或行动受到限制</lol-uikit-tooltipped-keyword>的敌方英雄时造成额外真实伤害。",
+        "longDesc": "伤害<b>移动或行动受到限制</b>的敌方英雄时造成 10 - 45 额外真实伤害（随等级提升）。<br><br>冷却时间：4 秒<br><rules>行动受限发生后才会触发效果。</rules>",
+        "recommendationDescriptor": "透过赢得 2020 第一季赛的积分对战取得。",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/CheapShot/CheapShot.png",
+        "endOfGameStatDescs": [
+            "总伤害：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kBurstDamage": 5,
+            "kDamagePerSecond": 5
+        }
+    },
+    {
+        "id": 8415,
+        "name": "魔法石像",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathResolve>意志</pathResolve> + <pathSorcery>巫术</pathSorcery> <br>+0-0 生命（随等级提升）<br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "<pathBonus><pathResolve>意志</pathResolve> + <pathSorcery>巫术</pathSorcery> 组合加成</pathBonus>",
+        "longDesc": "+0-0 生命（随等级提升）<br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8410,
+        "name": "斗转星移",
+        "majorChangePatchVersion": "",
+        "tooltip": "向附近受移动效果限制的敌方英雄移动时获得 <speed>7.5% 移动速度</speed>。朝着任何一个被你限制移动效果的敌方英雄移动时，此加成将提升至 <speed>15% 移动速度</speed>。<br><br>可由友军的控制效果触发的距离：1000<br><hr><br>已加速时间：@f1@ 秒",
+        "shortDesc": "朝着附近<lol-uikit-tooltipped-keyword key=\"LinkTooltip_Description_ImpairMov\">行动受限</lol-uikit-tooltipped-keyword>的敌方英雄移动时，获得 <lol-uikit-tooltipped-keyword key=\"LinkTooltip_Description_MS\"> 移动速度</lol-uikit-tooltipped-keyword>加成，如果行动限制效果是你施加的，这个加成效果会提升。",
+        "longDesc": "向附近受移动效果限制的敌方英雄移动时获得 <speed>7.5% 移动速度</speed>。朝着任何一个被你限制移动效果的敌方英雄移动时，此加成将提升至 <speed>15% 移动速度</speed>。<br><br>可由友军的控制效果触发的距离：1000",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/ApproachVelocity/ApproachVelocity.png",
+        "endOfGameStatDescs": [
+            "已加速时间：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kMoveSpeed": 10
+        }
+    },
+    {
+        "id": 8232,
+        "name": "水行者",
+        "majorChangePatchVersion": "",
+        "tooltip": "位于河道时，获得<speed>10移动速度</speed>和<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>@AdaptiveForceCalc@适性之力</font></lol-uikit-tooltipped-keyword>。<br><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "位于河道上时获得<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>额外移动速度</lol-uikit-tooltipped-keyword>及魔法攻击／物理攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>（适性）</lol-uikit-tooltipped-keyword>。",
+        "longDesc": "位于河道时获得<speed>10移动速度</speed>和<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>13 - 30适性之力</font></lol-uikit-tooltipped-keyword>（随等级提升）。<br><br><i>愿你与奔腾不息的河流一样迅捷，与受到惊吓的河蟹一样灵敏。</i>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/Waterwalking/Waterwalking.png",
+        "endOfGameStatDescs": [
+            "发动时间合计：@eogvar1@:@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kBurstDamage": 2,
+            "kDamagePerSecond": 2,
+            "kMoveSpeed": 6
+        }
+    },
+    {
+        "id": 8299,
+        "name": "背水一战",
+        "majorChangePatchVersion": "",
+        "tooltip": "生命低于 60% 时对敌方英雄造成 5% - 11% 额外伤害。生命降至 30% 时造成最大额外伤害。<br><br><rules>最低加成：5%。<br>生命低于 30% 时获得最高加成。</rules><br><hr><br>总伤害加成：<scaleAD>@f1@</scaleAD>",
+        "shortDesc": "你的生命低于一定值时会对敌方英雄造成额外伤害。",
+        "longDesc": "生命低于 60% 时对敌方英雄造成 5% - 11% 额外伤害。生命降至 30% 时造成最大额外伤害。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/LastStand/LastStand.png",
+        "endOfGameStatDescs": [
+            "总额外伤害：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kBurstDamage": 1,
+            "kDamagePerSecond": 9
+        }
+    },
+    {
+        "id": 8112,
+        "name": "死亡电刑",
+        "majorChangePatchVersion": "",
+        "tooltip": "3秒内，使用3次<b>独立</b>的普攻或技能命中同一位英雄，即可对目标造成<font color='#48C4B7'>@TotalDamage@</font>额外<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>适性伤害</font></lol-uikit-tooltipped-keyword>。<br>冷却时间：20秒<br><hr><br>总计造成伤害：<scaleAD>@f1@</scaleAD>",
+        "shortDesc": "3 秒内使用三个<b>独立的</b>普攻或技能攻击一名敌方英雄时将造成额外<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>适性伤害</lol-uikit-tooltipped-keyword>。",
+        "longDesc": "3秒内，使用3次<b>不同</b>的普攻或技能命中同一位英雄，即可对目标造成额外<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>适性伤害</font></lol-uikit-tooltipped-keyword>。<br><br>伤害：70-240（+0.1额外物理攻击，+0.05魔法攻击）伤害。<br>冷却时间：20秒<br><br><i>'我们称呼他们为雷神，意味着他们的雷电将引发灾厄。'</i>",
+        "recommendationDescriptor": "连段伤害",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "endOfGameStatDescs": [
+            "已造成伤害合计：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8234,
+        "name": "迅捷",
+        "majorChangePatchVersion": "9.9",
+        "tooltip": "所有附加在你身上的移动速度加成效果增强 7%，并获得 <speed>1% 移动速度</speed>。<br><br>目前获得：<speed>@f1@ 移动速度</speed><br>额外移动距离：@f2@",
+        "shortDesc": "所有附加在你身上的 <speed>移动速度</speed> 加成效果增强 7%，并获得 <speed>1% 移动速度</speed>。",
+        "longDesc": "所有附加在你身上的移动速度加成效果增强 7%，并获得 <speed>1% 移动速度</speed>。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/Celerity/CelerityTemp.png",
+        "endOfGameStatDescs": [
+            "已行经的额外距离：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kMoveSpeed": 10
+        }
+    },
+    {
+        "id": 8453,
+        "name": "苏醒",
+        "majorChangePatchVersion": "",
+        "tooltip": "获得 5% 治愈与护盾强度。<br><br>你对低于 40% 生命的目标施放获得的治愈效果和护盾效果会增强 10%。<br><hr><br><scaleAD>额外治愈量</scaleAD>：@f1@<br><scaleAD>额外护盾量</scaleAD>：@f2@<br><scaleAD>治愈和护盾总强度</scaleAD>：@f4@%",
+        "shortDesc": "获得 5% 治愈与护盾效果。<br><br>你施放或获得的治愈效果和护盾效果在生命低于 40% 的目标上会被强化 10%。",
+        "longDesc": "获得 5% 治愈与护盾强度。<br><br>你对低于 40% 生命的目标施放获得的治愈效果和护盾效果会增强 10%。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/Revitalize/Revitalize.png",
+        "endOfGameStatDescs": [
+            "额外治愈量：@eogvar1@",
+            "额外护盾值：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kHealing": 10
+        }
+    },
+    {
+        "id": 8360,
+        "name": "启封法书",
+        "majorChangePatchVersion": "8.9",
+        "tooltip": "将你的一个已装备的召唤师技能，替换为一个只能使用一次的全新召唤师技能。每替换一个不同的召唤师技能，都会使你的替换冷却时间永久缩短25秒（初始替换冷却时间为@f3@秒）。<br><br>你的首次替换将在6分钟时可用。<br><rules><br>召唤师技能只能在脱离战斗时进行替换。<br>在使用一个已替换的召唤师技能后，你必须再替换3次，才能重新选择最初使用过的技能。<br>在进行两次召唤师技能替换后，“重击”的伤害会提升。</rules><hr><br>已使用过的不同召唤师技能：@f4@/@f8@<br>目前召唤师技能更换的冷却时间：@f3@ 秒",
+        "shortDesc": "在脱离战斗时更换召唤师技能。更换独一无二的召唤师技能来提高你未来能够更换召唤师技能的频率。",
+        "longDesc": "将你的一个已装备的召唤师技能，替换为一个只能使用一次的全新召唤师技能。每替换一个不同的召唤师技能，都会使你的替换冷却时间永久缩短25秒（初始替换冷却时间为@f3@秒）。<br><br>你的首次替换将在6分钟时可用。<br><rules><br>召唤师技能只能在脱离战斗时进行替换。<br>在使用一个已替换的召唤师技能后，你必须再替换3次，才能重新选择最初使用过的技能。<br>在进行两次召唤师技能替换后，“重击”的伤害会提升。</rules>",
+        "recommendationDescriptor": "施放更多召唤师技能",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/UnsealedSpellbook/UnsealedSpellbook.png",
+        "endOfGameStatDescs": [
+            "已更换的召唤师技能：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8004,
+        "name": "完美主义",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathPrecision>精准</pathPrecision> + <pathSorcery>巫术</pathSorcery><br>+0% 攻速<br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "<pathBonus><pathPrecision>精准</pathPrecision> + <pathSorcery>巫术</pathSorcery> 组合加成</pathBonus>",
+        "longDesc": "+0% 攻速<br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8128,
+        "name": "灵魂收割",
+        "majorChangePatchVersion": "8.23",
+        "tooltip": "对生命值低于50%的英雄造成<scaleAD>@f8@物理伤害</scaleAD>并收割其灵魂，永久提升<font color='#fc314e'>11</font>灵魂收割的伤害。冷却时间：35秒（参与击杀时重置为1.0秒）<br><br>已收割灵魂：<font color='#fc314e'>@f5@</font><br>当前伤害：@TotalDamage@<font color='#fc314e'>（+@f6@）</font><br>总计造成伤害：@f9@",
+        "shortDesc": "对生命低的英雄造成 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>适性伤害</lol-uikit-tooltipped-keyword>并从目标身上收集灵魂。",
+        "longDesc": "对生命值低于50%的英雄可造成<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>适性伤害</lol-uikit-tooltipped-keyword>并收割其灵魂，永久提升11灵魂收割伤害。<br><br>灵魂收割伤害：30（+每个灵魂11伤害）（+0.1额外物理攻击）（+0.05魔法攻击）<br>冷却时间：35秒（参与击杀时重置为1.0秒）",
+        "recommendationDescriptor": "处决敌人",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+        "endOfGameStatDescs": [
+            "已造成伤害合计：@eogvar1@",
+            "已收割灵魂数：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8220,
+        "name": "灾厄",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathSorcery>巫术</pathSorcery> + <pathDomination>征服</pathDomination><br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "<pathBonus><pathSorcery>巫术</pathSorcery> + <pathDomination>征服</pathDomination> 组合加成</pathBonus>",
+        "longDesc": "+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8016,
+        "name": "冷酷菁英",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathPrecision>精准</pathPrecision> + <pathDomination>征服</pathDomination><br>+0% 攻速<br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "<pathBonus><pathPrecision>精准</pathPrecision> + <pathDomination>征服</pathDomination> 组合加成</pathBonus>",
+        "longDesc": "+0% 攻速<br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8473,
+        "name": "骨甲",
+        "majorChangePatchVersion": "9.9",
+        "tooltip": "受到敌方英雄伤害后，使你接下来所受的3次来自技能或普攻的伤害降低@BlockCalc@。<br>持续时间：1.5秒<br>冷却时间：55秒<br><br>总计已减免的伤害：<scaleLevel>@f1@</scaleLevel>",
+        "shortDesc": "受到敌方英雄伤害后，你所承受的下3次来自技能或普攻的伤害降低30-60（随等级提升）。<br><br>持续时间：1.5秒<br>冷却时间：55秒",
+        "longDesc": "受到敌方英雄伤害后，你所承受的下3次来自技能或普攻的伤害降低30-60（随等级提升）。<br><br>持续时间：1.5秒<br>冷却时间：55秒",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/BonePlating/BonePlating.png",
+        "endOfGameStatDescs": [
+            "已阻挡伤害合计：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kDurability": 10
+        }
+    },
+    {
+        "id": 8339,
+        "name": "天界之身",
+        "majorChangePatchVersion": "",
+        "tooltip": "+100 永久生命<br>-10%对英雄及野怪伤害直到 10 分。",
+        "shortDesc": "+100 永久生命<br>-10%对英雄及野怪伤害直到 10 分。",
+        "longDesc": "+100 永久生命<br>-10%对英雄及野怪伤害直到 10 分。<br><br><hr><br><i>「最伟大的传说隐居在群星中。」 <br>—驭梦者达分那。</i>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/CelestialBody/CelestialBody.png",
+        "endOfGameStatDescs": [
+            "--"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8214,
+        "name": "召唤艾黎",
+        "majorChangePatchVersion": "",
+        "tooltip": "用普攻或技能对敌方英雄造成伤害，会将艾黎送至目标身上，造成伤害<font color='#48C4B7'>@DamageCalc@</font>额外<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>适性伤害</font></lol-uikit-tooltipped-keyword>。<br><br>强化或保护友军也会将艾黎送至目标身上，提供<shield>@ShieldCalc@护盾</shield>。<br><br>在艾黎返回前无法再次派遣。<br><br>艾黎已攻击敌人<font color='#FFFFFF'>@f1@</font>次，总计造成<font color='#FFFFFF'>@f3@</font>伤害。<br>艾黎已帮助友军<font color='#FFFFFF'>@f2@</font>次，总计抵挡<font color='#FFFFFF'>@f4@</font>伤害。",
+        "shortDesc": "你的普攻和技能会将艾黎送至目标身上，伤害敌人或保护友军。",
+        "longDesc": "用普攻或技能对敌方英雄造成伤害，会将艾黎送至目标身上，造成10 - 50（+<scaleAP>0.05魔法攻击</scaleAP>）（+<scaleAD>0.1额外物理攻击</scaleAD>）伤害，随等级提升。<br><br>强化或保护友军，也会将艾黎送至目标身上，提供30 - 100（+<scaleAP>0.05魔法攻击</scaleAP>）（+<scaleAD>0.1额外物理攻击</scaleAD>）护盾，随等级提升。<br><br>在艾黎返回前无法再次派遣。",
+        "recommendationDescriptor": "远程骚扰伤害",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+        "endOfGameStatDescs": [
+            "已造成伤害：@eogvar1@",
+            "已阻挡伤害：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8141,
+        "name": "深域守卫",
+        "majorChangePatchVersion": "14.1",
+        "tooltip": "放置在敌方野区的守卫视为<keywordMajor>深域守卫</keywordMajor>。<keywordMajor>深域</keywordMajor>守卫获得+1额外生命值，延长+@DurationIncrease@秒额外持续时间（饰品的潜行守卫延长+@TrinketDurationIncrease@秒）。<br><br>9级：放置在河道的守卫也是<keywordMajor>深域</keywordMajor>守卫。<br><hr><br>深域守卫：@f1@",
+        "shortDesc": "放置在敌方野区的守卫视为<keywordMajor>深域守卫</keywordMajor>，提升生命值和持续时间。<br><br>9级：放置在河道的守卫也会视为<keywordMajor>深域</keywordMajor>守卫。",
+        "longDesc": "放置在敌方野区的守卫视为<keywordMajor>深域守卫</keywordMajor>。<keywordMajor>深域</keywordMajor>守卫获得+1额外生命值，延长+[30 - 45]秒持续时间（饰品的潜行守卫延长+[45 - 150]秒）。<br><br>9级：放置在河道的守卫也会视为<keywordMajor>深域</keywordMajor>守卫。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/DeepWard/DeepWard.png",
+        "endOfGameStatDescs": [
+            "深域守卫：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kGold": 2,
+            "kUtility": 8
+        }
+    },
+    {
+        "id": 8237,
+        "name": "焦灼",
+        "majorChangePatchVersion": "9.9",
+        "tooltip": "你的下个伤害性技能命中敌方英雄时使其燃烧，1秒后造成<magicDamage>@DamageCalc@额外魔法伤害</magicDamage>。<br>冷却时间：10秒<br><br>总计造成伤害：@f1@",
+        "shortDesc": "每过 10 秒你的首个伤害技能命中敌方英雄时会使其燃烧。",
+        "longDesc": "你下一次施放的伤害技能命中敌方英雄时使其燃烧，1 秒后造成 20 - 40 额外魔法伤害（随等级提升）。<br><br>冷却时间：10 秒。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/Scorch/Scorch.png",
+        "endOfGameStatDescs": [
+            "总额外伤害：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kBurstDamage": 7,
+            "kDamagePerSecond": 3
+        }
+    },
+    {
+        "id": 8139,
+        "name": "血噬",
+        "majorChangePatchVersion": "",
+        "tooltip": "伤害一名敌方英雄时回复<healing>@HealCalc@生命值</healing>。<br>冷却时间：20秒<br><br>总计获得治疗：@f1@",
+        "shortDesc": "伤害一名敌方英雄时回复自身生命。",
+        "longDesc": "伤害一名敌方英雄时治愈自己。<br><br>治愈量：16 - 40（+0.1 额外物理攻击、+0.05 魔法攻击）生命（随等级提升）<br><br>冷却时间：20 秒",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png",
+        "endOfGameStatDescs": [
+            "总治愈量：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kHealing": 10
+        }
+    },
+    {
+        "id": 9101,
+        "name": "吸收生命",
+        "majorChangePatchVersion": "",
+        "tooltip": "击杀一名目标会为你提供@HealAmount@生命值的治疗。<br><br><b>总计治疗：<scaleAD>@f1@</scaleAD></b>",
+        "shortDesc": "击杀一名目标会为你提供治疗。",
+        "longDesc": "击杀目标，根据等级回复1-23生命值。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/AbsorbLife/AbsorbLife.png",
+        "endOfGameStatDescs": [
+            "总治愈量：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kDurability": 7,
+            "kHealing": 3
+        }
+    },
+    {
+        "id": 8008,
+        "name": "致命节奏",
+        "majorChangePatchVersion": "",
+        "tooltip": "攻击敌方英雄可获得%i:scaleAS%@ASPerStack@攻击速度，持续6秒，最多可叠加6层。最大叠层时，%i:OnHit%<OnHit>普攻</OnHit>造成@NoteDamage@<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>额外适性伤害</font></lol-uikit-tooltipped-keyword>。<br><br>最大叠层持续时间：@f1@秒<br>已造成伤害：@f2@<br><br>此符文还会记录你在上一次攻击英雄结束后，在你准备就绪的0.25秒内对英雄打出的普攻次数占比：@f3@%（@f4@/@f5@）",
+        "shortDesc": "攻击敌方英雄可获得攻击速度，最多可叠加6层。满层时，普攻造成<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>额外适性伤害</font></lol-uikit-tooltipped-keyword>。",
+        "longDesc": "攻击敌方英雄可获得[6%近战 || 4%远程]攻击速度，持续6秒，最多可叠加至6层。最大叠层时，普攻造成[9 - 30近战 || 6 - 24远程] <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>额外适性伤害，每拥有1%额外攻速就会提升1%伤害</lol-uikit-tooltipped-keyword>。",
+        "recommendationDescriptor": "逐渐提升攻速",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "endOfGameStatDescs": [
+            "最大攻速持续时间：@eogvar1@:@eogvar2@<br>已造成伤害：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8010,
+        "name": "征服者",
+        "majorChangePatchVersion": "9.4",
+        "tooltip": "基础攻击或技能在命中敌方英雄时获得 2 层征服者效果，持续 5 秒，每层效果提供 <scaleLevel>@f5.1@</scaleLevel> <scaleAD>物理攻击</scaleAD>。最多可以叠加 12 次。远程英雄每次普攻只会提供 1 层效果。<br><br>在叠满层数后，你对英雄造成的 8% 伤害会转化为对自身的回复效果（远程英雄则为 5%）。<br><br>总治愈量： @f1@",
+        "shortDesc": "在攻击敌方英雄时获得适性之力的叠层。在达到12层后，将你对英雄造成的一部分伤害转化为等数值的回复量。",
+        "longDesc": "基础攻击或技能在命中敌方英雄时获得 2 层征服者效果，持续 5 秒，每层效果提供 1.8-4 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>适性之力</font></lol-uikit-tooltipped-keyword>。 最多可以叠加 12 次。远程英雄每次普攻只会提供 1 层效果。<br><br>在叠满层数后，你对英雄造成的 8% 伤害会转化为对自身的回复效果（远程英雄则为 5%）。",
+        "recommendationDescriptor": "额外伤害，持久",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "endOfGameStatDescs": [
+            "总回复：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 9105,
+        "name": "传奇：加速",
+        "majorChangePatchVersion": "",
+        "tooltip": "每层 <i>传奇</i>叠层（<statGood>最多10个叠层</statGood>），获得1.5基础技能加速。 <br><br>参与击杀敌方英雄、参与击杀史诗级野怪、击杀大型野怪和士兵均可累积<i>传奇</i>叠层。<br><hr><br>提供的总基础技能加速：<scaleAD>@f1.1@</scaleAD>（<statGood>@f3@/10</statGood>）<br>距离下一层还有：@f2@%",
+        "shortDesc": "对敌人造成<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>击杀/助攻</lol-uikit-tooltipped-keyword>提供永久基础技能<b>加速</b>。 ",
+        "longDesc": "每层 <i>传奇</i>叠层（<statGood>最多10个叠层</statGood>），获得1.5基础技能加速。 <br><br>参与击杀敌方英雄、参与击杀史诗级野怪、击杀大型野怪和士兵均可累积<i>传奇</i>叠层。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/LegendHaste/LegendHaste.png",
+        "endOfGameStatDescs": [
+            "完成时间：@eogvar1@:@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kDurability": 4,
+            "kUtility": 6
+        }
+    },
+    {
+        "id": 8106,
+        "name": "终焉猎人",
+        "majorChangePatchVersion": "9.9",
+        "tooltip": "你的终极技能获得<attention>6</attention>技能加速，每叠加一层<i>赏金猎人</i>，额外获得<attention>5</attention>技能加速。你首次对每个敌方英雄完成击杀/助攻时，均可获得<i>赏金猎人</i>层数。<br><br>当前终焉猎人加成：<attention>@f3@终极技能加速</attention><br><br><u>无可索取的赏金</u>",
+        "shortDesc": "<b>唯一</b> <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>击杀或助攻</lol-uikit-tooltipped-keyword> 将给予你终极技能永久的冷却时间减免。",
+        "longDesc": "你的终极技能获得<attention>6</attention>技能加速，每叠加一层<i>赏金猎人</i>，额外获得<attention>5</attention>技能加速。你首次对每个敌方英雄完成击杀/助攻时，均可获得<i>赏金猎人</i>层数。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png",
+        "endOfGameStatDescs": [
+            "总叠加层数： @eogvar1@",
+            "终极技能加速：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kCooldown": 10
+        }
+    },
+    {
+        "id": 8017,
+        "name": "斩杀",
+        "majorChangePatchVersion": "",
+        "tooltip": "对生命值高于60%的敌人造成8%额外伤害。<br><hr><br>总额外伤害： <scaleAD>@f1@</scaleAD>",
+        "shortDesc": "对高生命值的英雄造成额外伤害。",
+        "longDesc": "对生命值高于60%的敌人造成8%额外伤害。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/CutDown/CutDown.png",
+        "endOfGameStatDescs": [
+            "总额外伤害：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kBurstDamage": 1,
+            "kDamagePerSecond": 9
+        }
+    },
+    {
+        "id": 8224,
+        "name": "公理奥术师",
+        "majorChangePatchVersion": "14.1",
+        "tooltip": "终极技能造成的伤害、治疗和护盾效果提升12%。<br>（范围伤害的加成降低至8%）<br><br>对敌方英雄完成击杀/助攻会缩短终极技能当前冷却时间的7%。<br><br>终极技能冷却时间缩短：@f1@秒<br>对英雄的终极技能伤害/治疗/护盾加成：@f2@",
+        "shortDesc": "终极技能造成的伤害、治疗和护盾效果已获得提升。对敌方英雄完成击杀/助攻会缩短终极技能的当前冷却时间。",
+        "longDesc": "终极技能造成的伤害、治疗和护盾效果提升12%。 <br>（范围伤害的加成降低至8%）<br><br>对敌方英雄完成击杀/助攻会缩短终极技能当前冷却时间的7%。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/NullifyingOrb/Axiom_Arcanist.png",
+        "endOfGameStatDescs": [
+            "终极技能冷却时间缩短：@eogvar1@秒",
+            "对英雄的终极技能伤害/治疗/护盾加成：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kDurability": 10
+        }
+    },
+    {
+        "id": 8210,
+        "name": "卓越",
+        "majorChangePatchVersion": "",
+        "tooltip": "达到下列等级时获得加成效果：<br>5级：+5<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>技能加速</lol-uikit-tooltipped-keyword><br>8级：+5<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>技能加速</lol-uikit-tooltipped-keyword><br>11级：参与英雄击杀时，使基础技能的剩余冷却时间减少20%。<br><hr><br>额外技能疾速：+@f4*100@<br>返还秒数：@f3@",
+        "shortDesc": "达到下列等级时获得加成效果：<br>等级 5：+5<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>技能加速</lol-uikit-tooltipped-keyword><br>等级 8：+5<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>技能加速</lol-uikit-tooltipped-keyword><br>等级 11：参与击杀英雄时，使基本技能的剩余冷却时间减少 20%。",
+        "longDesc": "达到下列等级时获得加成效果：<br>5级：+5<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>技能加速</lol-uikit-tooltipped-keyword><br>8级：+5<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>技能加速</lol-uikit-tooltipped-keyword><br>11级：参与英雄击杀时，使基础技能的剩余冷却时间减少20%。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/Transcendence/Transcendence.png",
+        "endOfGameStatDescs": [
+            "已返还秒数：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kCooldown": 10
+        }
+    },
+    {
+        "id": 8005,
+        "name": "强攻",
+        "majorChangePatchVersion": "",
+        "tooltip": "连续使用3次普攻攻击一名敌方英雄可造成<scaleLevel>@f4@</scaleLevel>额外<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>适性伤害</font></lol-uikit-tooltipped-keyword>（随等级提升）并提升8%你所造成的伤害，持续至脱离与英雄的战斗。<br><hr><br>造成的额外伤害：<scaleAD>@f2@</scaleAD><br>三次命中冷却时间：6秒",
+        "shortDesc": "连续3次命中一名敌方英雄会造成额外伤害，增加你的伤害，持续至你脱离与英雄的战斗。",
+        "longDesc": "连续使用3次普攻攻击一名敌方英雄可造成40-160额外<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>适性伤害</font></lol-uikit-tooltipped-keyword>（随等级提升）并提升8%你所造成的伤害，持续至脱离与英雄的战斗。",
+        "recommendationDescriptor": "对单一目标伤害",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "endOfGameStatDescs": [
+            "总伤害：@eogvar1@",
+            "额外伤害：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8435,
+        "name": "魔镜之护",
+        "majorChangePatchVersion": "",
+        "tooltip": "获得 +6 魔法防御。 <br><br>消耗品的治疗效果至少治疗 20 生命，且护盾提升你的魔法防御 5% 3 秒。",
+        "shortDesc": "获得 +6 魔法防御。<br>治愈效果（包括消耗品的治愈效果）会暂时使你的魔法防御提升 5%。<br>",
+        "longDesc": "获得 +6 魔法防御。 <br><br>消耗品的治疗效果至少治疗 20 生命，且护盾提升你的魔法防御 5% 3 秒。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png",
+        "endOfGameStatDescs": [
+            "额外魔法防御：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8115,
+        "name": "以太之刃",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathDomination>征服</pathDomination> + <pathSorcery>巫术</pathSorcery><br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "<pathBonus><pathDomination>征服</pathDomination> + <pathSorcery>巫术</pathSorcery> 组合加成</pathBonus>",
+        "longDesc": "+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8137,
+        "name": "第六感",
+        "majorChangePatchVersion": "14.1",
+        "tooltip": "自动感知附近未被追踪且未被发现的守卫，并为队伍追踪该守卫。 <br><br>11级：使守卫现形10秒。<br><br>此效果的冷却时间为250秒。<br><hr><br>已感知守卫：@f1@",
+        "shortDesc": "在长冷却时间内，自动感知附近未被追踪且未被发现的守卫，并为队伍追踪该守卫。<br><br>11级：使守卫现形10秒。",
+        "longDesc": "自动感知附近未被追踪且未被发现的守卫，并为队伍追踪该守卫。 <br><br>11级：使守卫现形10秒。<br><br>此效果的冷却时间为250秒。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/SixthSense/SixthSense.png",
+        "endOfGameStatDescs": [
+            "已感知守卫：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kUtility": 10
+        }
+    },
+    {
+        "id": 8359,
+        "name": "窃盗高手",
+        "majorChangePatchVersion": "8.23",
+        "tooltip": "使用一个技能后，接下来的 2 次攻击，每次都会提供自身 5 金币...或是其他神秘奖励。<br><br>只有在攻击敌方英雄时才会提供你的奖励。<br><hr><br>获得金钱： @f1@<br>偷来道具数： @f3@",
+        "shortDesc": "透过对敌方英雄施放技能和普攻来从他们身上掠夺金币和道具。",
+        "longDesc": "使用一个技能后，接下来的 2 次攻击，每次都会提供自身 5 金币...或是其他神秘奖励。<br><br>只有在攻击敌方英雄时才会提供你的奖励。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/Kleptomancy/Kleptomancy.png",
+        "endOfGameStatDescs": [
+            "已获得金钱：@eogvar1@",
+            "已掠夺的道具数：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8352,
+        "name": "时间扭曲药水",
+        "majorChangePatchVersion": "8.22",
+        "tooltip": "使用药水时，立即获得其生命回复量的40%。<br><hr><br>立刻回复的总生命值：@f2@",
+        "shortDesc": "药水立刻获得部分回复。",
+        "longDesc": "使用药水时，立即获得其生命回复量的40%。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png",
+        "endOfGameStatDescs": [
+            "立即回复生命值：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kHealing": 5,
+            "kMoveSpeed": 5
+        }
+    },
+    {
+        "id": 5003,
+        "name": "魔法防御",
+        "majorChangePatchVersion": "",
+        "tooltip": "+8 魔法防御",
+        "shortDesc": "+8 魔法防御",
+        "longDesc": "+8 魔法防御",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/StatMods/StatModsMagicResIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8135,
+        "name": "宝藏猎人",
+        "majorChangePatchVersion": "",
+        "tooltip": "下一次搜集到一层<i>赏金猎人</i>叠层时，获得额外 <gold>50 金钱</gold>。根据每一层<i>赏金猎人</i>层数，使获得的金钱数量提升 <gold>20 金钱</gold>，最多可以获得<gold>130 金钱</gold>。<br><br>从一名不重复的敌方英雄身上首次取得击杀或助攻会获得一层<i>赏金猎人</i>叠层。<br><br>当前可获得赏金：<gold>@f15@ 金钱</gold><br>已搜集额外金钱：<gold>@f3@ 金钱</gold><br><hr><br><u>无可索取的赏金</u>",
+        "shortDesc": "<b>不重复</b>的<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>击杀参与</lol-uikit-tooltipped-keyword>会在首次搜集叠层时提升获得的金钱。",
+        "longDesc": "下一次搜集到一层<i>赏金猎人</i>叠层时，获得额外 <gold>50 金钱</gold>。根据每一层<i>赏金猎人</i>层数，使获得的金钱数量提升 <gold>20 金钱</gold>，最多可以获得<gold>130 金钱</gold>。<br><br>从一名不重复的敌方英雄身上首次取得击杀或助攻会获得一层<i>赏金猎人</i>叠层。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png",
+        "endOfGameStatDescs": [
+            "总计层数：@eogvar2@",
+            "已搜集金钱：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kGold": 15
+        }
+    },
+    {
+        "id": 8120,
+        "name": "幽灵普罗",
+        "majorChangePatchVersion": "9.9",
+        "tooltip": "你的守卫失效时在原地留下一只幽灵普罗，其可提供该地区的视野，持续 90 秒。邻近敌方英雄靠近时会吓跑幽灵普罗。<br><br>每生成一只幽灵普罗还有幽灵普罗侦查到一名敌方英雄时可使你获得1.2 物理攻击或 2 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>加成，最多叠加 10 层。<br><br>叠加 10 层后额外获得 10 适性之力。<br><hr><br>已获得的属性加成：<scaleAD>+@f2@ 物理攻击</scaleAD><br>已生成的幽灵普罗数：@f3@<br>已侦查到的敌人数：@f5@",
+        "shortDesc": "你的守卫失效时在原地留下一只幽灵普罗。幽灵普罗可提供该地区的视野，直到它被敌方英雄发现。每生成一只幽灵普罗还有幽灵普罗侦查到一名敌方英雄时永久获得物理攻击或魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>（适性）</lol-uikit-tooltipped-keyword>，完成收集后还会额外获得属性加成。",
+        "longDesc": "你的守卫失效时在原地留下一只幽灵普罗，其可提供该地区的视野，持续 90 秒。邻近敌方英雄靠近时会吓跑幽灵普罗。<br><br>每生成一只幽灵普罗还有幽灵普罗侦查到一名敌方英雄时可使你获得1.2 物理攻击或 2 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>加成，最多叠加 10 层。<br><br>叠加 10 层后额外获得 10 适性之力。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/GhostPoro/GhostPoro.png",
+        "endOfGameStatDescs": [
+            "已生成的幽灵普罗：@eogvar3@",
+            "已发现的敌人：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kUtility": 10
+        }
+    },
+    {
+        "id": 8134,
+        "name": "狡诈猎人",
+        "majorChangePatchVersion": "",
+        "tooltip": "提供<b>道具疾速</b>（包含饰品），数值相当于 <attention>20</attention> 加上额外 <attention>6</attention>x<i>赏金猎人</i>迭层。<br><br>你首次参与击杀每位敌方英雄时，都会赚取一层<i>赏金猎人</i>效果。<br><br><rules>道具疾速会影响拥有冷却时间的所有道具。</rules><br><br>道具启动的总次数（含饰品）： @f3@<br><hr><br><u>无可索取的赏金</u>",
+        "shortDesc": "<b>唯一</b> <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>击倒</lol-uikit-tooltipped-keyword>可提供永久道具<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>疾速</lol-uikit-tooltipped-keyword>（包含饰品）。",
+        "longDesc": "提供<b>道具疾速</b>（包含饰品），数值相当于 <attention>20</attention> 加上额外 <attention>6</attention>x<i>赏金猎人</i>迭层。<br><br>你首次参与击杀每位敌方英雄时，都会赚取一层<i>赏金猎人</i>效果。<br><br><rules>道具疾速会影响拥有冷却时间的所有道具。</rules>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/IngeniousHunter/IngeniousHunter.png",
+        "endOfGameStatDescs": [
+            "总叠加层数： @eogvar2@",
+            "道具启动的总次数（含饰品）：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kCooldown": 8,
+            "kUtility": 2
+        }
+    },
+    {
+        "id": 8351,
+        "name": "冰川增幅",
+        "majorChangePatchVersion": "",
+        "tooltip": "定身一名敌方英雄将引发3道冰川射线朝着你和其他附近英雄射出，创造出持续3（+定身效果的持续时间）秒的冰冻领域<br><br>冰冻领域会使敌人<status>减速</status><status>@SlowZoneCalc@</status>，并使敌人对你的友军（不包括你自己）造成的伤害降低15%。<br>冷却时间：25秒<br><br>减速敌方英雄的持续时间：@f1@秒<br>已减免伤害：@f2@",
+        "shortDesc": "定身一名敌方英雄将产生 3 道冰川射线，缓速附近敌人，并减少他们对你的友军造成的伤害。",
+        "longDesc": "定身一名敌方英雄将引发3道冰川射线朝着你和其他附近英雄射出，创造出持续3（+定身效果的持续时间）秒的冰冻领域，使敌人减速20%（每100%治疗和护盾强度+90%）（每100魔法攻击+6%）（每100额外物理攻击+7%），并使敌人对你的友军（不包括你自己）造成的伤害降低15%。<br><br>冷却时间：25秒",
+        "recommendationDescriptor": "缓速敌人",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+        "endOfGameStatDescs": [
+            "敌方英雄缓速时间总计：@eogvar1@ 秒",
+            "已减免伤害：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8242,
+        "name": "坚毅",
+        "majorChangePatchVersion": "",
+        "tooltip": "遭受控制效果时和之后2秒，获得<scaleLevel>@f1@</scaleLevel> <scaleArmor>物理防御</scaleArmor>和<scaleMR>魔法防御</scaleMR>。<br><br>双防提升后的总作战时间：@f6@秒。",
+        "shortDesc": "遭受控制效果时，获得物理防御与魔法防御。",
+        "longDesc": "受到控制以及控制结束后的2秒内，获得10物理防御和魔法防御。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/Unflinching/Unflinching.png",
+        "endOfGameStatDescs": [
+            "战斗中获得额外双防时间：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kDurability": 4,
+            "kUtility": 6
+        }
+    },
+    {
+        "id": 8401,
+        "name": "盾击",
+        "majorChangePatchVersion": "8.23",
+        "tooltip": "每当获得新的护盾时，你对英雄的下次普攻会造成<scaleLevel>@f4@</scaleLevel> <scaleHealth>（+@f2@）</scaleHealth><scaleMana>（+15.0%新的护盾量）</scaleMana>额外魔法伤害。<br><br>护盾失效后，最多可以在2秒内使用这个效果。<br><hr><br>总计造成伤害：@f1@",
+        "shortDesc": "当你获得一个护盾，你对一名英雄的下个普攻会造成额外 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>适性</font></lol-uikit-tooltipped-keyword> 伤害。",
+        "longDesc": "每当获得新的护盾时，你对英雄的下次普攻会造成<scaleLevel>5 - 30</scaleLevel><scaleHealth>（+2.5%额外生命值）</scaleHealth><scaleMana>（+15.0%新的护盾量）</scaleMana>额外<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>适性</font></lol-uikit-tooltipped-keyword>伤害。<br><br>护盾失效后，最多可以在2秒内触发这个效果。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png",
+        "endOfGameStatDescs": [
+            "总伤害：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kBurstDamage": 5,
+            "kDurability": 5
+        }
+    },
+    {
+        "id": 9111,
+        "name": "凯旋",
+        "majorChangePatchVersion": "",
+        "tooltip": "完成击杀时<healing>获得@MaxHealthCalc@外加5%自身已损失生命值的治疗</healing>，并获得额外<gold>20金钱</gold>。<br><br>总计回复生命值：<healing>@f1@</healing><br>总计获得额外金钱：<gold>@f2@</gold>",
+        "shortDesc": "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>造成击杀或助攻时</lol-uikit-tooltipped-keyword>回复5% 失去生命并额外获得 20 金钱。 ",
+        "longDesc": "完成击杀或助攻时回复5%已损失生命值，2.5%最大生命值，并额外获得20金钱。<br><br><hr><br><i>“最危险的狩猎赋予最崇高的荣耀。”<br>——诺克萨斯清算人</i>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/Triumph.png",
+        "endOfGameStatDescs": [
+            "已回复生命合计：@eogvar1@",
+            "已获得额外金钱总计：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kDurability": 2,
+            "kHealing": 8
+        }
+    },
+    {
+        "id": 8105,
+        "name": "残虐猎人",
+        "majorChangePatchVersion": "9.9",
+        "tooltip": "每叠加一层<i>赏金猎人</i>，便可在脱战时获得<speed>8移动速度</speed>。你首次对每个敌方英雄完成击杀/助攻时，均可获得<i>赏金猎人</i>层数。<br><br>当前残虐猎人加成：<speed>@f3@移动速度</speed><br><br><u>无可索取的赏金</u>",
+        "shortDesc": "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>造成击杀或助攻</lol-uikit-tooltipped-keyword>后（<b>对同一英雄只能触发一次</b>）永久获得<b>脱离战斗<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>移动速度</lol-uikit-tooltipped-keyword></b>。",
+        "longDesc": "每叠加一层<i>赏金猎人</i>，便可在脱战时获得<speed>8移动速度</speed>。你首次对每个敌方英雄完成击杀/助攻时，均可获得<i>赏金猎人</i>层数。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png",
+        "endOfGameStatDescs": [
+            "总叠加层数： @eogvar2@",
+            "提升移动速度：<speed>@eogvar1@</speed>"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kMoveSpeed": 10
+        }
+    },
+    {
+        "id": 8454,
+        "name": "利维坦海怪",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathResolve>意志</pathResolve> + <pathDomination>征服</pathDomination> <br>+0-0 生命（随等级提升）<br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "<pathBonus><pathResolve>意志</pathResolve> + <pathDomination>征服</pathDomination> 组合加成</pathBonus>",
+        "longDesc": "+0-0 生命（随等级提升）<br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8275,
+        "name": "光辉披风",
+        "majorChangePatchVersion": "8.11",
+        "tooltip": "施放一个召唤师技能后，获得 <speed>移动速度</speed> 提升，持续 2 秒并使你无视单位碰撞。<br><br>提升：根据召唤师技能的冷却时间提升 <speed>15% - 45% 移动速度</speed>。（冷却时间长的召唤师技能给予更多 <speed>移动速度</speed>）。<br><hr><br>发动次数：@f1@",
+        "shortDesc": "在施放一个召唤师技能后，获得一个短暂的<speed>移动速度</speed>加成，并令你无视单位碰撞。",
+        "longDesc": "施放一个召唤师技能后，获得 <speed>移动速度</speed> 提升，持续 2 秒并使你无视单位体积碰撞。<br><br>提升：根据召唤师技能的冷却时间提升 <speed>15% - 45% 移動速度</speed>。（冷却时间长的召唤师技能给予更多 <speed>移动速度</speed>）。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/NimbusCloak/6361.png",
+        "endOfGameStatDescs": [
+            "已启动次数： @eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kMoveSpeed": 10
+        }
+    },
+    {
+        "id": 8207,
+        "name": "秘术",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathSorcery>巫术</pathSorcery> + <pathInspiration>启示</pathInspiration><br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "<pathBonus><pathSorcery>巫术</pathSorcery> + <pathInspiration>启示</pathInspiration> 组合加成</pathBonus>",
+        "longDesc": "+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 5012,
+        "name": "防御成长",
+        "majorChangePatchVersion": "",
+        "tooltip": "+@f1@物理防御和魔法防御（随等级提升）",
+        "shortDesc": "+1-8物理防御和魔法防御（随等级提升）",
+        "longDesc": "+1-8物理防御和魔法防御（随等级提升）",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/StatMods/StatModsAdaptiveForceScalingIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8439,
+        "name": "裂地冲击",
+        "majorChangePatchVersion": "9.9",
+        "tooltip": "在定身一名敌方英雄后，获得<scaleArmor>@ArmorBuff@物理防御</scaleArmor>和<scaleMR>@MagicResistBuff@魔法防御</scaleMR>，持续2.5秒。随后爆炸，对附近敌人造成<magicDamage>@DamageCalc@魔法伤害</magicDamage>。<br>冷却时间：20秒<br><rules><i>防御加成上限为@MaxResistCalc@</i></rules><br><br>总计造成伤害：<magicDamage>@f1@</magicDamage><br>总计减免伤害：<scaleHealth>@f9@</scaleHealth>",
+        "shortDesc": "使一名敌方英雄<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Immobilize'>无法移动</lol-uikit-tooltipped-keyword>后获得防御加成，接着对周围敌人造成大量魔法伤害。",
+        "longDesc": "使一名敌方英雄无法移动后，自身物理防御和魔法防御提升 35 + 80%自身额外防御，持续2.5秒。接下来释放冲击波，对周围敌人造成魔法伤害。<br><br>伤害：25 - 120（+8%自身额外生命)<br>冷却时间：20秒<br><br>余震提供的防御加成上限：80-150（随等级提升）<br>",
+        "recommendationDescriptor": "短暂提升防御力",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+        "endOfGameStatDescs": [
+            "已造成伤害合计：@eogvar1@",
+            "已减轻伤害合计：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8109,
+        "name": "狡诘大师",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathDomination>征服</pathDomination> + <pathInspiration>启示</pathInspiration><br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "<pathBonus><pathDomination>征服</pathDomination> + <pathInspiration>启示</pathInspiration> 组合加成</pathBonus>",
+        "longDesc": "+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 5002,
+        "name": "物理防御",
+        "majorChangePatchVersion": "",
+        "tooltip": "+6 物理防御",
+        "shortDesc": "+6 物理防御",
+        "longDesc": "+6 物理防御",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/StatMods/StatModsArmorIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 5011,
+        "name": "生命值",
+        "majorChangePatchVersion": "",
+        "tooltip": "<scaleHealth>+65生命值</scaleHealth>",
+        "shortDesc": "+65生命值",
+        "longDesc": "+65生命值",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/StatMods/StatModsHealthScalingIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 5013,
+        "name": "韧性和减速抗性",
+        "majorChangePatchVersion": "",
+        "tooltip": "+15%韧性和减速抗性",
+        "shortDesc": "+15%韧性和减速抗性",
+        "longDesc": "+15%韧性和减速抗性",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/StatMods/StatModsTenacityIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8414,
+        "name": "巨兽",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathResolve>意志</pathResolve> + <pathPrecision>精准</pathPrecision> <br>+0-0 生命（根据等级）<br>+0% 攻速",
+        "shortDesc": "<pathBonus><pathResolve>意志</pathResolve> + <pathPrecision>精准</pathPrecision> 组合加成</pathBonus>",
+        "longDesc": "+0-0 生命（随等级提升）<br>+0% 攻速",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 5008,
+        "name": "适性之力",
+        "majorChangePatchVersion": "",
+        "tooltip": "<scaleAD>+@f2@ 物理攻击</scaleAD>",
+        "shortDesc": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>适性之力</font></lol-uikit-tooltipped-keyword>",
+        "longDesc": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>适性之力</font></lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/StatMods/StatModsAdaptiveForceIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8320,
+        "name": "时间支配者",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathInspiration>启示</pathInspiration> + <pathResolve>意志</pathResolve><br>+0-0 生命（随等级提升）",
+        "shortDesc": "<pathBonus><pathInspiration>启示</pathInspiration> + <pathResolve>意志</pathResolve> 组合加成</pathBonus>",
+        "longDesc": "+0-0 生命（随等级提升）",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8319,
+        "name": "观星者",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathInspiration>启示</pathInspiration> + <pathSorcery>巫术</pathSorcery><br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "<pathBonus><pathInspiration>启示</pathInspiration> + <pathSorcery>巫术</pathSorcery> 组合加成</pathBonus>",
+        "longDesc": "+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 5001,
+        "name": "生命系数",
+        "majorChangePatchVersion": "",
+        "tooltip": "<scaleHealth>+@f1@生命值</scaleHealth>（随等级提升）",
+        "shortDesc": "+10-180 生命 (随等级提升)",
+        "longDesc": "+10-180 生命 (随等级提升)",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/StatMods/StatModsHealthPlusIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8430,
+        "name": "钢铁肌肤",
+        "majorChangePatchVersion": "",
+        "tooltip": "获得 +5 物理防御。<br><br>获得来自消耗品的治愈效果、至少回复 20 生命的治愈效果，或是受到护盾保护时提升 5% 物理防御，持续 3 秒。",
+        "shortDesc": "获得 +5 物理防御。<br>治愈效果（包括消耗品的治愈效果）会暂时使你的物理防御提升 5%。",
+        "longDesc": "获得 +5 物理防御。<br><br>获得来自消耗品的治愈效果、至少回复 20 生命的治愈效果，或是受到护盾保护时提升 5% 物理防御，持续 3 秒。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/IronSkin/IronSkin.png",
+        "endOfGameStatDescs": [
+            "触发时间占游戏总长度百分比：@eogvar1@%"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8014,
+        "name": "致命一击",
+        "majorChangePatchVersion": "",
+        "tooltip": "对生命低于 40% 的英雄造成 8% 额外伤害。<br><hr><br>造成的额外伤害总计：<scaleAD>@f1@</scaleAD>",
+        "shortDesc": "对低血量的英雄造成额外伤害。",
+        "longDesc": "对生命低于 40% 的英雄造成 8% 额外伤害。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png",
+        "endOfGameStatDescs": [
+            "总伤害加成：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kBurstDamage": 8,
+            "kDamagePerSecond": 2
+        }
+    },
+    {
+        "id": 5007,
+        "name": "技能疾速",
+        "majorChangePatchVersion": "",
+        "tooltip": "<attention>+8技能加速</attention>",
+        "shortDesc": "+8<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>技能疾速</lol-uikit-tooltipped-keyword>",
+        "longDesc": "+8<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>技能疾速</lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/StatMods/StatModsCDRScalingIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8021,
+        "name": "瞬疾步法",
+        "majorChangePatchVersion": "",
+        "tooltip": "攻击和移动会生成能量叠层。叠加至100层时，使你的下一次普攻充满能量。<br><br>充能攻击会治愈你<healing>@HealAmount@生命值</healing>并给予 <speed>@MoveSpeedCalc@移动速度</speed>，持续1秒。<br><rules><br>从小兵获得的治愈效果为15%，<br></rules><hr><br>总计治疗：@f1@",
+        "shortDesc": "攻击或移动会累加能量。达 100 层时你下一次的攻击将治愈你并赋予你额外<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>移动速度</lol-uikit-tooltipped-keyword>。",
+        "longDesc": "攻击和移动会生成能量叠层。叠至100层时，使你的下次普攻充满能量<br><br>充能的普攻会治愈你10-130（+0.1额外物理攻击，+0.05魔法攻击）并获得<speed>20%移动速度</speed>，持续1秒。<br><br>对于远程英雄，治疗效果为60%，移动速度效果为75%，对士兵的合计治疗效果为15%。",
+        "recommendationDescriptor": "移动，生命值恢复",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+        "endOfGameStatDescs": [
+            "总治愈量：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8226,
+        "name": "附魔之带",
+        "majorChangePatchVersion": "8.7",
+        "tooltip": "使用技能击中一名敌方英雄时使你的最大魔力永久提升 25 点，最多提升 250 点魔力。<br><br>额外获得的魔力达 250 点之后，每5 秒回复自身 1% 已消耗魔力。<br><br>冷却时间：15 秒<br><hr><br>总额外魔力：@f1@<br>已回复魔力合计：@f2@",
+        "shortDesc": "使用技能击中一名敌方英雄时使你的最大魔力永久提升 25 点，最多提升 250 点魔力。<br><br>额外获得的魔力达 250 点之后，每 5 秒回复自身 1% 已消耗魔力。",
+        "longDesc": "使用技能击中一名敌方英雄时使你的最大魔力永久提升 25 点，最多提升 250 点魔力。<br><br>额外获得的魔力达 250 点之后，每5 秒回复自身 1% 已消耗魔力。<br><br>冷却时间：15 秒",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png",
+        "endOfGameStatDescs": [
+            "总额外魔力：@eogvar1@",
+            "已回复魔力合计：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kMana": 15
+        }
+    },
+    {
+        "id": 8451,
+        "name": "过度生长",
+        "majorChangePatchVersion": "8.23",
+        "tooltip": "从在你身边死亡的野怪或敌方小兵吸取灵魂碎片，每8 个碎片将使你永久获得 3 总生命。<br><br>当收集 120 个野怪或敌方小兵的碎片，将获得额外 3.5% 总生命。<br><hr><br>获得最大生命总量：<scaleHealth>@f1@</scaleHealth><br>已吸收敌人数量：<passiveText>@f2@</passiveText>",
+        "shortDesc": "当小兵或野怪在你周围死亡时，获得永久的最大生命成长。",
+        "longDesc": "从在你身边死亡的野怪或敌方小兵吸取灵魂碎片，每8 个碎片将使你永久获得 3 总生命。<br><br>当收集 120 个野怪或敌方小兵的碎片，将获得额外 3.5% 总生命。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/Overgrowth/Overgrowth.png",
+        "endOfGameStatDescs": [
+            "总最大生命加成：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kDurability": 10
+        }
+    },
+    {
+        "id": 8313,
+        "name": "三重补药",
+        "majorChangePatchVersion": "",
+        "tooltip": "在达到3级后，获得一个贪婪药剂。<br>达到6级后，获得一个力量药剂。<br>达到9级后，获得一个精通药剂。 <br><br>已获得道具：@f1@",
+        "shortDesc": "在达到3级后，获得一个贪婪药剂。<br>达到6级后，获得一个力量药剂。<br>达到9级后，获得一个精通药剂。 ",
+        "longDesc": "在达到3级后，获得一个贪婪药剂。<br>达到6级后，获得一个力量药剂。<br>达到9级后，获得一个精通药剂。 ",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/PerfectTiming/AlchemistCabinet.png",
+        "endOfGameStatDescs": [
+            "已获得道具：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kUtility": 10
+        }
+    },
+    {
+        "id": 9103,
+        "name": "传奇：血脉",
+        "majorChangePatchVersion": "",
+        "tooltip": "每层<i>传奇</i>叠层提供<scaleAD>0.45%普攻吸血</scaleAD>（<statGood>最多叠加15层</statGood>）。<i>传奇</i>层数叠满时，获得<scaleHealth>85最大生命值</scaleHealth>。<br><br>参与击杀敌方英雄、参与击杀史诗级野怪、击杀大型野怪和士兵均可累积<i>传奇</i>叠层。<br><hr><br>获得的普攻吸血效果总计：<scaleAD>@f1*100@%</scaleAD>（<statGood>@f3@ / 15</statGood>）<br>距离下一层还有：@f2@%<br>",
+        "shortDesc": "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>击杀参与</lol-uikit-tooltipped-keyword>会提供永久的<b>普攻吸血</b>，有其叠加上限。达到上限时，提升你的最大生命。与其他传奇符文相较，前期较弱但后期较强。",
+        "longDesc": "每层<i>传奇</i>叠层提供<scaleAD>0.45%普攻吸血</scaleAD>（<statGood>最多叠加15层</statGood>）。<i>传奇</i>层数叠满时，获得<scaleHealth>85最大生命值</scaleHealth>。<br><br>参与击杀敌方英雄、参与击杀史诗级野怪、击杀大型野怪和士兵均可累积<i>传奇</i>叠层。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png",
+        "endOfGameStatDescs": [
+            "完成时间：@eogvar1@:@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kHealing": 10
+        }
+    },
+    {
+        "id": 8114,
+        "name": "不死屠夫",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathDomination>征服</pathDomination> + <pathResolve>意志</pathResolve><br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD><br>+0-0 生命（随等级提升）",
+        "shortDesc": "<pathBonus><pathDomination>征服</pathDomination> + <pathResolve>意志</pathResolve> 组合加成</pathBonus>",
+        "longDesc": "+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>+0-0 生命（随等级提升）",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8230,
+        "name": "相位冲击",
+        "majorChangePatchVersion": "",
+        "tooltip": "在4秒内使用3次普攻或<b>不同</b>的技能命中同一位敌方英雄，可获得<speed>@MoveSpeedCalc@移动速度</speed>和<status>50%减速抗性</status>，持续3秒。<br><br>冷却时间：<attention>@CooldownCalc@秒</attention><br><br>总计启动次数：<attention>@f1@</attention>",
+        "shortDesc": "使用3次<b>不同</b>的普攻或技能命中同一位敌方英雄，即可获得爆发性<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>移速</lol-uikit-tooltipped-keyword>加成和减速抗性。 ",
+        "longDesc": "在4秒内使用3次普攻或<b>不同</b>的技能命中同一位敌方英雄，可获得<speed>25 - 50%移动速度</speed>（随等级提升）和<status>50%减速抗性</status>，持续3秒。远程英雄的移速效果为75%。<br>冷却时间：30秒 - 10秒",
+        "recommendationDescriptor": "疾速移动",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
+        "endOfGameStatDescs": [
+            "发动次数合计：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8318,
+        "name": "无情思想家",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathInspiration>启示</pathInspiration> + <pathDomination>征服</pathDomination><br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "<pathBonus><pathInspiration>启示</pathInspiration> + <pathDomination>征服</pathDomination> 组合加成</pathBonus>",
+        "longDesc": "+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8463,
+        "name": "生命之泉",
+        "majorChangePatchVersion": "",
+        "tooltip": "对一名敌方英雄施加移动受损效果时，为你和附近生命值最低的友方英雄回复<healing>@BaseHeal@生命值</healing>。<br>冷却时间：20秒<br><br>总计获得治疗：<healing>@f1@</healing>",
+        "shortDesc": "当使一名敌方英雄移动<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_ImpairMov'>受损</lol-uikit-tooltipped-keyword>后会为附近友方英雄提供治疗。 ",
+        "longDesc": "对一名敌方英雄施加移动受损效果会为你和附近生命值最低友方英雄回复生命值。<br><br>远程英雄获得70%效果。<br><br>冷却时间：20秒",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png",
+        "endOfGameStatDescs": [
+            "友军治愈量合计：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kHealing": 5,
+            "kUtility": 5
+        }
+    },
+    {
+        "id": 7000,
+        "name": "Template",
+        "majorChangePatchVersion": "",
+        "tooltip": "",
+        "shortDesc": "",
+        "longDesc": "",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Template/7000.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8304,
+        "name": "魔法灵靴",
+        "majorChangePatchVersion": "9.9",
+        "tooltip": "游戏进行至 12 分钟时获得免费的 轻魔之靴，在这之前无法购买任何鞋子。每次造成击杀或助攻都会使你提前 45 秒获得鞋子。<br><br> 轻魔之靴 将额外赋予你 <speed>10 移动速度</speed>。<br><hr><br><scaleAD>鞋子的送达时间：</scaleAD>@f1@:@f2@@f3@",
+        "shortDesc": "游戏进行至 12 分钟时获得一双免费的鞋子，在这之前你无法购买任何鞋子。每次<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>造成击杀或助攻</lol-uikit-tooltipped-keyword>都会使鞋子送达的时间提前 45 秒。",
+        "longDesc": "游戏进行至 12 分钟时获得免费的 轻魔之靴，在这之前无法购买任何鞋子。每次造成击杀或助攻都会使你提前 45 秒获得鞋子。<br><br> 轻魔之靴 将额外赋予你 <speed>10 移动速度</speed>。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png",
+        "endOfGameStatDescs": [
+            "鞋子送达时间：@eogvar1@:@eogvar2@@eogvar3@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kGold": 10,
+            "kMoveSpeed": 3
+        }
+    },
+    {
+        "id": 8236,
+        "name": "暴风凝聚",
+        "majorChangePatchVersion": "",
+        "tooltip": "每10分钟获得魔法攻击或物理攻击，<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>。<br><br><i>10分钟</i>：+8魔法攻击或5物理攻击 <br><i>20分钟</i>：+24魔法攻击或14物理攻击<br><i>30分钟</i>：+48魔法攻击或29物理攻击<br><i>40分钟</i>：+80魔法攻击或48物理攻击<br><i>50分钟</i>：+120魔法攻击或72物理攻击<br><i>60分钟</i>：+168魔法攻击或101物理攻击<br>以此类推……<br><hr><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "随着游戏的进行获得逐渐增加的物理攻击或魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>（适性）</lol-uikit-tooltipped-keyword>。",
+        "longDesc": "每10分钟获得魔法攻击或物理攻击，<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>。<br><br><i>10分钟</i>：+8魔法攻击或5物理攻击 <br><i>20分钟</i>：+24魔法攻击或14物理攻击<br><i>30分钟</i>：+48魔法攻击或29物理攻击<br><i>40分钟</i>：+80魔法攻击或48物理攻击<br><i>50分钟</i>：+120魔法攻击或72物理攻击<br><i>60分钟</i>：+168魔法攻击或101物理攻击<br>以此类推……",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png",
+        "endOfGameStatDescs": [
+            "总物理攻击 / 魔法攻击加成：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kBurstDamage": 5,
+            "kDamagePerSecond": 5
+        }
+    },
+    {
+        "id": 8009,
+        "name": "气定神闲",
+        "majorChangePatchVersion": "8.7",
+        "tooltip": "对敌方英雄造成伤害可回复6-50（远程英雄为80%）魔力或6能量。<br><br>参与击杀/助攻可回复15%最大魔力/能量。<br><br>伤害回复的冷却时间：8秒<br><hr><br>已回复施法资源：@f1@<br>",
+        "shortDesc": "对敌方英雄造成伤害会回复少量魔力/能量。参与击杀/助攻也会回复魔力/能量。",
+        "longDesc": "对敌方英雄造成伤害可回复6-50（远程英雄为80%）魔力或6能量。<br><br>参与击杀/助攻可回复15%最大魔力/能量。<br><br>伤害回复的冷却时间：8秒",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png",
+        "endOfGameStatDescs": [
+            "已回复的魔力 / 能量：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kMana": 15
+        }
+    },
+    {
+        "id": 8006,
+        "name": "永恒王者",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathPrecision>精准</pathPrecision> + <pathResolve>意志</pathResolve><br>+0% 攻速<br>+0-0 生命（随等级提升）",
+        "shortDesc": "<pathBonus><pathPrecision>精准</pathPrecision> + <pathResolve>意志</pathResolve> 组合加成</pathBonus>",
+        "longDesc": "+0% 攻速<br>+0-0 生命（随等级提升）",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 9104,
+        "name": "传奇：敏捷",
+        "majorChangePatchVersion": "",
+        "tooltip": "获得 3% 攻速，每层<i>传奇</i>叠层都会再使其提升 1.5%（<statGood>最多 10 层</statGood>）。<br><br>你可以藉由对敌方英雄、史诗级野怪造成击杀或助攻；击杀大型野怪或士兵来累积<i>传奇</i>叠层。<br><hr><br>获得的攻速加成总计：<scaleAD>@f1*100@%</scaleAD>（<statGood>@f3@ / 10</statGood>)<br>距离下一层还有：@f2@%",
+        "shortDesc": "对敌人<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>造成击杀或助攻</lol-uikit-tooltipped-keyword>将赋予你永久<b>攻速</b>。",
+        "longDesc": "获得 3% 攻速，每层<i>传奇</i>叠层都会再使其提升 1.5%（<statGood>最多 10 层</statGood>）。<br><br>你可以藉由对敌方英雄、史诗级野怪造成击杀或助攻；击杀大型野怪或士兵来累积<i>传奇</i>叠层。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png",
+        "endOfGameStatDescs": [
+            "完成时间：@eogvar1@:@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kDamagePerSecond": 10
+        }
+    },
+    {
+        "id": 8416,
+        "name": "智慧泰坦",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathResolve>意志</pathResolve> + <pathInspiration>启示</pathInspiration><br>+0-0 生命（随等级提升）",
+        "shortDesc": "<pathBonus><pathResolve>意志</pathResolve> + <pathInspiration>启示</pathInspiration> 组合加成</pathBonus>",
+        "longDesc": "+0-0 生命（随等级提升）",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 5005,
+        "name": "攻速",
+        "majorChangePatchVersion": "",
+        "tooltip": "+10% 攻击速度",
+        "shortDesc": " +10% 攻击速度",
+        "longDesc": " +10% 攻击速度",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/StatMods/StatModsAttackSpeedIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8306,
+        "name": "海克斯充能闪现",
+        "majorChangePatchVersion": "",
+        "tooltip": "闪现处于冷却时将被替换成<i>海克斯闪现</i>。<br><br><i>海克斯闪现</i>：吟唱 2.0 秒后，闪现至一个新的位置。<br><br>冷却时间：20 秒。当你进入与敌方英雄的战斗时，冷却时间为 10 秒。",
+        "shortDesc": "闪现正在冷却时会被<i>海克斯闪现</i>取代。<br><br><i>海克斯闪现</i>：吟唱数秒后闪现至一个新的位置。",
+        "longDesc": "闪现处于冷却时将被替换成<i>海克斯闪现</i>。<br><br><i>海克斯闪现</i>：吟唱 2.0 秒后，闪现至一个新的位置。<br><br>冷却时间：20 秒。当你进入与敌方英雄的战斗时，冷却时间为 10 秒。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png",
+        "endOfGameStatDescs": [
+            "海克斯闪现已使用的次数：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kUtility": 10
+        }
+    },
+    {
+        "id": 8465,
+        "name": "神圣守护",
+        "majorChangePatchVersion": "",
+        "tooltip": "<i>守护</i> 距离你 350 单位内的队友，以及被你选为技能目标的队友 2.5 秒。当 <i>守护</i>持续时，如果你或该队友在<i>守护</i>持续期间所承受的伤害超过一定数值，你们两个都会获得一个持续 1.5 秒的护盾。<br><br>强度：<shield>@ShieldCalc@护盾</shield>。<br>伤害阈值：<scaleAD>@ThresholdCalc@</scaleAD>减免后伤害。<br>冷却时间：@CooldownCalc@秒。<br>总计抵挡伤害：<healing>@f1@</healing>。",
+        "shortDesc": "守护你选为技能目标与那些和你距离非常近的队友。如果你或一个被守护的队友承受伤害时，你们两个都会获得护盾。",
+        "longDesc": "<i>守护</i> 距离你 350 单位内的队友，以及被你选为技能目标的队友 2.5 秒。当 <i>守护</i>持续时，如果你或该队友在<i>守护</i>持续期间所承受的伤害超过一定数值，你们两个都会获得一个持续 1.5 秒的护盾。<br><br>冷却时间：<scaleLevel>90 ~40</scaleLevel> 秒 <br>护盾：<scaleLevel>45~180</scaleLevel>+你的<scaleAP>25%</scaleAP> 魔法攻击 + 你<scalehealth>5%</scalehealth> 额外生命。<br>触发数值：<scaleLevel>50~165</scaleLevel> 减免后伤害。",
+        "recommendationDescriptor": "为友军提供护盾",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "endOfGameStatDescs": [
+            "总护盾值：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8138,
+        "name": "眼球收集器",
+        "majorChangePatchVersion": "",
+        "tooltip": "击杀敌方英雄或取得助攻后获得眼球，每颗眼球可提供 1.2 物理攻击或 2 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>加成。<br><br>搜集完 10 颗眼球后，额外获得 6 物理攻击或 10 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>加成。<br><br>每击杀一次英雄或取得一次助攻可获得 1 颗眼球。<br><hr><br>已获得的属性加成：<scaleAD>+@f2@ 物理攻击</scaleAD><br>已搜集的眼球数量：@f3@/10",
+        "shortDesc": "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>击杀敌方英雄或取得助攻后</lol-uikit-tooltipped-keyword>获得眼球。每颗眼球可永久提供物理攻击或魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>（适性）</lol-uikit-tooltipped-keyword>，完成搜集后还会获得额外的适性之力。",
+        "longDesc": "击杀敌方英雄或取得助攻后获得眼球，每颗眼球可提供 1.2 物理攻击或 2 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>加成。<br><br>搜集完 10 颗眼球后，额外获得 6 物理攻击或 10 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>加成。<br><br>每击杀一次英雄或取得一次助攻可获得 1 颗眼球。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png",
+        "endOfGameStatDescs": [
+            "总额外物理攻击 / 魔法攻击：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kBurstDamage": 5,
+            "kDamagePerSecond": 5
+        }
+    },
+    {
+        "id": 5010,
+        "name": "移动速度",
+        "majorChangePatchVersion": "",
+        "tooltip": "<speed>+2.5%移动速度</speed>",
+        "shortDesc": "+2.5%<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>移动速度</lol-uikit-tooltipped-keyword>",
+        "longDesc": "+2.5%<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>移动速度</lol-uikit-tooltipped-keyword>",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/StatMods/StatModsMovementSpeedIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8127,
+        "name": "疯狂怪医",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathDomination>征服</pathDomination> + <pathPrecision>精准</pathPrecision><br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD><br>+0% 攻速",
+        "shortDesc": "<pathBonus><pathDomination>征服</pathDomination> + <pathPrecision>精准</pathPrecision> 组合加成</pathBonus>",
+        "longDesc": "+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>+0% 攻速",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8140,
+        "name": "恐怖纪念品",
+        "majorChangePatchVersion": "14.1",
+        "tooltip": "每参与<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>次击杀/助攻</lol-uikit-tooltipped-keyword>可收集1个纪念品，最多可收集18个。<br><br>每收集一个，可获得6饰品加速。在没有视野饰品的游戏模式中，每个纪念品转而提供3召唤师技能加速。<br><hr><br>已收集纪念品：@f1@（最大值为18个）",
+        "shortDesc": "每参与<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>次击杀/助攻可收集1个纪念品</lol-uikit-tooltipped-keyword>，最多可收集18个。<br><br>每收集一个，可获得6饰品加速。",
+        "longDesc": "每参与<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>次击杀/助攻</lol-uikit-tooltipped-keyword>可收集1个纪念品，最多可收集18个。<br><br>每收集一个，可获得6饰品加速。在没有视野饰品的游戏模式中，每个纪念品转而提供3召唤师技能加速。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/GrislyMementos/GrislyMementos.png",
+        "endOfGameStatDescs": [
+            "已收集纪念品：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kCooldown": 5,
+            "kUtility": 5
+        }
+    },
+    {
+        "id": 8143,
+        "name": "即刻冲击",
+        "majorChangePatchVersion": "",
+        "tooltip": "使用冲刺、跳跃、闪现、传送或脱离潜行状态后，伤害性普攻和技能对敌方英雄造成额外<trueDamage>@BaseDamage@真实伤害</trueDamage>。<br>必须在4秒内使用<br>冷却时间：10秒<br><br>总计造成伤害：<trueDamage>@f1@</trueDamage>",
+        "shortDesc": "使用冲撞、跳跃、闪现、传送或脱离潜行状态后，伤害性普攻和技能对敌方英雄造成额外真实伤害。",
+        "longDesc": "使用冲撞、跳跃、闪现、传送或脱离潜行状态持续4秒后，伤害性普攻和技能会根据等级对敌方英雄造成额外<trueDamage>20-80真实伤害</trueDamage>。<br><br>冷却时间：10秒",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png",
+        "endOfGameStatDescs": [
+            "额外伤害：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kBurstDamage": 8,
+            "kDamagePerSecond": 2
+        }
+    },
+    {
+        "id": 8345,
+        "name": "干粮快递",
+        "majorChangePatchVersion": "",
+        "tooltip": "干粮快递：每2分钟获得一个活力干粮，直到6分钟。<br><br>干粮会回复20+2%你的最大生命值，根据已损失生命值而提升，最多可提升100%。食用或出售干粮可永久提升30你的最大生命值。 <br><hr><br>已获得干粮：@f1@/@f2@<br>干粮治疗量：@f3@",
+        "shortDesc": "每2分钟免费获得一块干粮，持续至6分钟。食用或出售干粮可永久提升你的最大生命值并回复生命值。",
+        "longDesc": "干粮快递：每2分钟获得一个活力干粮，直到6分钟。<br><br>干粮会回复20+2%你的最大生命值，根据已损失生命值而提升，最多可提升100%。食用或出售干粮可永久提升30你的最大生命值。 ",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png",
+        "endOfGameStatDescs": [
+            "已获得干粮：@eogvar1@",
+            "总计治疗：@eogvar3@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kHealing": 5,
+            "kMana": 10
+        }
+    },
+    {
+        "id": 8444,
+        "name": "回春",
+        "majorChangePatchVersion": "",
+        "tooltip": "受到一名敌方英雄伤害后，于10秒内回复等同于4%失去生命值。<br><hr><br><scaleAD>总治愈量：@f1@</scaleAD>",
+        "shortDesc": "受到敌方英雄伤害后于时间内回复一部分失去生命。",
+        "longDesc": "受到一名敌方英雄伤害后，于10秒内回复等同于4%失去生命值。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/SecondWind/SecondWind.png",
+        "endOfGameStatDescs": [
+            "总治愈量：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kHealing": 10
+        }
+    },
+    {
+        "id": 8205,
+        "name": "咒术师",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathSorcery>巫术</pathSorcery> + <pathPrecision>精准</pathPrecision><br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "<pathBonus><pathSorcery>巫术</pathSorcery> + <pathPrecision>精准</pathPrecision> 组合加成</pathBonus>",
+        "longDesc": "+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>+0% 攻速",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8437,
+        "name": "不灭之握",
+        "majorChangePatchVersion": "",
+        "tooltip": "进入战斗后每过4秒，你对敌方英雄的下一次普攻将附带以下效果：<li>造成<magicDamage>@DamageCalc@额外魔法伤害</magicDamage>。<li>获得<healing>@HealCalc@生命值</healing>的治疗。<li>永久提升你的生命值，近战攻击增加<healing>5</healing>，远程攻击增加<healing>2</healing>。<br><br>已获得最大生命值：<scaleHealth>@f4@</scaleHealth><br>对英雄造成伤害：<scaleHealth>@f1@</scaleHealth><br>总计获得治疗：<scaleHealth>@f2@</scaleHealth><br>使用次数：@f3@",
+        "shortDesc": "进入战斗之后，每过 4 秒你下一次对敌方英雄的普攻将造成额外魔法伤害；治愈你，并永久提升你的生命。 ",
+        "longDesc": "进入战斗后每过4秒，你对敌方英雄的下一次普攻将附带以下效果：<li>造成等同于自身3.5%最大生命值的额外魔法伤害<li>获得等同于自身1.3%最大生命值的治疗<li>使你的生命值永久提升5<br><rules><i>远程英雄：</i>伤害、治疗及永久生命值的获得量的效果为40%。</rules>",
+        "recommendationDescriptor": "以持久战消耗敌人",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+        "endOfGameStatDescs": [
+            "总伤害：@eogvar1@",
+            "总治愈量：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 9923,
+        "name": "刀锋之雹",
+        "majorChangePatchVersion": "8.11",
+        "tooltip": "攻击敌方英雄时（上限为@NumHits@次普攻），获得{{ Item_Melee_Ranged_Split }}%攻速。<br><br>冷却时间：@Cooldown@秒。<br><hr><br>刀锋之雨攻击：@f1@<br>已触发刀锋之雹的攻击占比：@f2@%<br><br><rules>普攻重置效果可提升普攻次数上限1次。<br>允许你暂时突破攻速上限。</rules>",
+        "shortDesc": "在攻击敌方英雄时，于最一开始的 3 次攻击获得大量攻速。",
+        "longDesc": "攻击敌方英雄时（上限为3次普攻），获得160%（远程英雄获得80%）攻速。<br><br>每次攻击间隔不得超过 3秒，否则该效果将终止。<br><br>冷却时间：10秒。<br><br><rules>普攻重置效果可提升普攻次数上限1次。<br>允许你暂时突破攻速上限。</rules>",
+        "recommendationDescriptor": "短暂的快速普攻",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "endOfGameStatDescs": [
+            "普攻造成了额外攻速：@eogvar1@",
+            "已触发刀锋之雹的攻击占比：@eogvar2@%"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8429,
+        "name": "调节",
+        "majorChangePatchVersion": "9.9",
+        "tooltip": "对战开始12分钟后，获得<scaleArmor>@ArmorCalcTooltip@物理防御</scaleArmor>和<scaleMR>@MagicResistCalcTooltip@魔法防御</scaleMR>。",
+        "shortDesc": "12分钟后获得+8物理防御和+8魔法防御，同时将物理防御和魔法防御提升3%。",
+        "longDesc": "12分钟后获得+8物理防御和+8魔法防御，同时将物理防御和魔法防御提升3%。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/Conditioning/Conditioning.png",
+        "endOfGameStatDescs": [
+            "触发时间占游戏总长度百分比：@eogvar1@%",
+            "总额外物理防御：@eogvar2@",
+            "总额外魔法防御：@eogvar3@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kDurability": 10
+        }
+    },
+    {
+        "id": 8124,
+        "name": "掠食者",
+        "majorChangePatchVersion": "",
+        "tooltip": "附魔你的鞋子，给予<font color='#c60300'>掠食者</font>的主动效果。<br><br>获得<speed>移动速度</speed>提升，追击敌方英雄时，会在 1.5 秒内逐渐提升至 <speed>@MaxMSLevelCalc@ 移动速度</speed>。对英雄的普攻或伤害性技能会结束此效果，造成 <scaleLevel>@f3@</scaleLevel><scaleAP>（+@f5@）</scaleAP><scaleAD>（+@f4@）</scaleAD> 额外伤害。<br><br>冷却时间：<scaleLevel>@f7@</scaleLevel> 秒<br><hr><br>对英雄造成伤害：@f1@",
+        "shortDesc": "添加一个主动效果到你的鞋子，其会使你获得大量<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>移动速度</lol-uikit-tooltipped-keyword>，并使你下一次的普攻或技能造成额外<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>适性伤害</lol-uikit-tooltipped-keyword>。",
+        "longDesc": "添加主动效果「<font color='#c60300'>掠食者</font>」到你的鞋子。<br><br>获得移动速度提升，追击敌方英雄时，会在 1 秒内逐渐提升至 25-50% 移动速度。速度提升后，对英雄的普攻或伤害性技能会结束此效果，造成 20-180（+<scaleAD>0.25</scaleAD> 额外物理攻击）（+<scaleAP>0.15</scaleAP> 魔法攻击）额外<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>适性伤害</font></lol-uikit-tooltipped-keyword>。<br><br>冷却时间：120-60 秒",
+        "recommendationDescriptor": "脱战移动",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/Predator/Predator.png",
+        "endOfGameStatDescs": [
+            "对英雄造成伤害合计：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8233,
+        "name": "绝对专注",
+        "majorChangePatchVersion": "",
+        "tooltip": "生命值高于70%时，获得<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>@AdaptiveForceCalc@适性之力</font></lol-uikit-tooltipped-keyword>。<br><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD>",
+        "shortDesc": "生命高于 70% 时获得额外<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>适性伤害</lol-uikit-tooltipped-keyword>。",
+        "longDesc": "血量高于 70% 生命时获得 最高18 物理攻击或 30 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>加成（随等级提升）。<br><br>等级 1 时获得 1.8 物理攻击或 3 魔法攻击。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png",
+        "endOfGameStatDescs": [
+            "发动时间合计：@eogvar1@:@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kBurstDamage": 5,
+            "kDamagePerSecond": 5
+        }
+    },
+    {
+        "id": 8007,
+        "name": "智者",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathPrecision>精准</pathPrecision> + <pathInspiration>启示</pathInspiration><br>+0% 攻速",
+        "shortDesc": "<pathBonus><pathPrecision>精准</pathPrecision> + <pathInspiration>启示</pathInspiration> 组合加成</pathBonus>",
+        "longDesc": "+0% 攻速",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8136,
+        "name": "僵尸守卫",
+        "majorChangePatchVersion": "8.14",
+        "tooltip": "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>参与摧毁（助攻也算）</lol-uikit-tooltipped-keyword>敌方守卫后，在其原有位置上召唤我方僵尸守卫。僵尸守卫会被敌方看到，可持续存在120秒，且不会计入你的守卫上限。<br><br>每召唤一个僵尸守卫，获得1.2 物理攻击或 2 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>加成，最多可叠加10层。生成10个僵尸守卫后，可额外获得10适性之力。<br><hr><br>已获得的属性加成：<scaleAD>+@f2@ 物理攻击</scaleAD><br>已生成的僵尸守卫数量：@f1@",
+        "shortDesc": "参与<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>摧毁（助攻也算）</lol-uikit-tooltipped-keyword>敌方守卫后，在其原有位置上召唤我方僵尸守卫。每生成一个僵尸守卫可永久获得物理攻击或魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>（适性）</lol-uikit-tooltipped-keyword>，完成搜集时还可以获得额外加成。",
+        "longDesc": "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>参与摧毁（助攻也算）</lol-uikit-tooltipped-keyword>敌方守卫后，在其原有位置上召唤我方僵尸守卫。僵尸守卫会被敌方看到，可持续存在120秒，且不会计入你的守卫上限。<br><br>每召唤一个僵尸守卫，获得1.2 物理攻击或 2 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>加成，最多可叠加10层。生成10个僵尸守卫后，可额外获得10适性之力。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/ZombieWard/ZombieWard.png",
+        "endOfGameStatDescs": [
+            "已产生的守卫数：@eogvar1@",
+            "已获得的适性之力：@eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kUtility": 10
+        }
+    },
+    {
+        "id": 8208,
+        "name": "远古先祖",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathSorcery>巫术</pathSorcery> + <pathResolve>意志</pathResolve><br>+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>当前加成：<scaleAD>+@f1@ <scaleAD>物理攻击</scaleAD></scaleAD><br>+0-0 生命（随等级提升）",
+        "shortDesc": "<pathBonus><pathSorcery>巫术</pathSorcery> + <pathResolve>意志</pathResolve> 组合加成</pathBonus>",
+        "longDesc": "+0 物理攻击或 +0 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword><br>+0-0 生命（随等级提升）",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8347,
+        "name": "银河视界",
+        "majorChangePatchVersion": "",
+        "tooltip": "+<attention>18</attention> 召唤师技能疾速 <br>+<attention>10</attention> 道具疾速",
+        "shortDesc": "+<attention>18</attention> 召唤师技能疾速 <br>+<attention>10</attention> 道具疾速",
+        "longDesc": "+<attention>18</attention> 召唤师技能疾速 <br>+<attention>10</attention> 道具疾速",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png",
+        "endOfGameStatDescs": [
+            "--"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kCooldown": 10
+        }
+    },
+    {
+        "id": 8472,
+        "name": "蛹化",
+        "majorChangePatchVersion": "8.6",
+        "tooltip": "以 40 额外生命开始游戏。当你达成 4击杀，将此生命转换为 6 物理攻击或 10 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>加成。<br><hr><br>击杀： @f1@/@f2@<br>已给予血量： @f3@<br>已给予<scaleAD>物理攻击</scaleAD>数值： @f4@",
+        "shortDesc": "以 40 额外生命开始游戏。当你达成 4击杀，将此生命转换为 6 物理攻击或 10 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>加成。",
+        "longDesc": "以 40 额外生命开始游戏。当你达成 4击杀，将此生命转换为 6 物理攻击或 10 魔法攻击<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>（适性）</font></lol-uikit-tooltipped-keyword>加成。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/Chrysalis/Chrysalis.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8316,
+        "name": "万事通",
+        "majorChangePatchVersion": "9.6",
+        "tooltip": "每从道具获得一个不同属性，获得一个万事通叠层。每层叠加为你提供<speed>1技能加速</speed>。<br><br>获得10或25个额外5层和10层<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>适性之力</lol-uikit-tooltipped-keyword>。<br><hr><br>不同属性：@f1@<br>额外适性之力：+@f2@",
+        "shortDesc": "每从道具获得一个不同属性，获得一个万事通叠层。每层叠加为你提供<speed>1技能加速</speed>。<br><br>获得额外5层和10层<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>适性之力</lol-uikit-tooltipped-keyword>。",
+        "longDesc": "每从道具获得一个不同属性，获得一个万事通叠层。每层叠加为你提供<speed>1技能加速</speed>。<br><br>获得10或25个额外5层和10层<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>适性之力</lol-uikit-tooltipped-keyword>。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png",
+        "endOfGameStatDescs": [
+            "已获得额外属性：@eogvar1@ - @eogvar2@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kUtility": 10
+        }
+    },
+    {
+        "id": 8229,
+        "name": "奥术彗星",
+        "majorChangePatchVersion": "",
+        "tooltip": "使用技能对一名敌方英雄造成伤害时，会在其位置处召唤一颗彗星，如果奥术彗星正在冷却，则会缩减其剩余冷却时间。<br><br>伤害：@DamageCalc@<br>冷却时间：@CooldownCalc@秒<br><rules><br>冷却时间减免：<br>单体伤害：20%。<br>范围伤害：10%。<br>持续伤害：5%。<br></rules><br>你的彗星命中率为@f3@%，对英雄总计造成@f1@伤害。",
+        "shortDesc": "使用技能伤害一名敌方英雄时召唤一颗彗星至他们的位置。",
+        "longDesc": "使用技能伤害一名敌方英雄时召唤一颗彗星到他们的位置。奥术彗星进入冷却后，使用技能伤害敌方英雄将缩减剩余冷却时间。<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>适性伤害</font></lol-uikit-tooltipped-keyword>：30 - 130，随等级提升（<scaleAP>+0.05 魔法攻击</scaleAP>、<scaleAD>+0.1 额外物理攻击</scaleAD>）<br>冷却时间：20 - 8 秒<br><rules><br>冷却时间减免：<br>单体伤害：20%。<br>范围伤害：10%。<br>持续伤害：5%。<br></rules>",
+        "recommendationDescriptor": "技能伤害",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "endOfGameStatDescs": [
+            "已造成伤害合计：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8344,
+        "name": "优雅决斗家",
+        "majorChangePatchVersion": "",
+        "tooltip": "<pathInspiration>启示</pathInspiration> + <pathPrecision>精准</pathPrecision><br>+0% 攻速",
+        "shortDesc": "<pathBonus><pathInspiration>启示</pathInspiration> + <pathPrecision>精准</pathPrecision> 组合加成</pathBonus>",
+        "longDesc": "+0% 攻速",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/RunesIcon.png",
+        "endOfGameStatDescs": [],
+        "recommendationDescriptorAttributes": {}
+    },
+    {
+        "id": 8321,
+        "name": "返现",
+        "majorChangePatchVersion": "",
+        "tooltip": "当你购买传说道具，获得8%金钱返还。",
+        "shortDesc": "当你购买传说道具，获得部分金钱返还。",
+        "longDesc": "当你购买传说道具，获得8%金钱返还。",
+        "recommendationDescriptor": "",
+        "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/CashBack/CashBack2.png",
+        "endOfGameStatDescs": [
+            "获得的金钱：@eogvar1@"
+        ],
+        "recommendationDescriptorAttributes": {
+            "kGold": 15
+        }
+    }
+]

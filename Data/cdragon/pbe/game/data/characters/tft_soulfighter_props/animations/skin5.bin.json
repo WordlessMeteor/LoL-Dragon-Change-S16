@@ -1,0 +1,133 @@
+{
+    "Characters/TFT_SoulFighter_Props/Animations/Skin5": {
+        "mCascadeBlendValue": 0.0,
+        "mClipDataMap": {
+            "Idle_Start": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT_SoulFighter_Props/Skins/Skin05/Animations/TFT_SoulFighter_Props_Skin05_LevelUp1_idle.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "LevelUp7": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{808f31d5}": {
+                        "mEndFrame": 180.0,
+                        "mShowSubmeshList": [
+                            "{2782eac1}",
+                            "CrowdA",
+                            "BLD",
+                            "Roof",
+                            "StandA",
+                            "StandsA",
+                            "BillBoard",
+                            "Sky_A",
+                            "Tube"
+                        ],
+                        "mHideSubmeshList": [
+                            "Cloud_A",
+                            "Sky_B",
+                            "stone"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "Vfx": {
+                        "mEffectKey": "TFT_Set9_SoulFighter_Inlv7_VFX",
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT_SoulFighter_Props/Skins/Skin05/Animations/TFT_SoulFighter_Props_Skin05_LevelUp7_in.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "EndFrame": 180.0,
+                "__type": "AtomicClipData"
+            },
+            "LevelUp7_Loop": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Idle2": {
+                        "mEffectKey": "TFT_Set9_SoulFighter_Idle2_VFX",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Sky_B",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "HideMesh": {
+                        "mHideSubmeshList": [
+                            "StandA",
+                            "Roof",
+                            "StandsA",
+                            "BLD"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT_SoulFighter_Props/Skins/Skin05/Animations/TFT_SoulFighter_Props_Skin05_LevelUp7_Loop.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{f47c8e13}": {
+                "mClipNameList": [
+                    "LevelUp7"
+                ],
+                "mEventDataMap": {
+                    "Vfx": {
+                        "mEffectKey": "TFT_Set9_SoulFighter_Inlv7_VFX",
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "__type": "SequencerClipData"
+            },
+            "Idle": {
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Idle_Start",
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "LevelUp7_Loop",
+                        "mValue": 7.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "TftArenaOwnerLevelParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
+            }
+        },
+        "mTrackDataMap": {
+            "Default": {
+                "__type": "TrackData"
+            }
+        },
+        "__type": "AnimationGraphData"
+    },
+    "__linked": []
+}

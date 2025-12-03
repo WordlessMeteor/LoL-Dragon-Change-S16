@@ -1,0 +1,266 @@
+{
+    "Characters/SwainDemonForm/Skins/Skin0": {
+        "championSkinName": "SwainDemonForm",
+        "metaDataTags": "faction:noxus,gender:male,race:human",
+        "loadscreen": {
+            "image": "ASSETS/Characters/Swain/Skins/Base/SwainLoadScreen.tex",
+            "__type": "CensoredImage"
+        },
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Swain"
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/SwainDemonForm/Animations/Skin0",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/SwainDemonForm/Skins/Base/SwainDemonForm.skl",
+            "simpleSkin": "ASSETS/Characters/SwainDemonForm/Skins/Base/SwainDemonForm.skn",
+            "texture": "ASSETS/Characters/SwainDemonForm/Skins/Base/SwainDemonForm_base_TX_CM.tex",
+            "selfIllumination": 0.699999988079071,
+            "overrideBoundingBox": [
+                150.0,
+                150.0,
+                150.0
+            ],
+            "Material": "Characters/SwainDemonForm/Skins/Skin0/Materials/bodyFresnel",
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "materialOverride": [
+                {
+                    "Material": "Characters/SwainDemonForm/Skins/Skin0/Materials/demon_arm",
+                    "submesh": "Swain_Arm_Mat",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "Characters/SwainDemonForm/Skins/Skin0/Materials/wings_fresnel_inst",
+                    "submesh": "Swain_Wings_Mat",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "mContextualActionData": "Characters/Swain/CAC/Swain_Base",
+        "iconCircle": "ASSETS/Characters/Swain/HUD/Swain_Circle_0.tex",
+        "iconSquare": "ASSETS/Characters/Swain/HUD/Swain_Square_0.tex",
+        "emoteBuffbone": "BUFFBONE_GLB_GROUND_LOC",
+        "healthBarData": {
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/Swain/Skins/Skin0/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/SwainDemonForm/Skins/Skin0/Materials/bodyFresnel": {
+        "name": "Characters/SwainDemonForm/Skins/Skin0/Materials/bodyFresnel",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Swain/Skins/Base/Particles/Swain_Base_DemonForm_01.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Fresnel_Color",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelColor_Size",
+                "value": [
+                    1.160927414894104,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelColor_Bias",
+                "value": [
+                    0.35499998927116394,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    16.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Bias",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Diffuse_Alpha_Override",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    0.675000011920929,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Noise_Scale",
+                "value": [
+                    10.0,
+                    2.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Noise_ScrollSpeed",
+                "value": [
+                    0.05000000074505806,
+                    -0.30000001192092896,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Override",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "INVERT_FRESNEL",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ADDITIONAL_MASKING",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/FresnelAlpha_Scrolling",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "FresnelColor_Bias",
+                    "driver": {
+                        "mDriver": {
+                            "mScriptName": "SwainRHealCounter",
+                            "__type": "BuffCounterDynamicMaterialFloatDriver"
+                        },
+                        "mMaxValue": 100.0,
+                        "mOutputMinValue": 0.800000011920929,
+                        "mOutputMaxValue": 0.25,
+                        "__type": "RemapFloatMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Bloom_Intensity",
+                    "driver": {
+                        "mDriver": {
+                            "mScriptName": "SwainRHealCounter",
+                            "__type": "BuffCounterDynamicMaterialFloatDriver"
+                        },
+                        "mMaxValue": 100.0,
+                        "mOutputMinValue": 0.019999999552965164,
+                        "mOutputMaxValue": 0.10000000149011612,
+                        "__type": "RemapFloatMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": [
+        "DATA/Characters/SwainDemonForm/SwainDemonForm.bin",
+        "DATA/Characters/SwainDemonForm/Animations/Skin0.bin",
+        "DATA/SwainDemonForm_Skins_Skin0_Skins_Skin33.bin"
+    ]
+}
