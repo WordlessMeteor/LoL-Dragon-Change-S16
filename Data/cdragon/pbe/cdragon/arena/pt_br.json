@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Cérbero",
             "rarity": 2,
-            "tooltip": "Recebe as Runas Essenciais <spellName>Chuva de Lâminas</spellName> e <spellName>Pressione o Ataque</spellName>."
+            "tooltip": "Recebe as Runas Essenciais <spellName>Chuva de Lâminas</spellName> e <spellName>Pressione o Ataque</spellName>.<br><br><spellName>Chuva de Lâminas</spellName> – Seus 3 primeiros ataques recebem um aumento gigantesco na <attackSpeed>Velocidade de Ataque</attackSpeed>.<br><spellName>Pressione o Ataque</spellName> – Acertar 3 ataques contra o mesmo inimigo causa dano explosivo e aumenta seu dano até você sair do combate."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Dança Demoníaca",
             "rarity": 1,
-            "tooltip": "Recebe as Runas Essenciais <spellName>Agilidade nos Pés</spellName> e <spellName>Aperto dos Mortos-Vivos</spellName>.<br><br>Cura realizada nesta rodada: @f1@<br>Cura total realizada: @f2@<br>Vida máxima recebida: @f3@"
+            "tooltip": "Recebe as Runas Essenciais <spellName>Agilidade nos Pés</spellName> e <spellName>Aperto dos Mortos-Vivos</spellName>.<br><br>Cura realizada nesta rodada: @f1@<br>Total de cura realizada: @f2@<br>Vida máxima recebida: @f3@<br><br><spellName>Agilidade nos Pés</spellName> – Mover-se e atacar gera cargas de <keywordMajor>Energizar</keywordMajor>. Com 100, seu próximo ataque causa dano adicional, cura você e concede uma explosão de <speed>Velocidade de Movimento</speed>.<br><spellName>Aperto dos Mortos-Vivos</spellName> – Permanecer em combate por 3s com um inimigo o marca. Ataques consomem a marca para causar dano adicional, curar você e conceder <scaleHealth>Vida máxima</scaleHealth> permanente."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Sinfonia da Guerra",
             "rarity": 2,
-            "tooltip": "Recebe as Runas Essenciais <spellName>Ritmo Fatal</spellName> e <spellName>Conquistador</spellName>."
+            "tooltip": "Recebe as Runas Essenciais <spellName>Ritmo Fatal</spellName> e <spellName>Conquistador</spellName>.<br><br><spellName>Ritmo Fatal</spellName> – Atacar Campeões concede <attackSpeed>Velocidade de Ataque</attackSpeed>, acumulando até 6 vezes. Com 6 acúmulos, seus ataques disparam um projétil que causa dano adicional.<br><spellName>Conquistador</spellName> – Acertar ataques e habilidades em Campeões concede a você <magicDamage>Força </magicDamage><physicalDamage>Adaptativa</physicalDamage>, acumulando até 12 vezes. Com 12 acúmulos, cura uma porcentagem do dano que você causar a Campeões."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Insuperável",
             "rarity": 1,
-            "tooltip": "Recebe as Runas Essenciais de <spellName>Aprimoramento Glacial</spellName> e <spellName>Pós-choque</spellName>."
+            "tooltip": "Recebe as Runas Essenciais <spellName>Aprimoramento Glacial</spellName> e <spellName>Pós-choque</spellName>.<br><br><spellName>Pós-choque</spellName> – <status>Imobilizar</status> Campeões concede <scaleArmor>Armadura</scaleArmor> e <scaleMR>Resistência Mágica</scaleMR> por 2,5s. Depois, você explode, causando dano a inimigos próximos com base na sua <scaleHealth>Vida máxima</scaleHealth>.<br><spellName>Aprimoramento Glacial</spellName> – <status>Imobilizar</status> Campeões cria gelo sob eles, causando <status>Lentidão</status> aos inimigos no interior e reduzindo o dano que causam."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Tempo Paralisado</spellName>: todos os Campeões entram em <status>Estase</status> por @StasisDuration@s (ou @SelfDuration@s para você). Durante esse período, você restaura <healing>@HealAmountPercent*100@% da Vida perdida</healing>."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Requisito: comprar @AnvilsReqToComplete@ Bigornas de Item.<br><br>Recompensa: todos os seus itens se tornam <keywordMajor>Magistrais</keywordMajor>, o que aumenta os atributos deles em @ItemPercentAmp*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Missão: Rito do Deus da Forja",
+            "rarity": 2,
+            "tooltip": "Requisito: comprar @AnvilsReqToComplete@ Bigornas de Item.<br><br>Recompensa: todos os seus itens se tornam <keywordMajor>Magistrais</keywordMajor>, o que aumenta os atributos deles em @ItemPercentAmp*100@%."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "Bumerangue OK",
             "rarity": 1,
             "tooltip": "<keywordMajor>Conjura automaticamente</keywordMajor> um bumerangue arremessado em um inimigo próximo a cada @BaseCooldown@s, causando @Damage@ de Dano Adaptativo a inimigos atingidos.<br><br>Dano causado nesta rodada: @f1@<br>Total de dano causado: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Ao causar dano com um ataque, sua próxima habilidade causa @AbilityBoost*100@% de dano adicional.<br><br>Ao causar dano com uma habilidade, seu próximo ataque causa @AttackBoost*100@% de dano adicional.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Híbrido",
+            "rarity": 1,
+            "tooltip": "Ao causar dano com um ataque, sua próxima habilidade causa @AbilityBoost*100@% de dano adicional.<br><br>Ao causar dano com uma habilidade, seu próximo ataque causa @AttackBoost*100@% de dano adicional."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Começa cada rodada com @StartingBees@ Abelha(s). Recebe Abelhas ao colher flores. Atacar ou acertar habilidades em um alvo a até @BeeRange@ faz uma Abelha atacar ao longo de @DebuffDuration@s.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Mente Coletiva",
+            "rarity": 2,
+            "tooltip": "Começa cada rodada com @StartingBees@ Abelha(s). Recebe Abelhas ao colher flores. Atacar ou acertar habilidades em um alvo a até @BeeRange@ faz uma Abelha atacar ao longo de @DebuffDuration@s.<br><br>Dano causado nesta rodada: @f1@<br>Total de dano causado: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Não é mais possível trocar.<br><br>Escolha um Aprimoramento Ouro; se ao menos @PrismaticThreshold@ das trocas forem consumidas, escolha um Aprimoramento Prismático no lugar.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "Suas invocações recebem @MinionSizeIncrease*100@% de tamanho, Vida e dano aumentado."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Adiciona Multiferramenta ao seu inventário. Durante cada Fase de Compra, escolha 1 entre 5 itens aleatórios. Multiferramenta se transformará nele durante a próxima rodada de combate.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Multiferramenta",
+            "rarity": 1,
+            "tooltip": "Adiciona Multiferramenta ao seu inventário. Durante cada Fase de Compra, escolha 1 entre 5 itens aleatórios. Multiferramenta se transformará nele durante a próxima rodada de combate.<br><br>Na rodada @PrismaticRound@, Multiferramenta pode gerar Itens Prismáticos."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "Do Início ao Fim",
             "rarity": 1,
-            "tooltip": "Recebe as Runas Essenciais <spellName>Primeiro Ataque</spellName> e <spellName>Colheita Sombria</spellName>.<br><br>Dano causado nesta rodada: @f1@<br>Total de dano causado: @f2@<br>Total de ouro obtido: @f3@"
+            "tooltip": "Recebe as Runas Essenciais <spellName>Primeiro Ataque</spellName> e <spellName>Colheita Sombria</spellName>.<br><br>Dano causado nesta rodada: @f1@<br>Total de dano causado: @f2@<br>Total de ouro recebido: @f3@<br><br><spellName>Primeiro Ataque</spellName> – Causar dano a um Campeão o faz sofrer mais dano por 3s. No fim, recebe ouro com base no dano adicional causado.<br><spellName>Colheita Sombria</spellName> – Causar dano a um inimigo com menos de <scaleHealth>50% da Vida</scaleHealth> causa dano adicional e aumenta o dano adicional permanentemente."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Uma vez por combate, quando estiver prestes a morrer, você se transforma em fogo-fátuo, fica com <scaleHealth>@HealthLock*100@% da Vida</scaleHealth> e vai para um ponto aleatório da arena.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Sala do Pânico",
+            "rarity": 0,
+            "tooltip": "Uma vez por combate, quando estiver prestes a morrer, você se transforma em fogo-fátuo, fica com <scaleHealth>@HealthLock*100@% da Vida</scaleHealth> e vai para um ponto aleatório da arena."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "Usar uma Habilidade concede <scaleBonus>@HastePerCast@ de Aceleração de Habilidade</scaleBonus>, acumulando infinitamente. Isso é redefinido a cada rodada."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "<healing>Curar</healing> ou conceder <Shield>Escudo</Shield> aumenta seu dano de habilidade em @SpellDamagePerStack*100@%, acumulando infinitamente na rodada.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Fúria Íntegra",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Dano de Habilidade adicional atual: @f1@%<br>Dano adicional nesta rodada: @f2@<br>Total de dano adicional: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Laser Orbital",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Dano causado nesta rodada: @f1@<br>Total de dano causado: @f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "Recebe <keyword>Energizado</keyword> duas vezes mais rápido. Ativar <keyword>Energizado</keyword> dispara um <keywordMajor>Projétil Mágico</keywordMajor>, causando até <trueDamage>@MaxHealthDamagePerMissile*100@% da Vida máxima como Dano Verdadeiro</trueDamage> com base na distância percorrida.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Enérgico",
+            "rarity": 0,
+            "tooltip": "Recebe <keyword>Energizado</keyword> duas vezes mais rápido. Ativar <keyword>Energizado</keyword> dispara um <keywordMajor>Projétil Mágico</keywordMajor>, causando até <trueDamage>@MaxHealthDamagePerMissile*100@% da Vida máxima como Dano Verdadeiro</trueDamage> com base na distância percorrida.<br><br>Dano causado com Projétil Mágico nesta rodada: @f1@<br>Total de dano causado com Projétil Mágico: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Conjurador de Runas Essenciais",
             "rarity": 1,
-            "tooltip": "Recebe as Runas Essenciais <spellName>Invocar Aery</spellName> e <spellName>Cometa Arcano</spellName>.<br><br>Total de dano causado: @f1@<br>Total de Escudos gerados: @f2@"
+            "tooltip": "Recebe as Runas Essenciais <spellName>Invocar Aery</spellName> e <spellName>Cometa Arcano</spellName>.<br><br>Total de dano causado: @f1@<br>Total de Escudos gerados: @f2@<br><br><spellName>Invocar Aery</spellName> – Aery salta nos inimigos a quem você causa dano ou em aliados a quem você concede <healing>Cura</healing>, <shield>Escudo</shield> ou Fortalecimento, causando dano a inimigos ou protegendo aliados com <shield>Escudo</shield>.<br><spellName>Cometa Arcano</spellName> – Causar dano de habilidade lança um cometa, causando dano a todos os inimigos em uma área."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Ao usar Flash, gera uma explosão ao seu redor que causa <magicDamage>@ExplosiveDamage@ de Dano Mágico</magicDamage> e @SlowAmount*100@% de <status>Lentidão</status> por @SlowDuration@s. Além disso, o Flash é redefinido a cada rodada.<br><br>Dano causado nesta rodada: @f1@<br>Total de dano causado: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "Recebe @CritChanceBonus*100@% de Chance de Acerto Crítico e @CritDamageBonus*100@% de Dano de Acerto Crítico. O limite máximo da sua Chance de Acerto Crítico é de @CritChanceCeiling*100@%.<br><br>Converte Chance de Acerto Crítico acima de @CritChanceCeiling*100@% em Dano de Acerto Crítico.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Mirar na Cabeça",
+            "rarity": 1,
+            "tooltip": "Recebe @CritChanceBonus*100@% de Chance de Acerto Crítico e @CritDamageBonus*100@% de Dano de Acerto Crítico. O limite máximo da sua Chance de Acerto Crítico é de @CritChanceCeiling*100@%.<br><br>Converte Chance de Acerto Crítico acima de @CritChanceCeiling*100@% em Dano de Acerto Crítico."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Mestre dos Combos",
             "rarity": 1,
-            "tooltip": "Recebe as Runas Essenciais <spellName>Eletrocutar</spellName> e <spellName>Ímpeto Gradual</spellName>.<br><br>Dano de Eletrocutar nesta rodada: @f1@<br>Total de dano de Eletrocutar: @f2@"
+            "tooltip": "Recebe as Runas Essenciais <spellName>Eletrocutar</spellName> e <spellName>Ímpeto Gradual</spellName>.<br><br>Dano de Eletrocutar nesta rodada: @f1@<br>Dano total de Eletrocutar: @f2@<br><br><spellName>Eletrocutar</spellName> – Acertar 3 ataques ou habilidades separados em 3s causa dano explosivo.<br><spellName>Ímpeto Gradual</spellName> – Acertar 3 ataques ou habilidades separados em 4s concede a você <speed>Velocidade de Movimento</speed> e Resistência a Lentidão por alguns segundos."
         },
         {
             "apiName": "DarkBlessing",

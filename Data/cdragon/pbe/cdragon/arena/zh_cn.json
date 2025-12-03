@@ -74,7 +74,7 @@
             "id": 323,
             "name": "地狱三头犬",
             "rarity": 2,
-            "tooltip": "获得<spellName>丛刃</spellName>和<spellName>强攻</spellName>基石符文。"
+            "tooltip": "获得<spellName>丛刃</spellName>和<spellName>强攻</spellName>基石符文。<br><br><spellName>丛刃</spellName> - 你的最初3次攻击获得巨幅提升过的<attackSpeed>攻击速度</attackSpeed>。<br><spellName>强攻</spellName> - 对相同敌人命中3次攻击后，会造成爆发性的伤害并提升你的伤害，直到你离开战斗。"
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "魔鬼之舞",
             "rarity": 1,
-            "tooltip": "获得<spellName>迅捷步法</spellName>和<spellName>不灭之握</spellName>基石符文。<br><br>这个回合已造成的治疗效果：@f1@<br>已造成的治疗效果总和：@f2@<br>已获得的最大生命值：@f3@"
+            "tooltip": "获得<spellName>迅捷步法</spellName>和<spellName>不灭之握</spellName>基石符文。<br><br>这个回合已造成的治疗效果：@f1@<br>已造成治疗效果的总和：@f2@<br>已获得的最大生命值：@f3@<br><br><spellName>迅捷步法</spellName> - 移动和攻击会生成<keywordMajor>盈能</keywordMajor>充能数。在100时，你的下一次攻击造成额外伤害、治疗你、并为你提供爆发性的<speed>移动速度</speed>。<br><spellName>不灭之握</spellName> - 在处于与一个敌人的战斗状态达3秒时，会将其标记。攻击会消耗该标记，以造成额外伤害、治疗你并提供永久的<scaleHealth>最大生命值</scaleHealth>。"
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "战争交响乐",
             "rarity": 2,
-            "tooltip": "获得<spellName>致命节奏</spellName>和<spellName>征服者</spellName>基石符文。"
+            "tooltip": "获得<spellName>致命节奏</spellName>和<spellName>征服者</spellName>基石符文。<br><br><spellName>致命节奏</spellName> - 攻击英雄提供<attackSpeed>攻击速度</attackSpeed>，至多叠加6层。在6层时，你的攻击发射造成额外伤害的一个弩箭。<br><spellName>征服者</spellName> - 对英雄的攻击和技能为你提供<physicalDamage>适应</physicalDamage><magicDamage>之力</magicDamage>，至多叠加12层。在12层时，将你的一部分对敌人的伤害转化为等额的治疗效果。"
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "不动如山",
             "rarity": 1,
-            "tooltip": "获<spellName>余震</spellName>和<spellName>冰川增幅</spellName>基石符文。"
+            "tooltip": "获得<spellName>余震</spellName>和<spellName>冰川增幅</spellName>基石符文。<br><br><spellName>余震</spellName> - <status>定身</status>敌方英雄会为你提供持续2.5秒的<scaleArmor>护甲</scaleArmor>和<scaleMR>魔抗</scaleMR>，随后会爆炸，对附近敌人造成基于你<scaleHealth>最大生命值</scaleHealth>的伤害。<br><spellName>冰川增幅</spellName> - <status>定身</status>敌方英雄会在他们下方生成冰面，<status>减速</status>其中的敌人并降低他们的伤害。"
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>时间停止</spellName>：所有附近的英雄都被置入持续@StasisDuration@秒的<status>凝滞</status>状态，对你则持续@SelfDuration@秒。在此效果期间，你回复<healing>@HealAmountPercent*100@%已损失生命值</healing>。"
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "需求：购买@AnvilsReqToComplete@个装备锻造器。<br><br>奖励：你的所有装备升级为<keywordMajor>杰作装备</keywordMajor>，提高其@ItemPercentAmp*100@%属性。",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "任务：熔铸之神的仪式",
+            "rarity": 2,
+            "tooltip": "需求：购买@AnvilsReqToComplete@个装备锻造器。<br><br>奖励：你的所有装备升级为<keywordMajor>杰作装备</keywordMajor>，提高其@ItemPercentAmp*100@%属性。"
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "回力OK镖",
             "rarity": 1,
             "tooltip": "每@BaseCooldown@秒朝着一个附近的敌人<keywordMajor>自动施放</keywordMajor>投掷一个回力镖，对命中的敌人们造成@Damage@自适应伤害。<br><br>这个回合已造成的伤害：@f1@<br>已造成伤害的总和：@f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "当你用一次攻击造成伤害时，你的下一个技能造成的伤害提升@AbilityBoost*100@%。<br><br>当你用一个技能造成伤害时，你的下一次攻击造成的伤害提升@AttackBoost*100@%。",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "双管齐下",
+            "rarity": 1,
+            "tooltip": "当你用一次攻击造成伤害时，你的下一个技能造成的伤害提升@AbilityBoost*100@%。<br><br>当你用一个技能造成伤害时，你的下一次攻击造成的伤害提升@AttackBoost*100@%。"
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "每回合开始时有@StartingBees@只【小蜜蜂】。通过收集花朵来获得【小蜜蜂】。攻击或技能在命中一个@BeeRange@码内的目标时将派出一只【小蜜蜂】去进行持续@DebuffDuration@秒的攻击。",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "蜂巢思维",
+            "rarity": 2,
+            "tooltip": "每回合开始时有@StartingBees@只【小蜜蜂】。通过收集花朵来获得【小蜜蜂】。攻击或技能在命中一个@BeeRange@码内的目标时将派出一只【小蜜蜂】去进行持续@DebuffDuration@秒的攻击。<br><br>这个回合已造成的伤害：@f1@<br>已造成伤害的总和：@f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "你不再能够刷新。<br><br>选择一个黄金阶强化符文，如果消耗了至少@PrismaticThreshold@个刷新次数，则强化此效果来选择一个棱彩阶强化符文作为替代。",
+            "desc": "即刻消耗掉你剩余的刷新次数，你不再能够刷新。<br><br>选择一个黄金阶强化符文，如果消耗了至少@PrismaticThreshold@个刷新次数，则强化此效果来选择一个棱彩阶强化符文作为替代。",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "你的召唤物获得@MinionSizeIncrease*100@%体型提升、生命值和伤害。"
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "将【多功能工具】加入你的装备栏。在每个购物环节期间，从5个随机装备中选择1件，【多功能工具】会在下个对战回合变为那件装备。",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "多功能工具",
+            "rarity": 1,
+            "tooltip": "将【多功能工具】加入你的装备栏。在每个购物环节期间，从5个随机装备中选择1件，【多功能工具】会在下个对战回合变为那件装备。<br><br>在@PrismaticRound@回合，【多功能工具】可随出棱彩装备。"
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "有始有终",
             "rarity": 1,
-            "tooltip": "获得<spellName>先攻</spellName>和<spellName>黑暗收割</spellName>基石符文。<br><br>这个回合已造成的伤害：@f1@<br>已造成伤害的总和：@f2@<br>已获得的金币总和：@f3@"
+            "tooltip": "获得<spellName>先攻</spellName>和<spellName>黑暗收割</spellName>基石符文。<br><br>这个回合已造成的伤害：@f1@<br>已造成伤害的总和：@f2@<br>已获得金币的总和：@f3@<br><br><spellName>先攻</spellName> - 伤害一个英雄时会使其在3秒内受到的伤害获得提升。在结束时，获得基于你已造成额外伤害值的金币。<br><spellName>黑暗收割</spellName> - 伤害一个低于<scaleHealth>50%生命值</scaleHealth>的敌人时会造成额外伤害然后永久提升该额外伤害。"
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "每场战斗仅触发一次，当你即将阵亡时，转而化为一个精魂，将你的生命值设置为<scaleHealth>@HealthLock*100@%</scaleHealth>，并传送到竞技场内的一个随机地点。",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "避难所",
+            "rarity": 0,
+            "tooltip": "每场战斗仅触发一次，当你即将阵亡时，转而化为一个精魂，将你的生命值设置为<scaleHealth>@HealthLock*100@%</scaleHealth>，并传送到竞技场内的一个随机地点。"
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "使用一个技能时提供<scaleBonus>@HastePerCast@技能急速</scaleBonus>，可无限叠加，这个效果会在每回合重置。"
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "<healing>治疗</healing>或<Shield>护盾</Shield>会提高你@SpellDamagePerStack*100@%技能伤害，回合内可无限叠加层数。",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "正义之怒",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>当前技能伤害加成：@f1@%<br>本回合造成的额外伤害：@f2@<br>造成额外伤害的总和：@f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "轨道镭射",
             "rarity": 2,
             "tooltip": " {{Cherry_OrbitalLaser_Summary}}<br><br>这个回合已造成的伤害：@f1@<br>已造成伤害的总和：@f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "以两倍速度获得<keyword>盈能</keyword>。触发<keyword>盈能</keyword>时会发射一个<keywordMajor>魔法飞弹</keywordMajor>，基于飞行距离至多造成<trueDamage>@MaxHealthDamagePerMissile*100@%最大生命值的真实伤害</trueDamage>。",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "能量充沛",
+            "rarity": 0,
+            "tooltip": "以两倍速度获得<keyword>盈能</keyword>。触发<keyword>盈能</keyword>时会发射一个<keywordMajor>魔法飞弹</keywordMajor>，基于飞行距离至多造成<trueDamage>@MaxHealthDamagePerMissile*100@%最大生命值的真实伤害</trueDamage>。<br><br>这个回合已造成的【魔法飞弹】伤害：@f1@<br>已造成【魔法飞弹】伤害的总和：@f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "基石法师",
             "rarity": 1,
-            "tooltip": "获得<spellName>召唤：艾黎</spellName>和<spellName>奥术彗星</spellName>基石符文。<br><br>已造成的伤害总和：@f1@<br>已生成的护盾值总和：@f2@"
+            "tooltip": "获得<spellName>召唤：艾黎</spellName>和<spellName>奥术彗星</spellName>基石符文。<br><br>已造成伤害的总和：@f1@<br>已提供护盾值的总和：@f2@<br><br><spellName>召唤：艾黎</spellName> - 艾黎会跳向受到你伤害的敌人或受到你<healing>治疗</healing>、<shield>护盾</shield>或增益的友军，对敌人造成伤害或为友军提供<shield>护盾</shield>。<br><spellName>奥术彗星</spellName> - 用技能造成伤害会发射一颗彗星，对范围内的所有敌人造成伤害。"
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "你在【闪现】时会在你周围引发爆炸，造成<magicDamage>@ExplosiveDamage@魔法伤害</magicDamage>和持续@SlowDuration@秒的@SlowAmount*100@%<status>减速</status>。此外，【闪现】每回合都会重置。<br><br>这个回合已造成的伤害：@f1@<br>已造成伤害的总和：@f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "获得@CritChanceBonus*100@%暴击几率和@CritDamageBonus*100@%暴击伤害。你的暴击几率封顶值为@CritChanceCeiling*100@%。<br><br>将@CritChanceCeiling*100@%之上的暴击几率转化为暴击伤害。",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "瞄准脑袋",
+            "rarity": 1,
+            "tooltip": "获得@CritChanceBonus*100@%暴击几率和@CritDamageBonus*100@%暴击伤害。你的暴击几率封顶值为@CritChanceCeiling*100@%。<br><br>将@CritChanceCeiling*100@%之上的暴击几率转化为暴击伤害。"
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "连招大师",
             "rarity": 1,
-            "tooltip": "获得<spellName>电刑</spellName>和<spellName>相位猛冲</spellName>基石符文。<br><br>这个回合的【电刑】伤害：@f1@<br>【电刑】伤害总和：@f2@"
+            "tooltip": "获得<spellName>电刑</spellName>和<spellName>相位猛冲</spellName>基石符文。<br><br>这回合的【电刑】伤害：@f1@<br>【电刑】伤害总和：@f2@<br><br><spellName>电刑</spellName> - 3秒内命中3个单独的攻击或技能，会造成爆发性的伤害。<br><spellName>相位猛冲</spellName> - 4秒内命中3个单独的攻击或技能，会为你提供持续若干秒的<speed>移动速度</speed>和减速抗性。"
         },
         {
             "apiName": "DarkBlessing",

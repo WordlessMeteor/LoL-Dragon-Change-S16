@@ -1468,7 +1468,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Caitlyn sets a trap that, when sprung, reveals and immobilizes the enemy champion for 1.5 seconds, granting Caitlyn an empowered Headshot.",
-            "dynamicDescription": "Caitlyn sets a trap that <status>Roots</status> the first champion that steps on it for @Effect6Amount@ seconds and granting <keywordStealth>True Sight</keywordStealth> of them for 3 seconds. Traps last for @Effect3Amount@ seconds, and @Effect5Amount@ traps may be active at once. This Ability has @Effect5Amount@ charges (@AmmoRechargeTime@ second refresh).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn sets a trap that <status>Roots</status> the first champion that steps on it for @RootDuration@ seconds and granting <keywordStealth>True Sight</keywordStealth> of them for 3 seconds. Traps last for @TrapDuration@ seconds, and @MaximumTraps@ traps may be active at once. This Ability has @MaximumCharges@ charges (@AmmoRechargeTime@ second refresh).<br><br>Targets rooted by this Ability take an additional <physicalDamage>@HeadshotBonusDamage@ physical damage</physicalDamage> from <keywordMajor>Headshot</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1494,7 +1494,7 @@
                 0.5
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1508,49 +1508,49 @@
                     2.0
                 ],
                 "Effect2Amount": [
-                    35.0,
-                    35.0,
-                    80.0,
-                    125.0,
-                    170.0,
-                    215.0,
-                    215.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    30.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    50.0,
-                    55.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     30.0,
@@ -1768,7 +1768,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Caitlyn takes time to line up the perfect shot, dealing massive damage to a single target at a huge range. Enemy champions can intercept the bullet for their ally.",
-            "dynamicDescription": "Caitlyn takes a moment to channel and line up the perfect shot, then she fires, dealing <physicalDamage>@RTotalDamage@ physical damage</physicalDamage>, but other enemy champions can intercept it. This Ability grants <keywordStealth>True Sight</keywordStealth> of the target during the channel.<br><br><rules>Deals up to an additional @CritChanceAmp*100@% based on Caitlyn's Critical Strike chance.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn takes a moment to channel and line up the perfect shot, then she fires, dealing <physicalDamage>@RTotalDamage@ physical damage</physicalDamage>, but other enemy champions can intercept it. This Ability grants <keywordStealth>True Sight</keywordStealth> of the target during the channel.<br><br><rules>Damage scales with Caitlyn's Critical Strike chance and Critical Strike Damage.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 3500.0,
                 3500.0,

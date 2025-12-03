@@ -1727,7 +1727,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "厄运小姐向敌人发射子弹，伤害他们以及他们后面的目标。两次攻击都可以施加【厄运的眷顾】。",
-            "dynamicDescription": "厄运小姐发射一次弹跳射击，对一个敌人及其身后的另一个敌人造成<physicalDamage>@TotalDamageTooltip@物理伤害</physicalDamage>。<br><br>第二段射击可以暴击。如果第一段射击击杀了它的目标，那么第二段射击就必定暴击。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "厄运小姐发射一次弹跳射击，对一个敌人及其身后的另一个敌人造成<physicalDamage>@TotalDamageTooltip@物理伤害</physicalDamage>。<br><br>第二段射击可以暴击以造成<physicalDamage>@TotalDamageCrit@物理伤害</physicalDamage>。如果第一段射击击杀了目标，则第二段射击必定暴击。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -2177,7 +2177,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "厄运小姐向她面前的锥形范围内引导一阵子弹风暴，对敌人造成大量伤害。这个技能的每波子弹都可以暴击。",
-            "dynamicDescription": "厄运小姐向前方锥形地带引导一阵弹幕，在@TotalChannelDuration@秒里持续发射共@TotalWaves@波，每波弹幕造成<physicalDamage>@PhysicalDamagePerWave@物理伤害</physicalDamage>(总共<physicalDamage>@TotalPhysicalDamage@物理伤害</physicalDamage>)。<br><br>每一波都可以暴击来造成%i:scaleCrit% <physicalDamage>@PhysicalCritPerWave@物理伤害</physicalDamage>(总共%i:scaleCrit%<physicalDamage>@TotalPhysicalCritDamage@物理伤害</physicalDamage>)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "厄运小姐向前方锥形地带引导一阵弹幕，@BaseChannelDuration@秒内持续发射共@BaseWaves@波子弹，每波弹幕造成<physicalDamage>@PhysicalDamagePerWave@物理伤害</physicalDamage>(总共<physicalDamage>@TotalPhysicalDamage@物理伤害</physicalDamage>)。<br><br>每一波均可触发暴击，造成%i:scaleCrit%<physicalDamage>@CritDamagePerWave@物理伤害</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

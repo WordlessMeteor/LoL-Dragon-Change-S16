@@ -615,6 +615,91 @@
         "ShadingModel": "{baebc346}",
         "parameters": [
             {
+                "name": "VertexDeformFeatureStrength",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VertexDeformFeatureStrength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VertexDeformTilling",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VertexDeformTilling",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VertexDeformSpeed",
+                "data": [
+                    -0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VertexDeformSpeed",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "DeformIntensity",
+                "data": [
+                    6.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "DeformIntensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "DeformProtection",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "DeformProtection",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Anim_Scale_Intensity",
                 "data": [
                     2.0,
@@ -1413,6 +1498,10 @@
         ],
         "staticSwitches": [
             {
+                "name": "USE_VERTEX_ANIMATION_BASED_ON_UV_AND_TEXTURE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "USE_VERTEX_ANIM",
                 "__type": "ShaderStaticSwitch"
             },
@@ -1486,6 +1575,16 @@
             }
         ],
         "textures": [
+            {
+                "name": "DeformNoise",
+                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "DeformMask",
+                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "ShaderTexture"
+            },
             {
                 "name": "Diffuse_Texture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
@@ -63639,6 +63738,33 @@
         },
         "featureMask": 5,
         "objectPath": "Shaders/SkinnedMesh/GalaxyScreen_Flipbook",
+        "__type": "CustomShaderDef"
+    },
+    "{ef20e7c5}": {
+        "parameters": [
+            {
+                "name": "TintColor",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.5
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "TintColor",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            }
+        ],
+        "featureDefines": {
+            "FEATURE_MASKED": "1"
+        },
+        "featureMask": 8,
+        "objectPath": "Shaders/StaticMesh/Indicator_Faelights",
         "__type": "CustomShaderDef"
     },
     "Shaders/StaticMesh/TFT_Blink": {

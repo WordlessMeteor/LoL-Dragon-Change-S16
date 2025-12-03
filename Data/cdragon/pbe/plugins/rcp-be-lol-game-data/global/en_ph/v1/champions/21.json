@@ -1601,7 +1601,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Miss Fortune fires a bullet at an enemy, damaging them and a target behind them. Both strikes can also apply Love Tap.",
-            "dynamicDescription": "Miss Fortune fires a bouncing shot, dealing <physicalDamage>@TotalDamageTooltip@ physical damage</physicalDamage> to an enemy and to another one behind them. <br><br>The second shot can critically strike. It always critically strikes if the first shot kills its target. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune fires a bouncing shot, dealing <physicalDamage>@TotalDamageTooltip@ physical damage</physicalDamage> to an enemy and to another one behind them. <br><br>The second shot can critically strike for <physicalDamage>@TotalDamageCrit@ physical damage</physicalDamage>. It always critically strikes if the first shot kills its target.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -2051,7 +2051,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Miss Fortune channels a barrage of bullets into a cone in front of her, dealing large amounts of damage to enemies. Each wave of Bullet Time can critically strike",
-            "dynamicDescription": "Miss Fortune channels a barrage of bullets, firing @TotalWaves@ waves over @TotalChannelDuration@ seconds, dealing <physicalDamage>@PhysicalDamagePerWave@ physical damage</physicalDamage> per wave (total <physicalDamage>@TotalPhysicalDamage@ physical damage</physicalDamage>).<br><br>Each wave can critically strike for %i:scaleCrit% <physicalDamage>@PhysicalCritPerWave@ physical damage</physicalDamage> (total %i:scaleCrit% <physicalDamage>@TotalPhysicalCritDamage@ physical damage</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune channels a barrage of bullets, firing @BaseWaves@ waves over @BaseChannelDuration@ seconds, dealing <physicalDamage>@PhysicalDamagePerWave@ physical damage</physicalDamage> per wave (total <physicalDamage>@TotalPhysicalDamage@ physical damage</physicalDamage>).<br><br>Each wave can critically strike for %i:scaleCrit% <physicalDamage>@CritDamagePerWave@ physical damage</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

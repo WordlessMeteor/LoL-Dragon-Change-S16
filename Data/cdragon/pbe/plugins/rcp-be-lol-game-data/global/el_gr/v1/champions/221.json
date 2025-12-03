@@ -970,7 +970,7 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "Ριπή ενέργειας",
+            "name": "Ριπή Ενέργειας",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zeri/HUD/Icons2D/ZeriQ.png",
             "abilityVideoPath": "champion-abilities/0221/ability_0221_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0221/ability_0221_Q1.jpg",
@@ -1120,14 +1120,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Λέιζερ υπερφόρτισης",
+            "name": "Λέιζερ Υπερφόρτισης",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Zeri/HUD/Icons2D/ZeriW.png",
             "abilityVideoPath": "champion-abilities/0221/ability_0221_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0221/ability_0221_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Ζέρι εξαπολύει έναν ηλεκτρικό παλμό που επιβραδύνει και προκαλεί ζημιά στον εχθρό που χτυπά πρώτα. Αν ο παλμός χτυπήσει τοίχο, επεκτείνεται σε ένα λέιζερ μεγάλης εμβέλειας.",
-            "dynamicDescription": "Η Ζέρι εξαπολύει έναν ηλεκτρικό παλμό που προκαλεί <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage> και <status>Επιβραδύνει</status> τον πρώτο εχθρό που θα χτυπήσει κατά @SlowPercent*100@% για @SlowDuration@ δευτ.<br><br>Εάν ο παλμός έρθει σε επαφή με εμπόδιο, επεκτείνεται σε ένα λέιζερ που εφαρμόζει τις επιδράσεις σε μια περιοχή και προκαλεί Καίριο Χτύπημα σε Ήρωες και τέρατα.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_ZeriW_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 1150.0,
                 1150.0,
@@ -1277,7 +1277,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Ζέρι εφορμά σε μικρή απόσταση και φορτίζει τις επόμενες 3 βολές της Ριπής Ενέργειας, ώστε να διαπερνούν εχθρούς. Θα πηδήξει από πάνω ή θα ολισθήσει κατά μήκος του εμποδίου που ακουμπά.",
-            "dynamicDescription": "Η Ζέρι εφορμά σε μικρή απόσταση και πηδά από πάνω από οποιοδήποτε εμπόδιο ακουμπά, αυξάνοντας κατά πολύ το εύρος της εφόρμησης. Για τα επόμενα @BuffDuration@ δευτ., οι βολές της από τη <spellName>Ριπή ενέργειας</spellName> γίνονται διαπεραστικές προκαλώντας @PenDamagePercent*100@% ζημιά στους αντιπάλους μετά την πρώτη κι επιπλέον <magicDamage>@BonusDamageTotal@ Μαγική Ζημιά</magicDamage> κατά το χτύπημα στον πρώτο στόχο που χτυπάει. <br><br>Όταν πετυχαίνει έναν αντίπαλο Ήρωα με μια Επίθεση ή Ικανότητα, μειώνεται ο Χρόνος Επαναφόρτισης κατά @CDReductionPerHit@ δευτ. Τα Καίρια Χτυπήματα μειώνουν τον Χρόνο Επαναφόρτισης κατά @CritCDReductionPerHit@ δευτ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Ζέρι εφορμά σε μικρή απόσταση και πηδά από πάνω από οποιοδήποτε εμπόδιο ακουμπά, αυξάνοντας κατά πολύ το εύρος της εφόρμησης. Για τα επόμενα @BuffDuration@ δευτ., οι βολές της από τη <spellName>Ριπή Ενέργειας</spellName> γίνονται διαπεραστικές προκαλώντας @PenDamagePercent*100@% ζημιά στους αντιπάλους μετά την πρώτη κι επιπλέον <magicDamage>@BonusDamageTotal@ Μαγική Ζημιά</magicDamage> κατά το χτύπημα στον πρώτο στόχο που χτυπάει. <br><br>Όταν πετυχαίνει έναν αντίπαλο Ήρωα με μια Επίθεση ή Ικανότητα, μειώνεται ο Χρόνος Επαναφόρτισης κατά @CDReductionPerHit@ δευτ. Τα Καίρια Χτυπήματα μειώνουν τον Χρόνο Επαναφόρτισης κατά @CritCDReductionPerHit@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -1427,7 +1427,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Ζέρι εξαπολύει μια έκρηξη ηλεκτρισμού και υπερφορτίζει τον εαυτό της, αποκτώντας αυξημένη ζημιά και συσσωρεύει Ταχύτητα Επίθεσης που ανανεώνεται και γίνεται δυνατότερη κάθε φορά που χτυπά έναν αντίπαλο Ήρωα. Όσο είναι υπερφορτισμένη, η Ριπή Ενέργειας γίνεται μια ταχύτερη τριπλή βολή που μεταδίδει κεραυνούς μεταξύ των εχθρών.",
-            "dynamicDescription": "Η Ζέρι εξαπολύει μια έκρηξη ηλεκτρισμού, που προκαλεί <magicDamage>@TotalActiveDamage@ Μαγική Ζημιά</magicDamage> σε κοντινούς εχθρούς. Εάν χτυπήσει έναν αντίπαλο Ήρωα η Ζέρι αποκτά <attackSpeed>@BaseASPercent*100@% Ταχύτητα Επίθεσης</attackSpeed> και <speed>@BaseBonusMS*100@% Ταχύτητα Κίνησης</speed> για @RDuration@ δευτ. Εάν χτυπήσετε έναν εχθρικό ήρωα με μια Επίθεση ή Ικανότητα επεκτείνει τη διάρκεια της ικανότητας και προσθέτει μια στοίβα Υπερφόρτισης για @MaxHyperchargeDuration@ δευτ. Τα Καίρια Χτυπήματα προσθέτουν 2 επιπλέον στοίβες. Κάθε στοίβα δίνει <speed>@MSPercent*100@% Ταχύτητα Κίνησης</speed>.<br><br>Σε αυτή την περίοδο, <spellName>Ριπή ενέργειας</spellName> γίνεται ένα πιο γρήγορο τριπλό χτύπημα που κάνει αλυσιδωτή <physicalDamage>@ChainPhysicalDamage@ Σωματική Ζημιά</physicalDamage> σε κοντινούς εχθρούς.<br><br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Ζέρι εξαπολύει μια έκρηξη ηλεκτρισμού, που προκαλεί <magicDamage>@TotalActiveDamage@ Μαγική Ζημιά</magicDamage> σε κοντινούς εχθρούς. Εάν χτυπήσει έναν αντίπαλο Ήρωα η Ζέρι αποκτά <attackSpeed>@BaseASPercent*100@% Ταχύτητα Επίθεσης</attackSpeed> και <speed>@BaseBonusMS*100@% Ταχύτητα Κίνησης</speed> για @RDuration@ δευτ. Εάν χτυπήσετε έναν εχθρικό ήρωα με μια Επίθεση ή Ικανότητα επεκτείνει τη διάρκεια της ικανότητας και προσθέτει μια στοίβα Υπερφόρτισης για @MaxHyperchargeDuration@ δευτ. Τα Καίρια Χτυπήματα προσθέτουν 2 επιπλέον στοίβες. Κάθε στοίβα δίνει <speed>@MSPercent*100@% Ταχύτητα Κίνησης</speed>.<br><br>Σε αυτή την περίοδο, <spellName>Ριπή Ενέργειας</spellName> γίνεται ένα πιο γρήγορο τριπλό χτύπημα που κάνει αλυσιδωτή <physicalDamage>@ChainPhysicalDamage@ Σωματική Ζημιά</physicalDamage> σε κοντινούς εχθρούς.<br><br>@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,

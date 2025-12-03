@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Цербер",
             "rarity": 2,
-            "tooltip": "Вы получаете ключевые руны <spellName>Град клинков</spellName> и <spellName>Решительное наступление</spellName>."
+            "tooltip": "Вы получаете ключевые руны <spellName>Град клинков</spellName> и <spellName>Решительное наступление</spellName>.<br><br><spellName>Град клинков</spellName> – для 3 ваших первых автоатак <attackSpeed>скорость атаки</attackSpeed> значительно повышена.<br><spellName>Решительное наступление</spellName> – попав 3 автоатаками по одному и тому же врагу, вы наносите дополнительный урон, и наносимый вами урон повышается, пока вы не выйдете из боя."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Танец демона",
             "rarity": 1,
-            "tooltip": "Вы получаете ключевые руны <spellName>Искусное лавирование</spellName> и <spellName>Хватка нежити</spellName>.<br><br>Эффективность лечения в этом раунде: @f1@<br>Общая эффективность лечения: @f2@<br>Прибавка к максимальному запасу здоровья: @f3@"
+            "tooltip": "Вы получаете ключевые руны <spellName>Искусное лавирование</spellName> и <spellName>Хватка нежити</spellName>.<br><br>Исцеление в этом раунде: @f1@<br>Общее исцеление: @f2@<br>Повышение максимального запаса здоровья: @f3@<br><br><spellName>Искусное лавирование</spellName> – при перемещении и автоатаках вы получаете заряды <keywordMajor>заряженности</keywordMajor>. После того как вы накопите 100 зарядов, ваша следующая автоатака нанесет дополнительный урон, восстановит вам здоровье и даст бонус к <speed>скорости передвижения</speed>.<br><spellName>Хватка нежити</spellName> – находясь в бою с вражеским чемпионом в течение 3 секунд, вы ставите на него метку. Автоатаки поглощают метку, нанося дополнительный урон, восстанавливая вам здоровье и навсегда повышая ваш <scaleHealth>максимальный запас здоровья</scaleHealth>."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Симфония войны",
             "rarity": 2,
-            "tooltip": "Вы получаете ключевые руны <spellName>Смертельный темп</spellName> и <spellName>Завоеватель</spellName>."
+            "tooltip": "Вы получаете ключевые руны <spellName>Смертельный темп</spellName> и <spellName>Завоеватель</spellName>.<br><br><spellName>Смертельный темп</spellName> – атакуя чемпионов, вы получаете <attackSpeed>скорость атаки</attackSpeed>. Эффект суммируется до 6 раз. Когда вы наберете 6 зарядов, при автоатаке вы будете выпускать снаряд, который наносит дополнительный урон.<br><spellName>Завоеватель</spellName> – попадая по чемпиону автоатакой или умением, вы получаете <physicalDamage>адаптивную </physicalDamage><magicDamage>силу</magicDamage>. Эффект суммируется до 12 раз. Когда вы наберете 12 зарядов, вы будете восстанавливать здоровье в размере части урона, нанесенного вами чемпионам."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Сама невозмутимость",
             "rarity": 1,
-            "tooltip": "Вы получаете ключевые руны <spellName>Дрожь земли</spellName> и <spellName>Ледяной нарост</spellName>."
+            "tooltip": "Вы получаете ключевые руны <spellName>Дрожь земли</spellName> и <spellName>Ледяной нарост</spellName>.<br><br><spellName>Дрожь земли</spellName> – при <status>обездвиживании</status> чемпионов вы на 2,5 сек. получаете <scaleArmor>броню</scaleArmor> и <scaleMR>сопротивление магии</scaleMR>, после чего рядом с вами происходит взрыв, который наносит врагам поблизости урон, зависящий от вашего <scaleHealth>максимального запаса здоровья</scaleHealth>.<br><spellName>Ледяной нарост</spellName> – при <status>обездвиживании</status> чемпионов вы создаете под ними ледяную область, которая <status>замедляет</status> врагов в ней и уменьшает наносимый ими урон."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Остановка времени</spellName>: все чемпионы поблизости впадают в <status>стазис</status> на @StasisDuration@ сек. Вы выходите из <status>стазиса</status> через @SelfDuration@ сек. и восстанавливаете <healing>@HealAmountPercent*100@% от недостающего здоровья</healing>, пока находитесь в нем."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Требование: купить наковальни предметов (@AnvilsReqToComplete@).<br><br>Награда: все ваши предметы становятся <keywordMajor>несравненными</keywordMajor> – их параметры повышаются на @ItemPercentAmp*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Задание ''Ритуал бога-кузнеца''",
+            "rarity": 2,
+            "tooltip": "Требование: купить наковальни предметов (@AnvilsReqToComplete@).<br><br>Награда: все ваши предметы становятся <keywordMajor>несравненными</keywordMajor> – их параметры повышаются на @ItemPercentAmp*100@%."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "Окей, бумеранг",
             "rarity": 1,
             "tooltip": "<keywordMajor>Автоматически:</keywordMajor> каждые @BaseCooldown@ сек. вы запускаете в ближайшего врага бумеранг, нанося @Damage@ ед. адаптивного урона всем пораженным бойцам.<br><br>Урон, нанесенный в этом раунде: @f1@<br>Общий нанесенный урон: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Когда вы наносите урон автоатакой, ваше следующее умение наносит на @AbilityBoost*100@% больше урона.<br><br>Когда вы наносите урон умением, ваша следующая автоатака наносит на @AttackBoost*100@% больше урона.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Гибрид",
+            "rarity": 1,
+            "tooltip": "Когда вы наносите урон автоатакой, ваше следующее умение наносит на @AbilityBoost*100@% больше урона.<br><br>Когда вы наносите урон умением, ваша следующая автоатака наносит на @AttackBoost*100@% больше урона."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "В начале каждого раунда вы получаете пчел (@StartingBees@). Также вы получаете пчел, собирая цветы. Попадая автоатаками и умениями по цели, которая находится в пределах @BeeRange@ ед., вы выпускаете в нее пчелу, которая атакует ее в течение @DebuffDuration@ сек.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Разум роя",
+            "rarity": 2,
+            "tooltip": "В начале каждого раунда вы получаете пчел (@StartingBees@). Также вы получаете пчел, собирая цветы. Попадая автоатаками и умениями по цели, которая находится в пределах @BeeRange@ ед., вы выпускаете в нее пчелу, которая атакует ее в течение @DebuffDuration@ сек.<br><br>Урон, нанесенный в этом раунде: @f1@<br>Общий нанесенный урон: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Вам больше не доступны перевыборы.<br><br>Выберите золотую аугментацию. Если количество потраченных перевыборов равно или превышает @PrismaticThreshold@, вместо этого выберите призматическую аугментацию.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "Ваши призванные бойцы увеличиваются в размере на @MinionSizeIncrease*100@% и получают такой же бонус к здоровью и урону."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Вы получаете Набор инструментов. В ходе каждой стадии покупок вы можете выбрать 1 из 5 случайных предметов, в который Набор инструментов превратится в следующем бою.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Набор инструментов",
+            "rarity": 1,
+            "tooltip": "Вы получаете Набор инструментов. В ходе каждой стадии покупок вы можете выбрать 1 из 5 случайных предметов, в который Набор инструментов превратится в следующем бою.<br><br>Начиная с раунда @PrismaticRound@ Набор инструментов получает возможность превращаться в призматические предметы."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "От начала до конца",
             "rarity": 1,
-            "tooltip": "Вы получаете ключевые руны <spellName>Удар на опережение</spellName> и <spellName>Темная жатва</spellName>.<br><br>Урон, нанесенный в этом раунде: @f1@<br>Общий нанесенный урон: @f2@<br>Общее количество полученного золота: @f3@"
+            "tooltip": "Вы получаете ключевые руны <spellName>Удар на опережение</spellName> и <spellName>Темная жатва</spellName>.<br><br>Урон, нанесенный в этом раунде: @f1@<br>Общий нанесенный урон: @f2@<br>Общее количество полученного золота: @f3@<br><br><spellName>Удар на опережение</spellName> – при нанесении урона чемпиону тот получает больше урона в течение 3 секунд. В конце действия эффекта вы получите золото, количество которого зависит от нанесенного дополнительного урона.<br><spellName>Темная жатва</spellName> – нанося урон врагу, у которого осталось меньше <scaleHealth>50% здоровья</scaleHealth>, вы наносите ему дополнительный урон, и объем этого дополнительного урона повышается навсегда."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Один раз за бой, когда вы должны погибнуть, вы превращаетесь в светлячка. Ваше здоровье становится равным <scaleHealth>@HealthLock*100@%</scaleHealth> от максимального запаса, и вы перемещаетесь в случайную точку арены.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Укромное укрытие",
+            "rarity": 0,
+            "tooltip": "Один раз за бой, когда вы должны погибнуть, вы превращаетесь в светлячка. Ваше здоровье становится равным <scaleHealth>@HealthLock*100@%</scaleHealth> от максимального запаса, и вы перемещаетесь в случайную точку арены."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "При применении умения вы получаете <scaleBonus>@HastePerCast@ ускорения умений</scaleBonus> (сбрасываются каждый раунд)."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "<healing>Лечение</healing> и <Shield>наложение щитов</Shield> повышают урон от умений на @SpellDamagePerStack*100@% до конца раунда. Эффект суммируется бесконечно.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Праведная ярость",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Текущий дополнительный урон от умений: @f1@%<br>Дополнительный урон в этом раунде: @f2@<br>Общий дополнительный урон: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Орбитальный лазер",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Урон, нанесенный в этом раунде: @f1@<br>Общий нанесенный урон: @f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "Вы накапливаете заряды <keyword>заряженности</keyword> вдвое быстрее. При срабатывании <keyword>заряженности</keyword> вы выпускаете <keywordMajor>волшебный снаряд</keywordMajor>, который наносит <trueDamage>чистый урон в размере до @MaxHealthDamagePerMissile*100@% от максимального запаса здоровья</trueDamage> в зависимости от преодоленного расстояния.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Заряженность",
+            "rarity": 0,
+            "tooltip": "Вы накапливаете заряды <keyword>заряженности</keyword> вдвое быстрее. При срабатывании <keyword>заряженности</keyword> вы выпускаете <keywordMajor>волшебный снаряд</keywordMajor>, который наносит <trueDamage>чистый урон в размере до @MaxHealthDamagePerMissile*100@% от максимального запаса здоровья</trueDamage> в зависимости от преодоленного расстояния.<br><br>Урон от волшебного снаряда в этом раунде: @f1@<br>Общий урон от волшебного снаряда: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Рунный призыватель",
             "rarity": 1,
-            "tooltip": "Вы получаете ключевые руны <spellName>Призыв Пушинки</spellName> и <spellName>Магическая комета</spellName>.<br><br>Общий нанесенный урон: @f1@<br>Общая прочность щитов: @f2@"
+            "tooltip": "Вы получаете ключевые руны <spellName>Призыв Пушинки</spellName> и <spellName>Магическая комета</spellName>.<br><br>Общий нанесенный урон: @f1@<br>Общая прочность щитов: @f2@<br><br><spellName>Призыв Пушинки</spellName> – Пушинка прыгает к врагам, которым вы наносите урон, и союзникам, на которых действует ваше <healing>лечение</healing>, <shield>щит</shield> или усиление, нанося урон первым и давая <shield>щит</shield> последним.<br><spellName>Магическая комета</spellName> – нанося урон умением, вы выпускаете комету, которая наносит урон всем врагам в определенной области."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Когда вы применяете Скачок, вокруг вас происходит взрыв, который наносит врагам <magicDamage>@ExplosiveDamage@ ед. магического урона</magicDamage> и <status>замедляет</status> их на @SlowAmount*100@% на @SlowDuration@ сек. Перезарядка Скачка сбрасывается в начале каждого раунда.<br><br>Урон, нанесенный в этом раунде: @f1@<br>Общий нанесенный урон: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "Увеличивает шанс критического удара на @CritChanceBonus*100@%, а критический урон – на @CritDamageBonus*100@%. Ваш максимальный шанс критического удара становится равным @CritChanceCeiling*100@%.<br><br>Преобразует шанс критического удара свыше @CritChanceCeiling*100@% в критический урон.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Целься в голову",
+            "rarity": 1,
+            "tooltip": "Увеличивает шанс критического удара на @CritChanceBonus*100@%, а критический урон – на @CritDamageBonus*100@%. Ваш максимальный шанс критического удара становится равным @CritChanceCeiling*100@%.<br><br>Преобразует шанс критического удара свыше @CritChanceCeiling*100@% в критический урон."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Мастер комбо",
             "rarity": 1,
-            "tooltip": "Вы получаете ключевые руны <spellName>Казнь электричеством</spellName> и <spellName>Фазовый рывок</spellName>.<br><br>Урон от Казни электричеством, нанесенный в этом раунде: @f1@<br>Общий урон от Казни электричеством: @f2@"
+            "tooltip": "Вы получаете ключевые руны <spellName>Казнь электричеством</spellName> и <spellName>Фазовый рывок</spellName>.<br><br>Урон от Казни электричеством, нанесенный в этом раунде: @f1@<br>Общий урон от Казни электричеством: @f2@<br><br><spellName>Казнь электричеством</spellName> – попав 3 отдельными автоатаками или умениями в течение 3 секунд, вы наносите дополнительный урон.<br><spellName>Фазовый рывок</spellName> – попав 3 отдельными автоатаками или умениями в течение 4 секунд, вы на несколько секунд получаете бонус к <speed>скорости передвижения</speed> и устойчивость к замедлению."
         },
         {
             "apiName": "DarkBlessing",

@@ -1154,7 +1154,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "泰达米尔对战斗极度饥渴，他受伤程度越高，攻击力越强。他能通过释放【Q嗜血杀戮】消耗怒气并治疗自己。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>泰达米尔嗜血成性，获得<scaleAD>@FlatAD@攻击力</scaleAD>，每1%已损失生命值额外提供<scaleAD>@ADPerOnePercentMissingHP@攻击力</scaleAD>。<br><br><spellActive>主动：</spellActive>泰达米尔消耗他的<keywordMajor>怒气</keywordMajor>，回复<healing>@BaseHeal@外加x@HealPerFury@怒气的生命值</healing>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>泰达米尔嗜血成性，获得至多<scaleAD>@MaximumBonusAD@攻击力</scaleAD>，基于他的已损失生命值(最大值出现在@RemainingHealthThreshold*100@%剩余生命值)<br><br><spellActive>主动：</spellActive>泰达米尔消耗他的<keywordMajor>怒气</keywordMajor>，回复<healing>@BaseHeal@外加@HealPerFury@x怒气的生命值(最大值：@MaximumHeal@)</healing>。 @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1304,7 +1304,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "泰达米尔嘲笑敌人，减少身边敌方英雄的攻击力。背对泰达米尔的敌人还会被减速。",
-            "dynamicDescription": "泰达米尔抛出羞辱之语，使英雄们降低@ADReduction*-1@攻击力，持续@ReductionDuration@秒。背对泰达米尔的敌方英雄还会被<status>减速</status>@SlowPotency*-100@%，持续相同时长。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "泰达米尔抛出羞辱之语，使英雄们降低@ADReduction*-1@攻击力，持续@ReductionDuration@秒，并且对背对泰达米尔的敌人造成@SlowPotency*-100@%<status>减速</status>，持续相同时长。@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,

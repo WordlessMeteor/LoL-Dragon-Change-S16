@@ -1603,7 +1603,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "凯特琳设下一个陷阱，这个陷阱在被敌方英雄踩中时，会使该英雄显形并被束缚1.5秒，并为凯特琳提供一次强化版的爆头。",
-            "dynamicDescription": "凯特琳设置一个陷阱来<status>禁锢</status>踩中它的第一个英雄@Effect6Amount@秒并提供该英雄的<keywordStealth>真实视野</keywordStealth>，持续3秒。陷阱持续@Effect3Amount@秒，并且同一时间至多可存在@Effect5Amount@个已激活的陷阱。这个技能有@Effect5Amount@层充能(@AmmoRechargeTime@秒充能时间)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "凯特琳设置一个陷阱来<status>禁锢</status>踩中它的第一个英雄@RootDuration@秒并提供该英雄的<keywordStealth>真实视野</keywordStealth>，持续3秒。陷阱持续@TrapDuration@秒，并且同一时间至多可存在@MaximumTraps@个已激活的陷阱。这个技能有@MaximumCharges@层充能(@AmmoRechargeTime@秒充能时间)。<br><br>被这个技能禁锢的目标会从<keywordMajor>爆头</keywordMajor>中受到额外的<physicalDamage>@HeadshotBonusDamage@物理伤害</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1629,7 +1629,7 @@
                 0.5
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1643,49 +1643,49 @@
                     2.0
                 ],
                 "Effect2Amount": [
-                    35.0,
-                    35.0,
-                    80.0,
-                    125.0,
-                    170.0,
-                    215.0,
-                    215.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    30.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    50.0,
-                    55.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     30.0,
@@ -1903,7 +1903,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "凯特琳精心准备完美一击，拥有超远射程并对单个目标造成巨大伤害。敌方英雄能为友军拦截子弹。",
-            "dynamicDescription": "凯特琳花费一段时间来引导并精心准备完美一击，然后她会开火，造成<physicalDamage>@RTotalDamage@物理伤害</physicalDamage>，但其他敌方英雄能拦截子弹。这个技能在引导期间会提供目标的<keywordStealth>真实视野</keywordStealth>。<br><br><rules>基于凯特琳的暴击几率，至多造成@CritChanceAmp*100@%的额外伤害。</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "凯特琳花费一段时间来引导并精心准备完美一击，然后她会开火，造成<physicalDamage>@RTotalDamage@物理伤害</physicalDamage>，但其他敌方英雄能拦截子弹。这个技能在引导期间会提供目标的<keywordStealth>真实视野</keywordStealth>。<br><br><rules>伤害受益于凯特琳的暴击几率和暴击伤害加成。</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 3500.0,
                 3500.0,

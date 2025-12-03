@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Kerberos",
             "rarity": 2,
-            "tooltip": "Získáš klíčové runy <spellName>Smršť mečů</spellName> a <spellName>Nepolevující útok</spellName>."
+            "tooltip": "Získáš klíčové runy <spellName>Smršť mečů</spellName> a <spellName>Nepolevující útok</spellName>.<br><br><spellName>Smršť mečů</spellName> – Tvé první 3 útoky mají výrazně zvýšenou <attackSpeed>rychlost útoků</attackSpeed>.<br><spellName>Nepolevující útok</spellName> – Zasažení stejného nepřítele 3 útoky způsobí nárazové poškození a až do konce boje způsobuje zvýšené poškození."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Tanec démona",
             "rarity": 1,
-            "tooltip": "Získáš klíčové runy <spellName>Hbité nohy</spellName> a <spellName>Spáry nehynoucích</spellName>.<br><br>Léčení provedené v tomto kole: @f1@<br>Celkové léčení: @f2@<br>Získané maximální zdraví: @f3@"
+            "tooltip": "Získáš klíčové runy <spellName>Hbité nohy</spellName> a <spellName>Spáry nehynoucích</spellName>.<br><br>Léčení provedené v tomto kole: @f1@<br>Celkové provedené léčení: @f2@<br>Získané maximální zdraví: @f3@<br><br><spellName>Hbité nohy</spellName> – Pohybem a útočením získáváš stupně <keywordMajor>nabití energií</keywordMajor>. Po nasčítání 100 stupňů způsobí tvůj příští útok bonusové poškození, vyléčí tě a udělí ti krátký bonus k <speed>rychlosti pohybu</speed>.<br><spellName>Spáry nehynoucích</spellName> – Po strávení 3&nbsp;sekund v boji označíš svého protivníka. Útoky toto označení spotřebují a způsobí bonusové poškození, vyléčí tě a udělí ti trvalý bonus k <scaleHealth>maximálnímu zdraví</scaleHealth>."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Symfonie války",
             "rarity": 2,
-            "tooltip": "Získáš klíčové runy <spellName>Smrtící tempo</spellName> a <spellName>Dobyvatel</spellName>."
+            "tooltip": "Získáš klíčové runy <spellName>Smrtící tempo</spellName> a <spellName>Dobyvatel</spellName>.<br><br><spellName>Smrtící tempo</spellName> – Útokem proti šampionovi získáš bonus k <attackSpeed>rychlosti útoků</attackSpeed>, který se může až 6x nasčítat. Po nasbírání 6 stupňů vystřelují tvoje útoky výboj způsobující dodatečné poškození.<br><spellName>Dobyvatel</spellName> – Zásahy šampionů útoky a schopnostmi ti udělují bonus k <physicalDamage>adaptivní </physicalDamage><magicDamage>síle</magicDamage>, který se může až 12x nasčítat. Po nasbírání 12 stupňů se budeš léčit ve výši určitého procenta poškození způsobovaného šampionům."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Neprůchodnost",
             "rarity": 1,
-            "tooltip": "Získáš klíčové runy <spellName>Následný otřes</spellName> a <spellName>Ledovcové vylepšení</spellName>."
+            "tooltip": "Získáš klíčové runy <spellName>Následný otřes</spellName> a <spellName>Ledovcové vylepšení</spellName>.<br><br><spellName>Následný otřes</spellName> – <status>Znehybňováním</status> šampionů získáš na 2,5&nbsp;sekundy bonus k <scaleArmor>brnění</scaleArmor> a <scaleMR>odolnosti vůči magii</scaleMR> a po uplynutí této doby vybuchneš, čímž způsobíš okolním nepřátelům poškození odvíjející se od tvého <scaleHealth>maximálního zdraví</scaleHealth>.<br><spellName>Ledovcové vylepšení</spellName> – <status>Znehybňováním</status> šampionů pod nimi vytváříš ledovou oblast, jež <status>zpomaluje</status> nepřátele, kteří se v ní nacházejí, a snižuje jim způsobované poškození."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Zastavení času</spellName>: Všichni okolní šampioni se na @StasisDuration@&nbsp;sek. ocitnou ve <status>stázi</status>, na tebe působí @SelfDuration@&nbsp;sek. Během této doby si obnovíš <healing>@HealAmountPercent*100@&nbsp;% chybějícího zdraví</healing>."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Požadavek: Kup si @AnvilsReqToComplete@ kovadlin(y) předmětů.<br><br>Odměna: Všechny tvé předměty se změní na <keywordMajor>mistrovské</keywordMajor>, čímž se jejich atributy zvýší o @ItemPercentAmp*100@&nbsp;%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Úkol: Obřad kovářského boha",
+            "rarity": 2,
+            "tooltip": "Požadavek: Kup si @AnvilsReqToComplete@ kovadlin(y) předmětů.<br><br>Odměna: Všechny tvé předměty se změní na <keywordMajor>mistrovské</keywordMajor>, čímž se jejich atributy zvýší o @ItemPercentAmp*100@&nbsp;%."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "Nekonečný bumerang",
             "rarity": 1,
             "tooltip": "V pravidelném intervalu @BaseCooldown@&nbsp;sek. <keywordMajor>automatickým sesláním</keywordMajor> hodíš po nedalekém nepříteli bumerang, který zasaženým protivníkům způsobí @Damage@ bodů adaptivního poškození.<br><br>Poškození způsobené v tomto kole: @f1@<br>Celkové způsobené poškození: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Když způsobíš poškození útokem, tvá příští schopnost způsobí o @AbilityBoost*100@&nbsp;% vyšší poškození.<br><br>Když způsobíš poškození schopností, tvůj příští útok způsobí o @AttackBoost*100@&nbsp;% vyšší poškození.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Hybrid",
+            "rarity": 1,
+            "tooltip": "Když způsobíš poškození útokem, tvá příští schopnost způsobí o @AbilityBoost*100@&nbsp;% vyšší poškození.<br><br>Když způsobíš poškození schopností, tvůj příští útok způsobí o @AttackBoost*100@&nbsp;% vyšší poškození."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Na začátku každého kola máš @StartingBees@x včelu. Sbíráním květin získáváš včely. Když zasáhneš útokem nebo schopností cíl v okruhu @BeeRange@ jednotek, přiletí k němu včela a bude na něj @DebuffDuration@&nbsp;sek. útočit.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Úlová mysl",
+            "rarity": 2,
+            "tooltip": "Na začátku každého kola máš @StartingBees@x včelu. Sbíráním květin získáváš včely. Když zasáhneš útokem nebo schopností cíl v okruhu @BeeRange@ jednotek, přiletí k němu včela a bude na něj @DebuffDuration@&nbsp;sek. útočit.<br><br>Poškození způsobené v tomto kole: @f1@<br>Celkové způsobené poškození: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Nemůžeš už měnit nabídku.<br><br>Můžeš si vybrat zlatou augmentaci. Při spotřebování alespoň @PrismaticThreshold@ obnovení nabídky si místo toho můžeš vybrat spektrální augmentaci.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "Tebou vyvolané jednotky mají o @MinionSizeIncrease*100@&nbsp;% větší velikost, zdraví a poškození."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Do inventáře se ti přidá Univerzální nástroj. Během každé nákupní fáze si vybereš 1 z 5 náhodných předmětů a Univerzální nástroj se na něj v příštím bojovém kole změní.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Univerzální nástroj",
+            "rarity": 1,
+            "tooltip": "Do inventáře se ti přidá Univerzální nástroj. Během každé nákupní fáze si vybereš 1 z 5 náhodných předmětů a Univerzální nástroj se na něj v příštím bojovém kole změní.<br><br>V @PrismaticRound@. kole může Univerzální nástroj nabídnout i spektrální předměty."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "Od začátku do konce",
             "rarity": 1,
-            "tooltip": "Získáš klíčové runy <spellName>První úder</spellName> a <spellName>Temné žně</spellName>.<br><br>Poškození způsobené v tomto kole: @f1@<br>Celkové způsobené poškození: @f2@<br>Celkem získané zlaťáky: @f3@"
+            "tooltip": "Získáš klíčové runy <spellName>První úder</spellName> a <spellName>Temné žně</spellName>.<br><br>Poškození způsobené v tomto kole: @f1@<br>Celkové způsobené poškození: @f2@<br>Celkem získané zlaťáky: @f3@<br><br><spellName>První úder</spellName> – Když způsobíš poškození nějakému šampionovi, po dobu 3&nbsp;sekund mu bude následně způsobováno vyšší poškození. Pak získáš zlaťáky odvíjející se od způsobeného bonusového poškození.<br><spellName>Temné žně</spellName> – Když způsobíš poškození šampionovi, který má méně než <scaleHealth>50&nbsp;% zdraví</scaleHealth>, utrpí bonusové poškození, jehož hodnota se následně trvale zvýší."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Jednou za kolo se namísto smrti přeměníš v éterickou bludičku, zdraví se ti nastaví na <scaleHealth>@HealthLock*100@&nbsp;%</scaleHealth> a přesuneš se na náhodné místo v aréně.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Nouzový úkryt",
+            "rarity": 0,
+            "tooltip": "Jednou za kolo se namísto smrti přeměníš v éterickou bludičku, zdraví se ti nastaví na <scaleHealth>@HealthLock*100@&nbsp;%</scaleHealth> a přesuneš se na náhodné místo v aréně."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "Použitím schopností získáš <scaleBonus>@HastePerCast@ ke zrychlení schopností</scaleBonus>, tento bonus se neomezeně nasčítává a v každém kole se vynuluje."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "Použitím <healing>léčení</healing> nebo <Shield>štítů</Shield> se poškození způsobované tvými schopnostmi zvýší o @SpellDamagePerStack*100@&nbsp;%, tento efekt se může v rámci kola neomezeně nasčítávat.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Spravedlivý hněv",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Aktuální bonus k poškození schopnostmi: @f1@&nbsp;%<br>Bonusové poškození v tomto kole: @f2@<br>Celkové bonusové poškození: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Orbitální laser",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Poškození způsobené v tomto kole: @f1@<br>Celkové způsobené poškození: @f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "<keyword>Nabíjení energií</keyword> probíhá dvakrát rychleji. Při <keyword>nabití energií</keyword> vypálíš <keywordMajor>magickou střelu</keywordMajor>, která v závislosti na uražené vzdálenosti způsobí <trueDamage>přímé poškození ve výši až @MaxHealthDamagePerMissile*100@&nbsp;% maximálního zdraví</trueDamage>.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Energetický nápoj",
+            "rarity": 0,
+            "tooltip": "<keyword>Nabíjení energií</keyword> probíhá dvakrát rychleji. Při <keyword>nabití energií</keyword> vypálíš <keywordMajor>magickou střelu</keywordMajor>, která v závislosti na uražené vzdálenosti způsobí <trueDamage>přímé poškození ve výši až @MaxHealthDamagePerMissile*100@&nbsp;% maximálního zdraví</trueDamage>.<br><br>Poškození způsobené magickými střelami v tomto kole: @f1@<br>Celkové poškození způsobené magickými střelami: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Vyvolávač run",
             "rarity": 1,
-            "tooltip": "Získáš klíčové runy <spellName>Vyvolat Aery</spellName> a <spellName>Magická kometa</spellName>.<br><br>Celkové způsobené poškození: @f1@<br>Celkově vytvořené štíty: @f2@"
+            "tooltip": "Získáš klíčové runy <spellName>Vyvolat Aery</spellName> a <spellName>Magická kometa</spellName>.<br><br>Celkové způsobené poškození: @f1@<br>Celkově vytvořené štíty: @f2@<br><br><spellName>Vyvolat Aery</spellName> – Aery přiskočí k tebou poškozenému nepříteli nebo ke spojenci, který od tebe obdržel <healing>léčení</healing>, <shield>štít</shield> či buff, a způsobí nepříteli poškození nebo udělí <shield>štít</shield> spojenci.<br><spellName>Magická kometa</spellName> – Způsobením poškození pomocí schopnosti vystřelíš kometu, která způsobí poškození všem nepřátelům v dané oblasti."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Když provedeš Skok, oblast kolem tebe vybuchne a způsobí <magicDamage>@ExplosiveDamage@ bodů magického poškození</magicDamage> a na @SlowDuration@&nbsp;sek. <status>zpomalí</status> nepřátele o @SlowAmount*100@&nbsp;%. Skok se navíc každé kolo resetuje.<br><br>Poškození způsobené v tomto kole: @f1@<br>Celkové způsobené poškození: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "Získáš @CritChanceBonus*100@&nbsp;% k šanci na kritický zásah a @CritDamageBonus*100@&nbsp;% k poškození kritickým zásahem. Tvoje šance na kritický zásah nemůže přesáhnout hodnotu @CritChanceCeiling*100@&nbsp;%.<br><br>Šance na kritický zásah nad @CritChanceCeiling*100@&nbsp;% se ti převádí do poškození kritickým zásahem.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Miř na hlavu",
+            "rarity": 1,
+            "tooltip": "Získáš @CritChanceBonus*100@&nbsp;% k šanci na kritický zásah a @CritDamageBonus*100@&nbsp;% k poškození kritickým zásahem. Tvoje šance na kritický zásah nemůže přesáhnout hodnotu @CritChanceCeiling*100@&nbsp;%.<br><br>Šance na kritický zásah nad @CritChanceCeiling*100@&nbsp;% se ti převádí do poškození kritickým zásahem."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Mistr komb",
             "rarity": 1,
-            "tooltip": "Získáš klíčové runy <spellName>Zásah proudem</spellName> a <spellName>Fázový shon</spellName>.<br><br>Poškození způsobené Zásahem proudem v tomto kole: @f1@<br>Celkové poškození způsobené Zásahem proudem: @f2@"
+            "tooltip": "Získáš klíčové runy <spellName>Zásah proudem</spellName> a <spellName>Fázový shon</spellName>.<br><br>Poškození Zásahem proudem v tomto kole: @f1@<br>Celkové poškození Zásahem proudem: @f2@<br><br><spellName>Zásah proudem</spellName> – Když v rozmezí 3&nbsp;sekund zasáhneš cíl 3 samostatnými útoky či schopnostmi, způsobíš mu nárazové poškození.<br><spellName>Fázový shon</spellName> – Když v rozmezí 3&nbsp;sekund zasáhneš nepřátele 4 samostatnými útoky či schopnostmi, získáš na pár sekund bonus k <speed>rychlosti pohybu</speed> a odolnosti vůči zpomalení."
         },
         {
             "apiName": "DarkBlessing",

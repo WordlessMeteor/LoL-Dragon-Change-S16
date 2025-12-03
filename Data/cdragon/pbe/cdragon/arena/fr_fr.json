@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Cerbère",
             "rarity": 2,
-            "tooltip": "Gagnez les runes fondamentales <spellName>Déluge de lames</spellName> et <spellName>Attaque soutenue</spellName>."
+            "tooltip": "Vous obtenez les runes fondamentales <spellName>Déluge de lames</spellName> et <spellName>Attaque soutenue</spellName>.<br><br><spellName>Déluge de lames</spellName> - Vos 3 premières attaques augmentent grandement votre <attackSpeed>vitesse d'attaque</attackSpeed>.<br><spellName>Attaque soutenue</spellName> - Toucher le même ennemi avec 3 attaques inflige une explosion de dégâts et augmente vos dégâts jusqu'à ce que vous quittiez le combat."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Danse du démon",
             "rarity": 1,
-            "tooltip": "Vous obtenez les runes fondamentales <spellName>Jeu de jambes</spellName> et <spellName>Poigne de l'immortel</spellName>.<br><br>PV rendus lors de cette manche : @f1@<br>Total des PV rendus : @f2@<br>PV max obtenus : @f3@"
+            "tooltip": "Vous obtenez les runes fondamentales <spellName>Jeu de jambes</spellName> et <spellName>Poigne de l'immortel</spellName>.<br><br>PV rendus lors de cette manche : @f1@<br>Total des PV rendus : @f2@<br>PV max gagnés : @f3@<br><br><spellName>Jeu de jambes</spellName> - Vos déplacements et attaques génèrent des effets <keywordMajor>Énergisant</keywordMajor>. À 100 effets cumulés, votre prochaine attaque inflige des dégâts bonus, vous soigne et vous octroie un bonus de <speed>vitesse de déplacement</speed>.<br><spellName>Poigne de l'immortel</spellName> - Combattre des ennemis pendant 3 sec les marque. Les attaques consomment la marque pour infliger des dégâts bonus, vous soigner et vous octroyer des <scaleHealth>PV max</scaleHealth> permanents."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Symphonie martiale",
             "rarity": 2,
-            "tooltip": "Vous obtenez les runes fondamentales <spellName>Tempo mortel</spellName> et <spellName>Conquérant</spellName>."
+            "tooltip": "Vous obtenez les runes fondamentales <spellName>Tempo mortel</spellName> et <spellName>Conquérant</spellName>.<br><br><spellName>Tempo mortel</spellName> - Attaquer des champions vous octroie de la <attackSpeed>vitesse d'attaque</attackSpeed> (effet cumulable 6 fois). À 6 effets cumulés, vos attaques tirent un éclair qui inflige des dégâts bonus.<br><spellName>Conquérant</spellName> - Les attaques et les compétences réussies sur des champions vous octroient de la <magicDamage>force</magicDamage> <physicalDamage>adaptative</physicalDamage>, cumulable 12 fois. À 12 effets cumulés, vous récupérez des PV équivalents à une partie des dégâts que vous infligez aux champions."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Après-glacial",
             "rarity": 1,
-            "tooltip": "Vous obtenez les runes fondamentales <spellName>Après-coup</spellName> et <spellName>Optimisation glaciale</spellName>."
+            "tooltip": "Vous obtenez les runes fondamentales <spellName>Après-coup</spellName> et <spellName>Optimisation glaciale</spellName>.<br><br><spellName>Après-coup</spellName> - <status>Immobiliser</status> des champions vous confère de l'<scaleArmor>armure</scaleArmor> et de la <scaleMR>résistance magique</scaleMR> pendant 2.5 sec, après quoi vous explosez, infligeant des dégâts aux ennemis proches en fonction de vos <scaleHealth>PV max</scaleHealth>.<br><spellName>Optimisation glaciale</spellName> - <status>Immobiliser</status> des champions crée de la glace sous eux, <status>ralentissant</status> les ennemis à l'intérieur et réduisant leurs dégâts."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Pause temporelle</spellName> : tous les champions proches entrent dans un état de <status>stase</status> pendant @StasisDuration@ sec, ou @SelfDuration@ sec pour vous. Pendant ce temps, vous récupérez <healing>@HealAmountPercent*100@% de vos PV manquants</healing>."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Conditions : Achetez @AnvilsReqToComplete@ Enclumes à objets.<br><br>Récompense : tous vos objets deviennent des <keywordMajor>chefs-d'œuvre</keywordMajor> dont les stats sont augmentées de @ItemPercentAmp*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Quête : Rite du dieu de la forge",
+            "rarity": 2,
+            "tooltip": "Conditions : Achetez @AnvilsReqToComplete@ Enclumes à objets.<br><br>Récompense : tous vos objets deviennent des <keywordMajor>chefs-d'œuvre</keywordMajor> dont les stats sont augmentées de @ItemPercentAmp*100@%."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "Ça boomerang ?",
             "rarity": 1,
             "tooltip": "Toutes les @BaseCooldown@ sec, vous lancez <keywordMajor>automatiquement</keywordMajor> un boomerang sur un ennemi proche, infligeant @Damage@ pts de dégâts adaptatifs aux ennemis touchés.<br><br>Dégâts infligés lors de cette manche : @f1@.<br>Total des dégâts infligés : @f2@."
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Lorsque vous infligez des dégâts avec une attaque, votre prochaine compétence inflige @AbilityBoost*100@% de dégâts bonus.<br><br>Lorsque vous infligez des dégâts avec une compétence, votre prochaine attaque inflige @AttackBoost*100@% de dégâts bonus.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Hybride",
+            "rarity": 1,
+            "tooltip": "Lorsque vous infligez des dégâts avec une attaque, votre prochaine compétence inflige @AbilityBoost*100@% de dégâts bonus.<br><br>Lorsque vous infligez des dégâts avec une compétence, votre prochaine attaque inflige @AttackBoost*100@% de dégâts bonus."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Vous commencez chaque manche avec @StartingBees@ abeille(s). Vous gagnez des abeilles en récoltant des fleurs. Attaquer ou blesser une cible avec des compétences dans un rayon de @BeeRange@ lance une abeille à l'attaque pendant @DebuffDuration@ sec.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Esprit de ruche",
+            "rarity": 2,
+            "tooltip": "Vous commencez chaque manche avec @StartingBees@ abeille(s). Vous gagnez des abeilles en récoltant des fleurs. Attaquer ou blesser une cible avec des compétences dans un rayon de @BeeRange@ lance une abeille à l'attaque pendant @DebuffDuration@ sec.<br><br>Dégâts infligés lors de cette manche : @f1@<br>Total des dégâts infligés : @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Vous ne pouvez plus effectuer de relance.<br><br>Sélectionnez une optimisation Or, et si au moins @PrismaticThreshold@ relances ont été consommées, sélectionnez une optimisation Prismatique à la place.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "La taille, les PV et les dégâts de vos invocations augmentent de @MinionSizeIncrease*100@%."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Le Multi-outils est ajouté à votre inventaire. Durant chaque phase d'achats, vous choisissez un objet parmi 5 aléatoires et le Multi-outils devient cet objet pendant la prochaine manche de combat.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Multi-outils",
+            "rarity": 1,
+            "tooltip": "Le Multi-outils est ajouté à votre inventaire. Durant chaque phase d'achats, vous choisissez un objet parmi 5 aléatoires et le Multi-outils devient cet objet pendant la prochaine manche de combat.<br><br>Lors de la manche @PrismaticRound@, le Multi-outils peut proposer des objets prismatiques."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "Du début à la fin",
             "rarity": 1,
-            "tooltip": "Vous obtenez les runes fondamentales <spellName>Premier coup</spellName> et <spellName>Moisson noire</spellName>.<br><br>Dégâts infligés lors de cette manche : @f1@<br>Total des dégâts infligés : @f2@<br>Total des PO gagnées : @f3@"
+            "tooltip": "Vous obtenez les runes fondamentales <spellName>Premier coup</spellName> et <spellName>Moisson noire</spellName>.<br><br>Dégâts infligés lors de cette manche : @f1@<br>Total des dégâts infligés : @f2@<br>PO gagnées au total : @f3@<br><br><spellName>Premier coup</spellName> - Blesser un champion ennemi lui fait subir plus de dégâts pendant 3 sec. À la fin, vous gagnez des PO selon les dégâts bonus infligés.<br><spellName>Moisson noire</spellName> - Blesser un ennemi qui a moins de <scaleHealth>50% de PV</scaleHealth> inflige des dégâts bonus et augmente définitivement ces dégâts bonus."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Une fois par combat, lorsque vous devriez mourir, vous devenez un feu follet, revenez à <scaleHealth>@HealthLock*100@% de vos PV</scaleHealth> et voyagez jusqu'à un lieu aléatoire dans l'arène.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Panic Room",
+            "rarity": 0,
+            "tooltip": "Une fois par combat, lorsque vous devriez mourir, vous devenez un feu follet, revenez à <scaleHealth>@HealthLock*100@% de vos PV</scaleHealth> et voyagez jusqu'à un lieu aléatoire dans l'arène."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "Utiliser une compétence vous octroie <scaleBonus>+@HastePerCast@ accélération de compétence</scaleBonus> (cumulable à l'infini). Réinitialisé à chaque manche."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "Les <healing>soins</healing> et les <Shield>boucliers</Shield> augmentent vos dégâts de compétence de @SpellDamagePerStack*100@%, cumulable à l'infini jusqu'à la fin de la manche.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Fureur vertueuse",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Bonus de dégâts de compétence actuel : @f1@%<br>Dégâts bonus cette manche : @f2@<br>Total des dégâts bonus : @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Laser orbital",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Dégâts infligés lors de cette manche : @f1@<br>Total des dégâts infligés : @f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "Vous gagnez des effets <keyword>Énergisant</keyword> deux fois plus vite. Déclencher des effets <keyword>Énergisant</keyword> tire un <keywordMajor>projectile magique</keywordMajor> qui inflige des <trueDamage>dégâts bruts équivalents à jusqu'à @MaxHealthDamagePerMissile*100@% de vos PV max</trueDamage> selon la distance parcourue.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Énergique",
+            "rarity": 0,
+            "tooltip": "Vous gagnez des effets <keyword>Énergisant</keyword> deux fois plus vite. Déclencher des effets <keyword>Énergisant</keyword> tire un <keywordMajor>projectile magique</keywordMajor> qui inflige des <trueDamage>@MaxHealthDamagePerMissile*100@dégâts bruts équivalents à jusqu'à % de vos PV max</trueDamage> selon la distance parcourue.<br><br>Dégâts infligés avec les projectiles magiques lors de cette manche : @f1@<br>Total des dégâts infligés avec les projectiles magiques : @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Invocation arcanique",
             "rarity": 1,
-            "tooltip": "Vous obtenez les runes fondamentales <spellName>Invocation d'Aery</spellName> et <spellName>Comète arcanique</spellName>.<br><br>Total des dégâts infligés : @f1@<br>Total des boucliers générés : @f2@"
+            "tooltip": "Vous obtenez les runes fondamentales <spellName>Invocation d'Aery</spellName> et <spellName>Comète arcanique</spellName>.<br><br>Total des dégâts infligés : @f1@<br>Total des boucliers générés : @f2@<br><br><spellName>Invocation d'Aery</spellName> - Blesser un ennemi, <healing>soigner</healing> ou <shield>octroyer un bouclier</shield> ou un buff à un allié envoie Aery qui blesse les ennemis et <shield>octroie un bouclier</shield> aux alliés.<br><spellName>Comète arcanique</spellName> - Infliger des dégâts de compétence fait tomber une comète qui inflige des dégâts à tous les ennemis dans la zone."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Quand vous utilisez Saut éclair, une explosion autour de vous inflige <magicDamage>@ExplosiveDamage@ pts de dégâts magiques</magicDamage> et <status>ralentit</status> les ennemis de @SlowAmount*100@% pendant @SlowDuration@ sec. De plus, Saut éclair se réinitialise à chaque manche.<br><br>Dégâts infligés lors de cette manche : @f1@.<br>Total des dégâts infligés : @f2@."
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "Vous obtenez @CritChanceBonus*100@% de chances de coup critique et @CritDamageBonus*100@% de dégâts de coup critique. Vos chances de coup critique sont limitées à @CritChanceCeiling*100@%.<br><br>Vous convertissez les chances de coup critique au-dessus de @CritChanceCeiling*100@% en dégâts de coup critique.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Visez la tête",
+            "rarity": 1,
+            "tooltip": "Vous obtenez @CritChanceBonus*100@% de chances de coup critique et @CritDamageBonus*100@% de dégâts de coup critique. Vos chances de coup critique sont limitées à @CritChanceCeiling*100@%.<br><br>Vous convertissez les chances de coup critique au-dessus de @CritChanceCeiling*100@% en dégâts de coup critique."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Électrocution phasique",
             "rarity": 1,
-            "tooltip": "Vous obtenez les runes fondamentales <spellName>Électrocution</spellName> et <spellName>Rush phasique</spellName>.<br><br>Dégâts d'Électrocution infligés lors de cette manche : @f1@<br>Total des dégâts infligés par Électrocution : @f2@"
+            "tooltip": "Vous obtenez les runes fondamentales <spellName>Électrocution</spellName> et <spellName>Rush phasique</spellName>.<br><br>Dégâts d'Électrocution cette manche : @f1@<br>Total des dégâts d'Électrocution : @f2@<br><br><spellName>Électrocution</spellName> - Blesser des ennemis avec 3 attaques ou compétences en l'espace de 3 sec inflige une grande quantité de dégâts.<br><spellName>Rush phasique</spellName> - Blesser des ennemis avec 3 attaques ou compétences en l'espace de 4 sec vous octroie de la <speed>vitesse de déplacement</speed> et de la résistance aux ralentissements pendant quelques secondes."
         },
         {
             "apiName": "DarkBlessing",

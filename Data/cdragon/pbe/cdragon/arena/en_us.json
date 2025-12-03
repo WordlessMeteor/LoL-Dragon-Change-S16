@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Cerberus",
             "rarity": 2,
-            "tooltip": "Gain the <spellName>Hail of Blades</spellName> and <spellName>Press the Attack</spellName> Keystone Runes."
+            "tooltip": "Gain the <spellName>Hail of Blades</spellName> and <spellName>Press the Attack</spellName> Keystone Runes.<br><br><spellName>Hail of Blades</spellName> - Your first 3 Attacks have massively increased <attackSpeed>Attack Speed</attackSpeed>.<br><spellName>Press the Attack</spellName> - Hitting 3 Attacks against the same enemy deals a burst of damage and increases your damage until you leave combat."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Demon's Dance",
             "rarity": 1,
-            "tooltip": "Gain the <spellName>Fleet Footwork</spellName> and <spellName>Grasp of the Undying</spellName> Keystone Runes.<br><br>Healing Done This Round: @f1@<br>Healing Done Total: @f2@<br>Max Health Gained: @f3@"
+            "tooltip": "Gain the <spellName>Fleet Footwork</spellName> and <spellName>Grasp of the Undying</spellName> Keystone Runes.<br><br>Healing Done This Round: @f1@<br>Healing Done Total: @f2@<br>Max Health Gained: @f3@<br><br><spellName>Fleet Footwork</spellName> - Moving and Attacking generates charges of <keywordMajor>Energize</keywordMajor>. At 100, your next Attack deals bonus damage, heals you, and grants you a burst of <speed>Move Speed</speed>.<br><spellName>Grasp of the Undying</spellName> - Being in combat for 3 seconds with an enemy marks them. Attacks consume the mark to deal bonus damage, heal you, and grant permanent <scaleHealth>max Health</scaleHealth>."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Symphony of War",
             "rarity": 2,
-            "tooltip": "Gain the <spellName>Lethal Tempo</spellName> and <spellName>Conqueror</spellName> Keystone Runes."
+            "tooltip": "Gain the <spellName>Lethal Tempo</spellName> and <spellName>Conqueror</spellName> Keystone Runes.<br><br><spellName>Lethal Tempo</spellName> - Attacking champions grants <attackSpeed>Attack Speed</attackSpeed>, stacking up to 6 times. At 6 stacks, your Attacks launch a bolt that deals additional damage.<br><spellName>Conqueror</spellName> - Attacks and Ability hits against champions grant you <physicalDamage>Adaptive</physicalDamage><magicDamage>Force</magicDamage>, stacking up to 12 times. At 12 stacks, heal for a percentage of damage you deal to champions."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Impassable",
             "rarity": 1,
-            "tooltip": "Gain the <spellName>Aftershock</spellName> and <spellName>Glacial Augment</spellName> Keystone Runes."
+            "tooltip": "Gain the <spellName>Aftershock</spellName> and <spellName>Glacial Augment</spellName> Keystone Runes.<br><br><spellName>Aftershock</spellName> - <status>Immobilizing</status> champions grants you <scaleArmor>Armor</scaleArmor> and <scaleMR>Magic Resist</scaleMR> for 2.5 seconds, after which you explode, damaging nearby enemies based on your <scaleHealth>max Health</scaleHealth>.<br><spellName>Glacial Augment</spellName> - <status>Immobilizing</status> champions creates ice beneath them, <status>Slowing</status> enemies inside and reducing their damage."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Time Stop</spellName>: All nearby champions are put in <status>Stasis</status> for @StasisDuration@ seconds, or @SelfDuration@ seconds for you. During which you restore <healing>@HealAmountPercent*100@% missing Health</healing>."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Requirement: Purchase @AnvilsReqToComplete@ Item Anvils.<br><br>Reward: All of your items become <keywordMajor>Masterwork</keywordMajor>, increasing their stats by @ItemPercentAmp*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Quest: Rite Of The Forge God",
+            "rarity": 2,
+            "tooltip": "Requirement: Purchase @AnvilsReqToComplete@ Item Anvils.<br><br>Reward: All of your items become <keywordMajor>Masterwork</keywordMajor>, increasing their stats by @ItemPercentAmp*100@%."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "OK Boomerang",
             "rarity": 1,
             "tooltip": "<keywordMajor>Autocast</keywordMajor> throw a boomerang at a nearby enemy every @BaseCooldown@s, dealing @Damage@ adaptive damage to enemies hit.<br><br>Damage Dealt This Round: @f1@<br>Damage Dealt Total: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "When you deal damage with an Attack, your next Ability deals @AbilityBoost*100@% increased damage.<br><br>When you deal damage with an Ability, you next Attack deals @AttackBoost*100@% increased damage.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Hybrid",
+            "rarity": 1,
+            "tooltip": "When you deal damage with an Attack, your next Ability deals @AbilityBoost*100@% increased damage.<br><br>When you deal damage with an Ability, you next Attack deals @AttackBoost*100@% increased damage."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Start each round with @StartingBees@ Bee(s). Gain Bees by harvesting flowers. Attacking or landing abilities on a target within @BeeRange@ will launch a Bee to attack over @DebuffDuration@ seconds.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Hive Mind",
+            "rarity": 2,
+            "tooltip": "Start each round with @StartingBees@ Bee(s). Gain Bees by harvesting flowers. Attacking or landing abilities on a target within @BeeRange@ will launch a Bee to attack over @DebuffDuration@ seconds.<br><br>Damage Dealt This Round: @f1@<br>Damage Dealt Total: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "You can no longer reroll.<br><br>Select a Gold Augment, if at least @PrismaticThreshold@ rerolls were consumed, empower this to select a Prismatic Augment instead.",
+            "desc": "Instantly consume your remaining rerolls, you can no longer reroll.<br><br>Select a Gold Augment, if at least @PrismaticThreshold@ rerolls were consumed this way, empower this to select a Prismatic Augment instead.",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "Your summons gain @MinionSizeIncrease*100@% increased size, health, and damage."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Add Multitool to your inventory. During each Shopping Phase, choose 1 of 5 random items, and Multitool becomes that item for the next combat round.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Multitool",
+            "rarity": 1,
+            "tooltip": "Add Multitool to your inventory. During each Shopping Phase, choose 1 of 5 random items, and Multitool becomes that item for the next combat round.<br><br>At round @PrismaticRound@, Multitool can roll Prismatic Items."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "From Beginning to End",
             "rarity": 1,
-            "tooltip": "Gain the <spellName>First Strike</spellName> and <spellName>Dark Harvest</spellName> Keystone Runes.<br><br>Damage Dealt This Round: @f1@<br>Damage Dealt Total: @f2@<br>Gold Gained Total: @f3@"
+            "tooltip": "Gain the <spellName>First Strike</spellName> and <spellName>Dark Harvest</spellName> Keystone Runes.<br><br>Damage Dealt This Round: @f1@<br>Damage Dealt Total: @f2@<br>Gold Gained Total: @f3@<br><br><spellName>First Strike</spellName> - Damaging a champion makes them take increased damage for 3 seconds. At the end, gain Gold based on your bonus damage dealt.<br><spellName>Dark Harvest</spellName> - Damaging an enemy below <scaleHealth>50% Health</scaleHealth> deals bonus damage and increases that bonus damage permanently."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Once per combat, when you would die, instead turn into a wisp, set yourself to <scaleHealth>@HealthLock*100@ Health%</scaleHealth>, and travel to a random spot in the arena.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Panic Room",
+            "rarity": 0,
+            "tooltip": "Once per combat, when you would die, instead turn into a wisp, set yourself to <scaleHealth>@HealthLock*100@ Health%</scaleHealth>, and travel to a random spot in the arena."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "Using an Ability grants <scaleBonus>@HastePerCast@ Ability Haste</scaleBonus>, stacking infinitely, this resets each round."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "<healing>Healing</healing> or <Shield>Shielding</Shield> increases your Ability damage by @SpellDamagePerStack*100@%, stacking infinitely for the round.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Righteous Fury",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Current Ability Damage Bonus: @f1@%<br>Bonus damage this round: @f2@<br>Bonus damage total: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Orbital Laser",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Damage Dealt This Round:@f1@<br>Damage Dealt Total:@f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "Gain <keyword>Energized</keyword> twice as quickly. Triggering <keyword>Energized</keyword> fires a <keywordMajor>Magic Missile</keywordMajor>, dealing up to <trueDamage>@MaxHealthDamagePerMissile*100@% max Health true damage</trueDamage> based on distance travelled.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Energetic",
+            "rarity": 0,
+            "tooltip": "Gain <keyword>Energized</keyword> twice as quickly. Triggering <keyword>Energized</keyword> fires a <keywordMajor>Magic Missile</keywordMajor>, dealing up to <trueDamage>@MaxHealthDamagePerMissile*100@% max Health true damage</trueDamage> based on distance travelled.<br><br>Magic Missile Damage Dealt This Round: @f1@<br>Magic Missile Damage Dealt Total: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Keystone Conjurer",
             "rarity": 1,
-            "tooltip": "Gain the <spellName>Summon Aery</spellName> and <spellName>Arcane Comet</spellName> Keystone Runes.<br><br>Damage Dealt Total: @f1@<br>Shields Generated Total: @f2@"
+            "tooltip": "Gain the <spellName>Summon Aery</spellName> and <spellName>Arcane Comet</spellName> Keystone Runes.<br><br>Damage Dealt Total: @f1@<br>Shields Generated Total: @f2@<br><br><spellName>Summon Aery</spellName> - Aery jumps onto enemies you damage or allies you <healing>Heal</healing>, <shield>Shield</shield>, or Buff, damaging enemies or <shield>Shielding</shield> allies.<br><spellName>Arcane Comet</spellName> - Dealing Ability damage launches a comet, damaing all enemies in an area."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "When you Flash, there is an explosion around you dealing <magicDamage>@ExplosiveDamage@ magic damage</magicDamage> and <status>Slowing</status> by @SlowAmount*100@% for @SlowDuration@ seconds. Additionally, Flash resets every round.<br><br>Damage Dealt This Round: @f1@<br>Damage Dealt Total: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "Gain @CritChanceBonus*100@% Critical Strike Chance and @CritDamageBonus*100@% Critical Strike Damage. Your Critical Strike Chance is capped at @CritChanceCeiling*100@%.<br><br>Convert Critical Strike Chance above @CritChanceCeiling*100@% into Critical Strike Damage.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Aim for the Head",
+            "rarity": 1,
+            "tooltip": "Gain @CritChanceBonus*100@% Critical Strike Chance and @CritDamageBonus*100@% Critical Strike Damage. Your Critical Strike Chance is capped at @CritChanceCeiling*100@%.<br><br>Convert Critical Strike Chance above @CritChanceCeiling*100@% into Critical Strike Damage."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Combo Master",
             "rarity": 1,
-            "tooltip": "Gain the <spellName>Electrocute</spellName> and <spellName>Phase Rush</spellName> Keystone Runes.<br><br>Electrocute Damage This Round: @f1@<br>Electrocute Damage Total: @f2@"
+            "tooltip": "Gain the <spellName>Electrocute</spellName> and <spellName>Phase Rush</spellName> Keystone Runes.<br><br>Electrocute Damage This Round: @f1@<br>Electrocute Damage Total: @f2@<br><br><spellName>Electrocute</spellName> - Hitting 3 separate Attacks or Abilities within 3 seconds deals a burst of damage.<br><spellName>Phase Rush</spellName> - Hitting 3 separate Attacks or Abilities within 4 seconds grants you <speed>Move Speed</speed> and Slow Resist for a few seconds."
         },
         {
             "apiName": "DarkBlessing",

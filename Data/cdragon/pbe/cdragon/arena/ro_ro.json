@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Cerber",
             "rarity": 2,
-            "tooltip": "Primești runele esențiale <spellName>''Ploaie de tăișuri''</spellName> și <spellName>''Asalt neîntrerupt''</spellName>."
+            "tooltip": "Primești runele esențiale <spellName>''Ploaie de tăișuri''</spellName> și <spellName>''Asalt neîntrerupt''</spellName>.<br><br><spellName>''Ploaie de tăișuri''</spellName> – Primele 3 atacuri ale tale au <attackSpeed>viteza de atac</attackSpeed> crescută semnificativ.<br><spellName>''Asalt neîntrerupt''</spellName> – Dacă lovești același inamic cu 3 atacuri, provoci o rafală de daune și îți crești daunele până când ieși din luptă."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Dansul demonului",
             "rarity": 1,
-            "tooltip": "Primești runele esențiale <spellName>''Joc de glezne''</spellName> și <spellName>''Chemarea morților vii''</spellName>.<br><br>Vindecare efectuată în această rundă: @f1@<br>Vindecare efectuată în total: @f2@<br>Viață maximă obținută: @f3@"
+            "tooltip": "Primești runele esențiale <spellName>''Joc de glezne''</spellName> și <spellName>''Chemarea morților vii''</spellName>.<br><br>Vindecare efectuată în această rundă: @f1@<br>Vindecare efectuată în total: @f2@<br>Viață maximă obținută: @f3@<br><br><spellName>''Joc de glezne''</spellName> – Deplasarea și atacurile generează cumuluri de <keywordMajor>''energizare''</keywordMajor>. La 100 de cumuluri, următorul tău atac provoacă daune bonus, te vindecă și îți oferă un bonus de <speed>viteză de mișcare</speed>.<br><spellName>''Chemarea morților vii''</spellName> – Dacă te lupți cu un inamic timp de 3 secunde, îl însemnezi. Atacurile consumă însemnul pentru a provoca daune bonus, a te vindeca și a-ți oferi <scaleHealth>viață maximă</scaleHealth> permanentă."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Simfonia războiului",
             "rarity": 2,
-            "tooltip": "Primești runele esențiale <spellName>''Tempo letal''</spellName> și <spellName>''Cuceritor''</spellName>."
+            "tooltip": "Primești runele esențiale <spellName>''Tempo letal''</spellName> și <spellName>''Cuceritor''</spellName>.<br><br><spellName>''Tempo letal''</spellName> – Dacă ataci campioni inamici, primești <attackSpeed>viteză de atac</attackSpeed>, care se cumulează de până la 6 ori. La 6 cumuluri, atacurile tale lansează un proiectil care provoacă daune suplimentare.<br><spellName>''Cuceritor''</spellName> – Atacurile și abilitățile care lovesc campioni îți oferă <physicalDamage>putere</physicalDamage> <magicDamage>adaptivă</magicDamage>, care se cumulează de până la 12 ori. La 12 cumuluri, te vindeci cu un procentaj din daunele provocate împotriva campionilor."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "De netrecut",
             "rarity": 1,
-            "tooltip": "Primești runele esențiale <spellName>''Replică''</spellName> și <spellName>''Augmentare glacială''</spellName>."
+            "tooltip": "Primești runele esențiale <spellName>''Replică''</spellName> și <spellName>''Augmentare glacială''</spellName>.<br><br><spellName>''Replică''</spellName> – <status>Imobilizarea</status> campionilor îți oferă <scaleArmor>armură</scaleArmor> și <scaleMR>rezistență la magie</scaleMR> timp de 2,5 secunde, după care explodezi, provocându-le daune inamicilor din apropiere în funcție de <scaleHealth>viața maximă</scaleHealth>.<br><spellName>''Augmentare glacială''</spellName> – <status>Imobilizarea</status> campionilor creează gheață sub aceștia, <status>încetinind</status> inamicii din zonă și reducându-le daunele."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Timp încremenit</spellName>: toți campionii din apropiere intră în <status>stază</status> timp de @StasisDuration@ secunde (@SelfDuration@ secunde în cazul tău). În timpul efectului, îți refaci <healing>@HealAmountPercent*100@% din viața lipsă</healing>."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Cerință: cumpără @AnvilsReqToComplete@ ''Nicovale de obiecte''.<br><br>Recompensă: toate obiectele tale se transformă în <keywordMajor>capodopere</keywordMajor>, crescându-și atributele cu @ItemPercentAmp*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Misiune: Ritualul zeului forjei",
+            "rarity": 2,
+            "tooltip": "Cerință: cumpără @AnvilsReqToComplete@ ''Nicovale de obiecte''.<br><br>Recompensă: toate obiectele tale se transformă în <keywordMajor>capodopere</keywordMajor>, crescându-și atributele cu @ItemPercentAmp*100@%."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "Bumerang OK",
             "rarity": 1,
             "tooltip": "Arunci <keywordMajor>automat</keywordMajor> un bumerang spre un inamic din apropiere la fiecare @BaseCooldown@ sec., provocându-le @Damage@ daune adaptive inamicilor loviți.<br><br>Daune provocate în această rundă: @f1@<br>Daune provocate în total: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Când provoci daune cu un atac, următoarea ta abilitate provoacă cu @AbilityBoost*100@% mai multe daune.<br><br>Când provoci daune cu o abilitate, următorul tău atac provoacă cu @AttackBoost*100@% mai multe daune.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Hibrid",
+            "rarity": 1,
+            "tooltip": "Când provoci daune cu un atac, următoarea ta abilitate provoacă cu @AbilityBoost*100@% mai multe daune.<br><br>Când provoci daune cu o abilitate, următorul tău atac provoacă cu @AttackBoost*100@% mai multe daune."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Începi fiecare rundă cu @StartingBees@ albină/albine. Primești albine recoltând flori. Dacă ataci sau lovești cu abilitățile o țintă aflată la cel mult @BeeRange@ unități, trimiți o albină să o atace timp de @DebuffDuration@ secunde.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Minte colectivă",
+            "rarity": 2,
+            "tooltip": "Începi fiecare rundă cu @StartingBees@ albină/albine. Primești albine recoltând flori. Dacă ataci sau lovești cu abilitățile o țintă aflată la cel mult @BeeRange@ unități, trimiți o albină să o atace timp de @DebuffDuration@ secunde.<br><br>Daune provocate în această rundă: @f1@<br>Daune provocate în total: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Nu mai poți reîncărca.<br><br>Selectezi o augmentare aurie. Dacă ai consumat cel puțin @PrismaticThreshold@ augmentări, îmbunătățești selecția într-una prismatică.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "Însoțitorii tăi au dimensiunea, viața și daunele crescute cu @MinionSizeIncrease*100@%."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Adaugă ''Unealta multifuncțională'' în inventarul tău. În fiecare fază de cumpărături, alegi 1 din 5 obiecte aleatorii, iar ''Unealta multifuncțională'' devine obiectul respectiv în următoarea rundă de luptă.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Unealtă multifuncțională",
+            "rarity": 1,
+            "tooltip": "Adaugă ''Unealta multifuncțională'' în inventarul tău. În fiecare fază de cumpărături, alegi 1 din 5 obiecte aleatorii, iar ''Unealta multifuncțională'' devine obiectul respectiv în următoarea rundă de luptă.<br><br>În runda @PrismaticRound@, ''Unealta multifuncțională'' poate oferi obiecte prismatice."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "De la început la sfârșit",
             "rarity": 1,
-            "tooltip": "Primești runele esențiale <spellName>''Primul asalt''</spellName> și <spellName>''Recolta sufletelor''</spellName>.<br><br>Daune provocate în această rundă: @f1@<br>Daune provocate în total: @f2@<br>Aur obținut în total: @f3@"
+            "tooltip": "Primești runele esențiale <spellName>''Primul asalt''</spellName> și <spellName>''Recolta sufletelor''</spellName>.<br><br>Daune provocate în această rundă: @f1@<br>Daune provocate în total: @f2@<br>Aur obținut în total: @f3@<br><br><spellName>''Primul asalt''</spellName> – Dacă îi provoci daune unui campion, îl faci să sufere daune crescute timp de 3 secunde. La final, primești aur în funcție de daunele bonus provocate.<br><spellName>''Recolta sufletelor''</spellName> – Dacă îi provoci daune unui inamic sub <scaleHealth>50% viață</scaleHealth>, îi provoci daune bonus și crești permanent acele daune bonus."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "O dată per luptă, când ai muri, te transformi într-un spirit, îți setezi viața la <scaleHealth>@HealthLock*100@%</scaleHealth> și te deplasezi într-un loc aleatoriu din arenă.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Camera de panică",
+            "rarity": 0,
+            "tooltip": "O dată per luptă, când ai muri, te transformi într-un spirit, îți setezi viața la <scaleHealth>@HealthLock*100@%</scaleHealth> și te deplasezi într-un loc aleatoriu din arenă."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "Dacă folosești o abilitate, primești <scaleBonus>@HastePerCast@ rapiditatea abilităților</scaleBonus>, care se cumulează la infinit, dar se resetează în fiecare rundă."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "<healing>Vindecările</healing> sau <Shield>protejările cu scuturi</Shield> îți cresc daunele abilităților cu @SpellDamagePerStack*100@%, cumulându-se la infinit în acea rundă.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Furia drepților",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Bonus actual la daunele abilităților: @f1@%<br>Daune bonus în această rundă: @f2@<br>Daune bonus în total: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Laser orbital",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Daune provocate în această rundă:@f1@<br>Daune provocate în total: @f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "Primești cumuluri de <keyword>''energizare''</keyword> de două ori mai repede. Declanșarea <keyword>''energizării''</keyword> lansează un <keywordMajor>proiectil magic</keywordMajor>, provocând <trueDamage>daune magice de până la @MaxHealthDamagePerMissile*100@% din viața maximă</trueDamage>, în funcție de distanța parcursă.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Energic",
+            "rarity": 0,
+            "tooltip": "Primești cumuluri de <keyword>''energizare''</keyword> de două ori mai repede. Declanșarea <keyword>''energizării''</keyword> lansează un <keywordMajor>proiectil magic</keywordMajor>, provocând <trueDamage>daune magice de până la @MaxHealthDamagePerMissile*100@% din viața maximă</trueDamage>, în funcție de distanța parcursă.<br><br>Daune provocate de proiectile magice în această rundă: @f1@<br>Daune provocate de proiectile magice în total: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Invocator esențial",
             "rarity": 1,
-            "tooltip": "Primești runele esențiale <spellName>''Invocare: Aery''</spellName> și <spellName>''Meteorit ocult''</spellName>.<br><br>Daune provocate în total: @f1@<br>Scuturi generate în total: @f2@"
+            "tooltip": "Primești runele esențiale <spellName>''Invocare: Aery''</spellName> și <spellName>''Meteorit ocult''</spellName>.<br><br>Daune provocate în total: @f1@<br>Scuturi generate în total: @f2@<br><br><spellName>''Invocare: Aery''</spellName> – Aery are pe inamicii cărora le provoci daune sau pe aliații pe care îi <healing>vindeci</healing>, îi <shield>protejezi cu scuturi</shield> sau cărora le oferi buff-uri, provocându-le daune inamicilor sau <shield>protejând cu un scut</shield> aliații.<br><spellName>''Meteorit ocult''</spellName> – Dacă provoci daune cu o abilitate, lansezi un meteorit, provocându-le daune tuturor inamicilor din zonă."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Când folosești ''Flash'', în jurul tău are loc o explozie care provoacă <magicDamage>@ExplosiveDamage@ daune magice</magicDamage> și <status>încetinește</status> inamicii cu @SlowAmount*100@% timp de @SlowDuration@ secunde. În plus, ''Flash'' se resetează în fiecare rundă.<br><br>Daune provocate în această rundă: @f1@<br>Daune provocate în total: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "Primești @CritChanceBonus*100@% șanse de lovitură critică și @CritDamageBonus*100@% daune din lovituri critice. Șansele tale de lovitură critică sunt limitate la @CritChanceCeiling*100@%.<br><br>Transformi toate șansele de lovitură critică ce depășesc @CritChanceCeiling*100@% în daune din lovituri critice.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Țintește capul",
+            "rarity": 1,
+            "tooltip": "Primești @CritChanceBonus*100@% șanse de lovitură critică și @CritDamageBonus*100@% daune din lovituri critice. Șansele tale de lovitură critică sunt limitate la @CritChanceCeiling*100@%.<br><br>Transformi toate șansele de lovitură critică ce depășesc @CritChanceCeiling*100@% în daune din lovituri critice."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Maestrul combinațiilor",
             "rarity": 1,
-            "tooltip": "Primești runele esențiale <spellName>''Electrocutare''</spellName> și <spellName>''Asalt fazic''</spellName>.<br><br>Daune din ''Electrocutare'' provocate în această rundă: @f1@<br>Daune totale din ''Electrocutare'': @f2@"
+            "tooltip": "Primești runele esențiale <spellName>''Electrocutare''</spellName> și <spellName>''Asalt fazic''</spellName>.<br><br>Daune din ''Electrocutare'' în această rundă: @f1@<br>Daune din ''Electrocutare'' în total: @f2@<br><br><spellName>''Electrocutare''</spellName> – Dacă nimerești 3 atacuri sau abilități separate în decurs de 3 secunde, provoci daune bruște.<br><spellName>''Asalt fazic''</spellName> – Dacă nimerești 3 atacuri sau abilități separate în decurs de 4 secunde, primești <speed>viteză de mișcare</speed> și rezistență la încetiniri timp de câteva secunde."
         },
         {
             "apiName": "DarkBlessing",

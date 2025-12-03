@@ -625,7 +625,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Con un azote de su espada látigo, Nilah inflige daño a los enemigos que impacta en una línea recta en la dirección que elija. Esta acción extiende el alcance de su ataque durante una breve duración.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Nilah obtiene @CritArmorPen@ de Penetración de Armadura y sus ataques contra campeones restauran <healing>@CritLifesteal@ del daño infligido como Vida</healing>. Si existe una sobrecuración, se convierte en un <shield>escudo</shield> durante @ShieldDuration@ seg.<br><br><spellActive>Activa:</spellActive> Nilah azota su espada látigo, lo que inflige <physicalDamage>@DamageCalc@ de daño físico</physicalDamage>, que aumenta con su probabilidad de golpe crítico. Si una estructura o unidad enemiga recibe un impacto, Nilah obtiene 125 de alcance de ataque y un <attackSpeed>@BonusAttackSpeedCalc@% de Velocidad de Ataque</attackSpeed>. Además, sus ataques impactan en un cono e infligen <physicalDamage>@AttackTotalDamageTooltip@ de daño físico</physicalDamage> durante @BuffDuration@ seg.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NilahQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1075,7 +1075,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Nilah gira su espada látigo con alegre exuberancia, lo que inflige daño a los enemigos a su alrededor antes de atraerlos hacia ella con su arma.",
-            "dynamicDescription": "Nilah azota su espada látigo, lo que inflige <physicalDamage>@DamagePerTickCalcTooltip@ de daño físico</physicalDamage> durante 1 seg, luego remata con una ráfaga de <physicalDamage>@DamageCalc@ de daño físico</physicalDamage> que también <status>atrae</status> a los enemigos cercanos hacia ella.<br><br>Nilah se cura a sí misma y a los aliados cercanos por un <healing>@ChampHealingPercent@ (+@spell.NilahQ:CritLifesteal@ Filo sin Forma) del daño infligido a la vida de los campeones enemigos (un@OtherHealingPercent*100@% para unidades que no sean campeones)</healing> y convierte cualquier sobrecuración en un <shield>escudo</shield> durante @Duration@ seg.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NilahR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1085,12 +1085,12 @@
                 400.0
             ],
             "costCoefficients": [
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 110.0,

@@ -621,6 +621,17 @@
                     "__type": "SpellDataValueVector"
                 }
             },
+            "mSpellCalculations": {
+                "{30e00b53}": {
+                    "mFormulaParts": [
+                        {
+                            "mNumber": 3000.0,
+                            "__type": "NumberCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
             "mCoefficient": 2.0,
             "mAnimationName": "dash_windup",
             "mImgIconName": [
@@ -1155,13 +1166,13 @@
                 {
                     "mName": "EncounterEyeCD",
                     "mValues": [
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1190,6 +1201,45 @@
                         0.11999999731779099
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "SkinScale",
+                    "mValues": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NexusBlitzMSPenalty",
+                    "mValues": [
+                        -100.0,
+                        -100.0,
+                        -100.0,
+                        -100.0,
+                        -100.0,
+                        -100.0,
+                        -100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "NexusBlitzHealthBonus",
+                    "mValues": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "__type": "SpellDataResource"
@@ -1203,6 +1253,7 @@
     "{36d5d60b}": {
         "mCharacterName": "SRU_RiftHerald",
         "baseHP": 6000.0,
+        "hpPerLevel": 700.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 170.0,
         "primaryAbilityResource": {
@@ -1211,8 +1262,12 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 130.0,
-        "baseArmor": 60.0,
-        "baseSpellBlock": 50.0,
+        "damagePerLevel": 10.0,
+        "baseArmor": 34.0,
+        "armorPerLevel": 8.0,
+        "baseSpellBlock": 32.0,
+        "spellBlockPerLevel": 4.0,
+        "critDamageMultiplier": 2.0,
         "baseMoveSpeed": 325.0,
         "attackRange": 250.0,
         "attackSpeed": 0.4000000059604645,
@@ -1226,7 +1281,6 @@
         "expGivenOnDeath": 600.0,
         "goldRadius": 1200.0,
         "experienceRadius": 1200.0,
-        "localGoldGivenOnDeath": 100.0,
         "localGoldSplitWithLastHitter": true,
         "globalGoldGivenOnDeath": 300.0,
         "globalExpGivenOnDeath": 300.0,
@@ -1315,7 +1369,8 @@
     },
     "Characters/SRU_RiftHerald/CharacterRecords/Root": {
         "mCharacterName": "SRU_RiftHerald",
-        "baseHP": 4750.0,
+        "baseHP": 6300.0,
+        "hpPerLevel": 700.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 170.0,
         "primaryAbilityResource": {
@@ -1323,9 +1378,13 @@
             "arBaseStaticRegen": 0.0,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 71.5,
-        "baseArmor": 60.0,
-        "baseSpellBlock": 50.0,
+        "baseDamage": 60.0,
+        "damagePerLevel": 10.0,
+        "baseArmor": 34.0,
+        "armorPerLevel": 8.0,
+        "baseSpellBlock": 32.0,
+        "spellBlockPerLevel": 4.0,
+        "critDamageMultiplier": 2.0,
         "baseMoveSpeed": 325.0,
         "attackRange": 250.0,
         "attackSpeed": 0.4000000059604645,
@@ -1336,10 +1395,9 @@
             "__type": "AttackSlotData"
         },
         "towerTargetingPriorityBoost": 10.0,
-        "expGivenOnDeath": 300.0,
+        "expGivenOnDeath": 240.0,
         "goldGivenOnDeath": 100.0,
-        "experienceRadius": 600.0,
-        "localGoldGivenOnDeath": 100.0,
+        "experienceRadius": 2000.0,
         "localGoldSplitWithLastHitter": true,
         "significance": 0.8999999761581421,
         "spellNames": [

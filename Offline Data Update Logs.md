@@ -20,5 +20,15 @@
 				DDragon: 15.23.1<br>The most recent update in <a href="https://github.com/WordlessMeteor/LoL-Dragon-Change-S15">the last repository</a>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2025-11-27 11-12-31</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>PBE: 15.24.729.3078 -> 16.1.730.3587</li>
+					</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>

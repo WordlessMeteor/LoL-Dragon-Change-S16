@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Cerberus",
             "rarity": 2,
-            "tooltip": "Mendapatkan Rune Keystone <spellName>Hail of Blades</spellName> dan <spellName>Press the Attack</spellName>."
+            "tooltip": "Mendapatkan Rune Keystone <spellName>Hail of Blades</spellName> dan <spellName>Press the Attack</spellName>.<br><br><spellName>Hail of Blades</spellName> - 3 Serangan pertamamu memiliki peningkatan <attackSpeed>Attack Speed</attackSpeed> yang sangat besar.<br><spellName>Press the Attack</spellName> - Mengenai 3 Serangan pada musuh yang sama memberikan burst damage dan meningkatkan damage-mu hingga kamu keluar dari combat."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Demon's Dance",
             "rarity": 1,
-            "tooltip": "Mendapatkan Rune Keystone <spellName>Fleet Footwork</spellName> dan <spellName>Grasp of The Undying</spellName>.<br><br>Heal Diberikan Ronde Ini: @f1@<br>Total Heal Diberikan: @f2@<br>Health Maksimum Diperoleh: @f3@"
+            "tooltip": "Mendapatkan Rune Keystone <spellName>Fleet Footwork</spellName> dan <spellName>Grasp of The Undying</spellName>.<br><br>Heal Diberikan Ronde Ini: @f1@<br>Total Heal Diberikan: @f2@<br>Health Maksimum Diperoleh: @f3@<br><br><spellName>Fleet Footwork</spellName> - Bergerak dan melakukan Serangan menghasilkan charge <keywordMajor>Energize</keywordMajor>. Saat mencapai 100 charge, Serangan berikutnya menghasilkan damage bonus, heal dirimu sendiri, dan memberimu burst <speed>Move Speed</speed>.<br><spellName>Grasp of the Undying</spellName> – Berada dalam combat selama 3 detik dengan musuh akan menandai mereka. Serangan akan mengonsumsi tanda tersebut untuk menghasilkan damage bonus, heal dirimu sendiri, dan memberimu <scaleHealth>Health maksimum</scaleHealth> permanen."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Symphony of War",
             "rarity": 2,
-            "tooltip": "Mendapatkan Rune Keystone <spellName>Lethal Tempo</spellName> dan <spellName>Conqueror</spellName>."
+            "tooltip": "Mendapatkan Rune Keystone <spellName>Lethal Tempo</spellName> dan <spellName>Conqueror</spellName>.<br><br><spellName>Lethal Tempo</spellName> - Menyerang champion memberikan <attackSpeed>Attack Speed</attackSpeed> yang stack hingga 6 kali. Saat mencapai 6 stack, Seranganmu meluncurkan petir yang menghasilkan damage tambahan.<br><spellName>Conqueror</spellName> – Mengenai champion dengan Serangan dan Ability memberimu <physicalDamage>Adaptive</physicalDamage> <magicDamage>Force</magicDamage> yang stack hingga 12 kali. Saat mencapai 12 stack, heal sekian persen damage yang kamu berikan ke champion."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Impassable",
             "rarity": 1,
-            "tooltip": "Mendapatkan Rune Keystone <spellName>Aftershock</spellName> dan <spellName>Glacial Augment</spellName>."
+            "tooltip": "Mendapatkan Rune Keystone <spellName>Aftershock</spellName> dan <spellName>Glacial Augment</spellName>.<br><br><spellName>Aftershock</spellName> - Menerapkan <status>Immobilize</status> pada champion memberimu <scaleArmor>Armor</scaleArmor> dan <scaleMR>Magic Resist</scaleMR> selama 2,5 detik, lalu kamu meledak, memberikan damage ke musuh di dekatmu berdasarkan <scaleHealth>Health maksimum</scaleHealth> kamu.<br><spellName>Glacial Augment</spellName> - Menerapkan <status>Immobilize</status> pada champion menciptakan es di bawah mereka, <status>Slow</status> musuh di area tersebut dan mengurangi damage mereka."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Time Stop</spellName>: Semua champion di sekitar akan memasuki mode <status>Stasis</status> selama @StasisDuration@ detik, atau @SelfDuration@ detik untukmu. Selama mode ini, kamu memulihkan <healing>@HealAmountPercent*100@% Health yang hilang</healing>."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Persyaratan: Membeli @AnvilsReqToComplete@ Anvil Item.<br><br>Reward: Semua item kamu berubah menjadi <keywordMajor>Masterwork</keywordMajor>, meningkatkan stat-nya sebesar @ItemPercentAmp*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Quest: Rite Of The Forge God",
+            "rarity": 2,
+            "tooltip": "Persyaratan: Membeli @AnvilsReqToComplete@ Anvil Item.<br><br>Reward: Semua item kamu berubah menjadi <keywordMajor>Masterwork</keywordMajor>, meningkatkan stat-nya sebesar @ItemPercentAmp*100@%."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "OK Boomerang",
             "rarity": 1,
             "tooltip": "<keywordMajor>Autocast</keywordMajor> melemparkan bumerang ke musuh di sekitar setiap @BaseCooldown@ detik, menghasilkan @Damage@ adaptive damage pada musuh yang terkena.<br><br>Damage Dihasilkan Ronde Ini: @f1@<br>Total Damage Dihasilkan: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Saat kamu menghasilkan damage dengan Serangan, Ability berikutnya memberikan @AbilityBoost*100@% peningkatan damage.<br><br>Saat kamu menghasilkan damage dengan Ability, Serangan berikutnya memberikan @AttackBoost*100@% peningkatan damage.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Hybrid",
+            "rarity": 1,
+            "tooltip": "Saat kamu menghasilkan damage dengan Serangan, Ability berikutnya memberikan @AbilityBoost*100@% peningkatan damage.<br><br>Saat kamu menghasilkan damage dengan Ability, Serangan berikutnya memberikan @AttackBoost*100@% peningkatan damage."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Mulai setiap ronde dengan @StartingBees@ Bee. Dapatkan Bee dengan memanen bunga. Menyerang atau mengenai target dengan Ability dalam jarak @BeeRange@ akan meluncurkan Bee untuk menyerang selama @DebuffDuration@ detik.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Hive Mind",
+            "rarity": 2,
+            "tooltip": "Mulai setiap ronde dengan @StartingBees@ Bee. Dapatkan Bee dengan memanen bunga. Menyerang atau mengenai target dengan Ability dalam jarak @BeeRange@ akan meluncurkan Bee untuk menyerang selama @DebuffDuration@ detik.<br><br>Damage Dihasilkan Ronde Ini: @f1@<br>Total Damage Dihasilkan: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Kamu sudah tidak bisa reroll.<br><br>Pilih Augment Gold, jika menggunakan minimal @PrismaticThreshold@ reroll, perkuat ini untuk memilih Augment Prismatic.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "Unit yang kamu panggil memperoleh @MinionSizeIncrease*100@% peningkatan ukuran, health, dan damage."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Menambahkan Multitool ke inventory-mu. Pada setiap Fase Belanja, pilih 1 dari 5 item random, dan Multitool akan berubah menjadi item tersebut untuk ronde combat berikutnya.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Multitool",
+            "rarity": 1,
+            "tooltip": "Menambahkan Multitool ke inventory-mu. Pada setiap Fase Belanja, pilih 1 dari 5 item random, dan Multitool akan berubah menjadi item tersebut untuk ronde combat berikutnya.<br><br>Pada ronde @PrismaticRound@, Multitool bisa menggulir Item Prismatic."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "From Beginning to End",
             "rarity": 1,
-            "tooltip": "Mendapatkan Rune Keystone <spellName>First Strike</spellName> dan <spellName>Dark Harvest</spellName>.<br><br>Damage Dihasilkan Ronde Ini: @f1@<br>Total Damage Dihasilkan: @f2@<br>Total Gold yang Didapatkan: @f3@"
+            "tooltip": "Mendapatkan Rune Keystone <spellName>First Strike</spellName> dan <spellName>Dark Harvest</spellName>.<br><br>Damage Dihasilkan Ronde Ini: @f1@<br>Total Damage Dihasilkan: @f2@<br>Total Gold Didapatkan: @f3@<br><br><spellName>First Strike</spellName> - Memberi damage ke champion membuat mereka menerima damage tambahan selama 3 detik. Di akhir durasi, dapatkan Gold berdasarkan damage bonus yang dihasilkan.<br><spellName>Dark Harvest</spellName> - Memberi damage ke musuh dengan Health di bawah <scaleHealth>50%</scaleHealth> memberikan damage bonus dan meningkatkan bonus tersebut secara permanen."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Sekali tiap combat, saat akan mati, kamu malah berubah menjadi wisp, mengatur Health-mu menjadi <scaleHealth>@HealthLock*100@%</scaleHealth>, lalu bergerak ke lokasi random di arena.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Panic Room",
+            "rarity": 0,
+            "tooltip": "Sekali tiap combat, saat akan mati, kamu malah berubah menjadi wisp, mengatur Health-mu menjadi <scaleHealth>@HealthLock*100@%</scaleHealth>, lalu bergerak ke lokasi random di arena."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "Menggunakan Ability akan memberimu <scaleBonus>@HastePerCast@ Ability Haste</scaleBonus> yang bisa stack tanpa batas, yang direset tiap ronde."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "Memberi <healing>Heal</healing> atau <Shield>Shield</Shield> meningkatkan damage Ability-mu sebesar @SpellDamagePerStack*100@%, di-stack tanpa batas untuk ronde tersebut.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Righteous Fury",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Damage Bonus Ability Saat Ini: @f1@%<br>Damage bonus ronde ini: @f2@<br>Total damage bonus: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Orbital Laser",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Damage Dihasilkan Ronde Ini:@f1@<br>Total Damage Dihasilkan:@f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "Mendapatkan <keyword>Energized</keyword> dua kali lebih cepat. Memicu <keyword>Energized</keyword> akan menembakkan <keywordMajor>Magic Missile</keywordMajor>, menghasilkan hingga <trueDamage>@MaxHealthDamagePerMissile*100@% true damage Health maksimum</trueDamage> berdasarkan jarak tempuh.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Energetic",
+            "rarity": 0,
+            "tooltip": "Mendapatkan <keyword>Energized</keyword> dua kali lebih cepat. Memicu <keyword>Energized</keyword> akan menembakkan <keywordMajor>Magic Missile</keywordMajor>, menghasilkan hingga <trueDamage>@MaxHealthDamagePerMissile*100@% true damage Health maksimum</trueDamage> berdasarkan jarak tempuh.<br><br>Damage yang Dihasilkan Magic Missile di Ronde Ini: @f1@<br>Total Damage yang Dihasilkan Magic Missile: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Keystone Conjurer",
             "rarity": 1,
-            "tooltip": "Mendapatkan Rune Keystone <spellName>Summon Aery</spellName> dan <spellName>Arcane Comet</spellName>.<br><br>Total Damage Dihasilkan: @f1@<br>Total Shield Dihasilkan: @f2@"
+            "tooltip": "Mendapatkan Rune Keystone <spellName>Summon Aery</spellName> dan <spellName>Arcane Comet</spellName>.<br><br>Total Damage Dihasilkan: @f1@<br>Total Shield Dihasilkan: @f2@<br><br><spellName>Summon Aery</spellName> - Aery melompat ke musuh yang kamu beri damage atau ke sekutu yang kamu <healing>Heal</healing>, <shield>Shield</shield>, atau Buff, memberikan damage ke musuh atau <shield>Shield</shield> ke sekutu.<br><spellName>Arcane Comet</spellName> - Menghasilkan damage Ability akan meluncurkan komet yang memberikan damage ke semua musuh di area."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Ketika kamu melakukan Flash, terjadi ledakan di sekitarmu yang menghasilkan <magicDamage>@ExplosiveDamage@ magic damage</magicDamage> dan menerapkan <status>Slow</status> sebesar @SlowAmount*100@% selama @SlowDuration@ detik. Selain itu, Flash akan direset setiap ronde.<br><br>Damage Dihasilkan Ronde Ini: @f1@<br>Total Damage Dihasilkan: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "Mendapatkan @CritChanceBonus*100@% Critical Strike Chance dan @CritDamageBonus*100@% Critical Strike Damage. Critical Strike Chance-mu dibatasi sebesar @CritChanceCeiling*100@%.<br><br>Critical Strike Chance di atas @CritChanceCeiling*100@% akan dikonversi menjadi Critical Strike Damage.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Aim for the Head",
+            "rarity": 1,
+            "tooltip": "Mendapatkan @CritChanceBonus*100@% Critical Strike Chance dan @CritDamageBonus*100@% Critical Strike Damage. Critical Strike Chance-mu dibatasi sebesar @CritChanceCeiling*100@%.<br><br>Critical Strike Chance di atas @CritChanceCeiling*100@% akan dikonversi menjadi Critical Strike Damage."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Combo Master",
             "rarity": 1,
-            "tooltip": "Mendapatkan Rune Keystone <spellName>Electrocute</spellName> dan <spellName>Phase Rush</spellName>.<br><br>Damage Electrocute Ronde Ini: @f1@<br>Total Damage Electrocute: @f2@"
+            "tooltip": "Mendapatkan Rune Keystone <spellName>Electrocute</spellName> dan <spellName>Phase Rush</spellName>.<br><br>Damage Electrocute di Ronde Ini: @f1@<br>Total Damage Electrocute: @f2@<br><br><spellName>Electrocute</spellName> - Mengenai 3 Serangan atau Ability berbeda dalam 3 detik memberikan burst damage.<br><spellName>Phase Rush</spellName> - Mengenai 3 Serangan atau Ability berbeda dalam 4 detik memberimu <speed>Move Speed</speed> dan Slow Resist selama beberapa detik."
         },
         {
             "apiName": "DarkBlessing",

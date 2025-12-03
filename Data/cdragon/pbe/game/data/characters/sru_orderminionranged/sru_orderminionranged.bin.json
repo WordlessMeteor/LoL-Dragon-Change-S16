@@ -11,7 +11,8 @@
         },
         "baseDamage": 19.5,
         "baseArmor": 0.0,
-        "baseMoveSpeed": 325.0,
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeed": 350.0,
         "attackRange": 550.0,
         "attackSpeed": 0.6669999957084656,
         "attackSpeedRatio": 0.6669999957084656,
@@ -31,7 +32,7 @@
             }
         ],
         "towerTargetingPriorityBoost": 1.0,
-        "expGivenOnDeath": 32.0,
+        "expGivenOnDeath": 31.0,
         "goldRadius": 1400.0,
         "experienceRadius": 1400.0,
         "localGoldGivenOnDeath": 8.0,
@@ -77,6 +78,7 @@
         },
         "baseDamage": 28.0,
         "baseArmor": 0.0,
+        "critDamageMultiplier": 2.0,
         "baseMoveSpeed": 325.0,
         "attackRange": 550.0,
         "attackSpeed": 0.6669999957084656,
@@ -141,7 +143,8 @@
         },
         "baseDamage": 19.5,
         "baseArmor": 0.0,
-        "baseMoveSpeed": 325.0,
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeed": 350.0,
         "attackRange": 550.0,
         "attackSpeed": 0.6669999957084656,
         "attackSpeedRatio": 0.6669999957084656,
@@ -161,7 +164,7 @@
             }
         ],
         "towerTargetingPriorityBoost": 1.0,
-        "expGivenOnDeath": 32.0,
+        "expGivenOnDeath": 31.0,
         "goldGivenOnDeath": 14.0,
         "experienceRadius": 1400.0,
         "perceptionBubbleRadius": 1200.0,
@@ -206,7 +209,8 @@
         },
         "baseDamage": 19.5,
         "baseArmor": 0.0,
-        "baseMoveSpeed": 325.0,
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeed": 350.0,
         "attackRange": 550.0,
         "attackSpeed": 0.6669999957084656,
         "attackSpeedRatio": 0.6669999957084656,
@@ -226,7 +230,7 @@
             }
         ],
         "towerTargetingPriorityBoost": 1.0,
-        "expGivenOnDeath": 32.0,
+        "expGivenOnDeath": 31.0,
         "goldGivenOnDeath": 14.0,
         "goldRadius": 1400.0,
         "experienceRadius": 1400.0,
@@ -272,7 +276,8 @@
         },
         "baseDamage": 19.5,
         "baseArmor": 0.0,
-        "baseMoveSpeed": 325.0,
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeed": 350.0,
         "attackRange": 550.0,
         "attackSpeed": 0.6669999957084656,
         "attackSpeedRatio": 0.6669999957084656,
@@ -292,7 +297,7 @@
             }
         ],
         "towerTargetingPriorityBoost": 1.0,
-        "expGivenOnDeath": 32.0,
+        "expGivenOnDeath": 31.0,
         "goldGivenOnDeath": 30.0,
         "experienceRadius": 1400.0,
         "localGoldGivenOnDeath": 5.0,
@@ -386,6 +391,81 @@
             "mCastType": 1,
             "castFrame": 14.100000381469727,
             "missileSpeed": 650.0,
+            "mMissileEffectName": "SRU_Order_CM_BA_Mis.troy",
+            "mHitEffectName": "SRU_Order_CM_BA_Tar.troy",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{a68e874a}": {
+        "ObjectName": "SRU_OrderMinionRangedBasicAttack_Frenzy",
+        "mScriptName": "SRU_OrderMinionRangedBasicAttack_Frenzy",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "bHaveHitEffect": true,
+            "mConsideredAsAutoAttack": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 60.0,
+                    "mOffsetInitialTargetHeight": 60.0,
+                    "mStartBoneName": "Buffbone_Glb_Weapon_1",
+                    "mSpeed": 1300.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.050000190734863,
+            "missileSpeed": 1300.0,
             "mMissileEffectName": "SRU_Order_CM_BA_Mis.troy",
             "mHitEffectName": "SRU_Order_CM_BA_Tar.troy",
             "bHaveHitBone": true,

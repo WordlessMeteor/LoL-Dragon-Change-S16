@@ -74,7 +74,7 @@
             "id": 323,
             "name": "케르베로스",
             "rarity": 2,
-            "tooltip": "<spellName>칼날비</spellName>와 <spellName>집중 공격</spellName> 핵심 룬을 얻습니다."
+            "tooltip": "<spellName>칼날비</spellName>와 <spellName>집중 공격</spellName> 핵심 룬을 얻습니다.<br><br><spellName>칼날비</spellName> - 첫 3회의 기본 공격 시 <attackSpeed>공격 속도</attackSpeed>가 크게 증가합니다.<br><spellName>집중 공격</spellName> - 같은 적에게 3회 기본 공격을 가하면 폭발적 피해를 입히고 전투에서 벗어날 때까지 피해량이 증가합니다."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "악마의 춤",
             "rarity": 1,
-            "tooltip": "<spellName>기민한 발놀림</spellName> 및 <spellName>착취의 손아귀</spellName> 핵심 룬을 얻습니다.<br><br>이번 라운드 체력 회복량: @f1@<br>총 체력 회복량: @f2@<br>증가한 최대 체력: @f3@"
+            "tooltip": "<spellName>기민한 발놀림</spellName>과 <spellName>착취의 손아귀</spellName> 핵심 룬을 얻습니다.<br><br>이번 라운드 체력 회복량: @f1@<br>체력 회복량: 총 @f2@<br>최대 체력 획득량: @f3@<br><br><spellName>기민한 발놀림</spellName> - 이동 및 공격 시 <keywordMajor>충전</keywordMajor> 중첩이 쌓입니다. 중첩이 100회 쌓이면 다음 기본 공격 시 추가 피해를 입히고 체력을 회복하며 <speed>이동 속도</speed>가 대폭 증가합니다.<br><spellName>착취의 손아귀</spellName> - 3초 동안 적과 전투 상태를 유지하면 해당 적에게 표식을 남깁니다. 기본 공격 시 표식을 소모해 추가 피해를 입히고 체력을 회복하며 영구히 <scaleHealth>최대 체력</scaleHealth>을 얻습니다."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "전장의 교향곡",
             "rarity": 2,
-            "tooltip": "<spellName>치명적 속도</spellName>와 <spellName>정복자</spellName> 핵심 룬을 얻습니다."
+            "tooltip": "<spellName>치명적 속도</spellName>와 <spellName>정복자</spellName> 핵심 룬을 얻습니다.<br><br><spellName>치명적 속도</spellName> - 챔피언을 기본 공격하면 <attackSpeed>공격 속도</attackSpeed>가 증가합니다. 이 효과는 6회까지 중첩됩니다. 6회 중첩되면 기본 공격 시 투사체를 날려 추가 피해를 입힙니다.<br><spellName>정복자</spellName> - 챔피언에게 기본 공격 및 스킬 적중 시 <physicalDamage>적응형</physicalDamage> <magicDamage>능력치</magicDamage>를 얻습니다. 이 효과는 12회까지 중첩됩니다. 12회 중첩되면 챔피언에게 입힌 피해의 일정 비율만큼 체력을 회복합니다."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "넘을 수 없는 벽",
             "rarity": 1,
-            "tooltip": "<spellName>여진</spellName>과 <spellName>빙결 강화</spellName> 핵심 룬을 얻습니다."
+            "tooltip": "<spellName>여진</spellName>과 <spellName>빙결 강화</spellName> 핵심 룬을 얻습니다.<br><br><spellName>여진</spellName> - 챔피언을 <status>이동 불가</status> 상태로 만들면 2.5초 동안 <scaleArmor>방어력</scaleArmor>과 <scaleMR>마법 저항력</scaleMR>이 증가하며, 이후 폭발이 일어나 주변 적에게 <scaleHealth>최대 체력</scaleHealth>에 비례한 피해를 입힙니다.<br><spellName>빙결 강화</spellName> - 챔피언을 <status>이동 불가</status> 상태로 만들면 대상 아래에 얼음을 생성해 범위 내 적을 <status>둔화</status>시키고 입히는 피해를 감소시킵니다."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>시간 정지</spellName>: 주변 모든 챔피언을 @StasisDuration@초 동안 또는 자신을 @SelfDuration@초 동안 <status>경직</status> 상태에 빠뜨립니다. 지속시간 동안 <healing>잃은 체력의 @HealAmountPercent*100@%</healing>에 해당하는 체력을 회복합니다."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "조건: 아이템 모루를 @AnvilsReqToComplete@개 구매해야 합니다.<br><br>보상: 모든 아이템이 <keywordMajor>걸작</keywordMajor> 아이템으로 변하여 해당 아이템의 능력치가 @ItemPercentAmp*100@% 증가합니다.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "퀘스트: 대장장이 신의 의식",
+            "rarity": 2,
+            "tooltip": "조건: 아이템 모루를 @AnvilsReqToComplete@개 구매해야 합니다.<br><br>보상: 모든 아이템이 <keywordMajor>걸작</keywordMajor> 아이템으로 변하여 해당 아이템의 능력치가 @ItemPercentAmp*100@% 증가합니다."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "부메랑 투척",
             "rarity": 1,
             "tooltip": "<keywordMajor>자동 사용</keywordMajor> @BaseCooldown@초마다 근처 적에게 부메랑을 던져 적중한 적에게 @Damage@의 적응형 피해를 입힙니다.<br><br>이 라운드에 입힌 피해량: @f1@<br>입힌 총 피해량: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "기본 공격으로 피해를 입히면 다음 스킬 피해량이 @AbilityBoost*100@% 증가합니다.<br><br>스킬로 피해를 입히면 다음 기본 공격 피해량이 @AttackBoost*100@% 증가합니다.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "하이브리드",
+            "rarity": 1,
+            "tooltip": "기본 공격으로 피해를 입히면 다음 스킬 피해량이 @AbilityBoost*100@% 증가합니다.<br><br>스킬로 피해를 입히면 다음 기본 공격 피해량이 @AttackBoost*100@% 증가합니다."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "매 라운드를 벌 @StartingBees@마리와 함께 시작합니다. 꽃을 수확하면 벌을 얻습니다. @BeeRange@ 거리 내 대상에게 기본 공격 또는 스킬 적중 시 벌을 날려 @DebuffDuration@초 동안 공격하게 합니다.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "군체 의식",
+            "rarity": 2,
+            "tooltip": "매 라운드를 벌 @StartingBees@마리와 함께 시작합니다. 꽃을 수확하면 벌을 얻습니다. @BeeRange@ 거리 내 대상에게 기본 공격 또는 스킬 적중 시 벌을 날려 @DebuffDuration@초 동안 공격하게 합니다.<br><br>이 라운드에 입힌 피해량: @f1@<br>입힌 피해량: 총 @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "더 이상 새로고침할 수 없습니다.<br><br>골드 증강 1개를 선택합니다. 새로고침을 @PrismaticThreshold@회 이상 사용했을 경우 선택지가 프리즘 증강으로 강화됩니다.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "소환물의 크기, 체력, 피해량이 @MinionSizeIncrease*100@% 증가합니다."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "보관함에 다용도 도구를 추가합니다. 구매 단계마다 무작위 5개 아이템 중 1개를 선택하면 다용도 도구가 다음 전투 라운드에 해당 아이템으로 변합니다.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "다용도 도구",
+            "rarity": 1,
+            "tooltip": "보관함에 다용도 도구를 추가합니다. 구매 단계마다 무작위 5개 아이템 중 1개를 선택하면 다용도 도구가 다음 전투 라운드에 해당 아이템으로 변합니다.<br><br>@PrismaticRound@라운드에서는 다용도 도구 선택지에 프리즘 아이템이 등장할 수 있습니다."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "시작부터 끝까지",
             "rarity": 1,
-            "tooltip": "<spellName>선제공격</spellName>과 <spellName>어둠의 수확</spellName> 핵심 룬을 얻습니다.<br><br>이번 라운드에 입힌 피해량: @f1@<br>입힌 총 피해량: @f2@<br>획득한 총 골드: @f3@"
+            "tooltip": "<spellName>선제공격</spellName>과 <spellName>어둠의 수확</spellName> 핵심 룬을 얻습니다.<br><br>이 라운드에 입힌 피해량: @f1@<br>입힌 피해량: 총 @f2@<br>획득한 골드: 총 @f3@<br><br><spellName>선제공격</spellName> - 챔피언에게 피해를 입히면 3초 동안 해당 챔피언이 받는 피해가 증가합니다. 지속시간 종료 시 입힌 추가 피해량에 따라 골드를 획득합니다.<br><spellName>어둠의 수확</spellName> - <scaleHealth>체력이 50%</scaleHealth> 아래인 적에게 피해를 입히면 추가 피해를 입히고 해당 추가 피해량이 영구적으로 증가합니다."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "전투당 1회 사망할 때, 대신 영혼 상태가 되고 <scaleHealth>체력이 @HealthLock*100@%</scaleHealth>가 되며 아레나의 무작위 지점으로 이동합니다.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "대피소",
+            "rarity": 0,
+            "tooltip": "전투당 1회 사망할 때, 대신 영혼 상태가 되고 <scaleHealth>체력이 @HealthLock*100@%</scaleHealth>가 되며 아레나의 무작위 지점으로 이동합니다."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "스킬 사용 시 <scaleBonus>스킬 가속이 @HastePerCast@</scaleBonus> 증가하고 무한히 중첩됩니다. 이 효과는 매 라운드 초기화됩니다."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "<healing>체력 회복</healing> 또는 <Shield>보호막 부여</Shield> 시 스킬 피해량이 @SpellDamagePerStack*100@% 증가합니다. 라운드가 끝날 때까지 무한히 중첩됩니다.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "정의로운 분노",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>현재 스킬 피해 보너스: @f1@%<br>이번 라운드 추가 피해량: @f2@<br>추가 피해량: 총 @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "궤도형 레이저",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>이 라운드에 입힌 피해량: @f1@<br>입힌 총 피해량: @f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "두 배 더 빠르게 <keyword>충전 상태</keyword>가 됩니다. <keyword>충전 상태</keyword>가 발동되면 <keywordMajor>마법 미사일</keywordMajor>을 발사해 이동한 거리에 따라 최대 <trueDamage>최대 체력의 @MaxHealthDamagePerMissile*100@%에 해당하는 고정 피해</trueDamage>를 입힙니다.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "에너지 충만",
+            "rarity": 0,
+            "tooltip": "두 배 더 빠르게 <keyword>충전 상태</keyword>가 됩니다. <keyword>충전 상태</keyword>가 발동되면 <keywordMajor>마법 미사일</keywordMajor>을 발사해 이동한 거리에 따라 최대 <trueDamage>최대 체력의 @MaxHealthDamagePerMissile*100@%에 해당하는 고정 피해</trueDamage>를 입힙니다.<br><br>이 라운드에 입힌 마법 미사일 피해량: @f1@<br>입힌 마법 미사일 피해량: 총 @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "핵심 룬 요술사",
             "rarity": 1,
-            "tooltip": "<spellName>콩콩이 소환</spellName>과 <spellName>신비로운 유성</spellName> 핵심 룬을 얻습니다.<br><br>입힌 총 피해량: @f1@<br>생성한 총 보호막: @f2@"
+            "tooltip": "<spellName>콩콩이 소환</spellName>과 <spellName>신비로운 유성</spellName> 핵심 룬을 얻습니다.<br><br>입힌 피해량: 총 @f1@<br>생성한 보호막: 총 @f2@<br><br><spellName>콩콩이 소환</spellName> - 피해를 입힌 적 또는 <healing>체력을 회복</healing>하거나 <shield>보호막</shield>을 씌우거나 이로운 효과를 부여한 아군에게 콩콩이를 보내 적에게는 피해를 입히고 아군에게는 <shield>보호막</shield>을 부여합니다.<br><spellName>신비로운 유성</spellName> - 스킬 피해를 입히면 유성을 날려 범위 내 모든 적에게 피해를 입힙니다."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "점멸 사용 시 주변에 폭발을 일으켜 <magicDamage>@ExplosiveDamage@의 마법 피해</magicDamage>를 입히고 @SlowDuration@초 동안 @SlowAmount*100@% <status>둔화</status>시킵니다. 추가로 점멸이 라운드마다 초기화됩니다.<br><br>이 라운드에 입힌 피해량: @f1@<br>입힌 총 피해량: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "치명타 확률을 @CritChanceBonus*100@%, 치명타 피해량을 @CritDamageBonus*100@% 얻습니다. 치명타 확률의 최대치가 @CritChanceCeiling*100@%로 제한됩니다.<br><br>@CritChanceCeiling*100@%를 초과하는 치명타 확률은 치명타 피해량으로 전환됩니다.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "머리를 노려라",
+            "rarity": 1,
+            "tooltip": "치명타 확률을 @CritChanceBonus*100@%, 치명타 피해량을 @CritDamageBonus*100@% 얻습니다. 치명타 확률의 최대치가 @CritChanceCeiling*100@%로 제한됩니다.<br><br>@CritChanceCeiling*100@%를 초과하는 치명타 확률은 치명타 피해량으로 전환됩니다."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "연계의 대가",
             "rarity": 1,
-            "tooltip": "<spellName>감전</spellName>과 <spellName>난입</spellName> 핵심 룬을 얻습니다.<br><br>이번 라운드에 입힌 감전 피해량: @f1@<br>총 감전 피해량: @f2@"
+            "tooltip": "<spellName>감전</spellName>과 <spellName>난입</spellName> 핵심 룬을 얻습니다.<br><br>이번 라운드에 입힌 감전 피해량: @f1@<br>감전 피해량: 총 @f2@<br><br><spellName>감전</spellName> - 3초 동안 기본 공격 또는 개별 스킬을 3회 적중시키면 폭발적 피해를 입힙니다.<br><spellName>난입</spellName> - 4초 동안 기본 공격 또는 개별 스킬을 3회 적중시키면 몇 초 동안 <speed>이동 속도</speed>와 둔화 저항 효과를 얻습니다."
         },
         {
             "apiName": "DarkBlessing",

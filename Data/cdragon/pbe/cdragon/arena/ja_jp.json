@@ -74,7 +74,7 @@
             "id": 323,
             "name": "ケルベロス",
             "rarity": 2,
-            "tooltip": "<spellName>「ヘイルブレード」</spellName>と<spellName>「プレスアタック」</spellName>のキーストーンルーンを獲得する。"
+            "tooltip": "<spellName>「ヘイルブレード」</spellName>と<spellName>「プレスアタック」</spellName>のキーストーンルーンを獲得する。<br><br><spellName>ヘイルブレード</spellName> - 最初の3回の通常攻撃の<attackSpeed>攻撃速度</attackSpeed>が大幅に増加する。<br><spellName>プレスアタック</spellName> - 同じ敵に通常攻撃を3回命中させると大ダメージを与え、戦闘を離脱するまでダメージを増加させる。"
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "悪魔のダンス",
             "rarity": 1,
-            "tooltip": "キーストーンルーンの<spellName>「フリートフットワーク」</spellName>と<spellName>「不死者の握撃」</spellName>を獲得する。<br><br>このラウンド中の体力回復量: @f1@<br>体力回復量の合計: @f2@<br>最大体力増加量: @f3@"
+            "tooltip": "キーストーンルーンの<spellName>「フリートフットワーク」</spellName>と<spellName>「不死者の握撃」</spellName>を獲得する。<br><br>このラウンドの体力回復量: @f1@<br>体力回復量の合計: @f2@<br>最大体力増加量: @f3@<br><br><spellName>フリートフットワーク</spellName> - 移動と通常攻撃で<keywordMajor>エネルギー充填</keywordMajor>のチャージを生成する。チャージが100になると、次の通常攻撃が追加ダメージを与え、自身の体力を回復し、<speed>移動速度</speed>を一時的に増加させる。<br><spellName>不死者の握撃</spellName> - 敵との戦闘に3秒間参加するとその敵をマークする。通常攻撃でマークを消費して追加ダメージを与え、自身の体力を回復し、<scaleHealth>最大体力</scaleHealth>を恒久的に増加させる。"
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "闘争交響曲",
             "rarity": 2,
-            "tooltip": "キーストーンルーンの<spellName>「リーサルテンポ」</spellName>と<spellName>「征服者」</spellName>を獲得する。"
+            "tooltip": "キーストーンルーンの<spellName>「リーサルテンポ」</spellName>と<spellName>「征服者」</spellName>を獲得する。<br><br><spellName>リーサルテンポ</spellName> - チャンピオンを攻撃すると<attackSpeed>攻撃速度</attackSpeed>が増加し、最大6回までスタックする。スタック数が6になると、通常攻撃が射撃を放って追加ダメージを与える。<br><spellName>征服者</spellName> - 通常攻撃およびスキルがチャンピオンに命中すると、<physicalDamage>アダプティブ</physicalDamage><magicDamage>フォース</magicDamage>を獲得し、最大12回までスタックする。スタック数が12になると、チャンピオンに与えたダメージの一定割合にあたる体力を回復する。"
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "通行不可",
             "rarity": 1,
-            "tooltip": "キーストーンルーンの<spellName>「アフターショック」</spellName>と<spellName>「グレイシャルオーグメント」</spellName>を獲得する。"
+            "tooltip": "キーストーンルーンの<spellName>「アフターショック」</spellName>と<spellName>「グレイシャルオーグメント」</spellName>を獲得する。<br><br><spellName>アフターショック</spellName> - チャンピオンに<status>移動不能効果</status>を与えると、<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>が2.5秒間増加し、その後爆発して周囲の敵に自身の<scaleHealth>最大体力</scaleHealth>に応じたダメージを与える。<br><spellName>グレイシャルオーグメント</spellName> - チャンピオンに<status>移動不能効果</status>を与えると、その足元に氷を作り出し、範囲内にいる敵に<status>スロウ効果</status>を付与し、ダメージを減少させる。"
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>時間停止</spellName>: 周囲のすべてのチャンピオンが@StasisDuration@秒間<status>固有時停止</status>状態になる。自身の効果時間は@SelfDuration@秒間になる。効果時間中に<healing>減少体力を@HealAmountPercent*100@%</healing>回復する。"
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "条件: アイテムの金床を@AnvilsReqToComplete@個購入する。<br><br>報酬: すべてのアイテムが<keywordMajor>マスターワーク</keywordMajor>になり、ステータスが@ItemPercentAmp*100@%増加する。",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "クエスト: 鍛冶神の儀式",
+            "rarity": 2,
+            "tooltip": "条件: アイテムの金床を@AnvilsReqToComplete@個購入する。<br><br>報酬: すべてのアイテムが<keywordMajor>マスターワーク</keywordMajor>になり、ステータスが@ItemPercentAmp*100@%増加する。"
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "OKブーメラン",
             "rarity": 1,
             "tooltip": "@BaseCooldown@秒ごとに、近くの敵1体に対してブーメランが<keywordMajor>自動発動</keywordMajor>で発射され、命中した敵に@Damage@のアダプティブダメージを与える。<br><br>このラウンドで与えたダメージ: @f1@<br>与えたダメージの合計: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "通常攻撃でダメージを与えると、次のスキルのダメージが@AbilityBoost*100@%増加する。<br><br>スキルでダメージを与えると、次の通常攻撃のダメージが@AttackBoost*100@%増加する。",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "ハイブリッド",
+            "rarity": 1,
+            "tooltip": "通常攻撃でダメージを与えると、次のスキルのダメージが@AbilityBoost*100@%増加する。<br><br>スキルでダメージを与えると、次の通常攻撃のダメージが@AttackBoost*100@%増加する。"
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "ハチを@StartingBees@匹所持して各ラウンドを開始する。花を収穫することでハチを獲得する。@BeeRange@の範囲内の対象に通常攻撃を行うかスキルを命中させるとハチを放って@DebuffDuration@秒間攻撃させる。",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "集合意識",
+            "rarity": 2,
+            "tooltip": "ハチを@StartingBees@匹所持して各ラウンドを開始する。花を収穫することでハチを獲得する。@BeeRange@の範囲内の対象に通常攻撃を行うかスキルを命中させるとハチを放って@DebuffDuration@秒間攻撃させる。<br><br>このラウンドで与えたダメージ: @f1@<br>与えたダメージの合計: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "リロールできなくなる。<br><br>ゴールドオーグメントを1個選択し、@PrismaticThreshold@回以上リロールすると、これが強化されて、代わりにプリズムオーグメントになる。",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "自身が召喚したユニットのサイズ、体力、ダメージが@MinionSizeIncrease*100@%増加する。"
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "アイテム欄にマルチツールを追加する。各準備フェーズ中に5個のランダムなアイテムの中から1個を選ぶ。次の戦闘ラウンド中、マルチツールがそのアイテムに変化する。",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "マルチツール",
+            "rarity": 1,
+            "tooltip": "アイテム欄にマルチツールを追加する。各準備フェーズ中に5個のランダムなアイテムの中から1個を選ぶ。次の戦闘ラウンド中、マルチツールがそのアイテムに変化する。<br><br>ラウンド@PrismaticRound@では、マルチツールが「プリズム」アイテムのいずれかに変化する。"
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "徹頭徹尾",
             "rarity": 1,
-            "tooltip": "キーストーンルーンの<spellName>「ファーストストライク」</spellName>と<spellName>「魂の収穫」</spellName>を獲得する。<br><br>このラウンド中に与えたダメージ量: @f1@<br>与えたダメージ量の合計: @f2@<br>獲得したゴールドの合計: @f3@"
+            "tooltip": "キーストーンルーンの<spellName>「ファーストストライク」</spellName>と<spellName>「魂の収穫」</spellName>を獲得する。<br><br>このラウンドで与えたダメージ: @f1@<br>与えたダメージの合計: @f2@<br>獲得したゴールドの合計: @f3@<br><br><spellName>ファーストストライク</spellName> - チャンピオンにダメージを与えると、そのチャンピオンが受けるダメージが3秒間増加する。最後に、与えた追加ダメージに応じたゴールドを獲得する。<br><spellName>魂の収穫</spellName> - <scaleHealth>体力が50%</scaleHealth>未満の敵にダメージを与えると、追加ダメージを与え、その追加ダメージを恒久的に増加させる。"
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "各戦闘で1回のみ、デスしそうになった時、代わりにウィスプに変身し、<scaleHealth>体力を@HealthLock*100@%</scaleHealth>にしてアリーナのランダムな地点へと移動する。",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "パニックルーム",
+            "rarity": 0,
+            "tooltip": "各戦闘で1回のみ、デスしそうになった時、代わりにウィスプに変身し、<scaleHealth>体力を@HealthLock*100@%</scaleHealth>にしてアリーナのランダムな地点へと移動する。"
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "スキルを使用すると、<scaleBonus>スキルヘイストを@HastePerCast@</scaleBonus>増加させるスタックを無限に獲得する。このスタックは毎ラウンドリセットされる。"
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "<healing>体力回復効果</healing>および<Shield>シールド効果</Shield>を付与すると、スキルダメージを@SpellDamagePerStack*100@%増加させる。この効果はこのラウンド中無限にスタックする。",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "正義の激憤",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>現在のスキルのダメージボーナス: @f1@%<br>このラウンドの追加ダメージ: @f2@<br>追加ダメージの合計: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "軌道レーザー",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>このラウンド中に与えたダメージ量: @f1@<br>与えたダメージ量の合計: @f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "<keyword>エネルギー充填</keyword>を2倍の速さで獲得する。<keyword>エネルギー充填</keyword>を発動させると、<keywordMajor>魔法ミサイル</keywordMajor>を発射し、ミサイルの移動距離に応じて最大で<trueDamage>最大体力の@MaxHealthDamagePerMissile*100@%にあたる確定ダメージ</trueDamage>を与える。",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "元気いっぱい",
+            "rarity": 0,
+            "tooltip": "<keyword>エネルギー充填</keyword>を2倍の速さで獲得する。<keyword>エネルギー充填</keyword>を発動させると、<keywordMajor>魔法ミサイル</keywordMajor>を発射し、ミサイルの移動距離に応じて最大で<trueDamage>最大体力の@MaxHealthDamagePerMissile*100@%にあたる確定ダメージ</trueDamage>を与える。<br><br>このラウンドで与えた魔法ミサイルダメージ: @f1@<br>与えた魔法ミサイルダメージの合計: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "キーストーンの奇術師",
             "rarity": 1,
-            "tooltip": "キーストーンルーンの<spellName>「エアリー召喚」</spellName>と<spellName>「秘儀の彗星」</spellName>を獲得する。<br><br>与えたダメージ量の合計: @f1@<br>生成したシールド量の合計: @f2@"
+            "tooltip": "キーストーンルーンの<spellName>「エアリー召喚」</spellName>と<spellName>「秘儀の彗星」</spellName>を獲得する。<br><br>与えたダメージの合計: @f1@<br>生成したシールド量の合計: @f2@<br><br><spellName>エアリー召喚</spellName> - エアリーはあなたがダメージを与えた敵、または<healing>体力回復</healing>、<shield>シールド</shield>、強化効果を付与した味方にジャンプし、敵にはダメージを与え味方には<shield>シールド</shield>を付与する。<br><spellName>秘儀の彗星</spellName> - スキルでダメージを与えると彗星を放ち、範囲内のすべての敵にダメージを与える。"
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "「フラッシュ」を使用すると、自身の周囲で爆発が起こる。この爆発は命中した敵に<magicDamage>@ExplosiveDamage@の魔法ダメージ</magicDamage>を与えて、@SlowDuration@秒間@SlowAmount*100@%の<status>スロウ効果</status>を付与する。さらに、「フラッシュ」が毎ラウンドリセットされる。<br><br>このラウンドで与えたダメージ: @f1@<br>与えたダメージの合計: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "クリティカル率が@CritChanceBonus*100@%増加し、クリティカルダメージが@CritDamageBonus*100@%増加する。クリティカル率の上限が@CritChanceCeiling*100@%になる。<br><br>@CritChanceCeiling*100@%を上回るクリティカル率をクリティカルダメージに変換する。",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "頭を狙え",
+            "rarity": 1,
+            "tooltip": "クリティカル率が@CritChanceBonus*100@%増加し、クリティカルダメージが@CritDamageBonus*100@%増加する。クリティカル率の上限が@CritChanceCeiling*100@%になる。<br><br>@CritChanceCeiling*100@%を上回るクリティカル率をクリティカルダメージに変換する。"
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "コンボマスター",
             "rarity": 1,
-            "tooltip": "キーストーンルーンの<spellName>「電撃」</spellName>と<spellName>「フェイズラッシュ」</spellName>を獲得する。<br><br>このラウンド中に「電撃」で与えたダメージ量: @f1@<br>「電撃」で与えたダメージ量の合計: @f2@"
+            "tooltip": "キーストーンルーンの<spellName>「電撃」</spellName>と<spellName>「フェイズラッシュ」</spellName>を獲得する。<br><br>このラウンドの「電撃」のダメージ: @f1@<br>「電撃」のダメージの合計: @f2@<br><br><spellName>電撃</spellName> - 3秒以内に別の通常攻撃またはスキルで3回攻撃すると大ダメージを与える。<br><spellName>フェイズラッシュ</spellName> - 4秒以内に別の通常攻撃またはスキルで3回攻撃すると<speed>移動速度</speed>が増加し、数秒間スロウ耐性を獲得する。"
         },
         {
             "apiName": "DarkBlessing",

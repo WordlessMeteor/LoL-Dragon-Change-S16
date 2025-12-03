@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Cerbero",
             "rarity": 2,
-            "tooltip": "Ottieni le rune chiave <spellName>Pioggia di lame</spellName> e <spellName>Attacco sostenuto</spellName>."
+            "tooltip": "Ottieni le rune chiave <spellName>Pioggia di lame</spellName> e <spellName>Attacco sostenuto</spellName>.<br><br><spellName>Pioggia di lame</spellName>: i tuoi primi 3 attacchi hanno <attackSpeed>velocità d'attacco</attackSpeed> notevolmente aumentata.<br><spellName>Attacco sostenuto</spellName>: colpire lo stesso bersaglio con 3 attacchi infligge una raffica di danni e aumenta i tuoi danni finché non abbandoni il combattimento."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Danza del demone",
             "rarity": 1,
-            "tooltip": "Ottieni le Rune chiave <spellName>Piede lesto</spellName> e <spellName>Presa dell'immortale</spellName>.<br><br>Guarigione effettuata in questo turno: @f1@<br>Totale guarigione effettuata: @f2@<br>Salute massima ottenuta: @f3@"
+            "tooltip": "Ottieni le rune chiave <spellName>Piede lesto</spellName> e <spellName>Presa dell'immortale</spellName>.<br><br>Guarigioni effettuate in questo turno: @f1@<br>Totale guarigioni effettuate: @f2@<br>Salute massima ottenuta: @f3@<br><br><spellName>Piede lesto</spellName>: movimento e attacchi base generano cariche di <keywordMajor>Energizzato</keywordMajor>. A 100 cariche, il tuo prossimo attacco infligge danni bonus, ti cura e ti fornisce un aumento di <speed>velocità di movimento</speed>.<br><spellName>Presa dell'immortale</spellName>: restando in combattimento con un nemico per 3 secondi, lo marchi. Gli attacchi consumano il marchio per infliggere danni bonus, curarti e fornirti <scaleHealth>salute massima</scaleHealth> permanente."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Sinfonia della guerra",
             "rarity": 2,
-            "tooltip": "Ottieni le Rune chiave <spellName>Tempo letale</spellName> e <spellName>Conquistatore</spellName>."
+            "tooltip": "Ottieni le rune chiave <spellName>Tempo letale</spellName> e <spellName>Conquistatore</spellName>.<br><br><spellName>Tempo letale</spellName>: attaccare i campioni ti fornisce <attackSpeed>velocità d'attacco</attackSpeed> cumulabile fino a 6 volte. A 6 cariche, i tuoi attacchi scagliano un dardo che infligge danni aggiuntivi.<br><spellName>Conquistatore</spellName>: i colpi con attacchi e abilità contro i campioni ti forniscono <physicalDamage>forza</physicalDamage><magicDamage> adattiva</magicDamage> cumulabile fino a 12 volte. A 12 cariche, ti curi di una percentuale dei danni che infliggi ai campioni."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Invalicabile",
             "rarity": 1,
-            "tooltip": "Ottieni le Rune chiave <spellName>Scossa di assestamento</spellName> e <spellName>Potenziamento glaciale</spellName>."
+            "tooltip": "Ottieni le rune chiave <spellName>Scossa di assestamento</spellName> e <spellName>Potenziamento glaciale</spellName>.<br><br><spellName>Scossa di assestamento</spellName>: <status>immobilizzare</status> i campioni ti fornisce <scaleArmor>armatura</scaleArmor> e <scaleMR>resistenza magica</scaleMR> per 2,5 secondi, dopodiché esplodi infliggendo danni ai nemici vicini in base alla tua <scaleHealth>salute massima</scaleHealth>.<br><spellName>Potenziamento glaciale</spellName>: <status>immobilizzare</status> i campioni crea ai loro piedi del ghiaccio che <status>rallenta</status> i nemici al suo interno e riduce i loro danni."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Stop al tempo</spellName>: Tutti i campioni nelle vicinanze entrano in <status>stasi</status> per @StasisDuration@ secondi, o per @SelfDuration@ nel tuo caso. Durante la stasi recuperi un <healing>@HealAmountPercent*100@% della salute mancante</healing>."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Requisiti: acquista @AnvilsReqToComplete@ Incudini degli oggetti.<br><br>Ricompensa: tutti i tuoi oggetti diventano <keywordMajor>Capolavori</keywordMajor> e le loro statistiche aumentano di un @ItemPercentAmp*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Missione: Rito del dio della Forgia",
+            "rarity": 2,
+            "tooltip": "Requisiti: acquista @AnvilsReqToComplete@ Incudini degli oggetti.<br><br>Ricompensa: tutti i tuoi oggetti diventano <keywordMajor>Capolavori</keywordMajor> e le loro statistiche aumentano di un @ItemPercentAmp*100@%."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "OK Boomerang",
             "rarity": 1,
             "tooltip": "Lancia <keywordMajor>automaticamente</keywordMajor> un boomerang a un nemico nelle vicinanze ogni @BaseCooldown@ secondo/i, infliggendo @Damage@ danni adattivi ai nemici colpiti.<br><br>Danni inflitti in questo turno: @f1@<br>Totale danni inflitti: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Quando infliggi danni con un attacco, la tua abilità successiva infligge danni aumentati di un @AbilityBoost*100@%.<br><br>Quando infliggi danni con un'abilità, il tuo attacco successivo infligge danni aumentati di un @AttackBoost*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Ibrido",
+            "rarity": 1,
+            "tooltip": "Quando infliggi danni con un attacco, la tua abilità successiva infligge danni aumentati di un @AbilityBoost*100@%.<br><br>Quando infliggi danni con un'abilità, il tuo attacco successivo infligge danni aumentati di un @AttackBoost*100@%."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Inizi ogni turno con @StartingBees@ Ape/Api. Ottieni Api raccogliendo fiori. Quando colpisci un bersaglio con attacchi o abilità entro @BeeRange@ di gittata, gli lanci contro le Api, che lo attaccano nell'arco di @DebuffDuration@ secondo/i.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Mente alveare",
+            "rarity": 2,
+            "tooltip": "Inizi ogni turno con @StartingBees@ Ape/Api. Ottieni Api raccogliendo fiori. Quando colpisci un bersaglio con attacchi o abilità entro @BeeRange@ di gittata, gli lanci contro le Api, che lo attaccano nell'arco di @DebuffDuration@ secondo/i.<br><br>Danni inflitti in questo turno: @f1@<br>Totale danni inflitti: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Non puoi più effettuare aggiornamenti.<br><br>Seleziona un Impianto oro, se vengono consumati almeno @PrismaticThreshold@ aggiornamenti, potenzialo selezionando al suo posto un Impianto Prismatico.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "Le tue evocazioni ottengono un aumento di dimensioni, salute e danni di un @MinionSizeIncrease*100@%."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Aggiungi il Multiutensile al tuo inventario. Durante ogni Fase degli acquisti, scegli 1 tra 5 oggetti casuali e il Multiutensile si trasformerà in quell'oggetto per il successivo turno di combattimento.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Multiutensile",
+            "rarity": 1,
+            "tooltip": "Aggiungi il Multiutensile al tuo inventario. Durante ogni Fase degli acquisti, scegli 1 tra 5 oggetti casuali e il Multiutensile si trasformerà in quell'oggetto per il successivo turno di combattimento.<br><br>Al turno @PrismaticRound@, il Multiutensile può trasformarsi in oggetti Prismatici."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "Dall'inizio alla fine",
             "rarity": 1,
-            "tooltip": "Ottieni le Rune chiave <spellName>Primo attacco</spellName> e <spellName>Raccolto oscuro</spellName>.<br><br>Danni inflitti in questo turno: @f1@<br>Totale danni inflitti: @f2@<br>Totale oro guadagnato: @f3@"
+            "tooltip": "Ottieni le rune chiave <spellName>Primo attacco</spellName> e <spellName>Raccolto oscuro</spellName>.<br><br>Danni inflitti in questo turno: @f1@<br>Totale danni inflitti: @f2@<br>Totale oro guadagnato: @f3@<br><br><spellName>Primo attacco</spellName>: danneggiare un campione fa sì che subisca danni aumentati per 3 secondi. Al termine, ottieni oro in base ai danni bonus inflitti.<br><spellName>Raccolto oscuro</spellName>: danneggiando un nemico con meno del <scaleHealth>50% di salute</scaleHealth> gli infliggi danni bonus e aumenti permanentemente quei danni bonus."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Una volta per combattimento, quando rischieresti di morire, ti trasformi invece in un fuoco fatuo, riporti <scaleHealth>la tua salute a un @HealthLock*100@%</scaleHealth> e raggiungi un punto casuale dell'arena.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Stanza antipanico",
+            "rarity": 0,
+            "tooltip": "Una volta per combattimento, quando rischieresti di morire, ti trasformi invece in un fuoco fatuo, riporti <scaleHealth>la tua salute a un @HealthLock*100@%</scaleHealth> e raggiungi un punto casuale dell'arena."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "L'utilizzo di un'abilità garantisce l'accumulo di <scaleBonus>@HastePerCast@ velocità abilità</scaleBonus> all'infinito. Si azzera a ogni turno."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "Fornire <healing>cure</healing> e <Shield>scudi</Shield> aumenta i tuoi danni da abilità di un @SpellDamagePerStack*100@% cumulabile all'infinito per il resto del turno.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Furia del giusto",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Bonus ai danni da abilità attuali: @f1@%<br>Danni bonus in questo turno: @f2@<br>Totale danni bonus: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Laser orbitale",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Danni inflitti in questo turno: @f1@<br>Totale danni inflitti: @f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "Ottieni <keyword>Energizzato</keyword> al doppio della velocità. Attivare <keyword>Energizzato</keyword> scaglia un <keywordMajor>proiettile magico</keywordMajor> che infligge fino a un <trueDamage>@MaxHealthDamagePerMissile*100@% di danni puri in base alla salute massima del bersaglio</trueDamage> e alla distanza percorsa.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Energetico",
+            "rarity": 0,
+            "tooltip": "Ottieni <keyword>Energizzato</keyword> al doppio della velocità. Attivare <keyword>Energizzato</keyword> scaglia un <keywordMajor>proiettile magico</keywordMajor> che infligge fino a un <trueDamage>@MaxHealthDamagePerMissile*100@% di danni puri in base alla salute massima del bersaglio</trueDamage> e alla distanza percorsa.<br><br>Danni inflitti con proiettili magici in questo turno: @f1@<br>Totale danni inflitti con proiettili magici: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Illusionista delle Rune chiave",
             "rarity": 1,
-            "tooltip": "Ottieni le Rune chiave <spellName>Evoca Aery</spellName> e <spellName>Cometa arcana</spellName>.<br><br>Totale danni inflitti: @f1@<br>Totale scudi generati: @f2@"
+            "tooltip": "Ottieni le rune chiave <spellName>Evoca Aery</spellName> e <spellName>Cometa arcana</spellName>.<br><br>Totale danni inflitti: @f1@<br>Totale scudi generati: @f2@<br><br><spellName>Evoca Aery</spellName>: Aery balza sui nemici a cui infliggi danni o sugli alleati a cui fornisci <healing>cure</healing>, <shield>scudi</shield> o buff, danneggiando i nemici e fornendo uno <shield>scudo</shield> agli alleati.<br><spellName>Cometa arcana</spellName>: quando infliggi danni da abilità scagli una cometa che danneggia tutti i nemici in un'area."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Quando usi Flash, intorno a te scoppia un'esplosione che infligge <magicDamage>@ExplosiveDamage@ danni magici</magicDamage> e <status>rallenta</status> i nemici di un @SlowAmount*100@% per @SlowDuration@ secondi. Inoltre, Flash si azzera a ogni nuovo turno.<br><br>Danni inflitti in questo turno: @f1@<br>Totale danni inflitti: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "Ottieni un @CritChanceBonus*100@% di probabilità di colpo critico e un @CritDamageBonus*100@% di danni critici. La tua probabilità di colpo critico massima è @CritChanceCeiling*100@%.<br><br>La probabilità di colpo critico superiore a un @CritChanceCeiling*100@% si converte in danni critici.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Mira alla testa",
+            "rarity": 1,
+            "tooltip": "Ottieni un @CritChanceBonus*100@% di probabilità di colpo critico e un @CritDamageBonus*100@% di danni critici. La tua probabilità di colpo critico massima è @CritChanceCeiling*100@%.<br><br>La probabilità di colpo critico superiore a un @CritChanceCeiling*100@% si converte in danni critici."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Maestro delle combo",
             "rarity": 1,
-            "tooltip": "Ottieni le Rune chiave <spellName>Elettroshock</spellName> e <spellName>Scatto fasico</spellName>.<br><br>Danni da Elettroshock in questo turno: @f1@<br>Totale danni da Elettroshock: @f2@"
+            "tooltip": "Ottieni le rune chiave <spellName>Elettroshock</spellName> e <spellName>Scatto fasico</spellName>.<br><br>Danni da Elettroshock in questo turno: @f1@<br>Danni da Elettroshock totali: @f2@<br><br><spellName>Elettroshock</spellName>: colpire con 3 attacchi o abilità diversi entro 3 secondi infligge una raffica di danni.<br><spellName>Scatto fasico</spellName>: colpire con 3 attacchi o abilità diversi entro 4 secondi ti fornisce <speed>velocità di movimento</speed> e resistenza al rallentamento per alcuni secondi."
         },
         {
             "apiName": "DarkBlessing",

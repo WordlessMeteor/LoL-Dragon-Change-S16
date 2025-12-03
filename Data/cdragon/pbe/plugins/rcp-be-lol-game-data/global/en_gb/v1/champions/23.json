@@ -1082,7 +1082,7 @@
             "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Tryndamere thrives on the thrills of combat, increasing his Attack Damage as he is more and more wounded. He can cast Bloodlust to consume his Fury and heal himself.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Tryndamere thirsts for blood, gaining <scaleAD>@FlatAD@ Attack Damage</scaleAD> plus <scaleAD>@ADPerOnePercentMissingHP@</scaleAD> per 1% missing Health.<br><br><spellActive>Active:</spellActive> Tryndamere consumes his <keywordMajor>Fury</keywordMajor>, restoring <healing>@BaseHeal@ plus @HealPerFury@ Health per Fury</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Tryndamere thirsts for blood, gaining up to <scaleAD>@MaximumBonusAD@ Attack Damage</scaleAD> based on his missing Health (max: @RemainingHealthThreshold*100@% remaining Health).<br><br><spellActive>Active:</spellActive> Tryndamere consumes his <keywordMajor>Fury</keywordMajor>, restoring <healing>@BaseHeal@ plus @HealPerFury@ Health per Fury (max: @MaximumHeal@)</healing>. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1232,7 +1232,7 @@
             "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Tryndamere lets out an insulting cry, decreasing surrounding champions' Attack Damage. Enemies with their backs turned to Tryndamere also have their Move Speed reduced.",
-            "dynamicDescription": "Tryndamere hurls insults, reducing champions' Attack Damage by @ADReduction*-1@ for @ReductionDuration@ seconds. Enemy champions with their backs towards Tryndamere are <status>Slowed</status> by @SlowPotency*-100@% for the same duration.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere hurls insults, reducing champions' Attack Damage by @ADReduction*-1@ for @ReductionDuration@ seconds and <status>Slowing</status> by @SlowPotency*-100@% while cowering from him for the same duration.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,

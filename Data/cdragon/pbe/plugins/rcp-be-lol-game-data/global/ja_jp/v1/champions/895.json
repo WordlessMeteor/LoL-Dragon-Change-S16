@@ -625,7 +625,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "鞭の刃を指定した方向に打ちつけ、直線上にいるすべての敵にダメージを与える。この攻撃が命中すると、少しの間だけ射程距離が増加する。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 物理防御貫通が@CritArmorPen@増加し、チャンピオンに対する通常攻撃で<healing>与ダメージの@CritLifesteal@にあたる体力</healing>を回復する。この効果で受けた余剰の体力回復量は@ShieldDuration@秒間<shield>シールド</shield>に変換される。<br><br><spellActive>発動効果:</spellActive> 鞭の刃を叩きつけ、<physicalDamage>@DamageCalc@の物理ダメージ</physicalDamage>を与える。このダメージはクリティカル率に応じて増加する。敵のユニットまたは建造物に命中すると@BuffDuration@秒間、射程距離が125、<attackSpeed>攻撃速度が@BonusAttackSpeedCalc@%</attackSpeed>増加し、通常攻撃が扇状の範囲に<physicalDamage>@AttackTotalDamageTooltip@の物理ダメージ</physicalDamage>を与えるようになる。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NilahQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1075,7 +1075,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "あふれ出る喜びの中で鞭の刃を振り回し、周囲の敵にダメージを与えてから、自身の方向に引き寄せる。",
-            "dynamicDescription": "鞭の刃を振り回し、1秒かけて<physicalDamage>@DamagePerTickCalcTooltip@の物理ダメージ</physicalDamage>を与える。そして最後に衝撃波で<physicalDamage>@DamageCalc@の物理ダメージ</physicalDamage>を与えて、周囲の敵を自身の方向に<status>引き寄せる</status>。<br><br>自身および周囲の味方は、<healing>敵チャンピオンの体力に与えたダメージの@ChampHealingPercent@(+「形なき刃」により@spell.NilahQ:CritLifesteal@)にあたる体力(チャンピオン以外の場合は@OtherHealingPercent*100@%にあたる体力)</healing>を回復し、余剰の体力回復量は@Duration@秒間<shield>シールド</shield>に変換される。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NilahR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1085,12 +1085,12 @@
                 400.0
             ],
             "costCoefficients": [
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 110.0,

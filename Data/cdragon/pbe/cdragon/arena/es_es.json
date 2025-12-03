@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Cerbero",
             "rarity": 2,
-            "tooltip": "Obtienes las runas clave <spellName>Lluvia de cuchillas</spellName> y <spellName>Ataque intensificado</spellName>."
+            "tooltip": "Obtienes las runas clave <spellName>Lluvia de cuchillas</spellName> y <spellName>Ataque intensificado</spellName>.<br><br><spellName>Lluvia de cuchillas</spellName> - Tus primeros 3 ataques obtienen mucha <attackSpeed>velocidad de ataque</attackSpeed>.<br><spellName>Ataque intensificado</spellName> - Asestar 3 ataques a un mismo enemigo inflige daño explosivo y aumenta tu daño hasta que abandones el combate."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Danza demoníaca",
             "rarity": 1,
-            "tooltip": "Obtienes las runas clave <spellName>Pies veloces</spellName> y <spellName>Garras del inmortal</spellName>.<br><br>Curación realizada esta ronda: @f1@<br>Curación realizada en total: @f2@<br>Vida máxima obtenida: @f3@"
+            "tooltip": "Obtienes las runas clave <spellName>Pies veloces</spellName> y <spellName>Garras del inmortal</spellName>.<br><br>Curación realizada esta ronda: @f1@<br>Curación realizada en total: @f2@<br>Vida máxima ganada: @f3@<br><br><spellName>Pies veloces</spellName> - Moverse y atacar genera cargas de <keywordMajor>Vigor</keywordMajor>. Con 100, tu siguiente ataque inflige daño adicional, te cura y te otorga una ráfaga de <speed>velocidad de movimiento</speed>.<br><spellName>Garras del inmortal</spellName> - Permanecer en combate 3 s con un enemigo lo marca. Los ataques consumen la marca para infligir daño adicional, curarte y otorgar <scaleHealth>vida máxima</scaleHealth> permanente."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Sinfonía de guerra",
             "rarity": 2,
-            "tooltip": "Obtienes las runas clave <spellName>Compás letal</spellName> y <spellName>Conquistador</spellName>."
+            "tooltip": "Obtienes las runas clave <spellName>Compás letal</spellName> y <spellName>Conquistador</spellName>.<br><br><spellName>Compás letal</spellName> - Atacar a campeones otorga <attackSpeed>velocidad de ataque</attackSpeed>, que se acumula un máximo de 6 veces. Con 6 acumulaciones, tus ataques disparan un proyectil que inflige daño adicional.<br><spellName>Conquistador</spellName> - Los ataques y habilidades asestadas a campeones te otorgan <magicDamage>fuerza</magicDamage> <physicalDamage>adaptable</physicalDamage>, que se acumula hasta 12 veces. Con 12 acumulaciones, te curas un porcentaje del daño que inflijas a campeones."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Intransitable",
             "rarity": 1,
-            "tooltip": "Obtienes las runas clave <spellName>Reverberacción</spellName> y <spellName>Mejora glacial</spellName>."
+            "tooltip": "Obtienes las runas clave <spellName>Reverberacción</spellName> y <spellName>Mejora glacial</spellName>.<br><br><spellName>Reverberacción</spellName> - <status>Inmovilizar</status> a campeones te otorga <scaleArmor>armadura</scaleArmor> y <scaleMR>resistencia mágica</scaleMR> durante 2,5 s, tras los cuales explotas, lo que inflige daño a los enemigos cercanos en función de tu <scaleHealth>vida máxima</scaleHealth>.<br><spellName>Mejora glacial</spellName> - <status>Inmovilizar</status> a campeones crea hielo debajo de ellos, lo que <status>ralentiza</status> a los enemigos que estén en contacto con el hielo y reduce su daño."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Tiempo detenido</spellName>: Todos los campeones cercanos entran en <status>estasis</status> durante @StasisDuration@ s, mientras que tú lo haces durante @SelfDuration@ s. Mientras tanto, restauras un <healing>@HealAmountPercent*100@% de la vida que te falte</healing>."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Requisito: Comprar @AnvilsReqToComplete@ yunques de objeto.<br><br>Recompensa: Todos tus objetos se vuelven <keywordMajor>selectos</keywordMajor>, lo que aumenta sus estadísticas un @ItemPercentAmp*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Misión: Ritual del dios de la forja",
+            "rarity": 2,
+            "tooltip": "Requisito: Comprar @AnvilsReqToComplete@ yunques de objeto.<br><br>Recompensa: Todos tus objetos se vuelven <keywordMajor>selectos</keywordMajor>, lo que aumenta sus estadísticas un @ItemPercentAmp*100@%."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "A tope con el bumerán",
             "rarity": 1,
             "tooltip": "<keywordMajor>Lanza automáticamente</keywordMajor> un bumerán a un enemigo cercano cada @BaseCooldown@ s, que inflige @Damage@ de daño adaptable a los enemigos alcanzados.<br><br>Daño infligido esta ronda: @f1@<br>Daño infligido en total: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Cuando infliges daño con un ataque, tu siguiente habilidad inflige un @AbilityBoost*100@% de daño adicional.<br><br>Cuando infliges daño con una habilidad, tu siguiente ataque inflige un @AttackBoost*100@% de daño adicional.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Híbrido",
+            "rarity": 1,
+            "tooltip": "Cuando infliges daño con un ataque, tu siguiente habilidad inflige un @AbilityBoost*100@% de daño adicional.<br><br>Cuando infliges daño con una habilidad, tu siguiente ataque inflige un @AttackBoost*100@% de daño adicional."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Comienzas cada ronda con @StartingBees@ abeja(s). Cosecha flores para obtener abejas. Al asestar ataques o habilidades a un objetivo en @BeeRange@, una abeja se lanzará al ataque a lo largo de @DebuffDuration@ s.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Mente colmena",
+            "rarity": 2,
+            "tooltip": "Comienzas cada ronda con @StartingBees@ abeja(s). Cosecha flores para obtener abejas. Al asestar ataques o habilidades a un objetivo en @BeeRange@, una abeja se lanzará al ataque a lo largo de @DebuffDuration@ s.<br><br>Daño infligido esta ronda: @f1@<br>Daño infligido en total: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Ya no puedes realizar más cambios.<br><br>Selecciona un aumento dorado. Si has realizado @PrismaticThreshold@ cambios como mínimo, podrás elegir un aumento prismático.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "Tus súbditos obtienen un @MinionSizeIncrease*100@% de tamaño, vida y daño adicionales."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Añade Multiherramienta a tu inventario. En cada fase de compra, elige 1 de 5 objetos aleatorios, y Multiherramienta se convertirá en ese objeto para la próxima ronda de combate.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Multiherramienta",
+            "rarity": 1,
+            "tooltip": "Añade Multiherramienta a tu inventario. En cada fase de compra, elige 1 de 5 objetos aleatorios, y Multiherramienta se convertirá en ese objeto para la próxima ronda de combate.<br><br>En la ronda @PrismaticRound@, Multiherramienta puede ofrecer objetos prismáticos."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "De principio a fin",
             "rarity": 1,
-            "tooltip": "Obtienes las runas clave <spellName>Primer golpe</spellName> y <spellName>Cosecha oscura</spellName>.<br><br>Daño infligido esta ronda: @f1@<br>Daño infligido en total: @f2@<br>Oro obtenido en total: @f3@"
+            "tooltip": "Obtienes las runas clave <spellName>Primer golpe</spellName> y <spellName>Cosecha oscura</spellName>.<br><br>Daño infligido esta ronda: @f1@<br>Daño infligido en total: @f2@<br>Total de oro obtenido: @f3@<br><br><spellName>Primer golpe</spellName> - Infligir daño a un campeón hace que reciba daño adicional durante 3 s. Al final, obtienes oro en función del daño adicional que hayas infligido.<br><spellName>Cosecha oscura</spellName> - Infligir daño a un enemigo que tenga menos del <scaleHealth>50% de vida</scaleHealth> inflige daño adicional y aumenta ese daño adicional de forma permanente."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Una vez por combate, cuando fueras a morir, te conviertes en un fatuo con un <scaleHealth>@HealthLock*100@% de vida</scaleHealth> y te desplazas hasta un lugar aleatorio de la arena.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Habitación del pánico",
+            "rarity": 0,
+            "tooltip": "Una vez por combate, cuando fueras a morir, te conviertes en un fatuo con un <scaleHealth>@HealthLock*100@% de vida</scaleHealth> y te desplazas hasta un lugar aleatorio de la arena."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "Al usar habilidades, obtienes <scaleBonus>@HastePerCast@ de velocidad de habilidades</scaleBonus>, que se acumula de forma ilimitada. Esto se reinicia cada ronda."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "<healing>Curar</healing> u otorgar un <Shield>escudo</Shield> aumenta el daño de tus habilidades un @SpellDamagePerStack*100@%, que se acumula de forma ilimitada durante la ronda.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Furia justiciera",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Bonificación actual de daño de las habilidades: @f1@%<br>Daño adicional esta ronda: @f2@<br>Daño adicional en total: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Láser orbital",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Daño infligido esta ronda: @f1@<br>Daño total infligido: @f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "Obtienes <keyword>Vigor</keyword> el doble de rápido. Activar <keyword>Vigor</keyword> dispara un <keywordMajor>proyectil mágico</keywordMajor>, lo que inflige hasta un <trueDamage>@MaxHealthDamagePerMissile*100@% de daño verdadero en función de la vida máxima</trueDamage> según la distancia recorrida.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Enérgico",
+            "rarity": 0,
+            "tooltip": "Obtienes <keyword>Vigor</keyword> el doble de rápido. Activar <keyword>Vigor</keyword> dispara un <keywordMajor>proyectil mágico</keywordMajor>, lo que inflige hasta un <trueDamage>@MaxHealthDamagePerMissile*100@% de daño verdadero en función de la vida máxima</trueDamage> según la distancia recorrida.<br><br>Daño infligido con proyectiles mágicos esta ronda: @f1@<br>Daño infligido con proyectiles mágicos en total: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Adepto de runas clave",
             "rarity": 1,
-            "tooltip": "Obtienes las runas clave <spellName>Invocar a Aery</spellName> y <spellName>Cometa arcano</spellName>.<br><br>Daño infligido en total: @f1@<br>Escudos generados en total: @f2@"
+            "tooltip": "Obtienes las runas clave <spellName>Invocar a Aery</spellName> y <spellName>Cometa arcano</spellName>.<br><br>Daño infligido en total: @f1@<br>Escudos generados en total: @f2@<br><br><spellName>Invocar a Aery</spellName> - Aery salta sobre los enemigos a los que hayas infligido daño o los aliados a los que hayas <healing>curado</healing>, brindado <shield>escudo</shield> o una mejora, lo que inflige daño a los enemigos u otorga un <shield>escudo</shield> a los aliados.<br><spellName>Cometa arcano</spellName> - Infligir daño con habilidades lanza un cometa que inflige daño a todos los enemigos en una zona."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Al usar Destello, desatas una explosión a tu alrededor que inflige <magicDamage>@ExplosiveDamage@ de daño mágico</magicDamage> y <status>ralentiza</status> un @SlowAmount*100@% durante @SlowDuration@ s. Además, Destello se reinicia cada ronda.<br><br>Daño infligido esta ronda: @f1@<br>Daño infligido en total: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "Otorga un @CritChanceBonus*100@% de probabilidad de impacto crítico y un @CritDamageBonus*100@ % de daño de impacto crítico. Tu probabilidad de impacto crítico tiene un límite del @CritChanceCeiling*100@%.<br><br>Convierte tu probabilidad de impacto crítico por encima de @CritChanceCeiling*100@% en daño de impacto crítico.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Apunta a la cabeza",
+            "rarity": 1,
+            "tooltip": "Otorga un @CritChanceBonus*100@% de probabilidad de impacto crítico y un @CritDamageBonus*100@ % de daño de impacto crítico. Tu probabilidad de impacto crítico tiene un límite del @CritChanceCeiling*100@%.<br><br>Convierte tu probabilidad de impacto crítico por encima de @CritChanceCeiling*100@% en daño de impacto crítico."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Maestría en combos",
             "rarity": 1,
-            "tooltip": "Obtienes las runas clave <spellName>Electrocutar</spellName> e <spellName>Irrupción de fase</spellName>.<br><br>Daño de Electrocutar esta ronda: @f1@<br>Daño de Electrocutar en total: @f2@"
+            "tooltip": "Obtienes las runas clave <spellName>Electrocutar</spellName> e <spellName>Irrupción de fase</spellName>.<br><br>Daño de Electrocutar esta ronda: @f1@<br>Daño de Electrocutar en total: @f2@<br><br><spellName>Electrocutar</spellName> - Asestar 3 ataques o habilidades independientes en 3 s inflige una ráfaga de daño.<br><spellName>Irrupción de fase</spellName> - Asestar 3 ataques o habilidades independientes en 4 s te otorga <speed>velocidad de movimiento</speed> y resistencia a ralentizaciones durante unos segundos."
         },
         {
             "apiName": "DarkBlessing",

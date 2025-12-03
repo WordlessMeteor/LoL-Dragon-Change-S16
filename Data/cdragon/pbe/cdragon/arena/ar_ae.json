@@ -74,7 +74,7 @@
             "id": 323,
             "name": "سيربيروس",
             "rarity": 2,
-            "tooltip": "تكسب رونز حجري الأساس <spellName>وابل النصال</spellName> و<spellName>الضغط الهجومي</spellName>."
+            "tooltip": "تكسب رونز حجر الأساس <spellName>وابل النصال</spellName> و<spellName>الضغط الهجومي</spellName>.<br><br><spellName>وابل النصال</spellName> - تحصل هجماتك الـ 3 الأولى على زيادة هائلة في <attackSpeed>سرعة الهجوم</attackSpeed>.<br><spellName>الضغط الهجومي</spellName> - تؤدي إصابة العدو نفسه بـ 3 هجمات إلى إلحاق دفقة من الضرر وتزيد الضرر الذي تلحقه حتى تغادر القتال."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "رقصة الشيطان",
             "rarity": 1,
-            "tooltip": "اكسب رونز أحجار الأساس <spellName>حركة الأقدام الرشيقة</spellName> و<spellName>قبضة الخالدين</spellName>.<br><br>العلاج المحقق في هذه الجولة: @f1@<br>إجمالي العلاج المحقق: @f2@<br>الصحة القصوى المكتسبة: @f3@"
+            "tooltip": "تكسب رونز حجر الأساس <spellName>حركة الأقدام الرشيقة</spellName> و<spellName>قبضة الخالدين</spellName>.<br><br>العلاج المطبق في هذه الجولة: @f1@<br>إجمالي العلاج المطبق: @f2@<br>الصحة القصوى المكتسبة: @f3@<br><br><spellName>حركة الأقدام الرشيقة</spellName> - تولّد الحركة والهجوم شحنات من تأثير <keywordMajor>التنشيط</keywordMajor>. عند الوصول إلى 100، يلحق هجومك التالي ضررًا إضافيًا ويعالجك ويمنحك دفقة من <speed>سرعة الحركة</speed>.<br><spellName>قبضة الخالدين</spellName> - يؤدّي البقاء في القتال لمدة 3 ثوانٍ مع عدو إلى وسمه. تستهلك الهجمات الوسم لإلحاق ضررٍ إضافيٍ، وتعالجك وتمنحك <scaleHealth>صحة قصوى</scaleHealth> دائمة."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "سيمفونية الحرب",
             "rarity": 2,
-            "tooltip": "اكسب رونز أحجار أساس <spellName>الإيقاع الفتاك</spellName> و<spellName>الغازي</spellName>."
+            "tooltip": "تكسب رونز حجر الأساس <spellName>الإيقاع الفتاك</spellName> و<spellName>الغازي</spellName>.<br><br><spellName>الإيقاع الفتاك</spellName> - تمنحك مهاجمة الأبطال <attackSpeed>سرعة هجوم</attackSpeed>، تتكدس حتى 6 مرات. عند الوصول إلى 6 تكدسات، تطلق هجماتك صاعقة تُلحق ضررًا إضافيًا.<br><spellName>الغازي</spellName> - تمنحك إصابات الهجمات والقدرات الملحقة بالأبطال <physicalDamage>قوة</physicalDamage><magicDamage>متكيفة</magicDamage>، تتكدس حتى 12 مرة. عند الوصول إلى 12 تكدس، تعالج نفسك بنسبة من الضرر الذي تلحقه بالأبطال."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "لا تُعْبَر",
             "rarity": 1,
-            "tooltip": "تكسب رونز أحجار الأساس <spellName>الصدمة الارتدادية</spellName> و<spellName>التحسين الجليدي</spellName>."
+            "tooltip": "تكسب رونز حجر الأساس <spellName>الصدمة الارتدادية</spellName> و<spellName>التحسين الجليدي</spellName>.<br><br><spellName>الصدمة الارتدادية</spellName> - يمنحك تأثير <status>شل حركة</status> الأبطال <scaleArmor>دروع</scaleArmor> و<scaleMR>مقاومة سحر</scaleMR> لمدة 2.5 ثانية، ثم تنفجر بعدها ملحقةً ضررًا بالأعداء في الجوار بناءً على <scaleHealth>صحتك القصوى</scaleHealth>.<br><spellName>التحسين الجليدي</spellName> - يؤدي <status>شل حركة</status> الأبطال إلى إنشاء جليدٍ تحتهم يسبب <status>إبطاء</status> الأعداء في داخله ويخفض ضررهم."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>إيقاف الزمن</spellName>: يتم وضع جميع الأبطال في الجوار في حالة <status>سبات</status> لمدة @StasisDuration@ث، أو @SelfDuration@ث بالنسبة لك. تستعيد خلالها <healing>@HealAmountPercent*100@% من الصحة الناقصة</healing>."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "الشرط: اشترِ @AnvilsReqToComplete@ من سنادين العناصر.<br><br>الجائزة: تصبح جميع عناصرك عناصر <keywordMajor>كفاءة</keywordMajor>، مما يزيد إحصاءاتها بنسبة @ItemPercentAmp*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "مهمة: طقوس سيد التصنيع",
+            "rarity": 2,
+            "tooltip": "الشرط: اشترِ @AnvilsReqToComplete@ من سنادين العناصر.<br><br>الجائزة: تصبح جميع عناصرك عناصر <keywordMajor>كفاءة</keywordMajor>، مما يزيد إحصاءاتها بنسبة @ItemPercentAmp*100@%."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "وقت البومرانغ",
             "rarity": 1,
             "tooltip": "يتسبب <keywordMajor>الإلقاء التلقائي</keywordMajor> برمي بومرانغ على بطل معادٍ في الجوار كل @BaseCooldown@ث ملحقًا @Damage@ ضرر متكيف بالأعداء المصابين.<br><br>الضرر الملحق هذه الجولة: @f1@<br>إجمالي الضرر الملحق: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "عندما تلحق ضررًا بهجوم، تلحق قدرتك التالية @AbilityBoost*100@% ضرر زائد.<br><br>عندما تلحق ضررًا بقدرة، يلحق هجومك التالي @AttackBoost*100@% ضرر زائد.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "هجين",
+            "rarity": 1,
+            "tooltip": "عندما تلحق ضررًا بهجوم، تلحق قدرتك التالية @AbilityBoost*100@% ضرر زائد.<br><br>عندما تلحق ضررًا بقدرة، يلحق هجومك التالي @AttackBoost*100@% ضرر زائد."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "تبدأ كل جولة ومعك @StartingBees@ من النحل. تكسب النحل من خلال حصاد الزهور. يؤدي الهجوم على هدف أو إصابته بقدرة ضمن نطاق @BeeRange@ إلى إطلاق النحل لمهاجمته لمدة @DebuffDuration@ث.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "العقل الجمعي",
+            "rarity": 2,
+            "tooltip": "تبدأ كل جولة ومعك @StartingBees@ من النحل. تكسب النحل من خلال حصاد الزهور. يؤدي الهجوم على هدف أو إصابته بقدرة ضمن نطاق @BeeRange@ إلى إطلاق النحل لمهاجمته لمدة @DebuffDuration@ث.<br><br>الضرر الملحق هذه الجولة: @f1@<br>إجمالي الضرر الملحق: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "لم يعد بوسعك الاستبدال.<br><br>اختر تحسينًا ذهبيًا، إذا تم استهلاك ما لا يقل عن @PrismaticThreshold@ من عمليات الاستبدال، يتم تعزيزه لاختيار تحسين موشوري بدلًا منه.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "يكسب المستدعون نسبة @MinionSizeIncrease*100@% زيادة في الحجم والصحة والضرر."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "أضف الأداة المتعددة إلى مخزونك. خلال كل مرحلة شراء، اختر عنصرًا واحدًا من بين 5 عناصر عشوائية، لتتحول الأداة المتعددة إلى ذلك العنصر في جولة القتال التالية.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "الأداة المتعددة",
+            "rarity": 1,
+            "tooltip": "أضف الأداة المتعددة إلى مخزونك. خلال كل مرحلة شراء، اختر عنصرًا واحدًا من بين 5 عناصر عشوائية، لتتحول الأداة المتعددة إلى ذلك العنصر في جولة القتال التالية.<br><br>عند الجولة @PrismaticRound@، يمكن للأداة المتعددة أن تستبدل بعناصر موشورية."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "من البداية إلى النهاية",
             "rarity": 1,
-            "tooltip": "اكسب رونز أحجار الأساس <spellName>الضربة الأولى</spellName> و<spellName>حصاد الظلام</spellName>.<br><br>الضرر الملحق في هذه الجولة: @f1@<br>إجمالي الضرر الملحق: @f2@<br>إجمالي الذهب المكتسب: @f3@"
+            "tooltip": "تكسب رونز حجر الأساس <spellName>الضربة الأولى</spellName> و<spellName>حصاد الظلام</spellName>.<br><br>الضرر الملحق هذه الجولة: @f1@<br>إجمالي الضرر الملحق: @f2@<br>إجمالي الذهب المكتسب: @f3@<br><br><spellName>الضربة الأولى</spellName> - يؤدي إلحاق الضرر ببطل إلى جعله يتلقى ضررًا أكبر لمدة 3 ثوانٍ. في النهاية، تكسب ذهبًا بناءً على ضررك الإضافي الملحق.<br><spellName>حصاد الظلام</spellName> - يؤدي إلحاق الضرر بعدو لديه أقل من <scaleHealth>50% صحة</scaleHealth> إلى إلحاق ضررٍ إضافي وزيادة ذلك الضرر الإضافي بشكل دائم."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "لمرة واحدة في المعركة، عندما توشك على الموت، تتحول بدلًا من ذلك إلى طيف، ويتم ضبط صحتك عند <scaleHealth>@HealthLock*100@%</scaleHealth>، وتنتقل إلى موقع عشوائي في الحلبة.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "الغرفة المحصّنة",
+            "rarity": 0,
+            "tooltip": "لمرة واحدة في المعركة، عندما توشك على الموت، تتحول بدلًا من ذلك إلى طيف، ويتم ضبط صحتك عند <scaleHealth>@HealthLock*100@%</scaleHealth>، وتنتقل إلى موقع عشوائي في الحلبة."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "يمنح استخدام قدرة <scaleBonus>@HastePerCast@ تسارع قدرة</scaleBonus>، ويتكدس التأثير بلا نهاية، وتتم إعادة ضبطه كل جولة."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "يؤدي <healing>العلاج</healing> أو <Shield>التدريع</Shield> إلى زيادة ضرر قدرتك بنسبة @SpellDamagePerStack*100@%، قابلة للتكدس إلى ما لانهاية خلال الجولة.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "غضب الشرفاء",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>مكافأة ضرر القدرة الحالية: @f1@%<br>الضرر الإضافي هذه الجولة: @f2@<br>إجمالي الضرر الإضافي: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "ليزر مداري",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>الضرر الملحق بهذه الجولة:@f1@<br>إجمالي الضرر الملحق:@f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "تكسب تأثير <keyword>التنشيط</keyword> أسرع بمرتين. يؤدي تفعيل تأثير <keyword>التنشيط</keyword> إلى إطلاق <keywordMajor>قذيفة سحرية</keywordMajor> تلحق ما يصل إلى <trueDamage>@MaxHealthDamagePerMissile*100@% من الصحة القصوى على شكل ضرر حقيقي</trueDamage> بناءً على المسافة المقطوعة.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "مفعم بالطاقة",
+            "rarity": 0,
+            "tooltip": "تكسب تأثير <keyword>التنشيط</keyword> أسرع بمرتين. يؤدي تفعيل تأثير <keyword>التنشيط</keyword> إلى إطلاق <keywordMajor>قذيفة سحرية</keywordMajor> تلحق ما يصل إلى <trueDamage>@MaxHealthDamagePerMissile*100@% من الصحة القصوى على شكل ضرر حقيقي</trueDamage> بناءً على المسافة المقطوعة.<br><br>ضرر القذيفة السحرية الملحق في هذه الجولة @f1@<br>إجمالي ضرر القذيفة السحرية الملحق: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "مستحضر حجر الأساس",
             "rarity": 1,
-            "tooltip": "اكسب رونز أحجار الأساس <spellName>استدعاء آوري</spellName> و<spellName>المذنب الغامض</spellName>.<br><br>إجمالي الضرر الملحق: @f1@<br>إجمالي الدروع المتجددة: @f2@"
+            "tooltip": "تكسب رونز حجر الأساس <spellName>استدعاء آوري</spellName> و<spellName>المذنّب الغامض</spellName>.<br><br>إجمالي الضرر الملحق: @f1@<br>إجمالي تأثيرات الدرع المولّدة: @f2@<br><br><spellName>استدعاء آوري</spellName> - تقفز آوري على الأعداء الذين تصيبهم أنت بضرر أو الحلفاء الذين تمنحهم <healing>العلاج</healing> أو <shield>الدرع</shield> أو التعزيز، فتُلحق الضرر بالأعداء أو تمنح الحلفاء <shield>درعًا</shield>.<br><spellName>المذنّب الغامض</spellName> - يؤدي إلحاق ضرر بالقدرات إلى إطلاق مذنّب يُصيب جميع الأعداء في منطقة."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "عندما تنفذ الانتقال الخاطف، يحدث انفجار من حولك يلحق <magicDamage>@ExplosiveDamage@ ضرر سحر</magicDamage> كما <status>يبطئ</status> بنسبة @SlowAmount*100@% لمدة @SlowDuration@ث. إضافة إلى ذلك، يُعاد ضبط الانتقال الخاطف كل جولة.<br><br>الضرر الملحق هذه الجولة: @f1@<br>إجمالي الضرر الملحق: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "تكسب @CritChanceBonus*100@% فرصة ضربة حرجة و @CritDamageBonus*100@% ضرر ضربة حرجة. يبلغ الحد الأقصى لفرصة الضربة الحرجة لديك @CritChanceCeiling*100@%.<br><br>يحوّل فرصة الضربة الحرجة التي تتجاوز @CritChanceCeiling*100@% إلى ضرر ضربة حرجة.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "استهداف الرأس",
+            "rarity": 1,
+            "tooltip": "تكسب @CritChanceBonus*100@% فرصة ضربة حرجة و @CritDamageBonus*100@% ضرر ضربة حرجة. يبلغ الحد الأقصى لفرصة الضربة الحرجة لديك @CritChanceCeiling*100@%.<br><br>يحوّل فرصة الضربة الحرجة التي تتجاوز @CritChanceCeiling*100@% إلى ضرر ضربة حرجة."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "أستاذ الضربات المتعاقبة",
             "rarity": 1,
-            "tooltip": "اكسب رونز أحجار الأساس <spellName>الصعقة الكهربائية</spellName> و<spellName>الاندفاع المرحلي</spellName>.<br><br>ضرر الصعقة الكهربائية في هذه الجولة: @f1@<br>إجمالي ضرر الصعقة الكهربائية: @f2@"
+            "tooltip": "تكسب رونز حجر الأساس <spellName>الصعقة الكهربائية</spellName> و<spellName>الاندفاع المرحلي</spellName>.<br><br>ضرر الصعقة الكهربائية هذه الجولة: @f1@<br>إجمالي ضرر الصعقة الكهربائية: @f2@<br><br><spellName>الصعقة الكهربائية</spellName> - تؤدي الإصابة بـ 3 هجمات أو قدرات منفصلة خلال 3 ثوانٍ إلى إلحاق دفقة من الضرر.<br><spellName>الاندفاع المرحلي</spellName> - تمنحك إصابة 3 هجمات أو قدرات منفصلة خلال 4 ثوانٍ <speed>سرعة حركة</speed> ومقاومة إبطاء لبضع ثوانٍ."
         },
         {
             "apiName": "DarkBlessing",

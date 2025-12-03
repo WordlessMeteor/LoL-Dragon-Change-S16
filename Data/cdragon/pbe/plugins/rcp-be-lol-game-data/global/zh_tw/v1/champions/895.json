@@ -625,7 +625,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "淣菈朝著指定方向揮舞鞭刃，對直線上所有命中的敵人造成傷害。短暫時間內，淣菈獲得攻擊距離提升。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive> 淣菈獲得 @CritArmorPen@ 物理穿透，並且根據攻擊所造成的傷害回復<healing>@CritLifesteal@ 生命</healing>。超出的治療量轉化為 <shield>護盾</shield> ，持續 @ShieldDuration@ 秒。<br><br><spellActive>主動： </spellActive> 淣菈向前揮舞鞭刃，對命中的敵人造成 <physicalDamage>@DamageCalc@ 物理傷害</physicalDamage>，傷害隨著暴擊率上升。若技能成功命中敵人或建築物，淣菈獲得額外 125 攻擊距離和 <attackSpeed>@BonusAttackSpeedCalc@% 攻速</attackSpeed>，接著她的普攻會獲得錐形範圍的濺射效果，造成 <physicalDamage>@AttackTotalDamageTooltip@ 物理傷害</physicalDamage> ，持續 @BuffDuration@ 秒。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NilahQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1075,7 +1075,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "淣菈愉快地揮舞手中的鞭刃，對周圍敵人造成傷害後將其拉向自身。",
-            "dynamicDescription": "淣菈向周圍揮舞鞭刃，在1秒內造成<physicalDamage>@DamagePerTickCalcTooltip@物理傷害</physicalDamage>，接著引爆並造成<physicalDamage>@DamageCalc@物理傷害</physicalDamage>，同時將附近敵人<status>拉</status>向自身。<br><br>淣菈治療自身和鄰近友軍，治療量等同於淣菈對敵方英雄造成傷害量的<healing>@ChampHealingPercent@（+@spell.NilahQ:CritLifesteal@百變之刃）（對非英雄則治療造成傷害量的@OtherHealingPercent*100@）</healing>，超出的治療量會轉化為<shield>護盾</shield>，持續@Duration@秒。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NilahR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1085,12 +1085,12 @@
                 400.0
             ],
             "costCoefficients": [
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 110.0,

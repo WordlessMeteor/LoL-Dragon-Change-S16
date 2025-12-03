@@ -1,0 +1,725 @@
+{
+    "{ebbc8a77}": {
+        "championSkinName": "TurretOvergrowth_Sodapop_Chaos",
+        "skinAnimationProperties": {
+            "animationGraphData": "{1acf9a07}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TurretOvergrowth/Skins/Skin48/TurretOvergrowth_Skin48.2026_S1_SRT_LanePushGameplay.skl",
+            "simpleSkin": "ASSETS/Characters/TurretOvergrowth/Skins/Skin48/TurretOvergrowth_Skin48.2026_S1_SRT_LanePushGameplay.skn",
+            "texture": "ASSETS/Characters/TurretOvergrowth/Skins/Skin49/TurretOvergrowth_Skin49_TX_CM.2026_S1_SRT_LanePushGameplay.tex",
+            "selfIllumination": 3.0,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "{2c24cc45}",
+                "boneName": "Root",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
+        "mResourceResolver": "{fe906bad}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "{9c7d7985}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Wave",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        -1.0,
+                        0.0,
+                        3.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "lambert4"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.5600060820579529,
+                        0.5633020401000977,
+                        0.239215686917305
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.3499961793422699
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 10,
+                "alphaRef": 0,
+                "softParticleParams": {
+                    "deltaIn": 15.0,
+                    "__type": "VfxSoftParticleDefinitionData"
+                },
+                "{cb13aff1}": -10.0,
+                "disableBackfaceCull": true,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        180.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Particles/TurretOvergrowth_Base_Noise_Caustic.2026_S1_SRT_LanePushGameplay.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.30000001192092896
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            3.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "emitterLinger": 1.0,
+                "emitterName": "motes",
+                "birthOrbitalVelocity": {
+                    "constantValue": [
+                        0.0,
+                        0.5,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthVelocity": {
+                    "constantValue": [
+                        10.0,
+                        500.0,
+                        10.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                10.0,
+                                500.0,
+                                10.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    0.25
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            0.25,
+                            1.0
+                        ],
+                        "values": [
+                            1.0,
+                            0.30000001192092896,
+                            0.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "radius": 150.0,
+                    "__type": "VfxShapeCylinder"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.800000011920929
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.8999999761581421,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.007171740289777517,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.3843137323856354,
+                                0.38883039355278015,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.02867170237004757,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 5,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        30.0,
+                        8.0,
+                        7.5
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                30.0,
+                                8.0,
+                                7.5
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            -0.0,
+                            0.20000000298023224,
+                            0.4000000059604645,
+                            0.6000000238418579,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.02500000037252903,
+                                -0.05000000074505806
+                            ],
+                            [
+                                0.30000001192092896,
+                                0.574999988079071,
+                                0.574999988079071
+                            ],
+                            [
+                                1.0,
+                                0.32499998807907104,
+                                0.32499998807907104
+                            ],
+                            [
+                                0.30000001192092896,
+                                0.15000000596046448,
+                                0.15000000596046448
+                            ],
+                            [
+                                1.0,
+                                0.3499999940395355,
+                                0.3499999940395355
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                -0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Particles/TurretOvergrowth_Base_Spark1_01.2026_S1_SRT_LanePushGameplay.tex",
+                "birthFrameRate": {
+                    "constantValue": 0.0,
+                    "__type": "ValueFloat"
+                },
+                "numFrames": 4,
+                "startFrame": 1,
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            2.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "BigTwirly",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -30.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Particles/TurretOvergrowth_Base_Swirl2_Idle.2026_S1_SRT_LanePushGameplay.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.9300068616867065,
+                        0.1600061058998108,
+                        0.16565194725990295,
+                        0.5882353186607361
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.9300068616867065,
+                                0.1600061058998108,
+                                0.16565194725990295,
+                                0.5882353186607361
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 4,
+                "alphaRef": 0,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.0,
+                                1.0
+                            ],
+                            "values": [
+                                0.20000000298023224,
+                                1.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "disableBackfaceCull": true,
+                "uvScrollClamp": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -360.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        -10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        6.0,
+                        3.0,
+                        6.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/TurretOvergrowth/Skins/Base/Particles/TurretOvergrowth_Base_Trail01.2026_S1_SRT_LanePushGameplay.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        -0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                -0.30000001192092896,
+                                0.30000001192092896
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        2.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvRotation": {
+                    "constantValue": 90.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "TurretOvergrowth_Skin49_Idle_Shine",
+        "particlePath": "Characters/TurretOvergrowth/Skins/Skin49/Particles/TurretOvergrowth_Skin49_Idle_Shine",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{fe906bad}": {
+        "resourceMap": {
+            "{2c24cc45}": "{9c7d7985}",
+            "{10d8efb8}": "{62d8ae54}",
+            "{13d8f471}": "{65d8b30d}",
+            "{12d8f2de}": "{64d8b17a}",
+            "{7c247af7}": "{00000000}",
+            "{96c89ceb}": "{00000000}"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/TurretOvergrowth/TurretOvergrowth.bin",
+        "DATA/Characters/TurretOvergrowth/Animations/Skin48.bin",
+        "DATA/TurretOvergrowth_Skins_Skin0_Skins_Skin48_Skins_Skin49.bin",
+        "DATA/TurretOvergrowth_Skins_Skin0_Skins_Skin49.bin"
+    ]
+}

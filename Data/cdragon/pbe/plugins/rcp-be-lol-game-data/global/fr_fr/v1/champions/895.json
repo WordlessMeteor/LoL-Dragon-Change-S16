@@ -625,7 +625,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Nilah donne un coup de lame-fouet dans la direction choisie, infligeant des dégâts aux ennemis sur une ligne droite. Cela augmente sa portée d'attaque pendant un court instant.",
-            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Nilah gagne +@CritArmorPen@ pénétration d'armure, et ses attaques contre les champions lui rendent des <healing>PV équivalents à @CritLifesteal@ des dégâts infligés</healing>. Toute surcharge de PV issue de cet effet est convertie en <shield>bouclier</shield> pendant @ShieldDuration@ sec.<br><br><spellActive>Active :</spellActive> Nilah donne un coup de lame-fouet, infligeant <physicalDamage>@DamageCalc@ pts de dégâts physiques</physicalDamage>. Ces dégâts augmentent avec ses chances de coup critique. Si une unité ou un bâtiment ennemis sont touchés, Nilah gagne +125 portée d'attaque et <attackSpeed>+@BonusAttackSpeedCalc@% de vitesse d'attaque</attackSpeed>, et ses attaques infligent <physicalDamage>@AttackTotalDamageTooltip@ pts de dégâts physiques</physicalDamage> dans une zone conique pendant @BuffDuration@ sec.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NilahQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1075,7 +1075,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Faisant gaiement tournoyer sa lame-fouet, Nilah inflige des dégâts aux ennemis qui l'entourent avant de les attirer vers elle.",
-            "dynamicDescription": "Nilah fait tournoyer sa lame-fouet, infligeant <physicalDamage>@DamagePerTickCalcTooltip@ pts de dégâts physiques</physicalDamage> en 1 sec, avant de donner un coup qui inflige <physicalDamage>@DamageCalc@ pts de dégâts physiques</physicalDamage> et qui <status>attire</status> les ennemis proches vers elle.<br><br>Nilah récupère des PV équivalents à <healing>@ChampHealingPercent@ (+@spell.NilahQ:CritLifesteal@ Lame fluide) des dégâts infligés aux champions ennemis (@OtherHealingPercent*100@% contre les non-champions)</healing> et elle rend le même montant aux alliés proches. Toute surcharge de PV issue de cet effet est convertie en <shield>bouclier</shield> pendant @Duration@ sec.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NilahR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1085,12 +1085,12 @@
                 400.0
             ],
             "costCoefficients": [
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 110.0,

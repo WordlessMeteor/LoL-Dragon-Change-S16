@@ -625,7 +625,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Nilah สร้างความเสียหายให้กับศัตรูที่โดนเป็นเส้นตรงด้วยการฟาดแส้ของเธอ ซึ่งจะช่วยเพิ่มระยะโจมตีของเธอเป็นเวลาสั้น ๆ",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> Nilah ได้รับเจาะเกราะ @CritArmorPen@ และการโจมตีใส่แชมเปี้ยนจะฟื้นฟู<healing>พลังชีวิต @CritLifesteal@ ตามความเสียหายที่ทำได้</healing> ฮีลที่เกินมาจะเปลี่ยนไปเป็น<shield>โล่ป้องกันความเสียหาย</shield>เป็นเวลา @ShieldDuration@ วินาที<br><br><spellActive>กดใช้:</spellActive> Nilah ฟาดแส้เป็นเส้นตรง สร้าง<physicalDamage>ความเสียหายกายภาพ @DamageCalc@ หน่วย</physicalDamage> เพิ่มขึ้นตามโอกาสคริติคอล หากโจมตีโดนยูนิตศัตรูหรือสิ่งก่อสร้าง Nilah จะได้รับระยะโจมตีเพิ่มขึ้น 125 หน่วย และ<attackSpeed>ความเร็วโจมตี @BonusAttackSpeedCalc@%</attackSpeed> และการโจมตีของเธอจะสร้าง<physicalDamage>ความเสียหายกายภาพ @AttackTotalDamageTooltip@ หน่วย</physicalDamage>เป็นรูปกรวย เป็นเวลา @BuffDuration@ วินาที<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NilahQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1075,7 +1075,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Nilah ควงแส้ไปรอบ ๆ ตัวด้วยความปีติอันล้นหลาม สร้างความเสียหายให้กับศัตรูรอบ ๆ ตัวเธอก่อนที่จะดึงพวกเขาเข้ามาด้วยอาวุธ",
-            "dynamicDescription": "Nilah ควงแส้ของเธอไปรอบ ๆ ตัว สร้าง<physicalDamage>ความเสียหายกายภาพ @DamagePerTickCalcTooltip@ หน่วย</physicalDamage> ภายในเวลา 1 วินาที จากนั้นจะหยุดหมุนเพื่อสร้าง<physicalDamage>ความเสียหายกายภาพ @DamageCalc@ หน่วย</physicalDamage> อีกทั้งยัง<status>ดึง</status>ศัตรูใกล้เคียงเข้าหาเธอ<br><br>Nilah จะฮีลตนเองและเพื่อนร่วมทีมใกล้เคียง <healing>@ChampHealingPercent@ (+@spell.NilahQ:CritLifesteal@ Formless Blade) ตามความเสียหายที่ทำได้ต่อพลังชีวิตของศัตรู (@OtherHealingPercent*100@% สำหรับยูนิตที่ไม่ใช่แชมเปี้ยน)</healing> การฮีลที่เกินมาจะเปลี่ยนไปเป็น<shield>โล่ป้องกันความเสียหาย</shield>ที่คงอยู่เป็นเวลา @Duration@ วินาที<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NilahR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1085,12 +1085,12 @@
                 400.0
             ],
             "costCoefficients": [
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 110.0,

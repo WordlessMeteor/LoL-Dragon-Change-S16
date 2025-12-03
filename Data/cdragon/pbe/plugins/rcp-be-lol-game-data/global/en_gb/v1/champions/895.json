@@ -625,7 +625,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "With a snap of her whip-blade, Nilah damages any enemies she hits in a straight line in her chosen direction. This action extends her attack range for a short duration.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Nilah gains @CritArmorPen@ Armor Penetration, and her Attacks against champions restore <healing>@CritLifesteal@ damage dealt as Health</healing>. Overhealing from this is converted into a <shield>Shield</shield> for @ShieldDuration@ seconds.<br><br><spellActive>Active:</spellActive> Nilah cracks her whip-blade, dealing <physicalDamage>@DamageCalc@ physical damage</physicalDamage>, increased by her Critical Strike Chance. If an enemy unit or structure is hit, Nilah gains 125 Attack Range and <attackSpeed>@BonusAttackSpeedCalc@% Attack Speed</attackSpeed>, and her Attacks hit in a cone as <physicalDamage>@AttackTotalDamageTooltip@ physical damage</physicalDamage> for @BuffDuration@ seconds.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Nilah gains @CritArmorPen@ Armor Penetration, and her Attacks against champions restore <healing>@CritLifesteal@ damage dealt as Health</healing>. Overhealing from this is converted into a <shield>Shield</shield> for @ShieldDuration@ seconds.<br><br><spellActive>Active:</spellActive> Nilah cracks her whip-blade, dealing <physicalDamage>@DamageCalc@ physical damage</physicalDamage>. If an enemy unit or structure is hit, Nilah gains 125 Attack Range and <attackSpeed>@BonusAttackSpeedCalc@% Attack Speed</attackSpeed>, and her Attacks hit in a cone for @BuffDuration@ seconds.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1075,7 +1075,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Twirling her whip-blade in joyful exuberance, Nilah deals damage to enemies around her before pulling them closer with her weapon.",
-            "dynamicDescription": "Nilah whirls her whip-blade, dealing <physicalDamage>@DamagePerTickCalcTooltip@ physical damage</physicalDamage> over 1 second, then finishes with a burst of <physicalDamage>@DamageCalc@ physical damage</physicalDamage> that also <status>Pulls</status> nearby enemies toward her.<br><br>Nilah heals herself and nearby allies by <healing>@ChampHealingPercent@ (+@spell.NilahQ:CritLifesteal@ Formless Blade) of her damage dealt to enemy champions' Health (@OtherHealingPercent*100@% for non-champions)</healing>, converting any overhealing into a <shield>Shield</shield> for @Duration@ seconds.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nilah whirls her whip-blade, dealing <physicalDamage>@DamagePerTickCalcTooltip@ physical damage</physicalDamage> over 1 second, then finishes with a burst of <physicalDamage>@DamageCalc@ physical damage</physicalDamage> that also <status>Pulls</status> nearby enemies toward her.<br><br>Apotheosis heals Nilah and her nearby allies for <healing>@ChampHealingPercent@ (+@spell.NilahQ:CritLifesteal@ Formless Blade) of the damage dealt</healing> to enemy champions, converting any overhealing into a <shield>Shield</shield> for @Duration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1085,12 +1085,12 @@
                 400.0
             ],
             "costCoefficients": [
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 110.0,

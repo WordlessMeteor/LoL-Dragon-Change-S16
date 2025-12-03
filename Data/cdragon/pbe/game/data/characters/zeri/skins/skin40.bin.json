@@ -2559,6 +2559,16 @@
                 "TextureName": "Fresnel_Mask",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "DeformNoise",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "DeformMask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
@@ -2628,6 +2638,56 @@
                     5.0,
                     5.0,
                     0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformFeatureStrength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformTilling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VertexDeformSpeed",
+                "value": [
+                    -0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformIntensity",
+                "value": [
+                    6.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformProtection",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -3119,6 +3179,12 @@
             },
             {
                 "name": "USE_VERTEX_ANIM",
+                "on": false,
+                "Group": "Vertex_Animation",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_VERTEX_ANIMATION_BASED_ON_UV_AND_TEXTURE",
                 "on": false,
                 "Group": "Vertex_Animation",
                 "__type": "StaticMaterialSwitchDef"
@@ -29517,123 +29583,6 @@
             },
             {
                 "rate": {
-                    "constantValue": 5.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 0.3199999928474426,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.2000000476837158,
-                "emitterName": "End_Impact_Glow",
-                "Linger": {
-                    "UseSeparateLingerColor": 1,
-                    "__type": "VfxLingerDefinitionData"
-                },
-                "SpawnShape": {
-                    "__type": "{ee39916f}"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        150.0,
-                        150.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        0.16127260029315948,
-                        0.8168764710426331,
-                        1.0,
-                        0.800000011920929
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.019999999552965164,
-                            0.30000001192092896,
-                            0.6725806593894958,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.06999313086271286
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                0.3799954354763031,
-                                0.5300068855285645,
-                                0.2500038146972656,
-                                0.5000076293945312
-                            ],
-                            [
-                                0.12941177189350128,
-                                0.38823530077934265,
-                                0.38823530077934265,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 121,
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthScale0": {
-                    "constantValue": [
-                        200.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.5,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_ZoomLines_Color.SKINS_Zeri_Skin40.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
                     "constantValue": 18.0,
                     "__type": "ValueFloat"
                 },
@@ -37362,7 +37311,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke01.SKINS_Zeri_Skin40.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke014.SKINS_Zeri_Skin40.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -37569,7 +37518,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke01.SKINS_Zeri_Skin40.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke014.SKINS_Zeri_Skin40.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -37782,7 +37731,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke02.SKINS_Zeri_Skin40.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke_001.SKINS_Zeri_Skin40.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -37988,7 +37937,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke02.SKINS_Zeri_Skin40.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke_001.SKINS_Zeri_Skin40.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -38229,7 +38178,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke02.SKINS_Zeri_Skin40.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke_001.SKINS_Zeri_Skin40.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -38425,7 +38374,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke01.SKINS_Zeri_Skin40.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke014.SKINS_Zeri_Skin40.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -38631,7 +38580,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke02.SKINS_Zeri_Skin40.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Zeri/Skins/Skin40/Particles/Zeri_Skin40_E_Smoke_001.SKINS_Zeri_Skin40.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"

@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Địa Ngục Khuyển",
             "rarity": 2,
-            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Mưa Kiếm</spellName> và <spellName>Sẵn Sàng Tấn Công</spellName>."
+            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Mưa Kiếm</spellName> và <spellName>Sẵn Sàng Tấn Công</spellName>.<br><br><spellName>Mưa Kiếm</spellName> - 3 Đòn Đánh đầu tiên của bạn được tăng mạnh <attackSpeed>Tốc Độ Đánh</attackSpeed>.<br><spellName>Sẵn Sàng Tấn Công</spellName> - Tung 3 Đòn Đánh lên cùng một kẻ địch sẽ gây thêm một lượng sát thương bùng nổ và tăng sát thương của bạn cho đến khi rời giao tranh."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Vũ Điệu Ma Quỷ",
             "rarity": 1,
-            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Bước Chân Thần Tốc</spellName> và <spellName>Quyền Năng Bất Diệt</spellName>.<br><br>Máu Đã Hồi Trong Vòng Này: @f1@<br>Tổng Máu Đã Hồi: @f2@<br>Máu Tối Đa Đã Nhận: @f3@"
+            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Bước Chân Thần Tốc</spellName> và <spellName>Quyền Năng Bất Diệt</spellName>.<br><br>Máu Đã Hồi Trong Vòng Này: @f1@<br>Tổng Máu Đã Hồi: @f2@<br>Máu Tối Đa Đã Nhận: @f3@<br><br><spellName>Bước Chân Thần Tốc</spellName> - Di Chuyển và Đánh Thường sẽ cộng tích trữ <keywordMajor>Tích Điện</keywordMajor>. Khi đạt 100, Đòn Đánh tiếp theo gây thêm sát thương, hồi máu và tăng mạnh <speed>Tốc Độ Di Chuyển</speed> của bạn.<br><spellName>Quyền Năng Bất Diệt</spellName> - Ở trong giao tranh với một kẻ địch trong 3 giây sẽ đánh dấu mục tiêu đó. Các đòn đánh sẽ tiêu hao đánh dấu để gây thêm sát thương, hồi máu và tăng vĩnh viễn <scaleHealth>Máu tối đa</scaleHealth> cho bạn."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Chiến Hùng Ca",
             "rarity": 2,
-            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Nhịp Độ Chết Người</spellName> và <spellName>Chinh Phục</spellName>."
+            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Nhịp Độ Chết Người</spellName> và <spellName>Chinh Phục</spellName>.<br><br><spellName>Nhịp Độ Chết Người</spellName> - Tấn công tướng sẽ tăng <attackSpeed>Tốc Độ Đánh</attackSpeed>, cộng dồn tối đa 6 lần. Khi đạt 6 cộng dồn, Đòn Đánh của bạn phóng ra một tia đạn gây thêm sát thương.<br><spellName>Chinh Phục</spellName> - Các Đòn Đánh và Kỹ Năng đánh trúng lên tướng sẽ cho bạn <physicalDamage>Sức Mạnh</physicalDamage><magicDamage>Thích Ứng</magicDamage>, cộng dồn tối đa 12 lần. Khi đạt 12 cộng dồn, hồi máu bằng một phần sát thương gây lên tướng."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Không Thể Vượt Qua",
             "rarity": 1,
-            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Dư Chấn</spellName> và <spellName>Nâng Cấp Băng Giá</spellName>."
+            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Dư Chấn</spellName> và <spellName>Nâng Cấp Băng Giá</spellName>.<br><br><spellName>Dư Chấn</spellName> - <status>Làm Bất Động</status> tướng sẽ cho bạn <scaleArmor>Giáp</scaleArmor> và <scaleMR>Kháng Phép</scaleMR> trong 2,5 giây, sau đó bạn phát nổ, gây sát thương lên các kẻ địch xung quanh dựa trên <scaleHealth>Máu tối đa</scaleHealth> của bạn.<br><spellName>Nâng Cấp Băng Giá</spellName> - <status>Làm Bất Động</status> tướng sẽ tạo ra băng giá dưới chân chúng, <status>Làm Chậm</status> kẻ địch bên trên và giảm sát thương của chúng."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Ngưng Đọng Thời Gian</spellName>: Tất cả các tướng ở gần rơi vào trạng thái <status>Ngưng Đọng</status> trong @StasisDuration@ giây hoặc @SelfDuration@ giây đối với bạn. Trong thời gian đó, bạn hồi lại <healing>@HealAmountPercent*100@% Máu đã mất</healing>."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Yêu Cầu: Mua @AnvilsReqToComplete@ Gói Trang Bị.<br><br>Phần Thưởng: Tất cả các trang bị của bạn hóa thành <keywordMajor>Tuyệt Phẩm</keywordMajor>, tăng chỉ số thêm @ItemPercentAmp*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Nhiệm Vụ: Nghi Lễ Thần Rèn",
+            "rarity": 2,
+            "tooltip": "Yêu Cầu: Mua @AnvilsReqToComplete@ Gói Trang Bị.<br><br>Phần Thưởng: Tất cả các trang bị của bạn hóa thành <keywordMajor>Tuyệt Phẩm</keywordMajor>, tăng chỉ số thêm @ItemPercentAmp*100@%."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "Boomerang OK",
             "rarity": 1,
             "tooltip": "<keywordMajor>Tự Động</keywordMajor> phóng ra 1 boomerang vào 1 tướng địch gần bên sau mỗi @BaseCooldown@ giây, gây @Damage@ sát thương thích ứng lên những kẻ địch trúng đòn.<br><br>Sát Thương Gây Ra Trong Vòng Này: @f1@<br>Tổng Sát Thương Gây Ra: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Khi bạn gây sát thương bằng một Đòn Đánh, Kỹ Năng tiếp theo của bạn gây thêm @AbilityBoost*100@% sát thương.<br><br>Khi bạn gây sát thương bằng một Kỹ Năng, Đòn Đánh tiếp theo của bạn gây thêm @AttackBoost*100@% sát thương.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Hỗn Hợp",
+            "rarity": 1,
+            "tooltip": "Khi bạn gây sát thương bằng một Đòn Đánh, Kỹ Năng tiếp theo của bạn gây thêm @AbilityBoost*100@% sát thương.<br><br>Khi bạn gây sát thương bằng một Kỹ Năng, Đòn Đánh tiếp theo của bạn gây thêm @AttackBoost*100@% sát thương."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Bắt đầu mỗi vòng đấu với @StartingBees@ Ong. Nhận Ong khi thu hoạch hoa. Đánh trúng mục tiêu bằng đòn đánh hoặc kỹ năng trong phạm vi @BeeRange@ sẽ phóng Ong tấn công chúng trong @DebuffDuration@ giây.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Tư Duy Bầy Ong",
+            "rarity": 2,
+            "tooltip": "Bắt đầu mỗi vòng đấu với @StartingBees@ Ong. Nhận Ong khi thu hoạch hoa. Đánh trúng mục tiêu bằng đòn đánh hoặc kỹ năng trong phạm vi @BeeRange@ sẽ phóng Ong tấn công chúng trong @DebuffDuration@ giây.<br><br>Sát Thương Gây Ra Trong Vòng Này: @f1@<br>Tổng Sát Thương Gây Ra: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Bạn không thể đổi lại nữa.<br><br>Chọn một Nâng Cấp Vàng, nếu ít nhất @PrismaticThreshold@ lượt đổi đã được sử dụng, cường hóa nó để chọn một Nâng Cấp Kim Cương thay thế.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "Các triệu hồi của bạn được tăng @MinionSizeIncrease*100@% kích cỡ, máu và sát thương."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Thêm Công Cụ Đa Dụng vào kho đồ của bạn. Trong mỗi Giai Đoạn Mua Sắm, chọn 1 trong 5 trang bị ngẫu nhiên; Công Cụ Đa Dụng sẽ biến thành trang bị đó cho vòng giao tranh kế tiếp.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Công Cụ Đa Dụng",
+            "rarity": 1,
+            "tooltip": "Thêm Công Cụ Đa Dụng vào kho đồ của bạn. Trong mỗi Giai Đoạn Mua Sắm, chọn 1 trong 5 trang bị ngẫu nhiên; Công Cụ Đa Dụng sẽ biến thành trang bị đó cho vòng giao tranh kế tiếp.<br><br>Tại vòng @PrismaticRound@, Công Cụ Đa Dụng có thể quay ra Trang Bị Tối Thượng."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "Từ Đầu Chí Cuối",
             "rarity": 1,
-            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Đòn Phủ Đầu</spellName> và <spellName>Thu Thập Hắc Ám</spellName>.<br><br>Sát Thương Gây Ra Trong Vòng Này: @f1@<br>Tổng Sát Thương Gây Ra: @f2@<br>Tổng Vàng Nhận Được: @f3@"
+            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Đòn Phủ Đầu</spellName> và <spellName>Thu Thập Hắc Ám</spellName>.<br><br>Sát Thương Gây Ra Trong Vòng Này: @f1@<br>Tổng Sát Thương Gây Ra: @f2@<br>Tổng Vàng Nhận Được: @f3@<br><br><spellName>Đòn Phủ Đầu</spellName> - Gây sát thương lên một tướng sẽ khiến họ phải nhận thêm sát thương trong 3 giây. Khi kết thúc, bạn sẽ nhận Vàng dựa trên lượng sát thương cộng thêm đã gây ra.<br><spellName>Thu Thập Hắc Ám</spellName> - Gây sát thương lên một kẻ địch dưới <scaleHealth>50% Máu</scaleHealth> gây thêm sát thương và vĩnh viễn tăng lượng sát thương cộng thêm đó."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Mỗi giao tranh một lần, khi bạn sắp bị hạ gục, bạn sẽ hóa thành một linh thể, hồi lại <scaleHealth>@HealthLock*100@% Máu</scaleHealth> và dịch chuyển đến một vị trí ngẫu nhiên trong võ đài.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Phòng Hoảng Loạn",
+            "rarity": 0,
+            "tooltip": "Mỗi giao tranh một lần, khi bạn sắp bị hạ gục, bạn sẽ hóa thành một linh thể, hồi lại <scaleHealth>@HealthLock*100@% Máu</scaleHealth> và dịch chuyển đến một vị trí ngẫu nhiên trong võ đài."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "Sử dụng một kỹ năng sẽ cho <scaleBonus>@HastePerCast@ Điểm Hồi Kỹ Năng</scaleBonus>, cộng dồn vô hạn, đặt lại sau mỗi vòng."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "<healing>Hồi Máu</healing> hoặc <Shield>Tạo Lá Chắn</Shield> sẽ tăng sát thương Kỹ Năng của bạn thêm @SpellDamagePerStack*100@%, cộng dồn vô hạn trong vòng đấu.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Công Lý Thịnh Nộ",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Sát Thương Kỹ Năng Cộng Thêm Hiện Tại: @f1@%<br>Sát thương cộng thêm vòng này: @f2@<br>Tổng sát thương cộng thêm: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Laser Không Kích",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Sát Thương Gây Ra Trong Vòng Này: @f1@<br>Tổng Sát Thương Gây Ra: @f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "Nhận <keyword>Tích Điện</keyword> nhanh gấp đôi. Kích hoạt <keyword>Tích Điện</keyword> sẽ bắn ra <keywordMajor>Tên Lửa Ma Pháp</keywordMajor>, gây <trueDamage>sát thương chuẩn tương đương @MaxHealthDamagePerMissile*100@% Máu tối đa</trueDamage> dựa trên khoảng cách đã bay được.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Tràn Đầy Sinh Lực",
+            "rarity": 0,
+            "tooltip": "Nhận <keyword>Tích Điện</keyword> nhanh gấp đôi. Kích hoạt <keyword>Tích Điện</keyword> sẽ bắn ra <keywordMajor>Tên Lửa Ma Pháp</keywordMajor>, gây <trueDamage>sát thương chuẩn tương đương @MaxHealthDamagePerMissile*100@% Máu tối đa</trueDamage> dựa trên khoảng cách đã bay được.<br><br>Sát Thương Tên Lửa Ma Pháp Gây Ra Trong Vòng Này: @f1@<br>Tổng Sát Thương Tên Lửa Ma Pháp Gây Ra: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Thầy Pháp Ngọc Bội",
             "rarity": 1,
-            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Triệu Hồi Aery</spellName> và <spellName>Thiên Thạch Bí Ẩn</spellName>.<br><br>Tổng Sát Thương Gây Ra: @f1@<br>Tổng Lá chắn Đã Tạo: @f2@"
+            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Triệu Hồi Aery</spellName> và <spellName>Thiên Thạch Bí Ẩn</spellName>.<br><br>Tổng Sát Thương Gây Ra: @f1@<br>Tổng Lá Chắn Đã Nhận: @f2@<br><br><spellName>Triệu Hồi Aerie</spellName> - Aery sẽ bay đến mục tiêu mà bạn gây sát thương hoặc đồng minh mà bạn <healing>Hồi Máu</healing>, <shield>Tạo Lá Chắn</shield> hoặc đặt Bùa Lợi, gây sát thương lên kẻ địch hoặc <shield>Tạo Lá Chắn</shield> cho đồng minh.<br><spellName>Thiên Thạch Bí Ẩn</spellName> - Gây sát thương bằng Kỹ Năng sẽ phóng ra một thiên thạch, gây sát thương lên tất cả kẻ địch trong vùng ảnh hưởng."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Sử dụng Tốc Biến sẽ kích hoạt một vụ nổ ra xung quanh, gây <magicDamage>@ExplosiveDamage@ sát thương phép</magicDamage> và <status>Làm Chậm</status> @SlowAmount*100@% trong @SlowDuration@ giây. Ngoài ra, Tốc Biến sẽ hồi lại sau mỗi vòng.<br><br>Sát Thương Gây Ra Trong Vòng Này: @f1@<br>Tổng Sát Thương Gây Ra: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "Nhận @CritChanceBonus*100@% Tỉ Lệ Chí Mạng và @CritDamageBonus*100@% Sát Thương Chí Mạng. Tỉ Lệ Chí Mạng của bạn tối đa là @CritChanceCeiling*100@%.<br><br>Chuyển đổi Tỉ Lệ Chí Mạng vượt @CritChanceCeiling*100@% thành Sát Thương Chí Mạng.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Nhắm Thẳng Đầu",
+            "rarity": 1,
+            "tooltip": "Nhận @CritChanceBonus*100@% Tỉ Lệ Chí Mạng và @CritDamageBonus*100@% Sát Thương Chí Mạng. Tỉ Lệ Chí Mạng của bạn tối đa là @CritChanceCeiling*100@%.<br><br>Chuyển đổi Tỉ Lệ Chí Mạng vượt @CritChanceCeiling*100@% thành Sát Thương Chí Mạng."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Bậc Thầy Combo",
             "rarity": 1,
-            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Sốc Điện</spellName> và <spellName>Tăng Tốc Pha</spellName>.<br><br>Sát Thương Sốc Điện Trong Vòng Này: @f1@<br>Tổng Sát Thương Sốc Điện: @f2@"
+            "tooltip": "Nhận Ngọc Siêu Cấp <spellName>Sốc Điện</spellName> và <spellName>Tăng Tốc Pha</spellName>.<br><br>Sát Thương Sốc Điện Trong Vòng Này: @f1@<br>Tổng Sát Thương Sốc Điện: @f2@<br><br><spellName>Sốc Điện</spellName> - Đánh trúng bằng 3 Đòn Đánh hoặc Kỹ Năng riêng biệt trong vòng 3 giây sẽ gây thêm một lượng sát thương bùng nổ.<br><spellName>Tăng Tốc Pha</spellName> - Đánh trúng bằng 3 Đòn Đánh hoặc Kỹ Năng riêng biệt trong vòng 4 giây sẽ tăng <speed>Tốc Độ Di Chuyển</speed> và cho bạn hiệu ứng Kháng Làm Chậm trong vài giây."
         },
         {
             "apiName": "DarkBlessing",

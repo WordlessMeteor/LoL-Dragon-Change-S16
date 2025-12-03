@@ -177,7 +177,8 @@
             "ClientStates/Gameplay/UX/LoL/Cherry/CherryEventChoice",
             "ClientStates/Gameplay/UX/LoL/TeamFrames",
             "ClientStates/Gameplay/UX/LoL/Cherry/CherryCombatIntro",
-            "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks"
+            "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks",
+            "ClientStates/Gameplay/UX/LoL/Champ/OrnnShop"
         ],
         "__type": "ViewControllerList"
     },
@@ -407,6 +408,27 @@
             "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments",
             "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionTooltip",
             "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones"
+        ],
+        "__type": "ViewControllerList"
+    },
+    "{27ebc1ed}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "Filter": {
+                        "__type": "ViewControllerFilter_Spectator"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                },
+                {
+                    "Mode": "Maps/Shipping/Map11/Modes/SWIFTPLAY",
+                    "__type": "ViewControllerFilter_Mode"
+                }
+            ],
+            "__type": "ViewControllerFilter_And"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/LoL/LoLSwiftplayNeutralTimerViewController"
         ],
         "__type": "ViewControllerList"
     },
@@ -872,6 +894,17 @@
         ],
         "__type": "ViewControllerList"
     },
+    "{831cd35b}": {
+        "Filter": {
+            "Map": "Maps/Shipping/Map11",
+            "__type": "ViewControllerFilter_Map"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/LoL/RoleBoundQuest/RoleBoundQuestSelection",
+            "ClientStates/Gameplay/UX/LoL/RoleBoundQuest/RoleBoundQuestNarrativeBarks"
+        ],
+        "__type": "ViewControllerList"
+    },
     "{862591ad}": {
         "Filter": {
             "Filters": [
@@ -1066,6 +1099,41 @@
         },
         "ViewControllers": [
             "ClientStates/Gameplay/UX/TFT/TFTArmory_FullPotential"
+        ],
+        "__type": "ViewControllerList"
+    },
+    "{9192c3da}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "Filter": {
+                        "__type": "ViewControllerFilter_Spectator"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                },
+                {
+                    "Map": "Maps/Shipping/Map11",
+                    "__type": "ViewControllerFilter_Map"
+                },
+                {
+                    "Filter": {
+                        "Mode": "Maps/Shipping/Map11/Modes/TUTORIAL_MODULE_1",
+                        "__type": "ViewControllerFilter_Mode"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                },
+                {
+                    "Filter": {
+                        "Mode": "Maps/Shipping/Map11/Modes/ULTBOOK",
+                        "__type": "ViewControllerFilter_Mode"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                }
+            ],
+            "__type": "ViewControllerFilter_And"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/LoL/LoLObjectiveVoteResults"
         ],
         "__type": "ViewControllerList"
     },
@@ -1274,14 +1342,19 @@
                         "__type": "ViewControllerFilter_Mode"
                     },
                     "__type": "ViewControllerFilter_Not"
+                },
+                {
+                    "Filter": {
+                        "Mode": "Maps/Shipping/Map11/Modes/SWIFTPLAY",
+                        "__type": "ViewControllerFilter_Mode"
+                    },
+                    "__type": "ViewControllerFilter_Not"
                 }
             ],
             "__type": "ViewControllerFilter_And"
         },
         "ViewControllers": [
-            "ClientStates/Gameplay/UX/LoL/LoLSRNeutralTimerViewControllerAtakhan",
-            "ClientStates/Gameplay/UX/LoL/LoLObjectiveVoteResults",
-            "ClientStates/Gameplay/UX/LoL/FeatsViewController"
+            "ClientStates/Gameplay/UX/LoL/LoLSRNeutralTimerViewControllerAtakhan"
         ],
         "__type": "ViewControllerList"
     },
@@ -2138,7 +2211,10 @@
             "{bd2e78df}",
             "{c35b82ea}",
             "{66c3ef36}",
-            "{52920b68}"
+            "{52920b68}",
+            "{9192c3da}",
+            "{831cd35b}",
+            "{27ebc1ed}"
         ],
         "__type": "ViewControllerSet"
     },

@@ -625,7 +625,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Нила бьет хлыстом по прямой, нанося урон всем пораженным врагам. После этого у нее ненадолго увеличивается дальность атаки.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> пробивание брони Нилы увеличено на @CritArmorPen@, а ее автоатаки против чемпионов <healing>лечат ее на @CritLifesteal@ от нанесенного урона</healing>. Избыточное лечение от этого эффекта превращается в <shield>щит</shield>, который действует @ShieldDuration@ сек.<br><br><spellActive>Активно:</spellActive> Нила бьет своим хлыстом, нанося врагам <physicalDamage>@DamageCalc@ физического урона</physicalDamage> (урон зависит от шанса критического удара). Если поражены вражеские боец или строение, Нила усиливается на @BuffDuration@ сек.: ее дальность атаки увеличивается на 125, а <attackSpeed>скорость атаки – на @BonusAttackSpeedCalc@%</attackSpeed>. Кроме того, в течение этого времени ее автоатаки поражают врагов в конусе, нанося <physicalDamage>@AttackTotalDamageTooltip@ физического урона</physicalDamage>.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NilahQ_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1075,7 +1075,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Нила совершает круговой удар хлыстом, нанося урон всем врагам поблизости, после чего подтягивает их к себе.",
-            "dynamicDescription": "Нила совершает круговой удар хлыстом, нанося пораженным врагам <physicalDamage>@DamagePerTickCalcTooltip@ физического урона</physicalDamage> в течение 1 сек. После этого она устраивает взрыв, нанося противникам поблизости <physicalDamage>@DamageCalc@ физического урона</physicalDamage> и <status>подтягивая</status> их к себе.<br><br>Нила лечит себя и союзников поблизости на <healing>@ChampHealingPercent@ (+@spell.NilahQ:CritLifesteal@ Хлесткий клинок) от урона, нанесенного вражеским чемпионам (@OtherHealingPercent*100@% для целей, не являющихся чемпионами)</healing>. Избыточное лечение дает <shield>щит</shield>, который действует @Duration@ сек.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Spell_NilahR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1085,12 +1085,12 @@
                 400.0
             ],
             "costCoefficients": [
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 110.0,

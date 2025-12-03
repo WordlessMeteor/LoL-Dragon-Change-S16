@@ -2367,7 +2367,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 4.0,
+                "particleLinger": 1.0,
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Alpha_Rocks",
@@ -2752,6 +2752,7 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLinger": 1.0,
                 "lifetime": 0.30000001192092896,
                 "isSingleParticle": 1,
                 "emitterName": "Mesh_Ring",
@@ -2877,6 +2878,7 @@
                     "constantValue": 0.20000000298023224,
                     "__type": "ValueFloat"
                 },
+                "particleLinger": 0.20000000298023224,
                 "lifetime": 0.10000000149011612,
                 "isSingleParticle": 1,
                 "emitterName": "Mesh_AddRing2",
@@ -3088,6 +3090,7 @@
                     "constantValue": 1.5,
                     "__type": "ValueFloat"
                 },
+                "particleLinger": 1.5,
                 "lifetime": 0.5,
                 "isSingleParticle": 1,
                 "emitterName": "Alpha_GroundSmoke",
@@ -3391,7 +3394,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "particleLinger": null,
+                "particleLinger": 0.4000000059604645,
                 "lifetime": 0.6000000238418579,
                 "isSingleParticle": 1,
                 "emitterName": "Add_FireSpawn",
@@ -3675,6 +3678,7 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLinger": 1.0,
                 "lifetime": 0.10000000149011612,
                 "isSingleParticle": 1,
                 "emitterName": "Mesh_AddRing1",
@@ -3783,8 +3787,7 @@
                     "constantValue": 1.5,
                     "__type": "ValueFloat"
                 },
-                "particleLingerType": 2,
-                "particleLinger": 1.149999976158142,
+                "particleLinger": 1.5,
                 "lifetime": 0.25,
                 "isSingleParticle": 1,
                 "emitterName": "Alpha_Ground",
@@ -4285,7 +4288,7 @@
                     "constantValue": 0.4000000059604645,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.30000001192092896,
+                "particleLinger": 0.4000000059604645,
                 "lifetime": 0.10000000149011612,
                 "isSingleParticle": 1,
                 "emitterName": "Add_FireUp",
@@ -4737,7 +4740,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.20000000298023224,
+                "particleLinger": 1.0,
                 "lifetime": 5.0,
                 "isSingleParticle": 1,
                 "fieldCollectionDefinition": {
@@ -5264,7 +5267,7 @@
                     "constantValue": 0.4000000059604645,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 1.0,
+                "particleLinger": 0.4000000059604645,
                 "lifetime": 1.0,
                 "emitterName": "Add_FireRing",
                 "importance": 3,
@@ -5455,9 +5458,11 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 1.0,
+                "particleLingerType": 1,
+                "particleLinger": 0.20000000298023224,
                 "lifetime": 45.0,
                 "emitterName": "Alpha_Fire_Idle",
+                "importance": 3,
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
@@ -5538,6 +5543,21 @@
                                 0.30000001192092896,
                                 0.8999999761581421,
                                 1.0499999523162842
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "UseLingerErosionDriveCurve": true,
+                    "LingerErosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.0,
+                                1.0
+                            ],
+                            "values": [
+                                0.0,
+                                1.0
                             ],
                             "__type": "VfxAnimatedFloatVariableData"
                         },
@@ -5892,7 +5912,8 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 1.0,
+                "particleLingerType": 1,
+                "particleLinger": 0.20000000298023224,
                 "lifetime": 45.0,
                 "emitterName": "Add_FireRing1",
                 "importance": 3,
@@ -5966,6 +5987,21 @@
                         "dynamics": {
                             "times": [
                                 0.30000001192092896,
+                                1.0
+                            ],
+                            "values": [
+                                0.0,
+                                1.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "UseLingerErosionDriveCurve": true,
+                    "LingerErosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.0,
                                 1.0
                             ],
                             "values": [
@@ -6147,7 +6183,8 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 1.0,
+                "particleLingerType": 1,
+                "particleLinger": 0.20000000298023224,
                 "lifetime": 45.0,
                 "emitterName": "Alpha_FireRing_Orange1",
                 "importance": 3,
@@ -6215,6 +6252,21 @@
                         "dynamics": {
                             "times": [
                                 0.6000000238418579,
+                                1.0
+                            ],
+                            "values": [
+                                0.0,
+                                1.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "UseLingerErosionDriveCurve": true,
+                    "LingerErosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.0,
                                 1.0
                             ],
                             "values": [

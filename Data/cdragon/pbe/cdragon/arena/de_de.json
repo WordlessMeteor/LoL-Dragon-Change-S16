@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Zerberus",
             "rarity": 2,
-            "tooltip": "Du erhältst die Schlüsselrunen <spellName>„Klingenhagel“</spellName> und <spellName>„Fokussierter Angriff“</spellName>."
+            "tooltip": "Du erhältst die Schlüsselrunen <spellName>„Klingenhagel“</spellName> und <spellName>„Fokussierter Angriff“</spellName>.<br><br><spellName>Klingenhagel</spellName> – Deine ersten 3&nbsp;Angriffe haben ein stark erhöhtes <attackSpeed>Angriffstempo</attackSpeed>.<br><spellName>Fokussierter Angriff</spellName> – Bei 3&nbsp;Treffern mit Angriffen gegen denselben Gegner erleidet dieser eine Schadensspitze, und dein Schaden wird erhöht, bis du den Kampf verlässt."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Dämonentanz",
             "rarity": 1,
-            "tooltip": "Du erhältst die Schlüsselrunen <spellName>Leichtfüßigkeit</spellName> und <spellName>Umklammerung der Untoten</spellName>.<br><br>Gewirkte Heilung in dieser Runde: @f1@<br>Gewirkte Heilung insgesamt: @f2@<br>Erhaltenes maximales Leben: @f3@"
+            "tooltip": "Du erhältst die Schlüsselrunen <spellName>Leichtfüßigkeit</spellName> und <spellName>Umklammerung der Untoten</spellName>.<br><br>In dieser Runde gewirkte Heilung: @f1@<br>Insgesamt gewirkte Heilung: @f2@<br>Erhaltenes maximales Leben: @f3@<br><br><spellName>Leichtfüßigkeit</spellName> – Bewegung und Angriffe erzeugen Ladungen von <keywordMajor>Aufladen</keywordMajor>. Bei 100 verursacht dein nächster Angriff zusätzlichen Schaden, heilt dich und gewährt dir einen <speed>Lauftemposchub</speed>.<br><spellName>Umklammerung der Untoten</spellName> – Wenn du 3&nbsp;Sekunden lang mit einem Gegner kämpfst, wird dieser markiert. Angriffe verbrauchen die Markierung, verursachen zusätzlichen Schaden, heilen dich und gewähren dauerhaft <scaleHealth>maximales Leben</scaleHealth>."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Sinfonie des Krieges",
             "rarity": 2,
-            "tooltip": "Du erhältst die Schlüsselrunen <spellName>Tödliches Tempo</spellName> und <spellName>Eroberer</spellName>."
+            "tooltip": "Du erhältst die Schlüsselrunen <spellName>Tödliches Tempo</spellName> und <spellName>Eroberer</spellName>.<br><br><spellName>Tödliches Tempo</spellName> – Wenn du Champions angreifst, erhältst du <attackSpeed>Angriffstempo</attackSpeed> (bis zu 6&nbsp;Steigerungen). Bei 6 Steigerungen feuern deine Angriffe einen Bolzen ab, der zusätzlichen Schaden verursacht.<br><spellName>Eroberer</spellName> – Treffer mit Angriffen oder Fähigkeiten gegen Champions gewähren dir <physicalDamage>adaptive</physicalDamage><magicDamage>Kraft</magicDamage> (bis zu 12&nbsp;Steigerungen). Bei 12&nbsp;Steigerungen heilst du dich um einen Teil des an Champions verursachten Schadens."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Unpassierbar",
             "rarity": 1,
-            "tooltip": "Du erhältst die Schlüsselrunen <spellName>Nachbeben</spellName> und <spellName>Eiszeit</spellName>."
+            "tooltip": "Du erhältst die Schlüsselrunen <spellName>Nachbeben</spellName> und <spellName>Eiszeit</spellName>.<br><br><spellName>Nachbeben</spellName> – Wenn du Champions <status>bewegungsunfähig machst</status>, erhältst du 2,5&nbsp;Sekunden lang <scaleArmor>Rüstung</scaleArmor> und <scaleMR>Magieresistenz</scaleMR>. Danach explodierst du und fügst Gegnern in der Nähe Schaden zu, der auf deinem <scaleHealth>maximalen Leben</scaleHealth> basiert.<br><spellName>Eiszeit</spellName> – Wenn du Champions <status>bewegungsunfähig machst</status>, entsteht Eis unter ihnen, das Gegner <status>verlangsamt</status> und ihren Schaden verringert."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Zeit anhalten</spellName>: Alle Champions in der Nähe werden @StasisDuration@&nbsp;Sekunden lang in eine <status>Stase</status> versetzt. Für dich dauert sie @SelfDuration@&nbsp;Sekunden. Währenddessen stellst du <healing>@HealAmountPercent*100@&nbsp;% deines fehlenden Lebens</healing> wieder her."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Voraussetzung: Kaufe @AnvilsReqToComplete@&nbsp;Gegenstandsschmieden.<br><br>Belohnung: All deine Gegenstände werden zum <keywordMajor>Meisterwerk</keywordMajor>, wodurch sich ihre Werte um @ItemPercentAmp*100@&nbsp;% erhöhen.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Quest: Ritus des Schmiedefeuers",
+            "rarity": 2,
+            "tooltip": "Voraussetzung: Kaufe @AnvilsReqToComplete@&nbsp;Gegenstandsschmieden.<br><br>Belohnung: All deine Gegenstände werden zum <keywordMajor>Meisterwerk</keywordMajor>, wodurch sich ihre Werte um @ItemPercentAmp*100@&nbsp;% erhöhen."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "O.K.-Bumerang",
             "rarity": 1,
             "tooltip": "Du feuerst alle @BaseCooldown@&nbsp;Sekunden <keywordMajor>automatisch</keywordMajor> einen Bumerang auf einen Gegner in der Nähe. Dadurch erleiden getroffene Gegner @Damage@ adaptiven Schaden.<br><br>In dieser Runde verursachter Schaden: @f1@<br>Verursachter Gesamtschaden: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Wenn du mit einem Angriff Schaden verursachst, verursacht deine nächste Fähigkeit @AbilityBoost*100@&nbsp;% mehr Schaden.<br><br>Wenn du mit einer Fähigkeit Schaden verursachst, verursacht dein nächster Angriff @AttackBoost*100@&nbsp;% mehr Schaden.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Hybrid",
+            "rarity": 1,
+            "tooltip": "Wenn du mit einem Angriff Schaden verursachst, verursacht deine nächste Fähigkeit @AbilityBoost*100@&nbsp;% mehr Schaden.<br><br>Wenn du mit einer Fähigkeit Schaden verursachst, verursacht dein nächster Angriff @AttackBoost*100@&nbsp;% mehr Schaden."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Du beginnst jede Runde mit @StartingBees@&nbsp;Biene(n). Du erhältst Bienen, indem du Blumen erntest. Wenn du innerhalb von @BeeRange@ ein Ziel angreifst oder mit Fähigkeiten triffst, greifen die Bienen, über @DebuffDuration@&nbsp;Sekunden hinweg an.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Schwarmgeist",
+            "rarity": 2,
+            "tooltip": "Du beginnst jede Runde mit @StartingBees@&nbsp;Biene(n). Du erhältst Bienen, indem du Blumen erntest. Wenn du innerhalb von @BeeRange@ ein Ziel angreifst oder mit Fähigkeiten triffst, greifen die Bienen, über @DebuffDuration@&nbsp;Sekunden hinweg an.<br><br>In dieser Runde verursachter Schaden: @f1@<br>Verursachter Gesamtschaden: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Du kannst nicht mehr aktualisieren.<br><br>Wähle eine goldene Augmentierung. Wenn mindestens @PrismaticThreshold@ Aktualisierungen verbraucht wurden, verstärkt sich der Effekt und du wählst stattdessen eine prismatische Augmentierung.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "Deine Beschwörungen erhalten @MinionSizeIncrease*100@&nbsp;% mehr Größe, Leben und Schaden."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Füge deinem Inventar „Multifunktionswerkzeug“ hinzu. Wähle in jeder Kaufphase 1 von 5 zufälligen Gegenständen aus, und „Multifunktionswerkzeug“ wird in der nächsten Kampfrunde zu diesem Gegenstand.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Multifunktionswerkzeug",
+            "rarity": 1,
+            "tooltip": "Füge deinem Inventar „Multifunktionswerkzeug“ hinzu. Wähle in jeder Kaufphase 1 von 5 zufälligen Gegenständen aus, und „Multifunktionswerkzeug“ wird in der nächsten Kampfrunde zu diesem Gegenstand.<br><br>In Runde @PrismaticRound@ kann „Multifunktionswerkzeug“ zu prismatischen Gegenständen werden."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "Von Anfang bis Ende",
             "rarity": 1,
-            "tooltip": "Du erhältst die Schlüsselrunen <spellName>Erstschlag</spellName> und <spellName>Dunkle Seelenernte</spellName>.<br><br>Verursachter Schaden in dieser Runde: @f1@<br>Verursachter Gesamtschaden: @f2@<br>Erhaltenes Gold insgesamt: @f3@"
+            "tooltip": "Du erhältst die Schlüsselrunen <spellName>Erstschlag</spellName> und <spellName>Dunkle Seelenernte</spellName>.<br><br>In dieser Runde verursachter Schaden: @f1@<br>Verursachter Gesamtschaden: @f2@<br>Insgesamt erhaltenes Gold: @f3@<br><br><spellName>Erstschlag</spellName> – Wenn du einem Champion Schaden zufügst, erleidet er 3&nbsp;Sekunden lang erhöhten Schaden. Am Ende erhältst du Gold basierend auf deinem zusätzlich verursachten Schaden.<br><spellName>Dunkle Ernte</spellName> – Wenn du einem Gegner mit weniger als <scaleHealth>50&nbsp;% Leben</scaleHealth> Schaden zufügst, verursachst du zusätzlichen Schaden und der zusätzliche Schaden wird dauerhaft erhöht."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Einmal pro Kampf, wenn du sterben würdest, verwandelst du dich stattdessen in einen Hauch, setzt dein Leben auf <scaleHealth>@HealthLock*100@&nbsp;%</scaleHealth> und bewegst dich an einen zufälligen Ort in der Arena.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Panikraum",
+            "rarity": 0,
+            "tooltip": "Einmal pro Kampf, wenn du sterben würdest, verwandelst du dich stattdessen in einen Hauch, setzt dein Leben auf <scaleHealth>@HealthLock*100@&nbsp;%</scaleHealth> und bewegst dich an einen zufälligen Ort in der Arena."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "Der Einsatz einer Fähigkeit gewährt <scaleBonus>@HastePerCast@&nbsp;Fähigkeitstempo</scaleBonus>, das unbegrenzt steigerbar ist (wird jede Runde zurückgesetzt)."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "<healing>Heilung</healing> oder <Shield>Schilde</Shield> erhöhen deinen Fähigkeitsschaden in dieser Runde um @SpellDamagePerStack*100@&nbsp;% (unbegrenzt steigerbar).",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Gerechter Zorn",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Aktueller zusätzlicher Fähigkeitsschaden: @f1@&nbsp;%<br>Zusätzlicher Schaden in dieser Runde: @f2@<br>Gesamter zusätzlicher Schaden: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Orbitallaser",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Verursachter Schaden in dieser Runde: @f1@<br>Verursachter Gesamtschaden: @f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "Du erhältst <keyword>Aufgeladen</keyword> doppelt so schnell. Wenn <keyword>Aufgeladen</keyword> ausgelöst wird, wird eine <keywordMajor>Magische Rakete</keywordMajor> abgefeuert, die absoluten Schaden in Höhe von bis zu <trueDamage>@MaxHealthDamagePerMissile*100@&nbsp;% des maximalen Lebens</trueDamage> verursacht (abhängig von der zurückgelegten Distanz).",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Tatkräftig",
+            "rarity": 0,
+            "tooltip": "Du erhältst <keyword>Aufgeladen</keyword> doppelt so schnell. Wenn <keyword>Aufgeladen</keyword> ausgelöst wird, wird eine <keywordMajor>Magische Rakete</keywordMajor> abgefeuert, die absoluten Schaden in Höhe von bis zu <trueDamage>@MaxHealthDamagePerMissile*100@&nbsp;% des maximalen Lebens</trueDamage> verursacht (abhängig von der zurückgelegten Distanz).<br><br>In dieser Runde verursachter Schaden durch „Magische Rakete“: @f1@<br>Verursachter Gesamtschaden durch „Magische Rakete“: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Schlüsselrunenbeschwörer",
             "rarity": 1,
-            "tooltip": "Du erhältst die Schlüsselrunen <spellName>Benefee-Beschwörung</spellName> und <spellName>Arkaner Komet</spellName>.<br><br>Verursachter Gesamtschaden: @f1@<br>Generierte Schilde insgesamt: @f2@"
+            "tooltip": "Du erhältst die Schlüsselrunen <spellName>Benefee-Beschwörung</spellName> und <spellName>Arkaner Komet</spellName>.<br><br>Verursachter Gesamtschaden: @f1@<br>Insgesamt generierte Schilde: @f2@<br><br><spellName>Benefee-Beschwörung</spellName> – Benefee springt auf Gegner, denen du Schaden zufügst, oder auf Verbündete, die du <healing>heilst</healing> oder denen du einen <shield>Schild</shield> oder Buff gewährst, und fügt Gegnern Schaden zu oder gewährt Verbündeten <shield>Schilde</shield>.<br><spellName>Arkaner Komet</spellName> – Wenn du Fähigkeitsschaden verursachst, wird ein Komet abgefeuert, der allen Gegnern in einem Bereich Schaden zufügt."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Wenn du „Blitz“ verwendest, entsteht eine Explosion um dich herum, die <magicDamage>@ExplosiveDamage@&nbsp;magischen Schaden</magicDamage> verursacht und @SlowDuration@&nbsp;Sekunden lang um @SlowAmount*100@&nbsp;% <status>verlangsamt</status>. Außerdem wird „Blitz“ jede Runde zurückgesetzt.<br><br>In dieser Runde verursachter Schaden: @f1@<br>Verursachter Gesamtschaden: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "Du erhältst eine Chance auf kritische Treffer von @CritChanceBonus*100@&nbsp;% und @CritDamageBonus*100@&nbsp;% kritischen Trefferschaden. Die Obergrenze für deine Chance auf kritische Treffer liegt bei @CritChanceCeiling*100@&nbsp;%.<br><br>Kritische Trefferchance über @CritChanceCeiling*100@&nbsp;% wird in kritischen Trefferschaden umgewandelt.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Ziele auf den Kopf",
+            "rarity": 1,
+            "tooltip": "Du erhältst eine Chance auf kritische Treffer von @CritChanceBonus*100@&nbsp;% und @CritDamageBonus*100@&nbsp;% kritischen Trefferschaden. Die Obergrenze für deine Chance auf kritische Treffer liegt bei @CritChanceCeiling*100@&nbsp;%.<br><br>Kritische Trefferchance über @CritChanceCeiling*100@&nbsp;% wird in kritischen Trefferschaden umgewandelt."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Kombo-Meister",
             "rarity": 1,
-            "tooltip": "Du erhältst die Schlüsselrunen <spellName>Elektrisieren</spellName> und <spellName>Phasenrausch</spellName>.<br><br>Schaden durch „Elektrisieren“ in dieser Runde: @f1@<br>Gesamtschaden durch „Elektrisieren“: @f2@"
+            "tooltip": "Du erhältst die Schlüsselrunen <spellName>Elektrisieren</spellName> und <spellName>Phasenrausch</spellName>.<br><br>Schaden durch „Elektrisieren“ in dieser Runde: @f1@<br>Gesamter Schaden durch „Elektrisieren“: @f2@<br><br><spellName>Elektrisieren</spellName> – Bei 3&nbsp;Treffern mit individuellen Angriffen oder Fähigkeiten verursachst du hohen Schaden über kurze Zeit.<br><spellName>Phasenrausch</spellName> – Bei 3&nbsp;Treffern mit individuellen Angriffen oder Fähigkeiten erhältst du einige Sekunden lang <speed>Lauftempo</speed> und Resistenz gegen Verlangsamung."
         },
         {
             "apiName": "DarkBlessing",

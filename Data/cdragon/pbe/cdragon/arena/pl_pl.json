@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Cerberus",
             "rarity": 2,
-            "tooltip": "Zyskujesz runy kluczowe <spellName>Nawałnica Mieczy</spellName> i <spellName>Do Ataku</spellName>."
+            "tooltip": "Zyskujesz runy kluczowe <spellName>Nawałnica Mieczy</spellName> i <spellName>Do Ataku</spellName>.<br><br><spellName>Nawałnica Mieczy</spellName> — twoje pierwsze 3 ataki mają znacznie zwiększoną <attackSpeed>prędkość ataku</attackSpeed>.<br><spellName>Do Ataku</spellName> — trafienie tego samego wroga 3 atakami zadaje obrażenia eksplozywne i zwiększa twoje obrażenia, dopóki nie opuścisz walki."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Taniec Demona",
             "rarity": 1,
-            "tooltip": "Zyskujesz runy kluczowe: <spellName>Zwinne Nogi</spellName> i <spellName>Uścisk Nieumarłego</spellName>.<br><br>Leczenie w tej rundzie: @f1@<br>Całkowite leczenie: @f2@<br>Uzyskane maksymalne zdrowie: @f3@ pkt."
+            "tooltip": "Zyskujesz runy kluczowe <spellName>Zwinne Nogi</spellName> i <spellName>Uścisk Nieumarłego</spellName>.<br><br>Obrażenia wyleczone w tej rundzie: @f1@ pkt.<br>Całkowite wyleczone obrażenia: @f2@ pkt.<br>Zyskane maksymalne zdrowie: @f3@ pkt.<br><br><spellName>Zwinne Nogi</spellName> — poruszanie się i atakowanie generuje ładunki <keywordMajor>Naładowania</keywordMajor>. Przy 100 twój kolejny atak zadaje dodatkowe obrażenia, leczy cię i zapewnia premię do <speed>prędkości ruchu</speed>.<br><spellName>Uścisk Nieumarłego</spellName> — przebywanie w walce z wrogiem przez 3 sek. oznacza go. Ataki zużywają oznaczenie, aby zadać dodatkowe obrażenia, uleczyć cię i zapewnić na stałe <scaleHealth>maksymalne zdrowie</scaleHealth>."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Wojenna Symfonia",
             "rarity": 2,
-            "tooltip": "Zyskujesz runy kluczowe: <spellName>Zabójcze Tempo</spellName> i <spellName>Zdobywca</spellName>."
+            "tooltip": "Zyskujesz runy kluczowe <spellName>Zabójcze Tempo</spellName> i <spellName>Zdobywca</spellName>.<br><br><spellName>Zabójcze Tempo</spellName> — atakowanie bohaterów zapewnia <attackSpeed>prędkość ataku</attackSpeed> kumulującą się do 6 razy. Przy 6 ładunkach twoje ataki uwalniają pocisk zadający dodatkowe obrażenia.<br><spellName>Zdobywca</spellName> — trafianie bohaterów atakami i umiejętnościami zapewnia ci <magicDamage>siłę</magicDamage> <physicalDamage>adaptacyjną</physicalDamage>, która kumuluje się do 12 razy. Przy 12 ładunkach leczysz się o procent obrażeń zadanych bohaterom."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Nie do Przeskoczenia",
             "rarity": 1,
-            "tooltip": "Zyskujesz runy kluczowe: <spellName>Reperkusje</spellName> i <spellName>Lodowcowe Ulepszenie</spellName>."
+            "tooltip": "Zyskujesz runy kluczowe <spellName>Reperkusje</spellName> i <spellName>Lodowcowe Ulepszenie</spellName>.<br><br><spellName>Reperkusje</spellName> — <status>unieruchomienie</status> bohaterów zapewnia ci <scaleArmor>pancerz</scaleArmor> i <scaleMR>odporność na magię</scaleMR> na 2,5 sek. Następnie wybuchasz, zadając obrażenia pobliskim wrogom w zależności od swojego <scaleHealth>maksymalnego zdrowia</scaleHealth>.<br><spellName>Lodowcowe Ulepszenie</spellName> — <status>unieruchomienie</status> bohaterów tworzy pod nimi lód, <status>spowalniając</status> wrogów i zmniejszając ich obrażenia."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Zatrzymanie Czasu</spellName>: WSZYSCY pobliscy bohaterowie zostają wprowadzeni w stan <status>inercji</status> na @StasisDuration@ sek. Efekt działa na ciebie przez @SelfDuration@ sek. Podczas trwania efektu leczysz się o <healing>@HealAmountPercent*100@% brakującego zdrowia</healing>."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Wymaganie: Kup następującą liczbę Kowadeł Przedmiotów: @AnvilsReqToComplete@.<br><br>Nagroda: Wszystkie twoje przedmioty stają się <keywordMajor>mistrzowskie</keywordMajor>, co zwiększa ich statystyki o @ItemPercentAmp*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Zadanie: Rytuał Boga Kuźni",
+            "rarity": 2,
+            "tooltip": "Wymaganie: Kup następującą liczbę Kowadeł Przedmiotów: @AnvilsReqToComplete@.<br><br>Nagroda: Wszystkie twoje przedmioty stają się <keywordMajor>mistrzowskie</keywordMajor>, co zwiększa ich statystyki o @ItemPercentAmp*100@%."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "OK, Bumerangu",
             "rarity": 1,
             "tooltip": "<keywordMajor>Automatycznie</keywordMajor> ciskasz bumerangiem w pobliskiego wroga co @BaseCooldown@ sek., zadając @Damage@ pkt. obrażeń adaptacyjnych trafionym wrogom.<br><br>Obrażenia zadane w tej rundzie: @f1@ pkt.<br>Całkowite zadane obrażenia: @f2@ pkt."
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Gdy zadajesz obrażenia atakiem, twoja kolejna umiejętność zadaje obrażenia zwiększone o @AbilityBoost*100@%.<br><br>Gdy zadajesz obrażenia umiejętnością, twój kolejny atak zadaje obrażenia zwiększone o @AttackBoost*100@%.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Hybryda",
+            "rarity": 1,
+            "tooltip": "Gdy zadajesz obrażenia atakiem, twoja kolejna umiejętność zadaje obrażenia zwiększone o @AbilityBoost*100@%.<br><br>Gdy zadajesz obrażenia umiejętnością, twój kolejny atak zadaje obrażenia zwiększone o @AttackBoost*100@%."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Zaczynasz każdą rundę z następującą liczbą Pszczół: @StartingBees@. Zdobywasz Pszczoły za zbieranie kwiatów. Atakowanie lub trafianie celu umiejętnościami w zasięgu @BeeRange@ jedn. sprawi, że Pszczoły będą go atakować przez @DebuffDuration@ sek.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Umysł Roju",
+            "rarity": 2,
+            "tooltip": "Zaczynasz każdą rundę z następującą liczbą Pszczół: @StartingBees@. Zdobywasz Pszczoły za zbieranie kwiatów. Atakowanie lub trafianie celu umiejętnościami w zasięgu @BeeRange@ jedn. sprawi, że Pszczoły będą go atakować przez @DebuffDuration@ sek.<br><br>Obrażenia zadane w tej rundzie: @f1@ pkt.<br>Całkowite zadane obrażenia: @f2@ pkt."
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Nie możesz już dokonać wymiany.<br><br>Wybierz złote ulepszenie, jeśli zużyjesz następującą liczbę przemian: @PrismaticThreshold@. Wzmocnij, aby wybrać ulepszenie pryzmatyczne.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "Twoje przywołańce zyskują @MinionSizeIncrease*100@% rozmiaru, zdrowia i obrażeń."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Dodaj narzędzie wielofunkcyjne do ekwipunku. Podczas każdej fazy zakupów wybierz 1 z 5 losowych przedmiotów. Narzędzie wielofunkcyjne stanie się tym przedmiotem w kolejnej rundzie walki.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Narzędzie wielofunkcyjne",
+            "rarity": 1,
+            "tooltip": "Dodaj narzędzie wielofunkcyjne do ekwipunku. Podczas każdej fazy zakupów wybierz 1 z 5 losowych przedmiotów. Narzędzie wielofunkcyjne stanie się tym przedmiotem w kolejnej rundzie walki.<br><br>W rundzie @PrismaticRound@ narzędzie wielofunkcyjne może losować pryzmatyczne przedmioty."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "Od Początku do Końca",
             "rarity": 1,
-            "tooltip": "Zyskujesz runy kluczowe <spellName>Pierwsze Uderzenie</spellName> i <spellName>Mroczne Żniwa</spellName>.<br><br>Obrażenia zadane w tej rundzie: @f1@ pkt.<br>Całkowite zadane obrażenia @f2@ pkt.<br>Całkowite uzyskane złoto: @f3@ szt."
+            "tooltip": "Zyskujesz runy kluczowe <spellName>Pierwsze Uderzenie</spellName> i <spellName>Mroczne Żniwa</spellName>.<br><br>Obrażenia zadane w tej rundzie: @f1@ pkt.<br>Całkowite zadane obrażenia: @f2@ pkt.<br>Całkowite zdobyte złoto: @f3@ szt.<br><br><spellName>Pierwsze Uderzenie</spellName> — zadanie obrażeń bohaterowi sprawia, że otrzymuje on zwiększone obrażenia przez 3 sek. Na koniec zdobywasz złoto w zależności od zadanych dodatkowych obrażeń.<br><spellName>Mroczne Żniwa</spellName> — zadanie obrażeń wrogowi, który ma mniej niż <scaleHealth>50% zdrowia</scaleHealth>, zadaje dodatkowe obrażenia i zwiększa te dodatkowe obrażenia na stałe."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Raz na walkę, gdy masz zginąć, przemieniasz się w ognika, masz <scaleHealth>@HealthLock*100@% zdrowia</scaleHealth> i przemieszczasz się w losowe miejsce na arenie.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Azyl",
+            "rarity": 0,
+            "tooltip": "Raz na walkę, gdy masz zginąć, przemieniasz się w ognika, masz <scaleHealth>@HealthLock*100@% zdrowia</scaleHealth> i przemieszczasz się w losowe miejsce na arenie."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "Użycie umiejętności zapewnia ci <scaleBonus>@HastePerCast@ jedn. przyspieszenia umiejętności</scaleBonus>. Efekt kumuluje się w nieskończoność i resetuje się w każdej rundzie."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "<healing>Leczenie</healing> i <Shield>tarcze</Shield> zwiększają twoje obrażenia od umiejętności o @SpellDamagePerStack*100@%, kumulując się w nieskończoność w tej rundzie.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Słuszny Gniew",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Obecna premia do obrażeń od umiejętności: @f1@%<br>Dodatkowe obrażenia w tej rundzie: @f2@ pkt.<br>Całkowite obrażenia dodatkowe: @f3@ pkt."
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Orbitalny Laser",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Obrażenia zadane w tej rundzie: @f1@ pkt.<br>Całkowite zadane obrażenia: @f2@ pkt."
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "Zyskujesz <keyword>Naładowanie</keyword> dwa razy szybciej. Aktywowanie <keyword>Naładowania</keyword> wystrzeliwuje <keywordMajor>Magiczny Pocisk</keywordMajor>, który zadaje <trueDamage>obrażenia nieuchronne równe do @MaxHealthDamagePerMissile*100@% maksymalnego zdrowia</trueDamage> w zależności od przebytego dystansu.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Energiczność",
+            "rarity": 0,
+            "tooltip": "Zyskujesz <keyword>Naładowanie</keyword> dwa razy szybciej. Aktywowanie <keyword>Naładowania</keyword> wystrzeliwuje <keywordMajor>Magiczny Pocisk</keywordMajor>, który zadaje <trueDamage>obrażenia nieuchronne równe do @MaxHealthDamagePerMissile*100@% maksymalnego zdrowia</trueDamage> w zależności od przebytego dystansu.<br><br>Obrażenia zadane Magicznym Pociskiem w tej rundzie: @f1@ pkt.<br>Całkowite obrażenia zadane Magicznym Pociskiem: @f2@ pkt."
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Runiczny Szarlatan",
             "rarity": 1,
-            "tooltip": "Zyskujesz runy kluczowe <spellName>Przywołanie Aery</spellName> i <spellName>Ezoteryczna Kometa</spellName>.<br><br>Całkowite zadane obrażenia: @f1@ pkt.<br>Całkowita wytrzymałość wygenerowanych tarcz: @f2@ pkt."
+            "tooltip": "Zyskujesz runy kluczowe <spellName>Przywołanie Aery</spellName> i <spellName>Ezoteryczna Kometa</spellName>.<br><br>Całkowite zadane obrażenia: @f1@ pkt.<br>Całkowita wartość wygenerowanych tarcz: @f2@ pkt.<br><br><spellName>Przywołanie Aery</spellName> — Aery wskakuje na wrogów, którym zadajesz obrażenia, lub sojuszników, których <healing>leczysz</healing>, <shield>osłaniasz tarczą</shield> lub wzmacniasz, i zadaje obrażenia wrogom lub <shield>osłania tarczą</shield> sojuszników.<br><spellName>Ezoteryczna Kometa</spellName> — zadawanie obrażeń umiejętnościami uwalnia kometę, która zadaje obrażenia wszystkim wrogom na obszarze."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Gdy użyjesz Błysku, obszar dookoła ciebie eksploduje, zadając <magicDamage>@ExplosiveDamage@ pkt. obrażeń magicznych</magicDamage> i <status>spowalniając</status> o @SlowAmount*100@% na @SlowDuration@ sek. Ponadto Błysk resetuje się co rundę.<br><br>Obrażenia zadane w tej rundzie: @f1@ pkt.<br>Całkowite zadane obrażenia: @f2@ pkt."
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "Zyskujesz @CritChanceBonus*100@% szansy na trafienie krytyczne i @CritDamageBonus*100@% obrażeń trafienia krytycznego. Twoja szansa na trafienie krytyczne jest ograniczona do @CritChanceCeiling*100@%.<br><br>Zamieniasz szansę na trafienie krytyczne powyżej @CritChanceCeiling*100@% w obrażenia trafienia krytycznego.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Celuj w Głowę",
+            "rarity": 1,
+            "tooltip": "Zyskujesz @CritChanceBonus*100@% szansy na trafienie krytyczne i @CritDamageBonus*100@% obrażeń trafienia krytycznego. Twoja szansa na trafienie krytyczne jest ograniczona do @CritChanceCeiling*100@%.<br><br>Zamieniasz szansę na trafienie krytyczne powyżej @CritChanceCeiling*100@% w obrażenia trafienia krytycznego."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Mistrz Kombinacji",
             "rarity": 1,
-            "tooltip": "Zyskujesz runy kluczowe: <spellName>Elektryzacja</spellName> i <spellName>Pęd Fazowy</spellName>.<br><br>Obrażenia Elektryzacji w tej rundzie: @f1@ pkt.<br>Całkowite obrażenia Elektryzacji: @f2@ pkt."
+            "tooltip": "Zyskujesz runy kluczowe <spellName>Elektryzacja</spellName> i <spellName>Pęd Fazowy</spellName>.<br><br>Obrażenia Elektryzacji w tej rundzie: @f1@ pkt.<br>Całkowite obrażenia Elektryzacji: @f2@ pkt.<br><br><spellName>Elektryzacja</spellName> — trafienie 3 oddzielnymi atakami lub umiejętnościami w ciągu 3 sek. zadaje obrażenia eksplozywne.<br><spellName>Pęd Fazowy</spellName> — trafienie 3 oddzielnymi atakami lub umiejętnościami w ciągu 4 sek. zapewni ci <speed>prędkość ruchu</speed> i odporność na spowolnienia na kilka sekund."
         },
         {
             "apiName": "DarkBlessing",

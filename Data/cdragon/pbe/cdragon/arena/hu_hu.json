@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Kerberosz",
             "rarity": 2,
-            "tooltip": "Megkapod a <spellName>Pengezápor</spellName> és az <spellName>Előrenyomulás</spellName> kiemelt rúnát."
+            "tooltip": "Biztosítja a <spellName>Pengezápor</spellName> és az <spellName>Előrenyomulás</spellName> kiemelt rúnát.<br><br><spellName>Pengezápor</spellName> – – Az első 3 támadást jelentősen megnövelt <attackSpeed>támadási sebességgel</attackSpeed> hajtod végre.<br><spellName>Előrenyomulás</spellName> – Az ugyanazon ellenfél elleni 3. támadás bónusz sebzést okoz, és megnöveli a sebzésedet, amíg harcban állsz."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "Démontánc",
             "rarity": 1,
-            "tooltip": "Biztosítja a <spellName>Szapora lábmunka</spellName> és <spellName>a Halhatatlanok szorítása</spellName> kiemelt rúnát.<br><br>A körben elvégzett gyógyítás: @f1@<br>Elvégzett gyógyítás összesen: @f2@<br>Megszerzett maximális életerő: @f3@"
+            "tooltip": "Biztosítja a <spellName>Szapora lábmunka</spellName> és a <spellName>Halhatatlanok szorítása</spellName> kiemelt rúnát.<br><br>A körben végzett gyógyítás: @f1@<br>Összes elvégzett gyógyítás: @f2@<br>Szerzett maximális életerő: @f3@<br><br><spellName>Szapora lábmunka</spellName> – A mozgás és támadás <keywordMajor>Töltődés</keywordMajor> jelzőket generál. 100 jelzőnél a következő támadásod bónusz sebzést okoz, gyógyítást ad, és megnöveli a <speed>mozgási sebességedet</speed>.<br><spellName>Halhatatlanok szorítása</spellName> – A legalább 3 másodpercig tartó harcok megjelölik az ellenséget. A támadások a jelölést felemésztve bónusz sebzést okoznak, gyógyítást adnak, és végleges <scaleHealth>maximális életerőt</scaleHealth> biztosítanak."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "A háború szimfóniája",
             "rarity": 2,
-            "tooltip": "Megkaphatod a <spellName>Halálos iram</spellName> és a <spellName>Hódító</spellName> kiemelt rúnákat."
+            "tooltip": "Biztosítja a <spellName>Halálos iram</spellName> és a <spellName>Hódító</spellName> kiemelt rúnát.<br><br><spellName>Halálos iram</spellName> – A hősök elleni támadások <attackSpeed>támadási sebességet</attackSpeed> biztosítanak (legfeljebb 6 alkalommal halmozódhat). 6 jelző elérésekor a támadásaid egy lövedéket lőnek ki, amely további sebzést okoz.<br><spellName>Hódító</spellName> – A hősöket eltaláló támadások és képességek <physicalDamage>adaptív</physicalDamage><magicDamage>erőt</magicDamage> biztosítanak, amely legfeljebb 12 alkalommal halmozódhat. 12 jelző elérése után életerőként nyered vissza a hősöknek okozott sebzés egy bizonyos százalékát."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Áthághatatlan",
             "rarity": 1,
-            "tooltip": "Biztosítja az <spellName>Utórengés</spellName> és a <spellName>Fagyos erősítés</spellName> kiemelt rúnát."
+            "tooltip": "Biztosítja az <spellName>Utórengés</spellName> és a <spellName>Fagyos erősítés</spellName> kiemelt rúnát.<br><br><spellName>Utórengés</spellName> – Ha <status>mozgásképtelenné</status> teszel egy hőst, 2,5 másodpercre <scaleArmor>páncélt</scaleArmor> és <scaleMR>varázsellenállást</scaleMR> kapsz, ezután felrobbansz, és a <scaleHealth>maximális életerőddel</scaleHealth> arányos sebzést okozol a közeli ellenségeknek.<br><spellName>Fagyos erősítés</spellName> – Ha <status>mozgásképtelenné</status> teszel egy hőst, jég keletkezik alatta, amely <status>lelassítja</status> az ellenséget, és csökkenti a sebzését."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Időmegállítás</spellName>: Az összes közeli hős @StasisDuration@ másodpercig, te pedig @SelfDuration@ másodpercig <status>sztázisba</status> kerülsz. Az időtartama alatt visszatöltöd <healing>a hiányzó életerőd@HealAmountPercent*100@%-át</healing>."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Követelmény: Vásárolj @AnvilsReqToComplete@ tárgyüllőt.<br><br>Jutalom: Minden tárgyad <keywordMajor>mesterivé</keywordMajor> válik, és @ItemPercentAmp*100@%-kal nőnek az értékei.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Küldetés: A kovácsisten rítusa",
+            "rarity": 2,
+            "tooltip": "Követelmény: Vásárolj @AnvilsReqToComplete@ tárgyüllőt.<br><br>Jutalom: Minden tárgyad <keywordMajor>mesterivé</keywordMajor> válik, és @ItemPercentAmp*100@%-kal nőnek az értékei."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "A jó öreg bumeráng",
             "rarity": 1,
             "tooltip": "@BaseCooldown@ másodpercenként <keywordMajor>automatikusan</keywordMajor> kilő egy bumerángot egy közeli ellenfélre, ami @Damage@ adaptív sebzést okoz az eltalált ellenfeleknek.<br><br>A körben okozott sebzés: @f1@<br>Összes kiosztott sebzés: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Ha egy támadásod sebzést okoz, a következő képességed sebzése @AbilityBoost*100@%-kal nő.<br><br>Ha egy képességed sebzést okoz, a következő támadásod sebzése @AttackBoost*100@%-kal nő.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Hibrid",
+            "rarity": 1,
+            "tooltip": "Ha egy támadásod sebzést okoz, a következő képességed sebzése @AbilityBoost*100@%-kal nő.<br><br>Ha egy képességed sebzést okoz, a következő támadásod sebzése @AttackBoost*100@%-kal nő."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Mindent kört @StartingBees@ Méhvel kezdesz. A virágok szüretelése Méheket ad. Ha egy támadásod vagy képességed eltalál egy @BeeRange@ mezőn belüli célpontot, azzal @DebuffDuration@ másodpercre rászabadítasz egy Méhet.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Kaptártudat",
+            "rarity": 2,
+            "tooltip": "Mindent kört @StartingBees@ Méhvel kezdesz. A virágok szüretelése Méheket ad. Ha egy támadásod vagy képességed eltalál egy @BeeRange@ mezőn belüli célpontot, azzal @DebuffDuration@ másodpercre rászabadítasz egy Méhet.<br><br>A körben okozott sebzés: @f1@<br>Összes kiosztott sebzés: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "A továbbiakban nem tudsz újrasorsolni.<br><br>Válassz ki egy Arany osztályú erősítést. Ha legalább @PrismaticThreshold@ újrasorsolást elhasználtál, Spektrum osztályú erősítést választhatsz.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "A megidézett egységek mérete, életereje és sebzése @MinionSizeIncrease*100@%-kal nagyobb."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Hozzáadod a Multifunkcit a fegyvertáradhoz. Minden vásárlási szakaszban választhatsz egyet 5 véletlenszerű tárgy közül, amellyé a Multifunkci a következő harci körben átalakul.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Multifunkci",
+            "rarity": 1,
+            "tooltip": "Hozzáadod a Multifunkcit a fegyvertáradhoz. Minden vásárlási szakaszban választhatsz egyet 5 véletlenszerű tárgy közül, amellyé a Multifunkci a következő harci körben átalakul.<br><br>@PrismaticRound@ kör után a Multifunkci Spektrum osztályú tárgyat sorsolhat."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "Elejétől a végéig",
             "rarity": 1,
-            "tooltip": "Biztosítja az <spellName>Első csapás</spellName> és a <spellName>Sötét szüret</spellName> kiemelt rúnát.<br><br>A körben okozott sebzés: @f1@<br>Okozott sebzés összesen: @f2@<br>Összes megszerzett arany: @f3@"
+            "tooltip": "Biztosítja az <spellName>Első csapás</spellName> és a <spellName>Sötét szüret</spellName> kiemelt rúnát.<br><br>A körben okozott sebzés: @f1@<br>Összes kiosztott sebzés: @f2@<br>Összesen megszerzett arany: @f3@<br><br><spellName>Első csapás</spellName> – A megsebzett hősök 3 másodpercig megnövelt sebzést szenvednek el. A végén aranyat kapsz az okozott bónusz sebzés alapján.<br><spellName>Sötét szüret</spellName> – Az <scaleHealth>50% alatti életerővel</scaleHealth> rendelkező ellenfelek megsebzése bónusz sebzést okoz, és véglegesen növeli ezt a bónusz sebzést."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Minden csatában egyszer, amikor meghalnál, lidércfénnyé változol, <scaleHealth>@HealthLock*100@%-ra nő az életerőd</scaleHealth>, és az aréna egy véletlenszerű pontjára utazol.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Pánikszoba",
+            "rarity": 0,
+            "tooltip": "Minden csatában egyszer, amikor meghalnál, lidércfénnyé változol, <scaleHealth>@HealthLock*100@%-ra nő az életerőd</scaleHealth>, és az aréna egy véletlenszerű pontjára utazol."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "Egy képesség bevetése <scaleBonus>@HastePerCast@ képességgyorsítást</scaleBonus> biztosít, amely végtelenül halmozódik, és értéke minden kör elején visszaáll."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "A <healing>gyógyítás</healing> és <Shield>pajzs</Shield> @SpellDamagePerStack*100@%-kal növeli a képességeid sebzését, ami a körben korlátlanul halmozódik.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Szent harag",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Képesség sebzésének aktuális bónusza: @f1@%<br>Bónusz sebzés ebben a körben: @f2@<br>Bónusz sebzés összesen: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Orbitális lézer",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>A körben okozott sebzés:@f1@<br>Okozott sebzés összesen:@f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "Kétszer gyorsabban kapsz <keyword>Töltődést</keyword>. A <keyword>Feltöltött</keyword> támadások <keywordMajor>Varázslövedéket</keywordMajor> szórnak, amely a megtett táv alapján akár a maximális életerő <trueDamage>@MaxHealthDamagePerMissile*100@%-ával egyenlő tényleges sebzést</trueDamage> okoz.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Energikus",
+            "rarity": 0,
+            "tooltip": "Kétszer gyorsabban kapsz <keyword>Töltődést</keyword>. A <keyword>Feltöltött</keyword> támadások <keywordMajor>Varázslövedéket</keywordMajor> szórnak, amely a megtett táv alapján akár a maximális életerő <trueDamage>@MaxHealthDamagePerMissile*100@%-ával egyenlő tényleges sebzést</trueDamage> okoz.<br><br>Varázslövedék által okozott sebzés ebben a körben: @f1@<br>Varázslövedék által okozott összes sebzés: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Kiemelt bűvész",
             "rarity": 1,
-            "tooltip": "Biztosítja az <spellName>Aery megidézése</spellName> és a <spellName>Misztikus üstökös</spellName> kiemelt rúnát.<br><br>Okozott sebzés összesen: @f1@<br>Létrehozott pajzs összesen: @f2@"
+            "tooltip": "Biztosítja az <spellName>Aery megidézése</spellName> és a <spellName>Misztikus üstökös</spellName> kiemelt rúnát.<br><br>Összes kiosztott sebzés: @f1@<br>Létrehozott pajzs összesen: @f2@<br><br><spellName>Aery megidézése</spellName> – Aery ráugrik az ellenségekre, amiket megsebzel vagy szövetségesekre, akiknek <healing>gyógyítást</healing>, <shield>pajzsot</shield> vagy erősítést adsz, és az ellenséget sebzi, a szövetségeseknek <shield>pajzsot</shield> ad.<br><spellName>Misztikus üstökös</spellName> – A képesség okozta sebzés kilő egy üstököst, amely egy területen sebzést okoz az ellenfeleknek."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Amikor átvillansz, robbanást okozol magad körül, amely <magicDamage>@ExplosiveDamage@ varázssebzést</magicDamage> okoz, és @SlowDuration@ másodpercre @SlowAmount*100@%-kal <status>lelassítja</status> a célpontokat. Emellett az Átvillanás minden körben nullázódik.<br><br>A körben okozott sebzés: @f1@<br>Összes kiosztott sebzés: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "@CritChanceBonus*100@% kritikus csapási esélyt és @CritDamageBonus*100@% kritikus csapási sebzést kapsz. A kritikus csapási esélyed maximum @CritChanceCeiling*100@% lehet.<br><br>A kritikus csapási esély @CritChanceCeiling*100@% felett kritikus csapási sebzéssé alakul.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Célozz a fejre",
+            "rarity": 1,
+            "tooltip": "@CritChanceBonus*100@% kritikus csapási esélyt és @CritDamageBonus*100@% kritikus csapási sebzést kapsz. A kritikus csapási esélyed maximum @CritChanceCeiling*100@% lehet.<br><br>A kritikus csapási esély @CritChanceCeiling*100@% felett kritikus csapási sebzéssé alakul."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Kombómester",
             "rarity": 1,
-            "tooltip": "Az <spellName>Áramütés</spellName> és a <spellName>Fázisroham</spellName> kiemelt rúnát biztosítja.<br><br>Az Áramütés sebzése ebben a körben: @f1@<br>Az Áramütés sebzése összesen: @f2@"
+            "tooltip": "Biztosítja az <spellName>Áramütés</spellName> és a <spellName>Fázisroham</spellName> kiemelt rúnát.<br><br>Áramütés sebzése ebben a körben: @f1@<br>Áramütés sebzése összesen: @f2@<br><br><spellName>Áramütés</spellName> – 3 különálló támadással vagy képességgel szerzett találat 3 másodpercen belül bónusz sebzést okoz.<br><spellName>Fázisroham</spellName> – 3 különálló támadással vagy képességgel szerzett találat 4 másodpercen belül néhány másodpercre <speed>mozgási sebességet</speed> és lassítás-ellenállást ad."
         },
         {
             "apiName": "DarkBlessing",

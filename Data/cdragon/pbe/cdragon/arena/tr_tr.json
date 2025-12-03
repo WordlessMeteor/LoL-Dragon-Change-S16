@@ -74,7 +74,7 @@
             "id": 323,
             "name": "Kerberos",
             "rarity": 2,
-            "tooltip": "<spellName>Keskin Sağanak</spellName> ve <spellName>Saldırıya Devam</spellName> anahtar rünlerini kazanırsın."
+            "tooltip": "<spellName>Keskin Sağanak</spellName> ve <spellName>Saldırıya Devam</spellName> anahtar rünlerini kazanırsın.<br><br><spellName>Keskin Sağanak</spellName> - İlk 3 saldırın yüksek miktarda <attackSpeed>saldırı hızı</attackSpeed> kazanır.<br><spellName>Saldırıya Devam</spellName> - Aynı hedefe 3 saldırı isabet ettirmek anlık hasar verir ve çatışmadan ayrılana kadar hasarını arttırır."
         },
         {
             "apiName": "Typhoon",
@@ -298,7 +298,7 @@
             "id": 23,
             "name": "İblis Dansı",
             "rarity": 1,
-            "tooltip": "<spellName>Ayağı Çabuk</spellName> ve <spellName>Hortlağın Pençesi</spellName> anahtar rünlerini kazanırsın.<br><br>Bu Tur Yapılan İyileştirme: @f1@<br>Yapılan Toplam İyileştirme: @f2@<br>Kazanılan Azami Can: @f3@"
+            "tooltip": "<spellName>Ayağı Çabuk</spellName> ve <spellName>Hortlağın Pençesi</spellName> anahtar rünlerini kazanırsın.<br><br>Bu Tur Yapılan İyileştirme: @f1@<br>Yapılan Toplam İyileştirme: @f2@<br>Kazanılan Azami Can: @f3@<br><br><spellName>Ayağı Çabuk</spellName> - Hareket etmek ve saldırmak <keywordMajor>Enerji Dolu</keywordMajor> yükleri kazandırır. 100 yüke ulaştığında bir sonraki saldırın ilave hasar verir, seni iyileştirir ve <speed>hareket hızı</speed> artışı kazandırır.<br><spellName>Hortlağın Pençesi</spellName> - 3 saniye boyunca bir rakiple çatışmada olmak o rakibi işaretler. Saldırılar işareti tüketerek ilave hasar verir, seni iyileştirir ve kalıcı olarak <scaleHealth>azami can</scaleHealth> kazandırır."
         },
         {
             "apiName": "DefensiveManeuvers",
@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Savaş Senfonisi",
             "rarity": 2,
-            "tooltip": "<spellName>Ölümcül Tempo</spellName> ve <spellName>Yenilmez</spellName> anahtar rünlerini kazanırsın."
+            "tooltip": "<spellName>Ölümcül Tempo</spellName> ve <spellName>Yenilmez</spellName> anahtar rünlerini kazanırsın.<br><br><spellName>Ölümcül Tempo</spellName> - Şampiyonlara saldırmak en fazla 6 defa birikecek şekilde <attackSpeed>saldırı hızı</attackSpeed> kazandırır. 6 yüke ulaştığında saldırıların fazladan hasar veren bir atış gönderir.<br><spellName>Yenilmez</spellName> - Şampiyonlara yönelik saldırılar ve yetenekler en fazla 12 defa birikecek şekilde <physicalDamage>değişken</physicalDamage> <magicDamage>kuvvet</magicDamage> kazandırır. 12 yüke ulaştığında şampiyonlara verdiğin hasarın belli bir yüzdesine eşdeğer miktarda iyileşirsin."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2384,7 +2384,7 @@
             "id": 149,
             "name": "Geçilmez",
             "rarity": 1,
-            "tooltip": "<spellName>Artçı Şok</spellName> ve <spellName>Buzul Takviyesi</spellName> anahtar rünlerini kazanırsın."
+            "tooltip": "<spellName>Artçı Şok</spellName> ve <spellName>Buzul Takviyesi</spellName> anahtar rünlerini kazanırsın.<br><br><spellName>Artçı Şok</spellName> - Şampiyonları <status>hareketsiz bırakmak</status> 2,5 saniyeliğine <scaleArmor>zırh</scaleArmor> ve <scaleMR>büyü direnci</scaleMR> kazandırır. Ardından bir patlama eşliğinde yakınındaki rakiplere <scaleHealth>azami canına</scaleHealth> bağlı olarak hasar verirsin.<br><spellName>Buzul Takviyesi</spellName> - Şampiyonları <status>hareketsiz bırakmak</status> altlarında buz oluşturur. Buzun içindeki rakipler <status>yavaşlar</status> ve daha az hasar verir."
         },
         {
             "apiName": "PandorasBox",
@@ -2663,6 +2663,21 @@
             "tooltip": "<spellName>Don!</spellName>: Yakındaki tüm şampiyonlar için @StasisDuration@ ve kendin için @SelfDuration@ saniyeliğine <status>zamanı durdurur</status>. Bu süre boyunca <healing>eksik canının %@HealAmountPercent*100@ kadarını</healing> yenilersin."
         },
         {
+            "apiName": "Quest_RiteOfTheForgeGod",
+            "calculations": {},
+            "dataValues": {
+                "AnvilsReqToComplete": 2.0,
+                "ItemPercentAmp": 0.10000000149011612
+            },
+            "desc": "Koşul: @AnvilsReqToComplete@ eşya örsü al.<br><br>Ödül: Bütün eşyaların <keywordMajor>şahesere</keywordMajor> dönüşerek niteliklerini %@ItemPercentAmp*100@ arttırır.",
+            "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_small.png",
+            "id": 333,
+            "name": "Hedef: Ocak İlahı Ayini",
+            "rarity": 2,
+            "tooltip": "Koşul: @AnvilsReqToComplete@ eşya örsü al.<br><br>Ödül: Bütün eşyaların <keywordMajor>şahesere</keywordMajor> dönüşerek niteliklerini %@ItemPercentAmp*100@ arttırır."
+        },
+        {
             "apiName": "FirstAidKit",
             "calculations": {},
             "dataValues": {
@@ -2710,6 +2725,60 @@
             "name": "Dönerse Senindir",
             "rarity": 1,
             "tooltip": "Her @BaseCooldown@ saniyede bir yakınındaki bir rakibe <keywordMajor>otomatik olarak</keywordMajor> bumerang göndererek isabet alan tüm rakiplere @Damage@ Değişken Hasar verirsin.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+        },
+        {
+            "apiName": "Hybrid",
+            "calculations": {},
+            "dataValues": {
+                "AbilityBoost": 0.30000001192092896,
+                "AttackBoost": 0.30000001192092896
+            },
+            "desc": "Bir saldırıyla hasar verdiğinde bir sonraki yeteneğin %@AbilityBoost*100@ daha fazla hasar verir.<br><br>Bir yetenekle hasar verdiğinde bir sonraki saldırın %@AttackBoost*100@ daha fazla hasar verir.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
+            "id": 338,
+            "name": "Karma",
+            "rarity": 1,
+            "tooltip": "Bir saldırıyla hasar verdiğinde bir sonraki yeteneğin %@AbilityBoost*100@ daha fazla hasar verir.<br><br>Bir yetenekle hasar verdiğinde bir sonraki saldırın %@AttackBoost*100@ daha fazla hasar verir."
+        },
+        {
+            "apiName": "HiveMind",
+            "calculations": {
+                "{18f0ea4e}": {
+                    "__type": "GameCalculation",
+                    "mFormulaParts": [
+                        {
+                            "__type": "ByCharLevelInterpolationCalculationPart",
+                            "mEndValue": 5.0,
+                            "mStartValue": 1.0
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806
+                        },
+                        {
+                            "__type": "StatByCoefficientCalculationPart",
+                            "mCoefficient": 0.05000000074505806,
+                            "mStat": 2,
+                            "mStatFormula": 2
+                        }
+                    ]
+                }
+            },
+            "dataValues": {
+                "ASReductionPerCounter": -0.029999999329447746,
+                "BeeRange": 800.0,
+                "DebuffDuration": 1.5,
+                "MaxBeeStacks": 6.0,
+                "StartingBees": 1.0
+            },
+            "desc": "Her tura @StartingBees@ arıyla başlarsın. Çiçek toplayarak arı kazanırsın. En fazla @BeeRange@ mesafedeki bir hedefe saldırmak veya yetenek isabet ettirmek arıların ona @DebuffDuration@ saniye boyunca saldırmasına yol açar.",
+            "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
+            "id": 338,
+            "name": "Haşarı Sürü",
+            "rarity": 2,
+            "tooltip": "Her tura @StartingBees@ arıyla başlarsın. Çiçek toplayarak arı kazanırsın. En fazla @BeeRange@ mesafedeki bir hedefe saldırmak veya yetenek isabet ettirmek arıların ona @DebuffDuration@ saniye boyunca saldırmasına yol açar.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -2874,7 +2943,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Artık eklentilerini yenileyemezsin.<br><br>Bir altın eklenti seç. En az @PrismaticThreshold@ yenileme yaptıysan bu eklentiyi güçlendirip bir prizmatik eklenti seçersin.",
+            "desc": "Cherry_CalculatedRisk_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3103,6 +3172,22 @@
             "tooltip": "Çağırdığın birimlerin boyutu, canı ve hasarı %@MinionSizeIncrease*100@ artar."
         },
         {
+            "apiName": "Multitool",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfItemsToRoll": 5.0,
+                "PrismaticRound": 4.0,
+                "SellableRound": 0
+            },
+            "desc": "Çok Amaçlı'yı çantana ekler. Her hazırlık evresinde 5 rasgele eşyadan birini seçersin. Çok Amaçlı bir sonraki çatışma turu boyunca seçtiğin eşyaya dönüşür.",
+            "iconLarge": "assets/ux/cherry/augments/icons/multitool_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/multitool_small.png",
+            "id": 331,
+            "name": "Çok Amaçlı",
+            "rarity": 1,
+            "tooltip": "Çok Amaçlı'yı çantana ekler. Her hazırlık evresinde 5 rasgele eşyadan birini seçersin. Çok Amaçlı bir sonraki çatışma turu boyunca seçtiğin eşyaya dönüşür.<br><br>Çok Amaçlı, @PrismaticRound@. turda prizmatik eşyalara dönüşebilir."
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {},
             "dataValues": {
@@ -3319,7 +3404,26 @@
             "id": 38,
             "name": "Baştan Sona",
             "rarity": 1,
-            "tooltip": "<spellName>İlk Vuruş</spellName> ve <spellName>Kara Hasat</spellName> anahtar rünlerini kazanırsın.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@<br>Kazanılan Toplam Altın: @f3@"
+            "tooltip": "<spellName>İlk Vuruş</spellName> ve <spellName>Kara Hasat</spellName> anahtar rünlerini kazanırsın.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@<br>Kazanılan Toplam Altın: @f3@<br><br><spellName>İlk Vuruş</spellName> - Bir şampiyona hasar vermek onun 3 saniyeliğine daha fazla hasar almasını sağlar. Sürenin sonunda verdiğin ilave hasara bağlı olarak altın kazanırsın.<br><spellName>Kara Hasat</spellName> - <scaleHealth>Canı %50'nin</scaleHealth> altında olan rakiplere hasar vermek ilave hasar verir ve bu ilave hasarı kalıcı olarak arttırır."
+        },
+        {
+            "apiName": "PanicRoom",
+            "calculations": {},
+            "dataValues": {
+                "DelayMovingTime": 0.5,
+                "HealthLock": 0.20000000298023224,
+                "MaximumDistanceRoF": 1500.0,
+                "MaxmimumDistance": 3000.0,
+                "MinimumDistance": 1500.0,
+                "WispSpeed": 3500.0
+            },
+            "desc": "Çatışma başına bir defalığına canın ilk kez sıfıra indiğinde katledilmek yerine bir ruha dönüşür, <scaleHealth>%@HealthLock*100@</scaleHealth> Can yeniler ve arenada rasgele bir konuma ışınlanırsın.",
+            "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
+            "id": 335,
+            "name": "Panik Odası",
+            "rarity": 0,
+            "tooltip": "Çatışma başına bir defalığına canın ilk kez sıfıra indiğinde katledilmek yerine bir ruha dönüşür, <scaleHealth>%@HealthLock*100@</scaleHealth> Can yeniler ve arenada rasgele bir konuma ışınlanırsın."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3570,6 +3674,26 @@
             "tooltip": "Yetenek kullanmak sınırsız kez birikecek şekilde <scaleBonus>@HastePerCast@ Yetenek Hızı</scaleBonus> kazandırır. Bu ilave her tur sıfırlanır."
         },
         {
+            "apiName": "RighteousFury",
+            "calculations": {},
+            "dataValues": {
+                "ADPerStack": 2.0,
+                "ASPerStack": 0.019999999552965164,
+                "Cooldown": 3.0,
+                "MinimumTrigger": 1.0,
+                "SpellDamagePerStack": 0.029999999329447746,
+                "StacksPerAllyCast": 5.0,
+                "StacksPerSelfCast": 1.0
+            },
+            "desc": "<healing>İyileştirme yapmak</healing> veya <Shield>kalkan sağlamak</Shield> yetenek hasarını tur boyunca sınırsız defa birikecek şekilde %@SpellDamagePerStack*100@ arttırır.",
+            "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/righteous_fury_small.png",
+            "id": 343,
+            "name": "Haklı Öfke",
+            "rarity": 2,
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Mevcut Yetenek Hasarı İlavesi: %@f1@<br>Bu Tur İlave Hasar: @f2@<br>Toplam İlave Hasar: @f3@"
+        },
+        {
             "apiName": "OrbitalLaser",
             "calculations": {
                 "DamagePerTick": {
@@ -3614,6 +3738,24 @@
             "name": "Yörünge Lazeri",
             "rarity": 2,
             "tooltip": "{{Cherry_OrbitalLaser_Summary}}<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+        },
+        {
+            "apiName": "Energetic",
+            "calculations": {},
+            "dataValues": {
+                "AmountOfMissiles": 1.0,
+                "EnergizeAmpAttackCharge": 2.0,
+                "EnergizeAmpMovementCharge": 2.0,
+                "MaxHealthDamagePerMissile": 0.003000000026077032,
+                "MaxRangeThreshold": 0
+            },
+            "desc": "<keyword>Enerji Dolu</keyword> etkisini iki kat daha hızlı kazanırsın. <keyword>Enerji Dolu</keyword> etkisi tetiklendiğinde kat ettiği mesafeye bağlı olarak en fazla <trueDamage>azami canın %@MaxHealthDamagePerMissile*100@ kadarına eşdeğer miktarda gerçek hasar</trueDamage> veren bir <keywordMajor>büyü atışı</keywordMajor> gönderirsin.",
+            "iconLarge": "assets/ux/cherry/augments/icons/energetic_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/energetic_small.png",
+            "id": 344,
+            "name": "Enerjik",
+            "rarity": 0,
+            "tooltip": "<keyword>Enerji Dolu</keyword> etkisini iki kat daha hızlı kazanırsın. <keyword>Enerji Dolu</keyword> etkisi tetiklendiğinde kat ettiği mesafeye bağlı olarak en fazla <trueDamage>@MaxHealthDamagePerMissile*100@azami canın % kadarına eşdeğer miktarda gerçek hasar</trueDamage> veren bir <keywordMajor>büyü atışı</keywordMajor> gönderirsin.<br><br>Bu Tur Verilen Büyü Atışı Hasarı: @f1@<br>Verilen Toplam Büyü Atışı Hasarı: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -3914,7 +4056,7 @@
             "id": 50,
             "name": "Anahtar Rün Sihirbazı",
             "rarity": 1,
-            "tooltip": "<spellName>Aery'yi Çağır</spellName> ve <spellName>Sihirli Yıldız</spellName> anahtar rünlerini kazanırsın.<br><br>Verilen Toplam Hasar: @f1@<br>Oluşturulan Toplam Kalkan: @f2@"
+            "tooltip": "<spellName>Aery'yi Çağır</spellName> ve <spellName>Sihirli Yıldız</spellName> anahtar rünlerini kazanırsın.<br><br>Verilen Toplam Hasar: @f1@<br>Oluşturulan Toplam Kalkan: @f2@<br><br><spellName>Aery'yi Çağır</spellName> - Aery hasar verdiğin rakiplere veya <healing>iyileştirme</healing>, <shield>kalkan</shield> ya da güçlendirme etkisi sağladığın takım arkadaşlarına atılır. Atıldığı rakiplere hasar verir, takım arkadaşlarınaysa <shield>kalkan</shield> sağlar.<br><spellName>Sihirli Yıldız</spellName> - Yetenek hasarı vermek bir meteor çağırarak alandaki bütün rakiplere hasar verir."
         },
         {
             "apiName": "LaserEyes",
@@ -4259,6 +4401,23 @@
             "tooltip": "Sıçra kullandığında etrafına <magicDamage>@ExplosiveDamage@ Büyü Hasarı</magicDamage> veren ve rakipleri @SlowDuration@ saniyeliğine %@SlowAmount*100@ <status>yavaşlatan</status> bir patlama meydana gelir. Ayrıca Sıçra'nın bekleme süresi her tur sıfırlanır.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
         },
         {
+            "apiName": "AimForTheHead",
+            "calculations": {},
+            "dataValues": {
+                "CritChanceBonus": 0.25,
+                "CritChanceCeiling": 0.5,
+                "CritChanceMod": 0.5,
+                "CritDamageBonus": 0.5
+            },
+            "desc": "%@CritChanceBonus*100@ Kritik Vuruş İhtimali ve %@CritDamageBonus*100@ Kritik Vuruş Hasarı kazanırsın. Kritik vuruş ihtimalin en fazla %@CritChanceCeiling*100@ olabilir.<br><br>%@CritChanceCeiling*100@ değerinin üstündeki kritik vuruş ihtimali, kritik vuruş hasarına dönüşür.",
+            "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
+            "id": 336,
+            "name": "Kafaya Nişan",
+            "rarity": 1,
+            "tooltip": "%@CritChanceBonus*100@ Kritik Vuruş İhtimali ve %@CritDamageBonus*100@ Kritik Vuruş Hasarı kazanırsın. Kritik vuruş ihtimalin en fazla %@CritChanceCeiling*100@ olabilir.<br><br>%@CritChanceCeiling*100@ değerinin üstündeki kritik vuruş ihtimali, kritik vuruş hasarına dönüşür."
+        },
+        {
             "apiName": "SummonersRoulette",
             "calculations": {},
             "dataValues": {
@@ -4475,7 +4634,7 @@
             "id": 16,
             "name": "Kombo Erbabı",
             "rarity": 1,
-            "tooltip": "<spellName>Elektrik Ver</spellName> ve <spellName>Sürat Coşkusu</spellName> anahtar rünlerini kazanırsın.<br><br>Elektrik Ver'in Bu Tur Verdiği Hasar: @f1@<br>Toplam Elektrik Ver Hasarı: @f2@"
+            "tooltip": "<spellName>Elektrik Ver</spellName> ve <spellName>Sürat Coşkusu</spellName> anahtar rünlerini kazanırsın.<br><br>Bu Tur Toplam Elektrik Ver Hasarı: @f1@<br>Toplam Elektrik Ver Hasarı: @f2@<br><br><spellName>Elektrik Ver</spellName> - 3 saniye içinde 3 farklı saldırı veya yetenek isabet ettirmek anlık hasar verir.<br><spellName>Sürat Coşkusu</spellName> - 4 saniye içinde 3 farklı saldırı veya yetenek isabet ettirmek birkaç saniyeliğine <speed>hareket hızı</speed> ve yavaşlatma direnci kazandırır."
         },
         {
             "apiName": "DarkBlessing",
