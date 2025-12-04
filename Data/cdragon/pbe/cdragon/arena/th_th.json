@@ -2778,7 +2778,7 @@
             "id": 338,
             "name": "Hive Mind",
             "rarity": 2,
-            "tooltip": "เริ่มต้นแต่ละรอบด้วยผึ้ง @StartingBees@ ตัว ได้รับผึ้งเมื่อเก็บเกี่ยวดอกไม้ อีกทั้งการโจมตีหรือการใช้สกิลโดนเป้าหมายภายในระยะ @BeeRange@ หน่วยจะปล่อยผึ้งไปโจมตีในช่วงระยะเวลา @DebuffDuration@ วินาที<br><br>ความเสียหายที่ทำได้ในรอบนี้: @f1@ หน่วย<br>ความเสียหายที่ทำได้ทั้งหมด: @f2@ หน่วย"
+            "tooltip": "เริ่มต้นแต่ละรอบด้วยผึ้ง @StartingBees@ ตัว ได้รับผึ้งเมื่อเก็บเกี่ยวดอกไม้ อีกทั้งการโจมตีหรือการใช้สกิลโดนเป้าหมายภายในระยะ @BeeRange@ หน่วย จะปล่อยผึ้งไปโจมตีในช่วงระยะเวลา @DebuffDuration@ วินาที<br><br>ความเสียหายที่ทำได้ในรอบนี้: @f1@ หน่วย<br>ความเสียหายที่ทำได้ทั้งหมด: @f2@ หน่วย"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -4195,6 +4195,21 @@
             "name": "Lightning Strikes",
             "rarity": 1,
             "tooltip": "ได้รับ<attackSpeed>ความเร็วโจมตีทั้งหมด @TotalASValue*100@%</attackSpeed><br><br>เมื่อทำ<attackSpeed>ความเร็วโจมตีได้ถึง @Breakpoint1@ ครั้งต่อวินาที</attackSpeed> จะได้รับ<magicDamage>ความเสียหายเวท</magicDamage> @OnHitDamage@ หน่วย {{ Item_Keyword_OnHit }}<br><br><rules><attackSpeed>ความเร็วโจมตีทั้งหมด</attackSpeed>จะคำนวณแบบเป็นตัวคูณให้กับ<attackSpeed>โบนัสความเร็วโจมตี</attackSpeed>ของคุณ</rules><br><br>ความเสียหายเวท On-Hit ที่ทำได้: @f1@ หน่วย"
+        },
+        {
+            "apiName": "Unshackled",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": 3.0,
+                "UltimateHaste": 50.0
+            },
+            "desc": "คุณสามารถร่ายสกิล <spellName>Hijack</spellName> ใส่คู่หูของคุณได้ ได้รับเร่งสกิลอัลติเมท @UltimateHaste@ หน่วย",
+            "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
+            "id": 314,
+            "name": "Unshackled",
+            "rarity": 1,
+            "tooltip": "คุณสามารถร่ายสกิล <spellName>Hijack</spellName> ใส่คู่หูของคุณได้ ได้รับเร่งสกิลอัลติเมท @UltimateHaste@ หน่วย"
         },
         {
             "apiName": "Repulsor",

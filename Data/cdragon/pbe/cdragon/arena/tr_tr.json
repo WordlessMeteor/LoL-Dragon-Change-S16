@@ -3755,7 +3755,7 @@
             "id": 344,
             "name": "Enerjik",
             "rarity": 0,
-            "tooltip": "<keyword>Enerji Dolu</keyword> etkisini iki kat daha hızlı kazanırsın. <keyword>Enerji Dolu</keyword> etkisi tetiklendiğinde kat ettiği mesafeye bağlı olarak en fazla <trueDamage>@MaxHealthDamagePerMissile*100@azami canın % kadarına eşdeğer miktarda gerçek hasar</trueDamage> veren bir <keywordMajor>büyü atışı</keywordMajor> gönderirsin.<br><br>Bu Tur Verilen Büyü Atışı Hasarı: @f1@<br>Verilen Toplam Büyü Atışı Hasarı: @f2@"
+            "tooltip": "<keyword>Enerji Dolu</keyword> etkisini iki kat daha hızlı kazanırsın. <keyword>Enerji Dolu</keyword> etkisi tetiklendiğinde kat ettiği mesafeye bağlı olarak en fazla <trueDamage>azami canın %@MaxHealthDamagePerMissile*100@ kadarına eşdeğer miktarda gerçek hasar</trueDamage> veren bir <keywordMajor>büyü atışı</keywordMajor> gönderirsin.<br><br>Bu Tur Verilen Büyü Atışı Hasarı: @f1@<br>Verilen Toplam Büyü Atışı Hasarı: @f2@"
         },
         {
             "apiName": "MysticPunch",
@@ -4195,6 +4195,21 @@
             "name": "Yıldırım Darbeleri",
             "rarity": 1,
             "tooltip": "<attackSpeed>%@TotalASValue*100@ Toplam Saldırı Hızı</attackSpeed> kazanırsın.<br><br><attackSpeed>Saniye başına @Breakpoint1@ saldırıya</attackSpeed> ulaştığında {{ Item_Keyword_OnHit }} @OnHitDamage@ <magicDamage>Büyü Hasarı</magicDamage> kazanırsın.<br><br><rules><attackSpeed>Toplam saldırı hızı</attackSpeed>, <attackSpeed>ilave saldırı hızının</attackSpeed> bir çarpanı olarak hesaplanır.</rules><br><br>İsabet Halinde Verilen Büyü Hasarı: @f1@"
+        },
+        {
+            "apiName": "Unshackled",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": 3.0,
+                "UltimateHaste": 50.0
+            },
+            "desc": "<spellName>Gasp</spellName>'ı takım arkadaşının üstünde kullanabilirsin. @UltimateHaste@ Ulti Hızı kazanırsın.",
+            "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
+            "id": 314,
+            "name": "İsyanın Zinciri",
+            "rarity": 1,
+            "tooltip": "<spellName>Gasp</spellName>'ı takım arkadaşının üstünde kullanabilirsin. @UltimateHaste@ Ulti Hızı kazanırsın."
         },
         {
             "apiName": "Repulsor",

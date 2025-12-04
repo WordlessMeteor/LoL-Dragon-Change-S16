@@ -53018,6 +53018,51 @@
         "ShadingModel": "{baebc346}",
         "parameters": [
             {
+                "name": "Dissolve_SmoothStep",
+                "data": [
+                    0.0,
+                    0.4000000059604645,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Dissolve_SmoothStep",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Dissolve_Bias",
+                "logicalParameters": [
+                    {
+                        "name": "Dissolve_Bias",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Gradient_Sharpness",
+                "data": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Gradient_Sharpness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "TintColor",
                 "data": [
                     1.0,
@@ -53244,6 +53289,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Alpha_Sharpness",
+                "data": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Alpha_Sharpness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Bloom_Intensity",
                 "data": [
                     1.0,
@@ -53293,9 +53355,23 @@
             {
                 "name": "HOLOGRAPHIC_ON",
                 "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_DISSOLVE",
+                "__type": "ShaderStaticSwitch"
             }
         ],
         "textures": [
+            {
+                "name": "Dissolve_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Particles/Base_plasma_noise.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Dissolve_Gradient_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Gradient_test_01.tex",
+                "__type": "ShaderTexture"
+            },
             {
                 "name": "Diffuse_Texture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/white.tex",
@@ -63740,7 +63816,7 @@
         "objectPath": "Shaders/SkinnedMesh/GalaxyScreen_Flipbook",
         "__type": "CustomShaderDef"
     },
-    "{ef20e7c5}": {
+    "Shaders/StaticMesh/Indicator_Faelights": {
         "parameters": [
             {
                 "name": "TintColor",

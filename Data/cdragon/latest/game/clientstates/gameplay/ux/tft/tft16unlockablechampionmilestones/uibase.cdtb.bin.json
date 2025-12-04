@@ -1,0 +1,433 @@
+{
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Enabled": true,
+        "Layer": 30,
+        "SceneTransitionIn": {
+            "__type": "SceneAlphaTransitionData"
+        },
+        "SceneTransitionOut": {
+            "startAlpha": 255,
+            "endAlpha": 0,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG",
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup",
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ProgressText"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/Background",
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/HitRegion",
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/BackgroundClicked",
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/BackgroundHover"
+        ],
+        "IsEnabled": true,
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/HitRegion",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/Background"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/BackgroundHover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/BackgroundClicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseDownEvent": "Play_sfx_Common_grid_release",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/Background": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/Background",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Enabled": true,
+        "Layer": 30,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1002.0,
+                    827.0
+                ],
+                "Size": [
+                    458.0,
+                    118.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Notifications/Set16/Notification_Backing_Default_PC_v2.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/BackgroundClicked": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/BackgroundClicked",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Enabled": true,
+        "Layer": 30,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1002.0,
+                    827.0
+                ],
+                "Size": [
+                    458.0,
+                    118.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Notifications/Set16/Notification_Backing_Clicked_PC_v2.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/HitRegion": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/HitRegion",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Layer": 30,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1002.0,
+                    827.0
+                ],
+                "Size": [
+                    458.0,
+                    118.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/BackgroundHover": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/BG/BackgroundHover",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Enabled": true,
+        "Layer": 30,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1002.0,
+                    827.0
+                ],
+                "Size": [
+                    458.0,
+                    118.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Notifications/Set16/Notification_Backing_Hover_PC_v2.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/Frame",
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/Icon",
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/LockIcon",
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/Name",
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/ProgressBarBackground",
+            "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/ProgressBarFill"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/LockIcon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/LockIcon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Enabled": true,
+        "Layer": 33,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1076.0,
+                    844.0
+                ],
+                "Size": [
+                    22.0,
+                    22.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/ProgressBarFill": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/ProgressBarFill",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Enabled": true,
+        "Layer": 34,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1041.0,
+                    892.0
+                ],
+                "Size": [
+                    50.0,
+                    8.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FlipY": true,
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/TeamPlanner/TeamEditor/UnlockableChampion_ProgressBar_Fill.TFT_Set16.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/Frame": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/Frame",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Enabled": true,
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1039.0,
+                    847.0
+                ],
+                "Size": [
+                    54.0,
+                    54.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/ProgressBarBackground": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/ProgressBarBackground",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Enabled": true,
+        "Layer": 33,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1040.0,
+                    891.0
+                ],
+                "Size": [
+                    52.0,
+                    11.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/TeamPlanner/TeamEditor/UnlockableChampion_ProgressBar_Base_v3.TFT_Set16.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/Name": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/Name",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Enabled": true,
+        "Layer": 31,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1015.0,
+                    903.0
+                ],
+                "Size": [
+                    106.0,
+                    34.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{222f910d}",
+        "TextAlignmentHorizontal": 1,
+        "TextAlignmentVertical": 0,
+        "WrappingMode": 2,
+        "{c1d0e91a}": 0.8999999761581421,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/Icon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ChampGroup/Icon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Enabled": true,
+        "Layer": 31,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1039.0,
+                    847.0
+                ],
+                "Size": [
+                    54.0,
+                    54.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ProgressText": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene/Group/ProgressText",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFT16UnlockableChampionMilestones/UIBase/NotificationScene",
+        "Enabled": true,
+        "Layer": 33,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1127.0,
+                    832.0
+                ],
+                "Size": [
+                    308.0,
+                    108.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{bcd669af}",
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 2,
+        "__type": "UiElementTextData"
+    },
+    "__linked": []
+}

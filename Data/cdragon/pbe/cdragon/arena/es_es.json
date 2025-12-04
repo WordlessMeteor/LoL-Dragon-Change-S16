@@ -2772,13 +2772,13 @@
                 "MaxBeeStacks": 6.0,
                 "StartingBees": 1.0
             },
-            "desc": "Comienzas cada ronda con @StartingBees@ abeja(s). Cosecha flores para obtener abejas. Al asestar ataques o habilidades a un objetivo en @BeeRange@, una abeja se lanzará al ataque a lo largo de @DebuffDuration@ s.",
+            "desc": "Comienzas cada ronda con @StartingBees@ abeja(s). Cosecha flores para obtener abejas. Al asestar ataques o habilidades a un objetivo a @BeeRange@ unidades, una abeja se lanzará al ataque a lo largo de @DebuffDuration@&nbsp;s.",
             "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
             "id": 338,
             "name": "Mente colmena",
             "rarity": 2,
-            "tooltip": "Comienzas cada ronda con @StartingBees@ abeja(s). Cosecha flores para obtener abejas. Al asestar ataques o habilidades a un objetivo en @BeeRange@, una abeja se lanzará al ataque a lo largo de @DebuffDuration@ s.<br><br>Daño infligido esta ronda: @f1@<br>Daño infligido en total: @f2@"
+            "tooltip": "Comienzas cada ronda con @StartingBees@ abeja(s). Cosecha flores para obtener abejas. Al asestar ataques o habilidades a un objetivo a @BeeRange@ unidades, una abeja se lanzará al ataque a lo largo de @DebuffDuration@&nbsp;s.<br><br>Daño infligido esta ronda: @f1@<br>Daño infligido en total: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -4197,6 +4197,21 @@
             "tooltip": "Obtienes un <attackSpeed>@TotalASValue*100@% de velocidad de ataque total</attackSpeed>.<br><br>Al asestar @Breakpoint1@ <attackSpeed>ataques por segundo</attackSpeed>, obtienes @OnHitDamage@ de <magicDamage>daño mágico</magicDamage> {{ Item_Keyword_OnHit }}.<br><br>La <rules><attackSpeed>velocidad de ataque total</attackSpeed> se calcula como multiplicador de tu <attackSpeed>velocidad de ataque adicional</attackSpeed>.</rules><br><br>Daño mágico infligido al golpear: @f1@"
         },
         {
+            "apiName": "Unshackled",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": 3.0,
+                "UltimateHaste": 50.0
+            },
+            "desc": "Puedes lanzar <spellName>Apropiación</spellName> sobre tu compañero. Obtienes @UltimateHaste@ de velocidad de habilidad definitiva.",
+            "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
+            "id": 314,
+            "name": "Desencadenado",
+            "rarity": 1,
+            "tooltip": "Puedes lanzar <spellName>Apropiación</spellName> sobre tu compañero. Obtienes @UltimateHaste@ de velocidad de habilidad definitiva."
+        },
+        {
             "apiName": "Repulsor",
             "calculations": {},
             "dataValues": {
@@ -4409,13 +4424,13 @@
                 "CritChanceMod": 0.5,
                 "CritDamageBonus": 0.5
             },
-            "desc": "Otorga un @CritChanceBonus*100@% de probabilidad de impacto crítico y un @CritDamageBonus*100@ % de daño de impacto crítico. Tu probabilidad de impacto crítico tiene un límite del @CritChanceCeiling*100@%.<br><br>Convierte tu probabilidad de impacto crítico por encima de @CritChanceCeiling*100@% en daño de impacto crítico.",
+            "desc": "Otorga un @CritChanceBonus*100@% de probabilidad de impacto crítico y un @CritDamageBonus*100@% de daño de impacto crítico. Tu probabilidad de impacto crítico tiene un límite del @CritChanceCeiling*100@%.<br><br>Convierte tu probabilidad de impacto crítico por encima del @CritChanceCeiling*100@% en daño de impacto crítico.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Apunta a la cabeza",
             "rarity": 1,
-            "tooltip": "Otorga un @CritChanceBonus*100@% de probabilidad de impacto crítico y un @CritDamageBonus*100@ % de daño de impacto crítico. Tu probabilidad de impacto crítico tiene un límite del @CritChanceCeiling*100@%.<br><br>Convierte tu probabilidad de impacto crítico por encima de @CritChanceCeiling*100@% en daño de impacto crítico."
+            "tooltip": "Otorga un @CritChanceBonus*100@% de probabilidad de impacto crítico y un @CritDamageBonus*100@% de daño de impacto crítico. Tu probabilidad de impacto crítico tiene un límite del @CritChanceCeiling*100@%.<br><br>Convierte tu probabilidad de impacto crítico por encima del @CritChanceCeiling*100@% en daño de impacto crítico."
         },
         {
             "apiName": "SummonersRoulette",

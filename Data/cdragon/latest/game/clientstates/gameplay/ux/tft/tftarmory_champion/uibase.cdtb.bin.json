@@ -1,0 +1,4525 @@
+{
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_ToggleArmoryScene": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_ToggleArmoryScene",
+        "Enabled": true,
+        "Layer": 100,
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Layer": 116,
+        "SceneTransitionIn": {
+            "TransitionTime": 0.5,
+            "EasingType": 23,
+            "startAlpha": 255,
+            "Edge": 3,
+            "__type": "SceneScreenEdgeTransitionData"
+        },
+        "SceneTransitionOut": {
+            "TransitionTime": 0.4000000059604645,
+            "EasingType": 22,
+            "startAlpha": 255,
+            "endAlpha": 0,
+            "Edge": 3,
+            "__type": "SceneScreenEdgeTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemIcon",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemIconShadow",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/RecipeButton",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemDragRegion",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemFootprint_Selected_VFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemFootprint_Unselected_VFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait0",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait1",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait2",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait3"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemIcon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemIcon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 15,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    672.0,
+                    1002.0
+                ],
+                "Size": [
+                    70.0,
+                    70.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemFootprint_Unselected_VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemFootprint_Unselected_VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Layer": 50,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/TFT/TFTArmory/Particles/TFT_UI_Armory_FootprintGenericVFX",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Default",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/HitRegion",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemIconFrame",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemName",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover_VFX"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/HitRegion",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Default",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemIconFrame"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemIconFrame",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover_VFX"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemIconFrame",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover_VFX"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemIconFrame",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover_VFX"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemIconFrame",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover_VFX"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemIconFrame",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover_VFX"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemName": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemName",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    611.0,
+                    1100.0
+                ],
+                "Size": [
+                    192.0,
+                    38.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{1e3241b3}",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/HitRegion": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/HitRegion",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Default": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Default",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 5,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    989.0
+                ],
+                "Size": [
+                    250.0,
+                    190.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Armory/TFT_Set14/GarenNetGod/TFT_ArmoryCard_Default_GarenNetGod.TFT_Set14.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    989.0
+                ],
+                "Size": [
+                    250.0,
+                    190.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Armory/TFT_Set14/GarenNetGod/TFT_ArmoryCard_Hover_GarenNetGod.TFT_Set14.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemIconFrame": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemIconFrame",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    666.0,
+                    996.0
+                ],
+                "Size": [
+                    82.0,
+                    82.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            255,
+            222,
+            0,
+            255
+        ],
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Armory/TFT_Set14/GarenNetGod/TFT_ItemFrame_GarenNetGod.TFT_Set14.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover_VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover_VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Layer": 30,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    581.0,
+                    1002.0
+                ],
+                "Size": [
+                    250.0,
+                    190.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/Particles/TFT_UI_Armory_GarenNetGod_CardHoverVFX",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait0": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait0",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait0/Name",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait0/Icon"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait0/Icon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait0/Icon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 100,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    603.0,
+                    1160.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait0/Name": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait0/Name",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 100,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    624.0,
+                    1160.0
+                ],
+                "Size": [
+                    113.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{de54e881}",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait2": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait2",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait2/Name",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait2/Icon"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait2/Name": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait2/Name",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 100,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    624.0,
+                    1120.0
+                ],
+                "Size": [
+                    113.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{de54e881}",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait2/Icon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait2/Icon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 100,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    603.0,
+                    1120.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait3": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait3",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait3/TraitName",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait3/Icon"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait3/TraitName": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait3/TraitName",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 100,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    624.0,
+                    1100.0
+                ],
+                "Size": [
+                    113.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{de54e881}",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait3/Icon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait3/Icon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 100,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    603.0,
+                    1100.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait1": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait1",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait1/Icon",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait1/Name"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait1/Name": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait1/Name",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 100,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    624.0,
+                    1140.0
+                ],
+                "Size": [
+                    113.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{de54e881}",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait1/Icon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/Traits/Trait1/Icon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 100,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    603.0,
+                    1140.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemFootprint_Selected_VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemFootprint_Selected_VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Layer": 50,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/TFT/TFTArmory/Particles/TFT_UI_Armory_FootprintSelectedVFX",
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemDragRegion": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemDragRegion",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "DragType": {
+            "UseStickyDrag": true,
+            "__type": "UiDraggableElementGroupDrag"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemIconShadow": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/ItemIconShadow",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 15,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    668.0,
+                    998.0
+                ],
+                "Size": [
+                    78.0,
+                    78.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/RecipeButton": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/RecipeButton",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/RecipeButton/HitRegion"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/RecipeButton/HitRegion",
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/RecipeButton/HitRegion": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_Slot0/RecipeButton/HitRegion",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 123,
+        "ParentScene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeInactiveVFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeVFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/DescriptionText",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Badge",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Cost",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_CostIcon",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_CostIconDisabled",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_CostIconHealth",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_CostIconHealthDisabled",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_DragHitTarget",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_HighlightOne",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_HighlightThree",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_HighlightTwo",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Icon",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Name",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Rarity6_CostHealth_VFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_TeamPlanReminder",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_TFT10_Headliner_Disabled",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/Bg",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/Highlight",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/Icon",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/Name",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/SpecialNub"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/Bg": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/Bg",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    600.0,
+                    1109.0
+                ],
+                "Size": [
+                    22.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Traits_Texture_Atlas.tex",
+            "mTextureSourceResolutionWidth": 512,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                399.0,
+                5.0,
+                420.0,
+                30.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/SpecialNub": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/SpecialNub",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    581.0,
+                    1112.0
+                ],
+                "Size": [
+                    25.0,
+                    23.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/Headliner/ShopCard_Headliner_Nub.png",
+            "__type": "LooseUiTextureData"
+        },
+        "MinimumSaturation": 1.0,
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/Name": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/Name",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    628.0,
+                    1118.0
+                ],
+                "Size": [
+                    113.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{de54e881}",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/Highlight": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/Highlight",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    600.0,
+                    1109.0
+                ],
+                "Size": [
+                    22.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_ShopHint_Headliner_Bottom",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/Icon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait0/Icon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    604.0,
+                    1115.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/Bg",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/Highlight",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/Icon",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/Name",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/SpecialNub"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/Highlight": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/Highlight",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    600.0,
+                    1079.0
+                ],
+                "Size": [
+                    22.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_ShopHint_Headliner_Bottom",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/SpecialNub": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/SpecialNub",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    581.0,
+                    1081.0
+                ],
+                "Size": [
+                    25.0,
+                    23.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/Headliner/ShopCard_Headliner_Nub.png",
+            "__type": "LooseUiTextureData"
+        },
+        "MinimumSaturation": 1.0,
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/Name": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/Name",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    628.0,
+                    1088.0
+                ],
+                "Size": [
+                    113.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{de54e881}",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/Bg": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/Bg",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    600.0,
+                    1079.0
+                ],
+                "Size": [
+                    22.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Traits_Texture_Atlas.tex",
+            "mTextureSourceResolutionWidth": 512,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                399.0,
+                5.0,
+                420.0,
+                30.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/Icon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait1/Icon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    604.0,
+                    1085.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/Bg",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/Highlight",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/Icon",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/Name",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/SpecialNub"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/SpecialNub": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/SpecialNub",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    581.0,
+                    1052.0
+                ],
+                "Size": [
+                    25.0,
+                    23.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/Headliner/ShopCard_Headliner_Nub.png",
+            "__type": "LooseUiTextureData"
+        },
+        "MinimumSaturation": 1.0,
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/Bg": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/Bg",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    600.0,
+                    1049.0
+                ],
+                "Size": [
+                    22.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Traits_Texture_Atlas.tex",
+            "mTextureSourceResolutionWidth": 512,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                399.0,
+                5.0,
+                420.0,
+                30.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/Highlight": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/Highlight",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    600.0,
+                    1049.0
+                ],
+                "Size": [
+                    22.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_ShopHint_Headliner_Bottom",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/Name": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/Name",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    628.0,
+                    1058.0
+                ],
+                "Size": [
+                    113.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{de54e881}",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/Icon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait2/Icon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    604.0,
+                    1055.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/Bg",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/Highlight",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/Icon",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/Name",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/SpecialNub"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/Name": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/Name",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    628.0,
+                    1028.0
+                ],
+                "Size": [
+                    113.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{de54e881}",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/Highlight": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/Highlight",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    600.0,
+                    1019.0
+                ],
+                "Size": [
+                    22.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_ShopHint_Headliner_Bottom",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/Icon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/Icon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    604.0,
+                    1025.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/SpecialNub": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/SpecialNub",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    581.0,
+                    1022.0
+                ],
+                "Size": [
+                    25.0,
+                    23.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/Headliner/ShopCard_Headliner_Nub.png",
+            "__type": "LooseUiTextureData"
+        },
+        "MinimumSaturation": 1.0,
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/Bg": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Traits/Trait3/Bg",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    600.0,
+                    1019.0
+                ],
+                "Size": [
+                    22.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Traits_Texture_Atlas.tex",
+            "mTextureSourceResolutionWidth": 512,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                399.0,
+                5.0,
+                420.0,
+                30.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Default",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Hover",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/VFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Region",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Clicked",
+            "{df49e8c9}"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Region",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Default"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/Set14/TFT_UI_VirusShopCard",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Default": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Default",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/UnitShop/Set14/Virus/TFT_ShopCard_Virus_Default.TFT_Set14.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Clicked": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Clicked",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/UnitShop/Set14/Virus/TFT_ShopCard_Virus_Default.TFT_Set14.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Hover": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Hover",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/UnitShop/Set14/Virus/TFT_ShopCard_Virus_Hover.TFT_Set14.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{df49e8c9}": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/TFT_VirusPopup",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1027.0
+                ],
+                "Size": [
+                    82.0,
+                    86.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "SpineSkelFile": "ASSETS/UX/TFT/Mograph/Sets/Set14/Virus/TFT_VirusPopup.skel",
+        "SpineAtlasFile": "ASSETS/UX/TFT/Mograph/Sets/Set14/Virus/TFT_VirusPopup.atlas",
+        "AnimationItems": [
+            {
+                "AnimationName": "animation",
+                "Loop": true,
+                "SpeedScale": 2.0,
+                "__type": "{d31bbf89}"
+            }
+        ],
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set14/UI_PixelateGlitch_Virus",
+        "__type": "{104afcda}"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Region": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity6/Region",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Clicked",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Default",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Default_BG",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Disabled_BG",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Hover",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Hover_BG",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/hoverVFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Region"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Region",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Default",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Default_BG"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Clicked",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Default_BG"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Clicked",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Default_BG"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Hover_BG",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/hoverVFX"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Hover_BG",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/hoverVFX"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Clicked",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Default_BG"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Clicked",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Default_BG"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Disabled_BG": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Disabled_BG",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    595.0,
+                    1011.0
+                ],
+                "Size": [
+                    208.0,
+                    166.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/ZAPS/Shop/TFT_ZapCard_allCat_BG_Disabled.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set12/UI_ZapShopBackground_Disabled",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Region": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Region",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Default": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Default",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    591.0,
+                    1002.0
+                ],
+                "Size": [
+                    215.0,
+                    177.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/ZAPS/Shop/TFT_ZapCard_allCat_Frame.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set12/UI_TextureGlow",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Clicked": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Clicked",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    591.0,
+                    1002.0
+                ],
+                "Size": [
+                    215.0,
+                    177.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/ZAPS/Shop/TFT_ZapCard_allCat_Frame.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set12/UI_TextureGlow",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Default_BG": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Default_BG",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    595.0,
+                    1009.0
+                ],
+                "Size": [
+                    206.0,
+                    167.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/ZAPS/Shop/TFT_ZapCard_allCat_BG.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set12/UI_ZapShopBackground",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/hoverVFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/hoverVFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 5,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1020.0
+                ],
+                "Size": [
+                    217.0,
+                    125.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/ShopCard/TFT_UI_Set12_ZapsHoverVFX",
+        "VFXAdjustmentScale": 0.5,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Hover_BG": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Hover_BG",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    595.0,
+                    1011.0
+                ],
+                "Size": [
+                    208.0,
+                    166.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/ZAPS/Shop/TFT_ZapCard_allCat_BG.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set12/UI_ZapShopBackground_Hover",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Hover": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special3/Hover",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    591.0,
+                    1002.0
+                ],
+                "Size": [
+                    215.0,
+                    177.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/ZAPS/Shop/TFT_ZapCard_allCat_Frame_Hover.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set12/UI_TextureGlowHover",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Default",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Hover",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Region",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Clicked"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Region",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Default"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Default": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Default",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                17.0,
+                602.0,
+                233.0,
+                764.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Clicked": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Clicked",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                17.0,
+                602.0,
+                233.0,
+                764.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Region": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Region",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Hover": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity3/Hover",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                240.0,
+                602.0,
+                456.0,
+                764.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Default",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Hover",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Region",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Clicked"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Region",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Default"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Clicked": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Clicked",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/UnitShop/TFT_ShopCard_Rarity4_Clicked.TFT_Set13_Evolved.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Hover": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Hover",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/UnitShop/TFT_ShopCard_Rarity4_Hover.TFT_Set13_Evolved.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Region": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Region",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Default": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity4/Default",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/UnitShop/TFT_ShopCard_Rarity4_Default.TFT_Set13_Evolved.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Default",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Hover",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/VFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Region",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Clicked"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Region",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Default"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_5Cost_Foil",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Default": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Default",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/UnitShop/TFT_ShopCard_Rarity5_Default.TFT_Set13_Evolved.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Region": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Region",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Clicked": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Clicked",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/UnitShop/TFT_ShopCard_Rarity5_Clicked.TFT_Set13_Evolved.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Hover": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity5/Hover",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/UnitShop/TFT_ShopCard_Rarity5_Hover.TFT_Set13_Evolved.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Default",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Hover",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Region",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Clicked"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Region",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Default"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Region": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Region",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Hover": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Hover",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                686.0,
+                431.0,
+                902.0,
+                593.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Default": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Default",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                463.0,
+                431.0,
+                679.0,
+                593.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Clicked": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity2/Clicked",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                463.0,
+                431.0,
+                679.0,
+                593.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Clicked",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Default",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Default_BG",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Disabled_BG",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Hover",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Hover_BG",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/hoverVFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Region"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Region",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Default",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Default_BG"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Clicked",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Default_BG"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Clicked",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Default_BG"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Hover_BG",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/hoverVFX"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Hover_BG",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/hoverVFX"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Clicked",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Default_BG"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Clicked",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Default_BG"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Default_BG": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Default_BG",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    598.0,
+                    1021.0
+                ],
+                "Size": [
+                    206.0,
+                    153.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/ZAPS/Shop/TFT_ZapCard_Xerath_BG.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set12/UI_ZapShopBackground_Xerath",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Hover_BG": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Hover_BG",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    598.0,
+                    1021.0
+                ],
+                "Size": [
+                    206.0,
+                    152.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/ZAPS/Shop/TFT_ZapCard_Xerath_BG.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set12/UI_ZapShopBackground_Xerath_Hover",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Clicked": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Clicked",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 5,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    591.0,
+                    997.0
+                ],
+                "Size": [
+                    220.0,
+                    182.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/ZAPS/Shop/TFT_ZapCard_Xerath_Frame.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set12/UI_TextureGlow",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Default": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Default",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 5,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    591.0,
+                    997.0
+                ],
+                "Size": [
+                    220.0,
+                    182.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/ZAPS/Shop/TFT_ZapCard_Xerath_Frame.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set12/UI_TextureGlow",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/hoverVFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/hoverVFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1020.0
+                ],
+                "Size": [
+                    217.0,
+                    125.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/ShopCard/TFT_UI_Set12_ZapsHoverVFX",
+        "VFXAdjustmentScale": 0.5,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Region": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Region",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Hover": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Hover",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 5,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    591.0,
+                    997.0
+                ],
+                "Size": [
+                    220.0,
+                    182.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/ZAPS/Shop/TFT_ZapCard_Xerath_Frame_Hover.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set12/UI_TextureGlowHover",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Disabled_BG": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Special4/Disabled_BG",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    598.0,
+                    1021.0
+                ],
+                "Size": [
+                    206.0,
+                    152.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Hud/ZAPS/Shop/TFT_ZapCard_Xerath_BG_Disabled.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/UiMaterials/Set12/UI_ZapShopBackground_Disabled",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Default",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Hover",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Region",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Clicked"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Region",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Default"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Hover"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Clicked"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Clicked": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Clicked",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                17.0,
+                431.0,
+                233.0,
+                593.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Hover": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Hover",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                240.0,
+                431.0,
+                456.0,
+                593.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Default": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Default",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                17.0,
+                431.0,
+                233.0,
+                593.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Region": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/Frame/Rarity1/Region",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_CostIconDisabled": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_CostIconDisabled",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    765.0,
+                    1152.0
+                ],
+                "Size": [
+                    12.0,
+                    12.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                310.0,
+                399.0,
+                327.0,
+                415.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_DragHitTarget": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_DragHitTarget",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "DragType": {
+            "UseStickyDrag": true,
+            "__type": "UiDraggableElementGroupDrag"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Cost": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Cost",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    777.0,
+                    1145.0
+                ],
+                "Size": [
+                    26.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{19778073}",
+        "TextAlignmentHorizontal": 1,
+        "WrappingMode": 5,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeInactiveVFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeInactiveVFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeInactiveVFX/TFT_UnitShop_Item0_BadgeInactive1VFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeInactiveVFX/TFT_UnitShop_Item0_BadgeInactive2VFX"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeInactiveVFX/TFT_UnitShop_Item0_BadgeInactive2VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeInactiveVFX/TFT_UnitShop_Item0_BadgeInactive2VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 19,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    568.0,
+                    1005.0
+                ],
+                "Size": [
+                    270.0,
+                    180.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_Headliner_ShopCardVFX_Alt",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeInactiveVFX/TFT_UnitShop_Item0_BadgeInactive1VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeInactiveVFX/TFT_UnitShop_Item0_BadgeInactive1VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 21,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    737.0,
+                    1007.0
+                ],
+                "Size": [
+                    101.0,
+                    101.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_Headliner_ShopCard_FrameVFX",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_HighlightTwo": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_HighlightTwo",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_ShopHint_2_Star",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_HighlightThree": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_HighlightThree",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_ShopHint_3_Star",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_CostIconHealthDisabled": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_CostIconHealthDisabled",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 5,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    760.0,
+                    1149.0
+                ],
+                "Size": [
+                    17.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                1243.0,
+                737.0,
+                1273.0,
+                765.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_TeamPlanReminder": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_TeamPlanReminder",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 13,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    599.0,
+                    1013.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/TFT_UnitShop_TeamPlanReminder.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Icon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Icon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    594.0,
+                    1019.0
+                ],
+                "Size": [
+                    208.0,
+                    123.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeVFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeVFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeVFX/TFT_UnitShop_Item0_BadgeVFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeVFX/TFT_UnitShop_Item0_Badge2VFX"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeVFX/TFT_UnitShop_Item0_Badge2VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeVFX/TFT_UnitShop_Item0_Badge2VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 19,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    568.0,
+                    1005.0
+                ],
+                "Size": [
+                    270.0,
+                    180.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_Headliner_ShopCardVFX",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeVFX/TFT_UnitShop_Item0_BadgeVFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/BadgeVFX/TFT_UnitShop_Item0_BadgeVFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 21,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    737.0,
+                    1007.0
+                ],
+                "Size": [
+                    101.0,
+                    101.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_Headliner_ShopCard_FrameVFX",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Name": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Name",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    600.0,
+                    1148.0
+                ],
+                "Size": [
+                    165.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{19778073}",
+        "HTMLStyleSheet": "{9c87124a}",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_CostIcon": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_CostIcon",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    765.0,
+                    1152.0
+                ],
+                "Size": [
+                    12.0,
+                    12.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                346.0,
+                398.0,
+                363.0,
+                414.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Rarity6_CostHealth_VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Rarity6_CostHealth_VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_UnitShop_CostHealth",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_HighlightOne": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_HighlightOne",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_ShopHint_Basic_ChampOwned",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_TFT10_Headliner_Disabled": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_TFT10_Headliner_Disabled",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 14,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    590.0,
+                    1015.0
+                ],
+                "Size": [
+                    216.0,
+                    162.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFT_UI_ShopHint_Basic_Headliner_Disabled",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_CostIconHealth": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_CostIconHealth",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 5,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    760.0,
+                    1149.0
+                ],
+                "Size": [
+                    17.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                1243.0,
+                737.0,
+                1273.0,
+                765.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/DescriptionText": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/DescriptionText",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Enabled": true,
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    602.0,
+                    1048.0
+                ],
+                "Size": [
+                    193.0,
+                    84.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{de54e881}",
+        "TextAlignmentVertical": 0,
+        "FlipForRTL": true,
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 2,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Badge": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0/ParentGroup/TFT_UnitShop_Item0_Badge",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/Armory_SlotChampion0",
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    738.0,
+                    1007.0
+                ],
+                "Size": [
+                    101.0,
+                    101.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Mograph/Sets/Set10/TFT_Headliner_Badge_Rainbow.png",
+            "__type": "LooseUiTextureData"
+        },
+        "Material": "ClientStates/Gameplay/UX/TFT/TFTUnitShop/UIBase/TFT_UnitShop/MainShopView/Materials/TFT_UI_Gradient_Mat",
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/ItemSpace": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/ItemSpace",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    575.0,
+                    991.0
+                ],
+                "Size": [
+                    264.0,
+                    192.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/TimerBar": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/TimerBar",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/TimerBar/Text",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/TimerBar/Backdrop",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/TimerBar/Texture"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/TimerBar/Text": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/TimerBar/Text",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 50,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    814.0,
+                    964.0
+                ],
+                "Size": [
+                    18.0,
+                    11.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{001f43b2}",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/TimerBar/Texture": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/TimerBar/Texture",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 50,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    581.0,
+                    966.0
+                ],
+                "Size": [
+                    216.0,
+                    6.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Armory/TFT_Set14/GarenNetGod/TFT_TimerBar_GarenNetGod.TFT_Set14.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/TimerBar/Backdrop": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/TimerBar/Backdrop",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 49,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    570.0,
+                    959.0
+                ],
+                "Size": [
+                    276.0,
+                    20.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Armory_Atlas_PC.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 512,
+            "mTextureUV": [
+                1400.0,
+                18.0,
+                1676.0,
+                38.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/background/Frame": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/background/Frame",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "BlockInputEvents": true,
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    21.0,
+                    917.0
+                ],
+                "Size": [
+                    1371.0,
+                    283.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Armory_Atlas_PC.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 512,
+            "mTextureUV": [
+                24.0,
+                17.0,
+                1395.0,
+                300.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/background/Background_VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/background/Background_VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    21.0,
+                    917.0
+                ],
+                "Size": [
+                    1371.0,
+                    283.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/TFT/TFTArmory/Particles/TFT_UI_Armory_BackgroundVFX",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/background/FrameGradient_GarenNetGod": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/background/FrameGradient_GarenNetGod",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "BlockInputEvents": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    32.0,
+                    976.0
+                ],
+                "Size": [
+                    1349.0,
+                    224.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            157,
+            12,
+            48,
+            255
+        ],
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Armory/TFT_Set14/GarenNetGod/TFT_Backer_Gradient_GarenNetGod.TFT_Set14.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/background/Title": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory/background/Title",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory_Champion/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 50,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    611.0,
+                    928.0
+                ],
+                "Size": [
+                    192.0,
+                    34.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "tft_shadowitem_ui_title",
+        "FontDescription": "{b8b57b6e}",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "__linked": []
+}

@@ -1425,7 +1425,7 @@
             "id": 79,
             "name": "Sinfonía de Guerra",
             "rarity": 2,
-            "tooltip": "Obtienes las runas clave <spellName>Cadencia Letal</spellName> y <spellName>Conquistador</spellName>.<br><br><spellName>Cadencia Letal</spellName>: Al atacar campeones, obtienes <attackSpeed>velocidad de ataque</attackSpeed>. La bonificación se acumula hasta seis veces. Cuando reúnes las seis acumulaciones, tus ataques lanzan un proyectil que inflige daño adicional.<br><spellName>Conquistador</spellName>: Al impactar campeones con ataques o habilidades, obtienes <physicalDamage>fuerza</physicalDamage><magicDamage>adaptable</magicDamage>. La bonificación se acumula hasta doce veces. Cuando reúnes las doce acumulaciones, te curas un porcentaje del daño que infliges a campeones."
+            "tooltip": "Obtienes las runas clave <spellName>Cadencia Letal</spellName> y <spellName>Conquistador</spellName>.<br><br><spellName>Cadencia Letal</spellName>: Al atacar campeones, obtienes <attackSpeed>velocidad de ataque</attackSpeed>. La bonificación se acumula hasta seis veces. Cuando reúnes las seis acumulaciones, tus ataques lanzan un proyectil que inflige daño adicional.<br><spellName>Conquistador</spellName>: Al impactar campeones con ataques o habilidades, obtienes <physicalDamage>fuerza</physicalDamage> <magicDamage>adaptable</magicDamage>. La bonificación se acumula hasta doce veces. Cuando reúnes las doce acumulaciones, te curas un porcentaje del daño que infliges a campeones."
         },
         {
             "apiName": "TrueshotProdigy",
@@ -2290,13 +2290,13 @@
                 "PrismaticGoldBasisDiscount": 1250.0,
                 "StatCostReduction": -150.0
             },
-            "desc": "Obtienes @GoldBonus@ de oro y se reduce el precio de todos los yunques<br>.<br>Yunques Prismáticos: @PrismaticCostReduction@<br>Yunques Legendarios: @LegendaryCostReduction@<br>Yunques de estadísticas: @StatCostReduction@<br><br><rules>Los objetos que se adquieren con los Yunques se revenden por 500 de oro menos.</rules>",
+            "desc": "Obtienes @GoldBonus@ de oro y se reduce el precio de todos los yunques.<br><br>Yunques Prismáticos: @PrismaticCostReduction@<br>Yunques Legendarios: @LegendaryCostReduction@<br>Yunques de estadísticas: @StatCostReduction@<br><br><rules>Los objetos que se adquieren con los Yunques se revenden por 500 de oro menos.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/thiefsgloves_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/thiefsgloves_small.png",
             "id": 234,
             "name": "Yunque de Gamba",
             "rarity": 2,
-            "tooltip": "Obtienes @GoldBonus@ de oro y se reduce el precio de todos los yunques<br>.<br>Yunques Prismáticos: @PrismaticCostReduction@<br>Yunques Legendarios: @LegendaryCostReduction@<br>Yunques de estadísticas: @StatCostReduction@<br><br><rules>Los objetos que se adquieren con los Yunques se revenden por 500 de oro menos.</rules>"
+            "tooltip": "Obtienes @GoldBonus@ de oro y se reduce el precio de todos los yunques.<br><br>Yunques Prismáticos: @PrismaticCostReduction@<br>Yunques Legendarios: @LegendaryCostReduction@<br>Yunques de estadísticas: @StatCostReduction@<br><br><rules>Los objetos que se adquieren con los Yunques se revenden por 500 de oro menos.</rules>"
         },
         {
             "apiName": "DivineIntervention",
@@ -2929,7 +2929,7 @@
                 "Range": 500.0,
                 "TickCadence": 0.25
             },
-            "desc": "Obtienes un aura que cosecha continuamente <keywordMajor>Poder Maldito</keywordMajor> permanente por cada campeón enemigo que esté dentro. Obtienes <scaleHealth>vida máxima</scaleHealth> según la cantidad de <keywordMajor>Poder Maldito</keywordMajor> que hayas acumulado.<br><br>La cantidad máxima de <keywordMajor>Poder Maldito</keywordMajor> que puedes obtener cada ronda aumenta con la cantidad total de fuentes de <keywordMajor>maldición</keywordMajor> que haya entre tu aliado y tú.",
+            "desc": "Obtienes un aura que cosecha <keywordMajor>Poder Maldito</keywordMajor> permanente por cada enemigo que esté dentro. Obtienes <scaleHealth>vida máxima</scaleHealth> según la cantidad de <keywordMajor>Poder Maldito</keywordMajor> que hayas acumulado.<br><br>La cantidad máxima de <keywordMajor>Poder Maldito</keywordMajor> que puedes obtener cada ronda aumenta con la cantidad de fuentes de <keywordMajor>maldición</keywordMajor> que haya entre tu aliado y tú.",
             "iconLarge": "assets/ux/cherry/augments/icons/plaguebearer_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/plaguebearer_small.png",
             "id": 216,
@@ -4195,6 +4195,21 @@
             "name": "Golpes Relampagueantes",
             "rarity": 1,
             "tooltip": "Obtienes un <attackSpeed>@TotalASValue*100@% de Velocidad de Ataque</attackSpeed>.<br><br>A los @Breakpoint1@ <attackSpeed>ataques por seg</attackSpeed>, te otorga @OnHitDamage@ <magicDamage>de daño mágico</magicDamage> {{ Item_Keyword_OnHit }}.<br><br><rules>La <attackSpeed>velocidad de ataque total</attackSpeed> se calcula como un multiplicador de tu <attackSpeed>velocidad de ataque adicional</attackSpeed></rules><br><br>Daño mágico al impacto infligido: @f1@"
+        },
+        {
+            "apiName": "Unshackled",
+            "calculations": {},
+            "dataValues": {
+                "MaxLevel": 3.0,
+                "UltimateHaste": 50.0
+            },
+            "desc": "Puedes lanzarle <spellName>Usurpación</spellName> a tu compañero. Obtienes @UltimateHaste@ de Aceleración de Definitiva.",
+            "iconLarge": "assets/ux/cherry/augments/icons/unshackled_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/unshackled_small.png",
+            "id": 314,
+            "name": "Usurpador",
+            "rarity": 1,
+            "tooltip": "Puedes lanzarle <spellName>Usurpación</spellName> a tu compañero. Obtienes @UltimateHaste@ de Aceleración de Definitiva."
         },
         {
             "apiName": "Repulsor",

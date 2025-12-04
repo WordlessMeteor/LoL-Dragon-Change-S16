@@ -1,7 +1,7 @@
 {
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 300,
         "__type": "UISceneData"
     },
@@ -14,13 +14,17 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/Border",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Icon",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Shadow",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/Padding",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/Region",
-            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/Overlay"
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/Overlay",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/UnlockIndicator/LockIcon",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarBackground",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarFill",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/VFX"
         ],
         "__type": "UiElementGroupData"
     },
@@ -28,24 +32,24 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Shadow",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
         "Layer": 33,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    0.0,
+                "Position": [
+                    -4.0,
                     -1.0
                 ],
                 "Size": [
-                    43.0,
-                    43.0
+                    56.0,
+                    56.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
-        "color": [
+        "Color": [
             0,
             0,
             0,
@@ -69,21 +73,21 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/Border",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    0.0,
+                "Position": [
+                    -4.0,
                     -1.0
                 ],
                 "Size": [
-                    43.0,
-                    43.0
+                    56.0,
+                    56.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -100,24 +104,106 @@
         },
         "__type": "UiElementEffectDesaturateData"
     },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarBackground": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarBackground",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -4.0,
+                    46.0
+                ],
+                "Size": [
+                    56.0,
+                    10.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/TeamPlanner/TeamEditor/UnlockableChampion_ProgressBar_Base_v3.TFT_Set16.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/UnlockIndicator/LockIcon": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/UnlockIndicator/LockIcon",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
+        "Enabled": true,
+        "Layer": 35,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    30.0,
+                    -5.0
+                ],
+                "Size": [
+                    26.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarFill": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarFill",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
+        "Enabled": true,
+        "Layer": 42,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -3.0,
+                    47.0
+                ],
+                "Size": [
+                    54.0,
+                    8.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "FlipY": true,
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/TeamPlanner/TeamEditor/UnlockableChampion_ProgressBar_Fill.TFT_Set16.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/Overlay": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/Overlay",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
         "Layer": 35,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    0.0,
+                "Position": [
+                    -4.0,
                     -1.0
                 ],
                 "Size": [
-                    43.0,
-                    43.0
+                    56.0,
+                    56.0
                 ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -137,23 +223,23 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/Region": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/Region",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 36,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    0.0,
-                    -1.0
+                "Position": [
+                    -4.0,
+                    -5.0
                 ],
                 "Size": [
-                    43.0,
-                    43.0
+                    60.0,
+                    60.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -161,21 +247,21 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/Padding": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/Padding",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    -6.0,
+                "Position": [
+                    -10.0,
                     -5.0
                 ],
                 "Size": [
-                    55.0,
-                    51.0
+                    63.0,
+                    64.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -183,31 +269,56 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Icon": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Icon",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 32,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     0.0,
-                    -1.0
+                    3.0
                 ],
                 "Size": [
-                    43.0,
-                    43.0
+                    48.0,
+                    48.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementEffectDesaturateData"
     },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/VFX": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_UnitSection/VFX",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
+        "Layer": 34,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -4.0,
+                    0.0
+                ],
+                "Size": [
+                    56.0,
+                    56.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/TFTCommon/Particles/TFT_Empty_Particle",
+        "VFXAdjustmentScale": 1.6699999570846558,
+        "__type": "UiElementParticleSystemData"
+    },
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/TFT_TraitInfoCard_Background",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout"
         ],
@@ -217,13 +328,14 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/HeaderGroup",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/ItemPaddingRegion",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/ItemGridLayout",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TextPaddingRegion",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TFT_TraitInfoCard_TraitDescription",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TextRegion",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TextBottomPaddingRegion",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/GridLayout"
         ],
         "Region": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TextRegion",
@@ -236,26 +348,26 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TFT_TraitInfoCard_TraitDescription": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TFT_TraitInfoCard_TraitDescription",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
-                    19.0,
-                    55.0
+                "Position": [
+                    15.0,
+                    160.0
                 ],
                 "Size": [
-                    314.0,
+                    332.0,
                     43.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "FontDescription": "{d4acb7ea}",
-        "{6e4f45c5}": true,
+        "FlipForRTL": true,
         "HTMLStyleSheet": "{9c87124a}",
         "WrappingMode": 1,
         "__type": "UiElementTextData"
@@ -263,7 +375,7 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/GridLayout": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/GridLayout",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/GridLayout/UnitSectionRegion"
         ],
         "Region": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/GridLayout/UnitSectionRegion",
@@ -271,13 +383,13 @@
             "__type": "LayoutStyleGrid"
         },
         "IgnoreDisabledElements": true,
-        "{6e4f45c5}": true,
+        "FlipForRTL": true,
         "__type": "UiElementGroupManagedLayoutData"
     },
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/ItemGridLayout": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/ItemGridLayout",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/ItemGridLayout/ItemSectionRegion"
         ],
         "Region": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/ItemGridLayout/ItemSectionRegion",
@@ -290,14 +402,14 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/ItemGridLayout/ItemSectionRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/ItemGridLayout/ItemSectionRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    12.0,
-                    56.0
+                "Position": [
+                    0.0,
+                    59.0
                 ],
                 "Size": [
-                    245.0,
+                    313.0,
                     31.0
                 ],
                 "SourceResolutionWidth": 1334,
@@ -308,10 +420,33 @@
         },
         "__type": "UiElementRegionData"
     },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TextBottomPaddingRegion": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TextBottomPaddingRegion",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    9.0,
+                    43.0
+                ],
+                "Size": [
+                    322.0,
+                    16.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/HeaderGroup": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/HeaderGroup",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/HeaderGroup/TFT_TraitInfoCard_TraitIcon",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/HeaderGroup/TFT_TraitInfoCard_TraitName"
         ],
@@ -320,12 +455,12 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/HeaderGroup/TFT_TraitInfoCard_TraitIcon": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/HeaderGroup/TFT_TraitInfoCard_TraitIcon",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 5,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    19.0,
+                "Position": [
+                    15.0,
                     10.0
                 ],
                 "Size": [
@@ -336,7 +471,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementIconData"
@@ -344,11 +479,11 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/HeaderGroup/TFT_TraitInfoCard_TraitName": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/HeaderGroup/TFT_TraitInfoCard_TraitName",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
-                    53.0,
+                "Position": [
+                    49.0,
                     2.0
                 ],
                 "Size": [
@@ -359,11 +494,11 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "FontDescription": "{d669dac2}",
-        "{6e4f45c5}": true,
+        "FlipForRTL": true,
         "HTMLStyleSheet": "{9c87124a}",
         "WrappingMode": 5,
         "__type": "UiElementTextData"
@@ -371,11 +506,11 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/ItemPaddingRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/ItemPaddingRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
-                    12.0,
+                "Position": [
+                    8.0,
                     38.0
                 ],
                 "Size": [
@@ -393,21 +528,21 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/GridLayout/UnitSectionRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/GridLayout/UnitSectionRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    8.0,
+                "Position": [
+                    -19.0,
                     169.0
                 ],
                 "Size": [
-                    283.0,
+                    331.0,
                     9.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -415,22 +550,22 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TextRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TextRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
-                    9.0,
+                "Position": [
+                    5.0,
                     10.0
                 ],
                 "Size": [
-                    328.0,
+                    339.0,
                     153.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -438,10 +573,10 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TextPaddingRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/VerticalLayout/TextPaddingRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     9.0,
                     43.0
                 ],
@@ -453,7 +588,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -461,23 +596,23 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/TFT_TraitInfoCard_Background": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Frame/TFT_TraitInfoCard_Background",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "enabled": true,
+        "Enabled": true,
         "BlockInputEvents": true,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    -1.0,
+                "Position": [
+                    -5.0,
                     0.0
                 ],
                 "Size": [
-                    348.0,
+                    352.0,
                     173.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -505,7 +640,7 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_ItemSection": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_ItemSection",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_ItemSection/Padding",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_ItemSection/Region",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_ItemSection/TFT_TraitInfoCard_ItemSlot0_ItemIcon"
@@ -516,8 +651,12 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Borders/Item_Border",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
+                "Position": [
+                    -4.0,
+                    0.0
+                ],
                 "Size": [
                     43.0,
                     43.0
@@ -526,7 +665,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -547,8 +686,12 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Borders/Unit_Border3",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
+                "Position": [
+                    -4.0,
+                    0.0
+                ],
                 "Size": [
                     43.0,
                     43.0
@@ -557,7 +700,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -578,8 +721,12 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Borders/Unit_Border2",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
+                "Position": [
+                    -4.0,
+                    0.0
+                ],
                 "Size": [
                     43.0,
                     43.0
@@ -588,7 +735,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -609,8 +756,12 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Borders/Unit_Border1",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
+                "Position": [
+                    -4.0,
+                    0.0
+                ],
                 "Size": [
                     43.0,
                     43.0
@@ -619,7 +770,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -640,8 +791,12 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Borders/Unit_Border6",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
+                "Position": [
+                    -4.0,
+                    0.0
+                ],
                 "Size": [
                     43.0,
                     43.0
@@ -650,11 +805,11 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "textureName": "ASSETS/UX/TFTMobile/InGame/UnitInfo/TFTM_13_UnitBorder_6_Default.TFT_Set13_Evolved.png",
+            "TextureName": "ASSETS/UX/TFTMobile/InGame/UnitInfo/TFTM_13_UnitBorder_6_Default.TFT_Set13_Evolved.png",
             "__type": "LooseUiTextureData"
         },
         "__type": "UiElementEffectDesaturateData"
@@ -663,8 +818,12 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Borders/Unit_Border5",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
+                "Position": [
+                    -4.0,
+                    0.0
+                ],
                 "Size": [
                     43.0,
                     43.0
@@ -673,7 +832,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -694,8 +853,12 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Borders/Unit_Border4",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
+                "Position": [
+                    -4.0,
+                    0.0
+                ],
                 "Size": [
                     43.0,
                     43.0
@@ -704,7 +867,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -724,10 +887,14 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_ItemSection/TFT_TraitInfoCard_ItemSlot0_ItemIcon": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_ItemSection/TFT_TraitInfoCard_ItemSlot0_ItemIcon",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 32,
-        "position": {
+        "Position": {
             "UIRect": {
+                "Position": [
+                    -4.0,
+                    0.0
+                ],
                 "Size": [
                     52.0,
                     52.0
@@ -743,10 +910,14 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_ItemSection/Region": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_ItemSection/Region",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 36,
-        "position": {
+        "Position": {
             "UIRect": {
+                "Position": [
+                    -4.0,
+                    0.0
+                ],
                 "Size": [
                     52.0,
                     52.0
@@ -762,10 +933,10 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_ItemSection/Padding": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/TFT_TraitInfoCard_ItemSection/Padding",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    -6.0,
+                "Position": [
+                    -10.0,
                     -6.0
                 ],
                 "Size": [
@@ -784,24 +955,24 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo/Overlays/Unit_Overlay_Locked",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/UnitInfo",
         "Layer": 35,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    0.0,
+                "Position": [
+                    -4.0,
                     -1.0
                 ],
                 "Size": [
                     32.0,
                     32.0
                 ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "textureName": "ASSETS/UX/TFT/Hud/UnitInfo/Unit_Overlay_Locked.png",
+            "TextureName": "ASSETS/UX/TFT/Hud/UnitInfo/Unit_Overlay_Locked.png",
             "__type": "LooseUiTextureData"
         },
         "__type": "UiElementEffectDesaturateData"
@@ -812,10 +983,302 @@
         "ParentScene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard",
         "__type": "UISceneData"
     },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
+        "Elements": [
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Border",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Icon",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Shadow",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Padding",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Region",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Overlay",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/UnlockIndicator/LockIcon",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarBackground",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarFill",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/VFX"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarFill": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarFill",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
+        "Enabled": true,
+        "Layer": 45,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1.0,
+                    47.0
+                ],
+                "Size": [
+                    54.0,
+                    8.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "FlipY": true,
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/TeamPlanner/TeamEditor/UnlockableChampion_ProgressBar_Fill.TFT_Set16.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarBackground": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarBackground",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    0.0,
+                    46.0
+                ],
+                "Size": [
+                    56.0,
+                    10.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/TeamPlanner/TeamEditor/UnlockableChampion_ProgressBar_Base_v3.TFT_Set16.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/UnlockIndicator/LockIcon": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/UnlockIndicator/LockIcon",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
+        "Enabled": true,
+        "Layer": 35,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    32.0,
+                    -3.0
+                ],
+                "Size": [
+                    28.0,
+                    28.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Icon": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Icon",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
+        "Enabled": true,
+        "Layer": 32,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    4.0,
+                    4.0
+                ],
+                "Size": [
+                    48.0,
+                    48.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/VFX": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/VFX",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
+        "Layer": 34,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    0.0,
+                    1.0
+                ],
+                "Size": [
+                    56.0,
+                    56.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/TFTCommon/Particles/TFT_Empty_Particle",
+        "VFXAdjustmentScale": 1.6699999570846558,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Region": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Region",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
+        "Enabled": true,
+        "Layer": 36,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    0.0,
+                    -4.0
+                ],
+                "Size": [
+                    60.0,
+                    60.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Border": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Border",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
+        "Layer": 34,
+        "Position": {
+            "UIRect": {
+                "Size": [
+                    56.0,
+                    56.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                1877.0,
+                623.0,
+                1917.0,
+                663.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Overlay": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Overlay",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
+        "Layer": 35,
+        "Position": {
+            "UIRect": {
+                "Size": [
+                    56.0,
+                    56.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 1024,
+            "mTextureUV": [
+                1877.0,
+                623.0,
+                1917.0,
+                663.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementEffectDesaturateData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Padding": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Padding",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -6.0,
+                    -5.0
+                ],
+                "Size": [
+                    63.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Shadow": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Shadow",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
+        "Layer": 33,
+        "Position": {
+            "UIRect": {
+                "Size": [
+                    56.0,
+                    56.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            0,
+            0,
+            0,
+            117
+        ],
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/Common/TooltipAtlas.tex",
+            "mTextureSourceResolutionWidth": 32,
+            "mTextureSourceResolutionHeight": 16,
+            "mTextureUV": [
+                4.0,
+                4.0,
+                8.0,
+                8.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_ItemSection": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_ItemSection",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_ItemSection/Padding",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_ItemSection/Region",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_ItemSection/TFT_TraitInfoCard_ItemSlot0_ItemIcon"
@@ -825,9 +1288,9 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_ItemSection/TFT_TraitInfoCard_ItemSlot0_ItemIcon": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_ItemSection/TFT_TraitInfoCard_ItemSlot0_ItemIcon",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 32,
-        "position": {
+        "Position": {
             "UIRect": {
                 "Size": [
                     52.0,
@@ -844,9 +1307,9 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_ItemSection/Padding": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_ItemSection/Padding",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     -6.0,
                     -6.0
                 ],
@@ -865,9 +1328,9 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_ItemSection/Region": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_ItemSection/Region",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 36,
-        "position": {
+        "Position": {
             "UIRect": {
                 "Size": [
                     52.0,
@@ -884,7 +1347,7 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/TFT_TraitInfoCard_Background",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout"
         ],
@@ -894,15 +1357,16 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/HeaderGroup",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/ItemPaddingRegion",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/ItemGridLayout",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TextPaddingRegion",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TFT_TraitInfoCard_TraitDescription",
-            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/FooterTextPaddingRegion",
-            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TFT_TraitInfoCard_TraitFooter",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TextRegion",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/BottomTextPaddingRegion",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TFT_TraitInfoCard_TraitFooter",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/FooterTextPaddingRegion",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/GridLayout"
         ],
         "Region": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TextRegion",
@@ -915,10 +1379,10 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TextPaddingRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TextPaddingRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     9.0,
                     43.0
                 ],
@@ -930,7 +1394,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -938,7 +1402,7 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/ItemGridLayout": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/ItemGridLayout",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/ItemGridLayout/ItemSectionRegion"
         ],
         "Region": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/ItemGridLayout/ItemSectionRegion",
@@ -952,14 +1416,14 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/ItemGridLayout/ItemSectionRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/ItemGridLayout/ItemSectionRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     9.0,
                     52.0
                 ],
                 "Size": [
-                    314.0,
+                    328.0,
                     64.0
                 ],
                 "SourceResolutionWidth": 1334,
@@ -973,10 +1437,10 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/ItemPaddingRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/ItemPaddingRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     12.0,
                     38.0
                 ],
@@ -995,7 +1459,7 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/HeaderGroup": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/HeaderGroup",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/HeaderGroup/TFT_TraitInfoCard_TraitIcon",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/HeaderGroup/TFT_TraitInfoCard_TraitName"
         ],
@@ -1004,22 +1468,22 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TextRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TextRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     9.0,
                     10.0
                 ],
                 "Size": [
-                    328.0,
+                    329.0,
                     153.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -1027,7 +1491,7 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/GridLayout": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/GridLayout",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/GridLayout/UnitSectionRegion"
         ],
         "Region": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/GridLayout/UnitSectionRegion",
@@ -1035,27 +1499,46 @@
             "__type": "LayoutStyleGrid"
         },
         "IgnoreDisabledElements": true,
-        "{6e4f45c5}": true,
+        "FlipForRTL": true,
         "__type": "UiElementGroupManagedLayoutData"
     },
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/GridLayout/UnitSectionRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/GridLayout/UnitSectionRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     8.0,
                     169.0
                 ],
                 "Size": [
-                    318.0,
+                    332.0,
                     9.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/BottomTextPaddingRegion": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/BottomTextPaddingRegion",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Size": [
+                    322.0,
+                    15.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -1063,10 +1546,10 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/FooterTextPaddingRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/FooterTextPaddingRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     12.0,
                     38.0
                 ],
@@ -1085,10 +1568,10 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/HeaderGroup/TFT_TraitInfoCard_TraitName": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/HeaderGroup/TFT_TraitInfoCard_TraitName",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     53.0,
                     2.0
                 ],
@@ -1100,11 +1583,11 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "FontDescription": "{d669dac2}",
-        "{6e4f45c5}": true,
+        "FlipForRTL": true,
         "HTMLStyleSheet": "{9c87124a}",
         "WrappingMode": 5,
         "__type": "UiElementTextData"
@@ -1112,11 +1595,11 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/HeaderGroup/TFT_TraitInfoCard_TraitIcon": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/HeaderGroup/TFT_TraitInfoCard_TraitIcon",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 5,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     19.0,
                     10.0
                 ],
@@ -1128,7 +1611,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementIconData"
@@ -1136,10 +1619,10 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TFT_TraitInfoCard_TraitFooter": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TFT_TraitInfoCard_TraitFooter",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     12.0,
                     78.0
                 ],
@@ -1161,10 +1644,10 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TFT_TraitInfoCard_TraitDescription": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/VerticalLayout/TFT_TraitInfoCard_TraitDescription",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     19.0,
                     55.0
                 ],
@@ -1176,11 +1659,11 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "FontDescription": "{d4acb7ea}",
-        "{6e4f45c5}": true,
+        "FlipForRTL": true,
         "HTMLStyleSheet": "{9c87124a}",
         "WrappingMode": 1,
         "__type": "UiElementTextData"
@@ -1188,10 +1671,10 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/TFT_TraitInfoCard_Background": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Frame/TFT_TraitInfoCard_Background",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     -1.0,
                     0.0
                 ],
@@ -1203,7 +1686,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1228,206 +1711,13 @@
         },
         "__type": "UiElementIconData"
     },
-    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection": {
-        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection",
-        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "elements": [
-            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Border",
-            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Icon",
-            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Shadow",
-            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Padding",
-            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Region",
-            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Overlay"
-        ],
-        "__type": "UiElementGroupData"
-    },
-    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Icon": {
-        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Icon",
-        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
-        "Layer": 32,
-        "position": {
-            "UIRect": {
-                "position": [
-                    0.0,
-                    -1.0
-                ],
-                "Size": [
-                    43.0,
-                    43.0
-                ],
-                "SourceResolutionWidth": 1334,
-                "SourceResolutionHeight": 750,
-                "__type": "UiElementRect"
-            },
-            "{981fbd00}": true,
-            "__type": "UiPositionRect"
-        },
-        "__type": "UiElementEffectDesaturateData"
-    },
-    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Region": {
-        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Region",
-        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "enabled": true,
-        "Layer": 36,
-        "position": {
-            "UIRect": {
-                "position": [
-                    0.0,
-                    -1.0
-                ],
-                "Size": [
-                    43.0,
-                    43.0
-                ],
-                "SourceResolutionWidth": 1334,
-                "SourceResolutionHeight": 750,
-                "__type": "UiElementRect"
-            },
-            "{981fbd00}": true,
-            "__type": "UiPositionRect"
-        },
-        "__type": "UiElementRegionData"
-    },
-    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Border": {
-        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Border",
-        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "Layer": 34,
-        "position": {
-            "UIRect": {
-                "position": [
-                    0.0,
-                    -1.0
-                ],
-                "Size": [
-                    43.0,
-                    43.0
-                ],
-                "SourceResolutionWidth": 1334,
-                "SourceResolutionHeight": 750,
-                "__type": "UiElementRect"
-            },
-            "{981fbd00}": true,
-            "__type": "UiPositionRect"
-        },
-        "TextureData": {
-            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
-            "mTextureSourceResolutionWidth": 2048,
-            "mTextureSourceResolutionHeight": 1024,
-            "mTextureUV": [
-                1877.0,
-                623.0,
-                1917.0,
-                663.0
-            ],
-            "__type": "AtlasData"
-        },
-        "__type": "UiElementEffectDesaturateData"
-    },
-    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Overlay": {
-        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Overlay",
-        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "Layer": 35,
-        "position": {
-            "UIRect": {
-                "position": [
-                    0.0,
-                    -1.0
-                ],
-                "Size": [
-                    43.0,
-                    43.0
-                ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
-                "__type": "UiElementRect"
-            },
-            "__type": "UiPositionRect"
-        },
-        "TextureData": {
-            "mTextureName": "ASSETS/UX/TFT/TFT_Hud_Texture_Atlas.TFT_Set12.tex",
-            "mTextureSourceResolutionWidth": 2048,
-            "mTextureSourceResolutionHeight": 1024,
-            "mTextureUV": [
-                1877.0,
-                623.0,
-                1917.0,
-                663.0
-            ],
-            "__type": "AtlasData"
-        },
-        "__type": "UiElementEffectDesaturateData"
-    },
-    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Padding": {
-        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/Padding",
-        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "position": {
-            "UIRect": {
-                "position": [
-                    -6.0,
-                    -5.0
-                ],
-                "Size": [
-                    55.0,
-                    51.0
-                ],
-                "SourceResolutionWidth": 1334,
-                "SourceResolutionHeight": 750,
-                "__type": "UiElementRect"
-            },
-            "{981fbd00}": true,
-            "__type": "UiPositionRect"
-        },
-        "__type": "UiElementRegionData"
-    },
-    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Shadow": {
-        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Shadow",
-        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
-        "Layer": 33,
-        "position": {
-            "UIRect": {
-                "position": [
-                    0.0,
-                    -1.0
-                ],
-                "Size": [
-                    43.0,
-                    43.0
-                ],
-                "SourceResolutionWidth": 1334,
-                "SourceResolutionHeight": 750,
-                "__type": "UiElementRect"
-            },
-            "{981fbd00}": true,
-            "__type": "UiPositionRect"
-        },
-        "color": [
-            0,
-            0,
-            0,
-            117
-        ],
-        "TextureData": {
-            "mTextureName": "ASSETS/UX/Common/TooltipAtlas.tex",
-            "mTextureSourceResolutionWidth": 32,
-            "mTextureSourceResolutionHeight": 16,
-            "mTextureUV": [
-                4.0,
-                4.0,
-                8.0,
-                8.0
-            ],
-            "__type": "AtlasData"
-        },
-        "__type": "UiElementIconData"
-    },
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Overlays/Unit_Overlay_Locked": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Overlays/Unit_Overlay_Locked",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
         "Layer": 35,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     0.0,
                     -1.0
                 ],
@@ -1435,14 +1725,14 @@
                     32.0,
                     32.0
                 ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "textureName": "ASSETS/UX/TFT/Hud/UnitInfo/Unit_Overlay_Locked.png",
+            "TextureName": "ASSETS/UX/TFT/Hud/UnitInfo/Unit_Overlay_Locked.png",
             "__type": "LooseUiTextureData"
         },
         "__type": "UiElementEffectDesaturateData"
@@ -1451,7 +1741,7 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Borders/Item_Border",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
                 "Size": [
                     43.0,
@@ -1461,7 +1751,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1482,7 +1772,7 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Borders/Unit_Border5",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
                 "Size": [
                     43.0,
@@ -1492,7 +1782,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1513,7 +1803,7 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Borders/Unit_Border4",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
                 "Size": [
                     43.0,
@@ -1523,7 +1813,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1544,7 +1834,7 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Borders/Unit_Border6",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
                 "Size": [
                     43.0,
@@ -1554,11 +1844,11 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "textureName": "ASSETS/UX/TFTMobile/InGame/UnitInfo/TFTM_13_UnitBorder_6_Default.TFT_Set13_Evolved.png",
+            "TextureName": "ASSETS/UX/TFTMobile/InGame/UnitInfo/TFTM_13_UnitBorder_6_Default.TFT_Set13_Evolved.png",
             "__type": "LooseUiTextureData"
         },
         "__type": "UiElementEffectDesaturateData"
@@ -1567,7 +1857,7 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Borders/Unit_Border1",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
                 "Size": [
                     43.0,
@@ -1577,7 +1867,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1598,7 +1888,7 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Borders/Unit_Border3",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
                 "Size": [
                     43.0,
@@ -1608,7 +1898,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1629,7 +1919,7 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker/Borders/Unit_Border2",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TraitTracker",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
                 "Size": [
                     43.0,
@@ -1639,7 +1929,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1666,9 +1956,9 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/Borders/Item_Border",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     0.0,
                     -1.0
                 ],
@@ -1680,7 +1970,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1701,9 +1991,9 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/Borders/Unit_Border1",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     0.0,
                     -1.0
                 ],
@@ -1715,7 +2005,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1736,9 +2026,9 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/Borders/Unit_Border3",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     0.0,
                     -1.0
                 ],
@@ -1750,7 +2040,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1771,9 +2061,9 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/Borders/Unit_Border2",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     0.0,
                     -1.0
                 ],
@@ -1785,7 +2075,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1806,9 +2096,9 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/Borders/Unit_Border5",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     0.0,
                     -1.0
                 ],
@@ -1820,7 +2110,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1841,9 +2131,9 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/Borders/Unit_Border4",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     0.0,
                     -1.0
                 ],
@@ -1855,7 +2145,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1875,34 +2165,38 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/Border",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Icon",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Shadow",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/Padding",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/Region",
-            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/Overlay"
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/Overlay",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/UnlockIndicator/LockIcon",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarBackground",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarFill",
+            "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/VFX"
         ],
         "__type": "UiElementGroupData"
     },
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/Padding": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/Padding",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     -6.0,
                     -5.0
                 ],
                 "Size": [
-                    60.0,
-                    54.0
+                    64.0,
+                    64.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -1910,23 +2204,23 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/Region": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/Region",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 36,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     -4.0,
-                    -4.0
+                    -8.0
                 ],
                 "Size": [
-                    46.0,
-                    46.0
+                    60.0,
+                    60.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -1934,19 +2228,19 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Icon": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Icon",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 32,
-        "position": {
+        "Position": {
             "UIRect": {
                 "Size": [
-                    38.0,
-                    38.0
+                    48.0,
+                    48.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementEffectDesaturateData"
@@ -1955,21 +2249,21 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/Border",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
         "Layer": 34,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     -4.0,
                     -4.0
                 ],
                 "Size": [
-                    46.0,
-                    46.0
+                    56.0,
+                    56.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -1990,24 +2284,24 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/TFT_TraitInfoCard_UnitSlot0_Shadow",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
         "Layer": 33,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    -2.0,
-                    -2.0
+                "Position": [
+                    -4.0,
+                    -4.0
                 ],
                 "Size": [
-                    42.0,
-                    42.0
+                    56.0,
+                    56.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
-        "color": [
+        "Color": [
             0,
             0,
             0,
@@ -2027,24 +2321,106 @@
         },
         "__type": "UiElementIconData"
     },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarBackground": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarBackground",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -4.0,
+                    41.0
+                ],
+                "Size": [
+                    56.0,
+                    11.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/TeamPlanner/TeamEditor/UnlockableChampion_ProgressBar_Base_v3.TFT_Set16.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarFill": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/UnlockIndicator/ProgressBarFill",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
+        "Enabled": true,
+        "Layer": 45,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -3.0,
+                    42.0
+                ],
+                "Size": [
+                    54.0,
+                    9.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "FlipY": true,
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/TeamPlanner/TeamEditor/UnlockableChampion_ProgressBar_Fill.TFT_Set16.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/UnlockIndicator/LockIcon": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/UnlockIndicator/LockIcon",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
+        "Enabled": true,
+        "Layer": 35,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    30.0,
+                    -8.0
+                ],
+                "Size": [
+                    26.0,
+                    26.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/Overlay": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/Overlay",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
         "Layer": 35,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
-                    -1.0,
-                    -1.0
+                "Position": [
+                    -4.0,
+                    -4.0
                 ],
                 "Size": [
-                    78.0,
-                    78.0
+                    56.0,
+                    56.0
                 ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -2061,10 +2437,35 @@
         },
         "__type": "UiElementEffectDesaturateData"
     },
+    "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/VFX": {
+        "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/TFT_TraitInfoCard_UnitSection/VFX",
+        "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
+        "Layer": 34,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -4.0,
+                    -3.0
+                ],
+                "Size": [
+                    56.0,
+                    56.0
+                ],
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
+                "__type": "UiElementRect"
+            },
+            "IgnoreSafeZone": true,
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/TFTCommon/Particles/TFT_Empty_Particle",
+        "VFXAdjustmentScale": 1.659999966621399,
+        "__type": "UiElementParticleSystemData"
+    },
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/FrameLayoutRegion"
         ],
@@ -2079,7 +2480,7 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/TFT_TraitInfoCard_Background",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout"
         ],
@@ -2089,7 +2490,7 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/PaddingAboveRule",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HorizontalRule",
@@ -2109,8 +2510,8 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/PaddingAboveUnits": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/PaddingAboveUnits",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
                 "Size": [
                     242.0,
@@ -2120,7 +2521,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -2128,19 +2529,19 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HorizontalRule": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HorizontalRule",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 5,
-        "position": {
+        "Position": {
             "UIRect": {
                 "Size": [
-                    304.0,
+                    318.0,
                     3.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
@@ -2168,22 +2569,22 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/TextRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/TextRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     18.0,
                     6.0
                 ],
                 "Size": [
-                    304.0,
+                    313.0,
                     99.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -2191,7 +2592,7 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout/HeaderRegion",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout/TraitIcon",
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout/HeaderPadding",
@@ -2203,14 +2604,14 @@
             "RowVerticalAlignment": 1,
             "__type": "LayoutStyleHorizontalList"
         },
-        "{6e4f45c5}": true,
+        "FlipForRTL": true,
         "__type": "UiElementGroupManagedLayoutData"
     },
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/PaddingBelowRule": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/PaddingBelowRule",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
                 "Size": [
                     304.0,
@@ -2220,7 +2621,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -2228,11 +2629,11 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout/TraitIcon": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout/TraitIcon",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 5,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     10.0,
                     18.0
                 ],
@@ -2244,7 +2645,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementIconData"
@@ -2252,26 +2653,26 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout/TraitName": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout/TraitName",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     52.0,
                     15.0
                 ],
                 "Size": [
-                    356.0,
+                    281.0,
                     43.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "FontDescription": "{aeffdc13}",
-        "{6e4f45c5}": true,
+        "FlipForRTL": true,
         "HTMLStyleSheet": "{9c87124a}",
         "WrappingMode": 5,
         "__type": "UiElementTextData"
@@ -2279,9 +2680,9 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout/HeaderRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout/HeaderRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     7.0,
                     15.0
                 ],
@@ -2293,7 +2694,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -2301,9 +2702,9 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout/HeaderPadding": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/HeaderLayout/HeaderPadding",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     50.0,
                     15.0
                 ],
@@ -2315,7 +2716,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -2323,8 +2724,8 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/TraitDescription": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/TraitDescription",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
                 "Size": [
                     304.0,
@@ -2334,11 +2735,11 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "FontDescription": "{d4acb7ea}",
-        "{6e4f45c5}": true,
+        "FlipForRTL": true,
         "HTMLStyleSheet": "{9c87124a}",
         "WrappingMode": 1,
         "__type": "UiElementTextData"
@@ -2346,8 +2747,8 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/PaddingAboveRule": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/PaddingAboveRule",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
                 "Size": [
                     304.0,
@@ -2357,7 +2758,7 @@
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -2365,7 +2766,7 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/GridLayout": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/GridLayout",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "elements": [
+        "Elements": [
             "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/GridLayout/UnitSectionRegion"
         ],
         "Region": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/GridLayout/UnitSectionRegion",
@@ -2373,23 +2774,27 @@
             "__type": "LayoutStyleGrid"
         },
         "IgnoreDisabledElements": true,
-        "{6e4f45c5}": true,
+        "FlipForRTL": true,
         "__type": "UiElementGroupManagedLayoutData"
     },
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/GridLayout/UnitSectionRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/VerticalLayout/GridLayout/UnitSectionRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "position": {
+        "Position": {
             "UIRect": {
+                "Position": [
+                    58.0,
+                    0.0
+                ],
                 "Size": [
-                    304.0,
-                    9.0
+                    324.0,
+                    11.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -2397,18 +2802,18 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/TFT_TraitInfoCard_Background": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/Frame/TFT_TraitInfoCard_Background",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "enabled": true,
-        "position": {
+        "Enabled": true,
+        "Position": {
             "UIRect": {
                 "Size": [
-                    344.0,
+                    340.0,
                     120.0
                 ],
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "UseAlpha": false,
@@ -2443,13 +2848,13 @@
     "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/FrameLayoutRegion": {
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/FrameLayout/FrameLayoutRegion",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
-        "position": {
+        "Position": {
             "UIRect": {
                 "SourceResolutionWidth": 1334,
                 "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
-            "{981fbd00}": true,
+            "IgnoreSafeZone": true,
             "__type": "UiPositionRect"
         },
         "__type": "UiElementRegionData"
@@ -2458,9 +2863,9 @@
         "name": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor/Overlays/Unit_Overlay_Unlocked",
         "Scene": "ClientStates/TFTCommon/UX/TFTTraitInfoCard_Mobile/UIBase/TFT_TraitInfoCard/TeamEditor",
         "Layer": 35,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     0.0,
                     -1.0
                 ],
@@ -2468,14 +2873,14 @@
                     32.0,
                     32.0
                 ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
+                "SourceResolutionWidth": 1334,
+                "SourceResolutionHeight": 750,
                 "__type": "UiElementRect"
             },
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "textureName": "ASSETS/UX/TFT/Hud/UnitInfo/Unit_Overlay_Locked.png",
+            "TextureName": "ASSETS/UX/TFT/Hud/UnitInfo/Unit_Overlay_Locked.png",
             "__type": "LooseUiTextureData"
         },
         "__type": "UiElementEffectDesaturateData"

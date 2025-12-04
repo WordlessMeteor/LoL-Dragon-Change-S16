@@ -24,7 +24,8 @@
             "{b9b5c7df}",
             "{5d21b392}",
             "{8eddc9c2}",
-            "{d234e251}"
+            "{d234e251}",
+            "{d243ecdb}"
         ],
         "textures": [
             {
@@ -286,6 +287,10 @@
     "{21026ca5}": {
         "objectPath": "{21026ca5}",
         "__type": "{c94926c6}"
+    },
+    "{33ed59d6}": {
+        "objectPath": "{33ed59d6}",
+        "__type": "EnvironmentUnlitShadingModel"
     },
     "{3c6ecc43}": {
         "objectPath": "{3c6ecc43}",
@@ -848,6 +853,10 @@
                 "name": "DEATH_EFFECT_COLOR_TINT",
                 "type": 3,
                 "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "BLOOM_INTENSITY_SCALE",
+                "__type": "X3DSharedConstantDef"
             }
         ],
         "__type": "X3DSharedConstantBufferDef"
@@ -953,6 +962,24 @@
         "constants": [
             {
                 "name": "DYNAMIC_PARTICLE_IDX",
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "PARTICLE_COLOR_FACTOR",
+                "type": 3,
+                "__type": "X3DSharedConstantDef"
+            }
+        ],
+        "__type": "X3DSharedConstantBufferDef"
+    },
+    "{d243ecdb}": {
+        "name": "VFXDynamicPerParticleInstanceCBPS",
+        "type": 1,
+        "frequency": 2,
+        "constants": [
+            {
+                "name": "PARTICLE_COLOR_FACTOR",
+                "type": 3,
                 "__type": "X3DSharedConstantDef"
             }
         ],

@@ -3,14 +3,14 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 120,
         "SceneTransitionIn": {
-            "transitionTime": 0.5,
+            "TransitionTime": 0.5,
             "EasingType": 23,
             "startAlpha": 255,
             "Edge": 3,
             "__type": "SceneScreenEdgeTransitionData"
         },
         "SceneTransitionOut": {
-            "transitionTime": 0.4000000059604645,
+            "TransitionTime": 0.4000000059604645,
             "EasingType": 22,
             "startAlpha": 255,
             "endAlpha": 0,
@@ -22,7 +22,7 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "elements": [
+        "Elements": [
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/ItemIcon",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/ItemIconShadow",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem",
@@ -33,14 +33,16 @@
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem",
-            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem"
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal"
         ],
         "__type": "UiElementGroupData"
     },
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "elements": [
+        "Elements": [
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/Default",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/Hover",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/HitRegion",
@@ -49,7 +51,7 @@
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/Hover_VFX",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/Magic_VFX"
         ],
-        "hitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/HitRegion",
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/Default",
@@ -78,7 +80,7 @@
             "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/ItemName",
             "__type": "UiElementGroupButtonState"
         },
-        "selectedStateElements": {
+        "SelectedStateElements": {
             "DisplayElementList": [
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/Hover",
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/ItemIconFrame",
@@ -113,11 +115,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/ItemName": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/ItemName",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 20,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     611.0,
                     1100.0
                 ],
@@ -147,11 +149,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/Default": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/Default",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 5,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -189,11 +191,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/ItemIconFrame": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/ItemIconFrame",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 20,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     668.0,
                     997.0
                 ],
@@ -215,7 +217,7 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "textureName": "ASSETS/UX/TFT/Armory/5YearEvent/TFT_EventArmory_Frame.png",
+            "TextureName": "ASSETS/UX/TFT/Armory/5YearEvent/TFT_EventArmory_Frame.png",
             "__type": "LooseUiTextureData"
         },
         "__type": "UiElementIconData"
@@ -223,11 +225,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/HitRegion": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/HitRegion",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 10,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -253,11 +255,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/Hover": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/Hover",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 10,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -296,9 +298,9 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/Hover_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 30,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -327,9 +329,9 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/TraitActivatorItem/Magic_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 11,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -356,7 +358,7 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "elements": [
+        "Elements": [
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Default",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Hover",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/HitRegion",
@@ -364,7 +366,7 @@
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Hover_VFX",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Magic_VFX"
         ],
-        "hitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/HitRegion",
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Default"
@@ -390,7 +392,7 @@
             "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/ItemName",
             "__type": "UiElementGroupButtonState"
         },
-        "selectedStateElements": {
+        "SelectedStateElements": {
             "DisplayElementList": [
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Hover",
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Hover_VFX",
@@ -423,9 +425,9 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Magic_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 11,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -453,9 +455,9 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Hover_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 30,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -483,11 +485,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/HitRegion": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/HitRegion",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 10,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -513,11 +515,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/ItemName": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/ItemName",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 20,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     611.0,
                     1064.0
                 ],
@@ -547,11 +549,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Default": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Default",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 5,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -589,11 +591,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Hover": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/BorderlessItem/Hover",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 10,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -628,10 +630,325 @@
         },
         "__type": "UiElementIconData"
     },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Default",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/HitRegion",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/ItemName",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover_VFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Magic_VFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/TFT16_IxtalRewards"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/HitRegion",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Default",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/TFT16_IxtalRewards"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Magic_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/TFT16_IxtalRewards"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Magic_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/TFT16_IxtalRewards"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Magic_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/TFT16_IxtalRewards"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Magic_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/TFT16_IxtalRewards"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Magic_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/TFT16_IxtalRewards"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/HitRegion": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/HitRegion",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Magic_VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Magic_VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1004.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/TFT/TFTArmory/Particles/TFT_UI_Armory_CardMagicVFX",
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Armory_Atlas_PC.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 512,
+            "mTextureUV": [
+                813.0,
+                316.0,
+                1063.0,
+                480.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Default": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Default",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 5,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/TFT/TFT_Armory_Atlas_PC.tex",
+            "mTextureSourceResolutionWidth": 2048,
+            "mTextureSourceResolutionHeight": 512,
+            "mTextureUV": [
+                550.0,
+                316.0,
+                800.0,
+                480.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover_VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/Hover_VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Layer": 30,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/TFTM_UI_DummyParticle",
+        "MaxPlayCount": 0,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/ItemName": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/ItemName",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    611.0,
+                    1042.0
+                ],
+                "Size": [
+                    192.0,
+                    85.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{1e3241b3}",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 2,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/TFT16_IxtalRewards": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalNormal/TFT16_IxtalRewards",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    611.0,
+                    1124.0
+                ],
+                "Size": [
+                    192.0,
+                    38.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{36f3a6c2}",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 5,
+        "__type": "UiElementTextData"
+    },
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "elements": [
+        "Elements": [
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/Hover",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/Default",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/HitRegion",
@@ -640,7 +957,7 @@
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/Hover_VFX",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/Magic_VFX"
         ],
-        "hitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/HitRegion",
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/Default",
@@ -669,7 +986,7 @@
             "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/ItemName",
             "__type": "UiElementGroupButtonState"
         },
-        "selectedStateElements": {
+        "SelectedStateElements": {
             "DisplayElementList": [
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/Hover",
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/ItemIconFrame",
@@ -705,9 +1022,9 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/Hover_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 30,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -735,11 +1052,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/Default": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/Default",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 5,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -778,9 +1095,9 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/Magic_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 11,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -807,11 +1124,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/Hover": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/Hover",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 10,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -849,11 +1166,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/ItemName": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/ItemName",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 20,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     611.0,
                     1100.0
                 ],
@@ -883,11 +1200,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/ItemIconFrame": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/ItemIconFrame",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 20,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     666.0,
                     996.0
                 ],
@@ -925,11 +1242,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/HitRegion": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RadiantItem/HitRegion",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 10,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -955,7 +1272,7 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "elements": [
+        "Elements": [
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Default",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/HitRegion",
@@ -964,7 +1281,7 @@
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover_VFX",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Magic_VFX"
         ],
-        "hitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/HitRegion",
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Default",
@@ -993,7 +1310,7 @@
             "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemName",
             "__type": "UiElementGroupButtonState"
         },
-        "selectedStateElements": {
+        "SelectedStateElements": {
             "DisplayElementList": [
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover",
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemIconFrame",
@@ -1029,9 +1346,9 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 30,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1059,11 +1376,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemIconFrame": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemIconFrame",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 20,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     666.0,
                     996.0
                 ],
@@ -1101,11 +1418,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/HitRegion": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/HitRegion",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 10,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1131,11 +1448,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Hover",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 10,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1173,11 +1490,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemName": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/ItemName",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 20,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     611.0,
                     1100.0
                 ],
@@ -1207,11 +1524,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Default": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Default",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 5,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1250,11 +1567,304 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/NormalItem/Magic_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 11,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/TFT/TFTArmory/Particles/TFT_UI_Armory_CardMagicVFX",
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Elements": [
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Default",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/HitRegion",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Hover",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/ItemName",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/TFT16_IxtalCashoutText",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Magic_VFX",
+            "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Shiny_VFX"
+        ],
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/HitRegion",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Default",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Shiny_VFX"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Magic_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Shiny_VFX"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Magic_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Shiny_VFX"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Magic_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Shiny_VFX"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Magic_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Shiny_VFX"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Hover",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Magic_VFX",
+                "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Shiny_VFX"
+            ],
+            "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/ItemName",
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/TFT16_IxtalCashoutText": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/TFT16_IxtalCashoutText",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    611.0,
+                    1124.0
+                ],
+                "Size": [
+                    192.0,
+                    38.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{92b1b4a5}",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 5,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Shiny_VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Shiny_VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1018.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "UX/Particles/TFT/Set16/TFT_UI_Set16_IxtalVFX_BA",
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Default": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Default",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 5,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Armory/TFT_Set16/ixtal/TFT_ArmoryCard_Base_Ixtal.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/HitRegion": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/HitRegion",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Hover": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Hover",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1015.0
+                ],
+                "Size": [
+                    250.0,
+                    164.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/TFT/Armory/TFT_Set16/ixtal/TFT_ArmoryCard_Hover_Ixtal.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/ItemName": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/ItemName",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Enabled": true,
+        "Layer": 20,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    611.0,
+                    1042.0
+                ],
+                "Size": [
+                    192.0,
+                    85.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{1e3241b3}",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 2,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Magic_VFX": {
+        "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/IxtalCashout/Magic_VFX",
+        "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    582.0,
+                    1004.0
                 ],
                 "Size": [
                     250.0,
@@ -1279,11 +1889,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/ItemIconShadow": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/ItemIconShadow",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 15,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     668.0,
                     998.0
                 ],
@@ -1309,18 +1919,18 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RecipeButton": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RecipeButton",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "elements": [
+        "Elements": [
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RecipeButton/HitRegion"
         ],
-        "hitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RecipeButton/HitRegion",
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RecipeButton/HitRegion",
         "__type": "UiElementGroupButtonData"
     },
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RecipeButton/HitRegion": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/RecipeButton/HitRegion",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1347,9 +1957,9 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/ItemFootprint_Selected_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 50,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1377,9 +1987,9 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/ItemFootprint_Unselected_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 50,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1407,7 +2017,7 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "elements": [
+        "Elements": [
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Default",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Hover",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/HitRegion",
@@ -1415,7 +2025,7 @@
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Hover_VFX",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Magic_VFX"
         ],
-        "hitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/HitRegion",
+        "HitRegionElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Default"
@@ -1441,7 +2051,7 @@
             "TextElement": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/ItemName",
             "__type": "UiElementGroupButtonState"
         },
-        "selectedStateElements": {
+        "SelectedStateElements": {
             "DisplayElementList": [
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Hover",
                 "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Hover_VFX",
@@ -1473,11 +2083,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/ItemName": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/ItemName",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 20,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     611.0,
                     1064.0
                 ],
@@ -1507,11 +2117,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/HitRegion": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/HitRegion",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 10,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1537,11 +2147,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Hover": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Hover",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 10,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1563,7 +2173,7 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "textureName": "ASSETS/UX/TFT/Armory/TFT_ArmoryCard_Hover_Heartsteel.png",
+            "TextureName": "ASSETS/UX/TFT/Armory/TFT_ArmoryCard_Hover_Heartsteel.png",
             "__type": "LooseUiTextureData"
         },
         "__type": "UiElementIconData"
@@ -1571,11 +2181,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Default": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Default",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 5,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1597,7 +2207,7 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "textureName": "ASSETS/UX/TFT/Armory/TFT_ArmoryCard_Default_Heartsteel.png",
+            "TextureName": "ASSETS/UX/TFT/Armory/TFT_ArmoryCard_Default_Heartsteel.png",
             "__type": "LooseUiTextureData"
         },
         "__type": "UiElementIconData"
@@ -1606,9 +2216,9 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Magic_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 11,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1636,9 +2246,9 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/HeartsteelItem/Hover_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 30,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1667,9 +2277,9 @@
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/ItemDragRegion",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
         "Layer": 10,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     582.0,
                     1015.0
                 ],
@@ -1699,11 +2309,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/ItemIcon": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/Armory_Slot0/ItemIcon",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 15,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     672.0,
                     1002.0
                 ],
@@ -1729,7 +2339,7 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/TimerBar": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/TimerBar",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "elements": [
+        "Elements": [
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/TimerBar/Text",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/TimerBar/Backdrop",
             "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/TimerBar/Texture"
@@ -1739,11 +2349,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/TimerBar/Texture": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/TimerBar/Texture",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 50,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     581.0,
                     966.0
                 ],
@@ -1781,11 +2391,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/TimerBar/Text": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/TimerBar/Text",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 50,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     814.0,
                     964.0
                 ],
@@ -1814,11 +2424,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/TimerBar/Backdrop": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/TimerBar/Backdrop",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 49,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     570.0,
                     959.0
                 ],
@@ -1856,11 +2466,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/background/Background_VFX": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/background/Background_VFX",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 2,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     21.0,
                     917.0
                 ],
@@ -1888,12 +2498,12 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/background/Frame": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/background/Frame",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "BlockInputEvents": true,
         "Layer": 1,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     21.0,
                     917.0
                 ],
@@ -1931,11 +2541,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/background/Title": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/background/Title",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 50,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     611.0,
                     928.0
                 ],
@@ -1964,11 +2574,11 @@
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/ItemSpace": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory/ItemSpace",
         "Scene": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_Armory",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 2,
-        "position": {
+        "Position": {
             "UIRect": {
-                "position": [
+                "Position": [
                     575.0,
                     991.0
                 ],
@@ -1993,7 +2603,7 @@
     },
     "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_ToggleArmoryScene": {
         "name": "ClientStates/Gameplay/UX/TFT/TFTArmory/UIBase/TFT_ToggleArmoryScene",
-        "enabled": true,
+        "Enabled": true,
         "Layer": 100,
         "__type": "UISceneData"
     },

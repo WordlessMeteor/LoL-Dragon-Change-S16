@@ -123,7 +123,7 @@
             "Items/1502",
             "Items/1503",
             "Items/1517",
-            "{52d3d72c}",
+            "Items/1524",
             "Items/1515",
             "Items/1523"
         ],
@@ -974,7 +974,7 @@
             "Items/1502",
             "Items/1503",
             "Items/1516",
-            "{52d3d72c}",
+            "Items/1524",
             "Items/1523",
             "Items/1507"
         ],
@@ -1591,7 +1591,7 @@
             "Items/1502",
             "Items/1503",
             "Items/1517",
-            "{52d3d72c}",
+            "Items/1524",
             "Items/1515",
             "Items/1507"
         ],
@@ -1719,7 +1719,7 @@
             "Items/1506",
             "Items/1503",
             "Items/1518",
-            "{52d3d72c}",
+            "Items/1524",
             "Items/1515",
             "Items/1507"
         ],
@@ -1842,7 +1842,7 @@
             "Items/1502",
             "Items/1503",
             "Items/1516",
-            "{52d3d72c}",
+            "Items/1524",
             "Items/1515",
             "Items/1507"
         ],
@@ -1962,7 +1962,7 @@
         },
         "mClientSideItemInventory": [
             "Items/1500",
-            "{57d85c39}",
+            "Items/1505",
             "Items/1503",
             "Items/1519",
             "Items/1507"
@@ -2083,7 +2083,7 @@
         },
         "mClientSideItemInventory": [
             "Items/1500",
-            "{57d85c39}",
+            "Items/1505",
             "Items/1503",
             "Items/1523",
             "Items/1507"
@@ -2255,6 +2255,77 @@
                 "mTargeterDefinitions": [
                     {
                         "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{6eecbff6}": {
+        "ObjectName": "TurretGoldRewardParticleMissile",
+        "mScriptName": "TurretGoldRewardParticleMissile",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "",
+                    "mSpeed": 1700.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "mGravity": 3000.0,
+                    "__type": "GravityHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 1.0,
+            "missileSpeed": 1700.0,
+            "mMissileEffectKey": "PreSeason_Turret_Shield_Gold_Reward_Mis",
+            "mLookAtPolicy": 0,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
                         "__type": "TargeterDefinitionRange"
                     }
                 ],
