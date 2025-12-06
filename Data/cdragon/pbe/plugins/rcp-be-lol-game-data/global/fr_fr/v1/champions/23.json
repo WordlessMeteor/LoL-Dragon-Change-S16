@@ -846,7 +846,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Tryndamere s'épanouit lors des combats, ce qui accroît ses dégâts d'attaque au fur et à mesure qu'il subit des blessures. Il peut lancer Soif de sang pour consommer sa Fureur et se soigner.",
-            "dynamicDescription": "Spell_TryndamereQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Tryndamere a soif de sang, ce qui augmente de <scaleAD>@MaximumBonusAD@ ses dégâts d'attaque</scaleAD> en fonction de ses PV manquants.<br><br><spellActive>Active :</spellActive> Tryndamere consomme sa <keywordMajor>Fureur</keywordMajor>, <healing>récupérant @BaseHeal@ PV plus @HealPerFury@ PV par point de Fureur (max : @MaximumHeal@)</healing>. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -996,7 +996,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Tryndamere lance un hurlement, réduisant les dégâts d'attaque des champions proches. De plus, les ennemis ayant le dos tourné voient leur vitesse de déplacement être réduite.",
-            "dynamicDescription": "Spell_TryndamereW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere lance des insultes, réduisant les dégâts d'attaque des champions de @ADReduction*-1@ pendant @ReductionDuration@ sec, et <status>ralentissant</status> les ennemis de @SlowPotency*-100@% pendant qu'ils se cachent de lui pendant @SlowDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1146,7 +1146,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Tryndamere lance un coup de taille vers une unité ciblée, infligeant des dégâts aux ennemis sur son chemin.",
-            "dynamicDescription": "Spell_TryndamereE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere tourbillonne à travers ses ennemis, infligeant <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage> et générant <keywordMajor>@NonChampFuryGain@ pts de Fureur</keywordMajor> par ennemi touché (<keywordMajor>@ChampFuryGain@ pts de Fureur</keywordMajor> contre les champions).<br><br>Le délai de récupération de cette compétence est réduit de @NonChampCDRefund@ sec quand Tryndamere inflige un coup critique et de @ChampCDRefund@ sec quand il inflige un coup critique à un champion.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

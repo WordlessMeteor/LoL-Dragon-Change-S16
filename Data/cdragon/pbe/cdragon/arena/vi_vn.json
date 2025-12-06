@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "Yêu Cầu: Mua @AnvilsReqToComplete@ Gói Trang Bị.<br><br>Phần Thưởng: Tất cả các trang bị của bạn hóa thành <keywordMajor>Tuyệt Phẩm</keywordMajor>, tăng chỉ số thêm @ItemPercentAmp*100@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2739,7 +2739,7 @@
             "id": 338,
             "name": "Hỗn Hợp",
             "rarity": 1,
-            "tooltip": "Khi bạn gây sát thương bằng một Đòn Đánh, Kỹ Năng tiếp theo của bạn gây thêm @AbilityBoost*100@% sát thương.<br><br>Khi bạn gây sát thương bằng một Kỹ Năng, Đòn Đánh tiếp theo của bạn gây thêm @AttackBoost*100@% sát thương."
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "Bắt đầu mỗi vòng đấu với @StartingBees@ Ong. Nhận Ong khi thu hoạch hoa. Đánh trúng mục tiêu bằng đòn đánh hoặc kỹ năng trong phạm vi @BeeRange@ sẽ phóng Ong tấn công chúng trong @DebuffDuration@ giây.",
@@ -2943,7 +2945,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Cherry_CalculatedRisk_Summary",
+            "desc": "Lập tức tiêu thụ số lượt đổi còn lại, bạn sẽ không thể đổi lại nữa.<br><br>Chọn một Nâng Cấp Vàng, nếu ít nhất @PrismaticThreshold@ lượt đổi đã được tiêu thụ theo cách này, cường hóa nó để chọn một Nâng Cấp Kim Cương thay thế.",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3410,7 +3412,7 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "<healing>Hồi Máu</healing> hoặc <Shield>Tạo Lá Chắn</Shield> sẽ tăng sát thương Kỹ Năng của bạn thêm @SpellDamagePerStack*100@%, cộng dồn vô hạn trong vòng đấu.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -3991,13 +3991,13 @@
                 "HealthThreshold": 0.30000001192092896,
                 "StealthDuration": 1.25
             },
-            "desc": "Cherry_MirrorImage_Summary",
+            "desc": "Khi xuống dưới <scaleHealth>@HealthThreshold*100@% Máu</scaleHealth>, <keywordStealth>Tàng Hình</keywordStealth> trong thoáng chốc và tạo 4 bản sao của bản thân.",
             "iconLarge": "assets/ux/cherry/augments/icons/mirrorimage_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mirrorimage_small.png",
             "id": 172,
             "name": "Phân Ảnh",
             "rarity": 0,
-            "tooltip": "Cherry_MirrorImage_Summary"
+            "tooltip": "Khi xuống dưới <scaleHealth>@HealthThreshold*100@% Máu</scaleHealth>, <keywordStealth>Tàng Hình</keywordStealth> trong thoáng chốc và tạo 4 bản sao của bản thân."
         },
         {
             "apiName": "Desecrator",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "Nhận @CritChanceBonus*100@% Tỉ Lệ Chí Mạng và @CritDamageBonus*100@% Sát Thương Chí Mạng. Tỉ Lệ Chí Mạng của bạn tối đa là @CritChanceCeiling*100@%.<br><br>Chuyển đổi Tỉ Lệ Chí Mạng vượt @CritChanceCeiling*100@% thành Sát Thương Chí Mạng.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "Nhắm Thẳng Đầu",
             "rarity": 1,
-            "tooltip": "Nhận @CritChanceBonus*100@% Tỉ Lệ Chí Mạng và @CritDamageBonus*100@% Sát Thương Chí Mạng. Tỉ Lệ Chí Mạng của bạn tối đa là @CritChanceCeiling*100@%.<br><br>Chuyển đổi Tỉ Lệ Chí Mạng vượt @CritChanceCeiling*100@% thành Sát Thương Chí Mạng."
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",

@@ -846,7 +846,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Триндамир получает наслаждение от битвы: с каждым ранением его сила атаки растет. Он может использовать Жажду крови, чтобы истратить ярость и вылечить себя.",
-            "dynamicDescription": "Spell_TryndamereQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> Триндамир жаждет крови: он получает вплоть до <scaleAD>@MaximumBonusAD@ силы атаки</scaleAD> в зависимости от своего недостающего здоровья.<br><br><spellActive>Активно:</spellActive> Триндамир поглощает <keywordMajor>ярость</keywordMajor>, восстанавливая <healing>здоровье в размере @BaseHeal@ плюс @HealPerFury@ за каждую единицу ярости (максимум – @MaximumHeal@)</healing>. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -996,7 +996,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Триндамир оскорбляет окружающих вражеских чемпионов, уменьшая их силу атаки. У врагов, повернутых к Триндамиру спиной, также ненадолго уменьшается скорость передвижения.",
-            "dynamicDescription": "Spell_TryndamereW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Триндамир выкрикивает оскорбления, уменьшая силу атаки чемпионов на @ADReduction*-1@ на @ReductionDuration@ сек., а также <status>замедляя</status> их на @SlowPotency*-100@% и вынуждая бежать прочь в течение @SlowDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1146,7 +1146,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Триндамир прорубается к цели, нанося урон всем на пути.",
-            "dynamicDescription": "Spell_TryndamereE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Триндамир совершает рывок сквозь врагов, нанося <physicalDamage>@TotalDamage@ ед. физического урона</physicalDamage> и получая <keywordMajor>@NonChampFuryGain@ ярости</keywordMajor> за каждого пораженного врага. Поражая вражеских чемпионов, он получает <keywordMajor>@ChampFuryGain@ ярости</keywordMajor>.<br><br>Перезарядка этого умения сокращается на @NonChampCDRefund@ сек., когда Триндамир совершает критический удар. Если цель – чемпион, перезарядка сокращается на @ChampCDRefund@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

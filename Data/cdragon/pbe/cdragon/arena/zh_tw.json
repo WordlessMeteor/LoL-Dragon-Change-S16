@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "條件：購買@AnvilsReqToComplete@個道具鐵砧。<br><br>獎勵：所有道具都會變成<keywordMajor>傑作</keywordMajor>，使其能力值增加@ItemPercentAmp*100@%。",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2739,7 +2739,7 @@
             "id": 338,
             "name": "混傷",
             "rarity": 1,
-            "tooltip": "普攻造成傷害時，下一個技能會造成@AbilityBoost*100@%額外傷害。<br><br>技能造成傷害時，下一個普攻會造成@AttackBoost*100@%額外傷害。"
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "每回合以@StartingBees@隻蜜蜂開局。採集花朵即可獲得蜜蜂。普攻或技能命中@BeeRange@範圍內的目標時，放出蜜蜂進行@DebuffDuration@秒的攻擊。",
@@ -2943,7 +2945,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Cherry_CalculatedRisk_Summary",
+            "desc": "立即消耗剩餘的重抽，你將無法再重抽。<br><br>選擇一件金級增幅裝置；若已按此方式花費至少@PrismaticThreshold@次重抽，則可升級為選擇一件稜鏡級增幅裝置。",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3410,20 +3412,20 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
                 "MinimumDistance": 1500.0,
                 "WispSpeed": 3500.0
             },
-            "desc": "每場戰鬥一次，死亡時化身為幻靈、回復到<scaleHealth>@HealthLock*100@%生命</scaleHealth>，並移動至競技場中的隨機位置。",
+            "desc": "每場戰鬥一次，死亡時不會化身為幻靈，而是回復到<scaleHealth>@HealthLock*100@%生命</scaleHealth>，並移動至競技場中的隨機位置。",
             "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
             "id": 335,
             "name": "避難密室",
             "rarity": 0,
-            "tooltip": "每場戰鬥一次，死亡時化身為幻靈、回復到<scaleHealth>@HealthLock*100@%生命</scaleHealth>，並移動至競技場中的隨機位置。"
+            "tooltip": "每場戰鬥一次，死亡時不會化身為幻靈，而是回復到<scaleHealth>@HealthLock*100@%生命</scaleHealth>，並移動至競技場中的隨機位置。"
         },
         {
             "apiName": "ParasiticMutation",
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "使用<healing>治療</healing>或<Shield>護盾</Shield>時，技能傷害提升@SpellDamagePerStack*100@%，效果能在該回合無限累加。",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -3991,13 +3991,13 @@
                 "HealthThreshold": 0.30000001192092896,
                 "StealthDuration": 1.25
             },
-            "desc": "Cherry_MirrorImage_Summary",
+            "desc": "生命低於<scaleHealth>@HealthThreshold*100@%</scaleHealth>時，短暫進入<keywordStealth>隱形</keywordStealth>狀態並創造4個分身。",
             "iconLarge": "assets/ux/cherry/augments/icons/mirrorimage_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mirrorimage_small.png",
             "id": 172,
             "name": "鏡像",
             "rarity": 0,
-            "tooltip": "Cherry_MirrorImage_Summary"
+            "tooltip": "生命低於<scaleHealth>@HealthThreshold*100@%</scaleHealth>時，短暫進入<keywordStealth>隱形</keywordStealth>狀態並創造4個分身。"
         },
         {
             "apiName": "Desecrator",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "獲得@CritChanceBonus*100@%暴擊率與@CritDamageBonus*100@%暴擊傷害。暴擊率上限為@CritChanceCeiling*100@%。<br><br>超出@CritChanceCeiling*100@%的暴擊率轉換為暴擊傷害。",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "瞄準頭部",
             "rarity": 1,
-            "tooltip": "獲得@CritChanceBonus*100@%暴擊率與@CritDamageBonus*100@%暴擊傷害。暴擊率上限為@CritChanceCeiling*100@%。<br><br>超出@CritChanceCeiling*100@%的暴擊率轉換為暴擊傷害。"
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",

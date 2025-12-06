@@ -846,7 +846,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Ketegangan combat membuat Tryndamere makin beringas dan meningkatkan Attack Damage-nya seiring bertambahnya luka yang dideritanya. Dia bisa cast Bloodlust untuk mengonsumsi Fury dan heal diri sendiri.",
-            "dynamicDescription": "Spell_TryndamereQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Tryndamere haus darah, mendapatkan hingga <scaleAD>@MaximumBonusAD@ Attack Damage</scaleAD> berdasarkan Health-nya yang hilang.<br><br><spellActive>Aktif:</spellActive> Tryndamere mengonsumsi <keywordMajor>Fury</keywordMajor> miliknya, dan memulihkan <healing>@BaseHeal@ ditambah @HealPerFury@ Health per Fury (maksimal: @MaximumHeal@)</healing>. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -996,7 +996,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Tryndamere mengeluarkan teriakan menghina, mengurangi Attack Damage dari champion di sekitar. Musuh yang membelakangi Tryndamere juga mengalami pengurangan Move Speed.",
-            "dynamicDescription": "Spell_TryndamereW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere mengeluarkan hinaan, mengurangi Attack Damage champion sebesar @ADReduction*-1@ selama @ReductionDuration@ detik, dan menyebabkan efek <status>Slow</status> sebesar @SlowPotency*-100@% sambil membuat mereka ciut terhadapnya selama @SlowDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1146,7 +1146,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Tryndamere menebas ke arah unit target dan menghasilkan damage pada musuh yang dilaluinya.",
-            "dynamicDescription": "Spell_TryndamereE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere berputar menembus musuh, memberikan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> dan menghasilkan <keywordMajor>@NonChampFuryGain@ Fury</keywordMajor> per musuh yang terkena, meningkat menjadi <keywordMajor>@ChampFuryGain@ Fury</keywordMajor> saat mengenai champion musuh.<br><br>Cooldown Ability ini berkurang sebanyak @NonChampCDRefund@ detik saat Tryndamere melakukan Critical Strike, dan berkurang sebanyak @ChampCDRefund@ detik saat melakukan Critical Strike pada champion.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

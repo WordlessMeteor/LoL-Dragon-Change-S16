@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "조건: 아이템 모루를 @AnvilsReqToComplete@개 구매해야 합니다.<br><br>보상: 모든 아이템이 <keywordMajor>걸작</keywordMajor> 아이템으로 변하여 해당 아이템의 능력치가 @ItemPercentAmp*100@% 증가합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2739,7 +2739,7 @@
             "id": 338,
             "name": "하이브리드",
             "rarity": 1,
-            "tooltip": "기본 공격으로 피해를 입히면 다음 스킬 피해량이 @AbilityBoost*100@% 증가합니다.<br><br>스킬로 피해를 입히면 다음 기본 공격 피해량이 @AttackBoost*100@% 증가합니다."
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "매 라운드를 벌 @StartingBees@마리와 함께 시작합니다. 꽃을 수확하면 벌을 얻습니다. @BeeRange@ 거리 내 대상에게 기본 공격 또는 스킬 적중 시 벌을 날려 @DebuffDuration@초 동안 공격하게 합니다.",
@@ -2943,7 +2945,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Cherry_CalculatedRisk_Summary",
+            "desc": "즉시 남은 새로고침을 모두 소모하고 더 이상 새로고침할 수 없습니다.<br><br>골드 증강 1개를 선택합니다. 이 방식으로 새로고침을 @PrismaticThreshold@회 이상 사용했을 경우 선택지가 프리즘 증강으로 강화됩니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3410,7 +3412,7 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "<healing>체력 회복</healing> 또는 <Shield>보호막 부여</Shield> 시 스킬 피해량이 @SpellDamagePerStack*100@% 증가합니다. 라운드가 끝날 때까지 무한히 중첩됩니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -3991,13 +3991,13 @@
                 "HealthThreshold": 0.30000001192092896,
                 "StealthDuration": 1.25
             },
-            "desc": "Cherry_MirrorImage_Summary",
+            "desc": "<scaleHealth>체력이 @HealthThreshold*100@%</scaleHealth> 아래로 떨어지면 잠시 <keywordStealth>투명</keywordStealth> 상태가 되고 자신의 분신 4명을 생성합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/mirrorimage_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mirrorimage_small.png",
             "id": 172,
             "name": "거울 환영",
             "rarity": 0,
-            "tooltip": "Cherry_MirrorImage_Summary"
+            "tooltip": "<scaleHealth>체력이 @HealthThreshold*100@%</scaleHealth> 아래로 떨어지면 잠시 <keywordStealth>투명</keywordStealth> 상태가 되고 자신의 분신 4명을 생성합니다."
         },
         {
             "apiName": "Desecrator",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "치명타 확률을 @CritChanceBonus*100@%, 치명타 피해량을 @CritDamageBonus*100@% 얻습니다. 치명타 확률의 최대치가 @CritChanceCeiling*100@%로 제한됩니다.<br><br>@CritChanceCeiling*100@%를 초과하는 치명타 확률은 치명타 피해량으로 전환됩니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "머리를 노려라",
             "rarity": 1,
-            "tooltip": "치명타 확률을 @CritChanceBonus*100@%, 치명타 피해량을 @CritDamageBonus*100@% 얻습니다. 치명타 확률의 최대치가 @CritChanceCeiling*100@%로 제한됩니다.<br><br>@CritChanceCeiling*100@%를 초과하는 치명타 확률은 치명타 피해량으로 전환됩니다."
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",

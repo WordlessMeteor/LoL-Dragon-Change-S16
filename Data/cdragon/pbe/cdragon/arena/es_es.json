@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "Requisito: Comprar @AnvilsReqToComplete@ yunques de objeto.<br><br>Recompensa: Todos tus objetos se vuelven <keywordMajor>selectos</keywordMajor>, lo que aumenta sus estadísticas un @ItemPercentAmp*100@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2739,7 +2739,7 @@
             "id": 338,
             "name": "Híbrido",
             "rarity": 1,
-            "tooltip": "Cuando infliges daño con un ataque, tu siguiente habilidad inflige un @AbilityBoost*100@% de daño adicional.<br><br>Cuando infliges daño con una habilidad, tu siguiente ataque inflige un @AttackBoost*100@% de daño adicional."
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "Comienzas cada ronda con @StartingBees@ abeja(s). Cosecha flores para obtener abejas. Al asestar ataques o habilidades a un objetivo a @BeeRange@ unidades, una abeja se lanzará al ataque a lo largo de @DebuffDuration@&nbsp;s.",
@@ -3410,20 +3412,20 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
                 "MinimumDistance": 1500.0,
                 "WispSpeed": 3500.0
             },
-            "desc": "Una vez por combate, cuando fueras a morir, te conviertes en un fatuo con un <scaleHealth>@HealthLock*100@% de vida</scaleHealth> y te desplazas hasta un lugar aleatorio de la arena.",
+            "desc": "Una vez por combate, cuando fueras a morir, te conviertes en un fuego fatuo con un <scaleHealth>@HealthLock*100@% de vida</scaleHealth> y te desplazas hasta un lugar aleatorio de la arena.",
             "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
             "id": 335,
             "name": "Habitación del pánico",
             "rarity": 0,
-            "tooltip": "Una vez por combate, cuando fueras a morir, te conviertes en un fatuo con un <scaleHealth>@HealthLock*100@% de vida</scaleHealth> y te desplazas hasta un lugar aleatorio de la arena."
+            "tooltip": "Una vez por combate, cuando fueras a morir, te conviertes en un fuego fatuo con un <scaleHealth>@HealthLock*100@% de vida</scaleHealth> y te desplazas hasta un lugar aleatorio de la arena."
         },
         {
             "apiName": "ParasiticMutation",
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "<healing>Curar</healing> u otorgar un <Shield>escudo</Shield> aumenta el daño de tus habilidades un @SpellDamagePerStack*100@%, que se acumula de forma ilimitada durante la ronda.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -3991,13 +3991,13 @@
                 "HealthThreshold": 0.30000001192092896,
                 "StealthDuration": 1.25
             },
-            "desc": "Cherry_MirrorImage_Summary",
+            "desc": "Cuando tienes menos del <scaleHealth>@HealthThreshold*100@% de vida</scaleHealth>, te vuelves <keywordStealth>invisible</keywordStealth> brevemente y creas 4 clones tuyos.",
             "iconLarge": "assets/ux/cherry/augments/icons/mirrorimage_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mirrorimage_small.png",
             "id": 172,
             "name": "Imagen especular",
             "rarity": 0,
-            "tooltip": "Cherry_MirrorImage_Summary"
+            "tooltip": "Cuando tienes menos del <scaleHealth>@HealthThreshold*100@% de vida</scaleHealth>, te vuelves <keywordStealth>invisible</keywordStealth> brevemente y creas 4 clones tuyos."
         },
         {
             "apiName": "Desecrator",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "Otorga un @CritChanceBonus*100@% de probabilidad de impacto crítico y un @CritDamageBonus*100@% de daño de impacto crítico. Tu probabilidad de impacto crítico tiene un límite del @CritChanceCeiling*100@%.<br><br>Convierte tu probabilidad de impacto crítico por encima del @CritChanceCeiling*100@% en daño de impacto crítico.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "Apunta a la cabeza",
             "rarity": 1,
-            "tooltip": "Otorga un @CritChanceBonus*100@% de probabilidad de impacto crítico y un @CritDamageBonus*100@% de daño de impacto crítico. Tu probabilidad de impacto crítico tiene un límite del @CritChanceCeiling*100@%.<br><br>Convierte tu probabilidad de impacto crítico por encima del @CritChanceCeiling*100@% en daño de impacto crítico."
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",

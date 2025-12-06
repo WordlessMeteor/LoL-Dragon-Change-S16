@@ -846,7 +846,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Tryndamere si nutre del brivido del combattimento, aumentando l'attacco fisico man mano che viene ferito. Può lanciare Sete di sangue per consumare la sua Furia e curarsi.",
-            "dynamicDescription": "Spell_TryndamereQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva</spellPassive>: Tryndamere è assetato di sangue e ottiene fino a <scaleAD>@MaximumBonusAD@ attacco fisico</scaleAD> in base alla sua salute mancante.<br><br><spellActive>Attiva:</spellActive> Tryndamere consuma la sua <keywordMajor>Furia</keywordMajor>, ripristinando <healing>@BaseHeal@ più @HealPerFury@ salute per Furia (massimo: @MaximumHeal@)</healing>. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -996,7 +996,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Tryndamere lancia un urlo di sfida, che diminuisce l'attacco fisico dei campioni circostanti. I nemici con la schiena voltata verso Tryndamere hanno anche la loro velocità di movimento ridotta.",
-            "dynamicDescription": "Spell_TryndamereW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere insulta gli avversari, riducendo l'attacco fisico dei campioni di @ADReduction*-1@ per @ReductionDuration@ secondo/i e <status>rallentandoli</status> di un @SlowPotency*-100@% mentre fuggono terrorizzati per @SlowDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1146,7 +1146,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Tryndamere rotea la sua spada verso l'unità bersaglio, infliggendo danni sulla sua traiettoria.",
-            "dynamicDescription": "Spell_TryndamereE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere rotea attraverso i nemici, infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> e generando <keywordMajor>@NonChampFuryGain@ Furia</keywordMajor> per ciascun nemico colpito, che aumenta a <keywordMajor>@ChampFuryGain@ Furia</keywordMajor> contro i campioni nemici.<br><br>Il tempo di ricarica di questa abilità è ridotto di @NonChampCDRefund@ secondo/i quando Tryndamere infligge colpi critici e di @ChampCDRefund@ secondo/i quando li infligge contro un campione.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

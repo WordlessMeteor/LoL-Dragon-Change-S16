@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "要求：购买@AnvilsReqToComplete@个道具铁砧。<br><br>奖励：你的所有道具都会变为<keywordMajor>杰作级</keywordMajor>，其属性提升@ItemPercentAmp*100@%。",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2739,7 +2739,7 @@
             "id": 338,
             "name": "混合",
             "rarity": 1,
-            "tooltip": "普攻造成伤害时，你的下一个技能会造成@AbilityBoost*100@%额外伤害。<br><br>技能造成伤害时，你的下一次普攻会造成@AttackBoost*100@%额外伤害。"
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "回合开始时拥有@StartingBees@只蜜蜂。采集花朵可获得蜜蜂。普攻或技能命中@BeeRange@距离内的目标时，将发射一只蜜蜂进行攻击，持续@DebuffDuration@秒。",
@@ -2943,7 +2945,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Cherry_CalculatedRisk_Summary",
+            "desc": "立即消耗你剩余的重骰次数，之后你将无法进行重骰。<br><br>选择一个金色增幅装置，如果通过此方式消耗至少@PrismaticThreshold@次重骰，则强化此效果并改为选择一个棱彩增幅装置。",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3410,7 +3412,7 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "<healing>治疗</healing>或<Shield>护盾</Shield>效果会使你的技能伤害提升@SpellDamagePerStack*100@%，可无限叠加，持续至回合结束。",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "获得@CritChanceBonus*100@%暴击机率和@CritDamageBonus*100@%暴击伤害。你的暴击机率的上限为@CritChanceCeiling*100@%。<br><br>超出@CritChanceCeiling*100@%的暴击机率会转化为暴击伤害。",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "瞄准头部",
             "rarity": 1,
-            "tooltip": "获得@CritChanceBonus*100@%暴击机率和@CritDamageBonus*100@%暴击伤害。你的暴击机率的上限为@CritChanceCeiling*100@%。<br><br>超出@CritChanceCeiling*100@%的暴击机率会转化为暴击伤害。"
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",

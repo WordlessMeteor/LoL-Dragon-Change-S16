@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "Requisito: comprar @AnvilsReqToComplete@ Bigornas de Item.<br><br>Recompensa: todos os seus itens se tornam <keywordMajor>Magistrais</keywordMajor>, o que aumenta os atributos deles em @ItemPercentAmp*100@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2733,13 +2733,13 @@
                 "AbilityBoost": 0.30000001192092896,
                 "AttackBoost": 0.30000001192092896
             },
-            "desc": "Ao causar dano com um ataque, sua próxima habilidade causa @AbilityBoost*100@% de dano adicional.<br><br>Ao causar dano com uma habilidade, seu próximo ataque causa @AttackBoost*100@% de dano adicional.",
+            "desc": "Ao causar dano com um Ataque, sua próxima Habilidade causa @AbilityBoost*100@% de dano adicional.<br><br>Ao causar dano com uma Habilidade, seu próximo Ataque causa @AttackBoost*100@% de dano adicional.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
             "id": 338,
             "name": "Híbrido",
             "rarity": 1,
-            "tooltip": "Ao causar dano com um ataque, sua próxima habilidade causa @AbilityBoost*100@% de dano adicional.<br><br>Ao causar dano com uma habilidade, seu próximo ataque causa @AttackBoost*100@% de dano adicional."
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "Começa cada rodada com @StartingBees@ Abelha(s). Recebe Abelhas ao colher flores. Atacar ou acertar habilidades em um alvo a até @BeeRange@ faz uma Abelha atacar ao longo de @DebuffDuration@s.",
@@ -2943,7 +2945,7 @@
             "dataValues": {
                 "PrismaticThreshold": 5.0
             },
-            "desc": "Cherry_CalculatedRisk_Summary",
+            "desc": "Consome as trocas restantes automaticamente e não é mais possível trocar.<br><br>Escolha um Aprimoramento Ouro; se ao menos @PrismaticThreshold@ das trocas forem consumidas assim, escolha um Aprimoramento Prismático no lugar.",
             "iconLarge": "assets/ux/cherry/augments/icons/calculated_risk_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/calculated_risk_small.png",
             "id": 320,
@@ -3410,7 +3412,7 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "<healing>Curar</healing> ou conceder <Shield>Escudo</Shield> aumenta seu dano de habilidade em @SpellDamagePerStack*100@%, acumulando infinitamente na rodada.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -3991,13 +3991,13 @@
                 "HealthThreshold": 0.30000001192092896,
                 "StealthDuration": 1.25
             },
-            "desc": "Cherry_MirrorImage_Summary",
+            "desc": "Ao ficar com menos de <scaleHealth>@HealthThreshold*100@% de Vida</scaleHealth>, fica <keywordStealth>Invisível</keywordStealth> por um breve período e cria 4 clones de si.",
             "iconLarge": "assets/ux/cherry/augments/icons/mirrorimage_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mirrorimage_small.png",
             "id": 172,
             "name": "Imagem-Espelho",
             "rarity": 0,
-            "tooltip": "Cherry_MirrorImage_Summary"
+            "tooltip": "Ao ficar com menos de <scaleHealth>@HealthThreshold*100@% de Vida</scaleHealth>, fica <keywordStealth>Invisível</keywordStealth> por um breve período e cria 4 clones de si."
         },
         {
             "apiName": "Desecrator",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "Recebe @CritChanceBonus*100@% de Chance de Acerto Crítico e @CritDamageBonus*100@% de Dano de Acerto Crítico. O limite máximo da sua Chance de Acerto Crítico é de @CritChanceCeiling*100@%.<br><br>Converte Chance de Acerto Crítico acima de @CritChanceCeiling*100@% em Dano de Acerto Crítico.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "Mirar na Cabeça",
             "rarity": 1,
-            "tooltip": "Recebe @CritChanceBonus*100@% de Chance de Acerto Crítico e @CritDamageBonus*100@% de Dano de Acerto Crítico. O limite máximo da sua Chance de Acerto Crítico é de @CritChanceCeiling*100@%.<br><br>Converte Chance de Acerto Crítico acima de @CritChanceCeiling*100@% em Dano de Acerto Crítico."
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",

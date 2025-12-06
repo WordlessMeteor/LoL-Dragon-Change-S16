@@ -846,7 +846,7 @@
             "cost": "소모값 없음",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "트린다미어는 전투의 스릴에 희열을 느낍니다. 트린다미어의 체력이 낮으면 낮을수록 공격력이 상승합니다. 피의 갈망 스킬 사용 시 트린다미어는 분노 수치를 소모하여 체력을 회복할 수 있습니다.",
-            "dynamicDescription": "Spell_TryndamereQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 트린다미어가 피에 굶주려 잃은 체력에 비례해 최대 <scaleAD>@MaximumBonusAD@의 공격력</scaleAD>을 얻습니다.<br><br><spellActive>사용 시:</spellActive> 트린다미어가 <keywordMajor>분노</keywordMajor>를 소모하여 <healing>체력을 @BaseHeal@+분노당 @HealPerFury@만큼 회복(최대: @MaximumHeal@)</healing>합니다. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -996,7 +996,7 @@
             "cost": "소모값 없음",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "트린다미어가 모욕적인 외침으로 주변 챔피언들의 공격력을 낮춥니다. 트린다미어에게서 등을 돌린 챔피언들은 이동 속도 역시 느려집니다.",
-            "dynamicDescription": "Spell_TryndamereW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "트린다미어가 모욕을 퍼부어 @ReductionDuration@초 동안 챔피언의 공격력을 @ADReduction*-1@ 감소시킵니다. 트린다미어에게서 도망치는 적은 @SlowDuration@초 동안 @SlowPotency*-100@% <status>둔화</status>됩니다.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1146,7 +1146,7 @@
             "cost": "소모값 없음",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "트린다미어가 공격 경로에 있는 적 유닛을 칼로 베어 피해를 입힙니다.",
-            "dynamicDescription": "Spell_TryndamereE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "트린다미어가 검을 들고 회전하며 적을 베어넘겨 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 적중한 적 하나당 <keywordMajor>분노가 @NonChampFuryGain@</keywordMajor> 생성되며, 대상이 챔피언일 경우 <keywordMajor>분노가 @ChampFuryGain@</keywordMajor> 생성됩니다.<br><br>트린다미어가 치명타를 입힐 때마다 이 스킬의 재사용 대기시간이 @NonChampCDRefund@초 감소하며 챔피언에게 치명타를 입히면 @ChampCDRefund@초 감소합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

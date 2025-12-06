@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "Wymaganie: Kup następującą liczbę Kowadeł Przedmiotów: @AnvilsReqToComplete@.<br><br>Nagroda: Wszystkie twoje przedmioty stają się <keywordMajor>mistrzowskie</keywordMajor>, co zwiększa ich statystyki o @ItemPercentAmp*100@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2739,7 +2739,7 @@
             "id": 338,
             "name": "Hybryda",
             "rarity": 1,
-            "tooltip": "Gdy zadajesz obrażenia atakiem, twoja kolejna umiejętność zadaje obrażenia zwiększone o @AbilityBoost*100@%.<br><br>Gdy zadajesz obrażenia umiejętnością, twój kolejny atak zadaje obrażenia zwiększone o @AttackBoost*100@%."
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "Zaczynasz każdą rundę z następującą liczbą Pszczół: @StartingBees@. Zdobywasz Pszczoły za zbieranie kwiatów. Atakowanie lub trafianie celu umiejętnościami w zasięgu @BeeRange@ jedn. sprawi, że Pszczoły będą go atakować przez @DebuffDuration@ sek.",
@@ -3410,7 +3412,7 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "<healing>Leczenie</healing> i <Shield>tarcze</Shield> zwiększają twoje obrażenia od umiejętności o @SpellDamagePerStack*100@%, kumulując się w nieskończoność w tej rundzie.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -3991,13 +3991,13 @@
                 "HealthThreshold": 0.30000001192092896,
                 "StealthDuration": 1.25
             },
-            "desc": "Cherry_MirrorImage_Summary",
+            "desc": "Gdy twoje zdrowie spadnie poniżej <scaleHealth>@HealthThreshold*100@%</scaleHealth>, na chwilę zyskujesz <keywordStealth>niewidzialność</keywordStealth> i tworzysz 4 klony siebie.",
             "iconLarge": "assets/ux/cherry/augments/icons/mirrorimage_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mirrorimage_small.png",
             "id": 172,
             "name": "Lustrzany Obraz",
             "rarity": 0,
-            "tooltip": "Cherry_MirrorImage_Summary"
+            "tooltip": "Gdy twoje zdrowie spadnie poniżej <scaleHealth>@HealthThreshold*100@%</scaleHealth>, na chwilę zyskujesz <keywordStealth>niewidzialność</keywordStealth> i tworzysz 4 klony siebie."
         },
         {
             "apiName": "Desecrator",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "Zyskujesz @CritChanceBonus*100@% szansy na trafienie krytyczne i @CritDamageBonus*100@% obrażeń trafienia krytycznego. Twoja szansa na trafienie krytyczne jest ograniczona do @CritChanceCeiling*100@%.<br><br>Zamieniasz szansę na trafienie krytyczne powyżej @CritChanceCeiling*100@% w obrażenia trafienia krytycznego.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "Celuj w Głowę",
             "rarity": 1,
-            "tooltip": "Zyskujesz @CritChanceBonus*100@% szansy na trafienie krytyczne i @CritDamageBonus*100@% obrażeń trafienia krytycznego. Twoja szansa na trafienie krytyczne jest ograniczona do @CritChanceCeiling*100@%.<br><br>Zamieniasz szansę na trafienie krytyczne powyżej @CritChanceCeiling*100@% w obrażenia trafienia krytycznego."
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",

@@ -482,7 +482,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "淣菈朝著指定方向揮舞鞭刃，對直線上所有命中的敵人造成傷害。短暫時間內，淣菈獲得攻擊距離提升。",
-            "dynamicDescription": "Spell_NilahQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>淣菈獲得@CritArmorPen@物理穿透，並且根據攻擊英雄所造成的傷害回復<healing>@CritLifesteal@生命</healing>。超額治療量會轉為<shield>護盾</shield>，持續@ShieldDuration@秒。<br><br><spellActive>主動：</spellActive>淣菈揮舞鞭刃，對命中的敵人造成<physicalDamage>@DamageCalc@物理傷害</physicalDamage>。若技能成功命中敵人或建築物，淣菈獲得額外125攻擊距離和<attackSpeed>@BonusAttackSpeedCalc@% 攻速</attackSpeed>，接著她的普攻會獲得錐形範圍的濺射效果，持續 @BuffDuration@ 秒。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -932,7 +932,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "淣菈愉快地揮舞手中的鞭刃，對周圍敵人造成傷害後將其拉向自身。",
-            "dynamicDescription": "Spell_NilahR_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "淣菈向周圍揮舞鞭刃，在1秒內對鄰近敵軍造成<physicalDamage>@DamagePerTickCalcTooltip@物理傷害</physicalDamage>，接著引爆並造成<physicalDamage>@DamageCalc@物理傷害</physicalDamage>，同時將鄰近敵軍<status>拉</status>向自身。<br><br>神之禮讚會治療淣菈和她和鄰近友軍的生命，治療量為<healing>對敵方英雄傷害量的@ChampHealingPercent@(+@spell.NilahQ:CritLifesteal@百變之刃)</healing>，超過最大生命的治療量會轉化成<shield>護盾</shield>，持續@Duration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

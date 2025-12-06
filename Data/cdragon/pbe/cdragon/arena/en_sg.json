@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "Requirement: Purchase @AnvilsReqToComplete@ Item Anvils.<br><br>Reward: All of your items become <keywordMajor>Masterwork</keywordMajor>, increasing their stats by @ItemPercentAmp*100@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2739,7 +2739,7 @@
             "id": 338,
             "name": "Hybrid",
             "rarity": 1,
-            "tooltip": "When you deal damage with an Attack, your next Ability deals @AbilityBoost*100@% increased damage.<br><br>When you deal damage with an Ability, your next Attack deals @AttackBoost*100@% increased damage."
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Abilities empower one Attack per cast.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,18 +2767,20 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
-            "desc": "Start each round with @StartingBees@ Bee(s). Gain Bees by harvesting flowers. Attacking or landing abilities on a target within @BeeRange@ will launch a Bee to attack over @DebuffDuration@ seconds.",
+            "desc": "Start each round with @StartingBees@ Bee(s), gain additonal Bees by harvesting flowers. Damaging an enemy champion sends a Bee dealing @BeeDamage@ over @DebuffDuration@ seconds on arrival, before returning to you.<br>",
             "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
             "id": 338,
             "name": "Hive Mind",
             "rarity": 2,
-            "tooltip": "Start each round with @StartingBees@ Bee(s). Gain Bees by harvesting flowers. Attacking or landing abilities on a target within @BeeRange@ will launch a Bee to attack over @DebuffDuration@ seconds.<br><br>Damage Dealt This Round: @f1@<br>Damage Dealt Total: @f2@"
+            "tooltip": "Start each round with @StartingBees@ Bee(s), gain additonal Bees by harvesting flowers. Damaging an enemy champion sends a Bee dealing @BeeDamage@ over @DebuffDuration@ seconds on arrival, before returning to you.<br><br>Damage Dealt This Round: @f1@<br>Damage Dealt Total: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -3410,7 +3412,7 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "<healing>Healing</healing> or <Shield>Shielding</Shield> increases your Ability damage by @SpellDamagePerStack*100@%, stacking infinitely for the round.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Righteous Fury",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Current Ability Damage Bonus: @f1@%<br>Bonus damage this round: @f2@<br>Bonus damage total: @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@s Cooldown per Ability cast, Augment, and Item.<br><br>Current Ability Damage Bonus: @f1@%<br>Bonus damage this round: @f2@<br>Bonus damage total: @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4421,16 +4421,16 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
-            "desc": "Gain @CritChanceBonus*100@% Critical Strike Chance and @CritDamageBonus*100@% Critical Strike Damage. Your Critical Strike Chance is capped at @CritChanceCeiling*100@%.<br><br>Convert Critical Strike Chance above @CritChanceCeiling*100@% into Critical Strike Damage.",
+            "desc": "Gain @CritChanceBonus*100@% Critical Strike Chance and @CritDamageBonus*100@% Critical Strike Damage. Your Critical Strike Chance is capped at @CritChanceCeiling*100@%.<br><br>Convert @CritChanceToDamageRatio*100@% of Critical Strike Chance above @CritChanceCeiling*100@% into Critical Strike Damage.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Aim for the Head",
             "rarity": 1,
-            "tooltip": "Gain @CritChanceBonus*100@% Critical Strike Chance and @CritDamageBonus*100@% Critical Strike Damage. Your Critical Strike Chance is capped at @CritChanceCeiling*100@%.<br><br>Convert Critical Strike Chance above @CritChanceCeiling*100@% into Critical Strike Damage."
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>Total Bonus Critical Strike Damage: @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

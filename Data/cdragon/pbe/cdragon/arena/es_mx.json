@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "Requisito: Compra @AnvilsReqToComplete@ yunque(s) de objetos.<br><br>Recompensa: Todos tus objetos obtienen la <keywordMajor>mejora de Maestro Artesano</keywordMajor>, lo que aumenta sus estadísticas en un @ItemPercentAmp*100@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2739,7 +2739,7 @@
             "id": 338,
             "name": "Híbrido",
             "rarity": 1,
-            "tooltip": "Al infligir daño con un ataque, tu siguiente habilidad inflige un @AbilityBoost*100@% más de daño.<br><br>Al infligir daño con una habilidad, tu siguiente ataque inflige un @AttackBoost*100@% más de daño."
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "Comienzas cada ronda con @StartingBees@ abeja(s). Obtienes abejas al cosechar flores. Si impactas a un objetivo con ataques o habilidades en un radio de @BeeRange@ de distancia, las abejas lo atacarán a lo largo de @DebuffDuration@ seg.",
@@ -3410,7 +3412,7 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "Al <healing>curar</healing> u <Shield>otorgar escudos</Shield>, tu daño de habilidad aumenta en un @SpellDamagePerStack*100@%. El efecto se acumula infinitamente durante la ronda.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "Obtienes un @CritChanceBonus*100@% de Probabilidad de Golpe Crítico y un @CritDamageBonus*100@% de daño de golpe crítico. Tu Probabilidad de Golpe Crítico tiene un límite de un @CritChanceCeiling*100@%.<br><br>La Probabilidad de Golpe Crítico que supere un @CritChanceCeiling*100@% se convierte en daño de golpe crítico.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "Apunta a la Cabeza",
             "rarity": 1,
-            "tooltip": "Obtienes un @CritChanceBonus*100@% de Probabilidad de Golpe Crítico y un @CritDamageBonus*100@% de daño de golpe crítico. Tu Probabilidad de Golpe Crítico tiene un límite de un @CritChanceCeiling*100@%.<br><br>La Probabilidad de Golpe Crítico que supere un @CritChanceCeiling*100@% se convierte en daño de golpe crítico."
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",

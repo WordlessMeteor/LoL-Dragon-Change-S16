@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "الشرط: اشترِ @AnvilsReqToComplete@ من سنادين العناصر.<br><br>الجائزة: تصبح جميع عناصرك عناصر <keywordMajor>كفاءة</keywordMajor>، مما يزيد إحصاءاتها بنسبة @ItemPercentAmp*100@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2733,13 +2733,13 @@
                 "AbilityBoost": 0.30000001192092896,
                 "AttackBoost": 0.30000001192092896
             },
-            "desc": "عندما تلحق ضررًا بهجوم، تلحق قدرتك التالية @AbilityBoost*100@% ضرر زائد.<br><br>عندما تلحق ضررًا بقدرة، يلحق هجومك التالي @AttackBoost*100@% ضرر زائد.",
+            "desc": "عندما تلحق ضررًا بهجوم، تلحق قدرتك التالية @AbilityBoost*100@% من الضرر المتزايد.<br><br>عندما تلحق ضررًا بقدرة، يلحق هجومك التالي @AttackBoost*100@% من الضرر المتزايد.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
             "id": 338,
             "name": "هجين",
             "rarity": 1,
-            "tooltip": "عندما تلحق ضررًا بهجوم، تلحق قدرتك التالية @AbilityBoost*100@% ضرر زائد.<br><br>عندما تلحق ضررًا بقدرة، يلحق هجومك التالي @AttackBoost*100@% ضرر زائد."
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "تبدأ كل جولة ومعك @StartingBees@ من النحل. تكسب النحل من خلال حصاد الزهور. يؤدي الهجوم على هدف أو إصابته بقدرة ضمن نطاق @BeeRange@ إلى إطلاق النحل لمهاجمته لمدة @DebuffDuration@ث.",
@@ -3410,7 +3412,7 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "يؤدي <healing>العلاج</healing> أو <Shield>التدريع</Shield> إلى زيادة ضرر قدرتك بنسبة @SpellDamagePerStack*100@%، قابلة للتكدس إلى ما لانهاية خلال الجولة.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -3991,13 +3991,13 @@
                 "HealthThreshold": 0.30000001192092896,
                 "StealthDuration": 1.25
             },
-            "desc": "Cherry_MirrorImage_Summary",
+            "desc": "عندما تنخفض صحتك إلى أقل من <scaleHealth>@HealthThreshold*100@%</scaleHealth>، تصبح <keywordStealth>غير مرئي</keywordStealth> لفترة وجيزة وتنشئ 4 نسخ عنك.",
             "iconLarge": "assets/ux/cherry/augments/icons/mirrorimage_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mirrorimage_small.png",
             "id": 172,
             "name": "صورة طبق الأصل",
             "rarity": 0,
-            "tooltip": "Cherry_MirrorImage_Summary"
+            "tooltip": "عندما تنخفض صحتك إلى أقل من <scaleHealth>@HealthThreshold*100@%</scaleHealth>، تصبح <keywordStealth>غير مرئي</keywordStealth> لفترة وجيزة وتنشئ 4 نسخ عنك."
         },
         {
             "apiName": "Desecrator",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "تكسب @CritChanceBonus*100@% فرصة ضربة حرجة و @CritDamageBonus*100@% ضرر ضربة حرجة. يبلغ الحد الأقصى لفرصة الضربة الحرجة لديك @CritChanceCeiling*100@%.<br><br>يحوّل فرصة الضربة الحرجة التي تتجاوز @CritChanceCeiling*100@% إلى ضرر ضربة حرجة.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "استهداف الرأس",
             "rarity": 1,
-            "tooltip": "تكسب @CritChanceBonus*100@% فرصة ضربة حرجة و @CritDamageBonus*100@% ضرر ضربة حرجة. يبلغ الحد الأقصى لفرصة الضربة الحرجة لديك @CritChanceCeiling*100@%.<br><br>يحوّل فرصة الضربة الحرجة التي تتجاوز @CritChanceCeiling*100@% إلى ضرر ضربة حرجة."
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",

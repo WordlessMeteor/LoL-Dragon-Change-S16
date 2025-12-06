@@ -846,7 +846,7 @@
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "泰達米爾對於戰鬥感到興奮，受到傷害越多，物理攻擊越高。他能夠施放嗜血殺戮來消耗怒氣並治療自己。",
-            "dynamicDescription": "Spell_TryndamereQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>泰達米爾渴望鮮血，會依據已損失生命逐漸增加最多<scaleAD>@MaximumBonusAD@物攻</scaleAD><br><br><spellActive>主動：</spellActive>泰達米爾消耗自身<keywordMajor>怒氣</keywordMajor>，回復<healing>@BaseHeal@生命，且每有一點怒氣可回復@HealPerFury@生命(上限：@MaximumHeal@)</healing>。 @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -996,7 +996,7 @@
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "泰達米爾發出戰嚎，降低周遭敵人的物理攻擊。背對泰達米爾的目標跑速也會下降。",
-            "dynamicDescription": "Spell_TryndamereW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "泰達米爾出言羞辱，使敵方英雄物攻降低@ADReduction*-1@，持續@ReductionDuration@秒，並在對方退縮時使其<status>緩速</status>@SlowPotency*-100@%，持續@SlowDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1146,7 +1146,7 @@
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "泰達米爾切向目標單位，對路徑上的敵人造成傷害。",
-            "dynamicDescription": "Spell_TryndamereE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "泰達米爾旋轉穿過敵人，造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>且每命中一位敵軍生成<keywordMajor>@NonChampFuryGain@怒氣</keywordMajor>，命中敵方英雄時提升至<keywordMajor>@ChampFuryGain@怒氣</keywordMajor>。<br><br>泰達米爾暴擊時，此技能冷卻時間縮短@NonChampCDRefund@秒，對敵方英雄暴擊時，縮短@ChampCDRefund@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

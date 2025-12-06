@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "Követelmény: Vásárolj @AnvilsReqToComplete@ tárgyüllőt.<br><br>Jutalom: Minden tárgyad <keywordMajor>mesterivé</keywordMajor> válik, és @ItemPercentAmp*100@%-kal nőnek az értékei.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2739,7 +2739,7 @@
             "id": 338,
             "name": "Hibrid",
             "rarity": 1,
-            "tooltip": "Ha egy támadásod sebzést okoz, a következő képességed sebzése @AbilityBoost*100@%-kal nő.<br><br>Ha egy képességed sebzést okoz, a következő támadásod sebzése @AttackBoost*100@%-kal nő."
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "Minden kört @StartingBees@ Méhvel kezdesz. A virágok szüretelése Méheket ad. Ha egy támadásod vagy képességed eltalál egy @BeeRange@ mezőn belüli célpontot, azzal @DebuffDuration@ másodpercre rászabadítasz egy Méhet.",
@@ -3410,7 +3412,7 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "A <healing>gyógyítás</healing> és <Shield>pajzs</Shield> @SpellDamagePerStack*100@%-kal növeli a képességeid sebzését, ami a körben korlátlanul halmozódik.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -3991,13 +3991,13 @@
                 "HealthThreshold": 0.30000001192092896,
                 "StealthDuration": 1.25
             },
-            "desc": "Cherry_MirrorImage_Summary",
+            "desc": "Amikor <scaleHealth>@HealthThreshold*100@% alá csökken az életerőd</scaleHealth>, rövid időre <keywordStealth>lopakodni</keywordStealth> kezdesz, és 4 klónt hagysz hátra.",
             "iconLarge": "assets/ux/cherry/augments/icons/mirrorimage_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mirrorimage_small.png",
             "id": 172,
             "name": "Tükörkép",
             "rarity": 0,
-            "tooltip": "Cherry_MirrorImage_Summary"
+            "tooltip": "Amikor <scaleHealth>@HealthThreshold*100@% alá csökken az életerőd</scaleHealth>, rövid időre <keywordStealth>lopakodni</keywordStealth> kezdesz, és 4 klónt hagysz hátra."
         },
         {
             "apiName": "Desecrator",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "@CritChanceBonus*100@% kritikus csapási esélyt és @CritDamageBonus*100@% kritikus csapási sebzést kapsz. A kritikus csapási esélyed maximum @CritChanceCeiling*100@% lehet.<br><br>A kritikus csapási esély @CritChanceCeiling*100@% felett kritikus csapási sebzéssé alakul.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "Célozz a fejre",
             "rarity": 1,
-            "tooltip": "@CritChanceBonus*100@% kritikus csapási esélyt és @CritDamageBonus*100@% kritikus csapási sebzést kapsz. A kritikus csapási esélyed maximum @CritChanceCeiling*100@% lehet.<br><br>A kritikus csapási esély @CritChanceCeiling*100@% felett kritikus csapási sebzéssé alakul."
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",

@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "需求：购买@AnvilsReqToComplete@个装备锻造器。<br><br>奖励：你的所有装备升级为<keywordMajor>杰作装备</keywordMajor>，提高其@ItemPercentAmp*100@%属性。",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2739,7 +2739,7 @@
             "id": 338,
             "name": "双管齐下",
             "rarity": 1,
-            "tooltip": "当你用一次攻击造成伤害时，你的下一个技能造成的伤害提升@AbilityBoost*100@%。<br><br>当你用一个技能造成伤害时，你的下一次攻击造成的伤害提升@AttackBoost*100@%。"
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "每回合开始时有@StartingBees@只【小蜜蜂】。通过收集花朵来获得【小蜜蜂】。攻击或技能在命中一个@BeeRange@码内的目标时将派出一只【小蜜蜂】去进行持续@DebuffDuration@秒的攻击。",
@@ -3410,20 +3412,20 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
                 "MinimumDistance": 1500.0,
                 "WispSpeed": 3500.0
             },
-            "desc": "每场战斗仅触发一次，当你即将阵亡时，转而化为一个精魂，将你的生命值设置为<scaleHealth>@HealthLock*100@%</scaleHealth>，并传送到竞技场内的一个随机地点。",
+            "desc": "每场战斗仅触发一次，当你即将阵亡时，转而化为一个精魂，将你自身设置为<scaleHealth>@HealthLock*100@%生命值</scaleHealth>，并传送到竞技场内的一个随机地点。",
             "iconLarge": "assets/ux/cherry/augments/icons/panic_room_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/panic_room_small.png",
             "id": 335,
             "name": "避难所",
             "rarity": 0,
-            "tooltip": "每场战斗仅触发一次，当你即将阵亡时，转而化为一个精魂，将你的生命值设置为<scaleHealth>@HealthLock*100@%</scaleHealth>，并传送到竞技场内的一个随机地点。"
+            "tooltip": "每场战斗仅触发一次，当你即将阵亡时，转而化为一个精魂，将你自身设置为<scaleHealth>@HealthLock*100@%生命值</scaleHealth>，并传送到竞技场内的一个随机地点。"
         },
         {
             "apiName": "ParasiticMutation",
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "<healing>治疗</healing>或<Shield>护盾</Shield>会提高你@SpellDamagePerStack*100@%技能伤害，回合内可无限叠加层数。",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -3991,13 +3991,13 @@
                 "HealthThreshold": 0.30000001192092896,
                 "StealthDuration": 1.25
             },
-            "desc": "Cherry_MirrorImage_Summary",
+            "desc": "当你跌下<scaleHealth>@HealthThreshold*100@%生命值</scaleHealth>时，暂时<keywordStealth>隐形</keywordStealth>并生成你自己的4个复制体。",
             "iconLarge": "assets/ux/cherry/augments/icons/mirrorimage_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mirrorimage_small.png",
             "id": 172,
             "name": "镜花水月",
             "rarity": 0,
-            "tooltip": "Cherry_MirrorImage_Summary"
+            "tooltip": "当你跌下<scaleHealth>@HealthThreshold*100@%生命值</scaleHealth>时，暂时<keywordStealth>隐形</keywordStealth>并生成你自己的4个复制体。"
         },
         {
             "apiName": "Desecrator",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "获得@CritChanceBonus*100@%暴击几率和@CritDamageBonus*100@%暴击伤害。你的暴击几率封顶值为@CritChanceCeiling*100@%。<br><br>将@CritChanceCeiling*100@%之上的暴击几率转化为暴击伤害。",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "瞄准脑袋",
             "rarity": 1,
-            "tooltip": "获得@CritChanceBonus*100@%暴击几率和@CritDamageBonus*100@%暴击伤害。你的暴击几率封顶值为@CritChanceCeiling*100@%。<br><br>将@CritChanceCeiling*100@%之上的暴击几率转化为暴击伤害。"
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",

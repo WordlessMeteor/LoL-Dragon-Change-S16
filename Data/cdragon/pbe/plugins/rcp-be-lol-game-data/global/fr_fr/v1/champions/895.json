@@ -482,7 +482,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Nilah donne un coup de lame-fouet dans la direction choisie, infligeant des dégâts aux ennemis sur une ligne droite. Cela augmente sa portée d'attaque pendant un court instant.",
-            "dynamicDescription": "Spell_NilahQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Nilah gagne @CritArmorPen@ de pénétration d'armure, et ses attaques contre les champions lui rendent des <healing>PV équivalents à @CritLifesteal@ des dégâts infligés</healing>. Toute surcharge de PV issue de cet effet est convertie en <shield>bouclier</shield> pendant @ShieldDuration@ sec.<br><br><spellActive>Active :</spellActive> Nilah donne un coup de lame-fouet, infligeant <physicalDamage>@DamageCalc@ pts de dégâts physiques</physicalDamage>. Si une unité ou un bâtiment ennemis sont touchés, Nilah gagne 125 portée d'attaque et <attackSpeed>@BonusAttackSpeedCalc@% de vitesse d'attaque</attackSpeed>, et ses attaques infligent des dégâts dans une zone conique pendant @BuffDuration@ sec.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -932,7 +932,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Faisant gaiement tournoyer sa lame-fouet, Nilah inflige des dégâts aux ennemis qui l'entourent avant de les attirer vers elle.",
-            "dynamicDescription": "Spell_NilahR_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nilah fait tourner sa lame-fouet, infligeant <physicalDamage>@DamagePerTickCalcTooltip@ pts de dégâts physiques</physicalDamage> en 1 sec, puis finit avec un coup infligeant <physicalDamage>@DamageCalc@ pts de dégâts physiques</physicalDamage>. De surcroît, ce coup <status>attire</status> vers elle les ennemis proches.<br><br>Apothéose soigne Nilah et ses alliés proches à hauteur de <healing>@ChampHealingPercent@ (+@spell.NilahQ:CritLifesteal@ Lame fluide) des dégâts infligés</healing> aux champions ennemis, convertissant tout PV supplémentaire en <shield>bouclier</shield> pendant @Duration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

@@ -846,7 +846,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "A Tryndamere le encanta la emoción del combate y, cuanto más herido está, más aumenta su daño de ataque. Puede lanzar Sed de sangre para consumir su furia y curarse.",
-            "dynamicDescription": "Spell_TryndamereQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva</spellPassive>: Tryndamere, sediento de sangre, obtiene <scaleAD>@MaximumBonusAD@ de daño de ataque</scaleAD> según la vida que le falte.<br><br><spellActive>Activa:</spellActive> Tryndamere consume su <keywordMajor>Furia</keywordMajor> para restaurar <healing>@BaseHeal@ + @HealPerFury@ de vida por Furia (máximo: @MaximumHeal@).</healing> @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -996,7 +996,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Tryndamere profiere un grito insultante que reduce el daño de ataque de los campeones circundantes. Además, los enemigos de espaldas a Tryndamere ven reducida su velocidad de movimiento.",
-            "dynamicDescription": "Spell_TryndamereW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere pronuncia insultos que reducen el daño de ataque de los campeones en @ADReduction*-1@ durante @ReductionDuration@ s y los <status>ralentiza</status> un @SlowPotency*-100@% mientras se acobardan ante él durante @SlowDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1146,7 +1146,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Tryndamere se abre paso hacia una unidad e inflige daño a todos los enemigos en su camino.",
-            "dynamicDescription": "Spell_TryndamereE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere gira a través de sus enemigos, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> y genera <keywordMajor>@NonChampFuryGain@ de Furia</keywordMajor> por cada enemigo golpeado, que aumenta hasta <keywordMajor>@ChampFuryGain@ de Furia</keywordMajor> contra campeones enemigos.<br><br>El enfriamiento de la habilidad se reduce en @NonChampCDRefund@ s cuando Tryndamere asesta un impacto crítico y se reduce en @ChampCDRefund@ s cuando lo hace contra un campeón.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

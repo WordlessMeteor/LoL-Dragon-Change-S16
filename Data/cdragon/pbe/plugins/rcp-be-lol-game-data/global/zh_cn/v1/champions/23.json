@@ -918,7 +918,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "泰达米尔对战斗极度饥渴，他受伤程度越高，攻击力越强。他能通过释放【Q嗜血杀戮】消耗怒气并治疗自己。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>泰达米尔嗜血成性，获得至多<scaleAD>@MaximumBonusAD@攻击力</scaleAD>，基于他的已损失生命值(最大值出现在@RemainingHealthThreshold*100@%剩余生命值)<br><br><spellActive>主动：</spellActive>泰达米尔消耗他的<keywordMajor>怒气</keywordMajor>，回复<healing>@BaseHeal@外加@HealPerFury@x怒气的生命值(最大值：@MaximumHeal@)</healing>。 @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>泰达米尔嗜血成性，获得至多<scaleAD>@MaximumBonusAD@攻击力</scaleAD>，基于他的已损失生命值。<br><br><spellActive>主动：</spellActive>泰达米尔消耗他的<keywordMajor>怒气</keywordMajor>，回复<healing>@BaseHeal@外加@HealPerFury@x怒气的生命值(最大值：@MaximumHeal@)</healing>。 @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1068,7 +1068,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "泰达米尔嘲笑敌人，减少身边敌方英雄的攻击力。背对泰达米尔的敌人还会被减速。",
-            "dynamicDescription": "泰达米尔抛出羞辱之语，使英雄们降低@ADReduction*-1@攻击力，持续@ReductionDuration@秒，并且对逃离泰达米尔的敌人造成@SlowPotency*-100@%<status>减速</status>，持续相同时长。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "泰达米尔抛出羞辱之语，使英雄们降低@ADReduction*-1@攻击力，持续@ReductionDuration@秒，并且对逃离泰达米尔的敌人造成@SlowPotency*-100@%<status>减速</status>，持续@SlowDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1218,7 +1218,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "泰达米尔挥舞大剑冲向目标，对冲锋路线上所有敌人造成伤害。",
-            "dynamicDescription": "Spell_TryndamereE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "泰达米尔旋转并穿过他的敌人，造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>并且每命中一个敌人就会生成<keywordMajor>@NonChampFuryGain@怒气</keywordMajor>，在命中敌方英雄时提升至<keywordMajor>@ChampFuryGain@怒气</keywordMajor>。<br><br>这个技能的冷却时间会在泰达米尔暴击时缩短@NonChampCDRefund@秒，并在对英雄暴击时缩短@ChampCDRefund@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

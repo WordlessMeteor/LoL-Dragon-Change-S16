@@ -846,7 +846,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "戦闘で負傷するほど攻撃力が増加する。発動させるとたまっている「フューリー」を消費し、体力を回復する。",
-            "dynamicDescription": "Spell_TryndamereQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 敵の血を求める欲望に駆り立てられ、減少体力に応じて<scaleAD>攻撃力が@MaximumBonusAD@</scaleAD>まで増加する。<br><br><spellActive>発動効果:</spellActive> たまった<keywordMajor>「フューリー」</keywordMajor>を消費し、<healing>@BaseHeal@ + 「フューリー」1ポイントにつき@HealPerFury@の体力</healing>を回復する(最大: @MaximumHeal@)。 @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -996,7 +996,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "敵を嘲る言葉を叫び、周囲にいる敵チャンピオンの攻撃力を低下させる。トリンダメアに背を向けている敵は、移動速度も低下する。",
-            "dynamicDescription": "Spell_TryndamereW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "嘲りの言葉を浴びせ、@ReductionDuration@秒間チャンピオンの攻撃力を@ADReduction*-1@低下させる。トリンダメアに背を向けている敵は@SlowDuration@秒間、@SlowPotency*-100@%の<status>スロウ効果</status>を受ける。@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1146,7 +1146,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点へ回転しながら移動し、移動中に当たった敵ユニットにダメージを与える。",
-            "dynamicDescription": "Spell_TryndamereE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "回転しながら敵に切り込み、<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与えて、命中した敵1体につき<keywordMajor>@NonChampFuryGain@フューリー</keywordMajor>を、対象が敵チャンピオンだった場合は<keywordMajor>@ChampFuryGain@フューリー</keywordMajor>を獲得する。<br><br>クリティカルが発生すると、このスキルのクールダウンが@NonChampCDRefund@秒短縮される(対象がチャンピオンの場合は@ChampCDRefund@秒短縮)。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,

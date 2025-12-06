@@ -26,7 +26,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "Idle1": {
+            "{0e2aa142}": {
                 "mTrackDataName": "Default",
                 "mTickDuration": 0.10000000149011612,
                 "mAnimationResourceData": {
@@ -95,7 +95,7 @@
                 "mEventDataMap": {
                     "FX": {
                         "mStartFrame": 1.0,
-                        "mEffectKey": "{37cf0620}",
+                        "mEffectKey": "TFT16_Bard_W_hand_cas",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "Weapon_Orb",
@@ -127,7 +127,7 @@
                 "mEventDataMap": {
                     "Particle": {
                         "mName": "Particle",
-                        "mEffectKey": "{37cf0620}",
+                        "mEffectKey": "TFT16_Bard_W_hand_cas",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "l_buffbone_glb_hand_loc",
@@ -144,6 +144,23 @@
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
+            },
+            "{68be3160}": {
+                "mTrackDataName": "Default",
+                "mTickDuration": 0.01666666753590107,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Bard/Skins/Base/Animations/TFT16_Bard_Run.TFT_Set16.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "EndFrame": 1.0,
+                "__type": "AtomicClipData"
+            },
+            "Idle1": {
+                "mClipNameList": [
+                    "{0e2aa142}",
+                    "{68be3160}"
+                ],
+                "__type": "SequencerClipData"
             }
         },
         "mMaskDataMap": {
@@ -249,8 +266,16 @@
             }
         },
         "mBlendDataTable": {
-            "18406128288626498566": {
+            "18406128286215872834": {
                 "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "1020805572150047072": {
+                "mTime": 1.0,
+                "__type": "TimeBlendData"
+            },
+            "7547524314143826242": {
+                "mTime": 1.0,
                 "__type": "TimeBlendData"
             }
         },

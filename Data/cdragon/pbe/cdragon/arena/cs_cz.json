@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "Požadavek: Kup si @AnvilsReqToComplete@ kovadlin(y) předmětů.<br><br>Odměna: Všechny tvé předměty se změní na <keywordMajor>mistrovské</keywordMajor>, čímž se jejich atributy zvýší o @ItemPercentAmp*100@&nbsp;%.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2739,7 +2739,7 @@
             "id": 338,
             "name": "Hybrid",
             "rarity": 1,
-            "tooltip": "Když způsobíš poškození útokem, tvá příští schopnost způsobí o @AbilityBoost*100@&nbsp;% vyšší poškození.<br><br>Když způsobíš poškození schopností, tvůj příští útok způsobí o @AttackBoost*100@&nbsp;% vyšší poškození."
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "Na začátku každého kola máš @StartingBees@x včelu. Sbíráním květin získáváš včely. Když zasáhneš útokem nebo schopností cíl v okruhu @BeeRange@ jednotek, přiletí k němu včela a bude na něj @DebuffDuration@&nbsp;sek. útočit.",
@@ -3410,7 +3412,7 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "Použitím <healing>léčení</healing> nebo <Shield>štítů</Shield> se poškození způsobované tvými schopnostmi zvýší o @SpellDamagePerStack*100@&nbsp;%, tento efekt se může v rámci kola neomezeně nasčítávat.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -3991,13 +3991,13 @@
                 "HealthThreshold": 0.30000001192092896,
                 "StealthDuration": 1.25
             },
-            "desc": "Cherry_MirrorImage_Summary",
+            "desc": "Když ti klesne zdraví pod <scaleHealth>@HealthThreshold*100@&nbsp;%</scaleHealth>, získáš na chvíli <keywordStealth>neviditelnost</keywordStealth> a vytvoříš si 4 vlastní klony.",
             "iconLarge": "assets/ux/cherry/augments/icons/mirrorimage_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mirrorimage_small.png",
             "id": 172,
             "name": "Zrcadlový obraz",
             "rarity": 0,
-            "tooltip": "Cherry_MirrorImage_Summary"
+            "tooltip": "Když ti klesne zdraví pod <scaleHealth>@HealthThreshold*100@&nbsp;%</scaleHealth>, získáš na chvíli <keywordStealth>neviditelnost</keywordStealth> a vytvoříš si 4 vlastní klony."
         },
         {
             "apiName": "Desecrator",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "Získáš @CritChanceBonus*100@&nbsp;% k šanci na kritický zásah a @CritDamageBonus*100@&nbsp;% k poškození kritickým zásahem. Tvoje šance na kritický zásah nemůže přesáhnout hodnotu @CritChanceCeiling*100@&nbsp;%.<br><br>Šance na kritický zásah nad @CritChanceCeiling*100@&nbsp;% se ti převádí do poškození kritickým zásahem.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "Miř na hlavu",
             "rarity": 1,
-            "tooltip": "Získáš @CritChanceBonus*100@&nbsp;% k šanci na kritický zásah a @CritDamageBonus*100@&nbsp;% k poškození kritickým zásahem. Tvoje šance na kritický zásah nemůže přesáhnout hodnotu @CritChanceCeiling*100@&nbsp;%.<br><br>Šance na kritický zásah nad @CritChanceCeiling*100@&nbsp;% se ti převádí do poškození kritickým zásahem."
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",

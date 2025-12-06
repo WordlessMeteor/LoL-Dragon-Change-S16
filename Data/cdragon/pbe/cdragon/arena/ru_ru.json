@@ -2667,7 +2667,7 @@
             "calculations": {},
             "dataValues": {
                 "AnvilsReqToComplete": 2.0,
-                "ItemPercentAmp": 0.10000000149011612
+                "ItemPercentAmp": 0.15000000596046448
             },
             "desc": "Требование: купить наковальни предметов (@AnvilsReqToComplete@).<br><br>Награда: все ваши предметы становятся <keywordMajor>несравненными</keywordMajor> – их параметры повышаются на @ItemPercentAmp*100@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/quest_rite_of_the_forge_god_large.png",
@@ -2739,7 +2739,7 @@
             "id": 338,
             "name": "Гибрид",
             "rarity": 1,
-            "tooltip": "Когда вы наносите урон автоатакой, ваше следующее умение наносит на @AbilityBoost*100@% больше урона.<br><br>Когда вы наносите урон умением, ваша следующая автоатака наносит на @AttackBoost*100@% больше урона."
+            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
         },
         {
             "apiName": "HiveMind",
@@ -2748,17 +2748,17 @@
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
-                            "__type": "ByCharLevelInterpolationCalculationPart",
-                            "mEndValue": 5.0,
-                            "mStartValue": 1.0
+                            "__type": "{ee18a47b}",
+                            "{0589a59c}": "BaseDamageMin",
+                            "{0b65bc23}": "BaseDamageMax"
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806
+                            "mCoefficient": 0.10000000149011612
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.05000000074505806,
+                            "mCoefficient": 0.10000000149011612,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,9 +2767,11 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BeeRange": 800.0,
-                "DebuffDuration": 1.5,
-                "MaxBeeStacks": 6.0,
+                "BaseDamageMax": 40.0,
+                "BaseDamageMin": 20.0,
+                "BeeRange": 25000.0,
+                "DebuffDuration": 2.0,
+                "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
             "desc": "В начале каждого раунда вы получаете пчел (@StartingBees@). Также вы получаете пчел, собирая цветы. Попадая автоатаками и умениями по цели, которая находится в пределах @BeeRange@ ед., вы выпускаете в нее пчелу, которая атакует ее в течение @DebuffDuration@ сек.",
@@ -3410,7 +3412,7 @@
             "apiName": "PanicRoom",
             "calculations": {},
             "dataValues": {
-                "DelayMovingTime": 0.5,
+                "DelayMovingTime": 1.0,
                 "HealthLock": 0.20000000298023224,
                 "MaximumDistanceRoF": 1500.0,
                 "MaxmimumDistance": 3000.0,
@@ -3681,9 +3683,7 @@
                 "ASPerStack": 0.019999999552965164,
                 "Cooldown": 3.0,
                 "MinimumTrigger": 1.0,
-                "SpellDamagePerStack": 0.029999999329447746,
-                "StacksPerAllyCast": 5.0,
-                "StacksPerSelfCast": 1.0
+                "SpellDamagePerStack": 0.029999999329447746
             },
             "desc": "<healing>Лечение</healing> и <Shield>наложение щитов</Shield> повышают урон от умений на @SpellDamagePerStack*100@% до конца раунда. Эффект суммируется бесконечно.",
             "iconLarge": "assets/ux/cherry/augments/icons/righteous_fury_large.png",
@@ -3991,13 +3991,13 @@
                 "HealthThreshold": 0.30000001192092896,
                 "StealthDuration": 1.25
             },
-            "desc": "Cherry_MirrorImage_Summary",
+            "desc": "Когда у вас остается <scaleHealth>@HealthThreshold*100@% здоровья</scaleHealth>, вы ненадолго получаете <keywordStealth>невидимость</keywordStealth> и создаете 4 своих клонов.",
             "iconLarge": "assets/ux/cherry/augments/icons/mirrorimage_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mirrorimage_small.png",
             "id": 172,
             "name": "Отражение",
             "rarity": 0,
-            "tooltip": "Cherry_MirrorImage_Summary"
+            "tooltip": "Когда у вас остается <scaleHealth>@HealthThreshold*100@% здоровья</scaleHealth>, вы ненадолго получаете <keywordStealth>невидимость</keywordStealth> и создаете 4 своих клонов."
         },
         {
             "apiName": "Desecrator",
@@ -4421,8 +4421,8 @@
             "dataValues": {
                 "CritChanceBonus": 0.25,
                 "CritChanceCeiling": 0.5,
-                "CritChanceMod": 0.5,
-                "CritDamageBonus": 0.5
+                "CritChanceToDamageRatio": 0.5,
+                "CritDamageBonus": 0.25
             },
             "desc": "Увеличивает шанс критического удара на @CritChanceBonus*100@%, а критический урон – на @CritDamageBonus*100@%. Ваш максимальный шанс критического удара становится равным @CritChanceCeiling*100@%.<br><br>Преобразует шанс критического удара свыше @CritChanceCeiling*100@% в критический урон.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
@@ -4430,7 +4430,7 @@
             "id": 336,
             "name": "Целься в голову",
             "rarity": 1,
-            "tooltip": "Увеличивает шанс критического удара на @CritChanceBonus*100@%, а критический урон – на @CritDamageBonus*100@%. Ваш максимальный шанс критического удара становится равным @CritChanceCeiling*100@%.<br><br>Преобразует шанс критического удара свыше @CritChanceCeiling*100@% в критический урон."
+            "tooltip": "Cherry_AimForTheHead_Tooltip"
         },
         {
             "apiName": "SummonersRoulette",
