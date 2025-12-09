@@ -2739,12 +2739,12 @@
             "id": 338,
             "name": "双管齐下",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>每施放一个技能会强化一次攻击。</rules>"
         },
         {
             "apiName": "HiveMind",
             "calculations": {
-                "{18f0ea4e}": {
+                "BeeDamage": {
                     "__type": "GameCalculation",
                     "mFormulaParts": [
                         {
@@ -2754,11 +2754,11 @@
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.10000000149011612
+                            "mCoefficient": 0.20000000298023224
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.10000000149011612,
+                            "mCoefficient": 0.20000000298023224,
                             "mStat": 2,
                             "mStatFormula": 2
                         }
@@ -2767,20 +2767,20 @@
             },
             "dataValues": {
                 "ASReductionPerCounter": -0.029999999329447746,
-                "BaseDamageMax": 40.0,
-                "BaseDamageMin": 20.0,
+                "BaseDamageMax": 100.0,
+                "BaseDamageMin": 40.0,
                 "BeeRange": 25000.0,
                 "DebuffDuration": 2.0,
                 "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
-            "desc": "每回合开始时有@StartingBees@只【小蜜蜂】。通过收集花朵来获得【小蜜蜂】。攻击或技能在命中一个@BeeRange@码内的目标时将派出一只【小蜜蜂】去进行持续@DebuffDuration@秒的攻击。",
+            "desc": "每回合开始时有@StartingBees@只【小蜜蜂】。通过收集花朵来获得【小蜜蜂】。伤害一个敌方弈子时，将派出一只【小蜜蜂】，它在抵达后的@DebuffDuration@秒里持续造成@BeeDamage@伤害，然后会折返。<br>",
             "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
             "id": 338,
             "name": "蜂巢思维",
             "rarity": 2,
-            "tooltip": "每回合开始时有@StartingBees@只【小蜜蜂】。通过收集花朵来获得【小蜜蜂】。攻击或技能在命中一个@BeeRange@码内的目标时将派出一只【小蜜蜂】去进行持续@DebuffDuration@秒的攻击。<br><br>这个回合已造成的伤害：@f1@<br>已造成伤害的总和：@f2@"
+            "tooltip": "每回合开始时有@StartingBees@只【小蜜蜂】。通过收集花朵来获得【小蜜蜂】。伤害一个敌方弈子时，将派出一只【小蜜蜂】，它在抵达后的@BeeDamage@秒里持续造成@DebuffDuration@伤害，然后会折返。<br><br>这个回合已造成的伤害：@f1@<br>已造成伤害的总和：@f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "正义之怒",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>当前技能伤害加成：@f1@%<br>本回合造成的额外伤害：@f2@<br>造成额外伤害的总和：@f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>每个技能施放、强化符文和装备有@Cooldown@秒冷却时间。<br><br>当前技能伤害加成：@f1@%<br>本回合造成的额外伤害：@f2@<br>造成额外伤害的总和：@f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "获得@CritChanceBonus*100@%暴击几率和@CritDamageBonus*100@%暴击伤害。你的暴击几率封顶值为@CritChanceCeiling*100@%。<br><br>将@CritChanceCeiling*100@%之上的暴击几率转化为暴击伤害。",
+            "desc": "获得@CritChanceBonus*100@%暴击几率和@CritDamageBonus*100@%暴击伤害。你的暴击几率封顶值为@CritChanceCeiling*100@%。<br><br>将@CritChanceCeiling*100@%之上的暴击几率的@CritChanceToDamageRatio*100@%转化为暴击伤害。",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "瞄准脑袋",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>额外暴击伤害总和：@f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

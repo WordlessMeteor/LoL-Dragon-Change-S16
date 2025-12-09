@@ -8886,7 +8886,7 @@
         "name": "LeaveDimension",
         "EventParameters": {
             "Unit": {
-                "Var": "{e8b51a07}",
+                "Var": "Unit",
                 "__type": "ScriptTableGet"
             }
         },
@@ -9234,7 +9234,7 @@
         "name": "EnterDimension",
         "EventParameters": {
             "Unit": {
-                "Var": "{e8b51a07}",
+                "Var": "Unit",
                 "__type": "ScriptTableGet"
             }
         },
@@ -22943,6 +22943,18 @@
                 "HideHealthBarFromEnemies": true,
                 "Ghosted": true,
                 "HasVfxPriority": true,
+                "DetectionEyeEffect": {
+                    "effect": "{84500b56}",
+                    "__type": "StealthVfxInstance"
+                },
+                "DetectionEyeWarningEffect": {
+                    "effect": "{59720fd2}",
+                    "__type": "StealthVfxInstance"
+                },
+                "DetectedEffect": {
+                    "effect": "{aff48344}",
+                    "__type": "StealthVfxInstance"
+                },
                 "EnterStealthEffect": {
                     "effect": "{1306dc84}",
                     "__type": "StealthVfxInstance"
