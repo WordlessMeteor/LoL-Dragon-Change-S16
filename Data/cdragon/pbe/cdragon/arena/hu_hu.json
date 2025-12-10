@@ -2736,10 +2736,10 @@
             "desc": "Ha egy támadásod sebzést okoz, a következő képességed sebzése @AbilityBoost*100@%-kal nő.<br><br>Ha egy képességed sebzést okoz, a következő támadásod sebzése @AttackBoost*100@%-kal nő.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "Hibrid",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>A képességek elsütésenként egy támadást erősítenek fel.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Szent harag",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Képesség sebzésének aktuális bónusza: @f1@%<br>Bónusz sebzés ebben a körben: @f2@<br>Bónusz sebzés összesen: @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@ mp. töltési idő minden képességaktiválás, erősítés és tárgy esetében.<br><br>Képesség sebzésének aktuális bónusza: @f1@%<br>Bónusz sebzés ebben a körben: @f2@<br>Bónusz sebzés összesen: @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "@CritChanceBonus*100@% kritikus csapási esélyt és @CritDamageBonus*100@% kritikus csapási sebzést kapsz. A kritikus csapási esélyed maximum @CritChanceCeiling*100@% lehet.<br><br>A kritikus csapási esély @CritChanceCeiling*100@% felett kritikus csapási sebzéssé alakul.",
+            "desc": "@CritChanceBonus*100@% kritikus csapási esélyt és @CritDamageBonus*100@% kritikus csapási sebzést kapsz. A kritikus csapási esélyed maximum @CritChanceCeiling*100@% lehet.<br><br>A kritikus csapási esély @CritChanceCeiling*100@% feletti részének @CritChanceToDamageRatio*100@%-a kritikus csapási sebzéssé alakul.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Célozz a fejre",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>Összes bónusz kritikus csapási sebzés: @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

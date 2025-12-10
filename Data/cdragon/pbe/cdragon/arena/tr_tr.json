@@ -2736,10 +2736,10 @@
             "desc": "Bir saldırıyla hasar verdiğinde bir sonraki yeteneğin %@AbilityBoost*100@ daha fazla hasar verir.<br><br>Bir yetenekle hasar verdiğinde bir sonraki saldırın %@AttackBoost*100@ daha fazla hasar verir.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "Karma",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Yetenekler kullanım başına bir saldırıyı güçlendirir.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Haklı Öfke",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Mevcut Yetenek Hasarı İlavesi: %@f1@<br>Bu Tur İlave Hasar: @f2@<br>Toplam İlave Hasar: @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Kullanılan yetenek, eklenti ve eşya başına @Cooldown@ sn. bekleme süresi.<br><br>Mevcut Yetenek Hasarı İlavesi: %@f1@<br>Bu Tur İlave Hasar: @f2@<br>Toplam İlave Hasar: @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "%@CritChanceBonus*100@ Kritik Vuruş İhtimali ve %@CritDamageBonus*100@ Kritik Vuruş Hasarı kazanırsın. Kritik vuruş ihtimalin en fazla %@CritChanceCeiling*100@ olabilir.<br><br>%@CritChanceCeiling*100@ değerinin üstündeki kritik vuruş ihtimali, kritik vuruş hasarına dönüşür.",
+            "desc": "%@CritChanceBonus*100@ Kritik Vuruş İhtimali ve %@CritDamageBonus*100@ Kritik Vuruş Hasarı kazanırsın. Kritik vuruş ihtimalin en fazla %@CritChanceCeiling*100@ olabilir.<br><br>%@CritChanceCeiling*100@ değerinin üstündeki kritik vuruş ihtimalinin %@CritChanceToDamageRatio*100@ kadarı kritik vuruş hasarına dönüşür.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Kafaya Nişan",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>Toplam İlave Kritik Vuruş Hasarı: %@f1*100@"
         },
         {
             "apiName": "SummonersRoulette",

@@ -2736,10 +2736,10 @@
             "desc": "기본 공격으로 피해를 입히면 다음 스킬 피해량이 @AbilityBoost*100@% 증가합니다.<br><br>스킬로 피해를 입히면 다음 기본 공격 피해량이 @AttackBoost*100@% 증가합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "하이브리드",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>스킬을 사용할 때마다 기본 공격이 1회 강화됩니다.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "정의로운 분노",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>현재 스킬 피해 보너스: @f1@%<br>이번 라운드 추가 피해량: @f2@<br>추가 피해량: 총 @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>스킬 사용, 증강, 아이템당 재사용 대기시간 @Cooldown@초<br><br>현재 스킬 피해 보너스: @f1@%<br>이번 라운드 추가 피해량: @f2@<br>추가 피해량: 총 @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "치명타 확률을 @CritChanceBonus*100@%, 치명타 피해량을 @CritDamageBonus*100@% 얻습니다. 치명타 확률의 최대치가 @CritChanceCeiling*100@%로 제한됩니다.<br><br>@CritChanceCeiling*100@%를 초과하는 치명타 확률은 치명타 피해량으로 전환됩니다.",
+            "desc": "치명타 확률을 @CritChanceBonus*100@%, 치명타 피해량을 @CritDamageBonus*100@% 얻습니다. 치명타 확률의 최대치가 @CritChanceCeiling*100@%로 제한됩니다.<br><br>@CritChanceCeiling*100@%를 초과하는 치명타 확률의 @CritChanceToDamageRatio*100@%가 치명타 피해량으로 전환됩니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "머리를 노려라",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>추가 치명타 피해량: 총 @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

@@ -2736,10 +2736,10 @@
             "desc": "Ao causar dano com um Ataque, sua próxima Habilidade causa @AbilityBoost*100@% de dano adicional.<br><br>Ao causar dano com uma Habilidade, seu próximo Ataque causa @AttackBoost*100@% de dano adicional.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "Híbrido",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Habilidades fortalecem um Ataque por conjuração.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Fúria Íntegra",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Dano de Habilidade adicional atual: @f1@%<br>Dano adicional nesta rodada: @f2@<br>Total de dano adicional: @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@s de Tempo de Recarga a cada conjuração de Habilidade, Aprimoramento e Item.<br><br>Dano de Habilidade adicional atual: @f1@%<br>Dano adicional neste round: @f2@<br>Total de dano adicional: @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "Recebe @CritChanceBonus*100@% de Chance de Acerto Crítico e @CritDamageBonus*100@% de Dano de Acerto Crítico. O limite máximo da sua Chance de Acerto Crítico é de @CritChanceCeiling*100@%.<br><br>Converte Chance de Acerto Crítico acima de @CritChanceCeiling*100@% em Dano de Acerto Crítico.",
+            "desc": "Recebe @CritChanceBonus*100@% de Chance de Acerto Crítico e @CritDamageBonus*100@% de Dano de Acerto Crítico. O limite máximo da sua Chance de Acerto Crítico é de @CritChanceCeiling*100@%.<br><br>Converte @CritChanceToDamageRatio*100@% da Chance de Acerto Crítico acima de @CritChanceCeiling*100@% em Dano de Acerto Crítico.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Mirar na Cabeça",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>Total de Dano de Acerto Crítico adicional: @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

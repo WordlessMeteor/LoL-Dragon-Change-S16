@@ -2736,10 +2736,10 @@
             "desc": "普攻造成傷害時，下一個技能會造成@AbilityBoost*100@%額外傷害。<br><br>技能造成傷害時，下一個普攻會造成@AttackBoost*100@%額外傷害。",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "混傷",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>每次施放技能可強化一次普攻。</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "正義之怒",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>目前技能傷害增益：@f1@%<br>本回合額外傷害：@f2@<br>額外傷害總計：@f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>每次施放技能、增幅裝置和道具，冷卻時間為@Cooldown@秒。<br><br>目前技能傷害增益：@f1@%<br>本回合額外傷害：@f2@<br>額外傷害總計：@f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "獲得@CritChanceBonus*100@%暴擊率與@CritDamageBonus*100@%暴擊傷害。暴擊率上限為@CritChanceCeiling*100@%。<br><br>超出@CritChanceCeiling*100@%的暴擊率轉換為暴擊傷害。",
+            "desc": "獲得@CritChanceBonus*100@%暴擊率與@CritDamageBonus*100@%暴擊傷害。暴擊率上限為@CritChanceCeiling*100@%。<br><br>將@CritChanceCeiling*100@%以上的暴擊率轉換為@CritChanceToDamageRatio*100@%的暴擊傷害。",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "瞄準頭部",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>總額外暴擊傷害：@f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

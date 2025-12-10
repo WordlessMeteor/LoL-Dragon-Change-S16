@@ -999,40 +999,50 @@
             "{a7f1cc4e}": {
                 "blocks": [
                     {
-                        "{d851ffa3}": "0cb3a101-8177-4981-b4bd-76948f0d0e30",
+                        "{d851ffa3}": "fd750fb0-88c8-4bbe-8f53-409f8f9de9a1",
                         "Condition": null,
                         "Sequence": {
                             "blocks": [
-                                null,
-                                null,
-                                null,
                                 {
-                                    "{d851ffa3}": "66efe2ef-4a0b-43c1-a52c-99f8ea74db22",
-                                    "Condition": {
-                                        "Value1": {
-                                            "Var": "{0abe0217}",
-                                            "__type": "ScriptTableGet"
-                                        },
-                                        "Operation": 2,
-                                        "Value2": {
-                                            "__type": "FloatGet"
-                                        },
-                                        "__type": "ComparisonScriptCondition"
-                                    },
+                                    "{d851ffa3}": "0cb3a101-8177-4981-b4bd-76948f0d0e30",
+                                    "Condition": null,
                                     "Sequence": {
                                         "blocks": [
                                             null,
                                             null,
+                                            null,
                                             {
-                                                "{d851ffa3}": "690535e7-e591-4e07-ae5f-2ec52fceb2f6",
-                                                "Formula": "(ptp.outMoveInput * (ptp.ownerMoveSpeed * 0.5)) + ptp.ApproxPos",
-                                                "Dest": {
-                                                    "Var": "moveFollowUpPos",
-                                                    "__type": "ScriptTableSet"
+                                                "{d851ffa3}": "66efe2ef-4a0b-43c1-a52c-99f8ea74db22",
+                                                "Condition": {
+                                                    "Value1": {
+                                                        "Var": "{0abe0217}",
+                                                        "__type": "ScriptTableGet"
+                                                    },
+                                                    "Operation": 2,
+                                                    "Value2": {
+                                                        "__type": "FloatGet"
+                                                    },
+                                                    "__type": "ComparisonScriptCondition"
                                                 },
-                                                "__type": "{15ebaa9c}"
-                                            },
-                                            null
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        null,
+                                                        null,
+                                                        {
+                                                            "{d851ffa3}": "690535e7-e591-4e07-ae5f-2ec52fceb2f6",
+                                                            "Formula": "(ptp.outMoveInput * (ptp.ownerMoveSpeed * 0.5)) + ptp.ApproxPos",
+                                                            "Dest": {
+                                                                "Var": "moveFollowUpPos",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "{15ebaa9c}"
+                                                        },
+                                                        null
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
                                         ],
                                         "__type": "ScriptSequence"
                                     },

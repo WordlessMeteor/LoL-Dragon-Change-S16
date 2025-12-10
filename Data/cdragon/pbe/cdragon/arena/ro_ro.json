@@ -2736,10 +2736,10 @@
             "desc": "Când provoci daune cu un atac, următoarea ta abilitate provoacă cu @AbilityBoost*100@% mai multe daune.<br><br>Când provoci daune cu o abilitate, următorul tău atac provoacă cu @AttackBoost*100@% mai multe daune.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "Hibrid",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Abilitățile îmbunătățesc un atac per folosire.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Furia drepților",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Bonus actual la daunele abilităților: @f1@%<br>Daune bonus în această rundă: @f2@<br>Daune bonus în total: @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Timp de reactivare: @Cooldown@ sec. per folosire a abilității și obiect.<br><br>Bonus actual la daunele abilităților: @f1@%<br>Daune bonus în această rundă: @f2@<br>Daune bonus în total: @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "Primești @CritChanceBonus*100@% șanse de lovitură critică și @CritDamageBonus*100@% daune din lovituri critice. Șansele tale de lovitură critică sunt limitate la @CritChanceCeiling*100@%.<br><br>Transformi toate șansele de lovitură critică ce depășesc @CritChanceCeiling*100@% în daune din lovituri critice.",
+            "desc": "Primești @CritChanceBonus*100@% șanse de lovitură critică și @CritDamageBonus*100@% daune din lovituri critice. Șansele tale de lovitură critică sunt limitate la @CritChanceCeiling*100@%.<br><br>Transformi @CritChanceToDamageRatio*100@% din șansele de lovitură critică ce depășesc @CritChanceCeiling*100@% în daune din lovituri critice.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Țintește capul",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>Daune bonus totale din lovituri critice: @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

@@ -2736,10 +2736,10 @@
             "desc": "عندما تلحق ضررًا بهجوم، تلحق قدرتك التالية @AbilityBoost*100@% من الضرر المتزايد.<br><br>عندما تلحق ضررًا بقدرة، يلحق هجومك التالي @AttackBoost*100@% من الضرر المتزايد.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "هجين",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>تمنح القدرات تعزيزًا لهجومٍ واحدٍ لكل إلقاء.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "غضب الشرفاء",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>مكافأة ضرر القدرة الحالية: @f1@%<br>الضرر الإضافي هذه الجولة: @f2@<br>إجمالي الضرر الإضافي: @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@ث فترة تبريد لكل إلقاء قدرة وتحسين وعنصر.<br><br>مكافأة ضرر القدرة الحالية: @f1@%<br>الضرر الإضافي هذه الجولة: @f2@<br>إجمالي الضرر الإضافي: @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "تكسب @CritChanceBonus*100@% فرصة ضربة حرجة و @CritDamageBonus*100@% ضرر ضربة حرجة. يبلغ الحد الأقصى لفرصة الضربة الحرجة لديك @CritChanceCeiling*100@%.<br><br>يحوّل فرصة الضربة الحرجة التي تتجاوز @CritChanceCeiling*100@% إلى ضرر ضربة حرجة.",
+            "desc": "تكسب @CritChanceBonus*100@% فرصة ضربة حرجة و @CritDamageBonus*100@% ضرر ضربة حرجة. يبلغ الحد الأقصى لفرصة الضربة الحرجة لديك @CritChanceCeiling*100@%.<br><br>يحوّل @CritChanceToDamageRatio*100@% من فرصة الضربة الحرجة التي تتجاوز @CritChanceCeiling*100@% إلى ضرر ضربة حرجة.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "استهداف الرأس",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>إجمالي ضرر الضربة الحرجة الإضافي: @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

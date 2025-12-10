@@ -2736,10 +2736,10 @@
             "desc": "Lorsque vous infligez des dégâts avec une attaque, votre prochaine compétence inflige @AbilityBoost*100@% de dégâts bonus.<br><br>Lorsque vous infligez des dégâts avec une compétence, votre prochaine attaque inflige @AttackBoost*100@% de dégâts bonus.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "Hybride",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Les compétences renforcent une attaque par lancement.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Fureur vertueuse",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Bonus de dégâts de compétence actuel : @f1@%<br>Dégâts bonus cette manche : @f2@<br>Total des dégâts bonus : @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@ sec de récupération par compétence, optimisation et objet.<br><br>Bonus de dégâts de compétence actuel : @f1@%<br>Dégâts bonus cette manche : @f2@<br>Total des dégâts bonus : @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "Vous obtenez @CritChanceBonus*100@% de chances de coup critique et @CritDamageBonus*100@% de dégâts de coup critique. Vos chances de coup critique sont limitées à @CritChanceCeiling*100@%.<br><br>Vous convertissez les chances de coup critique au-dessus de @CritChanceCeiling*100@% en dégâts de coup critique.",
+            "desc": "Vous obtenez @CritChanceBonus*100@% de chances de coup critique et @CritDamageBonus*100@% de dégâts de coup critique. Vos chances de coup critique sont limitées à @CritChanceCeiling*100@%.<br><br>Vous convertissez @CritChanceToDamageRatio*100@% de vos chances de coup critique supérieures à @CritChanceCeiling*100@% en dégâts de coup critique.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Visez la tête",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>Total des dégâts de coup critique bonus : @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

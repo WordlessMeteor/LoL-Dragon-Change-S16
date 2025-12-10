@@ -2736,10 +2736,10 @@
             "desc": "普攻造成伤害时，你的下一个技能会造成@AbilityBoost*100@%额外伤害。<br><br>技能造成伤害时，你的下一次普攻会造成@AttackBoost*100@%额外伤害。",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "混合",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>每次施法都会强化一次普攻。</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "正义之怒",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>当前技能伤害加成：@f1@%<br>本回合造成额外伤害：@f2@<br>总计额外伤害：@f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>每次施法、增幅装置和道具效果有@Cooldown@秒的冷却时间<br>。<br>当前技能伤害加成：@f1@%<br>本回合造成额外伤害：@f2@<br>总计额外伤害：@f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "获得@CritChanceBonus*100@%暴击机率和@CritDamageBonus*100@%暴击伤害。你的暴击机率的上限为@CritChanceCeiling*100@%。<br><br>超出@CritChanceCeiling*100@%的暴击机率会转化为暴击伤害。",
+            "desc": "获得@CritChanceBonus*100@%暴击机率和@CritDamageBonus*100@%暴击伤害。你的暴击机率的上限为@CritChanceCeiling*100@%。<br><br>超出@CritChanceCeiling*100@%的暴击机率会按@CritChanceToDamageRatio*100@%的比例转化为暴击伤害。",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "瞄准头部",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>%总计额外暴击伤害：@f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

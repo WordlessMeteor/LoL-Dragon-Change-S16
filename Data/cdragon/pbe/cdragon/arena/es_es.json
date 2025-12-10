@@ -2736,10 +2736,10 @@
             "desc": "Cuando infliges daño con un ataque, tu siguiente habilidad inflige un @AbilityBoost*100@% de daño adicional.<br><br>Cuando infliges daño con una habilidad, tu siguiente ataque inflige un @AttackBoost*100@% de daño adicional.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "Híbrido",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Las habilidades potencian un ataque por lanzamiento.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Furia justiciera",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Bonificación actual de daño de las habilidades: @f1@%<br>Daño adicional esta ronda: @f2@<br>Daño adicional en total: @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@ s de enfriamiento por lanzamiento de habilidad, aumento y objeto.<br><br>Bonificación actual de daño de las habilidades: @f1@%<br> de daño adicional esta ronda: @f2@<br>Daño adicional en total: @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "Otorga un @CritChanceBonus*100@% de probabilidad de impacto crítico y un @CritDamageBonus*100@% de daño de impacto crítico. Tu probabilidad de impacto crítico tiene un límite del @CritChanceCeiling*100@%.<br><br>Convierte tu probabilidad de impacto crítico por encima del @CritChanceCeiling*100@% en daño de impacto crítico.",
+            "desc": "Otorga un @CritChanceBonus*100@% de probabilidad de impacto crítico y un @CritDamageBonus*100@ % de daño de impacto crítico. Tu probabilidad de bloqueo tiene un límite del @CritChanceCeiling*100@%.<br><br>Convierte un @CritChanceToDamageRatio*100@% de tu probabilidad de impacto crítico por encima de @CritChanceCeiling*100@% en daño de impacto crítico.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Apunta a la cabeza",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>Daño de impacto crítico adicional total: @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

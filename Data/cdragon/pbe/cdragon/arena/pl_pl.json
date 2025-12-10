@@ -2736,10 +2736,10 @@
             "desc": "Gdy zadajesz obrażenia atakiem, twoja kolejna umiejętność zadaje obrażenia zwiększone o @AbilityBoost*100@%.<br><br>Gdy zadajesz obrażenia umiejętnością, twój kolejny atak zadaje obrażenia zwiększone o @AttackBoost*100@%.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "Hybryda",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Umiejętności wzmacniają jeden atak na użycie.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Słuszny Gniew",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Obecna premia do obrażeń od umiejętności: @f1@%<br>Dodatkowe obrażenia w tej rundzie: @f2@ pkt.<br>Całkowite obrażenia dodatkowe: @f3@ pkt."
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@ sek. odnowienia na każde użycie umiejętności, ulepszenia i przedmiotu.<br><br>Obecna premia do obrażeń od umiejętności: @f1@%<br>Dodatkowe obrażenia w tej rundzie: @f2@ pkt.<br>Całkowite obrażenia dodatkowe: @f3@ pkt."
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "Zyskujesz @CritChanceBonus*100@% szansy na trafienie krytyczne i @CritDamageBonus*100@% obrażeń trafienia krytycznego. Twoja szansa na trafienie krytyczne jest ograniczona do @CritChanceCeiling*100@%.<br><br>Zamieniasz szansę na trafienie krytyczne powyżej @CritChanceCeiling*100@% w obrażenia trafienia krytycznego.",
+            "desc": "Zyskujesz @CritChanceBonus*100@% szansy na trafienie krytyczne i @CritDamageBonus*100@% obrażeń trafienia krytycznego. Twoja szansa na trafienie krytyczne jest ograniczona do @CritChanceCeiling*100@%.<br><br>Zamieniasz @CritChanceToDamageRatio*100@% szansy na trafienie krytyczne powyżej @CritChanceCeiling*100@% w obrażenia trafienia krytycznego.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Celuj w Głowę",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>Całkowite dodatkowe obrażenia trafienia krytycznego: @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

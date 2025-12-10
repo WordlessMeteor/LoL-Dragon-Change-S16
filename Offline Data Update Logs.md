@@ -79,5 +79,16 @@
 					</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2025-12-10 11-31-11</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Latest: 15.24.731.5210 -> 15.24.732.0064</li>
+						<li>PBE: 16.1.731.8247 -> 16.1.732.1583</li>
+					</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>

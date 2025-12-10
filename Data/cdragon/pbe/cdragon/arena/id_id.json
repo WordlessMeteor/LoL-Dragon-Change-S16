@@ -2736,10 +2736,10 @@
             "desc": "Saat kamu menghasilkan damage dengan Serangan, Ability berikutnya memberikan @AbilityBoost*100@% peningkatan damage.<br><br>Saat kamu menghasilkan damage dengan Ability, Seranganmu berikutnya memberikan @AttackBoost*100@% peningkatan damage.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "Hybrid",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Ability memperkuat satu Serangan per cast.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Righteous Fury",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Damage Bonus Ability Saat Ini: @f1@%<br>Damage bonus ronde ini: @f2@<br>Total damage bonus: @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Cooldown @Cooldown@ dtk per cast Ability, Augment, dan Item.<br><br>Damage Bonus Ability Saat Ini: @f1@%<br>Damage bonus ronde ini: @f2@<br>Total damage bonus: @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "Mendapatkan @CritChanceBonus*100@% Critical Strike Chance dan @CritDamageBonus*100@% Critical Strike Damage. Critical Strike Chance-mu dibatasi sebesar @CritChanceCeiling*100@%.<br><br>Critical Strike Chance di atas @CritChanceCeiling*100@% akan dikonversi menjadi Critical Strike Damage.",
+            "desc": "Mendapatkan @CritChanceBonus*100@% Critical Strike Chance dan @CritDamageBonus*100@% Critical Strike Damage. Critical Strike Chance-mu dibatasi sebesar @CritChanceCeiling*100@%.<br><br> @CritChanceToDamageRatio*100@% Dari Critical Strike Chance di atas @CritChanceCeiling*100@% akan dikonversi menjadi Critical Strike Damage.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Aim for the Head",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>Total Critical Strike Damage Bonus: @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

@@ -2736,10 +2736,10 @@
             "desc": "通常攻撃でダメージを与えると、次のスキルのダメージが@AbilityBoost*100@%増加する。<br><br>スキルでダメージを与えると、次の通常攻撃のダメージが@AttackBoost*100@%増加する。",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "ハイブリッド",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>スキル使用ごとに1回だけ通常攻撃が強化される。</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "正義の激憤",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>現在のスキルのダメージボーナス: @f1@%<br>このラウンドの追加ダメージ: @f2@<br>追加ダメージの合計: @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>スキル、オーグメント、アイテム使用ごとにクールダウン@Cooldown@秒。<br><br>現在のスキルのダメージボーナス: @f1@%<br>このラウンドの追加ダメージ: @f2@<br>追加ダメージの合計: @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "クリティカル率が@CritChanceBonus*100@%増加し、クリティカルダメージが@CritDamageBonus*100@%増加する。クリティカル率の上限が@CritChanceCeiling*100@%になる。<br><br>@CritChanceCeiling*100@%を上回るクリティカル率をクリティカルダメージに変換する。",
+            "desc": "クリティカル率が@CritChanceBonus*100@%増加し、クリティカルダメージが@CritDamageBonus*100@%増加する。クリティカル率の上限が@CritChanceCeiling*100@%になる。<br><br>@CritChanceCeiling*100@%を上回るクリティカル率の@CritChanceToDamageRatio*100@%をクリティカルダメージに変換する。",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "頭を狙え",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>合計追加クリティカルダメージ: @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

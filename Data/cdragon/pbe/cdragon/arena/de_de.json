@@ -2736,10 +2736,10 @@
             "desc": "Wenn du mit einem Angriff Schaden verursachst, verursacht deine nächste Fähigkeit @AbilityBoost*100@&nbsp;% mehr Schaden.<br><br>Wenn du mit einer Fähigkeit Schaden verursachst, verursacht dein nächster Angriff @AttackBoost*100@&nbsp;% mehr Schaden.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "Hybrid",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Fähigkeiten verstärken einen Angriff pro Aktivierung.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Gerechter Zorn",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Aktueller zusätzlicher Fähigkeitsschaden: @f1@&nbsp;%<br>Zusätzlicher Schaden in dieser Runde: @f2@<br>Gesamter zusätzlicher Schaden: @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@&nbsp;Sek. Abklingzeit für jede aktivierte Fähigkeit, jede Augmentierung und jeden Gegenstand.<br><br>Aktueller zusätzlicher Fähigkeitsschaden: @f1@&nbsp;%<br>Zusätzlicher Schaden in dieser Runde: @f2@<br>Gesamter zusätzlicher Schaden: @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "Du erhältst eine Chance auf kritische Treffer von @CritChanceBonus*100@&nbsp;% und @CritDamageBonus*100@&nbsp;% kritischen Trefferschaden. Die Obergrenze für deine Chance auf kritische Treffer liegt bei @CritChanceCeiling*100@&nbsp;%.<br><br>Kritische Trefferchance über @CritChanceCeiling*100@&nbsp;% wird in kritischen Trefferschaden umgewandelt.",
+            "desc": "Du erhältst @CritChanceBonus*100@&nbsp;% Chance auf kritische Treffer und @CritDamageBonus*100@&nbsp;% kritischen Trefferschaden. Die Obergrenze für deine Chance auf kritische Treffer liegt bei @CritChanceCeiling*100@&nbsp;%.<br><br>@CritChanceToDamageRatio*100@&nbsp;% der Chance auf kritische Treffer über @CritChanceCeiling*100@&nbsp;% werden in kritischen Trefferschaden umgewandelt.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Ziele auf den Kopf",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>Zusätzlicher Schaden durch kritische Treffer insgesamt: @f1*100@&nbsp;%"
         },
         {
             "apiName": "SummonersRoulette",

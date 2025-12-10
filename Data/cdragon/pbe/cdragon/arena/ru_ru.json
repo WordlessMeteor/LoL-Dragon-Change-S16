@@ -2736,10 +2736,10 @@
             "desc": "Когда вы наносите урон автоатакой, ваше следующее умение наносит на @AbilityBoost*100@% больше урона.<br><br>Когда вы наносите урон умением, ваша следующая автоатака наносит на @AttackBoost*100@% больше урона.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "Гибрид",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Применяя умение, вы усиливаете следующую автоатаку (не более одной за умение).</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Праведная ярость",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Текущий дополнительный урон от умений: @f1@%<br>Дополнительный урон в этом раунде: @f2@<br>Общий дополнительный урон: @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Перезарядка: @Cooldown@ сек. за каждое применение умения, аугментации или предмета.<br><br>Текущий дополнительный урон от умений: @f1@%<br>Дополнительный урон в этом раунде: @f2@<br>Общий дополнительный урон: @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "Увеличивает шанс критического удара на @CritChanceBonus*100@%, а критический урон – на @CritDamageBonus*100@%. Ваш максимальный шанс критического удара становится равным @CritChanceCeiling*100@%.<br><br>Преобразует шанс критического удара свыше @CritChanceCeiling*100@% в критический урон.",
+            "desc": "Увеличивает шанс критического удара на @CritChanceBonus*100@%, а критический урон – на @CritDamageBonus*100@%. Ваш максимальный шанс критического удара становится равным @CritChanceCeiling*100@%.<br><br>Преобразует @CritChanceToDamageRatio*100@% шанса критического удара свыше @CritChanceCeiling*100@% в критический урон.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Целься в голову",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>Общий дополнительный критический урон: @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

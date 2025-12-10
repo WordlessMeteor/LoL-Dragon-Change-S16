@@ -2736,10 +2736,10 @@
             "desc": "Al infligir daño con un ataque, tu siguiente habilidad inflige un @AbilityBoost*100@% más de daño.<br><br>Al infligir daño con una habilidad, tu siguiente ataque inflige un @AttackBoost*100@% más de daño.",
             "iconLarge": "assets/ux/cherry/augments/icons/hybrid_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hybrid_small.png",
-            "id": 338,
+            "id": 357,
             "name": "Híbrido",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>Las habilidades potencian un ataque por lanzamiento.</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Furia Justiciera",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>Daño de habilidad adicional esta ronda: @f1@%<br>Daño adicional esta ronda: @f2@<br>Daño adicional en total: @f3@"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>@Cooldown@ seg de enfriamiento por lanzamiento de habilidad, aumento y objeto.<br><br>Daño de habilidad adicional esta ronda: @f1@%<br>Daño adicional esta ronda: @f2@<br>Daño adicional en total: @f3@"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "Obtienes un @CritChanceBonus*100@% de Probabilidad de Golpe Crítico y un @CritDamageBonus*100@% de daño de golpe crítico. Tu Probabilidad de Golpe Crítico tiene un límite de un @CritChanceCeiling*100@%.<br><br>La Probabilidad de Golpe Crítico que supere un @CritChanceCeiling*100@% se convierte en daño de golpe crítico.",
+            "desc": "Obtienes un @CritChanceBonus*100@% de Probabilidad de Golpe Crítico y un @CritDamageBonus*100@% de daño de golpe crítico. Tu Probabilidad de Golpe Crítico tiene un límite de un @CritChanceCeiling*100@%.<br><br>Convierte un @CritChanceToDamageRatio*100@% de la Probabilidad de Golpe Crítico que supere un @CritChanceCeiling*100@% en daño de golpe crítico.",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Apunta a la Cabeza",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>Daño de golpe crítico total adicional: @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

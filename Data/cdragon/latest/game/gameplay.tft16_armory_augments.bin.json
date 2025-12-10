@@ -1,7 +1,7 @@
 {
     "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments": {
         "PathHashToSelf": "clientstates/gameplay/ux/tft/tft16_armory_augments",
-        "BaseLoadable": "{18d11356}",
+        "BaseLoadable": "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments/UIBase",
         "MobileOverrideLoadable": "{69c6441d}",
         "UseSequencer": true,
         "ArmoryStyle": 4,
@@ -12,16 +12,16 @@
         "TitleText": "{9317c145}",
         "ItemSpace": "{1ec5b553}",
         "ItemSlotData": {
-            "ElementGroup": "{81757d01}",
+            "ElementGroup": "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0",
             "ItemIcon": "{42b4f0ec}",
             "ItemIconBordered": "{da853628}",
             "ItemFootprintSelectedVfx": "{8d05b993}",
             "ItemFootprintUnselectedVfx": "{f71a2338}",
-            "ItemActionButton": "{50391e1c}",
+            "ItemActionButton": "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/RerollButton",
             "ItemAction": 1,
             "{bc8f3dd5}": 2,
             "DefaultButtonStyle": {
-                "ItemButton": "{e126a059}",
+                "ItemButton": "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/Augment",
                 "description": "{903899e4}",
                 "__type": "TftArmoryButtonStyleData"
             },
@@ -33,14 +33,14 @@
                 "4": "{2e70eed5}"
             },
             "{692794b6}": "{14cdaec3}",
-            "{cd2b3ba4}": "{a3c9106c}",
+            "{cd2b3ba4}": "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/GoldLever",
             "{19d35524}": "{4585e9de}",
             "{1475bab7}": "{7945a19c}",
             "__type": "TftArmorySlotData"
         },
-        "MainScene": "{1f198817}",
-        "HideButtonScene": "{e9467323}",
-        "ToggleMainViewButton": "{492060d2}",
+        "MainScene": "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments/UIBase/TFT_Armory_Augments",
+        "HideButtonScene": "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments/UIBase/TFT_ToggleArmoryScene_Augments",
+        "ToggleMainViewButton": "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments/UIBase/TFT_ToggleArmoryScene_Augments/ToggleArmoryButton",
         "TimeoutVfxDuration": 10.0,
         "TimeoutVfxOnToggleButton": "{73c57d7b}",
         "TimeoutDoubleClickPrevention": 0.25,
@@ -53,7 +53,7 @@
         "Hash": "{14cdaec3}",
         "__type": "SequenceObjectSelector"
     },
-    "{18d11356}": {
+    "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments/UIBase": {
         "FilepathHash": "clientstates/gameplay/ux/tft/tft16_armory_augments/uibase",
         "__type": "UiPropertyLoadable"
     },
@@ -6298,7 +6298,7 @@
                     "__type": "SequenceTiming"
                 },
                 "element": {
-                    "value": "{50391e1c}",
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/RerollButton",
                     "__type": "{37841b56}"
                 },
                 "{76df2a8b}": "{14cdaec3}",
@@ -6311,7 +6311,7 @@
                     "__type": "SequenceTiming"
                 },
                 "element": {
-                    "value": "{a3c9106c}",
+                    "value": "ClientStates/Gameplay/UX/TFT/TFT16_Armory_Augments/UIBase/TFT_Armory_Augments/Armory_Slot0/GoldLever",
                     "__type": "{37841b56}"
                 },
                 "{76df2a8b}": "{14cdaec3}",
