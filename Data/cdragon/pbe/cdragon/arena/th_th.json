@@ -2739,7 +2739,7 @@
             "id": 357,
             "name": "Hybrid",
             "rarity": 1,
-            "tooltip": "Cherry_Hybrid_Tooltip_Extended"
+            "tooltip": "{{Cherry_Hybrid_Summary}}<br><br><rules>สกิลจะเสริมพลังให้การโจมตีหนึ่งครั้งต่อการร่ายหนึ่งที</rules>"
         },
         {
             "apiName": "HiveMind",
@@ -2774,13 +2774,13 @@
                 "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
-            "desc": "เริ่มต้นแต่ละรอบด้วยผึ้ง @StartingBees@ ตัว ได้รับผึ้งเมื่อเก็บเกี่ยวดอกไม้ อีกทั้งการโจมตีหรือการใช้สกิลโดนเป้าหมาย ภายในระยะ @BeeRange@ หน่วย จะปล่อยผึ้งไปโจมตีในช่วงระยะเวลา @DebuffDuration@ วินาที",
+            "desc": "เริ่มต้นแต่ละรอบโดยมีผึ้ง @StartingBees@ ตัว ได้รับผึ้งเพิ่มเมื่อเก็บเกี่ยวดอกไม้ การสร้างความเสียหายแก่แชมเปี้ยนจะส่งผึ้งออกไปสร้าง<magicDamage>ความเสียหายเวท @BeeDamage@ หน่วย</magicDamage>ในช่วงเวลา @DebuffDuration@ วินาทีเมื่อถึงเป้าหมาย แล้วย้อนกลับมาหาคุณ<br>",
             "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
             "id": 338,
             "name": "Hive Mind",
             "rarity": 2,
-            "tooltip": "เริ่มต้นแต่ละรอบด้วยผึ้ง @StartingBees@ ตัว ได้รับผึ้งเมื่อเก็บเกี่ยวดอกไม้ อีกทั้งการโจมตีหรือการใช้สกิลโดนเป้าหมายภายในระยะ @BeeRange@ หน่วย จะปล่อยผึ้งไปโจมตีในช่วงระยะเวลา @DebuffDuration@ วินาที<br><br>ความเสียหายที่ทำได้ในรอบนี้: @f1@ หน่วย<br>ความเสียหายที่ทำได้ทั้งหมด: @f2@ หน่วย"
+            "tooltip": "เริ่มต้นแต่ละรอบโดยมีผึ้ง @StartingBees@ ตัว ได้รับผึ้งเพิ่มเมื่อเก็บเกี่ยวดอกไม้ การสร้างความเสียหายแก่แชมเปี้ยนจะส่งผึ้งออกไปสร้าง<magicDamage>ความเสียหายเวท @BeeDamage@ หน่วย</magicDamage>ในช่วงเวลา @DebuffDuration@ วินาทีเมื่อถึงเป้าหมาย แล้วย้อนกลับมาหาคุณ<br><br>ความเสียหายที่ทำได้ในรอบนี้: @f1@ หน่วย<br>ความเสียหายที่ทำได้ทั้งหมด: @f2@ หน่วย"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -3691,7 +3691,7 @@
             "id": 343,
             "name": "Righteous Fury",
             "rarity": 2,
-            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>โบนัสความเสียหายสกิลในปัจจุบัน: @f1@%<br>โบนัสความเสียหายในรอบนี้: @f2@ หน่วย<br>โบนัสความเสียหายทั้งหมด: @f3@ หน่วย"
+            "tooltip": "{{Cherry_RighteousFury_Summary}}<br><br>คูลดาวน์ @Cooldown@ วินาทีต่อการร่ายสกิล Augment และไอเทมแต่ละครั้ง<br><br>โบนัสความเสียหายสกิลในปัจจุบัน: @f1@%<br>โบนัสความเสียหายในรอบนี้: @f2@ หน่วย<br>โบนัสความเสียหายทั้งหมด: @f3@ หน่วย"
         },
         {
             "apiName": "OrbitalLaser",
@@ -4424,13 +4424,13 @@
                 "CritChanceToDamageRatio": 0.5,
                 "CritDamageBonus": 0.25
             },
-            "desc": "ได้รับโอกาสคริติคอล @CritChanceBonus*100@% และความเสียหายคริติคอล @CritDamageBonus*100@% โอกาสคริติคอลของคุณจะถูกจำกัดที่ @CritChanceCeiling*100@%<br><br>แปลงโอกาสคริติคอลที่เกินจาก @CritChanceCeiling*100@% ให้เป็นความเสียหายคริติคอล",
+            "desc": "ได้รับโอกาสคริติคอล @CritChanceBonus*100@% และความเสียหายคริติคอล @CritDamageBonus*100@% โอกาสคริติคอลของคุณจะถูกจำกัดที่ @CritChanceCeiling*100@%<br><br>แปลงโอกาสคริติคอล @CritChanceToDamageRatio*100@% ที่เกินจาก @CritChanceCeiling*100@% ให้เป็นความเสียหายคริติคอล",
             "iconLarge": "assets/ux/cherry/augments/icons/aim_for_the_head_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/aim_for_the_head_small.png",
             "id": 336,
             "name": "Aim for the Head",
             "rarity": 1,
-            "tooltip": "Cherry_AimForTheHead_Tooltip"
+            "tooltip": "{{Cherry_AimForTheHead_Summary}}<br><br>โบนัสความเสียหายคริติคอลทั้งหมด: @f1*100@%"
         },
         {
             "apiName": "SummonersRoulette",

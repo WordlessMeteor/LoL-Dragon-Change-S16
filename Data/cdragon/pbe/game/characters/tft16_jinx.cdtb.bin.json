@@ -58,32 +58,6 @@
                         3.0
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "mName": "PercentMissilesHitCurrentTarget",
-                    "mValues": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "mName": "PercentMissilesWithinTwoHexesOfTarget",
-                    "mValues": [
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224
-                    ],
-                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -203,6 +177,78 @@
                             "__type": "TooltipInstanceList"
                         }
                     },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{64686c2d}": {
+        "ObjectName": "TFT16_JinxSpellAttackSecondary",
+        "mScriptName": "TFT16_JinxSpellAttackSecondary",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 22538,
+            "mAnimationName": "",
+            "delayCastOffsetPercent": -1.0,
+            "delayTotalTimePercent": -1.0,
+            "canCastOrQueueWhileCasting": true,
+            "mRollForCriticalHit": true,
+            "castRange": [
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0
+            ],
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mStartBoneName": "Cstm_Buffbone_Rocket_Launcher",
+                    "mTargetBoneName": "C_buffbone_Glb_Center_Loc",
+                    "mSpeed": 2500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "{91fd0920}"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 6.5,
+            "missileSpeed": 6000.0,
+            "mMissileEffectKey": "TFT16_Jinx_Q_Rocket_mis",
+            "mLineWidth": 60.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_buffbone_Glb_Center_Loc",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_tft9_JinxSpellAttack_OnCast",
+                "15": "Play_sfx_tft9_JinxSpellAttack_OnMissileCast",
+                "19": "Play_sfx_tft9_JinxSpellAttack_OnBuffDeactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT16_JinxSpellAttackSecondary",
+                    "mFormat": "{fffee0e7}",
                     "__type": "TooltipInstanceSpell"
                 },
                 "__type": "SpellDataResourceClient"
@@ -365,9 +411,8 @@
         "ObjectName": "TFT16_JinxSpellAttack",
         "mScriptName": "TFT16_JinxSpellAttack",
         "mSpell": {
-            "flags": 4,
             "mAffectsTypeFlags": 22538,
-            "mAnimationName": "",
+            "mAnimationName": "Attack1_Spell",
             "delayCastOffsetPercent": -1.0,
             "delayTotalTimePercent": -1.0,
             "mRollForCriticalHit": true,
@@ -409,7 +454,7 @@
                 "__type": "MissileSpecification"
             },
             "mCastType": 3,
-            "castFrame": 21.0,
+            "castFrame": 6.5,
             "missileSpeed": 6000.0,
             "mMissileEffectKey": "TFT16_Jinx_Q_Rocket_mis",
             "mLineWidth": 60.0,
