@@ -5200,6 +5200,19 @@
             "type": "Chest"
         },
         {
+            "id": "CHEST_784",
+            "name": "Demacian Orb",
+            "description": "เปิดเพื่อการันตีได้รับชิ้นส่วนสกินแบบสุ่ม 1 ชิ้น พร้อมโอกาสได้รับ Demacian Grab Bag",
+            "image": "/lol-game-data/assets/ASSETS/Loot/ForDemacia_Act1_Orb.png",
+            "startDate": "",
+            "endDate": "",
+            "mappedStoreId": 784,
+            "lifetimeMax": 0,
+            "autoRedeem": false,
+            "rarity": "Default",
+            "type": "Chest"
+        },
+        {
             "id": "STATSTONE_66600031",
             "name": "Galio - Series 1",
             "description": "ปลดล็อก Eternal ซีรีส์ 1 สำหรับ Galio",
@@ -5655,6 +5668,19 @@
             "type": "Chest"
         },
         {
+            "id": "CHEST_786",
+            "name": "Demacian Grab Bag",
+            "description": "ประกอบด้วยชิ้นส่วนสกิน 3 ชิ้นมูลค่า 975 RP ขึ้นไป หรือชิ้นส่วนสกิน 4 ชิ้นมูลค่า 1350 RP หรือต่ำกว่า มีโอกาสโบนัสที่จะได้รับ Mythic Essence",
+            "image": "/lol-game-data/assets/ASSETS/Loot/ForDemacia_Act1_Grab_Bag.png",
+            "startDate": "",
+            "endDate": "",
+            "mappedStoreId": 786,
+            "lifetimeMax": 0,
+            "autoRedeem": false,
+            "rarity": "Default",
+            "type": "Chest"
+        },
+        {
             "id": "CHEST_3330145",
             "name": "Star Guardian Tocker Egg",
             "description": "ประกอบไปด้วย Star Guardian Tocker",
@@ -5873,6 +5899,19 @@
             "startDate": "",
             "endDate": "",
             "mappedStoreId": 3330168,
+            "lifetimeMax": 0,
+            "autoRedeem": false,
+            "rarity": "Default",
+            "type": "Chest"
+        },
+        {
+            "id": "CHEST_787",
+            "name": "Demacian Exclusive Pack",
+            "description": "ประกอบด้วยชิ้นส่วนสกิน 3 ชิ้นมูลค่า 1350 RP หรือต่ำกว่า หรือชิ้นส่วนสกิน 4 ชิ้นมูลค่า 975 RP ขึ้นไป หรือชิ้นส่วนสกินแบบสุ่ม 6 ชิ้นในทุกราคา มีโอกาสโบนัสที่จะได้รับ Mythic Essence",
+            "image": "/lol-game-data/assets/ASSETS/Loot/ForDemacia_Act1_Exclusive_Pack.png",
+            "startDate": "",
+            "endDate": "",
+            "mappedStoreId": 787,
             "lifetimeMax": 0,
             "autoRedeem": false,
             "rarity": "Default",
@@ -51377,6 +51416,35 @@
             ]
         },
         {
+            "id": "CHEST_784_OPEN",
+            "description": "Demacian Orb",
+            "contextMenuText": "Demacian Orb",
+            "requirementText": "",
+            "imagePath": "/lol-game-data/assets/ASSETS/Loot/ForDemacia_Act1_Orb.png",
+            "introVideoPath": "",
+            "loopVideoPath": "",
+            "outroVideoPath": "",
+            "hasVisibleLootOdds": true,
+            "outputs": [
+                {
+                    "lootId": "LOOTTABLE_CHEST_champion_mastery_3",
+                    "localizedDescription": "10 Mythic Essence"
+                },
+                {
+                    "lootId": "CHEST_786",
+                    "localizedDescription": "Demacian Grab Bag"
+                },
+                {
+                    "lootId": "LOOTTABLE_CHEST_288_2",
+                    "localizedDescription": "ชิ้นส่วนสกิน"
+                },
+                {
+                    "lootId": "LOOTTABLE_CHEST_223_2",
+                    "localizedDescription": "สกิน Mythic ถาวร"
+                }
+            ]
+        },
+        {
             "id": "CURRENCY_mythic_forge_10",
             "description": "Emberwoken Chroma (Ashen Knight Pyke) + ไอคอน",
             "contextMenuText": "Emberwoken Chroma (Ashen Knight Pyke) + ไอคอน",
@@ -59713,6 +59781,31 @@
                 {
                     "lootId": "SUMMONER_ICON_5282",
                     "localizedDescription": ""
+                }
+            ]
+        },
+        {
+            "id": "CHEST_787_OPEN",
+            "description": "Demacian Exclusive Pack",
+            "contextMenuText": "Demacian Exclusive Pack",
+            "requirementText": "",
+            "imagePath": "/lol-game-data/assets/ASSETS/Loot/ForDemacia_Act1_Exclusive_Pack.png",
+            "introVideoPath": "",
+            "loopVideoPath": "",
+            "outroVideoPath": "",
+            "hasVisibleLootOdds": true,
+            "outputs": [
+                {
+                    "lootId": "LOOTTABLE_CHEST_champion_mastery_3",
+                    "localizedDescription": "10 Mythic Essence"
+                },
+                {
+                    "lootId": "LOOTTABLE_CHEST_223_2",
+                    "localizedDescription": "สกิน Mythic ถาวร"
+                },
+                {
+                    "lootId": "LOOTTABLE_CHEST_706",
+                    "localizedDescription": "ชิ้นส่วนสกิน 3 ชิ้นมูลค่า 1350 RP หรือต่ำกว่า หรือชิ้นส่วนสกินแบบสุ่ม 4 ชิ้นมูลค่า 975 RP ขึ้นไป หรือชิ้นส่วนสกิน 6 ชิ้นในทุกราคา"
                 }
             ]
         },
@@ -68774,6 +68867,31 @@
                 {
                     "lootId": "CHAMPION_SKIN_103016",
                     "localizedDescription": ""
+                }
+            ]
+        },
+        {
+            "id": "CHEST_786_OPEN",
+            "description": "Demacian Grab Bag",
+            "contextMenuText": "Demacian Grab Bag",
+            "requirementText": "",
+            "imagePath": "/lol-game-data/assets/ASSETS/Loot/ForDemacia_Act1_Grab_Bag.png",
+            "introVideoPath": "",
+            "loopVideoPath": "",
+            "outroVideoPath": "",
+            "hasVisibleLootOdds": true,
+            "outputs": [
+                {
+                    "lootId": "LOOTTABLE_CHEST_champion_mastery_3",
+                    "localizedDescription": "10 Mythic Essence"
+                },
+                {
+                    "lootId": "LOOTTABLE_CHEST_223_2",
+                    "localizedDescription": "สกิน Mythic ถาวร"
+                },
+                {
+                    "lootId": "LOOTTABLE_CHEST_705",
+                    "localizedDescription": "ชิ้นส่วนสกิน 3 ชิ้นมูลค่า 975 RP ขึ้นไป หรือชิ้นส่วนสกิน 4 ชิ้นมูลค่า 1350 RP หรือต่ำกว่า"
                 }
             ]
         },
