@@ -295,8 +295,8 @@
             ],
             "rigPoseModifierData": [
                 {
-                    "name": "{734103fb}",
-                    "Joint": "{465dfb99}",
+                    "name": "l_armor",
+                    "Joint": "L_Sleeve_Root",
                     "DefaultOn": false,
                     "DoRotation": true,
                     "maxAngle": 50.0,
@@ -304,8 +304,8 @@
                     "__type": "SpringPhysicsRigPoseModifierData"
                 },
                 {
-                    "name": "{c3c1291d}",
-                    "Joint": "{83420cd7}",
+                    "name": "R_Armor",
+                    "Joint": "R_Sleeve_Root",
                     "DefaultOn": false,
                     "DoRotation": true,
                     "maxAngle": 50.0,
@@ -321,14 +321,14 @@
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{eff0afb7}",
-                    "mEndingJointName": "{536d6678}",
+                    "mStartingJointName": "L_Wing3_1_SKN",
+                    "mEndingJointName": "L_Wing3_4_SKN",
                     "mDefaultMaskName": "{4fc1e099}",
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{2b3fdd19}",
-                    "mEndingJointName": "{e3b01bfa}",
+                    "mStartingJointName": "R_Wing3_1_SKN",
+                    "mEndingJointName": "R_Wing3_4_SKN",
                     "mDefaultMaskName": "{4fc1e099}",
                     "__type": "ConformToPathRigPoseModifierData"
                 }
@@ -1065,6 +1065,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "SprayAreaIntensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "TailTipColor",
                 "value": [
                     0.11000228673219681,
@@ -1420,6 +1430,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "SPARYAREACOLOR",
+                "Group": "Base Settings",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "TRANSITIONEFFECT",
                 "on": false,
@@ -2123,6 +2138,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "SprayAreaIntensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "TailTipColor",
                 "value": [
                     0.11465629190206528,
@@ -2472,6 +2497,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "SPARYAREACOLOR",
+                "Group": "Base Settings",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "TRANSITIONEFFECT",
                 "on": false,
@@ -3011,6 +3041,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "SprayAreaIntensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "TailTipColor",
                 "value": [
                     0.7941405177116394,
@@ -3348,6 +3388,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "SPARYAREACOLOR",
+                "Group": "Base Settings",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "TRANSITIONEFFECT",
                 "on": false,

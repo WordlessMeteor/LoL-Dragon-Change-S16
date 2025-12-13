@@ -1434,6 +1434,57 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Fading_In_Gradient",
+                "data": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Fading_In_Gradient",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Fading_In_Speed",
+                "data": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Fading_In_Speed",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Fading_Out_Speed",
+                "data": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Fading_Out_Speed",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Lightness_Adjustment_Strength",
                 "data": [
                     1.0,
@@ -1551,6 +1602,10 @@
             {
                 "name": "USE_SCREEN_SPACE_TEXTURE",
                 "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_LIGHTNESS_BREATHE",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -21951,6 +22006,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "SprayAreaIntensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SprayAreaIntensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "AdditiveScroll_ColorTint",
                 "data": [
                     1.0,
@@ -22526,6 +22598,11 @@
             },
             {
                 "name": "USE_FLOW_MAP",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "SPARYAREACOLOR",
+                "onByDefault": true,
                 "__type": "ShaderStaticSwitch"
             },
             {
