@@ -56901,6 +56901,40 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "HScan_Frequency",
+                "data": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "HScan_Frequency",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "HScanRange",
+                "data": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "HScanRange",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "UVScrolling_Noise_Intensity",
                 "data": [
                     1.0,
@@ -56997,6 +57031,57 @@
                     {
                         "name": "OverallScrollingTexture_Intensity",
                         "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SunDir_Range",
+                "data": [
+                    0.0,
+                    0.3330000042915344,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SunDir_Range",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SunDir_Normal_Intensity",
+                "data": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SunDir_Normal_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SunDir_Offset",
+                "data": [
+                    0.5,
+                    0.5,
+                    -0.25,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SunDir_Offset",
+                        "fields": 7,
                         "__type": "ShaderLogicalParameter"
                     }
                 ],
@@ -57130,7 +57215,15 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "HISTOGRAMSCAN_MASK",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "OVERLAY_ADDITIVE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "SUN_DIRECTION_MASK",
                 "__type": "ShaderStaticSwitch"
             },
             {

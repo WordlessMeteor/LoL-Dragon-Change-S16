@@ -1,5 +1,5 @@
 {
-    "{842b3f19}": {
+    "Characters/TFT16_Nasus/CharacterRecords/Root": {
         "mCharacterName": "TFT16_Nasus",
         "baseHP": 1500.0,
         "baseStaticHPRegen": 0.0,
@@ -7,7 +7,7 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 80.0,
+            "arBase": 70.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
@@ -30,7 +30,7 @@
             ""
         ],
         "spells": [
-            "{eba11f3f}",
+            "Characters/TFT16_Nasus/Spells/TFT16_NasusSpell",
             "{00000000}",
             "{00000000}",
             "{00000000}"
@@ -50,6 +50,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
+        "mInitialMana": 10.0,
         "mShopData": "{d05884fe}",
         "MobileHealthBarHeightOverride": 180.0,
         "mManaPerAttack": 5.0,
@@ -254,7 +255,7 @@
             "mCastType": 1,
             "castFrame": 1.0,
             "missileSpeed": 1000.0,
-            "mMissileEffectKey": "{824c5c46}",
+            "mMissileEffectKey": "TFT16_Nasus_R_mis",
             "mLookAtPolicy": 0,
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -329,7 +330,7 @@
         },
         "__type": "SpellObject"
     },
-    "{eba11f3f}": {
+    "Characters/TFT16_Nasus/Spells/TFT16_NasusSpell": {
         "ObjectName": "TFT16_NasusSpell",
         "mScriptName": "TFT16_NasusSpell",
         "mSpell": {
@@ -432,7 +433,7 @@
                     "mFormulaParts": [
                         {
                             "mStat": 12,
-                            "mDataValue": "{e133679c}",
+                            "mDataValue": "PercentHealthDamagePerSecond",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -525,7 +526,7 @@
         },
         "__type": "SpellObject"
     },
-    "{b901c8f9}": {
+    "Characters/TFT16_Nasus/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "__linked": []

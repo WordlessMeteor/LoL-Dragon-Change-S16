@@ -345,8 +345,8 @@
                     "mName": "ADDamage",
                     "mValues": [
                         0.0,
-                        120.0,
-                        200.0,
+                        135.0,
+                        240.0,
                         2000.0,
                         9000.0,
                         0.0,
@@ -357,26 +357,26 @@
                 {
                     "mName": "LaserFalloffPerTarget",
                     "mValues": [
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448
+                        0.18000000715255737,
+                        0.18000000715255737,
+                        0.18000000715255737,
+                        0.18000000715255737,
+                        0.18000000715255737,
+                        0.18000000715255737,
+                        0.18000000715255737
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "mName": "LaserFalloffCap",
                     "mValues": [
-                        0.44999998807907104,
-                        0.44999998807907104,
-                        0.44999998807907104,
-                        0.44999998807907104,
-                        0.44999998807907104,
-                        0.44999998807907104,
-                        0.44999998807907104
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -484,7 +484,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{3fc5598b}": {
+                "ModifiedLaserDamagePerSecond": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
@@ -512,7 +512,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{1f1cff52}": {
+                "ModifiedMissilesPerSecond": {
                     "mFormulaParts": [
                         {
                             "mSubparts": [
@@ -534,7 +534,7 @@
                                     },
                                     "mPart2": {
                                         "part1": {
-                                            "mDataValue": "{e9db1ea1}",
+                                            "mDataValue": "ASNeededForExtraMissile",
                                             "__type": "NamedDataValueCalculationPart"
                                         },
                                         "part2": {
@@ -546,7 +546,7 @@
                                     "__type": "ProductOfSubPartsCalculationPart"
                                 },
                                 {
-                                    "mDataValue": "{fcb6015f}",
+                                    "mDataValue": "MissilesPerSecond",
                                     "__type": "NamedDataValueCalculationPart"
                                 }
                             ],
@@ -557,7 +557,7 @@
                 },
                 "ModifiedMissileDamage": {
                     "mMultiplier": {
-                        "mDataValue": "{8210c4e8}",
+                        "mDataValue": "MissileDamageMult",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mSimpleTooltipCalculationDisplay": 5,
