@@ -424,13 +424,13 @@
                 {
                     "mName": "RecastWindow",
                     "mValues": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -502,13 +502,13 @@
                 {
                     "mName": "QCoeff",
                     "mValues": [
-                        0.10000000149011612,
+                        0.15000000596046448,
                         0.20000000298023224,
+                        0.25,
                         0.30000001192092896,
+                        0.3499999940395355,
                         0.4000000059604645,
-                        0.5,
-                        0.6000000238418579,
-                        0.699999988079071
+                        0.44999998807907104
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -654,7 +654,9 @@
                                 },
                                 {
                                     "type": "QCoeff",
+                                    "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_BonusADRatio",
+                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -944,6 +946,9 @@
         "mScriptName": "ZaahenE",
         "mSpell": {
             "mAffectsTypeFlags": 22543,
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock"
+            ],
             "DataValues": [
                 {
                     "mName": "Damage_Base",
@@ -981,19 +986,6 @@
                         900.0,
                         900.0,
                         900.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "mName": "DamageBonusBase",
-                    "mValues": [
-                        30.0,
-                        60.0,
-                        90.0,
-                        120.0,
-                        150.0,
-                        180.0,
-                        210.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1061,6 +1053,32 @@
                         50.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "SweetSpotDamageMod",
+                    "mValues": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "DamageBonusBase",
+                    "mValues": [
+                        30.0,
+                        60.0,
+                        90.0,
+                        120.0,
+                        150.0,
+                        180.0,
+                        210.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1080,19 +1098,12 @@
                     "__type": "GameCalculation"
                 },
                 "BonusDamageCalc": {
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "DamageBonusBase",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mCoefficient": 1.0,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
+                    "mMultiplier": {
+                        "mDataValue": "{3ea8f78a}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "BaseDamageCalc",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell3",
@@ -1384,7 +1395,8 @@
         "mSpell": {
             "mAffectsTypeFlags": 17431,
             "mSpellTags": [
-                "Trait_Ultimate"
+                "Trait_Ultimate",
+                "PositiveEffect_MoveBlock"
             ],
             "DataValues": [
                 {
