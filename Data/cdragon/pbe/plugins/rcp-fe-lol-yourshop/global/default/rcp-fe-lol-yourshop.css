@@ -1,0 +1,1317 @@
+.yourshop-root {
+    font-family: var(--font-body);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.yourshop-root:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-root {
+    background-image: url(/fe/lol-static-assets/images/uikit/backdrop-magic/backdrop-magic.png);
+    box-sizing: border-box;
+    cursor: default;
+    height: 718px;
+    padding-bottom: 30px;
+    padding-left: 34px;
+    padding-right: 35px;
+    padding-top: 100px;
+    position: relative;
+    width: 100%
+}
+
+.yourshop-root,
+.yourshop-root.seasonal-background {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover
+}
+
+.yourshop-root.seasonal-background {
+    background-image: url(/fe/lol-static-assets/images/po-seasonal-background.jpg)
+}
+
+.yourshop-root.seasonal-background:before {
+    background: rgba(0, 0, 0, .4);
+    background-image: radial-gradient(rgba(1, 10, 19, .4) 0, rgba(1, 10, 19, .6) 40%, rgba(1, 10, 19, .9) 80%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.yourshop-content-wrapper {
+    align-items: center;
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    position: relative
+}
+
+.yourshop-spinner-fullpage {
+    margin-top: 250px
+}
+
+.data-auth-modal-title {
+    font-family: var(--font-display)
+}
+
+.data-auth-paragraph-one,
+.data-auth-paragraph-two {
+    font-family: var(--font-body)
+}
+
+.data-auth-link,
+.data-auth-modal-title,
+.data-auth-paragraph-one,
+.data-auth-paragraph-two {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.data-auth-modal-title {
+    text-transform: uppercase
+}
+
+.data-auth-modal-title,
+.data-auth-modal-title:lang(el-gr),
+.data-auth-modal-title:lang(ja-jp),
+.data-auth-modal-title:lang(ko-kr),
+.data-auth-modal-title:lang(th-th),
+.data-auth-modal-title:lang(tr-tr),
+.data-auth-modal-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.data-auth-modal-title {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .025em;
+    line-height: 22px
+}
+
+.data-auth-modal-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.data-auth-paragraph-one {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.data-auth-paragraph-one:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.data-auth-paragraph-two {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.data-auth-paragraph-two:lang(ja-jp) {
+    font-size: 13px
+}
+
+.data-auth-paragraph-two:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.data-auth-link {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    outline: 0;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.data-auth-link:lang(ja-jp) {
+    font-size: 13px
+}
+
+.data-auth-link:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.data-auth-link {
+    color: #0596aa;
+    text-decoration: none
+}
+
+.data-auth-link.hover,
+.data-auth-link:hover {
+    color: #cdfafa
+}
+
+.data-auth-link:after {
+    background-color: #0596aa;
+    content: "";
+    display: inline-block;
+    height: 9px;
+    margin: 0 0 0 5px;
+    -webkit-mask: url(/fe/lol-yourshop/external-link-mask.png) no-repeat;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+    width: 9px
+}
+
+.data-auth-link:lang(ar-ae):after {
+    margin: 0 5px 0 0;
+    transform: scaleX(-1)
+}
+
+.data-auth-link:hover:after {
+    background-color: #cdfafa
+}
+
+.data-auth-selection-contents {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 270px;
+    text-align: center;
+    width: 572px
+}
+
+.data-auth-modal-title {
+    letter-spacing: .05em;
+    line-height: 24px;
+    margin-bottom: 16px;
+    margin-top: 24px
+}
+
+.data-auth-paragraph-one {
+    letter-spacing: .03em;
+    line-height: 24px;
+    margin: 0 32px
+}
+
+.data-auth-modal-line {
+    border: 1px solid #1e2328;
+    margin: 16px 0;
+    width: 71px
+}
+
+.data-auth-more-info-section {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 16px 10px
+}
+
+.data-auth-paragraph-two {
+    font-weight: 550;
+    letter-spacing: .05em;
+    padding-left: 10px
+}
+
+.data-auth-link {
+    color: #0ac8b9;
+    line-height: 16px;
+    text-decoration: underline
+}
+
+.data-auth-link:after {
+    background-color: #0ac8b9
+}
+
+.offer-card-pricing-discounted {
+    font-family: var(--font-display)
+}
+
+.offer-card-pricing-original {
+    font-family: var(--font-body)
+}
+
+.offer-card-pricing-discounted,
+.offer-card-pricing-original {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.offer-card-pricing-discounted {
+    text-transform: uppercase
+}
+
+.offer-card-pricing-discounted:lang(el-gr),
+.offer-card-pricing-discounted:lang(ja-jp),
+.offer-card-pricing-discounted:lang(ko-kr),
+.offer-card-pricing-discounted:lang(th-th),
+.offer-card-pricing-discounted:lang(tr-tr),
+.offer-card-pricing-discounted:lang(zh-tw) {
+    text-transform: none
+}
+
+.offer-card-pricing-discounted {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.offer-card-pricing-discounted:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.offer-card-pricing-original {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.offer-card-pricing-original:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center
+}
+
+.offer-card-pricing-original {
+    color: #5b5a56;
+    padding-top: 8px;
+    text-decoration: line-through
+}
+
+.offer-card-pricing-discounted {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.offer-card-rp-icon {
+    background: url(/fe/lol-static-assets/images/icon-rp-gradient-32.png) 50% no-repeat;
+    background-size: contain;
+    height: 16px;
+    margin: 0 5px 0 0;
+    width: 16px
+}
+
+.offer-card-discount,
+.offer-card-owned-text {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.offer-card-discount:lang(el-gr),
+.offer-card-discount:lang(ja-jp),
+.offer-card-discount:lang(ko-kr),
+.offer-card-discount:lang(th-th),
+.offer-card-discount:lang(tr-tr),
+.offer-card-discount:lang(zh-tw),
+.offer-card-owned-text:lang(el-gr),
+.offer-card-owned-text:lang(ja-jp),
+.offer-card-owned-text:lang(ko-kr),
+.offer-card-owned-text:lang(th-th),
+.offer-card-owned-text:lang(tr-tr),
+.offer-card-owned-text:lang(zh-tw) {
+    text-transform: none
+}
+
+.offer-card-discount {
+    color: #f0e6d2;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 28px
+}
+
+.offer-card-discount:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.offer-card-owned-text {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.offer-card-owned-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.offer-card-frame-back,
+.offer-card-frame-image,
+.offer-card-skin-tile,
+.yourshop-offer-card-content,
+.yourshop-offer-card-content-owned,
+.yourshop-offer-card-content-owned-purchasing,
+.yourshop-offer-card-content-purchasing {
+    height: 259.25px;
+    width: 122px
+}
+
+.offer-card-frame-back,
+.offer-card-frame-image {
+    cursor: pointer;
+    position: absolute
+}
+
+.yourshop-offer-card-content,
+.yourshop-offer-card-content-owned,
+.yourshop-offer-card-content-owned-purchasing,
+.yourshop-offer-card-content-purchasing {
+    cursor: pointer;
+    display: flex;
+    margin: 0 23px;
+    position: relative;
+    transition: -webkit-filter .3s ease-out, opacity 1s
+}
+
+.yourshop-offer-card-content-owned,
+.yourshop-offer-card-content-owned-owned,
+.yourshop-offer-card-content-owned-purchasing-owned,
+.yourshop-offer-card-content-purchasing-owned {
+    cursor: default;
+    opacity: .7;
+    pointer-events: none;
+    transition: opacity 1s
+}
+
+.yourshop-offer-card-content-owned-purchasing,
+.yourshop-offer-card-content-owned-purchasing-purchasing,
+.yourshop-offer-card-content-purchasing,
+.yourshop-offer-card-content-purchasing-purchasing {
+    cursor: default;
+    pointer-events: none
+}
+
+.yourshop-offer-card-content-owned-purchasing:hover,
+.yourshop-offer-card-content-owned:hover,
+.yourshop-offer-card-content-purchasing:hover,
+.yourshop-offer-card-content:hover {
+    -webkit-filter: brightness(1.4)
+}
+
+.offer-card-purchase-intro-video,
+.offer-card-purchase-loop-video,
+.offer-card-reveal-intro-video,
+.offer-card-reveal-outro-video,
+.offer-card-unrevealed-loop-video {
+    display: flex;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.offer-card-reveal-intro-video {
+    z-index: 1
+}
+
+.offer-card-skin-tile {
+    left: 0;
+    -webkit-mask-image: url(/fe/lol-static-assets/images/po-offer-card-back.png);
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-size: 122px 257px;
+    object-fit: cover;
+    position: absolute;
+    top: 0
+}
+
+.offer-card-champion-icon {
+    border-radius: 50%;
+    height: 50px;
+    left: calc(50% - 25px);
+    position: absolute;
+    top: 160px;
+    width: 50px
+}
+
+.offer-card-discount,
+.offer-card-owned-text {
+    bottom: 0;
+    direction: ltr;
+    position: absolute;
+    text-align: center;
+    width: 100%
+}
+
+.offer-card-purchasing {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 22px;
+    position: absolute;
+    width: 100%
+}
+
+.offer-card-owned-text {
+    animation: card-content-fade-in 1s;
+    color: #785a28;
+    padding-bottom: 22px
+}
+
+.offer-card-discount {
+    color: #c89b3c;
+    padding-bottom: 18px
+}
+
+.offer-card-rarity-gem {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    height: 16px;
+    justify-content: center;
+    object-fit: contain;
+    width: 100%
+}
+
+.offer-card-legacy-emblem,
+.offer-card-rarity-gem {
+    animation: card-content-fade-in 1s;
+    position: absolute
+}
+
+.offer-card-legacy-emblem {
+    height: 35px;
+    left: auto;
+    right: 0;
+    top: 0;
+    width: 35px
+}
+
+.offer-card-legacy-emblem:before {
+    background-image: url(/fe/lol-static-assets/images/po-card-corner.png);
+    height: 100%;
+    left: 0;
+    transform: none;
+    width: 100%
+}
+
+.offer-card-legacy-emblem:after,
+.offer-card-legacy-emblem:before {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    position: absolute;
+    top: 0
+}
+
+.offer-card-legacy-emblem:after {
+    background-image: url(/fe/lol-static-assets/images/po-legacy-icon.png);
+    height: 25px;
+    left: auto;
+    right: 0;
+    width: 25px
+}
+
+.offer-card-frame-back {
+    background-image: url(/fe/lol-static-assets/images/po-offer-card-back.png)
+}
+
+@-moz-keyframes card-content-fade-in {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes card-content-fade-in {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-o-keyframes card-content-fade-in {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes card-content-fade-in {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.yourshop-header-riot,
+.yourshop-header-tencent {
+    font-family: var(--font-display)
+}
+
+.yourshop-not-full-message,
+.yourshop-tencent-notice {
+    font-family: var(--font-body)
+}
+
+.yourshop-header-riot,
+.yourshop-header-tencent,
+.yourshop-not-full-message,
+.yourshop-tencent-notice {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.yourshop-header-riot,
+.yourshop-header-tencent {
+    text-transform: uppercase
+}
+
+.yourshop-header-riot:lang(el-gr),
+.yourshop-header-riot:lang(ja-jp),
+.yourshop-header-riot:lang(ko-kr),
+.yourshop-header-riot:lang(th-th),
+.yourshop-header-riot:lang(tr-tr),
+.yourshop-header-riot:lang(zh-tw),
+.yourshop-header-tencent:lang(el-gr),
+.yourshop-header-tencent:lang(ja-jp),
+.yourshop-header-tencent:lang(ko-kr),
+.yourshop-header-tencent:lang(th-th),
+.yourshop-header-tencent:lang(tr-tr),
+.yourshop-header-tencent:lang(zh-tw) {
+    text-transform: none
+}
+
+.yourshop-header-tencent {
+    color: #f0e6d2;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 28px
+}
+
+.yourshop-header-tencent:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-header-riot {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.yourshop-header-riot:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-tencent-notice {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.yourshop-tencent-notice:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-not-full-message {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.yourshop-not-full-message:lang(ja-jp) {
+    font-size: 13px
+}
+
+.yourshop-not-full-message:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-header {
+    width: 100%
+}
+
+.yourshop-header-tencent {
+    font-size: 24px;
+    margin-bottom: 16px;
+    margin-top: 20px
+}
+
+.yourshop-title {
+    margin-top: -8px;
+    position: absolute;
+    width: 100%
+}
+
+.yourshop-header-riot {
+    background-image: url(/fe/lol-static-assets/images/po-main-rule.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    height: 40px;
+    text-align: center
+}
+
+.yourshop-tencent-notice {
+    letter-spacing: .01em;
+    padding: 0 115px;
+    text-align: center;
+    width: 765px
+}
+
+.yourshop-not-full-message {
+    color: #c89b3c;
+    margin-top: 10px;
+    text-align: center
+}
+
+.yourshop-body {
+    height: 100%
+}
+
+.yourshop-body-riot {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-top: 80px
+}
+
+.yourshop-body-tencent {
+    margin-top: 50px
+}
+
+.yourshop-spinner {
+    margin-top: 130px
+}
+
+.yourshop-error-message {
+    margin: 100px 100px 0;
+    text-align: center
+}
+
+.yourshop-footer-riot-expiration,
+.yourshop-footer-tencent-expiration-tooltip-text {
+    font-family: var(--font-display)
+}
+
+.yourshop-footer-riot-notice,
+.yourshop-footer-tencent-expiration-text,
+.yourshop-footer-tencent-expiration-tooltip-date {
+    font-family: var(--font-body)
+}
+
+.yourshop-footer-riot-expiration,
+.yourshop-footer-riot-notice,
+.yourshop-footer-tencent-expiration-text,
+.yourshop-footer-tencent-expiration-tooltip-date,
+.yourshop-footer-tencent-expiration-tooltip-text,
+.yourshop-footer-tencent-links .yourshop-data-auth-modal-link,
+.yourshop-footer-tencent-links .yourshop-tou-link {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.yourshop-footer-tencent-expiration-tooltip-text {
+    text-transform: uppercase
+}
+
+.yourshop-footer-tencent-expiration-tooltip-text,
+.yourshop-footer-tencent-expiration-tooltip-text:lang(el-gr),
+.yourshop-footer-tencent-expiration-tooltip-text:lang(ja-jp),
+.yourshop-footer-tencent-expiration-tooltip-text:lang(ko-kr),
+.yourshop-footer-tencent-expiration-tooltip-text:lang(th-th),
+.yourshop-footer-tencent-expiration-tooltip-text:lang(tr-tr),
+.yourshop-footer-tencent-expiration-tooltip-text:lang(zh-tw) {
+    text-transform: none
+}
+
+.yourshop-footer-tencent-expiration-tooltip-text {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .0375em;
+    line-height: 18px
+}
+
+.yourshop-footer-tencent-expiration-tooltip-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-footer-riot-expiration {
+    color: #a09b8c;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    line-height: 24px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.yourshop-footer-riot-expiration:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-footer-tencent-expiration-tooltip-date {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.yourshop-footer-tencent-expiration-tooltip-date:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-footer-riot-notice,
+.yourshop-footer-tencent-expiration-text {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.yourshop-footer-riot-notice:lang(ja-jp),
+.yourshop-footer-tencent-expiration-text:lang(ja-jp) {
+    font-size: 13px
+}
+
+.yourshop-footer-riot-notice:lang(ar-ae),
+.yourshop-footer-tencent-expiration-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-footer-tencent-links .yourshop-data-auth-modal-link,
+.yourshop-footer-tencent-links .yourshop-tou-link {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    outline: 0;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.yourshop-footer-tencent-links .yourshop-data-auth-modal-link:lang(ja-jp),
+.yourshop-footer-tencent-links .yourshop-tou-link:lang(ja-jp) {
+    font-size: 13px
+}
+
+.yourshop-footer-tencent-links .yourshop-data-auth-modal-link:lang(ar-ae),
+.yourshop-footer-tencent-links .yourshop-tou-link:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-footer-tencent-links .yourshop-tou-link {
+    color: #0596aa;
+    text-decoration: none
+}
+
+.yourshop-footer-tencent-links .yourshop-tou-link.hover,
+.yourshop-footer-tencent-links .yourshop-tou-link:hover {
+    color: #cdfafa
+}
+
+.yourshop-footer-tencent-links .yourshop-tou-link:after {
+    background-color: #0596aa;
+    content: "";
+    display: inline-block;
+    height: 9px;
+    margin: 0 0 0 5px;
+    -webkit-mask: url(/fe/lol-yourshop/external-link-mask.png) no-repeat;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+    width: 9px
+}
+
+.yourshop-footer-tencent-links .yourshop-tou-link:lang(ar-ae):after {
+    margin: 0 5px 0 0;
+    transform: scaleX(-1)
+}
+
+.yourshop-footer-tencent-links .yourshop-tou-link:hover:after {
+    background-color: #cdfafa
+}
+
+.yourshop-footer {
+    width: 100%
+}
+
+.yourshop-footer-riot {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.yourshop-footer-riot-expiration {
+    color: #c8aa6e
+}
+
+.yourshop-footer-riot-rule {
+    border-bottom-width: 0;
+    border-color: #c89b3c;
+    width: 100%
+}
+
+.yourshop-footer-riot-notice {
+    color: #c89b3c;
+    min-width: 630px;
+    text-align: center
+}
+
+.yourshop-footer-tencent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 16px
+}
+
+.yourshop-footer-tencent-vertical-line {
+    background: #785a28;
+    border: 1px solid #785a28;
+    height: 14px
+}
+
+.yourshop-footer-tencent-links {
+    display: flex;
+    flex-direction: row
+}
+
+.yourshop-footer-tencent-links .yourshop-tou-link {
+    color: #0ac8b9;
+    line-height: 16px;
+    padding-right: 16px;
+    text-decoration: underline
+}
+
+.yourshop-footer-tencent-links .yourshop-tou-link:after {
+    background-color: #0ac8b9
+}
+
+.yourshop-footer-tencent-links .yourshop-data-auth-modal-link {
+    color: #0ac8b9;
+    padding-left: 16px;
+    text-decoration: underline
+}
+
+.yourshop-footer-tencent-expiration {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: space-between
+}
+
+.yourshop-footer-tencent-expiration-text {
+    border-bottom: 1px dashed hsla(40, 50%, 88%, .5);
+    color: #f0e6d2;
+    letter-spacing: .05em
+}
+
+.yourshop-footer-tencent-expiration-tooltip {
+    align-items: center;
+    background-color: #1a1c21;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 266px
+}
+
+.yourshop-footer-tencent-expiration-tooltip-text {
+    letter-spacing: .075em;
+    line-height: 24px
+}
+
+.yourshop-footer-tencent-expiration-tooltip-date {
+    color: #ccc4b3;
+    line-height: 24px
+}
+
+.yourshop-footer-tencent-clock-icon {
+    height: 16px;
+    width: 16px
+}
+
+.yourshop-footer-tencent-rule {
+    border-bottom-width: 0;
+    border-color: #785a28;
+    margin: 0
+}
+
+.offer-details-sale-badge,
+.offer-details-skin-name {
+    font-family: var(--font-display)
+}
+
+.offer-details-contents,
+.offer-details-currency-type,
+.offer-details-digital-goods-disclaimer,
+.offer-details-item-details,
+.offer-details-new-balance,
+.offer-details-not-enough-rp,
+.offer-details-purchase-confirmation,
+.yourshop-purchase-confirmation-link {
+    font-family: var(--font-body)
+}
+
+.offer-details-contents,
+.offer-details-currency-type,
+.offer-details-digital-goods-disclaimer,
+.offer-details-item-details,
+.offer-details-new-balance,
+.offer-details-not-enough-rp,
+.offer-details-purchase-confirmation,
+.offer-details-sale-badge,
+.offer-details-skin-name,
+.yourshop-purchase-confirmation-link {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.offer-details-skin-name {
+    text-transform: uppercase
+}
+
+.offer-details-skin-name:lang(el-gr),
+.offer-details-skin-name:lang(ja-jp),
+.offer-details-skin-name:lang(ko-kr),
+.offer-details-skin-name:lang(th-th),
+.offer-details-skin-name:lang(tr-tr),
+.offer-details-skin-name:lang(zh-tw) {
+    text-transform: none
+}
+
+.offer-details-skin-name {
+    color: #f0e6d2;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 28px
+}
+
+.offer-details-skin-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.offer-details-contents {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.offer-details-contents:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.offer-details-currency-type,
+.offer-details-digital-goods-disclaimer,
+.offer-details-item-details,
+.offer-details-new-balance,
+.offer-details-not-enough-rp,
+.offer-details-purchase-confirmation {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.offer-details-currency-type:lang(ja-jp),
+.offer-details-digital-goods-disclaimer:lang(ja-jp),
+.offer-details-item-details:lang(ja-jp),
+.offer-details-new-balance:lang(ja-jp),
+.offer-details-not-enough-rp:lang(ja-jp),
+.offer-details-purchase-confirmation:lang(ja-jp) {
+    font-size: 13px
+}
+
+.offer-details-currency-type:lang(ar-ae),
+.offer-details-digital-goods-disclaimer:lang(ar-ae),
+.offer-details-item-details:lang(ar-ae),
+.offer-details-new-balance:lang(ar-ae),
+.offer-details-not-enough-rp:lang(ar-ae),
+.offer-details-purchase-confirmation:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-purchase-confirmation-link {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    outline: 0;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.yourshop-purchase-confirmation-link:lang(ja-jp) {
+    font-size: 13px
+}
+
+.yourshop-purchase-confirmation-link:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.yourshop-purchase-confirmation-link {
+    color: #0596aa;
+    text-decoration: none
+}
+
+.yourshop-purchase-confirmation-link.hover,
+.yourshop-purchase-confirmation-link:hover {
+    color: #cdfafa
+}
+
+.yourshop-purchase-confirmation-link:after {
+    background-color: #0596aa;
+    content: "";
+    display: inline-block;
+    height: 9px;
+    margin: 0 0 0 5px;
+    -webkit-mask: url(/fe/lol-yourshop/external-link-mask.png) no-repeat;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+    width: 9px
+}
+
+.yourshop-purchase-confirmation-link:lang(ar-ae):after {
+    margin: 0 5px 0 0;
+    transform: scaleX(-1)
+}
+
+.yourshop-purchase-confirmation-link:hover:after {
+    background-color: #cdfafa
+}
+
+.offer-details-sale-badge {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .05em
+}
+
+.offer-details-sale-badge:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.offer-details-contents {
+    cursor: default;
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    width: 526px
+}
+
+.offer-details-sale-badge {
+    background-image: url(/fe/lol-static-assets/images/po-offer-details-sale-badge.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    color: #f0e6d2;
+    direction: ltr;
+    display: flex;
+    font-weight: 500;
+    height: 60.5px;
+    justify-content: center;
+    left: 8px;
+    padding-top: 12px;
+    position: absolute;
+    right: auto;
+    text-shadow: 0 0 2px #000;
+    top: -5px;
+    width: 59.5px
+}
+
+.offer-details-hero {
+    height: 294px;
+    position: relative
+}
+
+.offer-details-skin-splash {
+    height: 294px;
+    object-fit: cover;
+    position: absolute;
+    width: 100%
+}
+
+.offer-details-skin-vignette {
+    background: linear-gradient(0deg, #010a13 0, rgba(1, 10, 19, 0) 55%);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.offer-details-hero-copy {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0
+}
+
+.offer-details-skin-name {
+    line-height: 40px;
+    text-align: center
+}
+
+.offer-details-item-details {
+    align-items: center;
+    border: solid #463714;
+    border-width: 1px 0;
+    color: #785a28;
+    display: flex;
+    height: 35px;
+    justify-content: space-around;
+    margin: 0 20px
+}
+
+.offer-details-item-details.contains-multiple-detail {
+    align-items: center;
+    justify-content: space-between
+}
+
+.offer-details-item-details.contains-multiple-detail:after {
+    content: ""
+}
+
+.offer-details-champion-owned {
+    display: flex
+}
+
+.offer-details-champion-owned-icon {
+    background-color: #785a28;
+    height: 18px;
+    margin: 0 6px 0 0;
+    -webkit-mask-image: url(/fe/lol-static-assets/images/po-icon-helmet.png);
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    width: 18px
+}
+
+.offer-details-champion-icon {
+    position: absolute
+}
+
+.offer-details-skin-rarity {
+    align-items: center;
+    display: flex
+}
+
+.offer-details-skin-rarity-image {
+    height: 25px;
+    margin: 0 6px 0 0
+}
+
+.offer-details-purchase-confirmation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    justify-content: center;
+    margin: 10px 20px 0
+}
+
+.offer-details-purchase-details {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px
+}
+
+.offer-details-includes-champion {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.offer-details-includes-champion-icon {
+    height: 40px;
+    margin: 0 10px 0 0;
+    width: 40px
+}
+
+.offer-details-currency-type {
+    margin-bottom: 10px
+}
+
+.offer-details-new-balance {
+    color: #3c3c41;
+    margin-top: 10px
+}
+
+.offer-details-not-enough-rp {
+    color: #be1e37;
+    margin-top: 10px
+}
+
+.offer-details-digital-goods-disclaimer {
+    letter-spacing: .1em
+}
+
+/*# sourceMappingURL=rcp-fe-lol-yourshop.css.map*/

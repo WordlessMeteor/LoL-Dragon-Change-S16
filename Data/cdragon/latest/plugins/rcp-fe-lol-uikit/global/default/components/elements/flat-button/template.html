@@ -1,0 +1,94 @@
+<template>
+ <style>
+  @keyframes hoverTextShadow {
+	  0% {
+	    text-shadow: 0 0 4px rgba(240, 230, 216, 1);
+	  }
+	  50% {
+	    text-shadow: 0 0 4px rgba(240, 230, 216, .5);
+	  }
+	  100% {
+	  	text-shadow: 0 0 4px rgba(240, 230, 216, 0);
+	  }
+	}
+
+	@keyframes hoverGlow {
+	  0% {
+	    box-shadow: 0px 0px 5px 4px rgba(240, 230, 216, .5), 0px 0px 2px 1px rgba(240, 230, 216, .5) inset;
+	  }
+	  50% {
+	    box-shadow: 0px 0px 5px 4px rgba(240, 230, 216, .3), 0px 0px 2px 1px rgba(240, 230, 216, .3) inset;
+	  }
+	  100% {
+	    box-shadow: 0px 0px 5px 4px rgba(240, 230, 216, 0), 0px 0px 2px 1px rgba(240, 230, 216, 0) inset;
+	  }
+	}
+
+	@keyframes clickFlare {
+	  0% {
+	    opacity: 0;
+	  }
+	  25% {
+	    opacity: .6;
+	  }
+	  50% {
+	    opacity: .3;
+	  }
+	  100% {
+	    opacity: 0;
+	  }
+	}
+
+	@keyframes clickScale {
+	  from {
+	  	transform: scale(.94);
+	  }
+
+	  to {
+		transform: scale(1.0);
+	  }
+	}
+
+	@keyframes clickSheen {
+	  from {
+	    transform: translateY(-100%) rotate(0deg);
+	  }
+	  10% {
+	   transform: translateY(-80%) rotate(-5deg);
+	  }
+	  to {
+	    transform: translateY(100%) rotate(0deg);
+	  }
+	}
+ </style>
+ <div class="lol-uikit-flat-button-wrapper">
+  <div class="lol-uikit-flat-button-extra">
+  </div>
+  <div class="lol-uikit-flat-button-inner">
+   <div class="lol-uikit-flat-button">
+    <div class="lol-uikit-flat-button-bg">
+    </div>
+    <div class="lol-uikit-flat-button-border-idle">
+    </div>
+    <div class="lol-uikit-flat-button-border-transition">
+    </div>
+    <div class="lol-uikit-flat-button-flare">
+    </div>
+    <div class="lol-uikit-flat-button-glow">
+    </div>
+    <div class="lol-uikit-flat-button-sheen-wrapper">
+     <div class="lol-uikit-flat-button-sheen">
+     </div>
+    </div>
+    <div class="lol-uikit-flat-button-icon">
+    </div>
+    <div class="lol-uikit-flat-button-content-wrapper">
+     <slot>
+     </slot>
+    </div>
+   </div>
+  </div>
+  <slot name="comet-border">
+  </slot>
+ </div>
+</template>

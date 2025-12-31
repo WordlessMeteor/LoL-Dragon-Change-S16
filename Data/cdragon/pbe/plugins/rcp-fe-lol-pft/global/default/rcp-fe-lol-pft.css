@@ -1,0 +1,243 @@
+.checkboxes-section .checkboxes-input li label {
+    font-family: var(--font-body);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    color: #a09b8c;
+    font-weight: 400;
+    letter-spacing: .1em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.checkboxes-section .checkboxes-input li label:lang(ja-jp) {
+    font-size: 13px
+}
+
+.checkboxes-section .checkboxes-input li label:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.checkboxes-section {
+    text-align: left;
+    word-wrap: break-word
+}
+
+.checkboxes-section .checkboxes-input {
+    list-style: none;
+    padding: 0;
+    text-align: left
+}
+
+.checkboxes-section .checkboxes-input li {
+    height: 32px;
+    line-height: 32px;
+    margin-top: 3px;
+    width: 100%
+}
+
+.checkboxes-section .checkboxes-input li label {
+    display: inline-block;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    margin: 1px 5px 0 12px;
+    text-align: left;
+    width: 218px
+}
+
+.checkboxes-section .checkboxes-input li input[type=checkbox]:checked+label {
+    color: #f0e6d2
+}
+
+.free-response-section {
+    text-align: left
+}
+
+.free-response-section .free-response-question {
+    margin: 7px 0
+}
+
+.likert-section {
+    margin-bottom: 7px;
+    text-align: left
+}
+
+.likert-section lol-uikit-radio-input-option {
+    height: 32px
+}
+
+.likert-section .likert-question {
+    word-wrap: break-word
+}
+
+.multiple-choice-section {
+    text-align: left
+}
+
+.multiple-choice-section lol-uikit-radio-input-option {
+    height: 32px
+}
+
+.pft-survey .survey-title {
+    font-family: var(--font-display)
+}
+
+.pft-survey,
+.pft-survey .survey-caption {
+    font-family: var(--font-body)
+}
+
+.pft-survey,
+.pft-survey .survey-caption,
+.pft-survey .survey-title {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.pft-survey .survey-title {
+    text-transform: uppercase
+}
+
+.pft-survey .survey-title:lang(el-gr),
+.pft-survey .survey-title:lang(ja-jp),
+.pft-survey .survey-title:lang(ko-kr),
+.pft-survey .survey-title:lang(th-th),
+.pft-survey .survey-title:lang(tr-tr),
+.pft-survey .survey-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.pft-survey .survey-title {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.pft-survey .survey-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.pft-survey,
+.pft-survey .survey-caption {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.pft-survey .survey-caption:lang(ja-jp),
+.pft-survey:lang(ja-jp) {
+    font-size: 13px
+}
+
+.pft-survey .survey-caption:lang(ar-ae),
+.pft-survey:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.pft-survey {
+    direction: ltr;
+    padding: 12px 18px;
+    text-align: left;
+    width: 268px
+}
+
+.pft-survey.hoverable {
+    cursor: pointer
+}
+
+.pft-survey.hoverable:hover {
+    background: linear-gradient(180deg, rgba(88, 83, 66, 0), rgba(30, 35, 40, .7))
+}
+
+.pft-survey.hoverable:hover .survey-icon {
+    background-position: 0 -26px
+}
+
+.pft-survey.hoverable:active .survey-icon {
+    background-position: 0 -52px
+}
+
+.pft-survey.hoverable .survey-caption,
+.pft-survey.hoverable .survey-header,
+.pft-survey.hoverable .survey-icon,
+.pft-survey.hoverable .survey-title {
+    cursor: pointer
+}
+
+.pft-survey .survey-header {
+    min-height: 37px;
+    word-wrap: break-word
+}
+
+.pft-survey .survey-icon {
+    background-image: url(/fe/lol-pft/images/button-survey-sprite.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 26px;
+    left: 18px;
+    position: absolute;
+    right: auto;
+    text-align: center;
+    top: 17px;
+    width: 26px
+}
+
+.pft-survey .survey-title {
+    margin-left: 41px
+}
+
+.pft-survey .survey-title:lang(ar-ae) {
+    margin-left: 0;
+    margin-right: 41px
+}
+
+.pft-survey .survey-title.vertically-centered {
+    line-height: 37px
+}
+
+.pft-survey .survey-caption {
+    margin-left: 41px
+}
+
+.pft-survey .survey-caption:lang(ar-ae) {
+    margin-left: 0;
+    margin-right: 41px
+}
+
+.pft-survey .survey-form {
+    margin-top: 7px
+}
+
+.pft-survey .survey-content {
+    width: 268px
+}
+
+.pft-survey .survey-error {
+    color: #c5203a;
+    font-size: 12px
+}
+
+.pft-survey .show {
+    display: block
+}
+
+.pft-survey .hide {
+    display: none
+}
+
+.pft-survey .survey-footer {
+    margin-bottom: 6px;
+    margin-top: 12px
+}
+
+/*# sourceMappingURL=rcp-fe-lol-pft.css.map*/

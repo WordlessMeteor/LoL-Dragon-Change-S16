@@ -1,0 +1,18 @@
+<template>
+ <div class="ui-dropdown">
+  <dt class="ui-dropdown-current">
+   <div class="ui-dropdown-current-content shadow">
+   </div>
+   <slot name=".ui-dropdown-current-content.light">
+   </slot>
+  </dt>
+  <dd class="ui-dropdown-options-container">
+   <ul class="ui-dropdown-options">
+    <lol-uikit-scrollable>
+     <slot name="lol-uikit-dropdown-option">
+     </slot>
+    </lol-uikit-scrollable>
+   </ul>
+  </dd>
+ </div>
+</template>

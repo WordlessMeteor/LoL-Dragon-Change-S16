@@ -1,0 +1,46 @@
+<template>
+ <div id="animated-arrow-overlay-wrapper">
+  <svg class="svg-container" height="100%" id="path-defs" width="100%" x="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+   <defs>
+    <pattern height="40" id="noise-map" patternunits="userSpaceOnUse" width="400" x="0" y="0">
+     <image height="40" width="400" x="0" xlink:href="/fe/lol-uikit/images/noise-tile-alpha-tint-large.png" y="0"/>
+     <animate attributename="y" dur="20s" repeatcount="indefinite" values="0;20;0">
+     </animate>
+     <animate attributename="x" dur="40s" repeatcount="indefinite" values="0;50;0;-50;0">
+     </animate>
+    </pattern>
+    <pattern height="40" id="noise-map-offset" patternunits="userSpaceOnUse" width="400" x="25%" y="0">
+     <image height="40" width="400" x="0" xlink:href="/fe/lol-uikit/images/noise-tile-alpha-tint-large.png" y="0"/>
+     <animate attributename="y" dur="20s" repeatcount="indefinite" values="0;20;0">
+     </animate>
+     <animate attributename="x" dur="40s" repeatcount="indefinite" values="25;75;25;-25;25">
+     </animate>
+    </pattern>
+    <path d="M0, 0" fill="none" id="scalable-path" stroke="#fff" stroke-width="2">
+    </path>
+    <mask height="100%" id="mask-dashed-border" maskunits="userSpaceOnUse" width="100%" x="0" y="0">
+     <use class="dashed-border" stroke-width="4" xlink:href="#scalable-path">
+     </use>
+    </mask>
+    <mask height="100%" id="mask-dashed-border-offset" maskunits="userSpaceOnUse" width="100%" x="0" y="0">
+     <use class="dashed-border offset" stroke-width="4" xlink:href="#scalable-path">
+     </use>
+    </mask>
+   </defs>
+  </svg>
+  <div id="animated-magic-container">
+   <svg class="svg-container" height="100%" id="animated-magic-low" width="100%" x="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+    <rect fill="url(#noise-map)" height="100%" mask="url(#mask-dashed-border)" width="100%" x="0" y="0">
+    </rect>
+    <rect fill="url(#noise-map-offset)" height="100%" mask="url(#mask-dashed-border-offset)" width="100%" x="0" y="0">
+    </rect>
+   </svg>
+   <svg class="svg-container" height="100%" id="animated-magic-high" width="100%" x="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+    <rect fill="url(#noise-map)" height="100%" mask="url(#mask-dashed-border)" width="100%" x="0" y="0">
+    </rect>
+    <rect fill="url(#noise-map-offset)" height="100%" mask="url(#mask-dashed-border-offset)" width="100%" x="0" y="0">
+    </rect>
+   </svg>
+  </div>
+ </div>
+</template>

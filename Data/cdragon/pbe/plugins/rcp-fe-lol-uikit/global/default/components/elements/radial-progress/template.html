@@ -1,0 +1,24 @@
+<template>
+ <!--
+    All elements for the radial progress are positioned as absolute
+    simulating a z-index superposition
+  -->
+ <!-- Contains all assets for the empty meter -->
+ <div class="bottom-layer">
+  <slot name="bottom">
+  </slot>
+ </div>
+ <!--
+    Contains all assets that depends on the percentage
+    This layer will be affected by a mask that depends on the current percent
+  -->
+ <div class="middle-layer masked-layer">
+  <slot name="middle">
+  </slot>
+ </div>
+ <!-- Anything that needs to be at the top -->
+ <div class="top-layer">
+  <slot name="top">
+  </slot>
+ </div>
+</template>

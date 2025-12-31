@@ -1,0 +1,128 @@
+.screen-root[data-screen-name=rcp-fe-lol-store] {
+    position: relative
+}
+
+.__rcp-fe-lol-store {
+    display: flex;
+    height: 100%;
+    margin-top: -718px;
+    width: 100%
+}
+
+.__rcp-fe-lol-store iframe {
+    border: 0;
+    flex: 1;
+    margin: 0;
+    padding: 79px 0 0
+}
+
+.store-backdrop {
+    background-image: url(/fe/lol-store/background.png);
+    background-repeat: no-repeat;
+    height: 718px;
+    width: 1055px
+}
+
+.store-loading {
+    background-color: #000;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 1s ease;
+    width: 100%
+}
+
+.store-loading.fade-out {
+    opacity: 0
+}
+
+.bottom-gradient {
+    background-image: linear-gradient(rgba(4, 14, 26, 0), #040e1a);
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 1055px
+}
+
+.account-transfer-component {
+    direction: rtl;
+    height: 100%;
+    width: 100%
+}
+
+.account-transfer-component lol-uikit-full-page-backdrop {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.account-transfer-component lol-uikit-flat-button {
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%)
+}
+
+.account-transfer-component .transferring-spinner {
+    animation: account-transferring-spinner 4s linear infinite;
+    background: transparent url(/fe/lol-store/spinner.png) no-repeat 50% 50%;
+    background-size: contain;
+    display: inline-block;
+    height: 40px;
+    width: 40px
+}
+
+@-moz-keyframes account-transferring-spinner {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes account-transferring-spinner {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-o-keyframes account-transferring-spinner {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes account-transferring-spinner {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.account-transfer-conditions {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 0 0;
+    text-align: right;
+    width: 250px
+}
+
+.account-transfer-conditions article {
+    margin-bottom: 20px
+}

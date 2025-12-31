@@ -1,0 +1,5185 @@
+.rcp-fe-lol-champion-details {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.rcp-fe-lol-champion-details.is-dialog-frame {
+    height: 635px
+}
+
+.rcp-fe-lol-champion-details .cdp-nav-bar-lcm {
+    left: 325px;
+    position: absolute;
+    top: 8px
+}
+
+.rcp-fe-lol-champion-details .cdp-nav-bar-lcm lol-uikit-navigation-item {
+    padding-left: 5px
+}
+
+.rcp-fe-lol-champion-details .cdp-section-container {
+    box-sizing: border-box;
+    padding: 102px 35px 34px 34px;
+    pointer-events: none
+}
+
+.rcp-fe-lol-champion-details .cdp-section-container.visible {
+    pointer-events: all
+}
+
+.rcp-fe-lol-champion-details .cdp-skins-section-container {
+    padding: 0
+}
+
+.champion-details-dialog-frame {
+    height: 635px;
+    left: 108px;
+    position: absolute;
+    top: 44px;
+    width: 1055px
+}
+
+.cdp-backdrop-component {
+    background-color: #010a13;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.cdp-backdrop-component .cdp-backdrop {
+    animation: backdropfadein .125s 1;
+    background-color: #000;
+    height: 100%;
+    width: 100%
+}
+
+.cdp-backdrop-component .cdp-backdrop .cdp-backdrop-img-overlay {
+    background: url(/fe/lol-champion-details/content-right-background-gradient.png) 0 0/1055px 640px no-repeat;
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.cdp-backdrop-component .cdp-backdrop img {
+    height: 100%;
+    left: 190px;
+    position: absolute;
+    width: auto
+}
+
+.cdp-backdrop-component .cdp-backdrop:after {
+    background-image: radial-gradient(circle at top right, rgba(1, 10, 19, 0) 30%, rgba(1, 10, 19, .8) 50%, #010a13 70%), linear-gradient(180deg, #010a13 0, rgba(1, 10, 19, .7) 15px, transparent 8%);
+    background-size: cover;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.cdp-backdrop-component .cdp-backdrop.progression:after {
+    background-image: radial-gradient(circle at top right, rgba(1, 10, 19, 0) 30%, rgba(1, 10, 19, .8) 50%, #010a13 70%), linear-gradient(0deg, #010a13 0, #010a13 150px, rgba(1, 10, 19, .7) 250px, transparent 80%)
+}
+
+lol-uikit-section.progression.showfadeout .cdp-backdrop {
+    animation: backdropfadout .125s 1;
+    -webkit-filter: opacity(.2)
+}
+
+@-moz-keyframes backdropfadeout {
+    0% {
+        -webkit-filter: opacity(1)
+    }
+
+    to {
+        -webkit-filter: opacity(.2)
+    }
+}
+
+@-webkit-keyframes backdropfadeout {
+    0% {
+        -webkit-filter: opacity(1)
+    }
+
+    to {
+        -webkit-filter: opacity(.2)
+    }
+}
+
+@-o-keyframes backdropfadeout {
+    0% {
+        -webkit-filter: opacity(1)
+    }
+
+    to {
+        -webkit-filter: opacity(.2)
+    }
+}
+
+@keyframes backdropfadeout {
+    0% {
+        -webkit-filter: opacity(1)
+    }
+
+    to {
+        -webkit-filter: opacity(.2)
+    }
+}
+
+@-moz-keyframes backdropfadein {
+    0% {
+        -webkit-filter: opacity(.2)
+    }
+
+    to {
+        -webkit-filter: opacity(1)
+    }
+}
+
+@-webkit-keyframes backdropfadein {
+    0% {
+        -webkit-filter: opacity(.2)
+    }
+
+    to {
+        -webkit-filter: opacity(1)
+    }
+}
+
+@-o-keyframes backdropfadein {
+    0% {
+        -webkit-filter: opacity(.2)
+    }
+
+    to {
+        -webkit-filter: opacity(1)
+    }
+}
+
+@keyframes backdropfadein {
+    0% {
+        -webkit-filter: opacity(.2)
+    }
+
+    to {
+        -webkit-filter: opacity(1)
+    }
+}
+
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-name,
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-name:lang(el-gr),
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-name:lang(ja-jp),
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-name:lang(ko-kr),
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-name:lang(th-th),
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-name:lang(tr-tr),
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-name:lang(zh-tw),
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title:lang(el-gr),
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title:lang(ja-jp),
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title:lang(ko-kr),
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title:lang(th-th),
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title:lang(tr-tr),
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-name {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title:lang(ja-jp) {
+    font-size: 13px
+}
+
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title {
+    color: #a09b8c
+}
+
+.lcm-cdp-title-lockup-component {
+    direction: rtl;
+    display: flex;
+    height: 48px;
+    left: 0;
+    position: absolute;
+    top: -1px;
+    width: 316px
+}
+
+.lcm-cdp-title-lockup-component .title-lockup-background {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.lcm-cdp-title-lockup-component .title-lockup-background:lang(ar-ae) {
+    transform: scaleX(-1)
+}
+
+.lcm-cdp-title-lockup-component .champion-role-icon-container {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    width: 36px
+}
+
+.lcm-cdp-title-lockup-component .champion-role-icon-container .champion-role-icon-background {
+    background: #32281e;
+    height: 100%;
+    opacity: .5;
+    position: absolute;
+    width: 100%
+}
+
+.lcm-cdp-title-lockup-component .champion-role-icon-container .champion-role-icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 28px;
+    position: relative;
+    width: 28px
+}
+
+.lcm-cdp-title-lockup-component .champion-role-icon-container .champion-role-icon.assassin {
+    background-image: url(/fe/lol-champion-details/role-icon-assassin.png)
+}
+
+.lcm-cdp-title-lockup-component .champion-role-icon-container .champion-role-icon.fighter {
+    background-image: url(/fe/lol-champion-details/role-icon-fighter.png)
+}
+
+.lcm-cdp-title-lockup-component .champion-role-icon-container .champion-role-icon.mage {
+    background-image: url(/fe/lol-champion-details/role-icon-mage.png)
+}
+
+.lcm-cdp-title-lockup-component .champion-role-icon-container .champion-role-icon.marksman {
+    background-image: url(/fe/lol-champion-details/role-icon-marksman.png)
+}
+
+.lcm-cdp-title-lockup-component .champion-role-icon-container .champion-role-icon.support {
+    background-image: url(/fe/lol-champion-details/role-icon-support.png)
+}
+
+.lcm-cdp-title-lockup-component .champion-role-icon-container .champion-role-icon.tank {
+    background-image: url(/fe/lol-champion-details/role-icon-tank.png)
+}
+
+.lcm-cdp-title-lockup-component .champion-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4px 11px 4px 0;
+    position: relative;
+    text-align: right
+}
+
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-name {
+    color: #f0e6d2
+}
+
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-name:lang(ar-ae) {
+    font-size: 16px;
+    margin-bottom: 3px
+}
+
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title {
+    color: #c8aa6e;
+    margin-bottom: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 225px
+}
+
+.lcm-cdp-title-lockup-component .champion-info .lockup-champion-title:hover {
+    background-color: rgba(0, 0, 0, .749);
+    overflow: visible;
+    padding-right: 3px;
+    width: auto
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title,
+.cdp-right-hover-panel .cdp-right-hover-unowned-title,
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header .cdp-progression-title,
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title .cdp-progression-section-title-text {
+    font-family: var(--font-display)
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-blurb,
+.cdp-right-hover-panel .cdp-right-hover-unowned-rarity,
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-description,
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-text {
+    font-family: var(--font-body)
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-blurb,
+.cdp-right-hover-panel .cdp-right-hover-unowned-rarity,
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-description,
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title,
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-text,
+.cdp-right-hover-panel .cdp-right-hover-unowned-title,
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header .cdp-progression-title,
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title .cdp-progression-section-title-text {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title,
+.cdp-right-hover-panel .cdp-right-hover-unowned-title,
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header .cdp-progression-title,
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title .cdp-progression-section-title-text {
+    text-transform: uppercase
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title:lang(el-gr),
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title:lang(ja-jp),
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title:lang(ko-kr),
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title:lang(th-th),
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title:lang(tr-tr),
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title:lang(zh-tw),
+.cdp-right-hover-panel .cdp-right-hover-unowned-title:lang(el-gr),
+.cdp-right-hover-panel .cdp-right-hover-unowned-title:lang(ja-jp),
+.cdp-right-hover-panel .cdp-right-hover-unowned-title:lang(ko-kr),
+.cdp-right-hover-panel .cdp-right-hover-unowned-title:lang(th-th),
+.cdp-right-hover-panel .cdp-right-hover-unowned-title:lang(tr-tr),
+.cdp-right-hover-panel .cdp-right-hover-unowned-title:lang(zh-tw),
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header .cdp-progression-title:lang(el-gr),
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header .cdp-progression-title:lang(ja-jp),
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header .cdp-progression-title:lang(ko-kr),
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header .cdp-progression-title:lang(th-th),
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header .cdp-progression-title:lang(tr-tr),
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header .cdp-progression-title:lang(zh-tw),
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title .cdp-progression-section-title-text:lang(el-gr),
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title .cdp-progression-section-title-text:lang(ja-jp),
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title .cdp-progression-section-title-text:lang(ko-kr),
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title .cdp-progression-section-title-text:lang(th-th),
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title .cdp-progression-section-title-text:lang(tr-tr),
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title .cdp-progression-section-title-text:lang(zh-tw) {
+    text-transform: none
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-title {
+    color: #f0e6d2;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 28px
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header .cdp-progression-title {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header .cdp-progression-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title .cdp-progression-section-title-text {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title .cdp-progression-section-title-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-blurb,
+.cdp-right-hover-panel .cdp-right-hover-unowned-rarity,
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-description,
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-text {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-blurb:lang(ja-jp),
+.cdp-right-hover-panel .cdp-right-hover-unowned-rarity:lang(ja-jp),
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-description:lang(ja-jp),
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-text:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-blurb:lang(ar-ae),
+.cdp-right-hover-panel .cdp-right-hover-unowned-rarity:lang(ar-ae),
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-description:lang(ar-ae),
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.rcp-fe-lol-champion-details-progression-section {
+    direction: rtl;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 545px;
+    position: absolute;
+    top: 94px;
+    width: 100%
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-content-left {
+    height: 100%;
+    margin-right: 19px;
+    position: relative;
+    width: 420px
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-eternals-info {
+    align-items: center;
+    display: flex;
+    width: 100%
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-eternals-info .cdp-eternals-info-button {
+    cursor: pointer
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-content-right {
+    display: flex;
+    flex-direction: column;
+    height: 507px;
+    justify-content: flex-end;
+    padding: 0 0 38px 11px;
+    position: relative;
+    width: 559px
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-content-right.hovered {
+    justify-content: flex-start
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header {
+    border-bottom: 1px solid #1e2328;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 6px
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-header .cdp-progression-title {
+    color: #cdbe91;
+    margin: 0 0 0 6px;
+    white-space: nowrap
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression {
+    color: #f0e6d2;
+    height: 100%
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-section-title .cdp-progression-section-title-text {
+    color: #f0e6d2
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-divider {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5px;
+    width: 100%
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-divider .cdp-progression-content-divider-line {
+    background: linear-gradient(90deg, #463714, #463714) 0 100%/100% 1px no-repeat;
+    height: 1px;
+    width: 100%
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-divider .cdp-progression-content-divider-line-end {
+    background-image: url(/fe/lol-champion-details/line-end-decal.png);
+    background-size: contain;
+    min-height: 9px;
+    min-width: 9px
+}
+
+.rcp-fe-lol-champion-details-progression-section .cdp-progression-divider.title {
+    width: 140px
+}
+
+.cdp-right-hover-panel {
+    display: flex;
+    justify-content: center
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-title {
+    margin-bottom: 2px
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-rarity {
+    color: #a09b8c
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-blurb {
+    color: #a09b8c;
+    margin-bottom: 30px;
+    margin-top: 29px;
+    text-align: center
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-image-panel {
+    display: flex;
+    flex-direction: row
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-image {
+    background-size: 150px;
+    height: 150px;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 150px
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-text {
+    color: #a09b8c;
+    margin-bottom: 10px;
+    margin-top: 12px
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section {
+    border-bottom: 1px solid #3c3c41;
+    border-top: 1px solid #3c3c41;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding: 20px 0;
+    width: 530px
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    width: 230px
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-title {
+    color: #f0e6d2;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-description {
+    color: #a09b8c;
+    text-align: center
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section .reward-image {
+    min-height: 24px;
+    min-width: 24px
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section.personal-best .reward-image {
+    background: url(/fe/lol-champion-details/personal-best-icon-unowned.png) 0 0/24px 24px no-repeat
+}
+
+.cdp-right-hover-panel .cdp-right-hover-unowned-reward-section .cdp-reward-section.mastery-emote .reward-image {
+    background: url(/fe/lol-champion-details/mastery-icon-unowned-lcm.png) 0 0/24px 24px no-repeat
+}
+
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-series-no-statstones,
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-series-timeout-message {
+    font-family: var(--font-body);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-series-no-statstones:lang(ar-ae),
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-series-timeout-message:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.rcp-fe-lol-champion-details-series-component {
+    display: flex;
+    height: 100%
+}
+
+.rcp-fe-lol-champion-details-series-component.no-eternals {
+    align-items: center;
+    justify-content: center
+}
+
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-progression-series-component {
+    height: 100%;
+    width: 420px
+}
+
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-series-no-statstones {
+    background: url(/lol-game-data/assets/ASSETS/Loadouts/StatStones/Categories/LCU/SS_Icon_CC_Unique_0.png) no-repeat top;
+    background-size: 256px;
+    color: #a09b8c;
+    margin-top: -116px;
+    padding: 256px 18px 0;
+    text-align: center;
+    width: 300px
+}
+
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-series-scrollable {
+    height: 500px;
+    width: 440px
+}
+
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-series-scrollable::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background-color: #1e2328;
+    border: 3px solid transparent;
+    border-radius: 6px
+}
+
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-series-scrollable::-webkit-scrollbar-thumb:active {
+    background-color: #463714
+}
+
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-series-scrollable:hover::-webkit-scrollbar-thumb {
+    background-color: #785a28
+}
+
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-series-scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: #c89b3c
+}
+
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-series-info-spinner {
+    height: 40px;
+    width: 40px
+}
+
+.rcp-fe-lol-champion-details-series-component .cdp-series-info-wrapper .cdp-series-timeout-message {
+    color: #a09b8c;
+    text-align: center;
+    width: 350px
+}
+
+.cdp-progression-showcase-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 12px 0
+}
+
+.cdp-progression-series-header .cdp-progression-series-name,
+.cdp-progression-series-header .cdp-progression-series-sale .cdp-progression-series-sale-label,
+.cdp-progression-series-header .cdp-progression-statstone-milestone-progression .cdp-progression-statstones-completed {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.cdp-progression-series-header .cdp-progression-series-name:lang(el-gr),
+.cdp-progression-series-header .cdp-progression-series-name:lang(ja-jp),
+.cdp-progression-series-header .cdp-progression-series-name:lang(ko-kr),
+.cdp-progression-series-header .cdp-progression-series-name:lang(th-th),
+.cdp-progression-series-header .cdp-progression-series-name:lang(tr-tr),
+.cdp-progression-series-header .cdp-progression-series-name:lang(zh-tw),
+.cdp-progression-series-header .cdp-progression-series-sale .cdp-progression-series-sale-label:lang(el-gr),
+.cdp-progression-series-header .cdp-progression-series-sale .cdp-progression-series-sale-label:lang(ja-jp),
+.cdp-progression-series-header .cdp-progression-series-sale .cdp-progression-series-sale-label:lang(ko-kr),
+.cdp-progression-series-header .cdp-progression-series-sale .cdp-progression-series-sale-label:lang(th-th),
+.cdp-progression-series-header .cdp-progression-series-sale .cdp-progression-series-sale-label:lang(tr-tr),
+.cdp-progression-series-header .cdp-progression-series-sale .cdp-progression-series-sale-label:lang(zh-tw),
+.cdp-progression-series-header .cdp-progression-statstone-milestone-progression .cdp-progression-statstones-completed:lang(el-gr),
+.cdp-progression-series-header .cdp-progression-statstone-milestone-progression .cdp-progression-statstones-completed:lang(ja-jp),
+.cdp-progression-series-header .cdp-progression-statstone-milestone-progression .cdp-progression-statstones-completed:lang(ko-kr),
+.cdp-progression-series-header .cdp-progression-statstone-milestone-progression .cdp-progression-statstones-completed:lang(th-th),
+.cdp-progression-series-header .cdp-progression-statstone-milestone-progression .cdp-progression-statstones-completed:lang(tr-tr),
+.cdp-progression-series-header .cdp-progression-statstone-milestone-progression .cdp-progression-statstones-completed:lang(zh-tw) {
+    text-transform: none
+}
+
+.cdp-progression-series-header .cdp-progression-series-name,
+.cdp-progression-series-header .cdp-progression-series-sale .cdp-progression-series-sale-label,
+.cdp-progression-series-header .cdp-progression-statstone-milestone-progression .cdp-progression-statstones-completed {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.cdp-progression-series-header .cdp-progression-series-name:lang(ar-ae),
+.cdp-progression-series-header .cdp-progression-series-sale .cdp-progression-series-sale-label:lang(ar-ae),
+.cdp-progression-series-header .cdp-progression-statstone-milestone-progression .cdp-progression-statstones-completed:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-progression-series-header {
+    background: linear-gradient(180deg, rgba(1, 10, 19, .95), rgba(1, 10, 19, .85));
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    height: 36px;
+    justify-content: space-between;
+    position: sticky;
+    width: 100%;
+    z-index: 2
+}
+
+.cdp-progression-series-header .cdp-progression-series-name {
+    color: #a09b8c;
+    display: flex;
+    padding-left: 14px;
+    padding-right: 8px
+}
+
+.cdp-progression-series-header .cdp-progression-series-border {
+    border-bottom: 1px solid #1e2328;
+    box-sizing: border-box;
+    height: 7px;
+    width: 100%
+}
+
+.cdp-progression-series-header .cdp-progression-series-info {
+    display: flex;
+    flex-direction: column;
+    height: 36px;
+    justify-content: flex-end;
+    margin-top: -2px;
+    position: relative;
+    width: 100%
+}
+
+.cdp-progression-series-header .cdp-progression-series-info .cdp-progression-series-content {
+    display: flex;
+    flex-direction: row;
+    height: 24px;
+    justify-content: space-between;
+    position: relative;
+    top: 2px
+}
+
+.cdp-progression-series-header .cdp-progression-series-info .cdp-progression-series-content .cdp-progression-series-left {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.cdp-progression-series-header .cdp-progression-series-info .cdp-progression-series-content .cdp-progression-series-left .cdp-progression-owned-from-packs {
+    align-items: center;
+    display: flex
+}
+
+.cdp-progression-series-header .cdp-progression-series-info .cdp-progression-series-content .cdp-progression-series-right {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.cdp-progression-series-header .cdp-progression-series-info.incomplete {
+    padding-right: 5px
+}
+
+.cdp-progression-series-header .cdp-progression-series-info.incomplete .cdp-progression-series-border {
+    border-right: 1px solid #1e2328
+}
+
+.cdp-progression-series-header .cdp-progression-series-sale {
+    align-items: center;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    position: absolute;
+    right: 9px;
+    top: 6px
+}
+
+.cdp-progression-series-header .cdp-progression-series-sale .cdp-progression-series-sale-label {
+    color: #ff2345;
+    padding: 0 4px
+}
+
+.cdp-progression-series-header .cdp-progression-series-sale .sale-box {
+    background: #010a13;
+    border: 1px solid #be1e37;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -2
+}
+
+.cdp-progression-series-header .cdp-progression-series-sale .sale-box.sale-blur {
+    filter: blur(4px);
+    height: 100%;
+    mix-blend-mode: screen;
+    width: 100%;
+    z-index: -1
+}
+
+.cdp-progression-series-header .cdp-progression-series-unlock-button {
+    height: 32px;
+    --flat-button-min-height: 32px;
+    padding: 2px 2px 0 0
+}
+
+.cdp-progression-series-header .cdp-progression-mastery-upgrade {
+    background: url(/fe/lol-champion-details/mastery-unlocked-lcm.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 18px;
+    width: 25px
+}
+
+.cdp-progression-series-header .cdp-progression-separator {
+    background-color: #1e2328;
+    height: 28px;
+    margin: 0 12px 0 10px;
+    min-width: 1px
+}
+
+.cdp-progression-series-header .cdp-progression-statstone-milestone-progression {
+    display: flex;
+    padding-right: 14px
+}
+
+.cdp-progression-series-header .cdp-progression-statstone-milestone-progression .cdp-progression-statstone-logo {
+    background: url(/fe/lol-champion-details/eternals-logo.png) 0 0/10px 14px no-repeat;
+    margin-right: 8px;
+    margin-top: 1px;
+    min-height: 14px;
+    width: 10px
+}
+
+.cdp-progression-series-header .cdp-progression-statstone-milestone-progression .cdp-progression-statstones-completed {
+    color: #cdbe91;
+    margin-right: 4px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-header .cdp-progression-statstone-value,
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value,
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value,
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name {
+    font-family: var(--font-display)
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name-owned,
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-rarity {
+    font-family: var(--font-body)
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-header .cdp-progression-statstone-value,
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value,
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value,
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name,
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name-owned,
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-rarity {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-header .cdp-progression-statstone-value,
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value,
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value,
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name {
+    text-transform: uppercase
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-header .cdp-progression-statstone-value:lang(el-gr),
+.cdp-progression-statstone .cdp-progression-statstone-header .cdp-progression-statstone-value:lang(ja-jp),
+.cdp-progression-statstone .cdp-progression-statstone-header .cdp-progression-statstone-value:lang(ko-kr),
+.cdp-progression-statstone .cdp-progression-statstone-header .cdp-progression-statstone-value:lang(th-th),
+.cdp-progression-statstone .cdp-progression-statstone-header .cdp-progression-statstone-value:lang(tr-tr),
+.cdp-progression-statstone .cdp-progression-statstone-header .cdp-progression-statstone-value:lang(zh-tw),
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value:lang(el-gr),
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value:lang(ja-jp),
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value:lang(ko-kr),
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value:lang(th-th),
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value:lang(tr-tr),
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value:lang(zh-tw),
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value:lang(el-gr),
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value:lang(ja-jp),
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value:lang(ko-kr),
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value:lang(th-th),
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value:lang(tr-tr),
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value:lang(zh-tw),
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name:lang(el-gr),
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name:lang(ja-jp),
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name:lang(ko-kr),
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name:lang(th-th),
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name:lang(tr-tr),
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name:lang(zh-tw) {
+    text-transform: none
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-header .cdp-progression-statstone-value {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-header .cdp-progression-statstone-value:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value,
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value:lang(ja-jp),
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value:lang(ar-ae),
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name-owned,
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-rarity {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name-owned:lang(ja-jp),
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-rarity:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name-owned:lang(ar-ae),
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-rarity:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-progression-statstone {
+    align-items: center;
+    display: flex;
+    height: 118px;
+    position: relative;
+    width: 420px
+}
+
+.cdp-progression-statstone .cdp-progression-retired-icon {
+    background-image: url(/fe/lol-champion-details/legacy-icon.png);
+    background-size: contain;
+    height: 23px;
+    position: absolute;
+    top: 76px;
+    width: 23px
+}
+
+.cdp-progression-statstone .cdp-progression-retired-icon:lang(ar-ae) {
+    right: 59px
+}
+
+.cdp-progression-statstone.owned:hover .series-featured {
+    background-image: url(/fe/lol-champion-details/star-outline-resting.png)
+}
+
+.cdp-progression-statstone.owned:hover .series-featured:hover {
+    background-image: url(/fe/lol-champion-details/star-outline-hover.png)
+}
+
+.cdp-progression-statstone.owned:hover .series-featured.selected {
+    background-image: url(/fe/lol-champion-details/star-filled.png)
+}
+
+.cdp-progression-statstone.owned:hover .series-featured.selected:hover {
+    background-image: url(/fe/lol-champion-details/star-filled-hover.png)
+}
+
+.cdp-progression-statstone.owned:hover .cdp-progression-magic-mograph-wrapper {
+    display: block;
+    opacity: .6;
+    transition: opacity var(--ease-duration, .5s) ease-in-out
+}
+
+.cdp-progression-statstone.notowned:hover {
+    background-color: hsla(0, 0%, 100%, .03)
+}
+
+.cdp-progression-statstone .cdp-progression-magic-mograph-wrapper {
+    display: none;
+    opacity: 0;
+    position: relative;
+    transition: opacity var(--ease-duration, .5s) ease-in-out
+}
+
+.cdp-progression-statstone .cdp-progression-magic-mograph-wrapper.unlock {
+    display: inline-block;
+    opacity: 1
+}
+
+.cdp-progression-statstone .cdp-progression-magic-mograph-wrapper.statstone-cc {
+    -webkit-filter: hue-rotate(72deg)
+}
+
+.cdp-progression-statstone .cdp-progression-magic-mograph-wrapper.statstone-defense {
+    -webkit-filter: hue-rotate(-85deg)
+}
+
+.cdp-progression-statstone .cdp-progression-magic-mograph-wrapper.statstone-support {
+    -webkit-filter: hue-rotate(0)
+}
+
+.cdp-progression-statstone .cdp-progression-magic-mograph-wrapper.statstone-offense {
+    -webkit-filter: hue-rotate(-135deg)
+}
+
+.cdp-progression-statstone .cdp-progression-magic-mograph-wrapper.statstone-style {
+    -webkit-filter: hue-rotate(154deg)
+}
+
+.cdp-progression-statstone .cdp-progression-magic-mograph-wrapper.statstone-goal {
+    -webkit-filter: hue-rotate(130deg)
+}
+
+.cdp-progression-statstone .series-featured {
+    background-image: url(/fe/lol-champion-details/star-outline-resting.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    height: 17px;
+    margin: 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 17px
+}
+
+.cdp-progression-statstone .series-featured.selected {
+    background-image: url(/fe/lol-champion-details/star-filled.png)
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-right: 13px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-logo {
+    background-image: url(/fe/lol-champion-details/eternals-logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 14px;
+    min-width: 11px;
+    position: relative
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-logo.milestone-progress {
+    left: -85px;
+    top: -20px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-logo.milestones-passed {
+    padding-right: 7px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-header .cdp-progression-statstone-value {
+    text-transform: lowercase
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-value-info {
+    display: flex;
+    flex-direction: row
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-personal-best {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-icon {
+    background-image: url(/fe/lol-champion-details/personal-best-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 14px;
+    padding-right: 7px;
+    width: 14px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestones-passed-value,
+.cdp-progression-statstone .cdp-progression-statstone-personal-best-value {
+    color: #cdbe91;
+    position: relative;
+    text-transform: lowercase;
+    top: 1px;
+    white-space: nowrap
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestone {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 14px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestone .cdp-progression-statstone-milestone-bar {
+    border: thin solid #3c3c41;
+    height: 4px;
+    min-width: 272px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestone .cdp-progression-statstone-milestone-bar .cdp-progression-statstone-milestone-bar-fill {
+    background-color: #010a13;
+    height: 2px;
+    margin: 1px;
+    transition: width .5s ease-in-out;
+    width: 0
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestone .cdp-progression-statstone-milestone-bar .cdp-progression-statstone-milestone-bar-fill.statstone-cc {
+    background-image: linear-gradient(90deg, rgba(34, 197, 238, .2), #22c5ee)
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestone .cdp-progression-statstone-milestone-bar .cdp-progression-statstone-milestone-bar-fill.statstone-defense {
+    background-image: linear-gradient(90deg, rgba(255, 183, 17, .2), #ffb711)
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestone .cdp-progression-statstone-milestone-bar .cdp-progression-statstone-milestone-bar-fill.statstone-support {
+    background-image: linear-gradient(90deg, rgba(31, 180, 86, .2), #1fb456)
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestone .cdp-progression-statstone-milestone-bar .cdp-progression-statstone-milestone-bar-fill.statstone-offense {
+    background-image: linear-gradient(90deg, rgba(254, 31, 3, .2), #fe1f03)
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestone .cdp-progression-statstone-milestone-bar .cdp-progression-statstone-milestone-bar-fill.statstone-style {
+    background-image: linear-gradient(90deg, rgba(238, 52, 252, .2), #ee34fc)
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-milestone .cdp-progression-statstone-milestone-bar .cdp-progression-statstone-milestone-bar-fill.statstone-goal {
+    background-image: linear-gradient(90deg, rgba(190, 117, 255, .2), #be75ff)
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper {
+    align-items: center;
+    background: rgba(1, 10, 19, .3);
+    display: flex;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-image {
+    height: 85px;
+    width: auto
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-series-overview {
+    display: flex;
+    flex-direction: column
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description {
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+    width: 274px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    width: 274px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name-owned {
+    color: #cdbe91
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-name {
+    margin-bottom: 3px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-milestone-progress {
+    direction: ltr;
+    display: flex;
+    left: 80px;
+    position: relative;
+    right: auto;
+    top: -19px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-milestone-progress .progress-marker {
+    background-size: contain;
+    display: inline-flex;
+    height: 10px;
+    margin: 2px;
+    width: 10px
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-milestone-progress .progress-marker.filled {
+    background-image: url(/fe/lol-champion-details/milestone-filled.png)
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .cdp-progression-statstone-description .cdp-progression-statstone-milestone-progress .progress-marker.empty {
+    background-image: url(/fe/lol-champion-details/milestone-empty.png)
+}
+
+.cdp-progression-statstone .cdp-progression-statstone-wrapper .statstone-locked {
+    background: url(/fe/lol-champion-details/lock-default.png) 0 0/24px 24px no-repeat;
+    margin: 0 0 0 40px;
+    min-height: 24px;
+    min-width: 24px
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-value {
+    font-family: var(--font-display)
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-name {
+    font-family: var(--font-body)
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-name,
+.cdp-progression-showcase-item .cdp-progression-showcase-item-value {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-value {
+    text-transform: uppercase
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-value:lang(el-gr),
+.cdp-progression-showcase-item .cdp-progression-showcase-item-value:lang(ja-jp),
+.cdp-progression-showcase-item .cdp-progression-showcase-item-value:lang(ko-kr),
+.cdp-progression-showcase-item .cdp-progression-showcase-item-value:lang(th-th),
+.cdp-progression-showcase-item .cdp-progression-showcase-item-value:lang(tr-tr),
+.cdp-progression-showcase-item .cdp-progression-showcase-item-value:lang(zh-tw) {
+    text-transform: none
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-value {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-value:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-name {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-name:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-progression-showcase-item {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-logo {
+    position: relative
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-logo .cdp-progression-showcase-item-image {
+    height: 100%;
+    width: 85px
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-logo .cdp-progression-showcase-star {
+    background-image: url(/fe/lol-champion-details/showcase-star.png);
+    background-size: contain;
+    height: 20px;
+    position: absolute;
+    right: 7px;
+    top: 1px;
+    width: 20px
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-logo .cdp-progression-retired-icon {
+    background-image: url(/fe/lol-champion-details/legacy-icon.png);
+    background-size: contain;
+    height: 23px;
+    position: absolute;
+    top: 76px;
+    width: 23px
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-logo .cdp-progression-retired-icon:lang(ar-ae) {
+    right: 59px
+}
+
+.cdp-progression-showcase-item .cdp-progression-showcase-item-value {
+    color: #f0e6d2;
+    padding-top: 4px;
+    text-transform: lowercase
+}
+
+.rcp-fe-lol-champion-details-overview-section {
+    position: relative
+}
+
+.rcp-fe-lol-champion-details-overview-section .cdp-content-column {
+    height: 100%;
+    position: relative;
+    width: 325px
+}
+
+.rcp-fe-lol-champion-details-overview-section .cdp-overview-stats {
+    height: 195px
+}
+
+.rcp-fe-lol-champion-details-overview-section .cdp-overview-description {
+    height: 222px
+}
+
+.rcp-fe-lol-champion-details-overview-section .cdp-button-wrapper {
+    bottom: 0;
+    position: absolute;
+    width: 985px
+}
+
+.rcp-fe-lol-champion-details-overview-section .cdp-button-wrapper .cdp-learn-more-button,
+.rcp-fe-lol-champion-details-overview-section .cdp-button-wrapper .cdp-unlock-button {
+    display: inline-block;
+    margin-right: 15px;
+    min-width: 135px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-name,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-value,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-header,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value {
+    font-family: var(--font-display)
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-description {
+    font-family: var(--font-body)
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-description,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-name,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-value,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-header,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-name,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-value,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-header,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value {
+    text-transform: uppercase
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-name:lang(el-gr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-name:lang(ja-jp),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-name:lang(ko-kr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-name:lang(th-th),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-name:lang(tr-tr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-name:lang(zh-tw),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-value:lang(el-gr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-value:lang(ja-jp),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-value:lang(ko-kr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-value:lang(th-th),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-value:lang(tr-tr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-value:lang(zh-tw),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6:lang(el-gr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6:lang(ja-jp),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6:lang(ko-kr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6:lang(th-th),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6:lang(tr-tr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6:lang(zh-tw),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description:lang(el-gr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description:lang(ja-jp),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description:lang(ko-kr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description:lang(th-th),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description:lang(tr-tr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description:lang(zh-tw),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-header:lang(el-gr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-header:lang(ja-jp),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-header:lang(ko-kr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-header:lang(th-th),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-header:lang(tr-tr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-header:lang(zh-tw),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value:lang(el-gr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value:lang(ja-jp),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value:lang(ko-kr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value:lang(th-th),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value:lang(tr-tr),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value:lang(zh-tw) {
+    text-transform: none
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-value {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 32px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-value:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-name,
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-name:lang(ar-ae),
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-header {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-header:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6 {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-description {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-description:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+@-moz-keyframes cdp-progression-orb-spin-full {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes cdp-progression-orb-spin-full {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-o-keyframes cdp-progression-orb-spin-full {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes cdp-progression-orb-spin-full {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-moz-keyframes cdp-progression-orb-spin-half {
+    0% {
+        transform: rotate(180deg)
+    }
+
+    to {
+        transform: rotate(540deg)
+    }
+}
+
+@-webkit-keyframes cdp-progression-orb-spin-half {
+    0% {
+        transform: rotate(180deg)
+    }
+
+    to {
+        transform: rotate(540deg)
+    }
+}
+
+@-o-keyframes cdp-progression-orb-spin-half {
+    0% {
+        transform: rotate(180deg)
+    }
+
+    to {
+        transform: rotate(540deg)
+    }
+}
+
+@keyframes cdp-progression-orb-spin-half {
+    0% {
+        transform: rotate(180deg)
+    }
+
+    to {
+        transform: rotate(540deg)
+    }
+}
+
+@-moz-keyframes cdp-progression-orb-spin-third {
+    0% {
+        transform: rotate(120deg)
+    }
+
+    to {
+        transform: rotate(480deg)
+    }
+}
+
+@-webkit-keyframes cdp-progression-orb-spin-third {
+    0% {
+        transform: rotate(120deg)
+    }
+
+    to {
+        transform: rotate(480deg)
+    }
+}
+
+@-o-keyframes cdp-progression-orb-spin-third {
+    0% {
+        transform: rotate(120deg)
+    }
+
+    to {
+        transform: rotate(480deg)
+    }
+}
+
+@keyframes cdp-progression-orb-spin-third {
+    0% {
+        transform: rotate(120deg)
+    }
+
+    to {
+        transform: rotate(480deg)
+    }
+}
+
+@-moz-keyframes cdp-progression-orb-spin-two-third {
+    0% {
+        transform: rotate(240deg)
+    }
+
+    to {
+        transform: rotate(600deg)
+    }
+}
+
+@-webkit-keyframes cdp-progression-orb-spin-two-third {
+    0% {
+        transform: rotate(240deg)
+    }
+
+    to {
+        transform: rotate(600deg)
+    }
+}
+
+@-o-keyframes cdp-progression-orb-spin-two-third {
+    0% {
+        transform: rotate(240deg)
+    }
+
+    to {
+        transform: rotate(600deg)
+    }
+}
+
+@keyframes cdp-progression-orb-spin-two-third {
+    0% {
+        transform: rotate(240deg)
+    }
+
+    to {
+        transform: rotate(600deg)
+    }
+}
+
+.cdp-right-component {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 554px;
+    justify-content: flex-start;
+    width: 559px
+}
+
+.cdp-right-component .statstone-cc {
+    -webkit-filter: hue-rotate(72deg)
+}
+
+.cdp-right-component .statstone-defense {
+    -webkit-filter: hue-rotate(-85deg)
+}
+
+.cdp-right-component .statstone-support {
+    -webkit-filter: hue-rotate(0)
+}
+
+.cdp-right-component .statstone-offense {
+    -webkit-filter: hue-rotate(-135deg)
+}
+
+.cdp-right-component .statstone-style {
+    -webkit-filter: hue-rotate(154deg)
+}
+
+.cdp-right-component .statstone-goal {
+    -webkit-filter: hue-rotate(130deg)
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper {
+    height: 182px;
+    position: relative;
+    top: 15px;
+    width: 182px
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-orb-rings {
+    background: url(/fe/lol-champion-details/orbit-rings.png) 12px 12px/220px 220px no-repeat;
+    height: 232px;
+    left: -32px;
+    position: relative;
+    top: -50px;
+    width: 232px
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-orb-wrapper {
+    left: 66px;
+    position: absolute;
+    top: -50px
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-orb-wrapper .cdp-right-orb {
+    animation: cdp-progression-orb-spin-full 40s linear infinite;
+    background: url(/fe/lol-champion-details/eternal-orb-still.png) 0 0/24px 24px no-repeat;
+    height: 50px;
+    position: absolute;
+    transform-origin: center 122px;
+    width: 50px
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-orb-wrapper .cdp-right-orb.two-orb:nth-child(2) {
+    animation: cdp-progression-orb-spin-half 40s linear infinite
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-orb-wrapper .cdp-right-orb.three-orb:nth-child(2) {
+    animation: cdp-progression-orb-spin-third 40s linear infinite
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-orb-wrapper .cdp-right-orb.three-orb:nth-child(3) {
+    animation: cdp-progression-orb-spin-two-third 40s linear infinite
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-orb-wrapper .cdp-right-orb.statstone-cc {
+    -webkit-filter: hue-rotate(72deg)
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-orb-wrapper .cdp-right-orb.statstone-defense {
+    -webkit-filter: hue-rotate(-85deg)
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-orb-wrapper .cdp-right-orb.statstone-support {
+    -webkit-filter: hue-rotate(0)
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-orb-wrapper .cdp-right-orb.statstone-offense {
+    -webkit-filter: hue-rotate(-135deg)
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-orb-wrapper .cdp-right-orb.statstone-style {
+    -webkit-filter: hue-rotate(154deg)
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-orb-wrapper .cdp-right-orb.statstone-goal {
+    -webkit-filter: hue-rotate(130deg)
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-eternal-background {
+    left: -105px;
+    position: absolute;
+    top: -107px
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-eternal-image {
+    height: 280px;
+    left: -50px;
+    position: absolute;
+    top: -62px;
+    width: 280px
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-eternal-image.common {
+    height: 190px;
+    left: -5px;
+    top: 22px;
+    width: 190px
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-eternal-flame {
+    left: -54px;
+    position: absolute;
+    top: -50px
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-eternal-flame.common {
+    top: -24px
+}
+
+.cdp-right-component .cdp-right-eternal-wrapper .cdp-right-eternal-flame .cdp-right-eternal-flame-mograph video {
+    height: 280px;
+    width: 288px
+}
+
+.cdp-right-component .cdp-right-eternal-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description {
+    align-items: center;
+    color: #a09b8c;
+    display: flex;
+    flex-direction: column;
+    min-height: 180px;
+    padding: 46px 0 0;
+    text-align: center;
+    width: 550px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-value {
+    color: #f0e6d2;
+    padding-bottom: 4px;
+    text-transform: lowercase
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-name {
+    color: #cdbe91;
+    padding-bottom: 4px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-description .cdp-right-statstone-purchase-date {
+    color: #5b5a56;
+    padding-bottom: 12px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-around;
+    padding: 34px 0 0;
+    width: 100%
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    width: 176px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-lock-icon {
+    background: url(/fe/lol-champion-details/lock-locked.png) 0 0/10px 16px no-repeat;
+    height: 16px;
+    padding-right: 6px;
+    width: 10px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-header {
+    color: #a09b8c;
+    height: 36px;
+    padding-bottom: 4px;
+    text-align: center;
+    width: 100%
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    text-align: center;
+    width: 100%
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-personal-best-description h6 {
+    color: #5b5a56;
+    margin: 0
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-value-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-milestone-icon {
+    background: url(/fe/lol-champion-details/eternals-logo.png) 0 0/10px 14px no-repeat;
+    height: 14px;
+    padding-right: 6px;
+    width: 10px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value {
+    align-items: center;
+    color: #f0e6d2;
+    display: flex;
+    flex-direction: row;
+    text-transform: lowercase
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-right-progression-wrapper .cdp-right-progression .cdp-right-progression-value .cdp-right-personal-best-icon {
+    background-image: url(/fe/lol-champion-details/personal-best-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 14px;
+    padding-right: 4px;
+    width: 14px
+}
+
+.cdp-right-component .cdp-right-eternal-info .cdp-progression-content-divider-line {
+    background-color: #3c3c41;
+    min-height: 1px;
+    width: 530px
+}
+
+.cdp-tactical-info-component h6 {
+    font-family: var(--font-display)
+}
+
+.cdp-tactical-info-component p {
+    font-family: var(--font-body)
+}
+
+.cdp-tactical-info-component h6,
+.cdp-tactical-info-component p {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.cdp-tactical-info-component h6 {
+    text-transform: uppercase
+}
+
+.cdp-tactical-info-component h6:lang(el-gr),
+.cdp-tactical-info-component h6:lang(ja-jp),
+.cdp-tactical-info-component h6:lang(ko-kr),
+.cdp-tactical-info-component h6:lang(th-th),
+.cdp-tactical-info-component h6:lang(tr-tr),
+.cdp-tactical-info-component h6:lang(zh-tw) {
+    text-transform: none
+}
+
+.cdp-tactical-info-component h6 {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.cdp-tactical-info-component h6:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-tactical-info-component h6:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-tactical-info-component h6 {
+    color: #a09b8c
+}
+
+.cdp-tactical-info-component p {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.cdp-tactical-info-component p:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-tactical-info-component p:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-tactical-info-component p {
+    color: #f0e6d2
+}
+
+.cdp-tactical-info-component {
+    direction: rtl;
+    position: absolute;
+    text-align: right;
+    top: 27px
+}
+
+.cdp-tactical-info-component h6 {
+    margin: 0 0 2px
+}
+
+.cdp-tactical-info-component p {
+    margin: 0
+}
+
+.cdp-tactical-info-component .tactical-info-damage {
+    margin-bottom: 14px
+}
+
+.cdp-tactical-info-component .tactical-info-style {
+    margin-bottom: 11px
+}
+
+.cdp-tactical-info-component .continuum-graph-container {
+    direction: ltr;
+    display: flex;
+    margin-left: -1px
+}
+
+.cdp-tactical-info-component .continuum-graph {
+    background: url(/fe/lol-champion-details/continuum_graph_line.png) no-repeat 50%/100%;
+    height: 18px;
+    margin: 0 3px;
+    padding: 0 5px;
+    position: relative;
+    width: 80px
+}
+
+.cdp-tactical-info-component .continuum-graph-pip-container {
+    position: relative
+}
+
+.cdp-tactical-info-component .continuum-graph-pip {
+    background: url(/fe/lol-champion-details/continuum_graph_pip.png) no-repeat 50%/100%;
+    height: 14px;
+    position: absolute;
+    top: 2px;
+    transform: translateX(-50%);
+    width: 14px
+}
+
+.cdp-tactical-info-component .continuum-graph-icon {
+    height: 18px;
+    width: 18px
+}
+
+.cdp-tactical-info-component .continuum-graph-icon.attacks-icon {
+    background: url(/fe/lol-champion-details/continuum_icon_attackspeed.png) no-repeat 50%/100%
+}
+
+.cdp-tactical-info-component .continuum-graph-icon.attacks-icon-grey {
+    background: url(/fe/lol-champion-details/continuum_icon_attackspeed_grey.png) no-repeat 50%/100%
+}
+
+.cdp-tactical-info-component .continuum-graph-icon.abilities-icon {
+    background: url(/fe/lol-champion-details/continuum_icon_abilitypower.png) no-repeat 50%/100%
+}
+
+.cdp-tactical-info-component .continuum-graph-icon.abilities-icon-grey {
+    background: url(/fe/lol-champion-details/continuum_icon_abilitypower_grey.png) no-repeat 50%/100%
+}
+
+.cdp-tactical-info-component .difficulty-graph {
+    display: block;
+    height: 16px;
+    margin-top: 1px;
+    width: 120px
+}
+
+.cdp-tactical-info-component .difficulty-level-0 {
+    background: url(/fe/lol-champion-details/DifficultyGraph_empty.png) no-repeat 50%/100%
+}
+
+.cdp-tactical-info-component .difficulty-level-1 {
+    background: url(/fe/lol-champion-details/DifficultyGraph_Difficulty1.png) no-repeat 50%/100%
+}
+
+.cdp-tactical-info-component .difficulty-level-2 {
+    background: url(/fe/lol-champion-details/DifficultyGraph_Difficulty2.png) no-repeat 50%/100%
+}
+
+.cdp-tactical-info-component .difficulty-level-3 {
+    background: url(/fe/lol-champion-details/DifficultyGraph_Difficulty3.png) no-repeat 50%/100%
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment .segment-fill.level-1:after,
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment .segment-fill.level-2:after,
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment .segment-fill.level-3:after,
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover.crowd-control:before,
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover.damage:before,
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover.mobility:before,
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover.toughness:before,
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover.utility:before {
+    content: "";
+    height: 190px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 190px
+}
+
+.cdp-playstyle-info-component {
+    left: 146px;
+    position: absolute;
+    top: -7px
+}
+
+.cdp-playstyle-info-component .cdp-graph-background {
+    background: transparent url(/fe/lol-champion-details/cdp_graph_backing.png) top no-repeat;
+    background-size: 100%;
+    height: 190px;
+    margin: 0 auto;
+    position: relative;
+    width: 190px
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment {
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment .hover-event-mask {
+    -webkit-clip-path: polygon(45% 42%, 50% 41%, 54% 42%, 69% 23%, 63% 19%, 55% 17%, 55% 4%, 46% 4%, 46% 17%, 38% 19%, 31% 23%);
+    height: 100%;
+    pointer-events: all;
+    width: 100%
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment .tooltip-anchor {
+    height: 20px;
+    position: absolute;
+    width: 20px
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.damage {
+    transform: rotate(0deg)
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.damage .tooltip-anchor {
+    left: 86px;
+    top: 6px
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.toughness {
+    transform: rotate(72deg)
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.toughness .tooltip-anchor {
+    left: 86px;
+    top: 8px;
+    transform: rotate(-72deg)
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.crowd-control {
+    transform: rotate(144deg)
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.crowd-control .tooltip-anchor {
+    left: 84px;
+    top: 5px;
+    transform: rotate(-144deg)
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.mobility {
+    transform: rotate(216deg)
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.mobility .tooltip-anchor {
+    left: 86px;
+    top: 5px;
+    transform: rotate(-216deg)
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.utility {
+    transform: rotate(288deg)
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.utility .tooltip-anchor {
+    left: 84px;
+    top: 7px;
+    transform: rotate(-288deg)
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment .segment-fill {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment .segment-fill.level-1 {
+    background: transparent url(/fe/lol-champion-details/cdp-graph-segment-l1.png) top no-repeat;
+    background-size: 100%
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment .segment-fill.level-1:after {
+    background: transparent url(/fe/lol-champion-details/cdp-graph-segment-l1-hover.png) top no-repeat;
+    background-size: 100%;
+    opacity: 0;
+    transition: opacity .2s linear
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment .segment-fill.level-2 {
+    background: transparent url(/fe/lol-champion-details/cdp-graph-segment-l2.png) top no-repeat;
+    background-size: 100%
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment .segment-fill.level-2:after {
+    background: transparent url(/fe/lol-champion-details/cdp-graph-segment-l2-hover.png) top no-repeat;
+    background-size: 100%;
+    opacity: 0;
+    transition: opacity .2s linear
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment .segment-fill.level-3 {
+    background: transparent url(/fe/lol-champion-details/cdp-graph-segment-l3.png) top no-repeat;
+    background-size: 100%
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment .segment-fill.level-3:after {
+    background: transparent url(/fe/lol-champion-details/cdp-graph-segment-l3-hover.png) top no-repeat;
+    background-size: 100%;
+    opacity: 0;
+    transition: opacity .2s linear
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover .level-1:after,
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover .level-2:after,
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover .level-3:after {
+    opacity: 1
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover.damage:before {
+    background: transparent url(/fe/lol-champion-details/cdp-graph-damage-hover.png) top no-repeat;
+    background-size: 100%
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover.toughness:before {
+    background: transparent url(/fe/lol-champion-details/cdp-graph-toughness-hover.png) top no-repeat;
+    background-size: 100%;
+    transform: rotate(-72deg)
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover.crowd-control:before {
+    background: transparent url(/fe/lol-champion-details/cdp-graph-crowd-control-hover.png) top no-repeat;
+    background-size: 100%;
+    transform: rotate(-144deg)
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover.mobility:before {
+    background: transparent url(/fe/lol-champion-details/cdp-graph-mobility-hover.png) top no-repeat;
+    background-size: 100%;
+    transform: rotate(-216deg)
+}
+
+.cdp-playstyle-info-component .cdp-graph-background .stat-segment.hover.utility:before {
+    background: transparent url(/fe/lol-champion-details/cdp-graph-utility-hover.png) top no-repeat;
+    background-size: 100%;
+    transform: rotate(-288deg)
+}
+
+.cdp-abilities-section-container {
+    background-color: #010a13
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-key {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-key:lang(el-gr),
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-key:lang(ja-jp),
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-key:lang(ko-kr),
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-key:lang(th-th),
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-key:lang(tr-tr),
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-key:lang(zh-tw) {
+    text-transform: none
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-key {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-key:lang(ja-jp) {
+    font-size: 13px
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-key:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.rcp-fe-lol-champion-details-ability-picker {
+    align-content: center;
+    border-bottom: thin solid rgba(155, 125, 35, .5);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    left: 35px;
+    padding-bottom: 20px;
+    position: absolute;
+    top: 135px;
+    width: 325px
+}
+
+.rcp-fe-lol-champion-details-ability-picker .spellbook-wrapper {
+    display: flex;
+    flex-direction: column
+}
+
+.rcp-fe-lol-champion-details-ability-picker .spellbook {
+    display: flex;
+    flex-direction: row
+}
+
+.rcp-fe-lol-champion-details-ability-picker .spellbookOverride {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability {
+    color: #fff;
+    display: inline-block;
+    margin-right: 26px;
+    margin-top: 14px;
+    position: relative
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-video-progress {
+    background: linear-gradient(90deg, #0a323c, #0596aa, #0ac8b9, #cdfafa);
+    display: none;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 45px
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-icon-wrapper {
+    border: thin solid #3c3c41;
+    height: 38px;
+    position: relative;
+    width: 38px
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-icon-wrapper:after {
+    border: thin solid #010a13;
+    bottom: 0;
+    content: "";
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability.active .ability-icon-wrapper {
+    border-image: linear-gradient(to bottom right, #785a28, #c89b3c, #c8aa6e) 1 1;
+    border-style: solid;
+    border-width: 2px;
+    margin: -1px
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability.active .ability-video-progress {
+    display: block
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-icon {
+    cursor: pointer;
+    height: 38px;
+    width: 38px
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-icon:focus {
+    outline: none
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability .ability-key {
+    margin-top: 10px;
+    text-align: center
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability.ability-passive {
+    border: none;
+    margin-right: 54px;
+    margin-top: 20px;
+    position: relative
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability.ability-passive .ability-video-progress {
+    top: 36px
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability.ability-passive .ability-icon,
+.rcp-fe-lol-champion-details-ability-picker .ability.ability-passive .ability-icon-wrapper {
+    height: 28px;
+    width: 28px
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability.ability-passive .ability-key {
+    margin-top: 14px
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability.ability-passive:after {
+    border-right: thin solid #785a28;
+    content: "";
+    height: 40px;
+    position: absolute;
+    right: -28px;
+    top: -6px
+}
+
+.rcp-fe-lol-champion-details-ability-picker .ability:last-child {
+    margin-right: 0
+}
+
+.rcp-fe-lol-champion-details-ability-video {
+    height: 637px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1055px
+}
+
+.rcp-fe-lol-champion-details-ability-video .cdp-ability-video {
+    height: 720px;
+    left: 0;
+    position: absolute;
+    top: -40px;
+    width: 1056px
+}
+
+.rcp-fe-lol-champion-details-ability-video .cdp-ability-video video {
+    height: 100%;
+    width: 100%
+}
+
+.rcp-fe-lol-champion-details-ability-video .cdp-ability-video:after {
+    background: url(/fe/lol-champion-details/cdp-backdrop-mask.png) 0 0 no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.rcp-fe-lol-champion-details-ability-video .cdp-ability-video .loading-spinner {
+    background: transparent url(/fe/lol-champion-details/spinner.png) no-repeat 50% 50%;
+    background-size: contain;
+    height: 40px;
+    left: 65%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50% -50%);
+    visibility: hidden;
+    width: 40px
+}
+
+.rcp-fe-lol-champion-details-ability-video .cdp-ability-video.loading .loading-spinner {
+    animation: cdp-fadein .25s forwards, cdp-spin 4s linear infinite
+}
+
+.rcp-fe-lol-champion-details-ability-video .cdp-ability-video.loaded .loading-spinner {
+    animation: cdp-fadeout .25s forwards, cdp-spin 4s linear infinite
+}
+
+@-moz-keyframes cdp-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes cdp-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-o-keyframes cdp-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes cdp-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-moz-keyframes cdp-fadeout {
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+
+    99% {
+        opacity: 0;
+        visibility: visible
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@-webkit-keyframes cdp-fadeout {
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+
+    99% {
+        opacity: 0;
+        visibility: visible
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@-o-keyframes cdp-fadeout {
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+
+    99% {
+        opacity: 0;
+        visibility: visible
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@keyframes cdp-fadeout {
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+
+    99% {
+        opacity: 0;
+        visibility: visible
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@-moz-keyframes cdp-fadein {
+    0% {
+        opacity: 0;
+        visibility: visible
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+@-webkit-keyframes cdp-fadein {
+    0% {
+        opacity: 0;
+        visibility: visible
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+@-o-keyframes cdp-fadein {
+    0% {
+        opacity: 0;
+        visibility: visible
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+@keyframes cdp-fadein {
+    0% {
+        opacity: 0;
+        visibility: visible
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper h4 {
+    font-family: var(--font-display)
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper p {
+    font-family: var(--font-body)
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper h4,
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper p {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper h4 {
+    text-transform: uppercase
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper h4:lang(el-gr),
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper h4:lang(ja-jp),
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper h4:lang(ko-kr),
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper h4:lang(th-th),
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper h4:lang(tr-tr),
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper h4:lang(zh-tw) {
+    text-transform: none
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper h4 {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper h4:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper p {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper p:lang(ja-jp) {
+    font-size: 13px
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper p:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.rcp-fe-lol-champion-details-ability-description {
+    box-sizing: border-box;
+    padding: 235px 35px 34px 34px
+}
+
+.rcp-fe-lol-champion-details-ability-description.is-override {
+    padding-top: 310px
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column {
+    box-sizing: border-box;
+    height: 348px;
+    position: relative;
+    width: 325px
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper .cdp-ability-description {
+    height: 255px;
+    margin-top: 12px
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper h4 {
+    direction: rtl;
+    margin: 21px 0 11px
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper p {
+    overflow-wrap: break-word
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper p span {
+    color: #f0e6d2
+}
+
+.rcp-fe-lol-champion-details-ability-description .cdp-content-column .cdp-ability-description-wrapper .cdp-ability-info-wrapper p {
+    margin: 0
+}
+
+.cdp-skins-section .theme-features h4 {
+    font-family: var(--font-display)
+}
+
+.cdp-skins-section .theme-features,
+.cdp-skins-section .theme-features ul li {
+    font-family: var(--font-body)
+}
+
+.cdp-skins-section .theme-features,
+.cdp-skins-section .theme-features h4,
+.cdp-skins-section .theme-features ul li {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.cdp-skins-section .theme-features h4 {
+    text-transform: uppercase
+}
+
+.cdp-skins-section .theme-features h4:lang(el-gr),
+.cdp-skins-section .theme-features h4:lang(ja-jp),
+.cdp-skins-section .theme-features h4:lang(ko-kr),
+.cdp-skins-section .theme-features h4:lang(th-th),
+.cdp-skins-section .theme-features h4:lang(tr-tr),
+.cdp-skins-section .theme-features h4:lang(zh-tw) {
+    text-transform: none
+}
+
+.cdp-skins-section .theme-features h4 {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.cdp-skins-section .theme-features h4:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-skins-section .theme-features,
+.cdp-skins-section .theme-features ul li {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.cdp-skins-section .theme-features ul li:lang(ja-jp),
+.cdp-skins-section .theme-features:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-skins-section .theme-features ul li:lang(ar-ae),
+.cdp-skins-section .theme-features:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-skins-section {
+    background-color: #010a13;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.cdp-skins-section .uikit-background-switcher {
+    --background-switcher-img-height: 100%
+}
+
+.cdp-skins-section .theme-features {
+    margin-left: 8px;
+    margin-top: 115px;
+    max-height: 295px;
+    max-width: 308px
+}
+
+.cdp-skins-section .theme-features h4 {
+    margin: 0 0 12px
+}
+
+.cdp-skins-section .theme-features ul {
+    margin: 0;
+    padding-left: 13px
+}
+
+.cdp-skins-section .theme-features ul:lang(ar-ae) {
+    padding-inline-start: 20px
+}
+
+.cdp-skins-section .theme-features ul li {
+    color: #a09b8c;
+    line-height: 20px;
+    width: unset
+}
+
+.cdp-skins-section .cdp-skin-overlay {
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.cdp-skins-section .cdp-skin-overlay img,
+.cdp-skins-section .cdp-skin-overlay video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: auto
+}
+
+.cdp-skins-section .cdp-skin-overlay:after {
+    background: url(/fe/lol-champion-details/cdp-shader.png) 0 0 no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.cdp-skins-section .cdp-skins-carousel-container {
+    width: 100%
+}
+
+.cdp-skins-section .cdp-unlock-button-wrapper {
+    bottom: 43px;
+    left: 35px;
+    min-width: 135px;
+    position: absolute
+}
+
+.cdp-skins-section .cdp-unlock-button-content {
+    display: flex
+}
+
+.cdp-skins-section .cdp-unlock-button-content img {
+    margin-right: 4px
+}
+
+.cdp-skins-section .related {
+    bottom: 45px;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 27px
+}
+
+.cdp-skins-section .related .hidden {
+    display: none
+}
+
+.cdp-skins-section .related .icon {
+    cursor: pointer;
+    height: 28px;
+    margin-left: 20px;
+    width: 28px
+}
+
+.cdp-skins-section .related .chroma {
+    background: url(/fe/lol-static-assets/images/skin-viewer/icon-chroma-default.png) 0 0 no-repeat;
+    background-size: contain;
+    margin: auto
+}
+
+.cdp-skins-section .related .chroma:hover {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/icon-chroma-hover.png)
+}
+
+.cdp-skins-section .related .quest-forms {
+    width: 46px
+}
+
+.cdp-skins-section .related .quest-forms .icon {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/icon-three-masks-default.svg);
+    background-size: cover;
+    height: 20px;
+    margin: auto;
+    width: 20px
+}
+
+.cdp-skins-section .related .quest-forms .icon.tiered {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/evolution-icon.svg)
+}
+
+.cdp-skins-section .related .skinline {
+    width: 40px
+}
+
+.cdp-skins-section .related .skinline .icon {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/icon-themes-default.svg);
+    background-size: cover;
+    height: 20px;
+    margin: auto;
+    width: 20px
+}
+
+.cdp-skins-section .related .toggle-ui {
+    width: 40px
+}
+
+.cdp-skins-section .related .toggle-ui .icon {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/magnifier.svg);
+    background-size: cover;
+    height: 20px;
+    margin: auto;
+    width: 20px
+}
+
+.cdp-skins-carousel-container .champion-skin-name.base-skin,
+.cdp-skins-carousel-container .champion-skin-name.skin-name {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.cdp-skins-carousel-container .champion-skin-name.base-skin,
+.cdp-skins-carousel-container .champion-skin-name.base-skin:lang(el-gr),
+.cdp-skins-carousel-container .champion-skin-name.base-skin:lang(ja-jp),
+.cdp-skins-carousel-container .champion-skin-name.base-skin:lang(ko-kr),
+.cdp-skins-carousel-container .champion-skin-name.base-skin:lang(th-th),
+.cdp-skins-carousel-container .champion-skin-name.base-skin:lang(tr-tr),
+.cdp-skins-carousel-container .champion-skin-name.base-skin:lang(zh-tw),
+.cdp-skins-carousel-container .champion-skin-name.skin-name,
+.cdp-skins-carousel-container .champion-skin-name.skin-name:lang(el-gr),
+.cdp-skins-carousel-container .champion-skin-name.skin-name:lang(ja-jp),
+.cdp-skins-carousel-container .champion-skin-name.skin-name:lang(ko-kr),
+.cdp-skins-carousel-container .champion-skin-name.skin-name:lang(th-th),
+.cdp-skins-carousel-container .champion-skin-name.skin-name:lang(tr-tr),
+.cdp-skins-carousel-container .champion-skin-name.skin-name:lang(zh-tw) {
+    text-transform: none
+}
+
+.cdp-skins-carousel-container .champion-skin-name.base-skin {
+    color: #f0e6d2;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    letter-spacing: .025em;
+    line-height: 42px
+}
+
+.cdp-skins-carousel-container .champion-skin-name.base-skin:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-skins-carousel-container .champion-skin-name.skin-name {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    letter-spacing: .025em;
+    line-height: 22px
+}
+
+.cdp-skins-carousel-container .champion-skin-name.skin-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-skins-carousel-container .champion-skin-name.skin-name {
+    font-style: italic;
+    font-weight: 500
+}
+
+.cdp-emblem-overlay {
+    align-items: flex-start;
+    bottom: 140px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%
+}
+
+.cdp-emblem-overlay img {
+    width: 160px
+}
+
+.cdp-skin-thumbnail-gem-overlay {
+    align-items: flex-end;
+    bottom: 1px;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute
+}
+
+.cdp-skin-thumbnail-gem-overlay img {
+    width: 100%
+}
+
+.cdp-skins-carousel-container .champion-skin-name {
+    bottom: 115px;
+    display: flex;
+    left: 50%;
+    margin: 0 auto;
+    position: absolute;
+    transform: translateX(-50%)
+}
+
+.cdp-skins-carousel-container .champion-skin-name.skin-name {
+    bottom: 121px;
+    direction: rtl;
+    padding: 0 1em
+}
+
+.cdp-skins-carousel-container .skin-selection-indicator {
+    align-items: center;
+    bottom: 96px;
+    display: flex;
+    flex-direction: row;
+    height: 18px;
+    left: 50%;
+    margin: -2px auto auto;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%
+}
+
+.cdp-skins-carousel-container .skin-selection-indicator .line {
+    flex: 1 0;
+    height: 1px;
+    width: 50%
+}
+
+.cdp-skins-carousel-container .skin-selection-indicator .line.line-left {
+    background: linear-gradient(270deg, transparent 0, #785a28 0)
+}
+
+.cdp-skins-carousel-container .skin-selection-indicator .line.line-right {
+    background: linear-gradient(90deg, transparent 0, #785a28 0);
+    left: 50%
+}
+
+.cdp-skins-carousel-container .skin-selection-indicator.disabled .skin-pip:hover {
+    cursor: default
+}
+
+.cdp-skins-carousel-container .skin-selection-indicator .skin-selection-indicator-list {
+    align-items: center;
+    display: flex;
+    margin: 0 10px;
+    padding: 0
+}
+
+.cdp-skins-carousel-container .skin-selection-indicator .skin-pip {
+    background: url(/fe/lol-champion-details/skin-carousel-pip.png) 50% no-repeat;
+    background-size: contain;
+    display: block;
+    height: 6px;
+    margin-top: -1px;
+    padding: 5px;
+    width: 6px
+}
+
+.cdp-skins-carousel-container .skin-selection-indicator .skin-pip.skin-pip-selected {
+    background-image: url(/fe/lol-champion-details/skin-carousel-pip-selected.png);
+    padding: 4px 7px
+}
+
+.cdp-skins-carousel-container .skin-selection-indicator .skin-pip:hover {
+    cursor: pointer
+}
+
+.cdp-skins-carousel-container .skins-carousel {
+    align-items: center;
+    bottom: 22px;
+    display: flex;
+    height: 77px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%)
+}
+
+.cdp-skins-carousel-container .carousel-track-container {
+    height: 91px;
+    margin-top: 15px;
+    overflow: hidden;
+    padding-top: 14px
+}
+
+.cdp-skins-carousel-container .carousel-track {
+    display: flex;
+    transform: translateX(-198px);
+    transition: .7s cubic-bezier(0, 0, 0, 1)
+}
+
+.cdp-skins-carousel-container .buffer-wrapper,
+.cdp-skins-carousel-container .thumbnail-wrapper {
+    animation: thumbnail-wrapper-shrink-1 70ms cubic-bezier(1, 0, 1, 1), thumbnail-wrapper-shrink-2 .4s cubic-bezier(0, 0, 0, 1) 70ms;
+    background: #3c3c41;
+    height: 49px;
+    margin: 8px 5px;
+    position: relative;
+    width: 87px
+}
+
+.cdp-skins-carousel-container .buffer-wrapper:hover,
+.cdp-skins-carousel-container .thumbnail-wrapper:hover {
+    background: linear-gradient(0deg, #c89b3c, #f0e6d2)
+}
+
+.cdp-skins-carousel-container .buffer-wrapper:hover .cdp-skin-thumbnail-img,
+.cdp-skins-carousel-container .thumbnail-wrapper:hover .cdp-skin-thumbnail-img {
+    -webkit-filter: brightness(125%)
+}
+
+.cdp-skins-carousel-container .buffer-wrapper:hover.not-owned,
+.cdp-skins-carousel-container .thumbnail-wrapper:hover.not-owned {
+    background: #3c3c41
+}
+
+.cdp-skins-carousel-container .buffer-wrapper:hover.not-owned .cdp-skin-thumbnail-img,
+.cdp-skins-carousel-container .buffer-wrapper:hover.not-owned .skin-thumbnail-buffer,
+.cdp-skins-carousel-container .thumbnail-wrapper:hover.not-owned .cdp-skin-thumbnail-img,
+.cdp-skins-carousel-container .thumbnail-wrapper:hover.not-owned .skin-thumbnail-buffer {
+    -webkit-filter: grayscale(25%) brightness(125%)
+}
+
+.cdp-skins-carousel-container .buffer-wrapper.active-buffer,
+.cdp-skins-carousel-container .thumbnail-wrapper.active-skin {
+    animation: thumbnail-wrapper-expand-1 70ms cubic-bezier(1, 0, 1, 1), thumbnail-wrapper-expand-2 .4s cubic-bezier(0, 0, 0, 1) 70ms;
+    background: linear-gradient(0deg, #c8aa6e 0, #c89b3c 44%, #a07b32 59%, #785a28);
+    height: 65px;
+    margin: 0 5px;
+    width: 115px
+}
+
+.cdp-skins-carousel-container .buffer-wrapper.active-buffer:hover,
+.cdp-skins-carousel-container .thumbnail-wrapper.active-skin:hover {
+    background: linear-gradient(0deg, #c89b3c, #f0e6d2)
+}
+
+.cdp-skins-carousel-container .buffer-wrapper.active-buffer.not-owned:after,
+.cdp-skins-carousel-container .thumbnail-wrapper.active-skin.not-owned:after {
+    height: 80px;
+    position: absolute;
+    top: -7px;
+    width: 80px
+}
+
+.cdp-skins-carousel-container .buffer-wrapper.active-buffer.not-owned:hover.after,
+.cdp-skins-carousel-container .thumbnail-wrapper.active-skin.not-owned:hover.after {
+    background: url(/fe/lol-champion-details/skin-carousel-locked-hover.png)
+}
+
+.cdp-skins-carousel-container .buffer-wrapper.active-buffer .cdp-skin-thumbnail-img,
+.cdp-skins-carousel-container .buffer-wrapper.active-buffer .skin-thumbnail-buffer,
+.cdp-skins-carousel-container .thumbnail-wrapper.active-skin .cdp-skin-thumbnail-img,
+.cdp-skins-carousel-container .thumbnail-wrapper.active-skin .skin-thumbnail-buffer {
+    height: 59px;
+    margin: 3px;
+    padding: 0;
+    width: 109px
+}
+
+.cdp-skins-carousel-container .buffer-wrapper.active-buffer {
+    animation: thumbnail-wrapper-expand-1 70ms cubic-bezier(1, 0, 1, 1), thumbnail-wrapper-expand-2 .4s cubic-bezier(0, 0, 0, 1) 70ms;
+    height: 49px;
+    margin: 0 5px;
+    width: 87px
+}
+
+.cdp-skins-carousel-container .buffer-wrapper.active-buffer .skin-thumbnail-buffer {
+    height: 43px;
+    width: 81px
+}
+
+.cdp-skins-carousel-container .not-owned {
+    background: #3c3c41
+}
+
+.cdp-skins-carousel-container .not-owned .cdp-skin-thumbnail-img,
+.cdp-skins-carousel-container .not-owned .skin-thumbnail-buffer {
+    -webkit-filter: grayscale(50%);
+    margin: 2px;
+    padding: 1px
+}
+
+.cdp-skins-carousel-container .not-owned:after {
+    background: url(/fe/lol-champion-details/skin-carousel-locked.png);
+    background-size: contain
+}
+
+.cdp-skins-carousel-container .not-owned:after,
+.cdp-skins-carousel-container .not-owned:hover:after {
+    bottom: -15px;
+    content: "";
+    height: 30px;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 30px
+}
+
+.cdp-skins-carousel-container .not-owned:hover:after {
+    background: url(/fe/lol-champion-details/skin-carousel-locked-hover.png);
+    background-size: contain
+}
+
+.cdp-skins-carousel-container .loyalty-reward:after {
+    background-image: url(/fe/lol-champion-details/champ-free-to-play-reward-flag.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: " ";
+    height: 42px;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    right: 50%;
+    top: -14px;
+    transform: translateX(-50%);
+    width: 42px
+}
+
+.cdp-skins-carousel-container .rewards-program.active-skin.owned:not(.cdp-skins-carousel-container .rewards-program:hover):after,
+.cdp-skins-carousel-container .rewards-program:after {
+    background-image: url(/fe/lol-static-assets/images/loyalty-nav-bar.svg);
+    background-position: center calc(50% - 4px);
+    background-size: 22px;
+    height: 42px;
+    position: absolute;
+    right: -16px;
+    top: -14px;
+    width: 42px
+}
+
+.cdp-skins-carousel-container .rewards-program.active-skin:not(.cdp-skins-carousel-container .rewards-program:hover):after {
+    background-image: url(/fe/lol-static-assets/images/loyalty-nav-bar.svg);
+    background-position: 50%;
+    background-size: 36px
+}
+
+.cdp-skins-carousel-container .rewards-program.active-skin:after:hover {
+    height: 80px;
+    position: absolute;
+    top: -7px;
+    width: 80px
+}
+
+.cdp-skins-carousel-container .rental:after {
+    background-image: url(/fe/lol-champion-details/champ-rented-flag.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: " ";
+    height: 45px;
+    pointer-events: none;
+    position: absolute;
+    right: -17px;
+    top: -16px;
+    width: 45px
+}
+
+.cdp-skins-carousel-container .cdp-skin-thumbnail-img,
+.cdp-skins-carousel-container .skin-thumbnail-buffer {
+    background-position: 50% 40%;
+    background-size: cover;
+    cursor: pointer;
+    height: 43px;
+    margin: 3px;
+    min-height: 43px;
+    min-width: 81px;
+    outline: 1px solid #000;
+    outline-offset: -1px;
+    width: 81px
+}
+
+.cdp-skins-carousel-container .cdp-skin-thumbnail-augment {
+    background-position: 50% 40%;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.cdp-skins-carousel-container .no-transition {
+    transition: none !important
+}
+
+.cdp-skins-carousel-container .next-button,
+.cdp-skins-carousel-container .prev-button {
+    height: 36px;
+    margin: 0 5px
+}
+
+@-moz-keyframes thumbnail-wrapper-expand-1 {
+    0% {
+        margin: 0 -9px;
+        transform: scale(.75652)
+    }
+
+    to {
+        margin: 0 5px;
+        transform: scale(.97565)
+    }
+}
+
+@-webkit-keyframes thumbnail-wrapper-expand-1 {
+    0% {
+        margin: 0 -9px;
+        transform: scale(.75652)
+    }
+
+    to {
+        margin: 0 5px;
+        transform: scale(.97565)
+    }
+}
+
+@-o-keyframes thumbnail-wrapper-expand-1 {
+    0% {
+        margin: 0 -9px;
+        transform: scale(.75652)
+    }
+
+    to {
+        margin: 0 5px;
+        transform: scale(.97565)
+    }
+}
+
+@keyframes thumbnail-wrapper-expand-1 {
+    0% {
+        margin: 0 -9px;
+        transform: scale(.75652)
+    }
+
+    to {
+        margin: 0 5px;
+        transform: scale(.97565)
+    }
+}
+
+@-moz-keyframes thumbnail-wrapper-expand-2 {
+    0% {
+        margin: 0 5px;
+        transform: scale(.97565)
+    }
+
+    to {
+        margin: 0 5px;
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes thumbnail-wrapper-expand-2 {
+    0% {
+        margin: 0 5px;
+        transform: scale(.97565)
+    }
+
+    to {
+        margin: 0 5px;
+        transform: scale(1)
+    }
+}
+
+@-o-keyframes thumbnail-wrapper-expand-2 {
+    0% {
+        margin: 0 5px;
+        transform: scale(.97565)
+    }
+
+    to {
+        margin: 0 5px;
+        transform: scale(1)
+    }
+}
+
+@keyframes thumbnail-wrapper-expand-2 {
+    0% {
+        margin: 0 5px;
+        transform: scale(.97565)
+    }
+
+    to {
+        margin: 0 5px;
+        transform: scale(1)
+    }
+}
+
+@-moz-keyframes thumbnail-wrapper-shrink-1 {
+    0% {
+        margin: 8px 19px;
+        transform: scale(1.32184)
+    }
+
+    to {
+        margin: 8px 5px;
+        transform: scale(1.03218)
+    }
+}
+
+@-webkit-keyframes thumbnail-wrapper-shrink-1 {
+    0% {
+        margin: 8px 19px;
+        transform: scale(1.32184)
+    }
+
+    to {
+        margin: 8px 5px;
+        transform: scale(1.03218)
+    }
+}
+
+@-o-keyframes thumbnail-wrapper-shrink-1 {
+    0% {
+        margin: 8px 19px;
+        transform: scale(1.32184)
+    }
+
+    to {
+        margin: 8px 5px;
+        transform: scale(1.03218)
+    }
+}
+
+@keyframes thumbnail-wrapper-shrink-1 {
+    0% {
+        margin: 8px 19px;
+        transform: scale(1.32184)
+    }
+
+    to {
+        margin: 8px 5px;
+        transform: scale(1.03218)
+    }
+}
+
+@-moz-keyframes thumbnail-wrapper-shrink-2 {
+    0% {
+        margin: 8px 5px;
+        transform: scale(1.03218)
+    }
+
+    to {
+        margin: 8px 5px;
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes thumbnail-wrapper-shrink-2 {
+    0% {
+        margin: 8px 5px;
+        transform: scale(1.03218)
+    }
+
+    to {
+        margin: 8px 5px;
+        transform: scale(1)
+    }
+}
+
+@-o-keyframes thumbnail-wrapper-shrink-2 {
+    0% {
+        margin: 8px 5px;
+        transform: scale(1.03218)
+    }
+
+    to {
+        margin: 8px 5px;
+        transform: scale(1)
+    }
+}
+
+@keyframes thumbnail-wrapper-shrink-2 {
+    0% {
+        margin: 8px 5px;
+        transform: scale(1.03218)
+    }
+
+    to {
+        margin: 8px 5px;
+        transform: scale(1)
+    }
+}
+
+.tiered-transformations {
+    bottom: 140px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%)
+}
+
+.tiered-transformations__container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 82px;
+    justify-content: space-between;
+    overflow: visible;
+    position: relative;
+    width: 222px
+}
+
+.tiered-transformations__bar {
+    background: #4e4e4b;
+    border: 0;
+    height: 2px;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, calc(25% - 1px));
+    width: 144px;
+    z-index: -1
+}
+
+.tiered-transformations__item {
+    display: block;
+    margin: 0 auto;
+    width: 50%
+}
+
+.tiered-transformations__item>.image {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    margin: auto
+}
+
+.tiered-transformations__item:first-of-type>.image {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-1-no-resting.svg);
+    height: 94px;
+    width: 88px
+}
+
+.tiered-transformations__item:first-of-type>.image:hover {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-1-no-hover.svg)
+}
+
+.tiered-transformations__item:first-of-type>.image.selected {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-1-no-selected.svg)
+}
+
+.tiered-transformations__item:first-of-type>.image.obtained {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-1-o-resting.svg)
+}
+
+.tiered-transformations__item:first-of-type>.image.obtained:hover {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-1-o-hover.svg)
+}
+
+.tiered-transformations__item:first-of-type>.image.obtained.selected {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-1-o-selected.svg)
+}
+
+.tiered-transformations__item:nth-of-type(2)>.image {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-2-no-resting.svg);
+    height: 82px;
+    width: 131px
+}
+
+.tiered-transformations__item:nth-of-type(2)>.image:hover {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-2-no-hover.svg)
+}
+
+.tiered-transformations__item:nth-of-type(2)>.image.selected {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-2-no-selected.svg)
+}
+
+.tiered-transformations__item:nth-of-type(2)>.image.obtained {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-2-o-resting.svg)
+}
+
+.tiered-transformations__item:nth-of-type(2)>.image.obtained:hover {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-2-o-hover.svg)
+}
+
+.tiered-transformations__item:nth-of-type(2)>.image.obtained.selected {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-2-o-selected.svg)
+}
+
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count,
+lol-uikit-content-block[type=tooltip-small].mark-count-container-tooltip .mark-tooltip-text {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count {
+    text-transform: uppercase
+}
+
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count,
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count:lang(el-gr),
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count:lang(ja-jp),
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count:lang(ko-kr),
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count:lang(th-th),
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count:lang(tr-tr),
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count:lang(zh-tw) {
+    text-transform: none
+}
+
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    letter-spacing: .025em;
+    line-height: 22px
+}
+
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+lol-uikit-content-block[type=tooltip-small].mark-count-container-tooltip .mark-tooltip-text {
+    color: #a09b8c;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    line-height: 24px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+lol-uikit-content-block[type=tooltip-small].mark-count-container-tooltip .mark-tooltip-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.rcp-fe-lol-champion-details-mastery-section {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.rcp-fe-lol-champion-details-mastery-section .cdp-background-video {
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.rcp-fe-lol-champion-details-mastery-section .cdp-background-video video {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.rcp-fe-lol-champion-details-mastery-section .cdp-overview {
+    height: 100%;
+    margin-top: 0;
+    width: 100%
+}
+
+.rcp-fe-lol-champion-details-mastery-section .legacy-points-container {
+    left: 20px;
+    position: absolute;
+    top: 55px
+}
+
+.rcp-fe-lol-champion-details-mastery-section .crest-container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    margin: 0 0 0 166px
+}
+
+.rcp-fe-lol-champion-details-mastery-section .crest-container .info-modal-button {
+    align-items: center;
+    background: linear-gradient(0deg, #463714 4%, #785a28 23%, #c89b3c 90%, #c8aa6e);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    position: absolute;
+    right: 16px;
+    top: 40px;
+    width: 32px
+}
+
+.rcp-fe-lol-champion-details-mastery-section .crest-container .info-modal-button:hover {
+    background: linear-gradient(0deg, #c89b3c 0, #f0e6d2)
+}
+
+.rcp-fe-lol-champion-details-mastery-section .crest-container .info-modal-button .info-modal-icon {
+    background: url(/fe/lol-champion-details/info-icon.svg) no-repeat 50%/20px 20px;
+    background-color: #1e282d;
+    border-radius: 50%;
+    height: 29px;
+    width: 29px
+}
+
+.rcp-fe-lol-champion-details-mastery-section .mastery-footer {
+    background: rgba(1, 10, 19, .6);
+    border-top: 2px solid #463714;
+    bottom: 0;
+    display: flex;
+    height: 108px;
+    position: absolute;
+    width: 100%
+}
+
+.rcp-fe-lol-champion-details-mastery-section .mastery-footer .footer-left {
+    position: absolute
+}
+
+.rcp-fe-lol-champion-details-mastery-section .mastery-footer .footer-right {
+    position: relative;
+    width: 100%
+}
+
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container {
+    align-items: center;
+    background: rgba(1, 10, 19, .6);
+    border: 2px solid #463714;
+    bottom: 130px;
+    display: flex;
+    gap: 8px;
+    height: 52px;
+    justify-content: center;
+    left: 12px;
+    position: absolute;
+    width: 89px
+}
+
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-icon {
+    background-image: url(/fe/lol-static-assets/images/champion-mastery/mastery-mark.png);
+    background-size: contain;
+    height: 35px;
+    width: 35px
+}
+
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count {
+    color: #c8aa6e;
+    font-size: 19px
+}
+
+.rcp-fe-lol-champion-details-mastery-section .mark-count-container .mark-count:first-letter {
+    font-size: 20px
+}
+
+lol-uikit-content-block[type=tooltip-small].mark-count-container-tooltip {
+    padding: 12px 15px
+}
+
+lol-uikit-content-block[type=tooltip-small].mark-count-container-tooltip .mark-tooltip-text {
+    color: #cdbe91;
+    text-align: left;
+    width: 240px
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-level,
+.mastery-section-crest-display .mastery-info-container .mastery-xp-container .mastery-current-xp,
+lol-uikit-content-block[type=tooltip-small].marks-hover-area-tooltip .marks-hover-area-tooltip-desc {
+    font-family: var(--font-display)
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-xp-container .mastery-next-xp {
+    font-family: var(--font-body)
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-level,
+.mastery-section-crest-display .mastery-info-container .mastery-xp-container .mastery-current-xp,
+.mastery-section-crest-display .mastery-info-container .mastery-xp-container .mastery-next-xp,
+lol-uikit-content-block[type=tooltip-small].marks-hover-area-tooltip .marks-hover-area-tooltip-desc {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-level {
+    text-transform: uppercase
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-level:lang(el-gr),
+.mastery-section-crest-display .mastery-info-container .mastery-level:lang(ja-jp),
+.mastery-section-crest-display .mastery-info-container .mastery-level:lang(ko-kr),
+.mastery-section-crest-display .mastery-info-container .mastery-level:lang(th-th),
+.mastery-section-crest-display .mastery-info-container .mastery-level:lang(tr-tr),
+.mastery-section-crest-display .mastery-info-container .mastery-level:lang(zh-tw) {
+    text-transform: none
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-level {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-level:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-xp-container .mastery-current-xp,
+lol-uikit-content-block[type=tooltip-small].marks-hover-area-tooltip .marks-hover-area-tooltip-desc {
+    color: #a09b8c;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    line-height: 24px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-xp-container .mastery-current-xp:lang(ar-ae),
+lol-uikit-content-block[type=tooltip-small].marks-hover-area-tooltip .marks-hover-area-tooltip-desc:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-xp-container .mastery-next-xp {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-xp-container .mastery-next-xp:lang(ja-jp) {
+    font-size: 13px
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-xp-container .mastery-next-xp:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.mastery-section-crest-display {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    margin-top: 150px
+}
+
+.mastery-section-crest-display .crest-image {
+    height: 230px;
+    width: 295px
+}
+
+.mastery-section-crest-display .crest-image .mastery-crest-image {
+    bottom: 50px
+}
+
+.mastery-section-crest-display .crest-image .mastery-crest-aurora-video-container {
+    transform: translateY(20px)
+}
+
+.mastery-section-crest-display .crest-image .mastery-crest-aurora {
+    height: 500px;
+    transform: translate(-50%, -46%);
+    width: 500px
+}
+
+.mastery-section-crest-display .mastery-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 32px;
+    position: relative
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-xp-container {
+    align-items: baseline;
+    display: flex;
+    justify-content: center
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-xp-container .mastery-current-xp {
+    color: #c8aa6e;
+    font-weight: 700
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-xp-container .mastery-next-xp {
+    color: #c8aa6e;
+    letter-spacing: .05em
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-marks-container {
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    width: 100%
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-marks-container .marks-hover-area {
+    display: flex;
+    gap: 5px;
+    height: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    width: fit-content
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-marks-container .marks-hover-area .mark-icon {
+    background-image: url(/fe/lol-static-assets/images/champion-mastery/mastery-mark-empty.png);
+    background-size: contain;
+    height: 36px;
+    width: 36px
+}
+
+.mastery-section-crest-display .mastery-info-container .mastery-marks-container .marks-hover-area .mark-icon.completed {
+    background-image: url(/fe/lol-static-assets/images/champion-mastery/mastery-mark.png)
+}
+
+lol-uikit-content-block[type=tooltip-small].marks-hover-area-tooltip {
+    padding: 13px 15px
+}
+
+lol-uikit-content-block[type=tooltip-small].marks-hover-area-tooltip .marks-hover-area-tooltip-desc {
+    color: #cdbe91;
+    text-align: left;
+    width: 240px
+}
+
+.cdp-info-modal .info-container .how-title,
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text,
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .reward-container .reward-boarder .reward-amount-text,
+.cdp-info-modal .modal-title,
+.cdp-info-modal .modal-title.main {
+    font-family: var(--font-display)
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-description,
+.cdp-info-modal .info-container .how-it-works-container .how-description.main,
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text-maximum {
+    font-family: var(--font-body)
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-description,
+.cdp-info-modal .info-container .how-it-works-container .how-description.main,
+.cdp-info-modal .info-container .how-title,
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text,
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text-maximum,
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .reward-container .reward-boarder .reward-amount-text,
+.cdp-info-modal .modal-title,
+.cdp-info-modal .modal-title.main {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.cdp-info-modal .info-container .how-title,
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text,
+.cdp-info-modal .modal-title,
+.cdp-info-modal .modal-title.main {
+    text-transform: uppercase
+}
+
+.cdp-info-modal .info-container .how-title:lang(el-gr),
+.cdp-info-modal .info-container .how-title:lang(ja-jp),
+.cdp-info-modal .info-container .how-title:lang(ko-kr),
+.cdp-info-modal .info-container .how-title:lang(th-th),
+.cdp-info-modal .info-container .how-title:lang(tr-tr),
+.cdp-info-modal .info-container .how-title:lang(zh-tw),
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text:lang(el-gr),
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text:lang(ja-jp),
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text:lang(ko-kr),
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text:lang(th-th),
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text:lang(tr-tr),
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text:lang(zh-tw),
+.cdp-info-modal .modal-title.main:lang(el-gr),
+.cdp-info-modal .modal-title.main:lang(ja-jp),
+.cdp-info-modal .modal-title.main:lang(ko-kr),
+.cdp-info-modal .modal-title.main:lang(th-th),
+.cdp-info-modal .modal-title.main:lang(tr-tr),
+.cdp-info-modal .modal-title.main:lang(zh-tw),
+.cdp-info-modal .modal-title:lang(el-gr),
+.cdp-info-modal .modal-title:lang(ja-jp),
+.cdp-info-modal .modal-title:lang(ko-kr),
+.cdp-info-modal .modal-title:lang(th-th),
+.cdp-info-modal .modal-title:lang(tr-tr),
+.cdp-info-modal .modal-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.cdp-info-modal .modal-title.main {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 28px
+}
+
+.cdp-info-modal .modal-title.main:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-info-modal .info-container .how-title,
+.cdp-info-modal .modal-title {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.cdp-info-modal .info-container .how-title:lang(ar-ae),
+.cdp-info-modal .modal-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-description.main,
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text-maximum {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-description.main:lang(ar-ae),
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text-maximum:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-description {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-description:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-description:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .reward-container .reward-boarder .reward-amount-text {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .05em
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .reward-container .reward-boarder .reward-amount-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-info-modal {
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    height: 433px;
+    padding-top: 20px;
+    width: 709px
+}
+
+.cdp-info-modal .modal-title {
+    color: #c8aa6e
+}
+
+.cdp-info-modal .modal-title.main {
+    color: #f0e6d2;
+    white-space: nowrap
+}
+
+.cdp-info-modal .header-container {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    justify-content: center
+}
+
+.cdp-info-modal .header-container .title-flare {
+    background: url(/fe/lol-champion-details/info-modal-flare.png);
+    height: 6px;
+    width: 173px
+}
+
+.cdp-info-modal .header-container .title-flare.reverse {
+    transform: scaleX(-1)
+}
+
+.cdp-info-modal .info-container {
+    display: flex;
+    gap: 32px
+}
+
+.cdp-info-modal .info-container .how-title {
+    color: #c8aa6e
+}
+
+.cdp-info-modal .info-container .rewards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 247px;
+    padding: 0 38px 0 32px
+}
+
+.cdp-info-modal .info-container .rewards-container:lang(ar-ae) {
+    border-left: 2px solid #463714
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text {
+    color: #cdbe91
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .milestone-text-maximum {
+    color: #5b5a56;
+    margin-top: 2px
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .reward-container {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    width: 96px
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .reward-container .reward-boarder {
+    align-items: center;
+    background: #010a13;
+    border: 2px solid #1e2328;
+    display: flex;
+    height: 37px;
+    justify-content: center;
+    outline-color: rgba(1, 10, 19, .8);
+    outline-style: solid;
+    position: relative;
+    width: 37px
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .reward-container .reward-boarder .reward-image {
+    height: 100%;
+    width: 100%
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .reward-container .reward-boarder .reward-image.MARK {
+    height: 75%;
+    width: 100%
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .reward-container .reward-boarder .reward-image.HEXTECH_CHEST {
+    height: 95%;
+    width: 95%
+}
+
+.cdp-info-modal .info-container .rewards-container .rewards-container-row .reward-container .reward-boarder .reward-amount-text {
+    bottom: 0;
+    color: #fff;
+    font-size: 15px;
+    padding-right: 2px;
+    position: absolute;
+    right: 0
+}
+
+.cdp-info-modal .info-container .how-it-works-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 20px
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-description {
+    color: #a09b8c;
+    margin: 0 0 0 10px
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-description.main {
+    color: #cdbe91
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-container .how-row {
+    display: flex;
+    gap: 9px
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-container .how-row .how-icon {
+    height: 16px;
+    min-width: 16px
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-container .how-row .how-icon.mastery {
+    background: url(/fe/lol-static-assets/images/champion-mastery/generic-mastery-icon.svg)
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-container .how-row .how-icon.mark {
+    background: url(/fe/lol-champion-details/tooltip-mark-token.svg) no-repeat
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-container .how-row .how-icon.level-up {
+    background: url(/fe/lol-champion-details/level-up-two-arrows.svg) no-repeat
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-container .how-row .how-icon.pass-xp {
+    background: url(/fe/lol-champion-details/pass-xp-icon.svg) no-repeat
+}
+
+.cdp-info-modal .info-container .how-it-works-container .how-container .how-row .how-icon.champion-title {
+    background: url(/fe/lol-champion-details/rolled-scroll.svg) no-repeat
+}
+
+.mastery-section-milestone-progress .mastery-milestone-points-container {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.mastery-section-milestone-progress .mastery-milestone-points-container:lang(el-gr),
+.mastery-section-milestone-progress .mastery-milestone-points-container:lang(ja-jp),
+.mastery-section-milestone-progress .mastery-milestone-points-container:lang(ko-kr),
+.mastery-section-milestone-progress .mastery-milestone-points-container:lang(th-th),
+.mastery-section-milestone-progress .mastery-milestone-points-container:lang(tr-tr),
+.mastery-section-milestone-progress .mastery-milestone-points-container:lang(zh-tw) {
+    text-transform: none
+}
+
+.mastery-section-milestone-progress .mastery-milestone-points-container {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.mastery-section-milestone-progress .mastery-milestone-points-container:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.mastery-section-milestone-progress {
+    height: 100px;
+    position: relative;
+    width: 100%
+}
+
+.mastery-section-milestone-progress .mastery-milestone-points-container {
+    align-items: center;
+    background-color: rgba(1, 10, 19, .6);
+    border-top: 2px solid #463714;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .count,
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-text,
+.mastery-footer-milestone-track .reward-container .reward-boarder .reward-amount-text {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .count,
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-text {
+    text-transform: uppercase
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .count:lang(el-gr),
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .count:lang(ja-jp),
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .count:lang(ko-kr),
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .count:lang(th-th),
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .count:lang(tr-tr),
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .count:lang(zh-tw),
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-text:lang(el-gr),
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-text:lang(ja-jp),
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-text:lang(ko-kr),
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-text:lang(th-th),
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-text:lang(tr-tr),
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-text:lang(zh-tw) {
+    text-transform: none
+}
+
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-text {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .count {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .count:lang(ja-jp) {
+    font-size: 13px
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .count:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.mastery-footer-milestone-track .reward-container .reward-boarder .reward-amount-text {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .05em
+}
+
+.mastery-footer-milestone-track .reward-container .reward-boarder .reward-amount-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.mastery-footer-milestone-track {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    width: 100%
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .reward-boarder {
+    border: 2px solid;
+    border-image: linear-gradient(180deg, #c8aa6e 0, #655b41);
+    border-image-slice: 1;
+    box-sizing: border-box;
+    height: 56px;
+    width: 56px
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .reward-boarder .reward-image {
+    height: 70%;
+    margin: 7px;
+    width: 70%
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter {
+    background: #010a13;
+    border: 2px solid #1e2328;
+    border-radius: 16px;
+    padding: 2px
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill {
+    align-items: center;
+    background: #1e2328;
+    border: 3px solid #0ac8b9;
+    border-radius: 16px;
+    display: flex;
+    height: 18px;
+    justify-content: center;
+    width: fit-content
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .repeatable-arrow {
+    height: 18px;
+    padding: 0 2px 3px 4px;
+    width: 18px
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .repeatable-arrow.path {
+    fill: #0ac8b9
+}
+
+.mastery-footer-milestone-track .bonus-milestone-container .bonus-milestone-counter .bonus-milestone-pill .count {
+    color: #0ac8b9;
+    margin-right: 4px
+}
+
+.mastery-footer-milestone-track .milestone-progress-container {
+    align-items: center;
+    display: flex;
+    margin: 0 62px 12px 0
+}
+
+.mastery-footer-milestone-track .milestone-progress-container .milestone-progress-bar {
+    display: flex
+}
+
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-left: 1px;
+    width: 40px
+}
+
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-background {
+    background: #1e2328;
+    bottom: 0;
+    clip-path: polygon(7.5px 0, calc(100% - 7.5px) 0, 100% 50%, calc(100% - 7.5px) 100%, 7.5px 100%, 0 50%);
+    height: 14px;
+    width: 46px
+}
+
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-background.completed {
+    background: #0ac8b9
+}
+
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-plate {
+    background: #1e2328 linear-gradient(180deg, rgba(1, 10, 19, 0) 0, rgba(1, 10, 19, .34));
+    border-bottom: 2px solid #1e2328;
+    border-color: #1e2328 currentcolor;
+    border-top: 2px solid #1e2328;
+    box-sizing: border-box;
+    clip-path: polygon(10.5px 0, calc(100% - 10.5px) 0, calc(100% - 3px) 50%, calc(100% - 9.5px) calc(100% - 2px), 9.5px calc(100% - 2px), 3px 50%);
+    color: #a09b8c;
+    height: 22px;
+    position: absolute;
+    text-align: center;
+    transition: color .4s ease;
+    width: 54px
+}
+
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-plate.completed {
+    background: #0ac8b9 linear-gradient(180deg, rgba(1, 10, 19, 0) 0, rgba(1, 10, 19, .34));
+    border-color: #0ac8b9;
+    color: #1e2328
+}
+
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-text {
+    bottom: 16px;
+    color: #a09b8c;
+    font-size: 12px;
+    position: absolute
+}
+
+.mastery-footer-milestone-track .milestone-progress-container .milestone-container .milestone-text.completed {
+    color: #1e2328
+}
+
+.mastery-footer-milestone-track .milestone-progress-container .starting-milestone {
+    background-color: #010a13;
+    border: 1px solid #3c3c41;
+    border-radius: 50%;
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 22px;
+    left: 3px;
+    padding: 2px;
+    position: relative;
+    width: 22px
+}
+
+.mastery-footer-milestone-track .milestone-progress-container .starting-milestone .reward-star-icon {
+    background: #1e2328;
+    border: 2px solid #0ac8b9;
+    border-radius: 50%;
+    height: calc(100% - 6px);
+    padding: 1px;
+    width: calc(100% - 6px);
+    fill: #0ac8b9
+}
+
+.mastery-footer-milestone-track .reward-container {
+    align-items: center;
+    display: flex;
+    height: 56px;
+    justify-content: space-between;
+    min-width: 132px;
+    position: absolute;
+    top: 12px
+}
+
+.mastery-footer-milestone-track .reward-container .reward-boarder {
+    border: 2px solid;
+    border-image: linear-gradient(180deg, #c8aa6e 0, #655b41);
+    border-image-slice: 1;
+    box-sizing: border-box;
+    height: 56px;
+    margin: auto;
+    position: relative;
+    width: 56px
+}
+
+.mastery-footer-milestone-track .reward-container .reward-boarder.completed {
+    align-items: center;
+    border-image: linear-gradient(180deg, #83a2a6, #566d73);
+    border-image-slice: 1;
+    display: flex;
+    justify-content: center
+}
+
+.mastery-footer-milestone-track .reward-container .reward-boarder .reward-image {
+    height: 100%;
+    width: 100%
+}
+
+.mastery-footer-milestone-track .reward-container .reward-boarder .reward-image.MARK {
+    height: 70%;
+    margin: 7px;
+    width: 70%
+}
+
+.mastery-footer-milestone-track .reward-container .reward-boarder .reward-image.HEXTECH_CHEST {
+    height: 85%;
+    margin: 4px;
+    width: 85%
+}
+
+.mastery-footer-milestone-track .reward-container .reward-boarder .completed-overlay {
+    background: #010a13;
+    bottom: 2px;
+    height: 52px;
+    opacity: .4;
+    position: absolute;
+    width: 52px
+}
+
+.mastery-footer-milestone-track .reward-container .reward-boarder .completed-check-pip {
+    height: 30px;
+    position: absolute;
+    width: 30px
+}
+
+.mastery-footer-milestone-track .reward-container .reward-boarder .reward-amount-text {
+    bottom: 0;
+    color: #fff;
+    font-size: 15px;
+    padding-right: 2px;
+    position: absolute;
+    right: 0
+}
+
+.mastery-footer-milestone-requirements .milestone-season-row .milestone-level-text {
+    font-family: var(--font-display)
+}
+
+.mastery-footer-milestone-requirements .milestone-season-description {
+    font-family: var(--font-body)
+}
+
+.mastery-footer-milestone-requirements .milestone-season-description,
+.mastery-footer-milestone-requirements .milestone-season-row .milestone-level-text {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.mastery-footer-milestone-requirements .milestone-season-row .milestone-level-text {
+    text-transform: uppercase
+}
+
+.mastery-footer-milestone-requirements .milestone-season-row .milestone-level-text:lang(el-gr),
+.mastery-footer-milestone-requirements .milestone-season-row .milestone-level-text:lang(ja-jp),
+.mastery-footer-milestone-requirements .milestone-season-row .milestone-level-text:lang(ko-kr),
+.mastery-footer-milestone-requirements .milestone-season-row .milestone-level-text:lang(th-th),
+.mastery-footer-milestone-requirements .milestone-season-row .milestone-level-text:lang(tr-tr),
+.mastery-footer-milestone-requirements .milestone-season-row .milestone-level-text:lang(zh-tw) {
+    text-transform: none
+}
+
+.mastery-footer-milestone-requirements .milestone-season-row .milestone-level-text {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.mastery-footer-milestone-requirements .milestone-season-row .milestone-level-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.mastery-footer-milestone-requirements .milestone-season-description {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.mastery-footer-milestone-requirements .milestone-season-description:lang(ja-jp) {
+    font-size: 13px
+}
+
+.mastery-footer-milestone-requirements .milestone-season-description:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.mastery-footer-milestone-requirements {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 17px 0 0 15px
+}
+
+.mastery-footer-milestone-requirements .milestone-season-row {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.mastery-footer-milestone-requirements .milestone-season-row .milestone-level-text {
+    color: #f0e6d2
+}
+
+.mastery-footer-milestone-requirements .milestone-season-row .season-info-container {
+    cursor: pointer
+}
+
+.mastery-footer-milestone-requirements .milestone-season-description {
+    color: #5b5a56;
+    line-height: 12px;
+    margin-bottom: 4px
+}
+
+.mastery-footer-season-info .season-split-text,
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.title {
+    font-family: var(--font-display)
+}
+
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.data-time,
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.description {
+    font-family: var(--font-body)
+}
+
+.mastery-footer-season-info .season-split-text,
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.data-time,
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.description,
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.title {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.mastery-footer-season-info .season-split-text,
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.title {
+    text-transform: uppercase
+}
+
+.mastery-footer-season-info .season-split-text:lang(el-gr),
+.mastery-footer-season-info .season-split-text:lang(ja-jp),
+.mastery-footer-season-info .season-split-text:lang(ko-kr),
+.mastery-footer-season-info .season-split-text:lang(th-th),
+.mastery-footer-season-info .season-split-text:lang(tr-tr),
+.mastery-footer-season-info .season-split-text:lang(zh-tw),
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.title:lang(el-gr),
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.title:lang(ja-jp),
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.title:lang(ko-kr),
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.title:lang(th-th),
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.title:lang(tr-tr),
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.title:lang(zh-tw) {
+    text-transform: none
+}
+
+.mastery-footer-season-info .season-split-text,
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.title {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.mastery-footer-season-info .season-split-text:lang(ar-ae),
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.data-time {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.data-time:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.description {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.description:lang(ja-jp) {
+    font-size: 13px
+}
+
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.description:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.mastery-footer-season-info {
+    display: flex
+}
+
+.mastery-footer-season-info .season-split-text {
+    color: #c8aa6e;
+    margin-right: 2px
+}
+
+.mastery-footer-season-info .season-clock {
+    background: url(/fe/lol-static-assets/images/season-clock-yellow.svg) no-repeat 50%/12px 12px;
+    width: 20px
+}
+
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip {
+    max-width: max-content;
+    width: max-content
+}
+
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text {
+    color: #cdbe91;
+    min-width: 200px
+}
+
+lol-uikit-content-block[type=tooltip-small].season-info-tooltip .season-tooltip-text.title {
+    color: #c8aa6e;
+    margin-bottom: 3px
+}
+
+.cdp-feature-flyout-statstone-slot-numbner {
+    font-family: var(--font-display)
+}
+
+.cdp-feature-flyout-statstone-name {
+    font-family: var(--font-body)
+}
+
+.cdp-feature-flyout-statstone-name,
+.cdp-feature-flyout-statstone-slot-numbner {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.cdp-feature-flyout-statstone-slot-numbner {
+    text-transform: uppercase
+}
+
+.cdp-feature-flyout-statstone-slot-numbner:lang(el-gr),
+.cdp-feature-flyout-statstone-slot-numbner:lang(ja-jp),
+.cdp-feature-flyout-statstone-slot-numbner:lang(ko-kr),
+.cdp-feature-flyout-statstone-slot-numbner:lang(th-th),
+.cdp-feature-flyout-statstone-slot-numbner:lang(tr-tr),
+.cdp-feature-flyout-statstone-slot-numbner:lang(zh-tw) {
+    text-transform: none
+}
+
+.cdp-feature-flyout-statstone-slot-numbner {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.cdp-feature-flyout-statstone-slot-numbner:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-feature-flyout-statstone-name {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.cdp-feature-flyout-statstone-name:lang(ja-jp) {
+    font-size: 13px
+}
+
+.cdp-feature-flyout-statstone-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.cdp-feature-flyout-title {
+    padding: 8px 0;
+    text-align: center
+}
+
+.cdp-feature-flyout-content {
+    counter-reset: feature;
+    display: flex;
+    flex-direction: column
+}
+
+.cdp-feature-flyout-item {
+    align-items: center;
+    border-top: 1px solid #1e2328;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    height: 64px;
+    padding: 6px 10px;
+    width: 300px
+}
+
+.cdp-feature-flyout-item:hover {
+    background-color: hsla(40, 50%, 88%, .07)
+}
+
+.cdp-feature-flyout-statstone-image {
+    height: 64px;
+    padding-right: 14px;
+    position: relative;
+    width: 64px
+}
+
+.cdp-feature-flyout-statstone-image .cdp-feature-flyout-statstone-statue {
+    height: 100%;
+    width: 100%
+}
+
+.cdp-feature-flyout-statstone-image .cdp-feature-flyout-featured {
+    background-image: url(/fe/lol-champion-details/star-filled-hover.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    height: 17px;
+    margin: 6px 18px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 17px
+}
+
+.cdp-feature-flyout-statstone-name {
+    color: #a09b8c
+}
+
+.cdp-feature-flyout-statstone-slot-numbner {
+    color: #3c3c41;
+    margin: 0 auto 0 16px
+}
+
+.cdp-feature-flyout-statstone-slot-numbner:before {
+    content: counter(feature);
+    counter-increment: feature
+}
+
+.quest-forms .quest-form-tier {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.quest-forms .quest-form-tier:lang(el-gr),
+.quest-forms .quest-form-tier:lang(ja-jp),
+.quest-forms .quest-form-tier:lang(ko-kr),
+.quest-forms .quest-form-tier:lang(th-th),
+.quest-forms .quest-form-tier:lang(tr-tr),
+.quest-forms .quest-form-tier:lang(zh-tw) {
+    text-transform: none
+}
+
+.quest-forms .quest-form-tier {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.quest-forms .quest-form-tier:lang(ja-jp) {
+    font-size: 13px
+}
+
+.quest-forms .quest-form-tier:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.quest-forms {
+    display: flex;
+    flex-direction: column
+}
+
+.quest-forms .quest-form-tier {
+    align-items: center;
+    color: #3c3c41;
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    height: 24px;
+    justify-content: space-between;
+    line-height: 24px;
+    margin: 0 16px;
+    min-width: 238px;
+    padding: 7px 0
+}
+
+.quest-forms .quest-form-tier.unlocked {
+    cursor: pointer
+}
+
+.quest-forms .quest-form-tier:not(:last-child) {
+    border-bottom: 1px solid #1e2328;
+    box-sizing: content-box
+}
+
+.quest-forms .quest-form-tier.selected {
+    color: #c89b3c
+}
+
+.quest-forms .quest-form-tier.selected:before {
+    background-color: #c89b3c;
+    content: "";
+    height: 24px;
+    left: 3px;
+    position: absolute;
+    width: 2px
+}
+
+.quest-forms .quest-form-tier:hover {
+    color: #f0e6d2
+}
+
+.quest-forms .quest-form-tier:hover:before {
+    background-color: #f0e6d2;
+    content: "";
+    height: 24px;
+    left: 3px;
+    position: absolute;
+    width: 4px
+}
+
+.quest-forms .quest-form-tier .quest-form-tier-name {
+    padding-right: 10px
+}
+
+.quest-forms .quest-form-tier .quest-form-tier-lock {
+    background-image: url(/fe/lol-static-assets/images/npe-rewards-lock-grey.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 13px;
+    width: 8px
+}
+
+.quest-forms .quest-form-tier .quest-form-tier-emblem {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/lock-closed.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 26px;
+    width: 40px
+}
+
+.quest-forms .quest-form-tier .unlocked>.quest-form-tier-emblem {
+    height: 12px;
+    width: 8px
+}
+
+.quest-forms .quest-form-tier.form-0.unlocked>.quest-form-tier-emblem {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-1-resting.svg)
+}
+
+.quest-forms .quest-form-tier.form-0.unlocked:hover>.quest-form-tier-emblem {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-1-hover.svg)
+}
+
+.quest-forms .quest-form-tier.form-0.unlocked.selected>.quest-form-tier-emblem {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-1-selected.svg)
+}
+
+.quest-forms .quest-form-tier.form-1.unlocked>.quest-form-tier-emblem {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-2-resting.svg)
+}
+
+.quest-forms .quest-form-tier.form-1.unlocked:hover>.quest-form-tier-emblem {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-2-hover.svg)
+}
+
+.quest-forms .quest-form-tier.form-1.unlocked.selected>.quest-form-tier-emblem {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-2-selected.svg)
+}
+
+.quest-forms .quest-form-tier.form-2.unlocked>.quest-form-tier-emblem {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-3-resting.svg)
+}
+
+.quest-forms .quest-form-tier.form-2.unlocked:hover>.quest-form-tier-emblem {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-3-hover.svg)
+}
+
+.quest-forms .quest-form-tier.form-2.unlocked.selected>.quest-form-tier-emblem {
+    background-image: url(/fe/lol-static-assets/images/skin-viewer/tiered/tiered-evolution-3-selected.svg)
+}

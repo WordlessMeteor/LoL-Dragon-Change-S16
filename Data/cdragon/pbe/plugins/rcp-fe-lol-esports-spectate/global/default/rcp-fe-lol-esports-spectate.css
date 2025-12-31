@@ -1,0 +1,1168 @@
+.champ-select-spectate-component {
+    --left-side-color: #0b849e;
+    --right-side-color: #be1e37;
+    background: #000;
+    color: #fff;
+    font-family: Shentox, sans-serif;
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.champ-select-spectate-component .champion-select-header {
+    background-image: linear-gradient(104deg, #15171b 25%, #000 35%);
+    height: 108px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.champ-select-spectate-component .champion-select-header:before {
+    background-image: linear-gradient(74deg, #000 30%, #15171b 50%);
+    content: "";
+    height: 108px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%
+}
+
+.champ-select-spectate-component .champion-select-header .timer-left,
+.champ-select-spectate-component .champion-select-header .timer-right {
+    color: #fff;
+    font-size: 39px;
+    font-weight: 600;
+    height: 108px;
+    letter-spacing: .5px;
+    opacity: 0;
+    padding-top: 33px;
+    position: absolute;
+    top: 0;
+    width: 148px
+}
+
+.champ-select-spectate-component .champion-select-header .timer-left.visible,
+.champ-select-spectate-component .champion-select-header .timer-right.visible {
+    opacity: 1;
+    transition: opacity .3s
+}
+
+.champ-select-spectate-component .champion-select-header .timer-left .timer-bg,
+.champ-select-spectate-component .champion-select-header .timer-right .timer-bg {
+    height: 108px;
+    position: absolute;
+    top: 0;
+    transition: opacity .3s;
+    width: 98px
+}
+
+.champ-select-spectate-component .champion-select-header .timer-left .timer-inner,
+.champ-select-spectate-component .champion-select-header .timer-right .timer-inner {
+    position: absolute;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .4), -1px 1px 3px rgba(0, 0, 0, .4), -1px -1px 3px rgba(0, 0, 0, .4), 1px -1px 3px rgba(0, 0, 0, .4)
+}
+
+.champ-select-spectate-component .champion-select-header .timer-left {
+    left: 396px
+}
+
+.champ-select-spectate-component .champion-select-header .timer-left .timer-bg {
+    background: var(--left-side-color);
+    right: 0;
+    transform: skew(14deg)
+}
+
+.champ-select-spectate-component .champion-select-header .timer-left .timer-inner {
+    left: 69px
+}
+
+.champ-select-spectate-component .champion-select-header .timer-right {
+    right: 396px;
+    text-align: right
+}
+
+.champ-select-spectate-component .champion-select-header .timer-right .timer-bg {
+    background: var(--right-side-color);
+    left: 0;
+    transform: skew(-14deg)
+}
+
+.champ-select-spectate-component .champion-select-header .timer-right .timer-inner {
+    left: 20px
+}
+
+.champ-select-spectate-component .champion-select-header .header-keystone {
+    background: #15171b;
+    height: 108px;
+    left: 561px;
+    position: absolute;
+    right: 561px;
+    top: 0
+}
+
+.champ-select-spectate-component .champion-select-header .header-keystone>.left-bg-section {
+    background: #15171b;
+    height: 108px;
+    left: -14px;
+    position: absolute;
+    transform: skew(14deg);
+    width: 50px
+}
+
+.champ-select-spectate-component .champion-select-header .header-keystone>.right-bg-section {
+    background: #15171b;
+    height: 108px;
+    position: absolute;
+    right: -14px;
+    transform: skew(-14deg);
+    width: 50px
+}
+
+.champ-select-spectate-component .champion-select-header .header-keystone .header-keystone-inner {
+    background: transparent;
+    bottom: 0;
+    height: 23px;
+    left: 1px;
+    position: absolute;
+    text-align: center;
+    transition: background .3s, opacity .3s;
+    width: calc(100% - 2px)
+}
+
+.champ-select-spectate-component .champion-select-header .header-keystone .header-keystone-inner>.left-bg-section {
+    background: transparent;
+    height: 23px;
+    left: -4px;
+    position: absolute;
+    transform: skew(14deg);
+    transition: background .3s;
+    width: 50px
+}
+
+.champ-select-spectate-component .champion-select-header .header-keystone .header-keystone-inner>.right-bg-section {
+    background: transparent;
+    height: 23px;
+    position: absolute;
+    right: -4px;
+    transform: skew(-14deg);
+    transition: background .3s;
+    width: 50px
+}
+
+.champ-select-spectate-component .champion-select-header .header-keystone .header-keystone-inner>.phase {
+    direction: ltr;
+    font-size: 16px;
+    left: 0;
+    letter-spacing: .15px;
+    position: absolute;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .5), -1px 1px 3px rgba(0, 0, 0, .5), -1px -1px 3px rgba(0, 0, 0, .5), 1px -1px 3px rgba(0, 0, 0, .5);
+    top: 3px;
+    width: 100%
+}
+
+.champ-select-spectate-component.right-side-acting .champion-select-header .header-keystone-inner,
+.champ-select-spectate-component.right-side-acting .champion-select-header .header-keystone-inner .left-bg-section,
+.champ-select-spectate-component.right-side-acting .champion-select-header .header-keystone-inner .right-bg-section {
+    background: var(--right-side-color)
+}
+
+.champ-select-spectate-component.right-side-acting .timer-left .timer-bg {
+    opacity: 0
+}
+
+.champ-select-spectate-component.left-side-acting .champion-select-header .header-keystone-inner,
+.champ-select-spectate-component.left-side-acting .champion-select-header .header-keystone-inner .left-bg-section,
+.champ-select-spectate-component.left-side-acting .champion-select-header .header-keystone-inner .right-bg-section {
+    background: var(--left-side-color)
+}
+
+.champ-select-spectate-component.left-side-acting .timer-right .timer-bg,
+.champ-select-spectate-component.show-both-timers .champion-select-header .header-keystone-inner,
+.champ-select-spectate-component.show-both-timers .timer-bg {
+    opacity: 0
+}
+
+.champ-select-spectate-component .party {
+    display: flex;
+    flex-direction: column;
+    height: 453px;
+    position: absolute;
+    top: 132px;
+    width: 249px
+}
+
+.champ-select-spectate-component .party .summoner-wrapper {
+    height: 80px;
+    margin-bottom: 4px;
+    position: relative;
+    width: 100%
+}
+
+.champ-select-spectate-component .party .summoner-wrapper:nth-child(3) {
+    margin-bottom: 23px
+}
+
+.champ-select-spectate-component .party .summoner-wrapper .base-color-background {
+    bottom: 0;
+    -webkit-filter: saturate(.6);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.champ-select-spectate-component .party .summoner-wrapper .gradient-background-overlay {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, .83) 0, rgba(0, 0, 0, .72) 50%, rgba(0, 0, 0, .83));
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.champ-select-spectate-component .party .summoner-wrapper:first-child .gradient-background-overlay {
+    background-image: radial-gradient(ellipse 82% 128% at 50% 90%, rgba(0, 0, 0, .72) 0, rgba(0, 0, 0, .91) 100%)
+}
+
+.champ-select-spectate-component .party .summoner-wrapper:last-child .gradient-background-overlay {
+    background-image: radial-gradient(ellipse 82% 128% at 50% 10%, rgba(0, 0, 0, .72) 0, rgba(0, 0, 0, .91) 100%)
+}
+
+.champ-select-spectate-component .your-party .summoner-wrapper .base-color-background {
+    background: var(--left-side-color)
+}
+
+.champ-select-spectate-component .enemy-party .summoner-wrapper .base-color-background {
+    background: var(--right-side-color)
+}
+
+.champ-select-spectate-component .my-bans,
+.champ-select-spectate-component .their-bans {
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 116px;
+    position: absolute;
+    width: 475px
+}
+
+.champ-select-spectate-component .ban-background {
+    background: #161719;
+    height: 83px;
+    overflow: hidden;
+    position: relative;
+    width: 81px
+}
+
+.champ-select-spectate-component .ban-wrapper {
+    height: 83px;
+    position: relative;
+    width: 81px
+}
+
+.champ-select-spectate-component .ban-wrapper .ban-container {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.champ-select-spectate-component .ban-wrapper .ban-icon {
+    background: url(/fe/lol-esports-spectate/assets/ban-icon.png);
+    background-repeat: no-repeat;
+    background-size: 28px;
+    content: "";
+    -webkit-filter: brightness(.3) contrast(.85);
+    height: 28px;
+    position: absolute;
+    top: 28px;
+    transition: all .1s cubic-bezier(.29, .27, .5, .95);
+    width: 28px
+}
+
+.champ-select-spectate-component .ban-wrapper.completed {
+    animation: champBannedAnimation 1s ease-out forwards
+}
+
+.champ-select-spectate-component .ban-wrapper.completed .ban-icon {
+    -webkit-filter: brightness(1);
+    top: 68px
+}
+
+.champ-select-spectate-component .ban {
+    background-position-x: 51%;
+    background-position-y: 27%;
+    background-size: 431px;
+    height: 99px;
+    left: -13px;
+    margin-right: 2px;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    transition: opacity .2s;
+    width: 105px
+}
+
+.champ-select-spectate-component .ban:last-child {
+    margin-right: 0
+}
+
+.champ-select-spectate-component .ban.no-champion {
+    opacity: 0
+}
+
+.champ-select-spectate-component .my-bans {
+    left: 43px
+}
+
+.champ-select-spectate-component .my-bans .ban-wrapper {
+    margin-right: 4px
+}
+
+.champ-select-spectate-component .my-bans .ban-wrapper:nth-child(3) {
+    margin-right: 34px
+}
+
+.champ-select-spectate-component .my-bans .ban-wrapper .ban-icon {
+    right: 26px
+}
+
+.champ-select-spectate-component .my-bans .ban-wrapper.completed .ban-icon {
+    right: 19px
+}
+
+.champ-select-spectate-component .my-bans .ban-wrapper.active .ban-background {
+    border-right: 5px solid var(--left-side-color);
+    width: 77px
+}
+
+.champ-select-spectate-component .my-bans .ban-background {
+    transform: skew(14deg)
+}
+
+.champ-select-spectate-component .my-bans .ban-container {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: skew(-14deg)
+}
+
+.champ-select-spectate-component .their-bans {
+    flex-direction: row-reverse;
+    right: 43px
+}
+
+.champ-select-spectate-component .their-bans .ban-wrapper {
+    margin-left: 4px
+}
+
+.champ-select-spectate-component .their-bans .ban-wrapper:nth-child(3) {
+    margin-left: 34px
+}
+
+.champ-select-spectate-component .their-bans .ban-wrapper .ban-icon {
+    left: 31px;
+    transform: scaleX(-1)
+}
+
+.champ-select-spectate-component .their-bans .ban-wrapper.completed .ban-icon {
+    left: 23px
+}
+
+.champ-select-spectate-component .their-bans .ban-wrapper.active .ban-background {
+    border-left: 5px solid var(--right-side-color);
+    width: 77px
+}
+
+.champ-select-spectate-component .their-bans .ban-background {
+    margin-left: 4px;
+    transform: skew(-14deg)
+}
+
+.champ-select-spectate-component .their-bans .ban-container {
+    background-position-x: 49%;
+    transform: scaleX(-1) skew(-14deg)
+}
+
+.champ-select-spectate-component .your-party .party {
+    left: 0
+}
+
+.champ-select-spectate-component .enemy-party .party {
+    right: 0
+}
+
+.champion-select-color-switcher {
+    left: 333px;
+    position: absolute;
+    top: 200px
+}
+
+@-moz-keyframes champBannedAnimation {
+    0% {
+        -webkit-filter: brightness(1)
+    }
+
+    4% {
+        -webkit-filter: grayscale(.7) brightness(1.8)
+    }
+
+    to {
+        -webkit-filter: grayscale(.7) brightness(.9)
+    }
+}
+
+@-webkit-keyframes champBannedAnimation {
+    0% {
+        -webkit-filter: brightness(1)
+    }
+
+    4% {
+        -webkit-filter: grayscale(.7) brightness(1.8)
+    }
+
+    to {
+        -webkit-filter: grayscale(.7) brightness(.9)
+    }
+}
+
+@-o-keyframes champBannedAnimation {
+    0% {
+        -webkit-filter: brightness(1)
+    }
+
+    4% {
+        -webkit-filter: grayscale(.7) brightness(1.8)
+    }
+
+    to {
+        -webkit-filter: grayscale(.7) brightness(.9)
+    }
+}
+
+@keyframes champBannedAnimation {
+    0% {
+        -webkit-filter: brightness(1)
+    }
+
+    4% {
+        -webkit-filter: grayscale(.7) brightness(1.8)
+    }
+
+    to {
+        -webkit-filter: grayscale(.7) brightness(.9)
+    }
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="115"],
+.champ-select-spectate-component .their-bans .ban[data-id="115"] {
+    background-position-x: 46%;
+    background-position-y: 33%
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="19"],
+.champ-select-spectate-component .their-bans .ban[data-id="19"] {
+    background-position-y: 50%;
+    background-size: 281px
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="106"],
+.champ-select-spectate-component .their-bans .ban[data-id="106"] {
+    background-position-y: 20%
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="161"],
+.champ-select-spectate-component .their-bans .ban[data-id="161"] {
+    background-position-x: 47%;
+    background-size: 295px
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="44"],
+.champ-select-spectate-component .their-bans .ban[data-id="44"] {
+    background-position-x: 60%
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="223"],
+.champ-select-spectate-component .their-bans .ban[data-id="223"] {
+    background-size: 300px
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="13"],
+.champ-select-spectate-component .their-bans .ban[data-id="13"] {
+    background-position-x: 63%;
+    background-position-y: 38%
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="33"],
+.champ-select-spectate-component .their-bans .ban[data-id="33"] {
+    background-position-x: 55%;
+    background-position-y: 35%;
+    background-size: 373px
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="75"],
+.champ-select-spectate-component .their-bans .ban[data-id="75"] {
+    background-size: 597px
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="240"],
+.champ-select-spectate-component .my-bans .ban[data-id="96"],
+.champ-select-spectate-component .their-bans .ban[data-id="240"],
+.champ-select-spectate-component .their-bans .ban[data-id="96"] {
+    background-size: 300px
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="85"],
+.champ-select-spectate-component .their-bans .ban[data-id="85"] {
+    background-size: 321px
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="74"],
+.champ-select-spectate-component .their-bans .ban[data-id="74"] {
+    background-size: 350px
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="28"],
+.champ-select-spectate-component .their-bans .ban[data-id="28"] {
+    background-position-y: 22%
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="122"],
+.champ-select-spectate-component .their-bans .ban[data-id="122"] {
+    background-position-y: 19%
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="136"],
+.champ-select-spectate-component .their-bans .ban[data-id="136"] {
+    background-position-x: 57%;
+    background-position-y: 40%;
+    background-size: 360px
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="34"],
+.champ-select-spectate-component .their-bans .ban[data-id="34"] {
+    background-position-y: 36%
+}
+
+.champ-select-spectate-component .my-bans .ban[data-id="142"],
+.champ-select-spectate-component .their-bans .ban[data-id="142"] {
+    background-size: 300px
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="268"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="268"] {
+    background-position-y: 24%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="122"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="122"] {
+    background-position-y: 18%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="28"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="28"] {
+    background-position-y: 29%;
+    background-size: 165%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="50"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="50"] {
+    background-position-y: 22%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="9"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="9"] {
+    background-size: 165%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="114"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="114"] {
+    background-position-y: 18%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="105"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="105"] {
+    background-position-y: 21%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="74"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="74"] {
+    background-size: 200%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="420"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="420"] {
+    background-position-y: 18%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="39"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="39"] {
+    background-position-y: 26%;
+    background-size: 320%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="222"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="222"] {
+    background-position-y: 24%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="10"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="10"] {
+    background-position-y: 18%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="240"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="240"] {
+    background-position-y: 26%;
+    background-size: 180%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="96"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="96"] {
+    background-size: 180%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="7"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="7"] {
+    background-position-y: 22%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="64"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="64"] {
+    background-position-y: 26%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="236"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="267"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="236"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="267"] {
+    background-position-y: 23%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="20"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="20"] {
+    background-position-y: 18%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="33"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="33"] {
+    background-position-x: 67%;
+    background-size: 180%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="13"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="13"] {
+    background-position-x: 61%;
+    background-size: 205%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="223"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="223"] {
+    background-size: 180%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="8"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="8"] {
+    background-position-y: 23%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="201"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="201"] {
+    background-position-y: 20%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="106"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="106"] {
+    background-position-y: 17%;
+    background-size: 220%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="19"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="19"] {
+    background-position-y: 41%;
+    background-size: 170%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="101"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="101"] {
+    background-position-y: 22%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="115"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="115"] {
+    background-size: 200%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="83"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="83"] {
+    background-position-y: 19%;
+    background-size: 170%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="85"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="85"] {
+    background-size: 170%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="202"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="202"] {
+    background-position-y: 25%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="110"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="110"] {
+    background-position-x: 46%
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="142"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background[data-id="161"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="142"],
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background[data-id="161"] {
+    background-size: 166%
+}
+
+.champ-select-spectate-component [data-id="100"],
+.champ-select-spectate-component [data-id="102"],
+.champ-select-spectate-component [data-id="110"],
+.champ-select-spectate-component [data-id="112"],
+.champ-select-spectate-component [data-id="113"],
+.champ-select-spectate-component [data-id="121"],
+.champ-select-spectate-component [data-id="13"],
+.champ-select-spectate-component [data-id="136"],
+.champ-select-spectate-component [data-id="147"],
+.champ-select-spectate-component [data-id="163"],
+.champ-select-spectate-component [data-id="164"],
+.champ-select-spectate-component [data-id="203"],
+.champ-select-spectate-component [data-id="221"],
+.champ-select-spectate-component [data-id="236"],
+.champ-select-spectate-component [data-id="24"],
+.champ-select-spectate-component [data-id="240"],
+.champ-select-spectate-component [data-id="25"],
+.champ-select-spectate-component [data-id="250"],
+.champ-select-spectate-component [data-id="266"],
+.champ-select-spectate-component [data-id="27"],
+.champ-select-spectate-component [data-id="28"],
+.champ-select-spectate-component [data-id="29"],
+.champ-select-spectate-component [data-id="3"],
+.champ-select-spectate-component [data-id="36"],
+.champ-select-spectate-component [data-id="42"],
+.champ-select-spectate-component [data-id="420"],
+.champ-select-spectate-component [data-id="427"],
+.champ-select-spectate-component [data-id="432"],
+.champ-select-spectate-component [data-id="45"],
+.champ-select-spectate-component [data-id="497"],
+.champ-select-spectate-component [data-id="498"],
+.champ-select-spectate-component [data-id="517"],
+.champ-select-spectate-component [data-id="523"],
+.champ-select-spectate-component [data-id="526"],
+.champ-select-spectate-component [data-id="53"],
+.champ-select-spectate-component [data-id="63"],
+.champ-select-spectate-component [data-id="7"],
+.champ-select-spectate-component [data-id="711"],
+.champ-select-spectate-component [data-id="72"],
+.champ-select-spectate-component [data-id="76"],
+.champ-select-spectate-component [data-id="77"],
+.champ-select-spectate-component [data-id="78"],
+.champ-select-spectate-component [data-id="80"],
+.champ-select-spectate-component [data-id="800"],
+.champ-select-spectate-component [data-id="82"],
+.champ-select-spectate-component [data-id="85"],
+.champ-select-spectate-component [data-id="86"],
+.champ-select-spectate-component [data-id="876"],
+.champ-select-spectate-component [data-id="888"],
+.champ-select-spectate-component [data-id="9"],
+.champ-select-spectate-component [data-id="90"],
+.champ-select-spectate-component [data-id="910"] {
+    transform: scaleX(-1)
+}
+
+@font-face {
+    font-family: Shentox;
+    src: url(/fe/lol-esports-spectate/assets/shentox/shentox.ttf)
+}
+
+@font-face {
+    font-family: Shentox;
+    font-weight: 600;
+    src: url(/fe/lol-esports-spectate/assets/shentox/shentox-semibold.ttf)
+}
+
+@font-face {
+    font-family: Shentox;
+    font-weight: 300;
+    src: url(/fe/lol-esports-spectate/assets/shentox/shentox-light.ttf)
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper {
+    bottom: 0;
+    font-size: 16px;
+    font-weight: 300;
+    left: 0;
+    letter-spacing: .8px;
+    position: absolute;
+    right: 0;
+    text-shadow: 1px 1px 2px #000, 0 1px 2px #000, 0 0 3px #000, 0 0 3px #000, 1px 1px 4px #000;
+    top: 0
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background,
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .old-background {
+    background-position: 52% 28%;
+    background-size: 241%;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .background-wrapper {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .action-text {
+    bottom: 20px;
+    direction: ltr;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .2s
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .edge-border {
+    border-left: 0 solid #000;
+    border-right: 0 solid #000;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: width .15s;
+    width: 0
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .spells {
+    opacity: 1;
+    transition: opacity .3s
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .spell {
+    border: 2px solid #000;
+    box-shadow: 0 0 1px #000;
+    position: absolute;
+    width: 30px
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .spell:first-child {
+    top: 7px
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .spell:nth-child(2) {
+    top: 39px
+}
+
+.champ-select-spectate-component .summoner-object-component .summoner-object-wrapper .summoner-name {
+    bottom: 2px;
+    position: absolute;
+    transition: left .2s, right .2s
+}
+
+.champ-select-spectate-component .summoner-object-component.no-champion .spells {
+    opacity: 0
+}
+
+.champ-select-spectate-component .summoner-object-component.is-picking-now .action-text {
+    opacity: 1
+}
+
+.champ-select-spectate-component .summoner-object-component.champion-not-locked .background,
+.champ-select-spectate-component .summoner-object-component.champion-not-locked .old-background {
+    -webkit-filter: brightness(.8)
+}
+
+.champ-select-spectate-component .summoner-object-component.champion-locked .background {
+    animation: champLockedInAnimation 1.5s ease-out
+}
+
+.champ-select-spectate-component .your-party .summoner-object-component .summoner-object-wrapper .spell {
+    left: 11px
+}
+
+.champ-select-spectate-component .your-party .summoner-object-component .summoner-object-wrapper .summoner-name {
+    right: 9px
+}
+
+.champ-select-spectate-component .your-party .summoner-object-component .summoner-object-wrapper .edge-border {
+    background: var(--left-side-color);
+    right: 0
+}
+
+.champ-select-spectate-component .your-party .summoner-object-component .summoner-object-wrapper .action-text {
+    right: 15px
+}
+
+.champ-select-spectate-component .your-party .summoner-object-component.is-picking-now .edge-border {
+    border-left: 3px solid #000;
+    opacity: 1;
+    width: 4px
+}
+
+.champ-select-spectate-component .your-party .summoner-object-component.is-picking-now .summoner-name {
+    right: 15px
+}
+
+.champ-select-spectate-component .your-party .summoner-object-component.is-picking-now .action-text {
+    animation: fadeInRightAnimation .2s, flickerAnimation 3s cubic-bezier(.21, .89, .2, .88) .2s infinite
+}
+
+.champ-select-spectate-component .your-party .summoner-object-component .background-wrapper {
+    transform: scaleX(-1)
+}
+
+.champ-select-spectate-component .enemy-party .summoner-object-component .summoner-object-wrapper .spell {
+    right: 11px
+}
+
+.champ-select-spectate-component .enemy-party .summoner-object-component .summoner-object-wrapper .summoner-name {
+    left: 10px
+}
+
+.champ-select-spectate-component .enemy-party .summoner-object-component .summoner-object-wrapper .edge-border {
+    background: var(--right-side-color);
+    left: 0
+}
+
+.champ-select-spectate-component .enemy-party .summoner-object-component .summoner-object-wrapper .action-text {
+    left: 15px
+}
+
+.champ-select-spectate-component .enemy-party .summoner-object-component.is-picking-now .edge-border {
+    border-right: 3px solid #000;
+    opacity: 1;
+    width: 4px
+}
+
+.champ-select-spectate-component .enemy-party .summoner-object-component.is-picking-now .summoner-name {
+    left: 15px
+}
+
+.champ-select-spectate-component .enemy-party .summoner-object-component.is-picking-now .action-text {
+    animation: fadeInLeftAnimation .2s, flickerAnimation 3s cubic-bezier(.21, .89, .2, .88) .2s infinite
+}
+
+@-moz-keyframes flickerAnimation {
+    20% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes flickerAnimation {
+    20% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-o-keyframes flickerAnimation {
+    20% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes flickerAnimation {
+    20% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeInRightAnimation {
+    0% {
+        opacity: 0;
+        right: 23px
+    }
+
+    to {
+        opacity: 1;
+        right: 15px
+    }
+}
+
+@-webkit-keyframes fadeInRightAnimation {
+    0% {
+        opacity: 0;
+        right: 23px
+    }
+
+    to {
+        opacity: 1;
+        right: 15px
+    }
+}
+
+@-o-keyframes fadeInRightAnimation {
+    0% {
+        opacity: 0;
+        right: 23px
+    }
+
+    to {
+        opacity: 1;
+        right: 15px
+    }
+}
+
+@keyframes fadeInRightAnimation {
+    0% {
+        opacity: 0;
+        right: 23px
+    }
+
+    to {
+        opacity: 1;
+        right: 15px
+    }
+}
+
+@-moz-keyframes fadeInLeftAnimation {
+    0% {
+        left: 23px;
+        opacity: 0
+    }
+
+    to {
+        left: 15px;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInLeftAnimation {
+    0% {
+        left: 23px;
+        opacity: 0
+    }
+
+    to {
+        left: 15px;
+        opacity: 1
+    }
+}
+
+@-o-keyframes fadeInLeftAnimation {
+    0% {
+        left: 23px;
+        opacity: 0
+    }
+
+    to {
+        left: 15px;
+        opacity: 1
+    }
+}
+
+@keyframes fadeInLeftAnimation {
+    0% {
+        left: 23px;
+        opacity: 0
+    }
+
+    to {
+        left: 15px;
+        opacity: 1
+    }
+}
+
+@-moz-keyframes champLockedInAnimation {
+    0% {
+        -webkit-filter: brightness(1)
+    }
+
+    4% {
+        -webkit-filter: brightness(1.8)
+    }
+
+    to {
+        -webkit-filter: brightness(1)
+    }
+}
+
+@-webkit-keyframes champLockedInAnimation {
+    0% {
+        -webkit-filter: brightness(1)
+    }
+
+    4% {
+        -webkit-filter: brightness(1.8)
+    }
+
+    to {
+        -webkit-filter: brightness(1)
+    }
+}
+
+@-o-keyframes champLockedInAnimation {
+    0% {
+        -webkit-filter: brightness(1)
+    }
+
+    4% {
+        -webkit-filter: brightness(1.8)
+    }
+
+    to {
+        -webkit-filter: brightness(1)
+    }
+}
+
+@keyframes champLockedInAnimation {
+    0% {
+        -webkit-filter: brightness(1)
+    }
+
+    4% {
+        -webkit-filter: brightness(1.8)
+    }
+
+    to {
+        -webkit-filter: brightness(1)
+    }
+}
+
+/*# sourceMappingURL=rcp-fe-lol-esports-spectate.css.map*/

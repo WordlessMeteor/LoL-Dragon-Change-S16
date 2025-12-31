@@ -1,0 +1,2732 @@
+.lol-uikit-spinner-image {
+    animation: lol-uikit-spinner-animation 4s linear infinite
+}
+
+.lol-uikit-spinner-image-default-size {
+    height: 40px;
+    width: 40px
+}
+
+@-moz-keyframes lol-uikit-spinner-animation {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes lol-uikit-spinner-animation {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-o-keyframes lol-uikit-spinner-animation {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes lol-uikit-spinner-animation {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.lol-tooltip-component {
+    display: none
+}
+
+.uikit-framed-icon {
+    display: block
+}
+
+.uikit-framed-icon>.outer-mask>.frame-color>:first-child {
+    border-radius: 50%;
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.uikit-framed-icon .zoom>.outer-mask>.frame-color>img:first-child {
+    -webkit-clip-path: circle(calc(50% - var(--zoom, 0)*.5px) at center);
+    height: calc(100% + var(--zoom, 0)*1px);
+    margin-left: calc(var(--zoom, 0)*-.5*1px);
+    margin-top: calc(var(--zoom, 0)*-.5*1px);
+    width: calc(100% + var(--zoom, 0)*1px)
+}
+
+.uikit-framed-icon .zoom>.outer-mask>.frame-color>img:first-child:lang(ar-ae) {
+    margin-left: auto;
+    margin-right: calc(var(--zoom, 0)*-.5*1px)
+}
+
+.uikit-framed-icon .inner-mask {
+    border-radius: 50%;
+    box-shadow: inset 0 0 4px 1px rgba(1, 10, 19, .25);
+    box-sizing: border-box;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute
+}
+
+.uikit-framed-icon .inner-mask.inner-shadow {
+    box-shadow: inset 0 0 4px 4px rgba(0, 0, 0, .75)
+}
+
+.uikit-framed-icon .frame-color {
+    background-image: linear-gradient(0deg, #695625 0, #a9852d 23%, #b88d35 93%, #c8aa6e);
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    padding: 3px;
+    width: 100%
+}
+
+.uikit-framed-icon .frame-color.blue {
+    background-image: linear-gradient(0deg, #005a82 0, #0596aa 44%, #0596aa 93%, #0ac8b9)
+}
+
+.uikit-framed-icon .outer-mask {
+    border-radius: 50%;
+    box-shadow: 0 0 4px 1px rgba(1, 10, 19, .25);
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    position: relative
+}
+
+.uikit-framed-icon .interactive .frame-color:hover {
+    background-color: transparent;
+    background-image: linear-gradient(0deg, #c89b3c, #f0e6d2);
+    cursor: pointer
+}
+
+.uikit-framed-icon .interactive .frame-color:hover.blue {
+    background-image: linear-gradient(0deg, #3295c7 0, #0ac8b9 49%, #cdfafa)
+}
+
+.uikit-framed-icon .interactive .frame-color:active {
+    background-color: transparent;
+    background-image: linear-gradient(0deg, #695625, #463714);
+    cursor: pointer
+}
+
+.uikit-framed-icon .interactive .frame-color:active.blue {
+    background-image: linear-gradient(0deg, #005a82 0, #005a82 83%, #005a82)
+}
+
+.uikit-framed-icon .cursor-default {
+    cursor: default
+}
+
+:host([disabled]) .interactive .frame-color,
+:host([disabled]) .interactive .frame-color:active,
+:host([disabled]) .interactive .frame-color:hover {
+    background-color: #3c3732;
+    background-image: none
+}
+
+#patcher-progress-tooltip h1,
+.animated-progress-bar.main .progress-percent-text,
+.basic-button .play-button-container .play-button-content .play-button-text,
+.basic-button .play-button-container .play-button-content .play-button-text:lang(pl-pl),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper,
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss,
+.loadouts-modal-v2 .header .title,
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item,
+.loot-table-content .list-subtitle h5,
+.loot-table-content .list-title h5,
+.loot-table-content .loot-table-header,
+.loot-table-variable-odds-tooltip__title,
+.uikit-vignette .header {
+    font-family: var(--font-display)
+}
+
+#patcher-progress-tooltip .info,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input,
+.lol-patcher-error-modal ul,
+.loot-table-content,
+.loot-table-header-subtext {
+    font-family: var(--font-body)
+}
+
+#patcher-progress-tooltip .info,
+#patcher-progress-tooltip h1,
+.animated-progress-bar.main .progress-percent-text,
+.basic-button .play-button-container .play-button-content .play-button-text,
+.basic-button .play-button-container .play-button-content .play-button-text:lang(pl-pl),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper,
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss,
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item,
+.lol-patcher-error-modal ul,
+.loot-table-content,
+.loot-table-content .list-subtitle h5,
+.loot-table-content .list-title h5,
+.loot-table-content .loot-table-header,
+.loot-table-header-subtext,
+.loot-table-variable-odds-tooltip__title,
+.uikit-vignette .header {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+#patcher-progress-tooltip h1,
+.animated-progress-bar.main .progress-percent-text,
+.basic-button .play-button-container .play-button-content .play-button-text,
+.basic-button .play-button-container .play-button-content .play-button-text:lang(pl-pl),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper,
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss,
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item,
+.loot-table-content .list-subtitle h5,
+.loot-table-content .list-title h5,
+.loot-table-content .loot-table-header,
+.loot-table-variable-odds-tooltip__title,
+.uikit-vignette .header {
+    text-transform: uppercase
+}
+
+#patcher-progress-tooltip h1:lang(el-gr),
+#patcher-progress-tooltip h1:lang(ja-jp),
+#patcher-progress-tooltip h1:lang(ko-kr),
+#patcher-progress-tooltip h1:lang(th-th),
+#patcher-progress-tooltip h1:lang(tr-tr),
+#patcher-progress-tooltip h1:lang(zh-tw),
+.animated-progress-bar.main .progress-percent-text:lang(el-gr),
+.animated-progress-bar.main .progress-percent-text:lang(ja-jp),
+.animated-progress-bar.main .progress-percent-text:lang(ko-kr),
+.animated-progress-bar.main .progress-percent-text:lang(th-th),
+.animated-progress-bar.main .progress-percent-text:lang(tr-tr),
+.animated-progress-bar.main .progress-percent-text:lang(zh-tw),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(el-gr),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(ja-jp),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(ko-kr),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(pl-pl):lang(el-gr),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(pl-pl):lang(ja-jp),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(pl-pl):lang(ko-kr),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(pl-pl):lang(th-th),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(pl-pl):lang(tr-tr),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(pl-pl):lang(zh-tw),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(th-th),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(tr-tr),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(zh-tw),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(el-gr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(ja-jp),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(ko-kr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(th-th),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(tr-tr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(zh-tw),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(el-gr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(ja-jp),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(ko-kr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(th-th),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(tr-tr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(zh-tw),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(el-gr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(ja-jp),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(ko-kr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(th-th),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(tr-tr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(zh-tw),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(el-gr),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(ja-jp),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(ko-kr),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(th-th),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(tr-tr),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(zh-tw),
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item:lang(el-gr),
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item:lang(ja-jp),
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item:lang(ko-kr),
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item:lang(th-th),
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item:lang(tr-tr),
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item:lang(zh-tw),
+.loot-table-content .list-subtitle h5:lang(el-gr),
+.loot-table-content .list-subtitle h5:lang(ja-jp),
+.loot-table-content .list-subtitle h5:lang(ko-kr),
+.loot-table-content .list-subtitle h5:lang(th-th),
+.loot-table-content .list-subtitle h5:lang(tr-tr),
+.loot-table-content .list-subtitle h5:lang(zh-tw),
+.loot-table-content .list-title h5:lang(el-gr),
+.loot-table-content .list-title h5:lang(ja-jp),
+.loot-table-content .list-title h5:lang(ko-kr),
+.loot-table-content .list-title h5:lang(th-th),
+.loot-table-content .list-title h5:lang(tr-tr),
+.loot-table-content .list-title h5:lang(zh-tw),
+.loot-table-content .loot-table-header:lang(el-gr),
+.loot-table-content .loot-table-header:lang(ja-jp),
+.loot-table-content .loot-table-header:lang(ko-kr),
+.loot-table-content .loot-table-header:lang(th-th),
+.loot-table-content .loot-table-header:lang(tr-tr),
+.loot-table-content .loot-table-header:lang(zh-tw),
+.loot-table-variable-odds-tooltip__title:lang(el-gr),
+.loot-table-variable-odds-tooltip__title:lang(ja-jp),
+.loot-table-variable-odds-tooltip__title:lang(ko-kr),
+.loot-table-variable-odds-tooltip__title:lang(th-th),
+.loot-table-variable-odds-tooltip__title:lang(tr-tr),
+.loot-table-variable-odds-tooltip__title:lang(zh-tw),
+.uikit-vignette .header:lang(el-gr),
+.uikit-vignette .header:lang(ja-jp),
+.uikit-vignette .header:lang(ko-kr),
+.uikit-vignette .header:lang(th-th),
+.uikit-vignette .header:lang(tr-tr),
+.uikit-vignette .header:lang(zh-tw) {
+    text-transform: none
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title,
+.uikit-vignette .header {
+    color: #f0e6d2;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 28px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(ar-ae),
+.uikit-vignette .header:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+#patcher-progress-tooltip h1,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper,
+.loot-table-content .loot-table-header {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+#patcher-progress-tooltip h1:lang(ar-ae),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(ar-ae),
+.loot-table-content .loot-table-header:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.animated-progress-bar.main .progress-percent-text,
+.basic-button .play-button-container .play-button-content .play-button-text,
+.loot-table-content .list-title h5 {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.animated-progress-bar.main .progress-percent-text:lang(ar-ae),
+.basic-button .play-button-container .play-button-content .play-button-text:lang(ar-ae),
+.loot-table-content .list-title h5:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.basic-button .play-button-container .play-button-content .play-button-text:lang(pl-pl),
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item,
+.loot-table-content .list-subtitle h5,
+.loot-table-variable-odds-tooltip__title {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.basic-button .play-button-container .play-button-content .play-button-text:lang(pl-pl):lang(ja-jp),
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item:lang(ja-jp),
+.loot-table-content .list-subtitle h5:lang(ja-jp),
+.loot-table-variable-odds-tooltip__title:lang(ja-jp) {
+    font-size: 13px
+}
+
+.basic-button .play-button-container .play-button-content .play-button-text:lang(pl-pl):lang(ar-ae),
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item:lang(ar-ae),
+.loot-table-content .list-subtitle h5:lang(ar-ae),
+.loot-table-variable-odds-tooltip__title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header,
+.loot-table-content,
+.loot-table-header-subtext {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header:lang(ar-ae),
+.loot-table-content:lang(ar-ae),
+.loot-table-header-subtext:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+#patcher-progress-tooltip .info,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input,
+.lol-patcher-error-modal ul {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+#patcher-progress-tooltip .info:lang(ja-jp),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input:lang(ja-jp),
+.lol-patcher-error-modal ul:lang(ja-jp) {
+    font-size: 13px
+}
+
+#patcher-progress-tooltip .info:lang(ar-ae),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input:lang(ar-ae),
+.lol-patcher-error-modal ul:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.uikit-background-switcher {
+    --background-switcher-img-height: auto;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.uikit-background-switcher .lol-uikit-background-switcher-image,
+.uikit-background-switcher .lol-uikit-background-switcher-video {
+    object-fit: cover
+}
+
+.uikit-background-switcher .lol-uikit-background-switcher-image,
+.uikit-background-switcher .lol-uikit-background-switcher-overlay,
+.uikit-background-switcher .lol-uikit-background-switcher-video {
+    height: var(--background-switcher-img-height);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.uikit-background-switcher .lol-uikit-background-switcher-image.loading,
+.uikit-background-switcher .lol-uikit-background-switcher-overlay.loading,
+.uikit-background-switcher .lol-uikit-background-switcher-video.loading {
+    display: none
+}
+
+.uikit-background-switcher .lol-uikit-background-switcher-image.transition.pop-in,
+.uikit-background-switcher .lol-uikit-background-switcher-overlay.transition.pop-in,
+.uikit-background-switcher .lol-uikit-background-switcher-video.transition.pop-in {
+    animation: popIn .9s
+}
+
+.uikit-background-switcher .lol-uikit-background-switcher-image.transition.small-pop,
+.uikit-background-switcher .lol-uikit-background-switcher-overlay.transition.small-pop,
+.uikit-background-switcher .lol-uikit-background-switcher-video.transition.small-pop {
+    animation: smallPop .9s
+}
+
+.uikit-background-switcher .lol-uikit-background-switcher-image.transition.fade,
+.uikit-background-switcher .lol-uikit-background-switcher-overlay.transition.fade,
+.uikit-background-switcher .lol-uikit-background-switcher-video.transition.fade {
+    animation: fadeIn .9s
+}
+
+.uikit-background-switcher .lol-uikit-background-switcher-image.transition.pop-in-fade,
+.uikit-background-switcher .lol-uikit-background-switcher-overlay.transition.pop-in-fade,
+.uikit-background-switcher .lol-uikit-background-switcher-video.transition.pop-in-fade {
+    animation: popAndFadeIn .9s
+}
+
+.uikit-background-switcher.champion-ability-video {
+    -webkit-mask-image: radial-gradient(#000 0, transparent 70%);
+    -webkit-mask-position: 335px 40px;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 620px 500px
+}
+
+.uikit-background-switcher.champion-ability-video video {
+    left: 225px;
+    top: 60px;
+    width: 700px
+}
+
+@-moz-keyframes popIn {
+    0% {
+        -webkit-filter: brightness(1.5);
+        transform: perspective(20px) translateZ(40px)
+    }
+
+    to {
+        -webkit-filter: brightness(1);
+        transform: perspective(1000px) translateZ(0)
+    }
+}
+
+@-webkit-keyframes popIn {
+    0% {
+        -webkit-filter: brightness(1.5);
+        transform: perspective(20px) translateZ(40px)
+    }
+
+    to {
+        -webkit-filter: brightness(1);
+        transform: perspective(1000px) translateZ(0)
+    }
+}
+
+@-o-keyframes popIn {
+    0% {
+        -webkit-filter: brightness(1.5);
+        transform: perspective(20px) translateZ(40px)
+    }
+
+    to {
+        -webkit-filter: brightness(1);
+        transform: perspective(1000px) translateZ(0)
+    }
+}
+
+@keyframes popIn {
+    0% {
+        -webkit-filter: brightness(1.5);
+        transform: perspective(20px) translateZ(40px)
+    }
+
+    to {
+        -webkit-filter: brightness(1);
+        transform: perspective(1000px) translateZ(0)
+    }
+}
+
+@-moz-keyframes smallPop {
+    0% {
+        transform: perspective(20px) translateZ(1.05px)
+    }
+
+    to {
+        transform: perspective(1000px) translateZ(1px)
+    }
+}
+
+@-webkit-keyframes smallPop {
+    0% {
+        transform: perspective(20px) translateZ(1.05px)
+    }
+
+    to {
+        transform: perspective(1000px) translateZ(1px)
+    }
+}
+
+@-o-keyframes smallPop {
+    0% {
+        transform: perspective(20px) translateZ(1.05px)
+    }
+
+    to {
+        transform: perspective(1000px) translateZ(1px)
+    }
+}
+
+@keyframes smallPop {
+    0% {
+        transform: perspective(20px) translateZ(1.05px)
+    }
+
+    to {
+        transform: perspective(1000px) translateZ(1px)
+    }
+}
+
+@-moz-keyframes popAndFadeIn {
+    0% {
+        -webkit-filter: brightness(1.5);
+        opacity: 0;
+        transform: perspective(20px) translateZ(40px)
+    }
+
+    to {
+        -webkit-filter: brightness(1);
+        opacity: 1;
+        transform: perspective(1000px) translateZ(0)
+    }
+}
+
+@-webkit-keyframes popAndFadeIn {
+    0% {
+        -webkit-filter: brightness(1.5);
+        opacity: 0;
+        transform: perspective(20px) translateZ(40px)
+    }
+
+    to {
+        -webkit-filter: brightness(1);
+        opacity: 1;
+        transform: perspective(1000px) translateZ(0)
+    }
+}
+
+@-o-keyframes popAndFadeIn {
+    0% {
+        -webkit-filter: brightness(1.5);
+        opacity: 0;
+        transform: perspective(20px) translateZ(40px)
+    }
+
+    to {
+        -webkit-filter: brightness(1);
+        opacity: 1;
+        transform: perspective(1000px) translateZ(0)
+    }
+}
+
+@keyframes popAndFadeIn {
+    0% {
+        -webkit-filter: brightness(1.5);
+        opacity: 0;
+        transform: perspective(20px) translateZ(40px)
+    }
+
+    to {
+        -webkit-filter: brightness(1);
+        opacity: 1;
+        transform: perspective(1000px) translateZ(0)
+    }
+}
+
+.uikit-error-page {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.uikit-error-page--hidden {
+    display: none
+}
+
+.uikit-error-page__group {
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 340px
+}
+
+.uikit-error-page__wrench {
+    background-image: url(/fe/lol-static-assets/images/icon-repair.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 76px;
+    margin: 0 auto -4px;
+    width: 76px
+}
+
+.uikit-error-page__content {
+    direction: ltr;
+    text-align: center
+}
+
+.uikit-error-page__button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px
+}
+
+.uikit-error-page__retry-spinner {
+    animation: uikit-error-page__spin 1s linear 0s infinite;
+    background-image: url(/fe/lol-static-assets/images/spinner.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 32px;
+    width: 32px
+}
+
+@-moz-keyframes uikit-error-page__spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes uikit-error-page__spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-o-keyframes uikit-error-page__spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes uikit-error-page__spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.uikit-lottie {
+    overflow: visible;
+    position: relative
+}
+
+.uikit-lottie.loading-error {
+    background: #ea0e91
+}
+
+.uikit-lottie.loading-error:after {
+    content: "MISSING: " attr(src);
+    display: block;
+    word-wrap: break-word;
+    color: #000;
+    padding: 2px
+}
+
+.uikit-lottie .lottie-render-container {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.uikit-lottie .lottie-render-container .resize-to-fit {
+    height: 100%;
+    width: 100%
+}
+
+.uikit-lottie .lottie-render-container svg text,
+.uikit-lottie .lottie-render-container svg text tspan {
+    direction: ltr;
+    letter-spacing: inherit
+}
+
+:lang(ar-ae) .uikit-lottie svg text,
+:lang(ar-ae) .uikit-lottie svg text tspan {
+    unicode-bidi: bidi-override
+}
+
+.display-inline-block {
+    display: inline-block
+}
+
+.display-none {
+    display: none
+}
+
+.uikit-vignette {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px 4px 1fr 4px 130px;
+    height: 100%;
+    width: 100%
+}
+
+.uikit-vignette .bar {
+    align-items: center;
+    align-self: center;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    width: 100%
+}
+
+.uikit-vignette .header {
+    color: #f0e6d2
+}
+
+.uikit-vignette .main-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.uikit-vignette .border-bar {
+    background-image: -webkit-linear-gradient(left, #32281e, #785a28 50%, #32281e);
+    box-shadow: 0 2px 3px 1px rgba(0, 0, 0, .3);
+    height: 4px;
+    width: 100%
+}
+
+#lol-uikit-layer-manager-wrapper .modal>div>.uikit-modal__full-page,
+.svg-loader-container {
+    height: 100%;
+    width: 100%
+}
+
+.svg-loader-container {
+    position: relative
+}
+
+.svg-loader {
+    animation: wave 1.5s linear infinite;
+    animation-direction: alternate;
+    background: linear-gradient(110deg, #a09b8c, hsla(45, 10%, 59%, .3) 50%, #a09b8c);
+    background-size: 300% 300%;
+    height: 300px;
+    margin: 0;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    opacity: 1;
+    transition-duration: .2s;
+    transition-property: opacity;
+    width: 300px
+}
+
+.svg-loader.fade-out {
+    opacity: 0
+}
+
+.svg-loader.guide-mode {
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.content {
+    height: 100%;
+    width: 100%
+}
+
+.content.display-none {
+    display: none
+}
+
+@-moz-keyframes wave {
+    0% {
+        background-position: 100% 0
+    }
+
+    to {
+        background-position: 0
+    }
+}
+
+@-webkit-keyframes wave {
+    0% {
+        background-position: 100% 0
+    }
+
+    to {
+        background-position: 0
+    }
+}
+
+@-o-keyframes wave {
+    0% {
+        background-position: 100% 0
+    }
+
+    to {
+        background-position: 0
+    }
+}
+
+@keyframes wave {
+    0% {
+        background-position: 100% 0
+    }
+
+    to {
+        background-position: 0
+    }
+}
+
+.video-state {
+    height: 100%;
+    width: 100%
+}
+
+.video-state .intro,
+.video-state .loop,
+.video-state .outro {
+    position: absolute
+}
+
+.video-state .loop,
+.video-state .outro {
+    -webkit-animation: fadein .1s forwards
+}
+
+.video-state .hanging {
+    -webkit-filter: grayscale()
+}
+
+.video-state.logo .loop {
+    top: 33px
+}
+
+.video-state.main .loop {
+    top: 17px
+}
+
+.league-logo {
+    cursor: pointer
+}
+
+.basic-button {
+    box-sizing: border-box;
+    cursor: default;
+    height: 58px;
+    left: 29px;
+    padding: 7px 0;
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    transition: opacity .3s ease-out;
+    width: 162px
+}
+
+.basic-button .play-button-frame {
+    background-image: url(/fe/lol-static-assets/images/play-button-frame-default.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background .4s ease;
+    width: 100%
+}
+
+.basic-button .play-button-container {
+    background-position: 20px;
+    background-repeat: no-repeat;
+    height: 100%;
+    left: 0;
+    position: relative;
+    top: 0;
+    transition: background .4s ease .2s;
+    width: 100%
+}
+
+.basic-button .play-button-container .play-button-content {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 100%;
+    left: 36px;
+    padding: 6px;
+    pointer-events: all;
+    position: relative;
+    width: calc(100% - 34px)
+}
+
+.basic-button .play-button-container .play-button-content .play-button-text {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    pointer-events: none;
+    text-align: center;
+    width: 100%
+}
+
+.basic-button .play-button-container .play-button-content .play-button-text.clicked {
+    color: #3c3c41
+}
+
+.basic-button.play .play-button-container .play-button-content .play-button-text {
+    width: calc(100% - 16px)
+}
+
+.basic-button.disabled .play-button-content,
+.basic-button:disabled .play-button-content {
+    cursor: default
+}
+
+.basic-button.disabled .play-button-container .play-button-content .play-button-text,
+.basic-button:disabled .play-button-container .play-button-content .play-button-text {
+    color: #3c3c41
+}
+
+.basic-button.hidden {
+    filter: opacity(0)
+}
+
+.basic-button.hidden .play-button-content {
+    cursor: default;
+    pointer-events: none
+}
+
+.basic-button.repairing .play-button-container .play-button-text {
+    background-image: url(/fe/lol-static-assets/images/icon-repair.png);
+    background-position: 35px;
+    background-repeat: no-repeat;
+    background-size: 36px 36px
+}
+
+#patcher-progress-tooltip {
+    text-align: center;
+    user-select: none
+}
+
+#patcher-progress-tooltip h1 {
+    color: #f0e6d2;
+    margin: 0
+}
+
+#patcher-progress-tooltip hr {
+    border-color: #a09b8c;
+    border-bottom: 0;
+    color: #a09b8c;
+    filter: opacity(50%);
+    margin: 9px 0 12px
+}
+
+#patcher-progress-tooltip .info {
+    color: #a09b8c;
+    font-size: 11px;
+    text-align: initial
+}
+
+#patcher-progress-tooltip .filename {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%
+}
+
+.tooltip-holder #patcher-progress-tooltip {
+    display: none
+}
+
+.patching-progress-bar {
+    height: 122px;
+    left: 16px;
+    pointer-events: none;
+    position: absolute;
+    top: -22px;
+    width: 174px
+}
+
+.patching-progress-bar.disabled {
+    display: none
+}
+
+.patcher-bar-proxy,
+.patching-progress-bar .modal-holder {
+    pointer-events: auto
+}
+
+.patcher-bar-proxy {
+    height: 55px;
+    left: 0;
+    position: absolute;
+    top: 33px;
+    width: 100%;
+    z-index: 1
+}
+
+.animated-progress-bar {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.animated-progress-bar.patching,
+.animated-progress-bar.repairing {
+    display: block
+}
+
+.animated-progress-bar.outro {
+    -webkit-animation: fadeout .8s forwards;
+    -webkit-animation-delay: 1.2s
+}
+
+@-webkit-keyframes indeterminate {
+    to {
+        background-position: -200%
+    }
+}
+
+.lol-patcher-modal-holder,
+.patcher-tooltip-holder {
+    display: none
+}
+
+#rcp-fe-lol-patcher-bootstrap {
+    border: 2px solid #1e282d;
+    box-sizing: border-box;
+    color: #a09b8c;
+    display: flex;
+    height: 274px;
+    left: 0;
+    overflow: hidden;
+    top: 0;
+    width: 500px;
+    z-index: 10000
+}
+
+.lol-patcher-error-modal {
+    direction: ltr
+}
+
+.lol-patcher-error-modal h6,
+.lol-patcher-error-modal ul {
+    margin: 20px 0;
+    text-align: left
+}
+
+.lol-patcher-error-modal ul {
+    padding-left: 20px
+}
+
+.long-progress-bar {
+    height: 122px;
+    left: 240px;
+    top: -20px;
+    width: 804px
+}
+
+.long-progress-bar .animated-progress-bar .global-mask {
+    display: inherit;
+    height: 100%;
+    padding: inherit;
+    position: absolute;
+    width: 100%
+}
+
+.long-progress-bar .animated-progress-bar .global-mask.active {
+    -webkit-mask-image: url(/fe/lol-static-assets/images/long-mask-progress-bar-overlay.png);
+    -webkit-mask-position: center right;
+    -webkit-mask-repeat: no-repeat;
+    padding-right: 25px
+}
+
+.long-progress-bar .animated-progress-bar .frame {
+    left: 12px;
+    position: absolute;
+    top: 40px
+}
+
+.long-progress-bar .animated-progress-bar .progress-bar-wrapper .endpoint-container .video-wrapper {
+    height: 272px;
+    left: -51px;
+    position: absolute;
+    top: 7px;
+    transform: translateX(-124px);
+    width: 272px
+}
+
+.long-progress-bar .animated-progress-bar .progress-percent-text {
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0
+}
+
+.long-progress-bar .animated-progress-bar .progress-percent-text span:last-of-type {
+    padding: 0 0 0 5px
+}
+
+.long-progress-bar .animated-progress-bar .video-state.endpoint {
+    overflow: visible
+}
+
+.long-progress-bar .animated-progress-bar .video-state.main {
+    width: 754px
+}
+
+.long-progress-bar .animated-progress-bar .video-state.main .loop {
+    top: 12px
+}
+
+.long-progress-bar .animated-progress-bar .video-state.border {
+    height: 66px;
+    left: -11px;
+    top: -2px;
+    width: 776px
+}
+
+.long-progress-bar .animated-progress-bar .video-state.endpoint .loop {
+    height: 120px;
+    margin: 0;
+    width: 272px
+}
+
+.game-patcher-bar {
+    background-color: #232376;
+    height: 44px;
+    margin-left: 24px;
+    margin-top: 24px;
+    width: 256px
+}
+
+.league-client-logo .play-button-hover-magic,
+.league-client-logo .play-button-video {
+    left: 20px;
+    position: absolute;
+    top: -7px
+}
+
+.league-client-logo .large-video {
+    padding-left: 2px;
+    position: absolute;
+    top: -25px
+}
+
+.league-client-logo .league-logo {
+    cursor: default;
+    left: -13px;
+    position: absolute;
+    top: -6px
+}
+
+.animated-progress-bar.main .global-mask {
+    display: inherit;
+    height: 100%;
+    padding: inherit;
+    position: absolute;
+    width: 100%
+}
+
+.animated-progress-bar.main .global-mask.active {
+    -webkit-mask-image: url(/fe/lol-static-assets/images/mask-progress-bar-overlay.png);
+    -webkit-mask-position: center right;
+    -webkit-mask-repeat: no-repeat
+}
+
+.animated-progress-bar.main .progress-bar-wrapper {
+    -webkit-animation: fadein .3s forwards;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+    padding-left: 48px;
+    position: relative;
+    width: 100%
+}
+
+.animated-progress-bar.main .progress-bar-wrapper.outro {
+    -webkit-animation: fadeout .3s forwards
+}
+
+.animated-progress-bar.main .progress-bar-wrapper .progress-bar-container {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.animated-progress-bar.main .progress-bar-wrapper .endpoint-container {
+    height: 100%;
+    position: relative;
+    width: 4px
+}
+
+.animated-progress-bar.main .progress-bar-wrapper .endpoint-container .video-wrapper {
+    height: 122px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateX(-124px);
+    width: 174px
+}
+
+.animated-progress-bar.main .progress-bar-mask {
+    border-right: 10px solid transparent;
+    box-sizing: border-box;
+    height: 100%;
+    -webkit-mask-image: linear-gradient(90deg, #000, #000);
+    padding: 31px 0;
+    position: relative;
+    transition: all .3s;
+    width: 0
+}
+
+.animated-progress-bar.main .progress-bar-mask .video-wrapper {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.animated-progress-bar.main .progress-percent-text {
+    box-sizing: border-box;
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    line-height: 16px;
+    padding: 31px 0;
+    padding-left: inherit;
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+    top: 0;
+    width: 100%
+}
+
+.animated-progress-bar.main .progress-percent-text .phase {
+    font-size: 12px
+}
+
+.animated-progress-bar.main .video-state {
+    box-sizing: border-box;
+    left: 0;
+    object-fit: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 0
+}
+
+.animated-progress-bar.main .video-state.main {
+    padding: 14px 0;
+    width: 122px
+}
+
+.animated-progress-bar.main .video-state.main .loop {
+    top: 14px
+}
+
+.animated-progress-bar.main .video-state.border {
+    height: 60px;
+    left: -11px;
+    top: -1px;
+    width: 148px
+}
+
+.animated-progress-bar.main .video-state.endpoint {
+    top: -1px;
+    transition: all .3s
+}
+
+.animated-progress-bar.main .video-state.endpoint .intro {
+    height: 122px;
+    left: 78px;
+    width: 92px
+}
+
+.animated-progress-bar.main .video-state.endpoint .loop {
+    height: 122px;
+    width: 154px
+}
+
+.animated-progress-bar.main .video-state.frame {
+    padding: 41px 0 41px 12px
+}
+
+.animated-progress-bar.main .video-state.logo {
+    padding: 33px 0
+}
+
+.animated-progress-bar.main .video-state.outro {
+    box-sizing: content-box;
+    height: 100%;
+    padding-left: 36px;
+    width: 178px
+}
+
+.animated-progress-bar.main .video-state.outro .intro,
+.animated-progress-bar.main .video-state.outro .outro {
+    height: 108px;
+    margin: 7px 0;
+    width: inherit
+}
+
+.animated-progress-bar.main .video-state.disabled {
+    display: none
+}
+
+@-webkit-keyframes fadein {
+    0% {
+        filter: opacity(0)
+    }
+
+    to {
+        filter: opacity(1)
+    }
+}
+
+@-webkit-keyframes fadeout {
+    0% {
+        filter: opacity(1)
+    }
+
+    to {
+        display: none !important;
+        filter: opacity(0)
+    }
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper,
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss,
+.loadouts-modal-v2 .header .title,
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item,
+.loot-table-content .list-subtitle h5,
+.loot-table-content .list-title h5,
+.loot-table-content .loot-table-header,
+.loot-table-variable-odds-tooltip__title {
+    font-family: var(--font-display)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input,
+.loot-table-content,
+.loot-table-header-subtext {
+    font-family: var(--font-body)
+}
+
+.loot-table-window {
+    height: 600px;
+    width: 456px
+}
+
+.loot-table-window .loading-spinner {
+    left: 203px;
+    position: absolute;
+    top: 275px
+}
+
+.loot-table-header-subtext {
+    margin-top: 10px
+}
+
+.loot-table-content {
+    animation: fadeIn 1.2s;
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.loot-table-content hr {
+    border-color: #1e2328
+}
+
+.loot-table-content .loot-table-header {
+    color: #f0e6d2;
+    padding-left: 0
+}
+
+.loot-table-content .list-title h5 {
+    color: #f0e6d2;
+    margin-block-end: .75em;
+    margin-block-start: .5em
+}
+
+.loot-table-content .list-subtitle {
+    margin-bottom: 5px
+}
+
+.loot-table-content .list-subtitle h5 {
+    color: #a09b8c;
+    margin-block-end: 0;
+    margin-block-start: 0
+}
+
+.loot-table-content .filtered-hidden {
+    display: none
+}
+
+.loot-table-header-wrapper {
+    direction: ltr;
+    margin-right: 0;
+    padding: 16px 20px 0
+}
+
+.loot-table-scrollable-wrapper {
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden
+}
+
+.loot-table-scrollable {
+    padding: 0 20px
+}
+
+.loot-table-scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: #c8aa6e
+}
+
+.loot-table-scrollable>.loot-table-list-component>.loot-table-item-component:not(:first-child) {
+    margin-top: 4px
+}
+
+.loot-table-loading {
+    margin-top: 0
+}
+
+.loot-table-search {
+    margin: 5px 0
+}
+
+.loot-table-no-results {
+    margin-top: 10px;
+    text-align: center
+}
+
+.loot-table-variable-odds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    line-height: normal;
+    margin-top: 8px
+}
+
+.loot-table-variable-odds-tooltip {
+    background-color: #a09b8c;
+    border-radius: 4px;
+    color: #010a13;
+    display: inline-block;
+    text-align: center
+}
+
+.loot-table-variable-odds-tooltip:hover {
+    background-color: #c8aa6e
+}
+
+.loot-table-variable-odds-tooltip__content {
+    text-align: left;
+    width: 300px
+}
+
+.loot-table-variable-odds-tooltip__title-container {
+    align-items: center;
+    display: flex;
+    margin-bottom: 8px;
+    padding: 0
+}
+
+.loot-table-variable-odds-tooltip__disclaimer {
+    white-space: normal
+}
+
+.loot-table-variable-odds-tooltip__toggle-button {
+    align-items: center;
+    display: flex;
+    padding: 2px 4px
+}
+
+.loot-table-variable-odds-tooltip__badge-icon {
+    background-color: #010a13;
+    height: 13px;
+    margin: 0 6px 0 0;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    width: 13px
+}
+
+.loot-table-variable-odds-tooltip__badge-icon--tooltip {
+    background-color: #f0e6d2
+}
+
+.loot-table-variable-odds-tooltip__badge-icon.bad-luck-protection-icon {
+    height: 14px;
+    -webkit-mask-image: url(/fe/lol-static-assets/svg/bad_luck_protection_dice.svg);
+    width: 14px
+}
+
+.loot-table-variable-odds-tooltip__badge-icon.no-duplicates-icon {
+    -webkit-mask-image: url(/fe/lol-static-assets/svg/no_duplicates_cross_out.svg)
+}
+
+.loot-table-variable-odds-tooltip__badge-icon.mythic-promise-icon {
+    -webkit-mask-image: url(/fe/lol-static-assets/svg/tft_mythic_promise.svg)
+}
+
+.loot-table-variable-odds-tooltip__badge-icon.duplicate-rewards-icon {
+    -webkit-mask-image: url(/fe/lol-static-assets/svg/tft_duplicate_rewards.svg)
+}
+
+.loot-table-variable-odds-tooltip__badge-icon.dual-bounty-icon {
+    -webkit-mask-image: url(/fe/lol-static-assets/images/TFT-TR-DualBounty-Icon-Black.png)
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.loot-table-list-component {
+    margin-bottom: 14px;
+    overflow: hidden
+}
+
+.loot-table-item-component.is-collapsed .loot-table-chevron {
+    transform: rotate(0deg)
+}
+
+.loot-table-drop-rate {
+    margin: 0 0 0 auto;
+    padding: 10px 16px 10px 5px;
+    white-space: nowrap
+}
+
+.loot-table-drop-rate:empty {
+    padding: 8px 16px 8px 0
+}
+
+.loot-list-item-background-holder {
+    overflow: visible;
+    padding: 1px 0 1px 6px;
+    width: 0
+}
+
+.loot-list-item-background-holder .loot-list-item-row-background {
+    height: 100%;
+    margin: 0 0 0 -400px;
+    width: 1000px
+}
+
+.loot-list-item-details {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative
+}
+
+.loot-table-bullet-point {
+    background-color: #a09b8c;
+    height: 2px;
+    margin: 19px 10px 0 4px;
+    min-width: 10px;
+    width: 10px
+}
+
+.loot-table-chevron-wrapper {
+    height: 20px;
+    margin: 9px 4px 0 0;
+    width: 20px
+}
+
+.loot-table-chevron-wrapper path {
+    fill: #a09b8c
+}
+
+.loot-table-chevron {
+    transform: rotate(90deg);
+    transition: transform .1s ease
+}
+
+.loot-odd-name {
+    flex: 1;
+    padding-bottom: 10px;
+    padding-top: 10px
+}
+
+.loot-table-query-wrapper {
+    bottom: -3px;
+    color: hsla(45, 10%, 59%, .5);
+    font-size: 10px;
+    font-weight: 400;
+    left: auto;
+    position: absolute;
+    right: 0
+}
+
+.loot-table-query-children {
+    padding: 5px 0 5px 25px
+}
+
+.loot-table-query-children .loot-table-query-child-item {
+    display: flex
+}
+
+.loot-table-query-children .loot-table-query-child-item .loot-table-bullet-point {
+    margin: 8px 10px 0 0
+}
+
+.loot-table-query-children .loot-table-query-child-item:hover {
+    color: #f0e6d2
+}
+
+.loot-list-item-details {
+    background: rgba(30, 35, 40, .5);
+    font-weight: 700
+}
+
+.loot-list-item:hover>.loot-list-item-details {
+    color: #f0e6d2
+}
+
+.loot-list-item-details:hover .loot-list-item-row-background {
+    background: hsla(40, 50%, 88%, .3)
+}
+
+.loot-table-child-list {
+    padding: 0 0 0 16px
+}
+
+.loot-table-child-list .loot-list-item-details {
+    background: none;
+    font-weight: 400
+}
+
+.loot-table-child-list .loot-table-list-component {
+    margin-bottom: 0;
+    overflow: visible
+}
+
+.icon-rarity__container,
+.icon-rarity__tooltip-container {
+    height: inherit;
+    width: inherit
+}
+
+.icon-rarity__image {
+    height: 100%;
+    width: auto
+}
+
+.loadouts-modal-v2 {
+    background: #010a13;
+    border: thin solid #010a13;
+    display: flex;
+    flex-direction: column;
+    height: 620px;
+    width: 957px
+}
+
+.loadouts-modal-v2 .header {
+    align-content: center;
+    background-color: #09121a;
+    display: flex;
+    height: 40px
+}
+
+.loadouts-modal-v2 .header lol-uikit-flat-button {
+    height: 38px;
+    width: 138px
+}
+
+.loadouts-modal-v2 .header .title {
+    color: #f0e6d2;
+    flex: 1;
+    font-size: 25.58px;
+    font-weight: 700;
+    letter-spacing: .01em;
+    line-height: 38.58px;
+    margin-left: 25px
+}
+
+.loadouts-modal-v2 .header .tft-star-shards {
+    width: 115px
+}
+
+.loadouts-modal-v2 .loadouts-modal-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow: hidden;
+    width: 100%
+}
+
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item {
+    align-items: center;
+    background: #091724;
+    border: thin solid #010a13;
+    box-sizing: border-box;
+    color: #c8aa6e;
+    justify-content: center;
+    opacity: .7;
+    padding-left: 0;
+    width: 136px
+}
+
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item .loadouts-modal-navigation-title {
+    flex: 0 0 auto;
+    line-height: 14px;
+    margin: auto;
+    max-width: 90px;
+    text-align: center
+}
+
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item[active] {
+    background: linear-gradient(90deg, #152535 5%, #061321);
+    opacity: 1
+}
+
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-navigation-item[active] div {
+    -webkit-filter: brightness(200%)
+}
+
+.loadouts-modal-v2 .loadouts-modal-content .loadouts-modal-active-item {
+    transition: opacity .01s .01s;
+    width: 100%
+}
+
+.loadouts-modal-v2 .hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity .3s .1s;
+    visibility: hidden
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper,
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss {
+    font-family: var(--font-display)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input {
+    font-family: var(--font-body)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper,
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper,
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss {
+    text-transform: uppercase
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(el-gr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(ja-jp),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(ko-kr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(th-th),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(tr-tr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(zh-tw),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(el-gr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(ja-jp),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(ko-kr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(th-th),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(tr-tr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(zh-tw),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(el-gr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(ja-jp),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(ko-kr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(th-th),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(tr-tr),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(zh-tw),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(el-gr),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(ja-jp),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(ko-kr),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(th-th),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(tr-tr),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(zh-tw) {
+    text-transform: none
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title {
+    color: #f0e6d2;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    letter-spacing: .025em;
+    line-height: 28px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    letter-spacing: .025em;
+    line-height: 22px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input:lang(ja-jp) {
+    font-size: 13px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss,
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss {
+    color: #cdbe91;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss.active,
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss.active {
+    color: #f0e6d2;
+    position: relative
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:lang(ar-ae),
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel {
+    --cosmetic-option-group-title-padding: 0 5px 0 0;
+    --cosmetic-option-group-title-padding-rtl: 0 0 0 5px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 33px;
+    position: relative
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input {
+    display: block
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input {
+    -webkit-appearance: none;
+    background-color: rgba(0, 0, 0, .7);
+    border: thin solid #785a28;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .25), 0 0 0 1px rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    color: #f0e6d2;
+    display: block;
+    height: 30px;
+    outline: none;
+    padding: 0 6px;
+    width: 100%
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input:lang(ar-ae) {
+    direction: rtl
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input[type=search] {
+    background: no-repeat 5px/16px url(/fe/lol-static-assets/images/uikit/magnifying-glass-icon.png) rgba(0, 0, 0, .7);
+    line-height: 15px;
+    padding-left: 24px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input[type=search]:lang(ar-ae) {
+    background-position: 98%;
+    direction: rtl;
+    padding: 0 24px 0 6px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input[type=search]:focus {
+    background: no-repeat 5px/16px url(/fe/lol-static-assets/images/uikit/magnifying-glass-icon.png), linear-gradient(180deg, rgba(7, 16, 25, .7), rgba(32, 39, 44, .7))
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input[type=search]:focus:lang(ar-ae) {
+    background-position: 98%
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input:focus {
+    background: linear-gradient(180deg, rgba(7, 16, 25, .7), rgba(32, 39, 44, .7));
+    border-image: linear-gradient(180deg, #785a28, #c8aa6e) 1 stretch
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input:disabled {
+    background-color: #1e2328;
+    border-color: #3c3c41;
+    color: #5c5b57
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input::-webkit-input-placeholder {
+    color: #a09b8c
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input[type=search]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    background-color: #cdbe91;
+    cursor: pointer;
+    height: 18px;
+    margin: 0 0 0 5px;
+    -webkit-mask: url(/fe/lol-uikit/images/search-box-clear.png) no-repeat center;
+    -webkit-mask-size: contain;
+    width: 18px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input[type=search]::-webkit-search-cancel-button:hover {
+    background-color: #f0e6d2
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input[type=search]::-webkit-search-cancel-button:active {
+    background-color: #463714
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input[type=search]:lang(ar-ae)::-webkit-search-cancel-button {
+    margin: 0 5px 0 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input #cosmetic_search_bar {
+    height: 33px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .cosmetic-sorting-dropdown,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .search-container {
+    flex: 1
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .cosmetic-sorting-dropdown {
+    padding-top: 1px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .cosmetic-sorting-dropdown.hidden {
+    display: none
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .cosmetics-dropdown-spinner-default-order,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .cosmetics-dropdown-spinner-last-acquired {
+    animation: cosmetics-spinner-animation 4s linear infinite;
+    bottom: 0;
+    left: 81%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 25px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .cosmetics-dropdown-spinner-default-order.hidden,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .cosmetics-dropdown-spinner-last-acquired.hidden {
+    visibility: hidden
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .currency-container {
+    position: relative
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss {
+    background: rgba(0, 0, 0, .5);
+    border-radius: 8px;
+    color: #f0e6d2;
+    cursor: pointer;
+    padding: 3px 8px 4px 30px;
+    position: relative;
+    visibility: visible
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss.hidden {
+    visibility: hidden
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-ss:after {
+    background-image: url(/fe/lol-static-assets/images/icon-star-shards-active-88.png);
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    bottom: 0;
+    content: "";
+    left: -2px;
+    position: absolute;
+    top: 0;
+    width: 35px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-upgrade-video {
+    height: 0;
+    left: -88px;
+    mix-blend-mode: screen;
+    position: absolute;
+    top: -33px;
+    width: 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container .tft-star-shards .currency-upgrade-video.playing {
+    height: 64px;
+    width: 256px
+}
+
+@-moz-keyframes cosmetics-spinner-animation {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes cosmetics-spinner-animation {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-o-keyframes cosmetics-spinner-animation {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes cosmetics-spinner-animation {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .hide-unowned-checkbox-container {
+    display: flex;
+    padding-left: 20px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .hide-unowned-checkbox-container .hide_unowned_checkbox_label {
+    height: 17px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    width: 323px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic[content-id=NONE_OPTION] {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group {
+    align-items: center;
+    background: linear-gradient(180deg, transparent 0, transparent 70%, #000);
+    background-position: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 20px 1px #010a13, inset 0 0 0 1px #010a13;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    height: 405px;
+    justify-content: flex-end;
+    width: 100%
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group.locked {
+    filter: grayscale(.75) brightness(.85)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic.rarity-0 .selected-cosmetic-header-group-2 .selected-cosmetic-rarity {
+    background-image: url(/fe/lol-parties/common_plating_big.png)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic.rarity-1 .selected-cosmetic-header-group-2 .selected-cosmetic-rarity {
+    background-image: url(/fe/lol-parties/epic_plating_big.png)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic.rarity-2 .selected-cosmetic-header-group-2 .selected-cosmetic-rarity {
+    background-image: url(/fe/lol-parties/legendary_plating_big.png)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic.rarity-3 .selected-cosmetic-header-group-2 .selected-cosmetic-rarity {
+    background-image: url(/fe/lol-parties/mythic_plating_big.png)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic.rarity-tag {
+    background-size: unset
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-gem {
+    align-self: center;
+    background-image: var(--selected-cosmetic-rarity-tag);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100px;
+    justify-content: center;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    position: absolute;
+    top: 50%;
+    width: 100px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-icon {
+    height: 16px;
+    margin-top: -1px;
+    position: relative;
+    vertical-align: middle;
+    width: 16px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-group-favorite-button {
+    background: transparent url(/fe/lol-parties/button-favorite-off.png) no-repeat top;
+    background-size: cover;
+    border: 0;
+    bottom: 200px;
+    cursor: pointer;
+    height: 48px;
+    pointer-events: all;
+    position: absolute;
+    right: 20px;
+    width: 48px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-group-favorite-button:hover {
+    background: transparent url(/fe/lol-parties/button-favorite-off-hover.png) no-repeat top;
+    background-size: cover
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-group-favorite-button:hover.favorited {
+    background: transparent url(/fe/lol-parties/button-favorite-on-hover.png) no-repeat top;
+    background-size: cover
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-group-favorite-button:active {
+    background: transparent url(/fe/lol-parties/button-favorite-off-click.png) no-repeat top;
+    background-size: cover
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-group-favorite-button:active.favorited {
+    background: transparent url(/fe/lol-parties/button-favorite-on-click.png) no-repeat top;
+    background-size: cover
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-group-favorite-button.hasMaxFavorites,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-group-favorite-button:disabled {
+    background: transparent url(/fe/lol-parties/button-favorite-disabled.png) no-repeat top;
+    background-size: cover;
+    cursor: default
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-group-favorite-button.favorited {
+    background: transparent url(/fe/lol-parties/button-favorite-on.png) no-repeat top;
+    background-size: cover
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-group-favorite-button.hidden {
+    display: none
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-group-action-button {
+    display: flex;
+    flex: 0 0 auto;
+    height: 32px;
+    min-width: 170px;
+    padding-bottom: 24px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-group-action-button:before {
+    display: inline-block;
+    height: 10px;
+    width: 10px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper {
+    align-items: center;
+    color: #ff2345;
+    display: flex;
+    font-size: 12px;
+    height: 24px;
+    justify-content: center;
+    line-height: 16px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper.hidden {
+    opacity: 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper.purchasable {
+    color: #c8aa6e
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper .star-shards-amount {
+    color: #f0e6d2;
+    margin-left: .5em
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .star-shards-label-wrapper .star-shards-amount.hidden {
+    display: none
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title {
+    flex: 0 0 auto;
+    font-size: 21px;
+    letter-spacing: .07em;
+    line-height: 20px;
+    margin-top: 14px;
+    text-align: center;
+    width: 95%
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(ja-jp),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(zh-cn),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(zh-my),
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-title:lang(zh-tw) {
+    line-height: 24px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .content-locked {
+    background-image: url(/fe/lol-parties/lock.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    right: -1px;
+    top: 75%
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .content-locked.hidden {
+    visibility: hidden
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-rarity {
+    background-image: url(/fe/lol-parties/no_plating_big.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 150px 30px;
+    flex: 0 0 auto;
+    height: 30px;
+    position: relative;
+    width: 100%
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .selected-cosmetic-rarity.rarity-tag {
+    background-image: none
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-wrapper {
+    margin-bottom: 12px;
+    margin-top: 24px;
+    min-height: 34px;
+    min-width: 76px;
+    padding: 0 3px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-wrapper {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    transition: opacity .1s linear
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container:lang(ar-ae) {
+    direction: rtl
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container.hidden {
+    opacity: 0;
+    pointer-events: none
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container.norender {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container {
+    background: linear-gradient(#c8aa6e, #785a28);
+    border-radius: 21px;
+    cursor: pointer;
+    flex: 0 0 auto;
+    height: 34px;
+    position: relative;
+    width: 76px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container:nth-child(2) {
+    margin: 0 10px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.intended,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.recent {
+    box-shadow: 0 0 5px rgba(255, 171, 46, .7), 0 0 15px rgba(255, 171, 46, .7)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.intended .cosmetic-upgrade,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.recent .cosmetic-upgrade {
+    background: linear-gradient(#1e2328, #585342);
+    background-clip: padding-box
+        /* !importantÃ© */
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.intended .cosmetic-upgrade .cosmetics-modal-star,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.recent .cosmetic-upgrade .cosmetics-modal-star {
+    filter: brightness(1.4)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.equipped .cosmetic-upgrade {
+    background: linear-gradient(#c8aa6e, #785a28);
+    background-clip: padding-box
+        /* !importantÃ© */
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.unowned .cosmetic-upgrade {
+    background: #1e2328;
+    background-clip: padding-box
+        /* !importantÃ© */
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.unowned .cosmetic-upgrade .cosmetics-modal-star {
+    filter: contrast(0) brightness(.5)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.unowned:after {
+    background-image: url(/fe/lol-parties/lock.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    bottom: 0;
+    content: "";
+    height: 40px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    transform: translateY(50%)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.unowned.not-enough-shards:before {
+    background-image: url(/fe/lol-static-assets/images/icon-star-shards-36.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    content: " ";
+    height: 16px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+    z-index: 1
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.unowned.purchasable:before {
+    background-image: url(/fe/lol-static-assets/images/icon-star-shards-active-88.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 35px;
+    content: " ";
+    height: 35px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+    z-index: 1
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.unowned.purchasable:after {
+    opacity: 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container:hover.unowned:after {
+    background-image: url(/fe/lol-parties/lock_hover.png);
+    background-size: 54px 54px;
+    height: 54px;
+    transform: translateY(53%)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container:hover.unowned .cosmetic-upgrade .cosmetics-modal-star {
+    filter: contrast(.2) brightness(.7)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container:hover .cosmetic-upgrade {
+    background: linear-gradient(#1e2328, #585342);
+    background-clip: padding-box
+        /* !importantÃ© */
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container:hover .cosmetic-upgrade .cosmetics-modal-star {
+    filter: brightness(1.4)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container .cosmetic-upgrade {
+    align-items: center;
+    background: #1e2328;
+    background-clip: padding-box;
+    /* !importantÃ© */
+    border: 2px solid transparent;
+    border-radius: 21px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    pointer-events: none;
+    position: relative;
+    width: 100%
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container .cosmetic-upgrade.moon {
+    pointer-events: auto
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container .cosmetic-upgrade .cosmetics-modal-star {
+    background-image: url(/fe/lol-parties/tier_star.svg);
+    background-size: contain;
+    display: block;
+    height: 18px;
+    width: 18px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container .cosmetic-upgrade .cosmetics-modal-moon {
+    background-image: url(/fe/lol-parties/tier_moon.svg);
+    background-size: contain;
+    display: block;
+    height: 20px;
+    pointer-events: auto;
+    width: 20px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.moon-disabled .cosmetic-upgrade:before,
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic .selected-cosmetic-header-group-2 .cosmetic-upgrade-container .cosmetic-upgrade-bounding-container.star-shards-disabled .cosmetic-upgrade:before {
+    opacity: 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .selected-cosmetic:hover .selected-cosmetic-gem {
+    background-image: var(--selected-cosmetic-rarity-tag)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container {
+    border-image: linear-gradient(rgba(45, 35, 17, .6), rgba(90, 70, 34, .6) 11.46%, rgba(90, 70, 34, .6) 88.54%, rgba(45, 35, 17, .6)) 1;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    flex: 1 1 auto;
+    overflow: hidden;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    position: relative
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller {
+    flex: 1 1 auto;
+    height: 100%;
+    width: 100%
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-scroller-item {
+    padding: 0 10px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-scroller-item:first-child {
+    padding-top: 10px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-misc {
+    display: flex;
+    flex-direction: row
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    transition: opacity .1s linear .01s
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list.hidden {
+    display: none
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option[content-id=NONE_OPTION] {
+    background-repeat: no-repeat;
+    background-size: 36px;
+    display: none
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list.show-none .cosmetic-option[content-id=NONE_OPTION] {
+    display: flex
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group {
+    display: block;
+    padding-bottom: 13px;
+    transition: opacity .1s linear, height .1s linear, width .01s linear, padding-bottom .01s linear
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header {
+    background: linear-gradient(270deg, rgba(90, 70, 34, 0), #5a4622 52.08%, #ab8e58 92.19%, rgba(90, 70, 34, 0)), linear-gradient(2.02deg, rgba(1, 10, 19, 0) 23.21%, rgba(1, 10, 19, .72) 84.16%), linear-gradient(270deg, rgba(55, 46, 28, 0), #372e1c 71.35%, #372e1c 85.94%, rgba(55, 46, 28, 0));
+    background-position: 0 19px, 0 0, 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 1px, 100% 19px, 100% 19px;
+    color: #f0e6d2;
+    display: flex;
+    letter-spacing: .05em;
+    margin: 5px;
+    opacity: .7;
+    padding-bottom: 10px
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header .cosmetic-option-group-title {
+    opacity: 1;
+    padding: var(--cosmetic-option-group-title-padding)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header .cosmetic-option-group-title:lang(ar-ae) {
+    padding: var(--cosmetic-option-group-title-padding-rtl)
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group[group-shown=false] {
+    height: 0;
+    opacity: 0;
+    padding-bottom: 0;
+    pointer-events: none;
+    width: 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group[group-shown=false] .cosmetic-option-group-header {
+    opacity: 0
+}
+
+.loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller lol-parties-cosmetics-renderer[item-shown=false] {
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    width: 0
+}
+
+.loadouts-modal-v2 .header .tft-star-shards {
+    align-items: center;
+    display: flex;
+    margin-top: -2px
+}
+
+.loadouts-modal-v2 .header .tft-star-shards .currency-upgrade-video {
+    height: 0;
+    left: -88px;
+    mix-blend-mode: screen;
+    position: absolute;
+    top: -33px;
+    width: 0
+}
+
+.loadouts-modal-v2 .header .tft-star-shards .currency-upgrade-video.playing {
+    height: 64px;
+    width: 256px
+}
+
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss {
+    border-radius: 8px;
+    color: #f0e6d2;
+    padding: 3px 8px 4px 30px;
+    position: relative
+}
+
+.loadouts-modal-v2 .header .tft-star-shards .currency-ss:after {
+    background-image: url(/fe/lol-static-assets/images/icon-star-shards-active-88.png);
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    bottom: 0;
+    content: "";
+    left: -2px;
+    position: absolute;
+    top: 0;
+    width: 35px
+}
+
+/*# sourceMappingURL=rcp-fe-ember-libs.css.map*/

@@ -1,0 +1,69 @@
+<template>
+ <style>
+  @keyframes noiseScroll {
+      0%    { opacity: 1; background-position: 0 center; }
+      100%  { opacity: 1; background-position: -400% center; }
+    }
+
+    @keyframes noiseFade {
+      0%    { opacity: 1; }
+      10%   { opacity: 0; }
+      90%   { opacity: 0; }
+      100%  { opacity: 1; }
+    }
+
+    @keyframes radialEffectTransition {
+      0%    { top: -120px; }
+      100%  { top: 100%; }
+    }
+
+    @keyframes backgroundIntro {
+      0%    { box-shadow: inset 0 -10px 20px rgba(5, 150, 170, 0); }
+      30%   { box-shadow: inset 0 -10px 20px rgba(5, 150, 170, 0.5); }
+      100%  { box-shadow: inset 0 -10px 20px rgba(5, 150, 170, 0); }
+    }
+
+    @keyframes introText {
+      0%    { }
+      30%   { text-shadow: 0 0 0; }
+      50%   { text-shadow: 0 0 6px; }
+      60%   { text-shadow: 0 0 6px; }
+      100%  { text-shadow: 0 0 0; }
+    }
+
+    @keyframes backgroundClick {
+      0%    { box-shadow: inset 0 100px 0 rgba(5, 150, 170, 0); }
+      30%   { box-shadow: inset 0 100px 0 rgba(5, 150, 170, 0.5); }
+      100%  { box-shadow: inset 0 100px 0 rgba(5, 150, 170, 0.0); }
+    }
+
+    @keyframes runeMagicLeftSpriteSheetAnimation { /* 30 frames of 22px plus one null frame */
+      0%    { background-position-y: 22px; }
+      100%  { background-position-y: -660px; }
+    }
+    @keyframes runeMagicRightSpriteSheetAnimation { /* 30 frames of 22px plus one null frame */
+      0%    { background-position-y: 24px; }
+      100%  { background-position-y: -720px; }
+    }
+ </style>
+ <div class="lol-uikit-primary-magic-button-wrapper">
+  <div class="button-frame-idle">
+  </div>
+  <div class="button-frame-interactive">
+  </div>
+  <div class="left-rune-magic">
+  </div>
+  <div class="right-rune-magic">
+  </div>
+  <div class="radial-container">
+   <div class="radial-effect">
+   </div>
+  </div>
+  <lol-uikit-animated-border-overlay class="border-animation-container" speed="15000">
+  </lol-uikit-animated-border-overlay>
+  <div class="lol-uikit-primary-magic-button">
+   <slot>
+   </slot>
+  </div>
+ </div>
+</template>

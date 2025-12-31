@@ -1,0 +1,36 @@
+<template>
+ <div class="ui-dropdown">
+  <div class="ui-dropdown-options-container">
+   <lol-uikit-scrollable>
+    <div class="ui-dropdown-ungrouped-options">
+     <slot name="lol-uikit-dropdown-option">
+     </slot>
+    </div>
+    <div class="ui-dropdown-optgroups">
+     <slot name="lol-uikit-dropdown-optgroup">
+     </slot>
+    </div>
+    <!--
+          This <slot> element used to invite in the host options list cannot include
+          the host's self-generated currently selected element (see base-dropdown.js
+          for the case where the stylablecontent attribute is set).
+        -->
+    <slot>
+    </slot>
+   </lol-uikit-scrollable>
+  </div>
+  <!-- 
+      There's some subtlety in the way the slot elements are ordered and in the way
+      their invitations are triggered here. The currently selected element
+      must lie on top of the options list, otherwise when the options list is expanded,
+      the currently selected element will be covered up. This is why the 
+      ui-dropdown-current section is AFTER the ui-dropdown-options-container section.
+    -->
+  <div class="ui-dropdown-current">
+   <div class="ui-dropdown-current-content shadow">
+   </div>
+   <slot name=".ui-dropdown-current-content.light">
+   </slot>
+  </div>
+ </div>
+</template>

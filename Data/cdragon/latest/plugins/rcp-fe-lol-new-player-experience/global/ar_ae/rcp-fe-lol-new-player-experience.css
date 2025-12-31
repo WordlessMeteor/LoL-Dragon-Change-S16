@@ -1,0 +1,1347 @@
+.npe-root-component {
+    background-image: url(/fe/lol-new-player-experience/bg_diamonds.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-top: 2px solid #785a28;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 718px;
+    position: relative;
+    width: 1278px
+}
+
+.npe-root-component .bg-spinner-wrapper {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    -webkit-mask-image: -webkit-linear-gradient(bottom, transparent, transparent, #000, #000, #000, #000, #000, transparent, transparent);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.npe-root-component .bg-spinner-wrapper .npe-bg-ticks {
+    height: 574px;
+    width: 574px
+}
+
+.npe-root-component .bg-spinner-wrapper .npe-bg-ticks svg {
+    height: 100%;
+    overflow: visible;
+    width: 100%
+}
+
+.npe-root-component .bg-spinner-wrapper .npe-bg-ticks.animated {
+    animation: ticks-spin 90s linear infinite
+}
+
+@-moz-keyframes ticks-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes ticks-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-o-keyframes ticks-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes ticks-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.npe-root-component .bg-spinner-wrapper .npe-bg-ticks .radial-ticks {
+    fill: none;
+    stroke: #785a28;
+    stroke-miterlimit: 10;
+    stroke-width: 14px;
+    stroke-dasharray: 2.5 8.98;
+    opacity: .3;
+    transform-origin: center
+}
+
+.npe-footer-component lol-uikit-close-button {
+    bottom: 17px;
+    position: absolute;
+    right: 50px
+}
+
+.npe-footer-component .arrow-footer {
+    bottom: 0;
+    justify-content: inherit;
+    position: absolute;
+    width: 100%
+}
+
+.npe-footer-component .bottom-right-buttons {
+    align-items: flex-end;
+    bottom: 19px;
+    display: flex;
+    position: absolute;
+    right: 20px
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer {
+    font-family: var(--font-display)
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-info,
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer-label {
+    font-family: var(--font-body)
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-info,
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer,
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer-label {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer {
+    text-transform: uppercase
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer:lang(el-gr),
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer:lang(ja-jp),
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer:lang(ko-kr),
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer:lang(th-th),
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer:lang(tr-tr),
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer:lang(zh-tw) {
+    text-transform: none
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer {
+    color: #f0e6d2;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 32px
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-info,
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer-label {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-info:lang(ja-jp),
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer-label:lang(ja-jp) {
+    font-size: 13px
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-info:lang(ar-ae),
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-timer-label:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.npe-tutorial-carousel-component {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-item-magic-video {
+    cursor: default;
+    left: 340px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: opacity .1s cubic-bezier(0, .58, .58, 1)
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-item-magic-video.visible {
+    opacity: 1
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-carousel {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    opacity: 0;
+    position: relative;
+    -webkit-transition: -webkit-transform .8s cubic-bezier(.2, .9, 0, 1), opacity .4s ease-in-out .8s
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-carousel.visible {
+    opacity: 1
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-carousel .npe-tutorial-carousel-item-spacer {
+    flex: 0 0 auto;
+    height: 100%;
+    width: 54px
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-navigation {
+    bottom: 62px;
+    position: absolute
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block {
+    align-items: center;
+    cursor: default;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    width: 100%
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block.visible {
+    opacity: 1;
+    -webkit-transition: opacity .1s ease-in-out
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block.hidden {
+    opacity: 0;
+    -webkit-transition: opacity .1s ease-in-out .1s
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-block .npe-tutorial-info {
+    color: #0a96aa;
+    text-align: center;
+    width: 200px
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-carousel-arrow-container {
+    height: 32px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-carousel-arrow {
+    background-color: transparent;
+    background-image: url(/fe/lol-new-player-experience/arrow_default.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    border: none;
+    bottom: 0;
+    cursor: pointer;
+    margin: 80px 0;
+    outline: none;
+    position: absolute;
+    top: 0;
+    transition: background .3s ease-out;
+    width: 98px
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-carousel-arrow:hover {
+    background-image: url(/fe/lol-new-player-experience/arrow_hover.png), radial-gradient(ellipse at right, hsla(0, 0%, 100%, .11) 0, transparent 70%);
+    background-position: 50%, 50%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 32px 32px, 100% 100%
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-carousel-arrow:active {
+    background-image: url(/fe/lol-new-player-experience/arrow_click.png), radial-gradient(ellipse at right, hsla(0, 0%, 100%, .11) 0, transparent 70%);
+    background-position: 50%, 50%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 32px 32px, 100% 100%
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-carousel-arrow:disabled {
+    background-image: url(/fe/lol-new-player-experience/arrow_disabled.png);
+    cursor: unset
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-carousel-arrow.npe-tutorial-carousel-left-arrow {
+    left: 0;
+    transform: rotate(180deg)
+}
+
+.npe-tutorial-carousel-component .npe-tutorial-carousel-arrow.npe-tutorial-carousel-right-arrow {
+    right: 0
+}
+
+.npe-tp-carousel-navigation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.npe-tp-carousel-navigation.visible {
+    opacity: 1;
+    -webkit-transition: opacity .1s ease-in-out .1s
+}
+
+.npe-tp-carousel-navigation.hidden {
+    opacity: 0;
+    -webkit-transition: opacity .1s ease-in-out
+}
+
+.npe-tp-carousel-navigation .nav-content {
+    display: flex;
+    flex-direction: row;
+    height: 64px;
+    justify-content: center;
+    min-width: 170px
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips {
+    align-items: center;
+    display: flex;
+    height: 100%
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip {
+    align-items: center;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 24px;
+    justify-content: center;
+    padding: 0 3px;
+    width: 24px
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.unlocked {
+    background-image: url(/fe/lol-new-player-experience/pip-circle-default.png)
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.unlocked:hover {
+    background-image: url(/fe/lol-new-player-experience/pip-circle-hover.png)
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.unlocked:active {
+    background-image: url(/fe/lol-new-player-experience/pip-circle-clicked.png)
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.unlocked.disabled {
+    background-image: url(/fe/lol-new-player-experience/pip-circle-disabled.png);
+    cursor: default
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.unlocked.selected {
+    background-image: url(/fe/lol-new-player-experience/pip-circle-selected.png);
+    cursor: default
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.unlocked.selected.disabled {
+    background-image: url(/fe/lol-new-player-experience/pip-circle-disabled.png);
+    cursor: default
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.completed {
+    background-image: url(/fe/lol-new-player-experience/pip-checkmark-default.png)
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.completed:hover {
+    background-image: url(/fe/lol-new-player-experience/pip-checkmark-hover.png);
+    cursor: pointer
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.completed:active {
+    background-image: url(/fe/lol-new-player-experience/pip-checkmark-clicked.png)
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.completed.selected {
+    background-image: url(/fe/lol-new-player-experience/pip-checkmark-selected.png);
+    cursor: default
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.locked {
+    background-image: url(/fe/lol-new-player-experience/pip-lock-default.png)
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.locked:hover {
+    background-image: url(/fe/lol-new-player-experience/pip-lock-hover.png);
+    cursor: pointer
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.locked:active {
+    background-image: url(/fe/lol-new-player-experience/pip-lock-clicked.png)
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.locked.disabled {
+    background-image: url(/fe/lol-new-player-experience/pip-lock-disabled.png)
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.locked.selected {
+    background-image: url(/fe/lol-new-player-experience/pip-lock-selected.png);
+    cursor: default
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.locked.selected.disabled {
+    background-image: url(/fe/lol-new-player-experience/pip-lock-disabled.png)
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.reward {
+    background-image: url(/fe/lol-new-player-experience/pip-capsule-default.png);
+    background-size: contain
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.reward:hover {
+    background-image: url(/fe/lol-new-player-experience/pip-capsule-hover.png)
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.reward:active {
+    background-image: url(/fe/lol-new-player-experience/pip-capsule-clicked.png)
+}
+
+.npe-tp-carousel-navigation .nav-content .nav-pips .nav-pip.reward.selected {
+    background-image: url(/fe/lol-new-player-experience/pip-capsule-selected.png);
+    cursor: default
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-title,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block .npe-tutorial-item-sequence,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title {
+    font-family: var(--font-display)
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-reward-description,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-description {
+    font-family: var(--font-body)
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-reward-description,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-title,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block .npe-tutorial-item-sequence,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-description,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-title,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block .npe-tutorial-item-sequence,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title {
+    text-transform: uppercase
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-title:lang(el-gr),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-title:lang(ja-jp),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-title:lang(ko-kr),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-title:lang(th-th),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-title:lang(tr-tr),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-title:lang(zh-tw),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block .npe-tutorial-item-sequence:lang(el-gr),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block .npe-tutorial-item-sequence:lang(ja-jp),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block .npe-tutorial-item-sequence:lang(ko-kr),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block .npe-tutorial-item-sequence:lang(th-th),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block .npe-tutorial-item-sequence:lang(tr-tr),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block .npe-tutorial-item-sequence:lang(zh-tw),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title:lang(el-gr),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title:lang(ja-jp),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title:lang(ko-kr),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title:lang(th-th),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title:lang(tr-tr),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block .npe-tutorial-item-sequence,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block .npe-tutorial-item-sequence:lang(ar-ae),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-title {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-reward-description,
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-description {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay:lang(ja-jp),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-reward-description:lang(ja-jp),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-description:lang(ja-jp) {
+    font-size: 13px
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay:lang(ar-ae),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-reward-description:lang(ar-ae),
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-description:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.npe-tutorial-item-card-component {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    height: 414px;
+    justify-content: center;
+    position: relative;
+    transition: .3s;
+    width: 324px
+}
+
+.npe-tutorial-item-card-component lol-uikit-dialog-frame {
+    height: 414px;
+    width: 324px
+}
+
+.npe-tutorial-item-card-component:hover.card {
+    -webkit-filter: brightness(1.2);
+    -webkit-transition: -webkit-filter .3s cubic-bezier(.23, 1, .32, 1)
+}
+
+.npe-tutorial-item-card-component:hover.card.locked {
+    -webkit-filter: brightness(1.1);
+    -webkit-transition: -webkit-filter .3s cubic-bezier(.23, 1, .32, 1)
+}
+
+.npe-tutorial-item-card-component:hover.card.selected {
+    cursor: default;
+    -webkit-filter: unset
+}
+
+.npe-tutorial-item-card-component.selected {
+    cursor: default
+}
+
+.npe-tutorial-item-card-component.selected.card:after {
+    box-shadow: 0 0 90px rgba(10, 150, 170, .4);
+    transition: box-shadow .3s cubic-bezier(0, .58, .58, 1)
+}
+
+.npe-tutorial-item-card-component.card:after {
+    box-shadow: 0 0 0 rgba(10, 150, 170, 0);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: box-shadow .3s cubic-bezier(0, .58, .58, 1);
+    width: 100%;
+    z-index: -1
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation {
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    height: 374px;
+    padding: 18px;
+    position: relative;
+    width: 284px
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation>uikit-switch {
+    pointer-events: none
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-complete-video {
+    left: 32px;
+    position: absolute;
+    top: 71px
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-unlock-video {
+    cursor: default;
+    left: -86px;
+    position: absolute;
+    top: -153px
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-image {
+    background-size: 100% 100%;
+    height: 410px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 320px
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-image.locked {
+    -webkit-filter: saturate(30%)
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block {
+    flex: 0 0 auto;
+    margin: 0 0 0 16px;
+    padding-top: 4px
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-sequence-block .npe-tutorial-item-sequence {
+    background: -webkit-linear-gradient(#cdbe91, #c8aa6e, #785a28);
+    font-size: 48px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding-bottom: 7px;
+    padding-top: 4px;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #cdbe91
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block {
+    flex-direction: column
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title {
+    color: #cdbe91;
+    padding-bottom: 5px
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-top-block .npe-tutorial-item-text-block .npe-tutorial-item-title:hover {
+    color: #cdbe91
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-title {
+    color: #c8aa6e
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-block {
+    display: flex;
+    flex-direction: row;
+    margin-top: 11px
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-rewards-block .npe-tutorial-item-reward-block .npe-tutorial-item-reward-icon {
+    background-size: contain;
+    height: 18px;
+    margin: -3px 0 0 7px;
+    width: 18px
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-reward-description {
+    color: #a09b8c;
+    position: relative
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay {
+    align-items: center;
+    background-position: 50%, 0 0;
+    background-repeat: no-repeat, no-repeat;
+    color: #785a28;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all .3s ease-out;
+    width: 100%
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay .npe-tutorial-item-lock-text {
+    color: #c8aa6e;
+    margin-top: 105px;
+    opacity: 0;
+    text-align: center;
+    width: 50%
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay .npe-tutorial-item-lock-text.selected {
+    cursor: default;
+    opacity: 1
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay.visible {
+    opacity: 1
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay.hidden {
+    opacity: 0
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay.checkmark {
+    background-image: url(/fe/lol-new-player-experience/checkmark-default.png), linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+    background-size: 128px 128px, 100% 100%
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay.checkmark.largeAnimationsEnabled {
+    transition: opacity .3s ease-out 2.1s
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay.checkmark:hover {
+    background-image: url(/fe/lol-new-player-experience/checkmark-hover.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 128px 128px
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay.checkmark.selected {
+    background-image: url(/fe/lol-new-player-experience/checkmark-default.png), linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1));
+    background-size: 128px 128px, 100% 100%
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay.lock {
+    background-image: url(/fe/lol-new-player-experience/lock-default.png), linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+    background-size: 128px 128px, 100% 100%
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay.lock.largeAnimationsEnabled {
+    transition: opacity .3s ease-out 3.5s
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay.lock:hover {
+    background-image: url(/fe/lol-new-player-experience/lock-hover.png), linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+    color: #a09b8c
+}
+
+.npe-tutorial-item-card-component .tutorial-item-card-animation .npe-tutorial-item-overlay.lock:hover .npe-tutorial-item-lock-text {
+    color: #f0e6d2;
+    opacity: 1
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark {
+    font-family: var(--font-body);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark:lang(ja-jp) {
+    font-size: 13px
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.npe-tutorial-item-reward-component {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    height: 414px;
+    justify-content: center;
+    position: relative;
+    transition: .3s;
+    width: 324px
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper {
+    align-items: center;
+    direction: rtl;
+    display: flex;
+    flex: 1 1 auto;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-item-reward-switch .npe-tutorial-reward-image {
+    background-image: url(/fe/lol-new-player-experience/lg-reward-capsule.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    margin-left: 7px;
+    margin-top: -43px;
+    width: 324px
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-item-reward-switch .npe-tutorial-reward-image.completed,
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-item-reward-switch .npe-tutorial-reward-image.locked {
+    -webkit-filter: saturate(50%);
+    opacity: .4
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-item-reward-switch .npe-tutorial-item-reward-video {
+    animation: float-up-and-down 3s cubic-bezier(.45, .05, .55, .95) infinite alternate;
+    margin-top: -112px;
+    transform: translate3d(0, 5px, 0)
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-item-reward-switch .npe-tutorial-item-reward-video.completed,
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-item-reward-switch .npe-tutorial-item-reward-video.locked {
+    -webkit-filter: saturate(50%);
+    opacity: .4
+}
+
+@-moz-keyframes float-up-and-down {
+    0% {
+        transform: translate3d(0, 5px, 0)
+    }
+
+    to {
+        transform: translate3d(0, -8px, 0)
+    }
+}
+
+@-webkit-keyframes float-up-and-down {
+    0% {
+        transform: translate3d(0, 5px, 0)
+    }
+
+    to {
+        transform: translate3d(0, -8px, 0)
+    }
+}
+
+@-o-keyframes float-up-and-down {
+    0% {
+        transform: translate3d(0, 5px, 0)
+    }
+
+    to {
+        transform: translate3d(0, -8px, 0)
+    }
+}
+
+@keyframes float-up-and-down {
+    0% {
+        transform: translate3d(0, 5px, 0)
+    }
+
+    to {
+        transform: translate3d(0, -8px, 0)
+    }
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark {
+    align-items: center;
+    background-position: 57% 50%;
+    background-repeat: no-repeat;
+    background-size: 128px 128px;
+    color: #785a28;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark.locked,
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark.selected,
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark:hover {
+    opacity: 1
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark .npe-tutorial-reward-lock-text {
+    color: #c8aa6e;
+    margin-bottom: 20px;
+    opacity: 0;
+    text-align: center;
+    width: 66%
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark .npe-tutorial-reward-lock-text.selected,
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark .npe-tutorial-reward-lock-text:hover {
+    opacity: 1
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark.completed {
+    background-image: url(/fe/lol-new-player-experience/checkmark-default.png)
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark.completed:hover {
+    background-image: url(/fe/lol-new-player-experience/checkmark-hover.png)
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark.completed.selected {
+    background-image: url(/fe/lol-new-player-experience/checkmark-default.png)
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark.locked {
+    background-image: url(/fe/lol-new-player-experience/lock-default.png)
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark.locked:hover {
+    background-image: url(/fe/lol-new-player-experience/lock-hover.png);
+    color: #a09b8c
+}
+
+.npe-tutorial-item-reward-component .npe-tutorial-item-reward-wrapper .npe-tutorial-reward-checkmark.locked:hover .npe-tutorial-reward-lock-text {
+    color: #f0e6d2;
+    opacity: 1
+}
+
+.npe-tutorial-item-reward-component:hover.reward {
+    -webkit-filter: brightness(1.15);
+    -webkit-transition: -webkit-filter .3s cubic-bezier(.23, 1, .32, 1)
+}
+
+.npe-tutorial-item-reward-component:hover.reward.selected {
+    cursor: default;
+    -webkit-filter: unset
+}
+
+.npe-tutorial-item-reward-component.selected {
+    cursor: default
+}
+
+.npe-header-component .summoner-info-anchor .current-player-name,
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level,
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.npe-header-component .summoner-info-anchor .current-player-name,
+.npe-header-component .summoner-info-anchor .current-player-name:lang(el-gr),
+.npe-header-component .summoner-info-anchor .current-player-name:lang(ja-jp),
+.npe-header-component .summoner-info-anchor .current-player-name:lang(ko-kr),
+.npe-header-component .summoner-info-anchor .current-player-name:lang(th-th),
+.npe-header-component .summoner-info-anchor .current-player-name:lang(tr-tr),
+.npe-header-component .summoner-info-anchor .current-player-name:lang(zh-tw),
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level:lang(el-gr),
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level:lang(ja-jp),
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level:lang(ko-kr),
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level:lang(th-th),
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level:lang(tr-tr),
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level:lang(zh-tw),
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text,
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text:lang(el-gr),
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text:lang(ja-jp),
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text:lang(ko-kr),
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text:lang(th-th),
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text:lang(tr-tr),
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text:lang(zh-tw) {
+    text-transform: none
+}
+
+.npe-header-component .summoner-info-anchor .current-player-name,
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level,
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.npe-header-component .summoner-info-anchor .current-player-name:lang(ar-ae),
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level:lang(ar-ae),
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.npe-header-component .summoner-info-anchor .current-player-name,
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text {
+    letter-spacing: .0375em
+}
+
+.npe-header-component .summoner-info-anchor .current-player-name:lang(ar-ae),
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level {
+    color: #a09b8c
+}
+
+.npe-header-component {
+    height: 80px;
+    position: relative;
+    width: 100%
+}
+
+.npe-header-component .summoner-info-anchor {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 223px
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level {
+    height: 60px;
+    width: 60px
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level-icon {
+    margin-left: 11px;
+    margin-top: 6px
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level-icon .icon-image {
+    background-color: inherit
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-icon-image {
+    border: 0;
+    border-radius: 50%;
+    height: 60px;
+    position: absolute;
+    width: 60px
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .xp-ring {
+    border-radius: 50%;
+    height: 56px;
+    left: -3px;
+    position: absolute;
+    top: -3px;
+    width: 56px
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .unfilled.xp-ring {
+    background-color: #0a323c
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .filled.xp-ring {
+    background-color: #0596aa
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .center.xp-ring {
+    background-color: #010a13;
+    height: 48px;
+    left: 1px;
+    top: 1px;
+    width: 48px
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .icon-image {
+    background-color: #010a13;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 84%;
+    overflow: hidden;
+    position: absolute;
+    width: 84%
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level-ring {
+    background-image: url(/fe/lol-new-player-experience/social_panel_level_ring.png);
+    background-position: 50%;
+    background-size: 76px 76px;
+    height: 70px;
+    left: -10px;
+    position: absolute;
+    top: -10px;
+    width: 70px
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level {
+    bottom: 0;
+    font-size: 11px;
+    left: 9px;
+    position: absolute;
+    text-align: center;
+    width: 32px
+}
+
+.npe-header-component .summoner-info-anchor .fancy-icon-with-level .summoner-level.has-long-summoner-level {
+    bottom: -1px;
+    font-size: 10px
+}
+
+.npe-header-component .summoner-info-anchor .current-player-name {
+    align-self: center;
+    margin-left: 13px;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: no-wrap;
+    width: 145px
+}
+
+.npe-header-component .tutorial-path-nav {
+    border-bottom: thin solid hsla(40, 50%, 88%, .25);
+    height: 80px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items {
+    display: flex;
+    padding-left: 100px
+}
+
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item {
+    display: flex;
+    height: 79px;
+    position: relative;
+    width: 90px
+}
+
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item:before {
+    background-image: url(/fe/lol-new-player-experience/nav-pointer.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 15px;
+    pointer-events: none;
+    position: absolute;
+    top: -2px;
+    width: 90px
+}
+
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item:after {
+    background-image: url(/fe/lol-new-player-experience/nav-highlight.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -1px;
+    content: "";
+    height: 45px;
+    left: 0;
+    margin-left: -37px;
+    pointer-events: none;
+    position: absolute;
+    width: 150px
+}
+
+.npe-header-component .tutorial-path-nav .tutorial-path-nav-items .tutorial-path-nav-item .tutorial-path-nav-item-text {
+    align-self: center;
+    cursor: default;
+    margin: auto
+}
+
+.npe-header-component .npe-header-league-logo {
+    margin-left: 15px;
+    margin-top: 12px
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer,
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-text {
+    font-family: var(--font-display)
+}
+
+.npe-reward-celebration-animation,
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer,
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-text {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer,
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-text {
+    text-transform: uppercase
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer:lang(el-gr),
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer:lang(ja-jp),
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer:lang(ko-kr),
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer:lang(th-th),
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer:lang(tr-tr),
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer:lang(zh-tw),
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-text:lang(el-gr),
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-text:lang(ja-jp),
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-text:lang(ko-kr),
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-text:lang(th-th),
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-text:lang(tr-tr),
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-text:lang(zh-tw) {
+    text-transform: none
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-text {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer:lang(ja-jp) {
+    font-size: 13px
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.npe-reward-celebration-animation {
+    bottom: 1;
+    height: 720px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 1;
+    top: 0;
+    width: 1280px
+}
+
+.npe-reward-celebration-animation .reward-wrapper {
+    align-items: flex-start;
+    display: flex;
+    height: 450px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 120px;
+    width: 100%
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container.show {
+    opacity: 1
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container.hide {
+    opacity: 0
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .npe-reward-blue-essence-static {
+    background-image: url(/fe/lol-loot/assets/loot_item_icons/currency_champion.png);
+    height: 414px;
+    width: 414px
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper {
+    left: 39%;
+    position: absolute;
+    top: 78%
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-text {
+    color: #cdbe91;
+    line-height: 18px;
+    max-height: 36px;
+    min-height: 18px;
+    text-align: center;
+    vertical-align: middle
+}
+
+.npe-reward-celebration-animation .reward-wrapper.blue-essence-container .reward-text-wrapper .reward-footer {
+    color: #c89b3c;
+    flex: 1 1 auto;
+    height: 18px;
+    line-height: 18px;
+    margin-top: .5rem;
+    text-align: center;
+    vertical-align: middle
+}
+
+.npe-reward-celebration-animation .reward-wrapper.capsule-container {
+    opacity: 1;
+    transition: opacity .75s
+}
+
+.npe-reward-celebration-animation .reward-wrapper.capsule-container.show {
+    opacity: 1
+}
+
+.npe-reward-celebration-animation .reward-wrapper.capsule-container.hide {
+    opacity: 0
+}

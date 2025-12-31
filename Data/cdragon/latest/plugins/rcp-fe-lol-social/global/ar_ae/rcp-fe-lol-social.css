@@ -1,0 +1,6365 @@
+.lol-social-menu-input {
+    display: block
+}
+
+.lol-social-menu-input .wrapper {
+    left: 0;
+    overflow: hidden;
+    position: relative;
+    transition: left .3s cubic-bezier(0, 0, 0, 1);
+    width: 100%
+}
+
+.lol-social-menu-input .wrapper.wrapper-animate-out {
+    left: 110%
+}
+
+.lol-social-menu-input .input-icon {
+    background-color: #c8aa6e;
+    cursor: default;
+    height: 18px;
+    left: 10px;
+    -webkit-mask: url(/fe/lol-social/note_mask.png) no-repeat center;
+    -webkit-mask-size: contain;
+    position: absolute;
+    top: 5px;
+    width: 18px
+}
+
+.lol-social-menu-input .input-icon:lang(ar-ae) {
+    left: auto;
+    right: 10px
+}
+
+.lol-social-menu-input.is-saving .input-icon {
+    background-color: #f0e6d2
+}
+
+.lol-social-menu-input .input {
+    padding: 0 30px 0 6px;
+    width: 100%
+}
+
+.lol-social-menu-input .input:lang(ar-ae) {
+    padding: 0 6px 0 30px
+}
+
+.lol-social-menu-input.has-error .input {
+    border: thin solid #bc213b
+}
+
+.lol-social-menu-input.has-icon .input {
+    padding: 0 6px 0 34px
+}
+
+.lol-social-menu-input.has-icon .input:lang(ar-ae) {
+    padding: 0 34px 0 6px
+}
+
+.lol-social-menu-input .input.saving {
+    background: none;
+    border-color: transparent;
+    border-image: none;
+    box-shadow: none;
+    display: block
+}
+
+.lol-social-menu-input .animation {
+    background: #785a28;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    transition: width .3s cubic-bezier(0, 0, 0, 1);
+    width: 0
+}
+
+.lol-social-menu-input.is-saving .animation {
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%
+}
+
+.lol-social-menu-input .animation .input-message {
+    box-sizing: border-box;
+    color: #f0e6d2;
+    font-size: 12px;
+    height: 30px;
+    letter-spacing: .05em;
+    line-height: 16px;
+    padding: 7px;
+    position: absolute;
+    width: 222px
+}
+
+.lol-social-menu-input.has-icon .animation .input-message {
+    padding-left: 34px
+}
+
+.lol-social-menu-input .animation.animate-in {
+    right: 0
+}
+
+.lol-social-menu-input .animation.animate-in .input-message {
+    left: 0;
+    right: auto
+}
+
+.lol-social-menu-item .lol-social-menu-input {
+    margin: -10px -11px
+}
+
+.lol-social-menu-item:last-child .lol-social-menu-input {
+    margin-bottom: -11px
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-title,
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-subheader,
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-title,
+.hover-card-division,
+.hover-card-game-name-and-tag-wrapper,
+.hover-card-inline-game-tag,
+.hover-card-level,
+.hover-card-mastery-score,
+.hover-card-name,
+.hover-card-name-wrapper+.hover-card-game-tag,
+.lol-friend-finder-modal .friend-finder-panel-header-title,
+.lol-friend-finder-modal .header,
+.lol-friend-finder-modal .title,
+.lol-social-actions-bar .friend-header,
+.lol-social-identity .name,
+.lol-social-sidebar .alpha-version-panel,
+.player-behavior-reform-card .reform-card-subhead,
+.player-behavior-reform-card-v2 .reform-card-subhead,
+.player-behavior-reform-card-v3 .reform-card-subhead,
+.reform-card-v2-chat-log .reform-card-chat-log-header-title,
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab,
+.reform-card-v3-chat-log .reform-card-chat-log-header-title,
+lol-friend-finder-by-social-network .social-header,
+lol-friend-finder-by-social-network .social-networks .social-network,
+lol-friend-finder-social-summoner .social-profile-name {
+    font-family: var(--font-display)
+}
+
+.code-of-conduct .code-of-conduct-content-container .more-info-link,
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:link,
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:visited,
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-body-container .rule-item-body,
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-msg,
+.ephemeral-action-tooltip .menu-item-small-text,
+.hover-card-game-name-and-tag-wrapper,
+.hover-card-inline-game-tag,
+.hover-card-name-wrapper+.hover-card-game-tag,
+.hover-card-ranked-description,
+.hover-card-root-container,
+.identity-and-parties,
+.identity-and-parties .disconnected .message,
+.leaver-buster-dialog a:link,
+.leaver-buster-dialog a:visited,
+.lol-friend-finder-by-summoner-name .description,
+.lol-friend-finder-modal .feature-not-implemented,
+.lol-friend-finder-recent-summoner .summoner-identity .player-name-wrapper,
+.lol-friend-finder-requested-player .player-name-wrapper,
+.lol-social-sidebar,
+.lol-social-sidebar .disconnected .message,
+.no-recently-played-summoners,
+.player-behavior-ban-notification a:link,
+.player-behavior-ban-notification a:visited,
+.player-behavior-reform-card .reform-card-body,
+.player-behavior-reform-card a:link,
+.player-behavior-reform-card a:visited,
+.player-behavior-reform-card-v2 .reform-card-body,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:link,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:visited,
+.player-behavior-reform-card-v3 .reform-card-body,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:link,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:visited,
+.reform-card-chat-log .chat-log-header-copy-log-link,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:link,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:visited,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:link,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:visited,
+.social-count-badge,
+lol-friend-finder-by-social-network #social-summoner-list .empty,
+lol-friend-finder-by-social-network .faq-link,
+lol-friend-finder-by-social-network .social-description,
+lol-friend-finder-by-social-network .social-header.suggested-contacts-header .unlink-link,
+lol-friend-finder-by-social-network .social-info,
+lol-friend-finder-by-social-network .social-network-error,
+lol-friend-finder-by-social-network .unlinked-networks .unlinked-networks-header,
+lol-friend-finder-social-summoner .social-dismiss-link,
+lol-friend-finder-social-summoner .social-summoner-name {
+    font-family: var(--font-body)
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-title,
+.code-of-conduct .code-of-conduct-content-container .more-info-link,
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:link,
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:visited,
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-body-container .rule-item-body,
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-subheader,
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-msg,
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-title,
+.ephemeral-action-tooltip .menu-item-small-text,
+.hover-card-division,
+.hover-card-game-name-and-tag-wrapper,
+.hover-card-inline-game-tag,
+.hover-card-level,
+.hover-card-mastery-score,
+.hover-card-name,
+.hover-card-name-wrapper+.hover-card-game-tag,
+.hover-card-root-container,
+.identity-and-parties .disconnected .message,
+.leaver-buster-dialog a:link,
+.leaver-buster-dialog a:visited,
+.lol-friend-finder-by-summoner-name .description,
+.lol-friend-finder-modal .feature-not-implemented,
+.lol-friend-finder-modal .friend-finder-panel-header-title,
+.lol-friend-finder-modal .header,
+.lol-friend-finder-modal .title,
+.lol-friend-finder-recent-summoner .summoner-identity .player-name-wrapper,
+.lol-friend-finder-requested-player .player-name-wrapper,
+.lol-social-actions-bar .friend-header,
+.lol-social-identity .name,
+.lol-social-sidebar .alpha-version-panel,
+.lol-social-sidebar .disconnected .message,
+.no-recently-played-summoners,
+.player-behavior-ban-notification a:link,
+.player-behavior-ban-notification a:visited,
+.player-behavior-reform-card .reform-card-body,
+.player-behavior-reform-card .reform-card-subhead,
+.player-behavior-reform-card a:link,
+.player-behavior-reform-card a:visited,
+.player-behavior-reform-card-v2 .reform-card-body,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:link,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:visited,
+.player-behavior-reform-card-v2 .reform-card-subhead,
+.player-behavior-reform-card-v3 .reform-card-body,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:link,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:visited,
+.player-behavior-reform-card-v3 .reform-card-subhead,
+.reform-card-chat-log .chat-log-header-copy-log-link,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:link,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:visited,
+.reform-card-v2-chat-log .reform-card-chat-log-header-title,
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:link,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:visited,
+.reform-card-v3-chat-log .reform-card-chat-log-header-title,
+lol-friend-finder-by-social-network #social-summoner-list .empty,
+lol-friend-finder-by-social-network .faq-link,
+lol-friend-finder-by-social-network .social-description,
+lol-friend-finder-by-social-network .social-header,
+lol-friend-finder-by-social-network .social-header.suggested-contacts-header .unlink-link,
+lol-friend-finder-by-social-network .social-info,
+lol-friend-finder-by-social-network .social-network-error,
+lol-friend-finder-by-social-network .social-networks .social-network,
+lol-friend-finder-by-social-network .unlinked-networks .unlinked-networks-header,
+lol-friend-finder-social-summoner .social-dismiss-link,
+lol-friend-finder-social-summoner .social-profile-name,
+lol-friend-finder-social-summoner .social-summoner-name {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-title,
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-subheader,
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-title,
+.hover-card-division,
+.hover-card-game-name-and-tag-wrapper,
+.hover-card-inline-game-tag,
+.hover-card-level,
+.hover-card-mastery-score,
+.hover-card-name,
+.hover-card-name-wrapper+.hover-card-game-tag,
+.lol-friend-finder-modal .friend-finder-panel-header-title,
+.lol-friend-finder-modal .header,
+.lol-friend-finder-modal .title,
+.lol-social-actions-bar .friend-header,
+.lol-social-identity .name,
+.player-behavior-reform-card .reform-card-subhead,
+.player-behavior-reform-card-v2 .reform-card-subhead,
+.player-behavior-reform-card-v3 .reform-card-subhead,
+.reform-card-v2-chat-log .reform-card-chat-log-header-title,
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab,
+.reform-card-v3-chat-log .reform-card-chat-log-header-title,
+lol-friend-finder-by-social-network .social-header,
+lol-friend-finder-by-social-network .social-networks .social-network,
+lol-friend-finder-social-summoner .social-profile-name {
+    text-transform: uppercase
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-title:lang(el-gr),
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-title:lang(ja-jp),
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-title:lang(ko-kr),
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-title:lang(th-th),
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-title:lang(tr-tr),
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-title:lang(zh-tw),
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-subheader:lang(el-gr),
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-subheader:lang(ja-jp),
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-subheader:lang(ko-kr),
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-subheader:lang(th-th),
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-subheader:lang(tr-tr),
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-subheader:lang(zh-tw),
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-title:lang(el-gr),
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-title:lang(ja-jp),
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-title:lang(ko-kr),
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-title:lang(th-th),
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-title:lang(tr-tr),
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-title:lang(zh-tw),
+.hover-card-division:lang(el-gr),
+.hover-card-division:lang(ja-jp),
+.hover-card-division:lang(ko-kr),
+.hover-card-division:lang(th-th),
+.hover-card-division:lang(tr-tr),
+.hover-card-division:lang(zh-tw),
+.hover-card-game-name-and-tag-wrapper,
+.hover-card-game-name-and-tag-wrapper:lang(el-gr),
+.hover-card-game-name-and-tag-wrapper:lang(ja-jp),
+.hover-card-game-name-and-tag-wrapper:lang(ko-kr),
+.hover-card-game-name-and-tag-wrapper:lang(th-th),
+.hover-card-game-name-and-tag-wrapper:lang(tr-tr),
+.hover-card-game-name-and-tag-wrapper:lang(zh-tw),
+.hover-card-inline-game-tag,
+.hover-card-inline-game-tag:lang(el-gr),
+.hover-card-inline-game-tag:lang(ja-jp),
+.hover-card-inline-game-tag:lang(ko-kr),
+.hover-card-inline-game-tag:lang(th-th),
+.hover-card-inline-game-tag:lang(tr-tr),
+.hover-card-inline-game-tag:lang(zh-tw),
+.hover-card-level:lang(el-gr),
+.hover-card-level:lang(ja-jp),
+.hover-card-level:lang(ko-kr),
+.hover-card-level:lang(th-th),
+.hover-card-level:lang(tr-tr),
+.hover-card-level:lang(zh-tw),
+.hover-card-mastery-score:lang(el-gr),
+.hover-card-mastery-score:lang(ja-jp),
+.hover-card-mastery-score:lang(ko-kr),
+.hover-card-mastery-score:lang(th-th),
+.hover-card-mastery-score:lang(tr-tr),
+.hover-card-mastery-score:lang(zh-tw),
+.hover-card-name,
+.hover-card-name-wrapper+.hover-card-game-tag,
+.hover-card-name-wrapper+.hover-card-game-tag:lang(el-gr),
+.hover-card-name-wrapper+.hover-card-game-tag:lang(ja-jp),
+.hover-card-name-wrapper+.hover-card-game-tag:lang(ko-kr),
+.hover-card-name-wrapper+.hover-card-game-tag:lang(th-th),
+.hover-card-name-wrapper+.hover-card-game-tag:lang(tr-tr),
+.hover-card-name-wrapper+.hover-card-game-tag:lang(zh-tw),
+.hover-card-name:lang(el-gr),
+.hover-card-name:lang(ja-jp),
+.hover-card-name:lang(ko-kr),
+.hover-card-name:lang(th-th),
+.hover-card-name:lang(tr-tr),
+.hover-card-name:lang(zh-tw),
+.hover-card-ranked-description,
+.lol-friend-finder-modal .friend-finder-panel-header-title:lang(el-gr),
+.lol-friend-finder-modal .friend-finder-panel-header-title:lang(ja-jp),
+.lol-friend-finder-modal .friend-finder-panel-header-title:lang(ko-kr),
+.lol-friend-finder-modal .friend-finder-panel-header-title:lang(th-th),
+.lol-friend-finder-modal .friend-finder-panel-header-title:lang(tr-tr),
+.lol-friend-finder-modal .friend-finder-panel-header-title:lang(zh-tw),
+.lol-friend-finder-modal .header:lang(el-gr),
+.lol-friend-finder-modal .header:lang(ja-jp),
+.lol-friend-finder-modal .header:lang(ko-kr),
+.lol-friend-finder-modal .header:lang(th-th),
+.lol-friend-finder-modal .header:lang(tr-tr),
+.lol-friend-finder-modal .header:lang(zh-tw),
+.lol-friend-finder-modal .title:lang(el-gr),
+.lol-friend-finder-modal .title:lang(ja-jp),
+.lol-friend-finder-modal .title:lang(ko-kr),
+.lol-friend-finder-modal .title:lang(th-th),
+.lol-friend-finder-modal .title:lang(tr-tr),
+.lol-friend-finder-modal .title:lang(zh-tw),
+.lol-social-actions-bar .friend-header:lang(el-gr),
+.lol-social-actions-bar .friend-header:lang(ja-jp),
+.lol-social-actions-bar .friend-header:lang(ko-kr),
+.lol-social-actions-bar .friend-header:lang(th-th),
+.lol-social-actions-bar .friend-header:lang(tr-tr),
+.lol-social-actions-bar .friend-header:lang(zh-tw),
+.lol-social-identity .name,
+.lol-social-identity .name:lang(el-gr),
+.lol-social-identity .name:lang(ja-jp),
+.lol-social-identity .name:lang(ko-kr),
+.lol-social-identity .name:lang(th-th),
+.lol-social-identity .name:lang(tr-tr),
+.lol-social-identity .name:lang(zh-tw),
+.player-behavior-reform-card .reform-card-subhead,
+.player-behavior-reform-card .reform-card-subhead:lang(el-gr),
+.player-behavior-reform-card .reform-card-subhead:lang(ja-jp),
+.player-behavior-reform-card .reform-card-subhead:lang(ko-kr),
+.player-behavior-reform-card .reform-card-subhead:lang(th-th),
+.player-behavior-reform-card .reform-card-subhead:lang(tr-tr),
+.player-behavior-reform-card .reform-card-subhead:lang(zh-tw),
+.player-behavior-reform-card-v2 .reform-card-subhead,
+.player-behavior-reform-card-v2 .reform-card-subhead:lang(el-gr),
+.player-behavior-reform-card-v2 .reform-card-subhead:lang(ja-jp),
+.player-behavior-reform-card-v2 .reform-card-subhead:lang(ko-kr),
+.player-behavior-reform-card-v2 .reform-card-subhead:lang(th-th),
+.player-behavior-reform-card-v2 .reform-card-subhead:lang(tr-tr),
+.player-behavior-reform-card-v2 .reform-card-subhead:lang(zh-tw),
+.player-behavior-reform-card-v3 .reform-card-subhead,
+.player-behavior-reform-card-v3 .reform-card-subhead:lang(el-gr),
+.player-behavior-reform-card-v3 .reform-card-subhead:lang(ja-jp),
+.player-behavior-reform-card-v3 .reform-card-subhead:lang(ko-kr),
+.player-behavior-reform-card-v3 .reform-card-subhead:lang(th-th),
+.player-behavior-reform-card-v3 .reform-card-subhead:lang(tr-tr),
+.player-behavior-reform-card-v3 .reform-card-subhead:lang(zh-tw),
+.reform-card-v2-chat-log .reform-card-chat-log-header-title:lang(el-gr),
+.reform-card-v2-chat-log .reform-card-chat-log-header-title:lang(ja-jp),
+.reform-card-v2-chat-log .reform-card-chat-log-header-title:lang(ko-kr),
+.reform-card-v2-chat-log .reform-card-chat-log-header-title:lang(th-th),
+.reform-card-v2-chat-log .reform-card-chat-log-header-title:lang(tr-tr),
+.reform-card-v2-chat-log .reform-card-chat-log-header-title:lang(zh-tw),
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab:lang(el-gr),
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab:lang(ja-jp),
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab:lang(ko-kr),
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab:lang(th-th),
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab:lang(tr-tr),
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab:lang(zh-tw),
+.reform-card-v3-chat-log .reform-card-chat-log-header-title:lang(el-gr),
+.reform-card-v3-chat-log .reform-card-chat-log-header-title:lang(ja-jp),
+.reform-card-v3-chat-log .reform-card-chat-log-header-title:lang(ko-kr),
+.reform-card-v3-chat-log .reform-card-chat-log-header-title:lang(th-th),
+.reform-card-v3-chat-log .reform-card-chat-log-header-title:lang(tr-tr),
+.reform-card-v3-chat-log .reform-card-chat-log-header-title:lang(zh-tw),
+lol-friend-finder-by-social-network .social-header:lang(el-gr),
+lol-friend-finder-by-social-network .social-header:lang(ja-jp),
+lol-friend-finder-by-social-network .social-header:lang(ko-kr),
+lol-friend-finder-by-social-network .social-header:lang(th-th),
+lol-friend-finder-by-social-network .social-header:lang(tr-tr),
+lol-friend-finder-by-social-network .social-header:lang(zh-tw),
+lol-friend-finder-by-social-network .social-networks .social-network:lang(el-gr),
+lol-friend-finder-by-social-network .social-networks .social-network:lang(ja-jp),
+lol-friend-finder-by-social-network .social-networks .social-network:lang(ko-kr),
+lol-friend-finder-by-social-network .social-networks .social-network:lang(th-th),
+lol-friend-finder-by-social-network .social-networks .social-network:lang(tr-tr),
+lol-friend-finder-by-social-network .social-networks .social-network:lang(zh-tw),
+lol-friend-finder-social-summoner .social-profile-name:lang(el-gr),
+lol-friend-finder-social-summoner .social-profile-name:lang(ja-jp),
+lol-friend-finder-social-summoner .social-profile-name:lang(ko-kr),
+lol-friend-finder-social-summoner .social-profile-name:lang(th-th),
+lol-friend-finder-social-summoner .social-profile-name:lang(tr-tr),
+lol-friend-finder-social-summoner .social-profile-name:lang(zh-tw) {
+    text-transform: none
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-title {
+    color: #f0e6d2;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 28px
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-subheader,
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-title,
+.hover-card-name,
+.lol-friend-finder-modal .title,
+.player-behavior-reform-card .reform-card-subhead,
+.player-behavior-reform-card-v2 .reform-card-subhead,
+.player-behavior-reform-card-v3 .reform-card-subhead,
+.reform-card-v2-chat-log .reform-card-chat-log-header-title,
+.reform-card-v3-chat-log .reform-card-chat-log-header-title {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-subheader:lang(ar-ae),
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-title:lang(ar-ae),
+.hover-card-name:lang(ar-ae),
+.lol-friend-finder-modal .title:lang(ar-ae),
+.player-behavior-reform-card .reform-card-subhead:lang(ar-ae),
+.player-behavior-reform-card-v2 .reform-card-subhead:lang(ar-ae),
+.player-behavior-reform-card-v3 .reform-card-subhead:lang(ar-ae),
+.reform-card-v2-chat-log .reform-card-chat-log-header-title:lang(ar-ae),
+.reform-card-v3-chat-log .reform-card-chat-log-header-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.hover-card-name,
+.player-behavior-reform-card .reform-card-subhead,
+.player-behavior-reform-card-v2 .reform-card-subhead,
+.player-behavior-reform-card-v3 .reform-card-subhead {
+    letter-spacing: .025em
+}
+
+.hover-card-name:lang(ar-ae),
+.player-behavior-reform-card .reform-card-subhead:lang(ar-ae),
+.player-behavior-reform-card-v2 .reform-card-subhead:lang(ar-ae),
+.player-behavior-reform-card-v3 .reform-card-subhead:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.hover-card-inline-game-tag,
+.hover-card-level,
+.hover-card-mastery-score,
+.lol-social-identity .name,
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.hover-card-inline-game-tag:lang(ar-ae),
+.hover-card-level:lang(ar-ae),
+.hover-card-mastery-score:lang(ar-ae),
+.lol-social-identity .name:lang(ar-ae),
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lol-social-identity .name {
+    letter-spacing: .0375em
+}
+
+.lol-social-identity .name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.hover-card-inline-game-tag {
+    color: #a09b8c
+}
+
+.hover-card-division,
+.hover-card-game-name-and-tag-wrapper,
+.hover-card-name-wrapper+.hover-card-game-tag,
+.lol-friend-finder-modal .friend-finder-panel-header-title,
+.lol-friend-finder-modal .header,
+.lol-social-actions-bar .friend-header,
+lol-friend-finder-by-social-network .social-header,
+lol-friend-finder-by-social-network .social-networks .social-network,
+lol-friend-finder-social-summoner .social-profile-name {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.hover-card-division:lang(ja-jp),
+.hover-card-game-name-and-tag-wrapper:lang(ja-jp),
+.hover-card-name-wrapper+.hover-card-game-tag:lang(ja-jp),
+.lol-friend-finder-modal .friend-finder-panel-header-title:lang(ja-jp),
+.lol-friend-finder-modal .header:lang(ja-jp),
+.lol-social-actions-bar .friend-header:lang(ja-jp),
+lol-friend-finder-by-social-network .social-header:lang(ja-jp),
+lol-friend-finder-by-social-network .social-networks .social-network:lang(ja-jp),
+lol-friend-finder-social-summoner .social-profile-name:lang(ja-jp) {
+    font-size: 13px
+}
+
+.hover-card-division:lang(ar-ae),
+.hover-card-game-name-and-tag-wrapper:lang(ar-ae),
+.hover-card-name-wrapper+.hover-card-game-tag:lang(ar-ae),
+.lol-friend-finder-modal .friend-finder-panel-header-title:lang(ar-ae),
+.lol-friend-finder-modal .header:lang(ar-ae),
+.lol-social-actions-bar .friend-header:lang(ar-ae),
+lol-friend-finder-by-social-network .social-header:lang(ar-ae),
+lol-friend-finder-by-social-network .social-networks .social-network:lang(ar-ae),
+lol-friend-finder-social-summoner .social-profile-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.hover-card-game-name-and-tag-wrapper,
+.hover-card-name-wrapper+.hover-card-game-tag,
+.lol-friend-finder-modal .friend-finder-panel-header-title {
+    color: #a09b8c
+}
+
+.code-of-conduct .code-of-conduct-content-container .more-info-link,
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-body-container .rule-item-body,
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-msg,
+.player-behavior-reform-card .reform-card-body,
+.player-behavior-reform-card-v2 .reform-card-body,
+.player-behavior-reform-card-v3 .reform-card-body,
+lol-friend-finder-by-social-network .social-description {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.code-of-conduct .code-of-conduct-content-container .more-info-link:lang(ar-ae),
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-body-container .rule-item-body:lang(ar-ae),
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-msg:lang(ar-ae),
+.player-behavior-reform-card .reform-card-body:lang(ar-ae),
+.player-behavior-reform-card-v2 .reform-card-body:lang(ar-ae),
+.player-behavior-reform-card-v3 .reform-card-body:lang(ar-ae),
+lol-friend-finder-by-social-network .social-description:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.ephemeral-action-tooltip .menu-item-small-text,
+.hover-card-root-container,
+.identity-and-parties .disconnected .message,
+.lol-friend-finder-by-summoner-name .description,
+.lol-friend-finder-modal .feature-not-implemented,
+.lol-friend-finder-recent-summoner .summoner-identity .player-name-wrapper,
+.lol-friend-finder-requested-player .player-name-wrapper,
+.lol-social-sidebar .disconnected .message,
+.no-recently-played-summoners,
+lol-friend-finder-by-social-network #social-summoner-list .empty,
+lol-friend-finder-by-social-network .social-info,
+lol-friend-finder-by-social-network .social-network-error,
+lol-friend-finder-by-social-network .unlinked-networks .unlinked-networks-header,
+lol-friend-finder-social-summoner .social-summoner-name {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.ephemeral-action-tooltip .menu-item-small-text:lang(ja-jp),
+.hover-card-root-container:lang(ja-jp),
+.identity-and-parties .disconnected .message:lang(ja-jp),
+.lol-friend-finder-by-summoner-name .description:lang(ja-jp),
+.lol-friend-finder-modal .feature-not-implemented:lang(ja-jp),
+.lol-friend-finder-recent-summoner .summoner-identity .player-name-wrapper:lang(ja-jp),
+.lol-friend-finder-requested-player .player-name-wrapper:lang(ja-jp),
+.lol-social-sidebar .disconnected .message:lang(ja-jp),
+.no-recently-played-summoners:lang(ja-jp),
+lol-friend-finder-by-social-network #social-summoner-list .empty:lang(ja-jp),
+lol-friend-finder-by-social-network .social-info:lang(ja-jp),
+lol-friend-finder-by-social-network .social-network-error:lang(ja-jp),
+lol-friend-finder-by-social-network .unlinked-networks .unlinked-networks-header:lang(ja-jp),
+lol-friend-finder-social-summoner .social-summoner-name:lang(ja-jp) {
+    font-size: 13px
+}
+
+.ephemeral-action-tooltip .menu-item-small-text:lang(ar-ae),
+.hover-card-root-container:lang(ar-ae),
+.identity-and-parties .disconnected .message:lang(ar-ae),
+.lol-friend-finder-by-summoner-name .description:lang(ar-ae),
+.lol-friend-finder-modal .feature-not-implemented:lang(ar-ae),
+.lol-friend-finder-recent-summoner .summoner-identity .player-name-wrapper:lang(ar-ae),
+.lol-friend-finder-requested-player .player-name-wrapper:lang(ar-ae),
+.lol-social-sidebar .disconnected .message:lang(ar-ae),
+.no-recently-played-summoners:lang(ar-ae),
+lol-friend-finder-by-social-network #social-summoner-list .empty:lang(ar-ae),
+lol-friend-finder-by-social-network .social-info:lang(ar-ae),
+lol-friend-finder-by-social-network .social-network-error:lang(ar-ae),
+lol-friend-finder-by-social-network .unlinked-networks .unlinked-networks-header:lang(ar-ae),
+lol-friend-finder-social-summoner .social-summoner-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:link,
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:visited,
+.leaver-buster-dialog a:link,
+.leaver-buster-dialog a:visited,
+.player-behavior-ban-notification a:link,
+.player-behavior-ban-notification a:visited,
+.player-behavior-reform-card a:link,
+.player-behavior-reform-card a:visited,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:link,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:visited,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:link,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:visited,
+.reform-card-chat-log .chat-log-header-copy-log-link,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:link,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:visited,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:link,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:visited,
+lol-friend-finder-by-social-network .faq-link,
+lol-friend-finder-by-social-network .social-header.suggested-contacts-header .unlink-link,
+lol-friend-finder-social-summoner .social-dismiss-link {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    outline: 0;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:link:lang(ja-jp),
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:visited:lang(ja-jp),
+.leaver-buster-dialog a:link:lang(ja-jp),
+.leaver-buster-dialog a:visited:lang(ja-jp),
+.player-behavior-ban-notification a:link:lang(ja-jp),
+.player-behavior-ban-notification a:visited:lang(ja-jp),
+.player-behavior-reform-card a:link:lang(ja-jp),
+.player-behavior-reform-card a:visited:lang(ja-jp),
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:link:lang(ja-jp),
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:visited:lang(ja-jp),
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:link:lang(ja-jp),
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:visited:lang(ja-jp),
+.reform-card-chat-log .chat-log-header-copy-log-link:lang(ja-jp),
+.reform-card-v2-chat-log .reform-card-chat-log-header a:link:lang(ja-jp),
+.reform-card-v2-chat-log .reform-card-chat-log-header a:visited:lang(ja-jp),
+.reform-card-v3-chat-log .reform-card-chat-log-header a:link:lang(ja-jp),
+.reform-card-v3-chat-log .reform-card-chat-log-header a:visited:lang(ja-jp),
+lol-friend-finder-by-social-network .faq-link:lang(ja-jp),
+lol-friend-finder-by-social-network .social-header.suggested-contacts-header .unlink-link:lang(ja-jp),
+lol-friend-finder-social-summoner .social-dismiss-link:lang(ja-jp) {
+    font-size: 13px
+}
+
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:link:lang(ar-ae),
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:visited:lang(ar-ae),
+.leaver-buster-dialog a:link:lang(ar-ae),
+.leaver-buster-dialog a:visited:lang(ar-ae),
+.player-behavior-ban-notification a:link:lang(ar-ae),
+.player-behavior-ban-notification a:visited:lang(ar-ae),
+.player-behavior-reform-card a:link:lang(ar-ae),
+.player-behavior-reform-card a:visited:lang(ar-ae),
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:link:lang(ar-ae),
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:visited:lang(ar-ae),
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:link:lang(ar-ae),
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:visited:lang(ar-ae),
+.reform-card-chat-log .chat-log-header-copy-log-link:lang(ar-ae),
+.reform-card-v2-chat-log .reform-card-chat-log-header a:link:lang(ar-ae),
+.reform-card-v2-chat-log .reform-card-chat-log-header a:visited:lang(ar-ae),
+.reform-card-v3-chat-log .reform-card-chat-log-header a:link:lang(ar-ae),
+.reform-card-v3-chat-log .reform-card-chat-log-header a:visited:lang(ar-ae),
+lol-friend-finder-by-social-network .faq-link:lang(ar-ae),
+lol-friend-finder-by-social-network .social-header.suggested-contacts-header .unlink-link:lang(ar-ae),
+lol-friend-finder-social-summoner .social-dismiss-link:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.reform-card-chat-log .chat-log-header-copy-log-link,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:link,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:visited,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:link,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:visited,
+lol-friend-finder-by-social-network .social-header.suggested-contacts-header .unlink-link,
+lol-friend-finder-social-summoner .social-dismiss-link {
+    color: #cdbe91
+}
+
+.reform-card-chat-log .chat-log-header-copy-log-link.hover,
+.reform-card-chat-log .chat-log-header-copy-log-link:hover,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:link.hover,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:link:hover,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:visited.hover,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:visited:hover,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:link.hover,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:link:hover,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:visited.hover,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:visited:hover,
+lol-friend-finder-by-social-network .social-header.suggested-contacts-header .unlink-link.hover,
+lol-friend-finder-by-social-network .social-header.suggested-contacts-header .unlink-link:hover,
+lol-friend-finder-social-summoner .social-dismiss-link.hover,
+lol-friend-finder-social-summoner .social-dismiss-link:hover {
+    color: #f0e6d2
+}
+
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:link,
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:visited,
+.leaver-buster-dialog a:link,
+.leaver-buster-dialog a:visited,
+.player-behavior-ban-notification a:link,
+.player-behavior-ban-notification a:visited,
+.player-behavior-reform-card a:link,
+.player-behavior-reform-card a:visited,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:link,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:visited,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:link,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:visited,
+lol-friend-finder-by-social-network .faq-link {
+    color: #0596aa;
+    text-decoration: none
+}
+
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:link.hover,
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:link:hover,
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:visited.hover,
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:visited:hover,
+.leaver-buster-dialog a:link.hover,
+.leaver-buster-dialog a:link:hover,
+.leaver-buster-dialog a:visited.hover,
+.leaver-buster-dialog a:visited:hover,
+.player-behavior-ban-notification a:link.hover,
+.player-behavior-ban-notification a:link:hover,
+.player-behavior-ban-notification a:visited.hover,
+.player-behavior-ban-notification a:visited:hover,
+.player-behavior-reform-card a:link.hover,
+.player-behavior-reform-card a:link:hover,
+.player-behavior-reform-card a:visited.hover,
+.player-behavior-reform-card a:visited:hover,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:link.hover,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:link:hover,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:visited.hover,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:visited:hover,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:link.hover,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:link:hover,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:visited.hover,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:visited:hover,
+lol-friend-finder-by-social-network .faq-link.hover,
+lol-friend-finder-by-social-network .faq-link:hover {
+    color: #cdfafa
+}
+
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:link:after,
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:visited:after,
+.leaver-buster-dialog a:link:after,
+.leaver-buster-dialog a:visited:after,
+.player-behavior-ban-notification a:link:after,
+.player-behavior-ban-notification a:visited:after,
+.player-behavior-reform-card a:link:after,
+.player-behavior-reform-card a:visited:after,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:link:after,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:visited:after,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:link:after,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:visited:after,
+lol-friend-finder-by-social-network .faq-link:after {
+    background-color: #0596aa;
+    content: "";
+    display: inline-block;
+    height: 9px;
+    margin: 0 0 0 5px;
+    -webkit-mask: url(/fe/lol-social/external-link-mask.png) no-repeat;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+    width: 9px
+}
+
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:link:lang(ar-ae):after,
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:visited:lang(ar-ae):after,
+.leaver-buster-dialog a:link:lang(ar-ae):after,
+.leaver-buster-dialog a:visited:lang(ar-ae):after,
+.player-behavior-ban-notification a:link:lang(ar-ae):after,
+.player-behavior-ban-notification a:visited:lang(ar-ae):after,
+.player-behavior-reform-card a:link:lang(ar-ae):after,
+.player-behavior-reform-card a:visited:lang(ar-ae):after,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:link:lang(ar-ae):after,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:visited:lang(ar-ae):after,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:link:lang(ar-ae):after,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:visited:lang(ar-ae):after,
+lol-friend-finder-by-social-network .faq-link:lang(ar-ae):after {
+    margin: 0 5px 0 0;
+    transform: scaleX(-1)
+}
+
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:link:hover:after,
+.code-of-conduct .code-of-conduct-content-container .more-info-link a:visited:hover:after,
+.leaver-buster-dialog a:link:hover:after,
+.leaver-buster-dialog a:visited:hover:after,
+.player-behavior-ban-notification a:link:hover:after,
+.player-behavior-ban-notification a:visited:hover:after,
+.player-behavior-reform-card a:link:hover:after,
+.player-behavior-reform-card a:visited:hover:after,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:link:hover:after,
+.player-behavior-reform-card-v2 .reform-card-body .reform-card-text a:visited:hover:after,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:link:hover:after,
+.player-behavior-reform-card-v3 .reform-card-body .reform-card-text a:visited:hover:after,
+lol-friend-finder-by-social-network .faq-link:hover:after {
+    background-color: #cdfafa
+}
+
+.lol-social-sidebar .alpha-version-panel {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.lol-social-sidebar .alpha-version-panel:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lol-social-actions-bar .filter-button,
+.lol-social-actions-bar .folder-button,
+.lol-social-actions-bar .options-button,
+.lol-social-chat-toggle-button .chat-button,
+.lol-social-chat-toggle-button .chat-button.toggled,
+.lol-social-sidebar .bug-report-button,
+.lol-social-sidebar .bug-report-button-always-top {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0
+}
+
+.lol-social-actions-bar .filter-button.selected,
+.lol-social-actions-bar .folder-button.selected,
+.lol-social-actions-bar .options-button.selected {
+    background-color: #c89b3c
+}
+
+.lol-social-actions-bar .filter-button.unselected,
+.lol-social-actions-bar .folder-button.unselected,
+.lol-social-actions-bar .options-button.unselected {
+    background-color: #463714
+}
+
+.lol-social-actions-bar .filter-button[disabled],
+.lol-social-actions-bar .folder-button[disabled],
+.lol-social-actions-bar .options-button[disabled] {
+    cursor: default
+}
+
+.lol-social-actions-bar .filter-button[disabled]:hover,
+.lol-social-actions-bar .folder-button[disabled]:hover,
+.lol-social-actions-bar .options-button[disabled]:hover {
+    background-color: #c8aa6e
+}
+
+.lol-social-actions-bar {
+    height: 33px;
+    position: relative
+}
+
+.lol-social-actions-bar .actions-bar {
+    display: flex;
+    height: 100%;
+    margin-left: 2px;
+    margin-top: 2px;
+    position: relative
+}
+
+.lol-social-actions-bar .actions-bar:before {
+    background: linear-gradient(180deg, rgba(7, 16, 25, .7), rgba(32, 39, 44, .7));
+    border: thin solid transparent;
+    border-image: linear-gradient(180deg, #785a28, #c8aa6e) 1 stretch;
+    box-sizing: border-box;
+    content: "";
+    height: 30px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .2s ease-out;
+    width: 100%
+}
+
+.lol-social-actions-bar .actions-bar.folder-input-active:before,
+.lol-social-actions-bar .actions-bar.search-input-active:before {
+    opacity: 1
+}
+
+.lol-social-actions-bar .buttons {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    margin-top: -2px;
+    overflow: hidden;
+    position: relative;
+    transition: width .2s cubic-bezier(0, 0, 0, 1);
+    width: 100%
+}
+
+.lol-social-actions-bar .actions-bar.search-input-active:before {
+    background: none;
+    border: none;
+    box-sizing: border-box
+}
+
+.lol-social-actions-bar .actions-bar.folder-input-active .buttons,
+.lol-social-actions-bar .actions-bar.search-input-active .buttons,
+.lol-social-actions-bar .actions-bar.search-input-active .filter-button {
+    width: 0
+}
+
+.lol-social-actions-bar .friend-header {
+    color: #a09b8c;
+    flex: 1;
+    padding: 0 10px
+}
+
+.lol-social-actions-bar .search-box {
+    flex: 1;
+    overflow: hidden
+}
+
+.lol-social-actions-bar .action-bar-button {
+    flex-shrink: 0;
+    height: 100%;
+    width: 30px
+}
+
+.lol-social-actions-bar .player-name-input-component {
+    padding-top: 1px;
+    position: relative
+}
+
+.lol-social-actions-bar .search-input__game-name>input[type=search],
+.lol-social-actions-bar .search-input__game-name>input[type=search]:lang(ar-ae) {
+    background: no-repeat 5px/16px url(/fe/lol-static-assets/images/uikit/magnifying-glass-icon.png) rgba(0, 0, 0, .7);
+    padding: 0 0 0 24px
+}
+
+.lol-social-actions-bar .search-input__game-name>input[type=search]:focus,
+.lol-social-actions-bar .search-input__game-name>input[type=search]:lang(ar-ae):focus {
+    background: no-repeat 5px/16px url(/fe/lol-static-assets/images/uikit/magnifying-glass-icon.png), linear-gradient(270deg, rgba(0, 0, 0, .7), rgba(32, 39, 44, .7))
+}
+
+.lol-social-actions-bar .search-input__single-input>input[type=search],
+.lol-social-actions-bar .search-input__single-input>input[type=search]:lang(ar-ae) {
+    background: no-repeat 5px/16px url(/fe/lol-static-assets/images/uikit/magnifying-glass-icon.png) rgba(0, 0, 0, .7);
+    padding: 0 0 0 24px
+}
+
+.lol-social-actions-bar .search-input__single-input>input[type=search]:focus,
+.lol-social-actions-bar .search-input__single-input>input[type=search]:lang(ar-ae):focus {
+    background: no-repeat 5px/16px url(/fe/lol-static-assets/images/uikit/magnifying-glass-icon.png), linear-gradient(270deg, rgba(0, 0, 0, .7), rgba(32, 39, 44, .7))
+}
+
+.lol-social-actions-bar .filter-button {
+    background-color: #c8aa6e;
+    -webkit-mask: url(/fe/lol-social/search_mask.png) no-repeat center;
+    -webkit-mask-size: 18px
+}
+
+.lol-social-actions-bar .filter-button:hover {
+    background-color: #f0e6d2
+}
+
+.lol-social-actions-bar .filter-button:active {
+    background-color: #463714
+}
+
+.lol-social-actions-bar .folder-button {
+    background-color: #c8aa6e;
+    -webkit-mask: url(/fe/lol-social/add_folder_mask.png) no-repeat center;
+    -webkit-mask-size: 18px
+}
+
+.lol-social-actions-bar .folder-button:hover {
+    background-color: #f0e6d2
+}
+
+.lol-social-actions-bar .folder-button:active {
+    background-color: #463714
+}
+
+.lol-social-actions-bar .options-button {
+    background-color: #c8aa6e;
+    -webkit-mask: url(/fe/lol-social/sort_mask.png) no-repeat center;
+    -webkit-mask-size: 18px
+}
+
+.lol-social-actions-bar .options-button:hover {
+    background-color: #f0e6d2
+}
+
+.lol-social-actions-bar .options-button:active {
+    background-color: #463714
+}
+
+.lol-social-actions-bar .options-button:lang(ar-ae) {
+    transform: scaleX(-1)
+}
+
+.lol-social-actions-bar .friend-finder-button {
+    background-color: #c8aa6e;
+    cursor: pointer;
+    display: block;
+    height: inherit;
+    -webkit-mask: url(/fe/lol-social/add_person_mask.png) no-repeat center;
+    -webkit-mask-size: 18px;
+    width: inherit
+}
+
+.lol-social-actions-bar .friend-finder-button.disabled {
+    cursor: default;
+    opacity: .5
+}
+
+.lol-social-actions-bar .friend-finder-button:not(.disabled):hover {
+    background-color: #f0e6d2
+}
+
+.lol-social-actions-bar .friend-finder-button:not(.disabled):active {
+    background-color: #463714
+}
+
+.social-options-menu {
+    border-bottom: thin solid #785a28;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 220px
+}
+
+.social-options-menu lol-uikit-flat-checkbox {
+    margin: -8px -10px;
+    padding: 8px 10px
+}
+
+.social-options-menu lol-uikit-flat-checkbox.gbg-checkbox {
+    margin-top: -24px
+}
+
+.social-options-menu lol-uikit-flat-checkbox label {
+    color: #cdbe91
+}
+
+.social-options-menu lol-uikit-flat-checkbox:hover label {
+    color: #f0e6d2
+}
+
+.social-options-menu lol-uikit-radio-input-option {
+    --radio-input-option-hover-background-color: #1e2328;
+    --radio-input-option-padding: 0px 10px
+}
+
+.lol-social-menu-item:lang(ar-ae) {
+    text-align: right
+}
+
+.lol-social-menu-item.menu-item-separator {
+    margin-top: 5px;
+    position: relative
+}
+
+.lol-social-menu-item.menu-item-separator:before {
+    border-top: thin solid hsla(40, 50%, 88%, .25);
+    content: "";
+    height: 0;
+    left: 10px;
+    position: absolute;
+    right: 10px;
+    top: -3px
+}
+
+.gbg-label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px !important
+}
+
+.menuitem-sublabel {
+    color: #5b5a56;
+    letter-spacing: .05em
+}
+
+.lol-social-actions-folder-input {
+    display: block;
+    width: 100%
+}
+
+.lol-social-actions-folder-input .folder-name {
+    display: block;
+    position: relative
+}
+
+.lol-social-actions-folder-input .layout {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex
+}
+
+.lol-social-actions-folder-input .folder-name-contents {
+    position: relative
+}
+
+.lol-social-actions-folder-input .flat-input,
+.lol-social-actions-folder-input .folder-name-input {
+    height: 33px;
+    width: 100%
+}
+
+.lol-social-actions-folder-input .folder-name-input.saving {
+    border-color: transparent;
+    border-image: none
+}
+
+.lol-social-actions-folder-input .folder-name-input.error {
+    border: thin solid #bc213b
+}
+
+.lol-social-actions-folder-input .success-message {
+    color: #f0e6d2;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 4px 10px;
+    width: 160px
+}
+
+.lol-social-actions-folder-input .animation {
+    background: #785a28;
+    display: -webkit-box;
+    height: 90%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    transition: all .3s cubic-bezier(0, 0, 0, 1);
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify
+}
+
+.lol-social-chat-toggle-button .chat-button,
+.lol-social-chat-toggle-button .chat-button.toggled,
+.lol-social-sidebar .bug-report-button,
+.lol-social-sidebar .bug-report-button-always-top {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0
+}
+
+.lol-social-chat-toggle-button {
+    background-color: #010a13
+}
+
+.lol-social-chat-toggle-button .chat-button {
+    background-image: url(/fe/lol-social/chat_button.png);
+    background-position-y: 0;
+    background-size: cover;
+    height: 32px;
+    width: 38px
+}
+
+.lol-social-chat-toggle-button .chat-button:hover {
+    background-position-y: -32px
+}
+
+.lol-social-chat-toggle-button .chat-button:active {
+    background-position-y: -64px
+}
+
+.lol-social-chat-toggle-button .chat-button.disabled,
+.lol-social-chat-toggle-button .chat-button:disabled,
+.lol-social-chat-toggle-button .chat-button[disabled] {
+    background-position-y: -96px;
+    cursor: default
+}
+
+.lol-social-chat-toggle-button .chat-button.toggled {
+    background-image: url(/fe/lol-social/chat_button.png);
+    background-position-y: -96px;
+    background-size: cover
+}
+
+.lol-social-chat-toggle-button .chat-button.toggled:hover {
+    background-position-y: -128px
+}
+
+.lol-social-chat-toggle-button .chat-button.toggled:active {
+    background-position-y: -160px
+}
+
+.lol-social-chat-toggle-button .chat-button.toggled.disabled,
+.lol-social-chat-toggle-button .chat-button.toggled:disabled,
+.lol-social-chat-toggle-button .chat-button.toggled[disabled] {
+    background-position-y: -192px;
+    cursor: default
+}
+
+.lol-social-chat-toggle-button .chat-button.unread {
+    animation: pulseChatButton .75s ease-in-out infinite alternate
+}
+
+.lol-social-chat-toggle-button .chat-button[disabled] {
+    background-position-y: 0;
+    cursor: default;
+    opacity: .5
+}
+
+.lol-social-chat-toggle-button .social-count-badge {
+    box-shadow: 0 0 2px rgba(1, 10, 19, .5);
+    transform: translate(25px, -50%);
+    width: fit-content
+}
+
+@-moz-keyframes pulseChatButton {
+    0% {
+        -webkit-filter: brightness(1) saturate(1)
+    }
+
+    to {
+        -webkit-filter: brightness(1.5) saturate(1.5)
+    }
+}
+
+@-webkit-keyframes pulseChatButton {
+    0% {
+        -webkit-filter: brightness(1) saturate(1)
+    }
+
+    to {
+        -webkit-filter: brightness(1.5) saturate(1.5)
+    }
+}
+
+@-o-keyframes pulseChatButton {
+    0% {
+        -webkit-filter: brightness(1) saturate(1)
+    }
+
+    to {
+        -webkit-filter: brightness(1.5) saturate(1.5)
+    }
+}
+
+@keyframes pulseChatButton {
+    0% {
+        -webkit-filter: brightness(1) saturate(1)
+    }
+
+    to {
+        -webkit-filter: brightness(1.5) saturate(1.5)
+    }
+}
+
+.recently-played-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px
+}
+
+.recent-list {
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px
+}
+
+.no-recently-played-summoners {
+    background: url(/fe/lol-social/poro_sad.png) no-repeat 50%;
+    color: #a09b8c;
+    padding-top: 150px;
+    text-align: center
+}
+
+.header-icon {
+    margin-right: 4px;
+    vertical-align: middle
+}
+
+lol-friend-finder-by-social-network {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px
+}
+
+lol-friend-finder-by-social-network .social-description {
+    margin: 40px 0 25px;
+    text-align: center
+}
+
+lol-friend-finder-by-social-network .social-network-error {
+    background: url(/fe/lol-social/poro_question.png) no-repeat 50%;
+    color: #a09b8c;
+    padding: 150px 130px 0;
+    text-align: center
+}
+
+lol-friend-finder-by-social-network .social-networks {
+    display: flex;
+    flex: 1;
+    justify-content: center
+}
+
+lol-friend-finder-by-social-network .social-networks .social-network {
+    align-items: center;
+    background-color: #1e2328;
+    border: thin solid #3c3c41;
+    box-sizing: border-box;
+    color: #cdbe91;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+    justify-content: center;
+    margin: 0 20px;
+    width: 140px
+}
+
+lol-friend-finder-by-social-network .social-networks .social-network:before {
+    background-color: #a09b8c;
+    content: "";
+    height: 55px;
+    margin: 6px 0 14px;
+    -webkit-mask-size: contain;
+    width: 55px
+}
+
+lol-friend-finder-by-social-network .social-networks .social-network.facebook:before {
+    -webkit-mask-image: url(/fe/lol-social/icon_fb.png)
+}
+
+lol-friend-finder-by-social-network .social-networks .social-network.qq:before {
+    -webkit-mask-image: url(/fe/lol-social/icon_qq.png)
+}
+
+lol-friend-finder-by-social-network .social-networks .social-network.vk:before {
+    -webkit-mask-image: url(/fe/lol-social/icon_vk.png)
+}
+
+lol-friend-finder-by-social-network .social-networks .social-network:hover {
+    border-image: linear-gradient(0deg, #c89b3c, #f0e6d2) 1;
+    color: #f0e6d2
+}
+
+lol-friend-finder-by-social-network .social-networks .social-network:hover:before {
+    background-color: #f0e6d2
+}
+
+lol-friend-finder-by-social-network .social-networks .social-network:active {
+    border: thin solid #1e2328;
+    color: #5b5a56
+}
+
+lol-friend-finder-by-social-network .social-networks .social-network:active:before {
+    background-color: #5b5a56
+}
+
+lol-friend-finder-by-social-network .social-info {
+    color: #5b5a56;
+    margin-bottom: 15px
+}
+
+lol-friend-finder-by-social-network .faq-link {
+    cursor: pointer;
+    margin: 0 auto 0 0
+}
+
+lol-friend-finder-by-social-network .social-header {
+    align-items: center;
+    color: #a09b8c;
+    display: flex;
+    margin-bottom: 5px;
+    width: 100%
+}
+
+lol-friend-finder-by-social-network .social-header.suggested-contacts-header {
+    justify-content: space-between
+}
+
+lol-friend-finder-by-social-network .social-header.suggested-contacts-header .unlink-link {
+    cursor: pointer;
+    margin-right: 12px;
+    text-transform: none
+}
+
+lol-friend-finder-by-social-network .social-header.dismissed-contacts-header {
+    cursor: pointer;
+    margin-top: 20px
+}
+
+lol-friend-finder-by-social-network .social-header.dismissed-contacts-header:hover {
+    color: #f0e6d2
+}
+
+lol-friend-finder-by-social-network .social-header.dismissed-contacts-header:hover .arrow {
+    border-top-color: #f0e6d2
+}
+
+lol-friend-finder-by-social-network .social-header.dismissed-contacts-header .arrow {
+    border: 4px solid transparent;
+    border-top-color: #a09b8c;
+    margin: 4px 4px 0 0;
+    transform: rotate(-90deg);
+    transform-origin: 50% 25%;
+    transition: transform .1s
+}
+
+lol-friend-finder-by-social-network .social-header.dismissed-contacts-header .arrow[open] {
+    transform: rotate(0deg)
+}
+
+lol-friend-finder-by-social-network #social-summoner-list {
+    flex: 1;
+    padding-bottom: 10px
+}
+
+lol-friend-finder-by-social-network #social-summoner-list .empty {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 80px;
+    text-align: center
+}
+
+lol-friend-finder-by-social-network #social-summoner-list .empty:before {
+    background-image: url(/fe/lol-social/poro_sad.png);
+    background-size: contain;
+    content: "";
+    flex-shrink: 0;
+    height: 96px;
+    margin: 20px 0 25px;
+    width: 102px
+}
+
+lol-friend-finder-by-social-network #social-summoner-list .empty .empty-text {
+    margin-bottom: 20px
+}
+
+lol-friend-finder-by-social-network .dismissed-contacts,
+lol-friend-finder-by-social-network .suggested-contacts {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap
+}
+
+lol-friend-finder-by-social-network .social-footer {
+    align-items: center;
+    border-top: thin solid #3c3c41;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-top: 15px
+}
+
+lol-friend-finder-by-social-network .unlinked-networks {
+    align-items: center;
+    display: flex
+}
+
+lol-friend-finder-by-social-network .unlinked-networks .unlinked-networks-header {
+    margin-right: 10px
+}
+
+lol-friend-finder-by-social-network .network {
+    background-color: #a09b8c;
+    cursor: pointer;
+    height: 24px;
+    margin-right: 8px;
+    -webkit-mask-size: contain;
+    width: 24px
+}
+
+lol-friend-finder-by-social-network .network:hover {
+    background-color: #f0e6d2
+}
+
+lol-friend-finder-by-social-network .network:active {
+    background-color: #5b5a56
+}
+
+lol-friend-finder-by-social-network .network.facebook {
+    -webkit-mask-image: url(/fe/lol-social/icon_fb.png)
+}
+
+lol-friend-finder-by-social-network .network.qq {
+    -webkit-mask-image: url(/fe/lol-social/icon_qq.png)
+}
+
+lol-friend-finder-by-social-network .network.vk {
+    -webkit-mask-image: url(/fe/lol-social/icon_vk.png)
+}
+
+lol-friend-finder-by-social-network .more-contacts-button {
+    margin: 20px auto 0;
+    width: 100px
+}
+
+lol-friend-finder-by-social-network .contact-spinner {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    width: 50%
+}
+
+lol-friend-finder-by-social-network .contact-spinner:after {
+    animation: friend-finder-spin 3s linear infinite;
+    background-image: url(/fe/lol-social/spinner.png);
+    background-size: contain;
+    content: "";
+    height: 30px;
+    width: 30px
+}
+
+.lol-friend-finder-by-summoner-name .description {
+    margin-bottom: 10px
+}
+
+.lol-friend-finder-by-summoner-name .summoner-name-input-wrapper {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative
+}
+
+.lol-friend-finder-by-summoner-name .player-name-input-component {
+    flex: 1;
+    margin: 0 0 0 10px
+}
+
+#requested-players-list {
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px
+}
+
+.lol-friend-finder-recent-summoner {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    padding: 8px 0 8px 15px;
+    width: 33%
+}
+
+.lol-friend-finder-recent-summoner .summoner-identity {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    margin: 0 0 0 10px;
+    overflow: hidden
+}
+
+.lol-friend-finder-recent-summoner .summoner-identity:hover .summoner-name {
+    color: #f0e6d2
+}
+
+.lol-friend-finder-recent-summoner .summoner-identity:hover .player-name__alias {
+    color: #a09b8c
+}
+
+.lol-friend-finder-recent-summoner .summoner-identity .player-name-wrapper {
+    flex: 1;
+    overflow: hidden;
+    padding: 0 10px 0 0;
+    text-overflow: ellipsis
+}
+
+.lol-friend-finder-recent-summoner .summoner-identity .player-name-wrapper .player-name-component {
+    display: block
+}
+
+.lol-friend-finder-recent-summoner .summoner-identity .player-name-wrapper .player-name__alias,
+.lol-friend-finder-recent-summoner .summoner-identity .player-name-wrapper .summoner-name {
+    display: flex;
+    white-space: nowrap
+}
+
+.lol-friend-finder-recent-summoner .player-name__alias {
+    color: #5b5a56
+}
+
+.lol-friend-finder-recent-summoner .player-name__alias .summoner-name {
+    color: #a09b8c
+}
+
+.lol-friend-finder-recent-summoner .add-button {
+    background-color: #cdbe91;
+    cursor: pointer;
+    display: none;
+    height: 18px;
+    -webkit-mask: url(/fe/lol-social/add_person_mask.png) no-repeat center;
+    -webkit-mask-size: contain;
+    width: 18px
+}
+
+.lol-friend-finder-recent-summoner .add-button:hover {
+    background-color: #f0e6d2
+}
+
+.lol-friend-finder-recent-summoner .add-button:active {
+    background-color: #463714
+}
+
+.lol-friend-finder-recent-summoner .added {
+    background-color: #cdbe91;
+    height: 18px;
+    -webkit-mask: url(/fe/lol-social/icon_check_mask.png) no-repeat center;
+    -webkit-mask-size: contain;
+    width: 18px
+}
+
+.lol-friend-finder-recent-summoner:hover .add-button {
+    display: block
+}
+
+.lol-friend-finder-recent-summoner:hover .added {
+    background-color: #f0e6d2
+}
+
+lol-friend-finder-social-summoner {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    padding: 8px 20px 8px 0;
+    width: 50%
+}
+
+lol-friend-finder-social-summoner:hover .social-icon {
+    border-image: linear-gradient(0deg, #c89b3c, #f0e6d2) 1
+}
+
+lol-friend-finder-social-summoner:hover .social-added,
+lol-friend-finder-social-summoner:hover .social-summoner-name {
+    color: #f0e6d2
+}
+
+lol-friend-finder-social-summoner:hover .social-add-button,
+lol-friend-finder-social-summoner:hover .social-dismiss-link {
+    display: block
+}
+
+lol-friend-finder-social-summoner .social-icon {
+    border: thin solid #3c3c41;
+    box-sizing: border-box;
+    height: 52px;
+    padding: 1px;
+    width: 52px
+}
+
+lol-friend-finder-social-summoner .social-summoner-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 10px 0 12px;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+lol-friend-finder-social-summoner .social-profile-name {
+    margin-bottom: 1px;
+    overflow: hidden;
+    padding-left: 19px;
+    position: relative;
+    text-overflow: ellipsis
+}
+
+lol-friend-finder-social-summoner .social-profile-name:before {
+    background-size: contain;
+    content: "";
+    height: 13px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 13px
+}
+
+lol-friend-finder-social-summoner .social-profile-name.social-profile-name-facebook:before {
+    background-image: url(/fe/lol-social/icon_fb.png)
+}
+
+lol-friend-finder-social-summoner .social-profile-name.social-profile-name-qq:before {
+    background-image: url(/fe/lol-social/icon_qq.png)
+}
+
+lol-friend-finder-social-summoner .social-profile-name.social-profile-name-vk:before {
+    background-image: url(/fe/lol-social/icon_vk.png)
+}
+
+lol-friend-finder-social-summoner .social-summoner-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+lol-friend-finder-social-summoner .social-add-button {
+    background-color: #cdbe91;
+    cursor: pointer;
+    display: none;
+    height: 18px;
+    -webkit-mask: url(/fe/lol-social/add_person_mask.png) no-repeat center;
+    -webkit-mask-size: contain;
+    width: 18px
+}
+
+lol-friend-finder-social-summoner .social-add-button:hover {
+    background-color: #f0e6d2
+}
+
+lol-friend-finder-social-summoner .social-add-button:active {
+    background-color: #463714
+}
+
+lol-friend-finder-social-summoner .social-dismiss-link {
+    cursor: pointer;
+    display: none
+}
+
+lol-friend-finder-social-summoner .social-dismiss-link.dismissing {
+    pointer-events: none
+}
+
+lol-friend-finder-social-summoner .social-added {
+    background-color: #cdbe91;
+    height: 18px;
+    -webkit-mask-image: url(/fe/lol-social/icon_check_mask.png);
+    -webkit-mask-size: contain;
+    width: 18px
+}
+
+.lol-friend-finder-requested-player {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    padding: 8px 0 8px 15px;
+    width: 33%
+}
+
+.lol-friend-finder-requested-player .player-identity {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    margin: 0 0 0 10px;
+    overflow: hidden
+}
+
+.lol-friend-finder-requested-player .player-identity:hover:not(.working) .player-name {
+    color: #f0e6d2
+}
+
+.lol-friend-finder-requested-player .player-identity:hover:not(.working) .player-gnt {
+    color: #a09b8c
+}
+
+.lol-friend-finder-requested-player .player-identity:hover:not(.working) .player-gnt.only-name {
+    color: #f0e6d2
+}
+
+.lol-friend-finder-requested-player .player-name-wrapper {
+    flex: 1;
+    overflow: hidden;
+    padding: 0 10px 0 0
+}
+
+.lol-friend-finder-requested-player .player-gnt,
+.lol-friend-finder-requested-player .player-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.lol-friend-finder-requested-player .player-gnt {
+    color: #5b5a56
+}
+
+.lol-friend-finder-requested-player .player-gnt.only-name {
+    color: #a09b8c
+}
+
+.lol-friend-finder-requested-player .remove-button {
+    background-color: #cdbe91;
+    cursor: pointer;
+    display: none;
+    height: 18px;
+    -webkit-mask: url(/fe/lol-social/x_mask.png) no-repeat center;
+    -webkit-mask-size: contain;
+    width: 18px
+}
+
+.lol-friend-finder-requested-player .remove-button:hover {
+    background-color: #f0e6d2
+}
+
+.lol-friend-finder-requested-player .remove-button:active {
+    background-color: #463714
+}
+
+.lol-friend-finder-requested-player:hover .remove-button {
+    display: block
+}
+
+.lol-friend-finder-modal {
+    align-items: center;
+    cursor: default;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    height: 520px;
+    padding: 0 18px;
+    width: 560px
+}
+
+.lol-friend-finder-modal .title {
+    margin: 15px 0 10px
+}
+
+.lol-friend-finder-modal .friend-finder-panel-header {
+    border-bottom: thin solid #3c3c41;
+    display: flex;
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%
+}
+
+.lol-friend-finder-modal .friend-finder-panel-header:after {
+    background: #785a28;
+    bottom: -1px;
+    content: "";
+    height: 2px;
+    position: absolute;
+    width: 50%
+}
+
+.lol-friend-finder-modal .friend-finder-panel-header.use-animation:after {
+    transition-duration: .3s;
+    transition-property: right;
+    transition-timing-function: cubic-bezier(0, 0, 0, 1)
+}
+
+.lol-friend-finder-modal .friend-finder-panel-header.left-tab-active:after {
+    left: auto;
+    right: 0
+}
+
+.lol-friend-finder-modal .friend-finder-panel-header.right-tab-active:after {
+    left: auto;
+    right: 50%
+}
+
+.lol-friend-finder-modal .friend-finder-panel-header-title {
+    color: #cdbe91;
+    flex: 1;
+    padding: 9px 0;
+    text-align: center
+}
+
+.lol-friend-finder-modal .friend-finder-panel-header-title:hover:not(.selected) {
+    color: #f0e6d2;
+    cursor: pointer
+}
+
+.lol-friend-finder-modal .friend-finder-panel-header-title:active:not(.selected) {
+    color: #c8aa6e
+}
+
+.lol-friend-finder-modal .friend-finder-panel-header-title.selected {
+    color: #f0e6d2;
+    cursor: default
+}
+
+.lol-friend-finder-modal .friend-finder-panel-header-title.disabled {
+    color: #a09b8c;
+    cursor: default
+}
+
+.lol-friend-finder-modal .modal-body {
+    display: flex;
+    flex: 1;
+    margin-bottom: 30px;
+    overflow: hidden;
+    width: 100%
+}
+
+.lol-friend-finder-modal .recently-played-panel,
+.lol-friend-finder-modal .social-network-panel {
+    flex-shrink: 0;
+    transition: transform .3s cubic-bezier(0, 0, 0, 1);
+    width: 100%
+}
+
+.lol-friend-finder-modal .recently-played-panel {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px
+}
+
+.lol-friend-finder-modal .recently-played-panel:not(.active),
+.lol-friend-finder-modal .social-network-panel.active {
+    transform: translateX(100%)
+}
+
+.lol-friend-finder-modal .header {
+    color: #a09b8c;
+    margin-bottom: 10px
+}
+
+.lol-friend-finder-modal .feature-not-implemented {
+    background: url(/fe/lol-social/poro_sleeping.png) no-repeat 50%;
+    color: #a09b8c;
+    padding-top: 150px;
+    text-align: center
+}
+
+.lol-friend-finder-modal .spinner {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    width: 100%
+}
+
+.lol-friend-finder-modal .spinner:after {
+    animation: friend-finder-spin 3s linear infinite;
+    background-image: url(/fe/lol-social/spinner.png);
+    background-size: contain;
+    content: "";
+    height: 30px;
+    width: 30px
+}
+
+@-moz-keyframes friend-finder-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes friend-finder-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-o-keyframes friend-finder-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes friend-finder-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.hover-card-root-container {
+    bottom: unset !important;
+    display: block;
+    left: unset !important;
+    padding: 2px;
+    position: relative;
+    right: unset !important;
+    top: unset !important
+}
+
+.hover-card {
+    position: relative;
+    width: 390px
+}
+
+.hover-card:lang(ar-ae) {
+    direction: ltr
+}
+
+.hover-card.left,
+.hover-card.right {
+    width: 402px
+}
+
+.hover-card-container {
+    background-color: #1a1c21
+}
+
+.hover-card-container.right>div {
+    padding-right: 12px
+}
+
+.hover-card-container.left>div {
+    padding-left: 12px
+}
+
+.hover-card-container.top>div:first-child {
+    padding-top: 12px
+}
+
+.hover-card-container.bottom>div:last-child {
+    padding-bottom: 12px
+}
+
+#border-container {
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+#border {
+    -webkit-filter: drop-shadow(0 0 1px #000)
+}
+
+#hover-card-header {
+    background-image: linear-gradient(0deg, #1a1c21 13.41%, hsla(0, 0%, 77%, 0) 75.55%), url(/fe/lol-social/hovercard_default_bg.jpg);
+    background-position: 50% 18%;
+    background-size: cover;
+    display: flex;
+    height: 137px;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative
+}
+
+#hover-card-header .hover-card-backdrop,
+#hover-card-header .hover-card-backdrop-overlay {
+    background-position: 50% 18%;
+    background-size: cover;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.hover-card-header-left {
+    align-items: center;
+    display: flex;
+    height: 18px;
+    margin: 11px 0 0 9px;
+    position: relative
+}
+
+.hover-card-header-left:lang(ar-ae) {
+    margin: 11px 9px 0 0
+}
+
+.hover-card-header-right {
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px 8px 0 0;
+    position: relative;
+    width: 48px
+}
+
+.hover-card-header-right:lang(ar-ae) {
+    margin: 8px 0 0 8px
+}
+
+.hover-card-mastery-image {
+    background-color: #f0e6d2;
+    height: 20px;
+    margin: 0 4px 0 0;
+    -webkit-mask-image: url(/fe/lol-static-assets/images/champion-mastery/generic-mastery-icon.svg);
+    -webkit-mask-size: contain;
+    width: 20px
+}
+
+.hover-card-mastery-image:lang(ar-ae) {
+    margin: 0 0 0 6px
+}
+
+.hover-card-mastery-score {
+    color: #f0e6d2;
+    letter-spacing: .03em
+}
+
+.hover-card-position,
+.hover-card-role {
+    background-color: #f0e6d2;
+    -webkit-mask-size: contain
+}
+
+.hover-card-role {
+    height: 18px;
+    width: 18px
+}
+
+.hover-card-role.ASSASSIN {
+    -webkit-mask-image: url(/fe/lol-social/roleicon-assassin.png)
+}
+
+.hover-card-role.FIGHTER {
+    -webkit-mask-image: url(/fe/lol-social/roleicon-fighter.png)
+}
+
+.hover-card-role.MAGE {
+    -webkit-mask-image: url(/fe/lol-social/roleicon-mage.png)
+}
+
+.hover-card-role.MARKSMAN {
+    -webkit-mask-image: url(/fe/lol-social/roleicon-marksman.png)
+}
+
+.hover-card-role.SUPPORT {
+    -webkit-mask-image: url(/fe/lol-social/roleicon-support.png)
+}
+
+.hover-card-role.TANK {
+    -webkit-mask-image: url(/fe/lol-social/roleicon-tank.png)
+}
+
+.hover-card-position {
+    height: 20px;
+    margin: 0 0 0 10px;
+    width: 20px
+}
+
+.hover-card-position:lang(ar-ae) {
+    margin: 0 10px 0 0
+}
+
+.hover-card-position.TOP {
+    -webkit-mask-image: url(/fe/lol-social/positionicon-top.png)
+}
+
+.hover-card-position.JUNGLE {
+    -webkit-mask-image: url(/fe/lol-social/positionicon-jungle.png)
+}
+
+.hover-card-position.MID {
+    -webkit-mask-image: url(/fe/lol-social/positionicon-mid.png)
+}
+
+.hover-card-position.BOTTOM {
+    -webkit-mask-image: url(/fe/lol-social/positionicon-bottom.png)
+}
+
+.hover-card-position.SUPPORT {
+    -webkit-mask-image: url(/fe/lol-social/positionicon-support.png)
+}
+
+.hover-card-info-container {
+    align-items: flex-start;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    margin-top: -35px;
+    min-height: 100px;
+    position: relative
+}
+
+.hover-card-identity {
+    margin: -10px 5px 0 40px;
+    position: relative
+}
+
+.hover-card-identity:lang(ar-ae) {
+    margin: -10px 40px 0 5px
+}
+
+.hover-card-identity lol-regalia-hovercard-v2-element {
+    display: flex;
+    height: 100%;
+    width: 100%
+}
+
+.hover-card.has-regalia .hover-card-identity {
+    margin: 0 30px 0 40px
+}
+
+.hover-card.has-regalia .hover-card-identity:lang(ar-ae) {
+    margin: 0 40px 0 28px
+}
+
+.hover-card-icon {
+    align-self: baseline;
+    flex: 0 0 auto;
+    height: 70px;
+    position: relative;
+    width: 70px
+}
+
+.hover-card-icon .icon-image {
+    background-color: #1e2328;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 70px;
+    overflow: hidden;
+    position: absolute;
+    width: 70px
+}
+
+.hover-card-icon .icon-ring {
+    background: url(/fe/lol-social/ring.svg) no-repeat top;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.hover-card-icon .icon-ring.no-image {
+    background: url(/fe/lol-static-assets/images/empty-summoner-icon.svg) no-repeat top;
+    background-size: cover;
+    -webkit-filter: brightness(80%)
+}
+
+.summoner-themed-level-ring {
+    height: 70px;
+    width: 70px;
+    --themed-level-ring-level-text-font-size: 12px;
+    --themed-level-ring-level-text-bottom: -6%;
+    --themed-level-ring-level-text-top: auto;
+    --themed-level-ring-level-text-line-height: 20px
+}
+
+.hover-card-division {
+    font-size: 10px;
+    margin-left: 1px;
+    position: absolute;
+    top: 1px
+}
+
+.hover-card-division,
+.hover-card-level {
+    color: #a09b8c;
+    text-align: center;
+    width: 100%
+}
+
+.hover-card-level {
+    align-self: center;
+    margin-left: 2px
+}
+
+.hover-card-info {
+    direction: rtl;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    line-height: 20px;
+    margin: 5px 37px 0 10px;
+    overflow: hidden
+}
+
+.hover-card-info:lang(ar-ae) {
+    margin: 5px 10px 0 37px
+}
+
+.hover-card-info-container .hover-card-info-line-height-override {
+    line-height: 16px
+}
+
+.hover-card-name-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.hover-card-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.hover-card-title-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.hover-card-title {
+    font-style: italic;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.hover-card-title:lang(ar-ae) {
+    padding-right: 4px
+}
+
+.hover-card-inline-game-tag {
+    color: #5b5a56;
+    letter-spacing: .03em
+}
+
+.hover-card-game-name-and-tag-wrapper,
+.hover-card-name-wrapper+.hover-card-game-tag {
+    color: #5b5a56;
+    letter-spacing: .05em
+}
+
+.hover-card-game-tag {
+    direction: ltr;
+    unicode-bidi: isolate
+}
+
+.hover-card-game-tag .hover-card-game-tag-text {
+    direction: rtl;
+    unicode-bidi: isolate
+}
+
+.hover-card-game-tag:lang(ar-ae) {
+    text-align: right
+}
+
+.hover-card-game-name-and-tag-wrapper {
+    display: flex
+}
+
+.hover-card-game-name-and-tag-wrapper .hover-card-game-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-word
+}
+
+.hover-card-game-name-and-tag-wrapper .hover-card-game-tag {
+    margin-left: 4px
+}
+
+.hover-card-ranked-description {
+    border-top: 1px solid #3c3c41;
+    font-weight: 400;
+    letter-spacing: .05em;
+    line-height: 16px;
+    margin-top: 5px;
+    padding-top: 5px
+}
+
+.hover-card-ranked-description .hover-card-challenge-crystal,
+.hover-card-ranked-description .hover-card-rank {
+    align-items: center;
+    display: flex;
+    margin-bottom: 2px
+}
+
+.hover-card-ranked-description .hover-card-rank-img-container {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 4px 0 0;
+    width: 16px
+}
+
+.hover-card-ranked-description .hover-card-rank-img-container:lang(ar-ae) {
+    margin: 0 0 0 4px
+}
+
+.hover-card-footer {
+    letter-spacing: .05em;
+    padding-right: 12px !important
+}
+
+.hover-card-bottom-info {
+    border-top: thin solid #1e2328;
+    line-height: 20px;
+    margin-top: 5px;
+    min-height: 24px
+}
+
+.hover-card-note-wrapper,
+.hover-card-note-wrapper-offline-gnt {
+    background-color: #1e2328;
+    display: flex;
+    padding: 3px 16px
+}
+
+.hover-card-note-wrapper-offline-gnt {
+    line-height: 20px;
+    margin-top: 5px
+}
+
+.hover-card-note-icon {
+    background-image: url(/fe/lol-social/Note.png);
+    background-size: cover;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px
+}
+
+.hover-card-note {
+    color: #5b5a56;
+    margin: 0 0 0 8px;
+    overflow: hidden;
+    position: relative;
+    word-break: break-word
+}
+
+.hover-card-note:lang(ar-ae) {
+    margin: 0 8px 0 0
+}
+
+.hover-card-availability {
+    align-items: center;
+    color: #a09b8c;
+    display: flex;
+    padding: 2px 16px 0
+}
+
+.hover-card-availability .status-message-product-name {
+    text-transform: capitalize
+}
+
+.hover-card-availability-offline-gnt {
+    align-items: center;
+    color: #1e2328;
+    display: flex
+}
+
+.hover-card-gameinfo {
+    color: #0acbe6;
+    flex: 1 1 auto
+}
+
+.hovercard-open-party {
+    color: #00a741;
+    direction: rtl;
+    width: 100%
+}
+
+.hovercard-open-party .away {
+    color: #a09b8c
+}
+
+.hovercard-open-party-text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.hovercard-open-party-text .open-party-icon {
+    background: #1a1c21 url(/fe/lol-social/status_open_party.png) no-repeat 50%;
+    background-size: contain;
+    border-radius: 2px;
+    flex-grow: 0;
+    height: 16px;
+    margin: 0 5px 1px 1px;
+    width: 16px
+}
+
+.hovercard-open-party-text .open-party-icon:lang(ar-ae) {
+    margin: 0 1px 1px 5px
+}
+
+.hovercard-open-party-text .open-party-availability {
+    align-items: center;
+    display: flex;
+    flex-grow: 0;
+    margin: 0 5px 1px 1px
+}
+
+.hovercard-open-party-text .open-party-availability:lang(ar-ae) {
+    margin: 0 1px 1px 5px
+}
+
+.hovercard-open-party-text .open-party-occupancy {
+    flex-grow: 1
+}
+
+.hovercard-open-party-text .open-party-string {
+    flex-grow: 0;
+    margin: 0 4px 0 0
+}
+
+.hovercard-open-party-text .open-party-string:lang(ar-ae) {
+    margin: 0 0 0 4px
+}
+
+.hovercard-open-party-summoners {
+    direction: ltr;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%
+}
+
+.hovercard-open-party-summoners:after {
+    content: "\200b"
+}
+
+.hover-card-time {
+    color: #0acbe6;
+    flex: 0 0 auto
+}
+
+.hover-card-game-status {
+    color: #36d987
+}
+
+.hover-card-game-status.dnd {
+    color: #16cae5
+}
+
+.hover-card-game-status.away {
+    color: #a09b8c
+}
+
+.hover-card-availability-message.available,
+.hover-card-availability-message.chat,
+.hover-card-availability-message.online {
+    color: #00a741
+}
+
+.hover-card-availability-message.dnd,
+.hover-card-availability-message.spectating {
+    color: #16cae5
+}
+
+.hover-card-availability-message.away {
+    color: #a09b8c
+}
+
+.hover-card-availability-icon {
+    background: #010a13;
+    border: 2px solid #010a13;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: none;
+    height: 8px;
+    margin: -2px 5px 0 0;
+    width: 8px
+}
+
+.hover-card-availability-icon:lang(ar-ae) {
+    margin: -2px 0 0 5px
+}
+
+.hover-card-availability-icon.available,
+.hover-card-availability-icon.chat,
+.hover-card-availability-icon.online {
+    background-color: #1e825a;
+    border-color: #36d987;
+    display: block
+}
+
+.hover-card-availability-icon.dnd,
+.hover-card-availability-icon.spectating {
+    background-color: #025579;
+    border-color: #0acbe6;
+    display: block
+}
+
+.hover-card-availability-icon.away {
+    background-color: #400a12;
+    border-color: #be1e37;
+    display: block
+}
+
+.hover-card-availability-icon.offline {
+    background-color: #010a13;
+    border-color: #5b5a56;
+    display: block
+}
+
+.hover-card-availability-icon.offline-gnt {
+    border-color: #5b5a56;
+    margin: -2px 6px 0 0
+}
+
+.hover-card-availability-icon.offline-gnt:lang(ar-ae) {
+    margin: -2px 0 0 6px
+}
+
+.hover-card-availability-icon.mobile {
+    background: url(/fe/lol-static-assets/images/mobile.svg) no-repeat 50%;
+    background-size: contain;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    height: 12px;
+    margin: -2px 5px 0 0;
+    width: 12px
+}
+
+.hover-card-availability-icon.mobile:lang(ar-ae) {
+    margin: -2px 0 0 5px
+}
+
+.hover-card-availability-icon.discord {
+    background: url(/fe/lol-static-assets/images/discord_green.svg) no-repeat 50%;
+    background-size: contain;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    height: 12px;
+    margin: -2px 5px 0 0;
+    width: 15px
+}
+
+.hover-card-availability-icon.discord:lang(ar-ae) {
+    margin: -2px 0 0 5px
+}
+
+.hover-card-availability-icon.available.remote,
+.hover-card-availability-icon.chat.remote,
+.hover-card-availability-icon.online.remote {
+    background: url(/fe/lol-static-assets/images/mobile-online.svg) no-repeat 50%;
+    background-size: contain;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 12px;
+    margin: -1px 5px 0 0;
+    width: 12px
+}
+
+.hover-card-availability-icon.available.remote:lang(ar-ae),
+.hover-card-availability-icon.chat.remote:lang(ar-ae),
+.hover-card-availability-icon.online.remote:lang(ar-ae) {
+    margin: -1px 0 0 5px
+}
+
+.hover-card-status-message-wrapper {
+    align-items: center;
+    display: flex;
+    padding: 0 16px 2px
+}
+
+.hover-card-status-message-icon {
+    background-image: url(/fe/lol-social/Bullhorn.png);
+    background-size: cover;
+    height: 16px;
+    width: 16px
+}
+
+.hover-card-status-message {
+    margin: 0 0 0 8px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis
+}
+
+.hover-card-status-message:lang(ar-ae) {
+    margin: 0 8px 0 0
+}
+
+.lol-social-identity {
+    align-items: center;
+    display: flex;
+    min-height: 55px;
+    padding: 20px 8px 0 0;
+    position: relative;
+    right: 0;
+    width: 213px
+}
+
+.lol-social-identity .identity-rewards-unread-pip {
+    left: 74px;
+    position: absolute;
+    top: 14px
+}
+
+.lol-social-identity .lol-social-avatar {
+    flex-shrink: 0;
+    height: 56px;
+    margin: 0 12px 5px 11px;
+    width: 56px
+}
+
+.lol-social-identity .lol-social-avatar .icon-image {
+    height: 48px;
+    left: 5px;
+    top: 5px;
+    width: 48px
+}
+
+.lol-social-identity .lol-social-avatar .xp-ring {
+    left: 0;
+    top: 0
+}
+
+.lol-social-identity .lol-social-avatar .center.xp-ring {
+    left: 4px;
+    top: 4px
+}
+
+.lol-social-identity .lol-social-avatar .summoner-level-ring {
+    left: -7px;
+    top: -7px
+}
+
+.lol-social-identity .lol-social-avatar .summoner-level {
+    bottom: -7px;
+    left: 13px
+}
+
+.lol-social-identity .lol-social-avatar .summoner-level-icon {
+    margin-top: -8px
+}
+
+.lol-social-identity lol-uikit-radial-progress {
+    height: 56px;
+    width: 56px
+}
+
+.lol-social-identity .details {
+    flex: 1;
+    overflow: hidden
+}
+
+.lol-social-identity .lower-details {
+    display: flex;
+    overflow: hidden
+}
+
+.lol-social-identity .lower-details .lol-social-availability-hitbox {
+    height: 11px;
+    margin: 5px 5px 0 0
+}
+
+.lol-social-identity .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.lol-social-identity .status {
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    margin-top: 3px;
+    overflow: hidden
+}
+
+.lol-social-identity .status:hover .message {
+    color: #f0e6d2
+}
+
+.lol-social-identity .status:active .message {
+    color: #cdbe91
+}
+
+.lol-social-identity .status.disabled {
+    cursor: default;
+    pointer-events: none
+}
+
+.lol-social-identity .identity-message {
+    flex: 1
+}
+
+.lol-social-identity .identity-icon {
+    pointer-events: none
+}
+
+.lol-social-identity .identity-icon.social-avatar-hit {
+    cursor: pointer;
+    height: 56px;
+    pointer-events: auto;
+    width: 56px
+}
+
+.lol-social-identity .arrow {
+    margin-right: 4px
+}
+
+.lol-social-identity .notifications-button {
+    align-self: flex-end;
+    margin-left: 4px;
+    margin-right: 2px
+}
+
+.lol-social-identity .status .status-message:lang(ar-ae) {
+    text-align: left
+}
+
+.identity-menu {
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 220px
+}
+
+.lol-social-sidebar {
+    color: #a09b8c;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    -webkit-user-drag: none;
+    background: linear-gradient(#010a13, transparent 18%);
+    -webkit-user-select: none
+}
+
+.lol-social-sidebar .panel,
+.lol-social-sidebar .roster {
+    flex: 1
+}
+
+.lol-social-sidebar .inprogress .spinner {
+    animation: social-login-spin 3s linear infinite;
+    background: url(/fe/lol-social/spinner.png) no-repeat 50%;
+    height: 30px;
+    width: 30px
+}
+
+.lol-social-sidebar .centered {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.lol-social-sidebar .disconnected .message {
+    background: url(/fe/lol-social/poro_shocked.png) no-repeat top;
+    padding: 116px 18px 0;
+    text-align: center
+}
+
+.lol-social-sidebar .alpha-version-panel {
+    align-items: center;
+    border-top: thin solid #1e282d;
+    color: #3c3c41;
+    display: flex;
+    height: 32px;
+    width: 100%
+}
+
+.lol-social-sidebar .bug-report-button,
+.lol-social-sidebar .bug-report-button-always-top {
+    background-image: url(/fe/lol-social/report_bug.png);
+    background-position-y: 0;
+    background-size: cover;
+    height: 34px;
+    margin-right: -1px;
+    width: 34px
+}
+
+.lol-social-sidebar .bug-report-button-always-top:hover,
+.lol-social-sidebar .bug-report-button:hover {
+    background-position-y: -34px
+}
+
+.lol-social-sidebar .bug-report-button-always-top:active,
+.lol-social-sidebar .bug-report-button:active {
+    background-position-y: -68px
+}
+
+.lol-social-sidebar .bug-report-button-always-top.disabled,
+.lol-social-sidebar .bug-report-button-always-top:disabled,
+.lol-social-sidebar .bug-report-button-always-top[disabled],
+.lol-social-sidebar .bug-report-button.disabled,
+.lol-social-sidebar .bug-report-button:disabled,
+.lol-social-sidebar .bug-report-button[disabled] {
+    background-position-y: -102px;
+    cursor: default
+}
+
+.lol-social-sidebar .bug-report-button-always-top {
+    z-index: 1
+}
+
+.lol-social-sidebar .bug-report-button-notification {
+    bottom: 15px;
+    left: 20px;
+    position: relative
+}
+
+.lol-social-sidebar .social-buttons {
+    display: flex
+}
+
+.lol-social-sidebar .social-button {
+    flex: 0 0 auto;
+    height: 32px;
+    margin-left: 4px;
+    width: 38px
+}
+
+.identity-and-parties {
+    animation: fadein 1s;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px
+}
+
+.identity-and-parties .roster {
+    flex: 1
+}
+
+.identity-and-parties .centered {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.identity-and-parties .disconnected .message {
+    background: url(/fe/lol-social/poro_shocked.png) no-repeat top;
+    padding: 116px 18px 0;
+    text-align: center
+}
+
+.identity-and-parties .inprogress .spinner {
+    animation: social-login-spin 3s linear infinite;
+    background: url(/fe/lol-social/spinner.png) no-repeat 50%;
+    height: 30px;
+    width: 30px
+}
+
+@-moz-keyframes fadein {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-o-keyframes fadein {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes social-login-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes social-login-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-o-keyframes social-login-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes social-login-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.lol-social-lower-pane-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative
+}
+
+.details {
+    display: block;
+    height: 50px;
+    overflow-x: hidden;
+    position: relative
+}
+
+.details-view-profile {
+    color: #cdbe91;
+    margin-top: 10px
+}
+
+.details-view-profile-icon {
+    background-color: #cdbe91;
+    display: inline-block;
+    height: 11px;
+    -webkit-mask-image: url(/fe/lol-static-assets/images/nav-icon-profile.svg);
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+    width: 11px
+}
+
+.social-identity-transition-container {
+    position: absolute;
+    transform: translateX(0);
+    transition: transform 225ms cubic-bezier(0, 0, 0, 1);
+    width: 135px
+}
+
+.showing-name {
+    transform: translateX(-135px)
+}
+
+.social-identity-block {
+    display: inline-block;
+    height: 50px;
+    opacity: 0;
+    transition: opacity 225ms cubic-bezier(0, 0, 0, 1);
+    vertical-align: middle;
+    width: 135px
+}
+
+.active {
+    opacity: 1
+}
+
+.ephemeral-action-tooltip .menu-item-attention-tooltip {
+    cursor: pointer;
+    display: flex;
+    min-height: 115px;
+    position: absolute;
+    right: 30px;
+    top: 92px;
+    width: 300px
+}
+
+.ephemeral-action-tooltip .menu-item-attention-tooltip-content {
+    background: #d09a1d;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    min-height: 100px;
+    overflow: hidden;
+    width: 100%
+}
+
+.ephemeral-action-tooltip .menu-item-attention-tooltip-content:before {
+    border: 12px solid transparent;
+    border-bottom-color: #d09a1d;
+    content: "";
+    display: block;
+    height: 0;
+    left: calc(50% - 12px);
+    position: absolute;
+    top: -24px;
+    width: 0
+}
+
+.ephemeral-action-tooltip .menu-item-attention-tooltip-content-decoration {
+    background: #7d591c;
+    height: 8px;
+    left: calc(50% - 4px);
+    position: absolute;
+    top: 0;
+    transform: rotate(45deg);
+    width: 8px
+}
+
+.ephemeral-action-tooltip .menu-item-attention-tooltip-icon {
+    align-items: flex-start;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 81px
+}
+
+.ephemeral-action-tooltip .menu-item-attention-tooltip-icon img {
+    margin-top: 20px
+}
+
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    white-space: normal;
+    width: 266px
+}
+
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-title {
+    color: #3d2e1d;
+    font-weight: 700;
+    margin-top: 20px;
+    text-transform: none
+}
+
+.ephemeral-action-tooltip .menu-item-attention-tooltip-text-msg {
+    color: #3d2e1d;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    text-transform: none
+}
+
+.ephemeral-action-tooltip .menu-item-icon-wrapper {
+    display: flex;
+    justify-content: center
+}
+
+.ephemeral-action-tooltip .menu-item-glow {
+    align-self: center;
+    box-shadow: 0 0 26px 16px #cdbe91;
+    margin-left: 12px;
+    opacity: 0
+}
+
+.ephemeral-action-tooltip .navigation-icon-click-video {
+    display: flex;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.ephemeral-action-tooltip .menu-item-small-text {
+    margin-top: 5px
+}
+
+.ephemeral-action-tooltip .navigation-cta-wrapper {
+    pointer-events: none;
+    position: absolute
+}
+
+.ephemeral-action-tooltip .navigation-cta-wrapper.navigation-icon-cta {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0
+}
+
+.ephemeral-action-tooltip .navigation-cta-wrapper.navigation-icon-cta .navigation-cta-intro,
+.ephemeral-action-tooltip .navigation-cta-wrapper.navigation-icon-cta .navigation-cta-loop {
+    display: flex;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.ephemeral-action-tooltip .navigation-cta-wrapper.navigation-pip-cta {
+    right: 7px;
+    top: 25px
+}
+
+.ephemeral-action-tooltip .navigation-cta-wrapper.navigation-glow-cta {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0
+}
+
+.ephemeral-action-tooltip .menu-item-icon {
+    background-color: #cdbe91;
+    height: 24px;
+    margin-left: -12px;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    width: 24px
+}
+
+.ephemeral-action-tooltip .menu-item-icon:hover {
+    background-color: #f0e6d2
+}
+
+.ephemeral-action-tooltip .menu-item-icon:active {
+    background-color: #785a28
+}
+
+.ephemeral-action-tooltip img.menu-item-attention-tooltip-icon-profile {
+    width: 40px
+}
+
+.lol-social-version-bar {
+    display: contents
+}
+
+.lol-social-version-bar .version-bar-container {
+    flex: 1;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap
+}
+
+.code-of-conduct {
+    height: 639px;
+    width: 877px
+}
+
+.code-of-conduct .code-of-conduct-content-container {
+    align-items: center;
+    background-image: url(/fe/lol-social/coc-modal-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-close-button {
+    background-image: url(/fe/lol-static-assets/images/x.png);
+    height: 20px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 20px
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-close-button:active {
+    background-image: url(/fe/lol-static-assets/images/x_active.png)
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-close-button:hover {
+    background-image: url(/fe/lol-static-assets/images/x_hover.png)
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container {
+    align-items: center;
+    display: flex;
+    height: 22px;
+    justify-content: center
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-title {
+    color: #c8aa6e;
+    margin-left: 16px;
+    margin-right: 16px;
+    text-shadow: 2px 2px 4px #010a13
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-emphasis-metal {
+    background-image: url(/fe/lol-social/coc-header-metal.png);
+    background-repeat: no-repeat;
+    height: 7px;
+    width: 54px
+}
+
+.code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container .header-emphasis-metal.right {
+    transform: scaleX(-1)
+}
+
+.code-of-conduct .code-of-conduct-content-container .rules-container {
+    align-items: center;
+    direction: rtl;
+    display: flex;
+    flex-direction: column-reverse
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container {
+    height: 111px;
+    opacity: 0;
+    pointer-events: none;
+    width: 734px
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-content {
+    align-items: center;
+    background-image: url(/fe/lol-social/coc-rule-item-background.png);
+    display: flex;
+    flex-direction: column;
+    height: 119px;
+    position: relative;
+    width: 100%
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container.visible {
+    animation: fadeIn .5s linear forwards, translationDown .5s ease-in-out forwards;
+    cursor: pointer;
+    pointer-events: all
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container:hover .rule-item-body-container .rule-item-checkbox-container .rule-item-checkbox {
+    background-image: url(/fe/lol-social/coc-checkbox-frame-hover.png)
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container:active .rule-item-body-container .rule-item-checkbox-container .rule-item-checkbox {
+    background-image: url(/fe/lol-social/coc-checkbox-frame-down.png)
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container.accepted {
+    cursor: default;
+    opacity: 1;
+    pointer-events: none
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container.accepted .rule-item-body-container .rule-item-checkbox-container .rule-item-checkbox {
+    background-image: url(/fe/lol-social/coc-checkbox-frame-checked.png);
+    pointer-events: none
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-spacer {
+    height: 20px
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container {
+    align-items: center;
+    display: flex;
+    width: 702px
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-icon {
+    height: 20px;
+    width: 20px
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-subheader-container .rule-item-subheader {
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-body-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 702px
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-body-container .rule-item-body {
+    font-size: 13px;
+    width: 660px
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-body-container .rule-item-checkbox-container {
+    align-items: center;
+    background-image: radial-gradient(#323334 0, rgba(254, 0, 0, 0) 70%);
+    display: flex;
+    height: 53px;
+    justify-content: center;
+    width: 53px
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-body-container .rule-item-checkbox-container .rule-item-checkbox {
+    background-image: url(/fe/lol-social/coc-checkbox-frame-default.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 33px;
+    width: 33px
+}
+
+.code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-bottom-border {
+    background-image: url(/fe/lol-social/coc-rule-item-divider.png);
+    height: 11px;
+    position: absolute;
+    top: 111px;
+    width: 734px
+}
+
+.code-of-conduct .code-of-conduct-content-container .more-info-link {
+    position: relative;
+    top: 26px
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes translationDown {
+    0% {
+        pointer-events: none;
+        transform: translateY(-111px)
+    }
+
+    to {
+        pointer-events: all;
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes translationDown {
+    0% {
+        pointer-events: none;
+        transform: translateY(-111px)
+    }
+
+    to {
+        pointer-events: all;
+        transform: translateY(0)
+    }
+}
+
+@-o-keyframes translationDown {
+    0% {
+        pointer-events: none;
+        transform: translateY(-111px)
+    }
+
+    to {
+        pointer-events: all;
+        transform: translateY(0)
+    }
+}
+
+@keyframes translationDown {
+    0% {
+        pointer-events: none;
+        transform: translateY(-111px)
+    }
+
+    to {
+        pointer-events: all;
+        transform: translateY(0)
+    }
+}
+
+.leaver-buster-dialog .leaver-buster-warning-input {
+    margin-top: 12px;
+    text-align: center
+}
+
+.leaver-buster-dialog .leaver-buster-agree-text {
+    margin-top: 5px
+}
+
+.leaver-buster-dialog .leaver-buster-i-agree-highlight {
+    color: #c8aa6e;
+    font-weight: bolder
+}
+
+.leaver-buster-dialog .profile-icon {
+    margin: -3px auto
+}
+
+.player-behavior-reform-card-v2 {
+    direction: rtl
+}
+
+.player-behavior-reform-card-v2 .reform-card-content {
+    padding: 0 3px 0 0;
+    width: 600px
+}
+
+.player-behavior-reform-card-v2 .reform-card-scrollable {
+    box-sizing: border-box;
+    max-height: 625px;
+    padding: 30px 0
+}
+
+.player-behavior-reform-card-v2 .reform-card-scrollable-content {
+    margin: 0 37px 0 0;
+    width: 525px
+}
+
+.player-behavior-reform-card-v2 .reform-card-subhead {
+    color: #a09b8c;
+    font-style: italic
+}
+
+.player-behavior-reform-card-v2 .reform-card-subhead-punishment {
+    font-style: italic
+}
+
+.player-behavior-reform-card-v2 .reform-card-subhead-rule {
+    background: #1e2328;
+    border: none;
+    height: 1px;
+    margin: 20px 0
+}
+
+.player-behavior-reform-card-v2 .reform-card-body {
+    text-align: right
+}
+
+.reform-card-v2-chat-log .reform-card-chat-log-header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px
+}
+
+.reform-card-v2-chat-log .reform-card-chat-log-header a:link,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:visited {
+    color: #0596aa;
+    text-decoration: none
+}
+
+.reform-card-v2-chat-log .reform-card-chat-log-header a:link:hover,
+.reform-card-v2-chat-log .reform-card-chat-log-header a:visited:hover {
+    color: #cdfafa
+}
+
+.reform-card-v2-chat-log .reform-card-chat-tab-container {
+    display: block
+}
+
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab {
+    cursor: pointer;
+    display: inline;
+    margin: 0 0 0 10px;
+    opacity: .75;
+    position: relative
+}
+
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab.selected,
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab:hover {
+    opacity: 1
+}
+
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab.selected:after {
+    background-color: #c89b3c;
+    bottom: -5px;
+    content: "";
+    display: block;
+    height: 5px;
+    left: 0;
+    position: absolute;
+    width: 100%
+}
+
+.reform-card-v2-chat-log .reform-card-chat-tab-container .reform-card-chat-tab-line {
+    background-color: #c89b3c;
+    margin-top: 2px
+}
+
+.reform-card-v2-chat-log .reform-card-scrollable-game {
+    box-sizing: border-box;
+    display: none;
+    height: 200px;
+    margin: 2.5%
+}
+
+.reform-card-v2-chat-log .reform-card-scrollable-game.selected {
+    display: block
+}
+
+.reform-card-v2-chat-log .reform-card-chat-log-game {
+    background-color: #10191d;
+    min-height: 95%;
+    padding: 5px 2.5%;
+    width: 90%
+}
+
+.reform-card-v2-chat-log .reform-card-chat-log-game .reform-card-chat-log-hidden-header {
+    display: none
+}
+
+.reform-card-v2-chat-log .reform-card-chat-log-game .reform-card-chat-log-subheader {
+    overflow: hidden;
+    width: 100%
+}
+
+.reform-card-v2-chat-log .reform-card-chat-log-game .reform-card-chat-log-subheader .reform-card-chat-log-subheader-text {
+    color: #f0e6d2;
+    position: relative
+}
+
+.reform-card-v2-chat-log .reform-card-chat-log-game .reform-card-chat-log-subheader .reform-card-chat-log-subheader-text:after {
+    border-bottom: 1px solid #3c3c41;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    margin: auto 10px auto 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.reform-card-v2-chat-log .reform-card-chat-log-game .reform-card-chat-log-example {
+    margin: 0 10px 0 0
+}
+
+.reform-card-v2-chat-log .reform-card-chat-log-game .reform-card-chat-log-example .reform-card-chat-log-name {
+    color: #cdbe91
+}
+
+.reform-card-v2-match-history {
+    padding-top: 14px
+}
+
+.player-behavior-reform-card-v3 {
+    direction: rtl
+}
+
+.player-behavior-reform-card-v3 .game-id-text {
+    margin-top: 20px
+}
+
+.player-behavior-reform-card-v3 .reform-card-content {
+    padding: 0 3px 0 0;
+    width: 600px
+}
+
+.player-behavior-reform-card-v3 .reform-card-scrollable {
+    box-sizing: border-box;
+    max-height: 625px;
+    padding: 30px 0
+}
+
+.player-behavior-reform-card-v3 .reform-card-scrollable-content {
+    margin: 0 37px 0 0;
+    width: 525px
+}
+
+.player-behavior-reform-card-v3 .reform-card-subhead {
+    color: #a09b8c;
+    font-style: italic
+}
+
+.player-behavior-reform-card-v3 .reform-card-subhead-punishment {
+    font-style: italic
+}
+
+.player-behavior-reform-card-v3 .reform-card-subhead-rule {
+    background: #1e2328;
+    border: none;
+    height: 1px;
+    margin: 20px 0
+}
+
+.player-behavior-reform-card-v3 .reform-card-body {
+    padding-bottom: 20px;
+    text-align: right
+}
+
+.player-behavior-reform-card-v3 .reform-card-body .body-text {
+    white-space: pre-wrap
+}
+
+.reform-card-v3-chat-log .reform-card-chat-log-header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px
+}
+
+.reform-card-v3-chat-log .reform-card-chat-log-header a:link,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:visited {
+    color: #0596aa;
+    text-decoration: none
+}
+
+.reform-card-v3-chat-log .reform-card-chat-log-header a:link:hover,
+.reform-card-v3-chat-log .reform-card-chat-log-header a:visited:hover {
+    color: #cdfafa
+}
+
+.reform-card-v3-chat-log .reform-card-scrollable-game {
+    box-sizing: border-box;
+    display: none;
+    height: 200px;
+    margin: 2.5%
+}
+
+.reform-card-v3-chat-log .reform-card-scrollable-game.selected {
+    display: block
+}
+
+.reform-card-v3-chat-log .reform-card-chat-log-game {
+    background-color: #10191d;
+    min-height: 95%;
+    padding: 5px 2.5%;
+    width: 90%
+}
+
+.reform-card-v3-chat-log .reform-card-chat-log-game .reform-card-chat-log-example {
+    margin: 0 10px 0 0
+}
+
+.reform-card-v3-chat-log .reform-card-chat-log-game .reform-card-chat-log-example .reform-card-chat-log-name {
+    color: #cdbe91
+}
+
+.player-behavior-reform-card .reform-card-content {
+    padding: 0 3px 0 0
+}
+
+.player-behavior-reform-card .reform-card-scrollable {
+    box-sizing: border-box;
+    margin-bottom: 32px;
+    max-height: 550px;
+    padding: 30px 36px
+}
+
+.player-behavior-reform-card .reform-card-subhead {
+    color: #a09b8c;
+    font-style: italic
+}
+
+.player-behavior-reform-card .reform-card-subhead-punishment {
+    font-style: italic
+}
+
+.player-behavior-reform-card .reform-card-subhead-rule {
+    background: #1e2328;
+    border: none;
+    height: 1px;
+    margin: 24px -14px
+}
+
+.player-behavior-reform-card .reform-card-body {
+    text-align: left
+}
+
+.reform-card-chat-log .reform-card-chat-log-header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0
+}
+
+.reform-card-chat-log .chat-log-header-copy-log-link {
+    color: #0596aa;
+    text-decoration: none
+}
+
+.reform-card-chat-log .chat-log-header-copy-log-link:hover {
+    color: #cdfafa
+}
+
+.reform-card-chat-log .reform-card-chat-log {
+    -webkit-user-select: text
+}
+
+.reform-card-chat-log .reform-card-chat-log-game {
+    color: #f0e6d2
+}
+
+.reform-card-match-history {
+    padding-top: 14px
+}
+
+.lol-reporter-feedback-dialog p {
+    text-align: left;
+    white-space: pre-wrap
+}
+
+div[data-screen-name=social]>.social-plugin-home,
+div[data-screen-name=social]>.social-plugin-home>.ember-view {
+    height: 100%
+}
+
+.social-ember-fade-in {
+    animation: fadeInAnimation .25s ease-in-out
+}
+
+@-moz-keyframes fadeInAnimation {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInAnimation {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-o-keyframes fadeInAnimation {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.lol-social-arrow-toggle {
+    align-items: center;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    min-height: 8px;
+    min-width: 8px;
+    outline: none
+}
+
+.lol-social-arrow-toggle .arrow-toggle {
+    border: 4px solid transparent;
+    border-top-color: #a09b8c;
+    margin: 2px 0 -2px;
+    transform: rotate(-90deg);
+    transform-origin: 50% 25%
+}
+
+.lol-social-arrow-toggle .arrow-toggle.use-animation {
+    transition: transform .2s cubic-bezier(0, 0, 0, 1)
+}
+
+.lol-social-arrow-toggle .arrow-toggle:lang(ar-ae) {
+    transform: rotate(90deg)
+}
+
+.lol-social-arrow-toggle.medium .arrow-toggle {
+    border-width: 6px 4px
+}
+
+.lol-social-arrow-toggle.golden {
+    border-top-color: #cdbe91
+}
+
+.lol-social-arrow-toggle[open] .arrow-toggle,
+.lol-social-arrow-toggle[point-down] .arrow-toggle {
+    transform: rotate(0deg)
+}
+
+.lol-social-arrow-toggle[open][point-down] .arrow-toggle {
+    transform: rotate(180deg)
+}
+
+.lol-social-arrow-toggle:hover:not(:disabled) .arrow-toggle,
+.social-arrow-hit:hover:not(:disabled) .lol-social-arrow-toggle .arrow-toggle {
+    border-top-color: #f0e6d2
+}
+
+.lol-social-arrow-toggle:active:not(:disabled) .arrow-toggle,
+.social-arrow-hit:active:not(:disabled) .lol-social-arrow-toggle .arrow-toggle {
+    border-top-color: #cdbe91
+}
+
+.social-arrow-hit.active.golden .lol-social-arrow-toggle .arrow-toggle {
+    border-top-color: #785a28
+}
+
+.lol-social-availability-hitbox {
+    cursor: pointer
+}
+
+.lol-social-availability-hitbox .availability-icon {
+    background: #010a13;
+    border: 2px solid #5b5a56;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #010a13;
+    box-sizing: border-box;
+    height: 8px;
+    width: 8px
+}
+
+.lol-social-availability-hitbox .discord-online {
+    background: url(/fe/lol-static-assets/images/discord_green.svg) no-repeat 50%;
+    background-size: contain;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 12px;
+    margin: 0 0 -4px;
+    width: 12px
+}
+
+.lol-social-availability-hitbox[large] .availability-icon {
+    height: 11px;
+    width: 11px
+}
+
+.lol-social-availability-hitbox .availability-hitbox .availability-icon {
+    bottom: auto;
+    position: static;
+    right: auto
+}
+
+.lol-social-availability-hitbox .availability-icon.available,
+.lol-social-availability-hitbox .availability-icon.chat,
+.lol-social-availability-hitbox .availability-icon.online {
+    background-color: #1e825a;
+    border-color: #36d987
+}
+
+.lol-social-availability-hitbox .availability-icon.dnd,
+.lol-social-availability-hitbox .availability-icon.spectating {
+    background-color: #025579;
+    border-color: #0acbe6
+}
+
+.lol-social-availability-hitbox .availability-icon.away {
+    background-color: #400a12;
+    border-color: #be1e37
+}
+
+.lol-social-availability-hitbox .availability-icon.offline {
+    background-color: #010a13;
+    border-color: #5b5a56
+}
+
+.lol-social-availability-hitbox .availability-icon.mobile {
+    background: url(/fe/lol-static-assets/images/mobile.svg) no-repeat 50%;
+    background-size: contain;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 12px;
+    margin: 0 0 -4px;
+    width: 12px
+}
+
+.lol-social-availability-hitbox .availability-icon.available.remote,
+.lol-social-availability-hitbox .availability-icon.chat.remote,
+.lol-social-availability-hitbox .availability-icon.online.remote {
+    background: url(/fe/lol-static-assets/images/mobile-online.svg) no-repeat 50%;
+    background-size: contain;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 12px;
+    margin: 0 0 -4px;
+    width: 12px
+}
+
+.lol-social-availability-hitbox .availability-icon.open-party {
+    background: transparent url(/fe/lol-social/status_open_party.png) no-repeat 50%;
+    background-size: 15px 15px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: initial;
+    height: 15px;
+    width: 15px
+}
+
+.lol-social-clash-roster-panel .clash-roster-item-scroll {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-item.unread .clash-roster-members-online,
+.lol-social-clash-roster-panel-item .clash-roster-item.unread .clash-roster-name-container {
+    color: #f0e6d2
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-item {
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 48px;
+    justify-content: flex-start;
+    overflow: hidden;
+    transition: opacity .3s ease-out;
+    width: 100%
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-item.unread {
+    background: hsla(40, 50%, 88%, .18)
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-item.unread.use-animation {
+    animation: highlight 825ms 4 alternate
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-item.unread.use-animation .social-count-badge {
+    animation: highlightBadge 825ms 4 alternate
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-item.unread .clash-roster-name-container {
+    font-weight: 700
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-name {
+    color: #f0e6d2;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-shortName {
+    color: #c8aa6e;
+    margin: 0 3px 0 0;
+    vertical-align: top
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-shortName:lang(ar-ae) {
+    margin: 0 0 0 3px
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-name-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    width: 100%
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-members-online {
+    color: #5b5a56
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-info-container {
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    padding: 0 10px;
+    width: 100%
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-info-container.context-menu-open,
+.lol-social-clash-roster-panel-item .clash-roster-info-container:hover {
+    background: hsla(40, 50%, 88%, .1)
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-info-container.context-menu-open .clash-roster-members-online,
+.lol-social-clash-roster-panel-item .clash-roster-info-container:hover .clash-roster-members-online {
+    color: #a09b8c
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-info-text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 16px;
+    margin: 0 2px 0 10px;
+    overflow: hidden;
+    padding-top: 1px;
+    width: 100%
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-info-text>* {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.lol-social-clash-roster-panel-item .clash-roster-icon {
+    height: 32px;
+    width: 32px
+}
+
+.header-text {
+    font-family: var(--font-display)
+}
+
+.discord-banner-text {
+    font-family: var(--font-body)
+}
+
+.discord-banner-text,
+.header-text {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.header-text {
+    text-transform: uppercase
+}
+
+.header-text:lang(el-gr),
+.header-text:lang(ja-jp),
+.header-text:lang(ko-kr),
+.header-text:lang(th-th),
+.header-text:lang(tr-tr),
+.header-text:lang(zh-tw) {
+    text-transform: none
+}
+
+.header-text {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.header-text:lang(ja-jp) {
+    font-size: 13px
+}
+
+.header-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.discord-banner-text {
+    color: #a09b8c;
+    font-size: 12px;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.discord-banner-text:lang(ja-jp) {
+    font-size: 13px
+}
+
+.discord-banner-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.discord-banner-text {
+    font-weight: 400;
+    font-weight: 550;
+    letter-spacing: .05em
+}
+
+.discord-banner {
+    margin-bottom: 16px;
+    width: 100%
+}
+
+.header-text {
+    color: #a09b8c
+}
+
+.discord-banner-container {
+    background-image: url(/fe/lol-social/discord_gradient.png);
+    background-position: 50%;
+    border: 1px solid #1e2328;
+    overflow: hidden;
+    padding: 16px 20px;
+    position: relative
+}
+
+.discord-banner-content {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    width: 100%
+}
+
+.discord-banner-logo {
+    background-image: url(/fe/lol-social/discord_logo.png);
+    background-position: 50%;
+    background-size: cover;
+    flex-shrink: 0;
+    height: 48px;
+    width: 48px
+}
+
+.discord-banner-text {
+    color: #f0e6d2
+}
+
+.discord-banner-button {
+    flex-shrink: 0
+}
+
+.lol-social-avatar .summoner-level {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.lol-social-avatar .summoner-level:lang(el-gr),
+.lol-social-avatar .summoner-level:lang(ja-jp),
+.lol-social-avatar .summoner-level:lang(ko-kr),
+.lol-social-avatar .summoner-level:lang(th-th),
+.lol-social-avatar .summoner-level:lang(tr-tr),
+.lol-social-avatar .summoner-level:lang(zh-tw) {
+    text-transform: none
+}
+
+.lol-social-avatar .summoner-level {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.lol-social-avatar .summoner-level:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lol-social-avatar .summoner-level {
+    color: #a09b8c
+}
+
+.lol-social-avatar {
+    box-sizing: border-box;
+    display: flex;
+    height: 32px;
+    pointer-events: none;
+    position: relative;
+    width: 32px
+}
+
+.lol-social-avatar[me] {
+    pointer-events: all
+}
+
+.lol-social-avatar[large] {
+    height: 50px;
+    width: 50px
+}
+
+.lol-social-avatar .lol-social-availability-hitbox {
+    bottom: 3px;
+    padding: 2px;
+    position: absolute;
+    right: -3px
+}
+
+.lol-social-avatar[large] .lol-social-availability-hitbox {
+    bottom: 6px
+}
+
+.lol-social-avatar .icon-ring {
+    background: url(/fe/lol-social/playerobject_s_sprite.png) no-repeat top;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.lol-social-avatar .icon-ring:not(.has-icon) {
+    background-position-y: -128px
+}
+
+.lol-social-avatar .icon-ring.remote {
+    background-image: url(/fe/lol-social/playerobject_s_sprite2.png)
+}
+
+.lol-social-avatar[large] .icon-ring {
+    background: url(/fe/lol-social/playerobject_m_sprite.png) no-repeat top;
+    background-size: cover
+}
+
+.lol-social-avatar[large] .icon-ring:not(.has-icon) {
+    background-position-y: -200px
+}
+
+.lol-social-avatar .icon-image {
+    background-color: #010a13;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%
+}
+
+.lol-social-avatar .icon-image:not(.has-icon) {
+    display: none
+}
+
+.lol-social-avatar .icon-image.remote {
+    border-radius: 3px
+}
+
+.lol-social-avatar .summoner-level-icon {
+    margin-top: -7px
+}
+
+.lol-social-avatar .summoner-level-icon .icon-image {
+    background-color: inherit
+}
+
+.lol-social-avatar .xp-ring {
+    border-radius: 50%;
+    height: 56px;
+    left: -3px;
+    position: absolute;
+    top: -3px;
+    width: 56px
+}
+
+.lol-social-avatar .unfilled.xp-ring {
+    background-color: #0a323c
+}
+
+.lol-social-avatar .filled.xp-ring {
+    background-color: #0596aa
+}
+
+.lol-social-avatar .center.xp-ring {
+    background-color: #010a13;
+    height: 48px;
+    left: 1px;
+    top: 1px;
+    width: 48px
+}
+
+.lol-social-avatar .summoner-level-ring {
+    background-image: url(/fe/lol-social/social_panel_level_ring.png);
+    background-position: 50%;
+    background-size: 76px 76px;
+    height: 70px;
+    left: -10px;
+    position: absolute;
+    top: -10px;
+    width: 70px
+}
+
+.lol-social-avatar .summoner-level {
+    bottom: -10px;
+    font-size: 11px;
+    left: 9px;
+    position: absolute;
+    text-align: center;
+    width: 32px
+}
+
+.lol-social-avatar .summoner-level.has-long-summoner-level {
+    bottom: -8px;
+    font-size: 10px
+}
+
+.context-menu-open .lol-social-avatar .icon-ring.has-icon,
+.lol-social-avatar:not([disabled]):hover .icon-ring.has-icon,
+.social-avatar-hit:hover .lol-social-avatar:not([disabled]) .icon-ring.has-icon {
+    background-position-y: -32px
+}
+
+.lol-social-avatar:not([disabled]):active .icon-ring.has-icon,
+.social-avatar-hit:active .lol-social-avatar:not([disabled]) .icon-ring.has-icon {
+    background-position-y: -64px
+}
+
+.context-menu-open .lol-social-avatar[large] .icon-ring.has-icon,
+.lol-social-avatar[large]:not([disabled]):hover .icon-ring.has-icon,
+.social-avatar-hit:hover .lol-social-avatar[large]:not([disabled]) .icon-ring.has-icon {
+    background-position-y: -50px
+}
+
+.lol-social-avatar[large]:not([disabled]):active .icon-ring.has-icon,
+.social-avatar-hit:active .lol-social-avatar[large]:not([disabled]) .icon-ring.has-icon {
+    background-position-y: -100px
+}
+
+.lol-social-avatar:not([disabled]):hover .summoner-level-ring {
+    -webkit-filter: brightness(1.5)
+}
+
+.lol-social-avatar:not([disabled]):active img.icon-image,
+.social-avatar-hit:active .lol-social-avatar:not([disabled]) img.icon-image {
+    opacity: .5
+}
+
+.lol-social-friend-request .member-name,
+.lol-social-friend-request .member-name .player-name__tag-line,
+.lol-social-friend-request .social-summoner-name {
+    font-family: var(--font-body);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.lol-social-friend-request .member-name,
+.lol-social-friend-request .member-name .player-name__tag-line {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.lol-social-friend-request .member-name .player-name__tag-line:lang(ar-ae),
+.lol-social-friend-request .member-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lol-social-friend-request .social-summoner-name {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.lol-social-friend-request .social-summoner-name:lang(ja-jp) {
+    font-size: 13px
+}
+
+.lol-social-friend-request .social-summoner-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lol-social-friend-request .friend-request-button.accept,
+.lol-social-friend-request .friend-request-button.block,
+.lol-social-friend-request .friend-request-button.decline {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0
+}
+
+.lol-social-friend-request .friend-request {
+    align-items: center;
+    box-sizing: border-box;
+    cursor: default;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 72px;
+    position: relative;
+    -webkit-user-select: none
+}
+
+.lol-social-friend-request .friend-request:lang(ar-ae) {
+    direction: ltr
+}
+
+.lol-social-friend-request .friend-request:hover {
+    background: #1e2328
+}
+
+.lol-social-friend-request .friend-request:hover .member-name {
+    color: #f0e6d2
+}
+
+.lol-social-friend-request .friend-request:hover .member-game-name-tagline,
+.lol-social-friend-request .friend-request:hover .member-tagline {
+    color: #a09b8c
+}
+
+.lol-social-friend-request .friend-request.highlighted {
+    background: #1e2328
+}
+
+.lol-social-friend-request .friend-icon {
+    height: 32px;
+    margin: 0 10px;
+    width: 32px
+}
+
+.lol-social-friend-request .member-name {
+    color: #a09b8c;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis
+}
+
+.lol-social-friend-request .member-name .player-name__tag-line {
+    color: #5b5a56;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis
+}
+
+.lol-social-friend-request .member-game-name-tagline {
+    color: #5b5a56;
+    line-height: 1.4
+}
+
+.lol-social-friend-request .social-member-name {
+    color: #a09b8c;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 1px;
+    overflow: hidden;
+    padding-left: 19px;
+    position: relative;
+    text-overflow: ellipsis
+}
+
+.lol-social-friend-request .social-member-name:before {
+    background-size: contain;
+    bottom: 2px;
+    content: "";
+    height: 13px;
+    left: 0;
+    position: absolute;
+    width: 13px
+}
+
+.lol-social-friend-request .social-member-name.social-member-name-facebook:before {
+    background-image: url(/fe/lol-social/icon_fb.png)
+}
+
+.lol-social-friend-request .social-member-name.social-member-name-qq:before {
+    background-image: url(/fe/lol-social/icon_qq.png)
+}
+
+.lol-social-friend-request .social-member-name.social-member-name-vk:before {
+    background-image: url(/fe/lol-social/icon_vk.png)
+}
+
+.lol-social-friend-request .social-summoner-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.lol-social-friend-request .friend-request-text {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column
+}
+
+.lol-social-friend-request .friend-request-info {
+    color: #c89b3c;
+    line-height: 1.4
+}
+
+.lol-social-friend-request .action-message {
+    color: #f0e6d2
+}
+
+.lol-social-friend-request .friend-request-buttons {
+    display: flex
+}
+
+.lol-social-friend-request .friend-request-button {
+    height: 29px;
+    width: 29px
+}
+
+.lol-social-friend-request .friend-request-button.hidden {
+    visibility: hidden
+}
+
+.lol-social-friend-request .friend-request-button.accept {
+    background-color: #c8aa6e;
+    margin-right: 0;
+    -webkit-mask: url(/fe/lol-social/check_mask.png) no-repeat center;
+    -webkit-mask-size: 18px
+}
+
+.lol-social-friend-request .friend-request-button.accept:hover {
+    background-color: #f0e6d2
+}
+
+.lol-social-friend-request .friend-request-button.accept:active {
+    background-color: #463714
+}
+
+.lol-social-friend-request .friend-request-button.accept.accepted {
+    background-color: #f0e6d2;
+    pointer-events: none
+}
+
+.lol-social-friend-request .friend-request-button.decline {
+    background-color: #c8aa6e;
+    margin-right: 0;
+    -webkit-mask: url(/fe/lol-social/x_mask.png) no-repeat center;
+    -webkit-mask-size: 18px
+}
+
+.lol-social-friend-request .friend-request-button.decline:hover {
+    background-color: #f0e6d2
+}
+
+.lol-social-friend-request .friend-request-button.decline:active {
+    background-color: #463714
+}
+
+.lol-social-friend-request .friend-request-button.decline.declined {
+    background-color: #f0e6d2;
+    pointer-events: none
+}
+
+.lol-social-friend-request .friend-request-button.block {
+    background-color: #c8aa6e;
+    margin: 0 10px 0 0;
+    -webkit-mask: url(/fe/lol-social/block_mask.png) no-repeat center;
+    -webkit-mask-size: 18px
+}
+
+.lol-social-friend-request .friend-request-button.block:hover {
+    background-color: #f0e6d2
+}
+
+.lol-social-friend-request .friend-request-button.block:active {
+    background-color: #463714
+}
+
+.lol-social-friend-request .friend-request-button.block.blocked {
+    background-color: #f0e6d2;
+    pointer-events: none
+}
+
+.lol-social-friend-request .friend-request-button.block:lang(ar-ae) {
+    margin: 0 0 0 10px
+}
+
+.lol-social-friend-request .social-icon {
+    border: thin solid #3c3c41;
+    box-sizing: border-box;
+    height: 32px;
+    margin: 0 10px 0 18px;
+    padding: 1px;
+    width: 32px
+}
+
+.lol-social-friend-request .recently-honored-icon {
+    margin-right: 3px;
+    vertical-align: middle
+}
+
+.lol-social-friend-request .recently-honored-description {
+    color: #c8aa6e
+}
+
+.lol-social-friend-requests .friend-requests-header,
+.social-count-badge {
+    font-family: var(--font-body)
+}
+
+.lol-social-friend-requests .friend-requests-header {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.lol-social-friend-requests .friend-requests-header:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lol-social-friend-requests .friend-requests {
+    align-items: center;
+    background: rgba(1, 10, 19, .45);
+    cursor: pointer;
+    display: flex;
+    height: 44px;
+    justify-content: space-between;
+    padding: 0 10px
+}
+
+.lol-social-friend-requests .friend-requests[disabled] {
+    cursor: default;
+    opacity: .5
+}
+
+.lol-social-friend-requests .friend-requests:not([disabled]):hover {
+    background: hsla(40, 50%, 88%, .1)
+}
+
+.lol-social-friend-requests .friend-requests:not([disabled]):hover .friend-requests-header {
+    color: #fabe0a
+}
+
+.lol-social-friend-requests .friend-requests:not([disabled]):hover>.social-count-badge {
+    background-color: #fabe0a
+}
+
+.lol-social-friend-requests .friend-requests:not([disabled]):active .friend-requests-header {
+    color: #785a28
+}
+
+.lol-social-friend-requests .friend-requests:not([disabled]):active>.social-count-badge {
+    background-color: #785a28
+}
+
+.lol-social-friend-requests .friend-requests-header {
+    color: #c89b3c;
+    margin-right: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.lol-social-friend-requests-modal .friend-request-title {
+    font-family: var(--font-display)
+}
+
+.lol-social-friend-requests-modal {
+    font-family: var(--font-body)
+}
+
+.lol-social-friend-requests-modal .friend-request-title {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.lol-social-friend-requests-modal .friend-request-title:lang(el-gr),
+.lol-social-friend-requests-modal .friend-request-title:lang(ja-jp),
+.lol-social-friend-requests-modal .friend-request-title:lang(ko-kr),
+.lol-social-friend-requests-modal .friend-request-title:lang(th-th),
+.lol-social-friend-requests-modal .friend-request-title:lang(tr-tr),
+.lol-social-friend-requests-modal .friend-request-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.lol-social-friend-requests-modal .friend-request-title {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.lol-social-friend-requests-modal .friend-request-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lol-social-friend-requests-modal {
+    background: #010a13;
+    border: thin solid #1e282d;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    height: 470px;
+    width: 400px
+}
+
+.lol-social-friend-requests-modal .friend-request-header {
+    border-bottom: thin solid #1e282d;
+    padding: 10px 0
+}
+
+.lol-social-friend-requests-modal .friend-request-title {
+    text-align: center
+}
+
+.lol-social-friend-requests-modal .friend-request-title:lang(ar-ae) {
+    direction: ltr
+}
+
+.lol-social-friend-requests-modal .friend-request-list {
+    margin-bottom: 29px
+}
+
+:host {
+    outline: none
+}
+
+.social-menu-container {
+    background: rgba(1, 10, 19, .86);
+    outline: none;
+    padding: 2px 1px
+}
+
+.lol-social-menu-item {
+    box-sizing: border-box;
+    color: #cdbe91;
+    cursor: pointer;
+    display: block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 16px;
+    outline: none;
+    padding: 8px 10px;
+    text-align: left;
+    transition: padding .05s ease-in-out;
+    width: 100%;
+    word-break: break-word
+}
+
+.lol-social-menu-item:hover:not([has-input]) {
+    background: hsla(40, 50%, 88%, .1);
+    color: #f0e6d2
+}
+
+.context .lol-social-menu-item.active,
+.context .lol-social-menu-item:active,
+.context .lol-social-menu-item:hover:active {
+    background: none;
+    color: #cdbe91
+}
+
+.context .lol-social-menu-item.active,
+.context .lol-social-menu-item:active {
+    background: url(/fe/lol-social/pointer.png) no-repeat top;
+    padding-left: 16px;
+    padding-right: 4px
+}
+
+.context .lol-social-menu-item:hover:active {
+    background-position-y: -18px
+}
+
+.lol-social-roster .more-unread .more-unread-bar .more-unread-text-container .more-unread-text,
+.lol-social-roster .no-friends {
+    font-family: var(--font-body)
+}
+
+.lol-social-roster .no-friends {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.lol-social-roster .no-friends:lang(ja-jp) {
+    font-size: 13px
+}
+
+.lol-social-roster .no-friends:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lol-social-roster .roster-scrollable ::-webkit-scrollbar,
+.lol-social-roster .roster-scrollable::-webkit-scrollbar {
+    background-color: transparent;
+    height: 11px;
+    width: 11px
+}
+
+.lol-social-roster .roster-scrollable ::-webkit-scrollbar-thumb,
+.lol-social-roster .roster-scrollable::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background-color: #785a28;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    min-height: 32px
+}
+
+.lol-social-roster .roster-scrollable ::-webkit-scrollbar-thumb:hover,
+.lol-social-roster .roster-scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: #c8aa6e
+}
+
+.lol-social-roster .roster-scrollable ::-webkit-scrollbar-thumb:active,
+.lol-social-roster .roster-scrollable::-webkit-scrollbar-thumb:active {
+    background-color: #463714
+}
+
+.lol-social-roster .roster-scrollable ::-webkit-scrollbar-thumb:disabled,
+.lol-social-roster .roster-scrollable::-webkit-scrollbar-thumb:disabled {
+    background-color: #a09b8c
+}
+
+.lol-social-roster {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    position: relative
+}
+
+.lol-social-roster .hidden {
+    display: none
+}
+
+.lol-social-roster .list-container {
+    height: 100%;
+    position: relative;
+    width: 225px
+}
+
+.lol-social-roster .list-container.animating {
+    pointer-events: none
+}
+
+.lol-social-roster .list-container>div>div>div,
+.lol-social-roster .list-container>div>div>div>div {
+    transform-style: preserve-3d
+}
+
+.lol-social-roster .roster-scrollable>div {
+    overflow-x: hidden !important
+}
+
+.lol-social-roster .roster-drop-marker {
+    background: #c8aa6e;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.lol-social-roster .roster-drop-marker:after,
+.lol-social-roster .roster-drop-marker:before {
+    border: 5px solid transparent;
+    border-width: 5px 3px;
+    content: "";
+    height: 0;
+    position: absolute;
+    top: -4px;
+    width: 0
+}
+
+.lol-social-roster .roster-drop-marker:before {
+    border-left-color: #c8aa6e
+}
+
+.lol-social-roster .roster-drop-marker:after {
+    border-right-color: #c8aa6e;
+    right: 0
+}
+
+.lol-social-roster .preload-drag-grip {
+    background-image: url(/fe/lol-social/tooltip_grip.png);
+    display: none
+}
+
+.lol-social-roster .no-friends {
+    background: url(/fe/lol-social/poro_question.png) no-repeat top;
+    margin-top: 100px;
+    padding: 116px 18px 0;
+    text-align: center
+}
+
+.lol-social-roster .no-friends:lang(ar-ae) {
+    direction: ltr
+}
+
+.lol-social-roster .actions {
+    margin-bottom: 2px
+}
+
+.lol-social-roster .actions:lang(ar-ae) {
+    direction: ltr
+}
+
+.lol-social-roster .list-content,
+.lol-social-roster .list-content .roster-block {
+    display: flex;
+    flex-direction: column;
+    position: relative
+}
+
+.lol-social-roster .list-content .virtualized.roster-block>* {
+    position: absolute;
+    width: 100%
+}
+
+.lol-social-roster .list-content.will-animate-in {
+    opacity: 0
+}
+
+.lol-social-roster .list-content.animate-in {
+    opacity: 1;
+    transition: opacity .5s
+}
+
+.lol-social-roster .activity-section {
+    margin-bottom: 4px
+}
+
+.lol-social-roster .activity-section:lang(ar-ae) {
+    direction: ltr
+}
+
+.lol-social-roster .more-unread {
+    box-sizing: border-box;
+    height: 100px;
+    padding: 0 4px;
+    pointer-events: none;
+    position: absolute;
+    width: 100%
+}
+
+.lol-social-roster .more-unread .more-unread-bar {
+    background-color: #c89b3c;
+    cursor: pointer;
+    display: flex;
+    line-height: 20px;
+    pointer-events: auto
+}
+
+.lol-social-roster .more-unread .more-unread-bar .more-unread-text-container {
+    align-items: center;
+    display: flex;
+    margin: auto
+}
+
+.lol-social-roster .more-unread .more-unread-bar .more-unread-text-container .more-unread-text {
+    color: #010a13;
+    font-size: 12px;
+    font-weight: 900
+}
+
+.lol-social-roster .more-unread .more-unread-bar .more-unread-text-container .more-unread-arrow {
+    border: 4px solid transparent
+}
+
+.lol-social-roster .more-unread .more-unread-bar .more-unread-text-container:lang(ar-ae) {
+    direction: ltr
+}
+
+.lol-social-roster .more-unread.below {
+    background: -webkit-linear-gradient(transparent, #010a13);
+    bottom: 0
+}
+
+.lol-social-roster .more-unread.below .more-unread-bar {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin-top: 80px
+}
+
+.lol-social-roster .more-unread.below .more-unread-bar .more-unread-arrow {
+    border-top: 6px solid #010a13;
+    margin-left: 6px;
+    margin-top: 4px
+}
+
+.lol-social-roster .more-unread.above {
+    background: -webkit-linear-gradient(#010a13, transparent);
+    top: 0
+}
+
+.lol-social-roster .more-unread.above .more-unread-bar {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px
+}
+
+.lol-social-roster .more-unread.above .more-unread-bar .more-unread-arrow {
+    border-bottom: 6px solid #010a13;
+    margin-left: 6px;
+    margin-top: -6px
+}
+
+.dropping .lol-social-roster .marker {
+    opacity: 1
+}
+
+.lol-social-roster-group .group-header {
+    font-family: var(--font-display)
+}
+
+.social-count-badge {
+    font-family: var(--font-body)
+}
+
+.lol-social-roster-group .group-header {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.lol-social-roster-group .group-header:lang(el-gr),
+.lol-social-roster-group .group-header:lang(ja-jp),
+.lol-social-roster-group .group-header:lang(ko-kr),
+.lol-social-roster-group .group-header:lang(th-th),
+.lol-social-roster-group .group-header:lang(tr-tr),
+.lol-social-roster-group .group-header:lang(zh-tw) {
+    text-transform: none
+}
+
+.lol-social-roster-group .group-header {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.lol-social-roster-group .group-header:lang(ja-jp) {
+    font-size: 13px
+}
+
+.lol-social-roster-group .group-header:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lol-social-roster-group .group-header {
+    color: #a09b8c
+}
+
+.lol-social-roster-group .group.unread .group-header {
+    color: #f0e6d2
+}
+
+.lol-social-roster-group {
+    display: block
+}
+
+.lol-social-roster-group:lang(ar-ae) {
+    direction: ltr
+}
+
+.lol-social-roster-group .hidden {
+    display: none !important
+}
+
+.lol-social-roster-group .group {
+    position: relative
+}
+
+.lol-social-roster-group .group.unread .group-header {
+    background: hsla(40, 50%, 88%, .18);
+    font-weight: 700
+}
+
+.lol-social-roster-group .group.unread .unread-count {
+    margin-right: 10px;
+    margin-top: 4px
+}
+
+.lol-social-roster-group .group.unread.use-animation .group-header {
+    animation: highlight 825ms 4 alternate
+}
+
+.lol-social-roster-group .group.unread.use-animation .social-count-badge {
+    animation: highlightBadge 825ms 4 alternate
+}
+
+.lol-social-roster-group .group .unread-dot {
+    background-color: #c89b3c;
+    border-radius: 5px;
+    height: 10px;
+    width: 10px
+}
+
+.lol-social-roster-group .group-header {
+    background: rgba(1, 10, 19, .45);
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    margin-bottom: 4px
+}
+
+.lol-social-roster-group .group-header:hover {
+    background: hsla(40, 50%, 88%, .1);
+    color: #f0e6d2
+}
+
+.lol-social-roster-group .group-header:active {
+    color: #cdbe91
+}
+
+.lol-social-roster-group .group-header.dragging {
+    opacity: .5
+}
+
+.lol-social-roster-group .group-header.drag-capture {
+    border: thin solid #785a28;
+    line-height: 20px;
+    padding: 0 9px
+}
+
+.lol-social-roster-group .group-header.drag-capture .arrow-container {
+    display: none
+}
+
+.lol-social-roster-group .group-name {
+    display: flex;
+    height: 100%;
+    width: 100%
+}
+
+.lol-social-roster-group.drop-available .group-header {
+    background-color: #3c3c41;
+    color: #f0e6d2
+}
+
+.lol-social-roster-group.drop-available .group-header .arrow {
+    -webkit-filter: brightness(2)
+}
+
+.lol-social-roster-group.drop-available .drop-area {
+    background: linear-gradient(180deg, transparent 28px, rgba(1, 10, 19, .75) 0);
+    border: thin solid transparent;
+    border-image: linear-gradient(180deg, #785a28 0, #c89b3c) 1 1;
+    box-sizing: border-box;
+    margin-top: -28px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%
+}
+
+.lol-social-roster-group.drop-available .drop-area .drop-area-arrow {
+    align-self: center;
+    animation: slideIn .3s ease-in-out;
+    background-image: url(/fe/lol-social/drop.png);
+    background-position-y: -28px;
+    background-size: cover;
+    bottom: 0;
+    content: "";
+    height: 28px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px
+}
+
+@-moz-keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@-o-keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.lol-social-roster-group .arrow-container {
+    display: flex;
+    justify-content: flex-end;
+    opacity: 1;
+    width: 18px
+}
+
+.lol-social-roster-group .arrow-container.use-animation {
+    transition: width .25s cubic-bezier(0, 0, 0, 1), opacity .25s ease-out
+}
+
+.lol-social-roster-group .arrow-container.hide {
+    opacity: 0;
+    width: 0
+}
+
+.lol-social-roster-group-name {
+    display: block;
+    overflow: hidden
+}
+
+.lol-social-roster-group-name .group-name-text {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    padding: 0 9px;
+    position: relative;
+    width: 100%
+}
+
+.lol-social-roster-group-name .group-name-text.error {
+    border: thin solid #bc213b
+}
+
+.lol-social-roster-group-name .group-label {
+    cursor: pointer;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+.lol-social-roster-group-name .group-label-locale-direction-override {
+    direction: rtl;
+    unicode-bidi: isolate
+}
+
+.lol-social-roster-group-name .group-label-localized {
+    text-transform: none
+}
+
+.lol-social-roster-group-name .group-name-input {
+    background: none;
+    border: none;
+    color: #fff;
+    font: inherit;
+    letter-spacing: inherit;
+    outline: none;
+    padding: 0;
+    text-transform: inherit;
+    width: 100%
+}
+
+.lol-social-roster-group-name .group-name-animation {
+    background: #785a28;
+    height: 24px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all .3s ease-out
+}
+
+.lol-social-roster-group-name .group-name-animation.will-animate-in {
+    right: 100%
+}
+
+.lol-social-roster-group-name .group-name-animation.animate-in {
+    right: 0
+}
+
+.lol-social-roster-group-name .group-name-animation.animate-out {
+    left: 100%;
+    transition-delay: .3s
+}
+
+.lol-social-roster-member .member-name-wrapper .member-name,
+.social-count-badge {
+    font-family: var(--font-body)
+}
+
+.lol-social-roster-member .member-name-wrapper .member-name {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.lol-social-roster-member .member-name-wrapper .member-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lol-social-roster-member .member.has-unread .member-name,
+.lol-social-roster-member .member.has-unread .member-status {
+    color: #f0e6d2
+}
+
+.social-count-badge {
+    align-items: center;
+    background-color: #c89b3c;
+    border-radius: 3px;
+    color: #010a13;
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    height: 16px;
+    padding: 0 6px
+}
+
+.social-count-badge.will-animate-in {
+    opacity: 0
+}
+
+.social-count-badge.animate-in {
+    opacity: 1;
+    transition: opacity .3s ease-in-out
+}
+
+@-moz-keyframes highlight {
+    0% {
+        background: hsla(40, 50%, 88%, .18)
+    }
+
+    to {
+        background: hsla(40, 50%, 88%, .4)
+    }
+}
+
+@-webkit-keyframes highlight {
+    0% {
+        background: hsla(40, 50%, 88%, .18)
+    }
+
+    to {
+        background: hsla(40, 50%, 88%, .4)
+    }
+}
+
+@-o-keyframes highlight {
+    0% {
+        background: hsla(40, 50%, 88%, .18)
+    }
+
+    to {
+        background: hsla(40, 50%, 88%, .4)
+    }
+}
+
+@keyframes highlight {
+    0% {
+        background: hsla(40, 50%, 88%, .18)
+    }
+
+    to {
+        background: hsla(40, 50%, 88%, .4)
+    }
+}
+
+@-moz-keyframes highlightBadge {
+    0% {
+        -webkit-filter: brightness(1) saturate(1)
+    }
+
+    to {
+        -webkit-filter: brightness(1.35) saturate(1.35)
+    }
+}
+
+@-webkit-keyframes highlightBadge {
+    0% {
+        -webkit-filter: brightness(1) saturate(1)
+    }
+
+    to {
+        -webkit-filter: brightness(1.35) saturate(1.35)
+    }
+}
+
+@-o-keyframes highlightBadge {
+    0% {
+        -webkit-filter: brightness(1) saturate(1)
+    }
+
+    to {
+        -webkit-filter: brightness(1.35) saturate(1.35)
+    }
+}
+
+@keyframes highlightBadge {
+    0% {
+        -webkit-filter: brightness(1) saturate(1)
+    }
+
+    to {
+        -webkit-filter: brightness(1.35) saturate(1.35)
+    }
+}
+
+.lol-social-roster-member {
+    align-items: flex-end;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    transform-style: preserve-3d;
+    width: 212px
+}
+
+.lol-social-roster-member:lang(ar-ae) {
+    direction: ltr
+}
+
+.lol-social-roster-member.animate-in,
+.lol-social-roster-member.animate-out {
+    pointer-events: none
+}
+
+.lol-social-roster-member.drag-capture .member {
+    border: thin solid #785a28;
+    padding: 0 0 0 8px
+}
+
+.lol-social-roster-member.drag-capture .member:before {
+    background: url(/fe/lol-social/tooltip_grip.png) no-repeat 50%;
+    background-size: 18px;
+    content: "";
+    height: 100%;
+    width: 15px
+}
+
+.lol-social-roster-member.dragging,
+.lol-social-roster-member.dragging:after,
+.lol-social-roster-member.dragging:before {
+    opacity: 0;
+    transition: none
+}
+
+.lol-social-roster-member .member {
+    padding: 0 10px 0 0;
+    transition: opacity .3s ease-out
+}
+
+.lol-social-roster-member .member:lang(ar-ae) {
+    padding: 0 0 0 10px
+}
+
+.lol-social-roster-member .member.context-menu-open,
+.lol-social-roster-member .member:hover {
+    background: hsla(40, 50%, 88%, .1)
+}
+
+.lol-social-roster-member.animate-move .member {
+    box-shadow: 0 0 8px rgba(1, 10, 19, .7)
+}
+
+.lol-social-roster-member .layout {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 48px;
+    width: 100%
+}
+
+.lol-social-roster-member .layout.float-right {
+    background-color: #010a13;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 2px
+}
+
+.lol-social-roster-member .member-icon {
+    flex-shrink: 0;
+    height: 32px;
+    margin: 0 8px 0 2px;
+    width: 32px
+}
+
+.lol-social-roster-member .member-icon:lang(ar-ae) {
+    margin: 0 2px 0 8px
+}
+
+.lol-social-roster-member .details {
+    flex: 1 1 auto;
+    justify-content: center
+}
+
+.lol-social-roster-member .member-name-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -1px;
+    overflow: hidden
+}
+
+.lol-social-roster-member .member-name-wrapper .member-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.lol-social-roster-member .member-name-wrapper .member-status {
+    color: #5b5a56
+}
+
+.lol-social-roster-member .member.context-menu-open .member-name,
+.lol-social-roster-member .member:hover .member-name {
+    color: #f0e6d2
+}
+
+.lol-social-roster-member .member.context-menu-open .member-status,
+.lol-social-roster-member .member.offline.context-menu-open .member-name,
+.lol-social-roster-member .member.offline:hover .member-name,
+.lol-social-roster-member .member:hover .member-status {
+    color: #a09b8c
+}
+
+.lol-social-roster-member .member:active:not(.right-click) .member-name {
+    color: #3c3c41
+}
+
+.lol-social-roster-member .member.muted {
+    padding-right: 0
+}
+
+.lol-social-roster-member .muted-icon {
+    background-color: #3c3c41;
+    height: 16px;
+    margin-left: 2px;
+    -webkit-mask: url(/fe/lol-social/mute_mask.png) no-repeat center;
+    -webkit-mask-size: contain;
+    width: 16px
+}
+
+.lol-social-roster-member .discord-icon {
+    background-image: url(/fe/lol-static-assets/images/discord_blue.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-shrink: 0;
+    height: 20px;
+    margin-left: 4px;
+    opacity: .5;
+    width: 20px
+}
+
+.lol-social-roster-member .offline .member-icon {
+    opacity: .5
+}
+
+.lol-social-roster-member .offline .member-name {
+    color: #5b5a56
+}
+
+.lol-social-roster-member .member.has-unread {
+    background: hsla(40, 50%, 88%, .18)
+}
+
+.lol-social-roster-member .member.has-unread.use-animation {
+    animation: highlight 825ms 4 alternate
+}
+
+.lol-social-roster-member .member.has-unread.use-animation .social-count-badge {
+    animation: highlightBadge 825ms 4 alternate
+}
+
+.lol-social-roster-member .member.has-unread .member-name {
+    font-weight: 700
+}
+
+.lol-social-roster-member .social-count-badge {
+    margin-left: 4px
+}
+
+.lol-social-roster-member .edit-note-menu {
+    left: 0;
+    margin-top: -3px;
+    padding: 2px 0 4px;
+    position: absolute;
+    top: 100%;
+    transform: translateZ(1px);
+    width: 100%
+}
+
+.lol-social-roster-member .open-party .open-party-indicator {
+    background-color: #1e825a
+}
+
+.lol-social-roster-member .open-party-indicator {
+    background-color: transparent;
+    height: 90%;
+    width: 4px
+}
+
+.lol-social-roster-member .party-join-button {
+    background-image: url(/fe/lol-social/icon_open_party_join.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+    height: 30px;
+    width: 30px
+}
+
+.lol-social-roster-member .party-join-button:hover {
+    background-image: url(/fe/lol-social/icon_open_party_join_hover.png)
+}
+
+.lol-social-roster-member .party-join-button:active {
+    background-image: url(/fe/lol-social/icon_open_party_join_click.png)
+}
+
+.lol-social-roster-member .party-join-button.joining {
+    animation: open-party-join-spin 3s linear infinite;
+    background-image: url(/fe/lol-social/spinner.png)
+}
+
+.lol-social-roster-member .party-join-button[disabled] {
+    background-image: url(/fe/lol-social/icon_open_party_join_disabled.png)
+}
+
+.lol-social-roster-member .open-party:hover .party-join-button {
+    display: inline
+}
+
+.lol-social-roster-member .open-party:hover .social-count-badge {
+    display: none
+}
+
+.confirm-friend-actions {
+    width: 360px
+}
+
+.confirm-friend-actions p {
+    text-align: left
+}
+
+.confirm-friend-actions p:lang(ar-ae) {
+    text-align: right
+}
+
+@-moz-keyframes open-party-join-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes open-party-join-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-o-keyframes open-party-join-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes open-party-join-spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.lol-social-status .status-message,
+.lol-social-status .status-message-wrapper {
+    font-family: var(--font-body);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.lol-social-status .status-message-wrapper:lang(ja-jp),
+.lol-social-status .status-message:lang(ja-jp) {
+    font-size: 13px
+}
+
+.lol-social-status .status-message-wrapper:lang(ar-ae),
+.lol-social-status .status-message:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lol-social-status {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.lol-social-status .status-message {
+    color: inherit;
+    flex: 1 1 auto;
+    font: inherit;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.lol-social-status .status-message-availability-text {
+    display: flex
+}
+
+.lol-social-status .status-message-wrapper {
+    color: inherit;
+    display: inline-flex;
+    flex: 1 1 auto;
+    font: inherit;
+    white-space: nowrap
+}
+
+.lol-social-status .status-message-wrapper.chat,
+.lol-social-status .status-message-wrapper.online,
+.lol-social-status .status-message.chat,
+.lol-social-status .status-message.online {
+    color: #00a741
+}
+
+.lol-social-status .status-message-wrapper.dnd,
+.lol-social-status .status-message-wrapper.spectating,
+.lol-social-status .status-message.dnd,
+.lol-social-status .status-message.spectating {
+    color: #16cae5
+}
+
+.lol-social-status .status-message-wrapper.away,
+.lol-social-status .status-message.away {
+    color: #a09b8c
+}
+
+.lol-social-status .status-message-wrapper.open-party,
+.lol-social-status .status-message.open-party {
+    color: #00a741
+}
+
+.lol-social-status .status-message-wrapper.open-party.away,
+.lol-social-status .status-message.open-party.away {
+    color: #a09b8c
+}
+
+.lol-social-status .status-message,
+.lol-social-status .status-message-quoted {
+    flex: 0 0 auto;
+    min-width: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.lol-social-status .status-message-quoted:lang(ar-ae),
+.lol-social-status .status-message:lang(ar-ae) {
+    direction: ltr;
+    text-align: right
+}
+
+.lol-social-status .status-message-product-name {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    white-space: nowrap
+}
+
+.lol-social-status .status-message-quoted {
+    flex: 0 1 auto
+}
+
+.lol-social-status .status-message-quoted+.status-message-product-name {
+    flex: 1 0 auto
+}
+
+.identity-message .status-message-wrapper {
+    width: 100px
+}
+
+.vng-age-rating {
+    color: #a09b8c;
+    height: 60px;
+    overflow: hidden;
+    width: 223px
+}
+
+.vng-age-rating-hidden {
+    display: none
+}
+
+.vng-age-rating-container {
+    fill: #1e282d;
+    height: 100%;
+    width: 100%
+}
+
+.vng-age-rating-1,
+.vng-age-rating-2 {
+    stroke: currentColor;
+    stroke-width: 1px
+}
+
+.vng-age-rating-1,
+.vng-age-rating-3,
+.vng-age-rating-5,
+.vng-age-rating-6 {
+    fill-rule: evenodd
+}
+
+.vng-age-rating-3,
+.vng-age-rating-5,
+.vng-age-rating-6 {
+    fill: currentColor
+}
+
+.screen-root[data-screen-name=lol-vng-rating-overlay] {
+    bottom: 55px;
+    right: 0
+}
+
+.remedies-received-component .remedy-received-notification-title {
+    font-family: var(--font-display)
+}
+
+.remedies-received-component .remedy-received-notification-description-bottom,
+.remedies-received-component .remedy-received-notification-description-middle,
+.remedies-received-component .remedy-received-notification-description-top {
+    font-family: var(--font-body)
+}
+
+.remedies-received-component .remedy-received-notification-description-bottom,
+.remedies-received-component .remedy-received-notification-description-middle,
+.remedies-received-component .remedy-received-notification-description-top,
+.remedies-received-component .remedy-received-notification-title {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.remedies-received-component .remedy-received-notification-title {
+    text-transform: uppercase
+}
+
+.remedies-received-component .remedy-received-notification-title:lang(el-gr),
+.remedies-received-component .remedy-received-notification-title:lang(ja-jp),
+.remedies-received-component .remedy-received-notification-title:lang(ko-kr),
+.remedies-received-component .remedy-received-notification-title:lang(th-th),
+.remedies-received-component .remedy-received-notification-title:lang(tr-tr),
+.remedies-received-component .remedy-received-notification-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.remedies-received-component .remedy-received-notification-title {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 32px
+}
+
+.remedies-received-component .remedy-received-notification-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.remedies-received-component .remedy-received-notification-description-bottom,
+.remedies-received-component .remedy-received-notification-description-middle,
+.remedies-received-component .remedy-received-notification-description-top {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.remedies-received-component .remedy-received-notification-description-bottom:lang(ja-jp),
+.remedies-received-component .remedy-received-notification-description-middle:lang(ja-jp),
+.remedies-received-component .remedy-received-notification-description-top:lang(ja-jp) {
+    font-size: 13px
+}
+
+.remedies-received-component .remedy-received-notification-description-bottom:lang(ar-ae),
+.remedies-received-component .remedy-received-notification-description-middle:lang(ar-ae),
+.remedies-received-component .remedy-received-notification-description-top:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.remedies-received-component {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 25px 50px 50px;
+    text-align: center;
+    width: 600px
+}
+
+.remedies-received-component .remedy-received-notification-title {
+    color: #f0e6d2;
+    margin-bottom: 5px
+}
+
+.remedies-received-component .remedy-received-notification-description-top {
+    color: #a09b8c;
+    margin-top: 10px;
+    width: 550px
+}
+
+.remedies-received-component .remedy-received-notification-description-middle {
+    color: #a09b8c;
+    margin: 0 0 20px;
+    width: 550px
+}
+
+.remedies-received-component .remedy-received-notification-description-bottom {
+    color: #a09b8c;
+    width: 550px
+}
+
+.remedies-received-component .remedy-rewards-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px
+}
+
+.remedy-reward-card-component .remedy-reward-container .remedy-reward-description {
+    font-family: var(--font-body);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.remedy-reward-card-component .remedy-reward-container .remedy-reward-description:lang(ja-jp) {
+    font-size: 13px
+}
+
+.remedy-reward-card-component .remedy-reward-container .remedy-reward-description:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.remedy-reward-card-component {
+    align-items: center;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .8) 47.4%, rgba(0, 0, 0, .9));
+    border: 1px solid #1e2328;
+    display: flex;
+    height: 120px;
+    justify-content: center;
+    padding: 5px;
+    width: 120px
+}
+
+.remedy-reward-card-component .remedy-reward-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center
+}
+
+.remedy-reward-card-component .remedy-reward-container .remedy-reward-icon {
+    height: 60px;
+    margin-bottom: 5px;
+    width: 60px
+}
+
+.remedy-reward-card-component .remedy-reward-container .remedy-reward-description {
+    color: #f0e6d2;
+    width: 103px
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title {
+    font-family: var(--font-display)
+}
+
+.credibility-behavior-warning-component .behavior-warning-container,
+.credibility-behavior-warning-component .behavior-warning-container .credibility_behavior_warning_acknowledge_label {
+    font-family: var(--font-body)
+}
+
+.credibility-behavior-warning-component .behavior-warning-container,
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title,
+.credibility-behavior-warning-component .behavior-warning-container .credibility_behavior_warning_acknowledge_label {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title {
+    text-transform: uppercase
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title:lang(el-gr),
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title:lang(ja-jp),
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title:lang(ko-kr),
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title:lang(th-th),
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title:lang(tr-tr),
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 32px
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.credibility-behavior-warning-component .behavior-warning-container,
+.credibility-behavior-warning-component .behavior-warning-container .credibility_behavior_warning_acknowledge_label {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .credibility_behavior_warning_acknowledge_label:lang(ja-jp),
+.credibility-behavior-warning-component .behavior-warning-container:lang(ja-jp) {
+    font-size: 13px
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .credibility_behavior_warning_acknowledge_label:lang(ar-ae),
+.credibility-behavior-warning-component .behavior-warning-container:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.credibility-behavior-warning-component {
+    background: top/cover no-repeat url(/fe/lol-social/credibility_behavior_warning_background.png);
+    width: 700px
+}
+
+.credibility-behavior-warning-component .behavior-warning-container {
+    align-items: center;
+    color: #ccc4b3;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 75px;
+    text-align: left
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title-flair {
+    background: url(/fe/lol-social/title-flair.png) no-repeat 50%;
+    background-size: cover;
+    flex-grow: 0;
+    height: 6px;
+    width: 239px
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title-flair.behavior-warning-title-flair-flipped {
+    transform: scaleX(-1)
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-title-container .behavior-warning-title {
+    color: #f0e6d2;
+    flex-shrink: 0;
+    margin: 0 10px
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-description {
+    margin-bottom: 10px
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .credibility_behavior_warning_acknowledge_label {
+    color: #cdbe91;
+    margin-top: 20px
+}
+
+.credibility-behavior-warning-component .behavior-warning-container .behavior-warning-confirmation-input {
+    margin-top: 8px;
+    width: 100%
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title {
+    font-family: var(--font-display)
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-description {
+    font-family: var(--font-body)
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-description,
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title {
+    text-transform: uppercase
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title:lang(el-gr),
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title:lang(ja-jp),
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title:lang(ko-kr),
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title:lang(th-th),
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title:lang(tr-tr),
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title:lang(ja-jp) {
+    font-size: 13px
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-description {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-description:lang(ja-jp) {
+    font-size: 13px
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-description:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.credibility-behavior-warning-option {
+    background: linear-gradient(.22deg, #010a13 -3.5%, rgba(1, 10, 19, 0) 99.85%);
+    border: .78px solid #1e2328;
+    cursor: pointer;
+    height: 65px;
+    margin-bottom: 5px;
+    width: 100%
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-checkbox {
+    flex-basis: 0;
+    margin: 0 14px
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text {
+    align-items: center;
+    display: flex
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container {
+    align-items: flex-start;
+    color: #f0e6d2;
+    display: flex;
+    flex-direction: column;
+    text-align: start
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-title {
+    margin-bottom: 2px;
+    max-width: 460px
+}
+
+.credibility-behavior-warning-option .behavior-warning-option-container .behavior-warning-option-text .behavior-warning-option-inner-container .behavior-warning-option-description {
+    max-width: 460px
+}

@@ -1,0 +1,105 @@
+<template>
+ <!-- Render components are activated via css class ("renderMode <RenderMode> disabled")
+       * <RenderMode> is defined in playerNameComponentLogic.RenderMode
+       * disabled is added/removed when the corresponding renderMode is activated
+       * player-name__<type> classes identify elements whose text is set to the respective player name
+    -->
+ <span class="renderMode fullAlias disabled">
+  <!--
+-->
+  <span class="player-name__alias player-name__force-gamename-tagline-order">
+   <!--
+-->
+   <span class="player-name__game-name player-name__force-locale-text-direction">
+   </span>
+   <!--
+-->
+   <span class="player-name__tag-line-separator player-name__force-gamename-tagline-order">
+    #
+   </span>
+   <!--
+-->
+   <span class="player-name__tag-line player-name__force-locale-text-direction">
+   </span>
+   <!--
+-->
+  </span>
+  <!--
+-->
+ </span>
+ <span class="renderMode gameNameOnly disabled">
+  <!--
+-->
+  <span class="player-name__alias">
+   <!--
+-->
+   <span class="player-name__game-name player-name__force-locale-text-direction">
+   </span>
+   <!--
+-->
+  </span>
+  <!--
+-->
+ </span>
+ <span class="renderMode tagLineTooltip disabled">
+  <!--
+-->
+  <span class="player-name__alias">
+   <!--
+-->
+   <span class="player-name__game-name player-name__force-locale-text-direction">
+   </span>
+   <!--
+-->
+  </span>
+  <!--
+-->
+  <lol-uikit-tooltip>
+   <!--
+-->
+   <lol-uikit-content-block class="player-name__tooltip__alias" type="tooltip-system">
+    <!--
+-->
+    <span class="player-name__force-gamename-tagline-order">
+     <!--
+-->
+     <span class="player-name__tooltip__game-name player-name__force-locale-text-direction">
+     </span>
+     <!--
+-->
+     <span class="player-name__tooltip__tag-line-separator player-name__force-gamename-tagline-order">
+      #
+     </span>
+     <!--
+-->
+     <span class="player-name__tooltip__tag-line player-name__force-locale-text-direction">
+     </span>
+     <!--
+-->
+    </span>
+    <!--
+-->
+   </lol-uikit-content-block>
+   <!--
+-->
+  </lol-uikit-tooltip>
+  <!--
+-->
+ </span>
+ <span class="renderMode summonerName disabled">
+  <!--
+-->
+  <span class="player-name__summoner player-name__force-locale-text-direction">
+  </span>
+  <!--
+-->
+ </span>
+ <span class="renderMode error disabled">
+  <span class="player-name__error">
+  </span>
+ </span>
+ <span class="renderMode component disabled">
+  <slot class="disabled" name="alias">
+  </slot>
+ </span>
+</template>
