@@ -239,5 +239,10 @@
 			<td style="text-align:center;">CDragon: 1/1</td>
 			<td>移除了不存在的文件<br>Removed files that don't exist</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2025-12-31 19-23-01</td>
+			<td style="text-align:center;">CDragon: 1/1<br>DDragon: 1</td>
+			<td>跨年之品质级更新：格式化js文件<br>A QoL change across the new year: Format js files</td>
+		</tr>
 	</tbody>
 </table>
