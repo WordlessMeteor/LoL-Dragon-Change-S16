@@ -3068,6 +3068,7 @@
                 eventStoreSpineAtlas: s.Ember.computed.alias("rotationalShopAssets.events-store-spine-atlas"),
                 eventStoreSpineBackground: s.Ember.computed.alias("rotationalShopAssets.events-store-spine-background"),
                 isEventsStoreEnabled: s.Ember.computed.alias("rotationalShopService.isEventsStoreEnabled"),
+                isEventsMusicDisabled: s.Ember.computed.alias("rotationalShopService.eventsMusicDisabled"),
                 isEventsStoreDisabled: s.Ember.computed.not("isEventsStoreEnabled"),
                 soundOnClickedImage: s.Ember.computed.alias("rotationalShopAssets.event-store-sound-on-clicked"),
                 soundOnDefaultImage: s.Ember.computed.alias("rotationalShopAssets.event-store-sound-on-default"),
@@ -3277,7 +3278,7 @@
                     0
                 })),
                 _playBackgroundMusic(e) {
-                    this._stopBackgroundMusic(), this.set("music", this.playMusic(e)), this.set("tftService.eventStoreMuted", !1)
+                    this.get("isEventsMusicDisabled") || (this._stopBackgroundMusic(), this.set("music", this.playMusic(e)), this.set("tftService.eventStoreMuted", !1))
                 },
                 _stopBackgroundMusic(e) {
                     const t = this.get("music");
@@ -13042,6 +13043,7 @@
                     uiToggleEnabled: !1,
                     showToSLinks: !1,
                     eventsStoreEnabled: !1,
+                    eventsMusicDisabled: !1,
                     eventsStoreData: null,
                     _stores: null,
                     isStoreV3Enabled: !1,
@@ -13284,7 +13286,7 @@
                     },
                     _initObservers() {
                         s.db.addObserver(a.SERVICE_ENDPOINTS.ROTATIONAL_SHOP_CONFIG, this, (e => {
-                            if (e && (this.set("rotationalShopContentPreviewConfig", e.contentPreviewConfig), this.set("rotationalShopContentPreviewThumbnailConfig", e.contentPreviewThumbnailConfig), this.set("rotationalShopEnabled", Boolean(e.enabled)), this.set("uiToggleEnabled", Boolean(e.uiToggleEnabled)), this.set("showToSLinks", Boolean(e.showToSLinks)), this.set("eventsStoreEnabled", Boolean(e.eventsStoreEnabled)), this.set("eventsStoreData", e.eventsStoreData), e.navs && Array.isArray(e.navs) && this.set("rotationalShopNavsConfig", e.navs), e.enabled)) {
+                            if (e && (this.set("rotationalShopContentPreviewConfig", e.contentPreviewConfig), this.set("rotationalShopContentPreviewThumbnailConfig", e.contentPreviewThumbnailConfig), this.set("rotationalShopEnabled", Boolean(e.enabled)), this.set("uiToggleEnabled", Boolean(e.uiToggleEnabled)), this.set("showToSLinks", Boolean(e.showToSLinks)), this.set("eventsStoreEnabled", Boolean(e.eventsStoreEnabled)), this.set("eventsMusicDisabled", Boolean(e.eventsMusicDisabled)), this.set("eventsStoreData", e.eventsStoreData), e.navs && Array.isArray(e.navs) && this.set("rotationalShopNavsConfig", e.navs), e.enabled)) {
                                 s.db.addObserver(a.SERVICE_ENDPOINTS.STORES, this, (e => {
                                     e && this.set("_stores", e.data)
                                 }));

@@ -244,5 +244,27 @@
 			<td style="text-align:center;">CDragon: 1/1<br>DDragon: 1</td>
 			<td>跨年之品质级更新：格式化js文件<br>A QoL change across the new year: Format js files</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-01-03 12-13-46</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>No changes<br>Some files are recovered from a mistaken deletion</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-01-04 12-24-08</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>No changes</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-01-05 13-19-56<br>2026-01-05 17-41-46</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Latest: Within-patch change</li>
+						<li>PBE: Within-patch change</li>
+					</ul>
+				Certificate update.
+			</td>
+		</tr>
 	</tbody>
 </table>
