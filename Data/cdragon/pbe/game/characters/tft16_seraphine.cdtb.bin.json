@@ -101,7 +101,7 @@
             },
             "mCastType": 4,
             "missileSpeed": 200.0,
-            "mMissileEffectKey": "{8dfb53a4}",
+            "mMissileEffectKey": "TFT16_Seraphine_P_StackMissile",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
             "selectionPriority": 2,
@@ -227,7 +227,7 @@
         },
         "__type": "SpellObject"
     },
-    "{3236237d}": {
+    "Characters/TFT16_Seraphine/Spells/TFT16_SeraphineBasicAttack": {
         "ObjectName": "TFT16_SeraphineBasicAttack",
         "mScriptName": "TFT16_SeraphineBasicAttack",
         "mSpell": {
@@ -266,7 +266,7 @@
             },
             "mCastType": 1,
             "castFrame": 8.0,
-            "mMissileEffectKey": "{0988b8a0}",
+            "mMissileEffectKey": "TFT16_Seraphine_BA_mis",
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -274,7 +274,7 @@
         },
         "__type": "SpellObject"
     },
-    "{5a39955d}": {
+    "Characters/TFT16_Seraphine/Spells/TFT16_SeraphineBasicAttack2": {
         "ObjectName": "TFT16_SeraphineBasicAttack2",
         "mScriptName": "TFT16_SeraphineBasicAttack2",
         "mSpell": {
@@ -314,7 +314,7 @@
             },
             "mCastType": 1,
             "castFrame": 8.0,
-            "mMissileEffectKey": "{0988b8a0}",
+            "mMissileEffectKey": "TFT16_Seraphine_BA_mis",
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -322,7 +322,7 @@
         },
         "__type": "SpellObject"
     },
-    "{7c4556bd}": {
+    "Characters/TFT16_Seraphine/Spells/TFT16_SeraphineCritAttack": {
         "ObjectName": "TFT16_SeraphineCritAttack",
         "mScriptName": "TFT16_SeraphineCritAttack",
         "mSpell": {
@@ -361,7 +361,7 @@
             },
             "mCastType": 1,
             "castFrame": 10.0,
-            "mMissileEffectKey": "{0988b8a0}",
+            "mMissileEffectKey": "TFT16_Seraphine_BA_mis",
             "mHitEffectKey": "TFT_Global_BA_Crit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -369,7 +369,7 @@
         },
         "__type": "SpellObject"
     },
-    "{84088e81}": {
+    "Characters/TFT16_Seraphine/Spells/TFT16_SeraphineSpell": {
         "ObjectName": "TFT16_SeraphineSpell",
         "mScriptName": "TFT16_SeraphineSpell",
         "mSpell": {
@@ -411,9 +411,9 @@
                     "mName": "DamagePerCrystal",
                     "mValues": [
                         0.0,
-                        25.0,
-                        40.0,
-                        200.0,
+                        35.0,
+                        55.0,
+                        300.0,
                         200.0,
                         0.0,
                         0.0
@@ -463,8 +463,8 @@
                     "mName": "BigCastHeal",
                     "mValues": [
                         0.0,
-                        60.0,
-                        90.0,
+                        40.0,
+                        80.0,
                         400.0,
                         535.0,
                         0.0,
@@ -502,13 +502,13 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{441be960}": {
+                "ModifiedDamagePerCrystal": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{64f68253}",
+                                "mDataValue": "DamagePerCrystal",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
@@ -523,7 +523,7 @@
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{ac5ae1d7}",
+                                "mDataValue": "BigCastDamage",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
@@ -532,13 +532,13 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{5002a739}": {
+                "ModifiedBigCastHeal": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{47923bbc}",
+                                "mDataValue": "BigCastHeal",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
@@ -775,10 +775,10 @@
             },
             "mCastType": 1,
             "missileSpeed": 1800.0,
-            "mMissileEffectKey": "{3b6b7dea}",
+            "mMissileEffectKey": "TFT16_Seraphine_P_Harmony_Mis",
             "mLineWidth": 120.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{59253913}",
+            "mHitEffectKey": "TFT16_Seraphine_P_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Center_Loc",
             "SpellEventToAudioEventSuffix": {
@@ -924,10 +924,10 @@
             },
             "mCastType": 1,
             "missileSpeed": 1800.0,
-            "mMissileEffectKey": "{3b6b7dea}",
+            "mMissileEffectKey": "TFT16_Seraphine_P_Harmony_Mis",
             "mLineWidth": 120.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{59253913}",
+            "mHitEffectKey": "TFT16_Seraphine_P_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Center_Loc",
             "SpellEventToAudioEventSuffix": {
@@ -938,7 +938,7 @@
         },
         "__type": "SpellObject"
     },
-    "{ef3c5e2e}": {
+    "Characters/TFT16_Seraphine/CharacterRecords/Root": {
         "mCharacterName": "TFT16_Seraphine",
         "baseHP": 800.0,
         "baseStaticHPRegen": 0.0,
@@ -985,7 +985,7 @@
             ""
         ],
         "spells": [
-            "{84088e81}",
+            "Characters/TFT16_Seraphine/Spells/TFT16_SeraphineSpell",
             "{00000000}",
             "{00000000}",
             "{00000000}"
@@ -1013,7 +1013,7 @@
         "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
-    "{f8ba05b8}": {
+    "Characters/TFT16_Seraphine/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "__linked": []

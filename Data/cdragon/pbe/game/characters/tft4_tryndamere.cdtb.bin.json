@@ -121,9 +121,9 @@
                     "mName": "SpinDamage",
                     "mValues": [
                         1.399999976158142,
-                        1.399999976158142,
-                        1.399999976158142,
-                        1.399999976158142,
+                        120.0,
+                        180.0,
+                        270.0,
                         1.399999976158142,
                         1.399999976158142,
                         1.399999976158142
@@ -180,26 +180,25 @@
                                 "mDataValue": "BonusAAPercent",
                                 "__type": "NamedDataValueCalculationPart"
                             },
-                            "mRatio": 0.009999999776482582,
-                            "mStyleTag": "noScale",
-                            "mStyleTagIfScaled": "scaleAP",
+                            "mRatio": 1.0,
+                            "mStat": 2,
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
-                    "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 },
-                "TooltipDamage": {
+                "ModifiedSpinDamage": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mStat": 2,
                             "mSubpart": {
                                 "mDataValue": "SpinDamage",
                                 "__type": "NamedDataValueCalculationPart"
                             },
-                            "__type": "StatBySubPartCalculationPart"
+                            "mRatio": 1.0,
+                            "mStat": 3,
+                            "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -265,9 +264,7 @@
                             "Elements": [
                                 {
                                     "type": "SpinDamage",
-                                    "multiplier": 100.0,
-                                    "nameOverride": "Spell_TFT4_TryndamereE_SpinDamage",
-                                    "Style": 1,
+                                    "nameOverride": "Spell_TFT4_TryndamereE_SpingDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -349,19 +346,20 @@
     },
     "Characters/TFT4_Tryndamere/CharacterRecords/Root": {
         "mCharacterName": "TFT4_Tryndamere",
-        "baseHP": 850.0,
+        "baseHP": 1000.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
+            "arBase": 40.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 85.0,
-        "baseArmor": 45.0,
-        "baseSpellBlock": 45.0,
+        "baseArmor": 65.0,
+        "baseSpellBlock": 65.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
         "baseMoveSpeed": 500.0,
@@ -423,8 +421,8 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 60.0,
         "mShopData": "{f69acf8f}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "__linked": []

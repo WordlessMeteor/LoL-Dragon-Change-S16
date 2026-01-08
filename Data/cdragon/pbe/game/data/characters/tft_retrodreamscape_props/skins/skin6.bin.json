@@ -1,0 +1,180 @@
+{
+    "{af888f9e}": {
+        "championSkinName": "TFT_RetroDreamscape_Props",
+        "skinAnimationProperties": {
+            "animationGraphData": "{70a783cb}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TFT_RetroDreamscape_Props/Skins/Skin06/TFT_RetroDreamscape_Props_Skin06.TFT_ArenaSkin_RetroDreamscape.skl",
+            "simpleSkin": "ASSETS/Characters/TFT_RetroDreamscape_Props/Skins/Skin06/TFT_RetroDreamscape_Props_Skin06.TFT_ArenaSkin_RetroDreamscape.skn",
+            "selfIllumination": 2.0,
+            "castShadows": false,
+            "submeshRenderOrder": "Trunk PalmD PalmC PalmB PalmA",
+            "materialOverride": [
+                {
+                    "Material": "{1af00cb4}",
+                    "submesh": "Trunk",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "{ab3c74db}",
+                    "submesh": "PalmA",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "{ab3c74db}",
+                    "submesh": "PalmB",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "{ab3c74db}",
+                    "submesh": "PalmC",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "{ab3c74db}",
+                    "submesh": "PalmD",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Metal",
+        "mResourceResolver": "{4e6c7694}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "{1af00cb4}": {
+        "name": "Characters/TFT_RetroDreamscape_Props/Skins/Skin6/Materials/RetroDreamscape_PalmsTrunk_AnimProp_Mat_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT_RetroDreamscape_Props/Skins/Skin06/Level7_RetroDreamscape_Palm01_Tx.TFT_ArenaSkin_RetroDreamscape.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Alpha_mult",
+                        "stencilEnable": true,
+                        "blendEnable": true,
+                        "stencilCompareFunc": 6,
+                        "StencilReferenceId": "{422f0a3f}",
+                        "stencilMask": 255,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            },
+            {
+                "name": "env_transition",
+                "parentName": "normal",
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{ab3c74db}": {
+        "name": "Characters/TFT_RetroDreamscape_Props/Skins/Skin6/Materials/RetroDreamscape_Palms_AnimProp_Mat",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT_RetroDreamscape_Props/Skins/Skin06/Level7_RetroDreamscape_Palm_Tx.TFT_ArenaSkin_RetroDreamscape.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Alpha_mult",
+                        "stencilEnable": true,
+                        "blendEnable": true,
+                        "stencilCompareFunc": 6,
+                        "StencilReferenceId": "{422f0a3f}",
+                        "stencilMask": 255,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            },
+            {
+                "name": "env_transition",
+                "parentName": "normal",
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{4e6c7694}": {
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/TFT_RetroDreamscape_Props/TFT_RetroDreamscape_Props.bin",
+        "DATA/Characters/TFT_RetroDreamscape_Props/Animations/Skin6.bin"
+    ]
+}

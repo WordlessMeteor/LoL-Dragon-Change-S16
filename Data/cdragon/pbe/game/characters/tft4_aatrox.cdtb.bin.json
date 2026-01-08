@@ -1,13 +1,13 @@
 {
     "Characters/TFT4_Aatrox/CharacterRecords/Root": {
         "mCharacterName": "TFT4_Aatrox",
-        "baseHP": 900.0,
+        "baseHP": 1000.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 150.0,
+            "arBase": 115.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
@@ -108,8 +108,9 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 75.0,
+        "mInitialMana": 45.0,
         "mShopData": "{d1a6a7e1}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Aatrox/Skins/Meta": {
@@ -299,7 +300,6 @@
                                 {
                                     "type": "Damage",
                                     "nameOverride": "Spell_ListType_ModifiedMagicDamage",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -420,6 +420,9 @@
                     },
                     {
                         "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "{91fd0920}"
                     }
                 ],
                 "__type": "MissileSpecification"

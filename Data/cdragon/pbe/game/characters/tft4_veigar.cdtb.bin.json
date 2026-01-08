@@ -7,14 +7,14 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 55.0,
+            "arBase": 50.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 40.0,
-        "baseArmor": 25.0,
-        "baseSpellBlock": 25.0,
+        "baseArmor": 30.0,
+        "baseSpellBlock": 30.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
         "baseMoveSpeed": 500.0,
@@ -56,6 +56,7 @@
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
         "mShopData": "{f1470458}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Veigar/Spells/TFT4_VeigarBasicAttack": {
@@ -449,6 +450,9 @@
                     },
                     {
                         "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "{91fd0920}"
                     }
                 ],
                 "__type": "MissileSpecification"

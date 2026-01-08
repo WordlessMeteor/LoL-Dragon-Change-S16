@@ -483,9 +483,9 @@
                     "mName": "PercentAD",
                     "mValues": [
                         0.0,
-                        0.30000001192092896,
-                        0.4000000059604645,
-                        7.769999980926514,
+                        20.0,
+                        40.0,
+                        1144.0,
                         7.769999980926514,
                         7.769999980926514,
                         7.769999980926514
@@ -577,7 +577,7 @@
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 1.0,
-                            "mStat": 2,
+                            "mStat": 3,
                             "mStyleTag": "scaleAD",
                             "mStyleTagIfScaled": "scaleAD",
                             "__type": "SubPartScaledProportionalToStat"
@@ -585,6 +585,22 @@
                         {
                             "mDataValue": "BaseDamage",
                             "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 3,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "PercentAD",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 1.0,
+                            "mStat": 3,
+                            "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -674,9 +690,7 @@
                                 },
                                 {
                                     "type": "PercentAD",
-                                    "multiplier": 100.0,
-                                    "nameOverride": "Spell_ListType_ADScaling",
-                                    "Style": 1,
+                                    "nameOverride": "Spell_TFT4_SamiraR_PercentAD",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -1063,7 +1077,7 @@
                 "__type": "TFTTraitContributionData"
             }
         ],
-        "CharacterRole": "{34ed6daa}",
+        "CharacterRole": "{a35256da}",
         "mMoveInterval": -0.10000000149011612,
         "mMoveProximity": 180.0,
         "mMoveRange": 500.0,

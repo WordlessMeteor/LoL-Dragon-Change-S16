@@ -8,9 +8,9 @@
                     "mName": "PercentOfAD",
                     "mValues": [
                         0.0,
-                        2.0,
-                        2.0,
-                        3.5,
+                        190.0,
+                        290.0,
+                        750.0,
                         4.0,
                         0.0,
                         0.0
@@ -72,7 +72,7 @@
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 1.0,
-                            "mStat": 2,
+                            "mStat": 3,
                             "mStyleTag": "scaleAD",
                             "mStyleTagIfScaled": "scaleAD",
                             "__type": "SubPartScaledProportionalToStat"
@@ -131,9 +131,7 @@
                             "Elements": [
                                 {
                                     "type": "PercentOfAD",
-                                    "multiplier": 100.0,
-                                    "nameOverride": "Spell_ListType_ADScaling",
-                                    "Style": 1,
+                                    "nameOverride": "TFT_AD_Damage_NoCalculation",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -328,25 +326,25 @@
     },
     "Characters/TFT4_Talon/CharacterRecords/Root": {
         "mCharacterName": "TFT4_Talon",
-        "baseHP": 800.0,
+        "baseHP": 850.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 40.0,
+            "arBase": 30.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 95.0,
-        "baseArmor": 40.0,
-        "baseSpellBlock": 40.0,
+        "baseArmor": 45.0,
+        "baseSpellBlock": 45.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
-        "attackSpeed": 0.800000011920929,
+        "attackSpeed": 0.8500000238418579,
         "attackSpeedRatio": 0.800000011920929,
         "basicAttack": {
             "mAttackProbability": 0.5,
@@ -402,6 +400,7 @@
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
         "mShopData": "{63038e86}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Talon/Skins/Meta": {

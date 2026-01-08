@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "ブルータライザー",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "<scaleAD>攻撃力が@AD@</scaleAD>、スキルヘイストが@AbilityHaste@、<scaleLethality>脅威が@Lethality@</scaleLethality>増加する。"
         },
         {
@@ -2774,13 +2774,13 @@
                 "MaxBeeStacks": 8.0,
                 "StartingBees": 1.0
             },
-            "desc": "ハチを@StartingBees@匹所持して各ラウンドを開始し、花を摘むごとに追加のハチを獲得する。敵チャンピオンにダメージを与えるとハチが送り出され、到着後@DebuffDuration@秒かけて<magicDamage>@BeeDamage@の魔法ダメージ</magicDamage>を与えて自分のところに戻ってくる。<br>",
+            "desc": "ハチを@StartingBees@匹所持して各ラウンドを開始し、花を摘むごとに追加のハチを獲得する。敵チャンピオンにダメージを与えるとハチが送り出され、到着後@DebuffDuration@秒かけて<magicDamage>@BeeDamage@の魔法ダメージ</magicDamage>を与えて自身のところに戻ってくる。<br>",
             "iconLarge": "assets/ux/cherry/augments/icons/hive_mind_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/hive_mind_small.png",
             "id": 338,
             "name": "集合意識",
             "rarity": 2,
-            "tooltip": "ハチを@StartingBees@匹所持して各ラウンドを開始し、花を摘むごとに追加のハチを獲得する。敵チャンピオンにダメージを与えるとハチが送り出され、到着後@DebuffDuration@秒かけて<magicDamage>@BeeDamage@の魔法ダメージ</magicDamage>を与えて自分のところに戻ってくる。<br><br>このラウンドで与えたダメージ: @f1@<br>与えたダメージの合計: @f2@"
+            "tooltip": "ハチを@StartingBees@匹所持して各ラウンドを開始し、花を摘むごとに追加のハチを獲得する。敵チャンピオンにダメージを与えるとハチが送り出され、到着後@DebuffDuration@秒かけて<magicDamage>@BeeDamage@の魔法ダメージ</magicDamage>を与えて自身のところに戻ってくる。<br><br>このラウンドで与えたダメージ: @f1@<br>与えたダメージの合計: @f2@"
         },
         {
             "apiName": "Quest_ThreeSacredTreasures",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "{{ Item_Keyword_OnHit }}で残りクールダウンの@CooldownRefund*100@%分、通常スキルのクールダウンが短縮される。",
+            "desc": "Cherry_MysticPunch_Summary",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "神秘の鉄拳",
             "rarity": 2,
-            "tooltip": "{{ Item_Keyword_OnHit }}で残りクールダウンの@CooldownRefund*100@%分、通常スキルのクールダウンが短縮される。"
+            "tooltip": "Cherry_MysticPunch_Summary"
         },
         {
             "apiName": "Homeguard",
@@ -4519,7 +4519,7 @@
             "iconLarge": "assets/ux/cherry/augments/icons/quest_steelyourheart_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/quest_steelyourheart_small.png",
             "id": 152,
-            "name": "クエスト: キミのハートをスチール",
+            "name": "クエスト: 覚悟を決めろ",
             "rarity": 1,
             "tooltip": "条件: 「心の鋼」を所持して、スタックを@StackThreshold@以上溜める。<br><br>報酬: 「心の鋼」のスタック数が@StackMultiplication@倍になる。<healing>体力自動回復</healing>が「心の鋼」のスタック数の@StacktoRegenConversion*100@%分だけ増加する。"
         },

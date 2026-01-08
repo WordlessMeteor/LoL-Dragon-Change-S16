@@ -1,5 +1,5 @@
 {
-    "{1df7d6bd}": {
+    "Characters/TFT16_Kobuko/Spells/TFT16_KobukoBasicAttack": {
         "ObjectName": "TFT16_KobukoBasicAttack",
         "mScriptName": "TFT16_KobukoBasicAttack",
         "mSpell": {
@@ -36,7 +36,7 @@
         },
         "__type": "SpellObject"
     },
-    "{8d8c5ec1}": {
+    "Characters/TFT16_Kobuko/Spells/TFT16_KobukoSpell": {
         "ObjectName": "TFT16_KobukoSpell",
         "mScriptName": "TFT16_KobukoSpell",
         "mSpell": {
@@ -100,10 +100,10 @@
                     "mName": "SelfHealAP",
                     "mValues": [
                         100.0,
-                        100.0,
-                        140.0,
-                        200.0,
-                        280.0,
+                        180.0,
+                        240.0,
+                        300.0,
+                        400.0,
                         0.0,
                         0.0
                     ],
@@ -112,13 +112,13 @@
                 {
                     "mName": "SelfHealHealthPercent",
                     "mValues": [
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -156,7 +156,7 @@
                     "mFormulaParts": [
                         {
                             "mSubpart": {
-                                "mDataValue": "{5e8c7b96}",
+                                "mDataValue": "YuumiHeal",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
@@ -173,7 +173,7 @@
                             "mSubparts": [
                                 {
                                     "mSubpart": {
-                                        "mDataValue": "{fab98704}",
+                                        "mDataValue": "SelfHealAP",
                                         "__type": "NamedDataValueCalculationPart"
                                     },
                                     "mRatio": 0.009999999776482582,
@@ -181,7 +181,7 @@
                                 },
                                 {
                                     "mStat": 12,
-                                    "mDataValue": "{62dc5894}",
+                                    "mDataValue": "SelfHealHealthPercent",
                                     "__type": "StatByNamedDataValueCalculationPart"
                                 }
                             ],
@@ -273,7 +273,7 @@
         },
         "__type": "SpellObject"
     },
-    "{bc26c31d}": {
+    "Characters/TFT16_Kobuko/Spells/TFT16_KobukoBasicAttack2": {
         "ObjectName": "TFT16_KobukoBasicAttack2",
         "mScriptName": "TFT16_KobukoBasicAttack2",
         "mSpell": {
@@ -311,7 +311,7 @@
         },
         "__type": "SpellObject"
     },
-    "{f2d6c2fd}": {
+    "Characters/TFT16_Kobuko/Spells/TFT16_KobukoCritAttack": {
         "ObjectName": "TFT16_KobukoCritAttack",
         "mScriptName": "TFT16_KobukoCritAttack",
         "mSpell": {
@@ -347,10 +347,10 @@
         },
         "__type": "SpellObject"
     },
-    "{73ba9424}": {
+    "Characters/TFT16_Kobuko/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{d77defb2}": {
+    "Characters/TFT16_Kobuko/CharacterRecords/Root": {
         "mCharacterName": "TFT16_Kobuko",
         "baseHP": 950.0,
         "baseStaticHPRegen": 0.0,
@@ -397,7 +397,7 @@
             ""
         ],
         "spells": [
-            "{8d8c5ec1}",
+            "Characters/TFT16_Kobuko/Spells/TFT16_KobukoSpell",
             "{00000000}",
             "{00000000}",
             "{00000000}"

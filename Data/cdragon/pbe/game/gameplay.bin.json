@@ -697,6 +697,53 @@
         ],
         "__type": "ViewControllerList"
     },
+    "{59793893}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "ChampionSkinDataLink": "Characters/Briar/Skins/Skin20",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Briar/Skins/Skin21",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Briar/Skins/Skin22",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Briar/Skins/Skin23",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Briar/Skins/Skin24",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Briar/Skins/Skin25",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Briar/Skins/Skin26",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Briar/Skins/Skin27",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Briar/Skins/Skin28",
+                    "__type": "ViewControllerFilter_Champion"
+                }
+            ],
+            "__type": "ViewControllerFilter_Or"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/LoL/Skins/BriarSkin20"
+        ],
+        "__type": "ViewControllerList"
+    },
     "{5a31156f}": {
         "Filter": {
             "Filters": [
@@ -805,6 +852,24 @@
         "ViewControllers": [
             "ClientStates/Gameplay/UX/LoL/Ruby/RubyGameHeader"
         ],
+        "__type": "ViewControllerList"
+    },
+    "{6b10b23c}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "Filter": {
+                        "__type": "ViewControllerFilter_Spectator"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                },
+                {
+                    "Mode": "Maps/Shipping/Map11/Modes/WASD",
+                    "__type": "ViewControllerFilter_Mode"
+                }
+            ],
+            "__type": "ViewControllerFilter_And"
+        },
         "__type": "ViewControllerList"
     },
     "{6e8e0534}": {
@@ -1152,6 +1217,21 @@
         },
         "ViewControllers": [
             "ClientStates/Gameplay/UX/LoL/Champ/KaynTransform"
+        ],
+        "__type": "ViewControllerList"
+    },
+    "{989b6675}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "TFTSetData": "Maps/Shipping/Map22/Sets/TFTSet4_Act2",
+                    "__type": "{349845d9}"
+                }
+            ],
+            "__type": "ViewControllerFilter_Or"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/TFT/TFTGameStart"
         ],
         "__type": "ViewControllerList"
     },
@@ -1896,7 +1976,8 @@
             "__type": "ViewControllerFilter_And"
         },
         "ViewControllers": [
-            "ClientStates/Gameplay/UX/LoL/LoLGameTimeHeader"
+            "ClientStates/Gameplay/UX/LoL/LoLGameTimeHeader",
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection"
         ],
         "__type": "ViewControllerList"
     },
@@ -2147,7 +2228,7 @@
             "Maps/Shipping/Map11/Modes/PRACTICETOOL",
             "Maps/Shipping/Map11/Modes/ULTBOOK",
             "Maps/Shipping/Map21/Modes/NEXUSBLITZ",
-            "Maps/Shipping/Map11/Modes/TUTORIAL_MODULE_1",
+            "Maps/Shipping/Map11/Modes/WASD",
             "Maps/Shipping/Map30/Modes/CHERRY",
             "Maps/TestMaps/Map0/Modes/LightingPlayground",
             "Maps/TestMaps/Map0/Modes/Lightopia",
@@ -2212,9 +2293,67 @@
             "{c35b82ea}",
             "{66c3ef36}",
             "{52920b68}",
+            "{59793893}",
             "{9192c3da}",
             "{831cd35b}",
             "{27ebc1ed}"
+        ],
+        "__type": "ViewControllerSet"
+    },
+    "{af414e93}": {
+        "ClientState": "Gameplay",
+        "SpecifiedGameModes": [
+            "Maps/Shipping/Map11/Modes/TUTORIAL_MODULE_1"
+        ],
+        "ListsToLoad": [
+            "{e38e37fc}",
+            "{9cd9b4d9}",
+            "{1b89e6cf}",
+            "{e48964a2}",
+            "{ab73e0ed}",
+            "{90c14627}",
+            "{08c76845}",
+            "{1818bf4e}",
+            "{9fbf6039}",
+            "{f665c339}",
+            "{20607cff}",
+            "{928279f3}",
+            "{3fcf3af7}",
+            "{8d15449c}",
+            "{32c45aba}",
+            "{e7937f8d}",
+            "{74c53618}",
+            "{b18bf3c8}",
+            "{c4e5b6cf}",
+            "{ecf0ebb5}",
+            "{0923e281}",
+            "{8ad42640}",
+            "{2ff23ec6}",
+            "{38631a2e}",
+            "{32232bef}",
+            "{15c59aa1}",
+            "{f67b6a51}",
+            "{004411e2}",
+            "{a96cb2bc}",
+            "{8b9cd416}",
+            "{ce733481}",
+            "{d65681aa}",
+            "{f6918168}",
+            "{1b699102}",
+            "{d41225e7}",
+            "{c59ea7c7}",
+            "{eff8fc00}",
+            "{b931afa5}",
+            "{050f9bfb}",
+            "{13d3ad51}",
+            "{6e8e0534}",
+            "{c648f339}",
+            "{3bc84de4}",
+            "{714e5edf}",
+            "{556028a4}",
+            "{bd2e78df}",
+            "{52920b68}",
+            "{59793893}"
         ],
         "__type": "ViewControllerSet"
     },
@@ -2247,7 +2386,8 @@
             "{25ea0be6}",
             "{3833c472}",
             "{862591ad}",
-            "{9129c87d}"
+            "{9129c87d}",
+            "{989b6675}"
         ],
         "__type": "ViewControllerSet"
     },
@@ -2289,7 +2429,13 @@
             "{13d3ad51}",
             "{ea390d26}",
             "{1b89e6cf}",
-            "{52920b68}"
+            "{52920b68}",
+            "{3bc84de4}",
+            "{c648f339}",
+            "{6e8e0534}",
+            "{714e5edf}",
+            "{556028a4}",
+            "{bd2e78df}"
         ],
         "__type": "ViewControllerSet"
     },

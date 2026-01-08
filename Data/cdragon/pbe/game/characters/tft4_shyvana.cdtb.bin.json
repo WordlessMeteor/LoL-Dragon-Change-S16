@@ -1,25 +1,25 @@
 {
     "Characters/TFT4_Shyvana/CharacterRecords/Root": {
         "mCharacterName": "TFT4_Shyvana",
-        "baseHP": 700.0,
+        "baseHP": 800.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 75.0,
+            "arBase": 30.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 75.0,
-        "baseArmor": 40.0,
-        "baseSpellBlock": 40.0,
+        "baseArmor": 60.0,
+        "baseSpellBlock": 60.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
-        "attackSpeed": 0.75,
+        "attackSpeed": 0.8500000238418579,
         "attackSpeedRatio": 0.75,
         "basicAttack": {
             "mAttackProbability": 0.5,
@@ -73,6 +73,7 @@
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
         "mShopData": "{994f02c0}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Shyvana/Spells/TFT4_ShyvanaTransform": {
@@ -790,21 +791,18 @@
                                 {
                                     "type": "BurnDamage",
                                     "nameOverride": "Spell_ListType_Damage",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "ADWhileDragon",
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_ShyvanaADWhileDragon",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "BonusHealthPercent",
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_TFT7_VolibearP_BonusHealth",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

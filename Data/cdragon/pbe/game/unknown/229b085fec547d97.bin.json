@@ -1,0 +1,3925 @@
+{
+    "{21b6f8df}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 30.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 30.0,
+                "isSingleParticle": 1,
+                "childParticleSetDefinition": {
+                    "childrenIdentifiers": [
+                        {
+                            "effect": "{4d81014c}",
+                            "__type": "VfxChildIdentifier"
+                        }
+                    ],
+                    "ParentInheritanceDefinition": {
+                        "Mode": 16,
+                        "__type": "VfxParentInheritanceParams"
+                    },
+                    "__type": "VfxChildParticleSetDefinitionData"
+                },
+                "emitterName": "LOOP",
+                "blendMode": 1,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "isLocalOrientation": 0,
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.0024500000290572643,
+                            0.004000000189989805,
+                            0.007000000216066837,
+                            0.9399999976158142,
+                            0.9639999866485596,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.9369999766349792,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0391721725463867,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.2975621521472931,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 30.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 30.0,
+                "isSingleParticle": 1,
+                "childParticleSetDefinition": {
+                    "childrenIdentifiers": [
+                        {
+                            "effect": "{50810605}",
+                            "__type": "VfxChildIdentifier"
+                        }
+                    ],
+                    "ParentInheritanceDefinition": {
+                        "Mode": 16,
+                        "__type": "VfxParentInheritanceParams"
+                    },
+                    "__type": "VfxChildParticleSetDefinitionData"
+                },
+                "emitterName": "LOOP1",
+                "blendMode": 1,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "isLocalOrientation": 0,
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 3.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            1.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "lifetime": 29.0,
+                "emitterName": "BrightGlitches",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        300.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                300.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "radius": 200.0,
+                    "__type": "VfxShapeCylinder"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        100.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveRay"
+                },
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_BattleBoss/Veigar_Base_FlickerColor.TFT_Portal1_BattleBoss.tex",
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            0.10000000149011612,
+                            0.25,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.9700007438659668,
+                                0.8599984645843506,
+                                0.5799953937530518,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.8697337508201599,
+                                0.5960784554481506,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.7094529867172241,
+                                0.27843138575553894,
+                                1.0
+                            ],
+                            [
+                                0.886274516582489,
+                                0.5658503174781799,
+                                0.10980392247438431,
+                                1.0
+                            ],
+                            [
+                                0.8901960849761963,
+                                0.5362020134925842,
+                                0.08627451211214066,
+                                1.0
+                            ],
+                            [
+                                0.7882658243179321,
+                                0.43622490763664246,
+                                0.12446784228086472,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 80,
+                "miscRenderFlags": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    0.5001000165939331
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                90.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    0.0,
+                                    -1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        120.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    2.0,
+                                    3.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                50.0,
+                                120.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.6000000238418579,
+                                0.6000000238418579,
+                                1.0
+                            ],
+                            [
+                                0.6000000238418579,
+                                0.6000000238418579,
+                                1.0
+                            ],
+                            [
+                                0.24000000953674316,
+                                0.24000000953674316,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_D_Mask_Tx.TFT_Portal1_Arcana.tex",
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            1.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "lifetime": 29.0,
+                "emitterName": "BrightGlitches1",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        300.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                300.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "radius": 200.0,
+                    "__type": "VfxShapeCylinder"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        100.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveRay"
+                },
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_BattleBoss/Veigar_Base_FlickerColor.TFT_Portal1_BattleBoss.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.9000076055526733,
+                        0.5600060820579529,
+                        0.2699931263923645,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    0.800000011920929
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.9000076055526733,
+                                0.5600060820579529,
+                                0.2699931263923645,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            0.10000000149011612,
+                            0.25,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.9700007438659668,
+                                0.8599984645843506,
+                                0.5799953937530518,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.8697337508201599,
+                                0.5960784554481506,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.7094529867172241,
+                                0.27843138575553894,
+                                1.0
+                            ],
+                            [
+                                0.886274516582489,
+                                0.5658503174781799,
+                                0.10980392247438431,
+                                1.0
+                            ],
+                            [
+                                0.8901960849761963,
+                                0.5362020134925842,
+                                0.08627451211214066,
+                                1.0
+                            ],
+                            [
+                                0.7882658243179321,
+                                0.43622490763664246,
+                                0.12446784228086472,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 80,
+                "miscRenderFlags": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    0.5001000165939331
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                90.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    0.0,
+                                    -1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        120.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    2.0,
+                                    3.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                50.0,
+                                120.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.6000000238418579,
+                                0.6000000238418579,
+                                1.0
+                            ],
+                            [
+                                0.6000000238418579,
+                                0.6000000238418579,
+                                1.0
+                            ],
+                            [
+                                0.24000000953674316,
+                                0.24000000953674316,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_D_Mask_Tx.TFT_Portal1_Arcana.tex",
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Portal1_Arcana_Depart",
+        "particlePath": "Loadouts/TFTZoomSkins/Portal1_Arcana/VFXDefinition/Portal1_Arcana_Depart",
+        "soundPersistentDefault": "Play_sfx_tft_portal_base_depart_loop",
+        "flags": 87,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{4a80fc93}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxC6",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_WinterBlessed_SkyboxC1_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.5000076293945312
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -70,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_B_Tx.TFT_Portal1_Arcana.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.10000000149011612
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 3,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.699999988079071
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.699999988079071
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_WinterBlessed_SkyboxC_Mask_Tx.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxC7",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_WinterBlessed_SkyboxC1_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -69,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_A_Tx.TFT_Portal1_Arcana.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.10000000149011612
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 3,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.699999988079071
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.699999988079071
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_WinterBlessed_SkyboxC_Mask_Tx.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxC8",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_WinterBlessed_SkyboxC1_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.5000076293945312
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -70,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        120.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_B_Tx.TFT_Portal1_Arcana.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.10000000149011612
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 3,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.699999988079071
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.699999988079071
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_WinterBlessed_SkyboxC_Mask_Tx.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxC9",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_WinterBlessed_SkyboxC1_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -69,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        130.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_A_Tx.TFT_Portal1_Arcana.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.10000000149011612
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 3,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.699999988079071
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.699999988079071
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_WinterBlessed_SkyboxC_Mask_Tx.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxC10",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_WinterBlessed_SkyboxC1_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.5000076293945312
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -70,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        240.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_B_Tx.TFT_Portal1_Arcana.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.10000000149011612
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 3,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.699999988079071
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.699999988079071
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_WinterBlessed_SkyboxC_Mask_Tx.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxC11",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_WinterBlessed_SkyboxC1_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -69,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        250.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_A_Tx.TFT_Portal1_Arcana.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.10000000149011612
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 3,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.699999988079071
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.699999988079071
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_WinterBlessed_SkyboxC_Mask_Tx.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Portal1_Arcana_Arrive_Child04",
+        "particlePath": "Loadouts/TFTZoomSkins/Portal1_Arcana/VFXDefinition/Portal1_Arcana_Arrive_Child04",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{4d81014c}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.5,
+                "isSingleParticle": 1,
+                "emitterName": "Edge",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_A_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": 50,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "constantValue": 0.0,
+                        "__type": "ValueFloat"
+                    },
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Ahri_Base_SmallStarTrail.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_Tx.TFT_Portal1_Arcana.tex",
+                "particleUVScrollRate": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 30.0,
+                "isSingleParticle": 1,
+                "emitterName": "mask",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_Arcana_Mask_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -200,
+                "meshRenderFlags": 0,
+                "miscRenderFlags": 1,
+                "stencilMode": 1,
+                "StencilReferenceId": "{39906c46}",
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        0.8999999761581421,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/blackbox.TFT_Portal1_Arcana.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.5,
+                "isSingleParticle": 1,
+                "emitterName": "Edge1",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_A_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "stencilMode": 1,
+                "StencilReferenceId": "{fdd90589}",
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_C_Mask_Tx01.TFT_Portal1_Arcana.tex",
+                "particleUVScrollRate": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "lifetime": 2.5,
+                "isSingleParticle": 1,
+                "emitterName": "Edge2",
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.5199969410896301,
+                        0.39000535011291504,
+                        0.10000763088464737,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 52,
+                "alphaRef": 0,
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{fdd90589}",
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        -100.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        280.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Glow01.TFT_Portal1_Arcana.tex",
+                "particleUVScrollRate": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.5,
+                "isSingleParticle": 1,
+                "emitterName": "Edge3",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_A_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.10000763088464737
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 51,
+                "meshRenderFlags": 0,
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_C_Mask_Tx01.TFT_Portal1_Arcana.tex",
+                "particleUVScrollRate": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Portal1_Arcana_Arrive_Child01",
+        "particlePath": "Loadouts/TFTZoomSkins/Portal1_Arcana/VFXDefinition/Portal1_Arcana_Arrive_Child01",
+        "flags": 213,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{4f810472}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxC6",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_WinterBlessed_SkyboxC1_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.5000076293945312
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -70,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_B_Tx.TFT_Portal1_Arcana.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.8999999761581421
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 3,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.699999988079071
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.699999988079071
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_WinterBlessed_SkyboxC_Mask_Tx.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxC7",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_WinterBlessed_SkyboxC1_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -69,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_A_Tx.TFT_Portal1_Arcana.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.8999999761581421
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 3,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.699999988079071
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.699999988079071
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_WinterBlessed_SkyboxC_Mask_Tx.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxC8",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_WinterBlessed_SkyboxC1_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.5000076293945312
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -70,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        120.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_B_Tx.TFT_Portal1_Arcana.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.8999999761581421
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 3,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.699999988079071
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.699999988079071
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_WinterBlessed_SkyboxC_Mask_Tx.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxC9",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_WinterBlessed_SkyboxC1_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -69,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        130.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_A_Tx.TFT_Portal1_Arcana.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.8999999761581421
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 3,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.699999988079071
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.699999988079071
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_WinterBlessed_SkyboxC_Mask_Tx.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxC10",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_WinterBlessed_SkyboxC1_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.5000076293945312
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -70,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        240.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_B_Tx.TFT_Portal1_Arcana.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.8999999761581421
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 3,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.699999988079071
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.699999988079071
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_WinterBlessed_SkyboxC_Mask_Tx.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxC11",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_WinterBlessed_SkyboxC1_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -69,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        250.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_VFX_A_Tx.TFT_Portal1_Arcana.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.8999999761581421
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 3,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.699999988079071
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.699999988079071
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_WinterBlessed_SkyboxC_Mask_Tx.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Portal1_Arcana_Arrive_Child03",
+        "particlePath": "Loadouts/TFTZoomSkins/Portal1_Arcana/VFXDefinition/Portal1_Arcana_Arrive_Child03",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{50810605}": {
+        "complexEmitterDefinitionData": [
+            {
+                "timeBeforeFirstEmission": 3.0,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 3.5,
+                "isSingleParticle": 1,
+                "childParticleSetDefinition": {
+                    "childrenIdentifiers": [
+                        {
+                            "effect": "{4a80fc93}",
+                            "__type": "VfxChildIdentifier"
+                        }
+                    ],
+                    "__type": "VfxChildParticleSetDefinitionData"
+                },
+                "emitterName": "new",
+                "alphaRef": 0,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        360.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                360.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 3.299999952316284,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 40.0,
+                "childParticleSetDefinition": {
+                    "childrenIdentifiers": [
+                        {
+                            "effect": "{4f810472}",
+                            "__type": "VfxChildIdentifier"
+                        }
+                    ],
+                    "__type": "VfxChildParticleSetDefinitionData"
+                },
+                "emitterName": "new1",
+                "alphaRef": 0,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        360.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                360.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxA4",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_Arcana_SkyboxA_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.6000000238418579,
+                        0.5960784554481506,
+                        0.5960784554481506,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -100,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "isLocalOrientation": 0,
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_SkyboxA_Tx.TFT_Portal1_Arcana.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxA5",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_Arcana_SkyboxA_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.8599984645843506,
+                        0.08999770879745483,
+                        0.14000152051448822,
+                        0.25999847054481506
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -99,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "isLocalOrientation": 0,
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Runeterra_Mask_B.TFT_Portal1_Arcana.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        -0.20000000298023224,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxA6",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_Arcana_SkyboxA_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.545098066329956,
+                        0.0784313753247261,
+                        0.03529411926865578,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -98,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "isLocalOrientation": 0,
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Anniversary_Portal2_Shockwave_AlphaBreakup.TFT_Portal1_Arcana.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        -0.20000000298023224,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxA7",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_Arcana_SkyboxA_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.5843137502670288,
+                        0.062745101749897,
+                        0.09803921729326248,
+                        0.3686274588108063
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -96,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "isLocalOrientation": 0,
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_B_Mask_Tx.TFT_Portal1_Arcana.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.20000000298023224,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        -1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SkyboxB1",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/TFT_Portal1_Arcana_SkyboxB_Mesh.TFT_Portal1_Arcana.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.8274509906768799,
+                        0.8274509906768799,
+                        0.8274509906768799,
+                        0.34117648005485535
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -80,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "constantValue": 0.0,
+                        "__type": "ValueFloat"
+                    },
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Ahri_Base_SmallStarTrail.TFT_Portal1_Arcana.tex",
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isGroundLayer": 1,
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        -60.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Wind01.TFT_Portal1_Arcana.tex",
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        2.0,
+                        0.5
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/PetChibiMalphite_Skin2_Akshan_Skin10_Noise06.TFT_Portal1_Arcana.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            2.0,
+                            1.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.0,
+                            -1.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "lifetime": 2.5,
+                "isSingleParticle": 1,
+                "emitterName": "Square4",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/StarAni_01.TFT_Portal1_Arcana.skn",
+                        "mMeshSkeletonName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/StarAni_01.TFT_Portal1_Arcana.skl",
+                        "mAnimationName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/StarAni_02.TFT_Portal1_Arcana.anm",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -20,
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        45.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_Square_Tx.TFT_Portal1_Arcana.tex",
+                "particleUVScrollRate": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "lifetime": 2.5,
+                "isSingleParticle": 1,
+                "emitterName": "Square5",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/StarAni_01.TFT_Portal1_Arcana.skn",
+                        "mMeshSkeletonName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/StarAni_01.TFT_Portal1_Arcana.skl",
+                        "mAnimationName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/StarAni_02.TFT_Portal1_Arcana.anm",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.7287251353263855,
+                        0.6307011246681213,
+                        0.29372090101242065,
+                        0.5607843399047852
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -15,
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        45.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_Square_Tx.TFT_Portal1_Arcana.tex",
+                "particleUVScrollRate": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/HighLight01.TFT_Portal1_Arcana.tex",
+                    "UvRotationMult": {
+                        "constantValue": 45.0,
+                        "__type": "ValueFloat"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.0,
+                            0.5
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "lifetime": 2.5,
+                "isSingleParticle": 1,
+                "emitterName": "Square6",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/StarAni_01.TFT_Portal1_Arcana.skn",
+                        "mMeshSkeletonName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/StarAni_01.TFT_Portal1_Arcana.skl",
+                        "mAnimationName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/StarAni_01.TFT_Portal1_Arcana.anm",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": -14,
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        45.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_Square_Star_Tx.TFT_Portal1_Arcana.tex",
+                "particleUVScrollRate": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "lifetime": 2.5,
+                "isSingleParticle": 1,
+                "emitterName": "Square7",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/StarAni_01.TFT_Portal1_Arcana.skn",
+                        "mMeshSkeletonName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/StarAni_01.TFT_Portal1_Arcana.skl",
+                        "mAnimationName": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/StarAni_01.TFT_Portal1_Arcana.anm",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.7287251353263855,
+                        0.6307011246681213,
+                        0.29372090101242065,
+                        0.5607843399047852
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -10,
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "stencilMode": 2,
+                "StencilReferenceId": "{39906c46}",
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        45.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_Square_Star_Tx.TFT_Portal1_Arcana.tex",
+                "particleUVScrollRate": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/HighLight01.TFT_Portal1_Arcana.tex",
+                    "UvRotationMult": {
+                        "constantValue": 45.0,
+                        "__type": "ValueFloat"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.0,
+                            0.5
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Portal1_Arcana_Arrive_Child02",
+        "particlePath": "Loadouts/TFTZoomSkins/Portal1_Arcana/VFXDefinition/Portal1_Arcana_Arrive_Child02",
+        "flags": 213,
+        "buildUpTime": 3.299999952316284,
+        "transform": [
+            [
+                0.9999999403953552,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.9999999403953552,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                0.9999998807907104,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{aa453e32}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.75,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.75,
+                "isSingleParticle": 1,
+                "childParticleSetDefinition": {
+                    "childrenIdentifiers": [
+                        {
+                            "effect": "{4d81014c}",
+                            "__type": "VfxChildIdentifier"
+                        }
+                    ],
+                    "ParentInheritanceDefinition": {
+                        "Mode": 16,
+                        "__type": "VfxParentInheritanceParams"
+                    },
+                    "__type": "VfxChildParticleSetDefinitionData"
+                },
+                "emitterName": "LOOP1",
+                "blendMode": 1,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "isLocalOrientation": 0,
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.026745913550257683,
+                            0.0460624061524868,
+                            0.07821721583604813,
+                            0.9400333762168884,
+                            0.9643387794494629,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.9367396831512451,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0391721725463867,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.2975621521472931,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.75,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.75,
+                "isSingleParticle": 1,
+                "childParticleSetDefinition": {
+                    "childrenIdentifiers": [
+                        {
+                            "effect": "{50810605}",
+                            "__type": "VfxChildIdentifier"
+                        }
+                    ],
+                    "ParentInheritanceDefinition": {
+                        "Mode": 16,
+                        "__type": "VfxParentInheritanceParams"
+                    },
+                    "__type": "VfxChildParticleSetDefinitionData"
+                },
+                "emitterName": "LOOP2",
+                "blendMode": 1,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "isLocalOrientation": 0,
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 3.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            1.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "lifetime": 2.700000047683716,
+                "emitterName": "BrightGlitches",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        300.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                300.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "radius": 200.0,
+                    "__type": "VfxShapeCylinder"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        100.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveRay"
+                },
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_BattleBoss/Veigar_Base_FlickerColor.TFT_Portal1_BattleBoss.tex",
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            0.10000000149011612,
+                            0.25,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.9700007438659668,
+                                0.8599984645843506,
+                                0.5799953937530518,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.8697337508201599,
+                                0.5960784554481506,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.7094529867172241,
+                                0.27843138575553894,
+                                1.0
+                            ],
+                            [
+                                0.886274516582489,
+                                0.5658503174781799,
+                                0.10980392247438431,
+                                1.0
+                            ],
+                            [
+                                0.8901960849761963,
+                                0.5362020134925842,
+                                0.08627451211214066,
+                                1.0
+                            ],
+                            [
+                                0.7882658243179321,
+                                0.43622490763664246,
+                                0.12446784228086472,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 80,
+                "miscRenderFlags": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    0.5001000165939331
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                90.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    0.0,
+                                    -1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        120.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    2.0,
+                                    3.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                50.0,
+                                120.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.6000000238418579,
+                                0.6000000238418579,
+                                1.0
+                            ],
+                            [
+                                0.6000000238418579,
+                                0.6000000238418579,
+                                1.0
+                            ],
+                            [
+                                0.24000000953674316,
+                                0.24000000953674316,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_D_Mask_Tx.TFT_Portal1_Arcana.tex",
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            1.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "lifetime": 2.700000047683716,
+                "emitterName": "BrightGlitches1",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        300.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                300.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "radius": 200.0,
+                    "__type": "VfxShapeCylinder"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        100.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveRay"
+                },
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_BattleBoss/Veigar_Base_FlickerColor.TFT_Portal1_BattleBoss.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.9000076055526733,
+                        0.5600060820579529,
+                        0.2699931263923645,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    0.800000011920929
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.9000076055526733,
+                                0.5600060820579529,
+                                0.2699931263923645,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            0.10000000149011612,
+                            0.25,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.9700007438659668,
+                                0.8599984645843506,
+                                0.5799953937530518,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.8697337508201599,
+                                0.5960784554481506,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.7094529867172241,
+                                0.27843138575553894,
+                                1.0
+                            ],
+                            [
+                                0.886274516582489,
+                                0.5658503174781799,
+                                0.10980392247438431,
+                                1.0
+                            ],
+                            [
+                                0.8901960849761963,
+                                0.5362020134925842,
+                                0.08627451211214066,
+                                1.0
+                            ],
+                            [
+                                0.7882658243179321,
+                                0.43622490763664246,
+                                0.12446784228086472,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 80,
+                "miscRenderFlags": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    0.5001000165939331
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                90.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    0.0,
+                                    -1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        120.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    2.0,
+                                    3.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                50.0,
+                                120.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.6000000238418579,
+                                0.6000000238418579,
+                                1.0
+                            ],
+                            [
+                                0.6000000238418579,
+                                0.6000000238418579,
+                                1.0
+                            ],
+                            [
+                                0.24000000953674316,
+                                0.24000000953674316,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Zooms/Portal1_Arcana/Portal1_Arcana_D_Mask_Tx.TFT_Portal1_Arcana.tex",
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Portal1_Arcana_Arrive",
+        "particlePath": "Loadouts/TFTZoomSkins/Portal1_Arcana/VFXDefinition/Portal1_Arcana_Arrive",
+        "flags": 101,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": []
+}

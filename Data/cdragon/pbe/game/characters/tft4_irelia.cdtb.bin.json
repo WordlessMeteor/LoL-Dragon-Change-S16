@@ -236,8 +236,7 @@
                             "Elements": [
                                 {
                                     "type": "Damage",
-                                    "nameOverride": "Spell_ListType_ModifiedMagicDamage",
-                                    "Style": 1,
+                                    "nameOverride": "TFT_AP_Damage_NoCalculation",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -363,19 +362,20 @@
     },
     "Characters/TFT4_Irelia/CharacterRecords/Root": {
         "mCharacterName": "TFT4_Irelia",
-        "baseHP": 800.0,
+        "baseHP": 900.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 230.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
+            "arBase": 90.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 55.0,
-        "baseArmor": 40.0,
-        "baseSpellBlock": 40.0,
+        "baseArmor": 50.0,
+        "baseSpellBlock": 50.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
         "baseMoveSpeed": 500.0,
@@ -628,8 +628,9 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 50.0,
+        "mInitialMana": 30.0,
         "mShopData": "{3cd568ea}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "__linked": []

@@ -10,10 +10,10 @@
                     "mName": "BonkPercentAttackDamage",
                     "mValues": [
                         0.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        4.0,
+                        410.0,
+                        410.0,
+                        410.0,
+                        410.0,
                         4.0,
                         4.0
                     ],
@@ -83,6 +83,32 @@
                         2.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HeadlinerHealth",
+                    "mValues": [
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "HeadlinerAttackDamage",
+                    "mValues": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -93,9 +119,13 @@
                         {
                             "mSubparts": [
                                 {
-                                    "mStat": 2,
-                                    "mDataValue": "BonkPercentAttackDamage",
-                                    "__type": "StatByNamedDataValueCalculationPart"
+                                    "mSubpart": {
+                                        "mDataValue": "BonkPercentAttackDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 1.0,
+                                    "mStat": 3,
+                                    "__type": "SubPartScaledProportionalToStat"
                                 },
                                 {
                                     "mSubpart": {
@@ -182,10 +212,13 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
+                                    "type": "BonkDamage",
+                                    "nameOverride": "TFT_AP_Damage_NoCalculation",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
                                     "type": "BonkPercentAttackDamage",
-                                    "multiplier": 100.0,
                                     "nameOverride": "Spell_TFT4_WukongCarrySpell_BonkPercentAD",
-                                    "Style": 2,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -211,10 +244,10 @@
                     "mName": "PercentAD",
                     "mValues": [
                         1.5,
-                        2.4000000953674316,
-                        2.5,
-                        2.5999999046325684,
-                        3.5,
+                        120.0,
+                        195.0,
+                        365.0,
+                        535.0,
                         4.0,
                         4.5
                     ],
@@ -258,44 +291,47 @@
                         10.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "APDamage",
+                    "mValues": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "ModifiedPercentAD": {
+                "TotalDamage": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mSubpart": {
-                                "mDataValue": "PercentAD",
-                                "__type": "NamedDataValueCalculationPart"
-                            },
-                            "mRatio": 0.009999999776482582,
-                            "mStyleTag": "noScale",
-                            "mStyleTagIfScaled": "scaleAP",
-                            "__type": "SubPartScaledProportionalToStat"
-                        }
-                    ],
-                    "mDisplayAsPercent": true,
-                    "__type": "GameCalculation"
-                },
-                "TooltipDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
-                    "mFormulaParts": [
-                        {
-                            "mStat": 2,
-                            "mSubpart": {
-                                "mSubpart": {
-                                    "mDataValue": "PercentAD",
-                                    "__type": "NamedDataValueCalculationPart"
+                            "mSubparts": [
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "PercentAD",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 1.0,
+                                    "mStat": 3,
+                                    "__type": "SubPartScaledProportionalToStat"
                                 },
-                                "mRatio": 0.009999999776482582,
-                                "mStyleTag": "noScale",
-                                "mStyleTagIfScaled": "scaleAP",
-                                "__type": "SubPartScaledProportionalToStat"
-                            },
-                            "__type": "StatBySubPartCalculationPart"
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "APDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -370,11 +406,14 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
+                                    "type": "APDamage",
+                                    "nameOverride": "TFT_AP_Damage_NoCalculation",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
                                     "type": "PercentAD",
                                     "typeIndex": 1,
-                                    "multiplier": 100.0,
                                     "nameOverride": "Spell_TFT4_WukongQ_PercentAD",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -578,19 +617,19 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 50.0,
+            "arBase": 30.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 55.0,
-        "baseArmor": 30.0,
-        "baseSpellBlock": 30.0,
+        "baseArmor": 45.0,
+        "baseSpellBlock": 45.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.5,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
-        "attackSpeed": 0.6499999761581421,
+        "attackSpeed": 0.75,
         "attackSpeedRatio": 0.6499999761581421,
         "expGivenOnDeath": 0.0,
         "goldGivenOnDeath": 0.0,
@@ -627,6 +666,7 @@
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
         "mShopData": "{3cb9d803}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Wukong/Skins/Meta": {

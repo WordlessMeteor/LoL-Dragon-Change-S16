@@ -1,0 +1,102 @@
+{
+    "{b38895ea}": {
+        "championSkinName": "TFT_RetroDreamscape_Props",
+        "skinAnimationProperties": {
+            "animationGraphData": "{74a78a17}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TFT_RetroDreamscape_Props/Skins/Skin02/TFT_RetroDreamscape_Props_Skin02.TFT_ArenaSkin_RetroDreamscape.skl",
+            "simpleSkin": "ASSETS/Characters/TFT_RetroDreamscape_Props/Skins/Skin02/TFT_RetroDreamscape_Props_Skin02.TFT_ArenaSkin_RetroDreamscape.skn",
+            "selfIllumination": 2.0,
+            "overrideBoundingBox": [
+                1200.0,
+                1200.0,
+                1200.0
+            ],
+            "materialOverride": [
+                {
+                    "Material": "{01db7dae}",
+                    "submesh": "Bus",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Metal",
+        "mResourceResolver": "{971e26f8}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "{01db7dae}": {
+        "name": "Characters/TFT_RetroDreamscape_Props/Skins/Skin2/Materials/RetroDreamscape_Bus_AnimProp_Mat",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT_RetroDreamscape_Props/Skins/Skin02/Level1_RetroDreamscape_Bus_Tx.TFT_ArenaSkin_RetroDreamscape.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Alpha_mult",
+                        "stencilEnable": true,
+                        "blendEnable": true,
+                        "stencilCompareFunc": 7,
+                        "StencilReferenceId": "{422f0a3f}",
+                        "stencilMask": 255,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            },
+            {
+                "name": "env_transition",
+                "parentName": "normal",
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{971e26f8}": {
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/TFT_RetroDreamscape_Props/TFT_RetroDreamscape_Props.bin",
+        "DATA/Characters/TFT_RetroDreamscape_Props/Animations/Skin2.bin"
+    ]
+}
