@@ -61,9 +61,9 @@
                     this._profilesEnabled = !0, this._isMatchHistoryInitialized = !1, this._isChallengesCollectionInitialized = !1, this._componentRegistrations = {}, this._platformConfigListeners = new Set, this._isPrivacyEnabled = !1, this._platformConfigBinding = (0, s.DataBinding)("/lol-platform-config", (0, s.getProvider)().getSocket()), this._summonerBinding = (0, s.DataBinding)("/lol-summoner", (0, s.getProvider)().getSocket()), this._createComponents(), this._challengesManager = new i.default, this._matchHistoryManager = new a.default, this._registerProfilesEnabledListeners(), this._registerPrivacyEnabledListener()
                 }
                 _createComponents() {
-                    const e = n(29),
-                        t = n(245),
-                        s = n(263);
+                    const e = n(30),
+                        t = n(246),
+                        s = n(264);
                     e(), this._modalProfile = t(), this._mainProfile = s(this)
                 }
                 _registerProfilesEnabledListeners() {
@@ -86,9 +86,9 @@
                 }
                 getRankedReferenceModalButton() {
                     return {
-                        RankedReferenceModalButtonComponent: n(222),
-                        RankedReferenceModalButtonComponentStyles: n(223),
-                        RankedReferenceModalButtonComponentTemplate: n(224)
+                        RankedReferenceModalButtonComponent: n(223),
+                        RankedReferenceModalButtonComponentStyles: n(224),
+                        RankedReferenceModalButtonComponentTemplate: n(225)
                     }
                 }
                 get profilesEnabled() {
@@ -347,40 +347,45 @@
                 get: function() {
                     return o.default
                 }
-            }), Object.defineProperty(t, "PROFILE_PRIVACY", {
+            }), Object.defineProperty(t, "PRE_END_OF_GAME_SEQUENCE_EVENTS", {
                 enumerable: !0,
                 get: function() {
                     return l.default
                 }
-            }), Object.defineProperty(t, "QUEUES", {
+            }), Object.defineProperty(t, "PROFILE_PRIVACY", {
                 enumerable: !0,
                 get: function() {
                     return d.default
                 }
-            }), Object.defineProperty(t, "RANKED", {
+            }), Object.defineProperty(t, "QUEUES", {
                 enumerable: !0,
                 get: function() {
                     return m.default
                 }
-            }), Object.defineProperty(t, "REWARD_TRACKER", {
+            }), Object.defineProperty(t, "RANKED", {
                 enumerable: !0,
                 get: function() {
                     return _.default
                 }
-            }), Object.defineProperty(t, "SOCIAL", {
+            }), Object.defineProperty(t, "REWARD_TRACKER", {
                 enumerable: !0,
                 get: function() {
                     return u.default
                 }
-            }), Object.defineProperty(t, "TIME", {
+            }), Object.defineProperty(t, "SOCIAL", {
                 enumerable: !0,
                 get: function() {
                     return c.default
                 }
-            }), Object.defineProperty(t, "VANGUARD_STATES", {
+            }), Object.defineProperty(t, "TIME", {
                 enumerable: !0,
                 get: function() {
                     return h.default
+                }
+            }), Object.defineProperty(t, "VANGUARD_STATES", {
+                enumerable: !0,
+                get: function() {
+                    return p.default
                 }
             }), Object.defineProperty(t, "getGameKeyFromGameMode", {
                 enumerable: !0,
@@ -388,20 +393,21 @@
                     return i.getGameKeyFromGameMode
                 }
             });
-            var s = p(n(7)),
-                a = p(n(8)),
+            var s = f(n(7)),
+                a = f(n(8)),
                 i = n(9),
-                r = p(n(10)),
-                o = p(n(11)),
-                l = p(n(22)),
-                d = p(n(23)),
-                m = p(n(24)),
-                _ = p(n(25)),
-                u = p(n(26)),
-                c = p(n(27)),
-                h = p(n(28));
+                r = f(n(10)),
+                o = f(n(11)),
+                l = f(n(22)),
+                d = f(n(23)),
+                m = f(n(24)),
+                _ = f(n(25)),
+                u = f(n(26)),
+                c = f(n(27)),
+                h = f(n(28)),
+                p = f(n(29));
 
-            function p(e) {
+            function f(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -635,6 +641,18 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
+            var n = {
+                HONOR: "honor-vote",
+                CHALLENGES: "challenge-level-up-celebration",
+                MISSIONS: "missions-celebration",
+                RANKED: "ranked-celebration"
+            };
+            t.default = n
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
             const n = {
                     UNKNOWN: "UNKNOWN",
                     ENABLED: "ENABLED",
@@ -856,24 +874,24 @@
                     name: "rcp-fe-lol-profiles-overview",
                     ComponentFactory: s.ComponentFactory,
                     tra: s.traService,
-                    ProfileWrapperComponent: n(30),
-                    ProfileSummonerInfoComponent: n(34),
-                    SummonerNamingsComponent: n(37),
-                    SummonerXpRadialComponent: n(40),
-                    SummonerLevelBarComponent: n(44),
-                    ProfileEmblemRankedComponent: n(47).default,
-                    RankedDemotionWarningComponent: n(51).default,
-                    RankedIconComponent: n(54).default,
-                    RankedIconTooltipComponent: n(57).default,
-                    RankedLastSeasonTooltipComponent: n(60).default,
-                    ProfileEmblemHonorComponent: n(63).default,
-                    ProfileEmblemLegendaryChampionMasteryComponent: n(67).default,
-                    LegendaryMasteryIconComponent: n(70).default,
-                    LegendaryMasteryTooltipComponent: n(73).default,
-                    ProfileEmblemClashTrophyComponent: n(76).default,
-                    ProfileEmblemClashBannerComponent: n(79).default,
-                    EternalsTooltipComponent: n(84).default,
-                    ProfileBoostsComponent: n(87),
+                    ProfileWrapperComponent: n(31),
+                    ProfileSummonerInfoComponent: n(35),
+                    SummonerNamingsComponent: n(38),
+                    SummonerXpRadialComponent: n(41),
+                    SummonerLevelBarComponent: n(45),
+                    ProfileEmblemRankedComponent: n(48).default,
+                    RankedDemotionWarningComponent: n(52).default,
+                    RankedIconComponent: n(55).default,
+                    RankedIconTooltipComponent: n(58).default,
+                    RankedLastSeasonTooltipComponent: n(61).default,
+                    ProfileEmblemHonorComponent: n(64).default,
+                    ProfileEmblemLegendaryChampionMasteryComponent: n(68).default,
+                    LegendaryMasteryIconComponent: n(71).default,
+                    LegendaryMasteryTooltipComponent: n(74).default,
+                    ProfileEmblemClashTrophyComponent: n(77).default,
+                    ProfileEmblemClashBannerComponent: n(80).default,
+                    EternalsTooltipComponent: n(85).default,
+                    ProfileBoostsComponent: n(88),
                     PlayerRestrictionInfoComponent: s.SharedEmberComponents.PlayerRestrictionInfoComponent,
                     PlayerNameComponent: s.SharedEmberComponents.PlayerNameComponent,
                     RenderTelemetrySenderComponent: s.SharedEmberComponents.RenderTelemetrySenderComponent,
@@ -883,61 +901,61 @@
                     ChallengeItemTooltipComponent: s.SharedChallengesComponents.ChallengeItemTooltipComponent,
                     ChallengeItemFooterComponent: s.SharedChallengesComponents.ChallengeItemFooterComponent,
                     MasteryCrestComponent: s.SharedChampionMasteryComponents.MasteryCrestComponent,
-                    ProfileService: n(219),
-                    EternalsService: n(220),
-                    NotificationsService: n(221),
+                    ProfileService: n(220),
+                    EternalsService: n(221),
+                    NotificationsService: n(222),
                     RiotclientService: s.SharedChallengesComponents.RiotclientService,
                     GameDataService: s.SharedChallengesComponents.GameDataService,
                     SharedNotificationsService: s.SharedChallengesComponents.SharedNotificationsService,
                     SummonerService: s.SharedChallengesComponents.SummonerService,
                     CallToActionPipComponent: s.SharedEmberComponents.CallToActionPipComponent,
-                    RankedReferenceModalButtonComponent: n(222)
+                    RankedReferenceModalButtonComponent: n(223)
                 }), s.EmberApplicationFactory.setFactoryDefinition({
                     name: "RankedReferenceModalComponent",
                     tra: s.traService,
                     ComponentFactory: s.ComponentFactory,
-                    RankedReferenceModalComponent: n(225)
+                    RankedReferenceModalComponent: n(226)
                 }), s.EmberApplicationFactory.setFactoryDefinition({
                     ComponentFactory: s.ComponentFactory,
                     name: "ClashBannerPickerComponent",
                     tra: s.traService,
-                    ClashBannerPickerComponent: n(230).default
+                    ClashBannerPickerComponent: n(231).default
                 }), s.EmberApplicationFactory.setFactoryDefinition({
                     ComponentFactory: s.ComponentFactory,
                     name: "rcp-fe-lol-profiles-backdrop",
                     tra: s.traService,
-                    ProfileBackdropComponent: n(233),
-                    ProfileService: n(219)
+                    ProfileBackdropComponent: n(234),
+                    ProfileService: n(220)
                 }), s.EmberApplicationFactory.setFactoryDefinition({
                     ComponentFactory: s.ComponentFactory,
                     name: "rcp-fe-lol-profiles-backdrop-picker",
                     tra: s.traService,
-                    ProfileBackdropPickerComponent: n(236)
+                    ProfileBackdropPickerComponent: n(237)
                 }), s.EmberApplicationFactory.setFactoryDefinition({
                     ComponentFactory: s.ComponentFactory,
                     name: "rcp-fe-lol-profiles-search-input",
                     tra: s.traService,
-                    ProfileSearchInputComponent: n(239).default,
+                    ProfileSearchInputComponent: n(240).default,
                     ...e.fetchPlayerNameInputAndDependencies()
                 }), s.EmberApplicationFactory.setFactoryDefinition({
                     ComponentFactory: s.ComponentFactory,
                     name: "rcp-fe-lol-profiles-search-trail",
                     tra: s.traService,
-                    ProfileSearchTrailComponent: n(242),
-                    ProfileService: n(219),
+                    ProfileSearchTrailComponent: n(243),
+                    ProfileService: n(220),
                     PlayerNameComponent: s.SharedEmberComponents.PlayerNameComponent
                 })
             }
         }, (e, t, n) => {
             "use strict";
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 };
-            n(32), e.exports = a.Ember.Component.extend(i.default, {
+            n(33), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-overview-component"],
                 classNameBindings: ["loadingComplete:loaded:loading"],
-                layout: n(33),
+                layout: n(34),
                 notificationsService: a.Ember.inject.service("notifications"),
                 profileService: a.Ember.inject.service("profile"),
                 loadingComplete: a.Ember.computed.alias("profileService.loadingComplete"),
@@ -975,19 +993,19 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "nQp8duMW",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-overview-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-overview-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-overview-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-loading-spinner"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-overview-content"],["flush-element"],["text","\\n"],["block",["render-telemetry-sender"],null,[["renderEventName"],["profile-overview-rendered"]],1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-call-to-action"],["flush-element"],["text","\\n          "],["append",["unknown",["call-to-action-pip"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","\\n    "],["append",["helper",["profile-summoner-info"],null,[["isSearched"],[["get",["isSearched"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowUnreadNotifications"]]],null,0],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblems-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-ranked"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-honor"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-legendary-champion-mastery"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-clash-trophy"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-clash-banner"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "U9UQ4X1W",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-overview-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-overview-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-overview-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-loading-spinner"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-overview-content"],["flush-element"],["text","\\n"],["block",["render-telemetry-sender"],null,[["renderEventName"],["profile-overview-rendered"]],1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-call-to-action"],["flush-element"],["text","\\n          "],["append",["unknown",["call-to-action-pip"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","\\n    "],["append",["helper",["profile-summoner-info"],null,[["isSearched"],[["get",["isSearched"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowUnreadNotifications"]]],null,0],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblems-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-ranked"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-honor"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-legendary-champion-mastery"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-clash-trophy"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-slot"],["flush-element"],["append",["unknown",["profile-emblem-clash-banner"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 };
-            n(35), e.exports = a.Ember.Component.extend(i.default, {
+            n(36), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-summoner-info-component"],
-                layout: n(36),
+                layout: n(37),
                 profileService: a.Ember.inject.service("profile"),
                 isLocalPlayer: a.Ember.computed.not("isSearched"),
                 challengesConfig: a.Ember.computed.alias("profileService.challengesConfig")
@@ -998,19 +1016,19 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "kH86VOHC",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["flush-element"],["text","\\n  "],["open-element","lol-regalia-profile-v2-element",[]],["dynamic-attr","summoner-id",["unknown",["summoner","summonerId"]],null],["dynamic-attr","is-searched",["concat",[["unknown",["isSearched"]]]]],["dynamic-attr","puuid",["concat",[["unknown",["summoner","puuid"]]]]],["flush-element"],["text","\\n    "],["append",["unknown",["summoner-namings"]],false],["text","\\n    "],["append",["unknown",["summoner-xp-radial"]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-summoner-status-icons"],["flush-element"],["block",["if"],[["get",["isLocalPlayer"]]],null,1],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-restriction-info-outer-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-restriction-info-inner-container"],["flush-element"],["text","\\n      "],["block",["if"],[["get",["isLocalPlayer"]]],null,0],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","profile-challenge-banner-tokens"],["flush-element"],["text","\\n    "],["append",["helper",["challenge-banner-token-container"],null,[["puuid","isLocalPlayer"],[["get",["summoner","puuid"]],true]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["append",["unknown",["player-restriction-info"]],false]],"locals":[]},{"statements":[["append",["unknown",["profile-boosts"]],false]],"locals":[]}],"hasPartials":false}',
+                id: "3q0pUNog",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["flush-element"],["text","\\n  "],["open-element","lol-regalia-profile-v2-element",[]],["dynamic-attr","summoner-id",["unknown",["summoner","summonerId"]],null],["dynamic-attr","is-searched",["concat",[["unknown",["isSearched"]]]]],["dynamic-attr","puuid",["concat",[["unknown",["summoner","puuid"]]]]],["flush-element"],["text","\\n    "],["append",["unknown",["summoner-namings"]],false],["text","\\n    "],["append",["unknown",["summoner-xp-radial"]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-summoner-status-icons"],["flush-element"],["block",["if"],[["get",["isLocalPlayer"]]],null,1],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-restriction-info-outer-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-restriction-info-inner-container"],["flush-element"],["text","\\n      "],["block",["if"],[["get",["isLocalPlayer"]]],null,0],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","profile-challenge-banner-tokens"],["flush-element"],["text","\\n    "],["append",["helper",["challenge-banner-token-container"],null,[["puuid","isLocalPlayer"],[["get",["summoner","puuid"]],true]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["append",["unknown",["player-restriction-info"]],false]],"locals":[]},{"statements":[["append",["unknown",["profile-boosts"]],false]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 };
-            n(38), e.exports = a.Ember.Component.extend(i.default, {
+            n(39), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-summoner-namings-component"],
-                layout: n(39),
+                layout: n(40),
                 profileService: a.Ember.inject.service("profile"),
                 puuid: a.Ember.computed.alias("summoner.puuid"),
                 gameName: a.Ember.computed("summoner.gameName", (function() {
@@ -1029,20 +1047,20 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "jQ0mEH64",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-namings-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-namings-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-namings-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-resizing-text-field",[]],["static-attr","class","style-profile-summoner-name"],["static-attr","data-max-width","155"],["flush-element"],["text","\\n  "],["append",["helper",["player-name"],null,[["format","puuid","gameName","tagLine","summonerName","isCopyEnabled"],["tooltip",["get",["puuid"]],["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]],true]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "9Sc0Y/Kb",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-namings-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-namings-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-namings-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-resizing-text-field",[]],["static-attr","class","style-profile-summoner-name"],["static-attr","data-max-width","155"],["flush-element"],["text","\\n  "],["append",["helper",["player-name"],null,[["format","puuid","gameName","tagLine","summonerName","isCopyEnabled"],["tooltip",["get",["puuid"]],["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]],true]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 },
-                r = n(41);
-            n(42), e.exports = a.Ember.Component.extend(i.default, {
+                r = n(42);
+            n(43), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-summoner-xp-radial-component"],
-                layout: n(43),
+                layout: n(44),
                 profileService: a.Ember.inject.service("profile"),
                 circlePercentFill: 2,
                 circleDiameter: 13,
@@ -1089,17 +1107,17 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "6cos2KO0",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-xp-radial-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-xp-radial-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-xp-radial-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-xp-radial-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","summoner-xp-radial"],["flush-element"],["text","\\n    "],["open-element","svg",[]],["static-attr","class","summoner-xp-radial-progress"],["dynamic-attr","width",["concat",[["unknown",["circleDiameter"]]]]],["dynamic-attr","height",["concat",[["unknown",["circleDiameter"]]]]],["flush-element"],["text","\\n"],["text","      "],["open-element","circle",[]],["static-attr","class","summoner-xp-radial-progress-circle summoner-xp-radial-progress-circle-bg"],["static-attr","stroke-width","2"],["dynamic-attr","stroke-dasharray",["concat",[["unknown",["circleCircumference"]]," ",["unknown",["circleCircumference"]]]]],["static-attr","stroke-dashoffset","0"],["static-attr","fill","transparent"],["dynamic-attr","r",["concat",[["unknown",["circleRadius"]]]]],["dynamic-attr","cx",["concat",[["unknown",["circlePositionXY"]]]]],["dynamic-attr","cy",["concat",[["unknown",["circlePositionXY"]]]]],["flush-element"],["close-element"],["text","\\n"],["text","      "],["open-element","circle",[]],["static-attr","class","summoner-xp-radial-progress-circle"],["static-attr","stroke-width","2"],["dynamic-attr","stroke-dasharray",["concat",[["unknown",["circleCircumference"]]," ",["unknown",["circleCircumference"]]]]],["dynamic-attr","stroke-dashoffset",["concat",[["unknown",["progressPercent"]]]]],["static-attr","fill","transparent"],["dynamic-attr","r",["concat",[["unknown",["circleRadius"]]]]],["dynamic-attr","cx",["concat",[["unknown",["circlePositionXY"]]]]],["dynamic-attr","cy",["concat",[["unknown",["circlePositionXY"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","summoner-xp-radial-numbers"],["flush-element"],["append",["unknown",["summoner","summonerLevel"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summoner-xp-radial-hover-text"],["flush-element"],["append",["unknown",["xpProgressNumbersDisplay"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_title"]],false],["close-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_message"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "gaU0g+ld",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-xp-radial-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-xp-radial-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-xp-radial-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-xp-radial-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","summoner-xp-radial"],["flush-element"],["text","\\n    "],["open-element","svg",[]],["static-attr","class","summoner-xp-radial-progress"],["dynamic-attr","width",["concat",[["unknown",["circleDiameter"]]]]],["dynamic-attr","height",["concat",[["unknown",["circleDiameter"]]]]],["flush-element"],["text","\\n"],["text","      "],["open-element","circle",[]],["static-attr","class","summoner-xp-radial-progress-circle summoner-xp-radial-progress-circle-bg"],["static-attr","stroke-width","2"],["dynamic-attr","stroke-dasharray",["concat",[["unknown",["circleCircumference"]]," ",["unknown",["circleCircumference"]]]]],["static-attr","stroke-dashoffset","0"],["static-attr","fill","transparent"],["dynamic-attr","r",["concat",[["unknown",["circleRadius"]]]]],["dynamic-attr","cx",["concat",[["unknown",["circlePositionXY"]]]]],["dynamic-attr","cy",["concat",[["unknown",["circlePositionXY"]]]]],["flush-element"],["close-element"],["text","\\n"],["text","      "],["open-element","circle",[]],["static-attr","class","summoner-xp-radial-progress-circle"],["static-attr","stroke-width","2"],["dynamic-attr","stroke-dasharray",["concat",[["unknown",["circleCircumference"]]," ",["unknown",["circleCircumference"]]]]],["dynamic-attr","stroke-dashoffset",["concat",[["unknown",["progressPercent"]]]]],["static-attr","fill","transparent"],["dynamic-attr","r",["concat",[["unknown",["circleRadius"]]]]],["dynamic-attr","cx",["concat",[["unknown",["circlePositionXY"]]]]],["dynamic-attr","cy",["concat",[["unknown",["circlePositionXY"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","summoner-xp-radial-numbers"],["flush-element"],["append",["unknown",["summoner","summonerLevel"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summoner-xp-radial-hover-text"],["flush-element"],["append",["unknown",["xpProgressNumbersDisplay"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_title"]],false],["close-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_message"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 },
-                r = n(41);
+                r = n(42);
 
             function o(e) {
                 return e ? (e = Number.parseInt(e), isNaN(e) ? 0 : e) : 0
@@ -1109,9 +1127,9 @@
                 return t = o(e), n = 0, s = 100, Math.min(Math.max(t, n), s);
                 var t, n, s
             }
-            n(45), e.exports = a.Ember.Component.extend(i.default, {
+            n(46), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-summoner-level-bar-component"],
-                layout: n(46),
+                layout: n(47),
                 profileService: a.Ember.inject.service("profile"),
                 challengesConfig: a.Ember.computed.alias("profileService.challengesConfig"),
                 onPercentCompleteForNextLevelChange: a.Ember.on("didInsertElement", a.Ember.observer("summoner.percentCompleteForNextLevel", (function() {
@@ -1140,8 +1158,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "MKiKhBZI",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-level-bar-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-level-bar-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-level-bar-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-background"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-fill-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-fill-preloader"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-fill"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-number-plate"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-number-value"],["flush-element"],["append",["unknown",["summoner","summonerLevel"]],false],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-numbers-display"],["flush-element"],["text","\\n  "],["append",["unknown",["xpProgressNumbersDisplay"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n    "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_title"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_message"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "A+4EzAo0",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-level-bar-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-level-bar-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-summoner-info-component\\\\summoner-level-bar-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-background"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-fill-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-fill-preloader"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-fill"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-number-plate"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-number-value"],["flush-element"],["append",["unknown",["summoner","summonerLevel"]],false],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","style-profile-summoner-level-bar-xp-progress-numbers-display"],["flush-element"],["text","\\n  "],["append",["unknown",["xpProgressNumbersDisplay"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n    "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_title"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_summoner_info_experience_description_tooltip_message"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1150,8 +1168,8 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                i = n(41),
-                r = (s = n(31)) && s.__esModule ? s : {
+                i = n(42),
+                r = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 },
                 o = function(e, t) {
@@ -1169,7 +1187,7 @@
                             r && (r.get || r.set) ? Object.defineProperty(s, i, r) : s[i] = e[i]
                         } s.default = e, n && n.set(e, s);
                     return s
-                }(n(48));
+                }(n(49));
 
             function l(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -1179,11 +1197,11 @@
                     return e ? n : t
                 })(e)
             }
-            n(49);
+            n(50);
             const d = "UNRANKED";
             var m = a.Ember.Component.extend(r.default, {
                 classNames: ["style-profile-ranked-component"],
-                layout: n(50),
+                layout: n(51),
                 profileService: a.Ember.inject.service("profile"),
                 rankedData: a.Ember.computed.alias("profileService.rankedData"),
                 challengesConfig: a.Ember.computed.alias("profileService.challengesConfig"),
@@ -1280,8 +1298,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "8vE10ntW",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["mostValuableQueueInfo","queueLabel"]],false],["close-element"],["text","\\n"],["block",["unless"],[["get",["mostValuableQueueInfo","isUnranked"]]],null,5],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n      "],["append",["helper",["ranked-icon"],null,[["queueInfo","splitReward"],[["get",["mostValuableQueueInfo"]],["get",["splitReward"]]]]],false],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-ranked-reference-modal-button"],["flush-element"],["text","\\n        "],["append",["helper",["ranked-reference-modal-button"],null,[["queueType"],[["get",["mostValuableQueueInfo","queue","queueType"]]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-demotion-shield-warning"],["flush-element"],["text","\\n        "],["append",["helper",["ranked-demotion-warning"],null,[["computedQueueInfos","demotionWarning"],[["get",["computedQueueInfos"]],["get",["mostValuableQueueInfo","demotionWarning"]]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","positioningStrategy","offsetX"],["top","preserve",287]],3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-warning"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-ranked-emblem-tooltip-warning-icon icon-warning-",["unknown",["warningAnyQueue"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-warning-message"],["flush-element"],["append",["unknown",["tra","ranked_demotion_shield_expiring"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-ranked-emblem-tooltip-warning-icon icon-warning-",["unknown",["queueInfo","demotionWarning"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue"],["flush-element"],["text","\\n          "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["queue","isUnranked"]],"unranked",["get",["queueInfo","tier"]]],null],null],["flush-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-name"],["flush-element"],["append",["unknown",["queueInfo","queueLabel"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-tier"],["flush-element"],["append",["unknown",["queueInfo","tierDivisionLabel"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-lp"],["flush-element"],["append",["helper",["sanitize"],[["get",["queueInfo","subtitleLabel"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["queueInfo","demotionWarning"]]],null,1],["text","        "],["close-element"],["text","\\n"]],"locals":["queueInfo"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-queues"],["flush-element"],["text","\\n"],["block",["each"],[["get",["computedQueueInfos"]]],null,2],["text","      "],["open-element","div",[]],["static-attr","class","ranked-tooltip-last-season"],["flush-element"],["text","\\n        "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["unknown",["lastSeasonTier"]],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-name"],["flush-element"],["append",["unknown",["tra","ranked_tooltip_past_highest_rank"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-tier"],["flush-element"],["append",["unknown",["lastSeasonTierText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["warningAnyQueue"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","style-profile-emblem-subheader-position"],["dynamic-attr","src",["concat",[["unknown",["mostValuablePositionIcon"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-subheader-ranked"],["flush-element"],["text","\\n"],["block",["if"],[["get",["mostValuablePositionIcon"]]],null,4],["text","        "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["mostValuableQueueInfo","tierDivisionLabel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Bw1L9pC1",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["mostValuableQueueInfo","queueLabel"]],false],["close-element"],["text","\\n"],["block",["unless"],[["get",["mostValuableQueueInfo","isUnranked"]]],null,5],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n      "],["append",["helper",["ranked-icon"],null,[["queueInfo","splitReward"],[["get",["mostValuableQueueInfo"]],["get",["splitReward"]]]]],false],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-ranked-reference-modal-button"],["flush-element"],["text","\\n        "],["append",["helper",["ranked-reference-modal-button"],null,[["queueType"],[["get",["mostValuableQueueInfo","queue","queueType"]]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-demotion-shield-warning"],["flush-element"],["text","\\n        "],["append",["helper",["ranked-demotion-warning"],null,[["computedQueueInfos","demotionWarning"],[["get",["computedQueueInfos"]],["get",["mostValuableQueueInfo","demotionWarning"]]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","positioningStrategy","offsetX"],["top","preserve",287]],3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-warning"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-ranked-emblem-tooltip-warning-icon icon-warning-",["unknown",["warningAnyQueue"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-warning-message"],["flush-element"],["append",["unknown",["tra","ranked_demotion_shield_expiring"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-ranked-emblem-tooltip-warning-icon icon-warning-",["unknown",["queueInfo","demotionWarning"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue"],["flush-element"],["text","\\n          "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["queue","isUnranked"]],"unranked",["get",["queueInfo","tier"]]],null],null],["flush-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-name"],["flush-element"],["append",["unknown",["queueInfo","queueLabel"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-tier"],["flush-element"],["append",["unknown",["queueInfo","tierDivisionLabel"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-lp"],["flush-element"],["append",["helper",["sanitize"],[["get",["queueInfo","subtitleLabel"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["queueInfo","demotionWarning"]]],null,1],["text","        "],["close-element"],["text","\\n"]],"locals":["queueInfo"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","profile-ranked-emblem-tooltip-queues"],["flush-element"],["text","\\n"],["block",["each"],[["get",["computedQueueInfos"]]],null,2],["text","      "],["open-element","div",[]],["static-attr","class","ranked-tooltip-last-season"],["flush-element"],["text","\\n        "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["unknown",["lastSeasonTier"]],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-name"],["flush-element"],["append",["unknown",["tra","ranked_tooltip_past_highest_rank"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-tooltip-queue-tier"],["flush-element"],["append",["unknown",["lastSeasonTierText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["warningAnyQueue"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","style-profile-emblem-subheader-position"],["dynamic-attr","src",["concat",[["unknown",["mostValuablePositionIcon"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-subheader-ranked"],["flush-element"],["text","\\n"],["block",["if"],[["get",["mostValuablePositionIcon"]]],null,4],["text","        "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["mostValuableQueueInfo","tierDivisionLabel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1290,12 +1308,12 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 };
-            n(52);
+            n(53);
             var r = a.Ember.Component.extend(i.default, {
-                layout: n(53),
+                layout: n(54),
                 profileService: a.Ember.inject.service("profile"),
                 computedQueueInfos: null,
                 demotionWarning: null,
@@ -1321,8 +1339,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "kVN2Fw+d",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-demotion-warning-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-demotion-warning-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-demotion-warning-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["computedWarningsMaxSeverity"]]],null,2,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-demotion-warning warning-",["unknown",["demotionWarning"]]]]],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["demotionWarning"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-demotion-warning warning-",["unknown",["computedWarningsMaxSeverity"]]]]],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Yhz+rXsb",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-demotion-warning-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-demotion-warning-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-demotion-warning-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["computedWarningsMaxSeverity"]]],null,2,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-demotion-warning warning-",["unknown",["demotionWarning"]]]]],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["demotionWarning"]]],null,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-demotion-warning warning-",["unknown",["computedWarningsMaxSeverity"]]]]],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1331,10 +1349,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(55);
+            n(56);
             var a = s.Ember.Component.extend({
                 classNames: ["style-profile-ranked-icon-component"],
-                layout: n(56),
+                layout: n(57),
                 queueInfo: null,
                 splitReward: 0,
                 profileService: s.Ember.inject.service("profile"),
@@ -1352,8 +1370,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "6gsa+7JU",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-ranked"],["flush-element"],["text","\\n    "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["isUnranked"]],"unranked",["get",["tier"]]],null],null],["flush-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "0U2/J2up",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-ranked"],["flush-element"],["text","\\n    "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["isUnranked"]],"unranked",["get",["tier"]]],null],null],["flush-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1362,13 +1380,13 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 };
-            n(58);
+            n(59);
             var r = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-ranked-icon-tooltip-component"],
-                layout: n(59),
+                layout: n(60),
                 profileService: a.Ember.inject.service("profile"),
                 queueInfo: null,
                 splitReward: 0,
@@ -1389,8 +1407,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "XPaGfThI",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-crest-inner"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isUnranked"]]],null,2,1],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","style-profile-ranked-crest-tooltip-queue-and-division"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-queue ",["helper",["if"],[["get",["isUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["queueLabel"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-tier-division ",["helper",["if"],[["get",["isUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["tierDivisionLabel"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-crest-dividing-line ",["helper",["if"],[["get",["isUnranked"]],"unranked"],null]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","style-profile-ranked-crest-tooltip-stats-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-lp"],["flush-element"],["append",["helper",["sanitize"],[["get",["subtitleLabel"]]],null],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-warning-",["unknown",["demotionWarning"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-ranked ",["helper",["if"],[["get",["isProvisional"]],"provisional"],null]]]],["flush-element"],["text","\\n      "],["open-element","lol-regalia-crest-element",[]],["static-attr","animations","false"],["dynamic-attr","ranked-tier",["concat",[["unknown",["tier"]]]]],["dynamic-attr","ranked-division",["concat",[["unknown",["division"]]]]],["static-attr","visor-down","true"],["dynamic-attr","ranked-split-reward",["concat",[["unknown",["splitReward"]]]]],["static-attr","crest-type","ranked"],["flush-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["demotionWarning"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-unranked"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "8oCS3Ypv",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-icon-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-crest-inner"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isUnranked"]]],null,2,1],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","style-profile-ranked-crest-tooltip-queue-and-division"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-queue ",["helper",["if"],[["get",["isUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["queueLabel"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-tier-division ",["helper",["if"],[["get",["isUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["tierDivisionLabel"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-crest-dividing-line ",["helper",["if"],[["get",["isUnranked"]],"unranked"],null]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","style-profile-ranked-crest-tooltip-stats-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-lp"],["flush-element"],["append",["helper",["sanitize"],[["get",["subtitleLabel"]]],null],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-warning-",["unknown",["demotionWarning"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-crest-tooltip-ranked ",["helper",["if"],[["get",["isProvisional"]],"provisional"],null]]]],["flush-element"],["text","\\n      "],["open-element","lol-regalia-crest-element",[]],["static-attr","animations","false"],["dynamic-attr","ranked-tier",["concat",[["unknown",["tier"]]]]],["dynamic-attr","ranked-division",["concat",[["unknown",["division"]]]]],["static-attr","visor-down","true"],["dynamic-attr","ranked-split-reward",["concat",[["unknown",["splitReward"]]]]],["static-attr","crest-type","ranked"],["flush-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["demotionWarning"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","style-profile-ranked-crest-tooltip-unranked"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1399,13 +1417,13 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 };
-            n(61);
+            n(62);
             var r = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-ranked-last-season-tooltip-component"],
-                layout: n(62),
+                layout: n(63),
                 profileService: a.Ember.inject.service("profile"),
                 rankedData: null,
                 lastSeasonTier: a.Ember.computed("summoner.puuid", "rankedData.{highestPreviousSeasonEndTier,highestPreviousSeasonEndDivision}", (function() {
@@ -1431,8 +1449,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "R3x2x2mM",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-last-season-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-last-season-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-last-season-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-ranked-tooltip-last-trim"],["flush-element"],["text","\\n  "],["open-element","lol-regalia-banner-element",[]],["static-attr","animations","false"],["dynamic-attr","banner-rank",["concat",[["unknown",["lastSeasonTier"]]]]],["static-attr","banner-type","lastSeasonHighestRank"],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-tooltip-last-title ",["helper",["if"],[["get",["lastSeasonIsUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["tra","ranked_tooltip_past_highest_rank"]],false],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-tooltip-last-rank ",["helper",["if"],[["get",["lastSeasonIsUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["tooltipLastSeasonLabel"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "O3MZZ6F1",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-last-season-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-last-season-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-ranked-component\\\\ranked-last-season-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-ranked-tooltip-last-trim"],["flush-element"],["text","\\n  "],["open-element","lol-regalia-banner-element",[]],["static-attr","animations","false"],["dynamic-attr","banner-rank",["concat",[["unknown",["lastSeasonTier"]]]]],["static-attr","banner-type","lastSeasonHighestRank"],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-tooltip-last-title ",["helper",["if"],[["get",["lastSeasonIsUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["tra","ranked_tooltip_past_highest_rank"]],false],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-ranked-tooltip-last-rank ",["helper",["if"],[["get",["lastSeasonIsUnranked"]],"unranked"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["tooltipLastSeasonLabel"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1441,14 +1459,14 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 };
-            n(64);
-            var r = n(65);
+            n(65);
+            var r = n(66);
             var o = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-honor-component"],
-                layout: n(66),
+                layout: n(67),
                 profileService: a.Ember.inject.service("profile"),
                 honorLockImageUrl: r.HONOR_LOCK_IMAGE_URL,
                 isReputationEnabled: !1,
@@ -1602,8 +1620,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "zIelxbyu",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-honor-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-honor-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-honor-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tra","honor_profile_header"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowHonor"]]],null,12],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-honor-lock-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowHonorLockIcon"]]],null,11],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowHonor"]]],null,10,7],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isReputationEnabled"]]],null,6],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowHonor"]]],null,5,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","honor_profile_other_player_tooltip"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowOtherSummonerTooltip"]]],null,1]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["profileTooltipText"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],3]],"locals":[]},{"statements":[["block",["unless"],[["get",["isReputationEnabled"]]],null,4]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","honor-explainer-modal-question-mark"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openHonorExplainerModal"],null],null],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-honor-empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","style-profile-honor-icon"],["dynamic-attr","src",["concat",[["unknown",["honorProfileImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","style-profile-honor-icon-v3"],["dynamic-attr","src",["concat",[["unknown",["honorV3ProfileImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isReputationEnabled"]]],null,9,8]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","style-profile-honor-lock"],["dynamic-attr","src",["concat",[["unknown",["honorLockImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["honorProfileLevel"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "92EzuHp1",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-honor-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-honor-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-honor-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tra","honor_profile_header"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowHonor"]]],null,12],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-honor-lock-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowHonorLockIcon"]]],null,11],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowHonor"]]],null,10,7],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isReputationEnabled"]]],null,6],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowHonor"]]],null,5,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","honor_profile_other_player_tooltip"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowOtherSummonerTooltip"]]],null,1]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["profileTooltipText"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],3]],"locals":[]},{"statements":[["block",["unless"],[["get",["isReputationEnabled"]]],null,4]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","honor-explainer-modal-question-mark"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openHonorExplainerModal"],null],null],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-honor-empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","style-profile-honor-icon"],["dynamic-attr","src",["concat",[["unknown",["honorProfileImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","style-profile-honor-icon-v3"],["dynamic-attr","src",["concat",[["unknown",["honorV3ProfileImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isReputationEnabled"]]],null,9,8]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","style-profile-honor-lock"],["dynamic-attr","src",["concat",[["unknown",["honorLockImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["honorProfileLevel"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1612,13 +1630,13 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 };
-            n(68);
+            n(69);
             var r = a.Ember.Component.extend(i.default, {
                 classNames: ["profile-legendary-champion-mastery-component"],
-                layout: n(69),
+                layout: n(70),
                 profileService: a.Ember.inject.service("profile"),
                 eternalsService: a.Ember.inject.service("eternals"),
                 championMasteryData: a.Ember.computed.alias("profileService.championMasteries"),
@@ -1653,8 +1671,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "qaeihIiD",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tra","champmastery_score_label"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-champion-mastery-score"],["flush-element"],["append",["unknown",["totalScore"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n      "],["append",["helper",["legendary-mastery-icon"],null,[["mastery","emphasis"],[["get",["computedMasteries","0"]],"primary"]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,4]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["append",["helper",["eternals-tooltip"],null,[["eternal","index"],[["get",["eternal"]],["get",["index"]]]]],false],["text","\\n"]],"locals":["eternal","index"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","style-profile-tooltip-divider"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-eternals-section"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","style-profile-eternals-title"],["flush-element"],["append",["unknown",["tra","profile_mastery_tooltip_eternals_title"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","style-profile-eternals-tripple-tooltip"],["flush-element"],["text","\\n"],["block",["each"],[["get",["computedEternals"]]],null,0],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","profile-legendary-champion-mastery-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-mastery-section"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-mastery-title"],["flush-element"],["append",["unknown",["tra","profile_mastery_tooltip_mastery_title"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-legendary-champion-mastery-triple-tooltip"],["flush-element"],["text","\\n            "],["append",["helper",["legendary-mastery-tooltip"],null,[["mastery","emphasis"],[["get",["computedMasteries","1"]],"secondary"]]],false],["text","\\n            "],["append",["helper",["legendary-mastery-tooltip"],null,[["mastery","emphasis"],[["get",["computedMasteries","0"]],"primary"]]],false],["text","\\n            "],["append",["helper",["legendary-mastery-tooltip"],null,[["mastery","emphasis"],[["get",["computedMasteries","2"]],"secondary"]]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowEternals"]]],null,1],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","positioningStrategy","offsetX"],["top","preserve",0]],2]],"locals":[]},{"statements":[["block",["if"],[["get",["computedMasteries"]]],null,3]],"locals":[]}],"hasPartials":false}',
+                id: "JYWkfRKm",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tra","champmastery_score_label"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-champion-mastery-score"],["flush-element"],["append",["unknown",["totalScore"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n      "],["append",["helper",["legendary-mastery-icon"],null,[["mastery","emphasis"],[["get",["computedMasteries","0"]],"primary"]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,4]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["append",["helper",["eternals-tooltip"],null,[["eternal","index"],[["get",["eternal"]],["get",["index"]]]]],false],["text","\\n"]],"locals":["eternal","index"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","style-profile-tooltip-divider"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-eternals-section"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","style-profile-eternals-title"],["flush-element"],["append",["unknown",["tra","profile_mastery_tooltip_eternals_title"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","style-profile-eternals-tripple-tooltip"],["flush-element"],["text","\\n"],["block",["each"],[["get",["computedEternals"]]],null,0],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","profile-legendary-champion-mastery-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-mastery-section"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-mastery-title"],["flush-element"],["append",["unknown",["tra","profile_mastery_tooltip_mastery_title"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","style-profile-legendary-champion-mastery-triple-tooltip"],["flush-element"],["text","\\n            "],["append",["helper",["legendary-mastery-tooltip"],null,[["mastery","emphasis"],[["get",["computedMasteries","1"]],"secondary"]]],false],["text","\\n            "],["append",["helper",["legendary-mastery-tooltip"],null,[["mastery","emphasis"],[["get",["computedMasteries","0"]],"primary"]]],false],["text","\\n            "],["append",["helper",["legendary-mastery-tooltip"],null,[["mastery","emphasis"],[["get",["computedMasteries","2"]],"secondary"]]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowEternals"]]],null,1],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","positioningStrategy","offsetX"],["top","preserve",0]],2]],"locals":[]},{"statements":[["block",["if"],[["get",["computedMasteries"]]],null,3]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1663,10 +1681,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(71);
+            n(72);
             var a = s.Ember.Component.extend({
                 classNames: ["style-profile-legendary-champion-mastery-icon-component"],
-                layout: n(72),
+                layout: n(73),
                 mastery: {},
                 emphasis: "",
                 masteryDisabled: s.Ember.computed.empty("mastery"),
@@ -1693,8 +1711,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "Nv15rE1d",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-icon-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-icon-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-icon-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-champion-icon ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n\\n"],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-champion-icon-banner-layer ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","style-profile-banner-image"],["dynamic-attr","src",["unknown",["masteryBannerPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["text","  "],["open-element","div",[]],["static-attr","class","style-profile-champion-icon-layer"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-champion-icon-masked"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,2],["text","    "],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,1],["text","  "],["close-element"],["text","\\n\\n"],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-champion-icon-accent-layer ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-accent-image level-",["unknown",["masteryLevelCss"]]]]],["flush-element"],["text","\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["mastery-crest"],null,[["masteryLevel"],[["get",["masteryLevel"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-champion-icon-top-frame"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["championInfo","squarePortraitPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "yC+v7rD4",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-icon-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-icon-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-icon-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-champion-icon ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n\\n"],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-champion-icon-banner-layer ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","style-profile-banner-image"],["dynamic-attr","src",["unknown",["masteryBannerPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["text","  "],["open-element","div",[]],["static-attr","class","style-profile-champion-icon-layer"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-champion-icon-masked"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,2],["text","    "],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,1],["text","  "],["close-element"],["text","\\n\\n"],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-champion-icon-accent-layer ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-accent-image level-",["unknown",["masteryLevelCss"]]]]],["flush-element"],["text","\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["mastery-crest"],null,[["masteryLevel"],[["get",["masteryLevel"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-champion-icon-top-frame"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["championInfo","squarePortraitPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1703,10 +1721,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(74);
+            n(75);
             var a = s.Ember.Component.extend({
                 classNames: ["profile-legendary-champion-mastery-tooltip-component"],
-                layout: n(75),
+                layout: n(76),
                 mastery: {},
                 emphasis: "",
                 profileService: s.Ember.inject.service("profile"),
@@ -1738,8 +1756,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "9EWx1m8o",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-champion-icon-inner-container ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-icon-container"],["flush-element"],["text","\\n    "],["append",["helper",["legendary-mastery-icon"],null,[["mastery","emphasis"],[["get",["mastery"]],["get",["emphasis"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,0],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-title"],["flush-element"],["text","\\n        "],["append",["unknown",["championInfo","name"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-hr"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-level"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","profile-lcm-tooltip-contents-level-icon"],["static-attr","src","/fe/lol-static-assets/images/champion-mastery/icon-mastery.svg"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-level-text"],["flush-element"],["text","\\n          "],["append",["unknown",["masteryLevelTxt"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-best-grade"],["flush-element"],["text","\\n        "],["append",["unknown",["highestGradeTxt"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "33S58zhp",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-legendary-champion-mastery-component\\\\legendary-mastery-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-champion-icon-inner-container ",["unknown",["emphasis"]]]]],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-icon-container"],["flush-element"],["text","\\n    "],["append",["helper",["legendary-mastery-icon"],null,[["mastery","emphasis"],[["get",["mastery"]],["get",["emphasis"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["masteryDisabled"]]],null,0],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-title"],["flush-element"],["text","\\n        "],["append",["unknown",["championInfo","name"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-hr"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-level"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","profile-lcm-tooltip-contents-level-icon"],["static-attr","src","/fe/lol-static-assets/images/champion-mastery/icon-mastery.svg"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-level-text"],["flush-element"],["text","\\n          "],["append",["unknown",["masteryLevelTxt"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","profile-lcm-tooltip-contents-best-grade"],["flush-element"],["text","\\n        "],["append",["unknown",["highestGradeTxt"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1748,10 +1766,10 @@
                 value: !0
             }), t.default = void 0, t.validateTrophy = l;
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 };
-            n(77);
+            n(78);
             const r = (0, a.EmberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -1764,7 +1782,7 @@
             });
             var o = a.Ember.Component.extend(i.default, r, {
                 classNames: ["style-profile-trophy-component"],
-                layout: n(78),
+                layout: n(79),
                 profileService: a.Ember.inject.service("profile"),
                 puuid: a.Ember.computed.alias("summoner.puuid"),
                 isEnabledOnProfile: a.Ember.computed.bool("trophiesConfigNamespace.IsEnabledOnProfile"),
@@ -1862,8 +1880,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "qocJwqGS",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-trophy-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-trophy-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-trophy-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tournamentHeader"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasTrophy"]]],null,5],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasTrophyImgAssets"]]],null,4,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isEnabledOnProfile"]]],null,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","trophies_tournament_blank_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["hasNoTrophy"]]],null,1]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-trophy-empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-trophy-container"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","style-profile-trophy-pedestal"],["dynamic-attr","src",["concat",[["unknown",["pedestalImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","style-profile-trophy-cupgem"],["dynamic-attr","src",["concat",[["unknown",["cupgemImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["tierText"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["bracketText"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "qUWh7ZNq",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-trophy-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-trophy-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-trophy-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tournamentHeader"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasTrophy"]]],null,5],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasTrophyImgAssets"]]],null,4,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isEnabledOnProfile"]]],null,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","trophies_tournament_blank_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["hasNoTrophy"]]],null,1]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-trophy-empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-trophy-container"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","style-profile-trophy-pedestal"],["dynamic-attr","src",["concat",[["unknown",["pedestalImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","style-profile-trophy-cupgem"],["dynamic-attr","src",["concat",[["unknown",["cupgemImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["tierText"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["bracketText"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1872,12 +1890,12 @@
                 value: !0
             }), t.default = void 0, t.validateFlag = m;
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 },
-                r = n(80);
-            n(81);
-            var o = n(82);
+                r = n(81);
+            n(82);
+            var o = n(83);
             const l = (0, a.EmberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -1891,7 +1909,7 @@
             var d = a.Ember.Component.extend(i.default, l, {
                 classNames: ["style-profile-clash-banner-component"],
                 classNameBindings: ["isBannerClickable:clickable", "isBannerPickDisabled:pick-disabled"],
-                layout: n(83),
+                layout: n(84),
                 profileService: a.Ember.inject.service("profile"),
                 puuid: a.Ember.computed.alias("summoner.puuid"),
                 isEnabledOnProfile: a.Ember.computed.bool("bannersConfigNamespace.IsEnabledOnProfile"),
@@ -2031,8 +2049,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "QaqpOJJ4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["dynamic-attr","onclick",["helper",["if"],[["get",["isBannerClickable"]],["helper",["action"],[["get",[null]],"clickBanner"],null]],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tra","banners_profile_header"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["bannerImgSrc"]]],null,8],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["bannerImgSrc"]]],null,7,6],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["comment"," This if/elseif pattern is used so that toooltip creation doesn\'t get confused on initialization, when it temporarily appears that there isn\'t a flag  "],["text","\\n"],["block",["if"],[["get",["hasEquippedFlag"]]],null,5,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","banners_profile_blank_tooltip_message"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["hasNoEquippedFlag"]]],null,1]],"locals":[]},{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","style-profile-clash-banner-tooltip-call-to-action-separator"],["flush-element"],["close-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","banners_profile_tooltip_message"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-group"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-theme"],["flush-element"],["append",["unknown",["bannerTooltipTournamentText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-level"],["flush-element"],["append",["unknown",["bannerTooltipLevelText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-earned-date"],["flush-element"],["append",["unknown",["bannerTooltipEarnedDateText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isBannerClickable"]]],null,3],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["top"]],4]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-image"],["dynamic-attr","src",["concat",[["unknown",["bannerImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-frame"],["dynamic-attr","src",["concat",[["unknown",["frameImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-preloader"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-button"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["bannerTournamentTitle"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "M0omche1",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-emblem-wrapper"],["dynamic-attr","onclick",["helper",["if"],[["get",["isBannerClickable"]],["helper",["action"],[["get",[null]],"clickBanner"],null]],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-title"],["flush-element"],["append",["unknown",["tra","banners_profile_header"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["bannerImgSrc"]]],null,8],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","style-profile-emblem-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["bannerImgSrc"]]],null,7,6],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["comment"," This if/elseif pattern is used so that toooltip creation doesn\'t get confused on initialization, when it temporarily appears that there isn\'t a flag  "],["text","\\n"],["block",["if"],[["get",["hasEquippedFlag"]]],null,5,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","banners_profile_blank_tooltip_message"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["type","tooltipPosition"],["system","top"]],0]],"locals":[]},{"statements":[["block",["if"],[["get",["hasNoEquippedFlag"]]],null,1]],"locals":[]},{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","style-profile-clash-banner-tooltip-call-to-action-separator"],["flush-element"],["close-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","banners_profile_tooltip_message"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-group"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-theme"],["flush-element"],["append",["unknown",["bannerTooltipTournamentText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-level"],["flush-element"],["append",["unknown",["bannerTooltipLevelText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-tooltip-details-earned-date"],["flush-element"],["append",["unknown",["bannerTooltipEarnedDateText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isBannerClickable"]]],null,3],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["top"]],4]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-image"],["dynamic-attr","src",["concat",[["unknown",["bannerImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-frame"],["dynamic-attr","src",["concat",[["unknown",["frameImgSrc"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-preloader"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-button"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","style-profile-emblem-header-subtitle"],["flush-element"],["append",["unknown",["bannerTournamentTitle"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2041,11 +2059,11 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(85);
+            n(86);
             var a = s.Ember.Component.extend({
                 classNames: ["style-profile-eternals-component"],
                 classNameBindings: ["emphasis"],
-                layout: n(86),
+                layout: n(87),
                 eternal: null,
                 index: null,
                 championInfo: null,
@@ -2076,23 +2094,23 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "wW1gFxhl",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\eternals-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\eternals-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\eternals-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-eternals-image ",["unknown",["emphasis"]]]]],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["eternal","imageUrl"]],");"]]],["flush-element"],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","profile-eternals-value"],["flush-element"],["append",["unknown",["eternal","value"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","profile-eternals-name"],["flush-element"],["append",["unknown",["eternal","name"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-eternals-champion ",["unknown",["championId"]]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","profile-eternals-champion-framing"],["flush-element"],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","profile-eternals-champion-icon"],["dynamic-attr","src",["concat",[["unknown",["championInfo","squarePortraitPath"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "PE/KGxip",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\eternals-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\eternals-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\eternals-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-eternals-image ",["unknown",["emphasis"]]]]],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["eternal","imageUrl"]],");"]]],["flush-element"],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","profile-eternals-value"],["flush-element"],["append",["unknown",["eternal","value"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","profile-eternals-name"],["flush-element"],["append",["unknown",["eternal","name"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["profile-eternals-champion ",["unknown",["championId"]]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","profile-eternals-champion-framing"],["flush-element"],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","profile-eternals-champion-icon"],["dynamic-attr","src",["concat",[["unknown",["championInfo","squarePortraitPath"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var s = n(1),
-                a = n(41),
-                i = o(n(88)),
-                r = o(n(31));
+                a = n(42),
+                i = o(n(89)),
+                r = o(n(32));
 
             function o(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(217);
+            n(218);
             const {
                 RunMixin: l
             } = s.EmberAddons.EmberLifeline;
@@ -2121,7 +2139,7 @@
             });
             e.exports = s.Ember.Component.extend(l, d, r.default, {
                 classNames: ["style-profile-boosts-component"],
-                layout: n(218),
+                layout: n(219),
                 tooltipManager: s.TooltipManager,
                 profileService: s.Ember.inject.service("profile"),
                 boosts: s.Ember.computed.alias("profileService.boosts"),
@@ -3009,7 +3027,7 @@
                 function hn(t) {
                     var s = null;
                     if (!mn[t] && e && e.exports) try {
-                        s = on._abbr, n(89)("./" + t), pn(s)
+                        s = on._abbr, n(90)("./" + t), pn(s)
                     } catch (e) {}
                     return mn[t]
                 }
@@ -4138,260 +4156,260 @@
             }()
         }, (e, t, n) => {
             var s = {
-                "./af": 90,
-                "./af.js": 90,
-                "./ar": 91,
-                "./ar-dz": 92,
-                "./ar-dz.js": 92,
-                "./ar-kw": 93,
-                "./ar-kw.js": 93,
-                "./ar-ly": 94,
-                "./ar-ly.js": 94,
-                "./ar-ma": 95,
-                "./ar-ma.js": 95,
-                "./ar-sa": 96,
-                "./ar-sa.js": 96,
-                "./ar-tn": 97,
-                "./ar-tn.js": 97,
-                "./ar.js": 91,
-                "./az": 98,
-                "./az.js": 98,
-                "./be": 99,
-                "./be.js": 99,
-                "./bg": 100,
-                "./bg.js": 100,
-                "./bm": 101,
-                "./bm.js": 101,
-                "./bn": 102,
-                "./bn.js": 102,
-                "./bo": 103,
-                "./bo.js": 103,
-                "./br": 104,
-                "./br.js": 104,
-                "./bs": 105,
-                "./bs.js": 105,
-                "./ca": 106,
-                "./ca.js": 106,
-                "./cs": 107,
-                "./cs.js": 107,
-                "./cv": 108,
-                "./cv.js": 108,
-                "./cy": 109,
-                "./cy.js": 109,
-                "./da": 110,
-                "./da.js": 110,
-                "./de": 111,
-                "./de-at": 112,
-                "./de-at.js": 112,
-                "./de-ch": 113,
-                "./de-ch.js": 113,
-                "./de.js": 111,
-                "./dv": 114,
-                "./dv.js": 114,
-                "./el": 115,
-                "./el.js": 115,
-                "./en-SG": 116,
-                "./en-SG.js": 116,
-                "./en-au": 117,
-                "./en-au.js": 117,
-                "./en-ca": 118,
-                "./en-ca.js": 118,
-                "./en-gb": 119,
-                "./en-gb.js": 119,
-                "./en-ie": 120,
-                "./en-ie.js": 120,
-                "./en-il": 121,
-                "./en-il.js": 121,
-                "./en-nz": 122,
-                "./en-nz.js": 122,
-                "./eo": 123,
-                "./eo.js": 123,
-                "./es": 124,
-                "./es-do": 125,
-                "./es-do.js": 125,
-                "./es-us": 126,
-                "./es-us.js": 126,
-                "./es.js": 124,
-                "./et": 127,
-                "./et.js": 127,
-                "./eu": 128,
-                "./eu.js": 128,
-                "./fa": 129,
-                "./fa.js": 129,
-                "./fi": 130,
-                "./fi.js": 130,
-                "./fo": 131,
-                "./fo.js": 131,
-                "./fr": 132,
-                "./fr-ca": 133,
-                "./fr-ca.js": 133,
-                "./fr-ch": 134,
-                "./fr-ch.js": 134,
-                "./fr.js": 132,
-                "./fy": 135,
-                "./fy.js": 135,
-                "./ga": 136,
-                "./ga.js": 136,
-                "./gd": 137,
-                "./gd.js": 137,
-                "./gl": 138,
-                "./gl.js": 138,
-                "./gom-latn": 139,
-                "./gom-latn.js": 139,
-                "./gu": 140,
-                "./gu.js": 140,
-                "./he": 141,
-                "./he.js": 141,
-                "./hi": 142,
-                "./hi.js": 142,
-                "./hr": 143,
-                "./hr.js": 143,
-                "./hu": 144,
-                "./hu.js": 144,
-                "./hy-am": 145,
-                "./hy-am.js": 145,
-                "./id": 146,
-                "./id.js": 146,
-                "./is": 147,
-                "./is.js": 147,
-                "./it": 148,
-                "./it-ch": 149,
-                "./it-ch.js": 149,
-                "./it.js": 148,
-                "./ja": 150,
-                "./ja.js": 150,
-                "./jv": 151,
-                "./jv.js": 151,
-                "./ka": 152,
-                "./ka.js": 152,
-                "./kk": 153,
-                "./kk.js": 153,
-                "./km": 154,
-                "./km.js": 154,
-                "./kn": 155,
-                "./kn.js": 155,
-                "./ko": 156,
-                "./ko.js": 156,
-                "./ku": 157,
-                "./ku.js": 157,
-                "./ky": 158,
-                "./ky.js": 158,
-                "./lb": 159,
-                "./lb.js": 159,
-                "./lo": 160,
-                "./lo.js": 160,
-                "./lt": 161,
-                "./lt.js": 161,
-                "./lv": 162,
-                "./lv.js": 162,
-                "./me": 163,
-                "./me.js": 163,
-                "./mi": 164,
-                "./mi.js": 164,
-                "./mk": 165,
-                "./mk.js": 165,
-                "./ml": 166,
-                "./ml.js": 166,
-                "./mn": 167,
-                "./mn.js": 167,
-                "./mr": 168,
-                "./mr.js": 168,
-                "./ms": 169,
-                "./ms-my": 170,
-                "./ms-my.js": 170,
-                "./ms.js": 169,
-                "./mt": 171,
-                "./mt.js": 171,
-                "./my": 172,
-                "./my.js": 172,
-                "./nb": 173,
-                "./nb.js": 173,
-                "./ne": 174,
-                "./ne.js": 174,
-                "./nl": 175,
-                "./nl-be": 176,
-                "./nl-be.js": 176,
-                "./nl.js": 175,
-                "./nn": 177,
-                "./nn.js": 177,
-                "./pa-in": 178,
-                "./pa-in.js": 178,
-                "./pl": 179,
-                "./pl.js": 179,
-                "./pt": 180,
-                "./pt-br": 181,
-                "./pt-br.js": 181,
-                "./pt.js": 180,
-                "./ro": 182,
-                "./ro.js": 182,
-                "./ru": 183,
-                "./ru.js": 183,
-                "./sd": 184,
-                "./sd.js": 184,
-                "./se": 185,
-                "./se.js": 185,
-                "./si": 186,
-                "./si.js": 186,
-                "./sk": 187,
-                "./sk.js": 187,
-                "./sl": 188,
-                "./sl.js": 188,
-                "./sq": 189,
-                "./sq.js": 189,
-                "./sr": 190,
-                "./sr-cyrl": 191,
-                "./sr-cyrl.js": 191,
-                "./sr.js": 190,
-                "./ss": 192,
-                "./ss.js": 192,
-                "./sv": 193,
-                "./sv.js": 193,
-                "./sw": 194,
-                "./sw.js": 194,
-                "./ta": 195,
-                "./ta.js": 195,
-                "./te": 196,
-                "./te.js": 196,
-                "./tet": 197,
-                "./tet.js": 197,
-                "./tg": 198,
-                "./tg.js": 198,
-                "./th": 199,
-                "./th.js": 199,
-                "./tl-ph": 200,
-                "./tl-ph.js": 200,
-                "./tlh": 201,
-                "./tlh.js": 201,
-                "./tr": 202,
-                "./tr.js": 202,
-                "./tzl": 203,
-                "./tzl.js": 203,
-                "./tzm": 204,
-                "./tzm-latn": 205,
-                "./tzm-latn.js": 205,
-                "./tzm.js": 204,
-                "./ug-cn": 206,
-                "./ug-cn.js": 206,
-                "./uk": 207,
-                "./uk.js": 207,
-                "./ur": 208,
-                "./ur.js": 208,
-                "./uz": 209,
-                "./uz-latn": 210,
-                "./uz-latn.js": 210,
-                "./uz.js": 209,
-                "./vi": 211,
-                "./vi.js": 211,
-                "./x-pseudo": 212,
-                "./x-pseudo.js": 212,
-                "./yo": 213,
-                "./yo.js": 213,
-                "./zh-cn": 214,
-                "./zh-cn.js": 214,
-                "./zh-hk": 215,
-                "./zh-hk.js": 215,
-                "./zh-tw": 216,
-                "./zh-tw.js": 216
+                "./af": 91,
+                "./af.js": 91,
+                "./ar": 92,
+                "./ar-dz": 93,
+                "./ar-dz.js": 93,
+                "./ar-kw": 94,
+                "./ar-kw.js": 94,
+                "./ar-ly": 95,
+                "./ar-ly.js": 95,
+                "./ar-ma": 96,
+                "./ar-ma.js": 96,
+                "./ar-sa": 97,
+                "./ar-sa.js": 97,
+                "./ar-tn": 98,
+                "./ar-tn.js": 98,
+                "./ar.js": 92,
+                "./az": 99,
+                "./az.js": 99,
+                "./be": 100,
+                "./be.js": 100,
+                "./bg": 101,
+                "./bg.js": 101,
+                "./bm": 102,
+                "./bm.js": 102,
+                "./bn": 103,
+                "./bn.js": 103,
+                "./bo": 104,
+                "./bo.js": 104,
+                "./br": 105,
+                "./br.js": 105,
+                "./bs": 106,
+                "./bs.js": 106,
+                "./ca": 107,
+                "./ca.js": 107,
+                "./cs": 108,
+                "./cs.js": 108,
+                "./cv": 109,
+                "./cv.js": 109,
+                "./cy": 110,
+                "./cy.js": 110,
+                "./da": 111,
+                "./da.js": 111,
+                "./de": 112,
+                "./de-at": 113,
+                "./de-at.js": 113,
+                "./de-ch": 114,
+                "./de-ch.js": 114,
+                "./de.js": 112,
+                "./dv": 115,
+                "./dv.js": 115,
+                "./el": 116,
+                "./el.js": 116,
+                "./en-SG": 117,
+                "./en-SG.js": 117,
+                "./en-au": 118,
+                "./en-au.js": 118,
+                "./en-ca": 119,
+                "./en-ca.js": 119,
+                "./en-gb": 120,
+                "./en-gb.js": 120,
+                "./en-ie": 121,
+                "./en-ie.js": 121,
+                "./en-il": 122,
+                "./en-il.js": 122,
+                "./en-nz": 123,
+                "./en-nz.js": 123,
+                "./eo": 124,
+                "./eo.js": 124,
+                "./es": 125,
+                "./es-do": 126,
+                "./es-do.js": 126,
+                "./es-us": 127,
+                "./es-us.js": 127,
+                "./es.js": 125,
+                "./et": 128,
+                "./et.js": 128,
+                "./eu": 129,
+                "./eu.js": 129,
+                "./fa": 130,
+                "./fa.js": 130,
+                "./fi": 131,
+                "./fi.js": 131,
+                "./fo": 132,
+                "./fo.js": 132,
+                "./fr": 133,
+                "./fr-ca": 134,
+                "./fr-ca.js": 134,
+                "./fr-ch": 135,
+                "./fr-ch.js": 135,
+                "./fr.js": 133,
+                "./fy": 136,
+                "./fy.js": 136,
+                "./ga": 137,
+                "./ga.js": 137,
+                "./gd": 138,
+                "./gd.js": 138,
+                "./gl": 139,
+                "./gl.js": 139,
+                "./gom-latn": 140,
+                "./gom-latn.js": 140,
+                "./gu": 141,
+                "./gu.js": 141,
+                "./he": 142,
+                "./he.js": 142,
+                "./hi": 143,
+                "./hi.js": 143,
+                "./hr": 144,
+                "./hr.js": 144,
+                "./hu": 145,
+                "./hu.js": 145,
+                "./hy-am": 146,
+                "./hy-am.js": 146,
+                "./id": 147,
+                "./id.js": 147,
+                "./is": 148,
+                "./is.js": 148,
+                "./it": 149,
+                "./it-ch": 150,
+                "./it-ch.js": 150,
+                "./it.js": 149,
+                "./ja": 151,
+                "./ja.js": 151,
+                "./jv": 152,
+                "./jv.js": 152,
+                "./ka": 153,
+                "./ka.js": 153,
+                "./kk": 154,
+                "./kk.js": 154,
+                "./km": 155,
+                "./km.js": 155,
+                "./kn": 156,
+                "./kn.js": 156,
+                "./ko": 157,
+                "./ko.js": 157,
+                "./ku": 158,
+                "./ku.js": 158,
+                "./ky": 159,
+                "./ky.js": 159,
+                "./lb": 160,
+                "./lb.js": 160,
+                "./lo": 161,
+                "./lo.js": 161,
+                "./lt": 162,
+                "./lt.js": 162,
+                "./lv": 163,
+                "./lv.js": 163,
+                "./me": 164,
+                "./me.js": 164,
+                "./mi": 165,
+                "./mi.js": 165,
+                "./mk": 166,
+                "./mk.js": 166,
+                "./ml": 167,
+                "./ml.js": 167,
+                "./mn": 168,
+                "./mn.js": 168,
+                "./mr": 169,
+                "./mr.js": 169,
+                "./ms": 170,
+                "./ms-my": 171,
+                "./ms-my.js": 171,
+                "./ms.js": 170,
+                "./mt": 172,
+                "./mt.js": 172,
+                "./my": 173,
+                "./my.js": 173,
+                "./nb": 174,
+                "./nb.js": 174,
+                "./ne": 175,
+                "./ne.js": 175,
+                "./nl": 176,
+                "./nl-be": 177,
+                "./nl-be.js": 177,
+                "./nl.js": 176,
+                "./nn": 178,
+                "./nn.js": 178,
+                "./pa-in": 179,
+                "./pa-in.js": 179,
+                "./pl": 180,
+                "./pl.js": 180,
+                "./pt": 181,
+                "./pt-br": 182,
+                "./pt-br.js": 182,
+                "./pt.js": 181,
+                "./ro": 183,
+                "./ro.js": 183,
+                "./ru": 184,
+                "./ru.js": 184,
+                "./sd": 185,
+                "./sd.js": 185,
+                "./se": 186,
+                "./se.js": 186,
+                "./si": 187,
+                "./si.js": 187,
+                "./sk": 188,
+                "./sk.js": 188,
+                "./sl": 189,
+                "./sl.js": 189,
+                "./sq": 190,
+                "./sq.js": 190,
+                "./sr": 191,
+                "./sr-cyrl": 192,
+                "./sr-cyrl.js": 192,
+                "./sr.js": 191,
+                "./ss": 193,
+                "./ss.js": 193,
+                "./sv": 194,
+                "./sv.js": 194,
+                "./sw": 195,
+                "./sw.js": 195,
+                "./ta": 196,
+                "./ta.js": 196,
+                "./te": 197,
+                "./te.js": 197,
+                "./tet": 198,
+                "./tet.js": 198,
+                "./tg": 199,
+                "./tg.js": 199,
+                "./th": 200,
+                "./th.js": 200,
+                "./tl-ph": 201,
+                "./tl-ph.js": 201,
+                "./tlh": 202,
+                "./tlh.js": 202,
+                "./tr": 203,
+                "./tr.js": 203,
+                "./tzl": 204,
+                "./tzl.js": 204,
+                "./tzm": 205,
+                "./tzm-latn": 206,
+                "./tzm-latn.js": 206,
+                "./tzm.js": 205,
+                "./ug-cn": 207,
+                "./ug-cn.js": 207,
+                "./uk": 208,
+                "./uk.js": 208,
+                "./ur": 209,
+                "./ur.js": 209,
+                "./uz": 210,
+                "./uz-latn": 211,
+                "./uz-latn.js": 211,
+                "./uz.js": 210,
+                "./vi": 212,
+                "./vi.js": 212,
+                "./x-pseudo": 213,
+                "./x-pseudo.js": 213,
+                "./yo": 214,
+                "./yo.js": 214,
+                "./zh-cn": 215,
+                "./zh-cn.js": 215,
+                "./zh-hk": 216,
+                "./zh-hk.js": 216,
+                "./zh-tw": 217,
+                "./zh-tw.js": 217
             };
 
             function a(e) {
@@ -4408,7 +4426,7 @@
             }
             a.keys = function() {
                 return Object.keys(s)
-            }, a.resolve = i, e.exports = a, a.id = 89
+            }, a.resolve = i, e.exports = a, a.id = 90
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -4466,7 +4484,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -4574,7 +4592,7 @@
                         doy: 12
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -4622,7 +4640,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -4670,7 +4688,7 @@
                         doy: 12
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -4764,7 +4782,7 @@
                         doy: 12
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -4812,7 +4830,7 @@
                         doy: 12
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -4901,7 +4919,7 @@
                         doy: 6
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -4949,7 +4967,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5032,7 +5050,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5137,7 +5155,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5202,7 +5220,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5249,7 +5267,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5337,7 +5355,7 @@
                         doy: 6
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5425,7 +5443,7 @@
                         doy: 6
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5515,7 +5533,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5615,7 +5633,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5686,7 +5704,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5812,7 +5830,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5863,7 +5881,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5916,7 +5934,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -5965,7 +5983,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6030,7 +6048,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6095,7 +6113,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6160,7 +6178,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6222,7 +6240,7 @@
                         doy: 12
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6293,7 +6311,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6345,7 +6363,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6397,7 +6415,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6445,7 +6463,7 @@
                         return e + (1 == ~~(e % 100 / 10) ? "th" : 1 === t ? "st" : 2 === t ? "nd" : 3 === t ? "rd" : "th")
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6497,7 +6515,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6549,7 +6567,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6596,7 +6614,7 @@
                         return e + (1 == ~~(e % 100 / 10) ? "th" : 1 === t ? "st" : 2 === t ? "nd" : 3 === t ? "rd" : "th")
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6648,7 +6666,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6704,7 +6722,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6777,7 +6795,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6850,7 +6868,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6923,7 +6941,7 @@
                         doy: 6
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -6989,7 +7007,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7044,7 +7062,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7135,7 +7153,7 @@
                         doy: 12
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7229,7 +7247,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7278,7 +7296,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7343,7 +7361,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7403,7 +7421,7 @@
                         }
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7467,7 +7485,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7524,7 +7542,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7581,7 +7599,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7638,7 +7656,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7701,7 +7719,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7780,7 +7798,7 @@
                         return e < 4 ? "rati" : e < 12 ? "sokalli" : e < 16 ? "donparam" : e < 20 ? "sanje" : "rati"
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7869,7 +7887,7 @@
                         doy: 6
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -7931,7 +7949,7 @@
                         return e < 5 ? "לפנות בוקר" : e < 10 ? "בבוקר" : e < 12 ? n ? 'לפנה"צ' : "לפני הצהריים" : e < 18 ? n ? 'אחה"צ' : "אחרי הצהריים" : "בערב"
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8020,7 +8038,7 @@
                         doy: 6
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8123,7 +8141,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8219,7 +8237,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8292,7 +8310,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8346,7 +8364,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8427,7 +8445,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8480,7 +8498,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8533,7 +8551,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8602,7 +8620,7 @@
                         yy: "%d年"
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8656,7 +8674,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8718,7 +8736,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8793,7 +8811,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8884,7 +8902,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -8977,7 +8995,7 @@
                         doy: 6
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -9047,7 +9065,7 @@
                         return e < 12 ? "오전" : "오후"
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -9137,7 +9155,7 @@
                         doy: 12
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -9212,7 +9230,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -9305,7 +9323,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -9360,7 +9378,7 @@
                         return "ທີ່" + e
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -9458,7 +9476,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -9537,7 +9555,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -9623,7 +9641,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -9676,7 +9694,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -9741,7 +9759,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -9792,7 +9810,7 @@
                         return e < 4 ? "രാത്രി" : e < 12 ? "രാവിലെ" : e < 17 ? "ഉച്ച കഴിഞ്ഞ്" : e < 20 ? "വൈകുന്നേരം" : "രാത്രി"
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -9881,7 +9899,7 @@
                         }
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10048,7 +10066,7 @@
                         doy: 6
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10102,7 +10120,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10156,7 +10174,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10205,7 +10223,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10286,7 +10304,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10337,7 +10355,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10427,7 +10445,7 @@
                         doy: 6
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10492,7 +10510,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10557,7 +10575,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10606,7 +10624,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10694,7 +10712,7 @@
                         doy: 6
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10795,7 +10813,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10847,7 +10865,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10895,7 +10913,7 @@
                     dayOfMonthOrdinalParse: /\d{1,2}º/,
                     ordinal: "%dº"
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -10955,7 +10973,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11087,7 +11105,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11149,7 +11167,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11198,7 +11216,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11253,7 +11271,7 @@
                         return e > 11 ? n ? "ප.ව." : "පස් වරු" : n ? "පෙ.ව." : "පෙර වරු"
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11368,7 +11386,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11477,7 +11495,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11534,7 +11552,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11620,7 +11638,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11706,7 +11724,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11763,7 +11781,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11817,7 +11835,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11865,7 +11883,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -11957,7 +11975,7 @@
                         doy: 6
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12014,7 +12032,7 @@
                         doy: 6
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12066,7 +12084,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12149,7 +12167,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12201,7 +12219,7 @@
                         yy: "%d ปี"
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12252,7 +12270,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12339,7 +12357,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12421,7 +12439,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12495,7 +12513,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12542,7 +12560,7 @@
                         doy: 12
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12589,7 +12607,7 @@
                         doy: 12
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12664,7 +12682,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12779,7 +12797,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12841,7 +12859,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12888,7 +12906,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12935,7 +12953,7 @@
                         doy: 7
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -12999,7 +13017,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -13052,7 +13070,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -13101,7 +13119,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -13176,7 +13194,7 @@
                         doy: 4
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -13247,7 +13265,7 @@
                         yy: "%d 年"
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, function(e, t, n) {
             ! function(e) {
                 "use strict";
@@ -13318,15 +13336,15 @@
                         yy: "%d 年"
                     }
                 })
-            }(n(88))
+            }(n(89))
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "QPpyR8Q4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-boosts-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-boosts-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-boosts-component\\\\index.js\\" "],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["concat",["style-profile-perks-icon style-profile-boost ",["helper",["if"],[["get",["boostActive"]],"","disabled"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],5],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_perks_boost_tooltip_message_none"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","lol-typekit-label"],["flush-element"],["text","\\n                    "],["append",["unknown",["xpBoostWinCountString"]],false],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","lol-typekit-label"],["flush-element"],["text","\\n                    "],["append",["unknown",["xpExpireString"]],false],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","tr",[]],["flush-element"],["text","\\n              "],["open-element","td",[]],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","lol-typekit-value"],["flush-element"],["text","\\n                  "],["append",["unknown",["tra","profile_perks_boost_tooltip_message_xp_subtitle"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","td",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["xpExpireString"]]],null,2],["block",["if"],[["get",["xpBoostWinCountString"]]],null,1],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","table",[]],["static-attr","class","lol-uikit-list-table"],["flush-element"],["text","\\n"],["block",["if"],[["get",["xpBoostActive"]]],null,3],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["static-attr","class","style-profile-boosts-tooltip"],["flush-element"],["text","\\n      "],["open-element","h6",[]],["dynamic-attr","class",["concat",["style-profile-boosts-tooltip-title ",["helper",["if"],[["get",["boostActive"]],"left",""],null]]]],["flush-element"],["append",["unknown",["tra","profile_perks_boost_tooltip_title"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["boostActive"]]],null,4,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "SW+lo/rZ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-boosts-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-boosts-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-boosts-component\\\\index.js\\" "],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["concat",["style-profile-perks-icon style-profile-boost ",["helper",["if"],[["get",["boostActive"]],"","disabled"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],5],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_perks_boost_tooltip_message_none"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","lol-typekit-label"],["flush-element"],["text","\\n                    "],["append",["unknown",["xpBoostWinCountString"]],false],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","lol-typekit-label"],["flush-element"],["text","\\n                    "],["append",["unknown",["xpExpireString"]],false],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","tr",[]],["flush-element"],["text","\\n              "],["open-element","td",[]],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","lol-typekit-value"],["flush-element"],["text","\\n                  "],["append",["unknown",["tra","profile_perks_boost_tooltip_message_xp_subtitle"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","td",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["xpExpireString"]]],null,2],["block",["if"],[["get",["xpBoostWinCountString"]]],null,1],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","table",[]],["static-attr","class","lol-uikit-list-table"],["flush-element"],["text","\\n"],["block",["if"],[["get",["xpBoostActive"]]],null,3],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["static-attr","class","style-profile-boosts-tooltip"],["flush-element"],["text","\\n      "],["open-element","h6",[]],["dynamic-attr","class",["concat",["style-profile-boosts-tooltip-title ",["helper",["if"],[["get",["boostActive"]],"left",""],null]]]],["flush-element"],["append",["unknown",["tra","profile_perks_boost_tooltip_title"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["boostActive"]]],null,4,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -13566,11 +13584,11 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(223);
+            n(224);
             var a = n(6);
             e.exports = s.Ember.Component.extend({
                 classNames: ["ranked-reference-modal-button-component"],
-                layout: n(224),
+                layout: n(225),
                 init() {
                     this._super(...arguments), s.db.get("/lol-summoner/v1/current-summoner").then((e => {
                         this.set("isRankedEligible", e.summonerLevel >= 30)
@@ -13618,24 +13636,24 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "HcAAz+yV",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-button-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-button-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-button-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showingRankedReference"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","ranked-reference-modal-question-mark"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"OpenRankedReferenceModal"],null],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "5fXCyA9Y",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-button-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-button-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-button-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showingRankedReference"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","ranked-reference-modal-question-mark"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"OpenRankedReferenceModal"],null],null],["flush-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(226);
-            var a = n(227);
+            n(227);
+            var a = n(228);
             const i = 628;
             e.exports = s.Ember.Component.extend({
                 classNames: ["ranked-reference-modal-component"],
-                layout: n(228),
+                layout: n(229),
                 pageIndex: 0,
                 numPages: 0,
                 isScrolling: !1,
                 init() {
-                    this._super(...arguments), this.set("pageIndex", 0), this.set("numPages", Math.ceil(this.get("tiers").length / 3)), this.set("isScrolling", !1), this.set("defaultRewardsConfig", n(229)), window.requestAnimationFrame((() => {
+                    this._super(...arguments), this.set("pageIndex", 0), this.set("numPages", Math.ceil(this.get("tiers").length / 3)), this.set("isScrolling", !1), this.set("defaultRewardsConfig", n(230)), window.requestAnimationFrame((() => {
                         this.setInitialPage(this.get("rankedStatsEntry.tier"))
                     }))
                 },
@@ -13782,8 +13800,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "C6pKOJPS",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","ranked-reference-modal-container"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","ranked-reference-modal-background"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","title-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title-wing-left"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title-text"],["flush-element"],["append",["unknown",["titleText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title-wing-right"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","summary-body"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summary-title"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_summary_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summary-content"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_summary_content"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["rankedStatsEntry","isProvisional"]]],null,13],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","visual"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","visual_caption_division"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_visual_divisions"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","visual_content_container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","visual_tier"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_sizer"],["flush-element"],["text","\\n            "],["open-element","lol-regalia-emblem-element",[]],["static-attr","ranked-tier","SILVER"],["flush-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_caption"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_visual_tier"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","visual_tier"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_sizer"],["flush-element"],["text","\\n            "],["open-element","lol-regalia-emblem-element",[]],["static-attr","ranked-tier","GOLD"],["flush-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_caption"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_visual_tier"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","id","carousel-container"],["static-attr","class","carousel-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","id","carousel-body"],["static-attr","class","carousel-body"],["flush-element"],["text","\\n"],["block",["each"],[["get",["newCards"]]],null,12],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["carousel-left-arrow-mask ",["helper",["if"],[["get",["showLeftArrowButton"]],"reveal","hidden"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","carousel-left-arrow"],["modifier",["action"],[["get",[null]],"navigatePage",-1]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["carousel-right-arrow-mask ",["helper",["if"],[["get",["showRightArrowButton"]],"reveal","hidden"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","carousel-right-arrow"],["modifier",["action"],[["get",[null]],"navigatePage",1]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","current-rank-overlay"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","current-rank-text"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_current_rank_text"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","more-rewards-text"],["flush-element"],["append",["unknown",["item","extra_rewards_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","reward-title"],["flush-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","reward-text-line"],["flush-element"],["text","\\n                          "],["open-element","font",[]],["static-attr","color","#F0E6D2"],["flush-element"],["text","•"],["close-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["rewardListNode","isReward"]]],null,3,2]],"locals":["rewardListNode"]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","reward-title"],["flush-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","reward-text-line"],["flush-element"],["text","\\n                          "],["open-element","font",[]],["static-attr","color","#F0E6D2"],["flush-element"],["text","•"],["close-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["rewardListNode","isReward"]]],null,6,5]],"locals":["rewardListNode"]},{"statements":[["text","                      "],["open-element","div",[]],["dynamic-attr","class",["concat",["division-icon ",["get",["indicator"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["indicator"]},{"statements":[["block",["each"],[["get",["item","division_indicator"]]],null,8]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["static-attr","class","apex-lp-text"],["flush-element"],["append",["unknown",["item","lp_points_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","is_current_rank"]]],null,10]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","carousel-item-container"],["static-attr","id","carousel-item-container"],["modifier",["action"],[["get",[null]],"playHoverSound"],[["on"],["mouseEnter"]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["dynamic-attr","class",["concat",["regalia-crest-container ",["unknown",["item","rankedTier"]]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","regalia-crest-emblem-container"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","regalia-emblem-sizer"],["flush-element"],["text","\\n                "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["unknown",["item","rankedTier"]],null],["flush-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","carousel-item-text-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["anchor-",["unknown",["item","numberOfTextNodes"]]]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","carousel-item-text-anchor"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","rank-tier-title-text"],["flush-element"],["text","\\n                  "],["append",["unknown",["item","rankedTierName"]],false],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","rank-division-indicator"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","is_apex_tier"]]],null,11,9],["text","                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","reward-text-container"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-title"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_reward_text"]],false],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-text-container-upper-half"],["flush-element"],["text","\\n"],["block",["each"],[["get",["item","nodesBeforeHovered"]]],null,7],["text","                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-text-container-bottom-half"],["flush-element"],["text","\\n"],["block",["each"],[["get",["item","nodesAfterHovered"]]],null,4],["text","                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","has_extra_rewards"]]],null,1],["text","                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","is_current_rank"]]],null,0],["text","        "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","provisional-warning-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","provisional-warning-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","provisional-warning-text"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_unranked_warning"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "e0Bm5x8u",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\ranked-reference-modal-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","ranked-reference-modal-container"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","ranked-reference-modal-background"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","title-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title-wing-left"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title-text"],["flush-element"],["append",["unknown",["titleText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","title-wing-right"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","summary-body"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summary-title"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_summary_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","summary-content"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_summary_content"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["rankedStatsEntry","isProvisional"]]],null,13],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","visual"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","visual_caption_division"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_visual_divisions"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","visual_content_container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","visual_tier"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_sizer"],["flush-element"],["text","\\n            "],["open-element","lol-regalia-emblem-element",[]],["static-attr","ranked-tier","SILVER"],["flush-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_caption"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_visual_tier"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","visual_tier"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","visual_regalia_emblem_sizer"],["flush-element"],["text","\\n            "],["open-element","lol-regalia-emblem-element",[]],["static-attr","ranked-tier","GOLD"],["flush-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","visual_caption"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_visual_tier"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","id","carousel-container"],["static-attr","class","carousel-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","id","carousel-body"],["static-attr","class","carousel-body"],["flush-element"],["text","\\n"],["block",["each"],[["get",["newCards"]]],null,12],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["carousel-left-arrow-mask ",["helper",["if"],[["get",["showLeftArrowButton"]],"reveal","hidden"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","carousel-left-arrow"],["modifier",["action"],[["get",[null]],"navigatePage",-1]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["carousel-right-arrow-mask ",["helper",["if"],[["get",["showRightArrowButton"]],"reveal","hidden"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","carousel-right-arrow"],["modifier",["action"],[["get",[null]],"navigatePage",1]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","current-rank-overlay"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","current-rank-text"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_current_rank_text"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","more-rewards-text"],["flush-element"],["append",["unknown",["item","extra_rewards_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","reward-title"],["flush-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","reward-text-line"],["flush-element"],["text","\\n                          "],["open-element","font",[]],["static-attr","color","#F0E6D2"],["flush-element"],["text","•"],["close-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["rewardListNode","isReward"]]],null,3,2]],"locals":["rewardListNode"]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","reward-title"],["flush-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","reward-text-line"],["flush-element"],["text","\\n                          "],["open-element","font",[]],["static-attr","color","#F0E6D2"],["flush-element"],["text","•"],["close-element"],["append",["helper",["sanitize"],[["get",["rewardListNode","loc"]]],null],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["rewardListNode","isReward"]]],null,6,5]],"locals":["rewardListNode"]},{"statements":[["text","                      "],["open-element","div",[]],["dynamic-attr","class",["concat",["division-icon ",["get",["indicator"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["indicator"]},{"statements":[["block",["each"],[["get",["item","division_indicator"]]],null,8]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["static-attr","class","apex-lp-text"],["flush-element"],["append",["unknown",["item","lp_points_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","is_current_rank"]]],null,10]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","carousel-item-container"],["static-attr","id","carousel-item-container"],["modifier",["action"],[["get",[null]],"playHoverSound"],[["on"],["mouseEnter"]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["dynamic-attr","class",["concat",["regalia-crest-container ",["unknown",["item","rankedTier"]]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","regalia-crest-emblem-container"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","regalia-emblem-sizer"],["flush-element"],["text","\\n                "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-tier",["unknown",["item","rankedTier"]],null],["flush-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","carousel-item-text-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["anchor-",["unknown",["item","numberOfTextNodes"]]]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","carousel-item-text-anchor"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","rank-tier-title-text"],["flush-element"],["text","\\n                  "],["append",["unknown",["item","rankedTierName"]],false],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","rank-division-indicator"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","is_apex_tier"]]],null,11,9],["text","                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","reward-text-container"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-title"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_reward_text"]],false],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-text-container-upper-half"],["flush-element"],["text","\\n"],["block",["each"],[["get",["item","nodesBeforeHovered"]]],null,7],["text","                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-text-container-bottom-half"],["flush-element"],["text","\\n"],["block",["each"],[["get",["item","nodesAfterHovered"]]],null,4],["text","                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","has_extra_rewards"]]],null,1],["text","                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","is_current_rank"]]],null,0],["text","        "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","provisional-warning-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","provisional-warning-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","provisional-warning-text"],["flush-element"],["append",["unknown",["tra","ranked_reference_modal_unranked_warning"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, e => {
@@ -13795,9 +13813,9 @@
                 value: !0
             }), t._makeBannerDataFlagKey = d, t.default = void 0;
             var s = n(1),
-                a = n(80);
-            n(231);
-            var i = n(82);
+                a = n(81);
+            n(232);
+            var i = n(83);
             const r = (0, s.EmberDataBinding)({
                 Ember: s.Ember,
                 websocket: (0, s.getProvider)().getSocket(),
@@ -13809,7 +13827,7 @@
                 }
             });
             var o = s.Ember.Component.extend(r, {
-                layout: n(232),
+                layout: n(233),
                 classNames: ["style-profile-clash-banner-picker-component"],
                 isInitialized: !1,
                 init: function() {
@@ -13960,19 +13978,19 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "z8DlZsQk",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\clash-banner-picker-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\clash-banner-picker-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\clash-banner-picker-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-dialog-frame",[]],["static-attr","class","dialog-frame"],["static-attr","dismissable",""],["static-attr","orientation","bottom"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","dialog-content style-profile-clash-banner-picker-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","banners_update_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isInitialized"]]],null,5,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isCurrentlySaving"]]],null,1],["text","  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-button-group",[]],["static-attr","type","dialog-frame"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","button-accept"],["dynamic-attr","disabled",["unknown",["isCurrentlySaving"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"save"],null],null],["flush-element"],["text","\\n      "],["append",["helper",["if"],[["get",["isCurrentlySaving"]],["get",["tra","banners_update_save_button_saving"]],["get",["tra","banners_update_save_button"]]],null],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["isCurrentlySaving"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-saving-spinner"],["flush-element"],["text","\\n      "],["append",["unknown",["uikit-spinner"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-loading-spinner"],["flush-element"],["text","\\n            "],["append",["unknown",["uikit-spinner"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-picker-frame-img"],["dynamic-attr","src",["concat",[["unknown",["frame","imgSrc"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-clash-banner-picker-list-item ",["helper",["if"],[["get",["flag","isSelected"]],"list-item-selected"],null]]]],["modifier",["action"],[["get",[null]],"hoverFlag"],[["on"],["mouseEnter"]]],["modifier",["action"],[["get",[null]],"selectFlag",["get",["flag","itemId"]],["get",["flag","theme"]],["get",["flag","level"]],["get",["flag","seasonId"]],["get",["flag","earnedDateIso8601"]]],[["on"],["click"]]],["flush-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-picker-flag-img"],["dynamic-attr","src",["concat",[["unknown",["flag","imgSrc"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-details-group"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-theme"],["flush-element"],["append",["unknown",["flag","tournamentText"]],false],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-level"],["flush-element"],["append",["unknown",["flag","levelText"]],false],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-earned-date"],["flush-element"],["append",["unknown",["flag","earnedDateText"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"],["block",["if"],[["get",["flag","isSelected"]]],null,3],["text","              "],["close-element"],["text","\\n"]],"locals":["flag"]},{"statements":[["text","          "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["flags"]]],null,4],["text","          "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Nd2tcu4g",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\clash-banner-picker-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\clash-banner-picker-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-emblems\\\\profile-emblem-clash-banner-component\\\\clash-banner-picker-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-dialog-frame",[]],["static-attr","class","dialog-frame"],["static-attr","dismissable",""],["static-attr","orientation","bottom"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","dialog-content style-profile-clash-banner-picker-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","banners_update_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isInitialized"]]],null,5,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isCurrentlySaving"]]],null,1],["text","  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-button-group",[]],["static-attr","type","dialog-frame"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","button-accept"],["dynamic-attr","disabled",["unknown",["isCurrentlySaving"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"save"],null],null],["flush-element"],["text","\\n      "],["append",["helper",["if"],[["get",["isCurrentlySaving"]],["get",["tra","banners_update_save_button_saving"]],["get",["tra","banners_update_save_button"]]],null],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["isCurrentlySaving"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-saving-spinner"],["flush-element"],["text","\\n      "],["append",["unknown",["uikit-spinner"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-loading-spinner"],["flush-element"],["text","\\n            "],["append",["unknown",["uikit-spinner"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-picker-frame-img"],["dynamic-attr","src",["concat",[["unknown",["frame","imgSrc"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-clash-banner-picker-list-item ",["helper",["if"],[["get",["flag","isSelected"]],"list-item-selected"],null]]]],["modifier",["action"],[["get",[null]],"hoverFlag"],[["on"],["mouseEnter"]]],["modifier",["action"],[["get",[null]],"selectFlag",["get",["flag","itemId"]],["get",["flag","theme"]],["get",["flag","level"]],["get",["flag","seasonId"]],["get",["flag","earnedDateIso8601"]]],[["on"],["click"]]],["flush-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","style-profile-clash-banner-picker-flag-img"],["dynamic-attr","src",["concat",[["unknown",["flag","imgSrc"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-details-group"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-theme"],["flush-element"],["append",["unknown",["flag","tournamentText"]],false],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-level"],["flush-element"],["append",["unknown",["flag","levelText"]],false],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","style-profile-clash-banner-picker-list-item-earned-date"],["flush-element"],["append",["unknown",["flag","earnedDateText"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"],["block",["if"],[["get",["flag","isSelected"]]],null,3],["text","              "],["close-element"],["text","\\n"]],"locals":["flag"]},{"statements":[["text","          "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["flags"]]],null,4],["text","          "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 };
-            n(234), e.exports = a.Ember.Component.extend(i.default, {
+            n(235), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-backdrop-component"],
-                layout: n(235),
+                layout: n(236),
                 profileService: a.Ember.inject.service("profile"),
                 backdrop: a.Ember.computed.alias("profileService.backdrop"),
                 potatoModeSettings: a.Ember.computed.alias("profileService.potatoModeSettings"),
@@ -14010,14 +14028,14 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "+u707+Ke",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-backdrop-container ",["helper",["unless"],[["get",["isOverviewSection"]],"style-profile-backdrop-dimmed"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-masked-image"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-background-switcher"],null,[["class","src","overlays"],["style-profile-background-image",["helper",["if"],[["get",["shouldShowVideo"]],["get",["backdrop","backdropVideo"]],["get",["backdrop","backdropImage"]]],null],["get",["overlays"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["defaultBackdrop"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","style-profile-backdrop-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-backdrop-magic",[]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Jcxdcprz",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-backdrop-container ",["helper",["unless"],[["get",["isOverviewSection"]],"style-profile-backdrop-dimmed"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","style-profile-masked-image"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-background-switcher"],null,[["class","src","overlays"],["style-profile-background-image",["helper",["if"],[["get",["shouldShowVideo"]],["get",["backdrop","backdropVideo"]],["get",["backdrop","backdropImage"]]],null],["get",["overlays"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["defaultBackdrop"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","style-profile-backdrop-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-backdrop-magic",[]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(237);
+            n(238);
             const a = (0, s.EmberDataBinding)({
                 Ember: s.Ember,
                 websocket: (0, s.getProvider)().getSocket(),
@@ -14044,7 +14062,7 @@
             });
             e.exports = s.Ember.Component.extend(a, {
                 classNames: ["style-profile-backdrop-picker-component"],
-                layout: n(238),
+                layout: n(239),
                 isOnOverviewPage: s.Ember.computed("subnavigationState.shownSectionId", "overviewSectionId", (function() {
                     return this.get("overviewSectionId") === this.get("subnavigationState.shownSectionId")
                 })),
@@ -14113,8 +14131,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "SDkpZTk1",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-picker-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-picker-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-picker-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-skin-picker-button ",["helper",["unless"],[["get",["showSkinsPickerButton"]],"hide"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-close-button",[]],["static-attr","button-type","cog"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleSkinsPicker"],null],null],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_backdrop_picker_button_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "1tAUhjLW",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-picker-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-picker-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-backdrop-picker-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["style-profile-skin-picker-button ",["helper",["unless"],[["get",["showSkinsPickerButton"]],"hide"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-close-button",[]],["static-attr","button-type","cog"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleSkinsPicker"],null],null],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","profile_backdrop_picker_button_tooltip"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -14123,11 +14141,11 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                i = (s = n(240)) && s.__esModule ? s : {
+                i = (s = n(241)) && s.__esModule ? s : {
                     default: s
                 },
-                r = n(41);
-            n(241);
+                r = n(42);
+            n(242);
             const o = (0, a.EmberDataBinding)({
                 Ember: a.Ember,
                 websocket: (0, a.getProvider)().getSocket(),
@@ -14194,8 +14212,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "LF+rCLXW",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-input-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-input-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-input-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isOnOverviewPage"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["player-name-input"],null,[["enterKeyPressHandler","disabled"],[["helper",["action"],[["get",[null]],"enterKeyPressHandler"],null],["get",["disabled"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "KkRQ41CW",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-input-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-input-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-input-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isOnOverviewPage"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["player-name-input"],null,[["enterKeyPressHandler","disabled"],[["helper",["action"],[["get",[null]],"enterKeyPressHandler"],null],["get",["disabled"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -14204,12 +14222,12 @@
         }, (e, t, n) => {
             "use strict";
             var s, a = n(1),
-                i = (s = n(31)) && s.__esModule ? s : {
+                i = (s = n(32)) && s.__esModule ? s : {
                     default: s
                 };
-            n(243), e.exports = a.Ember.Component.extend(i.default, {
+            n(244), e.exports = a.Ember.Component.extend(i.default, {
                 classNames: ["style-profile-search-trail-component"],
-                layout: n(244),
+                layout: n(245),
                 profileService: a.Ember.inject.service("profile"),
                 bannerEnabled: a.Ember.computed.alias("profileService.bannerEnabled"),
                 friend: a.Ember.computed.alias("profileService.friend"),
@@ -14226,56 +14244,57 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "mRmxISL4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-trail-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-trail-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_15_24\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-trail-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-search-trail-summoner-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["summonerIconPath"]]],null,1],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","style-profile-search-trail-summoner-name"],["flush-element"],["text","\\n  "],["append",["helper",["player-name"],null,[["format","puuid"],["short",["get",["summoner","puuid"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["summonerIconPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-framed-icon"],null,null,0]],"locals":[]}],"hasPartials":false}',
+                id: "UgcZYTOk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-trail-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-trail-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_1\\\\LeagueClientContent_Release\\\\15685\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-profiles\\\\src\\\\app\\\\components\\\\profile-search-trail-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","style-profile-search-trail-summoner-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["summonerIconPath"]]],null,1],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","style-profile-search-trail-summoner-name"],["flush-element"],["text","\\n  "],["append",["helper",["player-name"],null,[["format","puuid"],["short",["get",["summoner","puuid"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["summonerIconPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-framed-icon"],null,null,0]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var s, a = n(1),
-                i = n(246),
-                r = n(260),
-                o = (s = n(261)) && s.__esModule ? s : {
+                i = n(247),
+                r = n(261),
+                o = (s = n(262)) && s.__esModule ? s : {
                     default: s
                 };
-            n(262), e.exports = function() {
+            n(263), e.exports = function() {
                 const e = new i.FullPageModalMediator({
                         Navigation: a.Navigation
                     }),
                     t = e.getScreenNode(),
                     n = document.createElement("div");
-                let s = !1;
+                let s = !1,
+                    l = null;
                 n.classList.add("rcp-fe-lol-profiles-modal"), t.appendChild(n);
                 const {
-                    subnavigationApi: l,
-                    screenRoot: d,
-                    subnavigationModel: m,
-                    rootElement: _,
-                    overviewSection: u
-                } = (0, r.createOverviewSubnavigation)("searched", e, n), c = new o.default;
-                return l.addEventListener("screenHidden", (() => {
-                    c.destroyWrapper("rcp-fe-lol-profiles-overview"), c.destroyWrapper("rcp-fe-lol-profiles-backdrop"), c.destroyWrapper("rcp-fe-lol-profiles-search-trail"), s = !1
-                })), l.addEventListener("showSubsection", ((e, t) => {
-                    if (s) return;
-                    m.summonerId = t.summonerId;
-                    const n = c.createWrapper("rcp-fe-lol-profiles-overview", Object.assign({}, m), _),
-                        a = c.createWrapper("rcp-fe-lol-profiles-backdrop", Object.assign({}, m));
-                    d.insertBefore(a.domNode, d.firstChild);
-                    const i = c.createWrapper("rcp-fe-lol-profiles-search-trail", Object.assign({}, m));
-                    d.appendChild(i.domNode), _.appendChild(n.domNode), s = !0
+                    subnavigationApi: d,
+                    screenRoot: m,
+                    subnavigationModel: _,
+                    rootElement: u,
+                    overviewSection: c
+                } = (0, r.createOverviewSubnavigation)("searched", e, n), h = new o.default;
+                return d.addEventListener("screenHidden", (() => {
+                    h.destroyWrapper("rcp-fe-lol-profiles-overview"), h.destroyWrapper("rcp-fe-lol-profiles-backdrop"), h.destroyWrapper("rcp-fe-lol-profiles-search-trail"), s = !1
+                })), d.addEventListener("showSubsection", ((e, t) => {
+                    if (s && l === t.puuid) return;
+                    l = t.puuid, _.summonerId = t.summonerId;
+                    const n = h.createWrapper("rcp-fe-lol-profiles-overview", Object.assign({}, _), u),
+                        a = h.createWrapper("rcp-fe-lol-profiles-backdrop", Object.assign({}, _));
+                    m.insertBefore(a.domNode, m.firstChild);
+                    const i = h.createWrapper("rcp-fe-lol-profiles-search-trail", Object.assign({}, _));
+                    m.appendChild(i.domNode), u.appendChild(n.domNode), s = !0
                 })), {
-                    subnavigationApi: l,
-                    overviewSection: u
+                    subnavigationApi: d,
+                    overviewSection: c
                 }
             }
         }, (e, t, n) => {
             "use strict";
-            var s = d(n(247)),
-                a = d(n(253)),
-                i = d(n(254)),
-                r = d(n(257)),
-                o = d(n(258)),
-                l = d(n(259));
+            var s = d(n(248)),
+                a = d(n(254)),
+                i = d(n(255)),
+                r = d(n(258)),
+                o = d(n(259)),
+                l = d(n(260));
 
             function d(e) {
                 return e && e.__esModule ? e : {
@@ -14295,11 +14314,11 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = l(n(248)),
-                a = l(n(249)),
-                i = l(n(251)),
-                r = n(252),
-                o = n(250);
+            var s = l(n(249)),
+                a = l(n(250)),
+                i = l(n(252)),
+                r = n(253),
+                o = n(251);
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -14407,10 +14426,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s, a = (s = n(248)) && s.__esModule ? s : {
+            var s, a = (s = n(249)) && s.__esModule ? s : {
                     default: s
                 },
-                i = n(250);
+                i = n(251);
             t.default = class {
                 constructor(e) {
                     if (e && !(e instanceof Element)) throw new Error("Mediator expects the component to be an instance of Element");
@@ -14470,9 +14489,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = r(n(248)),
-                a = r(n(247)),
-                i = n(250);
+            var s = r(n(249)),
+                a = r(n(248)),
+                i = n(251);
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -14555,11 +14574,11 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.NAVIGATION_ITEM_ATTR_PRIORITY = t.NAVIGATION_ITEM_ATTR_ID = t.NAVIGATION_ITEM_ATTR_DISABLED = t.NAVIGATION_ITEM_ATTR_ALERT = t.NAVIGATION_BAR_INDEX_ATTR = t.EVENT_NAVIGATION_CLICKED = void 0;
-            var s, a = (s = n(249)) && s.__esModule ? s : {
+            var s, a = (s = n(250)) && s.__esModule ? s : {
                     default: s
                 },
-                i = n(250),
-                r = n(252);
+                i = n(251),
+                r = n(253);
             const o = "lol-uikit-navigation-item-click-event";
             t.EVENT_NAVIGATION_CLICKED = o;
             const l = "item-id";
@@ -14659,9 +14678,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.SECTION_CONTROLLER_ATTR_SELECTED_ITEM = t.SECTION_ATTR_ID = t.SECTION_ATTR_DISABLED = t.EVENT_SECTION_WILL_SHOW = t.EVENT_SECTION_WILL_HIDE = t.EVENT_SECTION_SHOW = t.EVENT_SECTION_HIDE = void 0;
-            var s = r(n(249)),
-                a = r(n(255)),
-                i = n(250);
+            var s = r(n(250)),
+                a = r(n(256)),
+                i = n(251);
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -14738,7 +14757,7 @@
             t.default = h
         }, (e, t, n) => {
             "use strict";
-            const s = n(256),
+            const s = n(257),
                 a = new s;
             a.constructorClass = s, e.exports = a
         }, e => {
@@ -14820,10 +14839,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s, a = (s = n(249)) && s.__esModule ? s : {
+            var s, a = (s = n(250)) && s.__esModule ? s : {
                     default: s
                 },
-                i = n(250);
+                i = n(251);
             const r = ["Navigation"];
             class o extends a.default {
                 constructor(e = {}) {
@@ -14864,10 +14883,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s, a = (s = n(249)) && s.__esModule ? s : {
+            var s, a = (s = n(250)) && s.__esModule ? s : {
                     default: s
                 },
-                i = n(250);
+                i = n(251);
             const r = ["UIKit"];
             class o extends a.default {
                 constructor(e = {}) {
@@ -14906,10 +14925,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s, a = (s = n(249)) && s.__esModule ? s : {
+            var s, a = (s = n(250)) && s.__esModule ? s : {
                     default: s
                 },
-                i = n(250);
+                i = n(251);
             const r = ["screenName", "displayPriority", "displayNameLocKey", "Viewport", "Navigation"];
             class o extends a.default {
                 constructor(e = {}) {
@@ -14964,7 +14983,7 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1),
-                a = n(246);
+                a = n(247);
             const i = "profile_overview_subsection";
             e.exports = {
                 overviewSectionId: i,
@@ -15066,12 +15085,12 @@
         }, (e, t, n) => {
             "use strict";
             var s, a = n(1),
-                i = n(246),
-                r = n(260),
-                o = (s = n(261)) && s.__esModule ? s : {
+                i = n(247),
+                r = n(261),
+                o = (s = n(262)) && s.__esModule ? s : {
                     default: s
                 };
-            n(262), e.exports = function(e) {
+            n(263), e.exports = function(e) {
                 const t = new i.MainNavigationMediator({
                         Navigation: a.Navigation,
                         Viewport: a.Viewport,
@@ -15389,11 +15408,11 @@
                     t.default.add({
                         PrivateAPI: () => new e
                     });
-                    const s = n(264).default,
-                        a = n(265).default,
-                        i = n(266).default,
-                        r = n(267).default,
-                        o = n(268).default,
+                    const s = n(265).default,
+                        a = n(266).default,
+                        i = n(267).default,
+                        r = n(268).default,
+                        o = n(269).default,
                         l = new s,
                         d = new a,
                         m = new i,
@@ -15406,10 +15425,10 @@
                         GameDataProfileIcons: _,
                         GameDataSkins: u
                     });
-                    const c = new(0, n(269).default);
+                    const c = new(0, n(270).default);
                     return t.default.Regalia.registerProfilesApi && t.default.Regalia.registerProfilesApi(c), c
                 })).catch((e => {
-                    const s = n(270).default,
+                    const s = n(271).default,
                         a = e && e.message ? e.message : "unknown";
                     return t.default.logger.error(`init API creation error: ${a}`), t.default.add({
                         PrivateAPI: () => new s

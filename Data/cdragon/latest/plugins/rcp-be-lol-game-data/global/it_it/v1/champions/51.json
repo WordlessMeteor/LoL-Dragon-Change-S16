@@ -1468,7 +1468,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Caitlyn piazza una trappola che, se attivata, rivela e immobilizza il campione nemico per 1,5 secondi, conferendo a Caitlyn un Colpo alla testa potenziato.",
-            "dynamicDescription": "Caitlyn prepara una trappola che <status>immobilizza</status> il primo campione che ci passa sopra per @Effect6Amount@ secondi e conferisce <keywordStealth>Visione magica</keywordStealth> nei suoi confronti per 3 secondi. Le trappole durano per @Effect3Amount@ secondi e ne possono essere attive @Effect5Amount@ alla volta. Questa abilità ha @Effect5Amount@ cariche (@AmmoRechargeTime@ secondi di ricarica).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn prepara una trappola che <status>immobilizza</status> il primo campione che ci passa sopra per @RootDuration@ secondo/i e conferisce <keywordStealth>Visione magica</keywordStealth> nei suoi confronti per 3 secondi. Le trappole durano per @TrapDuration@ secondo/i e ne possono essere attive @MaximumTraps@ alla volta. Questa abilità ha @MaximumCharges@ cariche (@AmmoRechargeTime@ secondo/i di ricarica).<br><br>I bersagli immobilizzati da questa abilità subiscono <physicalDamage>@HeadshotBonusDamage@ danni fisici</physicalDamage> aggiuntivi da <keywordMajor>Colpo alla testa</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1494,7 +1494,7 @@
                 0.5
             ],
             "coefficients": {
-                "coefficient1": 0.6,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1508,49 +1508,49 @@
                     2.0
                 ],
                 "Effect2Amount": [
-                    35.0,
-                    35.0,
-                    80.0,
-                    125.0,
-                    170.0,
-                    215.0,
-                    215.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    30.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0,
-                    50.0,
-                    55.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    2.0,
-                    3.0,
-                    3.0,
-                    4.0,
-                    4.0,
-                    5.0,
-                    5.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5,
-                    1.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     30.0,
@@ -1768,7 +1768,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Caitlyn prende tempo per indirizzare il colpo perfetto, infliggendo danni ingenti a un bersaglio, a enorme distanza. I campioni nemici possono intercettare il proiettile per il loro alleato.",
-            "dynamicDescription": "Caitlyn si ferma un attimo per prendere la mira e spara, infliggendo <physicalDamage>@RTotalDamage@ danni fisici</physicalDamage>, ma gli altri campioni nemici possono intercettarlo. Quest'abilità conferisce <keywordStealth>Visione magica</keywordStealth> del bersaglio durante la canalizzazione.<br><br><rules>Infligge fino a un @CritChanceAmp*100@% aggiuntivo in base alla probabilità di colpo critico di Caitlyn.</rules>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Caitlyn si ferma un attimo per prendere la mira e spara, infliggendo <physicalDamage>@RTotalDamage@ danni fisici</physicalDamage>, ma gli altri campioni nemici possono intercettarlo. Quest'abilità conferisce <keywordStealth>Visione magica</keywordStealth> del bersaglio durante la canalizzazione.<br><br><rules>I danni crescono con la probabilità di colpo critico e i danni critici di Caitlyn.</rules>@SpellModifierDescriptionAppend@",
             "range": [
                 3500.0,
                 3500.0,

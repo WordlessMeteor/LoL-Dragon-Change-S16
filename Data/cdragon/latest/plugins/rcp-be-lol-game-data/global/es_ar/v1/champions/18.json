@@ -1422,8 +1422,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/18/18063.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/18/18063.png",
                     "colors": [
-                        "#DF9117",
-                        "#DF9117"
+                        "#FFEE59",
+                        "#FFEE59"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -1705,8 +1705,8 @@
     "passive": {
         "name": "En la Mira",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_Passive.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/0018/ability_0018_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/0018/ability_0018_P1.jpg",
         "description": "Aumenta el alcance de ataque de Tristana conforme sube de nivel."
     },
     "spells": [
@@ -2019,7 +2019,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Cuando Tristana mata a una unidad, sus proyectiles estallan como metralla e infligen daño a los enemigos circundantes. Se puede activar para colocarle una bomba a un enemigo, que explotará al cabo de un breve tiempo y hará daño a todas las unidades circundantes.",
-            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>Los ataques de Tristana que maten enemigos infligirán <magicDamage>@PassiveDamage@ de daño mágico</magicDamage> a los enemigos circundantes.<br><br><spellActive>Activa:</spellActive> Tristana adhiere una bomba a un enemigo o torreta que inflige <physicalDamage>@ActiveDamage@ de daño físico</physicalDamage> a los enemigos circundantes tras @ActiveDuration@ seg. El daño aumenta en un @CritChanceAmp*100@% de Probabilidad de Golpe Crítico y en un @ActivePerStackAmp*100@% cada vez que Tristana alcanza a un enemigo con un ataque o habilidad (máx. 4 acumulaciones).<br><br>Al llegar a @ActiveMaxStacks@ acumulaciones, la bomba explota inmediatamente (máx. <physicalDamage>@ActiveMaxDamage@ de daño físico</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>Los ataques de Tristana que maten enemigos infligen <magicDamage>@PassiveDamage@ de daño mágico</magicDamage> a los enemigos circundantes.<br><br><spellActive>Activa:</spellActive> Tristana adhiere una bomba a un enemigo o una torreta. Luego de @ActiveDuration@ seg, la bomba explota e inflige <physicalDamage>@ActiveDamage@ de daño físico</physicalDamage> a los enemigos cercanos. El daño aumenta un @ActivePerStackAmp*100@% cada vez que Tristana impacta a un objetivo con un ataque o una habilidad (máx.: 4 acumulaciones).<br><br>Al reunir @ActiveMaxStacks@ acumulaciones, la bomba explota al instante (inflige <physicalDamage>@ActiveMaxDamage@ de daño físico</physicalDamage> como máximo).@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

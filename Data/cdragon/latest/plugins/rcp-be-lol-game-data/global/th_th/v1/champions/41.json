@@ -368,7 +368,7 @@
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/41/41013.png",
                     "colors": [
                         "#27211C",
-                        "#272100"
+                        "#27211C"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -1258,7 +1258,7 @@
             "cost": "ไม่เสียอะไรเลย",
             "cooldown": "สะสมทุก ๆ @AmmoRechargeTime@ วินาที (สูงสุด: @MaxAmmo@ หน่วย)",
             "description": "Gangplank วางถังดินปืนลงบนพื้นที่เป้าหมาย ถ้าเขาโจมตีมันจะระเบิดออกสร้างความเสียหายให้แก่ศัตรูที่อยู่ในบริเวณนั้นพร้อมทั้งสโลว์ศัตรูด้วย",
-            "dynamicDescription": "Gangplank วางถังดินปืนที่ถูกทำลายได้โดย Gangplank และแชมเปี้ยนศัตรูเป็นเวลา @Effect5Amount@ วินาที เมื่อศัตรูทำลาย ถังดินปืนจะไม่ระเบิด เมื่อ Gangplank ทำลาย มันจะระเบิด โดยจะ<status>สโลว์</status>ศัตรู @FinalSlowAmount@% เป็นเวลา @Effect2Amount@ วินาที และสร้าง<physicalDamage>ความเสียหายกายภาพ</physicalDamage> พร้อมทั้งเจาะเกราะ @Effect10Amount@% แชมเปี้ยนจะได้รับ<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @Effect3Amount@ หน่วย</physicalDamage><br><br>พลังชีวิตของถังดินปืนจะลดลงทุก @f5@ วินาที การระเบิดของถังจะระเบิดถังอื่นที่อยู่ในระยะระเบิดที่ซ้อนกัน แต่จะไม่สร้างความเสียหายไปยังเป้าเดิมซ้ำกันเกินหนึ่งครั้ง การระเบิดของถังที่เกิดจาก <spellName>Parrrley</spellName> จะได้รับโบนัสทองสำหรับเป้าหมายที่ถูกสังหาร@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gangplank วางถังดินปืนที่ถูกทำลายได้โดย Gangplank และแชมเปี้ยนศัตรูเป็นเวลา @Effect5Amount@ วินาที เมื่อศัตรูทำลาย ถังดินปืนจะไม่ระเบิด เมื่อ Gangplank ทำลาย มันจะระเบิด <status>สโลว์</status> @FinalSlowAmount@% เป็นเวลา @Effect2Amount@ วินาทีและสร้าง<physicalDamage>ความเสียหายกายภาพ</physicalDamage> และเจาะเกราะ@Effect10Amount@% แชมเปี้ยนจะได้รับ<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @Effect3Amount@ หน่วย</physicalDamage><br><br>พลังชีวิตของถังดินปืนจะลดลงเรื่อย ๆ ทุก @BarrelDecayTime@ วินาที การระเบิดของถังจะระเบิดถังอื่นที่อยู่ในระยะระเบิดที่ซ้อนกัน แต่จะไม่สร้างความเสียหายไปยังเป้าเดิมซ้ำกันเกินหนึ่งครั้ง การระเบิดของถังที่เกิดจาก <spellName>Parrrley</spellName> จะได้รับโบนัสทองสำหรับเป้าหมายที่ถูกสังหาร@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1307,13 +1307,13 @@
                     2.0
                 ],
                 "Effect3Amount": [
-                    80.0,
                     75.0,
-                    105.0,
+                    75.0,
+                    95.0,
+                    115.0,
                     135.0,
-                    165.0,
-                    195.0,
-                    240.0
+                    155.0,
+                    175.0
                 ],
                 "Effect4Amount": [
                     40.0,

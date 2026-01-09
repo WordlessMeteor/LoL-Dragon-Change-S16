@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "15.24.1",
+    "version": "16.1.1",
     "data": {
         "Tristana": {
             "id": "Tristana",
@@ -456,19 +456,17 @@
                     "id": "TristanaE",
                     "name": "爆炸火花",
                     "description": "当崔丝塔娜杀死一个单位，加农炮弹会炸裂伤害周围的敌人。可通过主动施放这个技能来将一颗炸弹放置在目标身上，炸弹会在短时间内或被崔丝塔娜攻击数次后爆炸，爆炸时对目标及其附近的敌人造成伤害。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>崔丝塔娜的攻击在击杀敌人时会对周围敌人造成<magicDamage>{{ passivedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动：</spellActive>崔丝塔娜将一颗炸弹附着在一名敌人或防御塔上，来在{{ activeduration }}秒后对周围敌人造成<physicalDamage>{{ activedamage }}物理伤害</physicalDamage>。崔丝塔娜对带着炸弹的目标进行的每次攻击和技能都会使这个伤害提升{{ activeperstackamp*100 }}%(最多4层)，并且叠加暴击几率也会使这个伤害提升{{ critchanceamp*100 }}%。<br /><br />在{{ activemaxstacks }}层时，这个炸弹会立刻爆炸(最大值为<physicalDamage>{{ activemaxdamage }}物理伤害</physicalDamage>)。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>崔丝塔娜的攻击在击杀敌人时会对周围敌人造成<magicDamage>{{ passivedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动：</spellActive>崔丝塔娜将一颗炸弹附着在一名敌人或防御塔上，来在{{ activeduration }}秒后对周围敌人造成<physicalDamage>{{ activedamage }}物理伤害</physicalDamage>。崔丝塔娜对带着炸弹的目标进行的每次攻击和技能都会使这个伤害提升{{ activeperstackamp*100 }}%(最多4层)。<br /><br />在{{ activemaxstacks }}层时，这个炸弹会立刻爆炸(最大值为<physicalDamage>{{ activemaxdamage }}物理伤害</physicalDamage>)。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "被动爆炸伤害",
                             "基础火花伤害",
-                            "攻击力收益",
                             "冷却时间",
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
                             "{{ passivebasedamage }} -> {{ passivebasedamageNL }}",
                             "{{ activebasedamage }} -> {{ activebasedamageNL }}",
-                            "{{ activebadratio*100.000000 }}% -> {{ activebadrationl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]

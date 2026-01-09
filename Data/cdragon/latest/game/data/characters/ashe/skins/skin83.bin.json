@@ -42977,6 +42977,16 @@
         "name": "Characters/Ashe/Skins/Skin83/Materials/Ashe_Body_Mat_inst",
         "samplerValues": [
             {
+                "TextureName": "Dissolve_Gradient_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Gradient_test_01.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Dissolve_Texture",
+                "texturePath": "ASSETS/Shared/Particles/Base_plasma_noise.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "ASSETS/Characters/Ashe/Skins/Skin83/Ashe_Skin83_TX_CM.Chroma_Ashe_FaeDragon_HOLO.tex",
                 "addressU": 1,
@@ -43022,6 +43032,40 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Alpha_Sharpness",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_SmoothStep",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Sharpness",
+                "value": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Bias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "TintColor",
                 "value": [
@@ -43175,40 +43219,54 @@
         ],
         "switches": [
             {
+                "name": "USE_DISSOLVE",
+                "on": false,
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "FRESNEL_MASK_HOLOGRAPHIC",
                 "on": false,
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "MATCAP_ON",
                 "on": false,
+                "Group": "Mat Cap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "MATCAP_MASK_ON",
                 "on": false,
+                "Group": "Mat Cap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "IRIDESCENCE_ON",
                 "on": false,
+                "Group": "Iridescent",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "IRIDESCENT_MASK_ON",
                 "on": false,
+                "Group": "Iridescent",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "HOLOGRAPHIC_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "HOLOGRAPHIC_MASK_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "FLOWMAP_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],
@@ -43247,6 +43305,16 @@
     "Characters/Ashe/Skins/Skin83/Materials/Ashe_Bow_Mat_inst": {
         "name": "Characters/Ashe/Skins/Skin83/Materials/Ashe_Bow_Mat_inst",
         "samplerValues": [
+            {
+                "TextureName": "Dissolve_Gradient_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Gradient_test_01.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Dissolve_Texture",
+                "texturePath": "ASSETS/Shared/Particles/Base_plasma_noise.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
             {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "ASSETS/Characters/Ashe/Skins/Skin83/Ashe_Skin83_Arrow_TX_CM.Chroma_Ashe_FaeDragon_HOLO.tex",
@@ -43293,6 +43361,40 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Alpha_Sharpness",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_SmoothStep",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Sharpness",
+                "value": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Bias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "TintColor",
                 "value": [
@@ -43446,37 +43548,51 @@
         ],
         "switches": [
             {
+                "name": "USE_DISSOLVE",
+                "on": false,
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "FRESNEL_MASK_HOLOGRAPHIC",
                 "on": false,
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "MATCAP_ON",
+                "Group": "Mat Cap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "MATCAP_MASK_ON",
+                "Group": "Mat Cap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "IRIDESCENCE_ON",
+                "Group": "Iridescent",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "IRIDESCENT_MASK_ON",
+                "Group": "Iridescent",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "HOLOGRAPHIC_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "HOLOGRAPHIC_MASK_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "FLOWMAP_ON",
                 "on": false,
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],

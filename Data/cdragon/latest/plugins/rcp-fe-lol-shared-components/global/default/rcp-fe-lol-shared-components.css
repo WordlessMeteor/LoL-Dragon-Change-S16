@@ -3421,7 +3421,7 @@ div[data-screen-name=rcp-fe-lol-home].active .rcp-fe-lol-home-loading-spinner.lo
 }
 
 lol-uikit-content-block.restriction-tooltip-body {
-    width: 352px
+    width: 400px
 }
 
 lol-uikit-content-block.restriction-tooltip-body .player-restriction-info-header {
@@ -3702,12 +3702,16 @@ div.player-name-input__split-inputs-wrapper {
     border-image: none
 }
 
-.report-body-text {
+.report-body-text,
+.report-section-header-text {
     font-family: var(--font-body);
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased
+}
+
+.report-body-text {
     font-size: 12px;
     font-weight: 400;
     letter-spacing: .025em;
@@ -3723,6 +3727,23 @@ div.player-name-input__split-inputs-wrapper {
     letter-spacing: 0
 }
 
+.report-section-header-text {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.report-section-header-text:lang(ja-jp) {
+    font-size: 13px
+}
+
+.report-section-header-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
 .report-modal {
     box-sizing: border-box;
     cursor: default;
@@ -3732,7 +3753,7 @@ div.player-name-input__split-inputs-wrapper {
     padding: 18px;
     text-align: left;
     -webkit-user-select: none;
-    width: 450px
+    width: 500px
 }
 
 .report-header {
@@ -3748,7 +3769,7 @@ div.player-name-input__split-inputs-wrapper {
 .report-body-text {
     color: #a09b8c;
     flex: 0;
-    margin: 12px 0
+    margin: 12px 0 6px
 }
 
 .report-body-categories {
@@ -3756,6 +3777,27 @@ div.player-name-input__split-inputs-wrapper {
     list-style-type: none;
     margin: 0;
     padding: 0
+}
+
+.report-section-header {
+    padding-bottom: 6px
+}
+
+.report-section-header:before {
+    background-color: #785a28;
+    content: "";
+    display: block;
+    height: 1px;
+    margin-bottom: 8px;
+    width: 50px
+}
+
+.report-section-header-text {
+    display: inline-block;
+    text-size: 14px;
+    color: #f0e6d2;
+    word-wrap: break-word;
+    font-weight: 700
 }
 
 .report-flat-textarea-scrollable {
@@ -14768,6 +14810,292 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     width: 280px
 }
 
+.ranked-progression-panel-component {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.ranked-progression-panel-component .ranked-widget {
+    background-color: #000;
+    border: 1px solid #785a28;
+    height: calc(100% - 2px);
+    width: calc(100% - 2px)
+}
+
+.ranked-progression-panel-component .ranked-widget .ranked-widget-background {
+    background-image: url(/fe/lol-static-assets/images/ranked-widget/ranked-progression-panel-bg.png);
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.ranked-progression-panel-component .ranked-objective-card-wrapper_container {
+    background: #0c151f;
+    border: 1px solid #263039;
+    cursor: pointer;
+    height: calc(100% - 12px);
+    padding: 5px
+}
+
+.ranked-progression-panel-component .objectives-card-v2 {
+    border: none;
+    height: 100%;
+    max-width: 375px
+}
+
+.ranked-progression-panel-component .objectives-card-v2__objectives-main-container {
+    justify-content: center
+}
+
+.ranked-progression-panel-component .objectives-card-v2__reward-container {
+    box-sizing: border-box;
+    min-width: 80px
+}
+
+.ranked-progression-panel-component .objectives-card-v2__background-image-container {
+    height: 100%;
+    width: 100%
+}
+
+.ranked-progression-panel-component .objectives-card-v2__background-image {
+    height: 100%;
+    object-position: right;
+    position: absolute;
+    width: 100%
+}
+
+.ranked-progression-panel-component .objectives-card-v2__objectives-row {
+    height: 100%;
+    justify-content: center
+}
+
+.ranked-progression-panel-component .objectives-card-v2__objective-divider {
+    height: 12px
+}
+
+.ranked-progression-panel-component .objectives-card-v2__reward-count {
+    bottom: 94px
+}
+
+.ranked-progression-panel-component .objectives-card-v2__reward-count-box {
+    bottom: 86px
+}
+
+.ranked-progression-panel-component .objectives-card-v2__description {
+    margin: 0 8px 0 0;
+    z-index: unset
+}
+
+.ranked-progression-panel-component.layout-lobby .ranked-objective-card-wrapper_container .objectives-card-v2__description {
+    font-size: 12px
+}
+
+.ranked-progression-panel-component.layout-lobby .ranked-objective-card-wrapper_container .objectives-card-v2__reward-container {
+    box-sizing: border-box;
+    min-width: 60px
+}
+
+.ranked-progression-panel-component.layout-lobby .ranked-objective-card-wrapper_container .objectives-card-v2__reward-count {
+    bottom: 63px;
+    right: 1px
+}
+
+.ranked-progression-panel-component.layout-lobby .ranked-objective-card-wrapper_container .objectives-card-v2__reward-count-box {
+    bottom: 59px;
+    height: 23px;
+    width: 23px
+}
+
+.ranked-progression-panel-component.layout-lobby .ranked-objective-card-wrapper_container .objectives-card-v2__reward-item_image {
+    height: 32px;
+    width: 32px
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-milestone-text {
+    font-family: var(--font-display)
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-tier-division-text,
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-wins-lp-text {
+    font-family: var(--font-body)
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-milestone-text,
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-tier-division-text,
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-wins-lp-text {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-milestone-text {
+    text-transform: uppercase
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-milestone-text:lang(el-gr),
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-milestone-text:lang(ja-jp),
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-milestone-text:lang(ko-kr),
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-milestone-text:lang(th-th),
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-milestone-text:lang(tr-tr),
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-milestone-text:lang(zh-tw) {
+    text-transform: none
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-milestone-text {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-milestone-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-tier-division-text {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-tier-division-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-wins-lp-text {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-wins-lp-text:lang(ja-jp) {
+    font-size: 13px
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-wins-lp-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.ranked-progression-widget-component {
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-ranked-icon-wrapper {
+    height: 100%;
+    margin-left: 5%;
+    position: relative;
+    width: 110px
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-ranked-icon-wrapper .ranked-progression-widget-ranked-icon-background {
+    background: url(/fe/lol-static-assets/images/ranked-widget/background-circle.svg) no-repeat;
+    background-size: cover;
+    bottom: 0;
+    height: 75px;
+    left: 2px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 5%;
+    width: 75px
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    margin-left: 5%;
+    position: relative
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-tier-division-text {
+    color: #f0e6d2
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-wins-lp-text {
+    color: #a09b8c
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-content-wrapper .ranked-progression-widget-milestone-text {
+    color: var(--Blues-Blue-1, #cdfafa);
+    text-shadow: 0 0 12px #ffe6a3
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-icons-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+    position: absolute;
+    right: 10px
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-icons-wrapper .ranked-progression-widget-icon {
+    height: 38px;
+    margin-bottom: 8px;
+    width: 38px
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-icons-wrapper .ranked-progression-widget-icon.ranked-progression-widget-skin-icon {
+    background: url(/fe/lol-static-assets/images/ranked-widget/ranked-progression-icon-skin.svg) no-repeat;
+    background-size: cover
+}
+
+.ranked-progression-widget-component .ranked-progression-widget-icons-wrapper .ranked-progression-widget-icon .ranked-progression-widget-icon-completed {
+    background: url(/fe/lol-static-assets/images/ranked-widget/completed-checkmark.svg) no-repeat;
+    background-size: cover;
+    height: 22px;
+    position: absolute;
+    right: -4px;
+    top: -3px;
+    width: 22px
+}
+
+.ranked-progression-widget-component.layout-lobby .ranked-progression-widget-ranked-icon-wrapper {
+    margin-left: 3%;
+    width: 86px
+}
+
+.ranked-progression-widget-component.layout-lobby .ranked-progression-widget-ranked-icon-wrapper .ranked-progression-widget-ranked-icon-background {
+    height: 55px;
+    top: 5%;
+    width: 55px
+}
+
+.ranked-progression-widget-component.layout-lobby .ranked-progression-widget-content-wrapper {
+    gap: 4px;
+    margin-left: 2%
+}
+
+.ranked-progression-widget-component.layout-lobby .ranked-progression-widget-icons-wrapper {
+    margin-top: 2px
+}
+
+.ranked-progression-widget-component.layout-lobby .ranked-progression-widget-icons-wrapper .ranked-progression-widget-icon {
+    height: 32px;
+    margin-top: 6px;
+    width: 32px
+}
+
+.ranked-progression-widget-component.layout-lobby .ranked-progression-widget-icons-wrapper .ranked-progression-widget-icon .ranked-progression-widget-icon-completed {
+    height: 18px;
+    right: -4px;
+    top: 4px;
+    width: 18px
+}
+
 .report-header-title {
     font-family: var(--font-display)
 }
@@ -14876,7 +15204,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 }
 
 .report-category {
-    margin-bottom: 12px
+    margin-bottom: 8px
 }
 
 .report-category-flat-checkbox {

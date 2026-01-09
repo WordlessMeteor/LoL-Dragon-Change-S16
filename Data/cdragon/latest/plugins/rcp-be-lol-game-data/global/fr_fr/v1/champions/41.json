@@ -368,7 +368,7 @@
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/41/41013.png",
                     "colors": [
                         "#27211C",
-                        "#272100"
+                        "#27211C"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -1258,7 +1258,7 @@
             "cost": "Pas de coût",
             "cooldown": "@AmmoRechargeTime@ sec de rechargement (max : @MaxAmmo@)",
             "description": "Gangplank place un baril de poudre à l'endroit ciblé. S'il l'attaque, le baril explose, étendant les dégâts de l'attaque dans la zone et ralentissant les ennemis.",
-            "dynamicDescription": "Gangplank pose un baril de poudre qui peut être attaqué par Gangplank et les champions ennemis pendant @Effect5Amount@ sec. Quand un ennemi le détruit, le baril est désamorcé. Quand Gangplank le détruit, le baril explose, <status>ralentissant</status> de @FinalSlowAmount@% pendant @Effect2Amount@ sec et infligeant les <physicalDamage>dégâts de l'attaque</physicalDamage> en ignorant @Effect10Amount@% d'armure. Les champions subissent <physicalDamage>@Effect3Amount@ pts de dégâts physiques</physicalDamage> supplémentaires.<br><br>Les barils perdent des PV toutes les @f5@ sec. Les barils dont la zone d'effet mord sur celle du baril détruit explosent aussi, mais chaque ennemi ne peut subir des dégâts qu'une fois. Les explosions déclenchées avec <spellName>Pourparlers</spellName> octroient des PO supplémentaires si elles tuent des ennemis.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gangplank pose un baril de poudre qui peut être attaqué par Gangplank et les champions ennemis pendant @Effect5Amount@ sec. Quand un ennemi le détruit, le baril est désamorcé. Quand Gangplank le détruit, le baril explose, <status>ralentissant</status> de @FinalSlowAmount@% pendant @Effect2Amount@ sec et infligeant les <physicalDamage>dégâts de l'attaque</physicalDamage> en ignorant @Effect10Amount@% d'armure. Les champions subissent <physicalDamage>@Effect3Amount@ pts de dégâts physiques</physicalDamage> bonus.<br><br>Le baril perd des PV toutes les @BarrelDecayTime@ sec. Les barils dont la zone d'effet mord sur celle du baril détruit explosent aussi, mais chaque ennemi ne peut subir des dégâts qu'une fois. Les explosions déclenchées avec <spellName>Pourparlers</spellName> octroient des PO supplémentaires si elles tuent des ennemis.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1307,13 +1307,13 @@
                     2.0
                 ],
                 "Effect3Amount": [
-                    80.0,
                     75.0,
-                    105.0,
+                    75.0,
+                    95.0,
+                    115.0,
                     135.0,
-                    165.0,
-                    195.0,
-                    240.0
+                    155.0,
+                    175.0
                 ],
                 "Effect4Amount": [
                     40.0,

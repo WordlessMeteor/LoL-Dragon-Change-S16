@@ -368,7 +368,7 @@
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/41/41013.png",
                     "colors": [
                         "#27211C",
-                        "#272100"
+                        "#27211C"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -1258,7 +1258,7 @@
             "cost": "Nessun costo",
             "cooldown": "@AmmoRechargeTime@ secondi di ricarica (massimo: @MaxAmmo@)",
             "description": "Gangplank svela un Barile di polvere da sparo nella posizione bersaglio. Se lo attacca, esplode, diffondendo i danni dell'attacco ai nemici nell'area e rallentandoli.",
-            "dynamicDescription": "Gangplank piazza un barile di polvere da sparo che può essere attaccato da lui e dai campioni nemici per @Effect5Amount@ secondi. Se un nemico lo distrugge, il barile viene disinnescato. Se è Gangplank a distruggerlo, il barile esplode, <status>rallentando</status> i nemici di @FinalSlowAmount@% per @Effect2Amount@ secondi e infliggendo <physicalDamage>attacco fisico</physicalDamage>, che ignora @Effect10Amount@% di armatura. I campioni subiscono <physicalDamage>@Effect3Amount@ danni fisici</physicalDamage> aggiuntivi.<br><br>La salute del barile diminuisce ogni @f5@ secondi. La detonazione di un barile fa scoppiare gli altri coinvolti nell'esplosione, che però non infliggono danni allo stesso bersaglio più di una volta. Le esplosioni dei barili innescate da <spellName>Parrrlé</spellName> conferiscono oro bonus per i bersagli uccisi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gangplank piazza un barile di polvere da sparo che può essere attaccato da lui e dai campioni nemici per @Effect5Amount@ secondi. Se un nemico lo distrugge, il barile viene disinnescato. Se è Gangplank a distruggerlo, il barile esplode, <status>rallentando</status> i nemici di un @FinalSlowAmount@% per @Effect2Amount@ secondi e infliggendo <physicalDamage>attacco fisico</physicalDamage>, che ignora @Effect10Amount@% di armatura. I campioni subiscono <physicalDamage>@Effect3Amount@ danni fisici</physicalDamage> aggiuntivi.<br><br>La salute del barile decresce ogni @BarrelDecayTime@ secondi. La detonazione di un barile fa scoppiare gli altri coinvolti nell'esplosione, che però non infliggono danni allo stesso bersaglio più di una volta. Le esplosioni dei barili innescate da <spellName>Parrrlé</spellName> conferiscono oro bonus per i bersagli uccisi.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1307,13 +1307,13 @@
                     2.0
                 ],
                 "Effect3Amount": [
-                    80.0,
                     75.0,
-                    105.0,
+                    75.0,
+                    95.0,
+                    115.0,
                     135.0,
-                    165.0,
-                    195.0,
-                    240.0
+                    155.0,
+                    175.0
                 ],
                 "Effect4Amount": [
                     40.0,

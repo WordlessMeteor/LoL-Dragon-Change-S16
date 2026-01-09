@@ -109,18 +109,31 @@
                     "mName": "ActiveMRDamage",
                     "mValues": [
                         0.0,
-                        4.0,
-                        6.75,
+                        3.0,
+                        4.5,
                         50.0,
                         60.0,
                         0.0,
                         0.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ActiveARDamage",
+                    "mValues": [
+                        1.0,
+                        1.5,
+                        2.25,
+                        10.0,
+                        3.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "{d82ba8ec}": {
+                "BonusPassiveDamage": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
@@ -128,7 +141,7 @@
                             "mSubparts": [
                                 {
                                     "mStat": 6,
-                                    "mDataValue": "{d9305de8}",
+                                    "mDataValue": "PassiveMRRatio",
                                     "__type": "StatByNamedDataValueCalculationPart"
                                 }
                             ],
@@ -158,7 +171,12 @@
                     "mFormulaParts": [
                         {
                             "mStat": 6,
-                            "mDataValue": "{4dfac95d}",
+                            "mDataValue": "ActiveMRDamage",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 1,
+                            "mDataValue": "{5445a489}",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -238,6 +256,13 @@
                                     "type": "PassiveMRRatio",
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_TFT16_GalioSpell_PassiveDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ActiveARDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT16_GalioSpell_ActiveDamageMR",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },

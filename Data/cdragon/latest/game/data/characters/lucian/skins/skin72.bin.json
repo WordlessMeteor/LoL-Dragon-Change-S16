@@ -422,6 +422,13 @@
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mScriptName": "KalistaRInvuln",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -470,6 +477,36 @@
             },
             {
                 "OwnerCondition": {
+                    "SpellSlot": 3,
+                    "__type": "IsCastingBoolDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Spine3",
+                        "effectKey": "Lucian_Z_DemonIdleFlames",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "Buffbone_Glb_Ground_Loc",
+                        "effectKey": "Lucian_R_DemonFloatIdle",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "C_Buffbone_Glb_Layout_Loc",
+                        "effectKey": "Lucian_R_Transform",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "SubmeshesToShow": [
+                    "Demon_Form_MAT"
+                ],
+                "SubmeshesToHide": [
+                    "Lucian_Base_Mat"
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
                     "mDrivers": [
                         {
                             "__type": "HasBuffWithAttributeBoolDriver"
@@ -486,9 +523,24 @@
                                     "Dance",
                                     "Joke",
                                     "Taunt",
-                                    "Laugh"
+                                    "Laugh",
+                                    "Death"
                                 ],
                                 "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "{02b03835}",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mScriptName": "KalistaRInvuln",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
                         }
@@ -541,6 +593,72 @@
                     {
                         "boneName": "Grave",
                         "effectKey": "{dc2db2a2}",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "mOperator": 2,
+                            "mValueA": {
+                                "driver": {
+                                    "mAnimationName": "{9e55a33e}",
+                                    "__type": "AnimationFractionDynamicMaterialFloatDriver"
+                                },
+                                "graph": {
+                                    "times": [
+                                        0.10367347300052643,
+                                        0.10693877190351486,
+                                        0.8199999928474426,
+                                        0.9910203814506531
+                                    ],
+                                    "values": [
+                                        0.018053097650408745,
+                                        1.0,
+                                        0.9970796704292297,
+                                        0.012920353561639786
+                                    ],
+                                    "__type": "VfxAnimatedFloatVariableData"
+                                },
+                                "__type": "FloatGraphMaterialDriver"
+                            },
+                            "mValueB": {
+                                "mValue": 0.9900000095367432,
+                                "__type": "FloatLiteralMaterialDriver"
+                            },
+                            "__type": "FloatComparisonMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Shared/Spells/ZhonyasRingShield",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Bard/Spells/BardRAbility/BardRStasis",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "BuffType": 5,
+                                "__type": "HasBuffOfTypeBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Dirt2",
+                        "effectKey": "{207a5889}",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -78793,6 +78911,7 @@
                 "stencilMode": 2,
                 "stencilRef": 2,
                 "isUniformScale": 1,
+                "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
                         0.0,
@@ -80846,6 +80965,7 @@
                 "miscRenderFlags": 1,
                 "stencilMode": 2,
                 "stencilRef": 2,
+                "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
                         0.0,
@@ -80966,6 +81086,7 @@
                 },
                 "pass": 50,
                 "{cb13aff1}": -1.0,
+                "miscRenderFlags": 1,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "isGroundLayer": 1,
@@ -123035,6 +123156,16 @@
         "name": "Characters/Lucian/Skins/Skin72/Materials/Pearl_inst",
         "samplerValues": [
             {
+                "TextureName": "Dissolve_Gradient_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Gradient_test_01.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Dissolve_Texture",
+                "texturePath": "ASSETS/Shared/Particles/Base_plasma_noise.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "ASSETS/Characters/Lucian/Skins/Skin72/Lucian_Skin72_TX_CM.SKINS_Lucian_Skin72.tex",
                 "addressU": 1,
@@ -123080,6 +123211,40 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Alpha_Sharpness",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_SmoothStep",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Sharpness",
+                "value": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Bias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "TintColor",
                 "value": [
@@ -123221,38 +123386,52 @@
         ],
         "switches": [
             {
+                "name": "USE_DISSOLVE",
+                "on": false,
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "FRESNEL_MASK_HOLOGRAPHIC",
                 "on": false,
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "MATCAP_ON",
+                "Group": "Mat Cap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "MATCAP_MASK_ON",
+                "Group": "Mat Cap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "IRIDESCENCE_ON",
                 "on": false,
+                "Group": "Iridescent",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "IRIDESCENT_MASK_ON",
+                "Group": "Iridescent",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "HOLOGRAPHIC_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "HOLOGRAPHIC_MASK_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "FLOWMAP_ON",
                 "on": false,
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],
@@ -127443,6 +127622,9 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "{67570899}": {
+        "__type": "{9be57ed9}"
+    },
     "Characters/Lucian/Skins/Skin72/Resources": {
         "resourceMap": {
             "Lucian_AA_mis": "Characters/Lucian/Skins/Skin72/Particles/Lucian_Skin72_AA_mis",
@@ -128209,6 +128391,7 @@
                         "mAudioAction": {
                             "mMaxOccurences": 3,
                             "mSelfEventName": "Kill3DTurret",
+                            "mAllyEventName": "Kill3DTurret",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
                         },

@@ -4505,14 +4505,19 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
     z-index: -1
 }
 
-.season-pass-background-extended {
-    height: calc(100% - 82px);
-    object-fit: cover
+.season-pass-header-background {
+    height: 82px;
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    top: 0;
+    width: 100%
 }
 
-.season-pass-background-extended[data-is-act-background] {
-    height: 100%;
-    z-index: -2
+.season-pass-background-extended {
+    height: 639px;
+    object-fit: cover;
+    object-position: bottom
 }
 
 .season-pass-spash-image {

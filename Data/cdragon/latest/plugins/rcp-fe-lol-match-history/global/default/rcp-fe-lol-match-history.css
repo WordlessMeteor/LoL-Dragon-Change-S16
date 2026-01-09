@@ -1000,12 +1000,24 @@
     white-space: nowrap
 }
 
+.match-details-team-list .player-history-items {
+    left: 295px
+}
+
+.player-history-item.role-bound-item {
+    margin-left: 10px
+}
+
 .match-details-team-list .player-history-item {
     border-right: 0
 }
 
 .match-details-team-list .player-history-item:last-child {
     border-right: thin solid #463714
+}
+
+.player-history-stats {
+    padding-right: 10px
 }
 
 .player-history-others {
@@ -4272,18 +4284,17 @@
 
 .player-history-items {
     float: left;
-    padding: 4px 0;
-    width: 248px
+    padding: 4px 0
 }
 
 .match-details-team-list .player-history-items {
     float: none;
-    left: 295px;
+    left: 270px;
+    margin-right: 25px;
     padding: 0;
     position: absolute;
     right: auto;
-    top: 2px;
-    width: 171px
+    top: 2px
 }
 
 .match-details-team-list .player-history-items.player-history-items-with-augments {
@@ -4309,7 +4320,6 @@
 
 .match-details-team-list .player-history-item {
     border: 1px solid #463714;
-    border-right-width: 0;
     float: left;
     height: 23px;
     margin: 0;
@@ -4320,7 +4330,14 @@
     border-right-width: 0
 }
 
-.match-details-team-list .player-history-item:last-child,
+.match-details-team-list .player-history-item:last-child {
+    border-right-width: 1px
+}
+
+.match-details-team-list .player-history-item.role-bound-item {
+    margin-left: 8px
+}
+
 .player-history-items-with-augments .player-history-item:nth-child(6) {
     border-right-width: 1px
 }
@@ -4343,6 +4360,7 @@
 .player-history-stats {
     color: #a09b8c;
     direction: ltr;
+    margin-left: 25px;
     margin-top: 5px;
     transition: color .3s ease
 }

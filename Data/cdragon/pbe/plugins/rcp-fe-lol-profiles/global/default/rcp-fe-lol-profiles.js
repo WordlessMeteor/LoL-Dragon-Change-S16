@@ -13393,10 +13393,6 @@
                     friends: {
                         api: "chat",
                         path: "/v1/friends"
-                    },
-                    championMasteryViewEnabledConfig: {
-                        api: "championMastery",
-                        path: "/v1/champion-mastery-view-enabled"
                     }
                 }
             });
@@ -13447,19 +13443,12 @@
                 championMasteries: a.Ember.computed("summoner.puuid", (function() {
                     const e = this.get("summoner.puuid");
                     if (!e) return;
-                    const t = this.get("api.championMastery");
-                    this.get("championMasteryViewEnabledConfig") ? t.post(`/v1/${e}/champion-mastery-view/top?count=3`, {
+                    this.get("api.championMastery").post(`/v1/${e}/champion-mastery-view/top?count=3`, {
                         skipCache: !0
                     }).then((e => {
                         this.set("championMasteries", e)
                     })).catch((e => {
                         a.logger.error("Failed to fetch champion mastery views:", e)
-                    })) : t.post(`/v1/${e}/champion-mastery/top?count=3`, {
-                        skipCache: !0
-                    }).then((e => {
-                        this.set("championMasteries", e)
-                    })).catch((e => {
-                        a.logger.error("Failed to fetch top champion mastery:", e)
                     }))
                 })),
                 backdropObserver: a.Ember.observer("summoner.summonerId", (function() {

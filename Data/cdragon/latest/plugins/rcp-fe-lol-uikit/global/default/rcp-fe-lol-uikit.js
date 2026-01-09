@@ -12510,6 +12510,8 @@
                     SMALL: "small",
                     MEDIUM: "medium",
                     LARGE: "large",
+                    LNY26: "lny26",
+                    LNY26SINGLE: "lny26-single",
                     FULL: "full"
                 };
             var A = new class {

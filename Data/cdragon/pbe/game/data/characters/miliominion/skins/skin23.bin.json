@@ -1,5 +1,5 @@
 {
-    "{2f3e859a}": {
+    "Characters/MilioMinion/Skins/Skin23": {
         "championSkinName": "MilioMinionSkin23",
         "skinParent": 20,
         "skinAudioProperties": {
@@ -10,14 +10,14 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{a4126842}",
+            "animationGraphData": "Characters/MilioMinion/Animations/Skin20",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/MilioMinion/Skins/Skin20/MilioMinion_Skin20.SKINS_Milio_Skin20.skl",
             "simpleSkin": "ASSETS/Characters/MilioMinion/Skins/Skin20/MilioMinion_Skin20.SKINS_Milio_Skin20.skn",
             "texture": "ASSETS/Characters/MilioMinion/Skins/Skin23/MilioMinion_Skin23_FireBuddy_TX_CM.Chroma_Milio_WinterGrabBag.tex",
-            "Material": "{6c683f4e}",
+            "Material": "Characters/MilioMinion/Skins/Skin23/Materials/Buddy_Body_inst",
             "reflectionFresnelColor": [
                 0,
                 0,
@@ -26,7 +26,7 @@
             ],
             "materialOverride": [
                 {
-                    "Material": "{ad1b6d34}",
+                    "Material": "Characters/MilioMinion/Skins/Skin23/Materials/Buddy_Eyes_inst",
                     "submesh": "FireBuddy_Eyes",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -40,13 +40,13 @@
             "AlphaOutWhileUntargetable": false,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{33aca788}",
+        "mResourceResolver": "Characters/MilioMinion/Skins/Skin23/Resources",
         "__type": "SkinCharacterDataProperties"
     },
-    "{33aca788}": {
+    "Characters/MilioMinion/Skins/Skin23/Resources": {
         "__type": "ResourceResolver"
     },
-    "{6c683f4e}": {
+    "Characters/MilioMinion/Skins/Skin23/Materials/Buddy_Body_inst": {
         "name": "Characters/MilioMinion/Skins/Skin23/Materials/Buddy_Body_inst",
         "samplerValues": [
             {
@@ -81,6 +81,20 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Maintex_Alpha_Strength",
                 "__type": "StaticMaterialShaderParamDef"
@@ -344,6 +358,16 @@
         ],
         "switches": [
             {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -525,7 +549,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{ad1b6d34}": {
+    "Characters/MilioMinion/Skins/Skin23/Materials/Buddy_Eyes_inst": {
         "name": "Characters/MilioMinion/Skins/Skin23/Materials/Buddy_Eyes_inst",
         "samplerValues": [
             {

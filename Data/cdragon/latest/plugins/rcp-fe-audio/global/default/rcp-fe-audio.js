@@ -1051,8 +1051,8 @@
                                 _ = !1,
                                 d = !(0 == c.env("BLUEBIRD_DEBUG")),
                                 g = !(0 == c.env("BLUEBIRD_WARNINGS") || !d && !c.env("BLUEBIRD_WARNINGS")),
-                                v = !(0 == c.env("BLUEBIRD_LONG_STACK_TRACES") || !d && !c.env("BLUEBIRD_LONG_STACK_TRACES")),
-                                y = 0 != c.env("BLUEBIRD_W_FORGOTTEN_RETURN") && (g || !!c.env("BLUEBIRD_W_FORGOTTEN_RETURN"));
+                                y = !(0 == c.env("BLUEBIRD_LONG_STACK_TRACES") || !d && !c.env("BLUEBIRD_LONG_STACK_TRACES")),
+                                v = 0 != c.env("BLUEBIRD_W_FORGOTTEN_RETURN") && (g || !!c.env("BLUEBIRD_W_FORGOTTEN_RETURN"));
                             e.prototype.suppressUnhandledRejections = function() {
                                 var t = this._target();
                                 t._bitField = -1048577 & t._bitField | 524288
@@ -1218,7 +1218,7 @@
                             e.config = function(t) {
                                 if ("longStackTraces" in (t = Object(t)) && (t.longStackTraces ? e.longStackTraces() : !t.longStackTraces && e.hasLongStackTraces() && m()), "warnings" in t) {
                                     var n = t.warnings;
-                                    Q.warnings = !!n, y = Q.warnings, c.isObject(n) && "wForgottenReturn" in n && (y = !!n.wForgottenReturn)
+                                    Q.warnings = !!n, v = Q.warnings, c.isObject(n) && "wForgottenReturn" in n && (v = !!n.wForgottenReturn)
                                 }
                                 if ("cancellation" in t && t.cancellation && !Q.cancellation) {
                                     if (a.haveItemsQueued()) throw new Error("cannot enable cancellation after promises are in use");
@@ -1447,7 +1447,7 @@
                                 cancellation: !1,
                                 monitoring: !1
                             };
-                            return v && e.longStackTraces(), {
+                            return y && e.longStackTraces(), {
                                 longStackTraces: function() {
                                     return Q.longStackTraces
                                 },
@@ -1467,7 +1467,7 @@
                                     return O
                                 },
                                 checkForgottenReturns: function(t, e, n, i, r) {
-                                    if (void 0 === t && null !== e && y) {
+                                    if (void 0 === t && null !== e && v) {
                                         if (void 0 !== r && r._returnedNonUndefined()) return;
                                         n && (n += " ");
                                         var o = "a promise was created in a " + n + "handler but was not returned from it";
@@ -1598,28 +1598,28 @@
                             writable: !0,
                             enumerable: !0
                         }), _.prototype.isOperational = !0;
-                        var v = 0;
+                        var y = 0;
 
-                        function y(t) {
-                            if (!(this instanceof y)) return new y(t);
+                        function v(t) {
+                            if (!(this instanceof v)) return new v(t);
                             c(this, "name", "OperationalError"), c(this, "message", t), this.cause = t, this.isOperational = !0, t instanceof Error ? (c(this, "message", t.message), c(this, "stack", t.stack)) : Error.captureStackTrace && Error.captureStackTrace(this, this.constructor)
                         }
                         _.prototype.toString = function() {
-                            var t = Array(4 * v + 1).join(" "),
+                            var t = Array(4 * y + 1).join(" "),
                                 e = "\n" + t + "AggregateError of:\n";
-                            v++, t = Array(4 * v + 1).join(" ");
+                            y++, t = Array(4 * y + 1).join(" ");
                             for (var n = 0; n < this.length; ++n) {
                                 for (var i = this[n] === this ? "[Circular AggregateError]" : this[n] + "", r = i.split("\n"), o = 0; o < r.length; ++o) r[o] = t + r[o];
                                 e += (i = r.join("\n")) + "\n"
                             }
-                            return v--, e
-                        }, u(y, Error);
+                            return y--, e
+                        }, u(v, Error);
                         var m = Error.__BluebirdErrorTypes__;
                         m || (m = s({
                             CancellationError: f,
                             TimeoutError: p,
-                            OperationalError: y,
-                            RejectionError: y,
+                            OperationalError: v,
+                            RejectionError: v,
                             AggregateError: _
                         }), o.defineProperty(Error, "__BluebirdErrorTypes__", {
                             value: m,
@@ -1927,9 +1927,9 @@
                                     if (s.checkForgottenReturns(_, d, null !== a ? "Promise.filter" : "Promise.map", h), _ === l) return this._reject(_.e), !0;
                                     var g = r(_, this._promise);
                                     if (g instanceof e) {
-                                        var v = (g = g._target())._bitField;
-                                        if (0 == (50397184 & v)) return u >= 1 && this._inFlight++, i[n] = g, g._proxy(this, -1 * (n + 1)), !1;
-                                        if (0 == (33554432 & v)) return 0 != (16777216 & v) ? (this._reject(g._reason()), !0) : (this._cancel(), !0);
+                                        var y = (g = g._target())._bitField;
+                                        if (0 == (50397184 & y)) return u >= 1 && this._inFlight++, i[n] = g, g._proxy(this, -1 * (n + 1)), !1;
+                                        if (0 == (33554432 & y)) return 0 != (16777216 & y) ? (this._reject(g._reason()), !0) : (this._cancel(), !0);
                                         _ = g._value()
                                     }
                                     i[n] = _
@@ -2103,12 +2103,12 @@
                             var _ = function() {},
                                 d = {},
                                 g = {},
-                                v = t("./thenables")(w, _),
-                                y = t("./promise_array")(w, _, v, i, r),
+                                y = t("./thenables")(w, _),
+                                v = t("./promise_array")(w, _, y, i, r),
                                 m = t("./context")(w),
                                 C = m.create,
                                 b = t("./debuggability")(w, m),
-                                E = (b.CapturedTrace, t("./finally")(w, v)),
+                                E = (b.CapturedTrace, t("./finally")(w, y)),
                                 S = t("./catch_filter")(g),
                                 N = t("./nodeback"),
                                 k = a.errorObj,
@@ -2169,7 +2169,7 @@
                                 };
                                 return this.isFulfilled() ? (t.fulfillmentValue = this.value(), t.isFulfilled = !0) : this.isRejected() && (t.rejectionReason = this.reason(), t.isRejected = !0), t
                             }, w.prototype.all = function() {
-                                return arguments.length > 0 && this._warn(".all() was passed arguments but it does not take any"), new y(this).promise()
+                                return arguments.length > 0 && this._warn(".all() was passed arguments but it does not take any"), new v(this).promise()
                             }, w.prototype.error = function(t) {
                                 return this.caught(a.originatesFromRejection, t)
                             }, w.is = function(t) {
@@ -2181,9 +2181,9 @@
                                     i = A(t)(N(e, n));
                                 return i === k && e._rejectCallback(i.e, !0), e._isFateSealed() || e._setAsyncGuaranteed(), e
                             }, w.all = function(t) {
-                                return new y(t).promise()
+                                return new v(t).promise()
                             }, w.cast = function(t) {
-                                var e = v(t);
+                                var e = y(t);
                                 return e instanceof w || ((e = new w(_))._captureStackTrace(), e._setFulfilled(), e._rejectionHandler0 = t), e
                             }, w.resolve = w.fulfilled = w.cast, w.reject = w.rejected = function(t) {
                                 var e = new w(_);
@@ -2268,7 +2268,7 @@
                             }, w.prototype._resolveCallback = function(t, n) {
                                 if (0 == (117506048 & this._bitField)) {
                                     if (t === this) return this._rejectCallback(e(), !1);
-                                    var i = v(t, this);
+                                    var i = y(t, this);
                                     if (!(i instanceof w)) return this._fulfill(t);
                                     n && this._propagateFrom(i, 2);
                                     var r = i._target();
@@ -2324,7 +2324,7 @@
                                 var s = t instanceof w,
                                     a = this._bitField,
                                     u = 0 != (134217728 & a);
-                                0 != (65536 & a) ? (s && t._invokeInternalOnCancel(), i instanceof E && i.isFinallyHandler() ? (i.cancelPromise = t, A(e).call(i, o) === k && t._reject(k.e)) : e === n ? t._fulfill(n.call(i)) : i instanceof r ? i._promiseCancelled(t) : s || t instanceof y ? t._cancel() : i.cancel()) : "function" == typeof e ? s ? (u && t._setAsyncGuaranteed(), this._settlePromiseFromHandler(e, i, o, t)) : e.call(i, o, t) : i instanceof r ? i._isResolved() || (0 != (33554432 & a) ? i._promiseFulfilled(o, t) : i._promiseRejected(o, t)) : s && (u && t._setAsyncGuaranteed(), 0 != (33554432 & a) ? t._fulfill(o) : t._reject(o))
+                                0 != (65536 & a) ? (s && t._invokeInternalOnCancel(), i instanceof E && i.isFinallyHandler() ? (i.cancelPromise = t, A(e).call(i, o) === k && t._reject(k.e)) : e === n ? t._fulfill(n.call(i)) : i instanceof r ? i._promiseCancelled(t) : s || t instanceof v ? t._cancel() : i.cancel()) : "function" == typeof e ? s ? (u && t._setAsyncGuaranteed(), this._settlePromiseFromHandler(e, i, o, t)) : e.call(i, o, t) : i instanceof r ? i._isResolved() || (0 != (33554432 & a) ? i._promiseFulfilled(o, t) : i._promiseRejected(o, t)) : s && (u && t._setAsyncGuaranteed(), 0 != (33554432 & a) ? t._fulfill(o) : t._reject(o))
                             }, w.prototype._settlePromiseLateCancellationObserver = function(t) {
                                 var e = t.handler,
                                     n = t.promise,
@@ -2392,7 +2392,7 @@
                                     resolve: T,
                                     reject: F
                                 }
-                            }, a.notEnumerableProp(w, "_makeSelfResolutionError", e), t("./method")(w, _, v, i, b), t("./bind")(w, _, v, b), t("./cancel")(w, y, i, b), t("./direct_resolve")(w), t("./synchronous_inspection")(w), t("./join")(w, y, v, _, b), w.Promise = w, t("./map.js")(w, y, i, v, _, b), t("./using.js")(w, i, v, C, _, b), t("./timers.js")(w, _, b), t("./generators.js")(w, i, _, v, r, b), t("./nodeify.js")(w), t("./call_get.js")(w), t("./props.js")(w, y, v, i), t("./race.js")(w, _, v, i), t("./reduce.js")(w, y, i, v, _, b), t("./settle.js")(w, y, b), t("./some.js")(w, y, i), t("./promisify.js")(w, _), t("./any.js")(w), t("./each.js")(w, _), t("./filter.js")(w, _), a.toFastProperties(w), a.toFastProperties(w.prototype), P({
+                            }, a.notEnumerableProp(w, "_makeSelfResolutionError", e), t("./method")(w, _, y, i, b), t("./bind")(w, _, y, b), t("./cancel")(w, v, i, b), t("./direct_resolve")(w), t("./synchronous_inspection")(w), t("./join")(w, v, y, _, b), w.Promise = w, t("./map.js")(w, v, i, y, _, b), t("./using.js")(w, i, y, C, _, b), t("./timers.js")(w, _, b), t("./generators.js")(w, i, _, y, r, b), t("./nodeify.js")(w), t("./call_get.js")(w), t("./props.js")(w, v, y, i), t("./race.js")(w, _, y, i), t("./reduce.js")(w, v, i, y, _, b), t("./settle.js")(w, v, b), t("./some.js")(w, v, i), t("./promisify.js")(w, _), t("./any.js")(w), t("./each.js")(w, _), t("./filter.js")(w, _), a.toFastProperties(w), a.toFastProperties(w.prototype), P({
                                 a: 1
                             }), P({
                                 b: 2
@@ -2556,7 +2556,7 @@
                                     }
                                 }(s, e, n), s
                             }
-                            var v = u ? void 0 : function(t, u, c, l, h, f) {
+                            var y = u ? void 0 : function(t, u, c, l, h, f) {
                                 var p = function() {
                                         return this
                                     }(),
@@ -2579,15 +2579,15 @@
                                 return "string" == typeof _ && (t = l), r.notEnumerableProp(d, "__isPromisified__", !0), d
                             };
 
-                            function y(t, e, n, o, s) {
+                            function v(t, e, n, o, s) {
                                 for (var a = new RegExp(e.replace(/([$])/, "\\$") + "$"), u = g(t, e, a, n), c = 0, l = u.length; c < l; c += 2) {
                                     var h = u[c],
                                         f = u[c + 1],
                                         p = h + e;
-                                    if (o === v) t[p] = v(h, i, h, f, e, s);
+                                    if (o === y) t[p] = y(h, i, h, f, e, s);
                                     else {
                                         var _ = o(f, (function() {
-                                            return v(h, i, h, f, e, s)
+                                            return y(h, i, h, f, e, s)
                                         }));
                                         r.notEnumerableProp(_, "__isPromisified__", !0), t[p] = _
                                     }
@@ -2598,7 +2598,7 @@
                                 if ("function" != typeof t) throw new c("expecting a function but got " + r.classString(t));
                                 if (_(t)) return t;
                                 var n = function(t, e, n) {
-                                    return v(t, e, void 0, t, null, n)
+                                    return y(t, e, void 0, t, null, n)
                                 }(t, void 0 === (e = Object(e)).context ? i : e.context, !!e.multiArgs);
                                 return r.copyDescriptors(t, n, p), n
                             }, e.promisifyAll = function(t, e) {
@@ -2609,12 +2609,12 @@
                                 var o = e.filter;
                                 "function" != typeof o && (o = f);
                                 var s = e.promisifier;
-                                if ("function" != typeof s && (s = v), !r.isIdentifier(i)) throw new RangeError("suffix must be a valid identifier\n\n    See http://goo.gl/MqrFmX\n");
+                                if ("function" != typeof s && (s = y), !r.isIdentifier(i)) throw new RangeError("suffix must be a valid identifier\n\n    See http://goo.gl/MqrFmX\n");
                                 for (var a = r.inheritedDataKeys(t), u = 0; u < a.length; ++u) {
                                     var l = t[a[u]];
-                                    "constructor" !== a[u] && r.isClass(l) && (y(l.prototype, i, o, s, n), y(l, i, o, s, n))
+                                    "constructor" !== a[u] && r.isClass(l) && (v(l.prototype, i, o, s, n), v(l, i, o, s, n))
                                 }
-                                return y(t, i, o, s, n)
+                                return v(t, i, o, s, n)
                             }
                         }
                     }, {
@@ -3160,7 +3160,7 @@
                                 return _.isDisposer(t) ? (this.resources[this.index]._setDisposable(t), t.promise()) : t
                             }
 
-                            function v(t) {
+                            function y(t) {
                                 this.length = t, this.promise = null, this[t - 1] = null
                             }
                             _.prototype.data = function() {
@@ -3179,7 +3179,7 @@
                                 return null != t && "function" == typeof t.resource && "function" == typeof t.tryDispose
                             }, c(d, _), d.prototype.doDispose = function(t, e) {
                                 return this.data().call(t, t, e)
-                            }, v.prototype._resultCancelled = function() {
+                            }, y.prototype._resultCancelled = function() {
                                 for (var t = this.length, n = 0; n < t; ++n) {
                                     var i = this[n];
                                     i instanceof e && i.cancel()
@@ -3191,11 +3191,11 @@
                                 if ("function" != typeof o) return n("expecting a function but got " + a.classString(o));
                                 var u = !0;
                                 2 === t && Array.isArray(arguments[0]) ? (t = (r = arguments[0]).length, u = !1) : (r = arguments, t--);
-                                for (var c = new v(t), f = 0; f < t; ++f) {
+                                for (var c = new y(t), f = 0; f < t; ++f) {
                                     var d = r[f];
                                     if (_.isDisposer(d)) {
-                                        var y = d;
-                                        (d = d.promise())._setDisposable(y)
+                                        var v = d;
+                                        (d = d.promise())._setDisposable(v)
                                     } else {
                                         var m = i(d);
                                         m instanceof e && (d = m._then(g, null, null, {
@@ -3296,7 +3296,7 @@
                             return null != i ? null == i.get && null == i.set ? i.value : n : void 0
                         }
 
-                        function v(t, e, n) {
+                        function y(t, e, n) {
                             if (f(t)) return t;
                             var i = {
                                 value: n,
@@ -3307,7 +3307,7 @@
                             return r.defineProperty(t, e, i), t
                         }
 
-                        function y(t) {
+                        function v(t) {
                             throw t
                         }
                         var m = function() {
@@ -3402,7 +3402,7 @@
 
                         function T(t) {
                             try {
-                                v(t, "isOperational", !0)
+                                y(t, "isOperational", !0)
                             } catch (t) {}
                         }
 
@@ -3460,10 +3460,10 @@
                                 isIdentifier: N,
                                 inheritedDataKeys: m,
                                 getDataPropertyOrDefault: g,
-                                thrower: y,
+                                thrower: v,
                                 isArray: r.isArray,
                                 asArray: M,
-                                notEnumerableProp: v,
+                                notEnumerableProp: y,
                                 isPrimitive: f,
                                 isObject: p,
                                 isError: w,
@@ -3572,6 +3572,8 @@
                             offset: n = !1
                         } = t || {};
                         await this.ready(), !1 === this.options.allowConcurrency && this.isPlaying() && await this.stop(), e && await new r.default((t => setTimeout(t, 1e3 * e))), !1 !== n && (this.audioElement.currentTime = n), await this._play()
+                    } catch (t) {
+                        if ("AbortError" !== t?.name && -1 === t?.message?.indexOf("The play() request was interrupted")) throw t
                     } finally {
                         this._playPromise = null
                     }

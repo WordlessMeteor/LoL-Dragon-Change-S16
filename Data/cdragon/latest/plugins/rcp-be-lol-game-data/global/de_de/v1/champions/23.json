@@ -1082,7 +1082,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Der Nervenkitzel im Kampf dient Tryndamere als Ansporn, weshalb sich mit der Schwere seiner Verletzungen auch sein Angriffsschaden erhöht. Er kann „Blutdurst“ aktivieren, um seinen Zorn zu verbrauchen und sich zu heilen.",
-            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Tryndamere dürstet nach Blut und erhält dadurch <scaleAD>@FlatAD@&nbsp;Angriffsschaden</scaleAD> plus <scaleAD>@ADPerOnePercentMissingHP@</scaleAD> pro 1&nbsp;% seines fehlenden Lebens.<br><br><spellActive>Aktiv:</spellActive> Tryndamere verbraucht seinen <keywordMajor>Zorn</keywordMajor> und regeneriert dadurch <healing>@BaseHeal@ plus @HealPerFury@&nbsp;Leben</healing> pro Zorn.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Tryndamere dürstet nach Blut und erhält basierend auf seinem fehlenden Leben bis zu <scaleAD>@MaximumBonusAD@&nbsp;Angriffsschaden</scaleAD>.<br><br><spellActive>Aktiv:</spellActive> Tryndamere verbraucht seinen <keywordMajor>Zorn</keywordMajor> und stellt <healing>@BaseHeal@ plus @HealPerFury@ Leben pro Zorn (max: @MaximumHeal@)</healing> wieder her. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1232,7 +1232,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Tryndamere brüllt eine Beleidigung, die den Angriffsschaden naher Champions verringert. Bei Gegnern, die mit dem Rücken zu Tryndamere stehen, bewirkt sie außerdem eine Lauftempoverringerung.",
-            "dynamicDescription": "Tryndamere verhöhnt seinen Gegner und verringert den Angriffsschaden von Champions @ReductionDuration@&nbsp;Sekunden lang um @ADReduction*-1@. Gegnerische Champions, die Tryndamere den Rücken zuwenden, werden für dieselbe Dauer um @SlowPotency*-100@&nbsp;% <status>verlangsamt</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere verhöhnt seinen Gegner und verringert den Angriffsschaden von Champions @ReductionDuration@&nbsp;Sekunden lang um @ADReduction*-1@. Zudem <status>verlangsamt</status> er sie für @SlowDuration@&nbsp;Sekunden um @SlowPotency*-100@&nbsp;%, während sie vor ihm kauern.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1382,7 +1382,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Tryndamere wirbelt zu einer Zieleinheit und fügt dabei allen getroffenen Gegnern Schaden zu.",
-            "dynamicDescription": "Tryndamere wirbelt durch seine Gegner hindurch, fügt ihnen <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage> zu und generiert pro getroffenem Gegner <keywordMajor>@NonChampFuryGain@&nbsp;Zorn</keywordMajor>. Wird bei gegnerischen Champions auf <keywordMajor>@ChampFuryGain@&nbsp;Zorn</keywordMajor> erhöht.<br><br>Wenn Tryndamere kritisch trifft, verringert sich die Abklingzeit dieser Fähigkeit um @NonChampCDRefund@&nbsp;Sekunde(n), bei einem kritischen Championtreffer um @ChampCDRefund@&nbsp;Sekunde(n).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere wirbelt durch seine Gegner hindurch, fügt ihnen <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage> zu und generiert pro getroffenem Gegner <keywordMajor>@NonChampFuryGain@&nbsp;Zorn</keywordMajor>. Wird bei gegnerischen Champions auf <keywordMajor>@ChampFuryGain@&nbsp;Zorn</keywordMajor> erhöht.<br><br>Wenn Tryndamere kritisch trifft, verringert sich die Abklingzeit dieser Fähigkeit um @NonChampCDRefund@&nbsp;Sekunden, bei einem kritischen Championtreffer um @ChampCDRefund@&nbsp;Sekunden.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1408,8 +1408,8 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
-                "coefficient2": 1.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

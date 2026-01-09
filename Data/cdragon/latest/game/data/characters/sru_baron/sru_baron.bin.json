@@ -671,6 +671,26 @@
         "mScriptName": "BaronLineMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
+            "mSpellCalculations": {
+                "DoTDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mCoefficient": 0.07000000029802322,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "HitDamage": {
+                    "mMultiplier": {
+                        "mNumber": 3.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "DoTDamage",
+                    "__type": "GameCalculationModified"
+                }
+            },
             "mCoefficient": 1.2000000476837158,
             "mAnimationName": "Spell1",
             "mImgIconName": [
@@ -781,96 +801,13 @@
             "mSpellTags": [
                 "Trait_ImmobilizingCCSpell"
             ],
-            "DataValues": [
-                {
-                    "mName": "Damage",
-                    "mValues": [
-                        65.0,
-                        80.0,
-                        95.0,
-                        110.0,
-                        125.0,
-                        140.0,
-                        155.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "mName": "DelayBeforeMovement",
-                    "mValues": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "mName": "MaxDistance",
-                    "mValues": [
-                        550.0,
-                        550.0,
-                        550.0,
-                        550.0,
-                        550.0,
-                        550.0,
-                        550.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "mName": "KnockTowardsDistance",
-                    "mValues": [
-                        250.0,
-                        250.0,
-                        250.0,
-                        250.0,
-                        250.0,
-                        250.0,
-                        250.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "mName": "StandAsideRange",
-                    "mValues": [
-                        900.0,
-                        900.0,
-                        900.0,
-                        900.0,
-                        900.0,
-                        900.0,
-                        900.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "mName": "MagicPen",
-                    "mValues": [
-                        0.02500000037252903,
-                        0.05000000074505806,
-                        0.07500000298023224,
-                        0.10000000149011612,
-                        0.125,
-                        0.15000000596046448,
-                        0.17499999701976776
-                    ],
-                    "__type": "SpellDataValue"
-                }
-            ],
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "Damage",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mCoefficient": 0.6000000238418579,
+                            "mStat": 2,
+                            "mCoefficient": 1.0,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -879,7 +816,7 @@
             },
             "mAnimationName": "spell3_BASE",
             "mImgIconName": [
-                "ASSETS/Characters/Mordekaiser/HUD/Icons2D/MordekaiserE.dds"
+                "ASSETS/Shared/Spells/Icons2D/Baron_Debuff1.dds"
             ],
             "mCastTime": 0.25,
             "cooldownTime": [
@@ -921,24 +858,6 @@
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 5,
-                            "Elements": [
-                                {
-                                    "type": "MagicPen",
-                                    "multiplier": 100.0,
-                                    "nameOverride": "Spell_MordekaiserE_Penetration",
-                                    "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Damage",
-                                    "nameOverride": "Spell_ListType_Damage",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Cooldown",
-                                    "__type": "TooltipInstanceListElement"
-                                }
-                            ],
                             "__type": "TooltipInstanceList"
                         }
                     },
@@ -959,21 +878,6 @@
                 ],
                 "__type": "GameCalculation"
             },
-            "{ec17e271}": [
-                {
-                    "EffectTag": 65536,
-                    "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mDataValue": "KnockTowardsDistance",
-                                "__type": "NamedDataValueCalculationPart"
-                            }
-                        ],
-                        "__type": "GameCalculation"
-                    },
-                    "__type": "{b09016f6}"
-                }
-            ],
             "__type": "BotsSpellData"
         },
         "__type": "SpellObject"
@@ -2497,7 +2401,8 @@
     },
     "Characters/SRU_Baron/CharacterRecords/Root": {
         "mCharacterName": "SRU_Baron",
-        "baseHP": 11800.0,
+        "baseHP": 16300.0,
+        "hpPerLevel": 170.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 260.0,
         "primaryAbilityResource": {
@@ -2505,14 +2410,17 @@
             "arBaseStaticRegen": 0.0,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 150.0,
-        "baseArmor": 120.0,
-        "baseSpellBlock": 70.0,
+        "baseDamage": 175.0,
+        "damagePerLevel": 20.0,
+        "baseArmor": 34.0,
+        "armorPerLevel": 8.0,
+        "baseSpellBlock": 32.0,
+        "spellBlockPerLevel": 4.0,
+        "critDamageMultiplier": 2.0,
         "baseMoveSpeed": 300.0,
         "attackRange": 900.0,
         "attackSpeed": 0.625,
         "attackSpeedRatio": 0.625,
-        "attackSpeedPerLevel": 2.125,
         "acquisitionRange": 400.0,
         "basicAttack": {
             "mAttackTotalTime": 1.600000023841858,
@@ -2529,11 +2437,12 @@
                 "__type": "AttackSlotData"
             }
         ],
-        "expGivenOnDeath": 800.0,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 100.0,
         "experienceRadius": 2000.0,
         "deathEventListeningRadius": 1200.0,
-        "globalGoldGivenOnDeath": 300.0,
-        "globalExpGivenOnDeath": 600.0,
+        "globalGoldGivenOnDeath": 150.0,
+        "globalExpGivenOnDeath": 650.0,
         "significance": 1.0,
         "spellNames": [
             "BaronAttackMelee",
@@ -2617,6 +2526,7 @@
     "Characters/SRU_Baron/CharacterRecords/URF": {
         "mCharacterName": "SRU_Baron",
         "baseHP": 17000.0,
+        "hpPerLevel": 170.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 260.0,
         "primaryAbilityResource": {
@@ -2624,14 +2534,17 @@
             "arBaseStaticRegen": 0.0,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 150.0,
-        "baseArmor": 120.0,
-        "baseSpellBlock": 70.0,
+        "baseDamage": 175.0,
+        "damagePerLevel": 20.0,
+        "baseArmor": 34.0,
+        "armorPerLevel": 8.0,
+        "baseSpellBlock": 32.0,
+        "spellBlockPerLevel": 4.0,
+        "critDamageMultiplier": 2.0,
         "baseMoveSpeed": 300.0,
         "attackRange": 900.0,
         "attackSpeed": 0.625,
         "attackSpeedRatio": 0.625,
-        "attackSpeedPerLevel": 2.125,
         "acquisitionRange": 400.0,
         "basicAttack": {
             "mAttackTotalTime": 1.600000023841858,
@@ -2648,11 +2561,12 @@
                 "__type": "AttackSlotData"
             }
         ],
-        "expGivenOnDeath": 800.0,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 100.0,
         "experienceRadius": 2000.0,
         "deathEventListeningRadius": 1200.0,
-        "globalGoldGivenOnDeath": 300.0,
-        "globalExpGivenOnDeath": 600.0,
+        "globalGoldGivenOnDeath": 150.0,
+        "globalExpGivenOnDeath": 650.0,
         "significance": 1.0,
         "spellNames": [
             "BaronAttackMelee",

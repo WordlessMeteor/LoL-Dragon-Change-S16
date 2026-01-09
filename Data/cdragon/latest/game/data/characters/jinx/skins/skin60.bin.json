@@ -46,6 +46,8 @@
                         "Play_jinx_skin60_slotmachine_buffactivate_anomaly",
                         "Play_jinx_skin60_slotmachine_buffactivate_chemtech",
                         "Play_jinx_skin60_slotmachine_buffactivate_hextech",
+                        "Play_mus_JinxSkin60_Mute_MusicBus",
+                        "Play_mus_JinxSkin60_Unmute_MusicBus",
                         "Play_sfx_jinx_skin60_exalted_spawnin",
                         "Play_sfx_Jinx_Skin60_Homeguard3D_buffactivate_anim",
                         "Play_sfx_Jinx_Skin60_Homeguard3D_buffdeactivate_anim",
@@ -252,6 +254,9 @@
             "__type": "SkinMeshDataProperties"
         },
         "armorMaterial": "Flesh",
+        "HudMuteEvent": "Play_mus_JinxSkin60_Mute_MusicBus",
+        "HudUnmuteEvent": "Play_mus_JinxSkin60_Unmute_MusicBus",
+        "{2ac577e2}": true,
         "defaultAnimations": [
             "Rlauncher_To_Minigun"
         ],
@@ -167502,7 +167507,7 @@
         ],
         "particleName": "Jinx_Skin60_Idle_Shimmer_eyes_glow",
         "particlePath": "Characters/Jinx/Skins/Skin60/Particles/Jinx_Skin60_Idle_Shimmer_eyes_glow",
-        "flags": 193,
+        "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jinx/Skins/Skin60/Particles/Jinx_Skin60_W_Cast_v2": {
@@ -327029,6 +327034,7 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DTurret",
+                            "mAllyEventName": "Kill3DTurret",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
                         },

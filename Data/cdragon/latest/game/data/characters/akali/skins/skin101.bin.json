@@ -119,7 +119,6 @@
                         "Play_vo_Akali_AkaliBasicAttackPassiveMelee_cast3D",
                         "Play_vo_Akali_AkaliCritAttack_cast3D",
                         "Play_vo_Akali_AkaliE_cast3D",
-                        "Play_vo_Akali_AkaliEbattack_hit",
                         "Play_vo_Akali_AkaliQ_cast3D",
                         "Play_vo_Akali_AkaliR_cast3D",
                         "Play_vo_Akali_AkaliRb_cast3D",
@@ -164,6 +163,7 @@
                         "Play_vo_Akali_Move2DLong",
                         "Play_vo_Akali_Move2DStandard",
                         "Play_vo_Akali_Respawn2DGeneral",
+                        "Play_vo_Akali_Spell3DEHit",
                         "Play_vo_Akali_Taunt3DGeneral",
                         "Play_vo_Akali_TauntResponse3DGeneral"
                     ],
@@ -118274,6 +118274,16 @@
         "name": "Characters/Akali/Skins/Skin101/Materials/Akali_Weapon_Mat_inst",
         "samplerValues": [
             {
+                "TextureName": "Dissolve_Gradient_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Gradient_test_01.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Dissolve_Texture",
+                "texturePath": "ASSETS/Shared/Particles/Base_plasma_noise.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "ASSETS/Characters/Akali/Skins/Skin101/Akali_Skin101_Weapon_TX_CM.Chroma_Akali_SpiritBlossom_Paragon.tex",
                 "addressU": 1,
@@ -118319,6 +118329,40 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Alpha_Sharpness",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_SmoothStep",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Sharpness",
+                "value": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Bias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "TintColor",
                 "value": [
@@ -118472,36 +118516,50 @@
         ],
         "switches": [
             {
+                "name": "USE_DISSOLVE",
+                "on": false,
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "FRESNEL_MASK_HOLOGRAPHIC",
                 "on": false,
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "MATCAP_ON",
+                "Group": "Mat Cap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "MATCAP_MASK_ON",
+                "Group": "Mat Cap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "IRIDESCENCE_ON",
+                "Group": "Iridescent",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "IRIDESCENT_MASK_ON",
+                "Group": "Iridescent",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "HOLOGRAPHIC_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "HOLOGRAPHIC_MASK_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "FLOWMAP_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],
@@ -118540,6 +118598,16 @@
     "Characters/Akali/Skins/Skin101/Materials/Akali_Body_Mat_Inst_inst": {
         "name": "Characters/Akali/Skins/Skin101/Materials/Akali_Body_Mat_Inst_inst",
         "samplerValues": [
+            {
+                "TextureName": "Dissolve_Gradient_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Gradient_test_01.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Dissolve_Texture",
+                "texturePath": "ASSETS/Shared/Particles/Base_plasma_noise.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
             {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "ASSETS/Characters/Akali/Skins/Skin101/Akali_Skin101_TX_CM.Chroma_Akali_SpiritBlossom_Paragon.tex",
@@ -118586,6 +118654,40 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Alpha_Sharpness",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_SmoothStep",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Sharpness",
+                "value": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Bias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "TintColor",
                 "value": [
@@ -118739,36 +118841,50 @@
         ],
         "switches": [
             {
+                "name": "USE_DISSOLVE",
+                "on": false,
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "FRESNEL_MASK_HOLOGRAPHIC",
                 "on": false,
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "MATCAP_ON",
+                "Group": "Mat Cap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "MATCAP_MASK_ON",
+                "Group": "Mat Cap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "IRIDESCENCE_ON",
+                "Group": "Iridescent",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "IRIDESCENT_MASK_ON",
+                "Group": "Iridescent",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "HOLOGRAPHIC_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "HOLOGRAPHIC_MASK_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "FLOWMAP_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],

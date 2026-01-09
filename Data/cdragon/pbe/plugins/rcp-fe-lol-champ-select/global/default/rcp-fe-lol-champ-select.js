@@ -1215,10 +1215,10 @@
                 tra: i.Ember.inject.service(),
                 root: null,
                 init: function() {
-                    this._super(...arguments), this._playerNames = i.playerNames, this.uxSettingsInit(), this.recordDidRequestSucceed = this._recordDidRequestSucceed.bind(this);
+                    this._super(...arguments), this._puuidToOriginalSlotId = {}, this._playerNames = i.playerNames, this.uxSettingsInit(), this.recordDidRequestSucceed = this._recordDidRequestSucceed.bind(this);
                     this.set("sessionActions", n(35).create({
                         root: this
-                    })), this.get("dynamicConfigService").initDynamicConfigs(), i.Telemetry.startTracingEvent("champ-select-init-ember-app-settle"), this.get("chatPublisherService").registerSessionChangeCallback("game-starting", this.gameStartDelayedSysMessage.bind(this)), this.get("champSelectSfxService").initDataBindings(), this.initChatBindings(), this.initChampSelectBindings(), this.initBugReportBindings(), this.championPreviewKeyUpHandler = this.championPreviewKeyUpHandler.bind(this), this._puuidToOriginalSlotId = {}
+                    })), this.get("dynamicConfigService").initDynamicConfigs(), i.Telemetry.startTracingEvent("champ-select-init-ember-app-settle"), this.get("chatPublisherService").registerSessionChangeCallback("game-starting", this.gameStartDelayedSysMessage.bind(this)), this.get("champSelectSfxService").initDataBindings(), this.initChatBindings(), this.initChampSelectBindings(), this.initBugReportBindings(), this.championPreviewKeyUpHandler = this.championPreviewKeyUpHandler.bind(this)
                 },
                 didReceiveAttrs() {
                     this._super(...arguments)

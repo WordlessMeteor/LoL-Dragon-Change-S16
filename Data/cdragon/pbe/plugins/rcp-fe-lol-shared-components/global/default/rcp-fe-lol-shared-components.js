@@ -14956,7 +14956,7 @@
                     validators: e,
                     handlers: () => {
                         n.get("/lol-publishing-content/v1/listeners/client-data").then((e => {
-                            t.sendMessage({
+                            a.logger.info("DEBUG: Client data response", e), t.sendMessage({
                                 messageType: "rcp-fe-lol-home-data-response",
                                 data: {
                                     clientData: {
@@ -16321,10 +16321,21 @@
                         messageType: r.lootOpen,
                         validators: e,
                         handlers: (e, t) => {
-                            a.SharedComponentsApi.getApi_Router().navigateTo("rcp-fe-lol-loot", {
-                                page: t?.page,
-                                initialSelectedLootItem: t?.initialSelectedLootItem
-                            })
+                            const n = a.SharedComponentsApi.getApi_Router(),
+                                {
+                                    page: r,
+                                    initialSelectedLootItem: i
+                                } = t || {};
+                            let o = {};
+                            if (r === s.MOON_SKIN) o = {
+                                page: r,
+                                initialBannerId: i
+                            };
+                            else o = {
+                                page: r,
+                                initialSelectedLootItem: i
+                            };
+                            n.navigateTo("rcp-fe-lol-loot", o)
                         }
                     })
                 }(e, t),
@@ -16392,17 +16403,23 @@
             };
             var a = n(1);
             const r = {
-                runesOpen: "rcp-fe-lol-home-runes-open",
-                freeChampRotationOpen: "rcp-fe-lol-home-free-champ-rotation-open",
-                yourShopOpen: "open-yourshop",
-                lootOpen: "rcp-fe-lol-home-open-loot",
-                clashOpen: "rcp-fe-lol-home-show-clash",
-                championDetailsOpen: "rcp-fe-lol-home-open-champion-details",
-                activityCenter: "rcp-fe-lol-home-open-activity-center",
-                activityCenterInfoHub: "rcp-fe-lol-home-open-info-hub",
-                objectivesModal: "rcp-fe-lol-home-open-objectives",
-                personalizedOffersOpen: "rcp-fe-lol-home-personalized-offers-open"
-            }
+                    runesOpen: "rcp-fe-lol-home-runes-open",
+                    freeChampRotationOpen: "rcp-fe-lol-home-free-champ-rotation-open",
+                    yourShopOpen: "open-yourshop",
+                    lootOpen: "rcp-fe-lol-home-open-loot",
+                    clashOpen: "rcp-fe-lol-home-show-clash",
+                    championDetailsOpen: "rcp-fe-lol-home-open-champion-details",
+                    activityCenter: "rcp-fe-lol-home-open-activity-center",
+                    activityCenterInfoHub: "rcp-fe-lol-home-open-info-hub",
+                    objectivesModal: "rcp-fe-lol-home-open-objectives",
+                    personalizedOffersOpen: "rcp-fe-lol-home-personalized-offers-open"
+                },
+                s = {
+                    INDEX: "index",
+                    LOOT: "loot",
+                    MOON_SKIN: "moon-skin",
+                    MYTHIC_SHOPPEFRONT: "mythic-shoppefront"
+                }
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -16994,13 +17011,16 @@
                                         e.currencies.forEach((e => {
                                             n.unobserve(`/lol-inventory/v1/wallet/${e}`, t), n.observe(`/lol-inventory/v1/wallet/${e}`, t, (n => {
                                                 const s = n[e];
-                                                null != s ? t.sendMessage({
+                                                null != s ? (a.logger.info("DEBUG: Observed currency balance update", {
+                                                    currency: e,
+                                                    balance: s
+                                                }), t.sendMessage({
                                                     messageType: r.METAGAMES_OBSERVE_CURRENCY_BALANCES_RESPONSE,
                                                     data: {
                                                         currency: e,
                                                         balance: s
                                                     }
-                                                }) : a.logger.warning("handleMetagamesObserveCurrencyBalances: Missing currency balance", e)
+                                                })) : a.logger.warning("handleMetagamesObserveCurrencyBalances: Missing currency balance", e)
                                             })), i.add(e)
                                         }))
                                     }(o.options, t, n);
@@ -17031,7 +17051,7 @@
                                                         };
                                                     t.observe(i, o)
                                                 }))
-                                            }(o.purchaseIdToObserve, n), t.sendMessage({
+                                            }(o.purchaseIdToObserve, n), a.logger.info("DEBUG: Player event response", o), t.sendMessage({
                                                 messageType: r.METAGAMES_POST_PLAYER_EVENT_RESPONSE,
                                                 data: {
                                                     ...o,

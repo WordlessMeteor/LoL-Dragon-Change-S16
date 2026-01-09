@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "15.24.1",
+    "version": "16.1.1",
     "data": {
         "Twitch": {
             "id": "Twitch",
@@ -150,8 +150,8 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 59,
-                "attackdamageperlevel": 3.1,
-                "attackspeedperlevel": 3.38,
+                "attackdamageperlevel": 3,
+                "attackspeedperlevel": 3,
                 "attackspeed": 0.679
             },
             "spells": [
@@ -159,15 +159,15 @@
                     "id": "TwitchHideInShadows",
                     "name": "埋伏",
                     "description": "图奇进入伪装状态，持续一段短暂的时间并且移动速度得到提升。当离开伪装状态后，图奇会暂时获得攻击速度加成。<br><br>当一名身上带有【死亡毒液】的敌方英雄死亡时，此技能的冷却时间会重置。",
-                    "tooltip": "图奇<keywordStealth>伪装</keywordStealth>并获得<speed>{{ e3 }}%移动速度</speed>，持续{{ e2 }}秒。当附近有无法看见他的敌人时，移动速度提升至{{ e3 }}%。在离开<keywordStealth>伪装</keywordStealth>后，图奇获得<attackSpeed>{{ e1 }}%攻击速度</attackSpeed>，持续{{ e6 }}秒。<br /><br />当一名带有<keywordMajor>毒液</keywordMajor>的敌方英雄阵亡时，这个技能的冷却时间就会刷新。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "图奇<keywordStealth>伪装</keywordStealth>并获得<speed>{{ movespeedmod }}%移动速度</speed>，持续{{ stealthduration }}秒。当附近有一名无法看见他的敌方英雄时，移动速度提升至{{ hiddenspeed }}%。在离开<keywordStealth>伪装</keywordStealth>后，图奇获得<attackSpeed>{{ attackspeedmod*100 }}%攻击速度</attackSpeed>，持续{{ attackspeedduration }}秒。<br /><br />当一名带有<keywordMajor>毒液</keywordMajor>的敌方英雄阵亡时，这个技能的冷却时间就会刷新。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伪装时长",
                             "攻击速度"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e1 }}% -> {{ e1NL }}%"
+                            "{{ stealthduration }} -> {{ stealthdurationNL }}",
+                            "{{ attackspeedmod*100.000000 }}% -> {{ attackspeedmodnl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -191,46 +191,46 @@
                     "effect": [
                         null,
                         [
-                            45,
-                            50,
-                            55,
-                            60,
-                            65
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            10,
-                            11,
-                            12,
-                            13,
-                            14
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            30,
-                            30,
-                            30,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            6,
-                            6,
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             3,
@@ -240,39 +240,39 @@
                             3
                         ],
                         [
-                            500,
-                            500,
-                            500,
-                            500,
-                            500
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1000,
-                            1000,
-                            1000,
-                            1000,
-                            1000
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            30,
-                            30,
-                            30,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
-                        "45/50/55/60/65",
-                        "10/11/12/13/14",
-                        "30",
-                        "1",
-                        "1",
-                        "6",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "3",
-                        "500",
-                        "1000",
-                        "30"
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",

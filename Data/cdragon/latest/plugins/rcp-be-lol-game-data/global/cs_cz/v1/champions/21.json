@@ -260,8 +260,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21010.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21010.png",
                     "colors": [
-                        "#AAFFFF",
-                        "#FF55FF"
+                        "#6ABBEE",
+                        "#6ABBEE"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -284,8 +284,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21011.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21011.png",
                     "colors": [
-                        "#592AB5",
-                        "#6FCAD4"
+                        "#9C68D7",
+                        "#9C68D7"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -308,8 +308,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21012.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21012.png",
                     "colors": [
-                        "#BC7E11",
-                        "#2298CA"
+                        "#DF9117",
+                        "#DF9117"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -336,8 +336,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21013.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21013.png",
                     "colors": [
-                        "#BDDF5D",
-                        "#CA37BE"
+                        "#B6E084",
+                        "#B6E084"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -360,8 +360,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21014.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21014.png",
                     "colors": [
-                        "#B51717",
-                        "#222DC8"
+                        "#D33528",
+                        "#D33528"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -931,8 +931,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21039.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21039.png",
                     "colors": [
-                        "#2B7CFF",
-                        "#FF930E"
+                        "#F6A630",
+                        "#1C61B4"
                     ],
                     "descriptions": [
                         {
@@ -1072,8 +1072,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21043.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21043.png",
                     "colors": [
-                        "#DF9117",
-                        "#DF9117"
+                        "#FFEE59",
+                        "#FFEE59"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -1601,7 +1601,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Miss Fortune vypálí na nepřítele střelu, čímž způsobí poškození jak jemu, tak i cíli za ním. Oba zásahy mohou navíc aplikovat Dotyk lásky.",
-            "dynamicDescription": "Miss Fortune vypálí odráživou střelu, která způsobí <physicalDamage>@TotalDamageTooltip@ bodů fyzického poškození</physicalDamage> zvolenému nepříteli a jednomu dalšímu, který se nachází za ním. <br><br>Druhá střela může způsobit kritický zásah. Tento kritický zásah je zaručený, pokud první výstřel svůj cíl zabije. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune vypálí odráživou střelu, která způsobí <physicalDamage>@TotalDamageTooltip@ bodů fyzického poškození</physicalDamage> zvolenému nepříteli a jednomu dalšímu, který se nachází za ním. <br><br>Druhá střela může způsobit kritický zásah ve výši <physicalDamage>@TotalDamageCrit@ bodů fyzického poškození</physicalDamage>. Tento kritický zásah je zaručený, pokud první výstřel svůj cíl zabije.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -2051,7 +2051,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Miss Fortune soustředí salvu střel do kuželu před sebou, čímž nepřátelům způsobí rozsáhlé poškození. Každá vlna Salvy kulek může způsobit kritický zásah.",
-            "dynamicDescription": "Miss Fortune soustředí do kuželového prostoru před sebou salvu kulek, během @TotalChannelDuration@&nbsp;sek. tak vypálí @TotalWaves@ vln. Každá vlna výstřelů způsobí <physicalDamage>@PhysicalDamagePerWave@ bodů fyzického poškození</physicalDamage> (celkem <physicalDamage>@TotalPhysicalDamage@ bodů fyzického poškození</physicalDamage>).<br><br>Každá vlna může způsobit kritický zásah ve výši %i:scaleCrit% <physicalDamage>@PhysicalCritPerWave@ bodů fyzického poškození</physicalDamage> (celkem %i:scaleCrit% <physicalDamage>@TotalPhysicalCritDamage@ bodů fyzického poškození</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Miss Fortune soustředí do kuželového prostoru před sebou salvu kulek, během @BaseChannelDuration@&nbsp;sek. tak vypálí @BaseWaves@ vln. Každá vlna výstřelů způsobí <physicalDamage>@PhysicalDamagePerWave@ bodů fyzického poškození</physicalDamage> (celkem <physicalDamage>@TotalPhysicalDamage@ bodů fyzického poškození</physicalDamage>).<br><br>Každá vlna této schopnosti může způsobit kritický zásah ve výši %i:scaleCrit% <physicalDamage>@CritDamagePerWave@ bodů fyzického poškození</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

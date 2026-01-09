@@ -1422,8 +1422,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/18/18063.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/18/18063.png",
                     "colors": [
-                        "#DF9117",
-                        "#DF9117"
+                        "#FFEE59",
+                        "#FFEE59"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -1705,8 +1705,8 @@
     "passive": {
         "name": "Прицеливание",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_Passive.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/0018/ability_0018_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/0018/ability_0018_P1.jpg",
         "description": "С каждым уровнем Тристана увеличивает дальность атаки."
     },
     "spells": [
@@ -2019,7 +2019,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Когда Тристана убивает противника, ее пушечные ядра взрываются шрапнелью, нанося урон окружающим врагам. При активации умения Тристана прикрепляет к цели бомбу, которая взрывается через короткий промежуток времени, нанося урон окружающим врагам.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> автоатаки Тристаны, убивающие цель, наносят <magicDamage>@PassiveDamage@ магического урона</magicDamage> окружающим врагам.<br><br><spellActive>Активно:</spellActive> Тристана бросает на врага или башню бомбу, которая наносит <physicalDamage>@ActiveDamage@ физического урона</physicalDamage> окружающим врагам через @ActiveDuration@ сек. Этот урон увеличивается на @CritChanceAmp*100@% от шанса критического удара и на @ActivePerStackAmp*100@% каждый раз, когда Тристана поражает цель автоатакой или умением (максимум зарядов - 4).<br><br>Если накапливается @ActiveMaxStacks@ заряда, бомба взрывается немедленно (умение наносит не более <physicalDamage>@ActiveMaxDamage@ физического урона</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> автоатаки Тристаны, убивающие цель, наносят <magicDamage>@PassiveDamage@ ед. магического урона</magicDamage> окружающим врагам.<br><br><spellActive>Активно:</spellActive> Тристана бросает на врага или башню бомбу, которая наносит <physicalDamage>@ActiveDamage@ ед. физического урона</physicalDamage> окружающим врагам через @ActiveDuration@ сек. Этот урон увеличивается на @ActivePerStackAmp*100@% каждый раз, когда Тристана поражает цель автоатакой или умением (максимум зарядов – 4).<br><br>Если накапливается @ActiveMaxStacks@ зар., бомба взрывается немедленно (умение наносит не более <physicalDamage>@ActiveMaxDamage@ ед. физического урона</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -80,7 +80,7 @@ div[data-screen-name=rcp-fe-lol-postgame] .ember-application-factory>.ember-view
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-container,
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-status-text,
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container,
-.rating-change-component.expanded .rating-change-loc-container,
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc,
 .scoreboard-header-component .scoreboard-header-content,
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name,
 .scoreboard-row-component .scoreboard-row-content-container .scoreboard-row-player-details-container .scoreboard-row-details-content .scoreboard-row-name-and-champ-container .scoreboard-row-player-name,
@@ -286,7 +286,7 @@ lol-uikit-content-block.postgame-tft-piece-tooltip {
 .ranked-progression-component.consolation-lp-applied .ranked-progression-details .ranked-progression-update-result-status-text,
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container,
 .ranked-progression-component.leaver-penalty-applied .ranked-progression-details .ranked-progression-update-result-status-text,
-.rating-change-component.expanded .rating-change-loc-container,
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc,
 .scoreboard-header-component .scoreboard-header-content,
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name,
 .scoreboard-header-stat-icon-tooltip,
@@ -425,7 +425,7 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-c
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-container,
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-status-text,
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container,
-.rating-change-component.expanded .rating-change-loc-container,
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc,
 .scoreboard-header-component .scoreboard-header-content,
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name,
 .scoreboard-row-component .scoreboard-row-content-container .scoreboard-row-player-details-container .scoreboard-row-details-content .scoreboard-row-name-and-champ-container .scoreboard-row-player-name,
@@ -819,12 +819,12 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-c
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container:lang(th-th),
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container:lang(tr-tr),
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container:lang(zh-tw),
-.rating-change-component.expanded .rating-change-loc-container:lang(el-gr),
-.rating-change-component.expanded .rating-change-loc-container:lang(ja-jp),
-.rating-change-component.expanded .rating-change-loc-container:lang(ko-kr),
-.rating-change-component.expanded .rating-change-loc-container:lang(th-th),
-.rating-change-component.expanded .rating-change-loc-container:lang(tr-tr),
-.rating-change-component.expanded .rating-change-loc-container:lang(zh-tw),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(el-gr),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(ja-jp),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(ko-kr),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(th-th),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(tr-tr),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(zh-tw),
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name:lang(el-gr),
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name:lang(ja-jp),
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name:lang(ko-kr),
@@ -1211,7 +1211,7 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-c
 .progression-modal-root-component .progression-modal-header,
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-status-text,
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container,
-.rating-change-component.expanded .rating-change-loc-container,
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc,
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name,
 .scoreboard-row-component .scoreboard-row-content-container .scoreboard-row-player-details-container .scoreboard-row-details-content .scoreboard-row-position-level-container .scoreboard-row-in-game-level,
 .season-pass-progression.is-small .season-pass-progression__xp-gained-level-up-text,
@@ -1244,7 +1244,7 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-c
 .progression-modal-root-component .progression-modal-header:lang(ar-ae),
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-status-text:lang(ar-ae),
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container:lang(ar-ae),
-.rating-change-component.expanded .rating-change-loc-container:lang(ar-ae),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(ar-ae),
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name:lang(ar-ae),
 .scoreboard-row-component .scoreboard-row-content-container .scoreboard-row-player-details-container .scoreboard-row-details-content .scoreboard-row-position-level-container .scoreboard-row-in-game-level:lang(ar-ae),
 .season-pass-progression.is-small .season-pass-progression__xp-gained-level-up-text:lang(ar-ae),
@@ -2185,7 +2185,7 @@ lol-uikit-content-block[type=notification].postgame-friend-request-toast>p {
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-container,
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-status-text,
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container,
-.rating-change-component.expanded .rating-change-loc-container,
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc,
 .scoreboard-header-component .scoreboard-header-content,
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name,
 .scoreboard-row-component .scoreboard-row-content-container .scoreboard-row-player-details-container .scoreboard-row-details-content .scoreboard-row-name-and-champ-container .scoreboard-row-player-name,
@@ -5274,7 +5274,7 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-container,
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-status-text,
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container,
-.rating-change-component.expanded .rating-change-loc-container,
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc,
 .scoreboard-header-component .scoreboard-header-content,
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name,
 .scoreboard-row-component .scoreboard-row-content-container .scoreboard-row-player-details-container .scoreboard-row-details-content .scoreboard-row-name-and-champ-container .scoreboard-row-player-name,
@@ -5408,7 +5408,7 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 .ranked-progression-component.consolation-lp-applied .ranked-progression-details .ranked-progression-update-result-status-text,
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container,
 .ranked-progression-component.leaver-penalty-applied .ranked-progression-details .ranked-progression-update-result-status-text,
-.rating-change-component.expanded .rating-change-loc-container,
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc,
 .scoreboard-header-component .scoreboard-header-content,
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name,
 .scoreboard-header-stat-icon-tooltip,
@@ -5508,7 +5508,7 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-container,
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-status-text,
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container,
-.rating-change-component.expanded .rating-change-loc-container,
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc,
 .scoreboard-header-component .scoreboard-header-content,
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name,
 .scoreboard-row-component .scoreboard-row-content-container .scoreboard-row-player-details-container .scoreboard-row-details-content .scoreboard-row-name-and-champ-container .scoreboard-row-player-name,
@@ -5722,12 +5722,12 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container:lang(th-th),
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container:lang(tr-tr),
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container:lang(zh-tw),
-.rating-change-component.expanded .rating-change-loc-container:lang(el-gr),
-.rating-change-component.expanded .rating-change-loc-container:lang(ja-jp),
-.rating-change-component.expanded .rating-change-loc-container:lang(ko-kr),
-.rating-change-component.expanded .rating-change-loc-container:lang(th-th),
-.rating-change-component.expanded .rating-change-loc-container:lang(tr-tr),
-.rating-change-component.expanded .rating-change-loc-container:lang(zh-tw),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(el-gr),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(ja-jp),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(ko-kr),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(th-th),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(tr-tr),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(zh-tw),
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name:lang(el-gr),
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name:lang(ja-jp),
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name:lang(ko-kr),
@@ -6009,7 +6009,7 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 .progression-modal-root-component .progression-modal-header,
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-status-text,
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container,
-.rating-change-component.expanded .rating-change-loc-container,
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc,
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name,
 .scoreboard-row-component .scoreboard-row-content-container .scoreboard-row-player-details-container .scoreboard-row-details-content .scoreboard-row-position-level-container .scoreboard-row-in-game-level,
 .season-pass-progression.is-small .season-pass-progression__xp-gained-level-up-text,
@@ -6035,7 +6035,7 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 .progression-modal-root-component .progression-modal-header:lang(ar-ae),
 .ranked-progression-component .ranked-progression-details .ranked-progression-update-result-status-text:lang(ar-ae),
 .ranked-progression-component.is-loss-prevented .ranked-progression-details .ranked-progression-update-result-container:lang(ar-ae),
-.rating-change-component.expanded .rating-change-loc-container:lang(ar-ae),
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc:lang(ar-ae),
 .scoreboard-header-component .scoreboard-header-content .scoreboard-header-team-name:lang(ar-ae),
 .scoreboard-row-component .scoreboard-row-content-container .scoreboard-row-player-details-container .scoreboard-row-details-content .scoreboard-row-position-level-container .scoreboard-row-in-game-level:lang(ar-ae),
 .season-pass-progression.is-small .season-pass-progression__xp-gained-level-up-text:lang(ar-ae),
@@ -8319,11 +8319,16 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
     align-items: center;
     background-image: url(/fe/lol-postgame/rating-change-loc-frame.svg);
     background-size: 100%;
-    color: #b2d9db;
     display: flex;
     height: 43px;
     justify-content: center;
     width: 160px
+}
+
+.rating-change-component.expanded .rating-change-loc-container .rating-change-loc {
+    color: #b2d9db;
+    direction: rtl;
+    display: flex
 }
 
 .scoreboard-header-component {
@@ -8438,46 +8443,6 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 
 .scoreboard-honor-flair-component .honor-flair-icon.visible {
     display: block
-}
-
-@-moz-keyframes visible {
-    80% {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@-webkit-keyframes visible {
-    80% {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@-o-keyframes visible {
-    80% {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes visible {
-    80% {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
 }
 
 .scoreboard-honor-flair-component .honor-flair-icon-static {
@@ -8954,9 +8919,12 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 }
 
 .scoreboard-row-component .scoreboard-row-content-container .scoreboard-row-items-container {
-    justify-content: space-between;
-    margin-right: 59px;
-    width: 176px
+    justify-content: left;
+    width: 235px
+}
+
+.scoreboard-row-component .scoreboard-row-content-container .scoreboard-row-items-container .item-spacer {
+    width: 6px
 }
 
 .scoreboard-row-component .scoreboard-row-content-container .scoreboard-updated-challenge-component {
@@ -10662,6 +10630,206 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 .progression-modal-root-component .progression-modal-container .progresion-modal-content .progression-modal-eternals-token-container .progresion-modal-eternals-milestone .eternals-icon {
     height: 14px;
     margin-right: 4px
+}
+
+.scoreboard-climb-indicator-flair-component {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    left: -50px;
+    position: absolute;
+    width: 50px
+}
+
+.scoreboard-climb-indicator-flair-component .climb-indicator-flair-icon {
+    animation: visible 1s forwards;
+    display: none;
+    filter: drop-shadow(0 0 14px #b2d9db);
+    height: 28x;
+    opacity: 0;
+    width: 25px
+}
+
+.scoreboard-climb-indicator-flair-component .climb-indicator-flair-icon.visible {
+    display: block
+}
+
+@-moz-keyframes visible {
+    80% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes visible {
+    80% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-o-keyframes visible {
+    80% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes visible {
+    80% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.scoreboard-climb-indicator-flair-component .climb-indicator-flair-icon-static {
+    display: block;
+    filter: drop-shadow(0 0 14px #b2d9db);
+    height: 28px;
+    width: 25px
+}
+
+.scoreboard-climb-indicator-flair-component .climb-indicator-flair-tooltip-container {
+    height: 100%;
+    left: 0;
+    pointer-events: auto;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.climb-indicator-flair-tooltip-text {
+    text-align: left
+}
+
+.climb-indicator-flair-tooltip-text span {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-text {
+    font-family: var(--font-display)
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-explanation-line {
+    font-family: var(--font-body)
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-text,
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-explanation-line {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-text {
+    text-transform: uppercase
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-text:lang(el-gr),
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-text:lang(ja-jp),
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-text:lang(ko-kr),
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-text:lang(th-th),
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-text:lang(tr-tr),
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-text:lang(zh-tw) {
+    text-transform: none
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-text {
+    color: #f0e6d2;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 42px
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-text:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-explanation-line {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-explanation-line:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    top: -12px
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-modal-video-state-machine {
+    position: absolute
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-emblem-container {
+    align-items: center;
+    display: flex;
+    height: 280px;
+    justify-content: center;
+    position: relative;
+    width: 400px
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-emblem-container .valor-aegis-emblem {
+    height: 400px;
+    position: absolute;
+    width: 400px
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-spacer {
+    height: 26px
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 124px
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-text {
+    height: 52px
+}
+
+.valor-aegis-modal-component .valor-aegis-modal-content-container .valor-aegis-effect-text-container .valor-aegis-effect-explanation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 72px;
+    justify-content: space-between
+}
+
+.valor-aegis-modal-component.hide-static-image .valor-aegis-emblem-container .valor-aegis-emblem {
+    opacity: 0
 }
 
 .honor-vote-ceremony {

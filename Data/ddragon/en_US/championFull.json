@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "15.24.1",
+    "version": "16.1.1",
     "data": {
         "Aatrox": {
             "id": "Aatrox",
@@ -2573,7 +2573,7 @@
                     "id": "AkshanE",
                     "name": "Heroic Swing",
                     "description": "Akshan fires a grappling hook into terrain then swings around it, repeatedly firing at the nearest enemy while swinging. He can jump off early or gets knocked off when colliding with champions or terrain.",
-                    "tooltip": "<spellActive>First Cast:</spellActive> Akshan fires a grappling hook, attaching to the first terrain hit.<br /><br /><spellActive>Second Cast:</spellActive> Akshan swings around the terrain, repeatedly firing at the nearest enemy for <physicalDamage>{{ asmoddamagetodeal }} physical damage</physicalDamage> per shot.<br /><br /><spellActive>Third Cast:</spellActive> Akshan dives off the rope, firing a final shot.<br /><br />Colliding with an enemy Champion or terrain ends the swing early.<br /><br />Champion takedowns refresh this Ability's Cooldown.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellActive>First Cast:</spellActive> Akshan fires a grappling hook, attaching to the first terrain hit.<br /><br /><spellActive>Second Cast:</spellActive> Akshan swings around the terrain, repeatedly firing at the nearest enemy for <physicalDamage>{{ damagetodeal }} physical damage</physicalDamage> per shot.<br /><br /><spellActive>Third Cast:</spellActive> Akshan dives off the rope, firing a final shot.<br /><br />Colliding with an enemy Champion or terrain ends the swing early.<br /><br />Champion takedowns refresh this Ability's Cooldown.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -3923,13 +3923,11 @@
                     "leveltip": {
                         "label": [
                             "Cooldown",
-                            "Damage",
-                            "Attack Damage Ratio"
+                            "Damage"
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ damage_flat_base }} -> {{ damage_flat_baseNL }}",
-                            "{{ adratio*100.000000 }}% -> {{ adrationl*100.000000 }}%"
+                            "{{ damage_flat_base }} -> {{ damage_flat_baseNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -7192,8 +7190,8 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 59,
-                "attackdamageperlevel": 3.45,
-                "attackspeedperlevel": 3.33,
+                "attackdamageperlevel": 3,
+                "attackspeedperlevel": 3,
                 "attackspeed": 0.658
             },
             "spells": [
@@ -14091,7 +14089,7 @@
                     "id": "CaitlynW",
                     "name": "Yordle Snap Trap",
                     "description": "Caitlyn sets a trap that, when sprung, reveals and immobilizes the enemy champion for 1.5 seconds, granting Caitlyn an empowered Headshot.",
-                    "tooltip": "Caitlyn sets a trap that <status>Roots</status> the first champion that steps on it for {{ e6 }} seconds and granting <keywordStealth>True Sight</keywordStealth> of them for 3 seconds. Traps last for {{ e3 }} seconds, and {{ e5 }} traps may be active at once. This Ability has {{ e5 }} charges ({{ ammorechargetime }} second refresh).{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Caitlyn sets a trap that <status>Roots</status> the first champion that steps on it for {{ rootduration }} seconds and granting <keywordStealth>True Sight</keywordStealth> of them for 3 seconds. Traps last for {{ trapduration }} seconds, and {{ maximumtraps }} traps may be active at once. This Ability has {{ maximumcharges }} charges ({{ ammorechargetime }} second refresh).<br /><br />Targets rooted by this Ability take an additional <physicalDamage>{{ headshotbonusdamage }} physical damage</physicalDamage> from <keywordMajor>Headshot</keywordMajor>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Bonus Headshot Damage on Trapped Targets",
@@ -14100,10 +14098,10 @@
                             "Trap Duration"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}",
-                            "{{ e4 }} -> {{ e4NL }}",
-                            "{{ e3 }} -> {{ e3NL }}"
+                            "{{ maximumtraps }} -> {{ maximumtrapsNL }}",
+                            "{{ trapduration }} -> {{ trapdurationNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -14134,39 +14132,39 @@
                             2
                         ],
                         [
-                            35,
-                            80,
-                            125,
-                            170,
-                            215
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            35,
-                            40,
-                            45,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            4,
-                            4,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            4,
-                            4,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             30,
@@ -14200,11 +14198,11 @@
                     "effectBurn": [
                         null,
                         "2",
-                        "35/80/125/170/215",
-                        "30/35/40/45/50",
-                        "3/3/4/4/5",
-                        "3/3/4/4/5",
-                        "1.5",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "30",
                         "0",
                         "0",
@@ -14377,7 +14375,7 @@
                     "id": "CaitlynR",
                     "name": "Ace in the Hole",
                     "description": "Caitlyn takes time to line up the perfect shot, dealing massive damage to a single target at a huge range. Enemy champions can intercept the bullet for their ally.",
-                    "tooltip": "Caitlyn takes a moment to channel and line up the perfect shot, then she fires, dealing <physicalDamage>{{ rtotaldamage }} physical damage</physicalDamage>, but other enemy champions can intercept it. This Ability grants <keywordStealth>True Sight</keywordStealth> of the target during the channel.<br /><br /><rules>Deals up to an additional {{ critchanceamp*100 }}% based on Caitlyn's Critical Strike chance.</rules>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Caitlyn takes a moment to channel and line up the perfect shot, then she fires, dealing <physicalDamage>{{ rtotaldamage }} physical damage</physicalDamage>, but other enemy champions can intercept it. This Ability grants <keywordStealth>True Sight</keywordStealth> of the target during the channel.<br /><br /><rules>Damage scales with Caitlyn's Critical Strike chance and Critical Strike Damage.</rules>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage"
@@ -15275,7 +15273,7 @@
                 "hpperlevel": 104,
                 "mp": 450,
                 "mpperlevel": 40,
-                "movespeed": 328,
+                "movespeed": 335,
                 "armor": 18,
                 "armorperlevel": 4.7,
                 "spellblock": 32,
@@ -15840,7 +15838,7 @@
             ],
             "passive": {
                 "name": "Serpentine Grace",
-                "description": "Cassiopeia gains Move Speed per level, but she cannot purchase Boots items.",
+                "description": "All Move Speed bonuses are more effective on Cassiopeia.",
                 "image": {
                     "full": "Cassiopeia_Passive.png",
                     "sprite": "passive0.png",
@@ -15933,6 +15931,12 @@
                     "num": 32,
                     "name": "Toy Terror Cho'Gath",
                     "chromas": true
+                },
+                {
+                    "id": "31041",
+                    "num": 41,
+                    "name": "Petricite Cho'Gath",
+                    "chromas": false
                 }
             ],
             "lore": "From the moment Cho'Gath first emerged into the harsh light of Runeterra's sun, the beast was driven by the most pure and insatiable hunger. A perfect expression of the Void's desire to consume all life, Cho'Gath's complex biology quickly converts matter into new bodily growth—increasing its muscle mass and density, or hardening its outer carapace like organic diamond. When growing larger does not suit the Void-spawn's needs, it vomits out the excess material as razor-sharp spines, leaving prey skewered and ready to feast upon later.",
@@ -18811,7 +18815,7 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 62,
-                "attackdamageperlevel": 3.6,
+                "attackdamageperlevel": 3,
                 "attackspeedperlevel": 2.7,
                 "attackspeed": 0.679
             },
@@ -18828,8 +18832,8 @@
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e5 }} -> {{ e5NL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ adscaling }}% -> {{ adscalingNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -18854,25 +18858,25 @@
                     "effect": [
                         null,
                         [
-                            100,
-                            100,
-                            100,
-                            100,
-                            100
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             75,
-                            85,
-                            95,
-                            105,
-                            115
+                            75,
+                            75,
+                            75,
+                            75
                         ],
                         [
-                            30,
-                            35,
-                            40,
-                            45,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             5.75,
@@ -18882,11 +18886,11 @@
                             5.75
                         ],
                         [
-                            40,
-                            45,
-                            50,
-                            55,
-                            60
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -18926,11 +18930,11 @@
                     ],
                     "effectBurn": [
                         null,
-                        "100",
-                        "75/85/95/105/115",
-                        "30/35/40/45/50",
+                        "0",
+                        "75",
+                        "0",
                         "5.75",
-                        "40/45/50/55/60",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -18966,14 +18970,14 @@
                     "tooltip": "Draven becomes Ghosted, gains <speed>{{ e2 }}% Move Speed</speed> decaying over {{ e3 }} seconds and <attackSpeed>{{ e4 }}% Attack Speed</attackSpeed> for {{ e5 }} seconds.<br /><br />When Draven catches a <keywordMajor>Spinning Axe</keywordMajor>, this Ability's Cooldown is refreshed.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
+                            "Move Speed",
                             "Attack Speed",
-                            "@AbilityResourceName@ Cost",
-                            "Move Speed"
+                            "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e4 }}% -> {{ e4NL }}%",
-                            "{{ cost }} -> {{ costNL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%"
+                            "{{ movespeed*100.000000 }}% -> {{ movespeednl*100.000000 }}%",
+                            "{{ attackspeed*100.000000 }}% -> {{ attackspeednl*100.000000 }}%",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -18997,11 +19001,11 @@
                     "effect": [
                         null,
                         [
-                            4,
-                            5,
-                            6,
-                            7,
-                            8
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             50,
@@ -19018,11 +19022,11 @@
                             1.5
                         ],
                         [
+                            20,
+                            25,
                             30,
                             35,
-                            40,
-                            45,
-                            50
+                            40
                         ],
                         [
                             3,
@@ -19069,10 +19073,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "4/5/6/7/8",
+                        "0",
                         "50/55/60/65/70",
                         "1.5",
-                        "30/35/40/45/50",
+                        "20/25/30/35/40",
                         "3",
                         "-0.062/-0.069/-0.075/-0.081/-0.087",
                         "0",
@@ -25940,7 +25944,7 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ spelldamage }} -> {{ spelldamageNL }}",
                             "{{ e2 }} -> {{ e2NL }}",
                             "{{ e5 }} -> {{ e5NL }}",
                             "{{ cost }} -> {{ costNL }}"
@@ -26219,7 +26223,7 @@
                     "id": "GangplankE",
                     "name": "Powder Keg",
                     "description": "Gangplank uncovers a powder keg at target location. If he attacks it, it explodes, spreading the attack's damage to enemies in the area, slowing them.",
-                    "tooltip": "Gangplank places a powder keg that can be attacked by Gangplank and enemy champions for {{ e5 }} seconds. When an enemy destroys it, the keg is defused. When Gangplank destroys it, it explodes, <status>Slowing</status> by {{ finalslowamount }}% for {{ e2 }} seconds and dealing the <physicalDamage>Attack's damage</physicalDamage>, ignoring {{ e0 }}% Armor. Champions take an additional <physicalDamage>{{ e3 }} physical damage</physicalDamage>.<br /><br />Keg health decays every {{ f5 }} seconds. Keg explosions detonate other kegs with overlapping blast zones, but don't deal damage to the same target more than once. Keg explosions triggered by <spellName>Parrrley</spellName> will grant the bonus gold for targets killed.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Gangplank places a powder keg that can be attacked by Gangplank and enemy champions for {{ e5 }} seconds. When an enemy destroys it, the keg is defused. When Gangplank destroys it, it explodes, <status>Slowing</status> by {{ finalslowamount }}% for {{ e2 }} seconds and dealing the <physicalDamage>Attack's damage</physicalDamage>, ignoring {{ e0 }}% Armor. Champions take an additional <physicalDamage>{{ e3 }} physical damage</physicalDamage>.<br /><br />Keg health decays every {{ barreldecaytime }} seconds. Keg explosions detonate other kegs with overlapping blast zones, but don't deal damage to the same target more than once. Keg explosions triggered by <spellName>Parrrley</spellName> will grant the bonus gold for targets killed.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Bonus Damage Against Champions",
@@ -26270,10 +26274,10 @@
                         ],
                         [
                             75,
-                            105,
+                            95,
+                            115,
                             135,
-                            165,
-                            195
+                            155
                         ],
                         [
                             40,
@@ -26329,7 +26333,7 @@
                         null,
                         "3/3/4/4/5",
                         "2",
-                        "75/105/135/165/195",
+                        "75/95/115/135/155",
                         "40/50/60/70/80",
                         "25",
                         "2",
@@ -37789,7 +37793,7 @@
                 "critperlevel": 0,
                 "attackdamage": 59,
                 "attackdamageperlevel": 3.25,
-                "attackspeedperlevel": 1.4,
+                "attackspeedperlevel": 1,
                 "attackspeed": 0.625
             },
             "spells": [
@@ -43859,10 +43863,12 @@
                     "leveltip": {
                         "label": [
                             "Damage",
+                            "Damage",
                             "Cooldown"
                         ],
                         "effect": [
                             "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -43883,9 +43889,9 @@
                     "effect": [
                         null,
                         [
-                            150,
-                            250,
-                            350
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0.5,
@@ -43908,19 +43914,19 @@
                             300
                         ],
                         [
-                            15,
-                            15,
-                            15
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            13,
-                            13,
-                            13
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            70,
-                            70,
-                            70
+                            0,
+                            0,
+                            0
                         ],
                         [
                             750,
@@ -43935,14 +43941,14 @@
                     ],
                     "effectBurn": [
                         null,
-                        "150/250/350",
+                        "0",
                         "0.5",
                         "0",
                         "2.5",
                         "300",
-                        "15",
-                        "13",
-                        "70",
+                        "0",
+                        "0",
+                        "0",
                         "750",
                         "550"
                     ],
@@ -45743,7 +45749,7 @@
                     "id": "KindredEWrapper",
                     "name": "Mounting Dread",
                     "description": "Lamb fires a carefully placed shot, slowing the target. If Lamb attacks the target two more times, her third attack instead directs Wolf to pounce on the enemy, savaging them for massive damage.",
-                    "tooltip": "Kindred weakens an enemy, <status>Slowing</status> them by {{ totalslow }}% for {{ slowduration }} second.<br /><br />Kindred's third Attack against the target within {{ totalduration }} seconds of each other directs Wolf to pounce on the enemy, dealing <physicalDamage>{{ basebitedamage }}</physicalDamage> plus <physicalDamage>{{ percentbitedamage }} missing Health physical damage</physicalDamage>.<br /><br />Wolf's pounce critically strikes for <physicalDamage>{{ basebitedamage }}</physicalDamage> plus <physicalDamage>{{ critdamage }} missing Health physical damage</physicalDamage> instead if they are below {{ healththreshold }} Health.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Kindred weakens an enemy, <status>Slowing</status> them by {{ totalslow }}% for {{ slowduration }} second.<br /><br />Kindred's third Attack against the target within {{ totalduration }} seconds of each other directs Wolf to pounce on the enemy, dealing an additional <physicalDamage>{{ basebitedamage }}</physicalDamage> plus <physicalDamage>{{ percentbitedamage }} missing Health physical damage</physicalDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -51696,8 +51702,8 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 60,
-                "attackdamageperlevel": 2.9,
-                "attackspeedperlevel": 3.3,
+                "attackdamageperlevel": 2.5,
+                "attackspeedperlevel": 2.5,
                 "attackspeed": 0.638
             },
             "spells": [
@@ -51709,13 +51715,11 @@
                     "leveltip": {
                         "label": [
                             "Damage",
-                            "Attack Damage",
                             "Cooldown",
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -51741,25 +51745,25 @@
                     "effect": [
                         null,
                         [
-                            85,
-                            115,
-                            145,
-                            175,
-                            205
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            60,
-                            75,
-                            90,
-                            105,
-                            120
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1000,
-                            1000,
-                            1000,
-                            1000,
-                            1000
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0.41,
@@ -51769,11 +51773,11 @@
                             0.41
                         ],
                         [
-                            100,
-                            100,
-                            100,
-                            100,
-                            100
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -51813,11 +51817,11 @@
                     ],
                     "effectBurn": [
                         null,
-                        "85/115/145/175/205",
-                        "60/75/90/105/120",
-                        "1000",
+                        "0",
+                        "0",
+                        "0",
                         "0.41",
-                        "100",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -58042,8 +58046,8 @@
                 "difficulty": 1
             },
             "stats": {
-                "hp": 640,
-                "hpperlevel": 103,
+                "hp": 625,
+                "hpperlevel": 100,
                 "mp": 300,
                 "mpperlevel": 40,
                 "movespeed": 325,
@@ -58068,7 +58072,7 @@
                     "id": "MissFortuneRicochetShot",
                     "name": "Double Up",
                     "description": "Miss Fortune fires a bullet at an enemy, damaging them and a target behind them. Both strikes can also apply Love Tap.",
-                    "tooltip": "Miss Fortune fires a bouncing shot, dealing <physicalDamage>{{ totaldamagetooltip }} physical damage</physicalDamage> to an enemy and to another one behind them. <br /><br />The second shot can critically strike. It always critically strikes if the first shot kills its target. {{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Miss Fortune fires a bouncing shot, dealing <physicalDamage>{{ totaldamagetooltip }} physical damage</physicalDamage> to an enemy and to another one behind them. <br /><br />The second shot can critically strike for <physicalDamage>{{ totaldamagecrit }} physical damage</physicalDamage>. It always critically strikes if the first shot kills its target.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
@@ -58076,7 +58080,7 @@
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e2 }} -> {{ e2NL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -58493,7 +58497,7 @@
                     "id": "MissFortuneBulletTime",
                     "name": "Bullet Time",
                     "description": "Miss Fortune channels a barrage of bullets into a cone in front of her, dealing large amounts of damage to enemies. Each wave of Bullet Time can critically strike",
-                    "tooltip": "Miss Fortune channels a barrage of bullets, firing {{ totalwaves }} waves over {{ totalchannelduration }} seconds, dealing <physicalDamage>{{ physicaldamageperwave }} physical damage</physicalDamage> per wave (total <physicalDamage>{{ totalphysicaldamage }} physical damage</physicalDamage>).<br /><br />Each wave can critically strike for %i:scaleCrit% <physicalDamage>{{ physicalcritperwave }} physical damage</physicalDamage> (total %i:scaleCrit% <physicalDamage>{{ totalphysicalcritdamage }} physical damage</physicalDamage>).{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Miss Fortune channels a barrage of bullets, firing {{ basewaves }} waves over {{ basechannelduration }} seconds, dealing <physicalDamage>{{ physicaldamageperwave }} physical damage</physicalDamage> per wave (total <physicalDamage>{{ totalphysicaldamage }} physical damage</physicalDamage>).<br /><br />Each wave can critically strike for %i:scaleCrit% <physicalDamage>{{ critdamageperwave }} physical damage</physicalDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Bullet Barrages",
@@ -60115,6 +60119,12 @@
                     "id": "25080",
                     "num": 80,
                     "name": "Spirit Blossom Morgana",
+                    "chromas": false
+                },
+                {
+                    "id": "25081",
+                    "num": 81,
+                    "name": "Prestige Veiled Lady Morgana",
                     "chromas": false
                 }
             ],
@@ -62868,6 +62878,12 @@
                     "num": 36,
                     "name": "Crystalis Indomitus Nautilus",
                     "chromas": false
+                },
+                {
+                    "id": "111039",
+                    "num": 39,
+                    "name": "Petricite Nautilus",
+                    "chromas": false
                 }
             ],
             "lore": "A lonely legend as old as the first piers sunk in Bilgewater, the armored goliath known as Nautilus roams the dark waters off the coast of the Blue Flame Isles. Driven by a forgotten betrayal, he strikes without warning, swinging his enormous anchor to save the wretched, and drag the greedy to their doom. It is said he comes for those who forget to pay the “Bilgewater tithe”, pulling them down beneath the waves with him—an iron-clad reminder that none can escape the depths.",
@@ -64987,7 +65003,7 @@
                 "critperlevel": 0,
                 "attackdamage": 60,
                 "attackdamageperlevel": 2,
-                "attackspeedperlevel": 2.25,
+                "attackspeedperlevel": 2,
                 "attackspeed": 0.697
             },
             "spells": [
@@ -64995,15 +65011,13 @@
                     "id": "NilahQ",
                     "name": "Formless Blade",
                     "description": "With a snap of her whip-blade, Nilah damages any enemies she hits in a straight line in her chosen direction. This action extends her attack range for a short duration.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Nilah gains {{ critarmorpen }} Armor Penetration, and her Attacks against champions restore <healing>{{ critlifesteal }} damage dealt as Health</healing>. Overhealing from this is converted into a <shield>Shield</shield> for {{ shieldduration }} seconds.<br /><br /><spellActive>Active:</spellActive> Nilah cracks her whip-blade, dealing <physicalDamage>{{ damagecalc }} physical damage</physicalDamage>, increased by her Critical Strike Chance. If an enemy unit or structure is hit, Nilah gains 125 Attack Range and <attackSpeed>{{ bonusattackspeedcalc }}% Attack Speed</attackSpeed>, and her Attacks hit in a cone as <physicalDamage>{{ attacktotaldamagetooltip }} physical damage</physicalDamage> for {{ buffduration }} seconds.<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Nilah gains {{ critarmorpen }} Armor Penetration, and her Attacks against champions restore <healing>{{ critlifesteal }} damage dealt as Health</healing>. Overhealing from this is converted into a <shield>Shield</shield> for {{ shieldduration }} seconds.<br /><br /><spellActive>Active:</spellActive> Nilah cracks her whip-blade, dealing <physicalDamage>{{ damagecalc }} physical damage</physicalDamage>. If an enemy unit or structure is hit, Nilah gains 125 Attack Range and <attackSpeed>{{ bonusattackspeedcalc }}% Attack Speed</attackSpeed>, and her Attacks hit in a cone for {{ buffduration }} seconds.<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "Damage",
-                            "Damage: <physicalDamage>@TargetDamage@</physicalDamage> = <scaleLevel>@PercentAD*100@% (%i:scaleAD%)</scaleLevel>"
+                            "Damage"
                         ],
                         "effect": [
-                            "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ qadratio*100.000000 }}% -> {{ qadrationl*100.000000 }}%"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -65420,17 +65434,17 @@
                     "id": "NilahR",
                     "name": "Apotheosis",
                     "description": "Twirling her whip-blade in joyful exuberance, Nilah deals damage to enemies around her before pulling them closer with her weapon.",
-                    "tooltip": "Nilah whirls her whip-blade, dealing <physicalDamage>{{ damagepertickcalctooltip }} physical damage</physicalDamage> over 1 second, then finishes with a burst of <physicalDamage>{{ damagecalc }} physical damage</physicalDamage> that also <status>Pulls</status> nearby enemies toward her.<br /><br />Nilah heals herself and nearby allies by <healing>{{ champhealingpercent }} (+{{ spell.nilahq:critlifesteal }} Formless Blade) of her damage dealt to enemy champions' Health ({{ otherhealingpercent*100 }}% for non-champions)</healing>, converting any overhealing into a <shield>Shield</shield> for {{ duration }} seconds.<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Nilah whirls her whip-blade, dealing <physicalDamage>{{ damagepertickcalctooltip }} physical damage</physicalDamage> over 1 second, then finishes with a burst of <physicalDamage>{{ damagecalc }} physical damage</physicalDamage> that also <status>Pulls</status> nearby enemies toward her.<br /><br />Apotheosis heals Nilah and her nearby allies for <healing>{{ champhealingpercent }} (+{{ spell.nilahq:critlifesteal }} Formless Blade) of the damage dealt</healing> to enemy champions, converting any overhealing into a <shield>Shield</shield> for {{ duration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Cooldown",
                             "Damage",
-                            "Damage per Tick"
+                            "Damage Over Time"
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ damagebase }} -> {{ damagebaseNL }}",
-                            "{{ damagepertick }} -> {{ damagepertickNL }}"
+                            "{{ damagepertick*4.000000 }} -> {{ damageperticknl*4.000000 }}"
                         ]
                     },
                     "maxrank": 3,
@@ -65441,11 +65455,11 @@
                     ],
                     "cooldownBurn": "110/95/80",
                     "cost": [
-                        80,
-                        80,
-                        80
+                        100,
+                        100,
+                        100
                     ],
-                    "costBurn": "80",
+                    "costBurn": "100",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -76623,7 +76637,7 @@
                     "id": "RengarQ",
                     "name": "Savagery",
                     "description": "Rengar's next Attack brutally stabs his target for bonus damage.<br><br>Ferocity effect: deals increased damage and grants Attack Speed.",
-                    "tooltip": "Rengar's next 2 Attacks gain <attackSpeed>{{ e5 }}% Attack Speed</attackSpeed>. The first Attack critically strikes for <physicalDamage>{{ F4 }} (%i:scaleAD%%i:scaleCrit%) physical damage</physicalDamage>.<br /><br /><keywordMajor>Max Ferocity:</keywordMajor> The first Attack critically strikes for <physicalDamage>{{ F5 }} (%i:scaleLevel%%i:scaleAD%%i:scaleCrit%) physical damage</physicalDamage> and grants Rengar <attackSpeed>{{ empoweredqas }} Attack Speed</attackSpeed> for {{ e3 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Rengar's next 2 Attacks gain <attackSpeed>{{ asbonus }}% Attack Speed</attackSpeed>. The first Attack deals <physicalDamage>{{ qdamage }} physical damage</physicalDamage>.<br /><br /><keywordMajor>Max Ferocity:</keywordMajor> The first Attack deals <physicalDamage>{{ empoweredqdamage }} physical damage</physicalDamage> and grants Rengar <attackSpeed>{{ empoweredqas }} Attack Speed</attackSpeed> for {{ asduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -76631,8 +76645,8 @@
                             "Cooldown"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ baseadratiotooltip }}% -> {{ baseadratiotooltipNL }}%",
                             "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}"
                         ]
                     },
@@ -76657,53 +76671,53 @@
                     "effect": [
                         null,
                         [
-                            30,
-                            60,
-                            90,
-                            120,
-                            150
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            100,
-                            105,
-                            110,
-                            115,
-                            120
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            40,
-                            40,
-                            40,
-                            40
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.2,
-                            0.3,
-                            0.4,
-                            0.5,
-                            0.6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -76729,13 +76743,13 @@
                     ],
                     "effectBurn": [
                         null,
-                        "30/60/90/120/150",
-                        "100/105/110/115/120",
-                        "5",
-                        "5",
-                        "40",
-                        "3",
-                        "0.2/0.3/0.4/0.5/0.6",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0"
@@ -76766,7 +76780,7 @@
                     "id": "RengarW",
                     "name": "Battle Roar",
                     "description": "Rengar lets out a battle roar, damaging enemies and healing for some of the recent damage he has taken.<br><br>Ferocity effect: additionally breaks crowd control effects.",
-                    "tooltip": "Rengar roars, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to nearby enemies and restoring <healing>{{ damagepercentagehealed }}%</healing> of the damage taken in the last {{ e3 }} seconds as Health.<br /><br /><keywordMajor>Max Ferocity:</keywordMajor> Deals <magicDamage>{{ totaldamageempowered }} magic damage</magicDamage> and additionally cleanses Rengar of crowd control.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Rengar roars, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to nearby enemies and restoring <healing>{{ damagepercentagehealed }}%</healing> of the damage taken in the last {{ healingwindow }} seconds as Health.<br /><br /><keywordMajor>Max Ferocity:</keywordMajor> Deals <magicDamage>{{ totaldamageempowered }} magic damage</magicDamage> and additionally cleanses Rengar of crowd control.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -76805,32 +76819,32 @@
                             0
                         ],
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            100,
-                            100,
-                            100,
-                            100,
-                            100
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -76871,10 +76885,10 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "50",
-                        "1.5",
-                        "1.5",
-                        "100",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -76907,7 +76921,7 @@
                     "id": "RengarE",
                     "name": "Bola Strike",
                     "description": "Rengar throws a bola, slowing the first target hit for a short duration.<br><br>Ferocity effect: roots the target.",
-                    "tooltip": "Rengar throws a bola, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> to the first enemy hit, revealing and <status>Slowing</status> them by {{ e2 }}% for {{ e3 }} seconds.<br /><br /><keywordMajor>Max Ferocity:</keywordMajor> Deals <physicalDamage>{{ totalempowereddamage }} physical damage</physicalDamage> and <status>Roots</status> for {{ e4 }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Rengar throws a bola, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> to the first enemy hit, revealing and <status>Slowing</status> them by {{ slowamount }}% for {{ ccduration }} seconds.<br /><br /><keywordMajor>Max Ferocity:</keywordMajor> Deals <physicalDamage>{{ totalempowereddamage }} physical damage</physicalDamage> and <status>Roots</status> for {{ ccduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -76939,32 +76953,32 @@
                     "effect": [
                         null,
                         [
-                            55,
-                            100,
-                            145,
-                            190,
-                            235
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            45,
-                            60,
-                            75,
-                            90
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.75,
-                            1.75,
-                            1.75,
-                            1.75,
-                            1.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.75,
-                            1.75,
-                            1.75,
-                            1.75,
-                            1.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -77011,10 +77025,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "55/100/145/190/235",
-                        "30/45/60/75/90",
-                        "1.75",
-                        "1.75",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -79377,13 +79391,11 @@
                     "leveltip": {
                         "label": [
                             "Damage",
-                            "Cooldown",
-                            "Total AD Ratio"
+                            "Cooldown"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ qadratio*100.000000 }}% -> {{ qadrationl*100.000000 }}%"
+                            "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -79800,7 +79812,7 @@
                     "id": "SamiraR",
                     "name": "Inferno Trigger",
                     "description": "Samira unleashes a torrent of shots from her weapons, wildly shooting all enemies surrounding her.",
-                    "tooltip": "Samira can only use this Ability if her current <keywordMajor>Style</keywordMajor> rating is S. Using this Ability consumes all <keywordMajor>Style</keywordMajor> rating.<br /><br />Samira unleashes a torrent of shots from her weapons, wildly shooting all enemies surrounding her 10 times over 2 seconds, each shot dealing <physicalDamage>{{ damagecalc }} physical damage</physicalDamage> and applying Life Steal at {{ lifestealmod*100 }}% effectiveness. Each shot can also critically strike.<br /><br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Samira can only use this Ability if her current <keywordMajor>Style</keywordMajor> rating is S. Using this Ability consumes all <keywordMajor>Style</keywordMajor> rating.<br /><br />Samira unleashes a torrent of shots from her weapons, wildly shooting all enemies surrounding her 10 times over 2 seconds, each shot dealing <physicalDamage>{{ damagecalc }} physical damage</physicalDamage> and applying Life Steal at {{ lifestealmod*100 }}% effectiveness. Each shot can also critically strike.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage"
@@ -92439,6 +92451,12 @@
                     "num": 21,
                     "name": "Crystalis Motus Taliyah",
                     "chromas": true
+                },
+                {
+                    "id": "163024",
+                    "num": 24,
+                    "name": "Durand's Legacy Taliyah",
+                    "chromas": false
                 }
             ],
             "lore": "Taliyah is a nomadic mage from Shurima, torn between teenage wonder and adult responsibility. She has crossed nearly all of Valoran on a journey to learn the true nature of her growing powers, though more recently she has returned to protect her tribe. Some have mistaken her compassion for weakness and paid the ultimate price—for beneath Taliyah's youthful demeanor is a will strong enough to move mountains, and a spirit fierce enough to make the earth itself tremble.",
@@ -96303,19 +96321,17 @@
                     "id": "TristanaE",
                     "name": "Explosive Charge",
                     "description": "When Tristana kills a unit, her cannonballs burst into shrapnel, dealing damage to surrounding enemies. Can be activated to place a bomb on a target enemy that explodes after a short duration dealing damage to surrounding units.",
-                    "tooltip": "<spellPassive>Passive: </spellPassive>Tristana's Attacks that kill enemies deal <magicDamage>{{ passivedamage }} magic damage</magicDamage> to surrounding enemies.<br /><br /><spellActive>Active:</spellActive> Tristana attaches a bomb to an enemy or turret that deals <physicalDamage>{{ activedamage }} physical damage</physicalDamage> to surrounding enemies after {{ activeduration }} seconds. The damage is increased by {{ critchanceamp*100 }}% Critical Strike Chance and by {{ activeperstackamp*100 }}% each time Tristana hits an Attack or Ability (max 4 stacks).<br /><br />At {{ activemaxstacks }} stacks, the bomb explodes immediately (max <physicalDamage>{{ activemaxdamage }} physical damage</physicalDamage>).{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive: </spellPassive>Tristana's Attacks that kill enemies deal <magicDamage>{{ passivedamage }} magic damage</magicDamage> to surrounding enemies.<br /><br /><spellActive>Active:</spellActive> Tristana attaches a bomb to an enemy or turret that deals <physicalDamage>{{ activedamage }} physical damage</physicalDamage> to surrounding enemies after {{ activeduration }} seconds. The damage is increased by {{ activeperstackamp*100 }}% each time Tristana hits an Attack or Ability (max 4 stacks).<br /><br />At {{ activemaxstacks }} stacks, the bomb explodes immediately (max <physicalDamage>{{ activemaxdamage }} physical damage</physicalDamage>).{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Passive Explosion Damage",
                             "Base Charge Damage",
-                            "Attack Damage Ratio",
                             "Cooldown",
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
                             "{{ passivebasedamage }} -> {{ passivebasedamageNL }}",
                             "{{ activebasedamage }} -> {{ activebasedamageNL }}",
-                            "{{ activebadratio*100.000000 }}% -> {{ activebadrationl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -97404,17 +97420,15 @@
                     "id": "TryndamereQ",
                     "name": "Bloodlust",
                     "description": "Tryndamere thrives on the thrills of combat, increasing his Attack Damage as he is more and more wounded. He can cast Bloodlust to consume his Fury and heal himself.",
-                    "tooltip": "<spellPassive>Passive:</spellPassive> Tryndamere thirsts for blood, gaining <scaleAD>{{ flatad }} Attack Damage</scaleAD> plus <scaleAD>{{ adperonepercentmissinghp }}</scaleAD> per 1% missing Health.<br /><br /><spellActive>Active:</spellActive> Tryndamere consumes his <keywordMajor>Fury</keywordMajor>, restoring <healing>{{ baseheal }} plus {{ healperfury }} Health per Fury</healing>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>Passive:</spellPassive> Tryndamere thirsts for blood, gaining up to <scaleAD>{{ maximumbonusad }} Attack Damage</scaleAD> based on his missing Health.<br /><br /><spellActive>Active:</spellActive> Tryndamere consumes his <keywordMajor>Fury</keywordMajor>, restoring <healing>{{ baseheal }} plus {{ healperfury }} Health per Fury (max: {{ maximumheal }})</healing>. {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "Attack Damage",
-                            "Attack Damage per Health % Missing",
+                            "Maximum Damage",
                             "Healing",
                             "Heal Per Fury"
                         ],
                         "effect": [
-                            "{{ flatad }} -> {{ flatadNL }}",
-                            "{{ adperonepercentmissinghp }} -> {{ adperonepercentmissinghpNL }}",
+                            "{{ maximumbonusad }} -> {{ maximumbonusadNL }}",
                             "{{ basehealing }} -> {{ basehealingNL }}",
                             "{{ bonushealperfury }} -> {{ bonushealperfuryNL }}"
                         ]
@@ -97549,7 +97563,7 @@
                     "id": "TryndamereW",
                     "name": "Mocking Shout",
                     "description": "Tryndamere lets out an insulting cry, decreasing surrounding champions' Attack Damage. Enemies with their backs turned to Tryndamere also have their Move Speed reduced.",
-                    "tooltip": "Tryndamere hurls insults, reducing champions' Attack Damage by {{ adreduction*-1 }} for {{ reductionduration }} seconds. Enemy champions with their backs towards Tryndamere are <status>Slowed</status> by {{ slowpotency*-100 }}% for the same duration.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Tryndamere hurls insults, reducing champions' Attack Damage by {{ adreduction*-1 }} for {{ reductionduration }} seconds and <status>Slowing</status> by {{ slowpotency*-100 }}% while cowering from him for {{ slowduration }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Physical Damage Reduction",
@@ -97690,7 +97704,7 @@
                     "id": "TryndamereE",
                     "name": "Spinning Slash",
                     "description": "Tryndamere slices toward a target unit, dealing damage to enemies in his path.",
-                    "tooltip": "Tryndamere spins through his enemies, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and generating <keywordMajor>{{ nonchampfurygain }} Fury</keywordMajor> per enemy hit, increased to <keywordMajor>{{ champfurygain }} Fury</keywordMajor> against enemy champions.<br /><br />This Ability's Cooldown is reduced by {{ nonchampcdrefund }} second when Tryndamere critically strikes, and reduced by {{ champcdrefund }} seconds when critically striking a champion.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Tryndamere spins through his enemies, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and generating <keywordMajor>{{ nonchampfurygain }} Fury</keywordMajor> per enemy hit, increased to <keywordMajor>{{ champfurygain }} Fury</keywordMajor> against enemy champions.<br /><br />This Ability's Cooldown is reduced by {{ nonchampcdrefund }} seconds when Tryndamere critically strikes, and reduced by {{ champcdrefund }} seconds when critically striking a champion.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -98836,8 +98850,8 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 59,
-                "attackdamageperlevel": 3.1,
-                "attackspeedperlevel": 3.38,
+                "attackdamageperlevel": 3,
+                "attackspeedperlevel": 3,
                 "attackspeed": 0.679
             },
             "spells": [
@@ -98845,15 +98859,15 @@
                     "id": "TwitchHideInShadows",
                     "name": "Ambush",
                     "description": "Twitch becomes Camouflaged for a short duration and gains Move Speed. When leaving Camouflage, Twitch gains Attack Speed for a short duration.<br><br>When an enemy champion with Deadly Venom dies, Ambush's cooldown is reset.",
-                    "tooltip": "Twitch <keywordStealth>Camouflages</keywordStealth> and gains <speed>{{ e3 }}% Move Speed</speed> for {{ e2 }} seconds. The Move Speed increases to {{ e3 }}% while near an enemy champion that can't see him. After exiting <keywordStealth>Camouflage</keywordStealth>, Twitch gains <attackSpeed>{{ e1 }}% Attack Speed</attackSpeed> for {{ e6 }} seconds.<br /><br />When an enemy champion dies while afflicted with <keywordMajor>Venom</keywordMajor>, this Ability's Cooldown is refreshed.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Twitch <keywordStealth>Camouflages</keywordStealth> and gains <speed>{{ movespeedmod }}% Move Speed</speed> for {{ stealthduration }} seconds. The Move Speed increases to {{ hiddenspeed }}% while near an enemy champion that can't see him. After exiting <keywordStealth>Camouflage</keywordStealth>, Twitch gains <attackSpeed>{{ attackspeedmod*100 }}% Attack Speed</attackSpeed> for {{ attackspeedduration }} seconds.<br /><br />When an enemy champion dies while afflicted with <keywordMajor>Venom</keywordMajor>, this Ability's Cooldown is refreshed.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Camouflage Duration",
                             "Attack Speed"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e1 }}% -> {{ e1NL }}%"
+                            "{{ stealthduration }} -> {{ stealthdurationNL }}",
+                            "{{ attackspeedmod*100.000000 }}% -> {{ attackspeedmodnl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -98877,46 +98891,46 @@
                     "effect": [
                         null,
                         [
-                            45,
-                            50,
-                            55,
-                            60,
-                            65
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            10,
-                            11,
-                            12,
-                            13,
-                            14
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            30,
-                            30,
-                            30,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            6,
-                            6,
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             3,
@@ -98926,39 +98940,39 @@
                             3
                         ],
                         [
-                            500,
-                            500,
-                            500,
-                            500,
-                            500
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1000,
-                            1000,
-                            1000,
-                            1000,
-                            1000
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            30,
-                            30,
-                            30,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
-                        "45/50/55/60/65",
-                        "10/11/12/13/14",
-                        "30",
-                        "1",
-                        "1",
-                        "6",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "3",
-                        "500",
-                        "1000",
-                        "30"
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",
@@ -113990,18 +114004,18 @@
                             "{{ q2basedamage }} -> {{ q2basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ healpercent*100.000000 }}% -> {{ healpercentnl*100.000000 }}%",
-                            "{{ qcoeff }} -> {{ qcoeffNL }}"
+                            "{{ qcoeff*100.000000 }}% -> {{ qcoeffnl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
                     "cooldown": [
+                        10,
                         9,
                         8,
                         7,
-                        6,
-                        5
+                        6
                     ],
-                    "cooldownBurn": "9/8/7/6/5",
+                    "cooldownBurn": "10/9/8/7/6",
                     "cost": [
                         25,
                         25,
@@ -116147,7 +116161,7 @@
                     "id": "ZeriW",
                     "name": "Ultrashock Laser",
                     "description": "Zeri fires an electric pulse that slows and damages the first enemy hit. If the pulse hits a wall it expands into a long range laser.",
-                    "tooltip": "Zeri fires an electric pulse that deals <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and <status>Slows</status> the first enemy hit by {{ slowpercent*100 }}% for {{ slowduration }} seconds.<br /><br />If the pulse hits terrain, it expands into a laser that applies the effects in an area and Critically Strikes champions and monsters.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Zeri fires an electric pulse that deals <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> and <status>Slows</status> the first enemy hit by {{ slowpercent*100 }}% for {{ slowduration }} seconds.<br /><br />If the pulse hits terrain, it expands into a laser that applies the effects in an area and Critically Strikes champions and monsters for <physicalDamage>{{ walldamage }} physical damage</physicalDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",

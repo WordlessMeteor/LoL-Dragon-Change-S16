@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "15.24.1",
+    "version": "16.1.1",
     "data": {
         "Samira": {
             "id": "Samira",
@@ -101,13 +101,11 @@
                     "leveltip": {
                         "label": [
                             "伤害",
-                            "冷却时间",
-                            "总攻击力收益"
+                            "冷却时间"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ qadratio*100.000000 }}% -> {{ qadrationl*100.000000 }}%"
+                            "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -524,7 +522,7 @@
                     "id": "SamiraR",
                     "name": "炼狱扳机",
                     "description": "莎弥拉的武器倾泻出大量的子弹，狂野地射击她周围的所有敌人。",
-                    "tooltip": "莎弥拉只能在她当前的<keywordMajor>评价等级</keywordMajor>为S时使用这个技能。使用这个技能会消耗掉所有<keywordMajor>评价等级</keywordMajor>。<br /><br />莎弥拉的武器倾泻出大量的子弹，狂野地在2秒里持续对她周围的所有敌人进行10次射击，每次射击造成<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>并施加{{ lifestealmod*100 }}%效能的生命偷取。这些射击也可以产生暴击。<br /><br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "莎弥拉只能在她当前的<keywordMajor>评价等级</keywordMajor>为S时使用这个技能。使用这个技能会消耗掉所有<keywordMajor>评价等级</keywordMajor>。<br /><br />莎弥拉的武器倾泻出大量的子弹，狂野地在2秒里持续对她周围的所有敌人进行10次射击，每次射击造成<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>并施加{{ lifestealmod*100 }}%效能的生命偷取。这些射击也可以产生暴击。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害"

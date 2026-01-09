@@ -368,7 +368,7 @@
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/41/41013.png",
                     "colors": [
                         "#27211C",
-                        "#272100"
+                        "#27211C"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -1258,7 +1258,7 @@
             "cost": "Không Tiêu hao",
             "cooldown": "@AmmoRechargeTime@ giây Nạp lại (tối đa: @MaxAmmo@)",
             "description": "Gangplank đặt ra một thùng thuốc súng tại địa điểm chỉ định. Nếu hắn tấn công nó, nó sẽ phát nổ, gây sát thương của đòn đánh lan ra các kẻ địch trong phạm vi ảnh hưởng, và làm chậm chúng.",
-            "dynamicDescription": "Gangplank đặt ra một thùng thuốc súng có thể bị tấn công bởi bản thân hoặc tướng địch trong @Effect5Amount@ giây. Khi kẻ địch phá, thùng thuốc súng sẽ vỡ. Còn khi Gangplank phá nó, nó sẽ phát nổ, <status>Làm Chậm</status> kẻ địch đi @FinalSlowAmount@% trong @Effect2Amount@ giây và gây <physicalDamage>sát thương Đòn đánh</physicalDamage>, bỏ qua @Effect10Amount@% Giáp. Mục tiêu là tướng sẽ chịu thêm <physicalDamage>@Effect3Amount@ sát thương vật lý</physicalDamage>.<br><br>Máu của thùng thuốc súng sẽ giảm mỗi @f5@ giây. Thùng thuốc súng phát nổ sẽ kích nổ các thùng thuốc súng khác nằm trong vùng ảnh hưởng, nhưng không gây sát thương lên cùng một mục tiêu quá một lần. Thùng thuốc súng được kích nổ bởi <spellName>Đàm Phán</spellName> sẽ cho thêm vàng với mỗi mục tiêu hạ gục được.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gangplank đặt ra một thùng thuốc súng có thể bị tấn công bởi Gangplank hoặc tướng địch trong @Effect5Amount@ giây. Thuốc súng bị vô hiệu hóa khi kẻ địch phá thùng. Khi Gangplank phá thùng, thuốc súng sẽ phát nổ, <status>Làm Chậm</status> @FinalSlowAmount@% trong @Effect2Amount@ giây và gây <physicalDamage>sát thương của Đòn Đánh</physicalDamage>, bỏ qua @Effect10Amount@% Giáp. Tướng sẽ nhận thêm <physicalDamage>@Effect3Amount@ sát thương vật lý</physicalDamage>.<br><br>Máu của thùng thuốc súng sẽ giảm sau mỗi @BarrelDecayTime@ giây. Thùng khi phát nổ cũng sẽ kích nổ các thùng khác nằm trong phạm vi phát nổ của nó, nhưng không gây sát thương nhiều lần lên cùng một mục tiêu. Thùng được kích nổ bởi <spellName>Đàm Phán</spellName> sẽ ban lượng vàng cộng thêm với các mục tiêu bị tiêu diệt.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1307,13 +1307,13 @@
                     2.0
                 ],
                 "Effect3Amount": [
-                    80.0,
                     75.0,
-                    105.0,
+                    75.0,
+                    95.0,
+                    115.0,
                     135.0,
-                    165.0,
-                    195.0,
-                    240.0
+                    155.0,
+                    175.0
                 ],
                 "Effect4Amount": [
                     40.0,

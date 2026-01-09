@@ -151,6 +151,10 @@
         "name": "Turret",
         "__type": "Character"
     },
+    "Characters/TurretOvergrowth": {
+        "name": "TurretOvergrowth",
+        "__type": "Character"
+    },
     "Characters/YellowTrinketUpgrade": {
         "name": "YellowTrinketUpgrade",
         "__type": "Character"
@@ -294756,6 +294760,7 @@
             "mDefaultTextureName": "ASSETS/Maps/Info/Map21/2DLevelMiniMap.tex",
             "__type": "MinimapBackgroundConfig"
         },
+        "mNavigationMesh": "ASSETS/Maps/NavGrid/Map21/AIPath.aimesh_ngrid",
         "mSkyboxCubemapTexture": "",
         "mResourceResolvers": [
             "Maps/Shipping/Map21/MapSkins/OldMap/Resources"
@@ -297000,6 +297005,7 @@
             "mDefaultTextureName": "ASSETS/Maps/Info/Map21/2DLevelMiniMap.tex",
             "__type": "MinimapBackgroundConfig"
         },
+        "mNavigationMesh": "ASSETS/Maps/NavGrid/Map21/AIPath.aimesh_ngrid",
         "mResourceResolvers": [
             "Maps/Shipping/Map21/MapSkins/OldMap/Resources"
         ],
@@ -300748,13 +300754,14 @@
                         "__type": "GameModeConstantFloat"
                     },
                     "ov_OmnivampModifiedRatio": {
-                        "mValue": 0.33000001311302185,
+                        "mValue": 0.3330000042915344,
                         "__type": "GameModeConstantFloat"
                     },
                     "ov_OmnivampModifiedDamageTags": {
                         "mValue": [
                             "AOE",
-                            "Pet"
+                            "Pet",
+                            "DoT"
                         ],
                         "__type": "GameModeConstantStringVector"
                     },
@@ -300770,6 +300777,13 @@
                         "mValue": [
                             "AOE",
                             "Pet"
+                        ],
+                        "__type": "GameModeConstantStringVector"
+                    },
+                    "ov_OmnivampModifiedUnitTags": {
+                        "mValue": [
+                            "Minion",
+                            "Monster"
                         ],
                         "__type": "GameModeConstantStringVector"
                     }
@@ -301448,13 +301462,14 @@
                         "__type": "GameModeConstantFloat"
                     },
                     "ov_OmnivampModifiedRatio": {
-                        "mValue": 0.33000001311302185,
+                        "mValue": 0.3330000042915344,
                         "__type": "GameModeConstantFloat"
                     },
                     "ov_OmnivampModifiedDamageTags": {
                         "mValue": [
                             "AOE",
-                            "Pet"
+                            "Pet",
+                            "DoT"
                         ],
                         "__type": "GameModeConstantStringVector"
                     },
@@ -301470,6 +301485,13 @@
                         "mValue": [
                             "AOE",
                             "Pet"
+                        ],
+                        "__type": "GameModeConstantStringVector"
+                    },
+                    "ov_OmnivampModifiedUnitTags": {
+                        "mValue": [
+                            "Minion",
+                            "Monster"
                         ],
                         "__type": "GameModeConstantStringVector"
                     }
@@ -303435,7 +303457,8 @@
             "{26cd9e08}",
             "{faaa3e19}",
             "{93ad7550}",
-            "{976314f0}"
+            "{976314f0}",
+            "{ccd81c43}"
         ],
         "__type": "MapAudioDataProperties"
     },
@@ -303665,7 +303688,8 @@
             "evtRadialEmotePlaySlot6": "[]",
             "evtRadialEmotePlaySlot7": "[]",
             "evtRadialEmotePlaySlot8": "[]",
-            "evtDrawHud": "[]"
+            "evtDrawHud": "[]",
+            "evtRadialEmoteOpen": "[]"
         },
         "{911d1120}": true,
         "__type": "{5a92b195}"
@@ -305110,6 +305134,292 @@
             "__type": "MusicAudioDataProperties"
         },
         "feature": "{c6ae2d03}",
+        "__type": "FeatureAudioDataProperties"
+    },
+    "{ccd81c43}": {
+        "bankUnits": [
+            {
+                "name": "MUS_Map11_SEASONAL_26s1_SODAPOP",
+                "bankPath": [
+                    "ASSETS/Sounds/Wwise2016/SFX/Shared/MUS_map11_SEASONAL_26s1_SODAPOP_events.bnk",
+                    "ASSETS/Sounds/Wwise2016/SFX/Shared/MUS_map11_SEASONAL_26s1_SODAPOP_audio.bnk",
+                    "ASSETS/Sounds/Wwise2016/SFX/Shared/MUS_map11_SEASONAL_26s1_SODAPOP_audio.wpk"
+                ],
+                "__type": "BankUnit"
+            },
+            {
+                "name": "ENV_Map11_Sodapop2026",
+                "bankPath": [
+                    "ASSETS/Sounds/Wwise2016/SFX/Shared/ENV_Map11_Sodapop2026_audio.bnk",
+                    "ASSETS/Sounds/Wwise2016/SFX/Shared/ENV_Map11_Sodapop2026_events.bnk",
+                    "ASSETS/Sounds/Wwise2016/SFX/Shared/ENV_Map11_Sodapop2026_audio.wpk"
+                ],
+                "events": [
+                    "Play_sfx_2517_buffactivate",
+                    "Play_sfx_2530_Heal_Missile",
+                    "Play_sfx_Env_Map11_Sodapop_Ambience",
+                    "Play_sfx_Env_Map11_Sodapop_AmbienceBase",
+                    "Play_sfx_Env_Map11_Sodapop_AmbienceNEJungle",
+                    "Play_sfx_Env_Map11_Sodapop_AmbienceNWJungle",
+                    "Play_sfx_Env_Map11_Sodapop_AmbienceSEJungle",
+                    "Play_sfx_Env_Map11_Sodapop_AmbienceSWJungle",
+                    "Play_sfx_Env_Sodapop_Inhibitor_alive_loop",
+                    "Play_sfx_Env_Sodapop_Inhibitor_death_cast",
+                    "Play_sfx_Env_Sodapop_Inhibitor_spawn",
+                    "Play_sfx_Env_Sodapop_Inhibitor_spawn_idle",
+                    "Play_sfx_Env_Sodapop_Nexus_active_loop",
+                    "Play_sfx_Env_Sodapop_Nexus_death",
+                    "Play_sfx_Env_Sodapop_Nexus_spawn",
+                    "Play_sfx_Env_Sodapop_Turret_death",
+                    "Play_sfx_Env_Sodapop_TurretBasicAttack_hit",
+                    "Play_sfx_Env_Sodapop_TurretBasicAttack_missilelaunch",
+                    "Play_sfx_Env_Sodapop_TurretChampionBasicAttack_cast",
+                    "Play_sfx_Env_Sodapop_TurretChampionBasicAttack_hit",
+                    "Play_sfx_Env_Sodapop_TurretChampionBasicAttack_missilelaunch",
+                    "Play_sfx_Env_Sodapop_TurretNexus_respawn",
+                    "Play_sfx_Env_Sodapop_TurretShield_spawn",
+                    "Stop_sfx_Env_Sodapop_Inhibitor_spawn"
+                ],
+                "__type": "BankUnit"
+            },
+            {
+                "name": "Announcer_Global_Female1_VO",
+                "bankPath": [
+                    "ASSETS/Sounds/Wwise2016/VO/en_US/Shared/Announcer_Global_Female1_VO_audio.bnk",
+                    "ASSETS/Sounds/Wwise2016/VO/en_US/Shared/Announcer_Global_Female1_VO_events.bnk",
+                    "ASSETS/Sounds/Wwise2016/VO/en_US/Shared/Announcer_Global_Female1_VO_audio.wpk"
+                ],
+                "events": [
+                    "Play_vo_Announcer_Female1_AceBlue",
+                    "Play_vo_Announcer_Female1_AceEnemyTeam",
+                    "Play_vo_Announcer_Female1_Acepurple",
+                    "Play_vo_Announcer_Female1_AceRed",
+                    "Play_vo_Announcer_Female1_AceYourTeam",
+                    "Play_vo_Announcer_Female1_ChampionDoubleKillpurple",
+                    "Play_vo_Announcer_Female1_ChampionPentaKillpurple",
+                    "Play_vo_Announcer_Female1_ChampionQuadraKillpurple",
+                    "Play_vo_Announcer_Female1_ChampionTripleKillpurple",
+                    "Play_vo_Announcer_Female1_ChampionUnrealKillblue",
+                    "Play_vo_Announcer_Female1_ChampionUnrealKillpurple",
+                    "Play_vo_Announcer_Female1_ChampionUnrealKillred",
+                    "Play_vo_Announcer_Female1_DampenerDieBlue",
+                    "Play_vo_Announcer_Female1_DampenerDiepurple",
+                    "Play_vo_Announcer_Female1_DampenerDieRed",
+                    "Play_vo_Announcer_Female1_DampenerRespawnBlue",
+                    "Play_vo_Announcer_Female1_DampenerRespawnpurple",
+                    "Play_vo_Announcer_Female1_DampenerRespawnRed",
+                    "Play_vo_Announcer_Female1_DampenerRespawnSoonBlue",
+                    "Play_vo_Announcer_Female1_DampenerRespawnSoonpurple",
+                    "Play_vo_Announcer_Female1_DampenerRespawnSoonRed",
+                    "Play_vo_Announcer_Female1_DampenerUnderAttackBlue",
+                    "Play_vo_Announcer_Female1_DampenerUnderAttackpurple",
+                    "Play_vo_Announcer_Female1_DampenerUnderAttackRed",
+                    "Play_vo_Announcer_Female1_DominatingBlue",
+                    "Play_vo_Announcer_Female1_DominatingHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_DominatingHeroYourTeam",
+                    "Play_vo_Announcer_Female1_DominatingRed",
+                    "Play_vo_Announcer_Female1_DominatingYouYourTeam",
+                    "Play_vo_Announcer_Female1_DoubleKillBlue",
+                    "Play_vo_Announcer_Female1_DoubleKillHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_DoubleKillHeroYourTeam",
+                    "Play_vo_Announcer_Female1_DoubleKillRed",
+                    "Play_vo_Announcer_Female1_DoubleKillYouYourTeam",
+                    "Play_vo_Announcer_Female1_FirstBloodHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_FirstBloodHeroYourTeam",
+                    "Play_vo_Announcer_Female1_FirstBloodYouYourTeam",
+                    "Play_vo_Announcer_Female1_GodlikeBlue",
+                    "Play_vo_Announcer_Female1_GodlikeHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_GodlikeHeroYourTeam",
+                    "Play_vo_Announcer_Female1_GodlikeRed",
+                    "Play_vo_Announcer_Female1_GodlikeYouYourTeam",
+                    "Play_vo_Announcer_Female1_InhibitorLostEnemyTeam",
+                    "Play_vo_Announcer_Female1_InhibitorLostYourTeam",
+                    "Play_vo_Announcer_Female1_InhibitorRespawnEnemyTeam",
+                    "Play_vo_Announcer_Female1_InhibitorRespawnSoonEnemyTeam",
+                    "Play_vo_Announcer_Female1_InhibitorRespawnSoonYourTeam",
+                    "Play_vo_Announcer_Female1_InhibitorRespawnYourTeam",
+                    "Play_vo_Announcer_Female1_KillChampionHeroHero",
+                    "Play_vo_Announcer_Female1_KillChampionHeroHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_KillChampionHeroHeroYourTeam",
+                    "Play_vo_Announcer_Female1_KillChampionHeroYouEnemyTeam",
+                    "Play_vo_Announcer_Female1_KillChampionMinionHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_KillChampionMinionHeroYourTeam",
+                    "Play_vo_Announcer_Female1_KillChampionMinionYouEnemyTeam",
+                    "Play_vo_Announcer_Female1_KillChampionTurretHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_KillChampionTurretHeroYourTeam",
+                    "Play_vo_Announcer_Female1_KillChampionTurretYouEnemyTeam",
+                    "Play_vo_Announcer_Female1_KillChampionYouHeroYourTeam",
+                    "Play_vo_Announcer_Female1_KillDragonBlue",
+                    "Play_vo_Announcer_Female1_KillDragonpurple",
+                    "Play_vo_Announcer_Female1_KillDragonRed",
+                    "Play_vo_Announcer_Female1_KillingSpreeBlue",
+                    "Play_vo_Announcer_Female1_KillingSpreeHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_KillingSpreeHeroYourTeam",
+                    "Play_vo_Announcer_Female1_KillingSpreeRed",
+                    "Play_vo_Announcer_Female1_KillingSpreeSet1purple",
+                    "Play_vo_Announcer_Female1_KillingSpreeSet2purple",
+                    "Play_vo_Announcer_Female1_KillingSpreeSet3purple",
+                    "Play_vo_Announcer_Female1_KillingSpreeSet4purple",
+                    "Play_vo_Announcer_Female1_KillingSpreeSet5purple",
+                    "Play_vo_Announcer_Female1_KillingSpreeSet6purple",
+                    "Play_vo_Announcer_Female1_KillingSpreeYouYourTeam",
+                    "Play_vo_Announcer_Female1_KillWormBlue",
+                    "Play_vo_Announcer_Female1_KillWormpurple",
+                    "Play_vo_Announcer_Female1_KillWormRed",
+                    "Play_vo_Announcer_Female1_LegendaryBlue",
+                    "Play_vo_Announcer_Female1_LegendaryHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_LegendaryHeroYourTeam",
+                    "Play_vo_Announcer_Female1_LegendaryRed",
+                    "Play_vo_Announcer_Female1_LegendaryYouYourTeam",
+                    "Play_vo_Announcer_Female1_MinionSpawn",
+                    "Play_vo_Announcer_Female1_NexusUnderAttackBlue",
+                    "Play_vo_Announcer_Female1_NexusUnderAttackpurple",
+                    "Play_vo_Announcer_Female1_NexusUnderAttackRed",
+                    "Play_vo_Announcer_Female1_OnChampionKillminionblueHero",
+                    "Play_vo_Announcer_Female1_OnChampionKillminionblueHeropurple",
+                    "Play_vo_Announcer_Female1_OnChampionKillminionblueHerored",
+                    "Play_vo_Announcer_Female1_OnChampionKillminionpurpleHero",
+                    "Play_vo_Announcer_Female1_OnChampionKillminionpurpleHeroblue",
+                    "Play_vo_Announcer_Female1_OnChampionKillminionredHero",
+                    "Play_vo_Announcer_Female1_OnChampionKillminionredHeroblue",
+                    "Play_vo_Announcer_Female1_OnChampionKillturretblueHeropurple",
+                    "Play_vo_Announcer_Female1_OnChampionKillturretblueHerored",
+                    "Play_vo_Announcer_Female1_OnChampionKillTurretHeroAlt",
+                    "Play_vo_Announcer_Female1_OnChampionKillturretpurpleHeroblue",
+                    "Play_vo_Announcer_Female1_OnChampionKillturretredHeroblue",
+                    "Play_vo_Announcer_Female1_OnChampionUnrealKillEnemyTeam",
+                    "Play_vo_Announcer_Female1_OnChampionUnrealKillYourTeam",
+                    "Play_vo_Announcer_Female1_OnInhibitorAttackedYourTeam",
+                    "Play_vo_Announcer_Female1_OnKilledUnitOnKillingSpree",
+                    "Play_vo_Announcer_Female1_OnKilledUnitOnKillingSpreeSet1",
+                    "Play_vo_Announcer_Female1_OnKilledUnitOnKillingSpreeSet2",
+                    "Play_vo_Announcer_Female1_OnKilledUnitOnKillingSpreeSet3",
+                    "Play_vo_Announcer_Female1_OnKilledUnitOnKillingSpreeSet4",
+                    "Play_vo_Announcer_Female1_OnKilledUnitOnKillingSpreeSet5",
+                    "Play_vo_Announcer_Female1_OnKilledUnitOnKillingSpreeSet6",
+                    "Play_vo_Announcer_Female1_OnLeave",
+                    "Play_vo_Announcer_Female1_OnLeaveEnemyTeam",
+                    "Play_vo_Announcer_Female1_OnLeaveYourTeam",
+                    "Play_vo_Announcer_Female1_OnMinionAlmostKillblue",
+                    "Play_vo_Announcer_Female1_OnMinionAlmostKillred",
+                    "Play_vo_Announcer_Female1_OnMinionHalfKillblue",
+                    "Play_vo_Announcer_Female1_OnMinionHalfKillred",
+                    "Play_vo_Announcer_Female1_OnNexusAttackedYourTeam",
+                    "Play_vo_Announcer_Female1_OnOneMinuteMinionsSpawn",
+                    "Play_vo_Announcer_Female1_OnQuitEnemyTeam",
+                    "Play_vo_Announcer_Female1_OnQuitEnemyTeamAlt",
+                    "Play_vo_Announcer_Female1_OnQuitYourTeam",
+                    "Play_vo_Announcer_Female1_OnQuitYourTeamAlt",
+                    "Play_vo_Announcer_Female1_OnReconnectEnemyTeam",
+                    "Play_vo_Announcer_Female1_OnReconnectYourTeam",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage1Map1",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage1Map10",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage1Map2",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage1Map4",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage1Map6",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage1Map8",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage2",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage2ButchersBridge",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage2Map1",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage2Map10",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage2Map2",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage2Map3",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage2Map4",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage2Map6",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage2Map8",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage3Map10",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage3Map3",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage3Map8",
+                    "Play_vo_Announcer_Female1_OnStartGameMessage4Map10",
+                    "Play_vo_Announcer_Female1_OnTurretAlmostKillblue",
+                    "Play_vo_Announcer_Female1_OnTurretAlmostKillred",
+                    "Play_vo_Announcer_Female1_OnTurretAttackedYourTeam",
+                    "Play_vo_Announcer_Female1_OnTurretHalfKillred",
+                    "Play_vo_Announcer_Female1_OnWelcome",
+                    "Play_vo_Announcer_Female1_OnWelcomeToLeague",
+                    "Play_vo_Announcer_Female1_PentaKillBlue",
+                    "Play_vo_Announcer_Female1_PentaKillHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_PentaKillHeroYourTeam",
+                    "Play_vo_Announcer_Female1_PentaKillRed",
+                    "Play_vo_Announcer_Female1_PentaKillYouYourTeam",
+                    "Play_vo_Announcer_Female1_PlayerDisconnectYourTeam",
+                    "Play_vo_Announcer_Female1_PlayerReconnectYourTeam",
+                    "Play_vo_Announcer_Female1_QuadraKillBlue",
+                    "Play_vo_Announcer_Female1_QuadraKillHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_QuadraKillHeroYourTeam",
+                    "Play_vo_Announcer_Female1_QuadraKillRed",
+                    "Play_vo_Announcer_Female1_QuadraKillYouYourTeam",
+                    "Play_vo_Announcer_Female1_RampageBlue",
+                    "Play_vo_Announcer_Female1_RampageHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_RampageHeroYourTeam",
+                    "Play_vo_Announcer_Female1_RampageRed",
+                    "Play_vo_Announcer_Female1_RampageYouYourTeam",
+                    "Play_vo_Announcer_Female1_ShutdownHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_ShutdownHeroYourTeam",
+                    "Play_vo_Announcer_Female1_ShutdownYouYourTeam",
+                    "Play_vo_Announcer_Female1_StartGameMessage1Map11",
+                    "Play_vo_Announcer_Female1_StartGameMessage2Map11",
+                    "Play_vo_Announcer_Female1_StartGameMessage2Map12",
+                    "Play_vo_Announcer_Female1_SurrenderBlue",
+                    "Play_vo_Announcer_Female1_Surrenderpurple",
+                    "Play_vo_Announcer_Female1_SurrenderRed",
+                    "Play_vo_Announcer_Female1_TripleKillBlue",
+                    "Play_vo_Announcer_Female1_TripleKillHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_TripleKillHeroYourTeam",
+                    "Play_vo_Announcer_Female1_TripleKillRed",
+                    "Play_vo_Announcer_Female1_TripleKillYouYourTeam",
+                    "Play_vo_Announcer_Female1_TurretDieBlue",
+                    "Play_vo_Announcer_Female1_TurretDiepurple",
+                    "Play_vo_Announcer_Female1_TurretDieRed",
+                    "Play_vo_Announcer_Female1_TurretLostEnemyTeam",
+                    "Play_vo_Announcer_Female1_TurretLostFirstBloodEnemyTeam",
+                    "Play_vo_Announcer_Female1_TurretLostFirstBloodYourTeam",
+                    "Play_vo_Announcer_Female1_TurretLostYourTeam",
+                    "Play_vo_Announcer_Female1_TurretPlatingFall30Seconds",
+                    "Play_vo_Announcer_Female1_TurretPlatingFallOff",
+                    "Play_vo_Announcer_Female1_TurretUnderAttackBlue",
+                    "Play_vo_Announcer_Female1_TurretUnderAttackpurple",
+                    "Play_vo_Announcer_Female1_TurretUnderAttackRed",
+                    "Play_vo_Announcer_Female1_UnstoppableBlue",
+                    "Play_vo_Announcer_Female1_UnstoppableHeroEnemyTeam",
+                    "Play_vo_Announcer_Female1_UnstoppableHeroYourTeam",
+                    "Play_vo_Announcer_Female1_UnstoppableRed",
+                    "Play_vo_Announcer_Female1_UnstoppableYouYourTeam",
+                    "Play_vo_Announcer_Female1_VictoryBlue",
+                    "Play_vo_Announcer_Female1_Victorypurple",
+                    "Play_vo_Announcer_Female1_VictoryRed",
+                    "Play_vo_Announcer_Global_Female1_OnChampionHexaKillblue",
+                    "Play_vo_Announcer_Global_Female1_OnChampionHexaKillEnemyTeam",
+                    "Play_vo_Announcer_Global_Female1_OnChampionHexaKillred",
+                    "Play_vo_Announcer_Global_Female1_OnChampionHexaKillYou",
+                    "Play_vo_Announcer_Global_Female1_OnChampionHexaKillYourTeam",
+                    "Play_vo_Announcer_Global_Female1_OnDefeat",
+                    "Play_vo_Announcer_Global_Female1_OnVictory",
+                    "Play_vo_Announcer_Global_OnPointEnemyTeam",
+                    "Play_vo_Announcer_Global_OnPointYou",
+                    "Play_vo_Announcer_Global_OnPointYourTeam",
+                    "Play_vo_Announcer_Global_OnStartGameMessage1ModeSnowdowShowdown",
+                    "Play_vo_Announcer_Global_OnVictoryAlmostEnemy",
+                    "Play_vo_Announcer_Global_OnVictoryAlmostYou",
+                    "Play_vo_Announcer_Global_OnVictoryAlmostYourTeam"
+                ],
+                "voiceOver": true,
+                "__type": "BankUnit"
+            }
+        ],
+        "music": {
+            "themeMusicID": "Play_mus_map11_SEASONAL_26s1_SODAPOP_phase_select_base",
+            "themeMusicTransitionID": "Play_mus_map11_SEASONAL_phase_select_base_transition",
+            "legacyThemeMusicID": "Play_mus_map01_phase_select_base",
+            "legacyThemeMusicTransitionID": "Play_mus_map01_phase_select_base_transition",
+            "victoryMusicID": "Play_mus_map11_SEASONAL_26s1_SODAPOP_phase_victory_base",
+            "defeatMusicID": "Play_mus_map11_SEASONAL_26s1_SODAPOP_phase_defeat_base",
+            "victoryBannerSound": "Play_sfx_Env_SRUAP_Victory_Banner",
+            "defeatBannerSound": "Play_sfx_Evn_SRUAP_Defeat_Banner",
+            "ambientEvent": "Play_sfx_Env_Map11_Sodapop_Ambience",
+            "__type": "MusicAudioDataProperties"
+        },
+        "feature": "{96d74b19}",
         "__type": "FeatureAudioDataProperties"
     },
     "{faaa3e19}": {
@@ -307685,7 +307995,11 @@
             "Items/1515",
             "Items/7050",
             "Items/1521",
-            "Items/1522"
+            "Items/1522",
+            "Items/2530",
+            "Items/1524",
+            "Items/1505",
+            "Items/1523"
         ],
         "__type": "GameModeItemList"
     },
@@ -307840,7 +308154,6 @@
             "Items/3161",
             "Items/3803",
             "Items/6657",
-            "Items/3087",
             "Items/6620",
             "Items/2019",
             "Items/3147",
@@ -307872,8 +308185,19 @@
             "Items/3032",
             "Items/3181",
             "Items/8010",
-            "Items/3105",
-            "Items/3084"
+            "Items/3084",
+            "Items/2510",
+            "Items/2512",
+            "Items/2517",
+            "Items/2520",
+            "Items/2522",
+            "Items/2523",
+            "Items/2524",
+            "Items/2525",
+            "Items/2526",
+            "Items/3087",
+            "Items/3097",
+            "Items/3146"
         ],
         "__type": "GameModeItemList"
     },
@@ -308081,7 +308405,8 @@
             "Characters/SRUAP_Turret_Order5",
             "Characters/PreSeason_Turret_Shield",
             "Characters/Turret",
-            "Characters/TurretRubble"
+            "Characters/TurretRubble",
+            "Characters/TurretOvergrowth"
         ],
         "__type": "MapCharacterList"
     },
@@ -308498,7 +308823,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_DoubleKill@src you | hero | minion | turret@@src your team | enemy team@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/DoubleKill/DoubleKillAlliedElements",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/DoubleKill/DoubleKillEnemyElements",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "__type": "AnnouncementDefinition"
@@ -308525,7 +308849,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_QuadraKill@src you | hero | minion | turret@@src your team | enemy team@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/QuadraKill/QuadraKillAlliedElements",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/QuadraKill/QuadraKillEnemyElements",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "__type": "AnnouncementDefinition"
@@ -308659,7 +308982,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_KillChampion@src you | hero | minion | turret@@dest you | hero | minion | turret@@src your team | enemy team@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Common/Underlines/AnnBannerBlueUnderlineGroup",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Common/Underlines/AnnBannerRedUnderlineGroup",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "{61fca04c}": true,
@@ -308689,7 +309011,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_PentaKill@src you | hero | minion | turret@@src your team | enemy team@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Pentakill/PentakillAlliedElements",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Pentakill/PentaKillEnemyElements",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "__type": "AnnouncementDefinition"
@@ -308729,7 +309050,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_TripleKill@src you | hero | minion | turret@@src your team | enemy team@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/TripleKill/TripleKillAlliedElements",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/TripleKill/TripleKillEnemyElements",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "__type": "AnnouncementDefinition"
@@ -308744,7 +309064,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_FirstBlood@src you | hero | minion | turret@@src your team | enemy team@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Common/Underlines/AnnBannerBlueUnderlineGroup",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Common/Underlines/AnnBannerRedUnderlineGroup",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "{61fca04c}": true,
@@ -308820,7 +309139,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_NexusBlitz_Core_@event name@@src your team | enemy team@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Pentakill/PentakillAlliedElements",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Pentakill/PentaKillEnemyElements",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "__type": "AnnouncementDefinition"
@@ -308834,7 +309152,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_NexusBlitz_Core_@event name@@src your team | enemy team@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/QuadraKill/QuadraKillAlliedElements",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/QuadraKill/QuadraKillEnemyElements",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "__type": "AnnouncementDefinition"
@@ -308958,7 +309275,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_NexusBlitz_Core_OnTurretDie@src your team | enemy team@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Common/Underlines/AnnBannerBlueUnderlineGroup",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Common/Underlines/AnnBannerRedUnderlineGroup",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "__type": "AnnouncementDefinition"
@@ -309089,7 +309405,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_NexusBlitz_Core_@event name@@src your team | enemy team@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/TripleKill/TripleKillAlliedElements",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/TripleKill/TripleKillEnemyElements",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "__type": "AnnouncementDefinition"
@@ -309127,7 +309442,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_NexusBlitz_Core_@event name@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Common/Underlines/AnnBannerBlueUnderlineGroup",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Common/Underlines/AnnBannerRedUnderlineGroup",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "{61fca04c}": true,
@@ -309141,7 +309455,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_NexusBlitz_Core_@event name@@src you | hero | minion | turret@@dest you | hero | minion | turret@@src your team | enemy team@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Common/Underlines/AnnBannerBlueUnderlineGroup",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Common/Underlines/AnnBannerRedUnderlineGroup",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "{61fca04c}": true,
@@ -309156,7 +309469,6 @@
             "SoundKey": "Play_vo_Announcer_@voice@_NexusBlitz_Core_@event name@@src your team | enemy team@",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/DoubleKill/DoubleKillAlliedElements",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/DoubleKill/DoubleKillEnemyElements",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "__type": "AnnouncementDefinition"
@@ -309296,7 +309608,6 @@
             "SoundKey": "Play_sfx_SRU_RiftHerald_death_reverb",
             "AlliedElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Common/Underlines/AnnBannerBlueUnderlineGroup",
             "EnemyElements": "ClientStates/Gameplay/UX/AnnouncementBanners/ClassicBase/BannerScene/Common/Underlines/AnnBannerRedUnderlineGroup",
-            "{ab1323ac}": "ClientStates/Gameplay/UX/LoL/FeatsViewController/UIBase/FeatsScene",
             "__type": "AnnouncementDefinitionData"
         },
         "__type": "AnnouncementDefinition"

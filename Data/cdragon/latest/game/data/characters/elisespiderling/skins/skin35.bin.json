@@ -12,7 +12,7 @@
             "texture": "ASSETS/Characters/EliseSpiderling/Skins/Skin35/EliseSpiderling_Skin35_TX_CM.Chroma_Elise_WitheredRose_Paragon.tex",
             "skinScale": 0.375,
             "selfIllumination": 0.75,
-            "material": "Characters/EliseSpiderling/Skins/Skin35/Materials/Matcap_Iridescent_Holographic_inst",
+            "Material": "Characters/EliseSpiderling/Skins/Skin35/Materials/Matcap_Iridescent_Holographic_inst",
             "reflectionFresnelColor": [
                 0,
                 0,
@@ -31,7 +31,17 @@
         "name": "Characters/EliseSpiderling/Skins/Skin35/Materials/Matcap_Iridescent_Holographic_inst",
         "samplerValues": [
             {
-                "textureName": "Diffuse_Texture",
+                "TextureName": "Dissolve_Gradient_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Gradient_test_01.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Dissolve_Texture",
+                "texturePath": "ASSETS/Shared/Particles/Base_plasma_noise.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
                 "texturePath": "ASSETS/Characters/EliseSpiderling/Skins/Skin35/EliseSpiderling_Skin35_TX_CM.Chroma_Elise_WitheredRose_Paragon.tex",
                 "addressU": 1,
                 "addressV": 1,
@@ -39,7 +49,7 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "textureName": "Mask_Texture",
+                "TextureName": "Mask_Texture",
                 "texturePath": "ASSETS/Characters/EliseSpiderling/Skins/Skin35/EliseSpiderling_Skin35_Mask_TX_CM.Chroma_Elise_WitheredRose_Paragon.tex",
                 "addressU": 1,
                 "addressV": 1,
@@ -47,7 +57,7 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "textureName": "MatCap_Tex",
+                "TextureName": "MatCap_Tex",
                 "texturePath": "ASSETS/Shared/Materials/matcap_iridescent.tex",
                 "addressU": 1,
                 "addressV": 1,
@@ -55,19 +65,19 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "textureName": "iridescentTex",
+                "TextureName": "iridescentTex",
                 "texturePath": "ASSETS/Shared/Materials/EDG_Rainbow2.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "textureName": "Noise_Texture",
+                "TextureName": "Noise_Texture",
                 "texturePath": "ASSETS/Shared/Materials/SRX_Wind_Noise.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "textureName": "Flowmap",
+                "TextureName": "Flowmap",
                 "texturePath": "ASSETS/Shared/Materials/NB_FlowMap_Pond_A.tex",
                 "addressU": 1,
                 "addressV": 1,
@@ -76,6 +86,40 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Alpha_Sharpness",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_SmoothStep",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Sharpness",
+                "value": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Bias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "TintColor",
                 "value": [
@@ -229,36 +273,50 @@
         ],
         "switches": [
             {
+                "name": "USE_DISSOLVE",
+                "on": false,
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "FRESNEL_MASK_HOLOGRAPHIC",
                 "on": false,
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "MATCAP_ON",
+                "Group": "Mat Cap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "MATCAP_MASK_ON",
+                "Group": "Mat Cap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "IRIDESCENCE_ON",
+                "Group": "Iridescent",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "IRIDESCENT_MASK_ON",
+                "Group": "Iridescent",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "HOLOGRAPHIC_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "HOLOGRAPHIC_MASK_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "FLOWMAP_ON",
+                "Group": "Holographic",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],

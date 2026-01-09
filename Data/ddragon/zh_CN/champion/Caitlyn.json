@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "15.24.1",
+    "version": "16.1.1",
     "data": {
         "Caitlyn": {
             "id": "Caitlyn",
@@ -332,7 +332,7 @@
                     "id": "CaitlynW",
                     "name": "约德尔诱捕器",
                     "description": "凯特琳设下一个陷阱，这个陷阱在被敌方英雄踩中时，会使该英雄显形并被束缚1.5秒，并为凯特琳提供一次强化版的爆头。",
-                    "tooltip": "凯特琳设置一个陷阱来<status>禁锢</status>踩中它的第一个英雄{{ e6 }}秒并提供该英雄的<keywordStealth>真实视野</keywordStealth>，持续3秒。陷阱持续{{ e3 }}秒，并且同一时间至多可存在{{ e5 }}个已激活的陷阱。这个技能有{{ e5 }}层充能({{ ammorechargetime }}秒充能时间)。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "凯特琳设置一个陷阱来<status>禁锢</status>踩中它的第一个英雄{{ rootduration }}秒并提供该英雄的<keywordStealth>真实视野</keywordStealth>，持续3秒。陷阱持续{{ trapduration }}秒，并且同一时间至多可存在{{ maximumtraps }}个已激活的陷阱。这个技能有{{ maximumcharges }}层充能({{ ammorechargetime }}秒充能时间)。<br /><br />被这个技能禁锢的目标会从<keywordMajor>爆头</keywordMajor>中受到额外的<physicalDamage>{{ headshotbonusdamage }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "对陷阱中的目标的爆头伤害加成",
@@ -341,10 +341,10 @@
                             "陷阱持续时间"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}",
-                            "{{ e4 }} -> {{ e4NL }}",
-                            "{{ e3 }} -> {{ e3NL }}"
+                            "{{ maximumtraps }} -> {{ maximumtrapsNL }}",
+                            "{{ trapduration }} -> {{ trapdurationNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -375,39 +375,39 @@
                             2
                         ],
                         [
-                            35,
-                            80,
-                            125,
-                            170,
-                            215
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            35,
-                            40,
-                            45,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            4,
-                            4,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            4,
-                            4,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             30,
@@ -441,11 +441,11 @@
                     "effectBurn": [
                         null,
                         "2",
-                        "35/80/125/170/215",
-                        "30/35/40/45/50",
-                        "3/3/4/4/5",
-                        "3/3/4/4/5",
-                        "1.5",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "30",
                         "0",
                         "0",
@@ -618,7 +618,7 @@
                     "id": "CaitlynR",
                     "name": "让子弹飞",
                     "description": "凯特琳精心准备完美一击，拥有超远射程并对单个目标造成巨大伤害。敌方英雄能为友军拦截子弹。",
-                    "tooltip": "凯特琳花费一段时间来引导并精心准备完美一击，然后她会开火，造成<physicalDamage>{{ rtotaldamage }}物理伤害</physicalDamage>，但其他敌方英雄能拦截子弹。这个技能在引导期间会提供目标的<keywordStealth>真实视野</keywordStealth>。<br /><br /><rules>基于凯特琳的暴击几率，至多造成{{ critchanceamp*100 }}%的额外伤害。</rules>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "凯特琳花费一段时间来引导并精心准备完美一击，然后她会开火，造成<physicalDamage>{{ rtotaldamage }}物理伤害</physicalDamage>，但其他敌方英雄能拦截子弹。这个技能在引导期间会提供目标的<keywordStealth>真实视野</keywordStealth>。<br /><br /><rules>伤害受益于凯特琳的暴击几率和暴击伤害加成。</rules>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害"

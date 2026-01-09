@@ -17997,6 +17997,7 @@
                 "pass": -100,
                 "miscRenderFlags": 1,
                 "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -22467,6 +22468,7 @@
                 "pass": -100,
                 "miscRenderFlags": 1,
                 "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -24753,7 +24755,6 @@
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Seed_Alpha",
-                "disabled": true,
                 "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -24975,7 +24976,6 @@
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Seed_Alpha1",
-                "disabled": true,
                 "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -26622,6 +26622,7 @@
                 "pass": -100,
                 "miscRenderFlags": 1,
                 "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -31063,6 +31064,79 @@
                     1.0,
                     0.5
                 ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.25,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "lifetime": 0.10000000149011612,
+                "isSingleParticle": 1,
+                "emitterName": "HammerGlow",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.12759999930858612,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "reflectionDefinition": {
+                    "fresnel": 0.05000000074505806,
+                    "fresnelColor": [
+                        0.9529411792755127,
+                        0.29411765933036804,
+                        1.0,
+                        0.6705882549285889
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "miscRenderFlags": 1,
+                "particleIsLocalOrientation": 1,
+                "texture": "ASSETS/Characters/Poppy/Skins/Skin24/Particles/Poppy_Skin24_AlphaMask_Hammer.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],

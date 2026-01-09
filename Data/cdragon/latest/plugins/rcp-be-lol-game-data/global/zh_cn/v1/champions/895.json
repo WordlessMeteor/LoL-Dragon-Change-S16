@@ -625,7 +625,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "随着她鞭刃的一次抽击，尼菈对她所选方向中一条直线上命中的任何敌人们造成伤害。这个行动会在短时间里延伸她的攻击距离。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>尼菈获得@CritArmorPen@护甲穿透，并且她对英雄进行的攻击会回复自身<healing>@CritLifesteal@实际伤害值的生命值</healing>。来自这个效果的过量治疗将转化为一个持续@ShieldDuration@秒的<shield>护盾</shield>。<br><br><spellActive>主动：</spellActive>尼菈甩出她的鞭刃，造成<physicalDamage>@DamageCalc@物理伤害</physicalDamage>，可通过她的暴击几率提升。如果命中了一个敌方单位或建筑物，尼菈就会获得125攻击距离和<attackSpeed>@BonusAttackSpeedCalc@%攻击速度</attackSpeed>，并且她的攻击会在一个锥形范围内造成<physicalDamage>@AttackTotalDamageTooltip@物理伤害</physicalDamage>，这些效果持续@BuffDuration@秒。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>尼菈获得@CritArmorPen@护甲穿透，并且她对英雄进行的攻击会回复自身<healing>@CritLifesteal@造成伤害值的生命值</healing>。来自这个效果的过量治疗将转化为一个持续@ShieldDuration@秒的<shield>护盾</shield>。<br><br><spellActive>主动：</spellActive>尼菈甩出她的鞭刃，造成 <physicalDamage>@DamageCalc@物理伤害</physicalDamage>。如果命中了一个敌方单位或建筑物，尼菈就会获得125攻击距离和<attackSpeed>@BonusAttackSpeedCalc@%攻击速度</attackSpeed>，并且她的攻击会命中一个锥形范围，这些效果持续@BuffDuration@秒。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1075,7 +1075,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "尼菈快乐洋溢地挥舞她的鞭刃，对她周围的敌人们造成伤害，然后用她的武器将他们拉得更加靠近。",
-            "dynamicDescription": "尼菈挥舞她的鞭刃，在1秒里持续造成<physicalDamage>@DamagePerTickCalcTooltip@物理伤害</physicalDamage>，然后用一次<physicalDamage>@DamageCalc@物理伤害</physicalDamage>的爆发来完成挥舞，并将附近的敌人们<status>拉拽</status>向她。<br><br>尼菈对她自身和附近的友方英雄们进行治疗，治疗量相当于<healing>她对敌方英雄们造成的@ChampHealingPercent@ (+@spell.NilahQ:CritLifesteal@ 游刃万变)实际伤害值(非英雄单位为@OtherHealingPercent*100@%)</healing>，并将任何过量治疗转化为一个持续@Duration@秒的<shield>护盾</shield>。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "尼菈挥舞她的鞭刃，在1秒里持续造成<physicalDamage>@DamagePerTickCalcTooltip@物理伤害</physicalDamage>，然后用一次<physicalDamage>@DamageCalc@物理伤害</physicalDamage>的爆发来完成挥舞，并将附近的敌人们<status>拉拽</status>向她。<br><br>【神恩激荡】对尼菈和附近的友方英雄们进行治疗，治疗量相当于<healing>她对敌方英雄们的@ChampHealingPercent@ (+@spell.NilahQ:CritLifesteal@ 游刃万变)造成伤害值</healing>，并将任何过量治疗转化为一个持续@Duration@秒的<shield>护盾</shield>。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1085,12 +1085,12 @@
                 400.0
             ],
             "costCoefficients": [
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
             ],
             "cooldownCoefficients": [
                 110.0,

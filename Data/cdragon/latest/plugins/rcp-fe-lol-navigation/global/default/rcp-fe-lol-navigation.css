@@ -5243,6 +5243,7 @@ lol-uikit-content-block[type=dialog-small].app-controls-exit-dialog {
 .activity-center-thematic-timeline-milestone-tooltip-description,
 .activity-center__header p,
 .activity-center__header_super-title_hint-button__tooltip,
+.activity-center__season-pass-banner__details_item_link,
 .activity-center__tab_tooltip,
 .activity-components-error-message p,
 .activity-components-error-message--small p,
@@ -5257,6 +5258,7 @@ lol-uikit-content-block[type=dialog-small].app-controls-exit-dialog {
 .info-hub__button,
 .new-player-pack-component ul.store-item-contents-list,
 .persistent-header-opal__currency,
+.persistent-header-opal__disabled-title-text,
 .render-mode-carousel.new-player-pack-component .rewards-subtitle,
 lol-uikit-content-block.ac-mute-button__tooltip {
     font-family: var(--font-body)
@@ -5305,6 +5307,7 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 .activity-center__header_super-title_hint-button__tooltip,
 .activity-center__persistent-tab,
 .activity-center__season-pass-banner__details_item_level-required,
+.activity-center__season-pass-banner__details_item_link,
 .activity-center__season-pass-banner__details_item_title,
 .activity-center__tab,
 .activity-center__tab_tooltip,
@@ -5338,6 +5341,7 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 .new-player-pack-component .total-cost,
 .new-player-pack-component ul.store-item-contents-list,
 .persistent-header-opal__currency,
+.persistent-header-opal__disabled-title-text,
 .render-mode-carousel.new-player-pack-component .discount,
 .render-mode-carousel.new-player-pack-component .rewards-subtitle,
 .render-mode-carousel.new-player-pack-component .rewards-title,
@@ -5901,6 +5905,7 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 .activity-center-season-pass-progression__tooltip-unlocked-xp,
 .activity-center-skin-activity__selected-content-price,
 .activity-center-thematic-timeline-milestone-tooltip-description,
+.activity-center__season-pass-banner__details_item_link,
 .activity-components-error-message--small p,
 .beginners-journey .activity-center-rewards-container .rewards-subtitle,
 .beginners-journey-level-rewards__reward-description-text,
@@ -5910,6 +5915,7 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 .challenges-card .section-subtitle,
 .new-player-pack-component ul.store-item-contents-list,
 .persistent-header-opal__currency,
+.persistent-header-opal__disabled-title-text,
 .render-mode-carousel.new-player-pack-component .rewards-subtitle,
 lol-uikit-content-block.ac-mute-button__tooltip {
     color: #a09b8c;
@@ -5936,6 +5942,7 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 .activity-center-season-pass-progression__tooltip-unlocked-xp:lang(ja-jp),
 .activity-center-skin-activity__selected-content-price:lang(ja-jp),
 .activity-center-thematic-timeline-milestone-tooltip-description:lang(ja-jp),
+.activity-center__season-pass-banner__details_item_link:lang(ja-jp),
 .activity-components-error-message--small p:lang(ja-jp),
 .beginners-journey .activity-center-rewards-container .rewards-subtitle:lang(ja-jp),
 .beginners-journey-level-rewards__reward-description-text:lang(ja-jp),
@@ -5945,6 +5952,7 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 .challenges-card .section-subtitle:lang(ja-jp),
 .new-player-pack-component ul.store-item-contents-list:lang(ja-jp),
 .persistent-header-opal__currency:lang(ja-jp),
+.persistent-header-opal__disabled-title-text:lang(ja-jp),
 .render-mode-carousel.new-player-pack-component .rewards-subtitle:lang(ja-jp),
 lol-uikit-content-block.ac-mute-button__tooltip:lang(ja-jp) {
     font-size: 13px
@@ -5966,6 +5974,7 @@ lol-uikit-content-block.ac-mute-button__tooltip:lang(ja-jp) {
 .activity-center-season-pass-progression__tooltip-unlocked-xp:lang(ar-ae),
 .activity-center-skin-activity__selected-content-price:lang(ar-ae),
 .activity-center-thematic-timeline-milestone-tooltip-description:lang(ar-ae),
+.activity-center__season-pass-banner__details_item_link:lang(ar-ae),
 .activity-components-error-message--small p:lang(ar-ae),
 .beginners-journey .activity-center-rewards-container .rewards-subtitle:lang(ar-ae),
 .beginners-journey-level-rewards__reward-description-text:lang(ar-ae),
@@ -5975,6 +5984,7 @@ lol-uikit-content-block.ac-mute-button__tooltip:lang(ja-jp) {
 .challenges-card .section-subtitle:lang(ar-ae),
 .new-player-pack-component ul.store-item-contents-list:lang(ar-ae),
 .persistent-header-opal__currency:lang(ar-ae),
+.persistent-header-opal__disabled-title-text:lang(ar-ae),
 .render-mode-carousel.new-player-pack-component .rewards-subtitle:lang(ar-ae),
 lol-uikit-content-block.ac-mute-button__tooltip:lang(ar-ae) {
     letter-spacing: 0
@@ -6456,7 +6466,7 @@ lol-uikit-content-block.ac-mute-button__tooltip:lang(ar-ae) {
 }
 
 .activity-center__header__timer-container .activity-center-count-down .shared-reset-timer-component .reset-timer {
-    padding: 3px 10px 1px 8px
+    padding: 2px 10px 2px 8px
 }
 
 .activity-center__header h4 {
@@ -6613,7 +6623,7 @@ lol-uikit-content-block.ac-mute-button__tooltip:lang(ar-ae) {
 .activity-center-count-down .shared-reset-timer-component .reset-timer:before {
     background-size: 14px 14px;
     height: 14px;
-    margin: 0 4px 0 0;
+    margin: 0 4px 1px 0;
     padding: 1px;
     width: 14px
 }
@@ -7878,9 +7888,20 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 }
 
 .activity-center__season-pass-banner__details_item_title {
-    height: 40px;
+    height: 30px;
     margin: 6px 0 0;
     pointer-events: none
+}
+
+.activity-center__season-pass-banner__details_item_link {
+    color: #f0e6d2;
+    display: flex;
+    margin-top: -2px;
+    pointer-events: none
+}
+
+.activity-center__season-pass-banner__details_item_link--text {
+    margin: 1px 5px 0 0
 }
 
 .activity-center__season-pass-banner__details_item--active {
@@ -8370,6 +8391,41 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 .persistent-header-opal__currency--glow {
     color: #faf0d1;
     text-shadow: 0 0 5px #d8a521
+}
+
+.persistent-header-opal__disabled-title-container {
+    align-items: center;
+    display: flex;
+    gap: 6px;
+    justify-content: center
+}
+
+.persistent-header-opal__disabled-title-text {
+    color: #c79f4f;
+    font-size: 13px;
+    font-weight: 550
+}
+
+.persistent-header-opal__disabled-info-icon {
+    filter: brightness(.8);
+    height: 20px;
+    width: 20px
+}
+
+lol-uikit-content-block[type=tooltip-system].persistent-header-opal__disabled-tooltip {
+    padding: 16px;
+    width: 320px
+}
+
+lol-uikit-content-block[type=tooltip-system].persistent-header-opal__disabled-tooltip h6 {
+    margin-bottom: 4px;
+    text-align: left
+}
+
+lol-uikit-content-block[type=tooltip-system].persistent-header-opal__disabled-tooltip p {
+    max-width: 320px;
+    text-align: left;
+    white-space: normal
 }
 
 .ac-error-screen {
@@ -8933,7 +8989,13 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 
 .activity-center-ranked-activity__main-content {
     display: flex;
-    max-height: 50%
+    flex-direction: column;
+    max-height: 50%;
+    padding: 32px
+}
+
+.activity-center-ranked-activity__main-content .activity-center__header_info-hub-link {
+    display: none
 }
 
 .activity-center-ranked-activity__content {
@@ -8944,7 +9006,6 @@ lol-uikit-content-block.ac-mute-button__tooltip {
     justify-content: space-between;
     left: 213px;
     opacity: 0;
-    padding: 32px;
     position: absolute;
     top: 81px;
     transition: opacity .2s ease-in;
@@ -8955,35 +9016,34 @@ lol-uikit-content-block.ac-mute-button__tooltip {
     opacity: 1
 }
 
-.activity-center-ranked-activity__right-cta {
+.activity-center-ranked-activity__top-cta {
     display: flex;
-    justify-content: flex-end;
+    margin-top: 50px;
     width: 50%
 }
 
 .activity-center-ranked-activity__deeplinks-container {
     display: flex;
-    height: auto;
     height: 242px;
     justify-content: flex-end;
     min-width: 55%
 }
 
 .activity-center-ranked-activity__footer {
-    align-items: flex-end;
-    display: flex
+    display: flex;
+    flex-direction: column;
+    height: 24%;
+    left: 2px;
+    position: relative;
+    width: 840px
 }
 
-.activity-center-ranked-activity__footer--flex-between {
-    justify-content: space-between
-}
-
-.activity-center-ranked-activity__footer--flex-start {
-    justify-content: flex-start
-}
-
-.activity-center-ranked-activity__footer--flex-end {
-    justify-content: flex-end
+.activity-center-ranked-activity__footer_ranked-progression-panel {
+    bottom: 12px;
+    height: 128px;
+    position: absolute;
+    right: 10px;
+    width: 350px
 }
 
 .activity-center-skin-activity--skin-preview {
@@ -12573,7 +12633,7 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 }
 
 .tft-set-announcement .tft-set-announcement-left .tft-set-announcement-body {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     gap: 14px;

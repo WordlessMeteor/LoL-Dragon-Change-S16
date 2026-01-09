@@ -11931,7 +11931,7 @@
                     },
                     {
                         "name": "BonusStardustPerTwoStar",
-                        "value": 0.6
+                        "value": 0.33
                     }
                 ],
                 "min_units": 1,
@@ -14008,7 +14008,7 @@
         "trait_id": "TFT16_Soulbound",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Soulbound.TFT_Set16.png",
-        "tooltip_text": "Lucian และ Senna ต่อสู้ร่วมกัน สลับตัวไปมาเมื่อร่ายสกิล โดยพวกเขาแต่ละตัว จะมีสกิลที่แตกต่างกัน<br><br>อีกทั้งคู่หู Soulbound ที่แข็งแกร่งที่สุดของคุณ จะมอบโบนัสให้กับทีม พันธมิตรทั้งหมดได้รับความเสียหาย ลดลง @SennaDR*100@% ในขณะ Senna ต่อสู้ และได้รับการคูณความเสียหาย @LucianDA*100@% ในขณะ Lucian ต่อสู้",
+        "tooltip_text": "tft_trait_description_TFT16_Soulbound",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -14188,26 +14188,18 @@
         "trait_id": "TFT16_Teamup_SingedTeemo",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
-        "tooltip_text": "Teemo เป่าลูกดอกใส่เป้าหมายปัจจุบันของ Singed ในทุก ๆ @FireInterval@ วินาที สร้างความเสียหาย @TeemoEffectiveness*100@%<br><br>และเมื่อศัตรูที่ติดพิษจาก Teemo ถูกสังหาร Singed จะได้รับความเร็วเคลื่อนที่และพลังเวท @SingedAP@%",
+        "tooltip_text": "tft_trait_description_TFT16_Teamup_SingedTeemo",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "FireInterval",
-                        "value": 3.0
+                        "name": "SingedAPGain",
+                        "value": 2.0
                     },
                     {
-                        "name": "SingedAP",
-                        "value": 40.0
-                    },
-                    {
-                        "name": "SingedBonusMovespeed",
-                        "value": 50.0
-                    },
-                    {
-                        "name": "TeemoEffectiveness",
-                        "value": 0.5
+                        "name": "TeemoDamageReq",
+                        "value": 100.0
                     }
                 ],
                 "min_units": 2,
@@ -15902,7 +15894,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 2.0
+                        "value": 1.75
                     }
                 ],
                 "min_units": 2,
@@ -15914,7 +15906,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 3.5
+                        "value": 3.0
                     }
                 ],
                 "min_units": 3,
@@ -15926,7 +15918,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 6.0
+                        "value": 5.0
                     }
                 ],
                 "min_units": 4,

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "15.24.1",
+    "version": "16.1.1",
     "data": {
         "Draven": {
             "id": "Draven",
@@ -147,7 +147,7 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 62,
-                "attackdamageperlevel": 3.6,
+                "attackdamageperlevel": 3,
                 "attackspeedperlevel": 2.7,
                 "attackspeed": 0.679
             },
@@ -164,8 +164,8 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e5 }} -> {{ e5NL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ adscaling }}% -> {{ adscalingNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -190,25 +190,25 @@
                     "effect": [
                         null,
                         [
-                            100,
-                            100,
-                            100,
-                            100,
-                            100
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             75,
-                            85,
-                            95,
-                            105,
-                            115
+                            75,
+                            75,
+                            75,
+                            75
                         ],
                         [
-                            30,
-                            35,
-                            40,
-                            45,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             5.75,
@@ -218,11 +218,11 @@
                             5.75
                         ],
                         [
-                            40,
-                            45,
-                            50,
-                            55,
-                            60
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -262,11 +262,11 @@
                     ],
                     "effectBurn": [
                         null,
-                        "100",
-                        "75/85/95/105/115",
-                        "30/35/40/45/50",
+                        "0",
+                        "75",
+                        "0",
                         "5.75",
-                        "40/45/50/55/60",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -302,14 +302,14 @@
                     "tooltip": "德莱文进入幽灵状态，获得在{{ e3 }}秒里持续衰减的<speed>{{ e2 }}%移动速度</speed>和持续{{ e5 }}秒的<attackSpeed>{{ e4 }}%攻击速度</attackSpeed>。<br /><br />当德莱文接住一把<keywordMajor>旋转飞斧</keywordMajor>时，这个技能的冷却时间就会刷新。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
+                            "移动速度",
                             "攻击速度",
-                            "@AbilityResourceName@消耗",
-                            "移动速度"
+                            "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e4 }}% -> {{ e4NL }}%",
-                            "{{ cost }} -> {{ costNL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%"
+                            "{{ movespeed*100.000000 }}% -> {{ movespeednl*100.000000 }}%",
+                            "{{ attackspeed*100.000000 }}% -> {{ attackspeednl*100.000000 }}%",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -333,11 +333,11 @@
                     "effect": [
                         null,
                         [
-                            4,
-                            5,
-                            6,
-                            7,
-                            8
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             50,
@@ -354,11 +354,11 @@
                             1.5
                         ],
                         [
+                            20,
+                            25,
                             30,
                             35,
-                            40,
-                            45,
-                            50
+                            40
                         ],
                         [
                             3,
@@ -405,10 +405,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "4/5/6/7/8",
+                        "0",
                         "50/55/60/65/70",
                         "1.5",
-                        "30/35/40/45/50",
+                        "20/25/30/35/40",
                         "3",
                         "-0.062/-0.069/-0.075/-0.081/-0.087",
                         "0",

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "15.24.1",
+    "version": "16.1.1",
     "data": {
         "Rengar": {
             "id": "Rengar",
@@ -123,7 +123,7 @@
                     "id": "RengarQ",
                     "name": "残忍无情",
                     "description": "雷恩加尔的下次攻击会蛮横地戳刺他的目标来造成额外伤害。<br><br>残暴效果：造成更多伤害，并且他会获得攻击速度加成。",
-                    "tooltip": "雷恩加尔的下2次攻击获得<attackSpeed>{{ e5 }}%攻击速度</attackSpeed>。第一次攻击会暴击，造成<physicalDamage>{{ F4 }} (%i:scaleAD%%i:scaleCrit%) 物理伤害</physicalDamage>。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>第一次攻击会暴击，造成<physicalDamage>{{ F5 }} (%i:scaleLevel%%i:scaleAD%%i:scaleCrit%) 物理伤害</physicalDamage>并为雷恩加尔提供{{ e3 }}秒的<attackSpeed>{{ empoweredqas }}攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "雷恩加尔的下两次攻击获得<attackSpeed>{{ asbonus }}%攻击速度</attackSpeed>。第一次攻击造成<physicalDamage>{{ qdamage }}物理伤害</physicalDamage>。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>第一次攻击造成<physicalDamage>{{ empoweredqdamage }}物理伤害</physicalDamage>并为雷恩加尔提供持续{{ asduration }}秒的<attackSpeed>{{ empoweredqas }}攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -131,8 +131,8 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ baseadratiotooltip }}% -> {{ baseadratiotooltipNL }}%",
                             "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}"
                         ]
                     },
@@ -157,53 +157,53 @@
                     "effect": [
                         null,
                         [
-                            30,
-                            60,
-                            90,
-                            120,
-                            150
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            100,
-                            105,
-                            110,
-                            115,
-                            120
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            40,
-                            40,
-                            40,
-                            40
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.2,
-                            0.3,
-                            0.4,
-                            0.5,
-                            0.6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -229,13 +229,13 @@
                     ],
                     "effectBurn": [
                         null,
-                        "30/60/90/120/150",
-                        "100/105/110/115/120",
-                        "5",
-                        "5",
-                        "40",
-                        "3",
-                        "0.2/0.3/0.4/0.5/0.6",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0"
@@ -266,7 +266,7 @@
                     "id": "RengarW",
                     "name": "战争咆哮",
                     "description": "雷恩加尔发出一声战争咆哮，对敌人造成伤害并基于近期受到的伤害回复生命值。<br><br>残暴效果：额外移除控制效果。",
-                    "tooltip": "雷恩加尔进行咆哮，对附近的敌人们造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>并回复生命值，相当于他在前{{ e3 }}秒受到的<healing>{{ damagepercentagehealed }}%</healing>伤害。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>造成<magicDamage>{{ totaldamageempowered }}魔法伤害</magicDamage>并且还会净化雷恩加尔身上的控制效果。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "雷恩加尔进行咆哮，对附近的敌人们造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>并回复生命值，相当于他在前{{ healingwindow }}秒受到的<healing>{{ damagepercentagehealed }}%</healing>伤害。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>造成<magicDamage>{{ totaldamageempowered }}魔法伤害</magicDamage>并且还会净化雷恩加尔身上的控制效果。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -305,32 +305,32 @@
                             0
                         ],
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            100,
-                            100,
-                            100,
-                            100,
-                            100
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -371,10 +371,10 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "50",
-                        "1.5",
-                        "1.5",
-                        "100",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -407,7 +407,7 @@
                     "id": "RengarE",
                     "name": "套索打击",
                     "description": "雷恩加尔扔出一个套索，套索在命中第一个敌人后，会暂时降低这名敌人的移动速度。<br><br>残暴效果：对目标造成禁锢效果。",
-                    "tooltip": "雷恩加尔扔出一个套索，对命中的第一个敌人造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>，以及持续{{ e3 }}秒的显形和{{ e2 }}%<status>减速</status>。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>造成<physicalDamage>{{ totalempowereddamage }}物理伤害</physicalDamage>并将其<status>禁锢</status>{{ e4 }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "雷恩加尔扔出一个套索，对命中的第一个敌人造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>，以及持续{{ ccduration }}秒的显形和{{ slowamount }}%<status>减速</status>。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>造成<physicalDamage>{{ totalempowereddamage }}物理伤害</physicalDamage>和{{ ccduration }}秒<status>禁锢</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -439,32 +439,32 @@
                     "effect": [
                         null,
                         [
-                            55,
-                            100,
-                            145,
-                            190,
-                            235
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            45,
-                            60,
-                            75,
-                            90
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.75,
-                            1.75,
-                            1.75,
-                            1.75,
-                            1.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.75,
-                            1.75,
-                            1.75,
-                            1.75,
-                            1.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -511,10 +511,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "55/100/145/190/235",
-                        "30/45/60/75/90",
-                        "1.75",
-                        "1.75",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",

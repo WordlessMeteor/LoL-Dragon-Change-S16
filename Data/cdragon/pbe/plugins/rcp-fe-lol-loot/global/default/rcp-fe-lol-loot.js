@@ -383,7 +383,7 @@
                 r = n(42);
             const l = new class {
                 constructor() {
-                    this.lootVideoCache = o.UIKit.getVideoCache().createCache("rcp-fe-lol-loot"), this.lootSettings = null, this.showStandaloneMythicShop = !1, this.showMythicShoppefront = !1, this.isNewSanctumEnabled = null, this.banners = [], this.locale = "", this.provider = (0, o.getProvider)(), this._application = null, this._applicationInstance = null, this._appRootElement = null, this._screenRoot = this._getScreenRoot(), this._factoryRegistered = !1, o.Viewport.sidebar().on("backgroundUnset", this.setSidebarBackground.bind(this))
+                    this.lootVideoCache = o.UIKit.getVideoCache().createCache("rcp-fe-lol-loot"), this.lootSettings = null, this.isNewSanctumEnabled = null, this.banners = [], this.locale = "", this.provider = (0, o.getProvider)(), this._application = null, this._applicationInstance = null, this._appRootElement = null, this._screenRoot = this._getScreenRoot(), this._factoryRegistered = !1, o.Viewport.sidebar().on("backgroundUnset", this.setSidebarBackground.bind(this))
                 }
                 setSidebarBackground() {
                     const e = o.Viewport.main().getCurrentScreenRoot();
@@ -410,7 +410,7 @@
                             let r;
                             return this._application = n, o.externalModel.set("initialBannerId", t.initialBannerId || ""), o.db.post("/lol-loot/v1/refresh").then((() => {
                                 o.externalModel.set("initialSelectedLootItem", t.initialSelectedLootItem || "")
-                            })), r = t?.page ? t.page : e || i.ROUTES.INDEX, s && r === i.ROUTES.MOON_SKIN && (r = i.ROUTES.SANCTUM), this.showMythicShoppefront || r !== i.ROUTES.MYTHIC_SHOPPEFRONT || (r = i.ROUTES.INDEX), a.transitionTo(r), n
+                            })), r = t?.page ? t.page : e || i.ROUTES.INDEX, s && r === i.ROUTES.MOON_SKIN && (r = i.ROUTES.SANCTUM), a.transitionTo(r), n
                         })).then((e => {
                             this._screenRoot.getElement().appendChild(this._appRootElement), this._applicationInstance = e
                         })).catch((e => o.logger.trace("navigateTo", e))).finally((() => {
@@ -496,10 +496,8 @@
                         e.sort(((e, t) => t.startDate - e.startDate)), this.banners = e
                     })),
                     t = o.db.get(a.LOL_SETTINGS_PATHS.LOOT_SETTINGS).then((e => this.lootSettings = e)),
-                    n = o.db.get(a.REGION_LOCALE_PATH).then((e => this.locale = e.locale)),
-                    s = o.db.get(a.CLIENT_CONFIG_PATHS.STANDALONE_MYTHIC_SHOP).then((e => this.showStandaloneMythicShop = !!e)),
-                    i = o.db.get(a.CLIENT_CONFIG_PATHS.ENABLE_MYTHIC_SHOPPEFRONT).then((e => this.showMythicShoppefront = !!e));
-                return Promise.allSettled([e, t, n, s, i])
+                    n = o.db.get(a.REGION_LOCALE_PATH).then((e => this.locale = e.locale));
+                return Promise.allSettled([e, t, n])
             }.bind(l), Object.seal(l);
             var c = l;
             t.default = c
@@ -2621,18 +2619,12 @@
             const i = "/lol-client-config/v3/client-config",
                 a = {
                     ACTIVE_BANNERS: "/lol.client_settings.sanctum.active_banners",
-                    DISABLE_MYTHIC_ESSENCE_LOOT_ITEM: "/lol.client_settings.loot.disable_mythic_essence_loot_item",
                     EXTERNAL_LOOT_SUPPORT_URL_PATH: "/lol.client_settings.store.lcu.externalLootSupportUrl",
-                    STANDALONE_MYTHIC_SHOP: "/lol.client_settings.loot.standalone_mythic_shop",
-                    ENABLE_MYTHIC_SHOPPEFRONT: "/lol.client_settings.loot.enable_mythic_shoppefront",
                     IS_NEW_SANCTUM_ENABLED: "/lol.client_settings.sanctum.isNewSanctumEnabled"
                 };
             t.CLIENT_CONFIG_SETTING_PATHS = a;
             const r = {
                 ACTIVE_BANNERS: `${i}${a.ACTIVE_BANNERS}`,
-                DISABLE_MYTHIC_ESSENCE_LOOT_ITEM: `${i}${a.DISABLE_MYTHIC_ESSENCE_LOOT_ITEM}`,
-                STANDALONE_MYTHIC_SHOP: `${i}${a.STANDALONE_MYTHIC_SHOP}`,
-                ENABLE_MYTHIC_SHOPPEFRONT: `${i}${a.ENABLE_MYTHIC_SHOPPEFRONT}`,
                 IS_NEW_SANCTUM_ENABLED: `${i}${a.IS_NEW_SANCTUM_ENABLED}`
             };
             t.CLIENT_CONFIG_PATHS = r;
@@ -3784,7 +3776,6 @@
             } = s.EmberAddons.EmberLifeline, p = ["MATERIAL_key_fragment_forge"];
             e.exports = s.Ember.Component.extend(m, {
                 classNames: ["loot-root-component"],
-                clientConfig: s.Ember.inject.service("client-config"),
                 lootService: s.Ember.inject.service("loot"),
                 lootMassDisenchantService: s.Ember.inject.service("loot-mass-disenchant"),
                 uxSettingsService: s.Ember.inject.service("ux-settings"),
@@ -3845,9 +3836,10 @@
                         this.runTask((() => {
                             let n = this.autofillSlots();
                             if (e) {
-                                const t = this.get("playerLootItems").get(e.lootId) || e;
+                                const t = this.get("playerLootItems"),
+                                    o = t?.get(e.lootId) || e;
                                 this.addItemToFirstValidSlot({
-                                    lootItem: t
+                                    lootItem: o
                                 }) && n++
                             }
                             t(n)
@@ -3936,7 +3928,7 @@
                     const e = this.get("recipe.slots");
                     return e ? o.union(...e.map((e => e.lootIds))) : s.Ember.A()
                 })),
-                onIsLootPageVisibleChanged: s.Ember.observer("isLootPageVisible", "lootService.lootItemsInitialized", "initialSelectedLootItem", "clientConfig.disableMythicEssenceLootItem", (function() {
+                onIsLootPageVisibleChanged: s.Ember.observer("isLootPageVisible", "lootService.lootItemsInitialized", "initialSelectedLootItem", (function() {
                     const e = this.get("isLootPageVisible"),
                         t = this.get("lootService.lootItemsInitialized");
                     if (e) {
@@ -3962,7 +3954,7 @@
                 })),
                 _selectInitialLootItem: function() {
                     const e = this.get("initialSelectedLootItem");
-                    if (!e || e === i.MYTHIC_ESSENCE_ID && this.get("clientConfig.disableMythicEssenceLootItem")) return;
+                    if (!e || e === i.MYTHIC_ESSENCE_ID) return;
                     const t = this.get("playerLootItems");
                     if (t && t.get(e)) {
                         const n = t.get(e),
@@ -14695,7 +14687,7 @@
                         this.set("isLootItemDisplayEnabled", !0)
                     }), 2e3)
                 })),
-                categorizedLootItems: o.Ember.computed("lootItems", "allDisplayCategories", "clientConfig.disableMythicEssenceLootItem", (function() {
+                categorizedLootItems: o.Ember.computed("lootItems", "allDisplayCategories", (function() {
                     const e = this.get("lootItems"),
                         t = this.get("allDisplayCategories"),
                         n = {};
@@ -14806,9 +14798,8 @@
                     }
                 },
                 _isItemValidForDisplay(e, t) {
-                    const n = this.get("recipesConfiguration.alwaysShowLootIds"),
-                        o = this.get("clientConfig.disableMythicEssenceLootItem");
-                    return e && (!o || e.get("lootId") !== a.MYTHIC_ESSENCE_ID) && (e.get("count") > 0 || n && n.indexOf(e.get("lootId")) > -1) && e.displayCategories && t.includes(e.displayCategories)
+                    const n = this.get("recipesConfiguration.alwaysShowLootIds");
+                    return e && e.get("lootId") !== a.MYTHIC_ESSENCE_ID && (e.get("count") > 0 || n && n.indexOf(e.get("lootId")) > -1) && e.displayCategories && t.includes(e.displayCategories)
                 },
                 _addLocName(e) {
                     const t = this.get("locHelper");
@@ -17836,23 +17827,18 @@
                 layout: n(289),
                 classNames: ["loot-tray"],
                 classNameBindings: ["isMassDisenchantEnabled:recipe-help-container"],
-                clientConfig: s.Ember.inject.service("client-config"),
                 lootService: s.Ember.inject.service("loot"),
                 telemetryService: s.Ember.inject.service("telemetry"),
                 lootItems: s.Ember.computed.alias("lootService.lootItems"),
                 storeCustomerEnabled: s.Ember.computed.alias("lootService.storeCustomerEnabled"),
                 chestCount: s.Ember.computed.alias("lootService.chestCount"),
                 shouldUseWalletsForBlueEssence: s.Ember.computed.readOnly("lootService.shouldUseWalletsForBlueEssence"),
-                showMythicEssence: s.Ember.computed("clientConfig.disableMythicEssenceLootItem", (function() {
-                    return !this.get("clientConfig.disableMythicEssenceLootItem")
-                })),
                 isMassDisenchantEnabled: s.Ember.computed.alias("lootService.massDisenchantConfig.enabled"),
                 chestItem: a.CHEST_GENERIC_ID,
                 keyItem: a.MATERIAL_KEY_ID,
                 rareItem: a.MATERIAL_RARE_ID,
                 blueItem: a.CURRENCY_CHAMPION_ID,
                 orangeItem: a.ORANGE_ESSENCE_ID,
-                mythicItem: a.MYTHIC_ESSENCE_ID,
                 keyCount: s.Ember.computed("lootItems", "lootItems.MATERIAL_key.count", (function() {
                     return r(this.get("lootItems"), a.MATERIAL_KEY_ID)
                 })),
@@ -17864,9 +17850,6 @@
                 })),
                 orangeCount: s.Ember.computed("lootItems", "lootItems.CURRENCY_cosmetic.count", (function() {
                     return r(this.get("lootItems"), a.ORANGE_ESSENCE_ID)
-                })),
-                mythicCount: s.Ember.computed("lootItems", "lootItems.CURRENCY_mythic.count", (function() {
-                    return r(this.get("lootItems"), a.MYTHIC_ESSENCE_ID)
                 })),
                 storeStatusClass: s.Ember.computed("lootItems", "storeCustomerEnabled", "chestGenericItem", (function() {
                     const e = this.get("storeCustomerEnabled"),
@@ -17900,8 +17883,8 @@
         }, (e, t, n) => {
             const o = n(1).Ember;
             e.exports = o.HTMLBars.template({
-                id: "VKzU2sqM",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-loot\\\\src\\\\app\\\\components\\\\loot-tray\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-loot\\\\src\\\\app\\\\components\\\\loot-tray\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-loot\\\\src\\\\app\\\\components\\\\loot-tray\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["loot-tray-content ",["helper",["unless"],[["get",["showMythicEssence"]],"loot-tray-content-small"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isMassDisenchantEnabled"]]],null,2],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["loot-to-store-button ",["unknown",["storeStatusClass"]]]]],["modifier",["action"],[["get",[null]],"goToStore"]],["modifier",["action"],[["get",[null]],"purchaseChestButtonHovered"],[["on"],["mouseEnter"]]],["flush-element"],["close-element"],["text","\\n"],["block",["unless"],[["get",["shouldUseWalletsForBlueEssence"]]],null,1],["text","  "],["open-element","div",[]],["static-attr","class","loot-currency-container"],["flush-element"],["text","\\n    "],["append",["helper",["loot-tray-item"],null,[["targetCount","lootItemName"],[["get",["orangeCount"]],["get",["orangeItem"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["showMythicEssence"]]],null,0],["text","  "],["open-element","div",[]],["static-attr","class","loot-currency-container"],["flush-element"],["text","\\n    "],["append",["helper",["loot-tray-item"],null,[["targetCount","lootItemName"],[["get",["keyCount"]],["get",["keyItem"]]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","loot-currency-container"],["flush-element"],["text","\\n    "],["append",["helper",["loot-tray-item"],null,[["targetCount","lootItemName"],[["get",["chestCount"]],["get",["chestItem"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","loot-currency-container"],["flush-element"],["text","\\n      "],["append",["helper",["loot-tray-item"],null,[["targetCount","lootItemName"],[["get",["mythicCount"]],["get",["mythicItem"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","loot-currency-container"],["flush-element"],["text","\\n      "],["append",["helper",["loot-tray-item"],null,[["targetCount","lootItemName"],[["get",["blueCount"]],["get",["blueItem"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","loot-recipe-help-container"],["flush-element"],["text","\\n      "],["append",["unknown",["loot-recipe-help-button"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "0LzwjRQ8",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-loot\\\\src\\\\app\\\\components\\\\loot-tray\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-loot\\\\src\\\\app\\\\components\\\\loot-tray\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-loot\\\\src\\\\app\\\\components\\\\loot-tray\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","loot-tray-content loot-tray-content-small"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isMassDisenchantEnabled"]]],null,1],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["loot-to-store-button ",["unknown",["storeStatusClass"]]]]],["modifier",["action"],[["get",[null]],"goToStore"]],["modifier",["action"],[["get",[null]],"purchaseChestButtonHovered"],[["on"],["mouseEnter"]]],["flush-element"],["close-element"],["text","\\n"],["block",["unless"],[["get",["shouldUseWalletsForBlueEssence"]]],null,0],["text","  "],["open-element","div",[]],["static-attr","class","loot-currency-container"],["flush-element"],["text","\\n    "],["append",["helper",["loot-tray-item"],null,[["targetCount","lootItemName"],[["get",["orangeCount"]],["get",["orangeItem"]]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","loot-currency-container"],["flush-element"],["text","\\n    "],["append",["helper",["loot-tray-item"],null,[["targetCount","lootItemName"],[["get",["keyCount"]],["get",["keyItem"]]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","loot-currency-container"],["flush-element"],["text","\\n    "],["append",["helper",["loot-tray-item"],null,[["targetCount","lootItemName"],[["get",["chestCount"]],["get",["chestItem"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","loot-currency-container"],["flush-element"],["text","\\n      "],["append",["helper",["loot-tray-item"],null,[["targetCount","lootItemName"],[["get",["blueCount"]],["get",["blueItem"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","loot-recipe-help-container"],["flush-element"],["text","\\n      "],["append",["unknown",["loot-recipe-help-button"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -18544,9 +18527,6 @@
                 classNames: ["loot-sub-nav-component"],
                 clientConfig: o.Ember.inject.service("client-config"),
                 isNewSanctumEnabled: o.Ember.computed.bool("clientConfig.isNewSanctumEnabled"),
-                showMythicShoppefront: o.Ember.computed("clientConfig.enableMythicShoppefront", (function() {
-                    return !!this.get("clientConfig.enableMythicShoppefront")
-                })),
                 routes: s.ROUTES,
                 didRender() {
                     this._super(...arguments);
@@ -19531,7 +19511,7 @@
                     this._super(...arguments), this.clientConfigDataBinding = (0, o.dataBinding)("/client-config/v2/config", o.socket), this.initConfigObservers()
                 },
                 initConfigObservers() {
-                    this.observeConfig("externalLootSupportUrl", s.CLIENT_CONFIG_SETTING_PATHS.EXTERNAL_LOOT_SUPPORT_URL_PATH), this.observeConfig("standaloneMythicShop", s.CLIENT_CONFIG_SETTING_PATHS.STANDALONE_MYTHIC_SHOP), this.observeConfig("disableMythicEssenceLootItem", s.CLIENT_CONFIG_SETTING_PATHS.DISABLE_MYTHIC_ESSENCE_LOOT_ITEM), this.observeConfig("enableMythicShoppefront", s.CLIENT_CONFIG_SETTING_PATHS.ENABLE_MYTHIC_SHOPPEFRONT), this.observeConfig("isNewSanctumEnabled", s.CLIENT_CONFIG_SETTING_PATHS.IS_NEW_SANCTUM_ENABLED)
+                    this.observeConfig("externalLootSupportUrl", s.CLIENT_CONFIG_SETTING_PATHS.EXTERNAL_LOOT_SUPPORT_URL_PATH), this.observeConfig("isNewSanctumEnabled", s.CLIENT_CONFIG_SETTING_PATHS.IS_NEW_SANCTUM_ENABLED)
                 },
                 observeConfig(e, t) {
                     this.clientConfigDataBinding.observe(t, this, (t => {
@@ -19597,8 +19577,8 @@
         }, (e, t, n) => {
             const o = n(1).Ember;
             e.exports = o.HTMLBars.template({
-                id: "RAn6xoCe",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-loot\\\\src\\\\app\\\\templates\\\\components\\\\loot-sub-nav.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-loot\\\\src\\\\app\\\\styles\\\\components\\\\loot-sub-nav.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-loot\\\\src\\\\app\\\\components\\\\loot-sub-nav.js\\" "],["text","\\n"],["open-element","lol-uikit-navigation-bar",[]],["static-attr","class","loot-nav"],["static-attr","type","nav-bar-secondary"],["static-attr","selectedindex","0"],["flush-element"],["text","\\n"],["block",["link-to"],[["get",["routes","LOOT"]]],null,6],["text","\\n  "],["open-element","div",[]],["static-attr","class","loot-nav-vertical-rule"],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isNewSanctumEnabled"]]],null,5,3],["text","\\n"],["block",["if"],[["get",["showMythicShoppefront"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","class","loot-nav-item"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","loot_nav_item_mythic_shop"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["link-to"],[["get",["routes","MYTHIC_SHOPPEFRONT"]]],null,0]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","class","loot-nav-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"playUnwatchedMostRecentBannerVideo"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","loot_nav_item_the_sanctum"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["link-to"],[["get",["routes","MOON_SKIN"]]],null,2]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","class","loot-nav-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"playUnwatchedMostRecentBannerVideo"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","loot_nav_item_the_sanctum"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["link-to"],[["get",["routes","SANCTUM"]]],null,4]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-navigation-item",[]],["static-attr","class","loot-nav-item"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","loot_nav_item_crafting"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "LZYAX0Fx",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-loot\\\\src\\\\app\\\\templates\\\\components\\\\loot-sub-nav.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-loot\\\\src\\\\app\\\\styles\\\\components\\\\loot-sub-nav.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-loot\\\\src\\\\app\\\\components\\\\loot-sub-nav.js\\" "],["text","\\n"],["open-element","lol-uikit-navigation-bar",[]],["static-attr","class","loot-nav"],["static-attr","type","nav-bar-secondary"],["static-attr","selectedindex","0"],["flush-element"],["text","\\n"],["block",["link-to"],[["get",["routes","LOOT"]]],null,5],["text","\\n  "],["open-element","div",[]],["static-attr","class","loot-nav-vertical-rule"],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isNewSanctumEnabled"]]],null,4,2],["text","\\n"],["block",["link-to"],[["get",["routes","MYTHIC_SHOPPEFRONT"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-navigation-item",[]],["static-attr","class","loot-nav-item"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","loot_nav_item_mythic_shop"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","class","loot-nav-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"playUnwatchedMostRecentBannerVideo"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","loot_nav_item_the_sanctum"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["link-to"],[["get",["routes","MOON_SKIN"]]],null,1]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-navigation-item",[]],["static-attr","class","loot-nav-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"playUnwatchedMostRecentBannerVideo"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","loot_nav_item_the_sanctum"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["link-to"],[["get",["routes","SANCTUM"]]],null,3]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-navigation-item",[]],["static-attr","class","loot-nav-item"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","loot_nav_item_crafting"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

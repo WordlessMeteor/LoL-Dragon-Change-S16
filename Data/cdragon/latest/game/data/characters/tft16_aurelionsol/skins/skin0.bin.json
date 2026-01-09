@@ -50,16 +50,16 @@
         "type": 5,
         "samplerValues": [
             {
-                "TextureName": "Paralax_Texture",
-                "texturePath": "ASSETS/Characters/TFT16_AurelionSol/Skins/Base/TFT16_AurelionSol_Base_ParalaxTexture_TX_CM.TFT_Set16.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "ASSETS/Characters/TFT16_AurelionSol/Skins/Base/TFT16_AurelionSol_Base_TX_CM.TFT_Set16.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Paralax_Texture",
+                "texturePath": "ASSETS/Characters/TFT16_AurelionSol/Skins/Base/TFT16_AurelionSol_Base_ParalaxTexture_TX_CM.TFT_Set16.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -74,6 +74,56 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "SunDir_Offset",
+                "value": [
+                    0.5,
+                    0.5,
+                    -0.25,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SunDir_Range",
+                "value": [
+                    0.0,
+                    0.3330000042915344,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "HScanRange",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SunDir_Normal_Intensity",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "HScan_Frequency",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "OverallScrollingTexture_Intensity",
                 "value": [
@@ -352,6 +402,18 @@
             }
         ],
         "switches": [
+            {
+                "name": "HISTOGRAMSCAN_MASK",
+                "on": false,
+                "Group": "Scrolling Mask",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SUN_DIRECTION_MASK",
+                "on": false,
+                "Group": "Sun Direction Mask",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "INVERT_FRESNEL",
                 "on": false,

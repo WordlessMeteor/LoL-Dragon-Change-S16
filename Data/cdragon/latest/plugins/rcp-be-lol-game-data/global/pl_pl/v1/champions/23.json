@@ -1082,7 +1082,7 @@
             "cost": "Darmowa",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Tryndamere rozkoszuje się walką, przez co jego obrażenia od ataku są tym większe, im bardziej jest ranny. Może użyć Zewu Krwi, aby zużyć swą Furię do uleczenia się.",
-            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Tryndamere jest żądny krwi i zyskuje <scaleAD>@FlatAD@ pkt. obrażeń od ataku</scaleAD> plus <scaleAD>@ADPerOnePercentMissingHP@ pkt.</scaleAD> za każdy 1% brakującego zdrowia.<br><br><spellActive>Użycie:</spellActive> Tryndamere pochłania <keywordMajor>furię</keywordMajor>, przywracając sobie <healing>@BaseHeal@ pkt. zdrowia plus @HealPerFury@ pkt. za każdy ładunek furii</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Tryndamere ma Pragnienie Krwi, dzięki czemu zyskuje do <scaleAD>@MaximumBonusAD@ pkt. obrażeń od ataku</scaleAD> w zależności od swojego brakującego zdrowia.<br><br><spellActive>Użycie:</spellActive> Tryndamere pochłania swoją <keywordMajor>furię</keywordMajor>, przywracając sobie <healing>@BaseHeal@ pkt. zdrowia plus @HealPerFury@ pkt. za każdy zużyty punkt Furii (maks. @MaximumHeal@)</healing>. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1232,7 +1232,7 @@
             "cost": "Darmowa",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Tryndamere wydaje z siebie obelżywy krzyk, który zmniejsza obrażenia od ataku pobliskich wrogich bohaterów. Wrogowie odwróceni do Tryndamere'a plecami mają też zmniejszoną prędkość ruchu.",
-            "dynamicDescription": "Tryndamere rzuca wyzwiskami w stronę wrogów, zmniejszając obrażenia od ataku bohaterów o @ADReduction*-1@ pkt. na @ReductionDuration@ sek. Wrodzy bohaterowie odwróceni plecami do Tryndamere'a zostają <status>spowolnieni</status> o @SlowPotency*-100@% na tyle samo czasu.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere rzuca wyzwiskami, zmniejszając obrażenia od ataku wrogich bohaterów o @ADReduction*-1@ na @ReductionDuration@ sek. i <status>spowalniając</status> ich o @SlowPotency*-100@%, gdyż przez @SlowDuration@ sek. kulą się przed nim ze strachu.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1408,8 +1408,8 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
-                "coefficient2": 1.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

@@ -334,6 +334,34 @@
             }
         ],
         "mResourceResolver": "Characters/Leona/Skins/Skin45/Resources",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "Spell": "Characters/Leona/Spells/LeonaShieldOfDaybreakAbility/LeonaShieldOfDaybreak",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mAnimationNames": [
+                                "Dance",
+                                "Laugh"
+                            ],
+                            "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "L_WeaponAttach",
+                        "effectKey": "Leona_Q_cas",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Leona/Skins/Skin45/Particles/Leona_Skin45_Death": {

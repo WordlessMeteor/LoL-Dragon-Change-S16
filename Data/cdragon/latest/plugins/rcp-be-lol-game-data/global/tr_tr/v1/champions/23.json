@@ -1082,7 +1082,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Tryndamere savaş ateşiyle coşar ve yaraları arttıkça sahip olduğu saldırı gücü de artar. Kan Hırsı yeteneğini kullanarak Öfke tüketip kendini iyileştirebilir.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Tryndamere'in gözünü kan bürür ve <scaleAD>@FlatAD@</scaleAD> artı eksik olan her %1 Can miktarı başına <scaleAD>@ADPerOnePercentMissingHP@ Saldırı Gücü</scaleAD> kazanır.<br><br><spellActive>Aktif:</spellActive> Tryndamere <keywordMajor>Öfke</keywordMajor> tüketerek <healing>@BaseHeal@ artı tüketilen her Öfke başına @HealPerFury@ Can</healing> yeniler.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Kana susayan Tryndamere eksik canına bağlı olarak en fazla <scaleAD>@MaximumBonusAD@ Saldırı Gücü</scaleAD> kazanır.<br><br><spellActive>Aktif:</spellActive> Tryndamere <keywordMajor>Öfke</keywordMajor> yüklerini tüketerek öfke başına <healing>@BaseHeal@ artı @HealPerFury@ Can (en fazla @MaximumHeal@) yeniler</healing>. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1232,7 +1232,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Tryndamere, küçümseyen bir nara savurarak çevresindeki rakiplerin saldırı gücünü azaltır. Arkası Tryndamere'e dönük rakiplerin hareket hızı da azalır.",
-            "dynamicDescription": "Tryndamere hakaret ederek şampiyonların saldırı gücünü @ReductionDuration@ saniyeliğine @ADReduction*-1@ azaltır. Sırtı Tryndamere'e dönük rakip şampiyonlar aynı süre boyunca %@SlowPotency*-100@ <status>yavaşlar</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere hakaretler savurarak şampiyonların saldırı gücünü @ReductionDuration@ saniyeliğine @ADReduction*-1@ azaltır ve ondan korkup kaçan rakipleri @SlowDuration@ saniyeliğine %@SlowPotency*-100@ <status>yavaşlatır</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1408,8 +1408,8 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
-                "coefficient2": 1.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

@@ -11931,7 +11931,7 @@
                     },
                     {
                         "name": "BonusStardustPerTwoStar",
-                        "value": 0.6
+                        "value": 0.33
                     }
                 ],
                 "min_units": 1,
@@ -14008,7 +14008,7 @@
         "trait_id": "TFT16_Soulbound",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Soulbound.TFT_Set16.png",
-        "tooltip_text": "Lucian ve Senna birlikte savaşır. Biri yetenek kullandığında yer değiştirirler. Her şampiyonun kendine has bir yeteneği vardır. <br><br>En güçlü Ruhdaş ikilin takımına ilaveler sağlar. Senna çatışmada değilken tüm dost birimler %@SennaDR*100@ Hasar Azaltma kazanır. Lucian çatışmada değilken tüm dost birimler %@LucianDA*100@ Hasar Artışı kazanır.",
+        "tooltip_text": "tft_trait_description_TFT16_Soulbound",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -14188,26 +14188,18 @@
         "trait_id": "TFT16_Teamup_SingedTeemo",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
-        "tooltip_text": "Teemo her @FireInterval@ saniyede bir Singed'in mevcut hedefine doğru bir dart atışı yaparak %@TeemoEffectiveness*100@ Hasar verir.<br><br>Teemo'nun zehirlediği hedefler katledilince Singed hareket hızı ve %@SingedAP@ Yetenek Gücü kazanır.",
+        "tooltip_text": "tft_trait_description_TFT16_Teamup_SingedTeemo",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "FireInterval",
-                        "value": 3.0
+                        "name": "SingedAPGain",
+                        "value": 2.0
                     },
                     {
-                        "name": "SingedAP",
-                        "value": 40.0
-                    },
-                    {
-                        "name": "SingedBonusMovespeed",
-                        "value": 50.0
-                    },
-                    {
-                        "name": "TeemoEffectiveness",
-                        "value": 0.5
+                        "name": "TeemoDamageReq",
+                        "value": 100.0
                     }
                 ],
                 "min_units": 2,
@@ -15902,7 +15894,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 2.0
+                        "value": 1.75
                     }
                 ],
                 "min_units": 2,
@@ -15914,7 +15906,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 3.5
+                        "value": 3.0
                     }
                 ],
                 "min_units": 3,
@@ -15926,7 +15918,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 6.0
+                        "value": 5.0
                     }
                 ],
                 "min_units": 4,

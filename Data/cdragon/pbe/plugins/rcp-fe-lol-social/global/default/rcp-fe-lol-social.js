@@ -18980,11 +18980,11 @@
                 },
                 _isFriendRemotePlatform(e) {
                     const t = this.get("socialSessionService.me");
-                    return t?.platformId !== e?.platformId
+                    return !(!e?.platformId || !t?.platformId || t.platformId === e.platformId)
                 },
                 _isFriendRemoteProduct(e) {
                     const t = this.get("socialSessionService.me");
-                    return t?.product !== e?.product
+                    return !(!e?.product || !t?.product || t.product === e.product)
                 },
                 isFriendRemote(e) {
                     return this._isFriendRemoteProduct(e) || this._isFriendRemotePlatform(e)

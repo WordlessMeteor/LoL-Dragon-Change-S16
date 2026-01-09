@@ -24632,22 +24632,42 @@
                 sortedIncidents: i.Ember.computed.alias("statusTicker.sortedIncidentsWithShutdown"),
                 statusTickerUrl: null,
                 loadStatusTickerContent: !0,
+                offlineOrShuttingDown: i.Ember.computed("statusTicker.highestSeverity", (function() {
+                    const e = this.get("statusTicker"),
+                        t = e.get("highestSeverity");
+                    return e.isError(t) || e.isShuttingDown(t)
+                })),
                 attributeBindings: ["tabindex"],
                 tabindex: -1,
                 soundChannel: (0, i.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui"),
-                highestSeverity: i.Ember.computed.alias("statusTicker.highestSeverity"),
-                offline: i.Ember.computed("highestSeverity", (function() {
-                    const e = this.get("statusTicker").isError(this.get("highestSeverity"));
-                    return e && this.showStatusFlyout(), e
-                })),
                 _hasShownTickerForShutdown: !1,
-                shuttingDown: i.Ember.computed("highestSeverity", (function() {
-                    const e = this.get("statusTicker").isShuttingDown(this.get("highestSeverity"));
-                    return e && !this._hasShownTickerForShutdown && (this.showStatusFlyout(), this._hasShownTickerForShutdown = !0), e
+                highestSeverityObserver: i.Ember.observer("statusTicker.highestSeverity", (function() {
+                    const e = this.get("statusTicker"),
+                        t = e.get("highestSeverity"),
+                        n = e.isShuttingDown(t),
+                        a = e.isError(t);
+                    if (n || a)
+                        if (i.lockAndLoadPlugin.getLockState()) i.lockAndLoadPlugin.addEventListener("unlock", (() => {
+                            this.runTask((() => {
+                                if (!o.isActive()) {
+                                    if (n) {
+                                        if (this._hasShownTickerForShutdown) return;
+                                        this._hasShownTickerForShutdown = !0
+                                    }
+                                    this.showStatusFlyout()
+                                }
+                            }), 2e3)
+                        }));
+                        else if (!o.isActive()) {
+                        if (n) {
+                            if (this._hasShownTickerForShutdown) return;
+                            this._hasShownTickerForShutdown = !0
+                        }
+                        this.showStatusFlyout()
+                    }
                 })),
-                offlineOrShuttingDown: i.Ember.computed.or("offline", "shuttingDown"),
                 __observeShowStatusTicker__: i.Ember.observer("statusTicker.showStatusTicker", (function() {
-                    this.get("statusTickerService.showStatusTicker") && (this.showStatusFlyout(), this.set("statusTickerService.showStatusTicker", !1))
+                    this.get("statusTicker.showStatusTicker") && (this.showStatusFlyout(), this.set("statusTicker.showStatusTicker", !1))
                 })),
                 didInsertElement: function() {
                     this._super(...arguments), this.element.querySelector(".ticker-toggle").addEventListener("willHide", (() => {
@@ -24663,7 +24683,8 @@
                     this.set("shouldShowFlyout", !0), this.sendFlyoutManagerShowEvent()
                 },
                 sendFlyoutManagerShowEvent: function() {
-                    this.element && o.sendEvent(this.element.querySelector(".ticker-toggle"), "show")
+                    const e = this.element.querySelector(".ticker-toggle");
+                    this.element && e && o.sendEvent(e, "show")
                 },
                 assignStatusFlyout: function() {
                     const e = this.element.querySelector(".ticker-toggle"),
@@ -24690,7 +24711,7 @@
                         domNode: t
                     })
                 },
-                __observeShowFlyout__antipattern: i.Ember.observer("sortedIncidentsWithShutdown", (function() {
+                __observeShowFlyout__antipattern: i.Ember.observer("sortedIncidents", (function() {
                     o.isActive() || (this.triggerContentRerender(), this.assignStatusFlyout())
                 })),
                 triggerContentRerender() {

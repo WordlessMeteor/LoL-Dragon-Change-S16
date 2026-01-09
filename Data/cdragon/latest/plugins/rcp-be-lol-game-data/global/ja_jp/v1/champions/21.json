@@ -260,8 +260,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21010.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21010.png",
                     "colors": [
-                        "#AAFFFF",
-                        "#FF55FF"
+                        "#6ABBEE",
+                        "#6ABBEE"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -284,8 +284,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21011.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21011.png",
                     "colors": [
-                        "#592AB5",
-                        "#6FCAD4"
+                        "#9C68D7",
+                        "#9C68D7"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -308,8 +308,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21012.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21012.png",
                     "colors": [
-                        "#BC7E11",
-                        "#2298CA"
+                        "#DF9117",
+                        "#DF9117"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -336,8 +336,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21013.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21013.png",
                     "colors": [
-                        "#BDDF5D",
-                        "#CA37BE"
+                        "#B6E084",
+                        "#B6E084"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -360,8 +360,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21014.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21014.png",
                     "colors": [
-                        "#B51717",
-                        "#222DC8"
+                        "#D33528",
+                        "#D33528"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -931,8 +931,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21039.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21039.png",
                     "colors": [
-                        "#2B7CFF",
-                        "#FF930E"
+                        "#F6A630",
+                        "#1C61B4"
                     ],
                     "descriptions": [
                         {
@@ -1072,8 +1072,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/21/21043.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/21/21043.png",
                     "colors": [
-                        "#DF9117",
-                        "#DF9117"
+                        "#FFEE59",
+                        "#FFEE59"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -1601,7 +1601,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定した敵に発砲しダメージを与える。対象の背後に敵がいた場合、跳弾して後ろの敵にもダメージを与える。弾丸はどちらも「ラブタップ」の効果が適用される。",
-            "dynamicDescription": "跳弾する弾丸を発砲して、対象とその背後にいる敵に<physicalDamage>@TotalDamageTooltip@の物理ダメージ</physicalDamage>を与える。<br><br>2体目への跳弾はクリティカル判定を持ち、1体目の敵を倒した場合は、必ずクリティカルになる。 @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "跳弾する弾丸を発砲して、対象とその背後にいる敵に<physicalDamage>@TotalDamageTooltip@の物理ダメージ</physicalDamage>を与える。<br><br>2体目への跳弾はクリティカル判定を持ち、<physicalDamage>@TotalDamageCrit@の物理ダメージ</physicalDamage>を与える。1体目の敵を倒した場合は、必ずクリティカルになる。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -2051,7 +2051,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "前方の扇状範囲に大量の銃弾を放ち、範囲内にいる敵に大量のダメージを与える。波状に発射される弾丸の各ウェーブ毎にクリティカル判定を持つ。",
-            "dynamicDescription": "@TotalChannelDuration@秒間かけて大量の銃弾を@TotalWaves@回放ち、1回ごとに<physicalDamage>@PhysicalDamagePerWave@の物理ダメージ</physicalDamage>を与える(合計<physicalDamage>@TotalPhysicalDamage@の物理ダメージ</physicalDamage>)。<br><br>1回ごとにクリティカル判定を持ち、クリティカルが発生すると%i:scaleCrit% <physicalDamage>@PhysicalCritPerWave@の物理ダメージ</physicalDamage>を与える(合計%i:scaleCrit% <physicalDamage>@TotalPhysicalCritDamage@の物理ダメージ</physicalDamage>)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@BaseChannelDuration@秒間かけて大量の銃弾を@BaseWaves@回放ち、1回ごとに<physicalDamage>@PhysicalDamagePerWave@の物理ダメージ</physicalDamage>を与える(合計<physicalDamage>@TotalPhysicalDamage@の物理ダメージ</physicalDamage>)。<br><br>1回ごとにクリティカル判定を持ち、クリティカル時は%i:scaleCrit%<physicalDamage>@CritDamagePerWave@の物理ダメージ</physicalDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

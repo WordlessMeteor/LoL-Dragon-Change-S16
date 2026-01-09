@@ -58660,153 +58660,6 @@
         "objectPath": "Shaders/SkinnedMesh/ScrollingBloomColor",
         "__type": "CustomShaderDef"
     },
-    "Shaders/SkinnedMesh/Pulsefire_Ezrael": {
-        "ShadingModel": "{baebc346}",
-        "parameters": [
-            {
-                "name": "Grad_Blend",
-                "data": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "Grad_Blend",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "Tint",
-                "data": [
-                    0.0,
-                    0.0,
-                    1.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "Tint",
-                        "fields": 15,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "PulsingRhythm",
-                "data": [
-                    8.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "PulsingRhythm",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "PulsingINTENSITY",
-                "data": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "PulsingINTENSITY",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "ScrollSpeed",
-                "data": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ScrollSpeed",
-                        "fields": 3,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "Bloom",
-                "data": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "Bloom",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "BloomColor",
-                "data": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "BloomColor",
-                        "fields": 15,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            }
-        ],
-        "textures": [
-            {
-                "name": "Diffuse_Texture",
-                "defaultTexturePath": "ASSETS/Shared/Materials/Atlast_Test.tex",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "Grad_Texture",
-                "defaultTexturePath": "ASSETS/Shared/Materials/Atlast_Test.tex",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "Mask_Texture",
-                "defaultTexturePath": "ASSETS/Shared/Materials/Atlast_Test.tex",
-                "__type": "ShaderTexture"
-            }
-        ],
-        "featureDefines": {
-            "FEATURE_BLOOM": "1"
-        },
-        "featureMask": 1,
-        "objectPath": "Shaders/SkinnedMesh/Pulsefire_Ezrael",
-        "__type": "CustomShaderDef"
-    },
     "Shaders/SkinnedMesh/Scrolling_ColorDodge_Masked": {
         "ShadingModel": "{baebc346}",
         "parameters": [
@@ -64159,6 +64012,34 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Pulse_Speed_Min",
+                "logicalParameters": [
+                    {
+                        "name": "Pulse_Speed_Min",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Pulse_Strength",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Pulse_Strength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Distortion_Diffuse_Tex_B_Control",
                 "logicalParameters": [
                     {
@@ -64343,6 +64224,10 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "PULSE_BLEND_ON",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
                 "__type": "ShaderStaticSwitch"
             },
@@ -64360,11 +64245,15 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
-                "name": "BLENDCOLOR_ON",
+                "name": "ALPHABLEND_BLENDMAT",
                 "__type": "ShaderStaticSwitch"
             },
             {
                 "name": "ALPHABLEND_MAIN",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "BLENDCOLOR_ON",
                 "__type": "ShaderStaticSwitch"
             },
             {

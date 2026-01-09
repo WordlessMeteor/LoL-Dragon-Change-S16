@@ -11931,7 +11931,7 @@
                     },
                     {
                         "name": "BonusStardustPerTwoStar",
-                        "value": 0.6
+                        "value": 0.33
                     }
                 ],
                 "min_units": 1,
@@ -14008,7 +14008,7 @@
         "trait_id": "TFT16_Soulbound",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Soulbound.TFT_Set16.png",
-        "tooltip_text": "【卢锡安和赛娜】并肩作战，每一方施放技能后都会置换为另一方。他们每人都有一个独立的技能。<br><br>你最强大的那对【系魂圣枪】会为你的队伍提供额外加成。当【赛娜】退场后，所有友军获得@SennaDR*100@%伤害减免。当【卢锡安】退场后，所有友军获得@LucianDA*100@%伤害增幅。",
+        "tooltip_text": "【卢锡安和赛娜】并肩作战，每一方施放技能后都会置换为另一方。他们每人都有一个独立的技能。<br><br>你最强大的那对【系魂圣枪】会在存活时为你的队伍提供额外加成。当【赛娜】退场后，所有友军获得@SennaDR*100@%伤害减免。当【卢锡安】退场后，所有友军获得@LucianDA*100@%伤害增幅。",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -14188,26 +14188,18 @@
         "trait_id": "TFT16_Teamup_SingedTeemo",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
-        "tooltip_text": "每@FireInterval@秒，【提莫】向【辛吉德】的当前目标发射一个吹箭，造成@TeemoEffectiveness*100@%伤害。<br><br>当受到【提莫】中毒效果影响的敌人阵亡时，【辛吉德】获得移动速度和@SingedAP@%法术加成。",
+        "tooltip_text": "【辛吉德】的伤害会刷新【提莫】的中毒效果，并且【提莫】每造成@TeemoDamageReq@魔法伤害，就会为你最强大的那个【辛吉德】提供@SingedAPGain@%法术加成。",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "FireInterval",
-                        "value": 3.0
+                        "name": "SingedAPGain",
+                        "value": 2.0
                     },
                     {
-                        "name": "SingedAP",
-                        "value": 40.0
-                    },
-                    {
-                        "name": "SingedBonusMovespeed",
-                        "value": 50.0
-                    },
-                    {
-                        "name": "TeemoEffectiveness",
-                        "value": 0.5
+                        "name": "TeemoDamageReq",
+                        "value": 100.0
                     }
                 ],
                 "min_units": 2,
@@ -15902,7 +15894,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 2.0
+                        "value": 1.75
                     }
                 ],
                 "min_units": 2,
@@ -15914,7 +15906,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 3.5
+                        "value": 3.0
                     }
                 ],
                 "min_units": 3,
@@ -15926,7 +15918,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 6.0
+                        "value": 5.0
                     }
                 ],
                 "min_units": 4,

@@ -1082,7 +1082,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Tryndamere se hrănește cu energia luptei și, cu cât este mai grav rănit, cu atât daunele sale din atac cresc. Poate folosi ''Sânge învolburat'' pentru a-și potoli furia și a se vindeca.",
-            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> Tryndamere devine însetat de sânge, primind <scaleAD>@FlatAD@ daune din atac</scaleAD> plus <scaleAD>@ADPerOnePercentMissingHP@</scaleAD> pentru fiecare 1% din viața lipsă.<br><br><spellActive>Activă:</spellActive> Tryndamere își consumă <keywordMajor>furia</keywordMajor> și își reface <healing>@BaseHeal@ plus @HealPerFury@ viață pentru fiecare punct de furie</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> Tryndamere devine însetat de sânge, primind până la <scaleAD>@MaximumBonusAD@ daune din atac</scaleAD> în funcție de viața lipsă.<br><br><spellActive>Activă:</spellActive> Tryndamere își consumă <keywordMajor>furia</keywordMajor> și își reface <healing>@BaseHeal@ plus @HealPerFury@ viață pentru fiecare punct de furie (maximum: @MaximumHeal@)</healing>. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1232,7 +1232,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Tryndamere scoate un răget asurzitor, reducând daunele din atac ale campionilor din preajmă. Inamicilor care stau cu spatele la Tryndamere le este redusă și viteza de mișcare.",
-            "dynamicDescription": "Tryndamere insultă campionii inamici, reducându-le daunele din atac cu @ADReduction*-1@ timp de @ReductionDuration@ secunde. Campionii inamici cu spatele la Tryndamere sunt <status>încetiniți</status> cu @SlowPotency*-100@% pentru aceeași durată.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere insultă campionii inamici, reducându-le daunele din atac cu @ADReduction*-1@ timp de @ReductionDuration@ secunde și <status>încetinindu-i</status> cu @SlowPotency*-100@% timp de @SlowDuration@ secunde dacă se află cu spatele la el.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1382,7 +1382,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Tryndamere se îndreaptă către o țintă, provocând daune tuturor inamicilor din calea sa.",
-            "dynamicDescription": "Tryndamere se rotește prin inamici, provocându-le <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> și generând <keywordMajor>@NonChampFuryGain@ furie</keywordMajor> per inamic lovit. Valoarea crește la <keywordMajor>@ChampFuryGain@ furie</keywordMajor> împotriva campionilor inamici.<br><br>Timpul de reactivare al acestei abilități este redus cu @NonChampCDRefund@ secundă ori de câte ori Tryndamere execută o lovitură critică și cu @ChampCDRefund@ secunde când lovește critic un campion.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere se rotește prin inamici, provocându-le <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> și generând <keywordMajor>@NonChampFuryGain@ furie</keywordMajor> per inamic lovit. Valoarea crește la <keywordMajor>@ChampFuryGain@ furie</keywordMajor> împotriva campionilor inamici.<br><br>Timpul de reactivare al acestei abilități este redus cu @NonChampCDRefund@ secunde ori de câte ori Tryndamere execută o lovitură critică și cu @ChampCDRefund@ secunde când lovește critic un campion.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1408,8 +1408,8 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
-                "coefficient2": 1.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

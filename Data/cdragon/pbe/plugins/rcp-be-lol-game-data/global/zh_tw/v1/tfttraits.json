@@ -11931,7 +11931,7 @@
                     },
                     {
                         "name": "BonusStardustPerTwoStar",
-                        "value": 0.6
+                        "value": 0.33
                     }
                 ],
                 "min_units": 1,
@@ -14008,7 +14008,7 @@
         "trait_id": "TFT16_Soulbound",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Soulbound.TFT_Set16.png",
-        "tooltip_text": "路西恩跟姍娜並肩作戰，施放技能時彼此互換位置。每名英雄都具備獨特技能。<br><br>我方最強大的繫魂使者雙人組賦予我方隊伍增益。姍娜上場時，所有友軍獲得@SennaDR*100@%傷害減免。路西恩上場時，所有友軍獲得@LucianDA*100@%傷害增幅。",
+        "tooltip_text": "tft_trait_description_TFT16_Soulbound",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -14188,26 +14188,18 @@
         "trait_id": "TFT16_Teamup_SingedTeemo",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
-        "tooltip_text": "每@FireInterval@秒，提摩對辛吉德當前目標發射吹箭，造成@TeemoEffectiveness*100@%傷害。<br><br>中了提摩的劇毒的敵軍死亡時，辛吉德增加跑速和@SingedAP@%魔攻。",
+        "tooltip_text": "tft_trait_description_TFT16_Teamup_SingedTeemo",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "FireInterval",
-                        "value": 3.0
+                        "name": "SingedAPGain",
+                        "value": 2.0
                     },
                     {
-                        "name": "SingedAP",
-                        "value": 40.0
-                    },
-                    {
-                        "name": "SingedBonusMovespeed",
-                        "value": 50.0
-                    },
-                    {
-                        "name": "TeemoEffectiveness",
-                        "value": 0.5
+                        "name": "TeemoDamageReq",
+                        "value": 100.0
                     }
                 ],
                 "min_units": 2,
@@ -15902,7 +15894,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 2.0
+                        "value": 1.75
                     }
                 ],
                 "min_units": 2,
@@ -15914,7 +15906,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 3.5
+                        "value": 3.0
                     }
                 ],
                 "min_units": 3,
@@ -15926,7 +15918,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 6.0
+                        "value": 5.0
                     }
                 ],
                 "min_units": 4,

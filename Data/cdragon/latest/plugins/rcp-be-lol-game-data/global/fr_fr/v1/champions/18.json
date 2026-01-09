@@ -1422,8 +1422,8 @@
                     "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/18/18063.png",
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/18/18063.png",
                     "colors": [
-                        "#DF9117",
-                        "#DF9117"
+                        "#FFEE59",
+                        "#FFEE59"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -1705,8 +1705,8 @@
     "passive": {
         "name": "Tir de précision",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_Passive.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/0018/ability_0018_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/0018/ability_0018_P1.jpg",
         "description": "Augmente la portée d'attaque de Tristana quand elle gagne un niveau."
     },
     "spells": [
@@ -2019,7 +2019,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Lorsque Tristana élimine une unité, ses projectiles explosent et infligent des dégâts aux ennemis proches. Peut être activé pour placer sur une cible ennemie une bombe qui explose après un court moment, infligeant des dégâts aux unités proches.",
-            "dynamicDescription": "<spellPassive>Passive : </spellPassive>les attaques de Tristana qui tuent un ennemi infligent <magicDamage>@PassiveDamage@ pts de dégâts magiques</magicDamage> aux ennemis proches.<br><br><spellActive>Active :</spellActive> Tristana colle une bombe sur un ennemi ou une tourelle. Au bout de @ActiveDuration@ sec, la bombe explose, infligeant <physicalDamage>@ActiveDamage@ pts de dégâts physiques</physicalDamage> aux ennemis proches. Les dégâts sont augmentés de @CritChanceAmp*100@% des chances de coup critique et de @ActivePerStackAmp*100@% chaque fois que Tristana frappe la cible avec une attaque ou une compétence (max : 4 effets cumulés).<br><br>À @ActiveMaxStacks@ effets cumulés, la bombe explose immédiatement (max : <physicalDamage>@ActiveMaxDamage@ pts de dégâts physiques</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive : </spellPassive>les attaques de Tristana qui tuent des ennemis infligent <magicDamage>@PassiveDamage@ pts de dégâts magiques</magicDamage> aux ennemis proches.<br><br><spellActive>Active :</spellActive> Tristana colle une bombe sur un ennemi ou une tourelle. Au bout de @ActiveDuration@ sec, la bombe explose, infligeant <physicalDamage>@ActiveDamage@ pts de dégâts physiques</physicalDamage> aux ennemis proches. Les dégâts sont augmentés de @ActivePerStackAmp*100@% chaque fois que Tristana frappe la cible avec une attaque ou une compétence (max : 4 effets cumulés).<br><br>À @ActiveMaxStacks@ effets cumulés, la bombe explose immédiatement (max : <physicalDamage>@ActiveMaxDamage@ pts de dégâts physiques</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

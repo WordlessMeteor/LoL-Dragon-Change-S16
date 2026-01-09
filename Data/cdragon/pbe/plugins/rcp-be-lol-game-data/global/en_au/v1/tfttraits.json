@@ -11931,7 +11931,7 @@
                     },
                     {
                         "name": "BonusStardustPerTwoStar",
-                        "value": 0.6
+                        "value": 0.33
                     }
                 ],
                 "min_units": 1,
@@ -14008,7 +14008,7 @@
         "trait_id": "TFT16_Soulbound",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Soulbound.TFT_Set16.png",
-        "tooltip_text": "Lucian and Senna fight together, swapping when either casts. Each champion has a unique ability.<br><br>Your strongest Soulbound pair grants bonuses to your team. While Senna is out, all allies gain @SennaDR*100@% Damage Reduction. While Lucian is out, all allies gain @LucianDA*100@% Damage Amp.",
+        "tooltip_text": "Lucian and Senna fight together, swapping when either casts. Each champion has a unique ability.<br><br>Your strongest Soulbound pair grants bonuses to your team while they survive. While Senna is out, all allies gain @SennaDR*100@% Damage Reduction. While Lucian is out, all allies gain @LucianDA*100@% Damage Amp.",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -14188,26 +14188,18 @@
         "trait_id": "TFT16_Teamup_SingedTeemo",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
-        "tooltip_text": "Every @FireInterval@ seconds, Teemo fires a dart at Singed's current target, dealing @TeemoEffectiveness*100@% damage.<br><br>When an enemy poisoned by Teemo dies, Singed gains Move Speed and @SingedAP@% Ability Power.",
+        "tooltip_text": "Singed's damage refreshes Teemo's poisons, and every @TeemoDamageReq@ magic damage Teemo deals grants your strongest Singed @SingedAPGain@% Ability Power.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "FireInterval",
-                        "value": 3.0
+                        "name": "SingedAPGain",
+                        "value": 2.0
                     },
                     {
-                        "name": "SingedAP",
-                        "value": 40.0
-                    },
-                    {
-                        "name": "SingedBonusMovespeed",
-                        "value": 50.0
-                    },
-                    {
-                        "name": "TeemoEffectiveness",
-                        "value": 0.5
+                        "name": "TeemoDamageReq",
+                        "value": 100.0
                     }
                 ],
                 "min_units": 2,
@@ -15902,7 +15894,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 2.0
+                        "value": 1.75
                     }
                 ],
                 "min_units": 2,
@@ -15914,7 +15906,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 3.5
+                        "value": 3.0
                     }
                 ],
                 "min_units": 3,
@@ -15926,7 +15918,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 6.0
+                        "value": 5.0
                     }
                 ],
                 "min_units": 4,

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "15.24.1",
+    "version": "16.1.1",
     "data": {
         "Nilah": {
             "id": "Nilah",
@@ -77,7 +77,7 @@
                 "critperlevel": 0,
                 "attackdamage": 60,
                 "attackdamageperlevel": 2,
-                "attackspeedperlevel": 2.25,
+                "attackspeedperlevel": 2,
                 "attackspeed": 0.697
             },
             "spells": [
@@ -85,15 +85,13 @@
                     "id": "NilahQ",
                     "name": "游刃万变",
                     "description": "随着她鞭刃的一次抽击，尼菈对她所选方向中一条直线上命中的任何敌人们造成伤害。这个行动会在短时间里延伸她的攻击距离。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>尼菈获得{{ critarmorpen }}护甲穿透，并且她对英雄进行的攻击会回复自身<healing>{{ critlifesteal }}实际伤害值的生命值</healing>。来自这个效果的过量治疗将转化为一个持续{{ shieldduration }}秒的<shield>护盾</shield>。<br /><br /><spellActive>主动：</spellActive>尼菈甩出她的鞭刃，造成<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>，可通过她的暴击几率提升。如果命中了一个敌方单位或建筑物，尼菈就会获得125攻击距离和<attackSpeed>{{ bonusattackspeedcalc }}%攻击速度</attackSpeed>，并且她的攻击会在一个锥形范围内造成<physicalDamage>{{ attacktotaldamagetooltip }}物理伤害</physicalDamage>，这些效果持续{{ buffduration }}秒。<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>尼菈获得{{ critarmorpen }}护甲穿透，并且她对英雄进行的攻击会回复自身<healing>{{ critlifesteal }}造成伤害值的生命值</healing>。来自这个效果的过量治疗将转化为一个持续{{ shieldduration }}秒的<shield>护盾</shield>。<br /><br /><spellActive>主动：</spellActive>尼菈甩出她的鞭刃，造成 <physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>。如果命中了一个敌方单位或建筑物，尼菈就会获得125攻击距离和<attackSpeed>{{ bonusattackspeedcalc }}%攻击速度</attackSpeed>，并且她的攻击会命中一个锥形范围，这些效果持续{{ buffduration }}秒。<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "伤害",
-                            "伤害：<physicalDamage>@TargetDamage@</physicalDamage> = <scaleLevel>@PercentAD*100@% (%i:scaleAD%)</scaleLevel>"
+                            "伤害"
                         ],
                         "effect": [
-                            "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ qadratio*100.000000 }}% -> {{ qadrationl*100.000000 }}%"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -510,17 +508,17 @@
                     "id": "NilahR",
                     "name": "神恩激荡",
                     "description": "尼菈快乐洋溢地挥舞她的鞭刃，对她周围的敌人们造成伤害，然后用她的武器将他们拉得更加靠近。",
-                    "tooltip": "尼菈挥舞她的鞭刃，在1秒里持续造成<physicalDamage>{{ damagepertickcalctooltip }}物理伤害</physicalDamage>，然后用一次<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>的爆发来完成挥舞，并将附近的敌人们<status>拉拽</status>向她。<br /><br />尼菈对她自身和附近的友方英雄们进行治疗，治疗量相当于<healing>她对敌方英雄们造成的{{ champhealingpercent }} (+{{ spell.nilahq:critlifesteal }} 游刃万变)实际伤害值(非英雄单位为{{ otherhealingpercent*100 }}%)</healing>，并将任何过量治疗转化为一个持续{{ duration }}秒的<shield>护盾</shield>。<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "尼菈挥舞她的鞭刃，在1秒里持续造成<physicalDamage>{{ damagepertickcalctooltip }}物理伤害</physicalDamage>，然后用一次<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>的爆发来完成挥舞，并将附近的敌人们<status>拉拽</status>向她。<br /><br />【神恩激荡】对尼菈和附近的友方英雄们进行治疗，治疗量相当于<healing>她对敌方英雄们的{{ champhealingpercent }} (+{{ spell.nilahq:critlifesteal }} 游刃万变)造成伤害值</healing>，并将任何过量治疗转化为一个持续{{ duration }}秒的<shield>护盾</shield>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
                             "伤害",
-                            "每段伤害"
+                            "持续伤害"
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ damagebase }} -> {{ damagebaseNL }}",
-                            "{{ damagepertick }} -> {{ damagepertickNL }}"
+                            "{{ damagepertick*4.000000 }} -> {{ damageperticknl*4.000000 }}"
                         ]
                     },
                     "maxrank": 3,
@@ -531,11 +529,11 @@
                     ],
                     "cooldownBurn": "110/95/80",
                     "cost": [
-                        80,
-                        80,
-                        80
+                        100,
+                        100,
+                        100
                     ],
-                    "costBurn": "80",
+                    "costBurn": "100",
                     "datavalues": {},
                     "effect": [
                         null,

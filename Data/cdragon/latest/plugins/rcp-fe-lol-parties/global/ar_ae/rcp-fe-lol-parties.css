@@ -2920,7 +2920,6 @@ lol-uikit-content-block.custom-games-error ul li {
     border-bottom: thin solid #3c3c41;
     flex: 1 0 0;
     overflow-y: auto;
-    padding-top: 8px;
     transition: opacity .15s ease-in-out
 }
 
@@ -6828,6 +6827,16 @@ lol-uikit-content-block.custom-games-error div.custom-games-minor-restriction-de
     left: -110px
 }
 
+.tft-footer-notifications-container {
+    position: relative
+}
+
+.tft-footer-notifications-container .v2-footer-notifications {
+    bottom: 70px;
+    height: auto;
+    top: auto
+}
+
 .tft-player-card:hover:not(.tft-player-card-self):not(.tft-player-invited) .inner-border-1 {
     border: thin solid transparent;
     border-image: linear-gradient(0deg, #c89b3c, #f0e6d2) 1
@@ -7697,6 +7706,109 @@ lol-uikit-content-block.custom-games-error div.custom-games-minor-restriction-de
     width: 32px
 }
 
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span {
+    font-family: var(--font-display)
+}
+
+.autofill-notification-component .autofill-warning,
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] {
+    font-family: var(--font-body)
+}
+
+.autofill-notification-component .autofill-warning,
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large],
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span {
+    text-transform: uppercase
+}
+
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span:lang(el-gr),
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span:lang(ja-jp),
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span:lang(ko-kr),
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span:lang(th-th),
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span:lang(tr-tr),
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span:lang(zh-tw) {
+    text-transform: none
+}
+
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.autofill-notification-component .autofill-warning,
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.autofill-notification-component .autofill-warning:lang(ja-jp),
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large]:lang(ja-jp) {
+    font-size: 13px
+}
+
+.autofill-notification-component .autofill-warning:lang(ar-ae),
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large]:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.autofill-notification-component {
+    position: relative
+}
+
+.autofill-notification-component .autofill-warning {
+    align-items: center;
+    background-color: #1e2328;
+    border: 1px solid hsla(45, 10%, 59%, .1);
+    border-radius: 16px;
+    box-sizing: border-box;
+    color: #cdfafa;
+    direction: rtl;
+    display: flex;
+    flex-direction: row;
+    max-width: 300px;
+    overflow: hidden;
+    padding: 4px 8px
+}
+
+.autofill-notification-component .autofill-emblem-icon {
+    height: 17px;
+    padding-left: 0;
+    padding-right: 5px;
+    width: 19px
+}
+
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] {
+    min-width: 400px;
+    text-align: right
+}
+
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] div+div {
+    margin-top: 20px
+}
+
+lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span {
+    display: block;
+    margin-bottom: 5px
+}
+
 .v2-banner-component .lobby-banner .player-name-container .player-name {
     font-family: var(--font-display);
     -webkit-font-feature-settings: "kern" 1;
@@ -8054,9 +8166,15 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 
 .v2-footer-notifications,
 .v2-footer-notifications .parties-footer-error,
+.v2-footer-notifications .parties-footer-error-scrollable a:link,
+.v2-footer-notifications .parties-footer-error-scrollable a:visited,
 .v2-footer-notifications .parties-footer-warning,
+.v2-footer-notifications .parties-footer-warning-scrollable a:link,
+.v2-footer-notifications .parties-footer-warning-scrollable a:visited,
 .v2-footer-notifications .parties-restrictions-quick-play,
 .v2-footer-notifications .parties-restrictions-warning-error,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:link,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:visited,
 lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] {
     font-family: var(--font-body);
     -webkit-font-feature-settings: "kern" 1;
@@ -8106,12 +8224,105 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large]:lang(ar-ae) {
     letter-spacing: 0
 }
 
+.v2-footer-notifications .parties-footer-error-scrollable a:link,
+.v2-footer-notifications .parties-footer-error-scrollable a:visited,
+.v2-footer-notifications .parties-footer-warning-scrollable a:link,
+.v2-footer-notifications .parties-footer-warning-scrollable a:visited,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:link,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:visited {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    outline: 0;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.v2-footer-notifications .parties-footer-error-scrollable a:link:lang(ja-jp),
+.v2-footer-notifications .parties-footer-error-scrollable a:visited:lang(ja-jp),
+.v2-footer-notifications .parties-footer-warning-scrollable a:link:lang(ja-jp),
+.v2-footer-notifications .parties-footer-warning-scrollable a:visited:lang(ja-jp),
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:link:lang(ja-jp),
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:visited:lang(ja-jp) {
+    font-size: 13px
+}
+
+.v2-footer-notifications .parties-footer-error-scrollable a:link:lang(ar-ae),
+.v2-footer-notifications .parties-footer-error-scrollable a:visited:lang(ar-ae),
+.v2-footer-notifications .parties-footer-warning-scrollable a:link:lang(ar-ae),
+.v2-footer-notifications .parties-footer-warning-scrollable a:visited:lang(ar-ae),
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:link:lang(ar-ae),
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:visited:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.v2-footer-notifications .parties-footer-error-scrollable a:link,
+.v2-footer-notifications .parties-footer-error-scrollable a:visited,
+.v2-footer-notifications .parties-footer-warning-scrollable a:link,
+.v2-footer-notifications .parties-footer-warning-scrollable a:visited,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:link,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:visited {
+    color: #0596aa;
+    text-decoration: none
+}
+
+.v2-footer-notifications .parties-footer-error-scrollable a:link.hover,
+.v2-footer-notifications .parties-footer-error-scrollable a:link:hover,
+.v2-footer-notifications .parties-footer-error-scrollable a:visited.hover,
+.v2-footer-notifications .parties-footer-error-scrollable a:visited:hover,
+.v2-footer-notifications .parties-footer-warning-scrollable a:link.hover,
+.v2-footer-notifications .parties-footer-warning-scrollable a:link:hover,
+.v2-footer-notifications .parties-footer-warning-scrollable a:visited.hover,
+.v2-footer-notifications .parties-footer-warning-scrollable a:visited:hover,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:link.hover,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:link:hover,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:visited.hover,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:visited:hover {
+    color: #cdfafa
+}
+
+.v2-footer-notifications .parties-footer-error-scrollable a:link:after,
+.v2-footer-notifications .parties-footer-error-scrollable a:visited:after,
+.v2-footer-notifications .parties-footer-warning-scrollable a:link:after,
+.v2-footer-notifications .parties-footer-warning-scrollable a:visited:after,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:link:after,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:visited:after {
+    background-color: #0596aa;
+    content: "";
+    display: inline-block;
+    height: 9px;
+    margin: 0 0 0 5px;
+    -webkit-mask: url(/fe/lol-parties/external-link-mask.png) no-repeat;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+    width: 9px
+}
+
+.v2-footer-notifications .parties-footer-error-scrollable a:link:lang(ar-ae):after,
+.v2-footer-notifications .parties-footer-error-scrollable a:visited:lang(ar-ae):after,
+.v2-footer-notifications .parties-footer-warning-scrollable a:link:lang(ar-ae):after,
+.v2-footer-notifications .parties-footer-warning-scrollable a:visited:lang(ar-ae):after,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:link:lang(ar-ae):after,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:visited:lang(ar-ae):after {
+    margin: 0 5px 0 0;
+    transform: scaleX(-1)
+}
+
+.v2-footer-notifications .parties-footer-error-scrollable a:link:hover:after,
+.v2-footer-notifications .parties-footer-error-scrollable a:visited:hover:after,
+.v2-footer-notifications .parties-footer-warning-scrollable a:link:hover:after,
+.v2-footer-notifications .parties-footer-warning-scrollable a:visited:hover:after,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:link:hover:after,
+.v2-footer-notifications .parties-restrictions-warning-error-scrollable a:visited:hover:after {
+    background-color: #cdfafa
+}
+
 .v2-footer-notifications .parties-footer-error,
 .v2-footer-notifications .parties-footer-warning,
 .v2-footer-notifications .parties-queue-warning-error,
 .v2-footer-notifications .parties-ready-warning,
 .v2-footer-notifications .parties-restrictions-quick-play,
-.v2-footer-notifications .parties-restrictions-warning-error {
+.v2-footer-notifications .parties-restrictions-warning-error,
+.v2-footer-notifications .parties-tft-unranked-warning {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -8123,7 +8334,8 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large]:lang(ar-ae) {
 .v2-footer-notifications .parties-autofill-warning-icon,
 .v2-footer-notifications .parties-mmr-warning-icon,
 .v2-footer-notifications .parties-notification-warning-icon,
-.v2-footer-notifications .parties-ready-warning-icon {
+.v2-footer-notifications .parties-ready-warning-icon,
+.v2-footer-notifications .parties-tft-warning-icon {
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
@@ -8190,6 +8402,14 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large]:lang(ar-ae) {
     fill: #cdfafa
 }
 
+.v2-footer-notifications .parties-tft-warning-icon {
+    margin-right: 4px
+}
+
+.v2-footer-notifications .parties-tft-warning-icon path {
+    fill: #c89b3c
+}
+
 .v2-footer-notifications .parties-footer-error,
 .v2-footer-notifications .parties-footer-warning,
 .v2-footer-notifications .parties-restrictions-warning-error {
@@ -8225,7 +8445,8 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large]:lang(ar-ae) {
     color: #cdfafa
 }
 
-.v2-footer-notifications .parties-ready-warning {
+.v2-footer-notifications .parties-ready-warning,
+.v2-footer-notifications .parties-tft-unranked-warning {
     color: #a09b8c
 }
 
@@ -10117,12 +10338,19 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] {
     border-bottom: thin solid #3c3c41;
     flex: 1 0 0;
     overflow-y: auto;
-    padding-top: 8px;
     transition: opacity .15s ease-in-out
+}
+
+.v2-parties-invite-info-panel .parties-invite-info-panel-body.no-overflow {
+    overflow: hidden
 }
 
 .v2-parties-invite-info-panel .parties-invite-info-panel-body.collapsed {
     opacity: 0
+}
+
+.v2-parties-invite-info-panel .parties-invite-info-panel-body.no-bottom-border {
+    border-bottom: none
 }
 
 .v2-parties-invite-info-panel .parties-invite-info-panel-list {
@@ -17640,35 +17868,6 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
     list-style-type: none;
     margin: 0;
     padding: 0
-}
-
-.autofill-settings {
-    font-family: var(--font-body);
-    -webkit-font-feature-settings: "kern" 1;
-    font-kerning: normal;
-    -webkit-user-select: none;
-    -webkit-font-smoothing: antialiased;
-    color: #a09b8c;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: .025em;
-    line-height: 20px;
-    -webkit-font-smoothing: subpixel-antialiased
-}
-
-.autofill-settings:lang(ar-ae) {
-    letter-spacing: 0
-}
-
-.autofill-settings {
-    margin-bottom: 40px;
-    padding: 10px;
-    text-align: center;
-    width: 300px
-}
-
-.autofill-settings ul {
-    list-style-type: none
 }
 
 .game-mode-tutorial-carousel-item-content .top-block .step-block .step,

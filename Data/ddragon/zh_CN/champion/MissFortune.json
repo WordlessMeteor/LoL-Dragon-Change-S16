@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "15.24.1",
+    "version": "16.1.1",
     "data": {
         "MissFortune": {
             "id": "MissFortune",
@@ -180,8 +180,8 @@
                 "difficulty": 1
             },
             "stats": {
-                "hp": 640,
-                "hpperlevel": 103,
+                "hp": 625,
+                "hpperlevel": 100,
                 "mp": 300,
                 "mpperlevel": 40,
                 "movespeed": 325,
@@ -206,7 +206,7 @@
                     "id": "MissFortuneRicochetShot",
                     "name": "一箭双雕",
                     "description": "厄运小姐向敌人发射子弹，伤害他们以及他们后面的目标。两次攻击都可以施加【厄运的眷顾】。",
-                    "tooltip": "厄运小姐发射一次弹跳射击，对一个敌人及其身后的另一个敌人造成<physicalDamage>{{ totaldamagetooltip }}物理伤害</physicalDamage>。<br /><br />第二段射击可以暴击。如果第一段射击击杀了它的目标，那么第二段射击就必定暴击。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "厄运小姐发射一次弹跳射击，对一个敌人及其身后的另一个敌人造成<physicalDamage>{{ totaldamagetooltip }}物理伤害</physicalDamage>。<br /><br />第二段射击可以暴击以造成<physicalDamage>{{ totaldamagecrit }}物理伤害</physicalDamage>。如果第一段射击击杀了目标，则第二段射击必定暴击。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -214,7 +214,7 @@
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e2 }} -> {{ e2NL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -631,7 +631,7 @@
                     "id": "MissFortuneBulletTime",
                     "name": "弹幕时间",
                     "description": "厄运小姐向她面前的锥形范围内引导一阵子弹风暴，对敌人造成大量伤害。这个技能的每波子弹都可以暴击。",
-                    "tooltip": "厄运小姐向前方锥形地带引导一阵弹幕，在{{ totalchannelduration }}秒里持续发射共{{ totalwaves }}波，每波弹幕造成<physicalDamage>{{ physicaldamageperwave }}物理伤害</physicalDamage>(总共<physicalDamage>{{ totalphysicaldamage }}物理伤害</physicalDamage>)。<br /><br />每一波都可以暴击来造成%i:scaleCrit% <physicalDamage>{{ physicalcritperwave }}物理伤害</physicalDamage>(总共%i:scaleCrit%<physicalDamage>{{ totalphysicalcritdamage }}物理伤害</physicalDamage>)。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "厄运小姐向前方锥形地带引导一阵弹幕，{{ basechannelduration }}秒内持续发射共{{ basewaves }}波子弹，每波弹幕造成<physicalDamage>{{ physicaldamageperwave }}物理伤害</physicalDamage>(总共<physicalDamage>{{ totalphysicaldamage }}物理伤害</physicalDamage>)。<br /><br />每一波均可触发暴击，造成%i:scaleCrit%<physicalDamage>{{ critdamageperwave }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "弹织成幕",

@@ -3329,7 +3329,8 @@ div[data-screen-name=rcp-fe-lol-profiles-modal] .rank-standing-list-container .l
 
 .season-memorial-modal .season-memorial-modal-content-container .season-memorial-rewards-container .rewards-container-restricted,
 .season-memorial-modal .season-memorial-modal-content-container .season-memorial-rewards-scroller-container .rewards-images-container .reward-container-column .reward-description,
-.season-memorial-modal .season-memorial-modal-header .season-memorial-modal-season-duration {
+.season-memorial-modal .season-memorial-modal-header .season-memorial-modal-season-duration,
+.season-memorial-modal .season-memorial-modal-header .season-rewards-pending-disclaimer-container .season-rewards-pending-disclaimer-text {
     font-family: var(--font-body)
 }
 
@@ -3340,7 +3341,8 @@ div[data-screen-name=rcp-fe-lol-profiles-modal] .rank-standing-list-container .l
 .season-memorial-modal .season-memorial-modal-content-container .season-memorial-rewards-scroller-container .rewards-images-container .reward-container-column .reward-description,
 .season-memorial-modal .season-memorial-modal-header .season-memorial-modal-season-duration,
 .season-memorial-modal .season-memorial-modal-header .season-memorial-modal-title-container,
-.season-memorial-modal .season-memorial-modal-header .season-memorial-modal-title-container .season-memorial-modal-season-title {
+.season-memorial-modal .season-memorial-modal-header .season-memorial-modal-title-container .season-memorial-modal-season-title,
+.season-memorial-modal .season-memorial-modal-header .season-rewards-pending-disclaimer-container .season-rewards-pending-disclaimer-text {
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
@@ -3451,7 +3453,8 @@ div[data-screen-name=rcp-fe-lol-profiles-modal] .rank-standing-list-container .l
     letter-spacing: 0
 }
 
-.season-memorial-modal .season-memorial-modal-header .season-memorial-modal-season-duration {
+.season-memorial-modal .season-memorial-modal-header .season-memorial-modal-season-duration,
+.season-memorial-modal .season-memorial-modal-header .season-rewards-pending-disclaimer-container .season-rewards-pending-disclaimer-text {
     color: #a09b8c;
     font-size: 14px;
     font-weight: 400;
@@ -3460,7 +3463,8 @@ div[data-screen-name=rcp-fe-lol-profiles-modal] .rank-standing-list-container .l
     -webkit-font-smoothing: subpixel-antialiased
 }
 
-.season-memorial-modal .season-memorial-modal-header .season-memorial-modal-season-duration:lang(ar-ae) {
+.season-memorial-modal .season-memorial-modal-header .season-memorial-modal-season-duration:lang(ar-ae),
+.season-memorial-modal .season-memorial-modal-header .season-rewards-pending-disclaimer-container .season-rewards-pending-disclaimer-text:lang(ar-ae) {
     letter-spacing: 0
 }
 
@@ -3538,6 +3542,17 @@ div[data-screen-name=rcp-fe-lol-profiles-modal] .rank-standing-list-container .l
     height: 0;
     position: relative;
     top: -20px
+}
+
+.season-memorial-modal .season-memorial-modal-header .season-rewards-pending-disclaimer-container {
+    align-items: center;
+    display: flex;
+    height: 24px;
+    justify-content: center
+}
+
+.season-memorial-modal .season-memorial-modal-header .season-rewards-pending-disclaimer-container .season-rewards-pending-disclaimer-spacer {
+    width: 6px
 }
 
 .season-memorial-modal .season-memorial-modal-header-spacer {

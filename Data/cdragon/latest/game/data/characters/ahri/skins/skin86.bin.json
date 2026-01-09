@@ -172,21 +172,11 @@
                         "Play_vo_AhriSkin86_AhriPassive_cast3D",
                         "Play_vo_AhriSkin86_AhriQ_cast3D",
                         "Play_vo_AhriSkin86_AhriR_cast3D",
-                        "Play_vo_AhriSkin86_AhriR_cast5D",
                         "Play_vo_AhriSkin86_AhriR_OnBuffDeactivate",
                         "Play_vo_AhriSkin86_AhriW_cast3D",
                         "Play_vo_AhriSkin86_Attack2DGeneral",
                         "Play_vo_AhriSkin86_BuyItem2DGeneral",
-                        "Play_vo_AhriSkin86_Death3D_01",
-                        "Play_vo_AhriSkin86_Death3D_02",
-                        "Play_vo_AhriSkin86_Death3D_03",
-                        "Play_vo_AhriSkin86_Death3D_04",
-                        "Play_vo_AhriSkin86_Death3D_05",
-                        "Play_vo_AhriSkin86_Death3D_06",
-                        "Play_vo_AhriSkin86_Death3D_07",
-                        "Play_vo_AhriSkin86_Death3D_08",
-                        "Play_vo_AhriSkin86_Death3D_09",
-                        "Play_vo_AhriSkin86_Death3D_10",
+                        "Play_vo_AhriSkin86_Death3D",
                         "Play_vo_AhriSkin86_FirstEncounter3DGeneral",
                         "Play_vo_AhriSkin86_FirstEncounter3DLeBlancSkin55",
                         "Play_vo_AhriSkin86_FirstEncounter3DSKT",
@@ -202,16 +192,6 @@
                         "Play_vo_AhriSkin86_Kill3DPenta",
                         "Play_vo_AhriSkin86_Kill3DSKT",
                         "Play_vo_AhriSkin86_Kill3DTurret",
-                        "Play_vo_AhriSkin86_Kill5DGeneral_01",
-                        "Play_vo_AhriSkin86_Kill5DGeneral_02",
-                        "Play_vo_AhriSkin86_Kill5DGeneral_03",
-                        "Play_vo_AhriSkin86_Kill5DGeneral_04",
-                        "Play_vo_AhriSkin86_Kill5DGeneral_05",
-                        "Play_vo_AhriSkin86_Kill5DGeneral_06",
-                        "Play_vo_AhriSkin86_Kill5DGeneral_07",
-                        "Play_vo_AhriSkin86_Kill5DGeneral_08",
-                        "Play_vo_AhriSkin86_Kill5DGeneral_09",
-                        "Play_vo_AhriSkin86_Kill5DGeneral_10",
                         "Play_vo_AhriSkin86_Laugh3DGeneral",
                         "Play_vo_AhriSkin86_LevelUp2DGeneral",
                         "Play_vo_AhriSkin86_Move2DFirst",
@@ -225,13 +205,9 @@
                         "Play_vo_AhriSkin86_Taunt3DGeneral",
                         "Play_vo_AhriSkin86_TauntResponse3DGeneral",
                         "Play_vo_AhriSkin86_Unique3DFakerEmote",
-                        "Play_vo_AhriSkin86_Unique3DTransform",
-                        "Play_vo_AhriSkin86_Unique3DTransformOneAhead",
-                        "Play_vo_AhriSkin86_Unique3DTransformOneBehind",
-                        "Play_vo_AhriSkin86_Unique3DTransformOneGeneral",
-                        "Play_vo_AhriSkin86_Unique3DTransformTwoAhead",
-                        "Play_vo_AhriSkin86_Unique3DTransformTwoBehind",
-                        "Play_vo_AhriSkin86_Unique3DTransformTwoGeneral",
+                        "Play_vo_AhriSkin86_Unique3DTransformAhead",
+                        "Play_vo_AhriSkin86_Unique3DTransformBehind",
+                        "Play_vo_AhriSkin86_Unique3DTransformGeneral",
                         "Play_vo_AhriSkin86_UseItem2DWard"
                     ],
                     "voiceOver": true,
@@ -205013,203 +204989,8 @@
                     },
                     {
                         "mRuleName": "General",
-                        "mConditions": [
-                            {
-                                "mTotalKills": 1,
-                                "__type": "ContextualConditionKillCount"
-                            }
-                        ],
                         "mAudioAction": {
-                            "mSelfEventName": "Kill5DGeneral_01",
-                            "mEnemyEventName": "Kill3DGeneral",
-                            "mWaitForAnnouncerQueue": true,
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 30,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "General",
-                        "mConditions": [
-                            {
-                                "mTotalKills": 2,
-                                "__type": "ContextualConditionKillCount"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "Kill5DGeneral_02",
-                            "mEnemyEventName": "Kill3DGeneral",
-                            "mWaitForAnnouncerQueue": true,
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 30,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "General",
-                        "mConditions": [
-                            {
-                                "mTotalKills": 3,
-                                "__type": "ContextualConditionKillCount"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "Kill5DGeneral_03",
-                            "mEnemyEventName": "Kill3DGeneral",
-                            "mWaitForAnnouncerQueue": true,
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 30,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "General",
-                        "mConditions": [
-                            {
-                                "mTotalKills": 4,
-                                "__type": "ContextualConditionKillCount"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "Kill5DGeneral_04",
-                            "mEnemyEventName": "Kill3DGeneral",
-                            "mWaitForAnnouncerQueue": true,
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 30,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "General",
-                        "mConditions": [
-                            {
-                                "mTotalKills": 5,
-                                "__type": "ContextualConditionKillCount"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "Kill5DGeneral_05",
-                            "mEnemyEventName": "Kill3DGeneral",
-                            "mWaitForAnnouncerQueue": true,
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 30,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "General",
-                        "mConditions": [
-                            {
-                                "mTotalKills": 6,
-                                "__type": "ContextualConditionKillCount"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "Kill5DGeneral_06",
-                            "mEnemyEventName": "Kill3DGeneral",
-                            "mWaitForAnnouncerQueue": true,
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 30,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "General",
-                        "mConditions": [
-                            {
-                                "mTotalKills": 7,
-                                "__type": "ContextualConditionKillCount"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "Kill5DGeneral_07",
-                            "mEnemyEventName": "Kill3DGeneral",
-                            "mWaitForAnnouncerQueue": true,
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 30,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "General",
-                        "mConditions": [
-                            {
-                                "mTotalKills": 8,
-                                "__type": "ContextualConditionKillCount"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "Kill5DGeneral_08",
-                            "mEnemyEventName": "Kill3DGeneral",
-                            "mWaitForAnnouncerQueue": true,
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 30,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "General",
-                        "mConditions": [
-                            {
-                                "mTotalKills": 9,
-                                "__type": "ContextualConditionKillCount"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "Kill5DGeneral_09",
-                            "mEnemyEventName": "Kill3DGeneral",
-                            "mWaitForAnnouncerQueue": true,
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 30,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "General",
-                        "mConditions": [
-                            {
-                                "mTotalKills": 10,
-                                "__type": "ContextualConditionKillCount"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "Kill5DGeneral_10",
+                            "mSelfEventName": "Kill3DGeneral",
                             "mEnemyEventName": "Kill3DGeneral",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
@@ -205284,10 +205065,6 @@
                             {
                                 "mSpell": "Characters/Ahri/Spells/AhriCritAttack",
                                 "__type": "ContextualConditionSpellName"
-                            },
-                            {
-                                "mPercentChanceToPlay": 30,
-                                "__type": "ContextualConditionChanceToPlay"
                             },
                             {
                                 "mPercentChanceToPlay": 30,
@@ -205421,7 +205198,7 @@
                             }
                         ],
                         "mAudioAction": {
-                            "mSelfEventName": "cast5D",
+                            "mSelfEventName": "cast3D",
                             "mAllyEventName": "cast3D",
                             "mEnemyEventName": "cast3D",
                             "mSpectatorEventName": "cast3D",
@@ -205611,45 +205388,6 @@
             "OnFirstBlood": {
                 "mRules": [
                     {
-                        "mRuleName": "Self First Blood",
-                        "mConditions": [
-                            {
-                                "mCharacterType": 4,
-                                "mChildConditions": [
-                                    {
-                                        "IsSelf": true,
-                                        "__type": "ContextualConditionIsSelf"
-                                    }
-                                ],
-                                "__type": "ContextualConditionCharacter"
-                            },
-                            {
-                                "mCharacterType": 6,
-                                "mChildConditions": [
-                                    {
-                                        "__type": "ContextualConditionIsAlly"
-                                    }
-                                ],
-                                "__type": "ContextualConditionCharacter"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mMaxOccurences": 1,
-                            "mSelfEventName": "Kill3DFirst",
-                            "mAllyEventName": "Kill3DFirst",
-                            "mEnemyEventName": "Kill3DFirst",
-                            "mWaitForAnnouncerQueue": true,
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 10,
-                        "mOverrideCacCooldown": true,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
                         "mRuleName": "Enemy First Blood On Self",
                         "mConditions": [
                             {
@@ -205784,6 +205522,7 @@
                         "mAudioAction": {
                             "mMaxOccurences": 3,
                             "mSelfEventName": "Kill3DTurret",
+                            "mAllyEventName": "Kill3DTurret",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
                         },
@@ -205935,10 +205674,6 @@
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
-                                "mPercentChanceToPlay": 50,
-                                "__type": "ContextualConditionChanceToPlay"
-                            },
-                            {
                                 "mCharacterType": 1,
                                 "mChildConditions": [
                                     {
@@ -206036,18 +205771,56 @@
                 ],
                 "__type": "ContextualSituation"
             },
-            "OwnerDeath": {
+            "Transform": {
                 "mRules": [
                     {
+                        "mConditions": [
+                            {
+                                "{55848081}": {
+                                    "{df38ac45}": 1,
+                                    "__type": "{7463e786}"
+                                },
+                                "CompareOp": 2,
+                                "{6caa1bcc}": {
+                                    "{df38ac45}": 2,
+                                    "{f1cea006}": 2,
+                                    "__type": "{7463e786}"
+                                },
+                                "__type": "{4af7e9f2}"
+                            }
+                        ],
                         "mAudioAction": {
-                            "mMaxOccurences": 1,
-                            "mSelfEventName": "Death3D_01",
-                            "mAllyEventName": "Death3D_01",
-                            "mEnemyEventName": "Death3D_01",
-                            "mSpectatorEventName": "Death3D_01",
+                            "mSelfEventName": "Unique3DTransformAhead",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mPriority": 500,
+                        "mPriority": 200,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mConditions": [
+                            {
+                                "{55848081}": {
+                                    "{df38ac45}": 1,
+                                    "{f1cea006}": 2,
+                                    "__type": "{7463e786}"
+                                },
+                                "CompareOp": 4,
+                                "{6caa1bcc}": {
+                                    "{df38ac45}": 2,
+                                    "__type": "{7463e786}"
+                                },
+                                "__type": "{4af7e9f2}"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Unique3DTransformBehind",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 200,
                         "CooldownModifications": {
                             "IgnoreTimer": true,
                             "__type": "ContextualActionCooldownModifications"
@@ -206056,142 +205829,10 @@
                     },
                     {
                         "mAudioAction": {
-                            "mMaxOccurences": 1,
-                            "mSelfEventName": "Death3D_02",
-                            "mAllyEventName": "Death3D_02",
-                            "mEnemyEventName": "Death3D_02",
-                            "mSpectatorEventName": "Death3D_02",
+                            "mSelfEventName": "Unique3DTransformGeneral",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mPriority": 500,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mAudioAction": {
-                            "mMaxOccurences": 1,
-                            "mSelfEventName": "Death3D_03",
-                            "mAllyEventName": "Death3D_03",
-                            "mEnemyEventName": "Death3D_03",
-                            "mSpectatorEventName": "Death3D_03",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 500,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mAudioAction": {
-                            "mMaxOccurences": 1,
-                            "mSelfEventName": "Death3D_04",
-                            "mAllyEventName": "Death3D_04",
-                            "mEnemyEventName": "Death3D_04",
-                            "mSpectatorEventName": "Death3D_04",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 500,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mAudioAction": {
-                            "mMaxOccurences": 1,
-                            "mSelfEventName": "Death3D_05",
-                            "mAllyEventName": "Death3D_05",
-                            "mEnemyEventName": "Death3D_05",
-                            "mSpectatorEventName": "Death3D_05",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 500,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mAudioAction": {
-                            "mMaxOccurences": 1,
-                            "mSelfEventName": "Death3D_06",
-                            "mAllyEventName": "Death3D_06",
-                            "mEnemyEventName": "Death3D_06",
-                            "mSpectatorEventName": "Death3D_06",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 500,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mAudioAction": {
-                            "mMaxOccurences": 1,
-                            "mSelfEventName": "Death3D_07",
-                            "mAllyEventName": "Death3D_07",
-                            "mEnemyEventName": "Death3D_07",
-                            "mSpectatorEventName": "Death3D_07",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 500,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mAudioAction": {
-                            "mMaxOccurences": 1,
-                            "mSelfEventName": "Death3D_08",
-                            "mAllyEventName": "Death3D_08",
-                            "mEnemyEventName": "Death3D_08",
-                            "mSpectatorEventName": "Death3D_08",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 500,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mAudioAction": {
-                            "mMaxOccurences": 1,
-                            "mSelfEventName": "Death3D_09",
-                            "mAllyEventName": "Death3D_09",
-                            "mEnemyEventName": "Death3D_09",
-                            "mSpectatorEventName": "Death3D_09",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 500,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mAudioAction": {
-                            "mMaxOccurences": 1,
-                            "mSelfEventName": "Death3D_10",
-                            "mAllyEventName": "Death3D_10",
-                            "mEnemyEventName": "Death3D_10",
-                            "mSpectatorEventName": "Death3D_10",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 500,
+                        "mPriority": 200,
                         "CooldownModifications": {
                             "IgnoreTimer": true,
                             "__type": "ContextualActionCooldownModifications"
@@ -206201,14 +205842,19 @@
                 ],
                 "__type": "ContextualSituation"
             },
-            "Transform": {
+            "GotFirstBlood": {
                 "mRules": [
                     {
+                        "mRuleName": "First Blood",
                         "mAudioAction": {
-                            "mSelfEventName": "Unique3DTransform",
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DFirst",
+                            "mAllyEventName": "Kill3DFirst",
+                            "mEnemyEventName": "Kill3DFirst",
+                            "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mPriority": 200,
+                        "mPriority": 130,
                         "CooldownModifications": {
                             "IgnoreTimer": true,
                             "__type": "ContextualActionCooldownModifications"

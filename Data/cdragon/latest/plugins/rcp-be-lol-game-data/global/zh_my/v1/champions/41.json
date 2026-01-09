@@ -368,7 +368,7 @@
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/41/41013.png",
                     "colors": [
                         "#27211C",
-                        "#272100"
+                        "#27211C"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -1258,7 +1258,7 @@
             "cost": "无消耗",
             "cooldown": "@AmmoRechargeTime@ 秒充能 (最大：@MaxAmmo@)",
             "description": "刚普朗克在目标处挖掘一桶火药，如果他攻击木桶会造成爆炸，并将攻击伤害扩散到范围内的敌军、造成缓速。",
-            "dynamicDescription": "刚普朗克放置一个火药桶，火药桶可以被刚普朗克或敌人的普攻攻击，火药桶持续存在 @Effect5Amount@ 秒。当一名敌人摧毁火药桶，可将其引信拆除。当刚普朗克摧毁火药桶，该火药桶会爆炸，<status>缓速</status>敌人 @FinalSlowAmount@%，持续 @Effect2Amount@ 秒，并造成<physicalDamage>等同该次普攻的伤害</physicalDamage>，忽视 @Effect10Amount@% 物理防御。英雄会受到额外 <physicalDamage>@Effect3Amount@ 物理伤害</physicalDamage>。<br><br>火药桶的生命将每 @f5@ 秒衰减一次。火药桶的爆炸会引爆其它爆炸范围重叠的火药桶，但不会对相同目标造成一次以上的伤害。火药桶也可被<spellName>枪火谈判</spellName>引爆，并会在击杀目标时给予额外金钱。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "刚普朗克放置一个可被自己和敌方英雄攻击的火药桶，持续@Effect5Amount@秒。当一名敌人将火药桶摧毁时，该火药桶会哑火。当刚普朗克将火药桶摧毁时，该火药桶会爆炸，造成持续@Effect2Amount@秒的@FinalSlowAmount@%<status>减速</status>和相当于<physicalDamage>物理攻击</physicalDamage>的伤害，并无视@Effect10Amount@%物理防御。英雄会受到额外<physicalDamage>@Effect3Amount@物理伤害</physicalDamage>。<br><br>火药桶的生命值会每@BarrelDecayTime@秒衰减一次。火药桶会引爆其它爆炸区域与它有重叠的火药桶，但不会重复对相同目标造成伤害。火药桶的爆炸可通过<spellName>枪火谈判</spellName>来触发，并在击杀目标时提供额外金钱。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1307,13 +1307,13 @@
                     2.0
                 ],
                 "Effect3Amount": [
-                    80.0,
                     75.0,
-                    105.0,
+                    75.0,
+                    95.0,
+                    115.0,
                     135.0,
-                    165.0,
-                    195.0,
-                    240.0
+                    155.0,
+                    175.0
                 ],
                 "Effect4Amount": [
                     40.0,

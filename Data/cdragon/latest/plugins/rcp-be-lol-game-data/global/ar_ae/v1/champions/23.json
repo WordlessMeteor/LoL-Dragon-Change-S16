@@ -1082,7 +1082,7 @@
             "cost": "بلا تكاليف",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يعيش تريندامير على إثارة المعارك، مما يزيد ضرر هجومه مع ازدياد عدد جروحه. يستطيع إلقاء تعويذة تعطش للدماء لاستهلاك فورته وعلاج نفسه.",
-            "dynamicDescription": "<spellPassive>التأثير الكامن:</spellPassive> يتعطش تريندامير للدماء، فيكسب <scaleAD>@FlatAD@ ضرر هجوم</scaleAD> إضافة إلى <scaleAD>@ADPerOnePercentMissingHP@</scaleAD> لكل 1% من الصحة الناقصة.<br><br><spellActive>التأثير النشط:</spellActive> يستهلك تريندامير <keywordMajor>الفورة</keywordMajor> الخاصة به، فيستعيد <healing>@BaseHeal@ إضافة إلى @HealPerFury@ صحة لكل فورة</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن</spellPassive>: يتعطش تريندامير للدماء، فيكسب ما يصل إلى <scaleAD>@MaximumBonusAD@ ضرر هجوم</scaleAD> بناءً على مقدار الصحة الناقصة لديه.<br><br><spellActive>تأثير نشط</spellActive>: يستهلك تريندامير <keywordMajor>الفورة</keywordMajor> لديه، مستعيدًا <healing>@BaseHeal@ إضافةً إلى @HealPerFury@ صحة لكل فورة (الحد الأقصى: @MaximumHeal@)</healing>. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1232,7 +1232,7 @@
             "cost": "بلا تكاليف",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يطلق تريندامير صرخة مهينة، مما يضائل ضرر هجوم الأبطال المحيطين. كما يبطئ سرعة حركة الأعداء الذين يديرون ظهرهم لتريندامير.",
-            "dynamicDescription": "يقذف تريندامير الإهانات فيقلص ضرر هجوم الأبطال بنسبة @ADReduction*-1@ لمدة @ReductionDuration@ث. يتم <status>إبطاء</status> أبطال العدو أمام تريندامير وظهورهم باتجاهه بنسبة @SlowPotency*-100@% لنفس المدة.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يطلق تريندامير الإهانات، فيقلص ضرر هجوم الأبطال بمقدار @ADReduction*-1@ لمدة @ReductionDuration@ث ويسبب لهم <status>الإبطاء</status> بنسبة @SlowPotency*-100@%، بينما يرتعدون منه لمدة @SlowDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1382,7 +1382,7 @@
             "cost": "بلا تكاليف",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يشق تريندامير طريقه نحو وحدة معادية، فيلحق الضرر بالأعداء في طريقه.",
-            "dynamicDescription": "يدور تريندامير عبر أعدائه، فيلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> ويولد <keywordMajor>@NonChampFuryGain@ فورة</keywordMajor> لكل عدو تصيبه، تزداد إلى <keywordMajor>@ChampFuryGain@ فورة</keywordMajor> ضد الأبطال المعادين.<br><br>تتقلص فترة تبريد هذه القدرة لمدة @NonChampCDRefund@ث عندما يحقق تريندامير ضربة حرجة، وتتناقص لمدة @ChampCDRefund@ث عند إلحاق ضربة حرجة ببطل.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يدور تريندامير عبر أعدائه، فيلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> ويولد <keywordMajor>@NonChampFuryGain@ فورة</keywordMajor> لكل عدو يصيبه، تزداد إلى <keywordMajor>@ChampFuryGain@ فورة</keywordMajor> ضد الأبطال المعادين.<br><br>تتقلص فترة تبريد هذه القدرة لمدة @NonChampCDRefund@ث عندما يحقق تريندامير ضربة حرجة، وتتقلص لمدة @ChampCDRefund@ث عند إلحاق ضربة حرجة ببطل.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1408,8 +1408,8 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
-                "coefficient2": 1.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

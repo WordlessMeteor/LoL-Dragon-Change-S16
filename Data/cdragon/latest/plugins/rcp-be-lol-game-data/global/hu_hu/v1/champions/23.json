@@ -1082,7 +1082,7 @@
             "cost": "Nincs költsége",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Tryndamere-t egyre jobban feltüzeli a harci hév, és minél kevesebb az életereje, annál nagyobb bónusz sebzést kap. A Vérszomj megidézése felemészti a dühpontjait, és gyógyítja őt.",
-            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> Tryndamere a vérszomjával <scaleAD>@FlatAD@ sebzésre</scaleAD>, valamint a hiányzó életerő minden további 1%-a után <scaleAD>@ADPerOnePercentMissingHP@</scaleAD> sebzésre tesz szert.<br><br><spellActive>Aktív:</spellActive> Tryndamere felemészti a <keywordMajor>dühpontjait</keywordMajor>, ezzel <healing>@BaseHeal@ életerőt, továbbá dühpontonként további @HealPerFury@ életerőt nyer vissza</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> Tryndamere a vérszomjával a hiányzó életereje alapján legfeljebb <scaleAD>@MaximumBonusAD@ sebzésre</scaleAD> tesz szert.<br><br><spellActive>Aktív:</spellActive> Tryndamere felemészti a <keywordMajor>dühpontjait</keywordMajor>, ezzel <healing>@BaseHeal@ életerőt, továbbá dühpontonként további @HealPerFury@ életerőt nyer vissza (max.: @MaximumHeal@)</healing>. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1232,7 +1232,7 @@
             "cost": "Nincs költsége",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Tryndamere sértő kiáltást hallat, amely csökkenti a környező ellenfelek sebzését. A Tryndamere-nek háttal álló ellenfelek mozgási sebessége is csökken.",
-            "dynamicDescription": "Tryndamere sértésekkel dobálózik, így @ReductionDuration@ másodpercre @ADReduction*-1@ egységgel csökkenti a hősök sebzését. A Tryndamere-nek háttal álló ellenséges hősök ugyanezen időtartamra vonatkozóan @SlowPotency*-100@%-os <status>lassítást</status> szenvednek el.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere sértésekkel dobálózik, így @ReductionDuration@ másodpercre @ADReduction*-1@ egységgel csökkenti a hősök sebzését, valamint @SlowDuration@ másodpercre @SlowPotency*-100@%-kal <status>lelassítja</status> és megfélemlíti őket.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1408,8 +1408,8 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
-                "coefficient2": 1.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

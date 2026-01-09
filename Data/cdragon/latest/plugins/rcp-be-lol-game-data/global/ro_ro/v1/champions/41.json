@@ -368,7 +368,7 @@
                     "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/41/41013.png",
                     "colors": [
                         "#27211C",
-                        "#272100"
+                        "#27211C"
                     ],
                     "descriptions": [],
                     "description": "",
@@ -1258,7 +1258,7 @@
             "cost": "Fără cost",
             "cooldown": "Timp de reîncărcare: @AmmoRechargeTime@ sec (max: @MaxAmmo@)",
             "description": "Gangplank aruncă un butoi de pulbere în zona-țintă. Atunci când atacă un butoi, acesta explodează și provoacă daune AoE, încetinind toți inamicii din apropiere.",
-            "dynamicDescription": "Gangplank plasează un butoi de pulbere care poate fi atacat de Gangplank și de campionii inamici timp de @Effect5Amount@ secunde. Când îl distruge un inamic, butoiul este dezamorsat. Când îl distruge Gangplank, butoiul explodează, <status>încetinind</status> inamicii cu @FinalSlowAmount@% timp de @Effect2Amount@ secunde și provocându-le <physicalDamage>daunele din atac</physicalDamage>, ignorând @Effect10Amount@% din armură. Campionii suferă încă <physicalDamage>@Effect3Amount@ daune fizice</physicalDamage>.<br><br>Viața butoiului scade la fiecare @f5@ secunde. Exploziile butoaielor detonează celelalte butoaie ale căror zone de impact se suprapun, însă nu îi provoacă decât o dată daune aceleiași ținte. Exploziile butoaielor declanșate de <spellName>''Negociere''</spellName> vor oferi aur bonus pentru țintele ucise.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Gangplank plasează un butoi de pulbere care poate fi atacat de Gangplank și de campionii inamici timp de @Effect5Amount@ secunde. Când îl distruge un inamic, butoiul este dezamorsat. Când îl distruge Gangplank, butoiul explodează, <status>încetinind</status> inamicii cu @FinalSlowAmount@% timp de @Effect2Amount@ secunde și provocându-le <physicalDamage>daunele din atac</physicalDamage>, ignorând @Effect10Amount@% din armură. Campionii suferă <physicalDamage>@Effect3Amount@ daune fizice</physicalDamage> suplimentare.<br><br>Viața butoiului scade la fiecare @BarrelDecayTime@ secunde. Exploziile butoaielor detonează celelalte butoaie ale căror zone de impact se suprapun, însă nu îi provoacă decât o dată daune aceleiași ținte. Exploziile butoaielor declanșate de ''<spellName>Negociere</spellName>'' vor oferi aur bonus pentru țintele ucise.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1307,13 +1307,13 @@
                     2.0
                 ],
                 "Effect3Amount": [
-                    80.0,
                     75.0,
-                    105.0,
+                    75.0,
+                    95.0,
+                    115.0,
                     135.0,
-                    165.0,
-                    195.0,
-                    240.0
+                    155.0,
+                    175.0
                 ],
                 "Effect4Amount": [
                     40.0,

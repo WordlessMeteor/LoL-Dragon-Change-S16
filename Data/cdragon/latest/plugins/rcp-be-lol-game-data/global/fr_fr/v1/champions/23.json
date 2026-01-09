@@ -1082,7 +1082,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Tryndamere s'épanouit lors des combats, ce qui accroît ses dégâts d'attaque au fur et à mesure qu'il subit des blessures. Il peut lancer Soif de sang pour consommer sa Fureur et se soigner.",
-            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Tryndamere a soif de sang, ce qui augmente ses <scaleAD>dégâts d'attaque de @FlatAD@</scaleAD> plus <scaleAD>@ADPerOnePercentMissingHP@</scaleAD> tous les 1% de PV manquants.<br><br><spellActive>Active :</spellActive> Tryndamere consomme sa <keywordMajor>Fureur</keywordMajor>, récupérant <healing>@BaseHeal@ PV plus @HealPerFury@ PV par point de Fureur</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Tryndamere a soif de sang, ce qui augmente de <scaleAD>@MaximumBonusAD@ ses dégâts d'attaque</scaleAD> en fonction de ses PV manquants.<br><br><spellActive>Active :</spellActive> Tryndamere consomme sa <keywordMajor>Fureur</keywordMajor>, <healing>récupérant @BaseHeal@ PV plus @HealPerFury@ PV par point de Fureur (max : @MaximumHeal@)</healing>. @SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1232,7 +1232,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Tryndamere lance un hurlement, réduisant les dégâts d'attaque des champions proches. De plus, les ennemis ayant le dos tourné voient leur vitesse de déplacement être réduite.",
-            "dynamicDescription": "Tryndamere lance des insultes, réduisant les dégâts d'attaque des champions de @ADReduction*-1@ pendant @ReductionDuration@ sec. Les champions ennemis ayant le dos tourné à Tryndamere sont <status>ralentis</status> de @SlowPotency*-100@% pendant la même durée.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tryndamere lance des insultes, réduisant les dégâts d'attaque des champions de @ADReduction*-1@ pendant @ReductionDuration@ sec, et <status>ralentissant</status> les ennemis de @SlowPotency*-100@% pendant qu'ils se cachent de lui pendant @SlowDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1408,8 +1408,8 @@
                 7.0
             ],
             "coefficients": {
-                "coefficient1": 0.8,
-                "coefficient2": 1.3
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [

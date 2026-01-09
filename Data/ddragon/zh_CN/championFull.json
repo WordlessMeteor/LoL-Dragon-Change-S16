@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "15.24.1",
+    "version": "16.1.1",
     "data": {
         "Aatrox": {
             "id": "Aatrox",
@@ -2573,7 +2573,7 @@
                     "id": "AkshanE",
                     "name": "骄行荡寇",
                     "description": "阿克尚发射一个钩爪来吸附住地形，然后围绕它进行摆荡，在摆荡时快速朝相距最近的敌人开火。他可以提前从绳索上荡下来，或在与一名敌方英雄或地形产生碰撞时落下。",
-                    "tooltip": "<spellActive>第一段施放：</spellActive>阿克尚发射一个钩爪，吸附在命中的第一个地形上。<br /><br /><spellActive>第二段施放：</spellActive>阿克尚在地形附近摆荡，朝相距最近的敌人进行快速射击，每次射击造成<physicalDamage>{{ asmoddamagetodeal }}物理伤害</physicalDamage>。<br /><br /><spellActive>第三段施放：</spellActive>阿克尚从绳索上荡下来，并进行一次终极射击。<br /><br />与一名敌方英雄或地形产生碰撞，会提前结束摆荡。<br /><br />参与击杀敌方英雄后会刷新这个技能的冷却时间。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellActive>第一段施放：</spellActive>阿克尚发射一个钩爪，吸附在命中的第一个地形上。<br /><br /><spellActive>第二段施放：</spellActive>阿克尚在地形附近摆荡，朝相距最近的敌人进行快速射击，每次射击造成<physicalDamage>{{ damagetodeal }}物理伤害</physicalDamage>。<br /><br /><spellActive>第三段施放：</spellActive>阿克尚从绳索上荡下来，并进行一次终极射击。<br /><br />与一名敌方英雄或地形产生碰撞，会提前结束摆荡。<br /><br />参与击杀敌方英雄后会刷新这个技能的冷却时间。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -3923,13 +3923,11 @@
                     "leveltip": {
                         "label": [
                             "冷却时间",
-                            "伤害",
-                            "攻击力收益"
+                            "伤害"
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ damage_flat_base }} -> {{ damage_flat_baseNL }}",
-                            "{{ adratio*100.000000 }}% -> {{ adrationl*100.000000 }}%"
+                            "{{ damage_flat_base }} -> {{ damage_flat_baseNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -7192,8 +7190,8 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 59,
-                "attackdamageperlevel": 3.45,
-                "attackspeedperlevel": 3.33,
+                "attackdamageperlevel": 3,
+                "attackspeedperlevel": 3,
                 "attackspeed": 0.658
             },
             "spells": [
@@ -14091,7 +14089,7 @@
                     "id": "CaitlynW",
                     "name": "约德尔诱捕器",
                     "description": "凯特琳设下一个陷阱，这个陷阱在被敌方英雄踩中时，会使该英雄显形并被束缚1.5秒，并为凯特琳提供一次强化版的爆头。",
-                    "tooltip": "凯特琳设置一个陷阱来<status>禁锢</status>踩中它的第一个英雄{{ e6 }}秒并提供该英雄的<keywordStealth>真实视野</keywordStealth>，持续3秒。陷阱持续{{ e3 }}秒，并且同一时间至多可存在{{ e5 }}个已激活的陷阱。这个技能有{{ e5 }}层充能({{ ammorechargetime }}秒充能时间)。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "凯特琳设置一个陷阱来<status>禁锢</status>踩中它的第一个英雄{{ rootduration }}秒并提供该英雄的<keywordStealth>真实视野</keywordStealth>，持续3秒。陷阱持续{{ trapduration }}秒，并且同一时间至多可存在{{ maximumtraps }}个已激活的陷阱。这个技能有{{ maximumcharges }}层充能({{ ammorechargetime }}秒充能时间)。<br /><br />被这个技能禁锢的目标会从<keywordMajor>爆头</keywordMajor>中受到额外的<physicalDamage>{{ headshotbonusdamage }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "对陷阱中的目标的爆头伤害加成",
@@ -14100,10 +14098,10 @@
                             "陷阱持续时间"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}",
-                            "{{ e4 }} -> {{ e4NL }}",
-                            "{{ e3 }} -> {{ e3NL }}"
+                            "{{ maximumtraps }} -> {{ maximumtrapsNL }}",
+                            "{{ trapduration }} -> {{ trapdurationNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -14134,39 +14132,39 @@
                             2
                         ],
                         [
-                            35,
-                            80,
-                            125,
-                            170,
-                            215
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            35,
-                            40,
-                            45,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            4,
-                            4,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            4,
-                            4,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             30,
@@ -14200,11 +14198,11 @@
                     "effectBurn": [
                         null,
                         "2",
-                        "35/80/125/170/215",
-                        "30/35/40/45/50",
-                        "3/3/4/4/5",
-                        "3/3/4/4/5",
-                        "1.5",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "30",
                         "0",
                         "0",
@@ -14377,7 +14375,7 @@
                     "id": "CaitlynR",
                     "name": "让子弹飞",
                     "description": "凯特琳精心准备完美一击，拥有超远射程并对单个目标造成巨大伤害。敌方英雄能为友军拦截子弹。",
-                    "tooltip": "凯特琳花费一段时间来引导并精心准备完美一击，然后她会开火，造成<physicalDamage>{{ rtotaldamage }}物理伤害</physicalDamage>，但其他敌方英雄能拦截子弹。这个技能在引导期间会提供目标的<keywordStealth>真实视野</keywordStealth>。<br /><br /><rules>基于凯特琳的暴击几率，至多造成{{ critchanceamp*100 }}%的额外伤害。</rules>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "凯特琳花费一段时间来引导并精心准备完美一击，然后她会开火，造成<physicalDamage>{{ rtotaldamage }}物理伤害</physicalDamage>，但其他敌方英雄能拦截子弹。这个技能在引导期间会提供目标的<keywordStealth>真实视野</keywordStealth>。<br /><br /><rules>伤害受益于凯特琳的暴击几率和暴击伤害加成。</rules>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害"
@@ -15275,7 +15273,7 @@
                 "hpperlevel": 104,
                 "mp": 450,
                 "mpperlevel": 40,
-                "movespeed": 328,
+                "movespeed": 335,
                 "armor": 18,
                 "armorperlevel": 4.7,
                 "spellblock": 32,
@@ -15840,7 +15838,7 @@
             ],
             "passive": {
                 "name": "优雅蛇行",
-                "description": "卡西奥佩娅随等级获得移动速度，但她无法购买鞋子类装备。",
+                "description": "卡西奥佩娅身上的所有移动速度加成效率变得更多。",
                 "image": {
                     "full": "Cassiopeia_Passive.png",
                     "sprite": "passive0.png",
@@ -15933,6 +15931,12 @@
                     "num": 32,
                     "name": "鳄加斯",
                     "chromas": true
+                },
+                {
+                    "id": "31041",
+                    "num": 41,
+                    "name": "禁魔石巨像 科加斯",
+                    "chromas": false
                 }
             ],
             "lore": "自从科加斯出现在符文之地烈日照射之下的那一刻起，它就被永不餍足的饥饿所驱使。虚空吞噬一切生命的欲望完美地体现在科加斯的身上，它复杂的生物构造能够迅速将物质转化为身体的成长，不仅会增加肌肉的质量和密度，还能让外壳变得有如钻石般坚硬。当单纯的体型增长已经不能满足它时，这只虚空生物就会将多余的物质形成锋利的骨刺吐出体外，刺穿猎物，为稍后的盛宴进行准备。",
@@ -18811,7 +18815,7 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 62,
-                "attackdamageperlevel": 3.6,
+                "attackdamageperlevel": 3,
                 "attackspeedperlevel": 2.7,
                 "attackspeed": 0.679
             },
@@ -18828,8 +18832,8 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e5 }} -> {{ e5NL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ adscaling }}% -> {{ adscalingNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -18854,25 +18858,25 @@
                     "effect": [
                         null,
                         [
-                            100,
-                            100,
-                            100,
-                            100,
-                            100
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             75,
-                            85,
-                            95,
-                            105,
-                            115
+                            75,
+                            75,
+                            75,
+                            75
                         ],
                         [
-                            30,
-                            35,
-                            40,
-                            45,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             5.75,
@@ -18882,11 +18886,11 @@
                             5.75
                         ],
                         [
-                            40,
-                            45,
-                            50,
-                            55,
-                            60
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -18926,11 +18930,11 @@
                     ],
                     "effectBurn": [
                         null,
-                        "100",
-                        "75/85/95/105/115",
-                        "30/35/40/45/50",
+                        "0",
+                        "75",
+                        "0",
                         "5.75",
-                        "40/45/50/55/60",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -18966,14 +18970,14 @@
                     "tooltip": "德莱文进入幽灵状态，获得在{{ e3 }}秒里持续衰减的<speed>{{ e2 }}%移动速度</speed>和持续{{ e5 }}秒的<attackSpeed>{{ e4 }}%攻击速度</attackSpeed>。<br /><br />当德莱文接住一把<keywordMajor>旋转飞斧</keywordMajor>时，这个技能的冷却时间就会刷新。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
+                            "移动速度",
                             "攻击速度",
-                            "@AbilityResourceName@消耗",
-                            "移动速度"
+                            "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e4 }}% -> {{ e4NL }}%",
-                            "{{ cost }} -> {{ costNL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%"
+                            "{{ movespeed*100.000000 }}% -> {{ movespeednl*100.000000 }}%",
+                            "{{ attackspeed*100.000000 }}% -> {{ attackspeednl*100.000000 }}%",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -18997,11 +19001,11 @@
                     "effect": [
                         null,
                         [
-                            4,
-                            5,
-                            6,
-                            7,
-                            8
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             50,
@@ -19018,11 +19022,11 @@
                             1.5
                         ],
                         [
+                            20,
+                            25,
                             30,
                             35,
-                            40,
-                            45,
-                            50
+                            40
                         ],
                         [
                             3,
@@ -19069,10 +19073,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "4/5/6/7/8",
+                        "0",
                         "50/55/60/65/70",
                         "1.5",
-                        "30/35/40/45/50",
+                        "20/25/30/35/40",
                         "3",
                         "-0.062/-0.069/-0.075/-0.081/-0.087",
                         "0",
@@ -25940,7 +25944,7 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ spelldamage }} -> {{ spelldamageNL }}",
                             "{{ e2 }} -> {{ e2NL }}",
                             "{{ e5 }} -> {{ e5NL }}",
                             "{{ cost }} -> {{ costNL }}"
@@ -26219,7 +26223,7 @@
                     "id": "GangplankE",
                     "name": "火药桶",
                     "description": "普朗克在目标区域为一个火药桶开盖。如果他攻击火药桶，那么火药桶会爆炸，将这次攻击的伤害传播到范围内的敌人身上，并将他们减速。",
-                    "tooltip": "普朗克放置一个可被普朗克和敌方英雄攻击的火药桶，该火药桶持续{{ e5 }}秒。当一名敌人将火药桶摧毁时，该火药桶会哑火。当普朗克将火药桶摧毁时，该火药桶会爆炸，造成持续{{ e2 }}秒的{{ finalslowamount }}%<status>减速</status>和<physicalDamage>相当于攻击力的伤害</physicalDamage>，并无视{{ e0 }}%护甲。英雄会受到额外的<physicalDamage>{{ e3 }}物理伤害</physicalDamage>。<br /><br />火药桶的生命值会每{{ f5 }}秒衰减一次。火药桶会引爆其它爆炸区域与它有重叠的火药桶，但不会重复对相同目标造成伤害。火药桶的爆炸可通过<spellName>枪火谈判</spellName>来触发并在击杀目标们时提供额外金币。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "普朗克放置一个可被普朗克和敌方英雄攻击的火药桶，该火药桶持续{{ e5 }}秒。当一名敌人将火药桶摧毁时，该火药桶会哑火。当普朗克将火药桶摧毁时，该火药桶会爆炸，造成持续{{ e2 }}秒的{{ finalslowamount }}%<status>减速</status>和<physicalDamage>相当于攻击力的伤害</physicalDamage>，并无视{{ e0 }}%护甲。英雄会受到额外的<physicalDamage>{{ e3 }}物理伤害</physicalDamage>。<br /><br />>火药桶的生命值会每{{ barreldecaytime }}秒衰减一次。火药桶会引爆其它爆炸区域与它有重叠的火药桶，但不会重复对相同目标造成伤害。火药桶的爆炸可通过<spellName>枪火谈判</spellName>来触发并在击杀目标们时提供额外金币。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "对英雄的额外伤害",
@@ -26270,10 +26274,10 @@
                         ],
                         [
                             75,
-                            105,
+                            95,
+                            115,
                             135,
-                            165,
-                            195
+                            155
                         ],
                         [
                             40,
@@ -26329,7 +26333,7 @@
                         null,
                         "3/3/4/4/5",
                         "2",
-                        "75/105/135/165/195",
+                        "75/95/115/135/155",
                         "40/50/60/70/80",
                         "25",
                         "2",
@@ -37788,7 +37792,7 @@
                 "critperlevel": 0,
                 "attackdamage": 59,
                 "attackdamageperlevel": 3.25,
-                "attackspeedperlevel": 1.4,
+                "attackspeedperlevel": 1,
                 "attackspeed": 0.625
             },
             "spells": [
@@ -43858,10 +43862,12 @@
                     "leveltip": {
                         "label": [
                             "伤害",
+                            "伤害",
                             "冷却时间"
                         ],
                         "effect": [
                             "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -43882,9 +43888,9 @@
                     "effect": [
                         null,
                         [
-                            150,
-                            250,
-                            350
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0.5,
@@ -43907,19 +43913,19 @@
                             300
                         ],
                         [
-                            15,
-                            15,
-                            15
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            13,
-                            13,
-                            13
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            70,
-                            70,
-                            70
+                            0,
+                            0,
+                            0
                         ],
                         [
                             750,
@@ -43934,14 +43940,14 @@
                     ],
                     "effectBurn": [
                         null,
-                        "150/250/350",
+                        "0",
                         "0.5",
                         "0",
                         "2.5",
                         "300",
-                        "15",
-                        "13",
-                        "70",
+                        "0",
+                        "0",
+                        "0",
                         "750",
                         "550"
                     ],
@@ -45742,7 +45748,7 @@
                     "id": "KindredEWrapper",
                     "name": "横生惧意",
                     "description": "羊灵进行一发谨慎的定位射击，来使目标减速。如果羊灵又进行了两次攻击，那么她的第三次攻击会指挥狼灵扑向目标，对目标造成巨量伤害。",
-                    "tooltip": "千珏弱化一名敌人，对其造成持续{{ slowduration }}秒的{{ totalslow }}%<status>减速</status>。<br /><br />千珏在{{ totalduration }}秒内对目标进行的第三次攻击会引导狼灵扑击该敌人，造成<physicalDamage>{{ basebitedamage }}</physicalDamage>外加<physicalDamage>{{ percentbitedamage }}已损失生命值的物理伤害</physicalDamage>。<br /><br />狼灵的扑击会对低于{{ healththreshold }}生命值的目标进行暴击，造成<physicalDamage>{{ basebitedamage }}</physicalDamage>外加<physicalDamage>{{ critdamage }}已损失生命值的物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "千珏弱化一名敌人，对其造成持续{{ slowduration }}秒的{{ totalslow }}%<status>减速</status>。<br /><br />千珏在{{ totalduration }}秒内对目标进行的第三次攻击会引导狼灵扑击该敌人，造成额外<physicalDamage>{{ basebitedamage }}</physicalDamage>外加<physicalDamage>{{ percentbitedamage }}已损失生命值的物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -51695,8 +51701,8 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 60,
-                "attackdamageperlevel": 2.9,
-                "attackspeedperlevel": 3.3,
+                "attackdamageperlevel": 2.5,
+                "attackspeedperlevel": 2.5,
                 "attackspeed": 0.638
             },
             "spells": [
@@ -51708,13 +51714,11 @@
                     "leveltip": {
                         "label": [
                             "伤害",
-                            "攻击力",
                             "冷却时间",
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -51740,25 +51744,25 @@
                     "effect": [
                         null,
                         [
-                            85,
-                            115,
-                            145,
-                            175,
-                            205
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            60,
-                            75,
-                            90,
-                            105,
-                            120
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1000,
-                            1000,
-                            1000,
-                            1000,
-                            1000
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0.41,
@@ -51768,11 +51772,11 @@
                             0.41
                         ],
                         [
-                            100,
-                            100,
-                            100,
-                            100,
-                            100
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -51812,11 +51816,11 @@
                     ],
                     "effectBurn": [
                         null,
-                        "85/115/145/175/205",
-                        "60/75/90/105/120",
-                        "1000",
+                        "0",
+                        "0",
+                        "0",
                         "0.41",
-                        "100",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -58041,8 +58045,8 @@
                 "difficulty": 1
             },
             "stats": {
-                "hp": 640,
-                "hpperlevel": 103,
+                "hp": 625,
+                "hpperlevel": 100,
                 "mp": 300,
                 "mpperlevel": 40,
                 "movespeed": 325,
@@ -58067,7 +58071,7 @@
                     "id": "MissFortuneRicochetShot",
                     "name": "一箭双雕",
                     "description": "厄运小姐向敌人发射子弹，伤害他们以及他们后面的目标。两次攻击都可以施加【厄运的眷顾】。",
-                    "tooltip": "厄运小姐发射一次弹跳射击，对一个敌人及其身后的另一个敌人造成<physicalDamage>{{ totaldamagetooltip }}物理伤害</physicalDamage>。<br /><br />第二段射击可以暴击。如果第一段射击击杀了它的目标，那么第二段射击就必定暴击。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "厄运小姐发射一次弹跳射击，对一个敌人及其身后的另一个敌人造成<physicalDamage>{{ totaldamagetooltip }}物理伤害</physicalDamage>。<br /><br />第二段射击可以暴击以造成<physicalDamage>{{ totaldamagecrit }}物理伤害</physicalDamage>。如果第一段射击击杀了目标，则第二段射击必定暴击。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -58075,7 +58079,7 @@
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e2 }} -> {{ e2NL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -58492,7 +58496,7 @@
                     "id": "MissFortuneBulletTime",
                     "name": "弹幕时间",
                     "description": "厄运小姐向她面前的锥形范围内引导一阵子弹风暴，对敌人造成大量伤害。这个技能的每波子弹都可以暴击。",
-                    "tooltip": "厄运小姐向前方锥形地带引导一阵弹幕，在{{ totalchannelduration }}秒里持续发射共{{ totalwaves }}波，每波弹幕造成<physicalDamage>{{ physicaldamageperwave }}物理伤害</physicalDamage>(总共<physicalDamage>{{ totalphysicaldamage }}物理伤害</physicalDamage>)。<br /><br />每一波都可以暴击来造成%i:scaleCrit% <physicalDamage>{{ physicalcritperwave }}物理伤害</physicalDamage>(总共%i:scaleCrit%<physicalDamage>{{ totalphysicalcritdamage }}物理伤害</physicalDamage>)。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "厄运小姐向前方锥形地带引导一阵弹幕，{{ basechannelduration }}秒内持续发射共{{ basewaves }}波子弹，每波弹幕造成<physicalDamage>{{ physicaldamageperwave }}物理伤害</physicalDamage>(总共<physicalDamage>{{ totalphysicaldamage }}物理伤害</physicalDamage>)。<br /><br />每一波均可触发暴击，造成%i:scaleCrit%<physicalDamage>{{ critdamageperwave }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "弹织成幕",
@@ -60114,6 +60118,12 @@
                     "id": "25080",
                     "num": 80,
                     "name": "灵魂莲华 莫甘娜",
+                    "chromas": false
+                },
+                {
+                    "id": "25081",
+                    "num": 81,
+                    "name": "至臻 蒙面女郎 莫甘娜",
                     "chromas": false
                 }
             ],
@@ -62867,6 +62877,12 @@
                     "num": 36,
                     "name": "水晶泰坦 诺提勒斯",
                     "chromas": false
+                },
+                {
+                    "id": "111039",
+                    "num": 39,
+                    "name": "禁魔石巨像 诺提勒斯",
+                    "chromas": false
                 }
             ],
             "lore": "早在比尔吉沃特立起第一座码头的时候，就有一个孤独的传说。身着铁甲的巨人诺提勒斯在蓝焰岛附近的黑暗水域中徘徊。他心里记恨着一桩不可原谅的背叛，毫无预警地出手。他甩动巨大的船锚，拯救落难的可怜虫，或是将贪婪的人拖进末日。据说，没有缴“比尔吉沃特什一税”的人就是他的目标。他会带着他们和自己一起沉入波涛——相当于一个铁板钉钉的提醒，没人能逃脱深海的制裁。",
@@ -64986,7 +65002,7 @@
                 "critperlevel": 0,
                 "attackdamage": 60,
                 "attackdamageperlevel": 2,
-                "attackspeedperlevel": 2.25,
+                "attackspeedperlevel": 2,
                 "attackspeed": 0.697
             },
             "spells": [
@@ -64994,15 +65010,13 @@
                     "id": "NilahQ",
                     "name": "游刃万变",
                     "description": "随着她鞭刃的一次抽击，尼菈对她所选方向中一条直线上命中的任何敌人们造成伤害。这个行动会在短时间里延伸她的攻击距离。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>尼菈获得{{ critarmorpen }}护甲穿透，并且她对英雄进行的攻击会回复自身<healing>{{ critlifesteal }}实际伤害值的生命值</healing>。来自这个效果的过量治疗将转化为一个持续{{ shieldduration }}秒的<shield>护盾</shield>。<br /><br /><spellActive>主动：</spellActive>尼菈甩出她的鞭刃，造成<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>，可通过她的暴击几率提升。如果命中了一个敌方单位或建筑物，尼菈就会获得125攻击距离和<attackSpeed>{{ bonusattackspeedcalc }}%攻击速度</attackSpeed>，并且她的攻击会在一个锥形范围内造成<physicalDamage>{{ attacktotaldamagetooltip }}物理伤害</physicalDamage>，这些效果持续{{ buffduration }}秒。<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>尼菈获得{{ critarmorpen }}护甲穿透，并且她对英雄进行的攻击会回复自身<healing>{{ critlifesteal }}造成伤害值的生命值</healing>。来自这个效果的过量治疗将转化为一个持续{{ shieldduration }}秒的<shield>护盾</shield>。<br /><br /><spellActive>主动：</spellActive>尼菈甩出她的鞭刃，造成 <physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>。如果命中了一个敌方单位或建筑物，尼菈就会获得125攻击距离和<attackSpeed>{{ bonusattackspeedcalc }}%攻击速度</attackSpeed>，并且她的攻击会命中一个锥形范围，这些效果持续{{ buffduration }}秒。<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "伤害",
-                            "伤害：<physicalDamage>@TargetDamage@</physicalDamage> = <scaleLevel>@PercentAD*100@% (%i:scaleAD%)</scaleLevel>"
+                            "伤害"
                         ],
                         "effect": [
-                            "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ qadratio*100.000000 }}% -> {{ qadrationl*100.000000 }}%"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -65419,17 +65433,17 @@
                     "id": "NilahR",
                     "name": "神恩激荡",
                     "description": "尼菈快乐洋溢地挥舞她的鞭刃，对她周围的敌人们造成伤害，然后用她的武器将他们拉得更加靠近。",
-                    "tooltip": "尼菈挥舞她的鞭刃，在1秒里持续造成<physicalDamage>{{ damagepertickcalctooltip }}物理伤害</physicalDamage>，然后用一次<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>的爆发来完成挥舞，并将附近的敌人们<status>拉拽</status>向她。<br /><br />尼菈对她自身和附近的友方英雄们进行治疗，治疗量相当于<healing>她对敌方英雄们造成的{{ champhealingpercent }} (+{{ spell.nilahq:critlifesteal }} 游刃万变)实际伤害值(非英雄单位为{{ otherhealingpercent*100 }}%)</healing>，并将任何过量治疗转化为一个持续{{ duration }}秒的<shield>护盾</shield>。<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "尼菈挥舞她的鞭刃，在1秒里持续造成<physicalDamage>{{ damagepertickcalctooltip }}物理伤害</physicalDamage>，然后用一次<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>的爆发来完成挥舞，并将附近的敌人们<status>拉拽</status>向她。<br /><br />【神恩激荡】对尼菈和附近的友方英雄们进行治疗，治疗量相当于<healing>她对敌方英雄们的{{ champhealingpercent }} (+{{ spell.nilahq:critlifesteal }} 游刃万变)造成伤害值</healing>，并将任何过量治疗转化为一个持续{{ duration }}秒的<shield>护盾</shield>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
                             "伤害",
-                            "每段伤害"
+                            "持续伤害"
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ damagebase }} -> {{ damagebaseNL }}",
-                            "{{ damagepertick }} -> {{ damagepertickNL }}"
+                            "{{ damagepertick*4.000000 }} -> {{ damageperticknl*4.000000 }}"
                         ]
                     },
                     "maxrank": 3,
@@ -65440,11 +65454,11 @@
                     ],
                     "cooldownBurn": "110/95/80",
                     "cost": [
-                        80,
-                        80,
-                        80
+                        100,
+                        100,
+                        100
                     ],
-                    "costBurn": "80",
+                    "costBurn": "100",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -76622,7 +76636,7 @@
                     "id": "RengarQ",
                     "name": "残忍无情",
                     "description": "雷恩加尔的下次攻击会蛮横地戳刺他的目标来造成额外伤害。<br><br>残暴效果：造成更多伤害，并且他会获得攻击速度加成。",
-                    "tooltip": "雷恩加尔的下2次攻击获得<attackSpeed>{{ e5 }}%攻击速度</attackSpeed>。第一次攻击会暴击，造成<physicalDamage>{{ F4 }} (%i:scaleAD%%i:scaleCrit%) 物理伤害</physicalDamage>。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>第一次攻击会暴击，造成<physicalDamage>{{ F5 }} (%i:scaleLevel%%i:scaleAD%%i:scaleCrit%) 物理伤害</physicalDamage>并为雷恩加尔提供{{ e3 }}秒的<attackSpeed>{{ empoweredqas }}攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "雷恩加尔的下两次攻击获得<attackSpeed>{{ asbonus }}%攻击速度</attackSpeed>。第一次攻击造成<physicalDamage>{{ qdamage }}物理伤害</physicalDamage>。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>第一次攻击造成<physicalDamage>{{ empoweredqdamage }}物理伤害</physicalDamage>并为雷恩加尔提供持续{{ asduration }}秒的<attackSpeed>{{ empoweredqas }}攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -76630,8 +76644,8 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ baseadratiotooltip }}% -> {{ baseadratiotooltipNL }}%",
                             "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}"
                         ]
                     },
@@ -76656,53 +76670,53 @@
                     "effect": [
                         null,
                         [
-                            30,
-                            60,
-                            90,
-                            120,
-                            150
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            100,
-                            105,
-                            110,
-                            115,
-                            120
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            40,
-                            40,
-                            40,
-                            40,
-                            40
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.2,
-                            0.3,
-                            0.4,
-                            0.5,
-                            0.6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -76728,13 +76742,13 @@
                     ],
                     "effectBurn": [
                         null,
-                        "30/60/90/120/150",
-                        "100/105/110/115/120",
-                        "5",
-                        "5",
-                        "40",
-                        "3",
-                        "0.2/0.3/0.4/0.5/0.6",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0"
@@ -76765,7 +76779,7 @@
                     "id": "RengarW",
                     "name": "战争咆哮",
                     "description": "雷恩加尔发出一声战争咆哮，对敌人造成伤害并基于近期受到的伤害回复生命值。<br><br>残暴效果：额外移除控制效果。",
-                    "tooltip": "雷恩加尔进行咆哮，对附近的敌人们造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>并回复生命值，相当于他在前{{ e3 }}秒受到的<healing>{{ damagepercentagehealed }}%</healing>伤害。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>造成<magicDamage>{{ totaldamageempowered }}魔法伤害</magicDamage>并且还会净化雷恩加尔身上的控制效果。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "雷恩加尔进行咆哮，对附近的敌人们造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>并回复生命值，相当于他在前{{ healingwindow }}秒受到的<healing>{{ damagepercentagehealed }}%</healing>伤害。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>造成<magicDamage>{{ totaldamageempowered }}魔法伤害</magicDamage>并且还会净化雷恩加尔身上的控制效果。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -76804,32 +76818,32 @@
                             0
                         ],
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5,
-                            1.5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            100,
-                            100,
-                            100,
-                            100,
-                            100
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -76870,10 +76884,10 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "50",
-                        "1.5",
-                        "1.5",
-                        "100",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -76906,7 +76920,7 @@
                     "id": "RengarE",
                     "name": "套索打击",
                     "description": "雷恩加尔扔出一个套索，套索在命中第一个敌人后，会暂时降低这名敌人的移动速度。<br><br>残暴效果：对目标造成禁锢效果。",
-                    "tooltip": "雷恩加尔扔出一个套索，对命中的第一个敌人造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>，以及持续{{ e3 }}秒的显形和{{ e2 }}%<status>减速</status>。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>造成<physicalDamage>{{ totalempowereddamage }}物理伤害</physicalDamage>并将其<status>禁锢</status>{{ e4 }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "雷恩加尔扔出一个套索，对命中的第一个敌人造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>，以及持续{{ ccduration }}秒的显形和{{ slowamount }}%<status>减速</status>。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>造成<physicalDamage>{{ totalempowereddamage }}物理伤害</physicalDamage>和{{ ccduration }}秒<status>禁锢</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -76938,32 +76952,32 @@
                     "effect": [
                         null,
                         [
-                            55,
-                            100,
-                            145,
-                            190,
-                            235
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            45,
-                            60,
-                            75,
-                            90
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.75,
-                            1.75,
-                            1.75,
-                            1.75,
-                            1.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1.75,
-                            1.75,
-                            1.75,
-                            1.75,
-                            1.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -77010,10 +77024,10 @@
                     ],
                     "effectBurn": [
                         null,
-                        "55/100/145/190/235",
-                        "30/45/60/75/90",
-                        "1.75",
-                        "1.75",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -79376,13 +79390,11 @@
                     "leveltip": {
                         "label": [
                             "伤害",
-                            "冷却时间",
-                            "总攻击力收益"
+                            "冷却时间"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ qadratio*100.000000 }}% -> {{ qadrationl*100.000000 }}%"
+                            "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -79799,7 +79811,7 @@
                     "id": "SamiraR",
                     "name": "炼狱扳机",
                     "description": "莎弥拉的武器倾泻出大量的子弹，狂野地射击她周围的所有敌人。",
-                    "tooltip": "莎弥拉只能在她当前的<keywordMajor>评价等级</keywordMajor>为S时使用这个技能。使用这个技能会消耗掉所有<keywordMajor>评价等级</keywordMajor>。<br /><br />莎弥拉的武器倾泻出大量的子弹，狂野地在2秒里持续对她周围的所有敌人进行10次射击，每次射击造成<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>并施加{{ lifestealmod*100 }}%效能的生命偷取。这些射击也可以产生暴击。<br /><br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "莎弥拉只能在她当前的<keywordMajor>评价等级</keywordMajor>为S时使用这个技能。使用这个技能会消耗掉所有<keywordMajor>评价等级</keywordMajor>。<br /><br />莎弥拉的武器倾泻出大量的子弹，狂野地在2秒里持续对她周围的所有敌人进行10次射击，每次射击造成<physicalDamage>{{ damagecalc }}物理伤害</physicalDamage>并施加{{ lifestealmod*100 }}%效能的生命偷取。这些射击也可以产生暴击。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害"
@@ -92438,6 +92450,12 @@
                     "num": 21,
                     "name": "水晶圣骑 塔莉垭",
                     "chromas": true
+                },
+                {
+                    "id": "163024",
+                    "num": 24,
+                    "name": "杜朗传人 塔莉垭",
+                    "chromas": false
                 }
             ],
             "lore": "塔莉垭是一位来自恕瑞玛的游牧民族的法师，孩子的好奇与大人的责任两股力量同时拉扯着她。她曾踏遍瓦洛兰的山山水水，只为寻得控制己身异能的法门，不过最近，她已经回到了故乡，保护生她养她的部族。有些人把她的温柔善意当做是懦弱的表现，最终也为自己的愚鲁付出了代价。塔莉垭青春稚嫩的举止背后，是一颗敢于移山填海的雄心，和一个堪能倾世的灵魂。",
@@ -96302,19 +96320,17 @@
                     "id": "TristanaE",
                     "name": "爆炸火花",
                     "description": "当崔丝塔娜杀死一个单位，加农炮弹会炸裂伤害周围的敌人。可通过主动施放这个技能来将一颗炸弹放置在目标身上，炸弹会在短时间内或被崔丝塔娜攻击数次后爆炸，爆炸时对目标及其附近的敌人造成伤害。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>崔丝塔娜的攻击在击杀敌人时会对周围敌人造成<magicDamage>{{ passivedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动：</spellActive>崔丝塔娜将一颗炸弹附着在一名敌人或防御塔上，来在{{ activeduration }}秒后对周围敌人造成<physicalDamage>{{ activedamage }}物理伤害</physicalDamage>。崔丝塔娜对带着炸弹的目标进行的每次攻击和技能都会使这个伤害提升{{ activeperstackamp*100 }}%(最多4层)，并且叠加暴击几率也会使这个伤害提升{{ critchanceamp*100 }}%。<br /><br />在{{ activemaxstacks }}层时，这个炸弹会立刻爆炸(最大值为<physicalDamage>{{ activemaxdamage }}物理伤害</physicalDamage>)。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>崔丝塔娜的攻击在击杀敌人时会对周围敌人造成<magicDamage>{{ passivedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动：</spellActive>崔丝塔娜将一颗炸弹附着在一名敌人或防御塔上，来在{{ activeduration }}秒后对周围敌人造成<physicalDamage>{{ activedamage }}物理伤害</physicalDamage>。崔丝塔娜对带着炸弹的目标进行的每次攻击和技能都会使这个伤害提升{{ activeperstackamp*100 }}%(最多4层)。<br /><br />在{{ activemaxstacks }}层时，这个炸弹会立刻爆炸(最大值为<physicalDamage>{{ activemaxdamage }}物理伤害</physicalDamage>)。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "被动爆炸伤害",
                             "基础火花伤害",
-                            "攻击力收益",
                             "冷却时间",
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
                             "{{ passivebasedamage }} -> {{ passivebasedamageNL }}",
                             "{{ activebasedamage }} -> {{ activebasedamageNL }}",
-                            "{{ activebadratio*100.000000 }}% -> {{ activebadrationl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -97403,17 +97419,15 @@
                     "id": "TryndamereQ",
                     "name": "嗜血杀戮",
                     "description": "泰达米尔对战斗极度饥渴，他受伤程度越高，攻击力越强。他能通过释放【Q嗜血杀戮】消耗怒气并治疗自己。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>泰达米尔嗜血成性，获得<scaleAD>{{ flatad }}攻击力</scaleAD>，每1%已损失生命值额外提供<scaleAD>{{ adperonepercentmissinghp }}攻击力</scaleAD>。<br /><br /><spellActive>主动：</spellActive>泰达米尔消耗他的<keywordMajor>怒气</keywordMajor>，回复<healing>{{ baseheal }}外加x{{ healperfury }}怒气的生命值</healing>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>泰达米尔嗜血成性，获得至多<scaleAD>{{ maximumbonusad }}攻击力</scaleAD>，基于他的已损失生命值。<br /><br /><spellActive>主动：</spellActive>泰达米尔消耗他的<keywordMajor>怒气</keywordMajor>，回复<healing>{{ baseheal }}外加{{ healperfury }}x怒气的生命值(最大值：{{ maximumheal }})</healing>。 {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "攻击力",
-                            "每损失1%生命值的攻击力加成",
+                            "最大伤害",
                             "治疗效果",
                             "每点怒气的治疗量"
                         ],
                         "effect": [
-                            "{{ flatad }} -> {{ flatadNL }}",
-                            "{{ adperonepercentmissinghp }} -> {{ adperonepercentmissinghpNL }}",
+                            "{{ maximumbonusad }} -> {{ maximumbonusadNL }}",
                             "{{ basehealing }} -> {{ basehealingNL }}",
                             "{{ bonushealperfury }} -> {{ bonushealperfuryNL }}"
                         ]
@@ -97548,7 +97562,7 @@
                     "id": "TryndamereW",
                     "name": "蔑视",
                     "description": "泰达米尔嘲笑敌人，减少身边敌方英雄的攻击力。背对泰达米尔的敌人还会被减速。",
-                    "tooltip": "泰达米尔抛出羞辱之语，使英雄们降低{{ adreduction*-1 }}攻击力，持续{{ reductionduration }}秒。背对泰达米尔的敌方英雄还会被<status>减速</status>{{ slowpotency*-100 }}%，持续相同时长。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "泰达米尔抛出羞辱之语，使英雄们降低{{ adreduction*-1 }}攻击力，持续{{ reductionduration }}秒，并且对逃离泰达米尔的敌人造成{{ slowpotency*-100 }}%<status>减速</status>，持续{{ slowduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "物理伤害削减",
@@ -98835,8 +98849,8 @@
                 "crit": 0,
                 "critperlevel": 0,
                 "attackdamage": 59,
-                "attackdamageperlevel": 3.1,
-                "attackspeedperlevel": 3.38,
+                "attackdamageperlevel": 3,
+                "attackspeedperlevel": 3,
                 "attackspeed": 0.679
             },
             "spells": [
@@ -98844,15 +98858,15 @@
                     "id": "TwitchHideInShadows",
                     "name": "埋伏",
                     "description": "图奇进入伪装状态，持续一段短暂的时间并且移动速度得到提升。当离开伪装状态后，图奇会暂时获得攻击速度加成。<br><br>当一名身上带有【死亡毒液】的敌方英雄死亡时，此技能的冷却时间会重置。",
-                    "tooltip": "图奇<keywordStealth>伪装</keywordStealth>并获得<speed>{{ e3 }}%移动速度</speed>，持续{{ e2 }}秒。当附近有无法看见他的敌人时，移动速度提升至{{ e3 }}%。在离开<keywordStealth>伪装</keywordStealth>后，图奇获得<attackSpeed>{{ e1 }}%攻击速度</attackSpeed>，持续{{ e6 }}秒。<br /><br />当一名带有<keywordMajor>毒液</keywordMajor>的敌方英雄阵亡时，这个技能的冷却时间就会刷新。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "图奇<keywordStealth>伪装</keywordStealth>并获得<speed>{{ movespeedmod }}%移动速度</speed>，持续{{ stealthduration }}秒。当附近有一名无法看见他的敌方英雄时，移动速度提升至{{ hiddenspeed }}%。在离开<keywordStealth>伪装</keywordStealth>后，图奇获得<attackSpeed>{{ attackspeedmod*100 }}%攻击速度</attackSpeed>，持续{{ attackspeedduration }}秒。<br /><br />当一名带有<keywordMajor>毒液</keywordMajor>的敌方英雄阵亡时，这个技能的冷却时间就会刷新。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伪装时长",
                             "攻击速度"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e1 }}% -> {{ e1NL }}%"
+                            "{{ stealthduration }} -> {{ stealthdurationNL }}",
+                            "{{ attackspeedmod*100.000000 }}% -> {{ attackspeedmodnl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -98876,46 +98890,46 @@
                     "effect": [
                         null,
                         [
-                            45,
-                            50,
-                            55,
-                            60,
-                            65
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            10,
-                            11,
-                            12,
-                            13,
-                            14
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            30,
-                            30,
-                            30,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            6,
-                            6,
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             3,
@@ -98925,39 +98939,39 @@
                             3
                         ],
                         [
-                            500,
-                            500,
-                            500,
-                            500,
-                            500
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1000,
-                            1000,
-                            1000,
-                            1000,
-                            1000
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            30,
-                            30,
-                            30,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ]
                     ],
                     "effectBurn": [
                         null,
-                        "45/50/55/60/65",
-                        "10/11/12/13/14",
-                        "30",
-                        "1",
-                        "1",
-                        "6",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "3",
-                        "500",
-                        "1000",
-                        "30"
+                        "0",
+                        "0",
+                        "0"
                     ],
                     "vars": [],
                     "costType": " {{ abilityresourcename }}",
@@ -105520,7 +105534,7 @@
                     "id": "ViegoR",
                     "name": "痛贯天灵",
                     "description": "佛耶戈传送到一个附近的位置并在抵达时处决一名敌方英雄，将其心脏击碎并在其周围引发一阵毁灭性的冲击波来击退其友军。",
-                    "tooltip": "佛耶戈遗弃他当前<keywordMajor>占据</keywordMajor>的任一灵魂并传送。在抵达时，他会攻击当前生命值百分比最低的英雄，暂时使其<status>减速</status>{{ slowpercent*100 }}%并造成<physicalDamage>{{ totaldamage }}+{{ totalpercenthealth }}%已损失生命值的物理伤害</physicalDamage>。附近的其他敌人会被<status>击退</status>并受到<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "佛耶戈遗弃他当前<keywordMajor>占据</keywordMajor>的任一灵魂并传送。在抵达时，他会攻击当前生命值百分比最低的英雄，暂时使其<status>减速</status>{{ slowpercent*100 }}%并造成<physicalDamage>{{ totaldamage }} + {{ totalpercenthealth }}%已损失生命值的物理伤害</physicalDamage>。附近的其他敌人会被<status>击退</status>并受到<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "已损失的生命值伤害",
@@ -113989,18 +114003,18 @@
                             "{{ q2basedamage }} -> {{ q2basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ healpercent*100.000000 }}% -> {{ healpercentnl*100.000000 }}%",
-                            "{{ qcoeff }} -> {{ qcoeffNL }}"
+                            "{{ qcoeff*100.000000 }}% -> {{ qcoeffnl*100.000000 }}%"
                         ]
                     },
                     "maxrank": 5,
                     "cooldown": [
+                        10,
                         9,
                         8,
                         7,
-                        6,
-                        5
+                        6
                     ],
-                    "cooldownBurn": "9/8/7/6/5",
+                    "cooldownBurn": "10/9/8/7/6",
                     "cost": [
                         25,
                         25,
@@ -116147,7 +116161,7 @@
                     "id": "ZeriW",
                     "name": "强穿激光",
                     "description": "泽丽发射一道电能脉冲，来对首个命中的敌人造成减速和伤害。如果脉冲命中了一个墙体，那么它会延伸为一道长程激光。",
-                    "tooltip": "泽丽发射一道电能脉冲，来对首个命中的敌人造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>和持续{{ slowduration }}秒的{{ slowpercent*100 }}%<status>减速</status>。如果脉冲命中了地形，那么它会延伸为一道激光并在一个区域内施加效果并对英雄和野怪造成暴击。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "泽丽发射一道电能脉冲，来对首个命中的敌人造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>和持续{{ slowduration }}秒的{{ slowpercent*100 }}%<status>减速</status>。如果脉冲命中了地形，那么它会延伸为一道激光并在一个区域内施加效果并对英雄和野怪产生暴击以造成<physicalDamage>{{ walldamage }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
