@@ -5261,13 +5261,12 @@
                 },
                 _handleEventPass(e = []) {
                     try {
-                        const t = e.filter((e => "kSeasonPass" === e.eventInfo.eventType));
+                        const t = e.filter((e => "kSeasonPass" === e.eventInfo.eventType && "Default" === e.eventInfo.seasonPassSubType));
                         if (t && t.length > 0) {
-                            this.set("isSeasonPassActive", !0), this.set("seasonPassId", t[0].eventId), this.set("isErrored", !1);
                             const e = t[0].eventId,
                                 n = `/events/${e}/objectives-banner`,
                                 s = `/events/${e}/is-grace-period`;
-                            this._eventHubBinding.observe(n, this, this._handleEventPassProgress), this._eventHubBinding.observe(s, this, this._handleEventPassGracePeriod)
+                            this.set("isSeasonPassActive", !0), this.set("seasonPassId", e), this.set("isErrored", !1), this._eventHubBinding.observe(n, this, this._handleEventPassProgress), this._eventHubBinding.observe(s, this, this._handleEventPassGracePeriod)
                         }
                     } catch (e) {
                         this._handleError(), s.logger.error("Error handling event pass in postgame.", e)

@@ -1,5 +1,5 @@
 {
-    "{1a8692d8}": {
+    "Characters/TFT16_Jhin/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{1f751bab}": {
@@ -63,7 +63,7 @@
             "mCastType": 1,
             "castFrame": 7.0,
             "missileSpeed": 2600.0,
-            "mMissileEffectKey": "{6a9622d8}",
+            "mMissileEffectKey": "TFT16_Jhin_BA_Mis_01",
             "mHitEffectOrientType": 2,
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
@@ -72,7 +72,7 @@
         },
         "__type": "SpellObject"
     },
-    "{2475238a}": {
+    "Characters/TFT16_Jhin/Spells/TFT16_JhinBasicAttack3": {
         "ObjectName": "TFT16_JhinBasicAttack3",
         "mScriptName": "TFT16_JhinBasicAttack3",
         "mSpell": {
@@ -133,7 +133,7 @@
             "mCastType": 1,
             "castFrame": 7.0,
             "missileSpeed": 2600.0,
-            "mMissileEffectKey": "{6a9622d8}",
+            "mMissileEffectKey": "TFT16_Jhin_BA_Mis_01",
             "mHitEffectOrientType": 2,
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
@@ -142,7 +142,7 @@
         },
         "__type": "SpellObject"
     },
-    "{2575251d}": {
+    "Characters/TFT16_Jhin/Spells/TFT16_JhinBasicAttack2": {
         "ObjectName": "TFT16_JhinBasicAttack2",
         "mScriptName": "TFT16_JhinBasicAttack2",
         "mSpell": {
@@ -203,7 +203,7 @@
             "mCastType": 1,
             "castFrame": 7.0,
             "missileSpeed": 2600.0,
-            "mMissileEffectKey": "{6a9622d8}",
+            "mMissileEffectKey": "TFT16_Jhin_BA_Mis_01",
             "mHitEffectOrientType": 2,
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
@@ -346,7 +346,7 @@
             "mCastType": 3,
             "castFrame": 5.5,
             "missileSpeed": 10000.0,
-            "mMissileEffectKey": "{1b5633ea}",
+            "mMissileEffectKey": "TFT16_Jhin_R_Big_mis",
             "mLineWidth": 80.0,
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
@@ -360,7 +360,7 @@
         },
         "__type": "SpellObject"
     },
-    "{6605e4c1}": {
+    "Characters/TFT16_Jhin/Spells/TFT16_JhinSpell": {
         "ObjectName": "TFT16_JhinSpell",
         "mScriptName": "TFT16_JhinSpell",
         "mSpell": {
@@ -372,10 +372,10 @@
                     "mName": "ADDamage",
                     "mValues": [
                         4.440000057220459,
-                        125.0,
-                        190.0,
-                        280.0,
-                        370.0,
+                        135.0,
+                        200.0,
+                        300.0,
+                        400.0,
                         844.0,
                         4.440000057220459
                     ],
@@ -408,6 +408,19 @@
                         1.440000057220459,
                         1.440000057220459,
                         1.440000057220459
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "SpellFixedAS",
+                    "mValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -667,7 +680,7 @@
             "mCastType": 3,
             "castFrame": 7.53000020980835,
             "missileSpeed": 10000.0,
-            "mMissileEffectKey": "{12500a3f}",
+            "mMissileEffectKey": "TFT16_Jhin_R_small_mis",
             "mLineWidth": 80.0,
             "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
             "selectionPriority": 1,
@@ -680,7 +693,7 @@
         },
         "__type": "SpellObject"
     },
-    "{6a752cbd}": {
+    "Characters/TFT16_Jhin/Spells/TFT16_JhinBasicAttack": {
         "ObjectName": "TFT16_JhinBasicAttack",
         "mScriptName": "TFT16_JhinBasicAttack",
         "mSpell": {
@@ -740,7 +753,7 @@
             "mCastType": 1,
             "castFrame": 7.0,
             "missileSpeed": 2600.0,
-            "mMissileEffectKey": "{6a9622d8}",
+            "mMissileEffectKey": "TFT16_Jhin_BA_Mis_01",
             "mHitEffectOrientType": 2,
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
@@ -749,7 +762,7 @@
         },
         "__type": "SpellObject"
     },
-    "{7730d0ce}": {
+    "Characters/TFT16_Jhin/CharacterRecords/Root": {
         "mCharacterName": "TFT16_Jhin",
         "baseHP": 444.0,
         "baseStaticHPRegen": 0.0,
@@ -763,7 +776,7 @@
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 48.0,
+        "baseDamage": 44.0,
         "baseArmor": 24.0,
         "baseSpellBlock": 24.0,
         "baseCritChance": 0.25,
@@ -795,7 +808,7 @@
             ""
         ],
         "spells": [
-            "{6605e4c1}",
+            "Characters/TFT16_Jhin/Spells/TFT16_JhinSpell",
             "{00000000}",
             "{00000000}",
             "{00000000}"

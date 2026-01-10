@@ -34548,6 +34548,7 @@
                     },
                     "__type": "ValueColor"
                 },
+                "miscRenderFlags": 1,
                 "isUniformScale": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -34632,6 +34633,7 @@
                     "__type": "ValueColor"
                 },
                 "pass": 2,
+                "miscRenderFlags": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -47518,7 +47520,6 @@
                 "lifetime": 0.10000000149011612,
                 "isSingleParticle": 1,
                 "emitterName": "HammerGlow_avatar",
-                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -47527,16 +47528,13 @@
                     "__type": "VfxPrimitiveAttachedMesh"
                 },
                 "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.2980392277240753
-                    ],
-                    "__type": "ValueColor"
-                },
                 "Color": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
                     "dynamics": {
                         "times": [
                             0.0,
@@ -47545,21 +47543,21 @@
                         ],
                         "values": [
                             [
-                                1.0,
-                                1.0,
-                                1.0,
+                                0.0,
+                                0.0,
+                                0.0,
                                 0.0
                             ],
                             [
-                                1.0,
-                                1.0,
-                                1.0,
+                                0.0,
+                                0.0,
+                                0.0,
                                 1.0
                             ],
                             [
-                                1.0,
-                                1.0,
-                                1.0,
+                                0.0,
+                                0.0,
+                                0.0,
                                 1.0
                             ]
                         ],
@@ -47567,9 +47565,19 @@
                     },
                     "__type": "ValueColor"
                 },
+                "reflectionDefinition": {
+                    "fresnel": 0.10000000149011612,
+                    "fresnelColor": [
+                        0.7019608020782471,
+                        0.4588235318660736,
+                        0.062745101749897,
+                        0.6000000238418579
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
                 "miscRenderFlags": 1,
                 "particleIsLocalOrientation": 1,
-                "texture": "ASSETS/Characters/Poppy/Skins/Skin14/Particles/Poppy_Skin14_R_hammer.tex",
+                "texture": "ASSETS/Characters/Poppy/Skins/Skin14/Particles/Poppy_Skin14_AlphaMask_Hammer.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -62532,7 +62540,6 @@
                 "lifetime": 0.10000000149011612,
                 "isSingleParticle": 1,
                 "emitterName": "HammerGlow",
-                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -62546,7 +62553,7 @@
                         1.0,
                         1.0,
                         1.0,
-                        0.2980392277240753
+                        0.3000076413154602
                     ],
                     "__type": "ValueColor"
                 },
@@ -62581,9 +62588,25 @@
                     },
                     "__type": "ValueColor"
                 },
+                "modulationFactor": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "reflectionDefinition": {
+                    "fresnel": 0.10000000149011612,
+                    "fresnelColor": [
+                        0.7019608020782471,
+                        0.4588235318660736,
+                        0.062745101749897,
+                        0.6000000238418579
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
                 "miscRenderFlags": 1,
                 "particleIsLocalOrientation": 1,
-                "texture": "ASSETS/Characters/Poppy/Skins/Skin14/Particles/Poppy_Skin14_R_hammer.tex",
+                "texture": "ASSETS/Characters/Poppy/Skins/Skin14/Particles/Poppy_Skin14_AlphaMask_Hammer.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -63403,7 +63426,6 @@
                 "lifetime": 0.10000000149011612,
                 "isSingleParticle": 1,
                 "emitterName": "DustCloud1",
-                "disabled": true,
                 "birthVelocity": {
                     "constantValue": [
                         300.0,

@@ -298,5 +298,16 @@
 				DDragon: 15.24.1 -> 16.1.1
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-01-10 11-21-37</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: Imported Live file export list.<br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Latest: Within-patch change</li>
+						<li>PBE: 16.2.737.0059 -> 16.2.737.3033</li>
+					</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>

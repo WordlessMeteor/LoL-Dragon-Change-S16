@@ -13526,7 +13526,7 @@
                     if (!Array.isArray(e)) return;
                     const t = {};
                     for (const n of e) {
-                        const e = n.eventInfo.eventType === o.EVENT_PASS_TYPE.SEASON_PASS,
+                        const e = n.eventInfo.eventType === o.EVENT_PASS_TYPE.SEASON_PASS && n.eventInfo.seasonPassSubType === o.EVENT_PASS_SUB_TYPE.DEFAULT,
                             i = !!this.requiredDataToDisplayEAT?.seenEvents && this.requiredDataToDisplayEAT?.seenEvents?.[n.eventId];
                         if (e && !i) {
                             const e = this.getSeasonPassBundles(n.eventId),
@@ -13747,12 +13747,16 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.EVENT_PASS_TYPE = void 0;
+            }), t.EVENT_PASS_TYPE = t.EVENT_PASS_SUB_TYPE = void 0;
             t.EVENT_PASS_TYPE = {
                 SEASON_PASS: "kSeasonPass",
                 HALL_OF_LEGENDS: "kHallOfLegends",
                 EVENT_SHOP: "kEventShop",
                 ACTIVITY_CENTER_MILESTONES: "kActivityCenterMilestones"
+            };
+            t.EVENT_PASS_SUB_TYPE = {
+                DEFAULT: "Default",
+                MAYHEM: "Mayhem"
             }
         }, (e, t) => {
             "use strict";
