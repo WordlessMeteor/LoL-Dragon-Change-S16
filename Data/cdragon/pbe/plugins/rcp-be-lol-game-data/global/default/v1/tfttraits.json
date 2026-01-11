@@ -14094,20 +14094,16 @@
         "trait_id": "TFT16_Teamup_EkkoZilean",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_Timewinders.TFT_Set16.png",
-        "tooltip_text": "<row>(@MinUnits@) Every @EkkoCastsToGainXP@ casts, Ekko stores @EkkoXPGain@ XP for the Chronokeeper trait.</row><br><row>(@MinUnits@) AND enemies within Ekko's Parallel Convergence zone take damage from Zilean's Time Bombs @ZileanSpeedUp*100@% faster.</row><br><br><rules>Total Chronokeeper Stored XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "<row>After every combat Ekko participates in, gain @TOOLTIPONLYXP@XP. After 3-starring Ekko, gain a Zilean.</row><br><row>Ekko's empowered attacks echo for @DamageShare*100@% of the original damage to all enemies taking damage from your strongest Zilean.</row><br><br><br><br>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "EkkoCastsToGainXP",
-                        "value": 2.0
+                        "name": "DamageShare",
+                        "value": 0.1
                     },
                     {
-                        "name": "EkkoXPGain",
-                        "value": 1.0
-                    },
-                    {
-                        "name": "ZileanSpeedUp",
+                        "name": "TOOLTIPONLYXP",
                         "value": 2.0
                     }
                 ]
@@ -14134,14 +14130,26 @@
         "trait_id": "TFT16_Teamup_JarvanShyvana",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_UncompromisingWill.TFT_Set16.png",
-        "tooltip_text": "When Jarvan casts, Shyvana gains @JarvanShieldShare*100@% of the Shield. When Shyvana casts, Jarvan jumps in and deals @JarvanResistDamage*100@% of his Armor and Magic Resist as magic damage in a 2-hex radius.",
+        "tooltip_text": "When Jarvan casts, Shyvana gains @JarvanShieldShare*100@% of the Shield. When Shyvana casts, Jarvan jumps in and deals @JarvanResistDamage1*100@/@JarvanResistDamage2*100@/@JarvanResistDamage3*100@/@JarvanResistDamage4*100@% of his Armor and Magic Resist as magic damage in a 2-hex radius.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "JarvanResistDamage",
-                        "value": 1.85
+                        "name": "JarvanResistDamage1",
+                        "value": 1.25
+                    },
+                    {
+                        "name": "JarvanResistDamage2",
+                        "value": 1.4
+                    },
+                    {
+                        "name": "JarvanResistDamage3",
+                        "value": 1.6
+                    },
+                    {
+                        "name": "JarvanResistDamage4",
+                        "value": 2.0
                     },
                     {
                         "name": "JarvanShieldShare",
@@ -14184,11 +14192,32 @@
         ]
     },
     {
+        "display_name": "Joint Album",
+        "trait_id": "TFT16_Teamup_SeraphineSona",
+        "set": "TFTSet16",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
+        "tooltip_text": "Gain a Seraphine. Your strongest Seraphine's heal now also heals @HealPercent@% of the ally's missing Health. Your strongest Sona gains the Disruptor trait and fires an additional bolt with every cast. Gain a Sona after each player combat.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealPercent",
+                        "value": 10.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
         "display_name": "Poison Pals",
         "trait_id": "TFT16_Teamup_SingedTeemo",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
-        "tooltip_text": "Singed's damage refreshes Teemo's poisons, and every @TeemoDamageReq@ magic damage Teemo deals grants your strongest Singed @SingedAPGain@% Ability Power.",
+        "tooltip_text": "Gain a 2-star Teemo. Singed's damage refreshes Teemo's poisons and Teemo's damage grants Singed ramping Ability Power. Gain a Teemo after each player combat.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

@@ -14094,20 +14094,16 @@
         "trait_id": "TFT16_Teamup_EkkoZilean",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_Timewinders.TFT_Set16.png",
-        "tooltip_text": "<row>(@MinUnits@) 每施放技能@EkkoCastsToGainXP@次，【艾克】为【时光守护者】羁绊储存@EkkoXPGain@经验值。</row><br><row>(@MinUnits@) 并且位于【艾克】的【时光交错】区域内的敌人身上【基兰】的定时炸弹的爆炸时间会提前@ZileanSpeedUp*100@%。</row><br><br><rules>【时光守护者】已储存的总经验值：@TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "tft_trait_description_TFT16_Teamup_EkkoZilean",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "EkkoCastsToGainXP",
-                        "value": 2.0
+                        "name": "DamageShare",
+                        "value": 0.1
                     },
                     {
-                        "name": "EkkoXPGain",
-                        "value": 1.0
-                    },
-                    {
-                        "name": "ZileanSpeedUp",
+                        "name": "TOOLTIPONLYXP",
                         "value": 2.0
                     }
                 ]
@@ -14140,8 +14136,20 @@
             {
                 "constants": [
                     {
-                        "name": "JarvanResistDamage",
-                        "value": 1.85
+                        "name": "JarvanResistDamage1",
+                        "value": 1.25
+                    },
+                    {
+                        "name": "JarvanResistDamage2",
+                        "value": 1.4
+                    },
+                    {
+                        "name": "JarvanResistDamage3",
+                        "value": 1.6
+                    },
+                    {
+                        "name": "JarvanResistDamage4",
+                        "value": 2.0
                     },
                     {
                         "name": "JarvanShieldShare",
@@ -14184,11 +14192,32 @@
         ]
     },
     {
+        "display_name": "tft_trait_displayname_TFT16_Teamup_SeraphineSona",
+        "trait_id": "TFT16_Teamup_SeraphineSona",
+        "set": "TFTSet16",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
+        "tooltip_text": "tft_trait_description_TFT16_Teamup_SeraphineSona",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealPercent",
+                        "value": 10.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
         "display_name": "绝命毒师",
         "trait_id": "TFT16_Teamup_SingedTeemo",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
-        "tooltip_text": "【辛吉德】的伤害会刷新【提莫】的中毒效果，并且【提莫】每造成@TeemoDamageReq@魔法伤害，就会为你最强大的那个【辛吉德】提供@SingedAPGain@%法术加成。",
+        "tooltip_text": "TFT16_Teamup_SingedTeemo_Desc",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

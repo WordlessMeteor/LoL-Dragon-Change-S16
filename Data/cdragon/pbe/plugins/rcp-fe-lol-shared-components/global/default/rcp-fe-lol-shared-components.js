@@ -14956,7 +14956,7 @@
                     validators: e,
                     handlers: () => {
                         n.get("/lol-publishing-content/v1/listeners/client-data").then((e => {
-                            a.logger.info("DEBUG: Client data response", e), t.sendMessage({
+                            t.sendMessage({
                                 messageType: "rcp-fe-lol-home-data-response",
                                 data: {
                                     clientData: {
@@ -17011,16 +17011,13 @@
                                         e.currencies.forEach((e => {
                                             n.unobserve(`/lol-inventory/v1/wallet/${e}`, t), n.observe(`/lol-inventory/v1/wallet/${e}`, t, (n => {
                                                 const s = n[e];
-                                                null != s ? (a.logger.info("DEBUG: Observed currency balance update", {
-                                                    currency: e,
-                                                    balance: s
-                                                }), t.sendMessage({
+                                                null != s ? t.sendMessage({
                                                     messageType: r.METAGAMES_OBSERVE_CURRENCY_BALANCES_RESPONSE,
                                                     data: {
                                                         currency: e,
                                                         balance: s
                                                     }
-                                                })) : a.logger.warning("handleMetagamesObserveCurrencyBalances: Missing currency balance", e)
+                                                }) : a.logger.warning("handleMetagamesObserveCurrencyBalances: Missing currency balance", e)
                                             })), i.add(e)
                                         }))
                                     }(o.options, t, n);
@@ -17051,7 +17048,7 @@
                                                         };
                                                     t.observe(i, o)
                                                 }))
-                                            }(o.purchaseIdToObserve, n), a.logger.info("DEBUG: Player event response", o), t.sendMessage({
+                                            }(o.purchaseIdToObserve, n), t.sendMessage({
                                                 messageType: r.METAGAMES_POST_PLAYER_EVENT_RESPONSE,
                                                 data: {
                                                     ...o,

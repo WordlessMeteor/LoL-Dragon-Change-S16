@@ -12293,7 +12293,7 @@
                 media: a.Ember.computed.alias("battlePassV2.info.media"),
                 _eventMissionsStatusMap: new Map,
                 _eventPassMilestoneStatusMap: new Map,
-                eventStoreMuted: !1,
+                eventStoreMuted: !0,
                 init() {
                     this._super(...arguments), (0, a.getProvider)().getOptional("rcp-fe-lol-tft").then((e => this.set("api", e))), this._setLocale(), this._initObservers(), this.sharedAudioManager = a.navigation?.activityCenter?.getHomeHubsSharedAudioManager()
                 },

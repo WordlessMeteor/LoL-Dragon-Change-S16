@@ -288,7 +288,7 @@
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-01-09 11-37-13</td>
-			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td style="text-align:center;">CDragon: 1/2/1; DDragon: 1/2</td>
 			<td>
 				CDragon: <br>
 					<ul style="list-style-type: disc; margin-left: 20px;">
@@ -306,6 +306,17 @@
 					<ul style="list-style-type: disc; margin-left: 20px;">
 						<li>Latest: Within-patch change</li>
 						<li>PBE: 16.2.737.0059 -> 16.2.737.3033</li>
+					</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-01-11 10-29-31</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: Imported PBE file export list.<br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Latest: 16.1.737.1049 -> 16.1.737.4870</li>
+						<li>PBE: Within-patch change</li>
 					</ul>
 			</td>
 		</tr>
