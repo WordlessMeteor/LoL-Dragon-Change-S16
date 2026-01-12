@@ -494,7 +494,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{0565e2d2}": {
+            "Attack1_Gun_Start": {
                 "mAnimationInterruptionGroupNames": [
                     "{5ab2e906}"
                 ],
@@ -519,7 +519,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{c0345b03}": {
+            "Attack2_Gun_Start": {
                 "mAnimationInterruptionGroupNames": [
                     "{5ab2e906}"
                 ],
@@ -1847,12 +1847,12 @@
                         "__type": "ParametricPairData"
                     },
                     {
-                        "mClipName": "{f317a696}",
+                        "mClipName": "Walkover_Left",
                         "mValue": -160.0,
                         "__type": "ParametricPairData"
                     },
                     {
-                        "mClipName": "{f317a696}",
+                        "mClipName": "Walkover_Left",
                         "mValue": -75.0,
                         "__type": "ParametricPairData"
                     },
@@ -1867,12 +1867,12 @@
                         "__type": "ParametricPairData"
                     },
                     {
-                        "mClipName": "{3d950b4b}",
+                        "mClipName": "Walkover_Right",
                         "mValue": 75.0,
                         "__type": "ParametricPairData"
                     },
                     {
-                        "mClipName": "{3d950b4b}",
+                        "mClipName": "Walkover_Right",
                         "mValue": 160.0,
                         "__type": "ParametricPairData"
                     },
@@ -1884,7 +1884,7 @@
                 ],
                 "__type": "ParametricClipData"
             },
-            "{3d950b4b}": {
+            "Walkover_Right": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{af6be2d9}": {
@@ -1899,7 +1899,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{f317a696}": {
+            "Walkover_Left": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{af6be2d9}": {
@@ -2169,7 +2169,7 @@
                 "mFalseConditionClipName": "{454e55b9}",
                 "__type": "ConditionBoolClipData"
             },
-            "{d0e9efcb}": {
+            "Attack1_Gun_Hit": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Samira/Skins/Base/Animations/Attack1_Gun_Hit.anm",
@@ -2179,19 +2179,19 @@
             },
             "{36f591b1}": {
                 "mClipNameList": [
-                    "{0565e2d2}",
-                    "{d0e9efcb}"
+                    "Attack1_Gun_Start",
+                    "Attack1_Gun_Hit"
                 ],
                 "__type": "SequencerClipData"
             },
             "{0e810574}": {
                 "mClipNameList": [
-                    "{c0345b03}",
-                    "{551dd3a6}"
+                    "Attack2_Gun_Start",
+                    "Attack2_Gun_Hit"
                 ],
                 "__type": "SequencerClipData"
             },
-            "{551dd3a6}": {
+            "Attack2_Gun_Hit": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Samira/Skins/Base/Animations/Attack2_Gun_Hit.anm",
@@ -2448,7 +2448,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{2563cd73}": {
+            "Spell3_INTO_Run": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{b58dd4bf}": {
@@ -2574,7 +2574,7 @@
                 ],
                 "__type": "SequencerClipData"
             },
-            "{56233070}": {
+            "Spell4_INTO_Run": {
                 "mTrackDataName": "Default",
                 "mSyncGroupDataName": "{3d145f68}",
                 "mEventDataMap": {
@@ -5924,7 +5924,7 @@
                 "__type": "TimeBlendData"
             },
             "13039675255239377348": {
-                "mClipName": "{2563cd73}",
+                "mClipName": "Spell3_INTO_Run",
                 "__type": "TransitionClipBlendData"
             },
             "388966337633082115": {
@@ -25192,11 +25192,11 @@
                 "__type": "TimeBlendData"
             },
             "13039675255303898566": {
-                "mClipName": "{2563cd73}",
+                "mClipName": "Spell3_INTO_Run",
                 "__type": "TransitionClipBlendData"
             },
             "13039675255208391244": {
-                "mClipName": "{2563cd73}",
+                "mClipName": "Spell3_INTO_Run",
                 "__type": "TransitionClipBlendData"
             },
             "1246778255436299150": {
@@ -27920,15 +27920,15 @@
                 "__type": "TimeBlendData"
             },
             "12217611126978754189": {
-                "mClipName": "{56233070}",
+                "mClipName": "Spell4_INTO_Run",
                 "__type": "TransitionClipBlendData"
             },
             "12217611125197323545": {
-                "mClipName": "{56233070}",
+                "mClipName": "Spell4_INTO_Run",
                 "__type": "TransitionClipBlendData"
             },
             "12217611128622610743": {
-                "mClipName": "{56233070}",
+                "mClipName": "Spell4_INTO_Run",
                 "__type": "TransitionClipBlendData"
             },
             "15053826887484792756": {
@@ -34057,5 +34057,6 @@
             }
         },
         "__type": "AnimationGraphData"
-    }
+    },
+    "__linked": []
 }

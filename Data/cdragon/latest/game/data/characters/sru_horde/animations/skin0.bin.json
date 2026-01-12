@@ -1,5 +1,5 @@
 {
-    "{fa2d064b}": {
+    "Characters/SRU_Horde/Animations/Skin0": {
         "mCascadeBlendValue": 0.0,
         "mClipDataMap": {
             "Attack1a": {
@@ -55,10 +55,10 @@
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{ac16dda7}": {
-                        "mEffectKey": "{6d4865cb}",
+                        "mEffectKey": "SRU_Horde_Death",
                         "mParticleEventDataPairList": [
                             {
-                                "mBoneName": "{70d59b05}",
+                                "mBoneName": "LowerSpine",
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
@@ -166,7 +166,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{c0123932}": {
+            "Attack1B": {
                 "mTrackDataName": "Default",
                 "mTickDuration": 0.019999999552965164,
                 "mAnimationResourceData": {
@@ -179,7 +179,7 @@
             "{63793e68}": {
                 "mClipNameList": [
                     "Attack1a",
-                    "{c0123932}"
+                    "Attack1B"
                 ],
                 "__type": "SequencerClipData"
             },
@@ -244,7 +244,7 @@
             "{8f9b7cbd}": {
                 "mClipNameList": [
                     "Attack2a",
-                    "{f21943ad}"
+                    "Attack2B"
                 ],
                 "__type": "SequencerClipData"
             },
@@ -264,7 +264,7 @@
                 "EndFrame": 6.0,
                 "__type": "AtomicClipData"
             },
-            "{f21943ad}": {
+            "Attack2B": {
                 "mTrackDataName": "Default",
                 "mTickDuration": 0.01666666753590107,
                 "mAnimationResourceData": {
@@ -318,10 +318,10 @@
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{513a6c2e}": {
-                        "mEffectKey": "{508636cc}",
+                        "mEffectKey": "SRU_Horde_Spawn_In",
                         "mParticleEventDataPairList": [
                             {
-                                "mBoneName": "{93af9a72}",
+                                "mBoneName": "Spine2",
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
@@ -343,7 +343,7 @@
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{f26df3e1}": {
-                        "mEffectKey": "{df95c022}",
+                        "mEffectKey": "SRU_Horde_Spawn",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "Root",
@@ -389,10 +389,10 @@
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{ac16dda7}": {
-                        "mEffectKey": "{01f886fb}",
+                        "mEffectKey": "SRU_Horde_Death2",
                         "mParticleEventDataPairList": [
                             {
-                                "mBoneName": "{70d59b05}",
+                                "mBoneName": "LowerSpine",
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
@@ -420,10 +420,10 @@
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{05f871e9}": {
-                        "mEffectKey": "{f9747c34}",
+                        "mEffectKey": "SRU_Horde_SpawnMinis_Cas",
                         "mParticleEventDataPairList": [
                             {
-                                "mBoneName": "{70d59b05}",
+                                "mBoneName": "LowerSpine",
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
@@ -520,7 +520,7 @@
                     }
                 ],
                 "Updater": {
-                    "__type": "{42b7c989}"
+                    "__type": "LookAtInterestDistanceParametricUpdater"
                 },
                 "mChangeAnimationMidPlay": true,
                 "__type": "ConditionFloatClipData"
@@ -568,7 +568,7 @@
                 "mFlags": 2,
                 "mTrackDataName": "LookAt",
                 "Updater": {
-                    "__type": "{817dda6b}"
+                    "__type": "LookAtInterestAngleParametricUpdater"
                 },
                 "mParametricPairDataList": [
                     {
@@ -1282,5 +1282,6 @@
             }
         },
         "__type": "AnimationGraphData"
-    }
+    },
+    "__linked": []
 }
