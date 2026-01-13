@@ -98,7 +98,9 @@
                     return a.Viewport.main().getScreenRoot(e, s.APP_NAME)
                 }
                 show(e) {
-                    this.hide(), (0, s.default)();
+                    a.externalModel.setProperties({
+                        isVisible: !1
+                    }), (0, s.default)();
                     const t = [];
                     return (e = e || {}).targetDivId || (t.push(this.screenRootReleasePromise), t.push(this.screenRoot.bump())), Promise.all(t).then((() => {
                         this.application || (this.application = a.ComponentFactory.create(s.APP_NAME));
@@ -115,11 +117,14 @@
                         })
                     }))
                 }
-                hide() {
+                unsetModelProperties() {
                     a.externalModel.setProperties({
                         navOptions: void 0,
                         isVisible: !1
-                    }), this.screenRootReleasePromise = this.screenRoot.release()
+                    })
+                }
+                hide() {
+                    this.unsetModelProperties(), this.screenRootReleasePromise = this.screenRoot.release()
                 }
             }
         }, (e, t, n) => {

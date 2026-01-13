@@ -12321,7 +12321,7 @@
                 "constants": [
                     {
                         "name": "Damage",
-                        "value": 100.0
+                        "value": 333.0
                     },
                     {
                         "name": "EnemyNum",
@@ -13300,7 +13300,7 @@
                 "constants": [
                     {
                         "name": "PercentDamageMult",
-                        "value": 3.0
+                        "value": 3.5
                     }
                 ],
                 "min_units": 1,
@@ -14076,11 +14076,11 @@
                 "constants": [
                     {
                         "name": "AmbessaBonusAD",
-                        "value": 0.3
+                        "value": 0.4
                     },
                     {
                         "name": "WolfDamage",
-                        "value": 0.25
+                        "value": 0.3
                     }
                 ],
                 "min_units": 2,
@@ -14094,7 +14094,7 @@
         "trait_id": "TFT16_Teamup_EkkoZilean",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_Timewinders.TFT_Set16.png",
-        "tooltip_text": "tft_trait_description_TFT16_Teamup_EkkoZilean",
+        "tooltip_text": "<row>在有【艾克】参与的每场战斗之后，获得@TOOLTIPONLYXP@经验值。在将【艾克】升到3星之后，获得1个【基兰】。</row><br><row>【艾克】的强化攻击会将@DamageShare*100@%原伤害回响至所有受到你最强大的那个【基兰】的技能伤害的敌人。</row><br><br><br><br>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -14130,22 +14130,22 @@
         "trait_id": "TFT16_Teamup_JarvanShyvana",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_UncompromisingWill.TFT_Set16.png",
-        "tooltip_text": "当【嘉文四世】施放技能时，【希瓦娜】获得他@JarvanShieldShare*100@%护盾值。当【希瓦娜】施放技能时，【嘉文四世】会跳向敌人，在半径2格的范围内造成相当于他@JarvanResistDamage*100@%护甲和魔抗的魔法伤害。",
+        "tooltip_text": "当【嘉文四世】施放技能时，【希瓦娜】获得他@JarvanShieldShare*100@%护盾值。当【希瓦娜】施放技能时，【嘉文四世】会跳向敌人，在半径2格的范围内造成相当于他@JarvanResistDamage1*100@/@JarvanResistDamage2*100@/@JarvanResistDamage3*100@/@JarvanResistDamage4*100@%护甲和魔抗的魔法伤害。",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "JarvanResistDamage1",
-                        "value": 1.25
+                        "value": 1.0
                     },
                     {
                         "name": "JarvanResistDamage2",
-                        "value": 1.4
+                        "value": 1.2
                     },
                     {
                         "name": "JarvanResistDamage3",
-                        "value": 1.6
+                        "value": 1.55
                     },
                     {
                         "name": "JarvanResistDamage4",
@@ -14192,11 +14192,11 @@
         ]
     },
     {
-        "display_name": "tft_trait_displayname_TFT16_Teamup_SeraphineSona",
+        "display_name": "联合专辑",
         "trait_id": "TFT16_Teamup_SeraphineSona",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
-        "tooltip_text": "tft_trait_description_TFT16_Teamup_SeraphineSona",
+        "tooltip_text": "获得1个【萨勒芬妮】。你最强大的那个【萨勒芬妮】的治疗现在还会治疗友军的@HealPercent@%已损失生命值。你最强大的那个【娑娜】获得【耀光使】羁绊，并且每次技能施放会发射一个额外的弹体。每场玩家对战回合结束后，获得一个【娑娜】。",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -14217,7 +14217,7 @@
         "trait_id": "TFT16_Teamup_SingedTeemo",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
-        "tooltip_text": "TFT16_Teamup_SingedTeemo_Desc",
+        "tooltip_text": "获得1个2星【提莫】。【辛吉德】的伤害会刷新【提莫】的中毒效果，并且【提莫】的伤害会为【辛吉德】提供不断增长的法术加成。每场玩家对战回合结束后，获得一个【提莫】。",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
