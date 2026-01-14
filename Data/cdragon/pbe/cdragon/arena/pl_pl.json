@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Zyskujesz <spellName>Partyzantkę</spellName>.<br><br><rules>Gdy nie ruszasz się przez @HoldStillDuration@ sek., zyskujesz <keywordStealth>niewidzialność</keywordStealth>, dopóki się nie poruszysz. Gdy zakończysz <keywordStealth>niewidzialność</keywordStealth>, twój pierwszy atak zada dodatkowe <magicDamage>obrażenia magiczne</magicDamage>, zyskasz <attackSpeed>@BonusAS@ jedn. prędkości ataku</attackSpeed> i @BonusMS*100@% zanikającej <movementSpeed>prędkości ruchu</movementSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "Zwiększasz swoje <scaleHealth>maksymalne zdrowie</scaleHealth> o wartość równą połowie twojej <scaleMana>many</scaleMana>.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

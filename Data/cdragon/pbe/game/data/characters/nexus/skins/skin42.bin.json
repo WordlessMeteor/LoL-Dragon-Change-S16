@@ -1,8 +1,8 @@
 {
-    "{8246637a}": {
+    "Characters/Nexus/Skins/Skin42": {
         "championSkinName": "Nexus_Milkshake_Blue",
         "skinAnimationProperties": {
-            "animationGraphData": "{5275621d}",
+            "animationGraphData": "Characters/Nexus/Animations/Skin42",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -16,12 +16,12 @@
             "submeshRenderOrder": "Ground Base Train Poro PoroHat Glass GlassDestroyed Snowflake SnowflakeDestroyed",
             "materialOverride": [
                 {
-                    "Material": "{2760aded}",
+                    "Material": "Characters/Nexus/Skins/Skin42/Materials/Nexus_Skin42_Milkshake_Glass_inst",
                     "submesh": "Glass",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{2760aded}",
+                    "Material": "Characters/Nexus/Skins/Skin42/Materials/Nexus_Skin42_Milkshake_Glass_inst",
                     "submesh": "GlassDestroyed",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -37,23 +37,23 @@
             "unitHealthBarStyle": 8,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{209e86e8}",
+        "mResourceResolver": "Characters/Nexus/Skins/Skin42/Resources",
         "__type": "SkinCharacterDataProperties"
     },
-    "{209e86e8}": {
+    "Characters/Nexus/Skins/Skin42/Resources": {
         "resourceMap": {
             "Nexus_Explosion": "Characters/Nexus/Skins/Skin0/Particles/Nexus_Base_Explosion",
             "Nexus_Idle": "Characters/Nexus/Skins/Skin0/Particles/Nexus_Base_Idle",
-            "{9f7033fb}": "{d06d3e19}",
-            "{0dba490b}": "{781ee08a}",
-            "{5b4d93e1}": "{d536a16c}",
-            "{07cd8d66}": "{41183d2d}",
-            "{d3ca84ea}": "{0211075f}",
-            "{538c36bf}": "{c0cf03de}"
+            "Nexus_Skin42_Idle_Glow": "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Idle_Glow",
+            "{0dba490b}": "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Death_Order",
+            "{5b4d93e1}": "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Death_Pre_Explosion_Order",
+            "{07cd8d66}": "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Death_Pre_Explosion_Order_Reduced",
+            "{d3ca84ea}": "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Death_Order_Reduced",
+            "{538c36bf}": "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Z_Death_Order_Child"
         },
         "__type": "ResourceResolver"
     },
-    "{2760aded}": {
+    "Characters/Nexus/Skins/Skin42/Materials/Nexus_Skin42_Milkshake_Glass_inst": {
         "name": "Characters/Nexus/Skins/Skin42/Materials/Nexus_Skin42_Milkshake_Glass_inst",
         "paramValues": [
             {
@@ -207,7 +207,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{41183d2d}": {
+    "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Death_Pre_Explosion_Order_Reduced": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.20000000298023224,
@@ -1374,10 +1374,10 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{e53c7cb2}"
+                            "GlassDestroyed"
                         ],
                         "mSubmeshesToDrawAlways": [
-                            "{e53c7cb2}"
+                            "GlassDestroyed"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -1486,10 +1486,10 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{e53c7cb2}"
+                            "GlassDestroyed"
                         ],
                         "mSubmeshesToDrawAlways": [
-                            "{e53c7cb2}"
+                            "GlassDestroyed"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -2132,10 +2132,10 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{e53c7cb2}"
+                            "GlassDestroyed"
                         ],
                         "mSubmeshesToDrawAlways": [
-                            "{e53c7cb2}"
+                            "GlassDestroyed"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -2173,10 +2173,10 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{e53c7cb2}"
+                            "GlassDestroyed"
                         ],
                         "mSubmeshesToDrawAlways": [
-                            "{e53c7cb2}"
+                            "GlassDestroyed"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -2242,7 +2242,7 @@
         "flags": 214,
         "__type": "VfxSystemDefinitionData"
     },
-    "{781ee08a}": {
+    "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Death_Order": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 1.3200000524520874,
@@ -12133,7 +12133,7 @@
         "particlePath": "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Death_Order",
         "__type": "VfxSystemDefinitionData"
     },
-    "{c0cf03de}": {
+    "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Z_Death_Order_Child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -15434,7 +15434,7 @@
         "particlePath": "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Z_Death_Order_Child",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d06d3e19}": {
+    "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Idle_Glow": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -16779,7 +16779,7 @@
         "buildUpTime": 1.0,
         "__type": "VfxSystemDefinitionData"
     },
-    "{d536a16c}": {
+    "Characters/Nexus/Skins/Skin42/Particles/Nexus_Skin42_Death_Pre_Explosion_Order": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.10000000149011612,

@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "獲得「<spellName>約德爾游擊隊</spellName>」<br><br><rules>停止移動@HoldStillDuration@秒後，進入<keywordStealth>潛隱</keywordStealth>狀態，直到下次移動為止。脫離<keywordStealth>潛隱</keywordStealth>狀態時，下次普攻將造成額外<magicDamage>魔法傷害</magicDamage>，增加<attackSpeed>@BonusAS@攻速，以及@BonusMS*100@%<movementSpeed>會逐漸衰減的跑速</movementSpeed></attackSpeed>。</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "增加<scaleHealth>最大生命</scaleHealth>，增加量為<scaleMana>魔力</scaleMana>的一半。",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

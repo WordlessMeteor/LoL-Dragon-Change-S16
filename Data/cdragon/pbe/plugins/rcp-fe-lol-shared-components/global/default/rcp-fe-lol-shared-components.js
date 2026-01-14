@@ -16942,8 +16942,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.addMetagamesListeners = function(e, t, n) {
-                o(e, t, n)
-            }, t.mainMetagamesListener = o;
+                d(e, t, n)
+            }, t.mainMetagamesListener = d;
             var a = n(1);
             const r = {
                     METAGAMES_ROOT: "lol-metagames",
@@ -16956,21 +16956,29 @@
                     METAGAMES_OBSERVE_CURRENCY_BALANCES_RESPONSE: "lol-metagames-currency-balances-response",
                     METAGAMES_GET_BUILD_VERSION: "lol-metagames-get-build-version",
                     METAGAMES_GET_BUILD_VERSION_RESPONSE: "lol-metagames-get-build-version-response",
-                    METAGAMES_ERROR: "lol-metagames-error"
+                    METAGAMES_ERROR: "lol-metagames-error",
+                    METAGAMES_LCU_PATCHING_STATUS: "lol-metagames-lcu-patching-status",
+                    METAGAMES_LCU_PATCHING_STATUS_RESPONSE: "lol-metagames-lcu-patching-status-response"
                 },
                 s = {
                     SUCCESS: "Success",
                     FAILURE: "Failure"
                 },
-                i = new Set;
+                i = {
+                    PATCHING: "Patching",
+                    REPAIRING: "Repairing"
+                },
+                o = new Set;
+            let l = !1,
+                c = null;
 
-            function o(e, t, n) {
+            function d(e, t, n) {
                 t.addListener({
                     messageType: r.METAGAMES_ROOT,
                     validators: e,
-                    handlers: (e, o) => {
+                    handlers: (e, d) => {
                         try {
-                            switch (o?.type) {
+                            switch (d?.type) {
                                 case r.METAGAMES_PUT_PLAYER_DATA:
                                     ! function(e, t, n) {
                                         if (!e || !e.metagameId || !e.playerData) return void a.logger.error("handleMetagamesPlayerDataUpdate: Missing parameters", e);
@@ -17003,7 +17011,7 @@
                                                 }
                                             })
                                         }
-                                    }(o.options, t, n);
+                                    }(d.options, t, n);
                                     break;
                                 case r.METAGAMES_OBSERVE_CURRENCY_BALANCES:
                                     ! function(e, t, n) {
@@ -17018,9 +17026,9 @@
                                                         balance: s
                                                     }
                                                 }) : a.logger.warning("handleMetagamesObserveCurrencyBalances: Missing currency balance", e)
-                                            })), i.add(e)
+                                            })), o.add(e)
                                         }))
-                                    }(o.options, t, n);
+                                    }(d.options, t, n);
                                     break;
                                 case r.METAGAMES_POST_PLAYER_EVENT:
                                     !async function(e, t, n) {
@@ -17065,7 +17073,7 @@
                                                 }
                                             })
                                         }
-                                    }(o.options, t, n);
+                                    }(d.options, t, n);
                                     break;
                                 case r.METAGAMES_GET_BUILD_VERSION:
                                     ! function(e, t) {
@@ -17088,25 +17096,39 @@
                                         }))
                                     }(t, n);
                                     break;
+                                case r.METAGAMES_LCU_PATCHING_STATUS:
+                                    ! function(e, t, n) {
+                                        if (l) return;
+                                        l = !0, n.observe("/patcher/v1/products/league_of_legends/state", (e => {
+                                            const n = e?.action === i.PATCHING || e?.action === i.REPAIRING;
+                                            c !== n && (c = n, t.sendMessage({
+                                                messageType: r.METAGAMES_LCU_PATCHING_STATUS_RESPONSE,
+                                                data: {
+                                                    isPatching: n
+                                                }
+                                            }))
+                                        }))
+                                    }(d.options, t, n);
+                                    break;
                                 case r.METAGAMES_ERROR:
-                                    l = o.options, a.TelemetryService.sendTelemetryEvent("metagame_error_encountered", "error", "unity_metagame", {
-                                        source: l?.source || "Unknown",
-                                        reason: l?.reason || "Unknown",
-                                        metagameId: l?.metagameId || "Unknown"
+                                    u = d.options, a.TelemetryService.sendTelemetryEvent("metagame_error_encountered", "error", "unity_metagame", {
+                                        source: u?.source || "Unknown",
+                                        reason: u?.reason || "Unknown",
+                                        metagameId: u?.metagameId || "Unknown"
                                     });
                                     break;
                                 default:
-                                    a.logger.warning("mainMetagamesListener: Unknown message type", o?.type)
+                                    a.logger.warning("mainMetagamesListener: Unknown message type", d?.type)
                             }
                         } catch (e) {
                             a.logger.error("mainMetagamesListener: Error handling message", e)
                         }
-                        var l
+                        var u
                     },
                     cleanup: () => {
-                        i.forEach((e => {
+                        o.forEach((e => {
                             n.unobserve(`/lol-inventory/v1/wallet/${e}`, t)
-                        }))
+                        })), n.unobserve("/patcher/v1/products/league_of_legends/state", t), l = !1, c = null
                     }
                 })
             }

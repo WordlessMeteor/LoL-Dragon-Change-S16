@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Vous gagnez <spellName>Guérilla</spellName>.<br><br><rules>Après être resté immobile pendant @HoldStillDuration@ sec, vous devenez <keywordStealth>invisible</keywordStealth> jusqu'à votre prochain déplacement. Quand cette <keywordStealth>invisibilité</keywordStealth> prend fin, votre premier coup inflige des <magicDamage>dégâts magiques</magicDamage> bonus, vous gagnez <attackSpeed>+@BonusAS@ de vitesse d'attaque et @BonusMS*100@% de <movementSpeed>vitesse de déplacement (diminuant progressivement)</movementSpeed></attackSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "Vous gagnez un montant de <scaleHealth>PV max</scaleHealth> égal à la moitié de votre <scaleMana>mana</scaleMana>.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

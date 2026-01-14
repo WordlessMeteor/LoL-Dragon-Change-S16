@@ -7484,14 +7484,17 @@
                 })),
                 reportMenuItems: i.Ember.computed("displayName", "puuid", "obfuscatedPuuid", "queueId", (function() {
                     const e = [],
-                        t = [...c];
-                    420 !== this.get("queueId") && t.push("INAPPROPRIATE_NAME"), t.push("OTHER"), e.push({
+                        t = [...c],
+                        n = this.get("queueId"),
+                        i = this.get("puuid"),
+                        s = this.get("obfuscatedPuuid");
+                    420 !== n && t.push("INAPPROPRIATE_NAME"), t.push("OTHER"), e.push({
                         element: this._createMenuHeaderElement(this.get("displayName")),
                         disabled: !0
                     });
                     for (let n = 0; n < t.length; n++) e.push({
                         action: () => {
-                            this.send("submitReport", t[n])
+                            this.send("submitReport", i, s, t[n])
                         },
                         target: this,
                         element: this._createMenuItemElement(t[n], n === t.length - 1)
@@ -7557,29 +7560,25 @@
                             menuClass: "champ-select-reporting-menu"
                         }), p.openAtEvent(event), this.set("isContextMenuOpened", !0))
                     },
-                    submitReport(e) {
-                        const t = this.get("playerReportService"),
-                            n = this.get("isMuted"),
-                            i = this.get("isHumanoid"),
-                            s = this.get("summonerIdRemovalEnabled");
-                        if (!t || !t.sendPlayerReport) return;
-                        const o = this.get("tra").formatString("csr_report_submitted", {
+                    submitReport(e, t, n) {
+                        const i = this.get("playerReportService"),
+                            s = this.get("isMuted"),
+                            o = this.get("isHumanoid");
+                        if (!i || !i.sendPlayerReport) return;
+                        const a = this.get("tra").formatString("csr_report_submitted", {
                                 name: this.get("displayName")
                             }),
-                            a = {
-                                offenderPuuid: this.get("puuid"),
-                                obfuscatedOffenderPuuid: this.get("obfuscatedPuuid"),
+                            l = {
+                                offenderPuuid: e,
+                                obfuscatedOffenderPuuid: t,
                                 gameId: this.get("session.gameId"),
-                                categories: [e],
-                                ...!s && {
-                                    offenderSummonerId: this.get("summonerId")
-                                }
+                                categories: [n]
                             };
-                        t.sendPlayerReport(a).then((() => {
-                            this.recordDidRequestSucceed && this.recordDidRequestSucceed(!0), this.get("chatPublisherService").sendChatMessage(o), this.set("hasReported", !0)
+                        i.sendPlayerReport(l).then((() => {
+                            this.recordDidRequestSucceed && this.recordDidRequestSucceed(!0), this.get("chatPublisherService").sendChatMessage(a), this.set("hasReported", !0)
                         }), (e => {
-                            i ? (this.get("chatPublisherService").sendChatMessage(o), this.set("hasReported", !0)) : this.recordDidRequestSucceed && this.recordDidRequestSucceed(!1, e)
-                        })), e !== r || n || this.send("toggleMute")
+                            o ? (this.get("chatPublisherService").sendChatMessage(a), this.set("hasReported", !0)) : this.recordDidRequestSucceed && this.recordDidRequestSucceed(!1, e)
+                        })), n !== r || s || this.send("toggleMute")
                     }
                 }
             })

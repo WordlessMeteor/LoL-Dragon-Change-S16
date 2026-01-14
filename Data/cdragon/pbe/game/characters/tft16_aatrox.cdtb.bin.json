@@ -80,8 +80,8 @@
                     "mName": "ADDamage",
                     "mValues": [
                         0.0,
-                        85.0,
-                        170.0,
+                        95.0,
+                        200.0,
                         2400.0,
                         2400.0,
                         0.0,
@@ -156,7 +156,7 @@
                 }
             ],
             "mSpellCalculations": {
-                "{39e14a24}": {
+                "FirstCastModifiedDamage": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
@@ -185,9 +185,9 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{0582a038}": {
+                "SecondCastModifiedDamage": {
                     "mMultiplier": {
-                        "mDataValue": "{c0b8b5ee}",
+                        "mDataValue": "SecondCastPercentDamage",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mSimpleTooltipCalculationDisplay": 5,
@@ -218,9 +218,9 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{facdb4bf}": {
+                "ThirdCastModifiedDamage": {
                     "mMultiplier": {
-                        "mDataValue": "{408daf57}",
+                        "mDataValue": "ThirdCastPercentDamage",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mSimpleTooltipCalculationDisplay": 5,

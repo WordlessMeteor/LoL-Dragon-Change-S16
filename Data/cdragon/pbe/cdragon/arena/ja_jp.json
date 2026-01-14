@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "<spellName>「やぶからヨードル」</spellName>を獲得する。<br><br><rules>@HoldStillDuration@秒間移動せずにいると、移動し始めるまで<keywordStealth>インビジブル</keywordStealth>状態になる。<keywordStealth>インビジブル</keywordStealth>状態が解除されると、最初の攻撃が追加<magicDamage>魔法ダメージ</magicDamage>を与え、<attackSpeed>攻撃速度が@BonusAS@</attackSpeed>、<movementSpeed>移動速度が@BonusMS*100@%</movementSpeed>増加する。増加した移動速度は徐々に元に戻る。</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "<scaleMana>マナ</scaleMana>の半分にあたる<scaleHealth>最大体力</scaleHealth>を獲得する。",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Αποκτάτε <spellName>Ανταρτοπόλεμο</spellName>.<br><br><rules>Αφού μείνετε ακίνητοι για @HoldStillDuration@ δευτ., γίνεστε <keywordStealth>Αόρατοι</keywordStealth> μέχρι να κινηθείτε. Όταν δεν είστε πια <keywordStealth>Αόρατοι</keywordStealth>, το πρώτο σας χτύπημα προκαλεί μπόνους <magicDamage>Μαγική Ζημιά</magicDamage>, αποκτάτε <attackSpeed>@BonusAS@ Ταχύτητα Επίθεσης και @BonusMS*100@% <movementSpeed>Ταχύτητα Κίνησης που μειώνεται σταδιακά</movementSpeed></attackSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "Αυξάνετε τη <scaleHealth>μέγ. Ζωή</scaleHealth> κατά το μισό σας <scaleMana>Μάνα</scaleMana>.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Mendapatkan <spellName>Guerrilla Warfare</spellName>.<br><br><rules>Setelah tidak bergerak selama @HoldStillDuration@ detik, menjadi <keywordStealth>Invisible</keywordStealth> sampai kamu bergerak. Saat kamu keluar dari <keywordStealth>Invisibility</keywordStealth> ini, serangan pertamamu memberikan <magicDamage>magic damage</magicDamage> bonus, mendapatkan <attackSpeed>@BonusAS@ Attack Speed dan @BonusMS*100@% <movementSpeed>Move Speed yang berangsur berkurang</movementSpeed></attackSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "Meningkatkan <scaleHealth>Health maksimum</scaleHealth> sebesar setengah dari <scaleMana>Mana</scaleMana>.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

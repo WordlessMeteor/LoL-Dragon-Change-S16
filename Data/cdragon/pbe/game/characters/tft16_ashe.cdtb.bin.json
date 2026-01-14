@@ -66,7 +66,7 @@
                 "__type": "MissileSpecification"
             },
             "mCastType": 3,
-            "mMissileEffectKey": "{6e2b7f65}",
+            "mMissileEffectKey": "TFT16_Ashe_R_mis",
             "mHitEffectOrientType": 2,
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -83,7 +83,7 @@
         },
         "__type": "SpellObject"
     },
-    "{86454371}": {
+    "Characters/TFT16_Ashe/Spells/TFT16_AsheBasicAttack": {
         "ObjectName": "TFT16_AsheBasicAttack",
         "mScriptName": "TFT16_AsheBasicAttack",
         "mSpell": {
@@ -151,7 +151,7 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{3284d318}",
+            "mMissileEffectKey": "TFT16_Ashe_BA_mis",
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -168,7 +168,7 @@
         },
         "__type": "SpellObject"
     },
-    "{9ed967ad}": {
+    "Characters/TFT16_Ashe/Spells/TFT16_AsheSpell": {
         "ObjectName": "TFT16_AsheSpell",
         "mScriptName": "TFT16_AsheSpell",
         "mSpell": {
@@ -179,9 +179,9 @@
                     "mName": "APDamage",
                     "mValues": [
                         0.0,
-                        15.0,
-                        25.0,
-                        35.0,
+                        20.0,
+                        30.0,
+                        40.0,
                         50.0,
                         0.0,
                         0.0
@@ -192,10 +192,10 @@
                     "mName": "ADDamage",
                     "mValues": [
                         250.0,
-                        125.0,
-                        185.0,
-                        290.0,
-                        395.0,
+                        135.0,
+                        195.0,
+                        300.0,
+                        410.0,
                         250.0,
                         250.0
                     ],
@@ -298,7 +298,7 @@
                 },
                 "ModifiedDamage": {
                     "mMultiplier": {
-                        "mDataValue": "{029adf7d}",
+                        "mDataValue": "AOEPercent",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mSimpleTooltipCalculationDisplay": 5,
@@ -328,13 +328,13 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{a05c0320}": {
+                "SmallArrowDamageFinal": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mStat": 2,
                             "mSubpart": {
-                                "mDataValue": "{883e4dd8}",
+                                "mDataValue": "SmallArrowDamage",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "__type": "StatBySubPartCalculationPart"
@@ -448,7 +448,7 @@
         },
         "__type": "SpellObject"
     },
-    "{a208e279}": {
+    "Characters/TFT16_Ashe/Spells/TFT16_AsheBasicAttack2": {
         "ObjectName": "TFT16_AsheBasicAttack2",
         "mScriptName": "TFT16_AsheBasicAttack2",
         "mSpell": {
@@ -517,7 +517,7 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{3284d318}",
+            "mMissileEffectKey": "TFT16_Ashe_BA_mis",
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -609,7 +609,7 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{c5d99ad9}",
+            "mMissileEffectKey": "TFT16_Ashe_SmallArrow",
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -626,7 +626,7 @@
         },
         "__type": "SpellObject"
     },
-    "{e2b22021}": {
+    "Characters/TFT16_Ashe/Spells/TFT16_AsheCritAttack": {
         "ObjectName": "TFT16_AsheCritAttack",
         "mScriptName": "TFT16_AsheCritAttack",
         "mSpell": {
@@ -710,10 +710,10 @@
         },
         "__type": "SpellObject"
     },
-    "{825dff2e}": {
+    "Characters/TFT16_Ashe/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{c87ac228}": {
+    "Characters/TFT16_Ashe/CharacterRecords/Root": {
         "mCharacterName": "TFT16_Ashe",
         "baseHP": 550.0,
         "baseStaticHPRegen": 0.0,
@@ -760,7 +760,7 @@
             ""
         ],
         "spells": [
-            "{9ed967ad}",
+            "Characters/TFT16_Ashe/Spells/TFT16_AsheSpell",
             "{00000000}",
             "{00000000}",
             "{00000000}"

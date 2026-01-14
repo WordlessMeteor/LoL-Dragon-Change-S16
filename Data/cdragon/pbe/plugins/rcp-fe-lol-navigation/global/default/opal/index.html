@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-us">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   Unity Web Player | RealmDefense
+  </title>
+  <style>
+   body {
+      width: 1055px;
+      height: 720px;
+    }
+
+    #unity-canvas {
+      display: none;
+    }
+
+    #opal-mask-overlay {
+      position: absolute;
+      opacity: 1;
+      width: 1055px;
+      height: 720px;
+      background-color: grey;
+      top: 0;
+      left: 0;
+      display: block;
+      background:url("/fe/lol-navigation/metagames/Loading-BG.png") center center / cover;
+    }
+
+    .mask-overlay__content {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align:center;
+      top: 54%;
+      left: 52.5%;
+      transform: translate(-50%, -50%);
+    }
+
+    .mask-overlay__content_text {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .mask-overlay__content_text--loading,
+    .mask-overlay__content_text--patching,
+    .mask-overlay__content_text--error {
+      display: none;
+      font-family: 'system-ui', 'sans-serif';
+      font-weight: 400;
+      font-size: 16px;
+      color: #cdbe91;
+      text-transform: uppercase;
+    }
+
+    .mask-overlay__content_text--loading::after {
+      position: absolute;
+      left: 100%;
+      margin-left: 2px;
+      content: "";
+      display: inline-block;
+      width: 1.5em;
+      text-align: left;
+      animation: loading-dots 2s steps(4, end) infinite;
+    }
+
+    .mask-overlay__content_text--patching::after {
+      content: "";
+      display: inline-block;
+      width: 1.5em;
+      text-align: left;
+      animation: loading-dots 2s steps(4, end) infinite;
+    }
+
+    body.visibility-toggle #unity-canvas {
+      display: block;
+    }
+
+    body.visibility-toggle #opal-mask-overlay {
+      opacity: 0;
+      transition: opacity .5s ease-out;
+      pointer-events: none;
+    }
+
+    @keyframes loading-dots {
+      0%   { content: ""; }
+      25%  { content: "."; }
+      50%  { content: ". ."; }
+      75%  { content: ". . ."; }
+      100% { content: ""; }
+    }
+  </style>
+ </head>
+ <body height="720" style="padding: 0; border: 0; margin: 0; overflow: hidden;" width="1055">
+  <div class="mask-overlay" id="opal-mask-overlay">
+   <div class="mask-overlay__content">
+    <div class="mask-overlay__content_text">
+     <div class="mask-overlay__content_text--loading">
+     </div>
+     <div class="mask-overlay__content_text--patching">
+     </div>
+     <div class="mask-overlay__content_text--error">
+     </div>
+    </div>
+   </div>
+  </div>
+  <canvas height="720" id="unity-canvas" style="width: 1055px; height: 720px; background: #231F20" tabindex="-1" width="1055">
+  </canvas>
+  <div id="overlay-gradient" style="position:absolute; top: 0px; width: 1055px; height: 80px; background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1));">
+  </div>
+  <script src="Build/WebGLBuild.loader.js">
+  </script>
+  <script>
+   (() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const isModal = urlParams.has("isModal") && urlParams.get("isModal").toLowerCase() === 'true';
+        if(isModal) {
+          const body = document.body;
+          const overlayGradient = document.getElementById("overlay-gradient");
+          overlayGradient.style.display = "none";
+          body.style.marginTop = "-80px";
+        }
+
+        const TRA_KEYS = {
+          LOADING: "mgs_embed_loading",
+          ERROR: "mgs_embed_error",
+          PATCHING: "mgs_embed_patching"
+        };
+
+        let isInitialized = false;
+        let isPatchingTextInitialized = false;
+
+        // DOM elements
+        const maskOverlay = document.getElementById('opal-mask-overlay');
+        const maskOverlayText = maskOverlay.querySelector('.mask-overlay__content_text');
+        const loadingText = maskOverlayText.querySelector('.mask-overlay__content_text--loading');
+        const patchingText = maskOverlayText.querySelector('.mask-overlay__content_text--patching');
+        const errorText = maskOverlayText.querySelector('.mask-overlay__content_text--error');
+        const canvas = document.getElementById("unity-canvas");
+
+        // helpers
+        const toggleUIVisibility = () => {
+          if (document.body.classList.contains("visibility-toggle")) {
+            document.body.classList.remove("visibility-toggle");
+          } else {
+            document.body.classList.add("visibility-toggle");
+          }
+        }
+
+        const toggleTextElement = (textElement, toggleBoolean) => {
+          textElement.style.display = toggleBoolean ? 'block' : 'none';
+        }
+
+        const onTraSuccess = async (response) => {
+          const tra = await response.json();
+          return tra;
+        }
+        
+        const onTraError = (err) => {}
+        
+        const getTraFile = () => {
+          return fetch("/fe/lol-navigation/trans-activity-center.json")
+          .then(onTraSuccess)
+          .catch(onTraError);
+        }
+
+        const setTextContent = (tra) => {
+          loadingText.textContent = tra[TRA_KEYS.LOADING] || "Loading";
+          patchingText.textContent = tra[TRA_KEYS.PATCHING] || "Patching";
+          errorText.textContent = tra[TRA_KEYS.ERROR] || "An error occurred while loading";
+        }
+
+        const handleError = (error) => {
+          toggleTextElement(loadingText, false);
+          toggleTextElement(patchingText, false);
+          toggleTextElement(errorText, true);
+          try {
+            window.parent.postMessage({
+              messageType: "lol-metagames",
+              type: "RClientWindowMessenger",
+              data: {
+                type: "lol-metagames-error",
+                options: {
+                  source: "Unity Canvas",
+                  reason: error?.message || "Unknown error",
+                  metagameId: "opal"
+                }
+              }
+            }, "*");
+          } catch (postError) {
+            console.error("Failed to send error report:", postError);
+          }
+        };
+
+        const opalErrorListener = (error) => {
+          handleError(error);
+        };
+
+        const opalMessageListener = (event) => {
+          if (event.data) {
+            const {messageType, data} = event.data;
+            switch (messageType) {
+              case "play-enabled-response":
+                handlePlayEnabledResponse(data);
+                break;
+            }
+          }
+        };
+
+        // message handlers
+        // data payload: {enabled: boolean}
+        const handlePlayEnabledResponse = (data) => {
+          const enabled = data?.enabled;
+          if (enabled && !isInitialized) {
+            toggleTextElement(loadingText, true);
+            toggleTextElement(patchingText, false)
+            isInitialized = true;
+
+            createUnityInstance(document.querySelector("#unity-canvas"), {
+              arguments: [],
+              dataUrl: "Build/WebGLBuild.data",
+              frameworkUrl: "Build/WebGLBuild.framework.js",
+              codeUrl: "Build/WebGLBuild.wasm",
+              streamingAssetsUrl: "StreamingAssets",
+              companyName: "Riot Games",
+              productName: "RealmDefense",
+              productVersion: "1.0",
+              // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+              // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+            }).then((unityInstance) => {
+              toggleUIVisibility();
+            }).then(()=> {
+              window.removeEventListener("message", opalMessageListener);
+              // window.removeEventListener("error", opalErrorListener);
+            }).catch((error) => {
+              handleError(error);
+            });
+          } else if (isPatchingTextInitialized === false && enabled === false) {
+            toggleTextElement(patchingText, true);
+            isPatchingTextInitialized = true; 
+          }
+        }
+
+        // init
+        const init = () => {
+          // attach event listener
+          window.addEventListener("message", opalMessageListener);
+
+          //Error Handling for Unity bootstrap / loading
+          window.addEventListener('error', opalErrorListener);
+
+
+          // send message to get play enabled status
+          window.parent.postMessage({
+            messageType: "rcp-fe-lol-home-play-enabled",
+            type: "RClientWindowMessenger"
+          }, "*");
+          
+          // send message to notify parent to load the iframe
+          window.parent.postMessage({
+            messageType: "rcp-fe-lol-home-loaded",
+            type:"RClientWindowMessenger"
+          }, "*");
+        };
+
+        // execute init from getting tra keys
+        getTraFile()
+        .then((tra) => {
+          setTextContent(tra);
+        })
+        .catch((err) => {
+          setTextContent({});
+        })
+        .finally(() => {
+          init();
+        });
+      })();
+  </script>
+ </body>
+</html>

@@ -27795,7 +27795,7 @@
                     e && e.length && this.set("shutdownNotification", e)
                 },
                 _handleTickerMessages(e) {
-                    e && e.length && this.set("tickerMessages", e)
+                    e && e.length ? this.set("tickerMessages", e) : this.set("tickerMessages", null)
                 },
                 shutdownIncident: i.Ember.computed("shutdownNotification", "shutdownNotification.countdown", (function() {
                     const e = this.get("shutdownNotification.countdown");

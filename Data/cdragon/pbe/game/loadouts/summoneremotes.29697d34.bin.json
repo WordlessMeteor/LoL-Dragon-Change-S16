@@ -1,5 +1,5 @@
 {
-    "{4c08cd9f}": {
+    "Loadouts/SummonerEmotes/Particles/TFT/10077_EM_Unbound_Irelia_ElegantlyBrushingBackHair": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7,7 +7,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.75,
+                    "constantValue": 0.5,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -21,8 +21,8 @@
                 "birthColor": {
                     "constantValue": [
                         1.0,
-                        0.917647123336792,
-                        0.003921568859368563,
+                        0.8509804010391235,
+                        0.0,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -58,13 +58,14 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": -3,
+                "pass": 2,
                 "alphaRef": 0,
+                "isUniformScale": 1,
                 "birthScale0": {
                     "constantValue": [
-                        70.0,
-                        70.0,
-                        70.0
+                        80.0,
+                        5.0,
+                        5.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -72,11 +73,8 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.084103062748909,
-                            0.19902582466602325,
-                            0.29271793365478516,
-                            0.42167893052101135,
-                            0.75
+                            0.20000000298023224,
+                            0.5
                         ],
                         "values": [
                             [
@@ -85,24 +83,9 @@
                                 0.0
                             ],
                             [
-                                0.40062686800956726,
-                                0.3949781656265259,
-                                0.567695677280426
-                            ],
-                            [
-                                1.158951997756958,
-                                1.399999976158142,
-                                1.350000023841858
-                            ],
-                            [
-                                1.0611354112625122,
-                                1.06656014919281,
-                                1.277062177658081
-                            ],
-                            [
-                                0.9301824569702148,
-                                0.8135371208190918,
-                                1.2061660289764404
+                                1.2000000476837158,
+                                1.2000000476837158,
+                                1.2000000476837158
                             ],
                             [
                                 1.0,
@@ -114,7 +97,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/Mecha/5037_Mech_Drop_VFX.ACCESSORIES_16_2.tex",
+                "texture": "ASSETS/Loadouts/SummonerEmotes/TFT/10077_EM_Unbound_Irelia_ElegantlyBrushingBackHair_VFX.TFT_Accessories_1602.tex",
                 "uvMode": 2,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -124,9 +107,10 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.75,
+                    "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLinger": null,
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "IntroAlpha",
@@ -139,10 +123,17 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.4000000059604645,
+                            0.25,
+                            0.5,
                             1.0
                         ],
                         "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
                             [
                                 1.0,
                                 1.0,
@@ -154,6 +145,91 @@
                                 1.0,
                                 1.0,
                                 1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 1,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        80.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.25
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.2000000476837158,
+                                1.2000000476837158,
+                                1.2000000476837158
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Loadouts/SummonerEmotes/TFT/10077_EM_Unbound_Irelia_ElegantlyBrushingBackHair_VFX.TFT_Accessories_1602.tex",
+                "uvMode": 2,
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.5,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.5,
+                "isSingleParticle": 1,
+                "emitterName": "Mid",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.125
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
                             ],
                             [
                                 1.0,
@@ -166,85 +242,7 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": -4,
-                "alphaRef": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        70.0,
-                        70.0,
-                        70.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.084103062748909,
-                            0.19902582466602325,
-                            0.29271793365478516,
-                            0.42167893052101135,
-                            0.75
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                0.40062686800956726,
-                                0.3949781656265259,
-                                0.567695677280426
-                            ],
-                            [
-                                1.158951997756958,
-                                1.399999976158142,
-                                1.350000023841858
-                            ],
-                            [
-                                1.0611354112625122,
-                                1.06656014919281,
-                                1.277062177658081
-                            ],
-                            [
-                                0.9301824569702148,
-                                0.8135371208190918,
-                                1.2061660289764404
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/Mecha/5037_Mech_Drop_VFX.ACCESSORIES_16_2.tex",
-                "uvMode": 2,
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "timeBeforeFirstEmission": 0.75,
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 1.25,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.5,
-                "isSingleParticle": 1,
-                "emitterName": "Mid",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "blendMode": 1,
-                "pass": -4,
+                "pass": 1,
                 "alphaRef": 0,
                 "isUniformScale": 1,
                 "isRotationEnabled": 1,
@@ -277,35 +275,13 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        70.0,
+                        80.0,
                         5.0,
                         5.0
                     ],
                     "__type": "ValueVector3"
                 },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                1.100000023841858,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/Mecha/5037_Mech_Drop_VFX.ACCESSORIES_16_2.tex",
+                "texture": "ASSETS/Loadouts/SummonerEmotes/TFT/10077_EM_Unbound_Irelia_ElegantlyBrushingBackHair_VFX.TFT_Accessories_1602.tex",
                 "uvMode": 2,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -316,97 +292,30 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.30000001192092896,
+                    "constantValue": 0.20000000298023224,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 3.0,
                 "isSingleParticle": 1,
                 "emitterName": "outro",
-                "velocity": {
+                "birthVelocity": {
                     "constantValue": [
                         0.0,
-                        1.0,
+                        -700.0,
                         0.0
                     ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.20000000298023224,
-                            0.44999998807907104,
-                            0.699999988079071
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                0.0,
-                                -200.0,
-                                0.0
-                            ],
-                            [
-                                0.0,
-                                700.0,
-                                0.0
-                            ],
-                            [
-                                0.0,
-                                -850.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
                     "__type": "ValueVector3"
                 },
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "SpawnShape": {
-                    "emitOffset": {
-                        "constantValue": [
-                            0.0,
-                            1.0,
-                            0.0
-                        ],
-                        "dynamics": {
-                            "times": [
-                                0.0,
-                                0.5,
-                                1.0
-                            ],
-                            "values": [
-                                [
-                                    0.0,
-                                    0.0,
-                                    0.0
-                                ],
-                                [
-                                    0.0,
-                                    10.0,
-                                    0.0
-                                ],
-                                [
-                                    0.0,
-                                    0.0,
-                                    0.0
-                                ]
-                            ],
-                            "__type": "VfxAnimatedVector3fVariableData"
-                        },
-                        "__type": "ValueVector3"
-                    },
-                    "__type": "VfxShapeLegacy"
-                },
                 "blendMode": 1,
                 "Color": {
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.699999988079071,
+                            0.15000000596046448,
                             1.0
                         ],
                         "values": [
@@ -433,53 +342,29 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": -4,
+                "pass": 1,
                 "alphaRef": 0,
                 "isUniformScale": 1,
                 "isRotationEnabled": 1,
                 "rotation0": {
                     "constantValue": [
-                        1.0,
+                        -1.0,
                         0.0,
                         0.0
                     ],
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.0955175906419754,
-                            0.19172078371047974,
-                            0.379504531621933,
-                            0.6843319535255432,
                             1.0
                         ],
                         "values": [
                             [
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                -3.004387855529785,
+                                -0.0,
                                 0.0,
                                 0.0
                             ],
                             [
-                                -9.405426979064941,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                -0.9066449999809265,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                35.40352249145508,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                200.0,
+                                -15.0,
                                 0.0,
                                 0.0
                             ]
@@ -490,7 +375,7 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        70.0,
+                        80.0,
                         5.0,
                         5.0
                     ],
@@ -500,25 +385,13 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.25,
-                            0.5,
                             1.0
                         ],
                         "values": [
                             [
-                                1.100000023841858,
+                                1.0,
                                 1.0,
                                 1.0
-                            ],
-                            [
-                                1.1100000143051147,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                1.149999976158142,
-                                0.0,
-                                0.0
                             ],
                             [
                                 0.0,
@@ -530,7 +403,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/Mecha/5037_Mech_Drop_VFX.ACCESSORIES_16_2.tex",
+                "texture": "ASSETS/Loadouts/SummonerEmotes/TFT/10077_EM_Unbound_Irelia_ElegantlyBrushingBackHair_VFX.TFT_Accessories_1602.tex",
                 "uvMode": 2,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -661,7 +534,6 @@
                 "__type": "VfxEmitterDefinitionData"
             },
             {
-                "timeBeforeFirstEmission": 0.31700000166893005,
                 "rate": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -670,7 +542,7 @@
                     "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 2.0,
+                "lifetime": 1.5,
                 "isSingleParticle": 1,
                 "emitterName": "MidGlow",
                 "bindWeight": {
@@ -681,11 +553,11 @@
                 "Color": {
                     "dynamics": {
                         "times": [
-                            0.0,
-                            0.11999999731779099,
+                            0.10000000149011612,
+                            0.20000000298023224,
                             0.5,
-                            0.8500000238418579,
-                            0.8999999761581421
+                            0.8999999761581421,
+                            1.0
                         ],
                         "values": [
                             [
@@ -695,21 +567,21 @@
                                 0.0
                             ],
                             [
-                                0.9215686321258545,
-                                0.9882352948188782,
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.43421053886413574
+                            ],
+                            [
+                                1.0,
+                                1.0,
                                 1.0,
                                 1.0
                             ],
                             [
-                                0.8313725590705872,
                                 1.0,
-                                0.8470588326454163,
-                                1.0
-                            ],
-                            [
                                 1.0,
-                                0.9647058844566345,
-                                0.9960784316062927,
+                                1.0,
                                 1.0
                             ],
                             [
@@ -725,6 +597,7 @@
                 },
                 "pass": -5,
                 "alphaRef": 0,
+                "isUniformScale": 1,
                 "isRotationEnabled": 1,
                 "rotation0": {
                     "constantValue": [
@@ -755,9 +628,9 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        70.0,
-                        70.0,
-                        70.0
+                        80.0,
+                        5.0,
+                        5.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -765,15 +638,14 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.12300000339746475,
-                            0.8399999737739563,
-                            0.8999999761581421
+                            0.15000000596046448,
+                            1.0
                         ],
                         "values": [
                             [
-                                0.9300000071525574,
-                                0.8140000104904175,
-                                1.2059999704360962
+                                1.2000000476837158,
+                                1.2000000476837158,
+                                1.2000000476837158
                             ],
                             [
                                 1.0,
@@ -781,28 +653,22 @@
                                 1.0
                             ],
                             [
-                                1.090000033378601,
-                                1.090000033378601,
-                                1.090000033378601
-                            ],
-                            [
-                                0.0,
-                                0.0,
-                                0.0
+                                1.0499999523162842,
+                                1.0499999523162842,
+                                1.0499999523162842
                             ]
                         ],
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/Mecha/5037_Mech_Drop_Glow.ACCESSORIES_16_2.tex",
+                "texture": "ASSETS/Loadouts/SummonerEmotes/TFT/10077_EM_Unbound_Irelia_ElegantlyBrushingBackHair_Glow.TFT_Accessories_1602.tex",
                 "uvMode": 2,
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
-        "particleName": "EM_Mech_Drop",
-        "particlePath": "Loadouts/SummonerEmotes/Particles/EM_Mech_Drop",
-        "soundOnCreateDefault": "Play_sfx_Emotes_EW_Proud_01",
+        "particleName": "10077_EM_Unbound_Irelia_ElegantlyBrushingBackHair",
+        "particlePath": "Loadouts/SummonerEmotes/Particles/TFT/10077_EM_Unbound_Irelia_ElegantlyBrushingBackHair",
         "flags": 197,
         "transform": [
             [
@@ -825,7 +691,7 @@
             ],
             [
                 0.0,
-                85.0,
+                80.0,
                 0.0,
                 1.0
             ]

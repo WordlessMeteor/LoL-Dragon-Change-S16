@@ -15283,6 +15283,7 @@
                 analyticsService: r.Ember.inject.service("analytics"),
                 friendRequestsService: r.Ember.inject.service("friendRequests"),
                 profilesService: r.Ember.inject.service("profiles"),
+                discordId: r.Ember.computed.alias("friendRequest.discordId"),
                 friendRequestClasses: r.Ember.computed("accepted", "declined", (function() {
                     return (0, i.default)({
                         "friend-request": !0,
@@ -15519,13 +15520,14 @@
                 friendsService: r.Ember.inject.service("friends"),
                 friendRequestsService: r.Ember.inject.service("friendRequests"),
                 incomingFriendRequests: r.Ember.computed.alias("friendRequestsService.incomingFriendRequests"),
-                friendRequestsWithHonorInfo: r.Ember.computed("friendsService.honorRecognitionHistory", "incomingFriendRequests", (function() {
+                friendRequestsWithHonorInfo: r.Ember.computed("friendsService.honorRecognitionHistory", "friendsService.puuidToDiscordIdMap", "incomingFriendRequests", (function() {
                     const e = this.get("friendsService.honorRecognitionHistory") || [],
                         t = this.get("incomingFriendRequests"),
-                        n = new Set(e.map((({
+                        n = this.get("friendsService.puuidToDiscordIdMap"),
+                        r = new Set(e.map((({
                             puuid: e
                         }) => e)));
-                    return t.map((e => (n.has(e.puuid) && (e.hasHonorRecognition = !0), e)))
+                    return t.map((e => (r.has(e.puuid) && (e.hasHonorRecognition = !0), Object.prototype.hasOwnProperty.call(n, e.puuid) && (e.discordId = n[e.puuid]), e)))
                 }))
             });
             t.default = o
@@ -18903,14 +18905,18 @@
                 },
                 a = n(339),
                 s = n(366);
-            const l = "/lol-chat/v1/friends";
-            var c = o.Ember.Service.extend({
+            const l = "/lol-chat/v1/friends",
+                c = "/lol-honor-v2/v1/recognition-history",
+                p = "/lol-client-config/v3/client-config/lol.client_settings.discordIntegration.enabled";
+            var d = o.Ember.Service.extend({
+                discordIntegrationEnabled: !1,
                 friends: null,
                 filteredFriends: null,
                 honorRecognitionHistory: [],
                 gameNameSearchString: "",
                 tagLineSearchString: "",
                 singleInputSearchString: "",
+                puuidToDiscordIdMap: Object.create(null),
                 openPartiesService: o.Ember.inject.service("open-parties"),
                 settingsService: o.Ember.inject.service("social-settings"),
                 socialPlatformConfigService: o.Ember.inject.service("social-platform-config"),
@@ -18932,12 +18938,12 @@
                     this._super(...arguments), this._initObservers()
                 },
                 willDestroy() {
-                    this._super(...arguments), o.db.unobserve(l, this)
+                    this._super(...arguments), o.db.unobserve(p, this), o.db.unobserve(l, this), o.db.unobserve(c, this)
                 },
                 _initObservers() {
-                    o.db.observe(l, this, (e => {
+                    o.db.observe(p, this, (e => this.set("discordIntegrationEnabled", Boolean(e)))), o.db.observe(l, this, (e => {
                         e ? this.set("friends", e) : this.set("friends", [])
-                    })), o.db.observe("/lol-honor-v2/v1/recognition-history", this, (e => {
+                    })), o.db.observe(c, this, (e => {
                         this.set("honorRecognitionHistory", e)
                     }))
                 },
@@ -18971,12 +18977,21 @@
                     }
                 },
                 _adjustFriends(e) {
-                    return e ? (this._canFriendSort() && e.sort(this._friendSort.bind(this)), e.map((e => {
+                    if (!e) return [];
+                    if (this._canFriendSort() && e.sort(this._friendSort.bind(this)), this.get("discordIntegrationEnabled")) {
+                        const t = this.get("puuidToDiscordIdMap");
+                        for (const n of e) {
+                            const e = n.puuid;
+                            Object.prototype.hasOwnProperty.call(t, e) || n.discordId && (t[e] = n.discordId)
+                        }
+                        this.set("puuidToDiscordIdMap", t)
+                    }
+                    return e.map((e => {
                         if (e.lol && e.lol.pty) try {
                             e.ptyObject = JSON.parse(e.lol.pty)
                         } catch (e) {}
                         return e.availability = s.VALID_AVAILABILITIES.has(e.availability) ? e.availability : "offline", e
-                    }))) : []
+                    }))
                 },
                 _isFriendRemotePlatform(e) {
                     const t = this.get("socialSessionService.me");
@@ -19034,7 +19049,7 @@
                     e ? (this._getFilteredFriendsSingleInput(r), this._getFilteredFriendsGameNameTagLineInput(t, n)) : this.set("filteredFriends", null)
                 }
             });
-            t.default = c
+            t.default = d
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -21372,8 +21387,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "APkAfjt6",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-request.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-request.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-request.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["friendRequestClasses"]],null],["dynamic-attr","oncontextmenu",["helper",["action"],[["get",[null]],"openContextMenu"],null],null],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["avatarClassNames","member","iconId","hideindicator"],["friend-icon",["get",["friendRequest"]],["get",["friendRequest","icon"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-text"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","member-game-name-tagline"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-player-name",[]],["static-attr","render-mode","fullAlias"],["dynamic-attr","game-name",["unknown",["friendRequest","gameName"]],null],["dynamic-attr","tag-line",["unknown",["friendRequest","tagLine"]],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","friend-request-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["accepted"]]],null,5,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-buttons"],["flush-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["acceptRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"acceptRequest"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["declineRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"declineRequest"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["blockRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"blockRequest"],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["unknown",["tra","friend_request"]],false],["text","\\n      "]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","recently-honored-description"],["flush-element"],["open-element","img",[]],["static-attr","class","recently-honored-icon"],["static-attr","role","presentation"],["dynamic-attr","src",["unknown",["recentlyHonoredImage"]],null],["flush-element"],["close-element"],["append",["unknown",["tra","previously_honored"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["friendRequest","hasHonorRecognition"]]],null,1,0]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","action-message"],["flush-element"],["append",["unknown",["tra","friend_request_declined"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["declined"]]],null,3,2]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","action-message"],["flush-element"],["append",["unknown",["tra","friend_request_accepted"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "3hRDDuXr",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-request.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-request.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-request.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["friendRequestClasses"]],null],["dynamic-attr","oncontextmenu",["helper",["action"],[["get",[null]],"openContextMenu"],null],null],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["avatarClassNames","member","iconId","hideindicator"],["friend-icon",["get",["friendRequest"]],["get",["friendRequest","icon"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-text"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","member-game-name-tagline"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-player-name",[]],["static-attr","render-mode","fullAlias"],["dynamic-attr","game-name",["unknown",["friendRequest","gameName"]],null],["dynamic-attr","tag-line",["unknown",["friendRequest","tagLine"]],null],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,6],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","friend-request-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["accepted"]]],null,5,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-buttons"],["flush-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["acceptRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"acceptRequest"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["declineRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"declineRequest"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["blockRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"blockRequest"],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["unknown",["tra","friend_request"]],false],["text","\\n      "]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","recently-honored-description"],["flush-element"],["open-element","img",[]],["static-attr","class","recently-honored-icon"],["static-attr","role","presentation"],["dynamic-attr","src",["unknown",["recentlyHonoredImage"]],null],["flush-element"],["close-element"],["append",["unknown",["tra","previously_honored"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["friendRequest","hasHonorRecognition"]]],null,1,0]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","action-message"],["flush-element"],["append",["unknown",["tra","friend_request_declined"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["declined"]]],null,3,2]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","action-message"],["flush-element"],["append",["unknown",["tra","friend_request_accepted"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","friend-request-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","friend-request-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","friend-request-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

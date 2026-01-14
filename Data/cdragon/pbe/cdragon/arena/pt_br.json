@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Recebe <spellName>Técnicas de Guerrilha</spellName>.<br><br><rules>Depois de ficar imóvel por @HoldStillDuration@s, fica <keywordStealth>Invisível</keywordStealth> até se mover. Ao sair da <keywordStealth>Invisibilidade</keywordStealth>, seu primeiro ataque causa <magicDamage>Dano Mágico</magicDamage> adicional e você recebe <attackSpeed>@BonusAS@ de Velocidade de Ataque e @BonusMS*100@% de <movementSpeed>Velocidade de Movimento que decai</movementSpeed></attackSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "Recebe um aumento de <scaleHealth>Vida máxima</scaleHealth> equivalente à metade do <scaleMana>Mana</scaleMana>.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",
