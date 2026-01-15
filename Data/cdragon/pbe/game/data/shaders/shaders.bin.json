@@ -12136,6 +12136,12 @@
         "parameters": [
             {
                 "name": "UV_Rotation_Center",
+                "data": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
                 "logicalParameters": [
                     {
                         "name": "UV_Rotation_Center",
@@ -12186,6 +12192,12 @@
             },
             {
                 "name": "Fade_Rotation_Center",
+                "data": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
                 "logicalParameters": [
                     {
                         "name": "Fade_Rotation_Center",
@@ -12293,6 +12305,12 @@
             },
             {
                 "name": "Sheen_Rotation_Center",
+                "data": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
                 "logicalParameters": [
                     {
                         "name": "Sheen_Rotation_Center",
@@ -32018,6 +32036,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "EmissionR_Strength",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "EmissionR_Strength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "EmissionColor",
                 "data": [
                     0.0,
@@ -32045,6 +32080,28 @@
                 "logicalParameters": [
                     {
                         "name": "All_Additive_Strength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Emission_Bloom_Color",
+                "logicalParameters": [
+                    {
+                        "name": "Emission_Bloom_Color",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Emission_Bloom_Strength",
+                "logicalParameters": [
+                    {
+                        "name": "Emission_Bloom_Strength",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -32150,6 +32207,10 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "ALPHABLEND_EMISSION",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "ALL_ADDITIVE_ON",
                 "__type": "ShaderStaticSwitch"
             },
@@ -32159,6 +32220,10 @@
             },
             {
                 "name": "BLOOM_ON",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "BLOOM_EMISSION_ONLY",
                 "__type": "ShaderStaticSwitch"
             }
         ],

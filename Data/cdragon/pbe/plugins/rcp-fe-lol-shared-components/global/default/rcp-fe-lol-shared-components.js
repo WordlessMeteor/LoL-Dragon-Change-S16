@@ -13598,6 +13598,11 @@
                 },
                 closeModal() {
                     this.set("showModal", !1)
+                },
+                actions: {
+                    onClose() {
+                        this.closeModal()
+                    }
                 }
             });
             t.default = r
@@ -13607,8 +13612,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "aLvZKQNF",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\templates\\\\components\\\\discord-congrats-popup.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\components\\\\discord-congrats-popup.js\\" "],["text","\\n"],["block",["if"],[["get",["showModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-congrats-popup-content"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","discord_checkmark"],["static-attr","src","/fe/lol-static-assets/images/discord_checkmark.svg"],["flush-element"],["close-element"],["text","\\n      \\n      "],["open-element","div",[]],["static-attr","class","congrats-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","discord_congrats_popup_title"]],false],["text","\\n      "],["close-element"],["text","\\n      \\n      "],["open-element","div",[]],["static-attr","class","congrats-message"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","discord_congrats_popup_message"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissibleType","acceptText","closeButton","onAccept","show"],["DialogConfirm","inside",["get",["tra","discord_congrats_popup_okay_button"]],true,["helper",["action"],[["get",[null]],"onClose"],null],["get",["showModal"]]]],0]],"locals":[]}],"hasPartials":false}',
+                id: "b88iHoxE",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\templates\\\\components\\\\discord-congrats-popup.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\components\\\\discord-congrats-popup.js\\" "],["text","\\n"],["block",["if"],[["get",["showModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-congrats-popup-content"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","discord_checkmark"],["static-attr","src","/fe/lol-static-assets/images/discord_checkmark.svg"],["flush-element"],["close-element"],["text","\\n      \\n      "],["open-element","div",[]],["static-attr","class","congrats-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","discord_congrats_popup_title"]],false],["text","\\n      "],["close-element"],["text","\\n      \\n      "],["open-element","div",[]],["static-attr","class","congrats-message"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","discord_congrats_popup_message"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissibleType","acceptText","closeButton","onAccept","onClose","show"],["DialogConfirm","inside",["get",["tra","discord_congrats_popup_okay_button"]],true,["helper",["action"],[["get",[null]],"onClose"],null],["helper",["action"],[["get",[null]],"onClose"],null],["get",["showModal"]]]],0]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -14722,7 +14727,9 @@
                         }
                 },
                 startListening() {
-                    this._frameWindow ? (a.WindowMessenger.addMessageListeners(this._frameWindow, this.listeners), this.isListening = !0) : a.logger.warning("Attempted to add listeners to an unattached iframe")
+                    this._frameWindow ? (a.WindowMessenger.addMessageListeners(this._frameWindow, this.listeners), this.isListening = !0, this.sendMessage({
+                        messageType: "rcp-fe-lol-home-ready-listening"
+                    })) : a.logger.warning("Attempted to add listeners to an unattached iframe")
                 },
                 stopListening() {
                     this.isListening = !1, this.removeListeners()

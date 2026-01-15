@@ -118,6 +118,7 @@
    (() => {
         const urlParams = new URLSearchParams(window.location.search);
         const isModal = urlParams.has("isModal") && urlParams.get("isModal").toLowerCase() === 'true';
+        const isDebugMode = urlParams.has("isDebugMode") && urlParams.get("isDebugMode").toLowerCase() === 'true';
         if(isModal) {
           const body = document.body;
           const overlayGradient = document.getElementById("overlay-gradient");
@@ -131,8 +132,15 @@
           PATCHING: "mgs_embed_patching"
         };
 
-        let isInitialized = false;
-        let isPatchingTextInitialized = false;
+        const STATE = {
+          DEFAULT_IDLE: 'default_idle',
+          PATCHING: 'patching',
+          LOADING: 'loading',
+          READY: 'ready',
+          ERROR: 'error'
+        };
+
+        let currentState = STATE.DEFAULT_IDLE;
 
         // DOM elements
         const maskOverlay = document.getElementById('opal-mask-overlay');
@@ -175,9 +183,7 @@
         }
 
         const handleError = (error) => {
-          toggleTextElement(loadingText, false);
-          toggleTextElement(patchingText, false);
-          toggleTextElement(errorText, true);
+          setState(STATE.ERROR);
           try {
             window.parent.postMessage({
               messageType: "lol-metagames",
@@ -204,22 +210,59 @@
           if (event.data) {
             const {messageType, data} = event.data;
             switch (messageType) {
-              case "play-enabled-response":
-                handlePlayEnabledResponse(data);
+              case "lol-metagames-lcu-patching-status-response":
+                if(isDebugMode) {
+                  console.log("Received LCU patching status response:", data);
+                }
+                handleLcuPatchingStatus({isPatching: data?.isPatching});
+                break;
+              case "rcp-fe-lol-home-ready-listening":
+                if(isDebugMode) {
+                  console.log("Received ready-listening message:");
+                }
+                requestPatchingStatus();
                 break;
             }
           }
         };
 
-        // message handlers
-        // data payload: {enabled: boolean}
-        const handlePlayEnabledResponse = (data) => {
-          const enabled = data?.enabled;
-          if (enabled && !isInitialized) {
-            toggleTextElement(loadingText, true);
-            toggleTextElement(patchingText, false)
-            isInitialized = true;
+        
+        const setState = (newState) => {
+          if (currentState === newState) {
+            return;
+          }
+          
+          currentState = newState;
 
+          // clear previous state before setting new state
+          toggleTextElement(loadingText, false);
+          toggleTextElement(patchingText, false);
+          toggleTextElement(errorText, false);
+
+          switch (newState) {
+            case STATE.PATCHING:
+              toggleTextElement(patchingText, true);
+              break;
+            case STATE.LOADING:
+              toggleTextElement(loadingText, true);
+              break;
+            case STATE.READY:
+                toggleUIVisibility();
+              break;
+            case STATE.ERROR:
+              toggleTextElement(errorText, true);
+              break;
+          }
+        };
+
+        // message handlers
+        // data payload: {isPatching: boolean}
+        const handleLcuPatchingStatus = (data) => {
+          const isPatching = data?.isPatching;
+
+          if (!isPatching) {
+            if (currentState === STATE.DEFAULT_IDLE || currentState === STATE.PATCHING) {
+              setState(STATE.LOADING);
             createUnityInstance(document.querySelector("#unity-canvas"), {
               arguments: [],
               dataUrl: "Build/WebGLBuild.data",
@@ -232,39 +275,57 @@
               // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
               // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
             }).then((unityInstance) => {
-              toggleUIVisibility();
-            }).then(()=> {
-              window.removeEventListener("message", opalMessageListener);
-              // window.removeEventListener("error", opalErrorListener);
-            }).catch((error) => {
-              handleError(error);
-            });
-          } else if (isPatchingTextInitialized === false && enabled === false) {
-            toggleTextElement(patchingText, true);
-            isPatchingTextInitialized = true; 
+                setState(STATE.READY);
+              })
+              .then(() => {
+                  window.removeEventListener("message", opalMessageListener);
+              })
+              .catch((error) => {
+                handleError(error);
+              });
+            }
+          } else {
+            // Only show patching if we haven't started loading yet
+            if (currentState === STATE.DEFAULT_IDLE) {
+              setState(STATE.PATCHING);
+            }
           }
-        }
+        };
+
+
+
+        const requestPatchingStatus = () => {
+          try {
+            window.parent.postMessage({
+              messageType: "lol-metagames",
+              type: "RClientWindowMessenger",
+              data: {
+                type: "lol-metagames-lcu-patching-status",
+                options: {}
+              }
+            }, "*");
+          } catch (postError) {
+            console.error("Failed to request patching status:", postError);
+          }
+        };
+
+        // attach event listener
+        window.addEventListener("message", opalMessageListener);
+
+        //Error Handling for Unity bootstrap / loading
+        window.addEventListener('error', opalErrorListener);
 
         // init
         const init = () => {
-          // attach event listener
-          window.addEventListener("message", opalMessageListener);
-
-          //Error Handling for Unity bootstrap / loading
-          window.addEventListener('error', opalErrorListener);
-
-
-          // send message to get play enabled status
-          window.parent.postMessage({
-            messageType: "rcp-fe-lol-home-play-enabled",
-            type: "RClientWindowMessenger"
-          }, "*");
-          
           // send message to notify parent to load the iframe
           window.parent.postMessage({
             messageType: "rcp-fe-lol-home-loaded",
             type:"RClientWindowMessenger"
           }, "*");
+
+          if(isModal) {
+            handleLcuPatchingStatus({isPatching: false});
+          }
         };
 
         // execute init from getting tra keys

@@ -3881,13 +3881,18 @@
                     this._lootManager.init(), this._storeManager.init(), this._tftManager.init(), this._eventHubManager.init(), this._collectionsManager.init(), this._yourshopManager.init(), this.activityCenter = (0, _.default)(this)
                 }
                 _warnDeprecatedAddItem(e) {
-                    const t = Object.assign({}, e);
-                    delete t.show, delete t.hide;
-                    const n = Object.keys(t);
-                    for (const e of n) i.logger.warning(`deprecation: addItem should receive \`${e}\` through the options hash.`)
+                    const {
+                        show: t,
+                        hide: n,
+                        ...i
+                    } = e;
+                    return Object.keys(i).length > 0
                 }
                 addItem(e, t) {
-                    this._warnDeprecatedAddItem(e), e = Object.assign({}, C, e), t = Object.assign({}, S, t);
+                    this._warnDeprecatedAddItem(e) && i.logger.warning("deprecation: addItem should receive keys through the options hash.", {
+                        item: e,
+                        options: t
+                    }), e = Object.assign({}, C, e), t = Object.assign({}, S, t);
                     const n = e.show;
                     return e.show = function() {
                         const e = n(...arguments);
@@ -27157,7 +27162,23 @@
                     const e = i.Ember.A([]);
                     this.set("emberMenuItems", e)
                 },
-                isValidMenuItem: (e, t) => e ? t ? t.id ? Object.values(a.NAV_BAR_MENU_ITEM_NAME_TO_ID).includes(t.id) ? (t.iconCallToActionVideos && (t.iconPath || (i.logger.error("If an item has iconCallToActionVideos, it must also have an iconPath"), t.iconCallToActionVideos = void 0), t.iconCallToActionVideos.loop || (i.logger.error("iconCallToActionVideos must include a loop"), t.iconCallToActionVideos = void 0)), !0) : (i.logger.error("Navigation cannot add menu item with unrecognized id"), !1) : (i.logger.error("Navigation cannot add menu item with null/undefined id"), !1) : (i.logger.error("Navigation cannot add menu item with null/undefined options"), !1) : (i.logger.error("Navigation cannot add null/undefined item"), !1),
+                isValidMenuItem: (e, t) => e ? t ? t.id ? Object.values(a.NAV_BAR_MENU_ITEM_NAME_TO_ID).includes(t.id) ? (t.iconCallToActionVideos && (t.iconPath || (i.logger.error("If an item has iconCallToActionVideos, it must also have an iconPath", {
+                    item: e,
+                    options: t
+                }), t.iconCallToActionVideos = void 0), t.iconCallToActionVideos.loop || (i.logger.error("iconCallToActionVideos must include a loop", {
+                    item: e,
+                    options: t
+                }), t.iconCallToActionVideos = void 0)), !0) : (i.logger.error("Navigation cannot add menu item with unrecognized id", {
+                    item: e,
+                    options: t
+                }), !1) : (i.logger.error("Navigation cannot add menu item with null/undefined id", {
+                    item: e,
+                    options: t
+                }), !1) : (i.logger.error("Navigation cannot add menu item with null/undefined options", {
+                    item: e
+                }), !1) : (i.logger.error("Navigation cannot add null/undefined item", {
+                    options: t
+                }), !1),
                 addMenuItem(e, t) {
                     if (!this.isValidMenuItem(e, t)) return;
                     const n = Object.assign({}, t, e),

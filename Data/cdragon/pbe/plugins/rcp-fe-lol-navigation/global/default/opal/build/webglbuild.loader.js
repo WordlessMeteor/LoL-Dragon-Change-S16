@@ -31,7 +31,7 @@ function createUnityInstance(e, t, n) {
             preserveDrawingBuffer: !1,
             powerPreference: 2
         },
-        wasmFileSize: 41648402,
+        wasmFileSize: 41648949,
         cacheControl: function(e) {
             return e == s.dataUrl || e.match(/\.bundle/) ? "must-revalidate" : "no-store"
         },
