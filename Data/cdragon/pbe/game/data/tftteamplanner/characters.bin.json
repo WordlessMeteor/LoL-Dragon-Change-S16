@@ -11556,14 +11556,8 @@
         "ObjectName": "TFT4_VeigarR",
         "mScriptName": "TFT4_VeigarR",
         "mSpell": {
-            "mAffectsTypeFlags": 4106,
-            "mRequiredUnitTags": {
-                "mObjectTagList": [
-                    "{ea595ca6}",
-                    "Minion_Summon"
-                ],
-                "__type": "ObjectTags"
-            },
+            "mAffectsTypeFlags": 7183,
+            "mAffectsStatusFlags": 32,
             "mSpellTags": [
                 "Trait_Ultimate"
             ],
@@ -11652,6 +11646,7 @@
                 0.0
             ],
             "delayTotalTimePercent": -0.5,
+            "canCastWhileDisabled": true,
             "canCastOrQueueWhileCasting": true,
             "mCantCancelWhileWindingUp": true,
             "castRange": [
@@ -11685,10 +11680,11 @@
                 0,
                 0
             ],
-            "selectionPriority": 1,
+            "selectionPriority": 2,
             "mTargetingTypeData": {
                 "__type": "Self"
             },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
             "mClientData": {
                 "mTooltipData": {
                     "mObjectName": "TFT4_VeigarR",
@@ -53987,8 +53983,8 @@
                     "mName": "Damage",
                     "mValues": [
                         0.0,
-                        58.0,
-                        90.0,
+                        62.0,
+                        93.0,
                         199.0,
                         199.0,
                         0.0,

@@ -216,14 +216,8 @@
         "ObjectName": "TFT4_VeigarR",
         "mScriptName": "TFT4_VeigarR",
         "mSpell": {
-            "mAffectsTypeFlags": 4106,
-            "mRequiredUnitTags": {
-                "mObjectTagList": [
-                    "{ea595ca6}",
-                    "Minion_Summon"
-                ],
-                "__type": "ObjectTags"
-            },
+            "mAffectsTypeFlags": 7183,
+            "mAffectsStatusFlags": 32,
             "mSpellTags": [
                 "Trait_Ultimate"
             ],
@@ -312,6 +306,7 @@
                 0.0
             ],
             "delayTotalTimePercent": -0.5,
+            "canCastWhileDisabled": true,
             "canCastOrQueueWhileCasting": true,
             "mCantCancelWhileWindingUp": true,
             "castRange": [
@@ -345,10 +340,11 @@
                 0,
                 0
             ],
-            "selectionPriority": 1,
+            "selectionPriority": 2,
             "mTargetingTypeData": {
                 "__type": "Self"
             },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
             "mClientData": {
                 "mTooltipData": {
                     "mObjectName": "TFT4_VeigarR",
@@ -417,6 +413,7 @@
             ],
             "delayCastOffsetPercent": -1.0,
             "delayTotalTimePercent": -0.75,
+            "canCastWhileDisabled": true,
             "canCastOrQueueWhileCasting": true,
             "mCantCancelWhileWindingUp": true,
             "castRange": [
