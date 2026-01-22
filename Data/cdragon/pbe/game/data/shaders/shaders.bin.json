@@ -1536,6 +1536,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Bloom_Tint_Color",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Bloom_Tint_Color",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Bloom_Strength",
                 "logicalParameters": [
                     {
@@ -1622,6 +1639,10 @@
             },
             {
                 "name": "USE_FBM_ALPHA",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_BLOOM_TINT_COLOR",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -22559,6 +22580,68 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "VCDissolve_Pattern_Intensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VCDissolve_Pattern_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VCDissolve_Pattern_Tilling",
+                "data": [
+                    0.019999999552965164,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VCDissolve_Pattern_Tilling",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VCDissolve_Value",
+                "logicalParameters": [
+                    {
+                        "name": "VCDissolve_Value",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VCDissolve_Width",
+                "data": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VCDissolve_Width",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Dissolve_SmoothStep",
                 "data": [
                     0.0,
@@ -22857,6 +22940,15 @@
             },
             {
                 "name": "TRANSITIONEFFECT",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "DISSOLVE_VCREVERSE",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "DISSOLVE_VCBASED",
                 "__type": "ShaderStaticSwitch"
             },
             {

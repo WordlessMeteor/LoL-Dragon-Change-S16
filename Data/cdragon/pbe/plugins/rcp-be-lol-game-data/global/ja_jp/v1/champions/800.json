@@ -298,7 +298,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点に向かって複数の飛翔物を連続で発射する。飛翔物は爆発して範囲内の敵に繰り返しダメージを与える。",
-            "dynamicDescription": "指定地点に向かって@ExplosionCount@発の飛翔物を連続で発射する。飛翔物は指定地点の周囲に爆発を引き起こす。<br><br>爆発ごとに<magicDamage>@TotalExplosionDamage@の魔法ダメージ</magicDamage>、最大で合計<magicDamage>@AllDamageHit@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "指定地点に向かって@ExplosionCount@発の飛翔物を連続で発射する。飛翔物は指定地点の周囲に爆発を引き起こす。<br><br>最初の爆発の命中時に<magicDamage>@InitialExplosionDamage@の魔法ダメージ</magicDamage>を与え、その後の爆発はそれぞれ<magicDamage>@TotalExplosionDamage@の魔法ダメージ</magicDamage>、最大で合計<magicDamage>@AllDamageHit@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自身の周囲にバリアを形成する。このバリアは敵の発射物をその敵に向けて反射し、自身が受けるダメージを防ぎ、自身の移動速度を増加させる。",
-            "dynamicDescription": "自身の周囲にバリアを形成する。このバリアは敵チャンピオンの発射物を反射し、自身が受けるダメージを防ぎ、自身の<speed>移動速度を@MoveSpeed*100@%</speed>増加させる。この移動速度は@Duration@秒かけて元に戻る。<br><br>反射された発射物は<magicDamage>元の@DamagePercent@のダメージを魔法ダメージ</magicDamage>として与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "自身の周囲にバリアを形成する。このバリアは敵チャンピオンの発射物を反射し、<shield>@ShieldAmount@のシールド</shield>を@Duration@秒間獲得する。また、自身の<speed>移動速度を@MoveSpeed*100@%</speed>増加させる。この移動速度は@MoveSpeedDuration@秒かけて元に戻る。<br><br>反射された発射物は<magicDamage>@DamagePercent@元のダメージを魔法ダメージ</magicDamage>として与える。@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "前方に輝くオーブを発射し、中心にいた敵にはスネア効果を与え、周囲にいた敵にはスロウ効果と継続ダメージを与える。",
             "dynamicDescription": "輝くオーブを発射し、中心にいた敵には@RootDuration@秒間、<status>スネア効果</status>を与え、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与える。<br><br>オーブは周囲に敵対的範囲を作り出し、敵に@AreaSlowAmount*100@%の<status>スロウ効果</status>を与えて、<magicDamage>毎秒@AreaDamagePerSecond@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,

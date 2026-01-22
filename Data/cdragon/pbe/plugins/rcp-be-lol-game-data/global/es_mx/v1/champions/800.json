@@ -298,7 +298,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Mel dispara una ráfaga de proyectiles que explotan en torno a una ubicación objetivo, lo que inflige daño repetidamente a los enemigos que se encuentren en el área.",
-            "dynamicDescription": "Mel dispara una ráfaga de @ExplosionCount@ proyectiles que explotan en torno a una ubicación objetivo.<br><br>Cada explosión inflige <magicDamage>@TotalExplosionDamage@ de daño mágico</magicDamage>, que suma hasta un total de <magicDamage>@AllDamageHit@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel dispara una ráfaga de @ExplosionCount@ proyectiles que explotan en torno a una ubicación objetivo.<br><br>La primera explosión que impacta inflige <magicDamage>@InitialExplosionDamage@ de daño mágico</magicDamage> y cada explosión posterior inflige <magicDamage>@TotalExplosionDamage@ de daño mágico</magicDamage>, que suma hasta un total de <magicDamage>@AllDamageHit@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Mel forma una barrera alrededor de sí misma que refleja los proyectiles enemigos al atacante, la protege del daño y le otorga velocidad de movimiento.",
-            "dynamicDescription": "Mel forma una barrera alrededor de sí misma que refleja los proyectiles de campeones enemigos, la protege del daño y le otorga un <speed>@MoveSpeed*100@% de Velocidad de Movimiento que decae</speed> durante @Duration@ seg.<br><br>Los proyectiles reflejados infligen un <magicDamage>@DamagePercent@ del daño original como daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel forma una barrera alrededor de sí misma que refleja los proyectiles de campeones enemigos, lo que le otorga <shield>@ShieldAmount@ Escudos</shield> durante @Duration@ seg y un <speed>@MoveSpeed*100@% de Velocidad de Movimiento que decae</speed> durante @MoveSpeedDuration@ seg.<br><br>Los proyectiles reflejados infligen un <magicDamage>@DamagePercent@ del daño original como daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "Mel dispara un orbe radiante hacia adelante, el cual inmoviliza a los enemigos que se encuentren en su centro, mientras que el área a su alrededor ralentiza e inflige daño prolongado.",
             "dynamicDescription": "Mel dispara un orbe radiante, el cual <status>inmoviliza</status> a los enemigos en su centro durante @RootDuration@ seg e inflige <magicDamage>@Damage@ de daño mágico</magicDamage>.<br><br>El orbe crea un área hostil a su alrededor que <status>ralentiza</status> a los enemigos en un @AreaSlowAmount*100@% y les inflige <magicDamage>@AreaDamagePerSecond@ de daño mágico por seg</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,

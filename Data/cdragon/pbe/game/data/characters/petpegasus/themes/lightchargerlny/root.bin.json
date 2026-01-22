@@ -1,5 +1,6 @@
 {
-    "{fe86b261}": {
+    "Characters/PetPegasus/Themes/LightChargerLNY/Root": {
+        "championSkinName": "PetPegasus",
         "skinAudioProperties": {
             "tagEventList": [
                 "pet_littlelegend",
@@ -7,6 +8,32 @@
                 "pet_pegasus_LightChargerLNY"
             ],
             "bankUnits": [
+                {
+                    "name": "Pet_Pegasus_Base_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Companions/Pets/PetPegasus/Base/Pet_Pegasus_Base_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Companions/Pets/PetPegasus/Base/Pet_Pegasus_Base_SFX_events.bnk"
+                    ],
+                    "events": [
+                        "Play_sfx_Pet_Pegasus_cast3d",
+                        "Play_sfx_Pet_Pegasus_celebrate3d",
+                        "Play_sfx_Pet_Pegasus_damage_hurt3d",
+                        "Play_sfx_Pet_Pegasus_dance3d",
+                        "Play_sfx_Pet_Pegasus_death3d",
+                        "Play_sfx_Pet_Pegasus_greeting3d",
+                        "Play_sfx_Pet_Pegasus_idleB3d",
+                        "Play_sfx_Pet_Pegasus_idleC3d",
+                        "Play_sfx_Pet_Pegasus_interact3d",
+                        "Play_sfx_Pet_Pegasus_jokeA3d",
+                        "Play_sfx_Pet_Pegasus_jokeB3d",
+                        "Play_sfx_Pet_Pegasus_jokeC3d",
+                        "Play_sfx_Pet_Pegasus_recall3d",
+                        "Play_sfx_Pet_Pegasus_taunt3d",
+                        "Play_sfx_Pet_Pegasus_taunt_in3d",
+                        "Play_sfx_Pet_Pegasus_tauntloop3d"
+                    ],
+                    "__type": "BankUnit"
+                },
                 {
                     "name": "Pet_Pegasus_LightChargerLNY_SFX",
                     "bankPath": [
@@ -33,10 +60,80 @@
             "animationGraphData": "{f527b1d1}",
             "__type": "SkinAnimationProperties"
         },
-        "mResourceResolver": "{022f3243}",
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/PetPegasus/Pegasus_T1.skl",
+            "simpleSkin": "ASSETS/Characters/PetPegasus/Pegasus_T1.skn",
+            "texture": "ASSETS/Characters/PetPegasus/Pet_Pegasus_Base_TX_CM.tex",
+            "selfIllumination": 0.8999999761581421,
+            "initialSubmeshToHide": "Cliff, Wings, EyeClosed, EyeAngry, EyeSurprised",
+            "initialSubmeshShadowsToHide": "Wings",
+            "initialSubmeshMouseOversToHide": "Wings",
+            "submeshRenderOrder": "Body, Wings, EyeDefault, Cliff",
+            "materialOverride": [
+                {
+                    "texture": "ASSETS/Characters/PetPegasus/Pet_Pegasus_Base_Wing_TX_CM.tex",
+                    "submesh": "Wings",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/PetPegasus/Pet_Pegasus_Base_Eye_TX_CM.tex",
+                    "submesh": "EyeDefault",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/PetPegasus/Pet_Pegasus_Base_Prop_TX_CM.tex",
+                    "submesh": "Cliff",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/PetPegasus/Pet_Pegasus_Base_Eye_TX_CM.tex",
+                    "submesh": "EyeAngry",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/PetPegasus/Pet_Pegasus_Base_Eye_TX_CM.tex",
+                    "submesh": "EyeClosed",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/PetPegasus/Pet_Pegasus_Base_Eye_TX_CM.tex",
+                    "submesh": "EyeSurprised",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "texture": "ASSETS/Characters/PetPegasus/Pet_Pegasus_Base_Eye_TX_CM.tex",
+                    "submesh": "Brow",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "rigPoseModifierData": [
+                {
+                    "mStartingJointName": "Spine3_Ground",
+                    "mEndingJointName": "Pelvis_Ground",
+                    "mDefaultMaskName": "{7136e1bc}",
+                    "mMaxBoneAngle": 100.0,
+                    "__type": "ConformToPathRigPoseModifierData"
+                },
+                {
+                    "mStartingJointName": "tail1",
+                    "mEndingJointName": "tail3",
+                    "mDefaultMaskName": "{7136e1bc}",
+                    "__type": "ConformToPathRigPoseModifierData"
+                }
+            ],
+            "EnablePicking": false,
+            "__type": "SkinMeshDataProperties"
+        },
+        "healthBarData": {
+            "attachToBone": "Buffbone_Cstm_Healthbar",
+            "unitHealthBarStyle": 21,
+            "AlphaOutWhileUntargetable": false,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/PetPegasus/Themes/LightChargerLNY/Root/Resources",
         "__type": "SkinCharacterDataProperties"
     },
-    "{022f3243}": {
+    "Characters/PetPegasus/Themes/LightChargerLNY/Root/Resources": {
         "resourceMap": {
             "PetPegasus_Base_Emote_Taunt_Dust": "Characters/PetPegasus/Themes/Base/Root/Particles/PetPegasus_Base_Emote_Taunt_Dust",
             "PetPegasus_Base_Emote_Taunt_Idle": "Characters/PetPegasus/Themes/Base/Root/Particles/PetPegasus_Base_Emote_Taunt_Idle",
@@ -68,13 +165,13 @@
         "__type": "ResourceResolver"
     },
     "__linked": [
-        "DATA/PetPegasus_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_Ink_Root_Ink_Tier1_Ink_Tier2_Ink_Tier3_KDASeraphine_Root_KDASeraphine_Tier1_KDASeraphine_Tier2_KDASeraphine_Tier3_LightChargerLNY_Root_LightChargerLNY_Tier1_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin3_Skins_Skin4_Skins_Skin43_Skins_Skin44_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin56_Skins_Skin57_Skins_Skin59_Skins_Skin6_Skins_Skin60_Skins_Skin61_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
         "Characters/PetPegasus",
+        "DATA/PetPegasus_LightChargerLNY_Root_LightChargerLNY_Tier1_Skins_Skin58_Skins_Skin59_Skins_Skin60_Skins_Skin61.bin",
         "DATA/PetPegasus_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_Ink_Root_Ink_Tier1_Ink_Tier2_Ink_Tier3_KDASeraphine_Root_KDASeraphine_Tier1_KDASeraphine_Tier2_KDASeraphine_Tier3_LightChargerLNY_Root_LightChargerLNY_Tier1_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin43_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
         "DATA/Characters/PetPegasus/Animations/LightChargerLNY_Share.bin",
-        "DATA/PetPegasus_LightChargerLNY_Root_LightChargerLNY_Tier1.bin",
-        "DATA/PetPegasus_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_Ink_Root_Ink_Tier1_Ink_Tier2_Ink_Tier3_KDASeraphine_Root_KDASeraphine_Tier1_KDASeraphine_Tier2_KDASeraphine_Tier3_LightChargerLNY_Root_LightChargerLNY_Tier1_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
-        "DATA/PetPegasus_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_KDASeraphine_Root_KDASeraphine_Tier1_KDASeraphine_Tier2_KDASeraphine_Tier3_LightChargerLNY_Root_LightChargerLNY_Tier1_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin59_Skins_Skin6_Skins_Skin60_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
-        "DATA/PetPegasus_LightChargerLNY_Root_LightChargerLNY_Tier1_Skins_Skin59_Skins_Skin60_Skins_Skin61.bin"
+        "DATA/PetPegasus_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_KDASeraphine_Root_KDASeraphine_Tier1_KDASeraphine_Tier2_KDASeraphine_Tier3_LightChargerLNY_Root_LightChargerLNY_Tier1_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin58_Skins_Skin59_Skins_Skin6_Skins_Skin60_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/PetPegasus_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_Ink_Root_Ink_Tier1_Ink_Tier2_Ink_Tier3_KDASeraphine_Root_KDASeraphine_Tier1_KDASeraphine_Tier2_KDASeraphine_Tier3_LightChargerLNY_Root_LightChargerLNY_Tier1_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin3_Skins_Skin4_Skins_Skin43_Skins_Skin44_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55_Skins_Skin56_Skins_Skin57_Skins_Skin58_Skins_Skin59_Skins_Skin6_Skins_Skin60_Skins_Skin61_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/PetPegasus_Base_Root_Base_Tier1_Base_Tier2_Base_Tier3_Ink_Root_Ink_Tier1_Ink_Tier2_Ink_Tier3_KDASeraphine_Root_KDASeraphine_Tier1_KDASeraphine_Tier2_KDASeraphine_Tier3_LightChargerLNY_Root_LightChargerLNY_Tier1_Skins_Root_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin58_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/PetPegasus_LightChargerLNY_Root_LightChargerLNY_Tier1.bin"
     ]
 }

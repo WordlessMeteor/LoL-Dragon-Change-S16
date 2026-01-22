@@ -298,7 +298,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Mel feuert ein Trommelfeuer aus Projektilen ab, die im Zielbereich explodieren und Gegnern im Wirkbereich wiederholt Schaden zufügen.",
-            "dynamicDescription": "Mel feuert ein Trommelfeuer aus @ExplosionCount@&nbsp;Projektilen ab, die im Bereich um einen Zielort herum explodieren.<br><br>Jede Explosion verursacht <magicDamage>@TotalExplosionDamage@&nbsp;magischen Schaden</magicDamage>, bis die Obergrenze von insgesamt <magicDamage>@AllDamageHit@&nbsp;magischer Schaden</magicDamage> erreicht ist.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel feuert ein Trommelfeuer aus @ExplosionCount@&nbsp;Projektilen ab, die im Bereich um einen Zielort herum explodieren.<br><br>Die erste Explosion verursacht <magicDamage>@InitialExplosionDamage@&nbsp;magischen Schaden</magicDamage> und jede weitere <magicDamage>@TotalExplosionDamage@&nbsp;magischen Schaden</magicDamage>, bis zu einer Obergrenze von <magicDamage>@AllDamageHit@&nbsp;magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Mel erzeugt eine Barriere um sich herum, die gegnerische Projektile auf den Angreifer zurückwirft, verhindert, dass sie Schaden erleidet, und ihr erhöhtes Lauftempo gewährt.",
-            "dynamicDescription": "Mel erzeugt eine Barriere um sich herum, die Projektile von gegnerischen Champions zurückwirft, verhindert, dass sie Schaden erleidet, und ihr <speed>@MoveSpeed*100@&nbsp;% abfallendes Lauftempo</speed> für @Duration@&nbsp;Sekunde(n) gewährt.<br><br>Zurückgeworfene Projektile verursachen magischen Schaden in Höhe von <magicDamage>@DamagePercent@ des ursprünglichen Schadens</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel erzeugt eine Barriere um sich herum, die Projektile von gegnerischen Champions zurückwirft. Sie erhält für @Duration@&nbsp;Sekunden einen <shield>Schild in Höhe von @ShieldAmount@</shield> und für @MoveSpeedDuration@&nbsp;Sekunden <speed>@MoveSpeed*100@&nbsp;% abfallendes Lauftempo</speed>.<br><br>Zurückgeworfene Projektile verursachen <magicDamage>@DamagePercent@ des ursprünglichen Schadens als magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "Mel feuert eine leuchtende Kugel geradeaus, die Gegner in ihrem Zentrum festhält, Gegner im äußeren Bereich verlangsamt und zudem Schaden über Zeit verursacht.",
             "dynamicDescription": "Mel feuert eine leuchtende Kugel ab, die Gegner in ihrem Zentrum @RootDuration@&nbsp;Sekunden lang <status>festhält</status> und <magicDamage>@Damage@&nbsp;magischen Schaden</magicDamage> verursacht.<br><br>Die Kugel erschafft einen feindlichen Bereich um sich herum, der Gegner um @AreaSlowAmount*100@&nbsp;% <status>verlangsamt</status> und ihnen <magicDamage>@AreaDamagePerSecond@&nbsp;magischen Schaden pro Sekunde</magicDamage> zufügt.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,

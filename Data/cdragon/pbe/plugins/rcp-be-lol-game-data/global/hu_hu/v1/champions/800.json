@@ -298,7 +298,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Mel lövedékeket lő ki, amelyek felrobbannak a célterület körül, és sorozatos sebzést okoznak a területen belül tartózkodó ellenfeleknek.",
-            "dynamicDescription": "Mel @ExplosionCount@ lövedéket bocsát ki, amelyek felrobbannak a célterület körül.<br><br>Mindegyik robbanás <magicDamage>@TotalExplosionDamage@ varázssebzést</magicDamage> okoz, ami összesen <magicDamage>@AllDamageHit@ varázssebzést</magicDamage> jelent.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel @ExplosionCount@ lövedéket bocsát ki, amelyek felrobbannak a célterület körül.<br><br>Az első találatot érő robbanás <magicDamage>@InitialExplosionDamage@ varázssebzést</magicDamage>, a további robbanások pedig <magicDamage>@TotalExplosionDamage@ varázssebzést</magicDamage> okoznak, ami összesen <magicDamage>@AllDamageHit@ varázssebzést</magicDamage> jelent.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Mel pajzsot von maga köré, amely visszaveri az ellenséges lövedékeket a támadóra, és megakadályozza, hogy Mel sebzést szenvedjen el, valamint mozgási sebességet biztosít neki.",
-            "dynamicDescription": "Mel pajzsot von maga köré, amely visszaveri az ellenséges hősök lövedékeit, megvédve őt a sebzéstől, továbbá <speed>@MoveSpeed*100@%, @Duration@ másodperc alatt megszűnő támadási sebességet</speed> biztosít neki.<br><br>A visszavert lövedékek <magicDamage>az eredeti sebzés @DamagePercent@-ával egyenlő varázssebzést</magicDamage> okoznak.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel pajzsot von maga köré, amely visszaveri az ellenséges hősök lövedékeit, és @Duration@ másodpercre <shield>@ShieldAmount@ erejű pajzsot</shield>, valamint @MoveSpeedDuration@ másodpercre <speed>@MoveSpeed*100@% fokozatosan csökkenő mozgási sebességet</speed> kap.<br><br>A visszavert lövedékek <magicDamage>az eredeti sebzés @DamagePercent@-ával egyenlő varázssebzést</magicDamage> okoznak.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "Mel ragyogó gömböt lő ki, amely mozgásképtelenné teszi a középpontban lévő, és lelassítja a közeli ellenfeleket, valamint folyamatos sebzést okoz.",
             "dynamicDescription": "Mel ragyogó gömböt lő ki, amely @RootDuration@ másodpercig <status>mozgásképtelenné</status> teszi a középpontjában lévő ellenfeleket, és <magicDamage>@Damage@ varázssebzést</magicDamage> okoz.<br><br>A gömböt övező terület is veszélyes: @AreaSlowAmount*100@%-kal <status>lelassítja</status> az ellenfeleket, és <magicDamage>másodpercenként @AreaDamagePerSecond@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,

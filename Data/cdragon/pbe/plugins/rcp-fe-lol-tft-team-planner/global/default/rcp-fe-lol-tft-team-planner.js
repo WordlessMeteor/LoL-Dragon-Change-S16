@@ -20,10 +20,10 @@
                         a = this;
                     return Object.keys(e).forEach((function(n) {
                         const l = e[n],
-                            s = a._getValue(n, l);
-                        s && s.then ? (s.then((function(e) {
+                            i = a._getValue(n, l);
+                        i && i.then ? (i.then((function(e) {
                             e || console.warn("The promise for the key " + n + " resolved with a falsy value: ", e), a._addValue(n, e)
-                        })), t.push(s)) : a._addValue(n, s)
+                        })), t.push(i)) : a._addValue(n, i)
                     })), Promise.all(t)
                 },
                 _addValue: function(e, t) {
@@ -51,8 +51,8 @@
             }), t.default = void 0;
             var n = a(1),
                 l = a(4),
-                s = a(6),
-                i = P(a(7)),
+                i = a(6),
+                s = P(a(7)),
                 r = P(a(11)),
                 o = P(a(12)),
                 m = P(a(15)),
@@ -106,7 +106,7 @@
                         TeamEditorTierContainerComponent: v.default,
                         TeamEditorTierGridComponent: T.default,
                         TeamEditorTierGridTileComponent: b.default,
-                        MyTeamsPlannerService: i.default.extend({
+                        MyTeamsPlannerService: s.default.extend({
                             privateApi: this
                         }),
                         TraitsCalculatorService: r.default.extend({
@@ -144,7 +144,7 @@
                 show(e) {
                     if (!this._enabled || this._teamPlannerInstance && this._componentState.get("isVisible")) return;
                     (this._teamPlannerInstance ? Promise.resolve() : this._createTeamPlannerInstance().renderPromise).then((() => (n.LayerManager.addLayer(this._teamPlannerInstance.domNode), this.teamPlannerService.setStateFromPreviousContext()))).then((() => {
-                        this._componentState.set("isVisible", !0), this._notifyVisibilityObservers(!0), s.SFX.openFlyout.play(), this.teamplannerSessionId = D(), this.activatedFromSource = e, this.sessionStartTime_ms = Date.now(), this.subViewSessionStartTime_ms = Date.now()
+                        this._componentState.set("isVisible", !0), this._notifyVisibilityObservers(!0), i.SFX.openFlyout.play(), this.teamplannerSessionId = D(), this.activatedFromSource = e, this.sessionStartTime_ms = Date.now(), this.subViewSessionStartTime_ms = Date.now()
                     }))
                 }
                 _compareTeams(e, t) {
@@ -152,7 +152,7 @@
                 }
                 hide(e) {
                     if (!this._componentState.get("isVisible")) return;
-                    this._componentState.set("isVisible", !1), this._notifyVisibilityObservers(!1), n.LayerManager.removeLayer(this._teamPlannerInstance.domNode), s.SFX.closeFlyout.play();
+                    this._componentState.set("isVisible", !1), this._notifyVisibilityObservers(!1), n.LayerManager.removeLayer(this._teamPlannerInstance.domNode), i.SFX.closeFlyout.play();
                     let t = 0,
                         a = 0,
                         l = 0;
@@ -161,7 +161,7 @@
                             e.id && (e.teamIsImported ? e.editedByPlayer ? l += 1 : t += 1 : a += 1)
                         }))
                     }));
-                    const i = {
+                    const s = {
                         team_planner_view: e,
                         team_planner_game_state: "OutOfGame",
                         team_planner_platform: "PC",
@@ -194,7 +194,7 @@
                         team_planner_trait_filter_toggle_count: this.traitFilterToggleCount,
                         team_planner_trait_filter_unique_traits: this.traitFilterUniqueTraitFilterTraits
                     };
-                    i.active_set_toggle_count = this.activeSetToggleCount, i.active_set_name = this.currentSetName, i.default_set_name = this.defaultSetName, i.event_set_name = this.eventSetName, i.edited_default_team = this._compareTeams(this.currentDefaultTeam, this.cachedDefaultTeam), i.edited_event_team = this._compareTeams(this.currentEventTeam, this.cachedEventTeam), n.Telemetry.sendCustomData("TFT_team_planner_close", i), this.teamplannerSessionId = null, this.activatedFromSource = "", this.sessionStartTime_ms = 0, this.remindersClickedCount = 0, this.clearCount = 0, this.teamCodesImported = {}, this.teamCodesImportedCount = 0, this.teamCodesExported = {}, this.teamCodesExportedCount = 0, this.teamCodeErrors = [], this.teamCodeErrorsCount = 0, this.activeSetToggleCount = 0, this.cachedDefaultTeam = void 0, this.cachedEventTeam = void 0, this.subViewSessionStartTime_ms = 0, this.totalTeamCount = 0, this.deletedTeamsCount = 0, this.currentTeamId = "", this.remindedTeamId = "", this.editedChampionsCount = 0, this.currentTeamChampionNames = [], this.undoCount = 0, this.maxUndoReachedCount = 0, this.traitFilterClearCount = 0, this.traitFilterToggleCount = 0, this.traitFilterUniqueTraitFilterTraits = []
+                    s.active_set_toggle_count = this.activeSetToggleCount, s.active_set_name = this.currentSetName, s.default_set_name = this.defaultSetName, s.event_set_name = this.eventSetName, s.edited_default_team = this._compareTeams(this.currentDefaultTeam, this.cachedDefaultTeam), s.edited_event_team = this._compareTeams(this.currentEventTeam, this.cachedEventTeam), n.Telemetry.sendCustomData("TFT_team_planner_close", s), this.teamplannerSessionId = null, this.activatedFromSource = "", this.sessionStartTime_ms = 0, this.remindersClickedCount = 0, this.clearCount = 0, this.teamCodesImported = {}, this.teamCodesImportedCount = 0, this.teamCodesExported = {}, this.teamCodesExportedCount = 0, this.teamCodeErrors = [], this.teamCodeErrorsCount = 0, this.activeSetToggleCount = 0, this.cachedDefaultTeam = void 0, this.cachedEventTeam = void 0, this.subViewSessionStartTime_ms = 0, this.totalTeamCount = 0, this.deletedTeamsCount = 0, this.currentTeamId = "", this.remindedTeamId = "", this.editedChampionsCount = 0, this.currentTeamChampionNames = [], this.undoCount = 0, this.maxUndoReachedCount = 0, this.traitFilterClearCount = 0, this.traitFilterToggleCount = 0, this.traitFilterUniqueTraitFilterTraits = []
                 }
                 getEnabled() {
                     return this._enabled
@@ -224,7 +224,7 @@
                         } else this._createTeamPlannerInstance().renderPromise.then((() => {
                             n.LayerManager.addLayer(this._teamPlannerInstance.domNode), this._componentState.set("isImportVisible", !0)
                         }));
-                        s.SFX.openFlyout.play()
+                        i.SFX.openFlyout.play()
                     }
                 }
                 hideTeamImport() {
@@ -271,7 +271,7 @@
             "use strict";
             var n = a(1),
                 l = a(5);
-            const s = n.Ember.Object.extend(l.DataBindingMixin, l.FixDataBindingMixin, {
+            const i = n.Ember.Object.extend(l.DataBindingMixin, l.FixDataBindingMixin, {
                     tftChampionsBySet() {
                         return this.retrieveData("api.gameData", "/assets/v1/tftchampions-teamplanner.json").then((e => Object.entries(e).reduce(((e, [t, a]) => e.set(t, a.reduce(((e, t) => e.set(t.character_id, t)), n.Ember.Map.create()))), n.Ember.Map.create())))
                     },
@@ -295,8 +295,8 @@
                             let t = null,
                                 a = null;
                             for (let l = 0; l < e.length; l++) {
-                                const s = e[l];
-                                n.Ember.isArray(s.icons) && s.icons.length > 0 && s.icons[0].value && s.icons[0].value.texture && (0 === s.icons[0].value.texture.indexOf("ASSETS/UX/Fonts/TextIcons/TFT/TeamPlanner") ? a = s.icons : 0 === s.icons[0].value.texture.indexOf("ASSETS/UX/Fonts/TextIcons/LoL/StatsIcon") && (t = s.icons))
+                                const i = e[l];
+                                n.Ember.isArray(i.icons) && i.icons.length > 0 && i.icons[0].value && i.icons[0].value.texture && (0 === i.icons[0].value.texture.indexOf("ASSETS/UX/Fonts/TextIcons/TFT/TeamPlanner") ? a = i.icons : 0 === i.icons[0].value.texture.indexOf("ASSETS/UX/Fonts/TextIcons/LoL/StatsIcon") && (t = i.icons))
                             }
                             return {
                                 statsIcons: t,
@@ -308,15 +308,15 @@
                     _indexEntitiesByName: e => n.Ember.isArray(e) ? e.reduce(((e, t) => e.set(t.nameId, t)), n.Ember.Map.create()) : n.Ember.Map.create(),
                     _indexEntities: e => n.Ember.isArray(e) ? e.reduce(((e, t) => e.set(t.id, t)), n.Ember.Map.create()) : n.Ember.Map.create()
                 }),
-                i = s.create();
+                s = i.create();
             e.exports = {
-                TftGameData: s,
-                tftItemsByName: i.tftItemsByName(),
-                teamPlannerCSSJSON: i.teamPlannerCSSJSON(),
-                tftChampionsBySet: i.tftChampionsBySet(),
-                tftTraitsById: i.tftTraitsById(),
-                tftGameVariationsByAlias: i.tftGameVariationsByAlias(),
-                tftSets: i.tftSets()
+                TftGameData: i,
+                tftItemsByName: s.tftItemsByName(),
+                teamPlannerCSSJSON: s.teamPlannerCSSJSON(),
+                tftChampionsBySet: s.tftChampionsBySet(),
+                tftTraitsById: s.tftTraitsById(),
+                tftGameVariationsByAlias: s.tftGameVariationsByAlias(),
+                tftSets: s.tftSets()
             }
         }, (e, t, a) => {
             "use strict";
@@ -329,13 +329,13 @@
                         gameData: "/lol-game-data"
                     }
                 }),
-                s = n.Ember.Mixin.create({
+                i = n.Ember.Mixin.create({
                     retrieveData(e, t, a) {
                         return this.get(e).get(t, a).then((e => e ? Promise.resolve(e) : Promise.reject(void 0)))
                     }
                 });
             e.exports = {
-                FixDataBindingMixin: s,
+                FixDataBindingMixin: i,
                 DataBindingMixin: l
             }
         }, (e, t, a) => {
@@ -350,7 +350,7 @@
                     allowConcurrency: !1
                 })
             }
-            const s = {
+            const i = {
                 closeClick: l("/fe/lol-static-assets/sounds/sfx-uikit-grid-click.ogg"),
                 openFlyout: l("/fe/lol-static-assets/sounds/skin-viewer/sfx-uikit-button-flyout-open-click.ogg"),
                 closeFlyout: l("/fe/lol-static-assets/sounds/skin-viewer/sfx-uikit-button-flyout-close-click.ogg"),
@@ -384,7 +384,7 @@
                 clickTraitFilterModalTraitButton: l("/fe/lol-uikit/sfx-uikit-checkbox-click.ogg"),
                 hoverTraitFilterButtonGeneric: l("/fe/lol-uikit/sfx-uikit-button-gold-hover.ogg")
             };
-            t.SFX = s
+            t.SFX = i
         }, (e, t, a) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -392,8 +392,8 @@
             }), t.default = void 0;
             var n = a(1),
                 l = a(6);
-            const s = a(8),
-                i = {
+            const i = a(8),
+                s = {
                     readyCheck: "/lol-matchmaking/v1/ready-check",
                     dirtyTeam: "/lol-tft-team-planner/v1/sets/dirty",
                     hasViewedTeamPlannerPath: "/lol-tft-team-planner/v1/ftue/hasViewed",
@@ -532,7 +532,7 @@
                     }))
                 },
                 willDestroy() {
-                    this._super(...arguments), m.unobserve(i.dirtyTeam, this), m.unobserve(i.clientConfigPath, this), m.unobserver(i.teamCodeFromClipboardPath, this)
+                    this._super(...arguments), m.unobserve(s.dirtyTeam, this), m.unobserve(s.clientConfigPath, this), m.unobserver(s.teamCodeFromClipboardPath, this)
                 },
                 hasTeamMember(e) {
                     const t = this.get("currentlySelectedTeamId"),
@@ -540,11 +540,11 @@
                     return !!a && (!(a.champions.length < 1) && a.champions.find((t => t.championId === e)))
                 },
                 _initObservers() {
-                    m.observe(i.dirtyTeam, this, (e => {
+                    m.observe(s.dirtyTeam, this, (e => {
                         this._handleLocalTeamChange(e)
-                    })), m.observe(i.clientConfigPath, this, (e => {
+                    })), m.observe(s.clientConfigPath, this, (e => {
                         e && this.set("multipleSetsEnabled", e.multipleSetsEnabled)
-                    })), m.observe(i.remindersPath, this, (e => {
+                    })), m.observe(s.remindersPath, this, (e => {
                         if (void 0 === e) return this.set("remindedTeamIds", []), this.set("remindersEnabled", !1), void(this.privateApi.remindersEnabled = !1);
                         const t = this.get("currentlySelectedTeams");
                         if (t)
@@ -553,15 +553,15 @@
                                     this.privateApi.remindedTeamId = a.id;
                                     break
                                 } this.set("remindedTeamIds", e), this.set("remindersEnabled", !0), this.privateApi.remindersEnabled = !0
-                    })), m.observe(i.SortOptionPath, this, (e => {
+                    })), m.observe(s.SortOptionPath, this, (e => {
                         void 0 !== e && (this.isAZSortSupported() || 3 !== e) ? this.set("currentSortOption", e) : this.set("currentSortOption", 0)
-                    })), m.observe(i.readyCheck, this, (e => {
+                    })), m.observe(s.readyCheck, this, (e => {
                         e && this.get("isVisible") && "Accepted" === e.playerResponse && this.saveAndExit("match-accept")
-                    })), m.observe(i.setPath, this, (e => {
-                        e && (this.set("eventSetSelected", e === this.get("tftSets").eventSet?.SetCoreName), this.set("currentSetName", e), this.set("currentSetChampionsByAlias", this.tftChampionsBySet.get(e)), this.privateApi.currentSetName = e, this.privateApi.remindedTeamId = this.getCurrentlyRemindedTeamId(), m.post(i.dirtyTeam).then((e => {
+                    })), m.observe(s.setPath, this, (e => {
+                        e && (this.set("eventSetSelected", e === this.get("tftSets").eventSet?.SetCoreName), this.set("currentSetName", e), this.set("currentSetChampionsByAlias", this.tftChampionsBySet.get(e)), this.privateApi.currentSetName = e, this.privateApi.remindedTeamId = this.getCurrentlyRemindedTeamId(), m.post(s.dirtyTeam).then((e => {
                             this._handleLocalTeamChange(e)
                         })))
-                    })), m.observe(i.gameflowPath, this, (e => {
+                    })), m.observe(s.gameflowPath, this, (e => {
                         e && "GameStart" === e.phase && (this.clearUndoHistory(), this.clearAllTraitFilters())
                     })), this.privateApi.registerTeamPlannerService(this)
                 },
@@ -583,12 +583,12 @@
                     }));
                     const a = this.getSelectedSetId(),
                         l = this.get("currentTeams").get(a);
-                    let s = 0;
+                    let i = 0;
                     l.teams.forEach((e => {
-                        e.id && (s += 1)
-                    })), this.set("currentlySelectedTeams", n.Ember.A(l.teams)), this.privateApi.totalTeamCount = s;
-                    const i = this.getCurrentlySelectedTeam().champions,
-                        r = n.Ember.A(i);
+                        e.id && (i += 1)
+                    })), this.set("currentlySelectedTeams", n.Ember.A(l.teams)), this.privateApi.totalTeamCount = i;
+                    const s = this.getCurrentlySelectedTeam().champions,
+                        r = n.Ember.A(s);
                     this.set("currentTeamMembers", r), this._refreshTeamTraits(r), this.sortTeamsByStrategy(this.get("currentSortOption"))
                 },
                 _refreshTeamTraits(e) {
@@ -596,11 +596,11 @@
                         a = this.get("currentSetName"),
                         n = this.get("traitsCalculator"),
                         l = n.generateTraitCensus(e, t),
-                        s = n.generateTraitData(l, a);
-                    n.sortTraitData(s), this.set("currentTeamTraits", s)
+                        i = n.generateTraitData(l, a);
+                    n.sortTraitData(i), this.set("currentTeamTraits", i)
                 },
                 setStateFromPreviousContext() {
-                    return m.get(i.previousContextPath).then((e => {
+                    return m.get(s.previousContextPath).then((e => {
                         if (!e) return;
                         if ("NONE" === o[e.viewId]) return void this.openMyTeams();
                         let t = e.setId;
@@ -628,7 +628,7 @@
                 addChampionById(e) {
                     if (!e) return;
                     const t = this.get("currentTeamMembers"),
-                        a = i.addRemoveChampIdPath.replace("{set}", this.get("currentSetName")).replace("{team}", this.get("currentlySelectedTeamId")).replace("{championId}", e);
+                        a = s.addRemoveChampIdPath.replace("{set}", this.get("currentSetName")).replace("{team}", this.get("currentlySelectedTeamId")).replace("{championId}", e);
                     m.post(a).then((() => {
                         l.SFX.addChampion.play(), this.addToUndoHistory(t), this.privateApi.editedChampionsCount += 1
                     })).catch((() => {
@@ -638,7 +638,7 @@
                 removeChampionById(e) {
                     if (!e) return;
                     this.addToUndoHistory();
-                    const t = i.addRemoveChampIdPath.replace("{set}", this.get("currentSetName")).replace("{team}", this.get("currentlySelectedTeamId")).replace("{championId}", e);
+                    const t = s.addRemoveChampIdPath.replace("{set}", this.get("currentSetName")).replace("{team}", this.get("currentlySelectedTeamId")).replace("{championId}", e);
                     m.delete(t).then((() => {
                         l.SFX.removeChampion.play(), this.privateApi.editedChampionsCount += 1
                     }))
@@ -646,7 +646,7 @@
                 addChampionByIndex(e, t) {
                     if (!t) return;
                     const a = this.get("currentTeamMembers"),
-                        n = i.addRemoveChampIndexPath.replace("{set}", this.get("currentSetName")).replace("{team}", this.get("currentlySelectedTeamId")).replace("{championId}", t).replace("{index}", e);
+                        n = s.addRemoveChampIndexPath.replace("{set}", this.get("currentSetName")).replace("{team}", this.get("currentlySelectedTeamId")).replace("{championId}", t).replace("{index}", e);
                     m.post(n).then((() => {
                         l.SFX.addChampion.play(), this.addToUndoHistory(a), this.privateApi.editedChampionsCount += 1
                     })).catch((() => {
@@ -655,7 +655,7 @@
                 },
                 removeChampionByIndex(e) {
                     this.addToUndoHistory();
-                    const t = i.addRemoveChampIndexPath.replace("{set}", this.get("currentSetName")).replace("{team}", this.get("currentlySelectedTeamId")).replace("{championId}", "delete").replace("{index}", e);
+                    const t = s.addRemoveChampIndexPath.replace("{set}", this.get("currentSetName")).replace("{team}", this.get("currentlySelectedTeamId")).replace("{championId}", "delete").replace("{index}", e);
                     m.delete(t).then((() => {
                         l.SFX.removeChampion.play(), this.privateApi.editedChampionsCount += 1
                     }))
@@ -663,21 +663,21 @@
                 swapChampionsByIndex(e, t) {
                     if (e === t) return;
                     this.addToUndoHistory();
-                    const a = i.swapChampionsByIndexPath.replace("{set}", this.get("currentSetName")).replace("{team}", this.get("currentlySelectedTeamId"));
+                    const a = s.swapChampionsByIndexPath.replace("{set}", this.get("currentSetName")).replace("{team}", this.get("currentlySelectedTeamId"));
                     m.patch(a, [e, t])
                 },
                 saveAndExit(e = "tft-teamPlanner") {
                     e = !0 === this.get("shouldShowTeamEditor") ? "TeamEditor" : "MyTeams", this.consecutiveUndoCount = 0, this.handleCaseWhenTeamIsEmpty().then((() => {
                         this.privateApi.currentTeamChampionNames = this.getCurrentTeamChampionNames(), this.privateApi.hide(e);
                         const t = this.get("currentlySelectedTeamId");
-                        return Promise.all([m.patch(i.hasViewedTeamPlannerPath, !0), m.patch(i.lastViewedSetPath), m.put(i.previousContextPath, {
+                        return Promise.all([m.patch(s.hasViewedTeamPlannerPath, !0), m.patch(s.lastViewedSetPath), m.put(s.previousContextPath, {
                             optionalTeamId: -1 === t ? "" : t,
                             setId: this.get("currentSetName"),
                             sortOption: this.get("currentSortOption"),
                             viewId: Object.keys(o).find((e => o[e] === (this.get("shouldShowTeamEditor") ? "TEAM_EDITOR" : "MY_TEAMS")))
                         })])
                     })).then((() => {
-                        m.put(i.saveTeamPath)
+                        m.put(s.saveTeamPath)
                     }))
                 },
                 incrementRemindersClickedCount() {
@@ -721,14 +721,14 @@
                     return (e ? e.TranslatedShortDisplayName : "").replace("@TextIconKey@", "")
                 },
                 saveTeams(e) {
-                    m.put(i.saveTeamPath).then((() => {
+                    m.put(s.saveTeamPath).then((() => {
                         e()
                     }))
                 },
                 setEventSetSelected(e) {
                     const t = this.get("tftSets"),
                         a = e ? t.eventSet : t.standardSet;
-                    return m.patch(i.setPath, a.SetCoreName)
+                    return m.patch(s.setPath, a.SetCoreName)
                 },
                 setSetBySetCoreName(e) {
                     const t = this.get("tftSets");
@@ -742,30 +742,30 @@
                     this.addToUndoHistory();
                     const e = this.getSelectedSetId(),
                         t = this.get("currentlySelectedTeamId");
-                    m.delete(i.clearTeamPath.replace("{set}", e).replace("{team}", t)).then((() => {
+                    m.delete(s.clearTeamPath.replace("{set}", e).replace("{team}", t)).then((() => {
                         this.incrementClearCount()
                     }))
                 },
                 deleteTeamForSetById(e, t) {
-                    return m.delete(i.addRemoveTeamPath.replace("{set}", e).replace("{team}", t)).then((() => {
+                    return m.delete(s.addRemoveTeamPath.replace("{set}", e).replace("{team}", t)).then((() => {
                         this.privateApi.deletedTeamsCount += 1, this.privateApi.remindedTeamId === t && (this.privateApi.remindedTeamId = "");
-                        return this.get("currentlySelectedTeamId") === t && this.set("currentlySelectedTeamId", -1), this.get("undoHistory").delete(t), m.get(i.previousContextPath).then((e => {
+                        return this.get("currentlySelectedTeamId") === t && this.set("currentlySelectedTeamId", -1), this.get("undoHistory").delete(t), m.get(s.previousContextPath).then((e => {
                             if (!e) return;
                             const a = e.optionalTeamId;
-                            return a && a === t ? (e.optionalTeamId = "", m.put(i.previousContextPath, e)) : void 0
+                            return a && a === t ? (e.optionalTeamId = "", m.put(s.previousContextPath, e)) : void 0
                         }))
                     }))
                 },
                 exportTeamCodeForSetById(e, t) {
-                    return m.post(i.teamCodePath.replace("{set}", e).replace("{team}", t)).then((e => {
+                    return m.post(s.teamCodePath.replace("{set}", e).replace("{team}", t)).then((e => {
                         this.onTeamCodeExported(e)
                     })).catch((e => {
                         this.onTeamCodeError(e)
                     }))
                 },
                 addTeamForSet() {
-                    const e = s(),
-                        t = i.addRemoveTeamPath.replace("{set}", this.get("currentSetName")).replace("{team}", e);
+                    const e = i(),
+                        t = s.addRemoveTeamPath.replace("{set}", this.get("currentSetName")).replace("{team}", e);
                     this.set("previousRemindedTeamId", this.privateApi.remindedTeamId), m.post(t).then((() => {
                         this.privateApi.remindedTeamId = e, this.set("currentlySelectedTeamId", e), this.openTeamEditorForTeamId(e)
                     }))
@@ -775,7 +775,7 @@
                         this.set("currentlySelectedTeamId", e);
                         const a = this.getCurrentlySelectedTeam();
                         a.timeOfLastViewInMs = Date.now(), this._refreshTeamTraits(a.champions), this.set("shouldShowTeamEditor", !0), this.privateApi.subViewSessionStartTime_ms = Date.now(), this.privateApi.currentTeamId = e;
-                        const n = i.lastViewedTeamPath.replace("{set}", this.get("currentSetName")).replace("{team}", e);
+                        const n = s.lastViewedTeamPath.replace("{set}", this.get("currentSetName")).replace("{team}", e);
                         t(m.post(n))
                     }))
                 },
@@ -783,7 +783,7 @@
                     this.set("shouldShowTeamEditor", !1), this.consecutiveUndoCount = 0, this.privateApi.subViewSessionStartTime_ms = Date.now()
                 },
                 toggleRemindersForTeamId(e) {
-                    const t = i.remindersForSetPath.replace("{set}", this.getSelectedSetId()).replace("{team}", e);
+                    const t = s.remindersForSetPath.replace("{set}", this.getSelectedSetId()).replace("{team}", e);
                     if (this.get("remindedTeamIds").includes(e)) m.delete(t).then((() => {
                         this.privateApi.remindedTeamId = ""
                     }));
@@ -812,7 +812,7 @@
                     }
                 },
                 setCurrentSortOption(e) {
-                    this.set("currentSortOption", e), m.patch(i.SortOptionPath, e)
+                    this.set("currentSortOption", e), m.patch(s.SortOptionPath, e)
                 },
                 sortTeamsByStrategy(e) {
                     if (null == e) return;
@@ -822,16 +822,16 @@
                     return this.set("currentlySelectedTeams", n), this.notifyPropertyChange("currentlySelectedTeams"), n
                 },
                 checkNameValid(e) {
-                    const t = i.checkNameValidPath.replace("{name}", e);
+                    const t = s.checkNameValidPath.replace("{name}", e);
                     return m.post(t)
                 },
                 setTeamTitle(e, t) {
-                    const a = i.setTeamNamePath.replace("{set}", this.get("currentSetName")).replace("{team}", e).replace("{name}", t);
+                    const a = s.setTeamNamePath.replace("{set}", this.get("currentSetName")).replace("{team}", e).replace("{name}", t);
                     return m.patch(a)
                 },
                 importTeam(e) {
-                    const t = s(),
-                        a = i.importTeamPath.replace("{set}", this.get("currentSetName")).replace("{team}", t);
+                    const t = i(),
+                        a = s.importTeamPath.replace("{set}", this.get("currentSetName")).replace("{team}", t);
                     return m.post(a, e), t
                 },
                 hideTeamImport() {
@@ -844,7 +844,7 @@
                     this.set("pasteModal", !1), this.set("teamImportError", !1), this.set("modalTitle", this.get("tra.teamimport_save_team_title")), this.set("modalSubtext", this.get("tra.teamimport_save_subtext")), this.privateApi.showTeamImport()
                 },
                 showPasteTeamImport() {
-                    m.post(i.teamCodeFromClipboardPath.replace("{set}", this.get("currentSetName"))).then((e => {
+                    m.post(s.teamCodeFromClipboardPath.replace("{set}", this.get("currentSetName"))).then((e => {
                         this.set("pasteModal", !0), this.set("teamImportError", !1), this.set("modalTitle", this.get("tra.teamimport_paste_team_title")), this.set("modalSubtext", this.get("tra.teamimport_paste_subtext")), this.set("clipboardText", e.teamCode), this.privateApi.setTeamImport(e.teamPlan, this.get("currentSetName")), this.privateApi.showTeamImport()
                     }), (e => {
                         if (this.set("teamImportError", !0), this.set("pasteModal", !0), this.set("showTeamCodeExample", !0), this.privateApi.clearTeamImportData(), 455 === e.data.httpStatus) this.set("modalTitle", this.get("tra.teamimport_error_empty_title")), this.set("modalSubtext", this.get("tra.teamimport_paste_subtext")), this.set("modalErrorCode", this.get("tra.teamimport_error_empty_code"));
@@ -910,22 +910,22 @@
                         a = this.get("currentSetName"),
                         n = this.get("currentlySelectedTeamId"),
                         l = this.get("teamIdToFilteredChampions");
-                    let s = [];
-                    void 0 !== l[n] && (s = l[n]);
-                    let i = s.findIndex((t => t.traitId === e));
-                    if (-1 !== i) s.splice(i, 1);
+                    let i = [];
+                    void 0 !== l[n] && (i = l[n]);
+                    let s = i.findIndex((t => t.traitId === e));
+                    if (-1 !== s) i.splice(s, 1);
                     else {
                         const n = t.getChampionsForTrait(e, a),
                             l = t.generateTraitDataForSet(a).find((t => t.id === e)),
-                            i = {
+                            s = {
                                 traitId: l.id,
                                 tierCost: l.displayName,
                                 iconPath: l.icon_path,
                                 unitListData: n
                             };
-                        s.push(i)
+                        i.push(s)
                     }
-                    if (l[n] = s, this.set("teamIdToFilteredChampions", l), this.notifyPropertyChange("teamIdToFilteredChampions"), this.privateApi.traitFilterToggleCount++, i = this.privateApi.traitFilterUniqueTraitFilterTraits.findIndex((t => t.traitId === e)), -1 === i) {
+                    if (l[n] = i, this.set("teamIdToFilteredChampions", l), this.notifyPropertyChange("teamIdToFilteredChampions"), this.privateApi.traitFilterToggleCount++, s = this.privateApi.traitFilterUniqueTraitFilterTraits.findIndex((t => t.traitId === e)), -1 === s) {
                         const t = 5;
                         this.privateApi.traitFilterUniqueTraitFilterTraits.length < t && this.privateApi.traitFilterUniqueTraitFilterTraits.push(e)
                     }
@@ -951,7 +951,7 @@
                         t = this.get("currentlySelectedTeamId"),
                         a = e.get(t),
                         n = a.popObject(),
-                        l = i.setChampionsForTeamPath.replace("{set}", this.get("currentSetName")).replace("{team}", t);
+                        l = s.setChampionsForTeamPath.replace("{set}", this.get("currentSetName")).replace("{team}", t);
                     m.post(l, n.map((e => e.championId))), this.privateApi.undoCount++, this.consecutiveUndoCount++, 0 === a.length && this.consecutiveUndoCount === this.maxUndoHistoryPerTeam && this.privateApi.maxUndoReachedCount++, this.notifyPropertyChange("undoHistory")
                 },
                 addToUndoHistory(e = null) {
@@ -971,12 +971,12 @@
             var n = a(9),
                 l = a(10);
             e.exports = function(e, t, a) {
-                var s = t && a || 0;
+                var i = t && a || 0;
                 "string" == typeof e && (t = "binary" === e ? new Array(16) : null, e = null);
-                var i = (e = e || {}).random || (e.rng || n)();
-                if (i[6] = 15 & i[6] | 64, i[8] = 63 & i[8] | 128, t)
-                    for (var r = 0; r < 16; ++r) t[s + r] = i[r];
-                return t || l(i)
+                var s = (e = e || {}).random || (e.rng || n)();
+                if (s[6] = 15 & s[6] | 64, s[8] = 63 & s[8] | 128, t)
+                    for (var r = 0; r < 16; ++r) t[i + r] = s[r];
+                return t || l(s)
             }
         }, e => {
             var t = "undefined" != typeof crypto && crypto.getRandomValues && crypto.getRandomValues.bind(crypto) || "undefined" != typeof msCrypto && "function" == typeof window.msCrypto.getRandomValues && msCrypto.getRandomValues.bind(msCrypto);
@@ -1006,8 +1006,8 @@
             }), t.default = void 0;
             var n = a(1);
             const l = "<br>",
-                s = "<expandRow>",
-                i = "<row>",
+                i = "<expandRow>",
+                s = "<row>",
                 r = "</row>",
                 o = "<tftActiveRank>",
                 m = "<tftInactiveRank>",
@@ -1042,38 +1042,38 @@
                                 l[t.id] = t.id in l ? l[t.id].concat([e.character_id]) : [e.character_id]
                             }))
                         }));
-                        const s = e.get(n);
+                        const i = e.get(n);
                         Object.values(l).forEach((e => {
-                            e.sort(((e, t) => s.get(e).tier - s.get(t).tier))
+                            e.sort(((e, t) => i.get(e).tier - i.get(t).tier))
                         })), t[n] = l
                     })), t
                 },
                 _calculateTraitLevel(e, t, a) {
                     let n = "kNone",
                         l = 0,
-                        s = -1;
+                        i = -1;
                     if (e.conditional_trait_sets.forEach((e => {
-                            t >= e.min_units ? (!e.max_units || t <= e.max_units) && (n = e.style_name, l = e.style_idx) : s < 0 && "kChromatic" !== e.style_name && (s = e.min_units)
-                        })), -1 === s) {
+                            t >= e.min_units ? (!e.max_units || t <= e.max_units) && (n = e.style_name, l = e.style_idx) : i < 0 && "kChromatic" !== e.style_name && (i = e.min_units)
+                        })), -1 === i) {
                         for (let t = e.conditional_trait_sets.length - 1; t >= 0; t--) {
                             const a = e.conditional_trait_sets[t];
                             if ("kChromatic" !== a.style_name) {
-                                s = a.min_units;
+                                i = a.min_units;
                                 break
                             }
-                        } - 1 === s && (s = 0)
+                        } - 1 === i && (i = 0)
                     }
-                    a.style = n, a.styleRank = l, a.nextThreshold = s
+                    a.style = n, a.styleRank = l, a.nextThreshold = i
                 },
                 generateTraitData(e, t) {
                     const a = n.Ember.A(),
                         l = this.get("tftTraitsById"),
-                        s = this.get("tftChampionsByTrait")[t];
+                        i = this.get("tftChampionsByTrait")[t];
                     for (const t in e) {
-                        const i = e[t],
+                        const s = e[t],
                             r = l.get(t),
                             o = {};
-                        o.id = t, o.displayName = r.display_name, o.icon_path = r.icon_path, o.tooltipText = this._replaceTokens(r.tooltip_text, r, i), o.currentCount = i, o.championsByTrait = s[t], this._calculateTraitLevel(r, i, o);
+                        o.id = t, o.displayName = r.display_name, o.icon_path = r.icon_path, o.tooltipText = this._replaceTokens(r.tooltip_text, r, s), o.currentCount = s, o.championsByTrait = i[t], this._calculateTraitLevel(r, s, o);
                         const m = n.Ember.Object.create(o);
                         a.pushObject(m)
                     }
@@ -1085,12 +1085,12 @@
                         l = this.get("tftChampionsByTrait")[e];
                     for (const e in l) {
                         const l = a.get(e),
-                            s = l.conditional_trait_sets;
-                        if (s.length > 0 && "kUnique" !== s[0].style_name) {
+                            i = l.conditional_trait_sets;
+                        if (i.length > 0 && "kUnique" !== i[0].style_name) {
                             const a = {};
                             a.id = e, a.displayName = l.display_name, a.icon_path = l.icon_path;
-                            const s = n.Ember.Object.create(a);
-                            t.pushObject(s)
+                            const i = n.Ember.Object.create(a);
+                            t.pushObject(i)
                         }
                     }
                     return t
@@ -1124,21 +1124,21 @@
                         h = this._generateTokenSubstitutions(u, t);
                     let f = 0;
                     for (n.forEach((e => {
-                            if (0 === e.indexOf(s)) t.conditional_trait_sets.forEach((n => {
-                                const i = this._generateTokenSubstitutions(n, t);
+                            if (0 === e.indexOf(i)) t.conditional_trait_sets.forEach((n => {
+                                const s = this._generateTokenSubstitutions(n, t);
                                 let r = e,
-                                    u = this._replaceFirstToken(r, i);
-                                for (; u.didReplace;) r = u.replacedString, u = this._replaceFirstToken(r, i);
+                                    u = this._replaceFirstToken(r, s);
+                                for (; u.didReplace;) r = u.replacedString, u = this._replaceFirstToken(r, s);
                                 let h = a >= n.min_units;
-                                n.max_units && (h = h && a <= n.max_units), r = r.replace(s, h ? o : m), r = r.replace("</expandRow>", h ? c : d), p += r + l
+                                n.max_units && (h = h && a <= n.max_units), r = r.replace(i, h ? o : m), r = r.replace("</expandRow>", h ? c : d), p += r + l
                             }));
-                            else if (0 === e.indexOf(i)) {
+                            else if (0 === e.indexOf(s)) {
                                 const n = t.conditional_trait_sets[f],
-                                    s = this._generateTokenSubstitutions(n, t);
-                                let u = this._replaceFirstToken(e, s);
-                                for (; u.didReplace;) e = u.replacedString, u = this._replaceFirstToken(e, s);
+                                    i = this._generateTokenSubstitutions(n, t);
+                                let u = this._replaceFirstToken(e, i);
+                                for (; u.didReplace;) e = u.replacedString, u = this._replaceFirstToken(e, i);
                                 let h = a >= n.min_units;
-                                n.max_units && (h = h && a <= n.max_units), e = h ? (e = e.replace(i, o)).replace(r, c) : (e = e.replace(i, m)).replace(r, d), f++, p += e + l
+                                n.max_units && (h = h && a <= n.max_units), e = h ? (e = e.replace(s, o)).replace(r, c) : (e = e.replace(s, m)).replace(r, d), f++, p += e + l
                             } else {
                                 let t = this._replaceFirstToken(e, h);
                                 for (; t.didReplace;) e = t.replacedString, t = this._replaceFirstToken(e, h);
@@ -1157,7 +1157,7 @@
                     };
                     let n = !1,
                         l = t[a.token],
-                        s = "";
+                        i = "";
                     if (l) {
                         if (l *= a.multiplier, -1 === a.precision) {
                             a.precision = 2;
@@ -1165,10 +1165,10 @@
                             let t = Math.floor(l * e);
                             for (; t % 10 == 0 && a.precision > 0;) t /= 10, a.precision -= 1
                         }
-                        s = l.toFixed(a.precision)
+                        i = l.toFixed(a.precision)
                     } else n = !0;
                     return {
-                        replacedString: e.slice(0, a.start) + s + e.slice(a.end + 1, e.end),
+                        replacedString: e.slice(0, a.start) + i + e.slice(a.end + 1, e.end),
                         didReplace: !0,
                         error: n
                     }
@@ -1214,14 +1214,14 @@
                     if (-1 === a) return null;
                     let n = e.slice(t + 1, a);
                     const l = n.indexOf("*");
-                    let s = 1;
+                    let i = 1;
                     if (-1 !== l) {
                         const e = n.slice(l + 1, n.length);
-                        n = n.slice(0, l), s = Number(e), Number.isNaN(s) && (s = 1)
+                        n = n.slice(0, l), i = Number(e), Number.isNaN(i) && (i = 1)
                     }
-                    const i = n.indexOf(":");
+                    const s = n.indexOf(":");
                     let r;
-                    r = i < 0 ? n.indexOf(".") : n.indexOf(".", i);
+                    r = s < 0 ? n.indexOf(".") : n.indexOf(".", s);
                     let o = -1;
                     if (-1 !== r) {
                         const e = n.slice(r + 1, n.length);
@@ -1231,7 +1231,7 @@
                         start: t,
                         end: a,
                         precision: o,
-                        multiplier: s,
+                        multiplier: i,
                         token: n
                     }
                 },
@@ -1248,7 +1248,7 @@
             var n = a(1);
             a(13);
             var l = a(6),
-                s = n.Ember.Component.extend({
+                i = n.Ember.Component.extend({
                     layout: a(14),
                     classNames: ["team-planner-root-component"],
                     isLoading: !1,
@@ -1315,15 +1315,15 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "ZPOmszlV",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\team-planner-root.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\styles\\\\team-planner-root.styl\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],["isVisible"],null,7],["text","\\n"],["block",["uikit-modal"],null,[["type","displayModal"],["FullPage",["get",["isImportVisible"]]]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["unknown",["team-import-root"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["my-teams-root"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["team-editor-trait-filter"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["static-attr","style","width:338px;"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-section-header"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-icon reminders"],["flush-element"],["close-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-title"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_reminders_title"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-body"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_reminders_body"]],false],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-separator"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-section-header"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-icon snapshot"],["flush-element"],["close-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-title"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_snapshot_title"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-body"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_snapshot_body"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","team-editor-header"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","team-planner-back-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showMyTeams"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterBackButton"],null],null],["flush-element"],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","team-planner-title"],["flush-element"],["append",["unknown",["tra","title_tft_teamplanner"]],false],["close-element"],["text","\\n              "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","team-planner__header-container__tooltip-icon"],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterInfoButton"],null],null],["static-attr","noClick","true"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],3],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","team-editor-header-separator"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","team-planner-root__content"],["flush-element"],["text","\\n              "],["append",["unknown",["team-editor-tiers-list-container"]],false],["text","\\n              "],["append",["unknown",["team-editor-team-traits-container"]],false],["text","\\n              "],["append",["helper",["team-editor-team-container"],[["get",["teamData"]]],null],false],["text","\\n              "],["open-element","div",[]],["static-attr","class","team-planner-root__trait-filter-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",[null,"shouldShowTraitFilterModal"]]],null,2],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",[null,"shouldShowTeamEditor"]]],null,4,1]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","team-planner-root__spinner"],["flush-element"],["text"," "],["append",["unknown",["uikit-spinner"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","lol-uikit-full-page-backdrop",[]],["static-attr","class","team-planner-backdrop"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-planner-backdrop__click-elem"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"close"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-dialog-frame",[]],["static-attr","frame","bordered"],["static-attr","dismissable","true"],["static-attr","dismissable-type","inside"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner-root"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,6,5],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "v6m7rntn",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\team-planner-root.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\styles\\\\team-planner-root.styl\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],["isVisible"],null,7],["text","\\n"],["block",["uikit-modal"],null,[["type","displayModal"],["FullPage",["get",["isImportVisible"]]]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["unknown",["team-import-root"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["my-teams-root"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["team-editor-trait-filter"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["static-attr","style","width:338px;"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-section-header"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-icon reminders"],["flush-element"],["close-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-title"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_reminders_title"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-body"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_reminders_body"]],false],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-separator"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-section-header"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-icon snapshot"],["flush-element"],["close-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-title"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_snapshot_title"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-body"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_snapshot_body"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","team-editor-header"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","team-planner-back-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showMyTeams"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterBackButton"],null],null],["flush-element"],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","team-planner-title"],["flush-element"],["append",["unknown",["tra","title_tft_teamplanner"]],false],["close-element"],["text","\\n              "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","team-planner__header-container__tooltip-icon"],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterInfoButton"],null],null],["static-attr","noClick","true"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],3],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","team-editor-header-separator"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","team-planner-root__content"],["flush-element"],["text","\\n              "],["append",["unknown",["team-editor-tiers-list-container"]],false],["text","\\n              "],["append",["unknown",["team-editor-team-traits-container"]],false],["text","\\n              "],["append",["helper",["team-editor-team-container"],[["get",["teamData"]]],null],false],["text","\\n              "],["open-element","div",[]],["static-attr","class","team-planner-root__trait-filter-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",[null,"shouldShowTraitFilterModal"]]],null,2],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",[null,"shouldShowTeamEditor"]]],null,4,1]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","team-planner-root__spinner"],["flush-element"],["text"," "],["append",["unknown",["uikit-spinner"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","lol-uikit-full-page-backdrop",[]],["static-attr","class","team-planner-backdrop"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-planner-backdrop__click-elem"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"close"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-dialog-frame",[]],["static-attr","frame","bordered"],["static-attr","dismissable","true"],["static-attr","dismissable-type","inside"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner-root"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,6,5],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1334,7 +1334,7 @@
             var n = a(1);
             a(16);
             var l = a(6),
-                s = n.Ember.Component.extend({
+                i = n.Ember.Component.extend({
                     layout: a(17),
                     classNames: ["team-planner__tiers-list-container-component"],
                     teamPlannerService: n.Ember.inject.service("MyTeamsPlanner"),
@@ -1372,11 +1372,11 @@
                             n = this.get("teamPlannerService").currentSetChampionsByAlias;
                         return n ? (n.forEach(((e, n) => {
                             const l = e.tier,
-                                s = "TFTSet16" === this.get("teamPlannerService").currentSetName;
+                                i = "TFTSet16" === this.get("teamPlannerService").currentSetName;
                             l in a || (a[l] = {
                                 tierIcon: "/fe/lol-tft/images/home/TFT_Icon_Coins.png",
                                 tierLevel: l,
-                                tierCost: s && 5 === l ? `${l}+` : l,
+                                tierCost: i && 5 === l ? `${l}+` : l,
                                 unitListData: []
                             }, t.push(l)), a[l].unitListData.push(e)
                         })), t.sort(), t.forEach((t => {
@@ -1425,15 +1425,15 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "FFLGs9Eo",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\tiers-list-container.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__tiers-list-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["configTraitFlteringIsEnabled"]]],null,10],["text","  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","team-planner__tiers-list-container__scrollable-content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","onDrop",["helper",["action"],[["get",[null]],"onDrop"],null],null],["dynamic-attr","onDragOver",["helper",["action"],[["get",[null]],"onDragOver"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["filteredTierListData","length"]]],null,3,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-planner__gradient-bottom"],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["team-editor-tier-container"],null,[["tierData"],[["get",["tierData"]]]]],false],["text","\\n"]],"locals":["tierData"]},{"statements":[["block",["each"],[["get",["tierListData"]]],null,0]],"locals":[]},{"statements":[["text","          "],["append",["helper",["team-editor-tier-container"],null,[["tierData"],[["get",["tierData"]]]]],false],["text","\\n"]],"locals":["tierData"]},{"statements":[["block",["each"],[["get",["filteredTierListData"]]],null,2]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onTraitFilterButtonClicked"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onTraitFilterButtonHovered"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-tuner-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-text"],["flush-element"],["append",["unknown",["tra","teamplanner_filter_button_text"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-caret-down"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button filtering"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onTraitFilterButtonClicked"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onTraitFilterButtonHovered"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-tuner-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-text"],["flush-element"],["append",["unknown",["filteredTierLengthText"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button-clear-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onTraitFilterButtonClearButtonClicked"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onTraitFilterButtonClearButtonHovered"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button-clear-button-sidebar-separator"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button-clear-button-hover-gradient"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button-clear-button-x"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["filteredTierListData","length"]]],null,5,4]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-text"],["flush-element"],["append",["unknown",["tra","teamplanner_filter_button_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-text"],["flush-element"],["append",["unknown",["tra","teamplanner_filter_button_text"]],false],["text","\\n            ("],["append",["unknown",["filteredTierListData","length"]],false],["text",")"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button open"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-tuner-icon"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["filteredTierListData","length"]]],null,8,7],["text","        "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-caret-up"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowTraitFilterModal"]]],null,9,6]],"locals":[]}],"hasPartials":false}',
+                id: "pzW/nvsP",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\tiers-list-container.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__tiers-list-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["configTraitFlteringIsEnabled"]]],null,10],["text","  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","team-planner__tiers-list-container__scrollable-content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","onDrop",["helper",["action"],[["get",[null]],"onDrop"],null],null],["dynamic-attr","onDragOver",["helper",["action"],[["get",[null]],"onDragOver"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["filteredTierListData","length"]]],null,3,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-planner__gradient-bottom"],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["team-editor-tier-container"],null,[["tierData"],[["get",["tierData"]]]]],false],["text","\\n"]],"locals":["tierData"]},{"statements":[["block",["each"],[["get",["tierListData"]]],null,0]],"locals":[]},{"statements":[["text","          "],["append",["helper",["team-editor-tier-container"],null,[["tierData"],[["get",["tierData"]]]]],false],["text","\\n"]],"locals":["tierData"]},{"statements":[["block",["each"],[["get",["filteredTierListData"]]],null,2]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onTraitFilterButtonClicked"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onTraitFilterButtonHovered"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-tuner-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-text"],["flush-element"],["append",["unknown",["tra","teamplanner_filter_button_text"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-caret-down"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button filtering"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onTraitFilterButtonClicked"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onTraitFilterButtonHovered"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-tuner-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-text"],["flush-element"],["append",["unknown",["filteredTierLengthText"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button-clear-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onTraitFilterButtonClearButtonClicked"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onTraitFilterButtonClearButtonHovered"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button-clear-button-sidebar-separator"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button-clear-button-hover-gradient"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button-clear-button-x"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["filteredTierListData","length"]]],null,5,4]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-text"],["flush-element"],["append",["unknown",["tra","teamplanner_filter_button_text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-text"],["flush-element"],["append",["unknown",["tra","teamplanner_filter_button_text"]],false],["text","\\n            ("],["append",["unknown",["filteredTierListData","length"]],false],["text",")"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-button open"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-tuner-icon"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["filteredTierListData","length"]]],null,8,7],["text","        "],["open-element","div",[]],["static-attr","class","team-planner__trait-filter-caret-up"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowTraitFilterModal"]]],null,9,6]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1445,7 +1445,7 @@
             a(19);
             var l = a(6);
             n.dataBinding.bindTo(n.socket);
-            var s = n.Ember.Component.extend({
+            var i = n.Ember.Component.extend({
                 layout: a(20),
                 classNames: ["team-planner__team-container-component"],
                 teamPlannerService: n.Ember.inject.service("MyTeamsPlanner"),
@@ -1505,15 +1505,15 @@
                     }
                 }
             });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "VbEQLRRu",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-container.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__team-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-planner__team-container-header"],["flush-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","team-editor-edit-name-header"],["flush-element"],["text","\\n\\n"],["block",["if"],[["get",[null,"isEditingTeamName"]]],null,5,4],["text","      "],["open-element","lol-uikit-flat-input",[]],["dynamic-attr","class",["concat",["team-planner__team-container__team-name-input ",["helper",["unless"],[["get",[null,"isEditingTeamName"]],"invisible"],null]]]],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["type","name","id","key-up","focus-out","insert-newline","input","maxlength","value"],["text","team-title","team-title","teamNameKeyUp","saveEditedTeamName","saveEditedTeamName",["helper",["action"],[["get",[null]],"teamNameChanged"],null],24,["get",[null,"titleEditValue"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",[null,"inappropriateName"]]],null,3,2],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-planner__reminders"],["flush-element"],["text","\\n      "],["append",["helper",["my-teams-reminders-toggle"],null,[["TeamId"],[["get",["teamData","id"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["append",["unknown",["team-editor-team-grid"]],false],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-buttons"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-button clear"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"clearTeam"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterClearButton"],null],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-button__icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-button__text"],["flush-element"],["append",["unknown",["tra","teameditor_clear_button"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["configUndoButtonEnabled"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-button undo"],["dynamic-attr","disabled",["unknown",["isUndoHistoryEmpty"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleUndo"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-button__icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-button__text"],["flush-element"],["append",["unknown",["tra","teameditor_undo_button"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","team-editor-character-limit-text"],["flush-element"],["append",["unknown",["tra","teamplanner_character_reach_limit"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",[null,"characterLimitReached"]]],null,1]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","team-editor-character-limit-text"],["flush-element"],["append",["unknown",["tra","teamplanner_invalid_team_name"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-close-button",[]],["static-attr","class","team-planner__team-container__edit-name-button"],["static-attr","button-type","edit"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"startEditingTeamName"],null],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","team-planner__team-container__team-name"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"startEditingTeamName"],null],null],["flush-element"],["append",["unknown",["teamData","title"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-close-button",[]],["static-attr","class","team-planner__team-container__edit-name-button"],["static-attr","button-type","add"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"saveEditedTeamName"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Lip34MdB",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-container.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__team-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-planner__team-container-header"],["flush-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","team-editor-edit-name-header"],["flush-element"],["text","\\n\\n"],["block",["if"],[["get",[null,"isEditingTeamName"]]],null,5,4],["text","      "],["open-element","lol-uikit-flat-input",[]],["dynamic-attr","class",["concat",["team-planner__team-container__team-name-input ",["helper",["unless"],[["get",[null,"isEditingTeamName"]],"invisible"],null]]]],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["type","name","id","key-up","focus-out","insert-newline","input","maxlength","value"],["text","team-title","team-title","teamNameKeyUp","saveEditedTeamName","saveEditedTeamName",["helper",["action"],[["get",[null]],"teamNameChanged"],null],24,["get",[null,"titleEditValue"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",[null,"inappropriateName"]]],null,3,2],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-planner__reminders"],["flush-element"],["text","\\n      "],["append",["helper",["my-teams-reminders-toggle"],null,[["TeamId"],[["get",["teamData","id"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["append",["unknown",["team-editor-team-grid"]],false],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-buttons"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-button clear"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"clearTeam"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterClearButton"],null],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-button__icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-button__text"],["flush-element"],["append",["unknown",["tra","teameditor_clear_button"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["configUndoButtonEnabled"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-button undo"],["dynamic-attr","disabled",["unknown",["isUndoHistoryEmpty"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleUndo"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-button__icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","team-editor__team-container__footer-button__text"],["flush-element"],["append",["unknown",["tra","teameditor_undo_button"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","team-editor-character-limit-text"],["flush-element"],["append",["unknown",["tra","teamplanner_character_reach_limit"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",[null,"characterLimitReached"]]],null,1]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","team-editor-character-limit-text"],["flush-element"],["append",["unknown",["tra","teamplanner_invalid_team_name"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-close-button",[]],["static-attr","class","team-planner__team-container__edit-name-button"],["static-attr","button-type","edit"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"startEditingTeamName"],null],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","team-planner__team-container__team-name"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"startEditingTeamName"],null],null],["flush-element"],["append",["unknown",["teamData","title"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-close-button",[]],["static-attr","class","team-planner__team-container__edit-name-button"],["static-attr","button-type","add"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"saveEditedTeamName"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1534,9 +1534,9 @@
                         l = t.get("currentlySelectedTeams").find((e => e.id === a));
                     if (l) {
                         const a = l.champions,
-                            s = t.currentSetChampionsByAlias;
+                            i = t.currentSetChampionsByAlias;
                         a.forEach((t => {
-                            "" === t.championId ? e.push(n.Ember.Map.create()) : e.push(s.get(t.championId))
+                            "" === t.championId ? e.push(n.Ember.Map.create()) : e.push(i.get(t.championId))
                         }))
                     }
                     return e
@@ -1549,8 +1549,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "bY4gaDkT",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-grid.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__team-grid"],["flush-element"],["text","\\n"],["block",["each"],[["get",["teamCompData"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["team-editor-team-grid-tile"],null,[["tileData","teamIndex"],[["get",["tileData"]],["get",["index"]]]]],false],["text","\\n"]],"locals":["tileData","index"]}],"hasPartials":false}',
+                id: "MTppr8Tp",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-grid.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__team-grid"],["flush-element"],["text","\\n"],["block",["each"],[["get",["teamCompData"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["team-editor-team-grid-tile"],null,[["tileData","teamIndex"],[["get",["tileData"]],["get",["index"]]]]],false],["text","\\n"]],"locals":["tileData","index"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1572,7 +1572,7 @@
                     l(), t(e)
                 }, n.src = a(26)
             }));
-            var s = n.Ember.Component.extend({
+            var i = n.Ember.Component.extend({
                 layout: a(27),
                 classNames: ["team-planner__team-grid-tile-component"],
                 teamPlannerService: n.Ember.inject.service("MyTeamsPlanner"),
@@ -1618,7 +1618,7 @@
                     }
                 }
             });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
@@ -1628,8 +1628,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "L+4nJbLL",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-grid-tile.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["team-planner__team-grid-tile ",["helper",["if"],[["get",["hasChampion"]],"team-grid-tile--enabled"],null]]]],["dynamic-attr","draggable",["unknown",["hasChampion"]],null],["dynamic-attr","onDragStart",["helper",["action"],[["get",[null]],"onDragStart"],null],null],["dynamic-attr","onDragEnd",["helper",["action"],[["get",[null]],"onDragEnd"],null],null],["dynamic-attr","onMouseOver",["helper",["action"],[["get",[null]],"onMouseOver"],null],null],["dynamic-attr","onMouseDown",["helper",["action"],[["get",[null]],"onMouseDown"],null],null],["modifier",["action"],[["get",[null]],"onClick"]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasChampion"]]],null,4,3],["block",["if"],[["get",["tileData","tier"]]],null,2],["text","  "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile__hover-state"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isDragging"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-planner__team-grid-tile__drop-zone ",["unknown",["activeDropZone"]]]]],["dynamic-attr","onDragEnter",["helper",["action"],[["get",[null]],"onDragEnter"],null],null],["dynamic-attr","onDragLeave",["helper",["action"],[["get",[null]],"onDragLeave"],null],null],["dynamic-attr","onDrop",["helper",["action"],[["get",[null]],"onDrop"],null],null],["dynamic-attr","onDragOver",["helper",["action"],[["get",[null]],"onDragOver"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["team-editor-team-grid-tile-trait-icon"],null,[["traitId"],[["get",["trait","id"]]]]],false],["text","\\n"]],"locals":["trait"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile__image-overlay"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/team_editor_Member_Tier",["unknown",["tileData","tier"]],".png);"]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile__champion-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tileData","display_name"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile__trait-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tileData","traits"]]],null,1],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile__image-overlay"],["static-attr","style","background-image: url(/fe/lol-tft-team-planner/images/team_editor_Member_Empty.png);"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile__champion-splash"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["tileData","squareSplashIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "9H5IoLC2",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-grid-tile.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["team-planner__team-grid-tile ",["helper",["if"],[["get",["hasChampion"]],"team-grid-tile--enabled"],null]]]],["dynamic-attr","draggable",["unknown",["hasChampion"]],null],["dynamic-attr","onDragStart",["helper",["action"],[["get",[null]],"onDragStart"],null],null],["dynamic-attr","onDragEnd",["helper",["action"],[["get",[null]],"onDragEnd"],null],null],["dynamic-attr","onMouseOver",["helper",["action"],[["get",[null]],"onMouseOver"],null],null],["dynamic-attr","onMouseDown",["helper",["action"],[["get",[null]],"onMouseDown"],null],null],["modifier",["action"],[["get",[null]],"onClick"]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasChampion"]]],null,4,3],["block",["if"],[["get",["tileData","tier"]]],null,2],["text","  "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile__hover-state"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isDragging"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-planner__team-grid-tile__drop-zone ",["unknown",["activeDropZone"]]]]],["dynamic-attr","onDragEnter",["helper",["action"],[["get",[null]],"onDragEnter"],null],null],["dynamic-attr","onDragLeave",["helper",["action"],[["get",[null]],"onDragLeave"],null],null],["dynamic-attr","onDrop",["helper",["action"],[["get",[null]],"onDrop"],null],null],["dynamic-attr","onDragOver",["helper",["action"],[["get",[null]],"onDragOver"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["team-editor-team-grid-tile-trait-icon"],null,[["traitId"],[["get",["trait","id"]]]]],false],["text","\\n"]],"locals":["trait"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile__image-overlay"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/team_editor_Member_Tier",["unknown",["tileData","tier"]],".png);"]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile__champion-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tileData","display_name"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile__trait-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tileData","traits"]]],null,1],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile__image-overlay"],["static-attr","style","background-image: url(/fe/lol-tft-team-planner/images/team_editor_Member_Empty.png);"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile__champion-splash"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["tileData","squareSplashIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1660,8 +1660,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "kWXpkinh",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-grid-tile-trait-icon.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["trait","icon_path"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-planner__team-grid-tile-trait-icon__background ",["unknown",["setlessTraitId"]]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile-trait-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["trait","icon_path"]],");"]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "cZ1hcwha",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-grid-tile-trait-icon.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["trait","icon_path"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-planner__team-grid-tile-trait-icon__background ",["unknown",["setlessTraitId"]]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-planner__team-grid-tile-trait-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["trait","icon_path"]],");"]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1672,7 +1672,7 @@
             var n = a(1);
             a(32);
             var l = a(6);
-            var s = n.Ember.Component.extend({
+            var i = n.Ember.Component.extend({
                 layout: a(33),
                 classNames: ["team-planner__team-traits-container-component"],
                 teamPlannerService: n.Ember.inject.service("MyTeamsPlanner"),
@@ -1738,15 +1738,15 @@
                     }
                 }
             });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "x4I+SYIN",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-traits-container.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__team-traits-vertical-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["visibleTraits"]]],null,4],["block",["if"],[["get",["maxPages"]]],null,3,2],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","id","team-planner__trait-tooltip"],["dynamic-attr","class",["concat",["team-planner__trait-tooltip-container ",["helper",["if"],[["get",["tooltipTrait"]],"visible"],null]]]],["dynamic-attr","onMouseLeave",["helper",["action"],[["get",[null]],"onTooltipMouseLeave"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["tooltipTrait"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","trait-champion-tile"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","trait-champion-icon-border"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/cTeamPlanner_ChampionButton_Tier",["unknown",["champion","tier"]],".png);"]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","trait-champion-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["champion","squareIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["champion"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","trait-tooltip-header"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","trait-tooltip-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["tooltipTrait","icon_path"]],");"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","trait-title"],["flush-element"],["append",["unknown",["tooltipTrait","displayName"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","trait-tooltip-line"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","trait-label"],["flush-element"],["append",["unknown",["tooltipTrait","tooltipText"]],true],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","trait-champions-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tooltipChampionData"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__team-trait-container__next-page-button__hide"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__team-trait-container__next-page-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"nextPage"],null],null],["dynamic-attr","onMouseOver",["helper",["action"],[["get",[null]],"onMouseOver"],null],null],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","team-planner__team-trait-container__text"],["flush-element"],["text","+"],["append",["unknown",["hiddenTraitCount"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["team-editor-team-trait"],null,[["trait","currentTooltipTrait","mouseEnter","mouseLeave"],[["get",["tData"]],["get",["tooltipTrait"]],["helper",["action"],[["get",[null]],"onTraitMouseEnter",["get",["tData"]]],null],["helper",["action"],[["get",[null]],"onTraitMouseLeave"],null]]]],false],["text","\\n"]],"locals":["tData"]}],"hasPartials":false}',
+                id: "by1jCJUR",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-traits-container.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__team-traits-vertical-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["visibleTraits"]]],null,4],["block",["if"],[["get",["maxPages"]]],null,3,2],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","id","team-planner__trait-tooltip"],["dynamic-attr","class",["concat",["team-planner__trait-tooltip-container ",["helper",["if"],[["get",["tooltipTrait"]],"visible"],null]]]],["dynamic-attr","onMouseLeave",["helper",["action"],[["get",[null]],"onTooltipMouseLeave"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["tooltipTrait"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","trait-champion-tile"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","trait-champion-icon-border"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/cTeamPlanner_ChampionButton_Tier",["unknown",["champion","tier"]],".png);"]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","trait-champion-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["champion","squareIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["champion"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","trait-tooltip-header"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","trait-tooltip-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["tooltipTrait","icon_path"]],");"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","trait-title"],["flush-element"],["append",["unknown",["tooltipTrait","displayName"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","trait-tooltip-line"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","trait-label"],["flush-element"],["append",["unknown",["tooltipTrait","tooltipText"]],true],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","trait-champions-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tooltipChampionData"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__team-trait-container__next-page-button__hide"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__team-trait-container__next-page-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"nextPage"],null],null],["dynamic-attr","onMouseOver",["helper",["action"],[["get",[null]],"onMouseOver"],null],null],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","team-planner__team-trait-container__text"],["flush-element"],["text","+"],["append",["unknown",["hiddenTraitCount"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["team-editor-team-trait"],null,[["trait","currentTooltipTrait","mouseEnter","mouseLeave"],[["get",["tData"]],["get",["tooltipTrait"]],["helper",["action"],[["get",[null]],"onTraitMouseEnter",["get",["tData"]]],null],["helper",["action"],[["get",[null]],"onTraitMouseLeave"],null]]]],false],["text","\\n"]],"locals":["tData"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1775,8 +1775,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "EfgVuouI",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-trait.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__team-trait"],["flush-element"],["text","\\n"],["block",["if"],[["get",["trait"]]],null,3,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__background__empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__background"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/cTeamPlanner_ActiveTrait_",["unknown",["trait","style"]],".png)"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["trait","icon_path"]],");  ",["helper",["if"],[["get",["trait","styleRank"]],"filter: brightness(0);"],null]]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-planner__team-trait__hover-state ",["helper",["if"],[["get",["isShowingTooltip"]],"visible"],null]]]],["static-attr","style","background-image: url(/fe/lol-tft-team-planner/images/TFT_HUD_Trait_Hovered.png);"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__text"],["flush-element"],["append",["unknown",["trait","currentCount"]],false],["text","/"],["append",["unknown",["trait","nextThreshold"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__background__threat"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/cTeamPlanner_ActiveTrait_",["unknown",["trait","style"]],".png)"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__icon__threat"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["trait","icon_path"]],");"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-planner__team-trait__hover-state ",["helper",["if"],[["get",["isShowingTooltip"]],"visible"],null]]]],["static-attr","style","background-image: url(/fe/lol-tft-team-planner/images/TFT_HUD_Threat_Hovered.png);"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__text"],["flush-element"],["append",["unknown",["trait","currentCount"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isThreat"]]],null,2,1]],"locals":[]}],"hasPartials":false}',
+                id: "o2Z/TnBe",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-trait.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__team-trait"],["flush-element"],["text","\\n"],["block",["if"],[["get",["trait"]]],null,3,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__background__empty"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__background"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/cTeamPlanner_ActiveTrait_",["unknown",["trait","style"]],".png)"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["trait","icon_path"]],");  ",["helper",["if"],[["get",["trait","styleRank"]],"filter: brightness(0);"],null]]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-planner__team-trait__hover-state ",["helper",["if"],[["get",["isShowingTooltip"]],"visible"],null]]]],["static-attr","style","background-image: url(/fe/lol-tft-team-planner/images/TFT_HUD_Trait_Hovered.png);"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__text"],["flush-element"],["append",["unknown",["trait","currentCount"]],false],["text","/"],["append",["unknown",["trait","nextThreshold"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__background__threat"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/cTeamPlanner_ActiveTrait_",["unknown",["trait","style"]],".png)"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__icon__threat"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["trait","icon_path"]],");"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-planner__team-trait__hover-state ",["helper",["if"],[["get",["isShowingTooltip"]],"visible"],null]]]],["static-attr","style","background-image: url(/fe/lol-tft-team-planner/images/TFT_HUD_Threat_Hovered.png);"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-planner__team-trait__text"],["flush-element"],["append",["unknown",["trait","currentCount"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isThreat"]]],null,2,1]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1787,7 +1787,7 @@
             var n = a(1);
             a(38);
             var l = a(6),
-                s = n.Ember.Component.extend({
+                i = n.Ember.Component.extend({
                     layout: a(39),
                     classNames: ["team-editor-trait-filter-component"],
                     teamPlannerService: n.Ember.inject.service("MyTeamsPlanner"),
@@ -1835,15 +1835,15 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "9GTypxEz",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-trait-filter.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["static-attr","class","team-editor-trait-filter-backdrop"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-backdrop__click-elem"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"dismissTraitFilterModal"],null],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-header"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-header-text"],["flush-element"],["append",["unknown",["tra","teamplanner_filter_header_title"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-header-right-buttons"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-editor-trait-filter-clear-all-button ",["helper",["if"],[["get",["hasSelectedTraits"]],"team-editor-trait-filter-clear-all-button__enabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onTraitFilterClearButtonClicked"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onTraitFilterClearButtonHovered"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","teamplanner_filter_clear_button"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-divider"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-close-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"dismissTraitFilterModal"],null],null],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","team-editor-trait-filter-buttons-container-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-buttons-container"],["dynamic-attr","style",["concat",["--number-of-extra-rows: ",["unknown",["numExtraRows"]]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["traitData"]]],null,1],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasEnoughTraitsToScroll"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-gradient-bottom"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["team-editor-trait-filter-button"],null,[["trait"],[["get",["trait"]]]]],false],["text","\\n"]],"locals":["trait"]}],"hasPartials":false}',
+                id: "Yp1ET7G5",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-trait-filter.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["static-attr","class","team-editor-trait-filter-backdrop"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-backdrop__click-elem"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"dismissTraitFilterModal"],null],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-header"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-header-text"],["flush-element"],["append",["unknown",["tra","teamplanner_filter_header_title"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-header-right-buttons"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-editor-trait-filter-clear-all-button ",["helper",["if"],[["get",["hasSelectedTraits"]],"team-editor-trait-filter-clear-all-button__enabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onTraitFilterClearButtonClicked"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onTraitFilterClearButtonHovered"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","teamplanner_filter_clear_button"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-divider"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-close-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"dismissTraitFilterModal"],null],null],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","team-editor-trait-filter-buttons-container-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-buttons-container"],["dynamic-attr","style",["concat",["--number-of-extra-rows: ",["unknown",["numExtraRows"]]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["traitData"]]],null,1],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasEnoughTraitsToScroll"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-gradient-bottom"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["team-editor-trait-filter-button"],null,[["trait"],[["get",["trait"]]]]],false],["text","\\n"]],"locals":["trait"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1854,7 +1854,7 @@
             var n = a(1);
             a(41);
             var l = a(6),
-                s = n.Ember.Component.extend({
+                i = n.Ember.Component.extend({
                     layout: a(42),
                     classNames: ["team-editor-trait-filter-button-component"],
                     teamPlannerService: n.Ember.inject.service("MyTeamsPlanner"),
@@ -1879,15 +1879,15 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "GV8kyU84",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-trait-filter-button.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onTraitFilterButtonPressed"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onTraitFilterButtonHovered"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-button-icon-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-editor-trait-filter-button-background ",["helper",["if"],[["get",["isTraitSelected"]],"traitSelected"],null]]]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-button-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["trait","icon_path"]],"); ",["helper",["unless"],[["get",["isTraitSelected"]],"filter: opacity(0.3) drop-shadow(0 0 0 #5C5C5C);"],null]]]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-button-pressed-overlay"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-button-text"],["flush-element"],["append",["unknown",["trait","displayName"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "WHKwmAFs",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\team-trait-filter-button.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onTraitFilterButtonPressed"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onTraitFilterButtonHovered"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-button-icon-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-editor-trait-filter-button-background ",["helper",["if"],[["get",["isTraitSelected"]],"traitSelected"],null]]]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-button-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["trait","icon_path"]],"); ",["helper",["unless"],[["get",["isTraitSelected"]],"filter: opacity(0.3) drop-shadow(0 0 0 #5C5C5C);"],null]]]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-button-pressed-overlay"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-editor-trait-filter-button-text"],["flush-element"],["append",["unknown",["trait","displayName"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1909,8 +1909,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "GR014om4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\tier-container.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__tier-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-planner__tier-container__header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-planner__tier-container__header__cost"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["unknown",["tierData","tierIcon"]],null],["static-attr","class","team-planner__tier-container__header__cost__icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","team-planner__tier-container__header__cost__text"],["flush-element"],["append",["unknown",["tierData","tierCost"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["append",["helper",["team-editor-tier-grid"],null,[["unitListData"],[["get",["tierData","unitListData"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "hOxlsYac",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\tier-container.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__tier-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-planner__tier-container__header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-planner__tier-container__header__cost"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["unknown",["tierData","tierIcon"]],null],["static-attr","class","team-planner__tier-container__header__cost__icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","team-planner__tier-container__header__cost__text"],["flush-element"],["append",["unknown",["tierData","tierCost"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["append",["helper",["team-editor-tier-grid"],null,[["unitListData"],[["get",["tierData","unitListData"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1932,8 +1932,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "Hi55LU9H",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\tier-grid.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__tier-grid"],["flush-element"],["text","\\n"],["block",["each"],[["get",["unitListData"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["team-editor-tier-grid-tile"],null,[["unitData"],[["get",["unitData"]]]]],false],["text","\\n"]],"locals":["unitData"]}],"hasPartials":false}',
+                id: "qQ30wf+t",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\tier-grid.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__tier-grid"],["flush-element"],["text","\\n"],["block",["each"],[["get",["unitListData"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["team-editor-tier-grid-tile"],null,[["unitData"],[["get",["unitData"]]]]],false],["text","\\n"]],"locals":["unitData"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1944,7 +1944,7 @@
             var n = a(1);
             a(50);
             var l = a(6),
-                s = n.Ember.Component.extend({
+                i = n.Ember.Component.extend({
                     layout: a(51),
                     classNames: ["team-planner__tier-grid-tile-component"],
                     teamPlannerService: n.Ember.inject.service("MyTeamsPlanner"),
@@ -1991,15 +1991,15 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "hH7Ii2uu",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\tier-grid-tile.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__tier-grid-tile"],["dynamic-attr","draggable",["unknown",["isDraggable"]],null],["dynamic-attr","onDragStart",["helper",["action"],[["get",[null]],"onDragStart"],null],null],["dynamic-attr","onDragEnd",["helper",["action"],[["get",[null]],"onDragEnd"],null],null],["dynamic-attr","onMouseOver",["helper",["action"],[["get",[null]],"onMouseOver"],null],null],["dynamic-attr","onMouseDown",["helper",["action"],[["get",[null]],"onMouseDown"],null],null],["modifier",["action"],[["get",[null]],"onClick"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-planner__tier-grid-tile__portrait"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["unitData","squareIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-planner__tier-grid-tile__tierBorder"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/team_editor_ChampionButton_Tier",["unknown",["unitData","tier"]],".png);"]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","champion-block-traits-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["traits"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["isEquipped"]]],null,0],["text","  "],["open-element","div",[]],["static-attr","class","team-planner__tier-grid-tile__text"],["flush-element"],["append",["unknown",["unitData","display_name"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__tier-grid-tile__selected"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","champion-block-trait-icon"],["dynamic-attr","style",["concat",["background-image: url(",["get",["icon_path"]],");"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["icon_path"]}],"hasPartials":false}',
+                id: "laO1mJcN",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamEditor\\\\tier-grid-tile.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","team-planner__tier-grid-tile"],["dynamic-attr","draggable",["unknown",["isDraggable"]],null],["dynamic-attr","onDragStart",["helper",["action"],[["get",[null]],"onDragStart"],null],null],["dynamic-attr","onDragEnd",["helper",["action"],[["get",[null]],"onDragEnd"],null],null],["dynamic-attr","onMouseOver",["helper",["action"],[["get",[null]],"onMouseOver"],null],null],["dynamic-attr","onMouseDown",["helper",["action"],[["get",[null]],"onMouseDown"],null],null],["modifier",["action"],[["get",[null]],"onClick"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-planner__tier-grid-tile__portrait"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["unitData","squareIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-planner__tier-grid-tile__tierBorder"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/team_editor_ChampionButton_Tier",["unknown",["unitData","tier"]],".png);"]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","champion-block-traits-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["traits"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["isEquipped"]]],null,0],["text","  "],["open-element","div",[]],["static-attr","class","team-planner__tier-grid-tile__text"],["flush-element"],["append",["unknown",["unitData","display_name"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","team-planner__tier-grid-tile__selected"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","champion-block-trait-icon"],["dynamic-attr","style",["concat",["background-image: url(",["get",["icon_path"]],");"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["icon_path"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -2010,7 +2010,7 @@
             var n = a(1);
             a(53);
             var l = a(6),
-                s = n.Ember.Component.extend({
+                i = n.Ember.Component.extend({
                     layout: a(54),
                     classNames: ["team-planner__reminders-toggle-component"],
                     teamPlannerService: n.Ember.inject.service("MyTeamsPlanner"),
@@ -2033,15 +2033,15 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "IoS7D1ms",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\myTeams\\\\reminders-toggle.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["team-planner__reminders-toggle ",["helper",["if"],[["get",["remindersOnForThisTeam"]],"on"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","toggle-container animated"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"remindersToggleClick"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterToggle"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","open"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","toggle-button animated"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "9+cQqfzb",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\myTeams\\\\reminders-toggle.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["team-planner__reminders-toggle ",["helper",["if"],[["get",["remindersOnForThisTeam"]],"on"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","toggle-container animated"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"remindersToggleClick"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterToggle"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","open"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","toggle-button animated"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -2052,7 +2052,7 @@
             var n = a(1);
             a(56);
             var l = a(6),
-                s = n.Ember.Component.extend({
+                i = n.Ember.Component.extend({
                     layout: a(57),
                     classNames: ["team-planner__set-tabs-component"],
                     eventSetSelected: n.Ember.computed.alias("teamPlannerService.eventSetSelected"),
@@ -2127,15 +2127,15 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "oc9cKOox",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\myTeams\\\\set-tabs.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","my-teams__set-tabs-header-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","my-teams__set-tabs"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["my-teams__set-tab ",["helper",["unless"],[["get",["eventSetSelected"]],"selected"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"setEventSetSelected",false],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterDefaultSetTab"],null],null],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","my-teams__set-name"],["flush-element"],["text","\\n"],["block",["if"],[["get",["eventSetSelected"]]],null,5,4],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["my-teams__set-tab ",["helper",["if"],[["get",["eventSetSelected"]],"selected"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"setEventSetSelected",true],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterEventSetTab"],null],null],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","my-teams__set-name"],["flush-element"],["text","\\n"],["block",["if"],[["get",["eventSetSelected"]]],null,3,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","my-teams__set-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["eventSetSelected"]]],null,1,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["setHeaderName","standardSetHeader"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["setHeaderName","eventSetHeader"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tabNames","eventSet","unselectedDefault"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tabNames","eventSet","selectedDefault"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tabNames","standardSet","selectedDefault"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tabNames","standardSet","unselectedDefault"]],true],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "LWtvbLsP",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\myTeams\\\\set-tabs.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","my-teams__set-tabs-header-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","my-teams__set-tabs"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["my-teams__set-tab ",["helper",["unless"],[["get",["eventSetSelected"]],"selected"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"setEventSetSelected",false],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterDefaultSetTab"],null],null],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","my-teams__set-name"],["flush-element"],["text","\\n"],["block",["if"],[["get",["eventSetSelected"]]],null,5,4],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["my-teams__set-tab ",["helper",["if"],[["get",["eventSetSelected"]],"selected"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"setEventSetSelected",true],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterEventSetTab"],null],null],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","my-teams__set-name"],["flush-element"],["text","\\n"],["block",["if"],[["get",["eventSetSelected"]]],null,3,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","my-teams__set-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["eventSetSelected"]]],null,1,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["setHeaderName","standardSetHeader"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["setHeaderName","eventSetHeader"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tabNames","eventSet","unselectedDefault"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tabNames","eventSet","selectedDefault"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tabNames","standardSet","selectedDefault"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tabNames","standardSet","unselectedDefault"]],true],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -2163,8 +2163,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "uOivfm8v",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\myTeams\\\\my-teams-root.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["unknown",["my-teams-header"]],false],["text","\\n"],["append",["helper",["my-teams-list"],null,[["SetId"],["Set5"]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "P8XjmMaC",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\myTeams\\\\my-teams-root.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["unknown",["my-teams-header"]],false],["text","\\n"],["append",["helper",["my-teams-list"],null,[["SetId"],["Set5"]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -2175,7 +2175,7 @@
             var n = a(1);
             a(62);
             var l = a(6),
-                s = n.Ember.Component.extend({
+                i = n.Ember.Component.extend({
                     layout: a(63),
                     classNames: ["my-teams-header-component"],
                     teamPlannerService: n.Ember.inject.service("MyTeamsPlanner"),
@@ -2240,15 +2240,15 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "vusweHah",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\myTeams\\\\my-teams-header.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","my-teams-title-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","my-teams-title"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","myteams_title"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","team-planner__header-container__tooltip-icon"],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterInfoButton"],null],null],["static-attr","noClick","true"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],8],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["showSetTabs"]]],null,7],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","my-teams-header-separator"],["flush-element"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","my-teams-header-container"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","team-sorting-strategy"],["static-attr","class","my-teams-header-filter-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",[null,"displayedSortingOptions"]]],null,6],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","my-teams-header__create-team-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowTeamCount"]]],null,5],["block",["if"],[["get",["configAllowImportDialogue"]]],null,4],["text","    "],["open-element","div",[]],["static-attr","class","my-teams-header-button create-new"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"createNewTeamTriggered"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterCreateButton"],null],null],["dynamic-attr","disabled",["unknown",["isAtMaxTeams"]],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","my-teams-header-button-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","my-teams-header-button-text"],["flush-element"],["append",["unknown",["tra","myteams_new_team_button"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isAtMaxTeams"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","class","my-teams__create-new-button__tooltip"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","myteams_new_team_disabled_tooltip"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],0]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","class","my-teams__create-new-button__tooltip"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","myteams_new_team_disabled_tooltip"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],2]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","my-teams-header-button import"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"importNewTeamTriggered"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterImportButton"],null],null],["dynamic-attr","disabled",["unknown",["isAtMaxTeams"]],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams-header-button-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams-header-button-text"],["flush-element"],["append",["unknown",["tra","myteams_import_team_button"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isAtMaxTeams"]]],null,3],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","my-teams-header-teams-count"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["concat",["my-teams-header__num-teams ",["helper",["if"],[["get",["isAtMaxTeams"]],"isAtMaxTeams"],null]]]],["flush-element"],["append",["unknown",["teamCount"]],false],["close-element"],["text","\\n        /\\n        "],["append",["unknown",["maxTeams"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","value",["unknown",["option","value"]],null],["flush-element"],["append",["unknown",["option","label"]],false],["close-element"],["text","\\n"]],"locals":["option"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","my-teams-set-tabs-container"],["flush-element"],["text","\\n      "],["append",["unknown",["my-teams-set-tabs"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["static-attr","style","width:338px;"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-section-header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-icon reminders"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-title"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_reminders_title"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-body"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_reminders_body"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-separator"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-section-header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-icon snapshot"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-title"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_snapshot_title"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-body"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_snapshot_body"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "nEqGCtC+",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\myTeams\\\\my-teams-header.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","my-teams-title-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","my-teams-title"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","myteams_title"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","team-planner__header-container__tooltip-icon"],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterInfoButton"],null],null],["static-attr","noClick","true"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],8],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["showSetTabs"]]],null,7],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","my-teams-header-separator"],["flush-element"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","my-teams-header-container"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","team-sorting-strategy"],["static-attr","class","my-teams-header-filter-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",[null,"displayedSortingOptions"]]],null,6],["text","  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","my-teams-header__create-team-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowTeamCount"]]],null,5],["block",["if"],[["get",["configAllowImportDialogue"]]],null,4],["text","    "],["open-element","div",[]],["static-attr","class","my-teams-header-button create-new"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"createNewTeamTriggered"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterCreateButton"],null],null],["dynamic-attr","disabled",["unknown",["isAtMaxTeams"]],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","my-teams-header-button-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","my-teams-header-button-text"],["flush-element"],["append",["unknown",["tra","myteams_new_team_button"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isAtMaxTeams"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","class","my-teams__create-new-button__tooltip"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","myteams_new_team_disabled_tooltip"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],0]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","class","my-teams__create-new-button__tooltip"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","myteams_new_team_disabled_tooltip"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["bottom"]],2]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","my-teams-header-button import"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"importNewTeamTriggered"],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterImportButton"],null],null],["dynamic-attr","disabled",["unknown",["isAtMaxTeams"]],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams-header-button-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams-header-button-text"],["flush-element"],["append",["unknown",["tra","myteams_import_team_button"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isAtMaxTeams"]]],null,3],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","my-teams-header-teams-count"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["concat",["my-teams-header__num-teams ",["helper",["if"],[["get",["isAtMaxTeams"]],"isAtMaxTeams"],null]]]],["flush-element"],["append",["unknown",["teamCount"]],false],["close-element"],["text","\\n        /\\n        "],["append",["unknown",["maxTeams"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","value",["unknown",["option","value"]],null],["flush-element"],["append",["unknown",["option","label"]],false],["close-element"],["text","\\n"]],"locals":["option"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","my-teams-set-tabs-container"],["flush-element"],["text","\\n      "],["append",["unknown",["my-teams-set-tabs"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["static-attr","style","width:338px;"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-section-header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-icon reminders"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-title"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_reminders_title"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-body"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_reminders_body"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-separator"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-section-header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-icon snapshot"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-title"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_snapshot_title"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-body"],["flush-element"],["append",["unknown",["tra","myteams_tooltip_snapshot_body"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -2259,7 +2259,7 @@
             var n = a(1);
             a(65);
             var l = a(6),
-                s = n.Ember.Component.extend({
+                i = n.Ember.Component.extend({
                     layout: a(66),
                     classNames: ["my-teams-list-component"],
                     maxChampionsOnTeam: 10,
@@ -2306,15 +2306,15 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "FUkvFf61",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\myTeams\\\\my-teams-list-container.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","my-teams-list-container"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","onscroll",["helper",["action"],[["get",[null]],"onScroll"],null],null],["flush-element"],["text","\\n"],["block",["unless"],[["get",["teamListData"]]],null,4],["text","\\n"],["block",["each"],[["get",["teamListData"]]],null,3],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","my-teams-list-gradient-bottom"],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","champion-block-icon-border"],["static-attr","style","background-image: url(/fe/lol-tft-team-planner/images/cTeamPlanner_ChampionButton_my_teams_empty.png);"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","champion-block-icon-border"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/MyTeams_ChampionBorder_Tier",["unknown",["champion","tier"]],".png);"]]],["flush-element"],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","champion-block-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["champion","squareIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","my-teams__champion-block"],["flush-element"],["text","\\n"],["block",["if"],[["get",["champion","tier"]]],null,1,0],["text","              "],["close-element"],["text","\\n"]],"locals":["champion"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","my-teams-list-item"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams-list-item-column"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","my-teams-list-item-text"],["flush-element"],["append",["unknown",["team","title"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","my-teams__team-view"],["flush-element"],["text","\\n"],["block",["each"],[["get",["team","champions"]]],null,2],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","my-teams-list-item-backdrop__click-elem"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openTeamEditorForTeamId",["get",["team","id"]]],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterTeamEntry"],null],null],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","my-teams-toggle-container"],["flush-element"],["text","\\n          "],["append",["helper",["my-teams-reminders-toggle"],null,[["TeamId"],[["get",["team","id"]]]]],false],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","list-item-option-menu-button"],["flush-element"],["text","\\n          "],["append",["helper",["my-teams-options-menu"],null,[["TeamId"],[["get",["team","id"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["team"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","style","display: flex; flex-direction: column; justify-content: center; align-items: center; text-align:center"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams-no-teams-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams-no-teams-text"],["static-attr","style","color:#cdbe91"],["flush-element"],["append",["unknown",["tra","myteams_empty_state_title"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams-no-teams-text"],["static-attr","style","color:#a09b8c"],["flush-element"],["append",["unknown",["tra","myteams_empty_state_body"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "k9JlJqAw",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\myTeams\\\\my-teams-list-container.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","my-teams-list-container"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","onscroll",["helper",["action"],[["get",[null]],"onScroll"],null],null],["flush-element"],["text","\\n"],["block",["unless"],[["get",["teamListData"]]],null,4],["text","\\n"],["block",["each"],[["get",["teamListData"]]],null,3],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","my-teams-list-gradient-bottom"],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","champion-block-icon-border"],["static-attr","style","background-image: url(/fe/lol-tft-team-planner/images/cTeamPlanner_ChampionButton_my_teams_empty.png);"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","champion-block-icon-border"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/MyTeams_ChampionBorder_Tier",["unknown",["champion","tier"]],".png);"]]],["flush-element"],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","champion-block-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["champion","squareIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","my-teams__champion-block"],["flush-element"],["text","\\n"],["block",["if"],[["get",["champion","tier"]]],null,1,0],["text","              "],["close-element"],["text","\\n"]],"locals":["champion"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","my-teams-list-item"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams-list-item-column"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","my-teams-list-item-text"],["flush-element"],["append",["unknown",["team","title"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","my-teams__team-view"],["flush-element"],["text","\\n"],["block",["each"],[["get",["team","champions"]]],null,2],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","my-teams-list-item-backdrop__click-elem"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openTeamEditorForTeamId",["get",["team","id"]]],null],null],["dynamic-attr","onMouseEnter",["helper",["action"],[["get",[null]],"onMouseEnterTeamEntry"],null],null],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","my-teams-toggle-container"],["flush-element"],["text","\\n          "],["append",["helper",["my-teams-reminders-toggle"],null,[["TeamId"],[["get",["team","id"]]]]],false],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","list-item-option-menu-button"],["flush-element"],["text","\\n          "],["append",["helper",["my-teams-options-menu"],null,[["TeamId"],[["get",["team","id"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["team"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","style","display: flex; flex-direction: column; justify-content: center; align-items: center; text-align:center"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams-no-teams-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams-no-teams-text"],["static-attr","style","color:#cdbe91"],["flush-element"],["append",["unknown",["tra","myteams_empty_state_title"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","my-teams-no-teams-text"],["static-attr","style","color:#a09b8c"],["flush-element"],["append",["unknown",["tra","myteams_empty_state_body"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -2325,7 +2325,7 @@
             var n = a(1);
             a(68);
             var l = a(6),
-                s = n.Ember.Component.extend({
+                i = n.Ember.Component.extend({
                     layout: a(69),
                     classNames: ["my-teams-options-menu-component"],
                     teamPlannerService: n.Ember.inject.service("MyTeamsPlanner"),
@@ -2384,15 +2384,15 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "VxK9GtVu",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\myTeams\\\\my-teams-options-menu.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["options-menu-button ",["helper",["if"],[["get",[null,"optionsOpen"]],"open"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openOptionsMenu"],null],null],["flush-element"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["optionsOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeOptionsMenu"],null],null],["static-attr","direction","left"],["static-attr","caretless","true"],["static-attr","offsetx","36"],["static-attr","offsety","26"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","options-menu"],["flush-element"],["text","\\n"],["block",["if"],[["get",["configAllowTeamCodes"]]],null,0],["text","      "],["open-element","div",[]],["static-attr","class","options-menu-item-button-container"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDeleteTeamFlow"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","options-menu-item-button-image_delete_team"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","options-menu-item-button-text"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","myteams_team_options_delete"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","options-menu-item-button-container"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"exportTeamCode"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","options-menu-item-button-image-copy"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","options-menu-item-button-text"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","myteams_team_options_copy"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","options-menu-item-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Zv+11Vmt",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\myTeams\\\\my-teams-options-menu.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["options-menu-button ",["helper",["if"],[["get",[null,"optionsOpen"]],"open"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openOptionsMenu"],null],null],["flush-element"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["optionsOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeOptionsMenu"],null],null],["static-attr","direction","left"],["static-attr","caretless","true"],["static-attr","offsetx","36"],["static-attr","offsety","26"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","options-menu"],["flush-element"],["text","\\n"],["block",["if"],[["get",["configAllowTeamCodes"]]],null,0],["text","      "],["open-element","div",[]],["static-attr","class","options-menu-item-button-container"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDeleteTeamFlow"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","options-menu-item-button-image_delete_team"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","options-menu-item-button-text"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","myteams_team_options_delete"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","options-menu-item-button-container"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"exportTeamCode"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","options-menu-item-button-image-copy"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","options-menu-item-button-text"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","myteams_team_options_copy"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","options-menu-item-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -2403,7 +2403,7 @@
             var n = a(1);
             a(71);
             var l = a(6),
-                s = n.Ember.Component.extend({
+                i = n.Ember.Component.extend({
                     layout: a(72),
                     classNames: ["team-import-root-component"],
                     teamPlannerService: n.Ember.inject.service("MyTeamsPlanner"),
@@ -2457,11 +2457,11 @@
                             a.forEach((e => {
                                 e.championId && l.push(e.championId)
                             }));
-                            const s = t.importTeam(l),
-                                i = e.value;
-                            if (0 !== i.length && t.setTeamTitle(s, i), !t.get("pasteModal")) {
+                            const i = t.importTeam(l),
+                                s = e.value;
+                            if (0 !== s.length && t.setTeamTitle(i, s), !t.get("pasteModal")) {
                                 const e = t.get("currentSetName");
-                                t.exportTeamCodeForSetById(e, s), t.get("importTeamClicked").switchImportButtonToCheckmark()
+                                t.exportTeamCodeForSetById(e, i), t.get("importTeamClicked").switchImportButtonToCheckmark()
                             }
                             this.get("teamPlannerService").saveTeams((() => {
                                 const e = {
@@ -2501,15 +2501,15 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = i
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "oQmtPP4J",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_2\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamImport\\\\team-import-root.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["static-attr","class","team-import-backdrop"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-import-backdrop__click-elem"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"dismissImportModal"],null],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-dialog-frame",[]],["static-attr","frame","bordered"],["static-attr","dismissable","true"],["static-attr","dismissable-type","inside"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-import-root"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-import-header-title"],["flush-element"],["append",["unknown",["teamPlannerService","modalTitle"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-import-header-subtext1"],["flush-element"],["append",["unknown",["teamPlannerService","modalSubtext"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-view"],["flush-element"],["text","\\n"],["block",["each"],[["get",["importData"]]],null,13],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamPlannerService","pasteModal"]]],null,10],["block",["if"],[["get",["teamPlannerService","teamImportError"]]],null,7,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["append",["unknown",["tra","teamimport_duplicate_team_warning"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","teamplanner_character_reach_limit"]],false],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["characterLimitReached"]]],null,1]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","teamplanner_invalid_team_name"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","team-import-team-name-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-import-text-input-title"],["flush-element"],["append",["unknown",["tra","teamimport_team_name_title"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-import-text-input-container"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","team-name-text"],["static-attr","type","text"],["flush-element"],["text","\\n              "],["open-element","input",[]],["static-attr","class","team-name-text-input"],["static-attr","type","text"],["static-attr","name","team-title"],["static-attr","id","team-title"],["static-attr","maxLength","24"],["dynamic-attr","value",["concat",[["unknown",["teamTitle"]]]]],["dynamic-attr","placeholder",["unknown",["tra","teamimport_name_placeholder"]],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"teamNameChanged"],null],null],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-import-text-input-warning"],["flush-element"],["text","\\n"],["block",["if"],[["get",["inappropriateNameEntered"]]],null,3,2],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","import-button-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","duplicate-team-import-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["importDataMatchesExistingTeam"]]],null,0],["text","          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","import-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"validateNameAndImportTeam"],null],null],["flush-element"],["append",["unknown",["tra","teamimport_confirm"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-body"],["flush-element"],["append",["unknown",["tra","teamimport_tooltip_text"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","team-import-code-example-subtext"],["flush-element"],["append",["unknown",["tra","teamimport_error_code_example"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-import-code-example"],["flush-element"],["text","022e32f731f31e2ed2e12eb2ee2fc000TFTSet14"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-import-tooltip-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","team-import-tooltip-hint"],["flush-element"],["append",["unknown",["tra","teamimport_tooltip_hint"]],false],["close-element"],["text","\\n            "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","team-import-tooltip-icon"],["static-attr","noClick","true"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["top"]],5],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["teamPlannerService","showTeamCodeExample"]]],null,6],["text","        "],["open-element","div",[]],["static-attr","class","import-button-container"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","import-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"reimportTeam"],null],null],["flush-element"],["append",["unknown",["tra","teamimport_paste_again"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","team-import-subtext"],["flush-element"],["append",["unknown",["tra","teamimport_clipboard_string"]],false],["text","\\n            "],["append",["unknown",["teamPlannerService","clipboardText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","team-import-subtext"],["flush-element"],["append",["unknown",["teamPlannerService","modalErrorCode"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["teamPlannerService","teamImportError"]]],null,9,8]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","champion-block-icon"],["static-attr","style","background-image: url(/fe/lol-tft-team-planner/images/team_codes_champion_empty.png);"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","champion-block-icon-border"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/cTeamPlanner_ChampionButton_Tier",["unknown",["champion","price"]],".png);"]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","champion-block-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["champion","icon"]],");"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","champion-block"],["flush-element"],["text","\\n"],["block",["if"],[["get",["champion","price"]]],null,12,11],["text","          "],["close-element"],["text","\\n"]],"locals":["champion"]}],"hasPartials":false}',
+                id: "vwQr0hm1",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-tft-team-planner\\\\src\\\\app\\\\templates\\\\teamImport\\\\team-import-root.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["static-attr","class","team-import-backdrop"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","team-import-backdrop__click-elem"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"dismissImportModal"],null],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-dialog-frame",[]],["static-attr","frame","bordered"],["static-attr","dismissable","true"],["static-attr","dismissable-type","inside"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","team-import-root"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-import-header-title"],["flush-element"],["append",["unknown",["teamPlannerService","modalTitle"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-import-header-subtext1"],["flush-element"],["append",["unknown",["teamPlannerService","modalSubtext"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","team-view"],["flush-element"],["text","\\n"],["block",["each"],[["get",["importData"]]],null,13],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamPlannerService","pasteModal"]]],null,10],["block",["if"],[["get",["teamPlannerService","teamImportError"]]],null,7,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["append",["unknown",["tra","teamimport_duplicate_team_warning"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","teamplanner_character_reach_limit"]],false],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["characterLimitReached"]]],null,1]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","teamplanner_invalid_team_name"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","team-import-team-name-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-import-text-input-title"],["flush-element"],["append",["unknown",["tra","teamimport_team_name_title"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-import-text-input-container"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","team-name-text"],["static-attr","type","text"],["flush-element"],["text","\\n              "],["open-element","input",[]],["static-attr","class","team-name-text-input"],["static-attr","type","text"],["static-attr","name","team-title"],["static-attr","id","team-title"],["static-attr","maxLength","24"],["dynamic-attr","value",["concat",[["unknown",["teamTitle"]]]]],["dynamic-attr","placeholder",["unknown",["tra","teamimport_name_placeholder"]],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"teamNameChanged"],null],null],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-import-text-input-warning"],["flush-element"],["text","\\n"],["block",["if"],[["get",["inappropriateNameEntered"]]],null,3,2],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","import-button-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","duplicate-team-import-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["importDataMatchesExistingTeam"]]],null,0],["text","          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","import-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"validateNameAndImportTeam"],null],null],["flush-element"],["append",["unknown",["tra","teamimport_confirm"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","my-teams__tooltip-body"],["flush-element"],["append",["unknown",["tra","teamimport_tooltip_text"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","team-import-code-example-subtext"],["flush-element"],["append",["unknown",["tra","teamimport_error_code_example"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-import-code-example"],["flush-element"],["text","022e32f731f31e2ed2e12eb2ee2fc000TFTSet14"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","team-import-tooltip-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","team-import-tooltip-hint"],["flush-element"],["append",["unknown",["tra","teamimport_tooltip_hint"]],false],["close-element"],["text","\\n            "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","team-import-tooltip-icon"],["static-attr","noClick","true"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["top"]],5],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["teamPlannerService","showTeamCodeExample"]]],null,6],["text","        "],["open-element","div",[]],["static-attr","class","import-button-container"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","import-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"reimportTeam"],null],null],["flush-element"],["append",["unknown",["tra","teamimport_paste_again"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","team-import-subtext"],["flush-element"],["append",["unknown",["tra","teamimport_clipboard_string"]],false],["text","\\n            "],["append",["unknown",["teamPlannerService","clipboardText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","team-import-subtext"],["flush-element"],["append",["unknown",["teamPlannerService","modalErrorCode"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["teamPlannerService","teamImportError"]]],null,9,8]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","champion-block-icon"],["static-attr","style","background-image: url(/fe/lol-tft-team-planner/images/team_codes_champion_empty.png);"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","champion-block-icon-border"],["dynamic-attr","style",["concat",["background-image: url(/fe/lol-tft-team-planner/images/cTeamPlanner_ChampionButton_Tier",["unknown",["champion","price"]],".png);"]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","champion-block-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["champion","icon"]],");"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","champion-block"],["flush-element"],["text","\\n"],["block",["if"],[["get",["champion","price"]]],null,12,11],["text","          "],["close-element"],["text","\\n"]],"locals":["champion"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t) => {
@@ -2561,10 +2561,10 @@
     function a(n) {
         var l = t[n];
         if (void 0 !== l) return l.exports;
-        var s = t[n] = {
+        var i = t[n] = {
             exports: {}
         };
-        return e[n](s, s.exports, a), s.exports
+        return e[n](i, i.exports, a), i.exports
     }
     a.r = e => {
         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
@@ -2579,8 +2579,8 @@
             },
             n = a(2);
         const l = document.currentScript.ownerDocument;
-        const s = window.getPluginAnnounceEventName(n.PLUGIN_NAME);
-        l.addEventListener(s, (function(e) {
+        const i = window.getPluginAnnounceEventName(n.PLUGIN_NAME);
+        l.addEventListener(i, (function(e) {
             (0, e.registrationHandler)((async function(e) {
                 await t.default.init(e, {
                     Audio: e => e.get("rcp-fe-audio"),

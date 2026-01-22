@@ -298,7 +298,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Mel lansează o rafală de proiectile care explodează în jurul unei locații țintă, provocându-le daune în mod repetat inamicilor din zonă.",
-            "dynamicDescription": "Mel lansează o rafală de @ExplosionCount@ proiectile care explodează în jurul unei locații țintă.<br><br>Fiecare explozie provoacă <magicDamage>@TotalExplosionDamage@ daune magice</magicDamage>, până la <magicDamage>@AllDamageHit@ daune magice</magicDamage> în total.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel lansează o rafală de @ExplosionCount@ proiectile care explodează în jurul unei locații țintă.<br><br>Lovitura primei explozii provoacă <magicDamage>@InitialExplosionDamage@ daune magice</magicDamage>, iar fiecare explozie ulterioară provoacă <magicDamage>@TotalExplosionDamage@ daune magice</magicDamage>, cumulându-se până la <magicDamage>@AllDamageHit@ daune magice</magicDamage> în total.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Mel creează în jurul ei o barieră care reflectă proiectilele inamice înapoi spre atacator, previne daunele împotriva ei însăși și îi oferă viteză de mișcare.",
-            "dynamicDescription": "Mel creează în jurul ei o barieră care reflectă proiectilele venite de la campionii inamici, previne daunele împotriva ei însăși și îi oferă <speed>@MoveSpeed*100@% viteză de mișcare ce scade în timp</speed> timp de @Duration@ sec.<br><br>Proiectilele reflectate provoacă <magicDamage>daune magice în valoare de @DamagePercent@ din daunele inițiale</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel creează în jurul ei o barieră care reflectă proiectilele venite de la campionii inamici, primind <shield>scuturi în valoare de @ShieldAmount@</shield> timp de @Duration@ secunde și <speed>@MoveSpeed*100@% viteză de mișcare ce scade</speed> de-a lungul a @MoveSpeedDuration@ secunde.<br><br>Proiectilele reflectate provoacă <magicDamage>daune magice în valoare de @DamagePercent@ din daunele inițiale</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "Mel lansează înainte o sferă radiantă, țintuind inamicii din centrul ei și provocându-le daune în timp. În plus, încetinește inamicii din jur.",
             "dynamicDescription": "Mel lansează o sferă radiantă, <status>țintuind</status> inamicii din centru timp de @RootDuration@ secunde și provocându-le <magicDamage>@Damage@ daune magice</magicDamage>.<br><br>Sfera creează o zonă ostilă în jurul ei care <status>încetinește</status> inamicii cu @AreaSlowAmount*100@% și le provoacă <magicDamage>@AreaDamagePerSecond@ daune magice pe secundă</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,

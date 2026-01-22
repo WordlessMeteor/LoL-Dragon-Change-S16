@@ -1,0 +1,110 @@
+{
+    "{7d383973}": {
+        "championSkinName": "TFT_Targon_Home",
+        "skinAnimationProperties": {
+            "animationGraphData": "{d369d984}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TFT_GoldMine/Skins/Skin118/TFT_GoldMine_Skin118.TFT_ArenaSkin_Targon.skl",
+            "simpleSkin": "ASSETS/Characters/TFT_GoldMine/Skins/Skin118/TFT_GoldMine_Skin118.TFT_ArenaSkin_Targon.skn",
+            "selfIllumination": 2.0,
+            "Material": "{47839471}",
+            "castShadows": false,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "idleParticlesEffects": [
+            {
+                "effectKey": "{ab656bba}",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
+        "mResourceResolver": "{2ef3daa1}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "{2ef3daa1}": {
+        "resourceMap": {
+            "{ab656bba}": "Maps/Shipping/Map22/Particles/TFT_Arenas/TFT_GoldMines",
+            "{a096c3ba}": "{0264b771}",
+            "{52e51db3}": "{00000000}",
+            "{d4f15938}": "{00000000}",
+            "{aa7ed856}": "{0171d33c}",
+            "{66f94844}": "{7eec75f4}",
+            "{4f1c2757}": "{88a9861b}",
+            "{a97ed6c3}": "{0471d7f5}",
+            "{69f94cfd}": "{81ec7aad}",
+            "{501c28ea}": "{89a987ae}",
+            "{a87ed530}": "{0371d662}"
+        },
+        "__type": "ResourceResolver"
+    },
+    "{47839471}": {
+        "name": "Characters/TFT_GoldMine/Skins/Skin118/Materials/Targon_Goldmine_Home_Mat",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT_GoldMine/Skins/Skin118/TFT_Targon_GoldMine_Home_Tx.TFT_ArenaSkin_Targon.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "ShadowClip",
+                "value": [
+                    0.33000001311302185,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Only",
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "writeMask": 15,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": [
+        "DATA/Characters/TFT_GoldMine/TFT_GoldMine.bin",
+        "DATA/Characters/TFT_GoldMine/Animations/Skin118.bin",
+        "DATA/TFT_GoldMine_Skins_Skin118_Skins_Skin119.bin"
+    ]
+}

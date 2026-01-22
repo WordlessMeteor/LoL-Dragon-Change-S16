@@ -4036,6 +4036,10 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
     width: 1055px
 }
 
+.season-pass-track-root .reward-tracker-reward-track>.reward-tracker-reward-item-sparse:has(.reward-item-border-square):last-child {
+    margin-right: -7px
+}
+
 .season-pass-track-reward-framing-root {
     align-items: center;
     display: flex;
@@ -4230,6 +4234,8 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
 }
 
 .acm-reward-track-container {
+    display: flex;
+    justify-content: flex-end;
     width: 100%
 }
 
@@ -4243,6 +4249,10 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
 
 .acm-reward-track-container .reward-tracker.tracker-size-medium .reward-tracker-reward-track .reward-tracker-reward-item {
     width: 105px
+}
+
+.acm-reward-track-container .reward-tracker.tracker-size-medium .reward-tracker-reward-track .reward-tracker-reward-item:last-child {
+    margin-right: 0
 }
 
 .acm-objective-card {
@@ -4496,6 +4506,8 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
 .season-pass-background,
 .season-pass-background-extended {
     height: 100%;
+    object-fit: cover;
+    object-position: bottom;
     position: absolute;
     width: 1056px;
     z-index: -2
@@ -4516,9 +4528,7 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
 }
 
 .season-pass-background-extended {
-    height: 639px;
-    object-fit: cover;
-    object-position: bottom
+    height: 639px
 }
 
 .season-pass-spash-image {

@@ -298,7 +298,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "梅爾射出會在目標位置周圍爆炸的彈幕，對範圍內的敵人多次造成傷害。",
-            "dynamicDescription": "梅爾射出@ExplosionCount@發會在目標位置周圍爆炸的彈幕，<br><br>每次爆炸造成<magicDamage>@TotalExplosionDamage@魔法傷害</magicDamage>，總共最多造成<magicDamage>@AllDamageHit@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "梅爾射出@ExplosionCount@發會在目標位置周圍爆炸的彈幕。<br><br>第一次爆炸造成<magicDamage>@InitialExplosionDamage@魔法傷害</magicDamage>，之後的每次爆炸造成<magicDamage>@TotalExplosionDamage@魔法傷害</magicDamage>，總共最多造成<magicDamage>@AllDamageHit@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "梅爾在自身周圍生成屏障，能反彈射彈避免傷害，並增加跑速。",
-            "dynamicDescription": "梅爾在自身周圍生成屏障，能反彈敵方英雄射彈避免傷害，並增加<speed>@MoveSpeed*100@%會逐漸衰減的跑速</speed>，持續@Duration@秒。<br><br>被反彈的射彈造成<magicDamage>原本傷害量@DamagePercent@的魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "梅爾在自身周圍生成屏障，能反彈敵方英雄射彈，獲得持續@Duration@秒的<shield>@ShieldAmount@護盾</shield>，並提升<speed>@MoveSpeed*100@%會逐漸衰減的跑速</speed>，持續@MoveSpeedDuration@秒。<br><br>遭反彈的射彈造成原本傷害量<magicDamage>@DamagePercent@的魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "梅爾向前方射出光球，定身位於光球中心的敵人，並對周圍的敵人造成持續傷害和緩速效果。",
             "dynamicDescription": "梅爾射出光球，<status>定身</status>位於光球中心的敵人@RootDuration@秒，並對周圍的敵人造成<magicDamage>@Damage@魔法傷害</magicDamage>。<br><br>光球周圍的敵人會<status>緩速</status>@AreaSlowAmount*100@%，且每秒受到<magicDamage>@AreaDamagePerSecond@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,

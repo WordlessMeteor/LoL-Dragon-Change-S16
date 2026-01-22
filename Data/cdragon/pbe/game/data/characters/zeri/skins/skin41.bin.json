@@ -7,7 +7,7 @@
         "skinUpgradeData": {
             "mGearSkinUpgrades": [
                 "{9fe4d429}",
-                "{53a1e5b8}"
+                "Characters/Zeri/Skins/Skin41/Gear/ZeriSkin40_RBuff"
             ],
             "__type": "SkinUpgradeData"
         },
@@ -26348,7 +26348,7 @@
         "particlePath": "Characters/Zeri/Skins/Skin41/Particles/Zeri_Skin41_Recall_Ground01",
         "__type": "VfxSystemDefinitionData"
     },
-    "{53a1e5b8}": {
+    "Characters/Zeri/Skins/Skin41/Gear/ZeriSkin40_RBuff": {
         "mGearData": {
             "mVFXResourceResolver": {
                 "resourceMap": {
@@ -55137,6 +55137,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "Bloom_Tint_Color",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Fresnel_Blend_Mode",
                 "value": [
                     1.0,
@@ -55268,6 +55278,12 @@
             },
             {
                 "name": "USE_BLOOM",
+                "Group": "Bloom",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_BLOOM_TINT_COLOR",
+                "on": false,
                 "Group": "Bloom",
                 "__type": "StaticMaterialSwitchDef"
             },

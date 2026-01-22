@@ -94,12 +94,12 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/PetStyleTwoGaren/Skins/Skin1/Materials/PetStyleTwoGaren_Base_PBR_Throne",
+                    "Material": "{e1fb6b2c}",
                     "submesh": "Table_A",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/PetStyleTwoGaren/Skins/Skin1/Materials/PetStyleTwoGaren_Base_PBR_Throne_A",
+                    "Material": "{e1fb6b2c}",
                     "submesh": "Table_B",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -124,7 +124,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/PetStyleTwoGaren/Skins/Skin1/Materials/PetStyleTwoGaren_Base_PBR_Throne",
+                    "Material": "{e1fb6b2c}",
                     "submesh": "Table_C",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -158,6 +158,13 @@
             "EnablePicking": false,
             "__type": "SkinMeshDataProperties"
         },
+        "idleParticlesEffects": [
+            {
+                "effectKey": "{f6ceb1fd}",
+                "boneName": "Root",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
         "iconCircle": "ASSETS/Characters/PetStyleTwoGaren/HUD/Icon_StyleTwoGaren_Base_Classic_Tier1.TFT_Style2_Garen.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_HealthBar",
@@ -20228,6 +20235,115 @@
                 1.0
             ]
         ],
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{7cd615de}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Table_A2",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Table_A"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 3,
+                "pass": -8000,
+                "meshRenderFlags": 0,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Themes/Base/PetStyleTwoGaren_Base_Stage_A2_TX_CM.TFT_Style2_Garen.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Table_A3",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Table_B"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 3,
+                "pass": -7950,
+                "meshRenderFlags": 0,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Themes/Base/PetStyleTwoGaren_Base_Stage_B2_TX_CM.TFT_Style2_Garen.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Table_A4",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Table_C"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 3,
+                "pass": -8000,
+                "meshRenderFlags": 0,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Characters/PetStyleTwoGaren/Themes/Base/PetStyleTwoGaren_Base_Stage_A2_TX_CM.TFT_Style2_Garen.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "PetStyleTwoGaren_Skin1_Unboard",
+        "particlePath": "Characters/PetStyleTwoGaren/Skins/Skin1/Particles/PetStyleTwoGaren_Skin1_Unboard",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/PetStyleTwoGaren/Skins/Skin1/Particles/PetStyleTwoGaren_Skin1_Emote_TauntIn_01": {
@@ -41472,7 +41588,8 @@
             "PetStyleTwoGaren_Skin1_Emote_Stage_Out": "Characters/PetStyleTwoGaren/Skins/Skin1/Particles/PetStyleTwoGaren_Skin1_Emote_Stage_Out",
             "PetStyleTwoGaren_Skin1_Emote_DanceLoop_02": "Characters/PetStyleTwoGaren/Skins/Skin1/Particles/PetStyleTwoGaren_Skin1_Emote_DanceLoop_02",
             "PetStyleTwoGaren_Skin1_Emote_JokeIn_01Fre": "Characters/PetStyleTwoGaren/Skins/Skin1/Particles/PetStyleTwoGaren_Skin1_Emote_JokeIn_01Fre",
-            "PetStyleTwoGaren_Skin1_Emote_JokeLoop_01Fre": "Characters/PetStyleTwoGaren/Skins/Skin1/Particles/PetStyleTwoGaren_Skin1_Emote_JokeLoop_01Fre"
+            "PetStyleTwoGaren_Skin1_Emote_JokeLoop_01Fre": "Characters/PetStyleTwoGaren/Skins/Skin1/Particles/PetStyleTwoGaren_Skin1_Emote_JokeLoop_01Fre",
+            "{f6ceb1fd}": "{7cd615de}"
         },
         "__type": "ResourceResolver"
     },
@@ -41649,522 +41766,6 @@
                 "passes": [
                     {
                         "shader": "Shaders/SkinnedMesh/HKG_MatCap_Diff_Alpha",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
-    "Characters/PetStyleTwoGaren/Skins/Skin1/Materials/PetStyleTwoGaren_Base_PBR_Throne": {
-        "name": "Characters/PetStyleTwoGaren/Skins/Skin1/Materials/PetStyleTwoGaren_Base_PBR_Throne",
-        "samplerValues": [
-            {
-                "TextureName": "Outline_Bloom_Mask",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/PetStyleTwoGaren/Themes/Base/PetStyleTwoGaren_Base_Stage_A_TX_CM.TFT_Style2_Garen.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Scroll_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "EmissionR_DistortionG_Texture",
-                "texturePath": "ASSETS/Characters/PetStyleTwoGaren/Themes/Base/PetStyleTwoGaren_Base_Stage_A_Emiss_TX_CM.TFT_Style2_Garen.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "RMA_Texture",
-                "texturePath": "ASSETS/Characters/PetStyleTwoGaren/Themes/Base/PetStyleTwoGaren_Base_Stage_RMA_A_TX_CM.TFT_Style2_Garen.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "ScreenSpaceTex",
-                "texturePath": "ASSETS/Shared/Materials/white.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "ScreenSpace_Mask",
-                "texturePath": "ASSETS/Shared/Materials/white.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "Emission_Bloom_Strength",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Emission_Bloom_Color",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "EmissionR_Strength",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Exclude_Mask_from_TintColor_Value",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_ScreenSpaceTex_UV_Scroll_Speed",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "RMA_Value",
-                "value": [
-                    2.0,
-                    0.5,
-                    1.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Outline_Color",
-                "value": [
-                    0.6684519648551941,
-                    0.6342259645462036,
-                    0.5966888070106506,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Outline_Control",
-                "value": [
-                    0.44999998807907104,
-                    0.009999999776482582,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "OutlineBlendValue",
-                "value": [
-                    0.5,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_ScrollTex_R_UV_Tile",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_ScrollTex_R_UV_Scroll_Speed",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_ScrollTex_G_UV_Tile",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_ScrollTex_G_UV_Scroll_Speed",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_ScrollTex_B_UV_Tile",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_ScrollTex_B_UV_Scroll_Speed",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DissolveValue",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DissolveEdgePowObjSize",
-                "value": [
-                    10.0,
-                    500.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DissolveEdgeColor",
-                "value": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DissolveWaveStrengthLength",
-                "value": [
-                    0.10000000149011612,
-                    5.0,
-                    1.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DeformWaveController",
-                "value": [
-                    0.5,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DeformWaveStrength",
-                "value": [
-                    0.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_ScrollTex_R_Tint",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_ScrollTex_G_Tint",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_MaskStrength",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "BloomPow_RGB",
-                "value": [
-                    0.6060273051261902,
-                    0.4589150846004486,
-                    0.30743876099586487,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "EdgeBloomColor_RGB",
-                "value": [
-                    0.08281071484088898,
-                    0.09028763324022293,
-                    0.11683832854032516,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DissolveLocationOffset",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "EmissionColor",
-                "value": [
-                    0.1253528594970703,
-                    0.1927977353334427,
-                    0.2743266820907593,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DistortionStrength",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DissolveWaveDirNoiseA",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "DissolveWaveDirNoiseB",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "All_Additive_Strength",
-                "value": [
-                    1.2000000476837158,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_ScreenSpace_Mask_Strength",
-                "value": [
-                    2.0999999046325684,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_ScreenSpaceTex_UV_Tile",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "VFX_ScrollTex_Simple_Strength",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "FresnelOutlineOnly_Color",
-                "value": [
-                    0.800000011920929,
-                    0.609994649887085,
-                    0.609994649887085,
-                    0.36000609397888184
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "FresnelOutlineOnly_BaseColor",
-                "value": [
-                    0.8399938941001892,
-                    0.34000152349472046,
-                    0.34000152349472046,
-                    0.2899976968765259
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "FresnelOutlineOnly_Control",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "BLOOM_EMISSION_ONLY",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "ALPHABLEND_EMISSION",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "BLOOM_MASK_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "OUTLINE_MASK_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "EXCLUDE_MASK_FROM_TINTCOLOR",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "VFX_SCREENSPACETEX_SCROLL",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "VFX_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "VFX_ALPHA_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "VFX_SCROLLTEX_G_ADDITIVE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "VFX_SCROLLTEX_R_ADDITIVE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "DEFORM_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "TWO_D_DEFORM_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "OUTLINE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "BLOOM_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "DISTORTION_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "ALL_ADDITIVE_ON",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "VFX_SCROLLTEX_SIMPLE_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "VFX_SCREENSPACE_TEX_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "FRESNEL_OUTLINE_ONLY",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "VFX_SCROLLTEX_SIMPLE_MASK_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/PBR_VFX",
                         "blendEnable": true,
                         "srcColorBlendFactor": 6,
                         "srcAlphaBlendFactor": 6,
@@ -42384,8 +41985,8 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Characters/PetStyleTwoGaren/Skins/Skin1/Materials/PetStyleTwoGaren_Base_PBR_Throne_A": {
-        "name": "Characters/PetStyleTwoGaren/Skins/Skin1/Materials/PetStyleTwoGaren_Base_PBR_Throne_A",
+    "{e1fb6b2c}": {
+        "name": "Characters/PetStyleTwoGaren/Skins/Skin1/Materials/PetStyleTwoGaren_Base_PBR_Shadow",
         "samplerValues": [
             {
                 "TextureName": "Outline_Bloom_Mask",
@@ -42394,7 +41995,7 @@
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/PetStyleTwoGaren/Themes/Base/PetStyleTwoGaren_Base_Stage_B_TX_CM.TFT_Style2_Garen.tex",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -42409,7 +42010,7 @@
             },
             {
                 "TextureName": "RMA_Texture",
-                "texturePath": "ASSETS/Characters/PetStyleTwoGaren/Themes/Base/PetStyleTwoGaren_Base_Stage_A_RMA_B_TX_CM.TFT_Style2_Garen.tex",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -42445,7 +42046,7 @@
             {
                 "name": "Exclude_Mask_from_TintColor_Value",
                 "value": [
-                    0.6600000262260437,
+                    1.0,
                     0.0,
                     0.0,
                     0.0
@@ -42459,9 +42060,9 @@
             {
                 "name": "RMA_Value",
                 "value": [
-                    0.800000011920929,
-                    0.800000011920929,
                     1.0,
+                    0.0,
+                    0.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -42469,9 +42070,9 @@
             {
                 "name": "Outline_Color",
                 "value": [
-                    0.0,
-                    0.0,
-                    0.0,
+                    0.9642176032066345,
+                    0.9614709615707397,
+                    0.9614709615707397,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -42488,12 +42089,6 @@
             },
             {
                 "name": "OutlineBlendValue",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
@@ -42541,9 +42136,9 @@
             {
                 "name": "TintColor",
                 "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5000076293945312,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -42551,7 +42146,7 @@
             {
                 "name": "DissolveValue",
                 "value": [
-                    1.0,
+                    0.5,
                     0.0,
                     0.0,
                     0.0
@@ -42640,12 +42235,6 @@
             },
             {
                 "name": "BloomPow_RGB",
-                "value": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.05098039284348488
-                ],
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
@@ -42659,9 +42248,9 @@
             {
                 "name": "EmissionColor",
                 "value": [
-                    0.0,
-                    0.0,
-                    0.0,
+                    0.10864423960447311,
+                    0.10864423960447311,
+                    0.10864423960447311,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -42693,7 +42282,7 @@
             {
                 "name": "All_Additive_Strength",
                 "value": [
-                    1.7999999523162842,
+                    1.5,
                     0.0,
                     0.0,
                     0.0
@@ -42703,7 +42292,7 @@
             {
                 "name": "VFX_ScreenSpace_Mask_Strength",
                 "value": [
-                    4.974999904632568,
+                    2.0,
                     0.0,
                     0.0,
                     0.0
@@ -42872,10 +42461,10 @@
                     {
                         "shader": "Shaders/SkinnedMesh/PBR_VFX",
                         "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
+                        "PolygonDepthBiasEnable": true,
+                        "srcColorBlendFactor": 4,
+                        "writeMask": 7,
+                        "depthOffsetBias": -5.0,
                         "__type": "StaticMaterialPassDef"
                     }
                 ],
