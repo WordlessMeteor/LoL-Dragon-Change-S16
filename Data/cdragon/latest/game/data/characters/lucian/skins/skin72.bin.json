@@ -466,10 +466,26 @@
                                 "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "championName": "Characters/Lucian",
+                            "__type": "{635d04b7}"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
                 },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Buffbone_Glb_Ground_Loc",
+                        "effectKey": "Lucian_R_DemonFloatIdle",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "Spine3",
+                        "effectKey": "Lucian_Z_DemonIdleFlames",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
                 "SubmeshesToShow": [
                     "Demon_Ring_Mat"
                 ],
@@ -481,16 +497,6 @@
                     "__type": "IsCastingBoolDriver"
                 },
                 "PersistentVfxs": [
-                    {
-                        "boneName": "Spine3",
-                        "effectKey": "Lucian_Z_DemonIdleFlames",
-                        "__type": "PersistentVfxData"
-                    },
-                    {
-                        "boneName": "Buffbone_Glb_Ground_Loc",
-                        "effectKey": "Lucian_R_DemonFloatIdle",
-                        "__type": "PersistentVfxData"
-                    },
                     {
                         "boneName": "C_Buffbone_Glb_Layout_Loc",
                         "effectKey": "Lucian_R_Transform",
@@ -532,7 +538,7 @@
                         },
                         {
                             "mDriver": {
-                                "Spell": "{02b03835}",
+                                "Spell": "Characters/Kalista/Spells/KalistaPassiveAllyBuff",
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
@@ -122731,6 +122737,20 @@
         ],
         "paramValues": [
             {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Maintex_Alpha_Strength",
                 "__type": "StaticMaterialShaderParamDef"
             },
@@ -123004,6 +123024,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
                 "on": false,
@@ -123503,6 +123533,20 @@
         ],
         "paramValues": [
             {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Maintex_Alpha_Strength",
                 "__type": "StaticMaterialShaderParamDef"
             },
@@ -123771,6 +123815,16 @@
         ],
         "switches": [
             {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -123955,6 +124009,20 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Maintex_Alpha_Strength",
                 "__type": "StaticMaterialShaderParamDef"
@@ -124230,6 +124298,16 @@
         ],
         "switches": [
             {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -124413,6 +124491,20 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Maintex_Alpha_Strength",
                 "__type": "StaticMaterialShaderParamDef"
@@ -124682,6 +124774,16 @@
         ],
         "switches": [
             {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -124863,6 +124965,20 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Maintex_Alpha_Strength",
                 "__type": "StaticMaterialShaderParamDef"
@@ -125149,6 +125265,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
                 "on": false,
@@ -126028,6 +126154,20 @@
         ],
         "paramValues": [
             {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Maintex_Alpha_Strength",
                 "__type": "StaticMaterialShaderParamDef"
             },
@@ -126289,6 +126429,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
                 "on": false,
@@ -126751,6 +126901,20 @@
         ],
         "paramValues": [
             {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Maintex_Alpha_Strength",
                 "__type": "StaticMaterialShaderParamDef"
             },
@@ -127019,6 +127183,16 @@
         ],
         "switches": [
             {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -127200,6 +127374,20 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Maintex_Alpha_Strength",
                 "__type": "StaticMaterialShaderParamDef"
@@ -127474,6 +127662,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
                 "on": false,
@@ -128629,7 +128827,7 @@
                         "mRuleName": "Basic 1",
                         "mConditions": [
                             {
-                                "mSpell": "{528e7771}",
+                                "mSpell": "Characters/Lucian/Spells/LucianBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -128655,7 +128853,7 @@
                         "mRuleName": "Basic 2",
                         "mConditions": [
                             {
-                                "mSpell": "{3945be79}",
+                                "mSpell": "Characters/Lucian/Spells/LucianBasicAttack2",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -128681,7 +128879,7 @@
                         "mRuleName": "Crit Attack",
                         "mConditions": [
                             {
-                                "mSpell": "{b4d49c21}",
+                                "mSpell": "Characters/Lucian/Spells/LucianCritAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -128707,7 +128905,7 @@
                         "mRuleName": "Crit Attack 2",
                         "mConditions": [
                             {
-                                "mSpell": "{bdb1b1e9}",
+                                "mSpell": "Characters/Lucian/Spells/LucianCritAttack2",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {

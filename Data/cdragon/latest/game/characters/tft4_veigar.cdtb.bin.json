@@ -7,14 +7,14 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 55.0,
+            "arBase": 40.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 40.0,
-        "baseArmor": 25.0,
-        "baseSpellBlock": 25.0,
+        "baseArmor": 30.0,
+        "baseSpellBlock": 30.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
         "baseMoveSpeed": 500.0,
@@ -56,6 +56,7 @@
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
         "mShopData": "{f1470458}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Veigar/Spells/TFT4_VeigarBasicAttack": {
@@ -215,14 +216,8 @@
         "ObjectName": "TFT4_VeigarR",
         "mScriptName": "TFT4_VeigarR",
         "mSpell": {
-            "mAffectsTypeFlags": 4106,
-            "mRequiredUnitTags": {
-                "mObjectTagList": [
-                    "{ea595ca6}",
-                    "Minion_Summon"
-                ],
-                "__type": "ObjectTags"
-            },
+            "mAffectsTypeFlags": 7183,
+            "mAffectsStatusFlags": 32,
             "mSpellTags": [
                 "Trait_Ultimate"
             ],
@@ -231,9 +226,9 @@
                     "mName": "Damage",
                     "mValues": [
                         100.0,
-                        300.0,
-                        475.0,
-                        700.0,
+                        400.0,
+                        600.0,
+                        900.0,
                         1000.0,
                         1400.0,
                         1400.0
@@ -245,8 +240,8 @@
                     "mValues": [
                         1.0,
                         1.0,
-                        1.0,
                         2.0,
+                        3.0,
                         4.0,
                         4.0,
                         4.0
@@ -311,6 +306,7 @@
                 0.0
             ],
             "delayTotalTimePercent": -0.5,
+            "canCastWhileDisabled": true,
             "canCastOrQueueWhileCasting": true,
             "mCantCancelWhileWindingUp": true,
             "castRange": [
@@ -344,10 +340,11 @@
                 0,
                 0
             ],
-            "selectionPriority": 1,
+            "selectionPriority": 2,
             "mTargetingTypeData": {
                 "__type": "Self"
             },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
             "mClientData": {
                 "mTooltipData": {
                     "mObjectName": "TFT4_VeigarR",
@@ -364,7 +361,6 @@
                                     "type": "Damage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -417,6 +413,7 @@
             ],
             "delayCastOffsetPercent": -1.0,
             "delayTotalTimePercent": -0.75,
+            "canCastWhileDisabled": true,
             "canCastOrQueueWhileCasting": true,
             "mCantCancelWhileWindingUp": true,
             "castRange": [
@@ -449,6 +446,9 @@
                     },
                     {
                         "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "{91fd0920}"
                     }
                 ],
                 "__type": "MissileSpecification"

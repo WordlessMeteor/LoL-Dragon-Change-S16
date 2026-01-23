@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.1.1",
+    "version": "16.2.1",
     "data": {
         "Taliyah": {
             "id": "Taliyah",
@@ -115,12 +115,14 @@
                         "label": [
                             "伤害",
                             "减速",
+                            "野怪伤害",
                             "冷却时间",
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ slowpercent*100.000000 }}% -> {{ slowpercentnl*100.000000 }}%",
+                            "{{ monsterbonusflatdamage }} -> {{ monsterbonusflatdamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]

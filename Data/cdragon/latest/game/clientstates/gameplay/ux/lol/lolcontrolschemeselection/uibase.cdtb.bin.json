@@ -1,0 +1,1029 @@
+{
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 9999,
+        "SceneTransitionIn": {
+            "TransitionTime": 1.0,
+            "EasingType": 6,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/Scrim": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/Scrim",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "BlockInputEvents": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -816.0,
+                    0.0
+                ],
+                "Size": [
+                    3200.0,
+                    1200.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Tutorial/Scrim.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonClicked_WASD",
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonDefault_WASD",
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonHitRegion_WASD",
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonHover_WASD",
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_Keyslots",
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_MoveDown_Key",
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_MoveLeft_Key",
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_MoveRight_Key",
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_MoveUp_Key"
+        ],
+        "IsEnabled": true,
+        "HitRegionElement": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonHitRegion_WASD",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonDefault_WASD"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonHover_WASD"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonClicked_WASD"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_MoveDown_Key": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_MoveDown_Key",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    357.0,
+                    818.0
+                ],
+                "Size": [
+                    471.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Tutorial_MoveDown_Key",
+        "FontDescription": "{91f20ab5}",
+        "TextAlignmentHorizontal": 1,
+        "Color": [
+            145,
+            190,
+            205,
+            255
+        ],
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonHover_WASD": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonHover_WASD",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    410.0,
+                    680.0
+                ],
+                "Size": [
+                    362.0,
+                    220.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Tutorial/Tutorial_Tile_Hover.png",
+            "EdgeSizesLeftRight": [
+                6.0,
+                6.0
+            ],
+            "EdgeSizesTopBottom": [
+                6.0,
+                6.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_MoveUp_Key": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_MoveUp_Key",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    356.0,
+                    746.0
+                ],
+                "Size": [
+                    472.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Tutorial_WASD_MoveUp_Key",
+        "FontDescription": "{91f20ab5}",
+        "TextAlignmentHorizontal": 1,
+        "Color": [
+            145,
+            190,
+            205,
+            255
+        ],
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_MoveLeft_Key": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_MoveLeft_Key",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    280.0,
+                    818.0
+                ],
+                "Size": [
+                    472.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Tutorial_MoveLeft_Key",
+        "FontDescription": "{91f20ab5}",
+        "TextAlignmentHorizontal": 1,
+        "Color": [
+            145,
+            190,
+            205,
+            255
+        ],
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonClicked_WASD": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonClicked_WASD",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    410.0,
+                    680.0
+                ],
+                "Size": [
+                    362.0,
+                    220.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Tutorial/Tutorial_Tile_Down.png",
+            "EdgeSizesLeftRight": [
+                6.0,
+                6.0
+            ],
+            "EdgeSizesTopBottom": [
+                6.0,
+                6.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonDefault_WASD": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonDefault_WASD",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    410.0,
+                    680.0
+                ],
+                "Size": [
+                    362.0,
+                    220.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Tutorial/Tutorial_Tile.png",
+            "EdgeSizesLeftRight": [
+                6.0,
+                6.0
+            ],
+            "EdgeSizesTopBottom": [
+                6.0,
+                6.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_Keyslots": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_Keyslots",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    475.0,
+                    714.0
+                ],
+                "Size": [
+                    232.0,
+                    153.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Tutorial/Tutorial_WASD_keys_blank.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonHitRegion_WASD": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_ButtonHitRegion_WASD",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    399.0,
+                    646.0
+                ],
+                "Size": [
+                    385.0,
+                    323.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_MoveRight_Key": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_WASD/CSS_Button_MoveRight_Key",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    430.0,
+                    818.0
+                ],
+                "Size": [
+                    474.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Tutorial_MoveRight_Key",
+        "FontDescription": "{91f20ab5}",
+        "TextAlignmentHorizontal": 1,
+        "Color": [
+            145,
+            190,
+            205,
+            255
+        ],
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/PC_Subtitle": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/PC_Subtitle",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    815.0,
+                    912.0
+                ],
+                "Size": [
+                    362.0,
+                    24.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Tutorial_PC_Subtitle",
+        "FontDescription": "{ef7d26f4}",
+        "TextAlignmentVertical": 0,
+        "FlipForRTL": true,
+        "WrappingMode": 5,
+        "Color": [
+            103,
+            168,
+            202,
+            255
+        ],
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Title": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Title",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    565.0,
+                    82.0
+                ],
+                "Size": [
+                    471.0,
+                    22.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Tutorial_ControlScheme_Title",
+        "FontDescription": "{f8f9631f}",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/WASD_Title": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/WASD_Title",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    355.0,
+                    646.0
+                ],
+                "Size": [
+                    471.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Tutorial_WASD_Title",
+        "FontDescription": "{c3681c5e}",
+        "TextAlignmentHorizontal": 1,
+        "Color": [
+            210,
+            230,
+            240,
+            255
+        ],
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonClicked_RTS",
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonDefault_RTS",
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonHitRegion_RTS",
+            "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonHover_RTS"
+        ],
+        "IsEnabled": true,
+        "HitRegionElement": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonHitRegion_RTS",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonDefault_RTS"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonHover_RTS"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonClicked_RTS"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonDefault_RTS": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonDefault_RTS",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    810.0,
+                    680.0
+                ],
+                "Size": [
+                    362.0,
+                    220.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Tutorial/Tutorial_Tile_PC.png",
+            "EdgeSizesLeftRight": [
+                6.0,
+                6.0
+            ],
+            "EdgeSizesTopBottom": [
+                6.0,
+                6.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonHitRegion_RTS": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonHitRegion_RTS",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    801.0,
+                    646.0
+                ],
+                "Size": [
+                    381.0,
+                    323.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonClicked_RTS": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonClicked_RTS",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    810.0,
+                    680.0
+                ],
+                "Size": [
+                    362.0,
+                    220.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Tutorial/Tutorial_Tile_PC_Down.png",
+            "EdgeSizesLeftRight": [
+                6.0,
+                6.0
+            ],
+            "EdgeSizesTopBottom": [
+                6.0,
+                6.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonHover_RTS": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Button_RTS/CSS_ButtonHover_RTS",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    810.0,
+                    680.0
+                ],
+                "Size": [
+                    362.0,
+                    220.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Tutorial/Tutorial_Tile_PC_Hover.png",
+            "EdgeSizesLeftRight": [
+                6.0,
+                6.0
+            ],
+            "EdgeSizesTopBottom": [
+                6.0,
+                6.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/Left_Image": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/Left_Image",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    286.0,
+                    104.0
+                ],
+                "Size": [
+                    239.0,
+                    6.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Tutorial/Tutorial_TitleFlair_Left.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/PC_Title": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/PC_Title",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    755.0,
+                    646.0
+                ],
+                "Size": [
+                    471.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Tutorial_PC_Title",
+        "FontDescription": "{c3681c5e}",
+        "TextAlignmentHorizontal": 1,
+        "Color": [
+            210,
+            230,
+            240,
+            255
+        ],
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/PC_Description": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/PC_Description",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    815.0,
+                    936.0
+                ],
+                "Size": [
+                    362.0,
+                    100.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Tutorial_PC_Description",
+        "FontDescription": "{ef7d26f4}",
+        "TextAlignmentVertical": 0,
+        "FlipForRTL": true,
+        "WrappingMode": 1,
+        "Color": [
+            179,
+            196,
+            204,
+            255
+        ],
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/WASD_Subtitle": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/WASD_Subtitle",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    413.0,
+                    912.0
+                ],
+                "Size": [
+                    362.0,
+                    24.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Tutorial_WASD_Subtitle",
+        "FontDescription": "{ef7d26f4}",
+        "TextAlignmentVertical": 0,
+        "FlipForRTL": true,
+        "WrappingMode": 5,
+        "Color": [
+            103,
+            168,
+            202,
+            255
+        ],
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/WASD_Description": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/WASD_Description",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    413.0,
+                    936.0
+                ],
+                "Size": [
+                    362.0,
+                    100.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Tutorial_WASD_Description",
+        "FontDescription": "{ef7d26f4}",
+        "TextAlignmentVertical": 0,
+        "FlipForRTL": true,
+        "WrappingMode": 1,
+        "Color": [
+            179,
+            196,
+            204,
+            255
+        ],
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/Right_Image": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/Right_Image",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1076.0,
+                    104.0
+                ],
+                "Size": [
+                    239.0,
+                    6.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Tutorial/Tutorial_TitleFlair_Right.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Subtitle": {
+        "name": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector/CSS_Subtitle",
+        "Scene": "ClientStates/Gameplay/UX/LoL/LoLControlSchemeSelection/UIBase/ControlSchemeSelector",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    565.0,
+                    119.0
+                ],
+                "Size": [
+                    471.0,
+                    9.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Tutorial_ControlScheme_Subtitle",
+        "FontDescription": "{175c4799}",
+        "TextAlignmentHorizontal": 1,
+        "Color": [
+            179,
+            196,
+            204,
+            255
+        ],
+        "__type": "UiElementTextData"
+    },
+    "__linked": []
+}

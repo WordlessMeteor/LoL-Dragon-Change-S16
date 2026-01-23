@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "The Brutalizer",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "Gain <scaleAD>@AD@ Attack Damage</scaleAD>, @AbilityHaste@ Ability Haste, and <scaleLethality>@Lethality@ Lethality</scaleLethality>."
         },
         {
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Gain <spellName>Guerrilla Warfare</spellName>.<br><br><rules>After not moving for @HoldStillDuration@ seconds, turn <keywordStealth>Invisibile</keywordStealth> until you move. When you exit this <keywordStealth>Invisibility</keywordStealth>,your first hit deals bonus <magicDamage>magic damage</magicDamage> gain <attackSpeed>@BonusAS@ Attack Speed and @BonusMS*100@% <movementSpeed>decaying Move Speed</movementSpeed></attackSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "{{ Item_Keyword_OnHit }} reduce the cooldown of your basic abilities by @CooldownRefund*100@% of their remaining cooldown.",
+            "desc": "{{ Item_Keyword_OnHit }} reduce the cooldown of your abilities by @CooldownRefund@ seconds.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "Mystic Punch",
             "rarity": 2,
-            "tooltip": "{{ Item_Keyword_OnHit }} reduce the cooldown of your basic abilities by @CooldownRefund*100@% of their remaining cooldown."
+            "tooltip": "{{ Item_Keyword_OnHit }} reduce the cooldown of your abilities by @CooldownRefund@ seconds."
         },
         {
             "apiName": "Homeguard",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "Increase <scaleHealth>max Health</scaleHealth> by half of your <scaleMana>Mana</scaleMana>.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

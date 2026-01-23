@@ -1,8 +1,8 @@
 {
-    "{3c7592f0}": {
+    "Characters/TFT_EsportsParisOpen_Props/Skins/Skin15": {
         "championSkinName": "TFT_EsportsParisOpen_Ball",
         "skinAnimationProperties": {
-            "animationGraphData": "{53166593}",
+            "animationGraphData": "Characters/TFT_EsportsParisOpen_Props/Animations/Skin15",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -50,7 +50,7 @@
         ],
         "emoteBuffbone": "",
         "godrayFXbone": "",
-        "mResourceResolver": "{d7d4a75a}",
+        "mResourceResolver": "Characters/TFT_EsportsParisOpen_Props/Skins/Skin15/Resources",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/TFT_EsportsParisOpen_Props/Skins/Skin15/Materials/EsportsParisOpen_Skin15_Body_Color_Mat": {
@@ -93,6 +93,24 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Emission_Bloom_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Emission_Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionR_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Exclude_Mask_from_TintColor_Value",
                 "value": [
@@ -420,6 +438,16 @@
         ],
         "switches": [
             {
+                "name": "BLOOM_EMISSION_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_EMISSION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "BLOOM_MASK_ON",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -670,6 +698,24 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Emission_Bloom_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Emission_Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionR_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Exclude_Mask_from_TintColor_Value",
                 "value": [
@@ -996,6 +1042,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_EMISSION_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_EMISSION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "BLOOM_MASK_ON",
                 "on": false,
@@ -2455,7 +2511,7 @@
         "particlePath": "Characters/TFT_EsportsParisOpen_Props/Skins/Skin15/Particles/TFT_EsportsParisOpen_Skin15_Trail_inst",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d7d4a75a}": {
+    "Characters/TFT_EsportsParisOpen_Props/Skins/Skin15/Resources": {
         "resourceMap": {
             "TFT_EsportsParisOpen_Skin0_DissolveIn": "Characters/TFT_EsportsParisOpen_Props/Skins/Skin0/Particles/TFT_EsportsParisOpen_Skin0_DissolveIn",
             "{aefc8395}": "Characters/TFT_EsportsParisOpen_Props/Skins/Skin6/Particles/TFT_EsportsParisOpen_Skin6_sfx01",

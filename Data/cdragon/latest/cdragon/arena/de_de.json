@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "Brutalisierer",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "Erhält <scaleAD>@AD@ Angriffsschaden</scaleAD>, @AbilityHaste@ Fähigkeitstempo und <scaleLethality>@Lethality@ Tödlichkeitsfaktor</scaleLethality>."
         },
         {
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Du erhältst <spellName>Guerillakriegsführung</spellName>.<br><br><rules>Nachdem du dich @HoldStillDuration@&nbsp;Sekunden lang nicht bewegt hast, wirst du <keywordStealth>unsichtbar</keywordStealth>, bis du dich bewegst. Wenn du diese <keywordStealth>Unsichtbarkeit</keywordStealth> verlässt, verursacht dein erster Treffer zusätzlichen <magicDamage>magischen Schaden</magicDamage>. Außerdem erhältst du <attackSpeed>@BonusAS@&nbsp;Angriffstempo und @BonusMS*100@&nbsp;% <movementSpeed>abfallendes Lauftempo</movementSpeed></attackSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "Verringert die Abklingzeiten deiner Grundfähigkeiten {{ Item_Keyword_OnHit }} um @CooldownRefund*100@&nbsp;% der verbleibenden Abklingzeit.",
+            "desc": "{{ Item_Keyword_OnHit }} verringert die Abklingzeit deiner Fähigkeiten um @CooldownRefund@ Sekunden.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "Mystischer Schlag",
             "rarity": 2,
-            "tooltip": "Verringert die Abklingzeiten deiner Grundfähigkeiten {{ Item_Keyword_OnHit }} um @CooldownRefund*100@&nbsp;% der verbleibenden Abklingzeit."
+            "tooltip": "{{ Item_Keyword_OnHit }} verringert die Abklingzeit deiner Fähigkeiten um @CooldownRefund@ Sekunden."
         },
         {
             "apiName": "Homeguard",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "Dein <scaleHealth>maximales Leben</scaleHealth> wird um die Hälfte deines <scaleMana>Manas</scaleMana> erhöht.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

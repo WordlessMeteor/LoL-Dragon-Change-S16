@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "残暴之力",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "获得<scaleAD>@AD@攻击力</scaleAD>、@AbilityHaste@技能急速和<scaleLethality>@Lethality@穿甲</scaleLethality>。"
         },
         {
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "获得<spellName>游击队军备</spellName>。<br><br><rules>在原地不动@HoldStillDuration@秒后，获得<keywordStealth>隐形</keywordStealth>，持续到你移动为止。在你离开这个<keywordStealth>隐形</keywordStealth>状态时，你的第一次命中造成额外<magicDamage>魔法伤害</magicDamage>、获得<attackSpeed>@BonusAS@攻击速度和@BonusMS*100@%<movementSpeed>持续衰减的移动速度</movementSpeed></attackSpeed>。</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "{{ Item_Keyword_OnHit }}使你的各个基础技能的冷却时间缩减其@CooldownRefund*100@%剩余冷却时间。",
+            "desc": "{{ Item_Keyword_OnHit }}使你的各个技能的冷却时间缩减@CooldownRefund@秒。",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "秘术冲拳",
             "rarity": 2,
-            "tooltip": "{{ Item_Keyword_OnHit }}使你的各个基础技能的冷却时间缩减其@CooldownRefund*100@%剩余冷却时间。"
+            "tooltip": "{{ Item_Keyword_OnHit }}使你的各个技能的冷却时间缩减@CooldownRefund@秒。"
         },
         {
             "apiName": "Homeguard",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "使你的<scaleHealth>最大生命值</scaleHealth>提升，数额相当于你一半的<scaleMana>法力值</scaleMana>。",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

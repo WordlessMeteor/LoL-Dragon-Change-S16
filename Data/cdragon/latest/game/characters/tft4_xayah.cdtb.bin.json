@@ -495,9 +495,9 @@
                     "mName": "PercentADPerFeather",
                     "mValues": [
                         0.0,
-                        2.0,
-                        2.25,
-                        2.5,
+                        170.0,
+                        290.0,
+                        480.0,
                         3.5,
                         3.5,
                         3.5
@@ -610,17 +610,17 @@
                     "__type": "GameCalculation"
                 },
                 "ModifiedPhysicalDamagePerFeather": {
-                    "mMultiplier": {
-                        "mStat": 2,
-                        "mCoefficient": 1.0,
-                        "__type": "StatByCoefficientCalculationPart"
-                    },
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "PercentADPerFeather",
-                            "__type": "NamedDataValueCalculationPart"
+                            "mSubpart": {
+                                "mDataValue": "PercentADPerFeather",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 1.0,
+                            "mStat": 3,
+                            "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -679,15 +679,12 @@
                             "Elements": [
                                 {
                                     "type": "PercentADPerFeather",
-                                    "multiplier": 100.0,
-                                    "nameOverride": "Spell_TFT4_XayahR_DamageList",
-                                    "Style": 1,
+                                    "nameOverride": "TFT_AD_Damage_NoCalculation",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "MagicDamagePerFeather",
-                                    "nameOverride": "Spell_TFT4_XayahR_DamageList_Magic",
-                                    "Style": 1,
+                                    "nameOverride": "TFT_AP_Damage_NoCalculation",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -789,14 +786,14 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 120.0,
+            "arBase": 65.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 85.0,
-        "baseArmor": 30.0,
-        "baseSpellBlock": 30.0,
+        "baseArmor": 35.0,
+        "baseSpellBlock": 35.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
         "baseMoveSpeed": 500.0,
@@ -862,13 +859,14 @@
                 "__type": "TFTTraitContributionData"
             }
         ],
-        "CharacterRole": "{109d6820}",
+        "CharacterRole": "{2ae695df}",
         "mMoveInterval": -0.10000000149011612,
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 70.0,
+        "mInitialMana": 10.0,
         "mShopData": "{d85b87c9}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Xayah/Skins/Meta": {

@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "Tàn Bạo",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "Nhận <scaleAD>@AD@ Sức Mạnh Công Kích</scaleAD>, @AbilityHaste@ Điểm Hồi Kỹ Năng và <scaleLethality>@Lethality@ Sát Lực</scaleLethality>."
         },
         {
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Nhận <spellName>Chiến Tranh Du Kích</spellName>.<br><br><rules>Sau khi không di chuyển trong @HoldStillDuration@ giây, trở nên <keywordStealth>Vô Hình</keywordStealth> cho đến khi bạn di chuyển. Khi bạn thoát khỏi trạng thái <keywordStealth>Vô Hình</keywordStealth>, lần ra đòn đầu tiên của bạn gây thêm <magicDamage>sát thương phép</magicDamage>, nhận <attackSpeed>@BonusAS@ Tốc Độ Đánh và @BonusMS*100@% <movementSpeed>Tốc Độ Di Chuyển giảm dần</movementSpeed></attackSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "{{ Item_Keyword_OnHit }} giảm thời gian hồi chiêu của kỹ năng cơ bản tương đương @CooldownRefund*100@% thời gian hồi chiêu còn lại.",
+            "desc": "{{ Item_Keyword_OnHit }} giảm hồi chiêu kỹ năng của bạn đi @CooldownRefund@ giây.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "Cú Đấm Thần Bí",
             "rarity": 2,
-            "tooltip": "{{ Item_Keyword_OnHit }} giảm thời gian hồi chiêu của kỹ năng cơ bản tương đương @CooldownRefund*100@% thời gian hồi chiêu còn lại."
+            "tooltip": "{{ Item_Keyword_OnHit }} giảm hồi chiêu kỹ năng của bạn đi @CooldownRefund@ giây."
         },
         {
             "apiName": "Homeguard",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "Tăng <scaleHealth>Máu tối đa</scaleHealth> bằng một nửa <scaleMana>Năng Lượng</scaleMana> của bạn.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

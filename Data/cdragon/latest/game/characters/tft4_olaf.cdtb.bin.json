@@ -1,25 +1,25 @@
 {
     "Characters/TFT4_Olaf/CharacterRecords/Root": {
         "mCharacterName": "TFT4_Olaf",
-        "baseHP": 900.0,
+        "baseHP": 1000.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 180.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 70.0,
+            "arBase": 30.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 85.0,
-        "baseArmor": 45.0,
-        "baseSpellBlock": 45.0,
+        "baseArmor": 65.0,
+        "baseSpellBlock": 65.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
-        "attackSpeed": 0.800000011920929,
+        "attackSpeed": 0.8500000238418579,
         "attackSpeedRatio": 0.800000011920929,
         "expGivenOnDeath": 0.0,
         "goldGivenOnDeath": 0.0,
@@ -55,6 +55,7 @@
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
         "mShopData": "{022ca9ee}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Olaf/Spells/TFT4_OlafBasicAttack2": {
@@ -220,6 +221,31 @@
                     ],
                     "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
+                },
+                "TooltipOnlyModifiedCleaveDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mSubpart": {
+                                    "mDataValue": "CleaveDamage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                "mRatio": 0.009999999776482582,
+                                "mStyleTag": "noScale",
+                                "mStyleTagIfScaled": "scaleAP",
+                                "__type": "SubPartScaledProportionalToStat"
+                            },
+                            "mPart2": {
+                                "mStat": 2,
+                                "mCoefficient": 1.0,
+                                "__type": "StatByCoefficientCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
                 }
             },
             "mAnimationName": "",
@@ -271,6 +297,12 @@
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_TFT4_OlafP_CleaveDamage",
                                     "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "CleaveDamage",
+                                    "nameOverride": "Spell_TFT4_OlafP_TotalModifiedCleaveDamage",
+                                    "Style": 2,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

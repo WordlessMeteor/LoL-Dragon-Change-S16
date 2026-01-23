@@ -109,12 +109,25 @@
                     "mName": "ActiveMRDamage",
                     "mValues": [
                         0.0,
-                        4.0,
-                        6.75,
+                        3.5,
+                        5.25,
                         50.0,
                         60.0,
                         0.0,
                         0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ActiveARDamage",
+                    "mValues": [
+                        1.0,
+                        1.5,
+                        2.25,
+                        10.0,
+                        3.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -159,6 +172,11 @@
                         {
                             "mStat": 6,
                             "mDataValue": "ActiveMRDamage",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 1,
+                            "mDataValue": "ActiveARDamage",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -238,6 +256,13 @@
                                     "type": "PassiveMRRatio",
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_TFT16_GalioSpell_PassiveDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ActiveARDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_TFT16_GalioSpell_ActiveDamageMR",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },

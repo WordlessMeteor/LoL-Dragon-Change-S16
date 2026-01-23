@@ -1,6 +1,6 @@
 {
     "type": "tft-unlockable",
-    "version": "16.1.1",
+    "version": "16.2.1",
     "data": {
         "TFT16_Aatrox": {
             "requiredPlayerLevel": 8,
@@ -156,7 +156,7 @@
             }
         },
         "TFT16_Kaisa": {
-            "requiredPlayerLevel": 8,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
@@ -298,10 +298,8 @@
             "conditions": {
                 [
                     {
-                        "description": "@RequiredValue@ unique %i: TFT16Piltover%&nbsp;Piltover units",
-                        "requiredContributionCount": 3,
-                        "traitId": "TFT16_Piltover",
-                        "traitName": "Piltover"
+                        "description": "a %i: TFT16Piltover%&nbsp;Piltover unit with @RequiredValue@ items equipped",
+                        "requiredValue": 2
                     }
                 ]
             }
@@ -475,7 +473,7 @@
                 [
                     {
                         "description": "Ashe with @RequiredValue@ items equipped",
-                        "requiredValue": 2
+                        "requiredValue": 1
                     }
                 ]
             }
@@ -513,14 +511,12 @@
             "conditions": {
                 [
                     {
-                        "description": "@RequiredValue@-star @ChampName@",
-                        "requiredLevel": 1,
-                        "characterId": "TFT16_Jinx"
+                        "description": "Jinx with @RequiredValue@ item equipped",
+                        "requiredValue": 1
                     },
                     {
-                        "description": "@RequiredValue@-star @ChampName@",
-                        "requiredLevel": 2,
-                        "characterId": "TFT16_Vi"
+                        "description": "Vi with @RequiredValue@ item equipped",
+                        "requiredValue": 1
                     }
                 ]
             }
@@ -559,8 +555,8 @@
             "conditions": {
                 [
                     {
-                        "description": "2-star Viego with @RequiredValue@ items equipped",
-                        "requiredValue": 2
+                        "description": "2-star Viego with @RequiredValue@ item equipped",
+                        "requiredValue": 1
                     }
                 ]
             }
@@ -892,7 +888,7 @@
             "conditions": {
                 [
                     {
-                        "description": "@RequiredValue@ unique %i: TFT16Piltover%&nbsp;Piltover units",
+                        "description": "a %i: TFT16Piltover%&nbsp;Piltover unit with @RequiredValue@ items equipped",
                         "requiredContributionCount": 3,
                         "traitId": "TFT16_Piltover",
                         "traitName": "Piltover"
@@ -1150,7 +1146,7 @@
             "conditions": {
                 [
                     {
-                        "description": "2-star Viego with @RequiredValue@ items equipped",
+                        "description": "2-star Viego with @RequiredValue@ item equipped",
                         "requiredValue": 2
                     }
                 ]

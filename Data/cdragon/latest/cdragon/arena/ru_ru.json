@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "Изувер",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "Вы получаете <scaleAD>@AD@ силы атаки</scaleAD>, @AbilityHaste@ ускорения умений и <scaleLethality>@Lethality@ смертоносности</scaleLethality>."
         },
         {
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Вы получаете <spellName>Партизанскую войну</spellName>.<br><br><rules>Не двигаясь в течение @HoldStillDuration@ сек., вы получаете <keywordStealth>невидимость</keywordStealth> до тех пор, пока не начнете передвигаться. После выхода из <keywordStealth>невидимости</keywordStealth> ваша первая атака наносит дополнительный <magicDamage>магический урон</magicDamage>, вы получаете <attackSpeed>@BonusAS@ скорости атаки</attackSpeed>, а ваша <movementSpeed>скорость передвижения увеличивается на @BonusMS*100@% (ускорение постепенно ослабевает)</movementSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "{{ Item_Keyword_OnHit }} сокращает перезарядку ваших базовых умений на @CooldownRefund*100@% от оставшегося значения.",
+            "desc": "{{ Item_Keyword_OnHit }} сокращает перезарядку умений на @CooldownRefund@ сек.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "Мистический удар",
             "rarity": 2,
-            "tooltip": "{{ Item_Keyword_OnHit }} сокращает перезарядку ваших базовых умений на @CooldownRefund*100@% от оставшегося значения."
+            "tooltip": "{{ Item_Keyword_OnHit }} сокращает перезарядку умений на @CooldownRefund@ сек."
         },
         {
             "apiName": "Homeguard",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "Ваш <scaleHealth>максимальный запас здоровья</scaleHealth> увеличивается на половину от <scaleMana>запаса маны</scaleMana>.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

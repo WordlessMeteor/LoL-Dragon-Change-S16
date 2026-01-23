@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "The Brutalizer",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "ได้รับ<scaleAD>พลังโจมตี @AD@</scaleAD> หน่วย เร่งสกิล @AbilityHaste@ หน่วย และ<scaleLethality>โจมตีจุดตาย @Lethality@</scaleLethality> หน่วย"
         },
         {
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "ได้รับเอฟเฟกต์ <spellName>Guerrilla Warfare</spellName><br><br><rules>หลังจากที่อยู่นิ่ง ๆ เป็นเวลา @HoldStillDuration@ วินาที จะได้รับสถานะ<keywordStealth>ล่องหน</keywordStealth>จนกว่าคุณจะเคลื่อนที่ เมื่อคุณออกจากสถานะ<keywordStealth>ล่องหน</keywordStealth> การโจมตีครั้งแรกของคุณ จะสร้างโบนัส<magicDamage>ความเสียหายเวท</magicDamage> ได้รับ<attackSpeed>ความเร็วโจมตี @BonusAS@ และ<movementSpeed>ความเร็วเคลื่อนที่ที่จะค่อย ๆ ลดลง</movementSpeed> @BonusMS*100@%</attackSpeed></rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "{{ Item_Keyword_OnHit }} ลดคูลดาวน์สกิลพื้นฐานลง @CooldownRefund*100@% จากคูลดาวน์ที่เหลืออยู่",
+            "desc": "การโจมตี {{ Item_Keyword_OnHit }} จะลดคูลดาวน์สกิลของคุณลง @CooldownRefund@ วินาที",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "Mystic Punch",
             "rarity": 2,
-            "tooltip": "{{ Item_Keyword_OnHit }} ลดคูลดาวน์สกิลพื้นฐานลง @CooldownRefund*100@% จากคูลดาวน์ที่เหลืออยู่"
+            "tooltip": "การโจมตี {{ Item_Keyword_OnHit }} จะลดคูลดาวน์สกิลของคุณลง @CooldownRefund@ วินาที"
         },
         {
             "apiName": "Homeguard",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "เพิ่ม<scaleHealth>พลังชีวิตสูงสุด</scaleHealth>เป็นจำนวนครึ่งหนึ่งของ<scaleMana>มานา</scaleMana>ของคุณ",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

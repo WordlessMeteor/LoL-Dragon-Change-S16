@@ -1,5 +1,5 @@
 {
-    "{95ec05ca}": {
+    "Characters/PetStyleTwoThresh/Skins/Skin1": {
         "championSkinName": "PetStyleTwoThresh_Base_Classic_Tier1",
         "loadscreen": {
             "image": "ASSETS/Characters/PetStyleTwoThresh/HUD/LoadScreen_StyleTwoThresh_Base_Classic_Tier1.TFT_Style2_Thresh_Base.tex",
@@ -176,7 +176,7 @@
             "AlphaOutWhileUntargetable": false,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{5f8fd9d8}",
+        "mResourceResolver": "Characters/PetStyleTwoThresh/Skins/Skin1/Resources",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/PetStyleTwoThresh/Skins/Skin1/Particles/PetStyleTwoThresh_Skin1_Emote_Taunt_Hit02": {
@@ -64361,6 +64361,24 @@
         ],
         "paramValues": [
             {
+                "name": "Emission_Bloom_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Emission_Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionR_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Exclude_Mask_from_TintColor_Value",
                 "value": [
                     1.0,
@@ -64680,6 +64698,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_EMISSION_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_EMISSION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "BLOOM_MASK_ON",
                 "on": false,
@@ -64941,6 +64969,24 @@
         ],
         "paramValues": [
             {
+                "name": "Emission_Bloom_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Emission_Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionR_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Exclude_Mask_from_TintColor_Value",
                 "value": [
                     1.0,
@@ -65260,6 +65306,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_EMISSION_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_EMISSION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "BLOOM_MASK_ON",
                 "on": false,
@@ -65423,6 +65479,24 @@
         ],
         "paramValues": [
             {
+                "name": "Emission_Bloom_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Emission_Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionR_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Exclude_Mask_from_TintColor_Value",
                 "value": [
                     1.0,
@@ -65743,6 +65817,16 @@
         ],
         "switches": [
             {
+                "name": "BLOOM_EMISSION_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_EMISSION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "BLOOM_MASK_ON",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -65864,7 +65948,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{5f8fd9d8}": {
+    "Characters/PetStyleTwoThresh/Skins/Skin1/Resources": {
         "resourceMap": {
             "PetStyleTwoThresh_Skin1_Emote_Trail_01": "Characters/PetStyleTwoThresh/Skins/Skin1/Particles/PetStyleTwoThresh_Skin1_Emote_Trail_01",
             "PetStyleTwoThresh_Skin1_Emote_Idle_Lantern": "Characters/PetStyleTwoThresh/Skins/Skin1/Particles/PetStyleTwoThresh_Skin1_Emote_Idle_Lantern",

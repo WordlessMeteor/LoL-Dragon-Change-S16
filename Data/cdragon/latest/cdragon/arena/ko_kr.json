@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "야수화",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "<scaleAD>공격력이 @AD@</scaleAD> , 스킬 가속이 @AbilityHaste@, <scaleLethality>물리 관통력이 @Lethality@</scaleLethality> 증가합니다."
         },
         {
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "<spellName>유격 전투</spellName> 효과를 얻습니다.<br><br><rules>@HoldStillDuration@초 동안 가만히 있으면 다시 이동할 때까지 <keywordStealth>투명</keywordStealth> 상태가 됩니다. <keywordStealth>투명</keywordStealth> 상태에서 벗어나면 첫 적중 시 추가 <magicDamage>마법 피해</magicDamage>를 입히고 <attackSpeed>공격 속도가 @BonusAS@ 증가하며, <movementSpeed>이동 속도가 @BonusMS*100@% 증가했다가 점차 감소</movementSpeed></attackSpeed>합니다.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "{{ Item_Keyword_OnHit }} 기본 스킬의 남은 재사용 대기시간이 @CooldownRefund*100@% 감소합니다.",
+            "desc": "{{ Item_Keyword_OnHit }} 스킬의 재사용 대기시간이 @CooldownRefund@초 감소합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "신비한 주먹",
             "rarity": 2,
-            "tooltip": "{{ Item_Keyword_OnHit }} 기본 스킬의 남은 재사용 대기시간이 @CooldownRefund*100@% 감소합니다."
+            "tooltip": "{{ Item_Keyword_OnHit }} 스킬의 재사용 대기시간이 @CooldownRefund@초 감소합니다."
         },
         {
             "apiName": "Homeguard",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "<scaleHealth>최대 체력</scaleHealth>이 <scaleMana>마나</scaleMana>의 절반만큼 증가합니다.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

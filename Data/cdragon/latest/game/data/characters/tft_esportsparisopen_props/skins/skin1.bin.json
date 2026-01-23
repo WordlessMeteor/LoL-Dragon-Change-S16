@@ -1,8 +1,8 @@
 {
-    "{1077b765}": {
+    "Characters/TFT_EsportsParisOpen_Props/Skins/Skin1": {
         "championSkinName": "TFT_EsportsParisOpen_Cat",
         "skinAnimationProperties": {
-            "animationGraphData": "{961e8c34}",
+            "animationGraphData": "Characters/TFT_EsportsParisOpen_Props/Animations/Skin1",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -40,7 +40,7 @@
         ],
         "emoteBuffbone": "",
         "godrayFXbone": "",
-        "mResourceResolver": "{9ed88acf}",
+        "mResourceResolver": "Characters/TFT_EsportsParisOpen_Props/Skins/Skin1/Resources",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/TFT_EsportsParisOpen_Props/Skins/Skin1/Materials/EsportsParisOpen_Stencil_Mat_eye": {
@@ -83,6 +83,24 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Emission_Bloom_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Emission_Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionR_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Exclude_Mask_from_TintColor_Value",
                 "value": [
@@ -409,6 +427,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_EMISSION_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_EMISSION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "BLOOM_MASK_ON",
                 "on": false,
@@ -662,6 +690,24 @@
         ],
         "paramValues": [
             {
+                "name": "Emission_Bloom_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Emission_Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionR_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Exclude_Mask_from_TintColor_Value",
                 "value": [
                     1.0,
@@ -987,6 +1033,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_EMISSION_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_EMISSION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "BLOOM_MASK_ON",
                 "on": false,

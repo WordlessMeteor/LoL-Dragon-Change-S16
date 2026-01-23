@@ -9957,8 +9957,8 @@
                     "normalMapTexture": "ASSETS/Characters/Poppy/Skins/Skin33/Particles/Poppy_Skin33_R_Circle_normal.tex",
                     "__type": "VfxDistortionDefinitionData"
                 },
-                "miscRenderFlags": 1,
                 "isUniformScale": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -10802,6 +10802,7 @@
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -12887,6 +12888,7 @@
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
                 "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthScale0": {
                     "constantValue": [
                         200.0,
@@ -14040,8 +14042,8 @@
                     "normalMapTexture": "ASSETS/Characters/Poppy/Skins/Skin33/Particles/Poppy_Skin33_R_Circle_normal.tex",
                     "__type": "VfxDistortionDefinitionData"
                 },
-                "miscRenderFlags": 1,
                 "isUniformScale": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -14230,6 +14232,7 @@
                 "disableBackfaceCull": true,
                 "miscRenderFlags": 1,
                 "isRotationEnabled": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         -90.0,
@@ -14485,7 +14488,9 @@
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
                 "isRotationEnabled": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         -90.0,
@@ -15141,6 +15146,7 @@
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -15388,9 +15394,9 @@
                     -1.0,
                     -40.0
                 ],
+                "miscRenderFlags": 1,
                 "stencilRef": 2,
                 "isRotationEnabled": 1,
-                "isFollowingTerrain": 1,
                 "isGroundLayer": 1,
                 "useNavmeshMask": 1,
                 "birthRotation0": {
@@ -16289,6 +16295,8 @@
                 },
                 "isUniformScale": 1,
                 "isRandomStartFrame": 1,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -17226,6 +17234,7 @@
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
                 "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthScale0": {
                     "constantValue": [
                         200.0,
@@ -33369,9 +33378,9 @@
                 "reflectionDefinition": {
                     "fresnel": 0.05000000074505806,
                     "fresnelColor": [
-                        0.4942092001438141,
-                        0.2707713544368744,
-                        0.16171512007713318,
+                        0.4941176474094391,
+                        0.2705882489681244,
+                        0.16078431904315948,
                         0.0
                     ],
                     "__type": "VfxReflectionDefinitionData"
@@ -34940,6 +34949,88 @@
                     1.0
                 ],
                 "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.25,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "lifetime": 0.10000000149011612,
+                "isSingleParticle": 1,
+                "emitterName": "HammerGlow",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.2980392277240753
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.12759999930858612,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "reflectionDefinition": {
+                    "fresnel": 0.5,
+                    "fresnelColor": [
+                        0.4941176474094391,
+                        0.2705882489681244,
+                        0.16078431904315948,
+                        0.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "miscRenderFlags": 1,
+                "particleIsLocalOrientation": 1,
+                "texture": "ASSETS/Characters/Poppy/Skins/Skin33/Particles/Poppy_Skin33_AlphaMask_Hammer.tex",
+                "__type": "VfxEmitterDefinitionData"
             }
         ],
         "particleName": "Poppy_Skin39_R_hit_instant",
@@ -35681,8 +35772,8 @@
                     "normalMapTexture": "ASSETS/Characters/Poppy/Skins/Skin33/Particles/Poppy_Skin33_R_Circle_normal.tex",
                     "__type": "VfxDistortionDefinitionData"
                 },
-                "miscRenderFlags": 1,
                 "isUniformScale": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -35871,6 +35962,8 @@
                 "disableBackfaceCull": true,
                 "miscRenderFlags": 1,
                 "isRotationEnabled": 1,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         -90.0,
@@ -36194,11 +36287,9 @@
                     -1.0,
                     -40.0
                 ],
+                "miscRenderFlags": 1,
                 "stencilRef": 2,
                 "isRotationEnabled": 1,
-                "isFollowingTerrain": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         0.0,
@@ -36578,10 +36669,10 @@
                 },
                 "pass": 984,
                 "disableBackfaceCull": true,
-                "stencilMode": 3,
-                "stencilRef": 1,
+                "miscRenderFlags": 1,
                 "isRotationEnabled": 1,
                 "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         0.0,
@@ -36823,6 +36914,7 @@
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -37821,9 +37913,7 @@
                     "__type": "ValueColor"
                 },
                 "pass": 101,
-                "miscRenderFlags": 1,
                 "isUniformScale": 1,
-                "isGroundLayer": 1,
                 "birthScale0": {
                     "constantValue": [
                         200.0,

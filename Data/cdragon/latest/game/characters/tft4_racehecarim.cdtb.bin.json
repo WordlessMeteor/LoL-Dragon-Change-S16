@@ -1,0 +1,286 @@
+{
+    "{2ef8ab0d}": {
+        "ObjectName": "TFT4_RaceHecarimSpellCleaveAttack",
+        "mScriptName": "TFT4_RaceHecarimSpellCleaveAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "SejuaniBasicAttack",
+            "mAnimationName": "Spell_Attack1",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.0,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{3075942d}": {
+        "ObjectName": "TFT4_RaceHecarimSpellCleaveAttack2",
+        "mScriptName": "TFT4_RaceHecarimSpellCleaveAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "SejuaniBasicAttack",
+            "mAnimationName": "Spell_Attack2",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.0,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT4_RaceHecarim/Spells/TFT4_RaceHecarimBasicAttack": {
+        "ObjectName": "TFT4_RaceHecarimBasicAttack",
+        "mScriptName": "TFT4_RaceHecarimBasicAttack",
+        "mSpell": {
+            "mAlternateName": "SejuaniBasicAttack",
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.0,
+            "mHitEffectOrientType": 2,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT4_RaceHecarimBasicAttack",
+                    "mFormat": "{3054f17a}",
+                    "mLocKeys": {
+                        "keyName": "TFT4_RaceHecarim_SpellName",
+                        "keyTooltip": "TFT4_RaceHecarim_SpellTooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT4_RaceHecarim/Spells/TFT4_RaceHecarimBasicAttack2": {
+        "ObjectName": "TFT4_RaceHecarimBasicAttack2",
+        "mScriptName": "TFT4_RaceHecarimBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "SejuaniBasicAttack",
+            "mAnimationName": "Attack2",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT4_RaceHecarim/Spells/TFT4_RaceHecarimCritAttack": {
+        "ObjectName": "TFT4_RaceHecarimCritAttack",
+        "mScriptName": "TFT4_RaceHecarimCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "SejuaniBasicAttack",
+            "mAnimationName": "Crit",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{e4b0181d}": {
+        "ObjectName": "TFT4_RaceHecarimSpellCleaveCrit",
+        "mScriptName": "TFT4_RaceHecarimSpellCleaveCrit",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "SejuaniBasicAttack",
+            "mAnimationName": "Spell_Crit",
+            "delayCastOffsetPercent": -0.3077000081539154,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT4_RaceHecarim/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFT4_RaceHecarim/CharacterRecords/Root": {
+        "mCharacterName": "TFT4_RaceHecarim",
+        "baseHP": 0.0,
+        "baseStaticHPRegen": 0.0,
+        "healthBarHeight": 200.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "arBaseStaticRegen": 0.0,
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseArmor": 10.0,
+        "baseSpellBlock": 10.0,
+        "critDamageMultiplier": 1.0,
+        "baseMoveSpeed": 500.0,
+        "attackSpeed": 1.0,
+        "attackSpeedRatio": 0.75,
+        "basicAttack": {
+            "mAttackName": "TFT4_RaceHecarimBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT4_RaceHecarimBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT4_RaceHecarimCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT4_RaceHecarimSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFT4_RaceHecarim/Spells/TFT4_RaceHecarimBasicAttack",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "useRiotRelationships": true,
+        "flags": 9446664,
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{2420692c}",
+        "UnitInfoCardDisplayType": 2,
+        "MobileHealthBarHeightOverride": 0.0,
+        "mManaPerAttack": 0.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

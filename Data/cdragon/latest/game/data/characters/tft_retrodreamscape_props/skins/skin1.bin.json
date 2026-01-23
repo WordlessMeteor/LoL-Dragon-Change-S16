@@ -1,0 +1,140 @@
+{
+    "Characters/TFT_RetroDreamscape_Props/Skins/Skin1": {
+        "championSkinName": "TFT_RetroDreamscape_Props",
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/TFT_RetroDreamscape_Props/Animations/Skin1",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TFT_RetroDreamscape_Props/Skins/Skin01/TFT_RetroDreamscape_Props_Skin01.TFT_ArenaSkin_RetroDreamscape.skl",
+            "simpleSkin": "ASSETS/Characters/TFT_RetroDreamscape_Props/Skins/Skin01/TFT_RetroDreamscape_Props_Skin01.TFT_ArenaSkin_RetroDreamscape.skn",
+            "texture": "ASSETS/Shared/Materials/Blank.tex",
+            "selfIllumination": 2.0,
+            "overrideBoundingBox": [
+                800.0,
+                800.0,
+                800.0
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Metal",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "TFT_RetroDreamscape_Skin1_Avatar",
+                "boneName": "Train14",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
+        "mResourceResolver": "Characters/TFT_RetroDreamscape_Props/Skins/Skin1/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/TFT_RetroDreamscape_Props/Skins/Skin1/Resources": {
+        "resourceMap": {
+            "TFT_RetroDreamscape_Skin1_Avatar": "Characters/TFT_RetroDreamscape_Props/Skins/Skin1/Particles/TFT_RetroDreamscape_Skin1_Avatar"
+        },
+        "__type": "ResourceResolver"
+    },
+    "Characters/TFT_RetroDreamscape_Props/Skins/Skin1/Particles/TFT_RetroDreamscape_Skin1_Avatar": {
+        "complexEmitterDefinitionData": [
+            {
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Level1 Train",
+                "primitive": {
+                    "mMesh": {
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "pass": -9000,
+                "alphaRef": 0,
+                "stencilMode": 3,
+                "StencilReferenceId": "{422f0a3f}",
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Characters/TFT_RetroDreamscape_Props/Skins/Skin01/Level1_RetroDreamscape_Train01_Tx.TFT_ArenaSkin_RetroDreamscape.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Level7 Train",
+                "primitive": {
+                    "mMesh": {
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.7215686440467834,
+                        0.7490196228027344,
+                        0.7921568751335144,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -9000,
+                "alphaRef": 0,
+                "stencilMode": 2,
+                "StencilReferenceId": "{422f0a3f}",
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Characters/TFT_RetroDreamscape_Props/Skins/Skin01/Level7_RetroDreamscape_Train_Tx.TFT_ArenaSkin_RetroDreamscape.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Level7 Train Windows",
+                "primitive": {
+                    "mMesh": {
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.800000011920929,
+                        0.8399938941001892,
+                        1.0,
+                        0.3000076413154602
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -8900,
+                "alphaRef": 0,
+                "{cb13aff1}": -15.0,
+                "stencilMode": 2,
+                "StencilReferenceId": "{422f0a3f}",
+                "isGroundLayer": 1,
+                "texture": "ASSETS/Maps/Particles/TFT/RetroDreamscape/TFT_RetroDreamscape_Idele_Train04.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 2000.0,
+        "particleName": "TFT_RetroDreamscape_Skin1_Avatar",
+        "particlePath": "Characters/TFT_RetroDreamscape_Props/Skins/Skin1/Particles/TFT_RetroDreamscape_Skin1_Avatar",
+        "flags": 213,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": [
+        "DATA/Characters/TFT_RetroDreamscape_Props/TFT_RetroDreamscape_Props.bin",
+        "DATA/Characters/TFT_RetroDreamscape_Props/Animations/Skin1.bin"
+    ]
+}

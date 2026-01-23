@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "Brutalizzatore",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "Ottieni <scaleAD>@AD@ attacco fisico</scaleAD>, @AbilityHaste@ velocità abilità e <scaleLethality>@Lethality@ letalità</scaleLethality>."
         },
         {
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Ottieni <spellName>Guerriglia</spellName>.<br><br><rules>Se non ti muovi per @HoldStillDuration@ secondi, diventi <keywordStealth>invisibile</keywordStealth> finché non ti muovi. Quando esci dall'<keywordStealth>invisibilità</keywordStealth>, il tuo primo colpo infligge <magicDamage>danni magici</magicDamage> bonus, ottieni <attackSpeed>@BonusAS@ velocità d'attacco e @BonusMS*100@% <movementSpeed>velocità di movimento decrescente</movementSpeed></attackSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "{{ Item_Keyword_OnHit }} riduce la ricarica delle tue abilità base di un @CooldownRefund*100@% della ricarica rimasta.",
+            "desc": "{{ Item_Keyword_OnHit }} riduce la ricarica delle tue abilità di @CooldownRefund@ secondi.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "Pugno mistico",
             "rarity": 2,
-            "tooltip": "{{ Item_Keyword_OnHit }} riduce la ricarica delle tue abilità base di un @CooldownRefund*100@% della ricarica rimasta."
+            "tooltip": "{{ Item_Keyword_OnHit }} riduce la ricarica delle tue abilità di @CooldownRefund@ secondi."
         },
         {
             "apiName": "Homeguard",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "Aumenta la <scaleHealth>salute massima</scaleHealth> di una quantità pari alla metà del tuo <scaleMana>mana</scaleMana>.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

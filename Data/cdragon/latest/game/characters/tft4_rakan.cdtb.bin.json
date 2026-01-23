@@ -154,10 +154,10 @@
                     "mName": "ShieldAmount",
                     "mValues": [
                         0.0,
-                        300.0,
                         400.0,
-                        675.0,
-                        800.0,
+                        500.0,
+                        775.0,
+                        950.0,
                         800.0,
                         800.0
                     ],
@@ -170,7 +170,7 @@
                         2.0,
                         2.5,
                         3.0,
-                        4.0,
+                        3.5,
                         4.0,
                         4.0
                     ],
@@ -286,6 +286,10 @@
             "mLineWidth": 160.0,
             "bHaveHitBone": true,
             "mHitBoneName": "root",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
             "mSpellCooldownOrSealedQueueThreshold": 0.5,
             "mClientData": {
                 "mTooltipData": {
@@ -301,8 +305,7 @@
                             "Elements": [
                                 {
                                     "type": "ShieldAmount",
-                                    "nameOverride": "Spell_ListType_Shield",
-                                    "Style": 1,
+                                    "nameOverride": "Spell_TFT4_RakanW_ShieldAmount",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -403,7 +406,7 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 120.0,
+            "arBase": 70.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
@@ -450,8 +453,9 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 60.0,
+        "mInitialMana": 20.0,
         "mShopData": "{90db0f93}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "__linked": []

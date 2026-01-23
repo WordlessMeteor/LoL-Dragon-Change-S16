@@ -17396,35 +17396,52 @@
         "name": "Characters/Singed/Skins/Skin26/Materials/Fresnel_Glass_inst",
         "samplerValues": [
             {
-                "TextureName": "Diffuse_Color",
-                "texturePath": "ASSETS/Characters/Singed/Skins/Skin26/Singed_Skin26_TX_CM.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
+                "TextureName": "Outline_Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "TextureName": "Mask",
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Scroll_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "EmissionR_DistortionG_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "RMA_Texture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpaceTex",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Mask",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
             {
-                "name": "Fresnel_Color",
-                "value": [
-                    0.6196078658103943,
-                    0.2549019753932953,
-                    0.800000011920929,
-                    1.0
-                ],
+                "name": "Emission_Bloom_Strength",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Fresnel_Size",
+                "name": "Emission_Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionR_Strength",
                 "value": [
                     1.0,
                     0.0,
@@ -17432,6 +17449,425 @@
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Exclude_Mask_from_TintColor_Value",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScreenSpaceTex_UV_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RMA_Value",
+                "value": [
+                    1.0,
+                    0.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Outline_Color",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Outline_Control",
+                "value": [
+                    0.44999998807907104,
+                    0.009999999776482582,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineBlendValue",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_R_UV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_R_UV_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_G_UV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_G_UV_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_B_UV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_B_UV_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveValue",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveEdgePowObjSize",
+                "value": [
+                    10.0,
+                    500.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveEdgeColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveWaveStrengthLength",
+                "value": [
+                    0.10000000149011612,
+                    5.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformWaveController",
+                "value": [
+                    0.5,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformWaveStrength",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_R_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_G_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_MaskStrength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomPow_RGB",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EdgeBloomColor_RGB",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveLocationOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DistortionStrength",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveWaveDirNoiseA",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveWaveDirNoiseB",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "All_Additive_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScreenSpace_Mask_Strength",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScreenSpaceTex_UV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_Simple_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelOutlineOnly_Color",
+                "value": [
+                    0.38616007566452026,
+                    0.22915999591350555,
+                    1.0,
+                    0.9607843160629272
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelOutlineOnly_BaseColor",
+                "value": [
+                    0.7786373496055603,
+                    0.17351034283638,
+                    1.0,
+                    0.05098039284348488
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelOutlineOnly_Control",
+                "value": [
+                    0.0010000000474974513,
+                    1.1399999856948853,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "BLOOM_EMISSION_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_EMISSION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "EXCLUDE_MASK_FROM_TINTCOLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCREENSPACETEX_SCROLL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_ALPHA_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCROLLTEX_G_ADDITIVE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCROLLTEX_R_ADDITIVE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TWO_D_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALL_ADDITIVE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCROLLTEX_SIMPLE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCREENSPACE_TEX_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "FRESNEL_OUTLINE_ONLY",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCROLLTEX_SIMPLE_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
             }
         ],
         "shaderMacros": {
@@ -17442,7 +17878,7 @@
                 "name": "normal",
                 "passes": [
                     {
-                        "shader": "Shaders/SkinnedMesh/Fresnel_Basic",
+                        "shader": "Shaders/SkinnedMesh/PBR_VFX",
                         "blendEnable": true,
                         "srcColorBlendFactor": 6,
                         "srcAlphaBlendFactor": 6,
@@ -17464,44 +17900,58 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
-        "dynamicMaterial": {
-            "__type": "DynamicMaterialDef"
-        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Singed/Skins/Skin26/Materials/Fresnel_Glass_Head_inst": {
         "name": "Characters/Singed/Skins/Skin26/Materials/Fresnel_Glass_Head_inst",
         "samplerValues": [
             {
-                "TextureName": "Diffuse_Color",
-                "texturePath": "ASSETS/Characters/Singed/Skins/Skin26/Singed_Skin26_TX_CM.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
+                "TextureName": "Outline_Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "TextureName": "Mask",
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Scroll_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "EmissionR_DistortionG_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "RMA_Texture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpaceTex",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Mask",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
             {
-                "name": "Fresnel_Color",
-                "value": [
-                    0.8039215803146362,
-                    0.3607843220233917,
-                    0.5137255191802979,
-                    1.0
-                ],
+                "name": "Emission_Bloom_Strength",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Fresnel_Size",
+                "name": "Emission_Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionR_Strength",
                 "value": [
                     1.0,
                     0.0,
@@ -17509,17 +17959,437 @@
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Exclude_Mask_from_TintColor_Value",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScreenSpaceTex_UV_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RMA_Value",
+                "value": [
+                    1.0,
+                    0.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Outline_Color",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Outline_Control",
+                "value": [
+                    0.44999998807907104,
+                    0.009999999776482582,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineBlendValue",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_R_UV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_R_UV_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_G_UV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_G_UV_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_B_UV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_B_UV_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveValue",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveEdgePowObjSize",
+                "value": [
+                    10.0,
+                    500.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveEdgeColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveWaveStrengthLength",
+                "value": [
+                    0.10000000149011612,
+                    5.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformWaveController",
+                "value": [
+                    0.5,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformWaveStrength",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_R_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_G_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_MaskStrength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomPow_RGB",
+                "value": [
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EdgeBloomColor_RGB",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveLocationOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DistortionStrength",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveWaveDirNoiseA",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveWaveDirNoiseB",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "All_Additive_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScreenSpace_Mask_Strength",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScreenSpaceTex_UV_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VFX_ScrollTex_Simple_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelOutlineOnly_Color",
+                "value": [
+                    1.0,
+                    0.22525368630886078,
+                    0.399954229593277,
+                    0.9607843160629272
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelOutlineOnly_BaseColor",
+                "value": [
+                    1.0,
+                    0.2500038146972656,
+                    0.5338826775550842,
+                    0.05098039284348488
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelOutlineOnly_Control",
+                "value": [
+                    0.0010000000474974513,
+                    1.1399999856948853,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "BLOOM_EMISSION_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_EMISSION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "EXCLUDE_MASK_FROM_TINTCOLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCREENSPACETEX_SCROLL",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_ALPHA_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCROLLTEX_G_ADDITIVE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCROLLTEX_R_ADDITIVE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TWO_D_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALL_ADDITIVE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCROLLTEX_SIMPLE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCREENSPACE_TEX_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "FRESNEL_OUTLINE_ONLY",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VFX_SCROLLTEX_SIMPLE_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
             }
         ],
         "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
+            "NUM_BLEND_WEIGHTS": "4",
+            "DISABLE_SHADOWS": "1"
         },
         "techniques": [
             {
                 "name": "normal",
                 "passes": [
                     {
-                        "shader": "Shaders/SkinnedMesh/Fresnel_Basic",
+                        "shader": "Shaders/SkinnedMesh/PBR_VFX",
                         "blendEnable": true,
                         "srcColorBlendFactor": 6,
                         "srcAlphaBlendFactor": 6,
@@ -17541,9 +18411,6 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
-        "dynamicMaterial": {
-            "__type": "DynamicMaterialDef"
-        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Singed/Skins/Skin26/Resources": {

@@ -106,13 +106,13 @@
                 "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_label",
                 "items": [
                     {
-                        "option": 102,
+                        "option": 103,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_ReplaceQuickCastWithIndicator",
                         "__type": "OptionItemCheckbox"
                     },
                     {
-                        "option": 103,
+                        "option": 104,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_CastThePressedSpell",
                         "__type": "OptionItemCheckbox"
@@ -324,6 +324,11 @@
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_SummonerSpell2",
                                         "EventName": "[GameEvents]evtNormalCastAvatarSpell2",
                                         "__type": "OptionItemSecondaryHotkeys1Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_RoleQuestActive",
+                                        "EventName": "[GameEvents]evtNormalCastRoleBound",
+                                        "__type": "OptionItemSecondaryHotkeys1Column_Row"
                                     }
                                 ],
                                 "__type": "OptionItemSecondaryHotkeys1Column"
@@ -365,6 +370,11 @@
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_SummonerSpell2",
                                         "EventName": "[GameEvents]evtSmartCastAvatarSpell2",
                                         "__type": "OptionItemSecondaryHotkeys1Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_RoleQuestActive",
+                                        "EventName": "[GameEvents]evtSmartCastRoleBound",
+                                        "__type": "OptionItemSecondaryHotkeys1Column_Row"
                                     }
                                 ],
                                 "__type": "OptionItemSecondaryHotkeys1Column"
@@ -405,6 +415,11 @@
                                     {
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_SummonerSpell2",
                                         "EventName": "[GameEvents]evtSmartCastWithIndicatorAvatarSpell2",
+                                        "__type": "OptionItemSecondaryHotkeys1Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_RoleQuestActive",
+                                        "EventName": "[GameEvents]evtSmartCastWithIndicatorRoleBound",
                                         "__type": "OptionItemSecondaryHotkeys1Column_Row"
                                     }
                                 ],
@@ -448,6 +463,11 @@
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_SummonerSpell2",
                                         "EventName": "[GameEvents]evtSelfCastAvatarSpell2",
                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_RoleQuestActive",
+                                        "EventName": "[GameEvents]evtSelfCastRoleBound",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                     }
                                 ],
                                 "__type": "OptionItemSecondaryHotkeys2Column"
@@ -490,6 +510,11 @@
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_SummonerSpell2",
                                         "EventName": "[GameEvents]evtSmartPlusSelfCastAvatarSpell2",
                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_RoleQuestActive",
+                                        "EventName": "[GameEvents]evtSmartPlusSelfCastRoleBound",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                     }
                                 ],
                                 "__type": "OptionItemSecondaryHotkeys2Column"
@@ -530,6 +555,11 @@
                                     {
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_SummonerSpell2",
                                         "EventName": "[GameEvents]evtSmartPlusSelfCastWithIndicatorAvatarSpell2",
+                                        "__type": "OptionItemSecondaryHotkeys1Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_RoleQuestActive",
+                                        "EventName": "[GameEvents]evtSmartPlusSelfCastWithIndicatorRoleBound",
                                         "__type": "OptionItemSecondaryHotkeys1Column_Row"
                                     }
                                 ],
@@ -602,6 +632,11 @@
                                     {
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_ChampionSpecificInteraction6",
                                         "EventName": "[GameEvents]evtChampionSpecificInteractionButton6Click",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_RoleQuestActive",
+                                        "EventName": "[GameEvents]evtCastRoleBound",
                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                     }
                                 ],
@@ -2373,7 +2408,7 @@
                         "itemsLeft": [
                             {
                                 "LiveUpdate": true,
-                                "option": 84,
+                                "option": 85,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_HealthAndResourceBars_ShowHealthBars",
                                 "__type": "OptionItemCheckbox"
@@ -2422,14 +2457,14 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 88,
+                                "option": 89,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_HealthAndResourceBars_ShowLossOfControlUI",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
                                 "LiveUpdate": true,
-                                "option": 83,
+                                "option": 84,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_HealthAndResourceBars_ShowHealthBarAnimations",
                                 "__type": "OptionItemCheckbox"
@@ -2465,7 +2500,7 @@
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 80,
+                                "option": 81,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Notifications_ChampionHightlightOnCameraCenter",
                                 "__type": "OptionItemCheckbox"
@@ -2481,7 +2516,7 @@
                             },
                             {
                                 "LiveUpdate": true,
-                                "option": 91,
+                                "option": 92,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Notifications_ShowOffScreenPointsOfInterest",
                                 "__type": "OptionItemCheckbox"
@@ -2563,7 +2598,7 @@
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 96,
+                                "option": 97,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_AbilityAndAttackDisplay_ShowSpellCosts",
                                 "__type": "OptionItemCheckbox"
@@ -2616,7 +2651,7 @@
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 97,
+                                "option": 98,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_ShowSpellRecommendations",
                                 "__type": "OptionItemCheckbox"
@@ -2640,7 +2675,7 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 90,
+                                "option": 91,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Minimap_ShowNeutralCamps",
                                 "__type": "OptionItemCheckbox"
@@ -2698,7 +2733,7 @@
                         ],
                         "itemsRight": [
                             {
-                                "option": 98,
+                                "option": 99,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Scoreboard_ShowSummonerNames",
                                 "__type": "OptionItemCheckbox"
@@ -2721,7 +2756,7 @@
                 "items": [
                     {
                         "LiveUpdate": true,
-                        "option": 99,
+                        "option": 100,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Interface_TeamFrames_ShowTeamFramesOnLeft",
                         "__type": "OptionItemCheckbox"
@@ -2855,7 +2890,7 @@
                                 "__type": "OptionItemDropdown"
                             },
                             {
-                                "option": 100,
+                                "option": 101,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Chat_ShowTimestamps",
                                 "__type": "OptionItemCheckbox"
@@ -2970,13 +3005,13 @@
                     {
                         "ItemsEither": [
                             {
-                                "option": 76,
+                                "option": 77,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Damage",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 82,
+                                "option": 83,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Heal",
                                 "__type": "OptionItemCheckbox"
@@ -2987,13 +3022,13 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 81,
+                                "option": 82,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Gold",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 86,
+                                "option": 87,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Status",
                                 "__type": "OptionItemCheckbox"
@@ -3004,31 +3039,31 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 92,
+                                "option": 93,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Quest",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 89,
+                                "option": 90,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Mana",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 78,
+                                "option": 79,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_EnemyDamage",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 77,
+                                "option": 78,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Dodge",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 87,
+                                "option": 88,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Level",
                                 "__type": "OptionItemCheckbox"
@@ -3039,7 +3074,7 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 95,
+                                "option": 96,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Special",
                                 "__type": "OptionItemCheckbox"
@@ -3050,7 +3085,7 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 94,
+                                "option": 95,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Score",
                                 "__type": "OptionItemCheckbox"
@@ -3061,7 +3096,7 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 79,
+                                "option": 80,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Experience",
                                 "__type": "OptionItemCheckbox"
@@ -3173,7 +3208,7 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 101,
+                                "option": 102,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Gameplay_ShowTurretRangeIndicators",
                                 "__type": "OptionItemCheckbox"
@@ -3204,7 +3239,7 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 105,
+                                "option": 106,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Gameplay_TreatTargetChampionsOnlyAsAToggle",
                                 "__type": "OptionItemCheckbox"
@@ -3217,7 +3252,7 @@
                                     "ShowInTftPregame": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 93,
+                                "option": 94,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Recommend_Jungle_Path_Label",
                                 "TooltipTraKey": "Options_Recommend_Jungle_Path_Tooltip",
@@ -3354,7 +3389,7 @@
                         },
                         "itemsLeft": [
                             {
-                                "option": 104,
+                                "option": 105,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Controls_MoveCameraOnRevive",
                                 "__type": "OptionItemCheckbox"
@@ -3516,7 +3551,7 @@
                         },
                         "itemsLeft": [
                             {
-                                "option": 104,
+                                "option": 105,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Controls_MoveCameraOnRevive",
                                 "__type": "OptionItemCheckbox"
@@ -3585,14 +3620,14 @@
                 "items": [
                     {
                         "LiveUpdate": true,
-                        "option": 107,
+                        "option": 108,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Voice_InputSettings_ShowVoicePanelWithScoreboard",
                         "__type": "OptionItemCheckbox"
                     },
                     {
                         "LiveUpdate": true,
-                        "option": 108,
+                        "option": 109,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Voice_InputSettings_ShowSpeakingIndicatorsOnHUD",
                         "__type": "OptionItemCheckbox"
@@ -4257,7 +4292,7 @@
                                 "Filter": {
                                     "__type": "OptionItemFilter_Windows"
                                 },
-                                "option": 109,
+                                "option": 110,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Video_WaitForVSync",
                                 "TooltipTraKey": "Options_Video_WaitForVSync_Description",
@@ -4267,7 +4302,7 @@
                                 "Filter": {
                                     "__type": "OptionItemFilter_Osx"
                                 },
-                                "option": 109,
+                                "option": 110,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Video_WaitForVSyncOSX",
                                 "TooltipTraKey": "Options_Video_WaitForVSync_Description",
@@ -4568,13 +4603,13 @@
                 "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_label",
                 "items": [
                     {
-                        "option": 102,
+                        "option": 103,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_ReplaceQuickCastWithIndicator",
                         "__type": "OptionItemCheckbox"
                     },
                     {
-                        "option": 103,
+                        "option": 104,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_CastThePressedSpell",
                         "__type": "OptionItemCheckbox"
@@ -8368,7 +8403,7 @@
                 "__type": "OptionTemplateHotkeysLabel"
             },
             {
-                "Label": "{1044d685}",
+                "Label": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Hotkeys/OptT_Hotkey_Label_RoleBoundItem",
                 "__type": "OptionTemplateHotkeysLabel"
             }
         ],
@@ -8412,7 +8447,7 @@
             {
                 "EventName": "[GameEvents]evtCastRoleBound",
                 "EventNameTraKey": "Options_Hotkeys_PrimaryHotkeys_Abilities_RoleBoundItem",
-                "Position": "{3b9c328a}",
+                "Position": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Hotkeys/OptT_HotkeyRoleBoundItem_Pos",
                 "__type": "OptionTemplateHotkeysKey"
             },
             {
@@ -8499,7 +8534,7 @@
                 "__type": "OptionTemplateHotkeysLabel"
             },
             {
-                "Label": "{1044d685}",
+                "Label": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Hotkeys/OptT_Hotkey_Label_RoleBoundItem",
                 "__type": "OptionTemplateHotkeysLabel"
             }
         ],
@@ -8543,7 +8578,7 @@
             {
                 "EventName": "[WASD]CastRoleBound",
                 "EventNameTraKey": "Options_Hotkeys_PrimaryHotkeys_Abilities_RoleBoundItem",
-                "Position": "{3b9c328a}",
+                "Position": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Hotkeys/OptT_HotkeyRoleBoundItem_Pos",
                 "__type": "OptionTemplateHotkeysKey"
             },
             {
@@ -8607,10 +8642,10 @@
         "{d3d87bbf}": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Templates/MovementCameraSettingsHeader/OptT_MovementCameraSettingsHeader_Modern_Pos",
         "{f0692ff1}": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Options_Button3_Def",
         "{b02e568a}": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Templates/MovementCameraSettingsHeader/OptT_MovementCameraSettingsHeader_Classic_Pos",
-        "{55868758}": "{8df45a8a}",
-        "{60858432}": "{f6e4c052}",
-        "{73cb42f6}": "{0256af43}",
-        "{40e1645d}": "{c9c801e4}",
+        "{55868758}": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Templates/MovementCameraSettingsHeader/ControlSwapLock",
+        "{60858432}": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Templates/MovementCameraSettingsHeader/ControlSwapLock/Text/ControlSwapLock_Message",
+        "{73cb42f6}": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Templates/MovementCameraSettingsHeader/ControlSwapLock/ControlSwapLock_LockIcon",
+        "{40e1645d}": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Templates/MovementCameraSettingsHeader/ControlSwapLock/ControlSwapLock_ClockIcon",
         "__type": "{09984b4a}"
     },
     "ClientStates/LoLCommon/UX/Options/UIMobile": {

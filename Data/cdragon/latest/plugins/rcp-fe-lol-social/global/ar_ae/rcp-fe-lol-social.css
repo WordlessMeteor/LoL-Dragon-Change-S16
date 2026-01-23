@@ -3354,6 +3354,7 @@ lol-friend-finder-social-summoner .social-added {
 
 .code-of-conduct .code-of-conduct-content-container .code-of-conduct-title-container {
     align-items: center;
+    direction: rtl;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3433,6 +3434,7 @@ lol-friend-finder-social-summoner .social-added {
 }
 
 .code-of-conduct .code-of-conduct-content-container .more-info-link {
+    direction: rtl;
     margin: 20px 0 50px
 }
 
@@ -4552,14 +4554,61 @@ div[data-screen-name=social]>.social-plugin-home>.ember-view {
     opacity: .5
 }
 
+.lol-social-friend-request .friend-request-discord-id {
+    font-family: var(--font-display)
+}
+
+.lol-social-friend-request .friend-request-discord-id,
+.lol-social-friend-request .friend-request-discord-id .friend-request-discord-text,
 .lol-social-friend-request .member-name,
 .lol-social-friend-request .member-name .player-name__tag-line,
 .lol-social-friend-request .social-summoner-name {
-    font-family: var(--font-body);
+    font-family: var(--font-body)
+}
+
+.lol-social-friend-request .friend-request-discord-id,
+.lol-social-friend-request .member-name,
+.lol-social-friend-request .member-name .player-name__tag-line,
+.lol-social-friend-request .social-summoner-name {
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
     -webkit-font-smoothing: antialiased
+}
+
+.lol-social-friend-request .friend-request-discord-id {
+    text-transform: uppercase
+}
+
+.lol-social-friend-request .friend-request-discord-id,
+.lol-social-friend-request .friend-request-discord-id .friend-request-discord-text,
+.lol-social-friend-request .friend-request-discord-id:lang(el-gr),
+.lol-social-friend-request .friend-request-discord-id:lang(ja-jp),
+.lol-social-friend-request .friend-request-discord-id:lang(ko-kr),
+.lol-social-friend-request .friend-request-discord-id:lang(th-th),
+.lol-social-friend-request .friend-request-discord-id:lang(tr-tr),
+.lol-social-friend-request .friend-request-discord-id:lang(zh-tw) {
+    text-transform: none
+}
+
+.lol-social-friend-request .friend-request-discord-id {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.lol-social-friend-request .friend-request-discord-id:lang(ja-jp) {
+    font-size: 13px
+}
+
+.lol-social-friend-request .friend-request-discord-id:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.lol-social-friend-request .friend-request-discord-id {
+    color: #a09b8c
 }
 
 .lol-social-friend-request .member-name,
@@ -4808,6 +4857,29 @@ div[data-screen-name=social]>.social-plugin-home>.ember-view {
 
 .lol-social-friend-request .recently-honored-description {
     color: #c8aa6e
+}
+
+.lol-social-friend-request .friend-request-discord-id {
+    align-items: center;
+    color: #5b5a56;
+    display: flex;
+    gap: 6px;
+    letter-spacing: .05em;
+    margin-bottom: 4px
+}
+
+.lol-social-friend-request .friend-request-discord-id .friend-request-discord-icon {
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px
+}
+
+.lol-social-friend-request .friend-request-discord-id .friend-request-discord-text {
+    color: #0596aa;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    line-height: 16px
 }
 
 .lol-social-friend-requests .friend-requests-header,

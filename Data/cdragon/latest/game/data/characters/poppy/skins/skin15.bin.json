@@ -4704,16 +4704,13 @@
                     "__type": "VfxPrimitiveAttachedMesh"
                 },
                 "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.2980392277240753
-                    ],
-                    "__type": "ValueColor"
-                },
                 "Color": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
                     "dynamics": {
                         "times": [
                             0.0,
@@ -4722,21 +4719,21 @@
                         ],
                         "values": [
                             [
-                                1.0,
-                                1.0,
-                                1.0,
+                                0.0,
+                                0.0,
+                                0.0,
                                 0.0
                             ],
                             [
-                                1.0,
-                                1.0,
-                                1.0,
+                                0.0,
+                                0.0,
+                                0.0,
                                 1.0
                             ],
                             [
-                                1.0,
-                                1.0,
-                                1.0,
+                                0.0,
+                                0.0,
+                                0.0,
                                 1.0
                             ]
                         ],
@@ -4744,9 +4741,19 @@
                     },
                     "__type": "ValueColor"
                 },
+                "reflectionDefinition": {
+                    "fresnel": 0.10000000149011612,
+                    "fresnelColor": [
+                        0.0,
+                        0.45050737261772156,
+                        1.0,
+                        0.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
                 "miscRenderFlags": 1,
                 "particleIsLocalOrientation": 1,
-                "texture": "ASSETS/Characters/Poppy/Skins/Base/Particles/Poppy_Base_R_hammer.tex",
+                "texture": "ASSETS/Characters/Poppy/Skins/Skin15/Particles/Poppy_Skin15_AlphaMask_Hammer.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -9878,6 +9885,79 @@
                     },
                     "__type": "VfxTextureMultDefinitionData"
                 },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.25,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "lifetime": 0.10000000149011612,
+                "isSingleParticle": 1,
+                "emitterName": "HammerGlow_avatar",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.12759999930858612,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "reflectionDefinition": {
+                    "fresnel": 0.10000000149011612,
+                    "fresnelColor": [
+                        0.0,
+                        0.45050737261772156,
+                        1.0,
+                        0.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "miscRenderFlags": 1,
+                "particleIsLocalOrientation": 1,
+                "texture": "ASSETS/Characters/Poppy/Skins/Skin15/Particles/Poppy_Skin15_AlphaMask_Hammer.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],

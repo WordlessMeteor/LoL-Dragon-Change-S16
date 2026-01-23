@@ -1,13 +1,13 @@
 {
     "Characters/TFT4_Annie/CharacterRecords/Root": {
         "mCharacterName": "TFT4_Annie",
-        "baseHP": 750.0,
+        "baseHP": 800.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 175.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 65.0,
+            "arBase": 75.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
@@ -55,7 +55,9 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
+        "mInitialMana": 25.0,
         "mShopData": "{70365e3b}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Annie/Skins/Meta": {
@@ -223,9 +225,9 @@
                     "mName": "ShieldAmount",
                     "mValues": [
                         200.0,
-                        400.0,
-                        600.0,
-                        900.0,
+                        450.0,
+                        700.0,
+                        1000.0,
                         1200.0,
                         1300.0,
                         1500.0
@@ -369,13 +371,11 @@
                                     "type": "Damage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_ModifiedMagicDamage",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "ShieldAmount",
                                     "nameOverride": "Spell_TFT4_AnnieW_Shield",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

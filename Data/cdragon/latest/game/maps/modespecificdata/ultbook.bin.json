@@ -76504,49 +76504,86 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Characters/Sylas/Skins/Skin0/Materials/Sylas_R_Clone_inst": {
-        "name": "Characters/Sylas/Skins/Skin0/Materials/Sylas_R_Clone_inst",
+    "Characters/Sylas/Skins/Skin0/Materials/Sylas_R_Clone": {
+        "name": "Characters/Sylas/Skins/Skin0/Materials/Sylas_R_Clone",
         "samplerValues": [
             {
-                "TextureName": "Gradient_Texture",
-                "texturePath": "ASSETS/Characters/Sylas/Skins/Base/Particles/Sylas_Base_R_gradient.tex",
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
             {
+                "name": "Fresnel_Size",
+                "value": [
+                    6.4008002281188965,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Bias",
+                "value": [
+                    -0.14499999582767487,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Diffuse_Alpha_Override",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "FresnelColor_Size",
                 "value": [
-                    4.0,
+                    1.3209174871444702,
                     0.0,
                     0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color",
+                "value": [
+                    0.687739372253418,
+                    0.6489204168319702,
+                    0.9357595443725586,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
                 "name": "FresnelColor_Bias",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Inner_Color",
                 "value": [
-                    0.050003815442323685,
-                    0.050003815442323685,
-                    0.17999541759490967,
-                    0.20000000298023224
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Fresnel_Alpha",
-                "value": [
-                    1.0,
+                    -0.04500000178813934,
                     0.0,
                     0.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "INVERT_FRESNEL",
+                "__type": "StaticMaterialSwitchDef"
             }
         ],
         "shaderMacros": {
@@ -76557,7 +76594,7 @@
                 "name": "normal",
                 "passes": [
                     {
-                        "shader": "Shaders/SkinnedMesh/Sylas_R_Clone",
+                        "shader": "Shaders/SkinnedMesh/FresnelAlpha_Basic",
                         "blendEnable": true,
                         "srcColorBlendFactor": 6,
                         "srcAlphaBlendFactor": 6,
@@ -76579,9 +76616,6 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
-        "dynamicMaterial": {
-            "__type": "DynamicMaterialDef"
-        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Corki/Spells/MissileBarrageAbility/CorkiMissileBarrageCounterNormal": {
@@ -76865,6 +76899,18 @@
                         100.0,
                         100.0,
                         100.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                "cherry": {
+                    "value": [
+                        130.0,
+                        130.0,
+                        100.0,
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0
                     ],
                     "__type": "SpellEffectAmount"
                 }
@@ -77608,13 +77654,13 @@
                 {
                     "mName": "VarusWOnHitDamage",
                     "mValues": [
-                        -2.0,
-                        6.0,
-                        14.0,
-                        22.0,
-                        30.0,
-                        38.0,
-                        46.0
+                        -1.0,
+                        8.0,
+                        17.0,
+                        26.0,
+                        35.0,
+                        44.0,
+                        53.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -78584,11 +78630,11 @@
                 "MonsterDamageCap": {
                     "mFormulaParts": [
                         {
-                            "mNumber": 5.0,
+                            "mNumber": 3.0,
                             "__type": "NumberCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.10000000149011612,
+                            "mCoefficient": 0.05000000074505806,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],

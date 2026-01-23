@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "Embrutecedor",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "Obtienes <scaleAD>@AD@ de daño de ataque</scaleAD>, @AbilityHaste@ de velocidad de habilidades y <scaleLethality>@Lethality@ de letalidad</scaleLethality>."
         },
         {
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Obtienes <spellName>Guerra de guerrillas</spellName>.<br><br><rules>Después de no moverte durante @HoldStillDuration@ s, te vuelves <keywordStealth>invisible</keywordStealth> hasta que te mueves. Al salir de la <keywordStealth>invisibilidad</keywordStealth>, tu primer golpe inflige <magicDamage>daño mágico</magicDamage> adicional, obtienes un <attackSpeed>@BonusAS@ de velocidad de ataque y un @BonusMS*100@% de <movementSpeed>velocidad de movimiento que disminuye</movementSpeed></attackSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "Reduce el enfriamiento de tus habilidades básicas un @CooldownRefund*100@% del enfriamiento restante {{ Item_Keyword_OnHit }}.",
+            "desc": "Reduce el enfriamiento de tus habilidades en @CooldownRefund@ s {{ Item_Keyword_OnHit }}.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "Guantazo místico",
             "rarity": 2,
-            "tooltip": "Reduce el enfriamiento de tus habilidades básicas un @CooldownRefund*100@% del enfriamiento restante {{ Item_Keyword_OnHit }}."
+            "tooltip": "Reduce el enfriamiento de tus habilidades en @CooldownRefund@ s {{ Item_Keyword_OnHit }}."
         },
         {
             "apiName": "Homeguard",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "Aumenta tu <scaleHealth>vida máxima</scaleHealth> una cantidad equivalente a la mitad de tu <scaleMana>maná</scaleMana>.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

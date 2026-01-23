@@ -475,6 +475,24 @@
         ],
         "paramValues": [
             {
+                "name": "Emission_Bloom_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Emission_Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionR_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Exclude_Mask_from_TintColor_Value",
                 "value": [
                     1.0,
@@ -794,6 +812,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_EMISSION_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_EMISSION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "BLOOM_MASK_ON",
                 "on": false,
@@ -1410,6 +1438,20 @@
         ],
         "paramValues": [
             {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Maintex_Alpha_Strength",
                 "__type": "StaticMaterialShaderParamDef"
             },
@@ -1665,6 +1707,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
                 "on": false,

@@ -1,5 +1,5 @@
 {
-    "{97daa6c5}": {
+    "Characters/PetStyleTwoAhri/Skins/Skin2": {
         "championSkinName": "PetStyleTwoAhri_KDAPopstars_KDAPopstars_Tier1",
         "loadscreen": {
             "image": "ASSETS/Characters/PetStyleTwoAhri/HUD/LoadScreen_StyleTwoAhri_KDAPopstars_KDAPopstars_Tier1.TFT_Style2_Ahri_KDAPopstars.tex",
@@ -128,7 +128,7 @@
             "AlphaOutWhileUntargetable": false,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{8d31552f}",
+        "mResourceResolver": "Characters/PetStyleTwoAhri/Skins/Skin2/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -97511,6 +97511,24 @@
         ],
         "paramValues": [
             {
+                "name": "Emission_Bloom_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Emission_Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissionR_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Exclude_Mask_from_TintColor_Value",
                 "value": [
                     1.0,
@@ -97825,6 +97843,16 @@
         ],
         "switches": [
             {
+                "name": "BLOOM_EMISSION_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_EMISSION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "BLOOM_MASK_ON",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -97946,7 +97974,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{8d31552f}": {
+    "Characters/PetStyleTwoAhri/Skins/Skin2/Resources": {
         "resourceMap": {
             "PetStyleTwoAhri_KDAPopstars_Finisher_Env_A": "Characters/PetStyleTwoAhri/Skins/Skin2/Particles/PetStyleTwoAhri_KDAPopstars_Finisher_Env_A",
             "PetStyleTwoAhri_KDAPopstars_Finisher_Env_B": "Characters/PetStyleTwoAhri/Skins/Skin2/Particles/PetStyleTwoAhri_KDAPopstars_Finisher_Env_B",

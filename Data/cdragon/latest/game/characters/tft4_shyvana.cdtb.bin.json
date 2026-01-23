@@ -1,25 +1,25 @@
 {
     "Characters/TFT4_Shyvana/CharacterRecords/Root": {
         "mCharacterName": "TFT4_Shyvana",
-        "baseHP": 700.0,
+        "baseHP": 800.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 75.0,
+            "arBase": 30.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 75.0,
-        "baseArmor": 40.0,
-        "baseSpellBlock": 40.0,
+        "baseDamage": 70.0,
+        "baseArmor": 60.0,
+        "baseSpellBlock": 60.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
-        "attackSpeed": 0.75,
+        "attackSpeed": 0.699999988079071,
         "attackSpeedRatio": 0.75,
         "basicAttack": {
             "mAttackProbability": 0.5,
@@ -73,6 +73,7 @@
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
         "mShopData": "{994f02c0}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Shyvana/Spells/TFT4_ShyvanaTransform": {
@@ -624,9 +625,9 @@
                     "mName": "ADWhileDragon",
                     "mValues": [
                         0.30000001192092896,
-                        0.30000001192092896,
-                        0.6000000238418579,
-                        1.2000000476837158,
+                        0.15000000596046448,
+                        0.4000000059604645,
+                        0.8999999761581421,
                         2.5,
                         300.0,
                         350.0
@@ -676,9 +677,9 @@
                     "mName": "BonusHealthPercent",
                     "mValues": [
                         0.800000011920929,
+                        0.30000001192092896,
+                        0.3499999940395355,
                         0.4000000059604645,
-                        0.44999998807907104,
-                        0.5,
                         0.800000011920929,
                         0.800000011920929,
                         0.800000011920929
@@ -790,7 +791,6 @@
                                 {
                                     "type": "BurnDamage",
                                     "nameOverride": "Spell_ListType_Damage",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {

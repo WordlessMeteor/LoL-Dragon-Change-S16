@@ -3,7 +3,8 @@
         "ObjectName": "TFT4_NautilusR",
         "mScriptName": "TFT4_NautilusR",
         "mSpell": {
-            "mAffectsStatusFlags": 160,
+            "mAffectsTypeFlags": 11269,
+            "mAffectsStatusFlags": 32,
             "DataValues": [
                 {
                     "mName": "Damage",
@@ -12,7 +13,7 @@
                         270.0,
                         400.0,
                         600.0,
-                        1000.0,
+                        800.0,
                         1350.0,
                         1350.0
                     ],
@@ -127,6 +128,10 @@
                 5000.0,
                 5000.0
             ],
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
             "mClientData": {
                 "mTooltipData": {
                     "mObjectName": "TFT4_NautilusR",
@@ -142,7 +147,6 @@
                                 {
                                     "type": "Damage",
                                     "nameOverride": "Spell_ListType_Damage",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -450,13 +454,13 @@
     },
     "Characters/TFT4_Nautilus/CharacterRecords/Root": {
         "mCharacterName": "TFT4_Nautilus",
-        "baseHP": 750.0,
+        "baseHP": 800.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 210.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 150.0,
+            "arBase": 85.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
@@ -532,8 +536,9 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 85.0,
+        "mInitialMana": 30.0,
         "mShopData": "{9d626ce7}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Nautilus/Skins/Meta": {

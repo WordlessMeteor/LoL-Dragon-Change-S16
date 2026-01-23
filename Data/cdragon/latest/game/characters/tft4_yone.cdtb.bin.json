@@ -1,7 +1,7 @@
 {
     "Characters/TFT4_Yone/CharacterRecords/Root": {
         "mCharacterName": "TFT4_Yone",
-        "baseHP": 950.0,
+        "baseHP": 1200.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 245.0,
         "healthBarFullParallax": true,
@@ -13,8 +13,8 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 80.0,
-        "baseArmor": 50.0,
-        "baseSpellBlock": 50.0,
+        "baseArmor": 70.0,
+        "baseSpellBlock": 70.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
         "baseMoveSpeed": 500.0,
@@ -50,12 +50,13 @@
                 "__type": "TFTTraitContributionData"
             }
         ],
-        "CharacterRole": "{402a9680}",
+        "CharacterRole": "{44de5928}",
         "mMoveInterval": -0.10000000149011612,
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
         "mShopData": "{2e7084b7}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Yone/Spells/TFT4_YoneBasicAttack": {
@@ -482,6 +483,19 @@
                         15.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "UnforgottenMissingHPModifier",
+                    "mValues": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -564,14 +578,12 @@
                             "Elements": [
                                 {
                                     "type": "Damage",
-                                    "nameOverride": "Spell_ListType_Damage",
-                                    "Style": 1,
+                                    "nameOverride": "Spell_TFT4_YoneR_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "UnforgottenDamage",
                                     "nameOverride": "Spell_TFT4_YoneR_UnforgottenBaseDamage",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {

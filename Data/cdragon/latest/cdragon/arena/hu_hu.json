@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "A Brutális",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "<scaleAD>@AD@ sebzést</scaleAD>, @AbilityHaste@ képességgyorsítást és <scaleLethality>@Lethality@ halálosságot</scaleLethality> kapsz."
         },
         {
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Megkapod a <spellName>Gerilla-hadviselés</spellName> hatást.<br><br><rules>Ha @HoldStillDuration@ másodpercig nem mozogsz, <keywordStealth>lopakodni</keywordStealth> kezdesz, amíg újra meg nem mozdulsz. Ennek a <keywordStealth>lopakodásnak</keywordStealth> a megtörésekor az első találatod bónusz <magicDamage>varázssebzést</magicDamage> okoz, valamint <attackSpeed>@BonusAS@ támadási sebességet és @BonusMS*100@% <movementSpeed>fokozatosan csökkenő mozgási sebességet</movementSpeed></attackSpeed> kapsz.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "A hátralévő töltési idő @CooldownRefund*100@%-ával csökkenti az alapképességeid töltési idejét {{ Item_Keyword_OnHit }}.",
+            "desc": "{{ Item_Keyword_OnHit }} @CooldownRefund@ másodperccel csökkenti a képességeid töltési idejét.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "Misztikus ütés",
             "rarity": 2,
-            "tooltip": "A hátralévő töltési idő @CooldownRefund*100@%-ával csökkenti az alapképességeid töltési idejét {{ Item_Keyword_OnHit }}."
+            "tooltip": "{{ Item_Keyword_OnHit }} @CooldownRefund@ másodperccel csökkenti a képességeid töltési idejét."
         },
         {
             "apiName": "Homeguard",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "A <scaleMana>mana</scaleMana> felével növeli a <scaleHealth>maximális életerőt</scaleHealth>.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

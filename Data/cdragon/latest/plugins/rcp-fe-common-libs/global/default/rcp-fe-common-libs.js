@@ -4588,7 +4588,7 @@
                         branch: p
                     }), n.datadogRum.setGlobalContextProperty("rum", {
                         session_sample_rate: l.sessionSampleRate
-                    }), window.RIOT.CONSTANTS[a.ConstantsKey.commandLineArgs].has("--use-databuild") && n.datadogRum.setGlobalContextProperty("developer", window.RIOT.CONSTANTS[a.ConstantsKey.systemInfo]), this._updateRankedContext(s), h._TRACK_VIEWS_MANUALLY && this.trackView("rcp-fe-common-libs.initial-loading"), this._initSessionLogger(l), this._initTriageContextObservers(), this._initFeatureFlagObservers(), this._initPlayerContextObservers()
+                    }), n.datadogRum.setGlobalContextProperty("system", window.RIOT.CONSTANTS[a.ConstantsKey.systemInfo]), this._updateRankedContext(s), h._TRACK_VIEWS_MANUALLY && this.trackView("rcp-fe-common-libs.initial-loading"), this._initSessionLogger(l), this._initTriageContextObservers(), this._initFeatureFlagObservers(), this._initPlayerContextObservers()
                 }
                 getSessionId() {
                     const t = n.datadogRum.getInternalContext();

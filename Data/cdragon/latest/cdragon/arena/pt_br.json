@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "Brutalizador",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "Recebe <scaleAD>@AD@ de Dano de Ataque</scaleAD>, @AbilityHaste@ de Aceleração de Habilidade e <scaleLethality>@Lethality@ de Letalidade</scaleLethality>."
         },
         {
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "Recebe <spellName>Técnicas de Guerrilha</spellName>.<br><br><rules>Depois de ficar imóvel por @HoldStillDuration@s, fica <keywordStealth>Invisível</keywordStealth> até se mover. Ao sair da <keywordStealth>Invisibilidade</keywordStealth>, seu primeiro ataque causa <magicDamage>Dano Mágico</magicDamage> adicional e você recebe <attackSpeed>@BonusAS@ de Velocidade de Ataque e @BonusMS*100@% de <movementSpeed>Velocidade de Movimento que decai</movementSpeed></attackSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "{{ Item_Keyword_OnHit }} reduzem o Tempo de Recarga das suas habilidades básicas em @CooldownRefund*100@% do Tempo de Recarga restante delas.",
+            "desc": "{{ Item_Keyword_OnHit }} reduz o Tempo de Recarga das suas Habilidades em @CooldownRefund@s.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "Soco Místico",
             "rarity": 2,
-            "tooltip": "{{ Item_Keyword_OnHit }} reduzem o Tempo de Recarga das suas habilidades básicas em @CooldownRefund*100@% do Tempo de Recarga restante delas."
+            "tooltip": "{{ Item_Keyword_OnHit }} reduz o Tempo de Recarga das suas Habilidades em @CooldownRefund@s."
         },
         {
             "apiName": "Homeguard",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "Recebe um aumento de <scaleHealth>Vida máxima</scaleHealth> equivalente à metade do <scaleMana>Mana</scaleMana>.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",

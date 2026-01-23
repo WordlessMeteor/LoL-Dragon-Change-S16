@@ -393,6 +393,19 @@
                         0.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "PassiveHeal",
+                    "mValues": [
+                        0.0,
+                        300.0,
+                        700.0,
+                        2500.0,
+                        5000.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -510,6 +523,11 @@
                                 {
                                     "type": "MRForAllies",
                                     "nameOverride": "Spell_TFT16_TaricSpell_PassiveMR",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PassiveHeal",
+                                    "nameOverride": "Spell_TFT16_TaricSpell_Heal",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {

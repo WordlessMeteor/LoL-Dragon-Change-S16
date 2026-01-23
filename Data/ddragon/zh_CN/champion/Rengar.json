@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.1.1",
+    "version": "16.2.1",
     "data": {
         "Rengar": {
             "id": "Rengar",
@@ -123,16 +123,16 @@
                     "id": "RengarQ",
                     "name": "残忍无情",
                     "description": "雷恩加尔的下次攻击会蛮横地戳刺他的目标来造成额外伤害。<br><br>残暴效果：造成更多伤害，并且他会获得攻击速度加成。",
-                    "tooltip": "雷恩加尔的下两次攻击获得<attackSpeed>{{ asbonus }}%攻击速度</attackSpeed>。第一次攻击造成<physicalDamage>{{ qdamage }}物理伤害</physicalDamage>。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>第一次攻击造成<physicalDamage>{{ empoweredqdamage }}物理伤害</physicalDamage>并为雷恩加尔提供持续{{ asduration }}秒的<attackSpeed>{{ empoweredqas }}攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "雷恩加尔的下两次攻击获得<attackSpeed>{{ asbonus }}%攻击速度</attackSpeed>。第一次攻击造成<physicalDamage>{{ qtotaldamage }}物理伤害</physicalDamage>。<br /><br /><keywordMajor>满层残暴值：</keywordMajor>第一次攻击造成<physicalDamage>{{ empoweredqtotaldamage }}物理伤害</physicalDamage>并为雷恩加尔提供持续{{ asduration }}秒的<attackSpeed>{{ empoweredqas }}攻击速度</attackSpeed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
-                            "总攻击力收益",
+                            "额外攻击收益率",
                             "冷却时间"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ baseadratiotooltip }}% -> {{ baseadratiotooltipNL }}%",
+                            "{{ baseadratio*100.000000 }}% -> {{ baseadrationl*100.000000 }}%",
                             "{{ ammorechargetime }} -> {{ ammorechargetimeNL }}"
                         ]
                     },

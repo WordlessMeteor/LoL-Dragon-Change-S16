@@ -409,6 +409,19 @@
                         1.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "ShieldAmount",
+                    "mValues": [
+                        10.0,
+                        350.0,
+                        750.0,
+                        10000.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -439,6 +452,19 @@
                             },
                             "mRatio": 1.0,
                             "mStat": 3,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedShieldAmount": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "ShieldAmount",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -520,6 +546,11 @@
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_TFT16_KindredSpell_HealPercentage",
                                     "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ShieldAmount",
+                                    "nameOverride": "Spell_TFT16_KindredSpell_ShieldAmount",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {

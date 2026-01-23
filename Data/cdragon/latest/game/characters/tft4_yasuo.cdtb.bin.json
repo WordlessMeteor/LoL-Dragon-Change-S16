@@ -1,20 +1,20 @@
 {
     "Characters/TFT4_Yasuo/CharacterRecords/Root": {
         "mCharacterName": "TFT4_Yasuo",
-        "baseHP": 550.0,
+        "baseHP": 600.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 45.0,
+            "arBase": 40.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 50.0,
-        "baseArmor": 30.0,
-        "baseSpellBlock": 30.0,
+        "baseArmor": 45.0,
+        "baseSpellBlock": 45.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
         "baseMoveSpeed": 500.0,
@@ -92,6 +92,7 @@
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
         "mShopData": "{4abee5cd}",
+        "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
     "Characters/TFT4_Yasuo/Spells/TFT4_YasuoCritAttack3": {
@@ -299,10 +300,10 @@
                     "mName": "ADPercent",
                     "mValues": [
                         0.0,
-                        1.899999976158142,
-                        2.0,
-                        2.0999999046325684,
-                        3.0,
+                        115.0,
+                        175.0,
+                        260.0,
+                        385.0,
                         3.0,
                         3.0
                     ],
@@ -333,6 +334,19 @@
                         15.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "MagicDamage",
+                    "mValues": [
+                        0.0,
+                        20.0,
+                        30.0,
+                        45.0,
+                        60.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -341,17 +355,28 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mSubpart": {
-                                "mDataValue": "ADPercent",
-                                "__type": "NamedDataValueCalculationPart"
-                            },
-                            "mRatio": 0.009999999776482582,
-                            "mStyleTag": "noScale",
-                            "mStyleTagIfScaled": "scaleAP",
-                            "__type": "SubPartScaledProportionalToStat"
+                            "mSubparts": [
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "ADPercent",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 1.0,
+                                    "mStat": 3,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                },
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "MagicDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
                         }
                     ],
-                    "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 },
                 "TooltipDamage": {
@@ -432,10 +457,13 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
+                                    "type": "MagicDamage",
+                                    "nameOverride": "TFT_AP_Damage_NoCalculation",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
                                     "type": "ADPercent",
-                                    "multiplier": 100.0,
                                     "nameOverride": "Spell_TFT4_YasuoQ_StrikeDamage",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

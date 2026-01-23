@@ -2161,7 +2161,7 @@
         "trait_id": "TFT13_RammusTrait",
         "set": "TFTSet13",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_8_Threat.png",
-        "tooltip_text": "Pasti ada ruang di semua tim untuk Rammus. <br><br>+1 Ukuran Tim, tetapi hanya saat ada Rammus dalam timmu.",
+        "tooltip_text": "Pasti ada ruang di semua tim untuk Rammus. <br><br>+1 Jumlah Unit Tim, tetapi hanya saat ada Rammus dalam timmu.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -11931,7 +11931,7 @@
                     },
                     {
                         "name": "BonusStardustPerTwoStar",
-                        "value": 0.6
+                        "value": 0.33
                     }
                 ],
                 "min_units": 1,
@@ -11983,7 +11983,7 @@
         "trait_id": "TFT16_Bilgewater",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_9_Bilgewater.png",
-        "tooltip_text": "Setiap player combat, mendapatkan Silver Serpent (%i:scaleSerpents%), plus @SerpentsPerTakedown@ tambahan untuk setiap takedown dari Bilgewater. <br><br>Silver Serpent dapat digunakan di Black Market untuk memberikan stat bonus dan loot spesial ke champion Bilgewater. Tier yang lebih tinggi membuka loot&nbsp;yang lebih langka.<br><br><row>(@MinUnits@) @SerpentsPerRound@ %i:scaleSerpents%</row><br><row>(@MinUnits@) @SerpentsPerRound@ %i:scaleSerpents%, loot&nbsp;yang ditingkatkan</row><br><row>(@MinUnits@) @SerpentsPerRound@ %i:scaleSerpents%, loot&nbsp;superior</row><br><row>(@MinUnits@) @SerpentsPerRound@ %i:scaleSerpents%, @StatMult@x&nbsp;stat, TEMBAKKAN MERIAM!</row><br><br>Bonus Stat Saat Ini:<br>@TFTUnitProperty.:TFT16_Bilgewater_BonusAD*100@% %i:scaleAD%%i:scaleAP%, @TFTUnitProperty.:TFT16_Bilgewater_BonusAS*100@%&nbsp;%i:scaleAS%, @TFTUnitProperty.:TFT16_Bilgewater_BonusHealth*100@%&nbsp;%i:scaleHealth%<br><br>Serpent Saat Ini: @TFTUnitProperty.:TFT16_Bilgewater_SilverSerpents@&nbsp;%i:scaleSerpents%",
+        "tooltip_text": "Setiap player combat, mendapatkan Silver Serpent (%i:scaleSerpents%), plus @SerpentsPerTakedown@ tambahan untuk setiap takedown dari Bilgewater. <br>Silver Serpent dapat digunakan di Black Market untuk memberikan stat bonus dan loot spesial ke champion Bilgewater. Tier yang lebih tinggi membuka loot&nbsp;yang lebih langka.<br><row>(@MinUnits@) @SerpentsPerRound@ %i:scaleSerpents%</row><br><row>(@MinUnits@) @SerpentsPerRound@ %i:scaleSerpents%, loot&nbsp;yang ditingkatkan</row><br><row>(@MinUnits@) @SerpentsPerRound@ %i:scaleSerpents%, loot&nbsp;superior</row><br><row>(@MinUnits@) @SerpentsPerRound@ %i:scaleSerpents%, @StatMult@x&nbsp;stat, TEMBAKKAN MERIAM!</row><br>Bonus Stat Saat Ini:<br>@TFTUnitProperty.:TFT16_Bilgewater_BonusAD*100@% %i:scaleAD%%i:scaleAP%, @TFTUnitProperty.:TFT16_Bilgewater_BonusAS*100@%&nbsp;%i:scaleAS%, @TFTUnitProperty.:TFT16_Bilgewater_BonusHealth*100@%&nbsp;%i:scaleHealth%<br>Serpent Saat Ini: @TFTUnitProperty.:TFT16_Bilgewater_SilverSerpents@&nbsp;%i:scaleSerpents%",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -11997,7 +11997,7 @@
                     },
                     {
                         "name": "PrismaticBroadsideDamage",
-                        "value": 500.0
+                        "value": 300.0
                     },
                     {
                         "name": "PrismaticBroadsideTickRate",
@@ -12005,7 +12005,7 @@
                     },
                     {
                         "name": "SerpentsPerTakedown",
-                        "value": 2.0
+                        "value": 1.0
                     }
                 ]
             }
@@ -12321,7 +12321,7 @@
                 "constants": [
                     {
                         "name": "Damage",
-                        "value": 100.0
+                        "value": 333.0
                     },
                     {
                         "name": "EnemyNum",
@@ -12881,15 +12881,15 @@
                     },
                     {
                         "name": "Mana1",
-                        "value": 3.0
+                        "value": 2.0
                     },
                     {
                         "name": "Mana2",
-                        "value": 6.0
+                        "value": 4.0
                     },
                     {
                         "name": "Mana3",
-                        "value": 12.0
+                        "value": 5.0
                     },
                     {
                         "name": "PercentHealth",
@@ -13033,7 +13033,7 @@
                     },
                     {
                         "name": "GenerosityADAP",
-                        "value": 18.0
+                        "value": 10.0
                     },
                     {
                         "name": "GenerosityIncreasePerGold",
@@ -13041,15 +13041,15 @@
                     },
                     {
                         "name": "SpiritADAP",
-                        "value": 4.0
+                        "value": 3.0
                     },
                     {
                         "name": "SpiritHealth",
-                        "value": 0.2
+                        "value": 0.25
                     },
                     {
                         "name": "Transcendence3StarBuff",
-                        "value": 0.5
+                        "value": 1.0
                     },
                     {
                         "name": "TranscendenceHealth",
@@ -13057,7 +13057,7 @@
                     },
                     {
                         "name": "TranscendenceMagicDamage",
-                        "value": 0.22
+                        "value": 0.2
                     }
                 ],
                 "min_units": 3,
@@ -13101,7 +13101,7 @@
                     },
                     {
                         "name": "GenerosityADAP",
-                        "value": 30.0
+                        "value": 25.0
                     },
                     {
                         "name": "GenerosityIncreasePerGold",
@@ -13113,11 +13113,11 @@
                     },
                     {
                         "name": "SpiritHealth",
-                        "value": 0.25
+                        "value": 0.3
                     },
                     {
                         "name": "Transcendence3StarBuff",
-                        "value": 0.5
+                        "value": 1.0
                     },
                     {
                         "name": "TranscendenceHealth",
@@ -13125,7 +13125,7 @@
                     },
                     {
                         "name": "TranscendenceMagicDamage",
-                        "value": 0.28
+                        "value": 0.25
                     }
                 ],
                 "min_units": 5,
@@ -13177,7 +13177,7 @@
                     },
                     {
                         "name": "SpiritADAP",
-                        "value": 4.0
+                        "value": 5.0
                     },
                     {
                         "name": "SpiritHealth",
@@ -13185,7 +13185,7 @@
                     },
                     {
                         "name": "Transcendence3StarBuff",
-                        "value": 0.5
+                        "value": 1.0
                     },
                     {
                         "name": "TranscendenceHealth",
@@ -13193,7 +13193,7 @@
                     },
                     {
                         "name": "TranscendenceMagicDamage",
-                        "value": 0.33
+                        "value": 0.3
                     }
                 ],
                 "min_units": 7,
@@ -13259,11 +13259,11 @@
                 "constants": [
                     {
                         "name": "BaseDR",
-                        "value": 0.25
+                        "value": 0.26
                     },
                     {
                         "name": "IncreasedDR",
-                        "value": 0.33
+                        "value": 0.36
                     }
                 ],
                 "min_units": 6,
@@ -13300,7 +13300,7 @@
                 "constants": [
                     {
                         "name": "PercentDamageMult",
-                        "value": 3.5
+                        "value": 3.25
                     }
                 ],
                 "min_units": 1,
@@ -13716,7 +13716,7 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 0.22
+                        "value": 0.25
                     },
                     {
                         "name": "SoulMult",
@@ -13736,7 +13736,7 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 0.25
+                        "value": 0.33
                     },
                     {
                         "name": "SoulMult",
@@ -13871,7 +13871,7 @@
                 "constants": [
                     {
                         "name": "AbilityDamageReduction",
-                        "value": 0.1
+                        "value": 0.08
                     }
                 ],
                 "min_units": 1,
@@ -14008,7 +14008,7 @@
         "trait_id": "TFT16_Soulbound",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Soulbound.TFT_Set16.png",
-        "tooltip_text": "Lucian dan Senna bertarung bersama, bertukar saat salah satunya cast. Setiap champion memiliki ability unik.<br><br>Pasangan Soulbound terkuatmu memberikan bonus kepada timmu. Saat Senna keluar, semua sekutu mendapatkan @SennaDR*100@% Pengurangan Damage. Saat Lucian keluar, semua sekutu mendapatkan @LucianDA*100@% Damage Amp.",
+        "tooltip_text": "Lucian dan Senna bertarung bersama, bertukar saat salah satunya cast. Setiap champion memiliki ability unik.<br><br>Pasangan Soulbound terkuatmu memberikan bonus kepada tim selama mereka bertahan. Saat Senna keluar, semua sekutu mendapatkan @SennaDR*100@% Pengurangan Damage. Saat Lucian keluar, semua sekutu mendapatkan @LucianDA*100@% Damage Amp.",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -14076,11 +14076,11 @@
                 "constants": [
                     {
                         "name": "AmbessaBonusAD",
-                        "value": 0.3
+                        "value": 0.4
                     },
                     {
                         "name": "WolfDamage",
-                        "value": 0.25
+                        "value": 0.3
                     }
                 ],
                 "min_units": 2,
@@ -14094,20 +14094,16 @@
         "trait_id": "TFT16_Teamup_EkkoZilean",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_Timewinders.TFT_Set16.png",
-        "tooltip_text": "<row>(@MinUnits@) Setiap @EkkoCastsToGainXP@ cast, Ekko menyimpan @EkkoXPGain@ XP untuk trait the Chronokeeper.</row><br><row>(@MinUnits@) DAN musuh dalam zona Parallel Convergence Ekko menerima damage dari Time Bomb Zilean @ZileanSpeedUp*100@% lebih cepat.</row><br><br><rules>Total XP yang disimpan untuk Chronokeeper: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "<row>Setelah setiap combat yang diikuti Ekko, mendapatkan @TOOLTIPONLYXP@XP. Setelah membuat Ekko jadi Bintang-3, dapatkan satu Zilean.</row><br><row>Serangan Ekko yang diperkuat akan bergema sebesar @DamageShare*100@% dari damage awal ke semua musuh yang menerima damage dari Zilean terkuatmu.</row><br><br><br><br>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "EkkoCastsToGainXP",
-                        "value": 2.0
+                        "name": "DamageShare",
+                        "value": 0.1
                     },
                     {
-                        "name": "EkkoXPGain",
-                        "value": 1.0
-                    },
-                    {
-                        "name": "ZileanSpeedUp",
+                        "name": "TOOLTIPONLYXP",
                         "value": 2.0
                     }
                 ]
@@ -14134,14 +14130,26 @@
         "trait_id": "TFT16_Teamup_JarvanShyvana",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_UncompromisingWill.TFT_Set16.png",
-        "tooltip_text": "Saat Jarvan cast, Shyvana mendapatkan @JarvanShieldShare*100@% Shield. Saat Shyvana melakukan cast, Jarvan akan melompat masuk dan menghasilkan @JarvanResistDamage*100@% dari Armor dan Magic Resist-nya sebagai magic damage dalam radius 2 hex.",
+        "tooltip_text": "Saat Jarvan cast, Shyvana mendapatkan @JarvanShieldShare*100@% Shield. Saat Shyvana cast, Jarvan melompat masuk dan menghasilkan @JarvanResistDamage1*100@/@JarvanResistDamage2*100@/@JarvanResistDamage3*100@/@JarvanResistDamage4*100@% dari Armor dan Magic Resist-nya sebagai magic damage dalam radius 2 hex.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "JarvanResistDamage",
-                        "value": 1.85
+                        "name": "JarvanResistDamage1",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "JarvanResistDamage2",
+                        "value": 1.2
+                    },
+                    {
+                        "name": "JarvanResistDamage3",
+                        "value": 1.55
+                    },
+                    {
+                        "name": "JarvanResistDamage4",
+                        "value": 2.0
                     },
                     {
                         "name": "JarvanShieldShare",
@@ -14184,30 +14192,43 @@
         ]
     },
     {
-        "display_name": "Poison Pals",
-        "trait_id": "TFT16_Teamup_SingedTeemo",
+        "display_name": "Joint Album",
+        "trait_id": "TFT16_Teamup_SeraphineSona",
         "set": "TFTSet16",
-        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
-        "tooltip_text": "Setiap @FireInterval@ detik, Teemo melemparkan dart ke target Singed saat ini, menghasilkan @TeemoEffectiveness*100@% damage.<br><br>Ketika musuh yang terkena poison Teemo mati, Singed mendapatkan Move Speed dan @SingedAP@% Ability Power.",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_Joint-Album.TFT_16_3.png",
+        "tooltip_text": "Mendapatkan satu Seraphine. Heal Seraphine terkuatmu kini juga heal @HealPercent@% dari Health sekutu yang hilang. Sona terkuatmu mendapatkan trait Disruptor dan menembakkan satu proyektil tambahan setiap cast. Dapatkan satu Sona setelah tiap player combat.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
                 "constants": [
                     {
-                        "name": "FireInterval",
-                        "value": 3.0
+                        "name": "HealPercent",
+                        "value": 10.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Poison Pals",
+        "trait_id": "TFT16_Teamup_SingedTeemo",
+        "set": "TFTSet16",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/TeamUp_Trait_PoisonPals.TFT_Set16.png",
+        "tooltip_text": "Mendapatkan satu Teemo bintang-2. Damage Singed me-refresh racun Teemo, dan damage Teemo memberi Singed Ability Power yang terus meningkat. Dapatkan satu Teemo setelah tiap player combat.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "SingedAPGain",
+                        "value": 2.0
                     },
                     {
-                        "name": "SingedAP",
-                        "value": 40.0
-                    },
-                    {
-                        "name": "SingedBonusMovespeed",
-                        "value": 50.0
-                    },
-                    {
-                        "name": "TeemoEffectiveness",
-                        "value": 0.5
+                        "name": "TeemoDamageReq",
+                        "value": 100.0
                     }
                 ],
                 "min_units": 2,
@@ -14758,7 +14779,7 @@
                     },
                     {
                         "name": "ShimmerFuseDurability",
-                        "value": 0.1
+                        "value": 0.15
                     },
                     {
                         "name": "ShimmerFuseDuration",
@@ -14792,7 +14813,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthHeal",
-                        "value": 0.25
+                        "value": 0.3
                     },
                     {
                         "name": "RefreshSeconds",
@@ -14812,7 +14833,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthHeal",
-                        "value": 0.25
+                        "value": 0.3
                     },
                     {
                         "name": "RefreshSeconds",
@@ -15902,7 +15923,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 2.0
+                        "value": 1.75
                     }
                 ],
                 "min_units": 2,
@@ -15914,7 +15935,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 3.5
+                        "value": 3.0
                     }
                 ],
                 "min_units": 3,
@@ -15926,7 +15947,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 6.0
+                        "value": 5.0
                     }
                 ],
                 "min_units": 4,
@@ -16135,7 +16156,7 @@
                     },
                     {
                         "name": "GalioAD",
-                        "value": 80.0
+                        "value": 50.0
                     },
                     {
                         "name": "GalioBonusArmor",
@@ -16171,7 +16192,7 @@
                     },
                     {
                         "name": "GalioAD",
-                        "value": 165.0
+                        "value": 75.0
                     },
                     {
                         "name": "GalioBonusArmor",
@@ -16207,7 +16228,7 @@
                     },
                     {
                         "name": "GalioAD",
-                        "value": 330.0
+                        "value": 115.0
                     },
                     {
                         "name": "GalioBonusArmor",
@@ -16243,7 +16264,7 @@
                     },
                     {
                         "name": "GalioAD",
-                        "value": 330.0
+                        "value": 150.0
                     },
                     {
                         "name": "GalioBonusArmor",
@@ -16688,7 +16709,7 @@
                 "constants": [
                     {
                         "name": "BonusADSP",
-                        "value": 8.0
+                        "value": 10.0
                     },
                     {
                         "name": "BonusResists",
@@ -16716,7 +16737,7 @@
                 "constants": [
                     {
                         "name": "BonusADSP",
-                        "value": 12.0
+                        "value": 14.0
                     },
                     {
                         "name": "BonusResists",
@@ -16744,7 +16765,7 @@
                 "constants": [
                     {
                         "name": "BonusADSP",
-                        "value": 20.0
+                        "value": 22.0
                     },
                     {
                         "name": "BonusResists",
@@ -17194,7 +17215,7 @@
                     },
                     {
                         "name": "SPPercent",
-                        "value": 80.0
+                        "value": 90.0
                     }
                 ],
                 "min_units": 3,
@@ -17210,7 +17231,7 @@
                     },
                     {
                         "name": "SPPercent",
-                        "value": 105.0
+                        "value": 115.0
                     }
                 ],
                 "min_units": 5,
@@ -17226,7 +17247,7 @@
                     },
                     {
                         "name": "SPPercent",
-                        "value": 130.0
+                        "value": 140.0
                     }
                 ],
                 "min_units": 7,
@@ -17246,7 +17267,7 @@
                     },
                     {
                         "name": "SPPercent",
-                        "value": 190.0
+                        "value": 200.0
                     }
                 ],
                 "min_units": 10,
@@ -17352,7 +17373,7 @@
         "trait_id": "TFT4_Ninja",
         "set": "TFTSet4",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_Ninja.png",
-        "tooltip_text": "Ninja mendapatkan bonus %i:scaleAD% Attack Damage dan %i:scaleAP% Ability Power.<br><br>Trait ini hanya aktif jika kamu punya persis 1 atau semua dari 4 Ninja unik.<br><br><row>(@MinUnits@) Ninja mendapatkan @ADValue@% %i:scaleAD% dan @APValue@ %i:scaleAP%</row><br><row>(@MinUnits@) Semua Ninja mendapatkan @ADValue@% %i:scaleAD% dan @APValue@ %i:scaleAP%</row>",
+        "tooltip_text": "Ninja mendapatkan bonus %i:scaleAD% Attack Damage dan %i:scaleAP% Ability Power.<br><br>Trait ini baru aktif jika kamu punya tepat 1 atau 4 Ninja unik.<br><br><row>(@MinUnits@) Ninja mendapatkan @ADValue@% %i:scaleAD% dan @APValue@% %i:scaleAP%</row><br><row>(@MinUnits@) Semua Ninja mendapatkan @ADValue@% %i:scaleAD% dan @APValue@% %i:scaleAP%</row>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -20214,7 +20235,7 @@
         "trait_id": "TFT7_Dragon",
         "set": "TFTSet7",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Dragon.png",
-        "tooltip_text": "Innate: Memerlukan 2 slot tim. <br><br>Dragon menyediakan +3 ke trait yang diberi tanda dan mendapatkan bonus tambahan. <br><br><row>(@MinUnits@) @BonusHealth@ Health</row><br><row>(@MinUnits@) dan @Defenses@ Armor dan Magic Resist</row><br><row>(@MinUnits@) serta @PercentBonusDamage*100@% Damage Amp</row><br><row>(@MinUnits@) dan +@TeamSizeIncrease@ pada ukuran tim</row><br><row>(@MinUnits@) dan heal @Healing@ Health tiap detik</row><br><row>(@MinUnits@) dan Dragon-mu terbang! 300 %i:scaleHealth%, 30 %i:scaleArmor% dan %i:scaleMR%, 30 Attack Damage, 30 Ability Power, 30% Attack Speed </row>",
+        "tooltip_text": "Innate: Memerlukan 2 slot tim. <br><br>Dragon menyediakan +3 ke trait yang diberi tanda dan mendapatkan bonus tambahan. <br><br><row>(@MinUnits@) @BonusHealth@ Health</row><br><row>(@MinUnits@) dan @Defenses@ Armor dan Magic Resist</row><br><row>(@MinUnits@) serta @PercentBonusDamage*100@% Damage Amp</row><br><row>(@MinUnits@) dan +@TeamSizeIncrease@ jumlah unit tim</row><br><row>(@MinUnits@) dan heal @Healing@ Health tiap detik</row><br><row>(@MinUnits@) dan Dragon-mu terbang! 300 %i:scaleHealth%, 30 %i:scaleArmor% dan %i:scaleMR%, 30 Attack Damage, 30 Ability Power, 30% Attack Speed </row>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.1.1",
+    "version": "16.2.1",
     "data": {
         "Malphite": {
             "id": "Malphite",
@@ -451,11 +451,13 @@
                     "leveltip": {
                         "label": [
                             "伤害",
-                            "攻击速度减少"
+                            "攻击速度减少",
+                            "@AbilityResourceName@消耗"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ asreduction }}% -> {{ asreductionNL }}%"
+                            "{{ asreduction }}% -> {{ asreductionNL }}%",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -469,12 +471,12 @@
                     "cooldownBurn": "7",
                     "cost": [
                         50,
-                        50,
-                        50,
-                        50,
-                        50
+                        55,
+                        60,
+                        65,
+                        70
                     ],
-                    "costBurn": "50",
+                    "costBurn": "50/55/60/65/70",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -602,10 +604,10 @@
                     "maxrank": 3,
                     "cooldown": [
                         130,
-                        105,
-                        80
+                        115,
+                        100
                     ],
-                    "cooldownBurn": "130/105/80",
+                    "cooldownBurn": "130/115/100",
                     "cost": [
                         100,
                         100,

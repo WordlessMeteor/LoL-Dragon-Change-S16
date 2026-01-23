@@ -437,7 +437,7 @@
             "apiName": "Quest_MadHatter",
             "calculations": {},
             "dataValues": {
-                "AFPerHat": 10.0,
+                "AFPerHat": 12.0,
                 "ArmorMRPerHat": 6.0,
                 "HatGrowDelay": 0.05000000074505806,
                 "MSPerHat": 3.0,
@@ -1652,7 +1652,7 @@
             "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.png",
             "id": 82,
             "name": "الباطش",
-            "rarity": 1,
+            "rarity": 0,
             "tooltip": "تكسب <scaleAD>@AD@ ضرر هجوم</scaleAD> و @AbilityHaste@ تسارع قدرة و <scaleLethality>@Lethality@ قوة فتك</scaleLethality>."
         },
         {
@@ -3320,7 +3320,7 @@
                 "ASDuration": 5.0,
                 "BonusDamage": 0.10000000149011612,
                 "BonusMS": 1.0,
-                "HoldStillDuration": 1.25
+                "HoldStillDuration": 0.75
             },
             "desc": "تكسب <spellName>حرب العصابات</spellName>.<br><br><rules>بعد التوقف عن الحركة لمدة @HoldStillDuration@ث، تصبح <keywordStealth>غير مرئي</keywordStealth> إلى أن تتحرك. عند خروجك من طور <keywordStealth>غير مرئي</keywordStealth>، تُلحق إصابتك الأولى <magicDamage>ضرر سحر</magicDamage> إضافيًا وتكسب <attackSpeed>@BonusAS@ سرعة هجوم و @BonusMS*100@% <movementSpeed>سرعة حركة متلاشية</movementSpeed></attackSpeed>.</rules>",
             "iconLarge": "assets/ux/cherry/augments/icons/holdverystill_large.png",
@@ -3761,16 +3761,16 @@
             "apiName": "MysticPunch",
             "calculations": {},
             "dataValues": {
-                "CooldownRefund": 0.20000000298023224,
+                "CooldownRefund": 1.25,
                 "MinCDR": 0.5
             },
-            "desc": "يقلص {{ Item_Keyword_OnHit }} فترات تبريد قدراتك الأساسية بنسبة @CooldownRefund*100@% من فترة التبريد المتبقية.",
+            "desc": "{{ Item_Keyword_OnHit }} تقلص فترة تبريد قدراتك بمقدار @CooldownRefund@ث.",
             "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.png",
             "id": 58,
             "name": "لكمة الغموض",
             "rarity": 2,
-            "tooltip": "يقلص {{ Item_Keyword_OnHit }} فترات تبريد قدراتك الأساسية بنسبة @CooldownRefund*100@% من فترة التبريد المتبقية."
+            "tooltip": "{{ Item_Keyword_OnHit }} تقلص فترة تبريد قدراتك بمقدار @CooldownRefund@ث."
         },
         {
             "apiName": "Homeguard",
@@ -4682,7 +4682,10 @@
                     ]
                 }
             },
-            "dataValues": {},
+            "dataValues": {
+                "ConvertCap": 99999.0,
+                "Modifier": 0.5
+            },
             "desc": "تزداد <scaleHealth>الصحة القصوى</scaleHealth> بمقدار نصف <scaleMana>المانا</scaleMana> لديك.",
             "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.png",
