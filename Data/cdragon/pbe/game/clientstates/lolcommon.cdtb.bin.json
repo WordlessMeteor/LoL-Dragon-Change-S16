@@ -3317,11 +3317,15 @@
         "TabNameTraKey": "Options_Tab_Camera",
         "{a4b002d7}": [
             {
-                "template": "{3cd8d5b2}",
-                "LabelTraKey": "Options_Select_Camera",
-                "items": [
-                    {
-                        "Filter": {
+                "Filter": {
+                    "Filters": [
+                        {
+                            "__type": "{ef2cc9a6}"
+                        },
+                        {
+                            "__type": "{b7ea4f54}"
+                        },
+                        {
                             "ShowInLolReplay": false,
                             "ShowInTftGame": false,
                             "ShowInTftReplay": false,
@@ -3329,10 +3333,159 @@
                             "{64bc3430}": false,
                             "{047600fd}": false,
                             "__type": "OptionItemFilter_GameStyle"
-                        },
-                        "template": "{427434ff}",
-                        "__type": "{9ef1e737}"
+                        }
+                    ],
+                    "__type": "OptionItemFilter_And"
+                },
+                "option": 2,
+                "template": "{eeccf10a}",
+                "LabelTraKey": "Options_Camera_Header",
+                "{a4b002d7}": [
+                    {
+                        "TRAKey": "Options_MovementHeader_Option2_label",
+                        "__type": "OptionItemDropdownItem"
                     },
+                    {
+                        "TRAKey": "Options_MovementHeader_Option1_label",
+                        "value": 1,
+                        "__type": "OptionItemDropdownItem"
+                    },
+                    {
+                        "TRAKey": "Options_MovementHeader_Option3_label",
+                        "value": 2,
+                        "__type": "OptionItemDropdownItem"
+                    }
+                ],
+                "__type": "OptionItemDropdown"
+            },
+            {
+                "Filter": {
+                    "Filters": [
+                        {
+                            "__type": "{d4737a04}"
+                        },
+                        {
+                            "Filter": {
+                                "__type": "{b7ea4f54}"
+                            },
+                            "{93bef4c5}": false,
+                            "__type": "OptionItemFilter_Not"
+                        },
+                        {
+                            "ShowInLolReplay": false,
+                            "ShowInTftGame": false,
+                            "ShowInTftReplay": false,
+                            "ShowInTftPregame": false,
+                            "{64bc3430}": false,
+                            "{047600fd}": false,
+                            "__type": "OptionItemFilter_GameStyle"
+                        }
+                    ],
+                    "__type": "OptionItemFilter_And"
+                },
+                "option": 3,
+                "template": "{eeccf10a}",
+                "LabelTraKey": "Options_Camera_Header",
+                "{a4b002d7}": [
+                    {
+                        "TRAKey": "Options_MovementHeader_Option2_label",
+                        "__type": "OptionItemDropdownItem"
+                    },
+                    {
+                        "TRAKey": "Options_MovementHeader_Option3_label",
+                        "value": 2,
+                        "__type": "OptionItemDropdownItem"
+                    }
+                ],
+                "__type": "OptionItemDropdown"
+            },
+            {
+                "Filter": {
+                    "Filters": [
+                        {
+                            "__type": "{d4737a04}"
+                        },
+                        {
+                            "__type": "{b7ea4f54}"
+                        },
+                        {
+                            "ShowInLolReplay": false,
+                            "ShowInTftGame": false,
+                            "ShowInTftReplay": false,
+                            "ShowInTftPregame": false,
+                            "{64bc3430}": false,
+                            "{047600fd}": false,
+                            "__type": "OptionItemFilter_GameStyle"
+                        }
+                    ],
+                    "__type": "OptionItemFilter_And"
+                },
+                "option": 3,
+                "template": "{eeccf10a}",
+                "LabelTraKey": "Options_Camera_Header",
+                "{a4b002d7}": [
+                    {
+                        "TRAKey": "Options_MovementHeader_Option2_label",
+                        "__type": "OptionItemDropdownItem"
+                    },
+                    {
+                        "TRAKey": "Options_MovementHeader_Option1_label",
+                        "value": 1,
+                        "__type": "OptionItemDropdownItem"
+                    },
+                    {
+                        "TRAKey": "Options_MovementHeader_Option3_label",
+                        "value": 2,
+                        "__type": "OptionItemDropdownItem"
+                    }
+                ],
+                "__type": "OptionItemDropdown"
+            },
+            {
+                "Filter": {
+                    "Filters": [
+                        {
+                            "__type": "{ef2cc9a6}"
+                        },
+                        {
+                            "Filter": {
+                                "__type": "{b7ea4f54}"
+                            },
+                            "{93bef4c5}": false,
+                            "__type": "OptionItemFilter_Not"
+                        },
+                        {
+                            "ShowInLolReplay": false,
+                            "ShowInTftGame": false,
+                            "ShowInTftReplay": false,
+                            "ShowInTftPregame": false,
+                            "{64bc3430}": false,
+                            "{047600fd}": false,
+                            "__type": "OptionItemFilter_GameStyle"
+                        }
+                    ],
+                    "__type": "OptionItemFilter_And"
+                },
+                "option": 2,
+                "template": "{eeccf10a}",
+                "LabelTraKey": "replayui_controls",
+                "{a4b002d7}": [
+                    {
+                        "TRAKey": "Options_MovementHeader_Option2_label",
+                        "__type": "OptionItemDropdownItem"
+                    },
+                    {
+                        "TRAKey": "Options_MovementHeader_Option3_label",
+                        "value": 2,
+                        "__type": "OptionItemDropdownItem"
+                    }
+                ],
+                "__type": "OptionItemDropdown"
+            },
+            {
+                "template": "{3cd8d5b2}",
+                "LabelTraKey": "Options_Camera_Zoom_Header",
+                "items": [
                     {
                         "option": 4,
                         "template": "{2f26143a}",
@@ -3347,7 +3500,7 @@
                     "__type": "{fca7e1ca}"
                 },
                 "template": "{3cd8d5b2}",
-                "LabelTraKey": "Options_Controls_label",
+                "LabelTraKey": "Options_Camera_Header",
                 "items": [
                     {
                         "Filter": {
