@@ -33383,6 +33383,40 @@
         "ShadingModel": "{baebc346}",
         "parameters": [
             {
+                "name": "ScreenSpace_Tiling",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ScreenSpace_Tiling",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ScreenSpace_Texture_Tint",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "TintColor",
                 "data": [
                     1.0,
@@ -33788,6 +33822,10 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "FADE_DIFFUSE_ONLY_W_MASK",
                 "__type": "ShaderStaticSwitch"
             },
@@ -33800,15 +33838,33 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "BLOOM_SCROLLTEX_ONLY",
                 "__type": "ShaderStaticSwitch"
             },
             {
                 "name": "INVERT_BLOOM_FRESNEL",
                 "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "__type": "ShaderStaticSwitch"
             }
         ],
         "textures": [
+            {
+                "name": "Pattern_Mask",
+                "defaultTexturePath": "ASSETS/Shared/Materials/AlphaTest.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "ScreenSpace_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "ShaderTexture"
+            },
             {
                 "name": "AdditiveScrollTex",
                 "defaultTexturePath": "ASSETS/Shared/Materials/BC_TestTexture.tex",

@@ -18161,7 +18161,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Ashe/Skins/Skin76/Particles/Ashe_Skin76_BA_AirHelix.SKINS_Ashe_Skin76.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Ashe/Skins/Skin76/Particles/Ashe_Skin76_BA_AirHelix.SKINS_Ashe_Skin76.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -41016,6 +41016,16 @@
         "name": "Characters/Ashe/Skins/Skin79/Materials/AsheSkin76_HumanBow",
         "samplerValues": [
             {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "MatCap_Tex",
                 "texturePath": "ASSETS/Characters/Ashe/Skins/Skin76/Ashe_Skin76_Gold_Matcap_TX_CM.SKINS_Ashe_Skin76.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -41065,6 +41075,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "ScreenSpace_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_Alpha_Override",
                 "__type": "StaticMaterialShaderParamDef"
@@ -41247,6 +41277,21 @@
             }
         ],
         "switches": [
+            {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "OVERRIDE_DIFFUSE_ALPHA",
                 "on": false,

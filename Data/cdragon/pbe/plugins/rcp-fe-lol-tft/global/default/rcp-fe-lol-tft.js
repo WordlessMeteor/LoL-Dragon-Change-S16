@@ -11482,8 +11482,9 @@
                     showPip: a.Ember.computed.not("skillTreeInfoSeen"),
                     showInfoModal: !1,
                     urlFaq: a.Ember.computed("eventsData", (function() {
-                        const e = this.get("eventsData");
-                        return e && Array.isArray(e) && 1 === e.length ? e[0]?.urlFaq : ""
+                        const e = this.get("eventsData"),
+                            t = e.find((e => "skill-tree" === e.eventHubTemplateType))?.urlFaq;
+                        return t || ""
                     })),
                     rankIconImage: a.Ember.computed("assets", "animatedCurrentRank", (function() {
                         const e = this.get("animatedCurrentRank");

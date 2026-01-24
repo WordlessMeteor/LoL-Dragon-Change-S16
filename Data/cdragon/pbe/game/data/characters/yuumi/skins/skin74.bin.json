@@ -1,5 +1,5 @@
 {
-    "{8e27822f}": {
+    "Characters/Yuumi/Skins/Skin74": {
         "skinClassification": 2,
         "championSkinName": "YuumiSkin74",
         "skinParent": 70,
@@ -170,7 +170,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{5a11d4c8}",
+            "animationGraphData": "Characters/Yuumi/Animations/Skin70",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -182,7 +182,7 @@
                 270.0,
                 100.0
             ],
-            "Material": "{e8aea4ba}",
+            "Material": "Characters/Yuumi/Skins/Skin74/Material/Firecraker_Yuumi_Body_inst",
             "boundingCylinderHeight": 100.0,
             "boundingSphereRadius": 220.0,
             "reflectionFresnelColor": [
@@ -194,12 +194,12 @@
             "initialSubmeshToHide": "Props Eye_Dilated",
             "materialOverride": [
                 {
-                    "Material": "{e8aea4ba}",
+                    "Material": "Characters/Yuumi/Skins/Skin74/Material/Firecraker_Yuumi_Body_inst",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{595fc7dd}",
+                    "Material": "Characters/Yuumi/Skins/Skin74/Material/Firecraker_Yuumi_Book_inst",
                     "submesh": "Book_Page",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -209,7 +209,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{595fc7dd}",
+                    "Material": "Characters/Yuumi/Skins/Skin74/Material/Firecraker_Yuumi_Book_inst",
                     "submesh": "Book_Cover",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -219,7 +219,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{c7cbf75f}",
+                    "Material": "Characters/Yuumi/Skins/Skin74/Material/Firecraker_Yuumi_Eyes_Blink_Mat",
                     "submesh": "Eyes_Lion_Hat",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -275,10 +275,10 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{85c87725}",
+        "mResourceResolver": "Characters/Yuumi/Skins/Skin74/Resources",
         "__type": "SkinCharacterDataProperties"
     },
-    "{2fe0f77b}": {
+    "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_LaughSpitGrould": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -837,7 +837,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{5b3578a2}": {
+    "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_Q_Mis": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 1.0,
@@ -8802,7 +8802,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{857743ff}": {
+    "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_P_buf": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -10083,7 +10083,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{bc3b5c3f}": {
+    "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_Z_Fire01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -12108,7 +12108,7 @@
         "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
-    "{bd3b5dd2}": {
+    "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_Z_Fire02": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -13493,7 +13493,7 @@
         "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
-    "{c3e375a7}": {
+    "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_Z_Env": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -19046,7 +19046,7 @@
         "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
-    "{d328ded6}": {
+    "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_Idle_TarFireCracker": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -20195,9 +20195,19 @@
         "particlePath": "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_Idle_TarFireCracker",
         "__type": "VfxSystemDefinitionData"
     },
-    "{595fc7dd}": {
+    "Characters/Yuumi/Skins/Skin74/Material/Firecraker_Yuumi_Book_inst": {
         "name": "Characters/Yuumi/Skins/Skin74/Material/Firecraker_Yuumi_Book_inst",
         "samplerValues": [
+            {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
             {
                 "TextureName": "MatCap_Tex",
                 "texturePath": "ASSETS/Shared/Materials/MatCap/MatCap_Metal.tex",
@@ -20248,6 +20258,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "ScreenSpace_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_Alpha_Override",
                 "__type": "StaticMaterialShaderParamDef"
@@ -20443,6 +20473,21 @@
         ],
         "switches": [
             {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "OVERRIDE_DIFFUSE_ALPHA",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -20561,7 +20606,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{c7cbf75f}": {
+    "Characters/Yuumi/Skins/Skin74/Material/Firecraker_Yuumi_Eyes_Blink_Mat": {
         "name": "Characters/Yuumi/Skins/Skin74/Material/Firecraker_Yuumi_Eyes_Blink_Mat",
         "samplerValues": [
             {
@@ -20673,9 +20718,19 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{e8aea4ba}": {
+    "Characters/Yuumi/Skins/Skin74/Material/Firecraker_Yuumi_Body_inst": {
         "name": "Characters/Yuumi/Skins/Skin74/Material/Firecraker_Yuumi_Body_inst",
         "samplerValues": [
+            {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
             {
                 "TextureName": "MatCap_Tex",
                 "texturePath": "ASSETS/Shared/Materials/MatCap/MatCap_Metal.tex",
@@ -20726,6 +20781,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "ScreenSpace_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_Alpha_Override",
                 "__type": "StaticMaterialShaderParamDef"
@@ -20915,6 +20990,21 @@
         ],
         "switches": [
             {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "OVERRIDE_DIFFUSE_ALPHA",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -21033,86 +21123,86 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{85c87725}": {
+    "Characters/Yuumi/Skins/Skin74/Resources": {
         "resourceMap": {
-            "Yuumi_BA_mis": "{5fb4c53d}",
-            "Yuumi_BA_tar": "{527caa51}",
-            "Yuumi_P_buf": "{857743ff}",
-            "Yuumi_BA_cas_crit": "{47f4482f}",
-            "Yuumi_P_tar": "{292d1f35}",
-            "Yuumi_E_JumpPad": "{bef58ca0}",
-            "Yuumi_Hug_Effect": "{75552204}",
-            "Yuumi_Throw_Ring": "{53d7f047}",
-            "Yuumi_Magic_Explosion": "{69db62f2}",
-            "Yuumi_RootMark_Tar": "{389a99ab}",
-            "Yuumi_Q_Child_Glow": "{8077031a}",
-            "Yuumi_Q_Mis": "{5b3578a2}",
-            "Yuumi_R_wave_mis": "{6bbeee24}",
-            "Yuumi_E_Heal": "{50c35301}",
-            "Yuumi_P_AttachDistanceRing": "{96e4c6e2}",
-            "Yuumi_Q_Mis_Speedup": "{c9c00998}",
-            "Yuumi_Q_Slow": "{40fe6246}",
-            "Yuumi_P_Shield": "{bb11c5bb}",
-            "Yuumi_P_Cas_Shield": "{47c0f0f2}",
-            "Yuumi_P_beam": "{e4b3a9b9}",
-            "Yuumi_P_Beam_FromTarget": "{6ed5c544}",
-            "Yuumi_P_buff_Book": "{2358995e}",
-            "Yuumi_P_Spawn": "{50ccad35}",
-            "Yuumi_W_Trail": "{06701d93}",
-            "Yuumi_W_mis_child": "{0f3b99b6}",
-            "Yuumi_W_Attach": "{4525f9b4}",
-            "Yuumi_R_Gnar_Counter1": "{3927a791}",
-            "Yuumi_R_Gnar_Counter2": "{3627a2d8}",
-            "Yuumi_R_Gnar_counter_pop": "{bd773fad}",
+            "Yuumi_BA_mis": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_BAMis",
+            "Yuumi_BA_tar": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_BATar",
+            "Yuumi_P_buf": "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_P_buf",
+            "Yuumi_BA_cas_crit": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_BACasCrit",
+            "Yuumi_P_tar": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_tar",
+            "Yuumi_E_JumpPad": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_E_JumpPad",
+            "Yuumi_Hug_Effect": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_HugEffect",
+            "Yuumi_Throw_Ring": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_ThrowRing",
+            "Yuumi_Magic_Explosion": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Q_Timeout",
+            "Yuumi_RootMark_Tar": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_SlowFX",
+            "Yuumi_Q_Child_Glow": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Q_ChildGlow",
+            "Yuumi_Q_Mis": "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_Q_Mis",
+            "Yuumi_R_wave_mis": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_WaveMis",
+            "Yuumi_E_Heal": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_E_Heal",
+            "Yuumi_P_AttachDistanceRing": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_AttachDistanceRing",
+            "Yuumi_Q_Mis_Speedup": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Q_MisSpeedup",
+            "Yuumi_Q_Slow": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Q_Slow",
+            "Yuumi_P_Shield": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_Shield",
+            "Yuumi_P_Cas_Shield": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_CasShield",
+            "Yuumi_P_beam": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_beam",
+            "Yuumi_P_Beam_FromTarget": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_BeamFromTarget",
+            "Yuumi_P_buff_Book": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_BuffBook",
+            "Yuumi_P_Spawn": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_Spawn",
+            "Yuumi_W_Trail": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_W_Trail",
+            "Yuumi_W_mis_child": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_W_MisChild",
+            "Yuumi_W_Attach": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_W_Attach",
+            "Yuumi_R_Gnar_Counter1": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_GnarCounter01",
+            "Yuumi_R_Gnar_Counter2": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_GnarCounter02",
+            "Yuumi_R_Gnar_counter_pop": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_GnarCounterPop",
             "{af7af246}": "Characters/Yuumi/CAC/Yuumi_Base_Shared",
-            "Yuumi_R_Indicator": "{4b108459}",
-            "Yuumi_R_Book_Cas": "{d2ea1736}",
-            "Yuumi_R_Indicator_Child": "{d5a20fe9}",
-            "Yuumi_R_Page_1": "{9291e5d8}",
-            "Yuumi_R_Page_2": "{9591ea91}",
-            "Yuumi_R_Page_3": "{9491e8fe}",
-            "Yuumi_R_Page_4": "{9791edb7}",
-            "Yuumi_R_Page_5": "{9691ec24}",
-            "Yuumi_R_Page_6": "{9991f0dd}",
-            "Yuumi_R_Page_7": "{9891ef4a}",
-            "Yuumi_R__Indicator_Child_Child": "{135517d9}",
-            "Yuumi_R_tar": "{5e3126a7}",
-            "Yuumi_R_Book_Cas_Burst": "{b26ec9e4}",
-            "Yuumi_P_Range": "{175136c3}",
-            "Yuumi_Laugh_Spit_Mouth": "{59fc7b41}",
-            "{45d88f1d}": "{2fe0f77b}",
-            "Yuumi_Recall_Book_Glow": "{fb975bc7}",
-            "Yuumi_Joke_Book_glow": "{813f67fd}",
-            "Yuumi_Emote_Book_Sparks": "{a837aef1}",
-            "Yuumi_Joke_Splash": "{806d42a2}",
-            "Yuumi_R_Root": "{e5a7df00}",
-            "Yuumi_Q_Tar": "{c3738686}",
-            "Yuumi_Q_Timeout": "{69db62f2}",
-            "Yuumi_E_AS_Buff": "{e97e7842}",
-            "Yuumi_P_heal_indicator": "{6910ef29}",
-            "Yuumi_E_mis": "{e1e9202e}",
-            "Yuumi_P_BestFriend_Mark": "{c9cb1a55}",
-            "Yuumi_R_Tar_Indicator": "{b8b97244}",
-            "Yuumi_P_BestFriend_Passive": "{3c91bf39}",
-            "Yuumi_Q_AS_VisualMis": "{03ad1332}",
-            "Yuumi_R_beam_line": "{672b29c5}",
-            "Yuumi_P_Heal_Indicator_Child": "{758e4f19}",
-            "Yuumi_Q_buff_Yuumi": "{ddf835c1}",
-            "Yuumi_Q_buff_BestFriend_HandGlow": "{dc7c44e0}",
-            "Yuumi_P_BestFriend_Mark_Medium": "{a412fb26}",
-            "Yuumi_P_BestFriend_Mark_Weak": "{8e409f79}",
-            "{572b5c19}": "{87b2ca24}",
-            "{86a5ef35}": "{39ca2037}",
-            "{83a5ea7c}": "{3aca21ca}",
-            "{a3877634}": "{71f6ef02}",
-            "{42571bf9}": "{bc3b5c3f}",
-            "{3f571740}": "{bd3b5dd2}",
-            "{405718d3}": "{5cc49ded}",
-            "{02d9858d}": "{2f7307bf}",
-            "{3726c187}": "{122ef615}",
-            "{afe65cdf}": "{e3d6fb2d}",
-            "{c0263b25}": "{c3e375a7}",
-            "{31e38760}": "{d328ded6}"
+            "Yuumi_R_Indicator": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_Indicator",
+            "Yuumi_R_Book_Cas": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_BookCas",
+            "Yuumi_R_Indicator_Child": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_IndicatorChild",
+            "Yuumi_R_Page_1": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_Page01",
+            "Yuumi_R_Page_2": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_Page02",
+            "Yuumi_R_Page_3": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_Page03",
+            "Yuumi_R_Page_4": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_Page04",
+            "Yuumi_R_Page_5": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_Page05",
+            "Yuumi_R_Page_6": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_Page06",
+            "Yuumi_R_Page_7": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_Page07",
+            "Yuumi_R__Indicator_Child_Child": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_IndicatorChildChild",
+            "Yuumi_R_tar": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_tar",
+            "Yuumi_R_Book_Cas_Burst": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_BookCasBurst",
+            "Yuumi_P_Range": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_Range",
+            "Yuumi_Laugh_Spit_Mouth": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_LaughSpitMouth",
+            "{45d88f1d}": "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_LaughSpitGrould",
+            "Yuumi_Recall_Book_Glow": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Recall_BookGlow",
+            "Yuumi_Joke_Book_glow": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Joke_BookGlow",
+            "Yuumi_Emote_Book_Sparks": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Emote_BookSparks",
+            "Yuumi_Joke_Splash": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Joke_Splash",
+            "Yuumi_R_Root": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_Root",
+            "Yuumi_Q_Tar": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Q_Tar",
+            "Yuumi_Q_Timeout": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Q_Timeout",
+            "Yuumi_E_AS_Buff": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_E_ASBuff",
+            "Yuumi_P_heal_indicator": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_HealIndicator",
+            "Yuumi_E_mis": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_E_mis",
+            "Yuumi_P_BestFriend_Mark": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_BestFriendMark",
+            "Yuumi_R_Tar_Indicator": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_TarIndicator",
+            "Yuumi_P_BestFriend_Passive": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_BestFriendPassive",
+            "Yuumi_Q_AS_VisualMis": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Q_ASVisualMis",
+            "Yuumi_R_beam_line": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_R_BeamLine",
+            "Yuumi_P_Heal_Indicator_Child": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_HealIndicatorChild",
+            "Yuumi_Q_buff_Yuumi": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Q_BuffYuumi",
+            "Yuumi_Q_buff_BestFriend_HandGlow": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Q_BuffBestFriendHandGlow",
+            "Yuumi_P_BestFriend_Mark_Medium": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_BestFriendMarkMedium",
+            "Yuumi_P_BestFriend_Mark_Weak": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_P_BestFriendMarkWeak",
+            "{572b5c19}": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Q_TarChild",
+            "{86a5ef35}": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Q_TarChild01",
+            "{83a5ea7c}": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Q_TarChild02",
+            "{a3877634}": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Z_FireChild",
+            "{42571bf9}": "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_Z_Fire01",
+            "{3f571740}": "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_Z_Fire02",
+            "{405718d3}": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Z_Fire03",
+            "{02d9858d}": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Z_FireBoom",
+            "{3726c187}": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Z_Emotion",
+            "{afe65cdf}": "Characters/Yuumi/Skins/Skin70/Particles/Yuumi_Skin70_Z_alarm",
+            "{c0263b25}": "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_Z_Env",
+            "{31e38760}": "Characters/Yuumi/Skins/Skin74/Particles/Yuumi_Skin74_Idle_TarFireCracker"
         },
         "__type": "ResourceResolver"
     },

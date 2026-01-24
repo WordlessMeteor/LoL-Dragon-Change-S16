@@ -11152,8 +11152,9 @@
                     UXSettings: e => e.get("rcp-fe-lol-shared-components").getApi_UXSettings(),
                     ViewportPlugin: e => e.get("rcp-fe-lol-shared-components").getApi_Viewport()
                 }).then((function() {
-                    const e = t.default.l10n.tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-champion-details/trans.json").overlay("/fe/lol-navigation/trans.json").overlay("/fe/lol-champ-select/trans.json"),
-                        i = t.default.EmberL10n(t.default.Ember, e);
+                    let e = t.default.l10n.tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-champion-details/trans.json").overlay("/fe/lol-navigation/trans.json");
+                    e = e.overlay("/fe/lol-champ-select/trans.json");
+                    const i = t.default.EmberL10n(t.default.Ember, e);
                     return n(2).default.useTra(e), t.default.add({
                         tra: e,
                         traService: i

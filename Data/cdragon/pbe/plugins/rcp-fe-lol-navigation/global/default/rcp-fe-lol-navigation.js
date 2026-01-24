@@ -12991,10 +12991,10 @@
             };
             t.default = class {
                 constructor(e) {
-                    this.NavigationPlugin = e, this.menuItemId = e.getNavBarMenuItemId("JADE"), this.navigationItem = this.createNavigationItem()
+                    this.NavigationPlugin = e, this.menuItemId = e.getNavBarMenuItemId("JADE")
                 }
                 init() {
-                    this.NavigationPlugin.setItemEnabled(this.navigationItem, !0)
+                    this.navigationItem = this.createNavigationItem(), this.NavigationPlugin.setItemEnabled(this.navigationItem, !0)
                 }
                 createNavigationItem() {
                     return this.NavigationPlugin.addItem({
@@ -14781,7 +14781,8 @@
             };
             t.METAGAME_MESSENGER_MESSAGES = {
                 SHOW: "rcp-fe-lol-persistent-iframe-show",
-                HIDE: "rcp-fe-lol-persistent-iframe-hide"
+                HIDE: "rcp-fe-lol-persistent-iframe-hide",
+                KILL: "rcp-fe-lol-persistent-iframe-kill"
             };
             const o = {
                 LOL_PATCH_NOTES: "lol-patch-notes",
@@ -15518,6 +15519,7 @@
                     iframeId: n.metagameId,
                     onShowMessage: i.METAGAME_MESSENGER_MESSAGES.SHOW,
                     onHideMessage: i.METAGAME_MESSENGER_MESSAGES.HIDE,
+                    onKillMessage: i.METAGAME_MESSENGER_MESSAGES.KILL,
                     sendOnShowMessageOnCreate: t
                 }
             }, t.isAcPersistentLayerTab = function(e) {
@@ -22030,22 +22032,23 @@
                     iframeId: t,
                     onShowMessage: n,
                     onHideMessage: i,
-                    sendOnShowMessageOnCreate: s = !0
+                    onKillMessage: s,
+                    sendOnShowMessageOnCreate: o = !0
                 }) {
                     if (!t) return void a.logger.warning("iframeId is required to use the PersistentLayerManager.");
                     if (this._activeIframeId === t) return;
                     const {
-                        frame: o,
-                        didCreate: r
-                    } = this._getOrCreateIframe(t, e, n, i);
-                    o && (this._activeIframeId = t, s && this._sendOnMessageToActiveIframe(u), this._acPersistentContainer.classList.remove("activity-center__persistent-layer-container--hidden"), this._audioManager.destroy({
+                        frame: r,
+                        didCreate: l
+                    } = this._getOrCreateIframe(t, e, n, i, s);
+                    r && (this._activeIframeId = t, o && this._sendOnMessageToActiveIframe(u), this._acPersistentContainer.classList.remove("activity-center__persistent-layer-container--hidden"), this._audioManager.destroy({
                         stopAllMusicAmbience: !0
                     }))
                 }
                 getActiveIframeId() {
                     return this._activeIframeId
                 }
-                _getOrCreateIframe(e, t, n, i) {
+                _getOrCreateIframe(e, t, n, i, a) {
                     if (this._iFrameIdToManagedIframeMap.has(e)) {
                         const t = this._iFrameIdToManagedIframeMap.get(e),
                             {
@@ -22057,14 +22060,15 @@
                             didCreate: !1
                         }
                     } {
-                        const a = this._createManagedIframe(e, t, n);
+                        const s = this._createManagedIframe(e, t, n);
                         return this._iFrameIdToManagedIframeMap.set(e, {
-                            frame: a,
+                            frame: s,
                             onShowMessage: n,
                             onHideMessage: i,
+                            onKillMessage: a,
                             timerId: null
                         }), {
-                            frame: a,
+                            frame: s,
                             didCreate: !0
                         }
                     }
@@ -22135,9 +22139,11 @@
                 _destroyPersistentIframe(e) {
                     let t = this._iFrameIdToManagedIframeMap.get(e);
                     if (t) try {
-                        t?.timerId && (clearTimeout(t.timerId), t.timerId = null);
+                        t.frame && t.frame.sendMessage({
+                            messageType: t?.onKillMessage
+                        }), t?.timerId && (clearTimeout(t.timerId), t.timerId = null);
                         let e = this._acPersistentContainer.querySelector(`iframe[src="${t.frame?.url}"]`);
-                        e && (e.onload = e.onerror = null, e.src = "about:blank", e.remove(), e = null), t.frame?.destroy && t.frame.destroy(), t.frame = null, t.onShowMessage = null, t.onHideMessage = null, t = null
+                        e && (e.onload = e.onerror = null, e.src = "about:blank", e.remove(), e = null), t.frame?.destroy && t.frame.destroy(), t.frame = null, t.onShowMessage = null, t.onHideMessage = null, t.onKillMessage = null, t = null
                     } catch (t) {
                         a.logger.error(`Failed to destroy iframe with id ${e}:`, t)
                     } finally {
@@ -22153,7 +22159,9 @@
                 _handleGameFlowData(e) {
                     if (e && this._iFrameIdToManagedIframeMap.size > 0) {
                         const t = e?.phase;
-                        c.PERSISTENT_LAYER_MANAGER_DISALLOW_SET.has(t) && this.hide()
+                        c.PERSISTENT_LAYER_MANAGER_DISALLOW_SET.has(t) && this.hide().then((() => {
+                            this._destroyAllPersistentIframes()
+                        }))
                     }
                 }
             }

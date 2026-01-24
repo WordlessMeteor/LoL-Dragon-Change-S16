@@ -1,5 +1,5 @@
 {
-    "{1190e26d}": {
+    "Characters/Seraphine/Skins/Skin63": {
         "skinClassification": 2,
         "championSkinName": "SeraphineSkin63",
         "skinParent": 59,
@@ -156,7 +156,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{3c9fcd2f}",
+            "animationGraphData": "Characters/Seraphine/Animations/Skin59",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -170,7 +170,7 @@
                 250.0,
                 150.0
             ],
-            "Material": "{79ccfcbf}",
+            "Material": "Characters/Seraphine/Skins/Skin63/Materials/Seraphine_Skin63_Scroll_Mat_inst",
             "initialSubmeshToHide": "Bar UltSpeaker RecallTail Mic",
             "materialOverride": [
                 {
@@ -189,7 +189,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{5530c33f}",
+                    "Material": "Characters/Seraphine/Skins/Skin63/Materials/Seraphine_Skin63_Platform_EyesBlink_Mat",
                     "submesh": "Platform",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -199,7 +199,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{05666438}",
+                    "Material": "Characters/Seraphine/Skins/Skin63/Materials/Seraphine_Skin63_Eyes_Blink_Mat",
                     "submesh": "Bigeyes",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -260,10 +260,10 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{35132217}",
+        "mResourceResolver": "Characters/Seraphine/Skins/Skin63/Resources",
         "__type": "SkinCharacterDataProperties"
     },
-    "{05666438}": {
+    "Characters/Seraphine/Skins/Skin63/Materials/Seraphine_Skin63_Eyes_Blink_Mat": {
         "name": "Characters/Seraphine/Skins/Skin63/Materials/Seraphine_Skin63_Eyes_Blink_Mat",
         "samplerValues": [
             {
@@ -376,7 +376,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{5530c33f}": {
+    "Characters/Seraphine/Skins/Skin63/Materials/Seraphine_Skin63_Platform_EyesBlink_Mat": {
         "name": "Characters/Seraphine/Skins/Skin63/Materials/Seraphine_Skin63_Platform_EyesBlink_Mat",
         "samplerValues": [
             {
@@ -488,9 +488,19 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{79ccfcbf}": {
+    "Characters/Seraphine/Skins/Skin63/Materials/Seraphine_Skin63_Scroll_Mat_inst": {
         "name": "Characters/Seraphine/Skins/Skin63/Materials/Seraphine_Skin63_Scroll_Mat_inst",
         "samplerValues": [
+            {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
             {
                 "TextureName": "MatCap_Tex",
                 "texturePath": "ASSETS/Shared/Materials/MatCap/MatCap_Metal.tex",
@@ -541,6 +551,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "ScreenSpace_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_Alpha_Override",
                 "__type": "StaticMaterialShaderParamDef"
@@ -730,6 +760,21 @@
         ],
         "switches": [
             {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "OVERRIDE_DIFFUSE_ALPHA",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -848,7 +893,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{06006643}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_R_MisChild": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2129,7 +2174,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{0e0c2082}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Q_Mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2153,7 +2198,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Seraphine/Skins/Skin59/Particles/Q_Torus.SKINS_Seraphine_Skin59.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Seraphine/Skins/Skin59/Particles/Q_Torus.SKINS_Seraphine_Skin59.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -5474,7 +5519,7 @@
         "particlePath": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Q_Mis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{0fd0182f}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_R_CasSpeakers": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -5890,7 +5935,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Seraphine/Skins/Skin59/Particles/Q_Torus.SKINS_Seraphine_Skin59.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Seraphine/Skins/Skin59/Particles/Q_Torus.SKINS_Seraphine_Skin59.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -6277,7 +6322,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Seraphine/Skins/Skin59/Particles/Q_Torus.SKINS_Seraphine_Skin59.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Seraphine/Skins/Skin59/Particles/Q_Torus.SKINS_Seraphine_Skin59.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -8328,7 +8373,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{1acb1d73}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Emote_Joke_PlatformStart": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -9381,7 +9426,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{3a09323f}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_R_CasSpeakersChild": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -9480,7 +9525,7 @@
         "particlePath": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_R_CasSpeakersChild",
         "__type": "VfxSystemDefinitionData"
     },
-    "{5b271f17}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_P_HarmonyMis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -11604,7 +11649,7 @@
         "particlePath": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_P_HarmonyMis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{7ec4a4d9}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Emote_Death_Stage": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -12904,7 +12949,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{a392cb23}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_R_Charm": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -13655,7 +13700,7 @@
         "soundOnCreateDefault": "Play_sfx_Seraphine_SeraphineRCharm_hit",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a99fda96}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_E_Mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -20264,7 +20309,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{ba9df1bc}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Emote_Dance_Stage": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -21580,7 +21625,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{c16d1e44}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Z_TrailMiss": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -22111,7 +22156,7 @@
         "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
-    "{c71c3a22}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Idle_BlingBling": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -22450,7 +22495,7 @@
         "particlePath": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Idle_BlingBling",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e142e3b2}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_BasicAttackMis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -24392,7 +24437,7 @@
         "particlePath": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_BasicAttackMis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{eb7a4ec1}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_P_HarmonyNotes": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -26406,7 +26451,7 @@
         "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
-    "{f2693b5c}": {
+    "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Idle_TarFirework": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -27545,102 +27590,102 @@
         "particlePath": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Idle_TarFirework",
         "__type": "VfxSystemDefinitionData"
     },
-    "{35132217}": {
+    "Characters/Seraphine/Skins/Skin63/Resources": {
         "resourceMap": {
-            "Seraphine_E_Tar_2": "{c26d409a}",
-            "Seraphine_R_Cas": "{b0f02a93}",
-            "Seraphine_BasicAttack_mis": "{e142e3b2}",
-            "Seraphine_BasicAttack_tar": "{c852cf1c}",
-            "Seraphine_P_Echo_Cas": "{f6b1fbf2}",
-            "Seraphine_R_Charm": "{a392cb23}",
-            "Seraphine_Q_Impact": "{892bdbfb}",
-            "Seraphine_W_Buf": "{75eadbb4}",
-            "Seraphine_R_mis": "{71172849}",
-            "Seraphine_R_Mis_Child": "{06006643}",
-            "Seraphine_E_Mis": "{a99fda96}",
-            "Seraphine_E_Tar_Root": "{50be92c4}",
-            "Seraphine_E_tar": "{33473e74}",
-            "Seraphine_R_Mis_Warning": "{5167b87b}",
-            "Seraphine_Q_Mis": "{0e0c2082}",
-            "Seraphine_Q_Tar_Minion": "{f6bb8b9a}",
-            "Seraphine_W_Buf_02": "{caf93fda}",
-            "Seraphine_P_Echo_Buf": "{6e26c4d6}",
-            "Seraphine_P_Echo_Buf_Armed": "{a6ebf6d9}",
-            "Seraphine_W_Passive_InRange": "{5b352e10}",
-            "Seraphine_R_Tar_Friendly": "{3558a226}",
-            "Seraphine_P_Harmony_Mis": "{5b271f17}",
-            "Seraphine_W_Cas": "{f6760638}",
-            "Seraphine_W_Mis": "{0d5ae116}",
-            "Seraphine_W_Heal": "{31656859}",
-            "{602bd9bf}": "{baa1d827}",
-            "Seraphine_E_Passive_Root_Mark_Activate": "{8ec7b396}",
-            "Seraphine_E_Passive_Root_Mark": "{c783bc8b}",
-            "Seraphine_P_Harmony_Notes": "{eb7a4ec1}",
-            "Seraphine_P_Harmony_ToAllyMis": "{143ebd50}",
-            "Seraphine_P_Harmony_ToAllyMis_Child": "{de5e9ae6}",
-            "Seraphine_Q_AoE": "{a9f37080}",
-            "Seraphine_E_Passive_Stun_Mark_Activate": "{c8dc42b2}",
-            "Seraphine_E_Passive_Stun_Mark": "{1f27e4a7}",
-            "Seraphine_P_Harmony_Tar": "{932234e5}",
-            "Seraphine_Q_Tar": "{086c0970}",
-            "Seraphine_W_Heal_AoE": "{083148e0}",
-            "Seraphine_W_Heal_AoE_Indicator": "{040af921}",
-            "Seraphine_W_Heal_Aoe_Indicator_Enemy": "{740e5d7f}",
-            "Seraphine_P_Harmony_Mis_Range_Indicator": "{bd5fc90b}",
-            "{067386ec}": "{90028ab6}",
-            "Seraphine_Q_AOE_Target_Fill": "{6283d141}",
-            "Seraphine_R_Speakers_Recast": "{a80652ae}",
-            "Seraphine_R_Cas_Speakers": "{0fd0182f}",
-            "Seraphine_P_Echo_Buf_Armed_Stage": "{16864e81}",
-            "Seraphine_Q_Mis_Child": "{d03fc202}",
-            "Seraphine_R_Cas_Speakers_Child": "{3a09323f}",
-            "Seraphine_R_Tar_Enemy": "{04731673}",
-            "{34769d33}": "{934b7bfe}",
-            "Seraphine_E_Cas": "{6f9f2126}",
-            "Seraphine_E_Cas_Hands": "{645174a8}",
-            "Seraphine_Q_Tar_Crit": "{d9610624}",
-            "Seraphine_Q_Tar_Minion_Crit": "{7c2f3656}",
-            "Seraphine_Q_Cas": "{a928502a}",
-            "Seraphine_W_Buf_Ground": "{8ffcbc47}",
-            "Seraphine_W_Cas_Anim": "{0506a18d}",
-            "Seraphine_BasicAttack_Cas": "{22ce4bee}",
-            "Seraphine_P_E_Cas": "{ad3c8991}",
-            "Seraphine_P_Q_Cas": "{91934f2d}",
-            "Seraphine_P_W_Cas": "{ff5a73e3}",
-            "Seraphine_Emote_Recall": "{ffd210f9}",
-            "Seraphine_Emote_Recall_Child_Rose": "{cd8db86f}",
-            "Seraphine_Emote_Recall_Child_Rose_Pink": "{b4501cf7}",
-            "Seraphine_Emote_Death_Dust": "{06de939f}",
-            "Seraphine_Emote_Death_Stage": "{7ec4a4d9}",
-            "Seraphine_Emote_Respawn_Snap": "{aafcc0ed}",
-            "Seraphine_Emote_Dance_Spotlight": "{ba8cd7a8}",
-            "Seraphine_Emote_Dance_Flash": "{532d81ae}",
-            "Seraphine_Emote_Dance_Flash_02": "{12ab2718}",
-            "Seraphine_Emote_Dance_Flash_03": "{13ab28ab}",
-            "Seraphine_Emote_Dance_Stage": "{ba9df1bc}",
-            "Seraphine_Emote_Joke_Platform": "{4597c89f}",
-            "Seraphine_Emote_Joke_Platform_Start": "{1acb1d73}",
-            "Seraphine_Emote_Joke_Ground": "{321ab9af}",
-            "Seraphine_Emote_Joke_Ground_Start": "{0293a9c5}",
-            "Seraphine_Emote_Joke_Ground_Arrows": "{9336e68d}",
-            "Seraphine_Emote_Joke_Platform_Arrows": "{6d6e4d3d}",
-            "{97369e0b}": "{8461e41e}",
-            "{dcbfbc00}": "{0a8aaab1}",
-            "{dfbfc0b9}": "{078aa5f8}",
-            "{a7842cf2}": "{41786bd8}",
-            "{8459761e}": "{111a62f9}",
-            "{debfbf26}": "{088aa78b}",
-            "{23af9cf3}": "{15ed92e3}",
-            "{9b42908c}": "{93b39c72}",
-            "{031f0995}": "{c16d1e44}",
-            "{6b2b977e}": "{469803fc}",
-            "{daf75904}": "{0b07d38a}",
-            "{5944a31a}": "{db65a5f8}",
-            "{d9757e79}": "{dd39172b}",
-            "{3affee8a}": "{c71c3a22}",
-            "{1775ace7}": "{f2693b5c}",
-            "{e1bfc3df}": "{0d8aaf6a}",
-            "{52818906}": "{26dc9945}"
+            "Seraphine_E_Tar_2": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_E_Tar02",
+            "Seraphine_R_Cas": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_R_Cas",
+            "Seraphine_BasicAttack_mis": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_BasicAttackMis",
+            "Seraphine_BasicAttack_tar": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_BasicAttackTar",
+            "Seraphine_P_Echo_Cas": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_P_EchoCas",
+            "Seraphine_R_Charm": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_R_Charm",
+            "Seraphine_Q_Impact": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Q_Impact",
+            "Seraphine_W_Buf": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_Buf",
+            "Seraphine_R_mis": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_R_Mis",
+            "Seraphine_R_Mis_Child": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_R_MisChild",
+            "Seraphine_E_Mis": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_E_Mis",
+            "Seraphine_E_Tar_Root": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_E_TarRoot",
+            "Seraphine_E_tar": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_E_Tar",
+            "Seraphine_R_Mis_Warning": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_R_MisWarning",
+            "Seraphine_Q_Mis": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Q_Mis",
+            "Seraphine_Q_Tar_Minion": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Q_TarMinion",
+            "Seraphine_W_Buf_02": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_Buf02",
+            "Seraphine_P_Echo_Buf": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_P_EchoBuf",
+            "Seraphine_P_Echo_Buf_Armed": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_P_EchoBufArmed",
+            "Seraphine_W_Passive_InRange": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_PassiveInRange",
+            "Seraphine_R_Tar_Friendly": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_R_TarFriendly",
+            "Seraphine_P_Harmony_Mis": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_P_HarmonyMis",
+            "Seraphine_W_Cas": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_Cas",
+            "Seraphine_W_Mis": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_Mis",
+            "Seraphine_W_Heal": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_Heal",
+            "{602bd9bf}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_P_HarmonyBuf",
+            "Seraphine_E_Passive_Root_Mark_Activate": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_E_PassiveRootMarkActivate",
+            "Seraphine_E_Passive_Root_Mark": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_E_PassiveRootMark",
+            "Seraphine_P_Harmony_Notes": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_P_HarmonyNotes",
+            "Seraphine_P_Harmony_ToAllyMis": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_P_HarmonyToAllyMis",
+            "Seraphine_P_Harmony_ToAllyMis_Child": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_P_HarmonyToAllyMisChild",
+            "Seraphine_Q_AoE": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Q_AoE",
+            "Seraphine_E_Passive_Stun_Mark_Activate": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_E_PassiveStunMarkActivate",
+            "Seraphine_E_Passive_Stun_Mark": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_E_PassiveStunMark",
+            "Seraphine_P_Harmony_Tar": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_P_HarmonyTar",
+            "Seraphine_Q_Tar": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Q_Tar",
+            "Seraphine_W_Heal_AoE": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_HealAoE",
+            "Seraphine_W_Heal_AoE_Indicator": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_HealAoEIndicator",
+            "Seraphine_W_Heal_Aoe_Indicator_Enemy": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_HealAoeIndicatorEnemy",
+            "Seraphine_P_Harmony_Mis_Range_Indicator": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_P_HarmonyMisRangeIndicator",
+            "{067386ec}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Q_AoEChild",
+            "Seraphine_Q_AOE_Target_Fill": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Q_AOEIndicator",
+            "Seraphine_R_Speakers_Recast": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_R_SpeakersRecast",
+            "Seraphine_R_Cas_Speakers": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_R_CasSpeakers",
+            "Seraphine_P_Echo_Buf_Armed_Stage": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_P_EchoBufArmedStage",
+            "Seraphine_Q_Mis_Child": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Q_MisChild",
+            "Seraphine_R_Cas_Speakers_Child": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_R_CasSpeakersChild",
+            "Seraphine_R_Tar_Enemy": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_R_TarEnemy",
+            "{34769d33}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_E_PassiveFinalMarkPop",
+            "Seraphine_E_Cas": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_E_Cas",
+            "Seraphine_E_Cas_Hands": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_E_CasHands",
+            "Seraphine_Q_Tar_Crit": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Q_TarCrit",
+            "Seraphine_Q_Tar_Minion_Crit": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Q_TarMinionCrit",
+            "Seraphine_Q_Cas": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Q_Cas",
+            "Seraphine_W_Buf_Ground": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_BufGround",
+            "Seraphine_W_Cas_Anim": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_CasAnim",
+            "Seraphine_BasicAttack_Cas": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_BasicAttackCas",
+            "Seraphine_P_E_Cas": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_P_E_Cas",
+            "Seraphine_P_Q_Cas": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_P_Q_Cas",
+            "Seraphine_P_W_Cas": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_P_W_Cas",
+            "Seraphine_Emote_Recall": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Recall",
+            "Seraphine_Emote_Recall_Child_Rose": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Recall_ChildRose",
+            "Seraphine_Emote_Recall_Child_Rose_Pink": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Recall_ChildRosePink",
+            "Seraphine_Emote_Death_Dust": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Death_Dust",
+            "Seraphine_Emote_Death_Stage": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Emote_Death_Stage",
+            "Seraphine_Emote_Respawn_Snap": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Respawn_Snap",
+            "Seraphine_Emote_Dance_Spotlight": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Dance_Spotlight",
+            "Seraphine_Emote_Dance_Flash": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Dance_Flash",
+            "Seraphine_Emote_Dance_Flash_02": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Dance_Flash02",
+            "Seraphine_Emote_Dance_Flash_03": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Dance_Flash03",
+            "Seraphine_Emote_Dance_Stage": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Emote_Dance_Stage",
+            "Seraphine_Emote_Joke_Platform": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Joke_Platform",
+            "Seraphine_Emote_Joke_Platform_Start": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Emote_Joke_PlatformStart",
+            "Seraphine_Emote_Joke_Ground": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Joke_Ground",
+            "Seraphine_Emote_Joke_Ground_Start": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Joke_GroundStart",
+            "Seraphine_Emote_Joke_Ground_Arrows": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Joke_GroundArrows",
+            "Seraphine_Emote_Joke_Platform_Arrows": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Emote_Joke_PlatformArrows",
+            "{97369e0b}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_E_MisChild",
+            "{dcbfbc00}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_CasChild01",
+            "{dfbfc0b9}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_CasChild02",
+            "{a7842cf2}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_R_MisWarningChild01",
+            "{8459761e}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Q_AoEChild01",
+            "{debfbf26}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_CasChild03",
+            "{23af9cf3}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_CasChild03Child",
+            "{9b42908c}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Z_Groundheaven",
+            "{031f0995}": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Z_TrailMiss",
+            "{6b2b977e}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Z_endground",
+            "{daf75904}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Z_BurstSmokes",
+            "{5944a31a}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Z_Voice",
+            "{d9757e79}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Z_HeadPlatform",
+            "{3affee8a}": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Idle_BlingBling",
+            "{1775ace7}": "Characters/Seraphine/Skins/Skin63/Particles/Seraphine_Skin63_Idle_TarFirework",
+            "{e1bfc3df}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_W_CasChild04",
+            "{52818906}": "Characters/Seraphine/Skins/Skin59/Particles/Seraphine_Skin59_Z_MIdFirework"
         },
         "__type": "ResourceResolver"
     },

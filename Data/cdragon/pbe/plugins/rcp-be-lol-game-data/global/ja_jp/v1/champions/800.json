@@ -448,7 +448,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自身の周囲にバリアを形成する。このバリアは敵の発射物をその敵に向けて反射し、自身が受けるダメージを防ぎ、自身の移動速度を増加させる。",
-            "dynamicDescription": "自身の周囲にバリアを形成する。このバリアは敵チャンピオンの発射物を反射し、<shield>@ShieldAmount@のシールド</shield>を@Duration@秒間獲得する。また、自身の<speed>移動速度を@MoveSpeed*100@%</speed>増加させる。この移動速度は@MoveSpeedDuration@秒かけて元に戻る。<br><br>反射された発射物は<magicDamage>@DamagePercent@元のダメージを魔法ダメージ</magicDamage>として与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "自身の周囲にバリアを形成する。このバリアは敵チャンピオンの発射物を反射し、耐久値<shield>@ShieldAmount@のシールド</shield>を@Duration@秒間獲得する。また、自身の<speed>移動速度を@MoveSpeed*100@%</speed>増加させる。この移動速度は@MoveSpeedDuration@秒かけて元に戻る。<br><br>反射された発射物は<magicDamage>元のダメージの@DamagePercent@を魔法ダメージ</magicDamage>として与える。@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -616,12 +616,12 @@
                 90.0
             ],
             "cooldownCoefficients": [
-                12.0,
-                11.5,
                 11.0,
                 10.5,
                 10.0,
-                10.0
+                9.5,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

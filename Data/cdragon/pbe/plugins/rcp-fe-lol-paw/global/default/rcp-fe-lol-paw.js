@@ -2363,7 +2363,7 @@
                 if (!e || !t) return 0;
                 let n = 0;
                 return e.forEach((e => {
-                    const a = p(e, t);
+                    const a = u(e, t);
                     n += e.bundledItemPrice.quantity * a
                 })), n
             }, t.calculateUnadjustedTotalAmountNonBundle = function(e) {
@@ -2371,7 +2371,7 @@
                 let t = 0;
                 for (const n of e ?? []) t += n?.price?.originalPrice ?? 0;
                 return t
-            }, t.getBundledItemOriginalPrice = p, t.getExtraDecoratorBadges = function(e) {
+            }, t.getBundledItemOriginalPrice = u, t.getExtraDecoratorBadges = function(e) {
                 if (!e || !e.metadata || !e.metadata.length) return null;
                 const t = e.metadata.map((e => {
                     if ("EXTRA_STORE_CARD_DECORATOR_BADGE" !== e.type) return null;
@@ -2425,6 +2425,19 @@
                 if (!e || !e.metadata || !e.metadata.length) return null;
                 const t = e.metadata.find((e => "PAW_SPLASH_IMAGE" === e.type));
                 return t?.value || null
+            }, t.getSilvershieldsBadge = function(e, t) {
+                if (!e || !e.tags || !e.tags.length) return null;
+                const n = e.tags,
+                    a = "/fe/lol-paw/images/silvershields.svg";
+                if (n.includes(p)) return {
+                    iconUrl: a,
+                    text: t.get("cat_paw_silvershields_badge_text_3000")
+                };
+                if (n.includes(m)) return {
+                    iconUrl: a,
+                    text: t.get("cat_paw_silvershields_badge_text_5000")
+                };
+                return null
             }, t.getStatstoneRarity = function(e, t) {
                 const {
                     STATSTONE: n
@@ -2500,8 +2513,10 @@
             const {
                 CHAMPION_SKIN: r
             } = s.PAW.INVENTORY_TYPES;
+            const p = "silvershields_3000",
+                m = "silvershields_5000";
 
-            function p(e, t) {
+            function u(e, t) {
                 const n = e?.bundledItemPrice?.discountPrices?.find((e => e.currency === t));
                 if (n?.originalCost > 0) return n.originalCost;
                 if (n?.cost > 0) {
@@ -2579,14 +2594,18 @@
                 extraDecoratorBadges: o("itemPurchaseOption", (function() {
                     const e = this.get("itemPurchaseOption");
                     return (0, s.getExtraDecoratorBadges)(e)
+                })),
+                silvershieldsBadge: o("itemPurchaseOption", (function() {
+                    const e = this.get("itemPurchaseOption");
+                    return (0, s.getSilvershieldsBadge)(e, this.get("tra"))
                 }))
             });
             e.exports = i
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "bRlgHjxu",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\top-banner-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\top-banner-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\top-banner-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["message"]]],null,4],["block",["if"],[["get",["isOnSale"]]],null,3],["block",["if"],[["get",["extraDecoratorBadges"]]],null,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["item-metadata-decorator-badge ",["unknown",["badge","className"]]]]],["dynamic-attr","style",["concat",["background-image: ",["unknown",["badge","imageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["badge"]},{"statements":[["block",["each"],[["get",["extraDecoratorBadges"]]],null,0]],"locals":[]},{"statements":[["block",["if"],[["get",["extraDecoratorBadges","length"]]],null,1]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","on-sale-banner"],["flush-element"],["text","\\n    -"],["append",["unknown",["saleValue"]],false],["text","%\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","error-message"],["flush-element"],["text","\\n    "],["append",["unknown",["message"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "ZBcKIDTy",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\top-banner-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\top-banner-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\top-banner-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["message"]]],null,5],["block",["if"],[["get",["isOnSale"]]],null,4],["block",["if"],[["get",["extraDecoratorBadges"]]],null,3],["block",["if"],[["get",["silvershieldsBadge"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","silvershields-badge"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","silvershields-badge-icon"],["dynamic-attr","src",["unknown",["silvershieldsBadge","iconUrl"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","silvershields-badge-text"],["flush-element"],["append",["unknown",["silvershieldsBadge","text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["item-metadata-decorator-badge ",["unknown",["badge","className"]]]]],["dynamic-attr","style",["concat",["background-image: ",["unknown",["badge","imageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["badge"]},{"statements":[["block",["each"],[["get",["extraDecoratorBadges"]]],null,1]],"locals":[]},{"statements":[["block",["if"],[["get",["extraDecoratorBadges","length"]]],null,2]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","on-sale-banner"],["flush-element"],["text","\\n    -"],["append",["unknown",["saleValue"]],false],["text","%\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","error-message"],["flush-element"],["text","\\n    "],["append",["unknown",["message"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2764,14 +2783,19 @@
                         const n = `cat_paw_charity_${e.substring(7).toLowerCase()}_disclaimer`;
                         return t.exists(n) ? t.get(n) : t.get("cat_paw_charity_default_disclaimer")
                     }))
+                })),
+                silvershieldsPromoText: l("itemPurchaseOption", (function() {
+                    const e = this.get("itemPurchaseOption.tags") || [],
+                        t = this.get("tra");
+                    return e.includes("silvershields_5000") ? t.get("cat_paw_silvershields_5000_promo") : e.includes("silvershields_3000") ? t.get("cat_paw_silvershields_3000_promo") : null
                 }))
             });
             e.exports = o
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "ktGESIr9",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-warnings-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-warnings-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-warnings-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","scrollable-paw-warnings"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["warnings"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-warning"],["flush-element"],["append",["get",["warning"]],false],["close-element"],["text","\\n"]],"locals":["warning"]}],"hasPartials":false}',
+                id: "Y0rEaFsq",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-warnings-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-warnings-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-paw\\\\src\\\\components\\\\ui\\\\purchase-warnings-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","scrollable-paw-warnings"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["warnings"]]],null,1],["block",["if"],[["get",["silvershieldsPromoText"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-silvershields-promo-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["silvershieldsPromoText"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","paw-warning"],["flush-element"],["append",["get",["warning"]],false],["close-element"],["text","\\n"]],"locals":["warning"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
