@@ -6,24 +6,24 @@
             function n() {
                 return t || (console.error("The `provider` object has not been set, please do so by calling the `init` method."), null)
             }
-            const a = {
+            const s = {
                 init: function(e, n) {
                     return t = e, this.add(n)
                 },
                 _getValue: function(e, n) {
-                    let a;
-                    return "function" == typeof n ? (a = n(t), a || console.warn("The function for key " + e + " returned a falsy value: ", a)) : "string" == typeof n ? (a = t.get(n), a || console.warn("The provider `get` invocation for the key " + e + " returned a falsy value: ", a)) : "object" == typeof n && (a = n), a
+                    let s;
+                    return "function" == typeof n ? (s = n(t), s || console.warn("The function for key " + e + " returned a falsy value: ", s)) : "string" == typeof n ? (s = t.get(n), s || console.warn("The provider `get` invocation for the key " + e + " returned a falsy value: ", s)) : "object" == typeof n && (s = n), s
                 },
                 add: function(e) {
                     e = e || {};
                     const t = [],
                         n = this;
-                    return Object.keys(e).forEach((function(a) {
-                        const s = e[a],
-                            l = n._getValue(a, s);
+                    return Object.keys(e).forEach((function(s) {
+                        const a = e[s],
+                            l = n._getValue(s, a);
                         l && l.then ? (l.then((function(e) {
-                            e || console.warn("The promise for the key " + a + " resolved with a falsy value: ", e), n._addValue(a, e)
-                        })), t.push(l)) : n._addValue(a, l)
+                            e || console.warn("The promise for the key " + s + " resolved with a falsy value: ", e), n._addValue(s, e)
+                        })), t.push(l)) : n._addValue(s, l)
                     })), Promise.all(t)
                 },
                 _addValue: function(e, t) {
@@ -36,17 +36,17 @@
                     return n()
                 }
             };
-            e.exports = a
+            e.exports = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = function() {
-                const e = new a.default;
-                return new s.default(e)
+                const e = new s.default;
+                return new a.default(e)
             };
-            var a = l(n(3)),
-                s = l(n(140));
+            var s = l(n(3)),
+                a = l(n(140));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -58,22 +58,22 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = function(e, t) {
+            var s = n(1),
+                a = function(e, t) {
                     if (!t && e && e.__esModule) return e;
                     if (null === e || "object" != typeof e && "function" != typeof e) return {
                         default: e
                     };
                     var n = o(t);
                     if (n && n.has(e)) return n.get(e);
-                    var a = {},
-                        s = Object.defineProperty && Object.getOwnPropertyDescriptor;
+                    var s = {},
+                        a = Object.defineProperty && Object.getOwnPropertyDescriptor;
                     for (var l in e)
                         if ("default" !== l && Object.prototype.hasOwnProperty.call(e, l)) {
-                            var r = s ? Object.getOwnPropertyDescriptor(e, l) : null;
-                            r && (r.get || r.set) ? Object.defineProperty(a, l, r) : a[l] = e[l]
-                        } a.default = e, n && n.set(e, a);
-                    return a
+                            var r = a ? Object.getOwnPropertyDescriptor(e, l) : null;
+                            r && (r.get || r.set) ? Object.defineProperty(s, l, r) : s[l] = e[l]
+                        } s.default = e, n && n.set(e, s);
+                    return s
                 }(n(4)),
                 l = n(5);
 
@@ -85,29 +85,29 @@
                     return e ? n : t
                 })(e)
             }
-            const r = a.dataBinding.bindTo(a.socket);
+            const r = s.dataBinding.bindTo(s.socket);
             t.default = class {
                 constructor() {
-                    this.screenRoot = this.getScreenRoot(), this.application = null, this.eventHubDataBinding = (0, a.dataBinding)(l.EVENT_HUB_API, a.socket), this.binding = r
+                    this.screenRoot = this.getScreenRoot(), this.application = null, this.eventHubDataBinding = (0, s.dataBinding)(l.EVENT_HUB_API, s.socket), this.binding = r
                 }
                 getTargetDOMNode(e) {
                     return e ? document.getElementById(e) : this.screenRoot.getElement()
                 }
                 getScreenRoot() {
-                    const e = a.Viewport.getApiKey(s.APP_NAME);
-                    return a.Viewport.main().getScreenRoot(e, s.APP_NAME)
+                    const e = s.Viewport.getApiKey(a.APP_NAME);
+                    return s.Viewport.main().getScreenRoot(e, a.APP_NAME)
                 }
                 show(e) {
-                    a.externalModel.setProperties({
+                    s.externalModel.setProperties({
                         isVisible: !1
-                    }), (0, s.default)();
+                    }), (0, a.default)();
                     const t = [];
                     return (e = e || {}).targetDivId || (t.push(this.screenRootReleasePromise), t.push(this.screenRoot.bump())), Promise.all(t).then((() => {
-                        this.application || (this.application = a.ComponentFactory.create(s.APP_NAME));
-                        this.getTargetDOMNode(e?.targetDivId).appendChild(this.application.domNode), e.showRewardTrackPage = !0, a.externalModel.setProperties({
+                        this.application || (this.application = s.ComponentFactory.create(a.APP_NAME));
+                        this.getTargetDOMNode(e?.targetDivId).appendChild(this.application.domNode), e.showRewardTrackPage = !0, s.externalModel.setProperties({
                             navOptions: e,
                             isVisible: !0
-                        }), a.Telemetry.sendCustomData(l.TELEMETRY.TABLE, {
+                        }), s.Telemetry.sendCustomData(l.TELEMETRY.TABLE, {
                             eventName: l.TELEMETRY.SHOW_EVENT,
                             eventId: e?.eventId,
                             showPip: e?.showPip,
@@ -118,7 +118,7 @@
                     }))
                 }
                 unsetModelProperties() {
-                    a.externalModel.setProperties({
+                    s.externalModel.setProperties({
                         navOptions: void 0,
                         isVisible: !1
                     })
@@ -133,7 +133,7 @@
                 value: !0
             }), t.APP_NAME = void 0, t.default = function() {
                 const e = {
-                        ComponentFactory: a.ComponentFactory,
+                        ComponentFactory: s.ComponentFactory,
                         Router: l.default,
                         ApplicationRoute: o.default,
                         IndexRoute: r.default,
@@ -148,7 +148,7 @@
                         RewardsService: g.default,
                         RewardItemEnhancerService: f.default,
                         RegionInfoService: _.default,
-                        tra: a.traService,
+                        tra: s.traService,
                         HelpModalComponent: b.default,
                         PageHeaderComponent: E.default,
                         PageHeaderSystemControlsComponent: x.default,
@@ -171,11 +171,11 @@
                         EventShopTokenShopComponent: V.default,
                         EventShopXpComponent: U.default,
                         ObjectiveCardWrapperComponent: P.default,
-                        ObjectivesCardV2Component: a.SharedObjectivesComponents.ObjectivesCardComponentV2,
-                        ObjectivesRewardTooltipComponent: a.SharedObjectivesComponents.ObjectivesRewardTooltipComponent,
-                        ObjectivesProgressRadialComponent: a.SharedObjectivesComponents.ObjectivesProgressRadialComponent,
-                        ObjectivesTooltipRequirementsComponent: a.SharedObjectivesComponents.ObjectivesTooltipRequirementsComponent,
-                        ObjectivesTooltipRequirementIconComponent: a.SharedObjectivesComponents.ObjectivesTooltipRequirementIconComponent,
+                        ObjectivesCardV2Component: s.SharedObjectivesComponents.ObjectivesCardComponentV2,
+                        ObjectivesRewardTooltipComponent: s.SharedObjectivesComponents.ObjectivesRewardTooltipComponent,
+                        ObjectivesProgressRadialComponent: s.SharedObjectivesComponents.ObjectivesProgressRadialComponent,
+                        ObjectivesTooltipRequirementsComponent: s.SharedObjectivesComponents.ObjectivesTooltipRequirementsComponent,
+                        ObjectivesTooltipRequirementIconComponent: s.SharedObjectivesComponents.ObjectivesTooltipRequirementIconComponent,
                         HolLevelIconFlamesComponent: j.default,
                         HolNarrativeComponent: F.default,
                         HolPromotionBannerComponent: Y.default,
@@ -184,9 +184,9 @@
                         SeasonPassChapterCardComponent: X.default,
                         ResetTimerComponent: je,
                         FlatButtonCounterComponent: Ue,
-                        ...a.RewardTrackerEmberComponents,
-                        ...a.MultiPurchaseSliderEmberComponents,
-                        DigitalGoodsDisclaimerComponent: a.SharedEmberComponents.DigitalGoodsDisclaimerComponent,
+                        ...s.RewardTrackerEmberComponents,
+                        ...s.MultiPurchaseSliderEmberComponents,
+                        DigitalGoodsDisclaimerComponent: s.SharedEmberComponents.DigitalGoodsDisclaimerComponent,
                         ApplicationController: q.default,
                         IndexController: Q.default,
                         EventShopController: $.default,
@@ -195,14 +195,14 @@
                         ActivityCenterMilestonesController: ee.default,
                         EqHelper: te.default,
                         InventoryTypeNameHelper: ne.default,
-                        SafeImagePathHelper: ae.default,
+                        SafeImagePathHelper: se.default,
                         TEMPLATES: {
-                            application: se.default,
+                            application: ae.default,
                             index: le.default,
-                            [s.ROUTES.EVENT_SHOP]: oe.default,
-                            [s.ROUTES.HALL_OF_LEGENDS]: re.default,
-                            [s.ROUTES.SEASON_PASS]: ie.default,
-                            [s.ROUTES.ACTIVITY_CENTER_MILESTONES]: ce.default,
+                            [a.ROUTES.EVENT_SHOP]: oe.default,
+                            [a.ROUTES.HALL_OF_LEGENDS]: re.default,
+                            [a.ROUTES.SEASON_PASS]: ie.default,
+                            [a.ROUTES.ACTIVITY_CENTER_MILESTONES]: ce.default,
                             "components/help-modal": de.default,
                             "components/page-header-system-controls": pe.default,
                             "components/page-header": ue.default,
@@ -233,22 +233,22 @@
                         }
                     },
                     t = {
-                        ComponentFactory: a.ComponentFactory,
+                        ComponentFactory: s.ComponentFactory,
                         MemoryBookComponent: G.default,
                         MemoryItemComponent: K.default,
                         PlayerSettingsService: v.default,
-                        tra: a.traService,
+                        tra: s.traService,
                         TEMPLATES: {
                             "components/memory-book": Oe.default,
                             "componenets/memory-item": Ne.default
                         }
                     };
-                a.emberApplicationFactory.setFactoryDefinition("MemoryBookComponent", t), a.emberApplicationFactory.setFactoryDefinition(Fe, e, {
+                s.emberApplicationFactory.setFactoryDefinition("MemoryBookComponent", t), s.emberApplicationFactory.setFactoryDefinition(Fe, e, {
                     EMBER_CLI_COMPAT: !0
                 })
             };
-            var a = n(1),
-                s = n(5),
+            var s = n(1),
+                a = n(5),
                 l = Ve(n(6)),
                 o = Ve(n(7)),
                 r = Ve(n(8)),
@@ -301,8 +301,8 @@
                 ee = Ve(n(104)),
                 te = Ve(n(105)),
                 ne = Ve(n(26)),
-                ae = Ve(n(106)),
-                se = Ve(n(107)),
+                se = Ve(n(106)),
+                ae = Ve(n(107)),
                 le = Ve(n(108)),
                 oe = Ve(n(109)),
                 re = Ve(n(110)),
@@ -346,23 +346,23 @@
             const {
                 FlatButtonCounterComponent: Ue,
                 ResetTimerComponent: je
-            } = a.SharedComponents, Fe = "rcp-fe-lol-event-hub";
+            } = s.SharedComponents, Fe = "rcp-fe-lol-event-hub";
             t.APP_NAME = Fe
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = t.UNCLAIMED_REWARDS_PATH = t.TOKEN_SHOP_OBSERVERS = t.TELEMETRY = t.STORE_API = t.SKINS = t.SEASON_PASS_SUB_TYPES = t.SEASON_PASS_OBSERVERS = t.ROUTES = t.REWARD_TRACK_OBSERVERS = t.REWARD_TRACK_ITEM_STATE = t.REWARD_CELEBRATION_TYPE_NONE = t.REWARD_CELEBRATION_TYPE_FULLSCREEN = t.REWARDS_API = t.REPLAY_FULLSCREEN_CELEBRATION_PATH = t.REGION_LOCALE_PATH = t.PURCHASE_OFFER_PATH = t.PURCHASE_ITEM_PATH = t.PROGRESSION_PURCHASE_DATA_PATH = t.PASS_OWNERSHIP_TYPES = t.PASS_BUNDLES_PATH = t.OFFER_STATES = t.MYTHIC_ESSENCE_ITEM_ID = t.ITEM_INSTANCE = t.HOL_OBSERVERS = t.GAME_DATA_API = t.EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME = t.EVENT_SHOP_OBSERVERS = t.EVENT_INFO_PATH = t.EVENT_HUB_TYPES = t.EVENT_HUB_API = t.EVENT_CONFIGS_BY_TYPE = t.EVENT_BASE_OBSERVERS = t.CLAIM_ALL_REWARDS_PATH = t.BUILD_INFO_PATH = t.ACTIVITY_CENTER_APP = void 0;
+            }), t.default = t.UNCLAIMED_REWARDS_PATH = t.TOKEN_SHOP_OBSERVERS = t.TELEMETRY = t.STORE_API = t.SKINS = t.SEASON_PASS_SUB_TYPES = t.SEASON_PASS_OBSERVERS = t.ROUTES = t.REWARD_TRACK_OBSERVERS = t.REWARD_TRACK_ITEM_STATE = t.REWARD_CELEBRATION_TYPE_NONE = t.REWARD_CELEBRATION_TYPE_FULLSCREEN = t.REWARDS_API = t.REPLAY_FULLSCREEN_CELEBRATION_PATH = t.REGION_LOCALE_PATH = t.PURCHASE_OFFER_PATH = t.PURCHASE_ITEM_PATH = t.PROGRESSION_PURCHASE_DATA_PATH = t.PASS_OWNERSHIP_TYPES = t.PASS_BUNDLES_PATH = t.OFFER_STATES = t.MYTHIC_ESSENCE_ITEM_ID = t.MAYHEM_OBSERVERS = t.ITEM_INSTANCE = t.HOL_OBSERVERS = t.GAME_DATA_API = t.EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME = t.EVENT_SHOP_OBSERVERS = t.EVENT_INFO_PATH = t.EVENT_HUB_TYPES = t.EVENT_HUB_API = t.EVENT_CONFIGS_BY_TYPE = t.EVENT_BASE_OBSERVERS = t.CLAIM_ALL_REWARDS_PATH = t.BUILD_INFO_PATH = t.ACTIVITY_CENTER_APP = void 0;
             const n = "/lol-event-hub/v1";
             t.EVENT_HUB_API = n;
-            const a = "/info";
-            t.EVENT_INFO_PATH = a;
+            const s = "/info";
+            t.EVENT_INFO_PATH = s;
             t.PASS_BUNDLES_PATH = "/pass-bundles";
             t.PROGRESSION_PURCHASE_DATA_PATH = "/progression-purchase-data";
             t.PURCHASE_ITEM_PATH = "/purchase-item";
             t.PURCHASE_OFFER_PATH = "/purchase-offer";
-            const s = "/reward-track/claim-all";
-            t.CLAIM_ALL_REWARDS_PATH = s;
+            const a = "/reward-track/claim-all";
+            t.CLAIM_ALL_REWARDS_PATH = a;
             const l = "/reward-track/unclaimed-rewards";
             t.UNCLAIMED_REWARDS_PATH = l;
             t.MYTHIC_ESSENCE_ITEM_ID = "534";
@@ -391,22 +391,23 @@
                 ACTIVITY_CENTER_MILESTONES: "kActivityCenterMilestones"
             };
             t.EVENT_HUB_TYPES = r;
-            t.SEASON_PASS_SUB_TYPES = {
+            const i = {
                 DEFAULT: "Default",
                 MAYHEM: "Mayhem"
             };
-            const i = {
+            t.SEASON_PASS_SUB_TYPES = i;
+            const c = {
                 PURCHASED: "Purchased",
                 UNOWNED: "Unowned"
             };
-            t.PASS_OWNERSHIP_TYPES = i;
-            const c = {
+            t.PASS_OWNERSHIP_TYPES = c;
+            const d = {
                 LOCKED: "Locked",
                 UNLOCKED: "Unlocked",
                 UNSELECTED: "Unselected",
                 SELECTED: "Selected"
             };
-            t.REWARD_TRACK_ITEM_STATE = c;
+            t.REWARD_TRACK_ITEM_STATE = d;
             t.OFFER_STATES = {
                 OWNED: "kOwned",
                 AVAILABLE: "kAvailable",
@@ -435,9 +436,9 @@
                 REWARD_CLICK_EVENT: "reward_click",
                 SHOW_EVENT: "show"
             };
-            const d = [{
+            const p = [{
                 propertyName: "info",
-                propertyPath: a
+                propertyPath: s
             }, {
                 propertyName: "eventShopProgressionData",
                 propertyPath: "/progress-info-data"
@@ -448,8 +449,8 @@
                 propertyName: "isGracePeriod",
                 propertyPath: "/is-grace-period"
             }];
-            t.EVENT_BASE_OBSERVERS = d;
-            const p = [{
+            t.EVENT_BASE_OBSERVERS = p;
+            const u = [{
                 propertyName: "tokenShopData",
                 propertyPath: "/token-shop"
             }, {
@@ -460,8 +461,8 @@
                 propertyPath: "/token-shop/token-balance",
                 defaultValue: 0
             }];
-            t.TOKEN_SHOP_OBSERVERS = p;
-            const u = [{
+            t.TOKEN_SHOP_OBSERVERS = u;
+            const m = [{
                 propertyName: "rewardTrackProgress",
                 propertyPath: "/reward-track/progress"
             }, {
@@ -483,42 +484,47 @@
                 propertyName: "failureLoadingRewardTrack",
                 propertyPath: "/reward-track/failure"
             }];
-            t.REWARD_TRACK_OBSERVERS = u;
-            const m = [...d, ...p, ...u, {
+            t.REWARD_TRACK_OBSERVERS = m;
+            const h = [...p, ...u, ...m, {
                 propertyName: "backgroundData",
                 propertyPath: "/pass-background-data"
             }];
-            t.EVENT_SHOP_OBSERVERS = m;
-            const h = [...d, ...u, {
+            t.EVENT_SHOP_OBSERVERS = h;
+            const v = [...p, ...m, {
                 propertyName: "progressionPurchaseData",
                 propertyPath: "/progression-purchase-data"
             }, {
                 propertyName: "narrative",
                 propertyPath: "/narrative"
             }];
-            t.HOL_OBSERVERS = h;
-            const v = [...d, ...u, {
+            t.HOL_OBSERVERS = v;
+            const g = [...p, ...m, {
                 propertyName: "progressionPurchaseData",
                 propertyPath: "/progression-purchase-data"
             }, {
                 propertyName: "chapters",
                 propertyPath: "/chapters"
             }];
-            t.SEASON_PASS_OBSERVERS = v;
-            const g = [...d, ...u, {
+            t.SEASON_PASS_OBSERVERS = g;
+            const f = [...p, ...m, {
+                propertyName: "chapters",
+                propertyPath: "/chapters"
+            }];
+            t.MAYHEM_OBSERVERS = f;
+            const _ = [...p, ...m, {
                     propertyName: "backgroundData",
                     propertyPath: "/pass-background-data"
                 }],
-                f = "event-shop-offer-card";
-            t.EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME = f;
-            const _ = {
+                b = "event-shop-offer-card";
+            t.EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME = b;
+            const E = {
                 [r.EVENT_SHOP]: {
                     displayGenericTitle: !1,
                     displayHeaderLogo: !0,
                     traPrefix: "",
                     displaySingleBackground: !0,
                     route: o.EVENT_SHOP,
-                    observers: m
+                    observers: h
                 },
                 [r.HALL_OF_LEGENDS]: {
                     displayGenericTitle: !1,
@@ -526,7 +532,7 @@
                     traPrefix: "hol",
                     displaySingleBackgroundImg: !1,
                     route: o.HALL_OF_LEGENDS,
-                    observers: h
+                    observers: v
                 },
                 [r.SEASON_PASS]: {
                     displayGenericTitle: !1,
@@ -534,7 +540,7 @@
                     traPrefix: "season_pass",
                     displaySingleBackgroundImg: !1,
                     route: o.SEASON_PASS,
-                    observers: v
+                    observers: g
                 },
                 [r.ACTIVITY_CENTER_MILESTONES]: {
                     displayGenericTitle: !0,
@@ -542,33 +548,41 @@
                     traPrefix: "",
                     displaySingleBackground: !0,
                     route: o.ACTIVITY_CENTER_MILESTONES,
-                    observers: g
+                    observers: _
+                },
+                [i.MAYHEM]: {
+                    displayGenericTitle: !1,
+                    displayHeaderLogo: !1,
+                    traPrefix: "season_pass",
+                    displaySingleBackgroundImg: !1,
+                    route: o.SEASON_PASS,
+                    observers: f
                 }
             };
-            t.EVENT_CONFIGS_BY_TYPE = _;
-            var b = {
-                CLAIM_ALL_REWARDS_PATH: s,
+            t.EVENT_CONFIGS_BY_TYPE = E;
+            var x = {
+                CLAIM_ALL_REWARDS_PATH: a,
                 EVENT_HUB_API: n,
-                PASS_OWNERSHIP_TYPES: i,
-                REWARD_TRACK_ITEM_STATE: c,
-                EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME: f,
+                PASS_OWNERSHIP_TYPES: c,
+                REWARD_TRACK_ITEM_STATE: d,
+                EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME: b,
                 ROUTES: o,
                 EVENT_HUB_TYPES: r
             };
-            t.default = b;
+            t.default = x;
             t.ACTIVITY_CENTER_APP = "rcp-fe-lol-activity-center"
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5);
-            const l = a.Ember.Router.extend({
+            var s = n(1),
+                a = n(5);
+            const l = s.Ember.Router.extend({
                 location: "none"
             });
             l.map((function() {
-                Object.values(s.ROUTES).forEach((e => {
+                Object.values(a.ROUTES).forEach((e => {
                     this.route(e)
                 }))
             }));
@@ -579,86 +593,86 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = a.Ember.Route.extend({
-                    model: () => a.externalModel
+            var s = n(1),
+                a = s.Ember.Route.extend({
+                    model: () => s.externalModel
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = a.Ember.Route.extend({
-                    model: () => a.externalModel
+            var s = n(1),
+                a = s.Ember.Route.extend({
+                    model: () => s.externalModel
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = a.Ember.Route.extend({
-                    model: () => a.externalModel,
+            var s = n(1),
+                a = s.Ember.Route.extend({
+                    model: () => s.externalModel,
                     setupController(e, t) {
                         this._super(...arguments), e.set("model", t)
                     }
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = a.Ember.Route.extend({
-                    model: () => a.externalModel,
+            var s = n(1),
+                a = s.Ember.Route.extend({
+                    model: () => s.externalModel,
                     setupController(e, t) {
                         this._super(...arguments), e.set("model", t)
                     }
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = a.Ember.Route.extend({
-                    eventHubService: a.Ember.inject.service("event-hub"),
-                    model: () => a.externalModel,
+            var s = n(1),
+                a = s.Ember.Route.extend({
+                    eventHubService: s.Ember.inject.service("event-hub"),
+                    model: () => s.externalModel,
                     setupController(e, t) {
                         this._super(...arguments), e.set("model", t), this.get("eventHubService").getUnclaimedRewards().then((t => {
                             t.rewardsCount > 0 && e.set("isOnRewardTrackPage", !0)
                         }))
                     }
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = a.Ember.Route.extend({
-                    model: () => a.externalModel,
+            var s = n(1),
+                a = s.Ember.Route.extend({
+                    model: () => s.externalModel,
                     setupController(e, t) {
                         this._super(...arguments), e.set("model", t)
                     }
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(5),
-                s = n(1),
-                l = s.Ember.Service.extend({
+            var s = n(5),
+                a = n(1),
+                l = a.Ember.Service.extend({
                     init() {
-                        this._super(...arguments), this.eventHubDataBinding = (0, s.dataBinding)(a.EVENT_HUB_API, s.socket), this.eventSpecificObservers = [], this.getEvents()
+                        this._super(...arguments), this.eventHubDataBinding = (0, a.dataBinding)(s.EVENT_HUB_API, a.socket), this.eventSpecificObservers = [], this.getEvents()
                     },
                     getEvents() {
                         this.eventHubDataBinding.observe("/events", this, (e => {
@@ -668,40 +682,44 @@
                         }))
                     },
                     setActiveEvent(e) {
-                        if (!e) return this.clearEventSpecificData(), void this.setProperties({
+                        if (!e) return this.resetPassState(), this.clearEventSpecificData(), void this.setProperties({
                             activeEventId: null,
                             activeEventType: null
                         });
                         const t = this.get("activeEventId");
                         if (!t || t !== e) {
-                            this.clearEventSpecificData();
+                            this.resetPassState(), this.clearEventSpecificData();
                             const t = this.events.find((({
                                     eventId: t
                                 }) => t === e)),
                                 n = t?.eventInfo?.eventType,
-                                a = t?.eventInfo?.seasonPassSubType;
+                                s = t?.eventInfo?.seasonPassSubType;
                             this.setProperties({
                                 activeEventId: e,
                                 activeEventType: n,
-                                activeSeasonPassSubType: a
-                            }), this.observeEventSpecificData(), this.checkPassAvailability()
+                                activeSeasonPassSubType: s
+                            }), this.observeEventSpecificData(), this.getPassBundles().finally((() => {
+                                this.checkPassAvailability()
+                            }))
                         }
                     },
                     observeEventSpecificData() {
-                        const e = a.EVENT_CONFIGS_BY_TYPE[this.activeEventType]?.observers || [];
+                        let e = this.activeEventType;
+                        this.activeEventSubType && "Default" !== this.seasonPassSubType && (e = this.activeEventSubType);
+                        const t = s.EVENT_CONFIGS_BY_TYPE[e]?.observers || [];
                         for (const {
-                                propertyName: t,
+                                propertyName: e,
                                 propertyPath: n,
-                                defaultValue: a
+                                defaultValue: s
                             }
-                            of e) {
-                            const e = this.getEventSpecificPropertyPath(n);
+                            of t) {
+                            const t = this.getEventSpecificPropertyPath(n);
                             this.eventSpecificObservers.push({
-                                path: e,
-                                propertyName: t
-                            }), this.eventHubDataBinding.observe(e, this, (e => {
-                                this.isDestroying || this.isDestroyed || (null == e && (e = a), this.setProperties({
-                                    [t]: e
+                                path: t,
+                                propertyName: e
+                            }), this.eventHubDataBinding.observe(t, this, (t => {
+                                this.isDestroying || this.isDestroyed || (null == t && (t = s), this.setProperties({
+                                    [e]: t
                                 }))
                             }))
                         }
@@ -716,37 +734,37 @@
                             })
                         })), this.eventSpecificObservers = []
                     },
+                    resetPassState() {
+                        this.set("passLoading", !0), this.set("passAvailable", !1), this.set("passFullyUpgraded", !1)
+                    },
                     checkPassAvailability() {
-                        this.set("passLoading", !0), this.set("passAvailable", !1), this.checkPassFullyUpgraded().then((() => {
-                            this.set("passAvailable", !0)
+                        const e = this.get("bundles");
+                        Array.isArray(e) && e.length && (this.set("passAvailable", !0), this.checkPassFullyUpgraded())
+                    },
+                    checkPassFullyUpgraded(e = void 0) {
+                        const t = this.get("bundles"),
+                            n = e?.itemId ? t.find((t => t.details.itemId === e.itemId)).finalPrice : 0,
+                            s = !t.find((e => e.finalPrice > n));
+                        this.set("passFullyUpgraded", s)
+                    },
+                    async getPassBundles() {
+                        return this.set("passLoading", !0), await this.eventHubDataBinding.get(this.getEventSpecificPropertyPath(s.PASS_BUNDLES_PATH), {
+                            skipCache: !0
+                        }).then((e => {
+                            this.set("bundles", e)
                         })).catch((e => {
-                            this.set("passAvailable", !1)
+                            throw a.logger.error("Failure loading pass bundles: ", e), this.set("bundles", null), new Error("")
                         })).finally((() => {
                             this.set("passLoading", !1)
                         }))
                     },
-                    checkPassFullyUpgraded(e = void 0) {
-                        return this.set("passFullyUpgraded", !1), this.getPassBundles().then((t => {
-                            if (!t?.length) throw new Error("Pass Unavailable - Pass Bundles did not return any option");
-                            const n = e?.itemId ? t.find((t => t.details.itemId === e.itemId)).finalPrice : 0,
-                                a = !t.find((e => e.finalPrice > n));
-                            return this.set("passFullyUpgraded", a), this.set("bundles", t), t
-                        })).catch((e => {
-                            s.logger.error("Failure loading pass bundles: ", e), this.set("bundles", null)
-                        }))
-                    },
-                    async getPassBundles() {
-                        return await this.eventHubDataBinding.get(this.getEventSpecificPropertyPath(a.PASS_BUNDLES_PATH), {
-                            skipCache: !0
-                        })
-                    },
                     async getProgressionPurchaseData() {
-                        return await this.eventHubDataBinding.get(this.getEventSpecificPropertyPath(a.PROGRESSION_PURCHASE_DATA_PATH), {
+                        return await this.eventHubDataBinding.get(this.getEventSpecificPropertyPath(s.PROGRESSION_PURCHASE_DATA_PATH), {
                             skipCache: !0
                         })
                     },
                     async getUnclaimedRewards() {
-                        return await this.eventHubDataBinding.get(this.getEventSpecificPropertyPath(a.UNCLAIMED_REWARDS_PATH))
+                        return await this.eventHubDataBinding.get(this.getEventSpecificPropertyPath(s.UNCLAIMED_REWARDS_PATH))
                     },
                     purchasePassBundle(e) {
                         const t = {
@@ -758,13 +776,13 @@
                         return this.purchaseItem(t).then((() => this.checkPassFullyUpgraded(t)))
                     },
                     async purchaseItem(e) {
-                        return await this.eventHubDataBinding.post(a.PURCHASE_ITEM_PATH, e)
+                        return await this.eventHubDataBinding.post(s.PURCHASE_ITEM_PATH, e)
                     },
                     claimAllPendingRewards() {
-                        this.eventHubDataBinding.post(this.getEventSpecificPropertyPath(a.CLAIM_ALL_REWARDS_PATH))
+                        this.eventHubDataBinding.post(this.getEventSpecificPropertyPath(s.CLAIM_ALL_REWARDS_PATH))
                     },
                     async purchaseOffer(e, t) {
-                        return await this.eventHubDataBinding.post(this.getEventSpecificPropertyPath(a.PURCHASE_OFFER_PATH), {
+                        return await this.eventHubDataBinding.post(this.getEventSpecificPropertyPath(s.PURCHASE_OFFER_PATH), {
                             offerId: e,
                             purchaseQuantity: t
                         })
@@ -782,45 +800,45 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
-            const s = {
+            var s = n(1);
+            const a = {
                     MISSIONS: "/v1/missions"
                 },
                 l = "COMPLETED",
                 o = "REWARD_PENDING";
-            var r = a.Ember.Service.extend({
+            var r = s.Ember.Service.extend({
                 missions: [],
-                missionSeriesMap: a.Ember.computed("missions", (function() {
+                missionSeriesMap: s.Ember.computed("missions", (function() {
                     const e = new Map;
                     return this.get("missions").forEach((t => {
                         const n = t?.seriesName;
                         if (n) {
                             e.has(n) || e.set(n, []);
-                            const a = this._processMission(t);
-                            e.get(n).push(a)
+                            const s = this._processMission(t);
+                            e.get(n).push(s)
                         }
                     })), e
                 })),
-                featuredMissionsMap: a.Ember.computed("missionSeriesMap", (function() {
+                featuredMissionsMap: s.Ember.computed("missionSeriesMap", (function() {
                     const e = new Map,
                         t = this.get("missionSeriesMap");
                     return t && t.forEach(((t = [], n = []) => {
-                        const a = this._getFeaturedMission(t);
-                        a && e.set(n, a)
+                        const s = this._getFeaturedMission(t);
+                        s && e.set(n, s)
                     })), e
                 })),
                 init() {
-                    this._super(...arguments), this.lolMissionsDataBinding = (0, a.dataBinding)("/lol-missions", a.socket), this._getMissions()
+                    this._super(...arguments), this.lolMissionsDataBinding = (0, s.dataBinding)("/lol-missions", s.socket), this._getMissions()
                 },
                 willDestroy() {
-                    this._super(...arguments), this.lolMissionsDataBinding.unobserve(s.MISSIONS, this)
+                    this._super(...arguments), this.lolMissionsDataBinding.unobserve(a.MISSIONS, this)
                 },
                 getFeaturedMissionForSeries(e) {
                     const t = this.get("featuredMissionsMap");
                     return t && t.get(e) || null
                 },
                 _getMissions() {
-                    this.lolMissionsDataBinding.observe(s.MISSIONS, this, (e => {
+                    this.lolMissionsDataBinding.observe(a.MISSIONS, this, (e => {
                         e && this.set("missions", e)
                     }))
                 },
@@ -871,14 +889,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1);
-            const s = "Patching",
+            var s = n(1);
+            const a = "Patching",
                 l = "CheckingForUpdates",
                 o = "Repairing";
-            var r = a.Ember.Service.extend({
+            var r = s.Ember.Service.extend({
                 patcherData: null,
                 init() {
-                    this._super(...arguments), this.patcher = (0, a.dataBinding)("/patcher", a.socket), this.addObservers()
+                    this._super(...arguments), this.patcher = (0, s.dataBinding)("/patcher", s.socket), this.addObservers()
                 },
                 willDestroy() {
                     this._super(...arguments), this.patcher.unobserve("/v1/products/league_of_legends/state", this)
@@ -888,13 +906,13 @@
                         this.set("patcherData", e)
                     }))
                 },
-                isPatching: a.Ember.computed("patcherData.action", (function() {
-                    return this.get("patcherData.action") === s || this.get("patcherData.action") === o
+                isPatching: s.Ember.computed("patcherData.action", (function() {
+                    return this.get("patcherData.action") === a || this.get("patcherData.action") === o
                 })),
-                isCheckingForUpdates: a.Ember.computed("patcherData.action", (function() {
+                isCheckingForUpdates: s.Ember.computed("patcherData.action", (function() {
                     return this.get("patcherData.action") === l
                 })),
-                isGettingReadyForGame: a.Ember.computed.alias("isPatching")
+                isGettingReadyForGame: s.Ember.computed.alias("isPatching")
             });
             t.default = r
         }, (e, t, n) => {
@@ -902,9 +920,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.SETTINGS_API = t.EVENT_HUB_SETTINGS_PATH = void 0;
-            var a = n(1);
-            const s = "/lol-settings/v2";
-            t.SETTINGS_API = s;
+            var s = n(1);
+            const a = "/lol-settings/v2";
+            t.SETTINGS_API = a;
             const l = "/ready",
                 o = "/account/LCUPreferences/event-hub";
             t.EVENT_HUB_SETTINGS_PATH = o;
@@ -913,9 +931,9 @@
                 c = {
                     animationsEnabled: !0
                 };
-            var d = a.Ember.Service.extend({
+            var d = s.Ember.Service.extend({
                 init() {
-                    this._super(...arguments), this.settingsDataBinding = (0, a.dataBinding)(s, a.socket), this.settingsDataBinding.observe(r, this, (e => {
+                    this._super(...arguments), this.settingsDataBinding = (0, s.dataBinding)(a, s.socket), this.settingsDataBinding.observe(r, this, (e => {
                         this.set("potatoModeEnabled", e?.data?.potatoModeEnabled)
                     })), this.settingsDataBinding.observe(i, this, (e => {
                         const t = e?.data || c;
@@ -926,10 +944,10 @@
                     this._super(...arguments), this.settingsDataBinding.unobserve(r, this), this.settingsDataBinding.unobserve(i, this)
                 },
                 updatePlayerSettings(e, t = 0, n = 0) {
-                    this.settingsDataBinding.observe(l, this, (a => {
-                        if (!a) return;
+                    this.settingsDataBinding.observe(l, this, (s => {
+                        if (!s) return;
                         this.settingsDataBinding.unobserve(l, this);
-                        const s = {
+                        const a = {
                             schemaVersion: 1,
                             data: {
                                 playerSettingsDataMap: {
@@ -941,16 +959,16 @@
                                 }
                             }
                         };
-                        this.settingsDataBinding.patch(o, s)
+                        this.settingsDataBinding.patch(o, a)
                     }))
                 },
                 updatePlayerSettingsMemories(e, t = []) {
-                    return t.length ? new Promise(((n, a) => {
-                        this.settingsDataBinding.observe(l, this, (s => {
-                            s && (this.settingsDataBinding.unobserve(l, this), this.getAccountSettings().then((({
-                                data: s
+                    return t.length ? new Promise(((n, s) => {
+                        this.settingsDataBinding.observe(l, this, (a => {
+                            a && (this.settingsDataBinding.unobserve(l, this), this.getAccountSettings().then((({
+                                data: a
                             }) => {
-                                const l = s.playerSettingsDataMap[e].seenMemories || [],
+                                const l = a.playerSettingsDataMap[e].seenMemories || [],
                                     r = new Set([...l, ...t]),
                                     i = {
                                         schemaVersion: 1,
@@ -964,8 +982,8 @@
                                     };
                                 this.settingsDataBinding.patch(o, i).then((() => {
                                     n()
-                                })).catch(a)
-                            })).catch(a))
+                                })).catch(s)
+                            })).catch(s))
                         }))
                     })) : Promise.resolve()
                 },
@@ -986,7 +1004,7 @@
                         animationsEnabled: !e.animationsEnabled
                     })
                 },
-                animationsEnabled: a.Ember.computed("localSettings", "potatoModeEnabled", (function() {
+                animationsEnabled: s.Ember.computed("localSettings", "potatoModeEnabled", (function() {
                     return !this.get("potatoModeEnabled") && this.get("localSettings")?.animationsEnabled
                 }))
             });
@@ -996,14 +1014,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(5),
-                s = n(1),
-                l = s.Ember.Service.extend({
+            var s = n(5),
+                a = n(1),
+                l = a.Ember.Service.extend({
                     init() {
-                        this._super(...arguments), this.rewardsApi = (0, s.dataBinding)(a.REWARDS_API, s.socket)
+                        this._super(...arguments), this.rewardsApi = (0, a.dataBinding)(s.REWARDS_API, a.socket)
                     },
                     replayFullscreenCelebration(e) {
-                        return this.rewardsApi.post(a.REPLAY_FULLSCREEN_CELEBRATION_PATH, e)
+                        return this.rewardsApi.post(s.REPLAY_FULLSCREEN_CELEBRATION_PATH, e)
                     }
                 });
             t.default = l
@@ -1012,17 +1030,17 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(5),
-                s = n(1),
-                l = s.Ember.Service.extend({
+            var s = n(5),
+                a = n(1),
+                l = a.Ember.Service.extend({
                     init() {
-                        this._super(...arguments), this.storeApi = (0, s.dataBinding)(a.STORE_API, s.socket), this.gameDataApi = (0, s.dataBinding)(a.GAME_DATA_API, s.socket)
+                        this._super(...arguments), this.storeApi = (0, a.dataBinding)(s.STORE_API, a.socket), this.gameDataApi = (0, a.dataBinding)(s.GAME_DATA_API, a.socket)
                     },
                     skins: null,
                     rewardSkins: {},
                     getItemRarityByInstance(e) {
                         const t = this.get("rewardSkins");
-                        return t[e] ? this.rewardSkins[e] : this.storeApi.get(`${a.ITEM_INSTANCE}?instanceIds=%5B%22${e}%22%5D`).then((n => {
+                        return t[e] ? this.rewardSkins[e] : this.storeApi.get(`${s.ITEM_INSTANCE}?instanceIds=%5B%22${e}%22%5D`).then((n => {
                             if ("CHAMPION_SKIN" === n[e].inventoryType) return this.getSkinRarityById(n[e].itemId).then((e => (this.set("rewardSkins", {
                                 ...t,
                                 itemInstanceId: {
@@ -1033,7 +1051,7 @@
                     },
                     getSkins() {
                         const e = this.get("skins");
-                        return e ? Promise.resolve(e) : this.gameDataApi.get(a.SKINS).then((e => (this.set("skins", e), e)))
+                        return e ? Promise.resolve(e) : this.gameDataApi.get(s.SKINS).then((e => (this.set("skins", e), e)))
                     },
                     getSkinRarityById(e) {
                         return this.getSkins().then((t => {
@@ -1053,19 +1071,19 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(5),
-                s = n(1),
-                l = s.Ember.Service.extend({
+            var s = n(5),
+                a = n(1),
+                l = a.Ember.Service.extend({
                     init() {
-                        this._super(...arguments), this.db = s.dataBinding.bindTo(s.socket), this.fetchRegionData()
+                        this._super(...arguments), this.db = a.dataBinding.bindTo(a.socket), this.fetchRegionData()
                     },
                     async fetchRegionData() {
-                        const e = await this.db.get(a.REGION_LOCALE_PATH);
+                        const e = await this.db.get(s.REGION_LOCALE_PATH);
                         this.set("region", e?.region);
-                        const t = await this.db.get(a.BUILD_INFO_PATH);
+                        const t = await this.db.get(s.BUILD_INFO_PATH);
                         this.set("patchline", t?.patchline)
                     },
-                    isKREnv: s.Ember.computed("region", "patchline", (function() {
+                    isKREnv: a.Ember.computed("region", "patchline", (function() {
                         const e = this.get("region"),
                             t = this.get("patchline");
                         return "KR" === e || t && t.endsWith("_KR")
@@ -1077,64 +1095,64 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5),
-                l = a.Ember.Component.extend({
-                    eventHubService: a.Ember.inject.service("event-hub"),
-                    eventDetailsData: a.Ember.computed.alias("eventHubService.eventDetailsData"),
-                    eventType: a.Ember.computed.alias("eventHubService.activeEventType"),
-                    rewardEnhancementService: a.Ember.inject.service("reward-item-enhancer"),
-                    spotlightSkinId: a.Ember.computed.alias("eventHubService.eventDetailsData.spotlightSkinId"),
+            var s = n(1),
+                a = n(5),
+                l = s.Ember.Component.extend({
+                    eventHubService: s.Ember.inject.service("event-hub"),
+                    eventDetailsData: s.Ember.computed.alias("eventHubService.eventDetailsData"),
+                    eventType: s.Ember.computed.alias("eventHubService.activeEventType"),
+                    rewardEnhancementService: s.Ember.inject.service("reward-item-enhancer"),
+                    spotlightSkinId: s.Ember.computed.alias("eventHubService.eventDetailsData.spotlightSkinId"),
                     spotlightSkinName: null,
                     didReceiveAttrs() {
                         this.get("spotlightSkinId") && !this.get("spotlightSkinName") && this.get("rewardEnhancementService").getSkinById(this.get("spotlightSkinId")).then((e => {
                             this.set("spotlightSkinName", e?.name)
                         }))
                     },
-                    firstColumnTopic: a.Ember.computed("eventType", (function() {
-                        return this.get("eventType") === s.EVENT_HUB_TYPES.HALL_OF_LEGENDS ? a.tra.get("hol_help_modal_cinmatic_experience") : a.tra.get("event_shop_help_modal_earn_tokens")
+                    firstColumnTopic: s.Ember.computed("eventType", (function() {
+                        return this.get("eventType") === a.EVENT_HUB_TYPES.HALL_OF_LEGENDS ? s.tra.get("hol_help_modal_cinmatic_experience") : s.tra.get("event_shop_help_modal_earn_tokens")
                     })),
-                    firstColumnDescription: a.Ember.computed("eventType", "eventDetailsData", (function() {
-                        if (this.get("eventType") === s.EVENT_HUB_TYPES.HALL_OF_LEGENDS) {
+                    firstColumnDescription: s.Ember.computed("eventType", "eventDetailsData", (function() {
+                        if (this.get("eventType") === a.EVENT_HUB_TYPES.HALL_OF_LEGENDS) {
                             const e = this.get("eventDetailsData.inducteeName");
-                            return a.tra.formatString("hol_help_modal_cinmatic_experience_description", {
+                            return s.tra.formatString("hol_help_modal_cinmatic_experience_description", {
                                 inducteeName: e
                             })
                         }
-                        return a.tra.get("event_shop_help_modal_earn_tokens_description")
+                        return s.tra.get("event_shop_help_modal_earn_tokens_description")
                     })),
-                    secondColumnTopic: a.Ember.computed("eventType", (function() {
-                        return this.get("eventType") === s.EVENT_HUB_TYPES.HALL_OF_LEGENDS ? a.tra.get("hol_help_modal_exclusive_skins") : a.tra.get("event_shop_help_modal_redeem_tokens")
+                    secondColumnTopic: s.Ember.computed("eventType", (function() {
+                        return this.get("eventType") === a.EVENT_HUB_TYPES.HALL_OF_LEGENDS ? s.tra.get("hol_help_modal_exclusive_skins") : s.tra.get("event_shop_help_modal_redeem_tokens")
                     })),
-                    secondColumnDescription: a.Ember.computed("eventType", "spotlightSkinName", (function() {
-                        if (this.get("eventType") === s.EVENT_HUB_TYPES.HALL_OF_LEGENDS) {
+                    secondColumnDescription: s.Ember.computed("eventType", "spotlightSkinName", (function() {
+                        if (this.get("eventType") === a.EVENT_HUB_TYPES.HALL_OF_LEGENDS) {
                             const e = this.get("spotlightSkinName");
-                            return a.tra.formatString("hol_help_modal_exclusive_skins_description", {
+                            return s.tra.formatString("hol_help_modal_exclusive_skins_description", {
                                 skinName: e
                             })
                         }
-                        return a.tra.get("event_shop_help_modal_redeem_tokens_description")
+                        return s.tra.get("event_shop_help_modal_redeem_tokens_description")
                     })),
-                    thirdColumnTopic: a.Ember.computed("eventType", (function() {
-                        return this.get("eventType") === s.EVENT_HUB_TYPES.HALL_OF_LEGENDS ? a.tra.get("hol_help_modal_rewards") : a.tra.get("event_shop_help_modal_upgrade_pass")
+                    thirdColumnTopic: s.Ember.computed("eventType", (function() {
+                        return this.get("eventType") === a.EVENT_HUB_TYPES.HALL_OF_LEGENDS ? s.tra.get("hol_help_modal_rewards") : s.tra.get("event_shop_help_modal_upgrade_pass")
                     })),
-                    thirdColumnDescription: a.Ember.computed("eventType", "eventDetailsData", (function() {
-                        if (this.get("eventType") === s.EVENT_HUB_TYPES.HALL_OF_LEGENDS) {
+                    thirdColumnDescription: s.Ember.computed("eventType", "eventDetailsData", (function() {
+                        if (this.get("eventType") === a.EVENT_HUB_TYPES.HALL_OF_LEGENDS) {
                             const e = this.get("eventDetailsData.inducteeName");
-                            return a.tra.formatString("hol_help_modal_rewards_description", {
+                            return s.tra.formatString("hol_help_modal_rewards_description", {
                                 inducteeName: e
                             })
                         }
-                        return a.tra.get("event_shop_help_modal_upgrade_pass_description")
+                        return s.tra.get("event_shop_help_modal_upgrade_pass_description")
                     })),
-                    firstColumnIconClass: a.Ember.computed("eventType", (function() {
-                        return this.get("eventType") === s.EVENT_HUB_TYPES.HALL_OF_LEGENDS ? "eh-help-modal-icon-scroll" : "eh-help-modal-icon-loot"
+                    firstColumnIconClass: s.Ember.computed("eventType", (function() {
+                        return this.get("eventType") === a.EVENT_HUB_TYPES.HALL_OF_LEGENDS ? "eh-help-modal-icon-scroll" : "eh-help-modal-icon-loot"
                     })),
-                    secondColumnIconClass: a.Ember.computed("eventType", (function() {
-                        return this.get("eventType") === s.EVENT_HUB_TYPES.HALL_OF_LEGENDS ? "eh-help-modal-icon-skin" : "eh-help-modal-icon-currency"
+                    secondColumnIconClass: s.Ember.computed("eventType", (function() {
+                        return this.get("eventType") === a.EVENT_HUB_TYPES.HALL_OF_LEGENDS ? "eh-help-modal-icon-skin" : "eh-help-modal-icon-currency"
                     })),
-                    thirdColumnIconClass: a.Ember.computed("eventType", (function() {
-                        return this.get("eventType") === s.EVENT_HUB_TYPES.HALL_OF_LEGENDS ? "eh-help-modal-icon-loot" : "eh-help-modal-icon-boost"
+                    thirdColumnIconClass: s.Ember.computed("eventType", (function() {
+                        return this.get("eventType") === a.EVENT_HUB_TYPES.HALL_OF_LEGENDS ? "eh-help-modal-icon-loot" : "eh-help-modal-icon-boost"
                     })),
                     actions: {
                         handleCloseModalClick() {
@@ -1148,12 +1166,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5),
+            var s = n(1),
+                a = n(5),
                 l = n(5);
             const o = "/fe/lol-static-assets/sounds/sfx-uikit-button-gold-hover.ogg",
                 r = "/fe/lol-static-assets/sounds/sfx-uikit-button-gold-click.ogg";
-            var i = a.Ember.Component.extend({
+            var i = s.Ember.Component.extend({
                 classNames: ["eh-page-header"],
                 classNameBindings: ["showBottomBorder:eh-page-header-show-bottom-border", "showShroudGradient:eh-page-header-show-shroud-gradient"],
                 showShroudGradient: !0,
@@ -1162,7 +1180,7 @@
                 showTokenBalance: !1,
                 showSystemControls: !1,
                 showHelpModal: !1,
-                gracePeriodTooltipsText: a.Ember.computed("gracePeriodTooltipTextsOverride", (function() {
+                gracePeriodTooltipsText: s.Ember.computed("gracePeriodTooltipTextsOverride", (function() {
                     return {
                         tooltipTitleTop: this.get("tra.event_shop_page_header_time_tooltip_shop_title"),
                         tooltipDescriptionTop: this.get("tra.event_shop_page_header_time_tooltip_shop_description_grace_period"),
@@ -1171,7 +1189,7 @@
                         ...this.get("gracePeriodTooltipTextsOverride")
                     }
                 })),
-                tooltipProgressText: a.Ember.computed("tooltipProgressTextOverride", (function() {
+                tooltipProgressText: s.Ember.computed("tooltipProgressTextOverride", (function() {
                     return {
                         tooltipTitleTop: this.get("tra.event_shop_page_header_time_tooltip_progress_title"),
                         tooltipDescriptionTop: this.get("tra.event_shop_page_header_time_tooltip_progress_description"),
@@ -1179,29 +1197,29 @@
                         ...this.get("tooltipProgressTextOverride")
                     }
                 })),
-                eventHubService: a.Ember.inject.service("event-hub"),
-                eventDetailsData: a.Ember.computed.alias("eventHubService.eventDetailsData"),
-                isSeasonPass: a.Ember.computed.equal("eventHubService.activeEventType", l.EVENT_HUB_TYPES.SEASON_PASS),
-                isActivityCenterEventMilestones: a.Ember.computed.equal("eventHubService.activeEventType", l.EVENT_HUB_TYPES.ACTIVITY_CENTER_MILESTONES),
-                isGracePeriod: a.Ember.computed.alias("eventHubService.isGracePeriod"),
-                tokenImage: a.Ember.computed.alias("eventHubService.tokenShopData.tokenImage"),
-                passTitle: a.Ember.computed("eventHubService.info.localizedShortName", "eventHubService.eventDetailsData.eventName", "eventHubService.activeEventType", (function() {
+                eventHubService: s.Ember.inject.service("event-hub"),
+                eventDetailsData: s.Ember.computed.alias("eventHubService.eventDetailsData"),
+                isSeasonPass: s.Ember.computed.equal("eventHubService.activeEventType", l.EVENT_HUB_TYPES.SEASON_PASS),
+                isActivityCenterEventMilestones: s.Ember.computed.equal("eventHubService.activeEventType", l.EVENT_HUB_TYPES.ACTIVITY_CENTER_MILESTONES),
+                isGracePeriod: s.Ember.computed.alias("eventHubService.isGracePeriod"),
+                tokenImage: s.Ember.computed.alias("eventHubService.tokenShopData.tokenImage"),
+                passTitle: s.Ember.computed("eventHubService.info.localizedShortName", "eventHubService.eventDetailsData.eventName", "eventHubService.activeEventType", (function() {
                     const e = this.get("eventHubService.info.localizedShortName"),
                         t = this.get("eventHubService.eventDetailsData.eventName"),
                         n = l.EVENT_CONFIGS_BY_TYPE[this.get("eventHubService.activeEventType")]?.displayGenericTitle;
-                    return n ? a.tra.get("event_hub_generic_title") : e || t
+                    return n ? s.tra.get("event_hub_generic_title") : e || t
                 })),
-                eventSubtitle: a.Ember.computed.alias("eventHubService.info.localizedEventSubtitle"),
-                tokenBundlesCatalogEntry: a.Ember.computed.alias("eventHubService.tokenShopData.tokenBundlesCatalogEntry"),
-                localizedLogoPath: a.Ember.computed("eventHubService.info.localizedLogo", (function() {
+                eventSubtitle: s.Ember.computed.alias("eventHubService.info.localizedEventSubtitle"),
+                tokenBundlesCatalogEntry: s.Ember.computed.alias("eventHubService.tokenShopData.tokenBundlesCatalogEntry"),
+                localizedLogoPath: s.Ember.computed("eventHubService.info.localizedLogo", (function() {
                     const e = this.get("eventHubService.info.localizedLogo"),
                         t = this.get("tra.metadata.locale.id");
                     if (e && "/lol-game-data/assets/" !== e) return t ? e.replace("/en_US/", `/${t}/`) : e
                 })),
-                displayHeaderLogo: a.Ember.computed("eventHubService.activeEventType", (function() {
+                displayHeaderLogo: s.Ember.computed("eventHubService.activeEventType", (function() {
                     return l.EVENT_CONFIGS_BY_TYPE[this.get("eventHubService.activeEventType")]?.displayHeaderLogo
                 })),
-                remainingTimeTextProps: a.Ember.computed("isGracePeriod", "eventDetailsData", "gracePeriodRemainingTimeTextOverride", (function() {
+                remainingTimeTextProps: s.Ember.computed("isGracePeriod", "eventDetailsData", "gracePeriodRemainingTimeTextOverride", (function() {
                     if (this.get("isGracePeriod")) return {
                         almostEndingText: this.get("tra.event_shop_page_header_shop_almost_closing"),
                         wrappingText: this.get("tra.event_shop_page_header_shop_closes_in"),
@@ -1215,17 +1233,17 @@
                         endDateTime: e
                     }
                 })),
-                eventEndJsDate: a.Ember.computed("eventDetailsData", (function() {
+                eventEndJsDate: s.Ember.computed("eventDetailsData", (function() {
                     const e = this.get("eventDetailsData.progressEndDate") || this.get("eventDetailsData.shopEndDate");
                     return void 0 !== e ? new Date(e) : new Date
                 })),
-                progressEndDateFullText: a.Ember.computed("eventDetailsData", "tra.metadata.locale", (function() {
+                progressEndDateFullText: s.Ember.computed("eventDetailsData", "tra.metadata.locale", (function() {
                     if (!this.get("eventDetailsData.progressEndDate")) return;
                     const e = this.get("tra.metadata.locale.id"),
                         t = this.getLocaleFromTraLocaleId(e);
                     return this.getEndTimerTooltipText(this.get("eventDetailsData.progressEndDate"), t)
                 })),
-                shopEndDateFullText: a.Ember.computed("eventDetailsData", "tra.metadata.locale", (function() {
+                shopEndDateFullText: s.Ember.computed("eventDetailsData", "tra.metadata.locale", (function() {
                     const e = this.get("tra.metadata.locale.id"),
                         t = this.getLocaleFromTraLocaleId(e);
                     return this.getEndTimerTooltipText(this.get("eventDetailsData.shopEndDate"), t)
@@ -1233,7 +1251,7 @@
                 getLocaleFromTraLocaleId: (e = "") => e.toLowerCase().replace("_", "-"),
                 getEndTimerTooltipText(e, t) {
                     const n = new Date(e),
-                        s = n.toLocaleDateString(t, {
+                        a = n.toLocaleDateString(t, {
                             dateStyle: "long",
                             numberingSystem: "latn"
                         }),
@@ -1243,13 +1261,13 @@
                             minute: "numeric",
                             numberingSystem: "latn"
                         });
-                    return a.tra.formatString("event_shop_page_header_time_tooltip_date_string", {
-                        dateText: s,
+                    return s.tra.formatString("event_shop_page_header_time_tooltip_date_string", {
+                        dateText: a,
                         timeText: l
                     })
                 },
-                headerTitleImageSrc: a.Ember.computed.alias("eventHubService.eventDetailsData.headerTitleImagePath"),
-                hasHeaderTitleImage: a.Ember.computed("headerTitleImageSrc", (function() {
+                headerTitleImageSrc: s.Ember.computed.alias("eventHubService.eventDetailsData.headerTitleImagePath"),
+                hasHeaderTitleImage: s.Ember.computed("headerTitleImageSrc", (function() {
                     const e = this.get("headerTitleImageSrc");
                     return !(!e || "/lol-game-data/assets/" === e)
                 })),
@@ -1259,11 +1277,11 @@
                         this.set("showHelpModal", !0)
                     },
                     openHelpLink() {
-                        a.AudioPlugin.getChannel("sfx-ui").playSound(r), window.open(this.get("eventHubService.info.localizedHelpUrl"), "_blank")
+                        s.AudioPlugin.getChannel("sfx-ui").playSound(r), window.open(this.get("eventHubService.info.localizedHelpUrl"), "_blank")
                     },
                     navigateToStore() {
-                        a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                            eventName: s.TELEMETRY.PURCHASE_TOKENS_CLICK_EVENT,
+                        s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                            eventName: a.TELEMETRY.PURCHASE_TOKENS_CLICK_EVENT,
                             eventId: this.get("eventHubService.info.eventId"),
                             lockedTokens: this.get("eventHubService.info.lockedTokenCount"),
                             tokenBalance: this.get("eventHubService.info.currentTokenBalance")
@@ -1272,13 +1290,13 @@
                             itemId: e.itemId,
                             inventoryType: "BUNDLES"
                         })));
-                        a.Router.navigateTo("rcp-fe-lol-store", {
+                        s.Router.navigateTo("rcp-fe-lol-store", {
                             page: "hextech",
                             items: e
                         })
                     },
                     onHelpButtonHover() {
-                        a.AudioPlugin.getChannel("sfx-ui").playSound(o)
+                        s.AudioPlugin.getChannel("sfx-ui").playSound(o)
                     }
                 }
             });
@@ -1288,25 +1306,25 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = a.Ember.Component.extend({
+            var s = n(1),
+                a = s.Ember.Component.extend({
                     classNames: ["eh-page-header-system-controls"],
-                    playerSettingsService: a.Ember.inject.service("player-settings"),
-                    animationsEnabled: a.Ember.computed.alias("playerSettingsService.animationsEnabled"),
+                    playerSettingsService: s.Ember.inject.service("player-settings"),
+                    animationsEnabled: s.Ember.computed.alias("playerSettingsService.animationsEnabled"),
                     actions: {
                         toggleAnimationEnabled() {
                             this.get("playerSettingsService").toggleAnimationsEnabled()
                         }
                     }
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5);
+            var s = n(1),
+                a = n(5);
             const l = {
                     1: {
                         CSS_CLASS: "eh-purchase-bundles-modal-option-single",
@@ -1326,23 +1344,23 @@
                     }
                 },
                 o = "/lol-client-config/v3/client-config/lol.client_settings.purchase_widget.discount_disabled",
-                r = a.dataBinding.bindTo((0, a.getProvider)().getSocket());
-            var i = a.Ember.Component.extend({
+                r = s.dataBinding.bindTo((0, s.getProvider)().getSocket());
+            var i = s.Ember.Component.extend({
                 init() {
                     this._super(...arguments), r.observe(o, this, (function(e) {
-                        Array.isArray(e) ? this.set("discountDisabledIds", e) : (a.logger.warning("Missing or invalid setting for discount_disabled in client config."), this.set("discountDisabledIds", []))
+                        Array.isArray(e) ? this.set("discountDisabledIds", e) : (s.logger.warning("Missing or invalid setting for discount_disabled in client config."), this.set("discountDisabledIds", []))
                     }))
                 },
                 willDestroy() {
                     r.unobserve(o, this)
                 },
                 tag: null,
-                eventHubService: a.Ember.inject.service("event-hub"),
-                regionInfoService: a.Ember.inject.service("region-info"),
+                eventHubService: s.Ember.inject.service("event-hub"),
+                regionInfoService: s.Ember.inject.service("region-info"),
                 showPurchaseModal: !1,
                 bundles: null,
                 selectedOption: null,
-                summarySubtitle: a.Ember.computed.alias("tra.event_hub_purchase_modal_summary_pass_subtitle"),
+                summarySubtitle: s.Ember.computed.alias("tra.event_hub_purchase_modal_summary_pass_subtitle"),
                 descriptionElementAdditionalClassName: null,
                 isDescriptionExpanded: !1,
                 isExecutingPurchase: !1,
@@ -1351,41 +1369,47 @@
                 showDropRatesModal: !1,
                 rpPurchaseInProgress: !1,
                 discountDisabledIds: null,
-                isKREnv: a.Ember.computed.alias("regionInfoService.isKREnv"),
-                tosText: a.Ember.computed("isKREnv", (function() {
-                    return this.get("isKREnv") ? a.Ember.String.htmlSafe(this.get("tra.event_hub_purchase_modal_tos_kr")) : a.Ember.String.htmlSafe(this.get("tra.event_hub_purchase_modal_tos"))
+                displayBundleOptions: s.Ember.computed("eventHubService.passLoading", "options", (function() {
+                    return !this.get("eventHubService.passLoading") && this.get("options").length
                 })),
-                tosDisabled: a.Ember.computed.not("selectedOption.isPurchasable"),
+                displaySelectedOption: s.Ember.computed("displayBundleOptions", "selectedOption", (function() {
+                    return this.get("selectedOption") && this.get("displayBundleOptions")
+                })),
+                isKREnv: s.Ember.computed.alias("regionInfoService.isKREnv"),
+                tosText: s.Ember.computed("isKREnv", (function() {
+                    return this.get("isKREnv") ? s.Ember.String.htmlSafe(this.get("tra.event_hub_purchase_modal_tos_kr")) : s.Ember.String.htmlSafe(this.get("tra.event_hub_purchase_modal_tos"))
+                })),
+                tosDisabled: s.Ember.computed.not("selectedOption.isPurchasable"),
                 tosChecked: !1,
-                unlockButtonDisabled: a.Ember.computed("isExecutingPurchase", "selectedOption", "tosChecked", (function() {
+                unlockButtonDisabled: s.Ember.computed("isExecutingPurchase", "selectedOption", "tosChecked", (function() {
                     const e = this.get("isExecutingPurchase"),
                         t = this.get("selectedOption"),
                         n = this.get("tosChecked");
                     return !(!e && t && t.isPurchasable && n)
                 })),
-                optionsPointerClass: a.Ember.computed("isExecutingPurchase", "purchaseCompleted", (function() {
+                optionsPointerClass: s.Ember.computed("isExecutingPurchase", "purchaseCompleted", (function() {
                     return this.get("isExecutingPurchase") || this.get("purchaseCompleted") ? "" : "eh-purchase-bundles-modal-option-pointer"
                 })),
-                options: a.Ember.computed("bundles", (function() {
+                options: s.Ember.computed("bundles", (function() {
                     const e = this.get("bundles");
                     if (!e) return [];
                     if (!Object.keys(l).includes(e.length.toString())) {
                         const t = Object.keys(l).join(", ");
-                        a.logger.error(`Pass Purchase Modal - expected number of bundles to be ${t}; but got: ${e.length}`)
+                        s.logger.error(`Pass Purchase Modal - expected number of bundles to be ${t}; but got: ${e.length}`)
                     }
                     const t = l[e.length] || {},
                         n = t.CSS_CLASS || "",
-                        s = t.LOCATIONS || [],
+                        a = t.LOCATIONS || [],
                         o = e.map(((e, t) => {
                             e.bundledItems.forEach((e => {
-                                e.displayName = e.name, e.quantity > 1 && (e.displayName = a.tra.formatString("event_hub_purchase_modal_summary_item_name_quantity", {
+                                e.displayName = e.name, e.quantity > 1 && (e.displayName = s.tra.formatString("event_hub_purchase_modal_summary_item_name_quantity", {
                                     name: e.name,
                                     quantity: e.quantity
                                 }))
                             }));
                             return {
                                 ...this.formatOption(e, 0),
-                                optionTypeCssClass: s.includes(t) ? n : ""
+                                optionTypeCssClass: a.includes(t) ? n : ""
                             }
                         }));
                     let r;
@@ -1395,47 +1419,47 @@
                     else if (3 === o.length) {
                         r = [...o].reverse().find((e => !e.isOwned))
                     } else r = o.find((e => !e.isOwned));
-                    return r && (this.set("selectedOption", r), a.Ember.set(r, "selectedCssClass", "eh-purchase-bundles-modal-option-selected")), o
+                    return r && (this.set("selectedOption", r), s.Ember.set(r, "selectedCssClass", "eh-purchase-bundles-modal-option-selected")), o
                 })),
-                summaryTitle: a.Ember.computed("selectedOption", (function() {
+                summaryTitle: s.Ember.computed("selectedOption", (function() {
                     const e = this.get("selectedOption");
                     return e ? e.details.name : this.get("tra.event_hub_purchase_modal_summary_default_pass_title")
                 })),
-                newBalance: a.Ember.computed("selectedOption", (function() {
+                newBalance: s.Ember.computed("selectedOption", (function() {
                     const e = this.get("selectedOption");
-                    return !e || !e.futureBalance && 0 !== e.futureBalance ? "" : a.tra.formatString("event_hub_purchase_modal_rp", {
+                    return !e || !e.futureBalance && 0 !== e.futureBalance ? "" : s.tra.formatString("event_hub_purchase_modal_rp", {
                         price: e.futureBalance
                     })
                 })),
-                finalPrice: a.Ember.computed("selectedOption", (function() {
+                finalPrice: s.Ember.computed("selectedOption", (function() {
                     const e = this.get("selectedOption");
-                    return e && e.finalPrice ? a.tra.formatString("event_hub_purchase_modal_rp", {
+                    return e && e.finalPrice ? s.tra.formatString("event_hub_purchase_modal_rp", {
                         price: e.finalPrice
                     }) : ""
                 })),
-                displayDiscount: a.Ember.computed("selectedOption", "discountDisabledIds", (function() {
+                displayDiscount: s.Ember.computed("selectedOption", "discountDisabledIds", (function() {
                     const e = this.get("discountDisabledIds");
                     if (!e) return !1;
                     const t = this.get("selectedOption"),
                         n = t?.details?.itemId;
                     return !e.includes(n)
                 })),
-                initialPrice: a.Ember.computed("selectedOption", (function() {
+                initialPrice: s.Ember.computed("selectedOption", (function() {
                     const e = this.get("selectedOption");
-                    return e && e.initialPrice && e.finalPrice !== e.initialPrice ? a.tra.formatString("event_hub_purchase_modal_rp", {
+                    return e && e.initialPrice && e.finalPrice !== e.initialPrice ? s.tra.formatString("event_hub_purchase_modal_rp", {
                         price: e.initialPrice
                     }) : null
                 })),
-                discountPercentage: a.Ember.computed("selectedOption", (function() {
+                discountPercentage: s.Ember.computed("selectedOption", (function() {
                     const e = this.get("selectedOption");
-                    return e && e.discountPercentage ? a.tra.formatString("event_hub_purchase_modal_discount_percentage", {
+                    return e && e.discountPercentage ? s.tra.formatString("event_hub_purchase_modal_discount_percentage", {
                         percentage: e.discountPercentage
                     }) : null
                 })),
-                optionsExecutingPurchaseClass: a.Ember.computed("isExecutingPurchase", (function() {
+                optionsExecutingPurchaseClass: s.Ember.computed("isExecutingPurchase", (function() {
                     return this.get("isExecutingPurchase") ? "eh-purchase-bundles-modal-option-executing-purchase" : ""
                 })),
-                numberOfOptionsWrapperCssClass: a.Ember.computed("options", (function() {
+                numberOfOptionsWrapperCssClass: s.Ember.computed("options", (function() {
                     switch (this.get("options").length) {
                         case 1:
                             return "eh-purchase-bundles-modal-single-option";
@@ -1449,14 +1473,11 @@
                             return ""
                     }
                 })),
-                successMessage: a.Ember.computed("isKREnv", (function() {
-                    return this.get("isKREnv") ? a.Ember.String.htmlSafe(this.get("tra.event_hub_purchase_modal_success_message_kr")) : a.Ember.String.htmlSafe(this.get("tra.event_hub_purchase_modal_success_message"))
+                successMessage: s.Ember.computed("isKREnv", (function() {
+                    return this.get("isKREnv") ? s.Ember.String.htmlSafe(this.get("tra.event_hub_purchase_modal_success_message_kr")) : s.Ember.String.htmlSafe(this.get("tra.event_hub_purchase_modal_success_message"))
                 })),
                 didInsertElement() {
-                    this._super(...arguments), this.addObserver("showPurchaseModal", this.getOptions), this.getOptions()
-                },
-                willDestroyElement() {
-                    this.removeObserver("showPurchaseModal")
+                    this._super(...arguments), this.getOptions()
                 },
                 didRender() {
                     this.defineSeeMoreElementVisibility()
@@ -1467,19 +1488,15 @@
                     e && e.offsetHeight < 72 ? this.set("descriptionElementAdditionalClassName", "eh-purchase-bundles-modal-description-see-more-display-none") : this.set("descriptionElementAdditionalClassName", "")
                 },
                 getOptions() {
-                    this.get("showPurchaseModal") && this.get("eventHubService").getPassBundles().then((e => {
-                        if (!e?.length) throw new Error("Pass Purchase Modal - Pass Bundles did not return any option");
-                        this.set("bundles", e)
-                    })).catch((e => {
-                        a.logger.error("Pass Purchase Modal - Failure loading purchase options", e);
-                        const t = a.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_error_header"), this.get("tra.event_hub_generic_error_body"));
+                    this.get("showPurchaseModal") && this.get("eventHubService").getPassBundles().catch((e => {
+                        s.logger.error("Pass Purchase Modal - Failure loading purchase options", e);
+                        const t = s.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_error_header"), this.get("tra.event_hub_generic_error_body"));
                         this.showErrorModal(t)
                     }))
                 },
                 closeModal() {
                     this.setProperties({
                         showPurchaseModal: !1,
-                        bundles: null,
                         selectedOption: null,
                         isExecutingPurchase: !1,
                         purchaseCompleted: !1,
@@ -1489,7 +1506,7 @@
                     }), this.setIsDescriptionExpanded(!1)
                 },
                 showErrorModal(e) {
-                    this.closeModal(), a.UIKit.getModalManager().add({
+                    this.closeModal(), s.UIKit.getModalManager().add({
                         type: "DialogAlert",
                         data: {
                             contents: e,
@@ -1498,12 +1515,12 @@
                     })
                 },
                 showPurchaseErrorModal() {
-                    const e = a.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_purchase_error_header"), this.get("tra.event_hub_generic_purchase_error_body"));
+                    const e = s.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_purchase_error_header"), this.get("tra.event_hub_generic_purchase_error_body"));
                     this.showErrorModal(e)
                 },
                 resetSelectedOptionCssClass() {
                     this.get("options").forEach((e => {
-                        e.selectedCssClass && a.Ember.set(e, "selectedCssClass", "")
+                        e.selectedCssClass && s.Ember.set(e, "selectedCssClass", "")
                     }))
                 },
                 setIsDescriptionExpanded(e) {
@@ -1530,20 +1547,20 @@
                         this.closeModal()
                     },
                     openRPPurchaseModal() {
-                        this.set("rpPurchaseInProgress", !0), a.Payments.openPayments({
+                        this.set("rpPurchaseInProgress", !0), s.Payments.openPayments({
                             action: "RP_PURCHASE",
                             openedFrom: "event_hub_pass_purchase",
                             onClose: this.getOptions.bind(this)
                         }).catch((e => {
-                            a.logger.error("Pass Purchase Payments Modal - Failure loading payments modal", e);
-                            const t = a.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_error_header"), this.get("tra.event_hub_generic_purchase_rp_error_body"));
+                            s.logger.error("Pass Purchase Payments Modal - Failure loading payments modal", e);
+                            const t = s.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_error_header"), this.get("tra.event_hub_generic_purchase_rp_error_body"));
                             this.showErrorModal(t)
                         })).finally((() => {
                             this.set("rpPurchaseInProgress", !1)
                         }))
                     },
                     selectOption(e) {
-                        this.get("isExecutingPurchase") || this.get("purchaseCompleted") || this.get("selectedOption") === e || (this.resetSelectedOptionCssClass(), a.Ember.set(e, "selectedCssClass", "eh-purchase-bundles-modal-option-selected"), this.set("selectedOption", e), this.setIsDescriptionExpanded(!1), this.set("tosChecked", !1), this.set("descriptionElementAdditionalClassName", ""))
+                        this.get("isExecutingPurchase") || this.get("purchaseCompleted") || this.get("selectedOption") === e || (this.resetSelectedOptionCssClass(), s.Ember.set(e, "selectedCssClass", "eh-purchase-bundles-modal-option-selected"), this.set("selectedOption", e), this.setIsDescriptionExpanded(!1), this.set("tosChecked", !1), this.set("descriptionElementAdditionalClassName", ""))
                     },
                     toggleTosChecked(e) {
                         this.set("tosChecked", e.target.checked)
@@ -1560,14 +1577,14 @@
                                     event_name: e.details.name
                                 }
                             };
-                        a.datadogRum.startOperation(a.datadogRum.XP_STORE_ITEM_PURCHASE, t), a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                            eventName: s.TELEMETRY.PURCHASE_PASS_UNLOCK_CLICK_EVENT,
+                        s.datadogRum.startOperation(s.datadogRum.XP_STORE_ITEM_PURCHASE, t), s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                            eventName: a.TELEMETRY.PURCHASE_PASS_UNLOCK_CLICK_EVENT,
                             eventId: this.get("eventHubService.info.eventId"),
                             selectedOption: e.details.itemId
                         }), this.get("eventHubService").purchasePassBundle(e).then((() => {
-                            this.set("isExecutingPurchase", !1), this.set("purchaseCompleted", !0), this.updateBundlesAfterPurchase(), a.datadogRum.stopOperationWithOk(a.datadogRum.XP_STORE_ITEM_PURCHASE)
+                            this.set("isExecutingPurchase", !1), this.set("purchaseCompleted", !0), this.updateBundlesAfterPurchase(), s.datadogRum.stopOperationWithOk(s.datadogRum.XP_STORE_ITEM_PURCHASE)
                         })).catch((e => {
-                            a.logger.error("Failure purchasing Event Pass", e), this.showPurchaseErrorModal(), a.datadogRum.stopOperationWithError(a.datadogRum.XP_STORE_ITEM_PURCHASE, e)
+                            s.logger.error("Failure purchasing Event Pass", e), this.showPurchaseErrorModal(), s.datadogRum.stopOperationWithError(s.datadogRum.XP_STORE_ITEM_PURCHASE, e)
                         }))
                     },
                     expandOrCollapseDescription() {
@@ -1587,21 +1604,21 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.SOUNDS = void 0;
-            var a = n(1),
-                s = n(5);
+            var s = n(1),
+                a = n(5);
             const {
                 RunMixin: l
-            } = a.EmberAddons.EmberLifeline, o = {
+            } = s.EmberAddons.EmberLifeline, o = {
                 STEP: "/fe/lol-static-assets/sounds/sfx-uikit-generic-click-small.ogg",
                 MAX: "/fe/lol-static-assets/sounds/sfx-uikit-generic-click-big.ogg"
             };
             t.SOUNDS = o;
-            var r = a.Ember.Component.extend(l, {
+            var r = s.Ember.Component.extend(l, {
                 tag: null,
-                eventHubService: a.Ember.inject.service("event-hub"),
-                playerSettingsService: a.Ember.inject.service("player-settings"),
-                regionInfoService: a.Ember.inject.service("region-info"),
-                formatter: a.Ember.computed("tra.metadata.locale.id", (function() {
+                eventHubService: s.Ember.inject.service("event-hub"),
+                playerSettingsService: s.Ember.inject.service("player-settings"),
+                regionInfoService: s.Ember.inject.service("region-info"),
+                formatter: s.Ember.computed("tra.metadata.locale.id", (function() {
                     const e = this.get("tra.metadata.locale.id").toLowerCase().replace("_", "-");
                     return Intl.NumberFormat(e, {
                         numberingSystem: "latn"
@@ -1616,64 +1633,64 @@
                 levelsToBuy: 1,
                 minNumberOfLevelsToBuy: 1,
                 tosChecked: !1,
-                tosNotChecked: a.Ember.computed.not("tosChecked"),
+                tosNotChecked: s.Ember.computed.not("tosChecked"),
                 titleTraKey: "",
                 selectedReward: null,
                 pricePerLevel: 0,
                 currentBalance: 0,
-                isKREnv: a.Ember.computed.alias("regionInfoService.isKREnv"),
-                animationsEnabled: a.Ember.computed.alias("playerSettingsService.animationsEnabled"),
-                currentLevel: a.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
-                totalNumberOfLevels: a.Ember.computed.alias("eventHubService.rewardTrackProgress.totalLevels"),
-                shouldRenderSlider: a.Ember.computed("numberOfLevelsToBuy", (function() {
+                isKREnv: s.Ember.computed.alias("regionInfoService.isKREnv"),
+                animationsEnabled: s.Ember.computed.alias("playerSettingsService.animationsEnabled"),
+                currentLevel: s.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
+                totalNumberOfLevels: s.Ember.computed.alias("eventHubService.rewardTrackProgress.totalLevels"),
+                shouldRenderSlider: s.Ember.computed("numberOfLevelsToBuy", (function() {
                     return this.get("numberOfLevelsToBuy") > 1
                 })),
-                newLevel: a.Ember.computed("currentLevel", "levelsToBuy", (function() {
+                newLevel: s.Ember.computed("currentLevel", "levelsToBuy", (function() {
                     return this.get("currentLevel") + this.get("levelsToBuy")
                 })),
-                tosDisabled: a.Ember.computed("notEnoughRp", "errorLoadingPurchaseData", (function() {
+                tosDisabled: s.Ember.computed("notEnoughRp", "errorLoadingPurchaseData", (function() {
                     const e = this.get("notEnoughRp") || this.get("errorLoadingPurchaseData");
                     return e && this.set("tosChecked", !1), e
                 })),
-                tosEnabled: a.Ember.computed.not("tosDisabled"),
-                totalPrice: a.Ember.computed("levelsToBuy", "pricePerLevel", (function() {
+                tosEnabled: s.Ember.computed.not("tosDisabled"),
+                totalPrice: s.Ember.computed("levelsToBuy", "pricePerLevel", (function() {
                     return this.get("levelsToBuy") * this.get("pricePerLevel")
                 })),
-                totalPriceTra: a.Ember.computed("totalPrice", (function() {
+                totalPriceTra: s.Ember.computed("totalPrice", (function() {
                     const e = this.get("formatter").format(this.get("totalPrice"));
-                    return a.tra.formatString("event_hub_purchase_modal_rp", {
+                    return s.tra.formatString("event_hub_purchase_modal_rp", {
                         price: e
                     })
                 })),
-                numberOfLevelsToBuy: a.Ember.computed("currentLevel", "totalNumberOfLevels", (function() {
+                numberOfLevelsToBuy: s.Ember.computed("currentLevel", "totalNumberOfLevels", (function() {
                     return this.get("totalNumberOfLevels") - this.get("currentLevel")
                 })),
-                notEnoughRp: a.Ember.computed("newBalance", (function() {
+                notEnoughRp: s.Ember.computed("newBalance", (function() {
                     return this.get("newBalance") < 0
                 })),
-                newBalance: a.Ember.computed("currentBalance", "totalPrice", (function() {
+                newBalance: s.Ember.computed("currentBalance", "totalPrice", (function() {
                     return this.get("currentBalance") - this.get("totalPrice")
                 })),
-                newBalanceTra: a.Ember.computed("newBalance", (function() {
+                newBalanceTra: s.Ember.computed("newBalance", (function() {
                     const e = this.get("formatter").format(this.get("newBalance"));
-                    return a.tra.formatString("event_hub_purchase_modal_rp", {
+                    return s.tra.formatString("event_hub_purchase_modal_rp", {
                         price: e
                     })
                 })),
-                titleTra: a.Ember.computed("titleTraKey", (function() {
+                titleTra: s.Ember.computed("titleTraKey", (function() {
                     return this.get(`tra.${this.get("titleTraKey")}`)
                 })),
-                purchaseTosTra: a.Ember.computed("isKREnv", (function() {
-                    return this.get("isKREnv") ? a.Ember.String.htmlSafe(this.get("tra.event_hub_purchase_modal_tos_kr")) : this.get("tra.event_hub_purchase_levels_tos")
+                purchaseTosTra: s.Ember.computed("isKREnv", (function() {
+                    return this.get("isKREnv") ? s.Ember.String.htmlSafe(this.get("tra.event_hub_purchase_modal_tos_kr")) : this.get("tra.event_hub_purchase_levels_tos")
                 })),
-                purchaseButtonDisabled: a.Ember.computed.or("tosNotChecked", "purchaseInProgress"),
-                levelsButtonTra: a.Ember.computed.alias("tra.event_hub_purchase_levels_button"),
+                purchaseButtonDisabled: s.Ember.computed.or("tosNotChecked", "purchaseInProgress"),
+                levelsButtonTra: s.Ember.computed.alias("tra.event_hub_purchase_levels_button"),
                 init() {
-                    this._super(...arguments), this.addObserver("showPurchaseModal", this.observeShowPurchaseModal), this.addObserver("selectedReward", this.setLevelsToBuyFromSelectedReward)
+                    this._super(...arguments), this.setLevelsToBuyFromSelectedReward(), this.initializePurchaseProgressModal()
                 },
                 showPostPurchaseConfirmation() {
-                    const e = a.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_purchase_levels_confirmation_header"), this._getPurchaseConfirmationBody());
-                    a.UIKit.getModalManager().add({
+                    const e = s.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_purchase_levels_confirmation_header"), this._getPurchaseConfirmationBody());
+                    s.UIKit.getModalManager().add({
                         type: "DialogAlert",
                         data: {
                             contents: e,
@@ -1686,8 +1703,8 @@
                     return this.get("isKREnv") ? `\n        <p>${e}</p>\n        <p>${this.get("tra.event_hub_purchase_modal_success_message_kr")}</p>\n      ` : e
                 },
                 showGeneralErrorModal() {
-                    const e = a.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_purchase_error_header"), this.get("tra.event_hub_generic_purchase_error_body"));
-                    a.UIKit.getModalManager().add({
+                    const e = s.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_purchase_error_header"), this.get("tra.event_hub_generic_purchase_error_body"));
+                    s.UIKit.getModalManager().add({
                         type: "DialogAlert",
                         data: {
                             contents: e,
@@ -1695,9 +1712,9 @@
                         }
                     })
                 },
-                observeShowPurchaseModal() {
-                    this.get("showPurchaseModal") && (this.fetchProgressionPurchaseData(), a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                        eventName: s.TELEMETRY.OPEN_PURCHASE_LEVELS_EVENT,
+                initializePurchaseProgressModal() {
+                    this.fetchProgressionPurchaseData(), s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                        eventName: a.TELEMETRY.OPEN_PURCHASE_LEVELS_EVENT,
                         eventId: this.get("eventHubService.info.eventId"),
                         playerCurrentLevel: this.get("currentLevel"),
                         selectedRewardLevel: this.get("selectedReward")?.item?.threshold,
@@ -1705,7 +1722,7 @@
                         totalPrice: this.get("totalPrice"),
                         currentBalance: this.get("currentBalance"),
                         notEnoughRp: this.get("notEnoughRp")
-                    }))
+                    })
                 },
                 setLevelsToBuyFromSelectedReward() {
                     const e = this.get("selectedReward")?.item?.threshold;
@@ -1723,16 +1740,13 @@
                             levelsToBuy: Math.max(1, Math.min(this.get("levelsToBuy"), this.get("numberOfLevelsToBuy")))
                         })
                     })).catch((e => {
-                        this.set("errorLoadingPurchaseData", !0), a.logger.error("Failure loading progression purchase data", e)
+                        this.set("errorLoadingPurchaseData", !0), s.logger.error("Failure loading progression purchase data", e)
                     })).finally((() => {
                         this.set("isDataLoading", !1)
                     }))
                 },
                 debouncedFetchProgressionPurchaseData() {
                     this.set("isDataLoading", !0), this.debounceTask("fetchProgressionPurchaseData", 100)
-                },
-                willDestroyElement() {
-                    this.removeObserver("showPurchaseModal")
                 },
                 closeModal() {
                     this.setProperties({
@@ -1742,7 +1756,7 @@
                     }), this.setLevelsToBuyFromSelectedReward()
                 },
                 showErrorModal(e) {
-                    a.UIKit.getModalManager().add({
+                    s.UIKit.getModalManager().add({
                         type: "DialogAlert",
                         data: {
                             contents: e,
@@ -1752,7 +1766,7 @@
                     })
                 },
                 showPurchaseErrorModal() {
-                    const e = a.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_purchase_error_header"), this.get("tra.event_hub_generic_purchase_error_body"));
+                    const e = s.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_purchase_error_header"), this.get("tra.event_hub_generic_purchase_error_body"));
                     this.showErrorModal(e)
                 },
                 _animateLevelPurchaseIncrease() {
@@ -1768,7 +1782,7 @@
                     handleSelectedQuantityChange(e) {},
                     updateLevelsToBuy(e) {
                         this.get("levelsToBuy") < e.value && this.debounceTask("_animateLevelPurchaseIncrease", 100), this.set("levelsToBuy", e.value);
-                        const t = a.AudioPlugin.getChannel("sfx-ui");
+                        const t = s.AudioPlugin.getChannel("sfx-ui");
                         this.get("levelsToBuy") === this.get("numberOfLevelsToBuy") ? t.playSound(o.MAX) : t.playSound(o.STEP)
                     },
                     decreaseLevelsToBuy() {
@@ -1790,8 +1804,8 @@
                                 type: "season_pass_levels"
                             }
                         };
-                        return a.datadogRum.startOperation(a.datadogRum.XP_STORE_ITEM_PURCHASE, e), this.set("purchaseInProgress", !0), a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                            eventName: s.TELEMETRY.PURCHASE_LEVELS_CLICK_EVENT,
+                        return s.datadogRum.startOperation(s.datadogRum.XP_STORE_ITEM_PURCHASE, e), this.set("purchaseInProgress", !0), s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                            eventName: a.TELEMETRY.PURCHASE_LEVELS_CLICK_EVENT,
                             eventId: this.get("eventHubService.info.eventId"),
                             playerCurrentLevel: this.get("currentLevel"),
                             levelsToBuy: this.get("levelsToBuy"),
@@ -1799,26 +1813,26 @@
                             currentBalance: this.get("currentBalance"),
                             newBalance: this.get("newBalance")
                         }), this.get("eventHubService").purchaseOffer(this.get("progressionOfferId"), this.get("levelsToBuy")).then((() => {
-                            a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-yourshop-stinger.ogg"), this.showPostPurchaseConfirmation(), this.closeModal(), a.datadogRum.stopOperationWithOk(a.datadogRum.XP_STORE_ITEM_PURCHASE)
+                            s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-yourshop-stinger.ogg"), this.showPostPurchaseConfirmation(), this.closeModal(), s.datadogRum.stopOperationWithOk(s.datadogRum.XP_STORE_ITEM_PURCHASE)
                         })).catch((e => {
-                            a.logger.error(`Failure purchasing offer id: ${this.get("progressionOfferId")}`, e), this.closeModal(), this.showGeneralErrorModal(), a.datadogRum.stopOperationWithError(a.datadogRum.XP_STORE_ITEM_PURCHASE, e)
+                            s.logger.error(`Failure purchasing offer id: ${this.get("progressionOfferId")}`, e), this.closeModal(), this.showGeneralErrorModal(), s.datadogRum.stopOperationWithError(s.datadogRum.XP_STORE_ITEM_PURCHASE, e)
                         }))
                     },
                     openRPPurchaseModal() {
-                        this.set("rpPurchaseInProgress", !0), a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                            eventName: s.TELEMETRY.PURCHASE_LEVELS_RP_TOP_UP_CLICK_EVENT,
+                        this.set("rpPurchaseInProgress", !0), s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                            eventName: a.TELEMETRY.PURCHASE_LEVELS_RP_TOP_UP_CLICK_EVENT,
                             eventId: this.get("eventHubService.info.eventId"),
                             playerCurrentLevel: this.get("currentLevel"),
                             levelsToBuy: this.get("levelsToBuy"),
                             totalPrice: this.get("totalPrice"),
                             currentBalance: this.get("currentBalance")
-                        }), a.Payments.openPayments({
+                        }), s.Payments.openPayments({
                             action: "RP_PURCHASE",
                             openedFrom: "event_hub_purchase_levels",
                             onClose: this.debouncedFetchProgressionPurchaseData.bind(this)
                         }).catch((e => {
-                            a.logger.error("Levels Purchase Payments Modal - Failure loading payments modal", e);
-                            const t = a.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_error_header"), this.get("tra.event_hub_generic_purchase_rp_error_body"));
+                            s.logger.error("Levels Purchase Payments Modal - Failure loading payments modal", e);
+                            const t = s.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_error_header"), this.get("tra.event_hub_generic_purchase_rp_error_body"));
                             this.showErrorModal(t)
                         })).finally((() => {
                             this.set("rpPurchaseInProgress", !1)
@@ -1832,104 +1846,104 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5),
+            var s = n(1),
+                a = n(5),
                 l = n(26);
-            var o = a.Ember.Component.extend({
+            var o = s.Ember.Component.extend({
                 classNames: ["eh-reward-details"],
-                eventHubService: a.Ember.inject.service("event-hub"),
-                rewardsService: a.Ember.inject.service("rewards"),
-                regionInfoService: a.Ember.inject.service("region-info"),
-                playerSettingsService: a.Ember.inject.service("player-settings"),
-                playerCurrentLevel: a.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
-                totalNumberOfLevels: a.Ember.computed.alias("eventHubService.rewardTrackProgress.totalLevels"),
-                narrativeElements: a.Ember.computed.alias("eventHubService.narrative"),
-                isSeasonPass: a.Ember.computed.equal("eventHubService.activeEventType", s.EVENT_HUB_TYPES.SEASON_PASS),
+                eventHubService: s.Ember.inject.service("event-hub"),
+                rewardsService: s.Ember.inject.service("rewards"),
+                regionInfoService: s.Ember.inject.service("region-info"),
+                playerSettingsService: s.Ember.inject.service("player-settings"),
+                playerCurrentLevel: s.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
+                totalNumberOfLevels: s.Ember.computed.alias("eventHubService.rewardTrackProgress.totalLevels"),
+                narrativeElements: s.Ember.computed.alias("eventHubService.narrative"),
+                isSeasonPass: s.Ember.computed.equal("eventHubService.activeEventType", a.EVENT_HUB_TYPES.SEASON_PASS),
                 selectedReward: null,
                 selectedChapter: null,
                 rarityId: void 0,
                 rarityType: "skin",
-                rarityInfo: a.Ember.computed("rarityId", (function() {
+                rarityInfo: s.Ember.computed("rarityId", (function() {
                     const e = this.get("rarityId");
-                    return e && "kNoRarity" !== e ? a.RarityManager.agregatedSkinRarityInformationByTier[e] : null
+                    return e && "kNoRarity" !== e ? s.RarityManager.agregatedSkinRarityInformationByTier[e] : null
                 })),
-                rarityTraString: a.Ember.computed("rarityInfo", (function() {
+                rarityTraString: s.Ember.computed("rarityInfo", (function() {
                     if (this.get("rarityInfo")) return this.get("tra").get(this.get("rarityInfo").traKeySingular)
                 })),
-                region: a.Ember.computed.alias("regionInfoService.region"),
-                level: a.Ember.computed("selectedReward", (function() {
+                region: s.Ember.computed.alias("regionInfoService.region"),
+                level: s.Ember.computed("selectedReward", (function() {
                     const e = this.get("selectedReward")?.item?.threshold;
-                    return a.tra.formatString("event_hub_reward_level_number_text", {
+                    return s.tra.formatString("event_hub_reward_level_number_text", {
                         levelNumber: e
                     })
                 })),
-                chapterTitle: a.Ember.computed.alias("selectedChapter.localizedTitle"),
-                title: a.Ember.computed("selectedReward", (function() {
+                chapterTitle: s.Ember.computed.alias("selectedChapter.localizedTitle"),
+                title: s.Ember.computed("selectedReward", (function() {
                     const e = this.get("selectedReward")?.item,
                         t = this.get("selectedReward")?.optionIndex || 0;
                     return e?.rewardOptions?.[t]?.rewardName || ""
                 })),
-                showNarrativeRewardDescription: a.Ember.computed("selectedReward", "rewardDescription", "narrativeDescription", "rewardClaimed", (function() {
+                showNarrativeRewardDescription: s.Ember.computed("selectedReward", "rewardDescription", "narrativeDescription", "rewardClaimed", (function() {
                     const {
                         selectedReward: e,
                         rewardDescription: t,
                         narrativeDescription: n,
-                        rewardClaimed: a
+                        rewardClaimed: s
                     } = this.getProperties("selectedReward", "rewardDescription", "narrativeDescription", "rewardClaimed");
                     if (!e?.item?.rewardOptions?.length) return !1;
-                    return !this.isRewardLocked(e) && !a && (!!t || !!n)
+                    return !this.isRewardLocked(e) && !s && (!!t || !!n)
                 })),
-                rewardDescription: a.Ember.computed("selectedReward", (function() {
+                rewardDescription: s.Ember.computed("selectedReward", (function() {
                     const e = this.get("selectedReward")?.item,
                         t = this.get("selectedReward")?.optionIndex || 0;
                     return e?.rewardOptions?.[t]?.rewardDescription || ""
                 })),
-                narrativeDescription: a.Ember.computed("selectedNarrativeElement", (function() {
+                narrativeDescription: s.Ember.computed("selectedNarrativeElement", (function() {
                     const e = this.get("selectedNarrativeElement");
                     return e?.narrativeVideo?.localizedNarrativeVideoDescription || ""
                 })),
-                rewardClaimed: a.Ember.computed("selectedReward", (function() {
+                rewardClaimed: s.Ember.computed("selectedReward", (function() {
                     const e = this.get("selectedReward")?.optionIndex || 0,
                         t = this.get("selectedReward")?.item?.rewardOptions?.[e]?.state;
-                    return t === s.REWARD_TRACK_ITEM_STATE.SELECTED
+                    return t === a.REWARD_TRACK_ITEM_STATE.SELECTED
                 })),
-                showPassRequired: a.Ember.computed("selectedReward", (function() {
+                showPassRequired: s.Ember.computed("selectedReward", (function() {
                     const e = this.get("selectedReward");
                     if (!e?.item?.rewardOptions?.length) return !1;
                     return this.isRewardLocked(e)
                 })),
                 isRewardLocked(e) {
                     const t = e?.optionIndex;
-                    return e?.item?.rewardOptions?.[t]?.state === s.REWARD_TRACK_ITEM_STATE.LOCKED
+                    return e?.item?.rewardOptions?.[t]?.state === a.REWARD_TRACK_ITEM_STATE.LOCKED
                 },
-                selectedNarrativeElement: a.Ember.computed("selectedReward", "narrativeElements", (function() {
+                selectedNarrativeElement: s.Ember.computed("selectedReward", "narrativeElements", (function() {
                     const e = this.get("selectedReward")?.item?.threshold,
                         t = this.get("narrativeElements");
                     if (!e || !t?.length) return;
                     return t.find((t => parseInt(e) === t.narrativeStartingTrackLevel))
                 })),
-                showReplayButton: a.Ember.computed("selectedNarrativeElement", "totalNumberOfLevels", (function() {
+                showReplayButton: s.Ember.computed("selectedNarrativeElement", "totalNumberOfLevels", (function() {
                     const e = this.get("selectedNarrativeElement"),
                         t = this.get("totalNumberOfLevels");
                     return !(0 === e?.narrativeStartingTrackLevel) && !(e?.narrativeStartingTrackLevel === t) && !!e?.narrativeVideo?.localizedNarrativeVideoUrl
                 })),
-                isReplayButtonDisabled: a.Ember.computed("showReplayButton", "selectedNarrativeElement", "playerCurrentLevel", (function() {
+                isReplayButtonDisabled: s.Ember.computed("showReplayButton", "selectedNarrativeElement", "playerCurrentLevel", (function() {
                     if (!this.get("showReplayButton")) return !0;
                     const e = this.get("selectedNarrativeElement"),
                         t = e?.narrativeVideo?.narrativeVideoIsLockedOnLevel,
                         n = this.get("playerCurrentLevel") < e?.narrativeStartingTrackLevel;
                     return t && n
                 })),
-                rewardInventoryTypes: a.Ember.computed("selectedReward", "rarityTraString", (function() {
+                rewardInventoryTypes: s.Ember.computed("selectedReward", "rarityTraString", (function() {
                     const e = this.get("selectedReward"),
                         t = e?.item?.rewardOptions?.[this.get("selectedReward")?.optionIndex || 0];
                     if (!e || !t) return;
                     const n = t?.rewardInventoryTypes;
                     if (!n || 0 === n.length) return "";
-                    const s = this.get("rarityTraString") || a.tra.get(l.INVENTORY_TYPE_TRA_KEY[n[0]]);
-                    return 1 === n.length || n[0] === n[1] ? s : a.tra.formatString("event_hub_content_type_multiple", {
-                        firstType: s,
-                        secondType: a.tra.get(l.INVENTORY_TYPE_TRA_KEY[n[1]])
+                    const a = this.get("rarityTraString") || s.tra.get(l.INVENTORY_TYPE_TRA_KEY[n[0]]);
+                    return 1 === n.length || n[0] === n[1] ? a : s.tra.formatString("event_hub_content_type_multiple", {
+                        firstType: a,
+                        secondType: s.tra.get(l.INVENTORY_TYPE_TRA_KEY[n[1]])
                     })
                 })),
                 actions: {
@@ -1937,12 +1951,12 @@
                         if (this.get("isReplayButtonDisabled")) return;
                         const e = this.get("selectedNarrativeElement"),
                             t = document.createElement("iframe");
-                        t.setAttribute("src", e?.narrativeVideo?.localizedNarrativeVideoUrl), t.setAttribute("width", "100%"), t.setAttribute("height", "100%"), t.setAttribute("frameborder", "0"), a.FullPageModalManager.open({
+                        t.setAttribute("src", e?.narrativeVideo?.localizedNarrativeVideoUrl), t.setAttribute("width", "100%"), t.setAttribute("height", "100%"), t.setAttribute("frameborder", "0"), s.FullPageModalManager.open({
                             data: {
                                 contents: t
                             }
-                        }), a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                            eventName: s.TELEMETRY.REPLAY_BUTTON_CLICK_EVENT,
+                        }), s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                            eventName: a.TELEMETRY.REPLAY_BUTTON_CLICK_EVENT,
                             eventId: this.get("eventHubService.info.eventId"),
                             milestoneLevel: e.narrativeStartingTrackLevel
                         });
@@ -1957,8 +1971,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.INVENTORY_TYPE_TRA_KEY = void 0;
-            var a = n(1);
-            const s = {
+            var s = n(1);
+            const a = {
                 ACHIEVEMENT_TITLE: "event_hub_inventory_type_name_achievement_title",
                 ARAM_BOON: "event_hub_inventory_type_name_aram_boon",
                 BOOST: "event_hub_inventory_type_name_boost",
@@ -1990,14 +2004,14 @@
                 TFT_MAP_SKIN: "event_hub_inventory_type_name_tft_map_skin",
                 WARD_SKIN: "event_hub_inventory_type_name_ward_skin"
             };
-            t.INVENTORY_TYPE_TRA_KEY = s;
-            var l = a.Ember.Helper.helper((function(e) {
+            t.INVENTORY_TYPE_TRA_KEY = a;
+            var l = s.Ember.Helper.helper((function(e) {
                 const t = e[0];
-                let n = s[t];
+                let n = a[t];
                 if ("CHAMPION_SKIN" === t) {
-                    "RECOLOR" === e[1] && (n = s.CHROMA)
+                    "RECOLOR" === e[1] && (n = a.CHROMA)
                 }
-                return a.tra.get(n)
+                return s.tra.get(n)
             }));
             t.default = l
         }, (e, t, n) => {
@@ -2005,18 +2019,18 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = a.Ember.Component.extend({
+            var s = n(1),
+                a = s.Ember.Component.extend({
                     classNames: ["eh-claim-button"],
                     classNameBindings: ["claimingInProgress:eh-claim-button-claiming-in-progress"],
-                    eventHubService: a.Ember.inject.service("event-hub"),
-                    playerSettingsService: a.Ember.inject.service("player-settings"),
+                    eventHubService: s.Ember.inject.service("event-hub"),
+                    playerSettingsService: s.Ember.inject.service("player-settings"),
                     claimingInProgress: !1,
-                    unclaimedRewards: a.Ember.computed.alias("eventHubService.unclaimedRewards.rewardsCount"),
-                    claimButtonDisabled: a.Ember.computed("unclaimedRewards", (function() {
+                    unclaimedRewards: s.Ember.computed.alias("eventHubService.unclaimedRewards.rewardsCount"),
+                    claimButtonDisabled: s.Ember.computed("unclaimedRewards", (function() {
                         return !this.get("unclaimedRewards") || 0 === this.get("unclaimedRewards")
                     })),
-                    shouldShowAnimations: a.Ember.computed("playerSettingsService.animationsEnabled", "unclaimedRewards", (function() {
+                    shouldShowAnimations: s.Ember.computed("playerSettingsService.animationsEnabled", "unclaimedRewards", (function() {
                         return this.get("playerSettingsService.animationsEnabled") && this.get("unclaimedRewards") > 0
                     })),
                     mouseDown() {
@@ -2025,28 +2039,28 @@
                     },
                     actions: {
                         claimAllRewards() {
-                            this.get("claimButtonDisabled") || (this.get("eventHubService").claimAllPendingRewards(), this.set("claimingInProgress", !0), a.Ember.run.later(this, (() => this.set("claimingInProgress", !1)), 5e3))
+                            this.get("claimButtonDisabled") || (this.get("eventHubService").claimAllPendingRewards(), this.set("claimingInProgress", !0), s.Ember.run.later(this, (() => this.set("claimingInProgress", !1)), 5e3))
                         }
                     }
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.PERCENTAGE_ANIMATION_STEP = void 0;
-            var a = n(1),
-                s = n(5);
+            var s = n(1),
+                a = n(5);
             t.PERCENTAGE_ANIMATION_STEP = 5;
-            var l = a.Ember.Component.extend({
+            var l = s.Ember.Component.extend({
                 classNames: ["eh-progress-indicator"],
-                eventHubService: a.Ember.inject.service("event-hub"),
-                isGracePeriod: a.Ember.computed.alias("eventHubService.isGracePeriod"),
-                rewardTrackProgress: a.Ember.computed.alias("eventHubService.rewardTrackProgress"),
-                hasBonusTrack: a.Ember.computed("eventHubService.rewardTrackBonusItems", (function() {
+                eventHubService: s.Ember.inject.service("event-hub"),
+                isGracePeriod: s.Ember.computed.alias("eventHubService.isGracePeriod"),
+                rewardTrackProgress: s.Ember.computed.alias("eventHubService.rewardTrackProgress"),
+                hasBonusTrack: s.Ember.computed("eventHubService.rewardTrackBonusItems", (function() {
                     return this.get("eventHubService.rewardTrackBonusItems")?.length > 0
                 })),
-                isPassCompleted: a.Ember.computed("rewardTrackProgress", "hasBonusTrack", (function() {
+                isPassCompleted: s.Ember.computed("rewardTrackProgress", "hasBonusTrack", (function() {
                     if (this.get("rewardTrackProgress")) {
                         const {
                             level: e,
@@ -2057,42 +2071,42 @@
                 })),
                 currentLevel: null,
                 radialPercentage: 0,
-                remainingPercentage: a.Ember.computed("radialPercentage", (function() {
+                remainingPercentage: s.Ember.computed("radialPercentage", (function() {
                     const e = 100 - this.get("radialPercentage");
                     return e > 0 ? e : 0
                 })),
-                isSeasonPass: a.Ember.computed.equal("eventHubService.activeEventType", s.EVENT_HUB_TYPES.SEASON_PASS),
-                traPrefix: a.Ember.computed("eventHubService.activeEventType", (function() {
-                    const e = s.EVENT_CONFIGS_BY_TYPE[this.get("eventHubService.activeEventType")]?.traPrefix;
-                    return this.get("isSeasonPass") && this.get("eventHubService.activeSeasonPassSubType") !== s.SEASON_PASS_SUB_TYPES.DEFAULT ? `${e}_${this.get("eventHubService.activeSeasonPassSubType").toLowerCase()}` : e
+                isSeasonPass: s.Ember.computed.equal("eventHubService.activeEventType", a.EVENT_HUB_TYPES.SEASON_PASS),
+                traPrefix: s.Ember.computed("eventHubService.activeEventType", (function() {
+                    const e = a.EVENT_CONFIGS_BY_TYPE[this.get("eventHubService.activeEventType")]?.traPrefix;
+                    return this.get("isSeasonPass") && this.get("eventHubService.activeSeasonPassSubType") !== a.SEASON_PASS_SUB_TYPES.DEFAULT ? `${e}_${this.get("eventHubService.activeSeasonPassSubType").toLowerCase()}` : e
                 })),
-                progressInfoTooltipTitleTra: a.Ember.computed("traPrefix", (function() {
+                progressInfoTooltipTitleTra: s.Ember.computed("traPrefix", (function() {
                     return this.get(`tra.${this.get("traPrefix")}_progress_info_tooltip_title`)
                 })),
-                progressInfoTooltipBodyTra: a.Ember.computed("traPrefix", (function() {
+                progressInfoTooltipBodyTra: s.Ember.computed("traPrefix", (function() {
                     return this.get(`tra.${this.get("traPrefix")}_progress_info_tooltip_body`)
                 })),
-                progressLockedTooltipBodyTra: a.Ember.computed("rewardTrackProgress.totalLevels", (function() {
-                    return a.tra.formatString("event_hub_progress_locked_tooltip_body", {
+                progressLockedTooltipBodyTra: s.Ember.computed("rewardTrackProgress.totalLevels", (function() {
+                    return s.tra.formatString("event_hub_progress_locked_tooltip_body", {
                         totalLevels: this.get("rewardTrackProgress.totalLevels")
                     })
                 })),
-                progressUnit: a.Ember.computed("traPrefix", (function() {
+                progressUnit: s.Ember.computed("traPrefix", (function() {
                     return this.get(`tra.${this.get("traPrefix")}_progress_unit`)
                 })),
-                currentProgressAmount: a.Ember.computed("rewardTrackProgress", "isSeasonPass", (function() {
+                currentProgressAmount: s.Ember.computed("rewardTrackProgress", "isSeasonPass", (function() {
                     const e = this.get("isSeasonPass"),
                         t = this.get("rewardTrackProgress")?.level || 0,
                         n = this.get("rewardTrackProgress")?.currentLevelXP || 0;
                     return e ? n : t
                 })),
-                totalProgressAmount: a.Ember.computed("rewardTrackProgress", "isSeasonPass", (function() {
+                totalProgressAmount: s.Ember.computed("rewardTrackProgress", "isSeasonPass", (function() {
                     const e = this.get("isSeasonPass"),
                         t = this.get("rewardTrackProgress")?.totalLevels || 0,
                         n = this.get("rewardTrackProgress")?.totalLevelXP || 0;
                     return e ? n : t
                 })),
-                battleExpIconImageSrc: a.Ember.computed.alias("eventHubService.info.battleExpIcon"),
+                battleExpIconImageSrc: s.Ember.computed.alias("eventHubService.info.battleExpIcon"),
                 getPlayerXpPercentage(e) {
                     const t = Math.ceil(e?.currentLevelXP / e?.totalLevelXP * 100);
                     return Math.min(100, t) || 0
@@ -2122,8 +2136,8 @@
                     if (e === t) return;
                     if (e >= 100) return this.set("radialPercentage", 0), void requestAnimationFrame(this.updateRadialPercentage);
                     const n = t < e ? 5 : Math.min(5, t - e),
-                        a = Math.min(100, e + n);
-                    this.set("radialPercentage", a), requestAnimationFrame(this.updateRadialPercentage)
+                        s = Math.min(100, e + n);
+                    this.set("radialPercentage", s), requestAnimationFrame(this.updateRadialPercentage)
                 }
             });
             t.default = l
@@ -2132,28 +2146,28 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5),
-                l = a.Ember.Component.extend({
+            var s = n(1),
+                a = n(5),
+                l = s.Ember.Component.extend({
                     classNames: ["eh-lobby-button"],
                     eventId: null,
                     queueId: null,
-                    patchlineService: a.Ember.inject.service("patchline"),
-                    isPatcherBusy: a.Ember.computed("action", "patchlineService.isGettingReadyForGame", (function() {
+                    patchlineService: s.Ember.inject.service("patchline"),
+                    isPatcherBusy: s.Ember.computed("action", "patchlineService.isGettingReadyForGame", (function() {
                         return this.get("patchlineService.isGettingReadyForGame")
                     })),
                     actions: {
                         openLobby() {
                             const e = this.get("queueId"),
                                 t = this.get("eventId");
-                            e ? (0, a.getProvider)().getOptional("rcp-fe-lol-parties").then((t => {
+                            e ? (0, s.getProvider)().getOptional("rcp-fe-lol-parties").then((t => {
                                 e ? e && t.createLobby(e).then((() => {
                                     t.show(e)
-                                })) : a.Navigation.performMainAction()
+                                })) : s.Navigation.performMainAction()
                             })).catch((e => {
-                                a.logger.error("Provider Parties failure", e)
-                            })) : a.Navigation.performMainAction(), a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                                eventName: s.TELEMETRY.PLAY_CLICK_EVENT,
+                                s.logger.error("Provider Parties failure", e)
+                            })) : s.Navigation.performMainAction(), s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                                eventName: a.TELEMETRY.PLAY_CLICK_EVENT,
                                 eventId: t,
                                 queueId: e
                             })
@@ -2166,28 +2180,28 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5);
-            var l = a.Ember.Component.extend({
+            var s = n(1),
+                a = n(5);
+            var l = s.Ember.Component.extend({
                 classNames: ["eh-objective-card-wrapper"],
                 eventId: null,
                 objective: null,
                 shouldOpenCampaignTracker: !0,
                 eventOriginLocation: "activity_center_milestones",
                 eventHubType: "HALL_OF_LEGENDS",
-                lolMissionsService: a.Ember.inject.service("lol-missions"),
-                featuredMission: a.Ember.computed("objective", "lolMissionsService.featuredMissionsMap", (function() {
+                lolMissionsService: s.Ember.inject.service("lol-missions"),
+                featuredMission: s.Ember.computed("objective", "lolMissionsService.featuredMissionsMap", (function() {
                     const e = this.get("objective"),
                         t = this.get("lolMissionsService.featuredMissionsMap");
                     if (!e || !t) return null;
                     const n = e?.missionSeriesName,
-                        a = this.get("lolMissionsService")?.getFeaturedMissionForSeries(n);
-                    return a
+                        s = this.get("lolMissionsService")?.getFeaturedMissionForSeries(n);
+                    return s
                 })),
                 actions: {
                     openObjectives() {
                         if (this.get("shouldOpenCampaignTracker")) {
-                            a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-uikit-grid-click.ogg");
+                            s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-uikit-grid-click.ogg");
                             const e = {
                                 type: "open_campaign",
                                 payload: {
@@ -2196,8 +2210,8 @@
                                     objectiveGroup: this.get("objective.objectiveGroup")
                                 }
                             };
-                            a.Navigation.activityCenter.route(e.type, e.payload, {}), a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                                eventName: s.TELEMETRY.MISSION_CLICK_EVENT,
+                            s.Navigation.activityCenter.route(e.type, e.payload, {}), s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                                eventName: a.TELEMETRY.MISSION_CLICK_EVENT,
                                 eventId: this.get("eventId"),
                                 missionId: this.get("featuredMission.id")
                             })
@@ -2211,46 +2225,46 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5),
+            var s = n(1),
+                a = n(5),
                 l = n(32),
-                o = a.Ember.Component.extend({
+                o = s.Ember.Component.extend({
                     classNames: ["event-shop-card-multi-purchase-modal"],
-                    eventHubService: a.Ember.inject.service("event-hub"),
+                    eventHubService: s.Ember.inject.service("event-hub"),
                     purchaseInProgress: !1,
                     disableButtonState: !1,
                     notEnoughRp: !1,
                     offerPurchased: !1,
                     offer: null,
-                    isPurchaseDisabled: a.Ember.computed.or("disableButtonState", "purchaseInProgress", "validationError"),
-                    tokenImageSrc: a.Ember.computed.alias("eventHubService.tokenShopData.tokenImage"),
-                    currentTokenBalance: a.Ember.computed.alias("eventHubService.tokenBalance"),
-                    shouldRenderMultiPurchaseSlider: a.Ember.computed("offer.maxQuantity", (function() {
+                    isPurchaseDisabled: s.Ember.computed.or("disableButtonState", "purchaseInProgress", "validationError"),
+                    tokenImageSrc: s.Ember.computed.alias("eventHubService.tokenShopData.tokenImage"),
+                    currentTokenBalance: s.Ember.computed.alias("eventHubService.tokenBalance"),
+                    shouldRenderMultiPurchaseSlider: s.Ember.computed("offer.maxQuantity", (function() {
                         return this.get("offer.maxQuantity") > 1
                     })),
-                    purchaseConstraints: a.Ember.computed("offer", (function() {
+                    purchaseConstraints: s.Ember.computed("offer", (function() {
                         return (0, l.getOfferPurchaseConstraints)(this.get("offer"))
                     })),
-                    minPurchasableQuantity: a.Ember.computed.alias("purchaseConstraints.min"),
-                    maxPurchasableQuantity: a.Ember.computed.alias("purchaseConstraints.max"),
-                    purchaseQuantity: a.Ember.computed("offer", "purchaseConstraints", "selectedQuantity", (function() {
+                    minPurchasableQuantity: s.Ember.computed.alias("purchaseConstraints.min"),
+                    maxPurchasableQuantity: s.Ember.computed.alias("purchaseConstraints.max"),
+                    purchaseQuantity: s.Ember.computed("offer", "purchaseConstraints", "selectedQuantity", (function() {
                         const e = this.get("purchaseConstraints.getPurchaseQuantityFromSelectedQuantity")(this.get("selectedQuantity"));
                         return e || 1
                     })),
-                    purchasePrice: a.Ember.computed("validationError", "purchaseConstraints", "purchaseQuantity", (function() {
+                    purchasePrice: s.Ember.computed("validationError", "purchaseConstraints", "purchaseQuantity", (function() {
                         return this.get("validationError") ? this.get("purchaseConstraints.price") : this.get("purchaseQuantity") * this.get("purchaseConstraints.price")
                     })),
-                    futureTokenBalance: a.Ember.computed("currentTokenBalance", "purchaseConstraints", "purchaseQuantity", (function() {
+                    futureTokenBalance: s.Ember.computed("currentTokenBalance", "purchaseConstraints", "purchaseQuantity", (function() {
                         return this.get("currentTokenBalance") - this.get("purchaseQuantity") * this.get("purchaseConstraints.price")
                     })),
                     selectedQuantity: null,
                     validationError: null,
                     init() {
-                        this._super(...arguments), this.notEnoughRp = this.get("offer.offerState") === s.OFFER_STATES.UNAVAILABLE, this.offerPurchased = this.get("offer.offerState") === s.OFFER_STATES.OWNED, this.disableButtonState = this.notEnoughRp || this.offerPurchased, this.purchaseInProgress = this.get("offer.offerState") === s.OFFER_STATES.PURCHASING
+                        this._super(...arguments), this.notEnoughRp = this.get("offer.offerState") === a.OFFER_STATES.UNAVAILABLE, this.offerPurchased = this.get("offer.offerState") === a.OFFER_STATES.OWNED, this.disableButtonState = this.notEnoughRp || this.offerPurchased, this.purchaseInProgress = this.get("offer.offerState") === a.OFFER_STATES.PURCHASING
                     },
                     showPostPurchaseConfirmation() {
-                        const e = a.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_shop_card_purchase_confirmation_header"), this.get("tra.event_shop_card_purchase_confirmation_body"));
-                        a.UIKit.getModalManager().add({
+                        const e = s.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_shop_card_purchase_confirmation_header"), this.get("tra.event_shop_card_purchase_confirmation_body"));
+                        s.UIKit.getModalManager().add({
                             type: "DialogAlert",
                             data: {
                                 contents: e,
@@ -2259,8 +2273,8 @@
                         })
                     },
                     showGeneralErrorModal() {
-                        const e = a.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_purchase_error_header"), this.get("tra.event_hub_generic_purchase_error_body"));
-                        a.UIKit.getModalManager().add({
+                        const e = s.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.event_hub_generic_purchase_error_header"), this.get("tra.event_hub_generic_purchase_error_body"));
+                        s.UIKit.getModalManager().add({
                             type: "DialogAlert",
                             data: {
                                 contents: e,
@@ -2272,22 +2286,22 @@
                         id: e
                     }) {
                         return this.get("offer.items").forEach((t => {
-                            "HEXTECH_CRAFTING" === t.inventoryType && t.itemId === s.MYTHIC_ESSENCE_ITEM_ID && a.Telemetry.sendCustomData(s.TELEMETRY.MYTHIC_TABLE, {
-                                eventName: s.TELEMETRY.PURCHASE_OFFER_EVENT,
+                            "HEXTECH_CRAFTING" === t.inventoryType && t.itemId === a.MYTHIC_ESSENCE_ITEM_ID && s.Telemetry.sendCustomData(a.TELEMETRY.MYTHIC_TABLE, {
+                                eventName: a.TELEMETRY.PURCHASE_OFFER_EVENT,
                                 event_type: "mythic_purchase",
                                 clickedOffer: e,
                                 quantity: t.quantity,
                                 purchasePrice: this.get("purchasePrice")
                             })
-                        })), a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                            eventName: s.TELEMETRY.PURCHASE_OFFER_EVENT,
+                        })), s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                            eventName: a.TELEMETRY.PURCHASE_OFFER_EVENT,
                             eventId: this.get("eventHubService.info.eventId"),
                             clickedOffer: e,
                             tokenBalance: this.get("currentTokenBalance")
                         }), this.get("eventHubService").purchaseOffer(e, this.get("purchaseQuantity")).then((() => {
-                            a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-yourshop-stinger.ogg"), this.showPostPurchaseConfirmation(), this.closeModal()
+                            s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-yourshop-stinger.ogg"), this.showPostPurchaseConfirmation(), this.closeModal()
                         })).catch((t => {
-                            a.logger.error(`Failure purchasing offer id: ${e}`, t), this.closeModal(), this.showGeneralErrorModal()
+                            s.logger.error(`Failure purchasing offer id: ${e}`, t), this.closeModal(), this.showGeneralErrorModal()
                         }))
                     },
                     actions: {
@@ -2308,9 +2322,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.getRouteByEventHubType = t.getOfferPurchaseConstraints = t.getCategoryOffersId = t.default = void 0;
-            var a = n(5);
-            const s = e => `event_shop_offers_category_${e.toLowerCase()}`;
-            t.getCategoryOffersId = s;
+            var s = n(5);
+            const a = e => `event_shop_offers_category_${e.toLowerCase()}`;
+            t.getCategoryOffersId = a;
             const l = e => {
                 if (1 === e.items.length) {
                     const t = e.items[0];
@@ -2329,10 +2343,10 @@
                 }
             };
             t.getOfferPurchaseConstraints = l;
-            const o = e => a.EVENT_CONFIGS_BY_TYPE[e].route || a.ROUTES.EVENT_SHOP;
+            const o = e => s.EVENT_CONFIGS_BY_TYPE[e].route || s.ROUTES.EVENT_SHOP;
             t.getRouteByEventHubType = o;
             var r = {
-                getCategoryOffersId: s,
+                getCategoryOffersId: a,
                 getOfferPurchaseConstraints: l,
                 getRouteByEventHubType: o
             };
@@ -2342,31 +2356,31 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1).Ember.Component.extend({
+            var s = n(1).Ember.Component.extend({
                 classNames: ["event-shop-category-nav-bar"]
             });
-            t.default = a
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5),
+            var s = n(1),
+                a = n(5),
                 l = n(32),
-                o = a.Ember.Component.extend({
+                o = s.Ember.Component.extend({
                     classNames: ["event-shop-nav-bar-tab"],
                     classNameBindings: ["isTabSelected:event-shop-nav-bar-tab-selected"],
                     scrollToCategory: null,
-                    isTabSelected: a.Ember.computed("currentCategory", (function() {
+                    isTabSelected: s.Ember.computed("currentCategory", (function() {
                         return this.get("currentCategory") === this.get("category")
                     })),
-                    categoryTra: a.Ember.computed("category", (function() {
+                    categoryTra: s.Ember.computed("category", (function() {
                         return this.get(`tra.${(0,l.getCategoryOffersId)(this.category)}_tooltip`)
                     })),
                     click() {
-                        this.scrollToCategory(this.get("category")), a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                            eventName: s.TELEMETRY.CATEGORY_NAV_BAR_CLICK_EVENT,
+                        this.scrollToCategory(this.get("category")), s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                            eventName: a.TELEMETRY.CATEGORY_NAV_BAR_CLICK_EVENT,
                             eventId: this.get("eventHubService.info.eventId"),
                             clickedCategory: this.get("category")
                         })
@@ -2378,17 +2392,17 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5),
+            var s = n(1),
+                a = n(5),
                 l = n(32),
-                o = a.Ember.Component.extend({
+                o = s.Ember.Component.extend({
                     classNames: ["event-shop-category-offers"],
-                    categoryOffersId: a.Ember.computed("categoryOffers.category", (function() {
+                    categoryOffersId: s.Ember.computed("categoryOffers.category", (function() {
                         return (0, l.getCategoryOffersId)(this.get("categoryOffers.category"))
                     })),
                     didInsertElement() {
                         this._super(...arguments);
-                        const e = this.element.querySelectorAll(`.${s.EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME}`);
+                        const e = this.element.querySelectorAll(`.${a.EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME}`);
                         this.configureOfferCardsObservers(e)
                     },
                     configureOfferCardsObservers(e) {
@@ -2404,25 +2418,25 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = a.Ember.Component.extend({
+            var s = n(1),
+                a = s.Ember.Component.extend({
                     classNames: ["event-shop-fallback"],
-                    tra: a.tra,
+                    tra: s.tra,
                     error: null,
-                    errorMessageTra: a.Ember.computed("error", (function() {
+                    errorMessageTra: s.Ember.computed("error", (function() {
                         return {
                             title: this.get(`tra.${this.get("error.errorId")}_title`),
                             description: this.get(`tra.${this.get("error.errorId")}_description`)
                         }
                     }))
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1).Ember.Component.extend({
+            var s = n(1).Ember.Component.extend({
                 classNames: ["event-shop-main-view"],
                 isRewardTrackMinimized: !1,
                 actions: {
@@ -2431,46 +2445,46 @@
                     }
                 }
             });
-            t.default = a
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5);
+            var s = n(1),
+                a = n(5);
             const l = n(39);
-            var o = a.Ember.Component.extend({
-                classNames: [s.EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME],
+            var o = s.Ember.Component.extend({
+                classNames: [a.EVENT_SHOP_OFFER_CARD_CONTAINER_CLASSNAME],
                 classNameBindings: ["offer.highlighted:event-shop-token-shop-highlighted-card", "isOfferOwned:event-shop-token-shop-card-owned", "isOfferAvailable:event-shop-token-shop-card-available", "isOfferUnavailable:event-shop-token-shop-card-unavailable"],
                 offer: null,
-                eventHubService: a.Ember.inject.service("event-hub"),
-                tooltipManager: a.UIKit.getTooltipManager(),
+                eventHubService: s.Ember.inject.service("event-hub"),
+                tooltipManager: s.UIKit.getTooltipManager(),
                 isMouseOver: !1,
-                tokenShopData: a.Ember.computed.alias("eventHubService.tokenShopData"),
-                tokenBalance: a.Ember.computed.alias("eventHubService.tokenBalance"),
-                requiredTokens: a.Ember.computed("offer.price", "tokenBalance", (function() {
+                tokenShopData: s.Ember.computed.alias("eventHubService.tokenShopData"),
+                tokenBalance: s.Ember.computed.alias("eventHubService.tokenBalance"),
+                requiredTokens: s.Ember.computed("offer.price", "tokenBalance", (function() {
                     return this.get("offer.price") - this.get("tokenBalance")
                 })),
-                isPurchasing: a.Ember.computed("offer.offerState", (function() {
-                    return this.get("offer.offerState") === s.OFFER_STATES.PURCHASING
+                isPurchasing: s.Ember.computed("offer.offerState", (function() {
+                    return this.get("offer.offerState") === a.OFFER_STATES.PURCHASING
                 })),
-                isOfferRevealed: a.Ember.computed("offer.offerState", (function() {
-                    return this.get("offer.offerState") !== s.OFFER_STATES.UNREVEALED
+                isOfferRevealed: s.Ember.computed("offer.offerState", (function() {
+                    return this.get("offer.offerState") !== a.OFFER_STATES.UNREVEALED
                 })),
-                isOfferOwned: a.Ember.computed("offer.offerState", (function() {
-                    return this.get("offer.offerState") === s.OFFER_STATES.OWNED
+                isOfferOwned: s.Ember.computed("offer.offerState", (function() {
+                    return this.get("offer.offerState") === a.OFFER_STATES.OWNED
                 })),
-                isOfferAvailable: a.Ember.computed("offer.offerState", (function() {
-                    return this.get("offer.offerState") === s.OFFER_STATES.AVAILABLE
+                isOfferAvailable: s.Ember.computed("offer.offerState", (function() {
+                    return this.get("offer.offerState") === a.OFFER_STATES.AVAILABLE
                 })),
-                isOfferUnavailable: a.Ember.computed("offer.offerState", (function() {
-                    return this.get("offer.offerState") === s.OFFER_STATES.UNAVAILABLE
+                isOfferUnavailable: s.Ember.computed("offer.offerState", (function() {
+                    return this.get("offer.offerState") === a.OFFER_STATES.UNAVAILABLE
                 })),
-                shouldRenderOfferItemsCount: a.Ember.computed("offer", (function() {
+                shouldRenderOfferItemsCount: s.Ember.computed("offer", (function() {
                     return this.get("offer.items.length") > 1
                 })),
-                offerImage: a.Ember.computed("offer.image", (function() {
+                offerImage: s.Ember.computed("offer.image", (function() {
                     const e = this.get("offer.image");
                     return e && "/lol-game-data/assets/" !== e ? e : "/fe/lol-static-assets/images/event-shop/icon-shocked-poro-clear.png"
                 })),
@@ -2510,8 +2524,8 @@
                             moreTokensText: t,
                             unlockText: this.get("tra.event_shop_card_purchase_to_unlock")
                         }),
-                        a = document.createElement("div");
-                    return a.innerHTML = n, a
+                        s = document.createElement("div");
+                    return s.innerHTML = n, s
                 },
                 enableTooltip(e) {
                     for (let t = 0; t < e.length; t++) {
@@ -2529,8 +2543,8 @@
                     this.get("isOfferRevealed") && this.showModal(this.get("offer"))
                 },
                 showModal(e) {
-                    return a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                        eventName: s.TELEMETRY.OPEN_OFFER_CARD_EVENT,
+                    return s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                        eventName: a.TELEMETRY.OPEN_OFFER_CARD_EVENT,
                         eventId: this.get("eventHubService.info.eventId"),
                         clickedOffer: e.id,
                         tokenBalance: this.get("eventHubService.info.currentTokenBalance")
@@ -2544,10 +2558,10 @@
             });
             t.default = o
         }, (e, t, n) => {
-            var a = n(40);
-            e.exports = (a.default || a).template({
+            var s = n(40);
+            e.exports = (s.default || s).template({
                 compiler: [7, ">= 4.0.0"],
-                main: function(e, t, n, a, s) {
+                main: function(e, t, n, s, a) {
                     var l, o = null != t ? t : e.nullContext || {},
                         r = n.helperMissing,
                         i = "function",
@@ -2555,19 +2569,19 @@
                     return '<lol-uikit-tooltip>\r\n  <lol-uikit-content-block class="event-shop-xp-tooltip-content" type="tooltip-system">\r\n    <div class="event-shop-progression-tooltip-block">\r\n      <p>\r\n        ' + c(typeof(l = null != (l = n.youNeedText || (null != t ? t.youNeedText : t)) ? l : r) === i ? l.call(o, {
                         name: "youNeedText",
                         hash: {},
-                        data: s
+                        data: a
                     }) : l) + "<span class='event-shop-progression-tooltip-block-bold'> " + c(typeof(l = null != (l = n.requiredTokens || (null != t ? t.requiredTokens : t)) ? l : r) === i ? l.call(o, {
                         name: "requiredTokens",
                         hash: {},
-                        data: s
+                        data: a
                     }) : l) + " " + c(typeof(l = null != (l = n.moreTokensText || (null != t ? t.moreTokensText : t)) ? l : r) === i ? l.call(o, {
                         name: "moreTokensText",
                         hash: {},
-                        data: s
+                        data: a
                     }) : l) + " </span>" + c(typeof(l = null != (l = n.unlockText || (null != t ? t.unlockText : t)) ? l : r) === i ? l.call(o, {
                         name: "unlockText",
                         hash: {},
-                        data: s
+                        data: a
                     }) : l) + "\r\n      </p>\r\n    </div>\r\n  </lol-uikit-content-block>\r\n</lol-uikit-tooltip>"
                 },
                 useData: !0
@@ -2577,13 +2591,13 @@
         }, (e, t, n) => {
             "use strict";
 
-            function a(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
 
-            function s(e) {
+            function a(e) {
                 if (e && e.__esModule) return e;
                 var t = {};
                 if (null != e)
@@ -2591,12 +2605,12 @@
                 return t.default = e, t
             }
             t.__esModule = !0;
-            var l = s(n(42)),
-                o = a(n(56)),
-                r = a(n(44)),
-                i = s(n(43)),
-                c = s(n(57)),
-                d = a(n(58));
+            var l = a(n(42)),
+                o = s(n(56)),
+                r = s(n(44)),
+                i = a(n(43)),
+                c = a(n(57)),
+                d = s(n(58));
 
             function p() {
                 var e = new l.HandlebarsEnvironment;
@@ -2609,17 +2623,17 @@
         }, (e, t, n) => {
             "use strict";
 
-            function a(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             t.__esModule = !0, t.HandlebarsEnvironment = d;
-            var s = n(43),
-                l = a(n(44)),
+            var a = n(43),
+                l = s(n(44)),
                 o = n(45),
                 r = n(53),
-                i = a(n(55));
+                i = s(n(55));
             t.VERSION = "4.1.2";
             t.COMPILER_REVISION = 7;
             t.REVISION_CHANGES = {
@@ -2641,16 +2655,16 @@
                 logger: i.default,
                 log: i.default.log,
                 registerHelper: function(e, t) {
-                    if (s.toString.call(e) === c) {
+                    if (a.toString.call(e) === c) {
                         if (t) throw new l.default("Arg not supported with multiple helpers");
-                        s.extend(this.helpers, e)
+                        a.extend(this.helpers, e)
                     } else this.helpers[e] = t
                 },
                 unregisterHelper: function(e) {
                     delete this.helpers[e]
                 },
                 registerPartial: function(e, t) {
-                    if (s.toString.call(e) === c) s.extend(this.partials, e);
+                    if (a.toString.call(e) === c) a.extend(this.partials, e);
                     else {
                         if (void 0 === t) throw new l.default('Attempting to register a partial called "' + e + '" as undefined');
                         this.partials[e] = t
@@ -2660,9 +2674,9 @@
                     delete this.partials[e]
                 },
                 registerDecorator: function(e, t) {
-                    if (s.toString.call(e) === c) {
+                    if (a.toString.call(e) === c) {
                         if (t) throw new l.default("Arg not supported with multiple decorators");
-                        s.extend(this.decorators, e)
+                        a.extend(this.decorators, e)
                     } else this.decorators[e] = t
                 },
                 unregisterDecorator: function(e) {
@@ -2670,11 +2684,11 @@
                 }
             };
             var p = i.default.log;
-            t.log = p, t.createFrame = s.createFrame, t.logger = i.default
+            t.log = p, t.createFrame = a.createFrame, t.logger = i.default
         }, (e, t) => {
             "use strict";
             t.__esModule = !0, t.extend = o, t.indexOf = function(e, t) {
-                for (var n = 0, a = e.length; n < a; n++)
+                for (var n = 0, s = e.length; n < s; n++)
                     if (e[n] === t) return n;
                 return -1
             }, t.escapeExpression = function(e) {
@@ -2684,8 +2698,8 @@
                     if (!e) return e + "";
                     e = "" + e
                 }
-                if (!s.test(e)) return e;
-                return e.replace(a, l)
+                if (!a.test(e)) return e;
+                return e.replace(s, l)
             }, t.isEmpty = function(e) {
                 return !e && 0 !== e || !(!c(e) || 0 !== e.length)
             }, t.createFrame = function(e) {
@@ -2705,8 +2719,8 @@
                     "`": "&#x60;",
                     "=": "&#x3D;"
                 },
-                a = /[&<>"'`=]/g,
-                s = /[&<>"'`=]/;
+                s = /[&<>"'`=]/g,
+                a = /[&<>"'`=]/;
 
             function l(e) {
                 return n[e]
@@ -2734,53 +2748,53 @@
             t.__esModule = !0;
             var n = ["description", "fileName", "lineNumber", "message", "name", "number", "stack"];
 
-            function a(e, t) {
-                var s = t && t.loc,
+            function s(e, t) {
+                var a = t && t.loc,
                     l = void 0,
                     o = void 0;
-                s && (e += " - " + (l = s.start.line) + ":" + (o = s.start.column));
+                a && (e += " - " + (l = a.start.line) + ":" + (o = a.start.column));
                 for (var r = Error.prototype.constructor.call(this, e), i = 0; i < n.length; i++) this[n[i]] = r[n[i]];
-                Error.captureStackTrace && Error.captureStackTrace(this, a);
+                Error.captureStackTrace && Error.captureStackTrace(this, s);
                 try {
-                    s && (this.lineNumber = l, Object.defineProperty ? Object.defineProperty(this, "column", {
+                    a && (this.lineNumber = l, Object.defineProperty ? Object.defineProperty(this, "column", {
                         value: o,
                         enumerable: !0
                     }) : this.column = o)
                 } catch (e) {}
             }
-            a.prototype = new Error, t.default = a, e.exports = t.default
+            s.prototype = new Error, t.default = s, e.exports = t.default
         }, (e, t, n) => {
             "use strict";
 
-            function a(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             t.__esModule = !0, t.registerDefaultHelpers = function(e) {
-                s.default(e), l.default(e), o.default(e), r.default(e), i.default(e), c.default(e), d.default(e)
+                a.default(e), l.default(e), o.default(e), r.default(e), i.default(e), c.default(e), d.default(e)
             };
-            var s = a(n(46)),
-                l = a(n(47)),
-                o = a(n(48)),
-                r = a(n(49)),
-                i = a(n(50)),
-                c = a(n(51)),
-                d = a(n(52))
+            var a = s(n(46)),
+                l = s(n(47)),
+                o = s(n(48)),
+                r = s(n(49)),
+                i = s(n(50)),
+                c = s(n(51)),
+                d = s(n(52))
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a = n(43);
+            var s = n(43);
             t.default = function(e) {
                 e.registerHelper("blockHelperMissing", (function(t, n) {
-                    var s = n.inverse,
+                    var a = n.inverse,
                         l = n.fn;
                     if (!0 === t) return l(this);
-                    if (!1 === t || null == t) return s(this);
-                    if (a.isArray(t)) return t.length > 0 ? (n.ids && (n.ids = [n.name]), e.helpers.each(t, n)) : s(this);
+                    if (!1 === t || null == t) return a(this);
+                    if (s.isArray(t)) return t.length > 0 ? (n.ids && (n.ids = [n.name]), e.helpers.each(t, n)) : a(this);
                     if (n.data && n.ids) {
-                        var o = a.createFrame(n.data);
-                        o.contextPath = a.appendContextPath(n.data.contextPath, n.name), n = {
+                        var o = s.createFrame(n.data);
+                        o.contextPath = s.appendContextPath(n.data.contextPath, n.name), n = {
                             data: o
                         }
                     }
@@ -2790,43 +2804,43 @@
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a, s = n(43),
+            var s, a = n(43),
                 l = n(44),
-                o = (a = l) && a.__esModule ? a : {
-                    default: a
+                o = (s = l) && s.__esModule ? s : {
+                    default: s
                 };
             t.default = function(e) {
                 e.registerHelper("each", (function(e, t) {
                     if (!t) throw new o.default("Must pass iterator to #each");
                     var n = t.fn,
-                        a = t.inverse,
+                        s = t.inverse,
                         l = 0,
                         r = "",
                         i = void 0,
                         c = void 0;
 
-                    function d(t, a, l) {
-                        i && (i.key = t, i.index = a, i.first = 0 === a, i.last = !!l, c && (i.contextPath = c + t)), r += n(e[t], {
+                    function d(t, s, l) {
+                        i && (i.key = t, i.index = s, i.first = 0 === s, i.last = !!l, c && (i.contextPath = c + t)), r += n(e[t], {
                             data: i,
-                            blockParams: s.blockParams([e[t], t], [c + t, null])
+                            blockParams: a.blockParams([e[t], t], [c + t, null])
                         })
                     }
-                    if (t.data && t.ids && (c = s.appendContextPath(t.data.contextPath, t.ids[0]) + "."), s.isFunction(e) && (e = e.call(this)), t.data && (i = s.createFrame(t.data)), e && "object" == typeof e)
-                        if (s.isArray(e))
+                    if (t.data && t.ids && (c = a.appendContextPath(t.data.contextPath, t.ids[0]) + "."), a.isFunction(e) && (e = e.call(this)), t.data && (i = a.createFrame(t.data)), e && "object" == typeof e)
+                        if (a.isArray(e))
                             for (var p = e.length; l < p; l++) l in e && d(l, l, l === e.length - 1);
                         else {
                             var u = void 0;
                             for (var m in e) e.hasOwnProperty(m) && (void 0 !== u && d(u, l - 1), u = m, l++);
                             void 0 !== u && d(u, l - 1, !0)
-                        } return 0 === l && (r = a(this)), r
+                        } return 0 === l && (r = s(this)), r
                 }))
             }, e.exports = t.default
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a, s = n(44),
-                l = (a = s) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(44),
+                l = (s = a) && s.__esModule ? s : {
+                    default: s
                 };
             t.default = function(e) {
                 e.registerHelper("helperMissing", (function() {
@@ -2836,10 +2850,10 @@
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a = n(43);
+            var s = n(43);
             t.default = function(e) {
                 e.registerHelper("if", (function(e, t) {
-                    return a.isFunction(e) && (e = e.call(this)), !t.hash.includeZero && !e || a.isEmpty(e) ? t.inverse(this) : t.fn(this)
+                    return s.isFunction(e) && (e = e.call(this)), !t.hash.includeZero && !e || s.isEmpty(e) ? t.inverse(this) : t.fn(this)
                 })), e.registerHelper("unless", (function(t, n) {
                     return e.helpers.if.call(this, t, {
                         fn: n.inverse,
@@ -2852,9 +2866,9 @@
             "use strict";
             t.__esModule = !0, t.default = function(e) {
                 e.registerHelper("log", (function() {
-                    for (var t = [void 0], n = arguments[arguments.length - 1], a = 0; a < arguments.length - 1; a++) t.push(arguments[a]);
-                    var s = 1;
-                    null != n.hash.level ? s = n.hash.level : n.data && null != n.data.level && (s = n.data.level), t[0] = s, e.log.apply(e, t)
+                    for (var t = [void 0], n = arguments[arguments.length - 1], s = 0; s < arguments.length - 1; s++) t.push(arguments[s]);
+                    var a = 1;
+                    null != n.hash.level ? a = n.hash.level : n.data && null != n.data.level && (a = n.data.level), t[0] = a, e.log.apply(e, t)
                 }))
             }, e.exports = t.default
         }, (e, t) => {
@@ -2867,16 +2881,16 @@
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a = n(43);
+            var s = n(43);
             t.default = function(e) {
                 e.registerHelper("with", (function(e, t) {
-                    a.isFunction(e) && (e = e.call(this));
+                    s.isFunction(e) && (e = e.call(this));
                     var n = t.fn;
-                    if (a.isEmpty(e)) return t.inverse(this);
-                    var s = t.data;
-                    return t.data && t.ids && ((s = a.createFrame(t.data)).contextPath = a.appendContextPath(t.data.contextPath, t.ids[0])), n(e, {
-                        data: s,
-                        blockParams: a.blockParams([e], [s && s.contextPath])
+                    if (s.isEmpty(e)) return t.inverse(this);
+                    var a = t.data;
+                    return t.data && t.ids && ((a = s.createFrame(t.data)).contextPath = s.appendContextPath(t.data.contextPath, t.ids[0])), n(e, {
+                        data: a,
+                        blockParams: s.blockParams([e], [a && a.contextPath])
                     })
                 }))
             }, e.exports = t.default
@@ -2885,49 +2899,49 @@
             t.__esModule = !0, t.registerDefaultDecorators = function(e) {
                 l.default(e)
             };
-            var a, s = n(54),
-                l = (a = s) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(54),
+                l = (s = a) && s.__esModule ? s : {
+                    default: s
                 }
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a = n(43);
+            var s = n(43);
             t.default = function(e) {
-                e.registerDecorator("inline", (function(e, t, n, s) {
+                e.registerDecorator("inline", (function(e, t, n, a) {
                     var l = e;
-                    return t.partials || (t.partials = {}, l = function(s, l) {
+                    return t.partials || (t.partials = {}, l = function(a, l) {
                         var o = n.partials;
-                        n.partials = a.extend({}, o, t.partials);
-                        var r = e(s, l);
+                        n.partials = s.extend({}, o, t.partials);
+                        var r = e(a, l);
                         return n.partials = o, r
-                    }), t.partials[s.args[0]] = s.fn, l
+                    }), t.partials[a.args[0]] = a.fn, l
                 }))
             }, e.exports = t.default
         }, (e, t, n) => {
             "use strict";
             t.__esModule = !0;
-            var a = n(43),
-                s = {
+            var s = n(43),
+                a = {
                     methodMap: ["debug", "info", "warn", "error"],
                     level: "info",
                     lookupLevel: function(e) {
                         if ("string" == typeof e) {
-                            var t = a.indexOf(s.methodMap, e.toLowerCase());
+                            var t = s.indexOf(a.methodMap, e.toLowerCase());
                             e = t >= 0 ? t : parseInt(e, 10)
                         }
                         return e
                     },
                     log: function(e) {
-                        if (e = s.lookupLevel(e), "undefined" != typeof console && s.lookupLevel(s.level) <= e) {
-                            var t = s.methodMap[e];
+                        if (e = a.lookupLevel(e), "undefined" != typeof console && a.lookupLevel(a.level) <= e) {
+                            var t = a.methodMap[e];
                             console[t] || (t = "log");
-                            for (var n = arguments.length, a = Array(n > 1 ? n - 1 : 0), l = 1; l < n; l++) a[l - 1] = arguments[l];
-                            console[t].apply(console, a)
+                            for (var n = arguments.length, s = Array(n > 1 ? n - 1 : 0), l = 1; l < n; l++) s[l - 1] = arguments[l];
+                            console[t].apply(console, s)
                         }
                     }
                 };
-            t.default = s, e.exports = t.default
+            t.default = a, e.exports = t.default
         }, (e, t) => {
             "use strict";
 
@@ -2944,9 +2958,9 @@
                     n = r.COMPILER_REVISION;
                 if (t !== n) {
                     if (t < n) {
-                        var a = r.REVISION_CHANGES[n],
-                            s = r.REVISION_CHANGES[t];
-                        throw new o.default("Template was precompiled with an older version of Handlebars than the current runtime. Please update your precompiler to a newer version (" + a + ") or downgrade your runtime to an older version (" + s + ").")
+                        var s = r.REVISION_CHANGES[n],
+                            a = r.REVISION_CHANGES[t];
+                        throw new o.default("Template was precompiled with an older version of Handlebars than the current runtime. Please update your precompiler to a newer version (" + s + ") or downgrade your runtime to an older version (" + a + ").")
                     }
                     throw new o.default("Template was precompiled with a newer version of Handlebars than the current runtime. Please update your runtime to a newer version (" + e[1] + ").")
                 }
@@ -2960,17 +2974,17 @@
                         return e[t]
                     },
                     lookup: function(e, t) {
-                        for (var n = e.length, a = 0; a < n; a++)
-                            if (e[a] && null != e[a][t]) return e[a][t]
+                        for (var n = e.length, s = 0; s < n; s++)
+                            if (e[s] && null != e[s][t]) return e[s][t]
                     },
                     lambda: function(e, t) {
                         return "function" == typeof e ? e.call(t) : e
                     },
-                    escapeExpression: s.escapeExpression,
-                    invokePartial: function(n, a, l) {
-                        l.hash && (a = s.extend({}, a, l.hash), l.ids && (l.ids[0] = !0)), n = t.VM.resolvePartial.call(this, n, a, l);
-                        var r = t.VM.invokePartial.call(this, n, a, l);
-                        if (null == r && t.compile && (l.partials[l.name] = t.compile(n, e.compilerOptions, t), r = l.partials[l.name](a, l)), null != r) {
+                    escapeExpression: a.escapeExpression,
+                    invokePartial: function(n, s, l) {
+                        l.hash && (s = a.extend({}, s, l.hash), l.ids && (l.ids[0] = !0)), n = t.VM.resolvePartial.call(this, n, s, l);
+                        var r = t.VM.invokePartial.call(this, n, s, l);
+                        if (null == r && t.compile && (l.partials[l.name] = t.compile(n, e.compilerOptions, t), r = l.partials[l.name](s, l)), null != r) {
                             if (l.indent) {
                                 for (var i = r.split("\n"), c = 0, d = i.length; c < d && (i[c] || c + 1 !== d); c++) i[c] = l.indent + i[c];
                                 r = i.join("\n")
@@ -2984,10 +2998,10 @@
                         return n.decorator = e[t + "_d"], n
                     },
                     programs: [],
-                    program: function(e, t, n, a, s) {
+                    program: function(e, t, n, s, a) {
                         var l = this.programs[e],
                             o = this.fn(e);
-                        return t || s || a || n ? l = i(this, e, o, t, n, a, s) : l || (l = this.programs[e] = i(this, e, o)), l
+                        return t || a || s || n ? l = i(this, e, o, t, n, s, a) : l || (l = this.programs[e] = i(this, e, o)), l
                     },
                     data: function(e, t) {
                         for (; e && t--;) e = e._parent;
@@ -2995,17 +3009,17 @@
                     },
                     merge: function(e, t) {
                         var n = e || t;
-                        return e && t && e !== t && (n = s.extend({}, t, e)), n
+                        return e && t && e !== t && (n = a.extend({}, t, e)), n
                     },
                     nullContext: Object.seal({}),
                     noop: t.VM.noop,
                     compilerInfo: e.compiler
                 };
 
-                function a(t) {
-                    var s = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1],
-                        l = s.data;
-                    a._setup(s), !s.partial && e.useData && (l = function(e, t) {
+                function s(t) {
+                    var a = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1],
+                        l = a.data;
+                    s._setup(a), !a.partial && e.useData && (l = function(e, t) {
                         t && "root" in t || ((t = t ? r.createFrame(t) : {}).root = e);
                         return t
                     }(t, l));
@@ -3015,20 +3029,20 @@
                     function c(t) {
                         return "" + e.main(n, t, n.helpers, n.partials, l, i, o)
                     }
-                    return e.useDepths && (o = s.depths ? t != s.depths[0] ? [t].concat(s.depths) : s.depths : [t]), (c = d(e.main, c, n, s.depths || [], l, i))(t, s)
+                    return e.useDepths && (o = a.depths ? t != a.depths[0] ? [t].concat(a.depths) : a.depths : [t]), (c = d(e.main, c, n, a.depths || [], l, i))(t, a)
                 }
-                return a.isTop = !0, a._setup = function(a) {
-                    a.partial ? (n.helpers = a.helpers, n.partials = a.partials, n.decorators = a.decorators) : (n.helpers = n.merge(a.helpers, t.helpers), e.usePartial && (n.partials = n.merge(a.partials, t.partials)), (e.usePartial || e.useDecorators) && (n.decorators = n.merge(a.decorators, t.decorators)))
-                }, a._child = function(t, a, s, l) {
-                    if (e.useBlockParams && !s) throw new o.default("must pass block params");
+                return s.isTop = !0, s._setup = function(s) {
+                    s.partial ? (n.helpers = s.helpers, n.partials = s.partials, n.decorators = s.decorators) : (n.helpers = n.merge(s.helpers, t.helpers), e.usePartial && (n.partials = n.merge(s.partials, t.partials)), (e.usePartial || e.useDecorators) && (n.decorators = n.merge(s.decorators, t.decorators)))
+                }, s._child = function(t, s, a, l) {
+                    if (e.useBlockParams && !a) throw new o.default("must pass block params");
                     if (e.useDepths && !l) throw new o.default("must pass parent depths");
-                    return i(n, t, e[t], a, 0, s, l)
-                }, a
+                    return i(n, t, e[t], s, 0, a, l)
+                }, s
             }, t.wrapProgram = i, t.resolvePartial = function(e, t, n) {
                 e ? e.call || n.name || (n.name = e, e = n.partials[e]) : e = "@partial-block" === n.name ? n.data["partial-block"] : n.partials[n.name];
                 return e
             }, t.invokePartial = function(e, t, n) {
-                var a = n.data && n.data["partial-block"];
+                var s = n.data && n.data["partial-block"];
                 n.partial = !0, n.ids && (n.data.contextPath = n.ids[0] || n.data.contextPath);
                 var l = void 0;
                 n.fn && n.fn !== c && function() {
@@ -3036,14 +3050,14 @@
                     var e = n.fn;
                     l = n.data["partial-block"] = function(t) {
                         var n = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1];
-                        return n.data = r.createFrame(n.data), n.data["partial-block"] = a, e(t, n)
-                    }, e.partials && (n.partials = s.extend({}, n.partials, e.partials))
+                        return n.data = r.createFrame(n.data), n.data["partial-block"] = s, e(t, n)
+                    }, e.partials && (n.partials = a.extend({}, n.partials, e.partials))
                 }();
                 void 0 === e && l && (e = l);
                 if (void 0 === e) throw new o.default("The partial " + n.name + " could not be found");
                 if (e instanceof Function) return e(t, n)
             }, t.noop = c;
-            var a, s = function(e) {
+            var s, a = function(e) {
                     if (e && e.__esModule) return e;
                     var t = {};
                     if (null != e)
@@ -3051,28 +3065,28 @@
                     return t.default = e, t
                 }(n(43)),
                 l = n(44),
-                o = (a = l) && a.__esModule ? a : {
-                    default: a
+                o = (s = l) && s.__esModule ? s : {
+                    default: s
                 },
                 r = n(42);
 
-            function i(e, t, n, a, s, l, o) {
+            function i(e, t, n, s, a, l, o) {
                 function r(t) {
-                    var s = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1],
+                    var a = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1],
                         r = o;
-                    return !o || t == o[0] || t === e.nullContext && null === o[0] || (r = [t].concat(o)), n(e, t, e.helpers, e.partials, s.data || a, l && [s.blockParams].concat(l), r)
+                    return !o || t == o[0] || t === e.nullContext && null === o[0] || (r = [t].concat(o)), n(e, t, e.helpers, e.partials, a.data || s, l && [a.blockParams].concat(l), r)
                 }
-                return (r = d(n, r, e, o, a, l)).program = t, r.depth = o ? o.length : 0, r.blockParams = s || 0, r
+                return (r = d(n, r, e, o, s, l)).program = t, r.depth = o ? o.length : 0, r.blockParams = a || 0, r
             }
 
             function c() {
                 return ""
             }
 
-            function d(e, t, n, a, l, o) {
+            function d(e, t, n, s, l, o) {
                 if (e.decorator) {
                     var r = {};
-                    t = e.decorator(t, r, n, a && a[0], l, o, a), s.extend(t, r)
+                    t = e.decorator(t, r, n, s && s[0], l, o, s), a.extend(t, r)
                 }
                 return t
             }
@@ -3080,9 +3094,9 @@
             "use strict";
             t.__esModule = !0, t.default = function(e) {
                 var t = void 0 !== n.g ? n.g : window,
-                    a = t.Handlebars;
+                    s = t.Handlebars;
                 e.noConflict = function() {
-                    return t.Handlebars === e && (t.Handlebars = a), e
+                    return t.Handlebars === e && (t.Handlebars = s), e
                 }
             }, e.exports = t.default
         }, (e, t, n) => {
@@ -3090,24 +3104,24 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5),
-                l = a.Ember.Component.extend({
+            var s = n(1),
+                a = n(5),
+                l = s.Ember.Component.extend({
                     classNames: ["event-shop-progression"],
-                    eventHubService: a.Ember.inject.service("event-hub"),
-                    failureLoadingRewardTrack: a.Ember.computed.alias("eventHubService.failureLoadingRewardTrack"),
-                    rewardTrackItems: a.Ember.computed.alias("eventHubService.rewardTrackItems"),
-                    eventShopProgressionData: a.Ember.computed.alias("eventHubService.eventShopProgressionData"),
-                    unclaimedRewards: a.Ember.computed.alias("eventHubService.unclaimedRewards.rewardsCount"),
-                    lockedTokens: a.Ember.computed.alias("eventHubService.unclaimedRewards.lockedTokensCount"),
+                    eventHubService: s.Ember.inject.service("event-hub"),
+                    failureLoadingRewardTrack: s.Ember.computed.alias("eventHubService.failureLoadingRewardTrack"),
+                    rewardTrackItems: s.Ember.computed.alias("eventHubService.rewardTrackItems"),
+                    eventShopProgressionData: s.Ember.computed.alias("eventHubService.eventShopProgressionData"),
+                    unclaimedRewards: s.Ember.computed.alias("eventHubService.unclaimedRewards.rewardsCount"),
+                    lockedTokens: s.Ember.computed.alias("eventHubService.unclaimedRewards.lockedTokensCount"),
                     showPassPurchaseModal: !1,
-                    passPurchased: a.Ember.computed.alias("eventHubService.info.isPassPurchased"),
-                    passAvailable: a.Ember.computed.alias("eventHubService.passAvailable"),
-                    passLoading: a.Ember.computed.alias("eventHubService.passLoading"),
-                    hasUnclaimedRewards: a.Ember.computed("unclaimedRewards", (function() {
+                    passPurchased: s.Ember.computed.alias("eventHubService.info.isPassPurchased"),
+                    passAvailable: s.Ember.computed.alias("eventHubService.passAvailable"),
+                    passLoading: s.Ember.computed.alias("eventHubService.passLoading"),
+                    hasUnclaimedRewards: s.Ember.computed("unclaimedRewards", (function() {
                         return this.get("unclaimedRewards") > 0
                     })),
-                    eventPassItems: a.Ember.computed("eventShopProgressionData.eventPassBundlesCatalogEntry", (function() {
+                    eventPassItems: s.Ember.computed("eventShopProgressionData.eventPassBundlesCatalogEntry", (function() {
                         return (this.get("eventShopProgressionData.eventPassBundlesCatalogEntry") || []).map((e => ({
                             itemId: e.itemId,
                             inventoryType: "BUNDLES"
@@ -3125,8 +3139,8 @@
                     },
                     actions: {
                         passPurchaseClick() {
-                            !this.get("passPurchased") && this.get("passAvailable") && (a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                                eventName: s.TELEMETRY.PURCHASE_PASS_CLICK_EVENT,
+                            !this.get("passPurchased") && this.get("passAvailable") && (s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                                eventName: a.TELEMETRY.PURCHASE_PASS_CLICK_EVENT,
                                 eventId: this.get("eventHubService.info.eventId"),
                                 lockedTokens: this.get("eventHubService.info.lockedTokenCount"),
                                 tokenBalance: this.get("eventHubService.info.currentTokenBalance")
@@ -3140,25 +3154,25 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(61),
+            var s = n(1),
+                a = n(61),
                 l = n(5);
             const {
                 TRACKER_SIZE: o
-            } = s.REWARD_TRACKER;
-            var r = a.Ember.Component.extend({
+            } = a.REWARD_TRACKER;
+            var r = s.Ember.Component.extend({
                 classNames: ["event-shop-reward-track-wrapper"],
-                eventHubService: a.Ember.inject.service("event-hub"),
+                eventHubService: s.Ember.inject.service("event-hub"),
                 trackerSize: o.SMALL,
                 displayCurrentBonusIteration: !0,
-                rewardTrackProgress: a.Ember.computed.alias("eventHubService.rewardTrackProgress"),
-                rewardTrackItems: a.Ember.computed.alias("eventHubService.rewardTrackItems"),
-                rewardTrackBonusProgress: a.Ember.computed.alias("eventHubService.rewardTrackBonusProgress"),
-                rewardTrackBonusItems: a.Ember.computed.alias("eventHubService.rewardTrackBonusItems"),
-                isGracePeriod: a.Ember.computed.alias("eventHubService.isGracePeriod"),
+                rewardTrackProgress: s.Ember.computed.alias("eventHubService.rewardTrackProgress"),
+                rewardTrackItems: s.Ember.computed.alias("eventHubService.rewardTrackItems"),
+                rewardTrackBonusProgress: s.Ember.computed.alias("eventHubService.rewardTrackBonusProgress"),
+                rewardTrackBonusItems: s.Ember.computed.alias("eventHubService.rewardTrackBonusItems"),
+                isGracePeriod: s.Ember.computed.alias("eventHubService.isGracePeriod"),
                 scrollingArrowsEnabled: !0,
                 handleClickItem(e) {
-                    this.trackItemHasUnclaimedRewards(e) && (a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-uikit-grid-click.ogg"), this.get("eventHubService").claimAllPendingRewards())
+                    this.trackItemHasUnclaimedRewards(e) && (s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-uikit-grid-click.ogg"), this.get("eventHubService").claimAllPendingRewards())
                 },
                 trackItemHasUnclaimedRewards: ({
                     rewardOptions: e
@@ -3167,7 +3181,7 @@
                 }) => e === l.REWARD_TRACK_ITEM_STATE.UNSELECTED)),
                 actions: {
                     clickItem(e) {
-                        a.Ember.run.debounce(this, this.handleClickItem, e, 250)
+                        s.Ember.run.debounce(this, this.handleClickItem, e, 250)
                     }
                 }
             });
@@ -3179,7 +3193,7 @@
             }), Object.defineProperty(t, "GAMEFLOW_PHASES", {
                 enumerable: !0,
                 get: function() {
-                    return a.default
+                    return s.default
                 }
             }), Object.defineProperty(t, "GAME_CONTEXT_KEYS", {
                 enumerable: !0,
@@ -3194,7 +3208,7 @@
             }), Object.defineProperty(t, "GAME_SEARCH_STATES", {
                 enumerable: !0,
                 get: function() {
-                    return s.default
+                    return a.default
                 }
             }), Object.defineProperty(t, "PAW", {
                 enumerable: !0,
@@ -3247,8 +3261,8 @@
                     return l.getGameKeyFromGameMode
                 }
             });
-            var a = g(n(62)),
-                s = g(n(63)),
+            var s = g(n(62)),
+                a = g(n(63)),
                 l = n(64),
                 o = g(n(65)),
                 r = g(n(66)),
@@ -3304,10 +3318,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.GAME_CONTEXT_KEYS = void 0, t.getGameKeyFromGameMode = function(e) {
-                return e === s.default.TFT ? l.TFT : l.LEAGUE_OF_LEGENDS
+                return e === a.default.TFT ? l.TFT : l.LEAGUE_OF_LEGENDS
             };
-            var a, s = (a = n(65)) && a.__esModule ? a : {
-                default: a
+            var s, a = (s = n(65)) && s.__esModule ? s : {
+                default: s
             };
             const l = {
                 TFT: "tft",
@@ -3334,8 +3348,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = m(n(67)),
-                s = m(n(68)),
+            var s = m(n(67)),
+                a = m(n(68)),
                 l = m(n(69)),
                 o = m(n(70)),
                 r = m(n(71)),
@@ -3351,8 +3365,8 @@
                 }
             }
             var h = {
-                COMPONENT_TYPES: a.default,
-                CURRENCY_TYPES: s.default,
+                COMPONENT_TYPES: s.default,
+                CURRENCY_TYPES: a.default,
                 INVENTORY_TYPES: l.default,
                 MEDIA_TYPES: o.default,
                 MEDIA_LOAD_TYPES: r.default,
@@ -3512,34 +3526,34 @@
                     ENABLED: "ENABLED",
                     DISABLED: "DISABLED"
                 },
-                a = {
+                s = {
                     PRIVATE: "PRIVATE",
                     PUBLIC: "PUBLIC"
                 };
-            var s = {
+            var a = {
                 ProfilePrivacyEnabledState: n,
-                ProfilePrivacySetting: a,
+                ProfilePrivacySetting: s,
                 DEFAULT_PROFILE_PRIVACY: {
                     enabledState: n.UNKNOWN,
-                    setting: a.PUBLIC
+                    setting: s.PUBLIC
                 }
             };
-            t.default = s
+            t.default = a
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             const n = "RANKED_SOLO_5x5",
-                a = "RANKED_FLEX_SR",
-                s = "RANKED_FLEX_TT",
+                s = "RANKED_FLEX_SR",
+                a = "RANKED_FLEX_TT",
                 l = "CHERRY",
                 o = "RANKED_TFT",
                 r = "RANKED_TFT_DOUBLE_UP",
                 i = "RANKED_TFT_TURBO",
                 c = "RANKED_TFT_PAIRS",
-                d = [n, a],
-                p = [...d, s],
+                d = [n, s],
+                p = [...d, a],
                 u = [l],
                 m = [o, r],
                 h = [i, c],
@@ -3548,8 +3562,8 @@
                 f = [...h, ...u];
             var _ = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
-                RANKED_FLEX_SR_QUEUE_TYPE: a,
-                RANKED_FLEX_TT_QUEUE_TYPE: s,
+                RANKED_FLEX_SR_QUEUE_TYPE: s,
+                RANKED_FLEX_TT_QUEUE_TYPE: a,
                 RANKED_CHERRY_QUEUE_TYPE: l,
                 RANKED_TFT_QUEUE_TYPE: o,
                 RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: r,
@@ -3571,8 +3585,8 @@
                 value: !0
             }), t.default = void 0;
             const n = "UNRANKED",
-                a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
-                s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
+                s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
+                a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 l = ["IV", "III", "II", "I"],
                 o = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
@@ -3589,17 +3603,17 @@
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
                 DIVISION_NAME_NONE: "NA",
                 APEX_TIERS: ["MASTER", "GRANDMASTER", "CHALLENGER"],
-                REGULAR_TIERS: a,
-                TIERS: s,
+                REGULAR_TIERS: s,
+                TIERS: a,
                 ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: a[a.length - 1],
-                LOWEST_TIER: a[0],
+                HIGHEST_TIER: s[s.length - 1],
+                LOWEST_TIER: s[0],
                 DIVISIONS: l,
                 HIGHEST_DIVISION: l[l.length - 1],
                 LOWEST_DIVISION: l[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: r(s),
+                TIER_NAME_TO_ORDINAL: r(a),
                 DIVISION_TO_ORDINAL: r(l),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
@@ -3690,14 +3704,14 @@
                 YEARS: "years"
             };
             t.TIME_UNITS = n;
-            const a = 36e5,
-                s = 864e5,
+            const s = 36e5,
+                a = 864e5,
                 l = 6048e5,
                 o = {
                     MILLISECONDS_IN_A_SECOND: 1e3,
                     MILLISECONDS_IN_A_MINUTE: 6e4,
-                    MILLISECONDS_IN_A_HOUR: a,
-                    MILLISECONDS_IN_A_DAY: s,
+                    MILLISECONDS_IN_A_HOUR: s,
+                    MILLISECONDS_IN_A_DAY: a,
                     MILLISECONDS_IN_A_WEEK: l,
                     MILLISECONDS_IN_A_YEAR: 314496e5
                 };
@@ -3722,10 +3736,10 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = a.Ember.Component.extend({
+            var s = n(1),
+                a = s.Ember.Component.extend({
                     classNames: ["event-shop-token-shop-balance-amount"],
-                    eventHubService: a.Ember.inject.service("event-hub"),
+                    eventHubService: s.Ember.inject.service("event-hub"),
                     init() {
                         this._super(...arguments), this.addObserver("eventHubService.tokenBalance", this.renderTokenBalance)
                     },
@@ -3740,24 +3754,24 @@
                         this.element.style.setProperty("--event-shop-token-balance", e || 0)
                     }
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(32);
-            var l = a.Ember.Component.extend({
+            var s = n(1),
+                a = n(32);
+            var l = s.Ember.Component.extend({
                 classNames: ["event-shop-token-shop"],
-                eventHubService: a.Ember.inject.service("event-hub"),
-                categoriesOffers: a.Ember.computed("eventHubService.categoriesOffers", (function() {
+                eventHubService: s.Ember.inject.service("event-hub"),
+                categoriesOffers: s.Ember.computed("eventHubService.categoriesOffers", (function() {
                     const e = this.get("eventHubService.categoriesOffers");
                     return e?.length ? e.map((e => {
-                        const t = (0, s.getCategoryOffersId)(e.category);
+                        const t = (0, a.getCategoryOffersId)(e.category);
                         return {
                             ...e,
-                            categoryTitle: a.tra.get(t)
+                            categoryTitle: s.tra.get(t)
                         }
                     })) : []
                 })),
@@ -3784,7 +3798,7 @@
                 },
                 actions: {
                     scrollToCategory(e) {
-                        const t = this.element.querySelector(`#${(0,s.getCategoryOffersId)(e)}`);
+                        const t = this.element.querySelector(`#${(0,a.getCategoryOffersId)(e)}`);
                         this.element.querySelector("#token-shop-scrollable-container").scrollTop = t.offsetTop - 70
                     }
                 }
@@ -3795,42 +3809,42 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = a.Ember.Component.extend({
+            var s = n(1),
+                a = s.Ember.Component.extend({
                     classNames: ["event-shop-xp"],
-                    eventHubService: a.Ember.inject.service("event-hub"),
-                    rewardTrackXP: a.Ember.computed.alias("eventHubService.rewardTrackXP"),
-                    isGracePeriod: a.Ember.computed.alias("eventHubService.isGracePeriod"),
-                    unclaimedRewards: a.Ember.computed.alias("eventHubService.unclaimedRewards.rewardsCount"),
-                    completedLoops: a.Ember.computed("rewardTrackXP", (function() {
+                    eventHubService: s.Ember.inject.service("event-hub"),
+                    rewardTrackXP: s.Ember.computed.alias("eventHubService.rewardTrackXP"),
+                    isGracePeriod: s.Ember.computed.alias("eventHubService.isGracePeriod"),
+                    unclaimedRewards: s.Ember.computed.alias("eventHubService.unclaimedRewards.rewardsCount"),
+                    completedLoops: s.Ember.computed("rewardTrackXP", (function() {
                         return Math.max(this.get("rewardTrackXP.iteration") - 1, 0)
                     })),
-                    hasUnclaimedRewards: a.Ember.computed("unclaimedRewards", (function() {
+                    hasUnclaimedRewards: s.Ember.computed("unclaimedRewards", (function() {
                         return this.get("unclaimedRewards") > 0
                     })),
-                    levelLabel: a.Ember.computed("rewardTrackXP", (function() {
+                    levelLabel: s.Ember.computed("rewardTrackXP", (function() {
                         return this.get("rewardTrackXP.currentLevel") > 0 ? this.get("tra").formatString("event_shop_xp_label_current_level", {
                             currentLevel: this.get("rewardTrackXP.currentLevel")
                         }) : this.get("tra.event_shop_xp_label_level_start")
                     })),
-                    xpOverflow: a.Ember.computed("rewardTrackXP", (function() {
+                    xpOverflow: s.Ember.computed("rewardTrackXP", (function() {
                         return this.get("rewardTrackXP.isBonusPhase") && this.get("rewardTrackXP.currentLevelXP") >= this.get("rewardTrackXP.totalLevelXP")
                     }))
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(61),
+            var s = n(1),
+                a = n(61),
                 l = n(5);
             const {
                 MILESTONE_STAGES: o,
                 REWARD_STATE: r
-            } = s.REWARD_TRACKER;
-            var i = a.Ember.Component.extend({
+            } = a.REWARD_TRACKER;
+            var i = s.Ember.Component.extend({
                 classNames: ["hol-level-icon-flames"],
                 classNameBindings: ["flameClicked:hol-level-icon-flames-click", "applyHoverClassNameBinding:hol-level-icon-flames-hover"],
                 itemIndex: null,
@@ -3838,46 +3852,46 @@
                 reward: null,
                 isRewardItemClicked: !1,
                 isRewardItemHovering: !1,
-                applyHoverClassNameBinding: a.Ember.computed.or("isRewardItemClicked", "isRewardItemHovering"),
+                applyHoverClassNameBinding: s.Ember.computed.or("isRewardItemClicked", "isRewardItemHovering"),
                 flameClicked: !1,
                 animationsEnabled: !1,
-                eventHubService: a.Ember.inject.service("event-hub"),
-                rewardsService: a.Ember.inject.service("rewards"),
-                playerSettingsService: a.Ember.inject.service("player-settings"),
-                narrativeElements: a.Ember.computed.alias("eventHubService.narrative"),
-                selectedNarrativeElement: a.Ember.computed("reward", "narrativeElements", (function() {
+                eventHubService: s.Ember.inject.service("event-hub"),
+                rewardsService: s.Ember.inject.service("rewards"),
+                playerSettingsService: s.Ember.inject.service("player-settings"),
+                narrativeElements: s.Ember.computed.alias("eventHubService.narrative"),
+                selectedNarrativeElement: s.Ember.computed("reward", "narrativeElements", (function() {
                     const e = this.get("reward")?.threshold,
                         t = this.get("narrativeElements");
                     if (e && t?.length) return t.find((t => parseInt(e) === t.narrativeStartingTrackLevel))
                 })),
-                state: a.Ember.computed("reward", (function() {
+                state: s.Ember.computed("reward", (function() {
                     return this.get("reward")?.rewardOptions?.[0]?.state
                 })),
-                stateClass: a.Ember.computed("state", (function() {
+                stateClass: s.Ember.computed("state", (function() {
                     const e = this.get("state")?.toLocaleLowerCase();
                     return e || ""
                 })),
-                iconCursorClass: a.Ember.computed("replayEnabled", (function() {
+                iconCursorClass: s.Ember.computed("replayEnabled", (function() {
                     return this.get("replayEnabled") ? "reward-level-icon-flames-clickable" : ""
                 })),
-                replayEnabled: a.Ember.computed("levelClass", "selectedNarrativeElement", (function() {
+                replayEnabled: s.Ember.computed("levelClass", "selectedNarrativeElement", (function() {
                     const e = this.get("selectedNarrativeElement"),
                         t = e?.narrativeVideo?.narrativeVideoIsLockedOnLevel;
                     return this.get("levelClass") === o.COMPLETED || this.get("levelClass") === o.CURRENT || !t
                 })),
-                animationIdleSrc: a.Ember.computed("state", "replayEnabled", (function() {
+                animationIdleSrc: s.Ember.computed("state", "replayEnabled", (function() {
                     const e = this.get("state"),
                         t = this.get("replayEnabled");
                     let n = "locked";
                     return e === r.UNSELECTED ? n = "claimable" : (e === r.SELECTED || t) && (n = "claimed"), `/fe/lol-event-hub/videos/MILESTONE_Flame-${n}-default.webm`
                 })),
-                animationHoverSrc: a.Ember.computed("state", "replayEnabled", (function() {
+                animationHoverSrc: s.Ember.computed("state", "replayEnabled", (function() {
                     const e = this.get("state"),
                         t = this.get("replayEnabled");
                     let n = "locked";
                     return e === r.UNSELECTED ? n = "claimable" : (e === r.SELECTED || t) && (n = "claimed"), `/fe/lol-event-hub/videos/MILESTONE_Flame-${n}-hover.webm`
                 })),
-                animationClickSrc: a.Ember.computed("state", "replayEnabled", (function() {
+                animationClickSrc: s.Ember.computed("state", "replayEnabled", (function() {
                     const e = this.get("state"),
                         t = this.get("replayEnabled");
                     let n = "locked";
@@ -3898,19 +3912,19 @@
                     this.get("itemClick") && this.get("itemClick")(e, 0);
                     const t = this.get("selectedNarrativeElement"),
                         n = document.createElement("iframe");
-                    n.setAttribute("src", t?.narrativeVideo?.localizedNarrativeVideoUrl), n.setAttribute("width", "100%"), n.setAttribute("height", "100%"), n.setAttribute("frameborder", "0"), a.FullPageModalManager.open({
+                    n.setAttribute("src", t?.narrativeVideo?.localizedNarrativeVideoUrl), n.setAttribute("width", "100%"), n.setAttribute("height", "100%"), n.setAttribute("frameborder", "0"), s.FullPageModalManager.open({
                         data: {
                             contents: n
                         }
-                    }), a.Telemetry.sendCustomData(l.TELEMETRY.TABLE, {
+                    }), s.Telemetry.sendCustomData(l.TELEMETRY.TABLE, {
                         eventName: l.TELEMETRY.REPLAY_BUTTON_NODE_LEVEL_CLICK_EVENT,
                         eventId: this.get("eventHubService.info.eventId"),
                         isPassPurchased: this.get("eventHubService.info.isPassPurchased"),
                         clickOnLevel: e.threshold,
                         playerOnLevel: this.get("eventHubService.rewardTrackProgress.level")
                     });
-                    const s = [t?.narrativeStartingTrackLevel];
-                    this.get("playerSettingsService").updatePlayerSettingsMemories(this.get("eventHubService.activeEventId"), s)
+                    const a = [t?.narrativeStartingTrackLevel];
+                    this.get("playerSettingsService").updatePlayerSettingsMemories(this.get("eventHubService.activeEventId"), a)
                 }
             });
             t.default = i
@@ -3919,34 +3933,34 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5),
-                l = a.Ember.Component.extend({
+            var s = n(1),
+                a = n(5),
+                l = s.Ember.Component.extend({
                     classNames: ["hol-narrative"],
-                    eventHubService: a.Ember.inject.service("event-hub"),
-                    playerCurrentLevel: a.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
-                    totalNumberOfLevels: a.Ember.computed.alias("eventHubService.rewardTrackProgress.totalLevels"),
+                    eventHubService: s.Ember.inject.service("event-hub"),
+                    playerCurrentLevel: s.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
+                    totalNumberOfLevels: s.Ember.computed.alias("eventHubService.rewardTrackProgress.totalLevels"),
                     narrativeElementInView: null,
                     descriptionTextElementAdditionalClass: null,
-                    narrativeTitle: a.Ember.computed("narrativeElementInView", (function() {
+                    narrativeTitle: s.Ember.computed("narrativeElementInView", (function() {
                         const e = this.get("narrativeElementInView");
                         return e?.localizedNarrativeTitle || ""
                     })),
-                    narrativeDescription: a.Ember.computed("narrativeElementInView", (function() {
+                    narrativeDescription: s.Ember.computed("narrativeElementInView", (function() {
                         const e = this.get("narrativeElementInView");
                         return e?.localizedNarrativeDescription || ""
                     })),
-                    showPlayNarrativeVideoButton: a.Ember.computed("narrativeElementInView", "totalNumberOfLevels", (function() {
+                    showPlayNarrativeVideoButton: s.Ember.computed("narrativeElementInView", "totalNumberOfLevels", (function() {
                         const e = this.get("narrativeElementInView"),
                             t = 0 === e?.narrativeStartingTrackLevel,
                             n = e?.narrativeStartingTrackLevel === this.get("totalNumberOfLevels");
                         return (t || n) && !!e?.narrativeVideo?.localizedNarrativeVideoUrl && !!e?.narrativeVideo?.localizedPlayNarrativeButtonLabel
                     })),
-                    playNarrativeButtonLabel: a.Ember.computed("narrativeElementInView", (function() {
+                    playNarrativeButtonLabel: s.Ember.computed("narrativeElementInView", (function() {
                         const e = this.get("narrativeElementInView");
                         return e?.narrativeVideo?.localizedPlayNarrativeButtonLabel || ""
                     })),
-                    playButtonDisabled: a.Ember.computed("narrativeElementInView", "playerCurrentLevel", (function() {
+                    playButtonDisabled: s.Ember.computed("narrativeElementInView", "playerCurrentLevel", (function() {
                         const e = this.get("narrativeElementInView"),
                             t = e?.narrativeVideo?.narrativeVideoIsLockedOnLevel,
                             n = this.get("playerCurrentLevel") >= e?.narrativeStartingTrackLevel;
@@ -3964,14 +3978,14 @@
                         playNarrativeButtonClick() {
                             if (this.get("playButtonDisabled")) return;
                             const e = this.get("narrativeElementInView");
-                            a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                                eventName: s.TELEMETRY.HOL_PLAY_NARRATIVE_EVENT,
+                            s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                                eventName: a.TELEMETRY.HOL_PLAY_NARRATIVE_EVENT,
                                 eventId: this.get("eventHubService.info.eventId"),
                                 videoTitle: this.get("playNarrativeButtonLabel"),
                                 milestoneLevel: e?.narrativeStartingTrackLevel
                             });
                             const t = document.createElement("iframe");
-                            t.setAttribute("src", e?.narrativeVideo?.localizedNarrativeVideoUrl), t.setAttribute("width", "100%"), t.setAttribute("height", "100%"), t.setAttribute("frameborder", "0"), a.FullPageModalManager.open({
+                            t.setAttribute("src", e?.narrativeVideo?.localizedNarrativeVideoUrl), t.setAttribute("width", "100%"), t.setAttribute("height", "100%"), t.setAttribute("frameborder", "0"), s.FullPageModalManager.open({
                                 data: {
                                     contents: t
                                 }
@@ -3985,14 +3999,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5);
-            var l = a.Ember.Component.extend({
+            var s = n(1),
+                a = n(5);
+            var l = s.Ember.Component.extend({
                 classNames: ["hol-promotion-banner"],
                 selectedReward: null,
-                eventHubService: a.Ember.inject.service("event-hub"),
-                promotionBannerImgSrc: a.Ember.computed.alias("eventHubService.eventDetailsData.promotionBannerImage"),
-                showBanner: a.Ember.computed("selectedReward", "promotionBannerImgSrc", (function() {
+                eventHubService: s.Ember.inject.service("event-hub"),
+                promotionBannerImgSrc: s.Ember.computed.alias("eventHubService.eventDetailsData.promotionBannerImage"),
+                showBanner: s.Ember.computed("selectedReward", "promotionBannerImgSrc", (function() {
                     const e = this.get("promotionBannerImgSrc");
                     if (!e || "/lol-game-data/assets/" === e) return !1;
                     const t = this.get("selectedReward");
@@ -4000,8 +4014,8 @@
                 })),
                 actions: {
                     bannerClick() {
-                        a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                            eventName: s.TELEMETRY.HOL_PROMOTION_BANNER_CLICK_EVENT,
+                        s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                            eventName: a.TELEMETRY.HOL_PROMOTION_BANNER_CLICK_EVENT,
                             eventId: this.get("eventHubService.info.eventId")
                         }), this.get("eventHubService").getPassBundles().then((e => {
                             if (!e?.length) throw new Error("Event Hub banner - Pass Bundles did not return any option");
@@ -4009,12 +4023,12 @@
                                 itemId: e?.details?.itemId,
                                 inventoryType: e?.details?.inventoryType
                             })));
-                            a.Router.navigateTo("rcp-fe-lol-store", {
+                            s.Router.navigateTo("rcp-fe-lol-store", {
                                 page: "hextech",
                                 items: t
                             })
                         })).catch((e => {
-                            a.logger.error("Failure loading pass options", e), a.Router.navigateTo("rcp-fe-lol-store")
+                            s.logger.error("Failure loading pass options", e), s.Router.navigateTo("rcp-fe-lol-store")
                         }))
                     }
                 }
@@ -4022,24 +4036,24 @@
             t.default = l
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
-                l = (a = n(92)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                l = (s = n(92)) && s.__esModule ? s : {
+                    default: s
                 };
-            e.exports = s.Ember.Component.extend({
+            e.exports = a.Ember.Component.extend({
                 activeEventId: null,
                 memories: null,
                 rewardTrackProgress: null,
-                ScrollableUtils: s.ScrollableUtils,
+                ScrollableUtils: a.ScrollableUtils,
                 inducteeName: "",
                 layout: l.default,
-                playerSettingsService: s.Ember.inject.service("player-settings"),
+                playerSettingsService: a.Ember.inject.service("player-settings"),
                 init() {
                     this._super(...arguments), this.set("navigatedToMemory", !1)
                 },
-                subHeaderText: s.Ember.computed("inducteeName", (function() {
+                subHeaderText: a.Ember.computed("inducteeName", (function() {
                     const e = this.get("inducteeName");
-                    return s.tra.formatString("hol_hall_of_memories_sub_header", {
+                    return a.tra.formatString("hol_hall_of_memories_sub_header", {
                         inducteeName: e
                     })
                 })),
@@ -4051,58 +4065,58 @@
                 }
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "KJWCEGHv",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\memory-book.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\memory-book.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\memory-book.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","memory-book-modal-container"],["dynamic-attr","style",["helper",["concat"],["background-image: url(\'",["get",[null,"backgroundImageUrl"]],"\');"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","memory-book-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","header-container"],["flush-element"],["text","\\n      "],["open-element","h1",[]],["flush-element"],["text"," "],["append",["unknown",["tra","hol_hall_of_memories_header"]],false],["text"," "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","subheader-container"],["flush-element"],["text","\\n      "],["open-element","h2",[]],["flush-element"],["text"," "],["append",["unknown",["subHeaderText"]],false],["text"," "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","memories-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["memories"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["memory-item"],null,[["memory","activeEventId","holController","navigatedToMemory"],[["get",["memory"]],["get",["activeEventId"]],["get",["holController"]],["get",["navigatedToMemory"]]]]],false],["text","\\n"]],"locals":["memory","index"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var a, s = n(1),
-                l = (a = n(94)) && a.__esModule ? a : {
-                    default: a
+            var s, a = n(1),
+                l = (s = n(94)) && s.__esModule ? s : {
+                    default: s
                 },
                 o = n(16);
-            e.exports = s.Ember.Component.extend({
+            e.exports = a.Ember.Component.extend({
                 classNames: ["hol-memory-book-item"],
                 layout: l.default,
                 activeEventId: null,
                 holController: null,
-                playerSettingsService: s.Ember.inject.service("player-settings"),
+                playerSettingsService: a.Ember.inject.service("player-settings"),
                 navigatedToMemory: !1,
                 init() {
-                    this._super(...arguments), this.handleMemoryVideoIframeClosed = this.handleMemoryVideoIframeClosed.bind(this), this.settingsDataBinding = (0, s.dataBinding)(o.SETTINGS_API, s.socket), this.settingsDataBinding.observe(o.EVENT_HUB_SETTINGS_PATH, this, this.handleEventHubSettingsUpdated)
+                    this._super(...arguments), this.handleMemoryVideoIframeClosed = this.handleMemoryVideoIframeClosed.bind(this), this.settingsDataBinding = (0, a.dataBinding)(o.SETTINGS_API, a.socket), this.settingsDataBinding.observe(o.EVENT_HUB_SETTINGS_PATH, this, this.handleEventHubSettingsUpdated)
                 },
                 didInsertElement() {
                     this._super(...arguments)
                 },
-                unlockLevel: s.Ember.computed.alias("memory.narrativeStartingTrackLevel"),
-                thumbnailImage: s.Ember.computed.alias("memory.narrativeVideo.thumbnailImage"),
-                lockedClass: s.Ember.computed("memory", (function() {
+                unlockLevel: a.Ember.computed.alias("memory.narrativeStartingTrackLevel"),
+                thumbnailImage: a.Ember.computed.alias("memory.narrativeVideo.thumbnailImage"),
+                lockedClass: a.Ember.computed("memory", (function() {
                     return this.get("memory.isUnlocked") ? "memory-unlocked" : "memory-locked"
                 })),
-                unlocksAtLevelText: s.Ember.computed("tra", (function() {
+                unlocksAtLevelText: a.Ember.computed("tra", (function() {
                     const e = this.get("unlockLevel");
-                    return s.tra.formatString("hol_hall_of_memories_memory_card_unlock_level", {
+                    return a.tra.formatString("hol_hall_of_memories_memory_card_unlock_level", {
                         unlockLevel: e
                     })
                 })),
-                seenClass: s.Ember.computed("memory", (function() {
+                seenClass: a.Ember.computed("memory", (function() {
                     return this.get("memory.isUnseen") ? "memory-unseen" : "memory-seen"
                 })),
-                memoryThumbnail: s.Ember.computed("thumbnailImage", (function() {
+                memoryThumbnail: a.Ember.computed("thumbnailImage", (function() {
                     const e = this.get("thumbnailImage");
                     return e || "/fe/lol-event-hub/images/hol-memories-default-thumbnail.png"
                 })),
-                isLocked: s.Ember.computed("memory.isUnlocked", (function() {
+                isLocked: a.Ember.computed("memory.isUnlocked", (function() {
                     return !this.get("memory.isUnlocked")
                 })),
-                animationsEnabled: s.Ember.computed("playerSettingsService.animationsEnabled", (function() {
+                animationsEnabled: a.Ember.computed("playerSettingsService.animationsEnabled", (function() {
                     return this.get("playerSettingsService.animationsEnabled")
                 })),
                 handleMemoryVideoIframeClosed() {
-                    s.FullPageModalManager.removeEventListener("fullPageModalClose", this.handleMemoryVideoIframeClosed), this.holController.openMemoryBook()
+                    a.FullPageModalManager.removeEventListener("fullPageModalClose", this.handleMemoryVideoIframeClosed), this.holController.openMemoryBook()
                 },
                 handleEventHubSettingsUpdated() {
                     this.get("playerSettingsService").getAccountSettings().then((({
@@ -4111,9 +4125,9 @@
                         if (!e) return;
                         const t = this.get("activeEventId"),
                             n = e.playerSettingsDataMap[t] && e.playerSettingsDataMap[t].seenMemories || [],
-                            a = this.get("memory"),
-                            s = a.isUnlocked && !n.includes(a.narrativeStartingTrackLevel);
-                        this.set("memory.isUnseen", s)
+                            s = this.get("memory"),
+                            a = s.isUnlocked && !n.includes(s.narrativeStartingTrackLevel);
+                        this.set("memory.isUnseen", a)
                     }))
                 },
                 actions: {
@@ -4122,7 +4136,7 @@
                         const t = [this.get("memory.narrativeStartingTrackLevel")];
                         await this.get("playerSettingsService").updatePlayerSettingsMemories(this.get("activeEventId"), t);
                         const n = document.createElement("iframe");
-                        n.setAttribute("src", e), n.setAttribute("width", "100%"), n.setAttribute("height", "100%"), n.setAttribute("frameborder", "0"), s.FullPageModalManager.removeEventListener("fullPageModalClose", this.holController.handleMemoryBookClosed), s.FullPageModalManager.close(), this.holController.destroyMemoryBookInstance(), s.FullPageModalManager.addEventListener("fullPageModalClose", this.handleMemoryVideoIframeClosed), s.FullPageModalManager.open({
+                        n.setAttribute("src", e), n.setAttribute("width", "100%"), n.setAttribute("height", "100%"), n.setAttribute("frameborder", "0"), a.FullPageModalManager.removeEventListener("fullPageModalClose", this.holController.handleMemoryBookClosed), a.FullPageModalManager.close(), this.holController.destroyMemoryBookInstance(), a.FullPageModalManager.addEventListener("fullPageModalClose", this.handleMemoryVideoIframeClosed), a.FullPageModalManager.open({
                             data: {
                                 contents: n
                             }
@@ -4131,8 +4145,8 @@
                 }
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "md4cxEdf",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\memory-item.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\memory-item.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\memory-item.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["hol-media-card ",["helper",["if"],[["get",["memory","isLatestUnlock"]]," latestMemory"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["hol-media-card-button ",["unknown",["lockedClass"]]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openMemoryVideo",["get",["memory","narrativeVideo","localizedNarrativeVideoUrl"]]],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["hol-media-card-image ",["unknown",["lockedClass"]]," ",["unknown",["seenClass"]]]]],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","hol-media-card-image-thumbnail-image"],["dynamic-attr","src",["unknown",["memoryThumbnail"]],null],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["memory","isUnseen"]]],null,6],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hol-media-card-image-gradient"],["flush-element"],["close-element"],["text","\\n         "],["open-element","div",[]],["static-attr","class","hol-media-card-external-link-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLocked"]]],null,3,2],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hol-media-card-content-label-wrapper"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hol-media-card-content-label"],["flush-element"],["append",["unknown",["memory","narrativeVideo","localizedVideoTitle"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isLocked"]]],null,1,0],["text","        "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","hol-media-card-content-sub-label"],["flush-element"],["append",["unknown",["tra","hol_hall_of_memories_memory_card_link"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["hol-media-card-content-sub-label ",["unknown",["lockedClass"]]]]],["flush-element"],["append",["unknown",["unlocksAtLevelText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","src","/fe/lol-navigation/activity-center/external-link-rest.svg"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","src","/fe/lol-event-hub/images/lock-closed.svg"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","hol-media-card-image-unseen-lowspec"],["static-attr","src","/fe/lol-event-hub/images/hol-memories-unseen-lowspec.png"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","video",[]],["static-attr","class","hol-media-card-image-unseen-animation"],["static-attr","src","/fe/lol-event-hub/videos/memory-card-unseen.webm"],["static-attr","preload",""],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["animationsEnabled"]]],null,5,4]],"locals":[]}],"hasPartials":false}',
                 meta: {}
@@ -4142,23 +4156,23 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.TOTAL_REWARDS = t.SCROLLING_DISTANCE_SPARSE = t.REWARDS_PER_PAGE = void 0;
-            var a = n(1),
-                s = n(61),
+            var s = n(1),
+                a = n(61),
                 l = n(5);
             n(96);
             const {
                 TRACKER_SIZE: o
-            } = s.REWARD_TRACKER;
+            } = a.REWARD_TRACKER;
             t.REWARDS_PER_PAGE = 8;
             t.TOTAL_REWARDS = 48;
             const r = 1055;
             t.SCROLLING_DISTANCE_SPARSE = r;
-            var i = a.Ember.Component.extend({
+            var i = s.Ember.Component.extend({
                 init() {
                     this._super(...arguments), this.addObserver("selectedReward", this.updateBackgroundImage)
                 },
                 didInsertElement() {
-                    this._super(...arguments), this.setInitialReward(), this.showHextechRings(), a.Ember.run.scheduleOnce("afterRender", this, (() => {
+                    this._super(...arguments), this.setInitialReward(), this.showHextechRings(), s.Ember.run.scheduleOnce("afterRender", this, (() => {
                         const e = this.element.querySelector(".reward-tracker-scrollable"),
                             t = e => {
                                 const t = e.deltaY > 0 ? "right" : "left";
@@ -4171,16 +4185,16 @@
                                 } [e?.code];
                                 this.scrollToNextPage(t)
                             },
-                            a = () => {
+                            s = () => {
                                 this.set("scrollInProgress", !0), clearTimeout(this.get("scrollTimeout")), this.set("scrollTimeout", setTimeout((() => {
                                     this.set("scrollInProgress", !1)
                                 }), 200))
                             };
-                        e.addEventListener("scroll", a, {
+                        e.addEventListener("scroll", s, {
                             passive: !0
                         }), e.addEventListener("wheel", t, {
                             passive: !1
-                        }), document.addEventListener("keydown", n), this.set("scroll", a), this.set("wheel", t), this.set("keydown", n)
+                        }), document.addEventListener("keydown", n), this.set("scroll", s), this.set("wheel", t), this.set("keydown", n)
                     }))
                 },
                 willDestroyElement() {
@@ -4203,11 +4217,11 @@
                     const e = this.get("selectedChapter"),
                         t = this.get("selectedReward"),
                         n = parseInt(t?.item?.threshold) > 48,
-                        a = this.get("actBackgroundImage"),
-                        s = t?.item?.rewardOptions[0]?.splashImagePath;
+                        s = this.get("actBackgroundImage"),
+                        a = t?.item?.rewardOptions[0]?.splashImagePath;
                     let l = e?.backgroundImage;
-                    if (s) l = s;
-                    else if (a) l = a;
+                    if (a) l = a;
+                    else if (s) l = s;
                     else if (n) {
                         const e = 5;
                         l = this.get("chapters")?.[e]?.backgroundImage
@@ -4218,22 +4232,22 @@
                     this.sendAction("onBackgroundImageChange", null)
                 },
                 scrollTimeout: void 0,
-                eventHubService: a.Ember.inject.service("event-hub"),
-                actBackgroundImage: a.Ember.computed.alias("eventHubService.eventDetailsData.actBackgroundImage"),
-                rewardEnhancementService: a.Ember.inject.service("reward-item-enhancer"),
-                playerSettingsService: a.Ember.inject.service("player-settings"),
+                eventHubService: s.Ember.inject.service("event-hub"),
+                actBackgroundImage: s.Ember.computed.alias("eventHubService.eventDetailsData.actBackgroundImage"),
+                rewardEnhancementService: s.Ember.inject.service("reward-item-enhancer"),
+                playerSettingsService: s.Ember.inject.service("player-settings"),
                 hasAnimationToggled: !1,
-                animationsEnabled: a.Ember.computed("playerSettingsService.animationsEnabled", (function() {
+                animationsEnabled: s.Ember.computed("playerSettingsService.animationsEnabled", (function() {
                     return this.set("hasAnimationToggled", !0), this.get("playerSettingsService.animationsEnabled")
                 })),
-                disableRewardTrackerAnimations: a.Ember.computed.not("playerSettingsService.animationsEnabled"),
+                disableRewardTrackerAnimations: s.Ember.computed.not("playerSettingsService.animationsEnabled"),
                 rewardTrackRarity: null,
-                rewardTrackProgress: a.Ember.computed.alias("eventHubService.rewardTrackProgress"),
-                rewardTrackItems: a.Ember.computed("eventHubService.rewardTrackItems", (function() {
+                rewardTrackProgress: s.Ember.computed.alias("eventHubService.rewardTrackProgress"),
+                rewardTrackItems: s.Ember.computed("eventHubService.rewardTrackItems", (function() {
                     const e = this.get("eventHubService.rewardTrackItems");
                     return e?.map((e => {
                         const t = e?.rewardOptions[0];
-                        return t.rewardItemType === a.RewardConstants.REWARD_TYPES.CHAMPION_SKIN_UUID && this.get("rewardEnhancementService").getItemRarityByInstance(t.rewardItemId).then((e => {
+                        return t.rewardItemType === s.RewardConstants.REWARD_TYPES.CHAMPION_SKIN_UUID && this.get("rewardEnhancementService").getItemRarityByInstance(t.rewardItemId).then((e => {
                             const n = this.get("rewardTrackRarity");
                             n ? (n[t.rewardItemId] = e, this.set("rewardTrackRarity", n)) : this.set("rewardTrackRarity", {
                                 [t.rewardItemId]: e
@@ -4241,39 +4255,39 @@
                         })), e
                     }))
                 })),
-                rewardTrackBonusProgress: a.Ember.computed.alias("eventHubService.rewardTrackBonusProgress"),
-                rewardTrackBonusItems: a.Ember.computed.alias("eventHubService.rewardTrackBonusItems"),
+                rewardTrackBonusProgress: s.Ember.computed.alias("eventHubService.rewardTrackBonusProgress"),
+                rewardTrackBonusItems: s.Ember.computed.alias("eventHubService.rewardTrackBonusItems"),
                 trackerSize: o.MEDIUM,
                 scrollInProgress: !1,
-                isVisible: a.Ember.computed.alias("model.isVisible"),
-                showSplashImage: a.Ember.computed("selectedReward", (function() {
+                isVisible: s.Ember.computed.alias("model.isVisible"),
+                showSplashImage: s.Ember.computed("selectedReward", (function() {
                     const e = this.get("selectedReward");
                     return !!e?.item?.rewardOptions[0]?.splashImagePath
                 })),
-                framingStyle: a.Ember.computed("showSplashImage", (function() {
+                framingStyle: s.Ember.computed("showSplashImage", (function() {
                     return this.get("showSplashImage") ? "display:none;" : ""
                 })),
-                currentLevel: a.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
+                currentLevel: s.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
                 selectedReward: null,
-                rarityId: a.Ember.computed("selectedReward", "rewardTrackRarity", (function() {
+                rarityId: s.Ember.computed("selectedReward", "rewardTrackRarity", (function() {
                     const e = this.get("selectedReward");
                     if (e) return this.get("rewardTrackRarity")?.[e?.item?.rewardOptions[0].rewardItemId]
                 })),
-                selectedRewardOption: a.Ember.computed("selectedReward", (function() {
+                selectedRewardOption: s.Ember.computed("selectedReward", (function() {
                     if (this.get("selectedReward")) {
                         const e = this.get("selectedReward").item;
                         return e?.rewardOptions?.[this.get("selectedReward")?.optionIndex || 0]
                     }
                     return null
                 })),
-                selectedRewardImage: a.Ember.computed("selectedRewardOption", (function() {
+                selectedRewardImage: s.Ember.computed("selectedRewardOption", (function() {
                     const e = this.get("selectedRewardOption");
                     return e?.splashImagePath ? "" : e?.thumbIconPath || ""
                 })),
-                selectedRewardImageClass: a.Ember.computed("selectedRewardOption", (function() {
-                    return `season-pass-track-reward-highlight-image ${a.RewardUtils.getRewardInventoryTypeClass(this.get("selectedRewardOption"))}`
+                selectedRewardImageClass: s.Ember.computed("selectedRewardOption", (function() {
+                    return `season-pass-track-reward-highlight-image ${s.RewardUtils.getRewardInventoryTypeClass(this.get("selectedRewardOption"))}`
                 })),
-                selectedChapter: a.Ember.computed("selectedReward", "chapters", (function() {
+                selectedChapter: s.Ember.computed("selectedReward", "chapters", (function() {
                     const e = this.get("selectedReward"),
                         t = this.get("chapters");
                     return e?.item?.threshold && t?.length ? t.find((t => t.chapterStart <= e.item.threshold && t.chapterEnd >= e.item.threshold)) : null
@@ -4286,7 +4300,7 @@
                 showHextechRings() {
                     const e = document.getElementById("season-pass-track-reward-framing-intro-animation"),
                         t = document.getElementById("season-pass-track-reward-framing");
-                    this.get("isFirstPageVisit") && this.get("animationsEnabled") ? e && (a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-season-pass-hextech-metal-intro.ogg"), e.addEventListener("ended", function() {
+                    this.get("isFirstPageVisit") && this.get("animationsEnabled") ? e && (s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-season-pass-hextech-metal-intro.ogg"), e.addEventListener("ended", function() {
                         this.changeFramingStyles(e, t)
                     }.bind(this), {
                         once: !0
@@ -4303,8 +4317,8 @@
                 },
                 updateSelectedLevel(e, t) {
                     const n = this.getLastOfArray(e);
-                    let a;
-                    a = e.includes(t) ? this.getRewardByThreshold(t) : this.getChaseRewardOnPage(n), this.setReward(a)
+                    let s;
+                    s = e.includes(t) ? this.getRewardByThreshold(t) : this.getChaseRewardOnPage(n), this.setReward(s)
                 },
                 getChaseRewardLevelForCurrentPage: e => e ? 8 * Math.ceil(e / 8) : 8,
                 getRewardTrack(e = !1) {
@@ -4315,8 +4329,8 @@
                     const t = e > 48,
                         n = this.getRewardTrack(t);
                     if (!t) return n[e];
-                    const a = e + 1;
-                    return n.find((e => parseInt(e.threshold) === a))
+                    const s = e + 1;
+                    return n.find((e => parseInt(e.threshold) === s))
                 },
                 getRewardByThreshold(e) {
                     return this.getReward(e)
@@ -4348,13 +4362,13 @@
                         t && n ? this.set("hasAnimationToggled", !1) : this.updateTrackWithRewardsInReview(e)
                     },
                     rewardItemClick(e, t) {
-                        a.Telemetry.sendCustomData(l.TELEMETRY.TABLE, {
+                        s.Telemetry.sendCustomData(l.TELEMETRY.TABLE, {
                             eventName: l.TELEMETRY.REWARD_CLICK_EVENT,
                             eventId: this.get("eventHubService.info.eventId"),
                             milestoneLevel: e.threshold
                         }), this.setReward(e, t);
                         const n = document.getElementById("season-pass-track-reward-framing-outer-animation");
-                        n && (n.currentTime = 0, n.play()), a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-season-pass-hextech-reset.ogg")
+                        n && (n.currentTime = 0, n.play()), s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-season-pass-hextech-reset.ogg")
                     }
                 }
             });
@@ -4367,14 +4381,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = a.Ember.Component.extend({
+            var s = n(1),
+                a = s.Ember.Component.extend({
                     classNames: ["season-pass-overview-component"],
                     didInsertElement() {
                         this._super(...arguments)
                     },
                     isOnRewardTrackPage: !1,
-                    navOptions: a.Ember.computed.alias("model.navOptions"),
+                    navOptions: s.Ember.computed.alias("model.navOptions"),
                     chapterInView: null,
                     chapters: null,
                     actions: {
@@ -4386,53 +4400,53 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.ZERO_INDEXED_ROMAN_NUMERALS = void 0;
-            var a = n(1);
-            const s = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
-            t.ZERO_INDEXED_ROMAN_NUMERALS = s;
-            var l = a.Ember.Component.extend({
+            var s = n(1);
+            const a = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+            t.ZERO_INDEXED_ROMAN_NUMERALS = a;
+            var l = s.Ember.Component.extend({
                 classNames: ["season-pass-chapter-card"],
                 classNameBindings: ["hasCompletedChapter:season-pass-chapter-card-completed", "isLastChapterAndCompletedAll:season-pass-chapter-card-epilogue", "animationsDisabled:season-pass-disabled-animations"],
-                eventHubService: a.Ember.inject.service("event-hub"),
-                playerSettingsService: a.Ember.inject.service("player-settings"),
-                animationsEnabled: a.Ember.computed.alias("playerSettingsService.animationsEnabled"),
-                animationsDisabled: a.Ember.computed.not("animationsEnabled"),
+                eventHubService: s.Ember.inject.service("event-hub"),
+                playerSettingsService: s.Ember.inject.service("player-settings"),
+                animationsEnabled: s.Ember.computed.alias("playerSettingsService.animationsEnabled"),
+                animationsDisabled: s.Ember.computed.not("animationsEnabled"),
                 index: null,
-                chapters: a.Ember.computed.alias("eventHubService.chapters.chapters"),
-                currentLevel: a.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
-                currentActiveChapter: a.Ember.computed.alias("eventHubService.chapters.currentChapter"),
-                totalLevels: a.Ember.computed.alias("eventHubService.rewardTrackProgress.totalLevels"),
-                isLastChapterAndCompletedAll: a.Ember.computed("currentLevel", "totalLevels", "index", "chapters", (function() {
+                chapters: s.Ember.computed.alias("eventHubService.chapters.chapters"),
+                currentLevel: s.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
+                currentActiveChapter: s.Ember.computed.alias("eventHubService.chapters.currentChapter"),
+                totalLevels: s.Ember.computed.alias("eventHubService.rewardTrackProgress.totalLevels"),
+                isLastChapterAndCompletedAll: s.Ember.computed("currentLevel", "totalLevels", "index", "chapters", (function() {
                     const e = this.get("currentLevel"),
                         t = this.get("totalLevels"),
                         n = this.get("chapters").length;
                     return e >= t && this.get("index") === n - 1
                 })),
-                currentChapter: a.Ember.computed("chapters", "index", (function() {
+                currentChapter: s.Ember.computed("chapters", "index", (function() {
                     const e = this.get("index");
                     return this.get("chapters")?.[e]
                 })),
-                cardImageStyle: a.Ember.computed("currentChapter", (function() {
+                cardImageStyle: s.Ember.computed("currentChapter", (function() {
                     const e = this.get("currentChapter.cardImage");
-                    return a.Ember.String.htmlSafe(`background-image: url(${e})`)
+                    return s.Ember.String.htmlSafe(`background-image: url(${e})`)
                 })),
-                romanNumeral: a.Ember.computed("index", (function() {
-                    return s[this.get("index")]
+                romanNumeral: s.Ember.computed("index", (function() {
+                    return a[this.get("index")]
                 })),
-                chapterStatus: a.Ember.computed("currentLevel", "currentChapter", "isLastChapterAndCompletedAll", (function() {
+                chapterStatus: s.Ember.computed("currentLevel", "currentChapter", "isLastChapterAndCompletedAll", (function() {
                     const e = this.get("currentLevel"),
                         t = this.get("currentChapter");
                     return e + 1 >= t.chapterStart && e < t.chapterEnd ? "active" : this.get("isLastChapterAndCompletedAll") ? "epilogue" : e >= t.chapterEnd ? "completed" : "upcoming"
                 })),
-                hasCompletedChapter: a.Ember.computed("chapterStatus", (function() {
+                hasCompletedChapter: s.Ember.computed("chapterStatus", (function() {
                     return "completed" === this.get("chapterStatus")
                 })),
-                shouldShowActiveGlow: a.Ember.computed("chapterStatus", "isLastChapterAndCompletedAll", (function() {
+                shouldShowActiveGlow: s.Ember.computed("chapterStatus", "isLastChapterAndCompletedAll", (function() {
                     return "active" === this.get("chapterStatus") || this.get("isLastChapterAndCompletedAll")
                 })),
                 isUpcomingChapterHovered: !1,
@@ -4452,14 +4466,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5);
+            var s = n(1),
+                a = n(5);
             n(96);
-            var l = a.Ember.Controller.extend({
-                isVisible: a.Ember.computed.alias("model.isVisible"),
-                eventHubService: a.Ember.inject.service("event-hub"),
-                backgroundImageStyle: a.Ember.computed("eventHubService.backgroundData", "eventHubService.activeEventType", (function() {
-                    if (s.EVENT_CONFIGS_BY_TYPE[this.get("eventHubService.activeEventType")]?.displaySingleBackground && this.get("eventHubService.backgroundData.backgroundImagePath")) return a.Ember.String.htmlSafe(`background-image: url(${this.get("eventHubService.backgroundData.backgroundImagePath")})`)
+            var l = s.Ember.Controller.extend({
+                isVisible: s.Ember.computed.alias("model.isVisible"),
+                eventHubService: s.Ember.inject.service("event-hub"),
+                backgroundImageStyle: s.Ember.computed("eventHubService.backgroundData", "eventHubService.activeEventType", (function() {
+                    if (a.EVENT_CONFIGS_BY_TYPE[this.get("eventHubService.activeEventType")]?.displaySingleBackground && this.get("eventHubService.backgroundData.backgroundImagePath")) return s.Ember.String.htmlSafe(`background-image: url(${this.get("eventHubService.backgroundData.backgroundImagePath")})`)
                 }))
             });
             t.default = l
@@ -4468,14 +4482,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(32),
+            var s = n(1),
+                a = n(32),
                 l = n(5),
-                o = a.Ember.Controller.extend({
-                    eventHubService: a.Ember.inject.service("event-hub"),
-                    isVisible: a.Ember.computed.alias("model.isVisible"),
-                    navOptionsEventId: a.Ember.computed.alias("model.navOptions.eventId"),
-                    availableEvents: a.Ember.computed("eventHubService.events.[]", (function() {
+                o = s.Ember.Controller.extend({
+                    eventHubService: s.Ember.inject.service("event-hub"),
+                    isVisible: s.Ember.computed.alias("model.isVisible"),
+                    navOptionsEventId: s.Ember.computed.alias("model.navOptions.eventId"),
+                    availableEvents: s.Ember.computed("eventHubService.events.[]", (function() {
                         return (this.get("eventHubService.events") || []).map((({
                             eventId: e,
                             eventInfo: {
@@ -4486,7 +4500,7 @@
                             eventId: e,
                             eventType: n,
                             eventName: t,
-                            route: (0, s.getRouteByEventHubType)(n)
+                            route: (0, a.getRouteByEventHubType)(n)
                         })))
                     })),
                     init() {
@@ -4523,20 +4537,20 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0, n(96);
-            var a = n(1),
-                s = a.Ember.Controller.extend({
+            var s = n(1),
+                a = s.Ember.Controller.extend({
                     init() {
                         this._super(...arguments), this.addObserver("isVisible", this, "updatePlayerSettings"), this.addObserver("tokenBalance", this, "updatePlayerSettings"), this.addObserver("tokenShopOffersVersion", this, "updatePlayerSettings")
                     },
                     willDestroy() {
                         this.removeObserver("isVisible"), this.removeObserver("tokenBalance"), this.removeObserver("tokenShopOffersVersion")
                     },
-                    eventHubService: a.Ember.inject.service("event-hub"),
-                    playerSettingsService: a.Ember.inject.service("player-settings"),
-                    isVisible: a.Ember.computed.alias("model.isVisible"),
-                    tokenBalance: a.Ember.computed.alias("eventHubService.tokenBalance"),
-                    tokenShopOffersVersion: a.Ember.computed.alias("eventHubService.tokenShopData.offersVersion"),
-                    isEventShopReady: a.Ember.computed.or("eventHubService.categoriesOffers", "eventHubService.rewardTrackItems"),
+                    eventHubService: s.Ember.inject.service("event-hub"),
+                    playerSettingsService: s.Ember.inject.service("player-settings"),
+                    isVisible: s.Ember.computed.alias("model.isVisible"),
+                    tokenBalance: s.Ember.computed.alias("eventHubService.tokenBalance"),
+                    tokenShopOffersVersion: s.Ember.computed.alias("eventHubService.tokenShopData.offersVersion"),
+                    isEventShopReady: s.Ember.computed.or("eventHubService.categoriesOffers", "eventHubService.rewardTrackItems"),
                     isRewardTrackMinimized: !1,
                     updatePlayerSettings: function() {
                         if (this.get("isVisible")) {
@@ -4551,44 +4565,45 @@
                         }
                     }
                 });
-            t.default = s
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(61),
+            var s = n(1),
+                a = n(61),
                 l = n(5),
                 o = n(16);
             n(96);
             const {
                 TRACKER_SIZE: r
-            } = s.REWARD_TRACKER;
-            var i = a.Ember.Controller.extend({
-                eventHubService: a.Ember.inject.service("event-hub"),
-                playerSettingsService: a.Ember.inject.service("player-settings"),
-                activeEventId: a.Ember.computed.alias("eventHubService.activeEventId"),
+            } = a.REWARD_TRACKER;
+            var i = s.Ember.Controller.extend({
+                eventHubService: s.Ember.inject.service("event-hub"),
+                playerSettingsService: s.Ember.inject.service("player-settings"),
+                activeEventId: s.Ember.computed.alias("eventHubService.activeEventId"),
                 init() {
-                    this._super(...arguments), this.addObserver("isVisible", this, "pageVisibilityChanged"), this.addObserver("eventStartDate", this, "pageVisibilityChanged"), this.settingsDataBinding = (0, a.dataBinding)(o.SETTINGS_API, a.socket), this.settingsDataBinding.observe(o.EVENT_HUB_SETTINGS_PATH, this, this.handleEventHubSettingsUpdated), this.handleMemoryBookClosed = this.handleMemoryBookClosed.bind(this)
+                    this._super(...arguments), this.addObserver("isVisible", this, "pageVisibilityChanged"), this.addObserver("eventStartDate", this, "pageVisibilityChanged"), this.settingsDataBinding = (0, s.dataBinding)(o.SETTINGS_API, s.socket), this.settingsDataBinding.observe(o.EVENT_HUB_SETTINGS_PATH, this, this.handleEventHubSettingsUpdated), this.handleMemoryBookClosed = this.handleMemoryBookClosed.bind(this)
                 },
                 willDestroyElement() {
                     this.removeObserver("isVisible")
                 },
-                unclaimedRewards: a.Ember.computed.alias("eventHubService.unclaimedRewards.rewardsCount"),
-                rewardTrackProgress: a.Ember.computed.alias("eventHubService.rewardTrackProgress"),
-                rewardTrackItems: a.Ember.computed.alias("eventHubService.rewardTrackItems"),
-                disableRewardTrackerAnimations: a.Ember.computed.not("playerSettingsService.animationsEnabled"),
+                unclaimedRewards: s.Ember.computed.alias("eventHubService.unclaimedRewards.rewardsCount"),
+                rewardTrackProgress: s.Ember.computed.alias("eventHubService.rewardTrackProgress"),
+                rewardTrackItems: s.Ember.computed.alias("eventHubService.rewardTrackItems"),
+                disableRewardTrackerAnimations: s.Ember.computed.not("playerSettingsService.animationsEnabled"),
                 trackerSize: r.MEDIUM,
-                isVisible: a.Ember.computed.alias("model.isVisible"),
-                eventStartDate: a.Ember.computed.alias("eventHubService.eventDetailsData.eventStartDate"),
-                passPurchased: a.Ember.computed.alias("eventHubService.info.isPassPurchased"),
-                passAvailable: a.Ember.computed.alias("eventHubService.passAvailable"),
-                passLoading: a.Ember.computed.alias("eventHubService.passLoading"),
-                passFailedLoading: a.Ember.computed("passAvailable", "passLoading", (function() {
+                isVisible: s.Ember.computed.alias("model.isVisible"),
+                eventStartDate: s.Ember.computed.alias("eventHubService.eventDetailsData.eventStartDate"),
+                passBundles: s.Ember.computed.alias("eventHubService.bundles"),
+                passPurchased: s.Ember.computed.alias("eventHubService.info.isPassPurchased"),
+                passAvailable: s.Ember.computed.alias("eventHubService.passAvailable"),
+                passLoading: s.Ember.computed.alias("eventHubService.passLoading"),
+                passFailedLoading: s.Ember.computed("passAvailable", "passLoading", (function() {
                     return !this.get("passLoading") && !this.get("passAvailable")
                 })),
-                gracePeriodTooltipTextsOverride: a.Ember.computed("tra", (function() {
+                gracePeriodTooltipTextsOverride: s.Ember.computed("tra", (function() {
                     return {
                         tooltipTitleTop: this.get("tra.hol_page_header_time_tooltip_event_title_grace_period"),
                         tooltipDescriptionTop: this.get("tra.hol_page_header_time_tooltip_event_description_grace_period"),
@@ -4596,13 +4611,13 @@
                         tooltipDescriptionBottom: this.get("tra.hol_page_header_time_tooltip_progress_description_grace_period")
                     }
                 })),
-                gracePeriodRemainingTimeTextOverride: a.Ember.computed("tra", (function() {
+                gracePeriodRemainingTimeTextOverride: s.Ember.computed("tra", (function() {
                     return {
                         almostEndingText: this.get("tra.hol_page_header_event_almost_closing"),
                         wrappingText: this.get("tra.hol_page_header_event_closes_in")
                     }
                 })),
-                tooltipProgressTextOverride: a.Ember.computed("tra", (function() {
+                tooltipProgressTextOverride: s.Ember.computed("tra", (function() {
                     return {
                         tooltipTitleTop: this.get("tra.hol_page_header_time_tooltip_progress_title"),
                         tooltipDescriptionTop: this.get("tra.hol_page_header_time_tooltip_progress_description"),
@@ -4612,67 +4627,67 @@
                 showHelpModal: !1,
                 showPassPurchaseModal: !1,
                 showPurchaseLevelsModal: !1,
-                currentLevel: a.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
-                totalNumberOfLevels: a.Ember.computed.alias("eventHubService.rewardTrackProgress.totalLevels"),
-                noMoreLevelsToBuy: a.Ember.computed("currentLevel", "totalNumberOfLevels", (function() {
+                currentLevel: s.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
+                totalNumberOfLevels: s.Ember.computed.alias("eventHubService.rewardTrackProgress.totalLevels"),
+                noMoreLevelsToBuy: s.Ember.computed("currentLevel", "totalNumberOfLevels", (function() {
                     return this.get("currentLevel") === this.get("totalNumberOfLevels")
                 })),
-                parallaxEnabled: a.Ember.computed.alias("playerSettingsService.animationsEnabled"),
-                backgroundImageStyle: a.Ember.computed("narrativeElementInView", "parallaxEnabled", (function() {
+                parallaxEnabled: s.Ember.computed.alias("playerSettingsService.animationsEnabled"),
+                backgroundImageStyle: s.Ember.computed("narrativeElementInView", "parallaxEnabled", (function() {
                     const e = this.get("narrativeElementInView"),
                         t = e?.narrativeBackgroundImage;
-                    if (t && !this.get("parallaxEnabled")) return a.Ember.String.htmlSafe(`background-image: url("${t}")`)
+                    if (t && !this.get("parallaxEnabled")) return s.Ember.String.htmlSafe(`background-image: url("${t}")`)
                 })),
                 clickedReward: null,
-                selectedReward: a.Ember.computed("currentLevel", "rewardTrackItems", "clickedReward", (function() {
+                selectedReward: s.Ember.computed("currentLevel", "rewardTrackItems", "clickedReward", (function() {
                     const e = this.get("clickedReward");
                     if (e) return this.set("clickedReward", null), e;
                     const t = this.get("rewardTrackItems"),
                         n = this.get("currentLevel"),
-                        a = t?.find((e => e.threshold >= Math.min(n + 1, t.length)));
+                        s = t?.find((e => e.threshold >= Math.min(n + 1, t.length)));
                     return {
-                        item: a,
+                        item: s,
                         optionIndex: 0
                     }
                 })),
-                selectedRewardOption: a.Ember.computed("selectedReward", (function() {
+                selectedRewardOption: s.Ember.computed("selectedReward", (function() {
                     const e = this.get("selectedReward").item;
                     return e?.rewardOptions?.[this.get("selectedReward")?.optionIndex || 0]
                 })),
-                selectedRewardImage: a.Ember.computed("selectedRewardOption", (function() {
+                selectedRewardImage: s.Ember.computed("selectedRewardOption", (function() {
                     const e = this.get("selectedRewardOption");
                     return e?.splashImagePath || e?.thumbIconPath || ""
                 })),
-                selectedRewardImageClass: a.Ember.computed("selectedReward", (function() {
-                    return `hol-root-reward-highlight-image ${a.RewardUtils.getRewardInventoryTypeClass(this.get("selectedRewardOption"))}`
+                selectedRewardImageClass: s.Ember.computed("selectedReward", (function() {
+                    return `hol-root-reward-highlight-image ${s.RewardUtils.getRewardInventoryTypeClass(this.get("selectedRewardOption"))}`
                 })),
                 latestLevelInView: null,
                 previousLatestLevelInView: null,
                 previousSelectedRewardLevel: null,
-                sortedNarrativeElementsByLevelDescending: a.Ember.computed("eventHubService.narrative", (function() {
+                sortedNarrativeElementsByLevelDescending: s.Ember.computed("eventHubService.narrative", (function() {
                     const e = this.get("eventHubService.narrative");
                     return e?.length ? [...e].sort(((e, t) => t.narrativeStartingTrackLevel - e.narrativeStartingTrackLevel)) : []
                 })),
-                narrativeElementInView: a.Ember.computed("sortedNarrativeElementsByLevelDescending", "selectedReward", "latestLevelInView", "previousLatestLevelInView", "previousSelectedRewardLevel", "narrativeElementsInView", (function() {
+                narrativeElementInView: s.Ember.computed("sortedNarrativeElementsByLevelDescending", "selectedReward", "latestLevelInView", "previousLatestLevelInView", "previousSelectedRewardLevel", "narrativeElementsInView", (function() {
                     const e = this.get("latestLevelInView"),
                         t = this.get("narrativeElementsInView"),
                         n = this.get("sortedNarrativeElementsByLevelDescending"),
-                        a = this.get("selectedReward")?.item?.threshold;
-                    if (!e || !n?.length || !a) return;
-                    let s = a;
-                    a === this.get("previousSelectedRewardLevel") && e !== this.get("previousLatestLevelInView") && (s = t.includes(1) ? 1 : e), this.set("previousSelectedRewardLevel", a), this.set("previousLatestLevelInView", e);
-                    return n.find((e => s >= e.narrativeStartingTrackLevel))
+                        s = this.get("selectedReward")?.item?.threshold;
+                    if (!e || !n?.length || !s) return;
+                    let a = s;
+                    s === this.get("previousSelectedRewardLevel") && e !== this.get("previousLatestLevelInView") && (a = t.includes(1) ? 1 : e), this.set("previousSelectedRewardLevel", s), this.set("previousLatestLevelInView", e);
+                    return n.find((e => a >= e.narrativeStartingTrackLevel))
                 })),
-                levelsWithMemoryVideo: a.Ember.computed("eventHubService.narrative", "totalNumberOfLevels", (function() {
+                levelsWithMemoryVideo: s.Ember.computed("eventHubService.narrative", "totalNumberOfLevels", (function() {
                     const e = this.get("eventHubService.narrative"),
                         t = this.get("totalNumberOfLevels");
                     if (!e?.length) return [];
                     const n = [];
                     return e.forEach((e => {
-                        const a = 0 === e.narrativeStartingTrackLevel,
-                            s = e.narrativeStartingTrackLevel === t,
+                        const s = 0 === e.narrativeStartingTrackLevel,
+                            a = e.narrativeStartingTrackLevel === t,
                             l = !!e.narrativeVideo?.localizedNarrativeVideoUrl;
-                        a || s || !l || n.push(e.narrativeStartingTrackLevel)
+                        s || a || !l || n.push(e.narrativeStartingTrackLevel)
                     })), n
                 })),
                 pageVisibilityChanged: function() {
@@ -4687,11 +4702,11 @@
                         (isNaN(t) || t < n) && this.set("showHelpModal", !0)
                     }))
                 },
-                showPassPurchaseModalObserver: a.Ember.observer("model.navOptions.openPassPurchase", (function() {
+                showPassPurchaseModalObserver: s.Ember.observer("model.navOptions.openPassPurchase", (function() {
                     const e = this.get("model.navOptions.openPassPurchase");
                     this.set("showPassPurchaseModal", e)
                 })),
-                memories: a.Ember.computed("sortedNarrativeElementsByLevelDescending", "currentLevel", (function() {
+                memories: s.Ember.computed("sortedNarrativeElementsByLevelDescending", "currentLevel", (function() {
                     const e = this.get("sortedNarrativeElementsByLevelDescending").filter((e => e?.narrativeVideo?.localizedNarrativeVideoUrl)).reverse();
                     if (!e.length) return;
                     const t = e.map((e => ({
@@ -4709,7 +4724,7 @@
                     if (!e) return;
                     const t = this.get("rewardTrackProgress"),
                         n = this.get("activeEventId"),
-                        s = a.ComponentFactory.create("MemoryBookComponent", {
+                        a = s.ComponentFactory.create("MemoryBookComponent", {
                             activeEventId: n,
                             memories: e,
                             rewardTrackProgress: t,
@@ -4717,34 +4732,34 @@
                             inducteeName: this.get("eventHubService.eventDetailsData.inducteeName"),
                             holController: this
                         }),
-                        l = a.ComponentFactory.getDOMNode(s);
-                    a.FullPageModalManager.open({
+                        l = s.ComponentFactory.getDOMNode(a);
+                    s.FullPageModalManager.open({
                         data: {
                             contents: l
                         }
-                    }), a.Ember.run.next(this, (() => {
-                        a.FullPageModalManager.addEventListener("fullPageModalClose", this.handleMemoryBookClosed)
-                    })), s.componentPromise.then((e => {
+                    }), s.Ember.run.next(this, (() => {
+                        s.FullPageModalManager.addEventListener("fullPageModalClose", this.handleMemoryBookClosed)
+                    })), a.componentPromise.then((e => {
                         this.set("memoryBookInstance", e.app)
                     }))
                 },
                 handleMemoryBookClosed() {
-                    a.FullPageModalManager.removeEventListener("fullPageModalClose", this.handleMemoryBookClosed), this.destroyMemoryBookInstance(), this.setAllUnlockedMemoriesToSeen()
+                    s.FullPageModalManager.removeEventListener("fullPageModalClose", this.handleMemoryBookClosed), this.destroyMemoryBookInstance(), this.setAllUnlockedMemoriesToSeen()
                 },
                 destroyMemoryBookInstance() {
                     this.get("memoryBookInstance") && (this.get("memoryBookInstance").destroy(), this.set("memoryBookInstance", void 0))
                 },
-                memoriesObserver: a.Ember.observer("memories.[]", (function() {
+                memoriesObserver: s.Ember.observer("memories.[]", (function() {
                     this.updateUnseenUnlockedMemories()
                 })),
                 setAllUnlockedMemoriesToSeen(e = void 0, t = void 0) {
                     const n = e || this.get("memories"),
-                        a = t || this.get("activeEventId");
+                        s = t || this.get("activeEventId");
                     if (!n) return;
-                    const s = [];
+                    const a = [];
                     n.forEach((e => {
-                        e.isUnlocked && s.push(e.narrativeStartingTrackLevel)
-                    })), this.get("playerSettingsService").updatePlayerSettingsMemories(a, s)
+                        e.isUnlocked && a.push(e.narrativeStartingTrackLevel)
+                    })), this.get("playerSettingsService").updatePlayerSettingsMemories(s, a)
                 },
                 handleEventHubSettingsUpdated() {
                     this.updateUnseenUnlockedMemories()
@@ -4757,22 +4772,22 @@
                         data: n
                     }) => {
                         if (!n) return;
-                        const a = n.playerSettingsDataMap[t] && n.playerSettingsDataMap[t].seenMemories || [];
-                        let s = 0;
+                        const s = n.playerSettingsDataMap[t] && n.playerSettingsDataMap[t].seenMemories || [];
+                        let a = 0;
                         e.forEach((e => {
-                            e.isUnlocked && !a.includes(e.narrativeStartingTrackLevel) && s++
-                        })), this.set("unseenUnlockedMemoriesCount", s)
+                            e.isUnlocked && !s.includes(e.narrativeStartingTrackLevel) && a++
+                        })), this.set("unseenUnlockedMemoriesCount", a)
                     }))
                 },
-                shouldShowAnimationsMemoriesButton: a.Ember.computed("playerSettingsService.animationsEnabled", "unseenUnlockedMemoriesCount", (function() {
+                shouldShowAnimationsMemoriesButton: s.Ember.computed("playerSettingsService.animationsEnabled", "unseenUnlockedMemoriesCount", (function() {
                     return this.get("playerSettingsService.animationsEnabled") && Number(this.get("unseenUnlockedMemoriesCount")) > 0
                 })),
-                memoriesNotLoaded: a.Ember.computed("memories", (function() {
+                memoriesNotLoaded: s.Ember.computed("memories", (function() {
                     return !(this.get("memories") || []).length
                 })),
                 actions: {
                     passPurchaseClick() {
-                        this.get("passFailedLoading") || (a.Telemetry.sendCustomData(l.TELEMETRY.TABLE, {
+                        this.get("passFailedLoading") || (s.Telemetry.sendCustomData(l.TELEMETRY.TABLE, {
                             eventName: l.TELEMETRY.PURCHASE_PASS_CLICK_EVENT,
                             eventId: this.get("eventHubService.info.eventId")
                         }), this.set("showPassPurchaseModal", !0))
@@ -4788,7 +4803,7 @@
                         this.openMemoryBook()
                     },
                     rewardItemClick(e, t) {
-                        a.Telemetry.sendCustomData(l.TELEMETRY.TABLE, {
+                        s.Telemetry.sendCustomData(l.TELEMETRY.TABLE, {
                             eventName: l.TELEMETRY.REWARD_CLICK_EVENT,
                             eventId: this.get("eventHubService.info.eventId"),
                             milestoneLevel: e.threshold
@@ -4801,8 +4816,8 @@
                         const t = e?.srcElement?.scrollLeft / (e?.srcElement?.scrollWidth - e?.srcElement?.clientWidth) || 0,
                             n = document.querySelector(".hol-root-parallax")?.clientWidth || 0;
                         document.querySelectorAll(".hol-root-parallax-layer").forEach((e => {
-                            const a = t * (e.scrollWidth - n);
-                            e.style.transform = `translateX(-${a}px)`
+                            const s = t * (e.scrollWidth - n);
+                            e.style.transform = `translateX(-${s}px)`
                         }))
                     }
                 }
@@ -4813,21 +4828,21 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(5),
+            var s = n(1),
+                a = n(5),
                 l = n(95),
                 o = n(61);
             const {
                 RunMixin: r
-            } = a.EmberAddons.EmberLifeline;
-            var i = a.Ember.Controller.extend(r, {
+            } = s.EmberAddons.EmberLifeline;
+            var i = s.Ember.Controller.extend(r, {
                 isOnRewardTrackPage: !1,
-                playerSettingsService: a.Ember.inject.service("player-settings"),
-                eventHubService: a.Ember.inject.service("event-hub"),
-                isFullClientBackground: a.Ember.computed("actBackgroundPath", (function() {
+                playerSettingsService: s.Ember.inject.service("player-settings"),
+                eventHubService: s.Ember.inject.service("event-hub"),
+                isFullClientBackground: s.Ember.computed("actBackgroundPath", (function() {
                     return !!this.get("actBackgroundPath")
                 })),
-                classNames: a.Ember.computed("isFullClientBackground", (function() {
+                classNames: s.Ember.computed("isFullClientBackground", (function() {
                     const e = {
                         seasonPassRoot: "event-hub-season-pass-root",
                         seasonPassHeader: "season-pass-root-header",
@@ -4837,24 +4852,25 @@
                         for (const t in e) e[t] = `${e[t]}-extended`;
                     return e
                 })),
-                actBackgroundPath: a.Ember.computed.alias("eventHubService.eventDetailsData.actBackgroundImage"),
-                isActBackground: a.Ember.computed("backgroundImagePath", "actBackgroundPath", (function() {
+                actBackgroundPath: s.Ember.computed.alias("eventHubService.eventDetailsData.actBackgroundImage"),
+                isActBackground: s.Ember.computed("backgroundImagePath", "actBackgroundPath", (function() {
                     return this.get("backgroundImagePath") === this.get("actBackgroundPath")
                 })),
-                displayNavBarShroud: a.Ember.computed.not("isFullClientBackground"),
-                animationsEnabled: a.Ember.computed.alias("playerSettingsService.animationsEnabled"),
-                hasBackgroundVideo: a.Ember.computed("chapterInView.backgroundVideo", (function() {
+                displayNavBarShroud: s.Ember.computed.not("isFullClientBackground"),
+                animationsEnabled: s.Ember.computed.alias("playerSettingsService.animationsEnabled"),
+                hasBackgroundVideo: s.Ember.computed("chapterInView.backgroundVideo", (function() {
                     return "/lol-game-data/assets/" !== this.get("chapterInView.backgroundVideo")
                 })),
-                shouldDisplayPurchasePassButton: a.Ember.computed("eventHubService.bundles", (function() {
-                    const e = this.get("eventHubService.bundles");
+                passBundles: s.Ember.computed.alias("eventHubService.bundles"),
+                shouldDisplayPurchasePassButton: s.Ember.computed("passBundles", (function() {
+                    const e = this.get("passBundles");
                     return !!Array.isArray(e) && !!e.length
                 })),
                 backgroundImagePath: null,
                 isFirstPageVisit: null,
                 navRouterSource: null,
-                isVisible: a.Ember.computed.alias("model.isVisible"),
-                navOptions: a.Ember.computed.alias("model.navOptions"),
+                isVisible: s.Ember.computed.alias("model.isVisible"),
+                navOptions: s.Ember.computed.alias("model.navOptions"),
                 init() {
                     this._super(...arguments), this.addObserver("isVisible", this.pageVisibilityChanged), this.addObserver("navOptions", this.handleNavOptions), this.addObserver("eventHubService.chapters", this.onChaptersChange), this.set("isFirstPageVisit", !0)
                 },
@@ -4878,18 +4894,18 @@
                         e === t.length - 1 && this.get("currentLevel") >= this.get("totalNumberOfLevels") && (n.localizedTitle = this.get("tra.season_pass_epilogue_title")), this.set("chapterInView", t?.[e])
                     }
                 },
-                showSplashImage: a.Ember.computed("splashImagePath", "isOnRewardTrackPage", (function() {
+                showSplashImage: s.Ember.computed("splashImagePath", "isOnRewardTrackPage", (function() {
                     return this.get("isOnRewardTrackPage") && !!this.get("splashImagePath")
                 })),
-                passPurchased: a.Ember.computed.alias("eventHubService.info.isPassPurchased"),
-                passAvailable: a.Ember.computed.alias("eventHubService.passAvailable"),
-                passLoading: a.Ember.computed.alias("eventHubService.passLoading"),
-                passFullyUpgraded: a.Ember.computed.or("eventHubService.passFullyUpgraded", "passLoading"),
-                passFailedLoading: a.Ember.computed("passAvailable", "passLoading", (function() {
+                passPurchased: s.Ember.computed.alias("eventHubService.info.isPassPurchased"),
+                passAvailable: s.Ember.computed.alias("eventHubService.passAvailable"),
+                passLoading: s.Ember.computed.alias("eventHubService.passLoading"),
+                passFullyUpgraded: s.Ember.computed.or("eventHubService.passFullyUpgraded", "passLoading"),
+                passFailedLoading: s.Ember.computed("passAvailable", "passLoading", (function() {
                     return !this.get("passLoading") && !this.get("passAvailable")
                 })),
                 showPassPurchaseModal: !1,
-                gracePeriodTooltipTextsOverride: a.Ember.computed("tra", (function() {
+                gracePeriodTooltipTextsOverride: s.Ember.computed("tra", (function() {
                     return {
                         tooltipTitleTop: this.get("tra.hol_page_header_time_tooltip_event_title_grace_period"),
                         tooltipDescriptionTop: this.get("tra.hol_page_header_time_tooltip_event_description_grace_period"),
@@ -4897,13 +4913,13 @@
                         tooltipDescriptionBottom: this.get("tra.hol_page_header_time_tooltip_progress_description_grace_period")
                     }
                 })),
-                gracePeriodRemainingTimeTextOverride: a.Ember.computed("tra", (function() {
+                gracePeriodRemainingTimeTextOverride: s.Ember.computed("tra", (function() {
                     return {
                         almostEndingText: this.get("tra.hol_page_header_event_almost_closing"),
                         wrappingText: this.get("tra.hol_page_header_event_closes_in")
                     }
                 })),
-                tooltipProgressTextOverride: a.Ember.computed("tra", (function() {
+                tooltipProgressTextOverride: s.Ember.computed("tra", (function() {
                     return {
                         tooltipTitleTop: this.get("tra.hol_page_header_time_tooltip_progress_title"),
                         tooltipDescriptionTop: this.get("tra.hol_page_header_time_tooltip_progress_description"),
@@ -4911,25 +4927,26 @@
                     }
                 })),
                 showPurchaseLevelsModal: !1,
-                currentLevel: a.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
-                totalNumberOfLevels: a.Ember.computed.alias("eventHubService.rewardTrackProgress.totalLevels"),
-                noMoreLevelsToBuy: a.Ember.computed("currentLevel", "totalNumberOfLevels", (function() {
+                currentLevel: s.Ember.computed.alias("eventHubService.rewardTrackProgress.level"),
+                totalNumberOfLevels: s.Ember.computed.alias("eventHubService.rewardTrackProgress.totalLevels"),
+                noMoreLevelsToBuy: s.Ember.computed("currentLevel", "totalNumberOfLevels", (function() {
                     return this.get("currentLevel") >= this.get("totalNumberOfLevels")
                 })),
-                chapters: a.Ember.computed.alias("eventHubService.chapters.chapters"),
-                chapterInView: a.Ember.computed("chapters", "eventHubService.chapters.currentChapter", (function() {
+                chapters: s.Ember.computed.alias("eventHubService.chapters.chapters"),
+                chapterInView: s.Ember.computed("chapters", "eventHubService.chapters.currentChapter", (function() {
                     return this.get("chapters")?.[this.get("eventHubService.chapters.currentChapter")]
                 })),
-                mandatoryDataLoaded: a.Ember.computed("chapters", "currentLevel", "chapterInView", (function() {
-                    return void 0 !== this.get("chapters") && void 0 !== this.get("currentLevel") && void 0 !== this.get("chapterInView")
+                mandatoryDataLoaded: s.Ember.computed("chapters", "currentLevel", "chapterInView", "passLoading", "passAvailable", (function() {
+                    const e = !this.get("passLoading") || this.get("passAvailable");
+                    return void 0 !== this.get("chapters") && void 0 !== this.get("currentLevel") && void 0 !== this.get("chapterInView") && e
                 })),
-                rewardTrackItems: a.Ember.computed.alias("eventHubService.rewardTrackItems"),
-                levelFocus: a.Ember.computed("currentLevel", "navRouterSource", "totalNumberOfLevels", "rewardTrackItems", (function() {
+                rewardTrackItems: s.Ember.computed.alias("eventHubService.rewardTrackItems"),
+                levelFocus: s.Ember.computed("currentLevel", "navRouterSource", "totalNumberOfLevels", "rewardTrackItems", (function() {
                     const e = this.get("currentLevel"),
                         t = this.get("rewardTrackItems")?.[e - 1],
                         n = t?.rewardOptions?.[0]?.state === o.REWARD_TRACKER.REWARD_STATE.SELECTED,
-                        a = e % l.REWARDS_PER_PAGE == 0 && n;
-                    return this.get("navRouterSource") === s.ACTIVITY_CENTER_APP ? (this.set("navRouterSource", null), this.get("totalNumberOfLevels")) : a ? e + 1 : e
+                        s = e % l.REWARDS_PER_PAGE == 0 && n;
+                    return this.get("navRouterSource") === a.ACTIVITY_CENTER_APP ? (this.set("navRouterSource", null), this.get("totalNumberOfLevels")) : s ? e + 1 : e
                 })),
                 updateChapterInView(e) {
                     const t = this.get("chapterInView"),
@@ -4938,8 +4955,8 @@
                 },
                 actions: {
                     passPurchaseClick() {
-                        this.get("passFailedLoading") || (a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                            eventName: s.TELEMETRY.PURCHASE_PASS_CLICK_EVENT,
+                        this.get("passFailedLoading") || (s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                            eventName: a.TELEMETRY.PURCHASE_PASS_CLICK_EVENT,
                             eventId: this.get("eventHubService.info.eventId")
                         }), this.set("showPassPurchaseModal", !0))
                     },
@@ -4947,10 +4964,10 @@
                         this.get("noMoreLevelsToBuy") || this.set("showPurchaseLevelsModal", !0)
                     },
                     onSelectChapter(e) {
-                        this.updateChapterInView(e), this.set("isOnRewardTrackPage", !0), a.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-season-pass-zoom-in.ogg");
+                        this.updateChapterInView(e), this.set("isOnRewardTrackPage", !0), s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-season-pass-zoom-in.ogg");
                         const t = this.get("navOptions");
-                        a.Telemetry.sendCustomData(s.TELEMETRY.TABLE, {
-                            eventName: s.TELEMETRY.SHOW_EVENT,
+                        s.Telemetry.sendCustomData(a.TELEMETRY.TABLE, {
+                            eventName: a.TELEMETRY.SHOW_EVENT,
                             chapterNumber: e + 1,
                             showPip: t?.showPip,
                             showGlow: t?.showGlow
@@ -4978,42 +4995,42 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1),
-                s = n(61),
+            var s = n(1),
+                a = n(61),
                 l = n(5);
             const {
                 RunMixin: o
-            } = a.EmberAddons.EmberLifeline, {
+            } = s.EmberAddons.EmberLifeline, {
                 TRACKER_SIZE: r
-            } = s.REWARD_TRACKER;
-            var i = a.Ember.Controller.extend(o, {
-                playerSettingsService: a.Ember.inject.service("player-settings"),
-                eventHubService: a.Ember.inject.service("event-hub"),
-                eventId: a.Ember.computed.alias("eventHubService.activeEventId"),
-                animationsEnabled: a.Ember.computed.alias("playerSettingsService.animationsEnabled"),
-                disableRewardTrackerAnimations: a.Ember.computed.not("playerSettingsService.animationsEnabled"),
-                isVisible: a.Ember.computed.alias("model.isVisible"),
-                rewardTrackItems: a.Ember.computed.alias("eventHubService.rewardTrackItems"),
-                rewardTrackProgress: a.Ember.computed.alias("eventHubService.rewardTrackProgress"),
+            } = a.REWARD_TRACKER;
+            var i = s.Ember.Controller.extend(o, {
+                playerSettingsService: s.Ember.inject.service("player-settings"),
+                eventHubService: s.Ember.inject.service("event-hub"),
+                eventId: s.Ember.computed.alias("eventHubService.activeEventId"),
+                animationsEnabled: s.Ember.computed.alias("playerSettingsService.animationsEnabled"),
+                disableRewardTrackerAnimations: s.Ember.computed.not("playerSettingsService.animationsEnabled"),
+                isVisible: s.Ember.computed.alias("model.isVisible"),
+                rewardTrackItems: s.Ember.computed.alias("eventHubService.rewardTrackItems"),
+                rewardTrackProgress: s.Ember.computed.alias("eventHubService.rewardTrackProgress"),
                 trackerSize: r.MEDIUM,
-                showHelpIcon: a.Ember.computed.bool("eventHubService.info.localizedHelpUrl"),
-                objective: a.Ember.computed.alias("eventHubService.info.objectiveCard"),
-                hasValidObjective: a.Ember.computed("objective", (function() {
+                showHelpIcon: s.Ember.computed.bool("eventHubService.info.localizedHelpUrl"),
+                objective: s.Ember.computed.alias("eventHubService.info.objectiveCard"),
+                hasValidObjective: s.Ember.computed("objective", (function() {
                     const e = this.get("objective");
                     return !!e && (!!e.missionSeriesName && !!e.objectiveCategoryId && !!e.objectiveGroup)
                 })),
-                queueId: a.Ember.computed.alias("eventHubService.info.queueId"),
-                shouldShowLobbyButton: a.Ember.computed("queueId", (function() {
+                queueId: s.Ember.computed.alias("eventHubService.info.queueId"),
+                shouldShowLobbyButton: s.Ember.computed("queueId", (function() {
                     return this.get("queueId") >= 0
                 })),
-                shouldShowClaimButton: a.Ember.computed("rewardTrackItems", (function() {
+                shouldShowClaimButton: s.Ember.computed("rewardTrackItems", (function() {
                     const e = [],
                         t = this.get("rewardTrackItems");
                     return !Array.isArray(t) || (t.forEach((t => {
                         e.push(...t.rewardOptions)
                     })), !e.every((e => e.celebrationType === l.REWARD_CELEBRATION_TYPE_NONE)))
                 })),
-                hasMandatoryDataLoaded: a.Ember.computed("rewardTrackItems", "rewardTrackProgress", (function() {
+                hasMandatoryDataLoaded: s.Ember.computed("rewardTrackItems", "rewardTrackProgress", (function() {
                     return !!this.get("rewardTrackItems")?.length && !!Object.keys(this.get("rewardTrackProgress")).length
                 })),
                 init() {
@@ -5032,245 +5049,245 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1).Ember.Helper.helper((e => e[0] === e[1]));
-            t.default = a
+            var s = n(1).Ember.Helper.helper((e => e[0] === e[1]));
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(1).Ember.Helper.helper((function(e) {
+            var s = n(1).Ember.Helper.helper((function(e) {
                 let t = e[0];
                 return t && "" !== t && "default.png" !== t && "default.jpg" !== t || (t = "/fe/lol-static-assets/images/event-shop/icon-shocked-poro-clear.png"), t
             }));
-            t.default = a
+            t.default = s
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "tF+9XOY1",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\application.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["isVisible"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","rcp-fe-lol-event-hub-application"],["dynamic-attr","style",["unknown",["backgroundImageStyle"]],null],["flush-element"],["text","\\n    "],["append",["unknown",["outlet"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "8wcyUypb",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\index.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","event-hub-index"],["flush-element"],["text","\\n"],["block",["each"],[["get",["availableEvents"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","event-hub-navigation-item"],["modifier",["action"],[["get",[null]],"selectEvent",["get",["event"]]]],["flush-element"],["text","\\n      "],["append",["unknown",["event","route"]],false],["text","\\n      "],["append",["unknown",["event","eventName"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["event"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "ARNiu60x",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\event-shop.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","event-shop-root"],["dynamic-attr","style",["unknown",["backgroundImageStyle"]],null],["flush-element"],["text","\\n  "],["append",["helper",["page-header"],null,[["showBottomBorder","showHelpIcon","showTokenBalance"],[true,true,true]]],false],["text","\\n"],["block",["if"],[["get",["isEventShopReady"]]],null,1,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["event-shop-main-view"],null,[["isRewardTrackMinimized","toggleMinimizeRewardTrack","model"],[["get",["isRewardTrackMinimized"]],["helper",["action"],[["get",[null]],"toggleMinimizeRewardTrack"],null],["get",["model"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "yh3pIdnw",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\hall-of-legends.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","hol-root"],["dynamic-attr","style",["unknown",["backgroundImageStyle"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["parallaxEnabled"]]],null,6],["text","  "],["open-element","div",[]],["static-attr","class","hol-root-reward-highlight"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["selectedRewardImage"]]]]],["dynamic-attr","class",["concat",[["unknown",["selectedRewardImageClass"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hol-root-content-shroud"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","hol-visual-shroud "],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","src","/fe/lol-event-hub/images/shroud.png"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hol-root-reward-framming"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","src","/fe/lol-event-hub/images/hol-reward-framing.png"],["static-attr","class","hol-root-reward-framming-image"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hol-root-header"],["flush-element"],["text","\\n      "],["append",["helper",["page-header"],null,[["showHelpModal","showHelpIcon","showSystemControls","gracePeriodTooltipTextsOverride","gracePeriodRemainingTimeTextOverride","tooltipProgressTextOverride"],[["get",["showHelpModal"]],true,true,["get",["gracePeriodTooltipTextsOverride"]],["get",["gracePeriodRemainingTimeTextOverride"]],["get",["tooltipProgressTextOverride"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["rewardTrackItems"]]],null,5,0],["text","  "],["close-element"],["text","\\n  "],["append",["helper",["purchase-levels-modal"],null,[["showPurchaseModal","titleTraKey","selectedReward"],[["get",["showPurchaseLevelsModal"]],"hol_purchase_levels_modal_title",["get",["selectedReward"]]]]],false],["text","\\n  "],["append",["helper",["purchase-bundles-modal"],null,[["showPurchaseModal"],[["get",["showPassPurchaseModal"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","hol-root-ticket-icon"],["static-attr","src","/fe/lol-static-assets/images/event-shop/ticket-gold2.svg"],["flush-element"],["close-element"],["text","\\n                    "],["append",["unknown",["tra","event_hub_purchase_pass"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["append",["unknown",["tra","event_shop_progression_label_pass_unavailable"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["static-attr","class","idle hol-root-reward-track-cta"],["dynamic-attr","disabled",["unknown",["passFailedLoading"]],null],["modifier",["action"],[["get",[null]],"passPurchaseClick"]],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","hol-root-reward-track-upgrade-pass-cta"],["flush-element"],["text","\\n"],["block",["if"],[["get",["passFailedLoading"]]],null,2,1],["text","                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["static-attr","class","idle hol-root-reward-track-cta"],["dynamic-attr","disabled",["unknown",["noMoreLevelsToBuy"]],null],["modifier",["action"],[["get",[null]],"purchaseLevelsClick"]],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","hol-root-reward-track-upgrade-pass-cta"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","hol-root-ticket-icon"],["static-attr","src","/fe/lol-static-assets/images/event-shop/ticket-gold2.svg"],["flush-element"],["close-element"],["text","\\n                  "],["append",["unknown",["tra","event_hub_purchase_levels_button"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hol-root-center-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hol-root-center-area-left-column"],["flush-element"],["text","\\n          "],["append",["helper",["hol-narrative"],null,[["narrativeElementInView"],[["get",["narrativeElementInView"]]]]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hol-root-center-area-right-column"],["flush-element"],["text","\\n          "],["append",["helper",["hol-promotion-banner"],null,[["selectedReward"],[["get",["selectedReward"]]]]],false],["text","\\n          "],["append",["helper",["reward-details"],null,[["selectedReward"],[["get",["selectedReward"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","hol-root-reward-track"],["flush-element"],["text","\\n        "],["append",["helper",["reward-tracker"],null,[["rewardTrackItems","rewardTrackProgress","trackerSize","shouldScrollToUnclaimedReward","rewardItemTooltipComponent","rewardsInViewChanged","itemClick","isBorderlessTrack","scrollingArrowsEnabled","selectedItemThreshold","rewardItemLevelIconComponent","levelsWithMemoryVideo","onScroll","disableAnimations"],[["get",["rewardTrackItems"]],["get",["rewardTrackProgress"]],["get",["trackerSize"]],true,"",["helper",["action"],[["get",[null]],"rewardsInViewChanged"],null],["helper",["action"],[["get",[null]],"rewardItemClick"],null],true,true,["get",["selectedReward","item","threshold"]],"hol-level-icon-flames",["get",["levelsWithMemoryVideo"]],["helper",["action"],[["get",[null]],"onRewardTrackerScroll"],null],["get",["disableRewardTrackerAnimations"]]]]],false],["text","\\n        "],["open-element","div",[]],["static-attr","class","hol-root-reward-track-second-row"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hol-root-progress-indicator"],["flush-element"],["text","\\n            "],["append",["unknown",["progress-indicator"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hol-root-reward-track-cta-group"],["flush-element"],["text","\\n            "],["append",["helper",["flat-button-counter"],null,[["onButtonClick","buttonText","buttonCount","showAnimations","primary","disabled"],[["helper",["action"],[["get",[null]],"openMemoryBookAction"],null],["get",["tra","hol_memories_button_text"]],["get",["unseenUnlockedMemoriesCount"]],["get",["shouldShowAnimationsMemoriesButton"]],false,["get",["memoriesNotLoaded"]]]]],false],["text","\\n\\n            "],["append",["unknown",["claim-button"]],false],["text","\\n"],["block",["if"],[["get",["passPurchased"]]],null,4,3],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","hol-root-parallax"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","hol-root-parallax-layer hol-root-parallax-background"],["static-attr","src","/fe/lol-event-hub/images/parallax/background.png"],["flush-element"],["close-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","hol-root-parallax-layer hol-root-parallax-midground"],["static-attr","src","/fe/lol-event-hub/images/parallax/midground.png"],["flush-element"],["close-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","hol-root-parallax-layer hol-root-parallax-foreground"],["static-attr","src","/fe/lol-event-hub/images/parallax/foreground.png"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "8Yv2Rk6W",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\hall-of-legends.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","hol-root"],["dynamic-attr","style",["unknown",["backgroundImageStyle"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["parallaxEnabled"]]],null,8],["text","  "],["open-element","div",[]],["static-attr","class","hol-root-reward-highlight"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["selectedRewardImage"]]]]],["dynamic-attr","class",["concat",[["unknown",["selectedRewardImageClass"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hol-root-content-shroud"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","hol-visual-shroud "],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","src","/fe/lol-event-hub/images/shroud.png"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hol-root-reward-framming"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","src","/fe/lol-event-hub/images/hol-reward-framing.png"],["static-attr","class","hol-root-reward-framming-image"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hol-root-header"],["flush-element"],["text","\\n      "],["append",["helper",["page-header"],null,[["showHelpModal","showHelpIcon","showSystemControls","gracePeriodTooltipTextsOverride","gracePeriodRemainingTimeTextOverride","tooltipProgressTextOverride"],[["get",["showHelpModal"]],true,true,["get",["gracePeriodTooltipTextsOverride"]],["get",["gracePeriodRemainingTimeTextOverride"]],["get",["tooltipProgressTextOverride"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["rewardTrackItems"]]],null,7,2],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["showPurchaseLevelsModal"]]],null,1],["block",["if"],[["get",["showPassPurchaseModal"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["purchase-bundles-modal"],null,[["bundles","showPurchaseModal"],[["get",["passBundles"]],["get",["showPassPurchaseModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["purchase-levels-modal"],null,[["showPurchaseModal","titleTraKey","selectedReward"],[["get",["showPurchaseLevelsModal"]],"hol_purchase_levels_modal_title",["get",["selectedReward"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","hol-root-ticket-icon"],["static-attr","src","/fe/lol-static-assets/images/event-shop/ticket-gold2.svg"],["flush-element"],["close-element"],["text","\\n                    "],["append",["unknown",["tra","event_hub_purchase_pass"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["append",["unknown",["tra","event_shop_progression_label_pass_unavailable"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["static-attr","class","idle hol-root-reward-track-cta"],["dynamic-attr","disabled",["unknown",["passFailedLoading"]],null],["modifier",["action"],[["get",[null]],"passPurchaseClick"]],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","hol-root-reward-track-upgrade-pass-cta"],["flush-element"],["text","\\n"],["block",["if"],[["get",["passFailedLoading"]]],null,4,3],["text","                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["static-attr","class","idle hol-root-reward-track-cta"],["dynamic-attr","disabled",["unknown",["noMoreLevelsToBuy"]],null],["modifier",["action"],[["get",[null]],"purchaseLevelsClick"]],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","hol-root-reward-track-upgrade-pass-cta"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","hol-root-ticket-icon"],["static-attr","src","/fe/lol-static-assets/images/event-shop/ticket-gold2.svg"],["flush-element"],["close-element"],["text","\\n                  "],["append",["unknown",["tra","event_hub_purchase_levels_button"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hol-root-center-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hol-root-center-area-left-column"],["flush-element"],["text","\\n          "],["append",["helper",["hol-narrative"],null,[["narrativeElementInView"],[["get",["narrativeElementInView"]]]]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hol-root-center-area-right-column"],["flush-element"],["text","\\n          "],["append",["helper",["hol-promotion-banner"],null,[["selectedReward"],[["get",["selectedReward"]]]]],false],["text","\\n          "],["append",["helper",["reward-details"],null,[["selectedReward"],[["get",["selectedReward"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","hol-root-reward-track"],["flush-element"],["text","\\n        "],["append",["helper",["reward-tracker"],null,[["rewardTrackItems","rewardTrackProgress","trackerSize","shouldScrollToUnclaimedReward","rewardItemTooltipComponent","rewardsInViewChanged","itemClick","isBorderlessTrack","scrollingArrowsEnabled","selectedItemThreshold","rewardItemLevelIconComponent","levelsWithMemoryVideo","onScroll","disableAnimations"],[["get",["rewardTrackItems"]],["get",["rewardTrackProgress"]],["get",["trackerSize"]],true,"",["helper",["action"],[["get",[null]],"rewardsInViewChanged"],null],["helper",["action"],[["get",[null]],"rewardItemClick"],null],true,true,["get",["selectedReward","item","threshold"]],"hol-level-icon-flames",["get",["levelsWithMemoryVideo"]],["helper",["action"],[["get",[null]],"onRewardTrackerScroll"],null],["get",["disableRewardTrackerAnimations"]]]]],false],["text","\\n        "],["open-element","div",[]],["static-attr","class","hol-root-reward-track-second-row"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hol-root-progress-indicator"],["flush-element"],["text","\\n            "],["append",["unknown",["progress-indicator"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hol-root-reward-track-cta-group"],["flush-element"],["text","\\n            "],["append",["helper",["flat-button-counter"],null,[["onButtonClick","buttonText","buttonCount","showAnimations","primary","disabled"],[["helper",["action"],[["get",[null]],"openMemoryBookAction"],null],["get",["tra","hol_memories_button_text"]],["get",["unseenUnlockedMemoriesCount"]],["get",["shouldShowAnimationsMemoriesButton"]],false,["get",["memoriesNotLoaded"]]]]],false],["text","\\n\\n            "],["append",["unknown",["claim-button"]],false],["text","\\n"],["block",["if"],[["get",["passPurchased"]]],null,6,5],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","hol-root-parallax"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","hol-root-parallax-layer hol-root-parallax-background"],["static-attr","src","/fe/lol-event-hub/images/parallax/background.png"],["flush-element"],["close-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","hol-root-parallax-layer hol-root-parallax-midground"],["static-attr","src","/fe/lol-event-hub/images/parallax/midground.png"],["flush-element"],["close-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","hol-root-parallax-layer hol-root-parallax-foreground"],["static-attr","src","/fe/lol-event-hub/images/parallax/foreground.png"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "y03gD30I",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\season-pass.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["classNames","seasonPassRoot"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["mandatoryDataLoaded"]]],null,13,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","season-pass-spinner-container"],["flush-element"],["text","\\n      "],["append",["helper",["uikit-spinner"],null,[["width","height"],["40px","40px"]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","img",[]],["static-attr","class","season-pass-ticket-icon"],["static-attr","src","/fe/lol-static-assets/images/event-shop/ticket-gold2.svg"],["flush-element"],["close-element"],["text","\\n                      "],["append",["unknown",["tra","event_hub_purchase_pass"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["append",["unknown",["tra","event_shop_progression_label_pass_unavailable"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["static-attr","class","idle season-pass-cta"],["dynamic-attr","disabled",["unknown",["passFailedLoading"]],null],["modifier",["action"],[["get",[null]],"passPurchaseClick"]],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","season-pass-upgrade-pass-cta"],["flush-element"],["text","\\n"],["block",["if"],[["get",["passFailedLoading"]]],null,2,1],["text","                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n                      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","event_hub_purchase_lvl_tooltip"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["static-attr","class","idle season-pass-cta"],["modifier",["action"],[["get",[null]],"passPurchaseClick"]],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","season-pass-upgrade-pass-cta"],["flush-element"],["text","\\n                      "],["append",["unknown",["tra","season_pass_upgrade_pass"]],false],["text","\\n                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["passFullyUpgraded"]]],null,5],["text","                "],["open-element","lol-uikit-close-button",[]],["dynamic-attr","disabled",["unknown",["noMoreLevelsToBuy"]],null],["static-attr","button-type","exp"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"purchaseLevelsClick"],null],null],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["top"]],4],["text","                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["passPurchased"]]],null,6,3]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","season-pass-cta-group"],["flush-element"],["text","\\n            "],["append",["unknown",["claim-button"]],false],["text","\\n"],["block",["if"],[["get",["shouldDisplayPurchasePassButton"]]],null,7],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["season-pass-overview"],null,[["chapters","chapterInView","onSelectChapter","onMouseOverCard"],[["get",["chapters"]],["get",["chapterInView"]],["helper",["action"],[["get",[null]],"onSelectChapter"],null],["helper",["action"],[["get",[null]],"onMouseOverCard"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["season-pass-track"],null,[["chapters","onRewardTrackerScroll","onLatestLevelInViewChange","levelFocus","onBackgroundImageChange","isFirstPageVisit"],[["get",["chapters"]],["helper",["action"],[["get",[null]],"onRewardTrackerScroll"],null],["helper",["action"],[["get",[null]],"onLatestLevelInViewChange"],null],["get",["levelFocus"]],["helper",["action"],[["get",[null]],"onBackgroundImageChange"],null],["get",["isFirstPageVisit"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","season-pass-header-background"],["dynamic-attr","src",["unknown",["actBackgroundPath"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","season-pass-background-shroud"],["static-attr","src","/fe/lol-event-hub/images/background-shroud.png"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isFullClientBackground"]]],null,12],["block",["if"],[["get",["isActBackground"]]],null,11],["text","    "],["open-element","img",[]],["dynamic-attr","class",["unknown",["classNames","seasonPassBackground"]],null],["dynamic-attr","src",["unknown",["backgroundImagePath"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","season-pass-body-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["unknown",["classNames","seasonPassHeader"]],null],["flush-element"],["text","\\n        "],["append",["helper",["page-header"],null,[["isOnRewardTrackPage","showHelpModal","showHelpIcon","showSystemControls","showShroudGradient","gracePeriodTooltipTextsOverride","gracePeriodRemainingTimeTextOverride","tooltipProgressTextOverride","chapterInView"],[["get",["isOnRewardTrackPage"]],false,false,true,["get",["displayNavBarShroud"]],["get",["gracePeriodTooltipTextsOverride"]],["get",["gracePeriodRemainingTimeTextOverride"]],["get",["tooltipProgressTextOverride"]],["get",["chapterInView"]]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-pass-main-view"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isOnRewardTrackPage"]]],null,10,9],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-pass-footer"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-pass-xp"],["flush-element"],["text","\\n          "],["append",["unknown",["progress-indicator"]],false],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["isOnRewardTrackPage"]]],null,8],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["append",["helper",["purchase-levels-modal"],null,[["showPurchaseModal","titleTraKey","selectedReward"],[["get",["showPurchaseLevelsModal"]],"season_pass_purchase_levels_modal_title",["get",["selectedReward"]]]]],false],["text","\\n    "],["append",["helper",["purchase-bundles-modal"],null,[["showPurchaseModal"],[["get",["showPassPurchaseModal"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "yP6IqN1T",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\season-pass.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["classNames","seasonPassRoot"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["mandatoryDataLoaded"]]],null,15,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","season-pass-spinner-container"],["flush-element"],["text","\\n      "],["append",["helper",["uikit-spinner"],null,[["width","height"],["40px","40px"]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["purchase-bundles-modal"],null,[["bundles","showPurchaseModal"],[["get",["passBundles"]],["get",["showPassPurchaseModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["purchase-levels-modal"],null,[["showPurchaseModal","titleTraKey","selectedReward"],[["get",["showPurchaseLevelsModal"]],"season_pass_purchase_levels_modal_title",["get",["selectedReward"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","img",[]],["static-attr","class","season-pass-ticket-icon"],["static-attr","src","/fe/lol-static-assets/images/event-shop/ticket-gold2.svg"],["flush-element"],["close-element"],["text","\\n                      "],["append",["unknown",["tra","event_hub_purchase_pass"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["append",["unknown",["tra","event_shop_progression_label_pass_unavailable"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["static-attr","class","idle season-pass-cta"],["dynamic-attr","disabled",["unknown",["passFailedLoading"]],null],["modifier",["action"],[["get",[null]],"passPurchaseClick"]],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","season-pass-upgrade-pass-cta"],["flush-element"],["text","\\n"],["block",["if"],[["get",["passFailedLoading"]]],null,4,3],["text","                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n                      "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","event_hub_purchase_lvl_tooltip"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["static-attr","class","idle season-pass-cta"],["modifier",["action"],[["get",[null]],"passPurchaseClick"]],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","season-pass-upgrade-pass-cta"],["flush-element"],["text","\\n                      "],["append",["unknown",["tra","season_pass_upgrade_pass"]],false],["text","\\n                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["passFullyUpgraded"]]],null,7],["text","                "],["open-element","lol-uikit-close-button",[]],["dynamic-attr","disabled",["unknown",["noMoreLevelsToBuy"]],null],["static-attr","button-type","exp"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"purchaseLevelsClick"],null],null],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["top"]],6],["text","                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["passPurchased"]]],null,8,5]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","season-pass-cta-group"],["flush-element"],["text","\\n            "],["append",["unknown",["claim-button"]],false],["text","\\n"],["block",["if"],[["get",["shouldDisplayPurchasePassButton"]]],null,9],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["season-pass-overview"],null,[["chapters","chapterInView","onSelectChapter","onMouseOverCard"],[["get",["chapters"]],["get",["chapterInView"]],["helper",["action"],[["get",[null]],"onSelectChapter"],null],["helper",["action"],[["get",[null]],"onMouseOverCard"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["season-pass-track"],null,[["chapters","onRewardTrackerScroll","onLatestLevelInViewChange","levelFocus","onBackgroundImageChange","isFirstPageVisit"],[["get",["chapters"]],["helper",["action"],[["get",[null]],"onRewardTrackerScroll"],null],["helper",["action"],[["get",[null]],"onLatestLevelInViewChange"],null],["get",["levelFocus"]],["helper",["action"],[["get",[null]],"onBackgroundImageChange"],null],["get",["isFirstPageVisit"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","season-pass-header-background"],["dynamic-attr","src",["unknown",["actBackgroundPath"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","season-pass-background-shroud"],["static-attr","src","/fe/lol-event-hub/images/background-shroud.png"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isFullClientBackground"]]],null,14],["block",["if"],[["get",["isActBackground"]]],null,13],["text","    "],["open-element","img",[]],["dynamic-attr","class",["unknown",["classNames","seasonPassBackground"]],null],["dynamic-attr","src",["unknown",["backgroundImagePath"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","season-pass-body-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["unknown",["classNames","seasonPassHeader"]],null],["flush-element"],["text","\\n        "],["append",["helper",["page-header"],null,[["isOnRewardTrackPage","showHelpModal","showHelpIcon","showSystemControls","showShroudGradient","gracePeriodTooltipTextsOverride","gracePeriodRemainingTimeTextOverride","tooltipProgressTextOverride","chapterInView"],[["get",["isOnRewardTrackPage"]],false,false,true,["get",["displayNavBarShroud"]],["get",["gracePeriodTooltipTextsOverride"]],["get",["gracePeriodRemainingTimeTextOverride"]],["get",["tooltipProgressTextOverride"]],["get",["chapterInView"]]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-pass-main-view"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isOnRewardTrackPage"]]],null,12,11],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-pass-footer"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-pass-xp"],["flush-element"],["text","\\n          "],["append",["unknown",["progress-indicator"]],false],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["isOnRewardTrackPage"]]],null,10],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["showPurchaseLevelsModal"]]],null,2],["block",["if"],[["get",["showPassPurchaseModal"]]],null,1]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "/vUc2uG8",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\activity-center-milestones.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","acm-root"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["hasMandatoryDataLoaded"]]],null,5,4],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","acm-cta-group--lobby"],["flush-element"],["text","\\n                            "],["append",["helper",["lobby-button"],null,[["eventId","queueId"],[["get",["eventId"]],["get",["queueId"]]]]],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","acm-cta-group--claim"],["flush-element"],["text","\\n                            "],["append",["unknown",["claim-button"]],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["append",["helper",["reward-tracker"],null,[["rewardTrackItems","rewardTrackProgress","trackerSize","isBorderlessTrack","isSparseTrack","disableAnimations","mouseScrollEnabled","basicRewardDetailsTooltip","isSinglePageNarrowTrack"],[["get",["rewardTrackItems"]],["get",["rewardTrackProgress"]],["get",["trackerSize"]],true,true,["get",["disableRewardTrackerAnimations"]],false,true,true]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["append",["helper",["objective-card-wrapper"],null,[["eventId","objective","shouldOpenCampaignTracker"],[["get",["eventId"]],["get",["objective"]],true]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","acm-body-container"],["flush-element"],["text","\\n            "],["append",["helper",["page-header"],null,[["showHelpModal","showHelpIcon","showSystemControls"],[false,["get",["showHelpIcon"]],true]]],false],["text","\\n            "],["open-element","div",[]],["static-attr","class","acm-body"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","acm-objective-card"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasValidObjective"]]],null,3],["text","                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","acm-reward-track-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["rewardTrackItems"]]],null,2],["text","                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","acm-footer"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowClaimButton"]]],null,1],["block",["if"],[["get",["shouldShowLobbyButton"]]],null,0],["text","                "],["close-element"],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","acm-spinner-container"],["flush-element"],["text","\\n            "],["append",["helper",["uikit-spinner"],null,[["width","height"],["40px","40px"]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "wokuyqdf",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\help-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\help-modal.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\help-modal.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","okText","dismissible","dismissibleType","onClose"],[["get",["showHelpModal"]],"DialogAlert",["get",["tra","event_hub_help_modal_explore_button"]],true,"inside",["helper",["action"],[["get",[null]],"handleCloseModalClick"],null]]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-large"],["static-attr","id","eh-help-modal"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-help-modal-top"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","eh-help-modal-title"],["flush-element"],["append",["unknown",["tra","event_hub_help_modal_title"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","eh-help-modal-event-name"],["flush-element"],["text","\\n        "],["append",["unknown",["eventDetailsData","eventName"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-help-modal-mid"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","eh-help-modal-image"],["dynamic-attr","src",["unknown",["eventDetailsData","helpModalImagePath"]],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-help-modal-bot"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","eh-help-modal-bot-containers"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-help-modal-icons ",["unknown",["firstColumnIconClass"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-help-modal-topic"],["flush-element"],["append",["unknown",["firstColumnTopic"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-help-description"],["flush-element"],["append",["unknown",["firstColumnDescription"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","eh-help-modal-bot-containers"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-help-modal-icons ",["unknown",["secondColumnIconClass"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-help-modal-topic"],["flush-element"],["append",["unknown",["secondColumnTopic"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-help-description"],["flush-element"],["append",["unknown",["secondColumnDescription"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","eh-help-modal-bot-containers"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-help-modal-icons ",["unknown",["thirdColumnIconClass"]]]]],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-help-modal-topic"],["flush-element"],["append",["unknown",["thirdColumnTopic"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-help-description"],["flush-element"],["append",["unknown",["thirdColumnDescription"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "ldW3VkgS",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\page-header-system-controls.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\page-header-system-controls.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\page-header-system-controls.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","eh-page-header-system-controls-icon-wrapper eh-page-header-animation-control"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleAnimationEnabled"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["animationsEnabled"]]],null,3,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","class","eh-page-header-system-controls-tooltip"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","event_hub_page_header_system_controls_tooltip_animation_off"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["bottom","system"]],0],["text","    "],["open-element","svg",[]],["static-attr","width","24"],["static-attr","height","24"],["static-attr","viewBox","0 0 24 24"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n      "],["open-element","circle",[]],["static-attr","class","eh-page-header-system-controls-icon-circle"],["static-attr","cx","12"],["static-attr","cy","12"],["static-attr","r","11.5"],["static-attr","stroke","#A09B8C"],["flush-element"],["close-element"],["text","\\n      "],["open-element","path",[]],["static-attr","class","eh-page-header-system-controls-icon-path"],["static-attr","fill-rule","evenodd"],["static-attr","clip-rule","evenodd"],["static-attr","d","M8.01022 11.7118C8.00345 11.807 8 11.9031 8 12C8 14.2091 9.79086 16 12 16C12.0969 16 12.193 15.9966 12.2882 15.9898L8.01022 11.7118ZM14.2251 15.3245C15.2955 14.6067 16 13.3856 16 12C16 9.79086 14.2091 8 12 8C10.6144 8 9.39332 8.70453 8.6755 9.77491L14.2251 15.3245Z"],["static-attr","fill","#A09B8C"],["flush-element"],["close-element"],["text","\\n      "],["open-element","path",[]],["static-attr","class","eh-page-header-system-controls-icon-path"],["static-attr","d","M6.3999 7.70166L7.70098 6.40058L17.5994 16.299L16.2983 17.6001L6.3999 7.70166Z"],["static-attr","fill","#A09B8C"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","class","eh-page-header-system-controls-tooltip"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","event_hub_page_header_system_controls_tooltip_animation_on"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["bottom","system"]],2],["text","    "],["open-element","svg",[]],["static-attr","width","24"],["static-attr","height","24"],["static-attr","viewBox","0 0 24 24"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n      "],["open-element","circle",[]],["static-attr","class","eh-page-header-system-controls-icon-circle"],["static-attr","cx","12"],["static-attr","cy","12"],["static-attr","r","11.5"],["static-attr","stroke","#A09B8C"],["flush-element"],["close-element"],["text","\\n      "],["open-element","g",[]],["static-attr","clip-path","url(#clip0_3016_32270)"],["flush-element"],["text","\\n        "],["open-element","path",[]],["static-attr","class","eh-page-header-system-controls-icon-path"],["static-attr","fill-rule","evenodd"],["static-attr","clip-rule","evenodd"],["static-attr","d","M8.0006 8.08015C7.74191 8.02759 7.47416 8 7.19995 8C4.99081 8 3.19995 9.79086 3.19995 12C3.19995 14.2091 4.99081 16 7.19995 16C7.47415 16 7.74191 15.9724 8.0006 15.9199C7.01047 14.9098 6.39995 13.5262 6.39995 12C6.39995 10.4738 7.01047 9.09024 8.0006 8.08015ZM9.59995 8.79971C8.62839 9.52947 7.99995 10.6913 7.99995 12C7.99995 13.3087 8.62839 14.4705 9.59995 15.2003C10.5715 14.4705 11.2 13.3087 11.2 12C11.2 10.6913 10.5715 9.52947 9.59995 8.79971Z"],["static-attr","fill","#A09B8C"],["flush-element"],["close-element"],["text","\\n        "],["open-element","path",[]],["static-attr","class","eh-page-header-system-controls-icon-path"],["static-attr","fill-rule","evenodd"],["static-attr","clip-rule","evenodd"],["static-attr","d","M12.8007 8.08015C12.542 8.02759 12.2742 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C12.2742 16 12.542 15.9724 12.8007 15.9199C11.8105 14.9098 11.2 13.5262 11.2 12C11.2 10.4738 11.8105 9.09023 12.8007 8.08015ZM14.4 8.79971C13.4284 9.52947 12.8 10.6913 12.8 12C12.8 13.3087 13.4284 14.4705 14.4 15.2003C15.3716 14.4705 16 13.3087 16 12C16 10.6913 15.3716 9.52947 14.4 8.79971Z"],["static-attr","fill","#A09B8C"],["flush-element"],["close-element"],["text","\\n        "],["open-element","path",[]],["static-attr","class","eh-page-header-system-controls-icon-path"],["static-attr","d","M20.7999 12C20.7999 14.2091 19.0091 16 16.7999 16C14.5908 16 12.7999 14.2091 12.7999 12C12.7999 9.79086 14.5908 8 16.7999 8C19.0091 8 20.7999 9.79086 20.7999 12Z"],["static-attr","fill","#A09B8C"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","defs",[]],["flush-element"],["text","\\n        "],["open-element","clipPath",[]],["static-attr","id","clip0_3016_32270"],["flush-element"],["text","\\n          "],["open-element","rect",[]],["static-attr","width","17.6"],["static-attr","height","17.6"],["static-attr","fill","white"],["static-attr","transform","translate(3.19995 3.2002)"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "UUwnK5Ae",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\page-header.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\page-header.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\page-header.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","eh-page-header-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-page-header-top-bar"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayHeaderLogo"]]],null,21],["text","        "],["open-element","div",[]],["static-attr","class","eh-page-header-title"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasHeaderTitleImage"]]],null,20,19],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-page-header-end-timer"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isActivityCenterEventMilestones"]]],null,18,16],["text","            "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showUnits","showSeconds","showMinutes","showHours","digits","separator","timerText","showContainer","transparentBackground"],[["get",["eventEndJsDate"]],true,true,false,false,false,1," ","{{remainingTime}}",true,true]]],false],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["showHelpIcon"]]],null,9],["block",["if"],[["get",["showTokenBalance"]]],null,6],["block",["if"],[["get",["showSystemControls"]]],null,4],["text","        "],["open-element","div",[]],["static-attr","class","eh-help-modal-root"],["flush-element"],["text","\\n            "],["append",["helper",["help-modal"],null,[["showHelpModal"],[["get",["showHelpModal"]]]]],false],["text","\\n        "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["localizedLogoPath"]]],null,3,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","eh-page-header-subtitle"],["flush-element"],["text","\\n                        "],["append",["unknown",["eventSubtitle"]],false],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","eh-page-header-title-block"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-page-header-title-large"],["flush-element"],["text","\\n                    "],["append",["unknown",["eventDetailsData","eventName"]],false],["text","\\n                "],["close-element"],["text","\\n"],["block",["if"],[["get",["eventSubtitle"]]],null,0],["text","            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isActivityCenterEventMilestones"]]],null,1]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["flush-element"],["text","\\n            "],["open-element","img",[]],["dynamic-attr","class",["helper",["if"],[["get",["isSeasonPass"]],"eh-page-header-seasonal-logo","eh-page-header-activity-center-milestones-logo"],null],null],["dynamic-attr","src",["unknown",["localizedLogoPath"]],null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["page-header-system-controls"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                            "],["open-element","lol-uikit-content-block",[]],["static-attr","class","eh-page-header-buy-tokens-tooltip"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n                                "],["append",["unknown",["tra","event_shop_page_header_buy_tokens_tooltip"]],false],["text","\\n                            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","eh-page-header-token-balance-wrapper"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-page-header-token-balance"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-page-header-token-balance-label"],["flush-element"],["text","\\n                        "],["append",["unknown",["tra","event_shop_page_header_balance_you_have"]],false],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","eh-page-header-token-balance-icon"],["dynamic-attr","src",["unknown",["tokenImage"]],null],["flush-element"],["close-element"],["text","\\n                    "],["append",["unknown",["event-shop-token-balance-amount"]],false],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-page-header-buy-tokens-link"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-close-button",[]],["static-attr","button-type","plus"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"navigateToStore"],null],null],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["bottom","system"]],5],["text","                    "],["close-element"],["text","\\n                "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","eh-page-header-help-tooltip"],["flush-element"],["text","\\n                            "],["append",["unknown",["tra","acm_support_article_link_tooltip_text"]],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["right","system"]],7]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","eh-page-header-help-container"],["flush-element"],["text","\\n                "],["open-element","button",[]],["static-attr","class","eh-page-header-help-button"],["static-attr","role","button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],["helper",["if"],[["get",["isActivityCenterEventMilestones"]],"openHelpLink","showHelpModal"],null]],null],null],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"onHelpButtonHover"],null],null],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isActivityCenterEventMilestones"]]],null,8],["text","            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                            "],["open-element","div",[]],["static-attr","class","eh-page-header-tooltip-block eh-page-header-tooltip-block-bottom"],["flush-element"],["text","\\n                                "],["open-element","h6",[]],["static-attr","class","eh-page-header-time-tooltip-bot-title"],["flush-element"],["append",["unknown",["tooltipProgressText","tooltipTitleBottom"]],false],["text","\\n                                "],["close-element"],["text","\\n                                "],["open-element","p",[]],["static-attr","class","eh-page-header-time-tooltip-bot-date"],["flush-element"],["append",["unknown",["shopEndDateFullText"]],false],["close-element"],["text","\\n                            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                                        "],["append",["unknown",["shopEndDateFullText"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                                        "],["append",["unknown",["progressEndDateFullText"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                            "],["open-element","div",[]],["static-attr","class","eh-page-header-tooltip-block eh-page-header-tooltip-block-top"],["flush-element"],["text","\\n                                "],["open-element","h5",[]],["static-attr","class","eh-page-header-time-tooltip-top-title"],["flush-element"],["text","\\n                                    "],["append",["unknown",["tooltipProgressText","tooltipTitleTop"]],false],["text","\\n                                "],["close-element"],["text","\\n                                "],["open-element","p",[]],["static-attr","class","eh-page-header-time-tooltip-top-date"],["flush-element"],["text","\\n"],["block",["if"],[["get",["progressEndDateFullText"]]],null,12,11],["text","                                "],["close-element"],["text","\\n                                "],["open-element","p",[]],["static-attr","class","eh-page-header-description"],["flush-element"],["append",["unknown",["tooltipProgressText","tooltipTitleDescription"]],false],["close-element"],["text","\\n                            "],["close-element"],["text","\\n"],["block",["if"],[["get",["progressEndDateFullText"]]],null,10]],"locals":[]},{"statements":[["text","                            "],["open-element","div",[]],["static-attr","class","eh-page-header-tooltip-block eh-page-header-tooltip-block-top"],["flush-element"],["text","\\n                                "],["open-element","h5",[]],["static-attr","class","eh-page-header-time-tooltip-top-title"],["flush-element"],["text","\\n                                    "],["append",["unknown",["gracePeriodTooltipsText","tooltipTitleTop"]],false],["text","\\n                                "],["close-element"],["text","\\n                                "],["open-element","p",[]],["static-attr","class","eh-page-header-time-tooltip-top-date"],["flush-element"],["append",["unknown",["shopEndDateFullText"]],false],["close-element"],["text","\\n                                "],["open-element","p",[]],["static-attr","class","eh-page-header-description-top"],["flush-element"],["text","\\n                                    "],["append",["unknown",["gracePeriodTooltipsText","tooltipDescriptionTop"]],false],["text","\\n                                "],["close-element"],["text","\\n                            "],["close-element"],["text","\\n                            "],["open-element","div",[]],["static-attr","class","eh-page-header-tooltip-block eh-page-header-tooltip-block-bottom"],["flush-element"],["text","\\n                                "],["open-element","h6",[]],["static-attr","class","eh-page-header-time-tooltip-bot-title"],["flush-element"],["text","\\n                                    "],["append",["unknown",["gracePeriodTooltipsText","tooltipTitleBottom"]],false],["text","\\n                                "],["close-element"],["text","\\n                                "],["open-element","p",[]],["static-attr","class","eh-page-header-description"],["flush-element"],["text","\\n                                    "],["append",["unknown",["gracePeriodTooltipsText","tooltipDescriptionBottom"]],false],["text","\\n                                "],["close-element"],["text","\\n                            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","lol-uikit-content-block",[]],["static-attr","class","eh-page-header-tooltip-content"],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isGracePeriod"]]],null,14,13],["text","                    \\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["bottom","system"]],15]],"locals":[]},{"statements":[["text","                    "],["open-element","lol-uikit-content-block",[]],["static-attr","class","eh-page-header-tooltip-content"],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-page-header-tooltip-block"],["flush-element"],["text","\\n                            "],["open-element","h5",[]],["static-attr","class","eh-page-header-time-tooltip-top-title"],["flush-element"],["text","\\n                                "],["append",["unknown",["tra","acm_page_header_time_tooltip_progress_title"]],false],["text","\\n                            "],["close-element"],["text","\\n                            "],["open-element","p",[]],["static-attr","class","eh-page-header-time-tooltip-top-date"],["flush-element"],["text","\\n                                "],["append",["unknown",["shopEndDateFullText"]],false],["text","\\n                            "],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["right","system"]],17]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","eh-page-header-title-text"],["flush-element"],["text","\\n                    "],["open-element","span",[]],["flush-element"],["text","\\n                        "],["append",["unknown",["passTitle"]],false],["text","\\n                    "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","eh-page-header-title-image"],["dynamic-attr","src",["unknown",["headerTitleImageSrc"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","img",[]],["static-attr","class","eh-page-header-logo"],["dynamic-attr","src",["unknown",["eventDetailsData","eventIconPath"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
-                id: "KhWIEneA",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\purchase-bundles-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\purchase-bundles-modal.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\purchase-bundles-modal.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","dismissibleType","onClose"],[["get",["showPurchaseModal"]],"DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"handleCloseModalClick"],null]]],27],["block",["if"],[["get",["showDropRatesModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["loot-table-root"],null,[["name"],[["get",["dropRatesLootItemName"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["show","type","dismissibleType","onClose"],["true","DialogDismiss","inside",["helper",["action"],[["get",[null]],"closeDropRatesModal"],null]]],0]],"locals":[]},{"statements":[["text","              "],["open-element","h5",[]],["static-attr","class","eh-purchase-bundles-modal-summary-choose-text"],["flush-element"],["append",["unknown",["tra","event_hub_purchase_modal_summary_choose"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button-content"],["flush-element"],["text","\\n                          "],["append",["unknown",["tra","event_hub_purchase_modal_buy_rp"]],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["append",["helper",["uikit-spinner"],null,[["width","height"],["15px","15px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-balance"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-balance-not-enough-rp"],["flush-element"],["text","\\n                      "],["append",["unknown",["tra","event_hub_purchase_modal_not_enough_rp"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openRPPurchaseModal"],null],null],["dynamic-attr","disabled",["unknown",["rpPurchaseInProgress"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["rpPurchaseInProgress"]]],null,4,3],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-balance"],["flush-element"],["text","\\n                    "],["append",["unknown",["tra","event_hub_purchase_modal_balance"]],false],["text","\\n                    "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                    "],["append",["unknown",["newBalance"]],false],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-tos"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","eh-purchase-bundles-modal-summary-tos-checkbox"],["flush-element"],["text","\\n                      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","id","tosChecked"],["static-attr","name","tosChecked"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleTosChecked"],null],null],["dynamic-attr","disabled",["unknown",["tosDisabled"]],null],["dynamic-attr","checked",["unknown",["tosChecked"]],null],["flush-element"],["close-element"],["text","\\n                      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","tosChecked"],["static-attr","class","eh-purchase-bundles-modal-tos-text"],["flush-element"],["text","\\n                        "],["append",["unknown",["tosText"]],false],["text","\\n                      "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["eh-purchase-bundles-modal-digital-goods-disclaimer"]]],false],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["dynamic-attr","disabled",["unknown",["unlockButtonDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"unlockPass"],null],null],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button-content"],["flush-element"],["text","\\n                        "],["append",["unknown",["tra","event_hub_purchase_modal_unlock_now"]],false],["text","\\n                      "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-discount"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-discount-text"],["flush-element"],["append",["unknown",["discountPercentage"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-initial-price"],["flush-element"],["text","\\n                      "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-initial-price-text"],["flush-element"],["append",["unknown",["initialPrice"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["initialPrice"]]],null,8],["block",["if"],[["get",["discountPercentage"]]],null,7]],"locals":[]},{"statements":[["text","                              "],["open-element","div",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDropRatesModal",["get",["item"]]],null],null],["static-attr","class","eh-purchase-bundles-modal-summary-item-drop-rates"],["flush-element"],["text","\\n                                "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-dice-icon"],["flush-element"],["close-element"],["text","\\n                                "],["append",["unknown",["tra","event_hub_purchase_modal_see_drop_rates"]],false],["text","\\n                              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                                "],["append",["helper",["inventory-type-name"],[["get",["item","inventoryType"]],["get",["item","subInventoryType"]]],null],false],["text","\\n"]],"locals":[]},{"statements":[["text","                                "],["append",["unknown",["tra","event_shop_offer_card_owned"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-summary-item\\n                          ",["helper",["if"],[["get",["item","owned"]],"eh-purchase-bundles-modal-summary-item-owned"],null]]]],["flush-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-img-wrapper"],["flush-element"],["text","\\n                          "],["open-element","img",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-img"],["dynamic-attr","src",["helper",["safe-image-path"],[["get",["item","splashImage"]]],null],null],["flush-element"],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-details"],["flush-element"],["text","\\n                          "],["open-element","p",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-name"],["flush-element"],["text","\\n                            "],["append",["unknown",["item","displayName"]],false],["text","\\n                          "],["close-element"],["text","\\n                          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-description"],["flush-element"],["text","\\n                            "],["open-element","p",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-inventory-type"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","owned"]]],null,12,11],["text","                            "],["close-element"],["text","\\n"],["block",["if"],[["helper",["eq"],[["get",["item","subInventoryType"]],"CHEST"],null]],null,10],["text","                          "],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                      "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","                        "],["append",["unknown",["tra","event_shop_see_more"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["append",["unknown",["tra","event_shop_see_less"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["static-attr","class","eh-purchase-bundles-modal-summary-scrollable-area"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","id","eh-purchase-bundles-modal-summary-description"],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-summary-description\\n                    ",["unknown",["descriptionElementAdditionalClassName"]],"\\n                    ",["helper",["if"],[["get",["isDescriptionExpanded"]],"eh-purchase-bundles-modal-summary-description-expanded"],null]]]],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","id","eh-purchase-bundles-modal-summary-description-text"],["static-attr","class","eh-purchase-bundles-modal-summary-description-text"],["flush-element"],["text","\\n                    "],["append",["unknown",["selectedOption","details","description"]],true],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-description-see-more"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"expandOrCollapseDescription"],null],null],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-description-see-more-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDescriptionExpanded"]]],null,15,14],["text","                    "],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-summary-description-see-more-chevron"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-items"],["flush-element"],["text","\\n                  "],["open-element","h5",[]],["static-attr","class","eh-purchase-bundles-modal-summary-items-header"],["flush-element"],["text","\\n                    "],["append",["unknown",["tra","event_hub_purchase_modal_purchse_summary"]],false],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["selectedOption","bundledItems"]]],null,13],["text","                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-price"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-final-price"],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-final-price-text"],["flush-element"],["append",["unknown",["finalPrice"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["displayDiscount"]]],null,9],["text","                "],["close-element"],["text","\\n"],["block",["if"],[["get",["selectedOption","isPurchasable"]]],null,6,5],["text","              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-details"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedOption"]]],null,16,2],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-spinner"],["flush-element"],["text","\\n            "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-header"],["flush-element"],["text","\\n          "],["open-element","h4",[]],["static-attr","class","eh-purchase-bundles-modal-summary-title"],["flush-element"],["append",["unknown",["summaryTitle"]],false],["close-element"],["text","\\n          "],["open-element","h5",[]],["static-attr","class","eh-purchase-bundles-modal-summary-subtitle"],["flush-element"],["append",["unknown",["summarySubtitle"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["isExecutingPurchase"]]],null,18,17]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-header"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-lock-icon"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-text"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","event_hub_purchase_modal_success_header"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-item-name"],["flush-element"],["text","\\n              "],["append",["unknown",["summaryTitle"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-message"],["flush-element"],["text","\\n              "],["append",["unknown",["successMessage"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-footer"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button"],["flush-element"],["text","\\n              "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleCloseModalClick"],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button-content"],["flush-element"],["text","\\n                  "],["append",["unknown",["tra","event_hub_purchase_modal_awesome"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-spinner"],["flush-element"],["text","\\n          "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-price"],["flush-element"],["text","\\n                          "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-price-text"],["flush-element"],["append",["unknown",["option","finalPrice"]],false],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-quantity"],["flush-element"],["append",["unknown",["option","bundledItems","length"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-owned-text"],["flush-element"],["append",["unknown",["tra","event_shop_offer_card_owned"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["static-attr","class","eh-purchase-bundles-modal-decorator-badge"],["dynamic-attr","src",["unknown",["option","details","decoratorBadgeURL"]],null],["static-attr","onerror","this.onerror=null; this.remove();"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-option\\n                ",["unknown",["option","optionTypeCssClass"]],"\\n                ",["unknown",["option","selectedCssClass"]],"\\n                ",["unknown",["option","ownedClass"]],"\\n                ",["unknown",["optionsPointerClass"]],"\\n                ",["unknown",["optionsExecutingPurchaseClass"]]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectOption",["get",["option"]]],null],null],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-image-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["option","details","decoratorBadgeURL"]]],null,24],["text","                "],["open-element","img",[]],["static-attr","class","eh-purchase-bundles-modal-option-image"],["dynamic-attr","src",["unknown",["option","details","splashImage"]],null],["dynamic-attr","alt",["unknown",["option","details","name"]],null],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-details-wrapper"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-details"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-title"],["flush-element"],["append",["unknown",["option","details","name"]],false],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-bottom-row"],["flush-element"],["text","\\n"],["block",["if"],[["get",["option","isOwned"]]],null,23,22],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["option"]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-options-wrapper ",["unknown",["numberOfOptionsWrapperCssClass"]]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["options"]]],null,25],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-options"],["flush-element"],["text","\\n"],["block",["if"],[["get",["options","length"]]],null,26,21],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary"],["flush-element"],["text","\\n"],["block",["if"],[["get",["purchaseCompleted"]]],null,20,19],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "ptptxWhn",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\purchase-bundles-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\purchase-bundles-modal.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\purchase-bundles-modal.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","dismissibleType","onClose"],[["get",["showPurchaseModal"]],"DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"handleCloseModalClick"],null]]],27],["block",["if"],[["get",["showDropRatesModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["loot-table-root"],null,[["name"],[["get",["dropRatesLootItemName"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["show","type","dismissibleType","onClose"],["true","DialogDismiss","inside",["helper",["action"],[["get",[null]],"closeDropRatesModal"],null]]],0]],"locals":[]},{"statements":[["text","              "],["open-element","h5",[]],["static-attr","class","eh-purchase-bundles-modal-summary-choose-text"],["flush-element"],["append",["unknown",["tra","event_hub_purchase_modal_summary_choose"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button-content"],["flush-element"],["text","\\n                          "],["append",["unknown",["tra","event_hub_purchase_modal_buy_rp"]],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["append",["helper",["uikit-spinner"],null,[["width","height"],["15px","15px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-balance"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-balance-not-enough-rp"],["flush-element"],["text","\\n                      "],["append",["unknown",["tra","event_hub_purchase_modal_not_enough_rp"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openRPPurchaseModal"],null],null],["dynamic-attr","disabled",["unknown",["rpPurchaseInProgress"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["rpPurchaseInProgress"]]],null,4,3],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-balance"],["flush-element"],["text","\\n                    "],["append",["unknown",["tra","event_hub_purchase_modal_balance"]],false],["text","\\n                    "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                    "],["append",["unknown",["newBalance"]],false],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-tos"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","eh-purchase-bundles-modal-summary-tos-checkbox"],["flush-element"],["text","\\n                      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","id","tosChecked"],["static-attr","name","tosChecked"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleTosChecked"],null],null],["dynamic-attr","disabled",["unknown",["tosDisabled"]],null],["dynamic-attr","checked",["unknown",["tosChecked"]],null],["flush-element"],["close-element"],["text","\\n                      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","tosChecked"],["static-attr","class","eh-purchase-bundles-modal-tos-text"],["flush-element"],["text","\\n                        "],["append",["unknown",["tosText"]],false],["text","\\n                      "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["eh-purchase-bundles-modal-digital-goods-disclaimer"]]],false],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["dynamic-attr","disabled",["unknown",["unlockButtonDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"unlockPass"],null],null],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button-content"],["flush-element"],["text","\\n                        "],["append",["unknown",["tra","event_hub_purchase_modal_unlock_now"]],false],["text","\\n                      "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-discount"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-discount-text"],["flush-element"],["append",["unknown",["discountPercentage"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-initial-price"],["flush-element"],["text","\\n                      "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-initial-price-text"],["flush-element"],["append",["unknown",["initialPrice"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["initialPrice"]]],null,8],["block",["if"],[["get",["discountPercentage"]]],null,7]],"locals":[]},{"statements":[["text","                              "],["open-element","div",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDropRatesModal",["get",["item"]]],null],null],["static-attr","class","eh-purchase-bundles-modal-summary-item-drop-rates"],["flush-element"],["text","\\n                                "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-dice-icon"],["flush-element"],["close-element"],["text","\\n                                "],["append",["unknown",["tra","event_hub_purchase_modal_see_drop_rates"]],false],["text","\\n                              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                                "],["append",["helper",["inventory-type-name"],[["get",["item","inventoryType"]],["get",["item","subInventoryType"]]],null],false],["text","\\n"]],"locals":[]},{"statements":[["text","                                "],["append",["unknown",["tra","event_shop_offer_card_owned"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-summary-item\\n                          ",["helper",["if"],[["get",["item","owned"]],"eh-purchase-bundles-modal-summary-item-owned"],null]]]],["flush-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-img-wrapper"],["flush-element"],["text","\\n                          "],["open-element","img",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-img"],["dynamic-attr","src",["helper",["safe-image-path"],[["get",["item","splashImage"]]],null],null],["flush-element"],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-details"],["flush-element"],["text","\\n                          "],["open-element","p",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-name"],["flush-element"],["text","\\n                            "],["append",["unknown",["item","displayName"]],false],["text","\\n                          "],["close-element"],["text","\\n                          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-description"],["flush-element"],["text","\\n                            "],["open-element","p",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-inventory-type"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","owned"]]],null,12,11],["text","                            "],["close-element"],["text","\\n"],["block",["if"],[["helper",["eq"],[["get",["item","subInventoryType"]],"CHEST"],null]],null,10],["text","                          "],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                      "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","                        "],["append",["unknown",["tra","event_shop_see_more"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["append",["unknown",["tra","event_shop_see_less"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["static-attr","class","eh-purchase-bundles-modal-summary-scrollable-area"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","id","eh-purchase-bundles-modal-summary-description"],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-summary-description\\n                    ",["unknown",["descriptionElementAdditionalClassName"]],"\\n                    ",["helper",["if"],[["get",["isDescriptionExpanded"]],"eh-purchase-bundles-modal-summary-description-expanded"],null]]]],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","id","eh-purchase-bundles-modal-summary-description-text"],["static-attr","class","eh-purchase-bundles-modal-summary-description-text"],["flush-element"],["text","\\n                    "],["append",["unknown",["selectedOption","details","description"]],true],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-description-see-more"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"expandOrCollapseDescription"],null],null],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-description-see-more-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDescriptionExpanded"]]],null,15,14],["text","                    "],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-summary-description-see-more-chevron"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-items"],["flush-element"],["text","\\n                  "],["open-element","h5",[]],["static-attr","class","eh-purchase-bundles-modal-summary-items-header"],["flush-element"],["text","\\n                    "],["append",["unknown",["tra","event_hub_purchase_modal_purchse_summary"]],false],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["selectedOption","bundledItems"]]],null,13],["text","                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-price"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-final-price"],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-final-price-text"],["flush-element"],["append",["unknown",["finalPrice"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["displayDiscount"]]],null,9],["text","                "],["close-element"],["text","\\n"],["block",["if"],[["get",["selectedOption","isPurchasable"]]],null,6,5],["text","              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-details"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displaySelectedOption"]]],null,16,2],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-spinner"],["flush-element"],["text","\\n            "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-header"],["flush-element"],["text","\\n          "],["open-element","h4",[]],["static-attr","class","eh-purchase-bundles-modal-summary-title"],["flush-element"],["append",["unknown",["summaryTitle"]],false],["close-element"],["text","\\n          "],["open-element","h5",[]],["static-attr","class","eh-purchase-bundles-modal-summary-subtitle"],["flush-element"],["append",["unknown",["summarySubtitle"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["isExecutingPurchase"]]],null,18,17]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-header"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-lock-icon"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-text"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","event_hub_purchase_modal_success_header"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-item-name"],["flush-element"],["text","\\n              "],["append",["unknown",["summaryTitle"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-message"],["flush-element"],["text","\\n              "],["append",["unknown",["successMessage"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-footer"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button"],["flush-element"],["text","\\n              "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleCloseModalClick"],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button-content"],["flush-element"],["text","\\n                  "],["append",["unknown",["tra","event_hub_purchase_modal_awesome"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-spinner"],["flush-element"],["text","\\n          "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-price"],["flush-element"],["text","\\n                          "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-price-text"],["flush-element"],["append",["unknown",["option","finalPrice"]],false],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-quantity"],["flush-element"],["append",["unknown",["option","bundledItems","length"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-owned-text"],["flush-element"],["append",["unknown",["tra","event_shop_offer_card_owned"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["static-attr","class","eh-purchase-bundles-modal-decorator-badge"],["dynamic-attr","src",["unknown",["option","details","decoratorBadgeURL"]],null],["static-attr","onerror","this.onerror=null; this.remove();"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-option\\n                ",["unknown",["option","optionTypeCssClass"]],"\\n                ",["unknown",["option","selectedCssClass"]],"\\n                ",["unknown",["option","ownedClass"]],"\\n                ",["unknown",["optionsPointerClass"]],"\\n                ",["unknown",["optionsExecutingPurchaseClass"]]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectOption",["get",["option"]]],null],null],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-image-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["option","details","decoratorBadgeURL"]]],null,24],["text","                "],["open-element","img",[]],["static-attr","class","eh-purchase-bundles-modal-option-image"],["dynamic-attr","src",["unknown",["option","details","splashImage"]],null],["dynamic-attr","alt",["unknown",["option","details","name"]],null],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-details-wrapper"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-details"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-title"],["flush-element"],["append",["unknown",["option","details","name"]],false],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-bottom-row"],["flush-element"],["text","\\n"],["block",["if"],[["get",["option","isOwned"]]],null,23,22],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["option"]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-options-wrapper ",["unknown",["numberOfOptionsWrapperCssClass"]]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["options"]]],null,25],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-options"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayBundleOptions"]]],null,26,21],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary"],["flush-element"],["text","\\n"],["block",["if"],[["get",["purchaseCompleted"]]],null,20,19],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "I1ev3bOj",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\purchase-levels-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\purchase-levels-modal.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\purchase-levels-modal.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","dismissibleType","onClose"],[["get",["showPurchaseModal"]],"DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"handleCloseModalClick"],null]]],13]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["append",["unknown",["levelsButtonTra"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["append",["helper",["uikit-spinner"],null,[["width","height"],["15px","15px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","eh-purchase-levels-modal-price-button"],["dynamic-attr","disabled",["unknown",["purchaseButtonDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"purchaseLevels"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["purchaseInProgress"]]],null,1,0],["text","            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["append",["unknown",["tra","event_hub_purchase_modal_buy_rp"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["append",["helper",["uikit-spinner"],null,[["width","height"],["15px","15px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","eh-purchase-levels-modal-rp-button"],["static-attr","primary","true"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openRPPurchaseModal"],null],null],["dynamic-attr","disabled",["unknown",["rpPurchaseInProgress"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["rpPurchaseInProgress"]]],null,4,3],["text","            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-error"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","event_hub_purchase_levels_modal_error_loading_offer"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-price-breakdown-new-balance"],["flush-element"],["append",["unknown",["tra","event_hub_purchase_levels_modal_new_balance"]],false],["open-element","img",[]],["static-attr","src","/fe/lol-static-assets/images/event-hub/rp-small.svg"],["flush-element"],["close-element"],["append",["unknown",["newBalanceTra"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-error"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","event_hub_purchase_modal_not_enough_rp"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","eh-multi-purchase-slider-container"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-slider-number"],["flush-element"],["text","\\n                "],["append",["unknown",["minNumberOfLevelsToBuy"]],false],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","lol-uikit-slider",[]],["static-attr","class","multi-purchase-uikit-slider eh-multi-purchase-slider"],["static-attr","step","1"],["static-attr","min","1"],["dynamic-attr","max",["unknown",["numberOfLevelsToBuy"]],null],["dynamic-attr","value",["unknown",["levelsToBuy"]],null],["static-attr","clickSet","true"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"updateLevelsToBuy"],null],null],["flush-element"],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-slider-number"],["flush-element"],["text","\\n                "],["append",["unknown",["numberOfLevelsToBuy"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","uikit-state-machine",[]],["static-attr","state","hidden"],["dynamic-attr","showPurchaseModal",["helper",["if"],[["get",["showPurchaseModal"]],"true","false"],null],null],["dynamic-attr","isDataLoading",["helper",["if"],[["get",["isDataLoading"]],"true","false"],null],null],["static-attr","class","eh-purchase-levels-modal-selection-next-level-animation"],["flush-element"],["text","\\n                "],["open-element","uikit-states",[]],["flush-element"],["text","\\n                  "],["open-element","uikit-state",[]],["static-attr","name","hidden"],["flush-element"],["text","\\n                    "],["open-element","uikit-transition",[]],["static-attr","next-state","intro"],["flush-element"],["text","\\n                      "],["open-element","uikit-condition-parameter",[]],["static-attr","name","showPurchaseModal"],["static-attr","value","true"],["flush-element"],["close-element"],["text","\\n                      "],["open-element","uikit-condition-parameter",[]],["static-attr","name","isDataLoading"],["static-attr","value","false"],["flush-element"],["close-element"],["text","\\n                      "],["open-element","uikit-condition-media",[]],["static-attr","selector","#hidden"],["static-attr","can-play",""],["flush-element"],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","uikit-behavior-media",[]],["static-attr","selector","#hidden"],["static-attr","preloading",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","uikit-behavior-media",[]],["static-attr","selector","#loop"],["static-attr","preloading",""],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","uikit-state",[]],["static-attr","name","intro"],["flush-element"],["text","\\n                    "],["open-element","uikit-transition",[]],["static-attr","next-state","loop"],["flush-element"],["text","\\n                      "],["open-element","uikit-condition-media",[]],["static-attr","selector","#hidden"],["static-attr","ended",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","uikit-condition-media",[]],["static-attr","selector","#loop"],["static-attr","can-play",""],["flush-element"],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","uikit-behavior-media",[]],["static-attr","selector","#hidden"],["static-attr","ended",""],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","uikit-state",[]],["static-attr","name","loop"],["flush-element"],["text","\\n                    "],["open-element","uikit-transition",[]],["static-attr","next-state","hidden"],["flush-element"],["text","\\n                      "],["open-element","uikit-condition-parameter",[]],["static-attr","next-state","hidden"],["static-attr","name","isDataLoading"],["static-attr","value","true"],["flush-element"],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","uikit-behavior-media",[]],["static-attr","selector","#loop"],["static-attr","playing",""],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","uikit-switch",[]],["static-attr","id","hidden"],["static-attr","visible-state","intro"],["flush-element"],["text","\\n                  "],["open-element","uikit-video",[]],["static-attr","src","/fe/lol-static-assets/images/event-hub/level-ring-fast.webm"],["static-attr","visible-value","*"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","uikit-switch",[]],["static-attr","id","loop"],["static-attr","visible-state","loop"],["flush-element"],["text","\\n                  "],["open-element","uikit-video",[]],["static-attr","src","/fe/lol-static-assets/images/event-hub/level-ring.webm"],["static-attr","visible-value","*"],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","video",[]],["static-attr","id","level-increase"],["static-attr","class","eh-purchase-levels-modal-selection-next-level-animation"],["static-attr","src","/fe/lol-static-assets/images/event-hub/union-animated.webm#t=50"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-selection-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-selection"],["flush-element"],["text","\\n"],["block",["if"],[["get",["animationsEnabled"]]],null,10],["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-levels-modal-selection-next-level ",["helper",["unless"],[["get",["animationsEnabled"]],"low-spec"],null]]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-selection-next-level-title"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","event_hub_purchase_levels_modal_new_level_text"]],false],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-selection-next-level-black-box"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-selection-next-level-new-level"],["flush-element"],["text","\\n                  "],["append",["unknown",["newLevel"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldRenderSlider"]]],null,9],["text","\\n          "],["open-element","div",[]],["static-attr","class","eh-slider-incrementer-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-slider-incrementer"],["flush-element"],["text","\\n              "],["open-element","lol-uikit-close-button",[]],["static-attr","button-type","remove"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"decreaseLevelsToBuy"],null],null],["dynamic-attr","disabled",["helper",["if"],[["helper",["eq"],[["get",["minNumberOfLevelsToBuy"]],["get",["levelsToBuy"]]],null],"true",null],null],null],["flush-element"],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-slider-incrementer-current"],["flush-element"],["append",["unknown",["levelsToBuy"]],false],["close-element"],["text","\\n              "],["open-element","lol-uikit-close-button",[]],["static-attr","button-type","add"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"increaseLevelsToBuy"],null],null],["dynamic-attr","disabled",["helper",["if"],[["helper",["eq"],[["get",["numberOfLevelsToBuy"]],["get",["levelsToBuy"]]],null],"true",null],null],null],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-slider-incrementer-caption"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","event_hub_purchase_levels_modal_slider_caption"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-price-breakdown-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-price-breakdown-rp"],["flush-element"],["open-element","img",[]],["static-attr","src","/fe/lol-static-assets/images/event-hub/rp.svg"],["flush-element"],["close-element"],["append",["unknown",["totalPriceTra"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["notEnoughRp"]]],null,8,7],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-price-confirmation-container"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","id","tosChecked"],["static-attr","name","tosChecked"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleTosChecked"],null],null],["dynamic-attr","disabled",["unknown",["tosDisabled"]],null],["dynamic-attr","checked",["unknown",["tosChecked"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","tosChecked"],["static-attr","class","eh-purchase-levels-modal-price-confirmation-text"],["flush-element"],["text","\\n              "],["append",["unknown",["purchaseTosTra"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["eh-purchase-levels-digital-goods-disclaimer"]]],false],["text","\\n"],["block",["if"],[["get",["errorLoadingPurchaseData"]]],null,6],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-buttons-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["notEnoughRp"]]],null,5,2],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-spinner"],["flush-element"],["text","\\n          "],["append",["helper",["uikit-spinner"],null,[["width","height"],["40px","40px"]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-header"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-static-assets/images/event-hub/arrow-xp.png"],["static-attr","class","arrow-xp-image"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-header-title"],["flush-element"],["text","\\n          "],["append",["unknown",["titleTra"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-purchase-levels-modal-header-subtitle"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","event_hub_purchase_levels_modal_subtitle"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isDataLoading"]]],null,12,11],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "cMUL37JS",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\reward-details.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\reward-details.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\reward-details.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","eh-reward-details-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isSeasonPass"]]],null,6,4],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","eh-reward-details-title"],["flush-element"],["text","\\n  "],["append",["unknown",["title"]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["showPassRequired"]]],null,3],["block",["if"],[["get",["rewardClaimed"]]],null,2],["block",["if"],[["get",["showNarrativeRewardDescription"]]],null,1],["block",["if"],[["get",["showReplayButton"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","idle eh-reward-details-replay-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"replayButtonClick"],null],null],["dynamic-attr","disabled",["unknown",["isReplayButtonDisabled"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-reward-details-replay-button-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","eh-reward-details-replay-button-icon"],["flush-element"],["text","\\n        "],["open-element","svg",[]],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["static-attr","width","16"],["static-attr","height","16"],["static-attr","viewBox","0 0 16 16"],["static-attr","fill","none"],["flush-element"],["text","\\n          "],["open-element","path",[]],["static-attr","d","M13.4308 8.88263C13.4202 8.84654 13.3884 8.82309 13.353 8.81948C13.3159 8.81587 13.2823 8.83752 13.2664 8.87C12.9534 9.53399 12.2356 9.90387 11.631 9.94357C12.0129 9.48888 12.1737 8.72024 12.0624 7.83071C11.9227 6.71745 11.2844 5.18738 9.93723 4.53963C7.95354 3.58695 7.31352 2.69923 7.29761 0.889495C7.29761 0.851605 7.27286 0.817323 7.23927 0.804692C7.20391 0.792062 7.16501 0.804692 7.14203 0.833561C5.42707 2.97529 5.87084 4.0236 6.26156 4.94921C6.34466 5.14588 6.42422 5.33353 6.47903 5.52479C6.63461 6.06067 6.52853 6.63986 6.19792 7.07831C5.92918 7.43376 5.55436 7.62863 5.16894 7.6178C4.92319 7.60878 4.75523 7.533 4.65799 7.38324C4.46705 7.08914 4.536 6.49371 4.86485 5.6114C4.87899 5.57531 4.86838 5.53562 4.84009 5.51036C4.81181 5.4851 4.77114 5.48149 4.73932 5.50134C2.39318 6.87442 2.33661 9.51595 2.42147 10.5877C2.48866 11.4412 3.39741 13.4909 5.21137 14.5518C6.73362 15.4431 8.96483 15.2086 9.53766 15.0426C13.0401 14.0304 14.0478 10.8872 13.429 8.88263H13.4308ZM8.37432 10.8024C9.19644 11.0045 9.76043 11.562 9.80994 12.2242C9.8559 12.8359 9.46164 13.3754 8.75621 13.6677C7.97829 13.9907 6.36411 13.6641 5.52961 12.7763C5.14242 12.365 4.96385 11.8886 4.99745 11.3618C5.05579 10.4488 5.7347 9.43836 7.01827 8.35396C6.88036 9.35536 6.82202 10.4217 8.37609 10.8024H8.37432Z"],["static-attr","fill","#CDBE91"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["append",["unknown",["tra","event_hub_cutscene_button_label"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","eh-reward-details-description"],["flush-element"],["text","\\n    "],["append",["unknown",["rewardDescription"]],false],["text","\\n    "],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n    "],["append",["unknown",["narrativeDescription"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","eh-reward-details-claimed"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-event-hub/images/checkmark-II.svg"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-reward-details-claimed-text"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","event_hub_reward_claimed_description"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","reward-purchase-description"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-event-hub/images/lock-gold.svg"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reward-purchase-pass-text"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","season_pass_purchase_to_unlock_description"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["level"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["icon-rarity"],null,[["rarity","type","region"],[["get",["rarityId"]],["get",["rarityType"]],["get",["region"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["rarityId"]]],null,5],["text","    "],["append",["unknown",["rewardInventoryTypes"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "ttyGtW/v",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\claim-button.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\claim-button.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\claim-button.js\\" "],["text","\\n"],["open-element","lol-uikit-flat-button",[]],["static-attr","class","idle eh-claim-button-uikit-flat-button"],["dynamic-attr","disabled",["unknown",["claimButtonDisabled"]],null],["modifier",["action"],[["get",[null]],"claimAllRewards"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","eh-claim-button-uikit-flat-button-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["unclaimedRewards"]]],null,1],["text","    "],["append",["unknown",["tra","event_shop_reward_button_claim_reward"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowAnimations"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","eh-claim-button-animations"],["flush-element"],["text","\\n    "],["open-element","video",[]],["static-attr","class","eh-claim-button-animation-idle"],["static-attr","src","/fe/lol-event-hub/videos/CLAIM_BTN_Claimable-particles-default.webm"],["static-attr","preload",""],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","video",[]],["static-attr","class","eh-claim-button-animation-hover"],["static-attr","src","/fe/lol-event-hub/videos/CLAIM_BTN_Claimable-particles-hover.webm"],["static-attr","preload",""],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","video",[]],["static-attr","class","eh-claim-button-animation-active"],["static-attr","src","/fe/lol-event-hub/videos/CLAIM_BTN_Claimable-particles-pressed.webm"],["static-attr","preload",""],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","eh-claim-button-unclaimed-rewards-label"],["flush-element"],["text","\\n        "],["append",["unknown",["unclaimedRewards"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "J8JMYph5",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\progress-indicator.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\progress-indicator.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\progress-indicator.js\\" "],["text","\\n"],["block",["if"],[["get",["isSeasonPass"]]],null,10],["open-element","div",[]],["static-attr","class","eh-progress-indicator-text-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isSeasonPass"]]],null,9],["text","  "],["open-element","div",[]],["static-attr","class","eh-progress-indicator-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isPassCompleted"]]],null,8,7],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","eh-progress-info"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","info"]],4],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["append",["unknown",["progressInfoTooltipBodyTra"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["progressLockedTooltipBodyTra"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["progressInfoTooltipTitleTra"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","event_hub_progress_locked_tooltip_title"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-content-block",[]],["static-attr","class","eh-progress-info-tooltip"],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-progress-info-tooltip-title"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isGracePeriod"]]],null,3,2],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-progress-info-tooltip-body"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isGracePeriod"]]],null,1,0],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["flush-element"],["text","\\n            "],["append",["unknown",["currentProgressAmount"]],false],["text","\\n            /\\n            "],["append",["unknown",["totalProgressAmount"]],false],["text","\\n          "],["open-element","span",[]],["dynamic-attr","class",["helper",["if"],[["get",["isSeasonPass"]],"eh-progress-indicator-label","hol-progress-indicator-unit"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["progressUnit"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["tra","event_hub_progress_locked_tooltip_title"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isGracePeriod"]]],null,6,5]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["tra","event_hub_pass_complete"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","img",[]],["dynamic-attr","src",["unknown",["battleExpIconImageSrc"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","eh-xp-circle-radial"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-radial-progress",[]],["static-attr","class","eh-xp-circle-radial-component"],["static-attr","start-angle","270"],["static-attr","end-angle","-90"],["static-attr","type","custom"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","bottom"],["static-attr","class","bottom"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-xp-circle-radial-component-outer-ring"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","middle"],["static-attr","class","middle"],["dynamic-attr","percent",["unknown",["radialPercentage"]],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","middle"],["static-attr","class","middle eh-xp-circle-radial-component-remaining-xp"],["dynamic-attr","percent",["unknown",["remainingPercentage"]],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","top"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","eh-xp-circle-radial-component-label"],["flush-element"],["append",["unknown",["rewardTrackProgress","level"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "qY2yhc1N",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\lobby-button.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\lobby-button.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\lobby-button.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","eh-lobby-button_container"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openLobby"],null],null],["dynamic-attr","disabled",["unknown",["isPatcherBusy"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["isPatcherBusy"]]],null,1,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["tra","lobby_button_play"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["tra","lobby_button_client_patching"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "PztNuwfw",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\objective-card-wrapper.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\objective-card-wrapper.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\objective-card-wrapper.js\\" "],["text","\\n"],["block",["if"],[["get",["featuredMission"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","eh-objective-card-wrapper_container"],["modifier",["action"],[["get",[null]],"openObjectives"]],["flush-element"],["text","\\n    "],["append",["helper",["objectives-card-v2"],null,[["cardData","isNew","parentGroupId","isRewardFulfilled","isLOL","lolEventHubType"],[["get",["featuredMission"]],["get",["featuredMission","isNew"]],["get",["objective","objectiveGroup"]],["get",["featuredMission","isRewardFulfilled"]],true,["get",["eventHubType"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "wIH7Me5H",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\event-shop-card-multi-purchase-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\event-shop-card-multi-purchase-modal.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\event-shop-card-multi-purchase-modal.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-large"],["static-attr","class","event-shop-card-multi-purchase-content-block"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","event-shop-card-multi-purchase-modal-preview-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","event-shop-card-multi-purchase-modal-image-container"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","event-shop-card-multi-purchase-modal-image"],["dynamic-attr","src",["unknown",["offer","image"]],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","event-shop-card-multi-purchase-item-title"],["flush-element"],["append",["unknown",["offer","localizedTitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","event-shop-card-multi-purchase-item-details"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["offer","localizedDescription"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldRenderMultiPurchaseSlider"]]],null,3],["text","  "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["event-shop-card-multi-purchase-modal-digital-goods-disclaimer"]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","event-shop-card-multi-purchase-details"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-purchase-button",[]],["dynamic-attr","disabled",["unknown",["isPurchaseDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"purchaseOffer",["get",["offer"]]],null],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","event-shop-card-multi-purchase-currency-wrapper"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","event-shop-card-multi-purchase-currency-icon"],["dynamic-attr","src",["unknown",["tokenImageSrc"]],null],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["purchasePrice"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["notEnoughRp"]]],null,2],["block",["if"],[["get",["offerPurchased"]]],null,1],["text","    "],["open-element","div",[]],["static-attr","class","event-shop-card-multi-purchase-future-balance"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isPurchaseDisabled"]]],null,0],["text","    "],["close-element"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["unknown",["tra","event_hub_purchase_modal_balance"]],false],["text","\\n        "],["append",["unknown",["futureTokenBalance"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","event-shop-card-multi-purchase-not-enough-tokens"],["flush-element"],["append",["unknown",["tra","event_shop_card_purchase_offer_already_owned"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","event-shop-card-multi-purchase-not-enough-tokens"],["flush-element"],["append",["unknown",["tra","event_shop_card_purchase_not_enough_tokens"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["multi-purchase-slider"],null,[["min","max","onValidationChange","onSelectedQuantityChange","disabled"],[["get",["minPurchasableQuantity"]],["get",["maxPurchasableQuantity"]],["helper",["action"],[["get",[null]],"handleValidationChange"],null],["helper",["action"],[["get",[null]],"handleSelectedQuantityChange"],null],["get",["purchaseInProgress"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "mmggKpXu",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\event-shop-category-nav-bar-tab.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\event-shop-category-nav-bar-tab.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\event-shop-category-nav-bar-tab.js\\" "],["text","\\n"],["open-element","img",[]],["static-attr","class","event-shop-nav-bar-tab-icon"],["dynamic-attr","src",["unknown",["categoryIconPath"]],null],["flush-element"],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["right","system"]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["categoryTra"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "pPHjAUzb",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\event-shop-category-nav-bar.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\event-shop-category-nav-bar.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\event-shop-category-nav-bar.js\\" "],["text","\\n"],["block",["each"],[["get",["categoriesOffers"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["event-shop-category-nav-bar-tab"],null,[["scrollToCategory","category","categoryIconPath","currentCategory"],[["get",["scrollToCategory"]],["get",["categoryOffers","category"]],["get",["categoryOffers","categoryIconPath"]],["get",["currentCategory"]]]]],false],["text","\\n"]],"locals":["categoryOffers"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "yeEFD98j",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\event-shop-category-offers.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\event-shop-category-offers.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\event-shop-category-offers.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","id",["unknown",["categoryOffersId"]],null],["static-attr","class","event-shop-token-shop-category-offers"],["flush-element"],["text","\\n"],["block",["each"],[["get",["categoryOffers","offers"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["event-shop-offer-card"],null,[["offer"],[["get",["offer"]]]]],false],["text","\\n"]],"locals":["offer"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "Dq2ffvPr",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\event-shop-fallback.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\event-shop-fallback.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\event-shop-fallback.js\\" "],["text","\\n"],["block",["if"],[["get",["error","errorMessage"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","event-shop-spinner"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["width","height"],["40px","40px"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","event-shop-unavailable-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","event-shop-unavailable-error-image"],["static-attr","src","/fe/lol-static-assets/images/event-shop/icon-shocked-poro-clear.png"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","event-shop-unavailable-message"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","event-shop-unavailable-message-title"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","event-shop-unavailable-message-title-warning"],["static-attr","src","/fe/lol-static-assets/images/event-shop/red-warning.png"],["flush-element"],["close-element"],["append",["unknown",["errorMessageTra","title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","event-shop-unavailable-message-description"],["flush-element"],["text","\\n        "],["append",["unknown",["errorMessageTra","description"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "nWgZ0nU7",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\event-shop-main-view.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\event-shop-main-view.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\event-shop-main-view.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["event-shop-main-view-token-shop ",["helper",["if"],[["get",["isRewardTrackMinimized"]],"event-shop-main-view-token-shop-maximized",""],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["event-shop-token-shop"]],false],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["event-shop-main-view-progression ",["helper",["if"],[["get",["isRewardTrackMinimized"]],"event-shop-main-view-progression-minimized",""],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","event-shop-main-view-progression-minimize-button-container"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"minimizeRewardTrack"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","event-shop-main-view-progression-minimize-button-trapezoid-border"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","event-shop-main-view-progression-minimize-button-trapezoid"],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["event-shop-main-view-progression-minimize-button-chevron ",["helper",["if"],[["get",["isRewardTrackMinimized"]],"rotate-up",""],null]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["append",["helper",["event-shop-progression"],null,[["model"],[["get",["model"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "eyrrSRzg",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\event-shop-offer-card.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\event-shop-offer-card.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\event-shop-offer-card.js\\" "],["text","\\n"],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["offerImage"]]]]],["static-attr","class","event-shop-token-shop-offer-card-image"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","event-shop-token-shop-offer-card-footer"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","event-shop-token-shop-offer-card-title"],["flush-element"],["text","\\n    "],["append",["unknown",["offer","localizedTitle"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","event-shop-token-shop-offer-card-price"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isOfferOwned"]]],null,7,6],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldRenderOfferItemsCount"]]],null,2],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["displayMultiPurchaseModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["event-shop-card-multi-purchase-modal"],null,[["closeModal","offer"],[["helper",["action"],[["get",[null]],"closeModal"],null],["get",["offer"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["displayModal","type","dismissible","dismissibleType","onClose"],[["get",["displayMultiPurchaseModal"]],"DialogDismiss",true,"outside",["helper",["action"],[["get",[null]],"closeModal"],null]]],0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","event-shop-token-shop-offer-items-size"],["flush-element"],["text","\\n      "],["append",["unknown",["offer","items","length"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","event-shop-token-shop-offer-card-price-currency-icon"],["dynamic-attr","src",["unknown",["tokenShopData","tokenImage"]],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","event-shop-token-shop-offer-card-price-value"],["flush-element"],["append",["unknown",["offer","price"]],false],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isOfferRevealed"]]],null,3]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","event-shop-token-shop-offer-card-spinner"],["flush-element"],["text","\\n        "],["append",["helper",["uikit-spinner"],null,[["width","height"],["15px","15px"]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["append",["unknown",["tra","event_shop_offer_card_purchasing"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,5,4]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","event-shop-token-shop-offer-card-owned-icon"],["static-attr","src","/fe/lol-static-assets/images/event-shop/check_mask.png"],["flush-element"],["close-element"],["text","\\n      "],["append",["unknown",["tra","event_shop_offer_card_owned"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "+dLkMXbN",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\event-shop-progression.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\event-shop-progression.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\event-shop-progression.js\\" "],["text","\\n"],["block",["if"],[["get",["rewardTrackItems","length"]]],null,10,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","event-shop-progression-fallback"],["flush-element"],["text","\\n    "],["append",["helper",["event-shop-fallback"],null,[["error"],[["get",["failureLoadingRewardTrack"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","event-shop-progression-label-pass-message"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","event_shop_progression_label_pass_unavailable"]],false],["text","\\n        "],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","event-shop-progression-upgrade-button"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["static-attr","class","idle"],["modifier",["action"],[["get",[null]],"passPurchaseClick"]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","event-shop-progression-button-content"],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","event-shop-progression-ticket-icon"],["static-attr","src","/fe/lol-static-assets/images/event-shop/ticket-gold2.svg"],["flush-element"],["close-element"],["text","\\n              "],["append",["unknown",["tra","event_hub_purchase_pass"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["passAvailable"]]],null,2,1]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","event-shop-progression-label-pass-message"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","event_shop_progression_label_pass_loading"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["passLoading"]]],null,4,3]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","event-shop-progression-label-pass-message"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","event-shop-progression-check-icon"],["static-attr","src","/fe/lol-static-assets/images/event-shop/check_mask.png"],["flush-element"],["close-element"],["text","\\n          "],["append",["unknown",["tra","event_shop_progression_label_pass_purchased"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","event-shop-progression-label-wrapper"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","event-shop-progression-label"],["flush-element"],["append",["unknown",["tra","event_shop_progression_label_instantly_get"]],false],["close-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","event-shop-progression-token-icon"],["dynamic-attr","src",["unknown",["eventShopProgressionData","tokenImage"]],null],["flush-element"],["close-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","event-shop-progression-label-tokens"],["flush-element"],["append",["unknown",["lockedTokens"]],false],["text","\\n            "],["append",["unknown",["tra","event_shop_progression_label_tokens"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["lockedTokens"]]],null,7]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","event-shop-progression-unclaimed-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","event-shop-progression-unclaimed-box"],["flush-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["unclaimedRewards"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","event_shop_progression_label_unclaimed_rewards"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","event-shop-progression-info"],["flush-element"],["text","\\n    "],["append",["unknown",["event-shop-xp"]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","event-shop-progression-pass-purchase"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasUnclaimedRewards"]]],null,9,8],["block",["if"],[["get",["passPurchased"]]],null,6,5],["text","      "],["append",["helper",["purchase-bundles-modal"],null,[["showPurchaseModal"],[["get",["showPassPurchaseModal"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","event-shop-progression-track"],["flush-element"],["text","\\n    "],["append",["unknown",["event-shop-reward-track-wrapper"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "4i3OCZcs",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\event-shop-reward-track-wrapper.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\event-shop-reward-track-wrapper.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\event-shop-reward-track-wrapper.js\\" "],["text","\\n"],["block",["if"],[["get",["rewardTrackItems"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["reward-tracker"],null,[["rewardTrackItems","rewardTrackProgress","displayCurrentBonusIteration","rewardTrackBonusItems","rewardTrackBonusProgress","itemClick","bonusItemClick","trackerSize","useDefaultTooltipComponent","isDisabled","shouldScrollToUnclaimedReward","scrollingArrowsEnabled"],[["get",["rewardTrackItems"]],["get",["rewardTrackProgress"]],["get",["displayCurrentBonusIteration"]],["get",["rewardTrackBonusItems"]],["get",["rewardTrackBonusProgress"]],["helper",["action"],[["get",[null]],"clickItem"],null],["helper",["action"],[["get",[null]],"clickItem"],null],["get",["trackerSize"]],true,["get",["isGracePeriod"]],true,["get",["scrollingArrowsEnabled"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "9ep+D1eW",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\event-shop-token-shop.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\event-shop-token-shop.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\event-shop-token-shop.js\\" "],["text","\\n"],["block",["if"],[["get",["categoriesOffers","length"]]],null,2,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","event-shop-token-shop-section-header-title-text"],["flush-element"],["append",["unknown",["categoryOffers","categoryTitle"]],false],["close-element"],["text","\\n          "],["open-element","hr",[]],["static-attr","class","event-shop-token-shop-section-header-line"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["event-shop-category-offers"],null,[["categoryOffers","headerTxtObserver"],[["get",["categoryOffers"]],["get",["headerTxtObserver"]]]]],false],["text","\\n"]],"locals":["categoryOffers"]},{"statements":[["text","  "],["append",["helper",["event-shop-category-nav-bar"],null,[["currentCategory","categoriesOffers","scrollToCategory"],[["get",["currentCategory"]],["get",["categoriesOffers"]],["helper",["action"],[["get",[null]],"scrollToCategory"],null]]]],false],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","id","token-shop-scrollable-container"],["static-attr","class","event-shop-token-shop-scrollable-section"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","event-shop-token-shop-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","event-shop-token-shop-offers"],["flush-element"],["text","\\n"],["block",["each"],[["get",["categoriesOffers"]]],null,1],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "MZIRnBAU",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\event-shop-xp.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\event-shop-xp.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\event-shop-xp.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","event-shop-xp-header-pass-track"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","event_shop_xp_header_pass_track"]],false],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","event-shop-xp-vertical-divider"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["event-shop-xp-level-tooltip ",["helper",["if"],[["get",["rewardTrackXP","isBonusPhase"]],"is-completed"],null]]]],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],10],["text","  "],["open-element","div",[]],["static-attr","class","event-shop-xp-level"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isGracePeriod"]]],null,5,4],["text","  "],["close-element"],["text","\\n"],["block",["if"],[["get",["isGracePeriod"]]],null,1,0],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","event-shop-xp-vertical-divider"],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["event-shop-xp-label-xp-wrapper ",["helper",["if"],[["get",["xpOverflow"]]," xp-overflow"],null]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","event-shop-xp-label-xp"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","event-shop-xp-label-xp-current"],["flush-element"],["append",["unknown",["rewardTrackXP","currentLevelXP"]],false],["close-element"],["text","\\n         / \\n        "],["open-element","span",[]],["static-attr","class","event-shop-xp-label-xp-total"],["flush-element"],["text"," "],["append",["unknown",["rewardTrackXP","totalLevelXP"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","event-shop-xp-label-level-xp"],["flush-element"],["append",["unknown",["tra","event_hub_xp_label"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["event-shop-xp-label-xp-wrapper ",["helper",["if"],[["get",["hasUnclaimedRewards"]]," unclaimed"],null]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","event-shop-xp-label-xp"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","event-shop-xp-label-xp-current"],["flush-element"],["append",["unknown",["rewardTrackXP","currentLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","event-shop-xp-label-level-xp"],["flush-element"],["append",["unknown",["tra","event_shop_reward_description_level_completed"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","event-shop-xp-label-level"],["flush-element"],["text","\\n        "],["append",["unknown",["levelLabel"]],false],["text","\\n      "],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","event-shop-xp-repeat"],["flush-element"],["text","\\n        "],["open-element","svg",[]],["static-attr","class","event-shop-xp-repeat-icon"],["static-attr","viewBox","0 0 10 7"],["flush-element"],["text","\\n          "],["open-element","path",[]],["static-attr","class","event-shop-xp-repeat-icon-path"],["static-attr","fill-rule","evenodd"],["static-attr","clip-rule","evenodd"],["static-attr","d","M6.38908 1.77185V0.399902L3.9833 2.31037L6.38956 4.22084V2.85168C6.81026 2.85942 7.21055 3.02847 7.50237 3.32164C7.79419 3.61481 7.95364 4.00809 7.94565 4.41496C7.93765 4.82183 7.76286 5.20897 7.45972 5.4912C7.15659 5.77343 6.74995 5.92765 6.32925 5.91991H3.33337C2.91248 5.91991 2.50883 5.75821 2.21121 5.47037C1.9136 5.18254 1.7464 4.79215 1.7464 4.3851C1.7464 3.97804 1.9136 3.58765 2.21121 3.29982C2.50883 3.01199 2.91248 2.85028 3.33337 2.85028V1.77045C2.61636 1.77045 1.92872 2.04593 1.42171 2.53627C0.914713 3.02661 0.629883 3.69165 0.629883 4.3851C0.629883 5.07854 0.914713 5.74359 1.42171 6.23393C1.92872 6.72427 2.61636 6.99974 3.33337 6.99974H6.32925C6.68409 7.00357 7.03623 6.93977 7.36557 6.81198C7.69491 6.68419 7.995 6.49492 8.24871 6.25496C8.50242 6.01501 8.70477 5.72907 8.84422 5.41349C8.98367 5.0979 9.05748 4.75884 9.06144 4.41566C9.0654 4.07249 8.99943 3.73192 8.8673 3.4134C8.73517 3.09488 8.53947 2.80465 8.29136 2.55928C8.04325 2.31391 7.7476 2.1182 7.42129 1.98334C7.09498 1.84847 6.7444 1.77708 6.38956 1.77325L6.38908 1.77185Z"],["static-attr","fill","#5b5a56"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","event-shop-xp-iteration"],["flush-element"],["text","\\n          "],["append",["unknown",["rewardTrackXP","iteration"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","event-shop-xp-vertical-divider"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","event-shop-xp-label-level"],["flush-element"],["text","\\n        "],["append",["unknown",["levelLabel"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["rewardTrackXP","isBonusPhase"]]],null,3,2]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","event-shop-xp-label-progress-locked"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","event_shop_xp_label_level_progress_locked"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","event-shop-progression-tooltip-block"],["flush-element"],["text","\\n          "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","event_shop_xp_label_event_xp"]],false],["close-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","event_shop_xp_tooltip_complete_top"]],false],["open-element","br",[]],["flush-element"],["close-element"],["append",["unknown",["tra","event_shop_xp_tooltip_complete_bottom"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","event-shop-progression-tooltip-block-repeat"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","event-shop-xp-tooltip-block-description"],["flush-element"],["text","\\n            "],["open-element","h5",[]],["static-attr","class","event-shop-xp-tooltip-block-description-header"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","event_shop_xp_tooltip_looping_description_header"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","p",[]],["static-attr","class","event-shop-xp-tooltip-block-description-content"],["flush-element"],["text","\\n              "],["append",["helper",["sanitize"],[["get",["tra","event_shop_xp_tooltip_looping_description_content$html"]]],null],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","event-shop-xp-vertical-divider"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","event-shop-progression-tooltip-block-loop"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","event-shop-xp-tooltip-repeat"],["flush-element"],["text","\\n              "],["open-element","svg",[]],["static-attr","class","event-shop-xp-tooltip-repeat-icon"],["static-attr","viewBox","0 0 10 7"],["flush-element"],["text","\\n                "],["open-element","path",[]],["static-attr","class","event-shop-xp-repeat-icon-path"],["static-attr","fill-rule","evenodd"],["static-attr","clip-rule","evenodd"],["static-attr","d","M6.38908 1.77185V0.399902L3.9833 2.31037L6.38956 4.22084V2.85168C6.81026 2.85942 7.21055 3.02847 7.50237 3.32164C7.79419 3.61481 7.95364 4.00809 7.94565 4.41496C7.93765 4.82183 7.76286 5.20897 7.45972 5.4912C7.15659 5.77343 6.74995 5.92765 6.32925 5.91991H3.33337C2.91248 5.91991 2.50883 5.75821 2.21121 5.47037C1.9136 5.18254 1.7464 4.79215 1.7464 4.3851C1.7464 3.97804 1.9136 3.58765 2.21121 3.29982C2.50883 3.01199 2.91248 2.85028 3.33337 2.85028V1.77045C2.61636 1.77045 1.92872 2.04593 1.42171 2.53627C0.914713 3.02661 0.629883 3.69165 0.629883 4.3851C0.629883 5.07854 0.914713 5.74359 1.42171 6.23393C1.92872 6.72427 2.61636 6.99974 3.33337 6.99974H6.32925C6.68409 7.00357 7.03623 6.93977 7.36557 6.81198C7.69491 6.68419 7.995 6.49492 8.24871 6.25496C8.50242 6.01501 8.70477 5.72907 8.84422 5.41349C8.98367 5.0979 9.05748 4.75884 9.06144 4.41566C9.0654 4.07249 8.99943 3.73192 8.8673 3.4134C8.73517 3.09488 8.53947 2.80465 8.29136 2.55928C8.04325 2.31391 7.7476 2.1182 7.42129 1.98334C7.09498 1.84847 6.7444 1.77708 6.38956 1.77325L6.38908 1.77185Z"],["static-attr","fill","#5b5a56"],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","event-shop-xp-iteration"],["flush-element"],["text","\\n                "],["append",["unknown",["rewardTrackXP","iteration"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","event_shop_xp_tooltip_looping_loop_header"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","event-shop-xp-horizontal-divider"],["flush-element"],["close-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["completedLoops"]],false],["text"," "],["append",["unknown",["tra","event_shop_xp_tooltip_looping_loop_footer"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["rewardTrackXP","isBonusPhase"]]],null,7,6]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","event-shop-progression-tooltip-block"],["flush-element"],["text","\\n          "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","event_shop_xp_label_level_progress_locked"]],false],["close-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["tra","event_shop_xp_tooltip_progress_locked_description"]]],null],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","class","event-shop-xp-tooltip-content"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isGracePeriod"]]],null,9,8],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "1v7aiPW8",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\hol-level-icon-flames.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\hol-level-icon-flames.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\hol-level-icon-flames.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["reward-level-icon-flames ",["unknown",["iconCursorClass"]]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["animationsEnabled"]]],null,1,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","svg",[]],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["static-attr","width","32"],["static-attr","height","33"],["static-attr","viewBox","0 0 32 33"],["static-attr","fill","none"],["flush-element"],["text","\\n      "],["open-element","path",[]],["static-attr","d","M25.7129 18.1384C25.6949 18.0782 25.6409 18.0391 25.5809 18.0331C25.518 18.0271 25.461 18.0632 25.434 18.1173C24.9031 19.224 23.6854 19.8404 22.6596 19.9066C23.3075 19.1488 23.5804 17.8677 23.3915 16.3852C23.1545 14.5297 22.0718 11.9796 19.7863 10.9C16.4211 9.31224 15.3354 7.8327 15.3084 4.81648C15.3084 4.75333 15.2664 4.69619 15.2094 4.67514C15.1494 4.65409 15.0835 4.67514 15.0445 4.72325C12.1352 8.2928 12.888 10.04 13.5508 11.5827C13.6918 11.9105 13.8268 12.2232 13.9197 12.542C14.1837 13.4351 14.0037 14.4004 13.4429 15.1312C12.987 15.7236 12.3511 16.0484 11.6973 16.0303C11.2804 16.0153 10.9954 15.889 10.8305 15.6394C10.5066 15.1492 10.6235 14.1568 11.1814 12.6863C11.2054 12.6262 11.1874 12.56 11.1394 12.5179C11.0914 12.4758 11.0224 12.4698 10.9684 12.5029C6.9884 14.7914 6.89242 19.1939 7.03639 20.9802C7.15036 22.4026 8.69199 25.8188 11.7693 27.587C14.3516 29.0725 18.1367 28.6816 19.1085 28.4049C25.0501 26.7179 26.7597 21.4794 25.7099 18.1384H25.7129ZM17.135 21.338C18.5296 21.6748 19.4864 22.6041 19.5704 23.7077C19.6484 24.7271 18.9795 25.6263 17.7828 26.1135C16.4631 26.6517 13.7248 26.1074 12.3091 24.6279C11.6523 23.9423 11.3494 23.1484 11.4063 22.2703C11.5053 20.7486 12.657 19.0646 14.8345 17.2573C14.6006 18.9263 14.5016 20.7035 17.138 21.338H17.135Z"],["dynamic-attr","fill",["concat",["url(#paint0_linear_4086_42312",["unknown",["itemIndex"]],")"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","defs",[]],["flush-element"],["text","\\n        "],["open-element","linearGradient",[]],["dynamic-attr","id",["concat",["paint0_linear_4086_42312",["unknown",["itemIndex"]]]]],["static-attr","x1","16.5"],["static-attr","y1","28.667"],["static-attr","x2","16.5"],["static-attr","y2","4.66699"],["static-attr","gradientUnits","userSpaceOnUse"],["flush-element"],["text","\\n          "],["open-element","stop",[]],["dynamic-attr","class",["concat",["reward-level-icon-flames-gradient-start reward-level-flames-state-",["unknown",["stateClass"]]," ",["unknown",["levelClass"]]]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","stop",[]],["static-attr","offset","1"],["dynamic-attr","class",["concat",["reward-level-icon-flames-gradient-finish reward-level-flames-state-",["unknown",["stateClass"]]," ",["unknown",["levelClass"]]]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","reward-level-icon-flames-animations"],["flush-element"],["text","\\n      "],["open-element","video",[]],["static-attr","class","reward-level-icon-flames-animation reward-level-icon-flames-animation-idle"],["dynamic-attr","src",["unknown",["animationIdleSrc"]],null],["static-attr","loop",""],["static-attr","autoplay",""],["static-attr","muted",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","video",[]],["static-attr","class","reward-level-icon-flames-animation reward-level-icon-flames-animation-hover"],["dynamic-attr","src",["unknown",["animationHoverSrc"]],null],["static-attr","loop",""],["static-attr","autoplay",""],["static-attr","muted",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","video",[]],["static-attr","class","reward-level-icon-flames-animation reward-level-icon-flames-animation-click"],["dynamic-attr","src",["unknown",["animationClickSrc"]],null],["static-attr","loop",""],["static-attr","autoplay",""],["static-attr","muted",""],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "xLLmkBVj",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\hol-narrative.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\hol-narrative.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\hol-narrative.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","hol-narrative-title"],["flush-element"],["append",["unknown",["narrativeTitle"]],false],["close-element"],["text","\\n\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","hol-narrative-description"],["dynamic-attr","overflow-masks",["helper",["if"],[["get",["descriptionTextElementAdditionalClass"]],"enabled","disabled"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","id","hol-narrative-description-text"],["dynamic-attr","class",["concat",["hol-narrative-description-text ",["unknown",["descriptionTextElementAdditionalClass"]]]]],["flush-element"],["text","\\n    "],["append",["unknown",["narrativeDescription"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showPlayNarrativeVideoButton"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","hol-narrative-video-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"playNarrativeButtonClick"],null],null],["dynamic-attr","disabled",["unknown",["playButtonDisabled"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hol-narrative-video-button-content"],["flush-element"],["text","\\n      "],["append",["unknown",["playNarrativeButtonLabel"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "bo4sKE/N",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\hol-promotion-banner.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\hol-promotion-banner.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\hol-promotion-banner.js\\" "],["text","\\n"],["block",["if"],[["get",["showBanner"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","img",[]],["static-attr","class","hol-promotion-banner-img"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"bannerClick"],null],null],["dynamic-attr","src",["unknown",["promotionBannerImgSrc"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "ZWH5oLYZ",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\season-pass-chapter-card.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\season-pass-chapter-card.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\season-pass-chapter-card.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["season-pass-chapter-card-wrapper season-pass-chapter-card-wrapper-",["unknown",["chapterStatus"]]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","season-pass-chapter-card-image"],["dynamic-attr","style",["unknown",["cardImageStyle"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["season-pass-card-gradient season-pass-card-gradient-",["unknown",["chapterStatus"]]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-pass-card-footer"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","season-pass-card-footer-line"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-pass-card-roman-numeral"],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","season-pass-card-roman-numeral-container"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["hasCompletedChapter"]]],null,9,8],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","season-pass-card-footer-line"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowActiveGlow"]]],null,5],["block",["if"],[["get",["isUpcomingChapterHovered"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","img",[]],["static-attr","src","/fe/lol-event-hub/images/season-pass-overview-upcoming-chapter-hover-low-spec.png"],["static-attr","class","season-pass-chapter-card-overlay"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","video",[]],["static-attr","class","season-pass-chapter-card-overlay"],["static-attr","src","/fe/lol-event-hub/videos/season-pass-overview-upcoming-chapter-hover.webm"],["static-attr","preload",""],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["animationsEnabled"]]],null,1,0]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","src","/fe/lol-event-hub/images/season-pass-overview-active-chapter-low-spec.png"],["static-attr","class","season-pass-chapter-card-overlay"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","video",[]],["static-attr","class","season-pass-chapter-card-overlay"],["static-attr","src","/fe/lol-event-hub/videos/season_pass_overview_active_chapter.webm"],["static-attr","preload",""],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["animationsEnabled"]]],null,4,3]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["romanNumeral"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","svg",[]],["static-attr","viewBox","0 0 10 7"],["static-attr","class","season-pass-chapter-card-loop"],["flush-element"],["text","\\n                "],["open-element","path",[]],["static-attr","fill-rule","evenodd"],["static-attr","clip-rule","evenodd"],["static-attr","d","M6.38908 1.77185V0.399902L3.9833 2.31037L6.38956 4.22084V2.85168C6.81026 2.85942 7.21055 3.02847 7.50237 3.32164C7.79419 3.61481 7.95364 4.00809 7.94565 4.41496C7.93765 4.82183 7.76286 5.20897 7.45972 5.4912C7.15659 5.77343 6.74995 5.92765 6.32925 5.91991H3.33337C2.91248 5.91991 2.50883 5.75821 2.21121 5.47037C1.9136 5.18254 1.7464 4.79215 1.7464 4.3851C1.7464 3.97804 1.9136 3.58765 2.21121 3.29982C2.50883 3.01199 2.91248 2.85028 3.33337 2.85028V1.77045C2.61636 1.77045 1.92872 2.04593 1.42171 2.53627C0.914713 3.02661 0.629883 3.69165 0.629883 4.3851C0.629883 5.07854 0.914713 5.74359 1.42171 6.23393C1.92872 6.72427 2.61636 6.99974 3.33337 6.99974H6.32925C6.68409 7.00357 7.03623 6.93977 7.36557 6.81198C7.69491 6.68419 7.995 6.49492 8.24871 6.25496C8.50242 6.01501 8.70477 5.72907 8.84422 5.41349C8.98367 5.0979 9.05748 4.75884 9.06144 4.41566C9.0654 4.07249 8.99943 3.73192 8.8673 3.4134C8.73517 3.09488 8.53947 2.80465 8.29136 2.55928C8.04325 2.31391 7.7476 2.1182 7.42129 1.98334C7.09498 1.84847 6.7444 1.77708 6.38956 1.77325L6.38908 1.77185Z"],["static-attr","fill","#b2d9db"],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isLastChapterAndCompletedAll"]]],null,7,6]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","season-pass-card-checkmark"],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","src","/fe/lol-event-hub/images/checkmark-II.svg"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "TeXP4o3N",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\season-pass-overview.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\season-pass-overview.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\season-pass-overview.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","season-pass-chapter-info"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","season-pass-chapter-title-text"],["flush-element"],["append",["unknown",["chapterInView","localizedTitle"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","season-pass-chapters-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["chapters"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["season-pass-chapter-card"],null,[["index","onSelectChapter","onMouseOverCard"],[["get",["index"]],["helper",["action"],[["get",[null]],"onSelectChapter"],null],["helper",["action"],[["get",[null]],"onMouseOverCard"],null]]]],false],["text","\\n"]],"locals":["chapter","index"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const a = n(1).Ember;
-            e.exports = a.HTMLBars.template({
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
                 id: "fRAik2Z5",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\season-pass-track.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\season-pass-track.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\season-pass-track.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","season-pass-track-root"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","season-pass-track-content-shroud"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","season-pass-track-reward-framing-root"],["dynamic-attr","style",["unknown",["framingStyle"]],null],["flush-element"],["text","\\n      "],["open-element","video",[]],["static-attr","id","season-pass-track-reward-framing-intro-animation"],["static-attr","class","season-pass-track-reward-framing-intro-animation"],["static-attr","src","/fe/lol-event-hub/videos/season-pass-reward-hextech-intro.webm"],["static-attr","autoplay",""],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","id","season-pass-track-reward-framing"],["static-attr","class","season-pass-track-reward-framing"],["flush-element"],["text","\\n"],["block",["if"],[["get",["animationsEnabled"]]],null,3,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["rewardTrackItems"]]],null,1,0],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","season-pass-track-reward-highlight"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["selectedRewardImage"]]]]],["dynamic-attr","class",["concat",[["unknown",["selectedRewardImageClass"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","season-pass-track-center-area"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-pass-track-center-area-right-column"],["flush-element"],["text","\\n          "],["append",["helper",["reward-details"],null,[["selectedReward","selectedChapter","rarityId"],[["get",["selectedReward"]],["get",["selectedChapter"]],["get",["rarityId"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-pass-track-reward-track"],["flush-element"],["text","\\n        "],["append",["helper",["reward-tracker"],null,[["rewardTrackItems","rewardTrackProgress","trackerSize","displayCurrentBonusIteration","rewardsInViewChanged","itemClick","bonusItemClick","isBorderlessTrack","isSparseTrack","scrollingArrowsEnabled","disableScrolling","selectedItemThreshold","disableAnimations","focusOnLevel","rewardTrackBonusItems","rewardTrackBonusProgress","mouseScrollEnabled"],[["get",["rewardTrackItems"]],["get",["rewardTrackProgress"]],["get",["trackerSize"]],true,["helper",["action"],[["get",[null]],"rewardsInViewChanged"],null],["helper",["action"],[["get",[null]],"rewardItemClick"],null],["helper",["action"],[["get",[null]],"rewardItemClick"],null],true,true,true,["get",["scrollInProgress"]],["get",["selectedReward","item","threshold"]],["get",["disableRewardTrackerAnimations"]],["get",["levelFocus"]],["get",["rewardTrackBonusItems"]],["get",["rewardTrackBonusProgress"]],false]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","id","season-pass-track-reward-framing-full-image"],["static-attr","class","season-pass-track-reward-framing-full-image"],["static-attr","src","/fe/lol-event-hub/images/hol-reward-framing.png"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","video",[]],["static-attr","id","season-pass-track-reward-framing-outer-animation"],["static-attr","class","season-pass-track-reward-framing-animation"],["static-attr","src","/fe/lol-event-hub/videos/season-pass-reward-hextech-reset.webm"],["static-attr","autoplay",""],["flush-element"],["close-element"],["text","\\n          "],["open-element","video",[]],["static-attr","id","season-pass-track-reward-framing-rotating-animation"],["static-attr","class","season-pass-track-reward-framing-animation"],["static-attr","src","/fe/lol-event-hub/videos/season-pass-reward-hextech-ring-rotation.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
@@ -5294,13 +5311,13 @@
         }],
         t = {};
 
-    function n(a) {
-        var s = t[a];
-        if (void 0 !== s) return s.exports;
-        var l = t[a] = {
+    function n(s) {
+        var a = t[s];
+        if (void 0 !== a) return a.exports;
+        var l = t[s] = {
             exports: {}
         };
-        return e[a](l, l.exports, n), l.exports
+        return e[s](l, l.exports, n), l.exports
     }
     n.g = function() {
         if ("object" == typeof globalThis) return globalThis;
@@ -5320,20 +5337,20 @@
         var e, t = (e = n(1)) && e.__esModule ? e : {
             default: e
         };
-        const a = "rcp-fe-lol-event-hub",
-            s = window.testsSandboxDoc || document.currentScript.ownerDocument;
-        const l = window.getPluginAnnounceEventName(a);
-        s.addEventListener(l, (function(e) {
+        const s = "rcp-fe-lol-event-hub",
+            a = window.testsSandboxDoc || document.currentScript.ownerDocument;
+        const l = window.getPluginAnnounceEventName(s);
+        a.addEventListener(l, (function(e) {
             (0, e.registrationHandler)((e => t.default.init(e, {
                 ComponentFactory: e => e.get("rcp-fe-common-libs").getComponentFactory(),
                 Telemetry: e => e.get("rcp-fe-common-libs").getTelemetry(),
-                dataBinding: e => e.get("rcp-fe-common-libs").getDataBinding(a),
+                dataBinding: e => e.get("rcp-fe-common-libs").getDataBinding(s),
                 datadogRum: e => e.get("rcp-fe-common-libs").getDatadogRum(),
                 EmberAddons: e => e.get("rcp-fe-ember-libs").getSharedEmberAddons(),
                 Ember: e => e.get("rcp-fe-ember-libs").getEmber(),
                 emberL10n: e => e.get("rcp-fe-ember-libs").getEmberL10n(),
                 FullPageModalManager: e => e.get("rcp-fe-lol-shared-components").getApi_fullPageModalManager(),
-                logger: e => e.get("rcp-fe-common-libs").logging.create(a),
+                logger: e => e.get("rcp-fe-common-libs").logging.create(s),
                 UIKit: e => e.get("rcp-fe-lol-uikit"),
                 AudioPlugin: e => e.get("rcp-fe-audio"),
                 Navigation: e => e.get("rcp-fe-lol-navigation"),
@@ -5352,15 +5369,15 @@
                 RarityManager: e => e.get("rcp-fe-common-libs").rarityManager
             }).then((() => {
                 const n = e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-shared-components/trans-digital-goods-disclaimer.json").overlay("/fe/lol-loot/trans.json").overlay("/fe/lol-event-hub/trans.json").overlay("/fe/lol-objectives/trans.json"),
-                    a = t.default.emberL10n(t.default.Ember, n),
-                    s = t.default.Ember.Object.create({
+                    s = t.default.emberL10n(t.default.Ember, n),
+                    a = t.default.Ember.Object.create({
                         isVisible: !1
                     });
                 return t.default.add({
                     emberApplicationFactory: e.get("rcp-fe-ember-libs").getEmberApplicationFactory(),
-                    externalModel: s,
+                    externalModel: a,
                     tra: n,
-                    traService: a
+                    traService: s
                 })
             })).then((() => (0, n(2).default)()))))
         }), {

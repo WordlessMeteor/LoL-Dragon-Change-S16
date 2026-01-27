@@ -424,7 +424,7 @@
                     if (e || (e = {}), e.initialSelectedLootItem) return this.navigateTo(i.ROUTES.LOOT, e);
                     if (e.initialBannerId) {
                         const t = await this._isNewSanctumEnabled() ? i.ROUTES.SANCTUM : i.ROUTES.MOON_SKIN;
-                        return e.page = t, this.navigateTo(t, e)
+                        return e.page = t, await this._setAndAwaitData(), this.navigateTo(t, e)
                     }
                     return await this._setAndAwaitData(), e.selectedRoute ? this.navigateTo(e.selectedRoute, e) : this.navigateTo(i.ROUTES.INDEX, e)
                 }
@@ -492,9 +492,9 @@
                 return this._getWatchedSanctumBannerVideos(this.lootSettings).has(e)
             }.bind(c), c._getWatchedSanctumBannerVideos = function() {
                 return new Set(this.lootSettings?.data?.watchedSanctumBannerVideos || [])
-            }.bind(c), c._setAndAwaitData = function() {
+            }.bind(c), c._setAndAwaitData = async function() {
                 let e;
-                e = this._isNewSanctumEnabled() ? o.db.get(l.SANCTUM_API_PATHS.BANNERS).then((e => {
+                e = await this._isNewSanctumEnabled() ? o.db.get(l.SANCTUM_API_PATHS.BANNERS).then((e => {
                     e.sort(((e, t) => t.startDate - e.startDate)), this.banners = e
                 })) : o.db.get(a.MOON_SKIN_API_PATHS.BANNERS_PATH).then((e => {
                     e.sort(((e, t) => t.startDate - e.startDate)), this.banners = e
@@ -736,6 +736,7 @@
                 sanctumService: o.Ember.inject.service("sanctum"),
                 initialBannerId: "",
                 isInitialBannerSelectionPending: !1,
+                hasPlayedInitialIntroVideo: !1,
                 btnClickSfxPath: i.SFX.DEFAULT_BUTTON_CLICK_SFX,
                 currencyName: o.Ember.computed.alias("tra.banner_about_ancient_spark_title"),
                 currencyType: s.CURRENCY_TYPES.ANCIENT_SPARK,
@@ -799,11 +800,15 @@
                     })), o.TelemetryService.startTelemetryTimerEvent(l.TELEMETRY_EVENT_NAMES.MOON_SKIN_ROOT_TIMESPENT)
                 },
                 didInsertElement() {
-                    this._super(...arguments), this.addObserver("selectedBanner", this, "_initializeBannerAnimations"), this.addObserver("motionEffectsDisabled", this, "_initializeBannerAnimations"), this.addObserver("sanctumService.activeBanners", this, "_handleInitialBannerSelection")
+                    this._super(...arguments), this.addObserver("selectedBanner", this, "_initializeBannerAnimations"), this.addObserver("selectedBanner", this, "_playInitialIntroVideo"), this.addObserver("motionEffectsDisabled", this, "_initializeBannerAnimations"), this.addObserver("sanctumService.activeBanners", this, "_handleInitialBannerSelection")
                 },
                 noActiveBanners: o.Ember.computed("sanctumService.activeBanners", (function() {
                     return 0 === this.get("sanctumService.activeBanners")?.length
                 })),
+                _playInitialIntroVideo() {
+                    const e = this.get("selectedBanner");
+                    e && !this.get("hasPlayedInitialIntroVideo") && (this.set("hasPlayedInitialIntroVideo", !0), o.LootApi.playUnwatchedBannerVideoByBannerId(e.id))
+                },
                 _initializeBannerAnimations() {
                     this.get("selectedBanner") && o.Ember.run.scheduleOnce("afterRender", this, (function() {
                         if (this.get("hasForegroundAnimation")) {
@@ -2369,7 +2374,7 @@
                     })), o.TelemetryService.startTelemetryTimerEvent(i.TELEMETRY_EVENTS.eventName.MOON_SKIN_ROOT_TIMESPENT)
                 },
                 didInsertElement() {
-                    this._super(...arguments), this.addObserver("activeBanner", this, "_initializeParallax"), this.addObserver("motionEffectsDisabled", this, "_initializeParallax"), this.addObserver("moonSkinService.activeBanners", this, "_handleInitialBannerSelection")
+                    this._super(...arguments), this.addObserver("activeBanner", this, "_initializeParallax"), this.addObserver("activeBanner", this, "_playInitialIntroVideo"), this.addObserver("motionEffectsDisabled", this, "_initializeParallax"), this.addObserver("moonSkinService.activeBanners", this, "_handleInitialBannerSelection")
                 },
                 noActiveBanners: o.Ember.computed("moonSkinService.activeBanners", (function() {
                     return 0 === this.get("moonSkinService.activeBanners")?.length

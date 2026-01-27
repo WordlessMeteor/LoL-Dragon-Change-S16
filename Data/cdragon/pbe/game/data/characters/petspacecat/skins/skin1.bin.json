@@ -50,7 +50,7 @@
             "submeshRenderOrder": "BodyBase Face_Base Shawls Armor_Skin Face__Grimace Face_laughter Face_Confidence Face_Evil Mouth_Evil Mouth_Laughter Mouth_Grimace Mouth_Charm Mouth_Base Face_Light4 Face_Light2 Face_Light1 BodySkin Stars Face_Charm",
             "materialOverride": [
                 {
-                    "Material": "{31c02a83}",
+                    "Material": "Characters/PetSpaceCat/Skins/Skin1/Materials/PetSpaceCat_Matcap_base",
                     "submesh": "BodyBase",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -87,7 +87,7 @@
         "mResourceResolver": "{89826979}",
         "__type": "SkinCharacterDataProperties"
     },
-    "{31c02a83}": {
+    "Characters/PetSpaceCat/Skins/Skin1/Materials/PetSpaceCat_Matcap_base": {
         "name": "Characters/PetSpaceCat/Skins/Skin1/Materials/PetSpaceCat_Matcap_base",
         "samplerValues": [
             {
@@ -224,7 +224,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{70f8962a}": {
+    "Characters/PetSpaceCat/Skins/Skin1/Particles/PetSpaceCat_Skin1_Emote_Dance_Sky01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1970,7 +1970,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{b4c83342}": {
+    "Characters/PetSpaceCat/Skins/Skin1/Particles/PetSpaceCat_Skin1_Emote_Taunt_Flashes_Parent": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2002,7 +2002,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{2c44b7a8}",
+                            "effectKey": "PetSpaceCat_Emote_Taunt_Flashes_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -2147,7 +2147,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{2c44b7a8}",
+                            "effectKey": "PetSpaceCat_Emote_Taunt_Flashes_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -2297,7 +2297,8 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "Bodybase"
+                            "Bodybase",
+                            "{6488c908}"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -2435,7 +2436,8 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "Bodybase"
+                            "Bodybase",
+                            "{6488c908}"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -2825,7 +2827,7 @@
         "particlePath": "Characters/PetSpaceCat/Skins/Skin1/Particles/PetSpaceCat_Skin1_Emote_Taunt_Flashes_Parent",
         "__type": "VfxSystemDefinitionData"
     },
-    "{dc093ff6}": {
+    "Characters/PetSpaceCat/Skins/Skin1/Particles/PetSpaceCat_Skin1_Emote_Laugh_Fire": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7254,7 +7256,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{1f31434c}",
+                            "effectKey": "PetSpaceCat_Emote_Laugh_TrailChild",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -8032,7 +8034,7 @@
         "particlePath": "Characters/PetSpaceCat/Skins/Skin1/Particles/PetSpaceCat_Skin1_Emote_Laugh_Fire",
         "__type": "VfxSystemDefinitionData"
     },
-    "{f2c3e4cf}": {
+    "Characters/PetSpaceCat/Skins/Skin1/Particles/PetSpaceCat_Skin1_Emote_Idle_Stop": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -8664,35 +8666,35 @@
     },
     "{89826979}": {
         "resourceMap": {
-            "{b2d88174}": "{c715019b}",
-            "{d4efbb9a}": "{e1bee4b9}",
-            "{f80049d7}": "{f2c3e4cf}",
-            "{841b8e1b}": "{d3e311ce}",
-            "{d9e65f1f}": "{12d739da}",
-            "{5c292f5a}": "{bfcfb167}",
-            "{688382b0}": "{88ac18b5}",
-            "{44f44af2}": "{70f8962a}",
-            "{1d67d356}": "{14bb3387}",
-            "{2c44b7a8}": "{ace0c623}",
-            "{2a0c983a}": "{b4c83342}",
-            "{dd8c2517}": "{c0fa8774}",
-            "{19257eae}": "{65195267}",
-            "{68d74934}": "{65202c25}",
-            "{3be5ed80}": "{c1f719e5}",
-            "{31f47986}": "{505362c7}",
-            "{b33727dd}": "{89b45b04}",
-            "{1b9918d3}": "{8965cd40}",
-            "{a1638539}": "{04b18338}",
-            "{a06383a6}": "{05b184cb}",
-            "{b237264a}": "{8ab45c97}",
-            "{f521295a}": "{735e5f07}",
-            "{70b52a7c}": "{59224efb}",
-            "{f7dadca0}": "{836e50f5}",
-            "{3ace58ce}": "{dc093ff6}",
-            "{e4e18b3c}": "{7e437a13}",
-            "{1f31434c}": "{b9fb3611}",
-            "{32f47b19}": "{4f536134}",
-            "{c4886655}": "{641ea95a}"
+            "PetSpaceCat_Emote_Trail": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Trail",
+            "PetSpaceCat_Emote_Trail02": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Trail02",
+            "PetSpaceCat_Emote_Idle_Stop": "Characters/PetSpaceCat/Skins/Skin1/Particles/PetSpaceCat_Skin1_Emote_Idle_Stop",
+            "PetSpaceCat_Emote_Joke_Mis": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Joke_Mis",
+            "PetSpaceCat_Emote_Joke_Tar": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Joke_Tar",
+            "PetSpaceCat_Emote_Laugh_Ground01": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Laugh_Ground01",
+            "PetSpaceCat_Emote_Dance_Ground01": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Dance_Ground01",
+            "PetSpaceCat_Emote_Dance_Sky01": "Characters/PetSpaceCat/Skins/Skin1/Particles/PetSpaceCat_Skin1_Emote_Dance_Sky01",
+            "PetSpaceCat_Emote_Taunt_Carpet": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Taunt_Carpet",
+            "PetSpaceCat_Emote_Taunt_Flashes_Child": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Taunt_Flashes_Child",
+            "PetSpaceCat_Emote_Taunt_Flashes_Parent": "Characters/PetSpaceCat/Skins/Skin1/Particles/PetSpaceCat_Skin1_Emote_Taunt_Flashes_Parent",
+            "PetSpaceCat_Emote_Dance_Revolve": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Dance_Revolve",
+            "PetSpaceCat_Emote_Dance_Bady": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Dance_Bady",
+            "PetSpaceCat_Emote_Dance_Circle": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Dance_Circle",
+            "PetSpaceCat_Emote_Dance_Firework_Child": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Dance_Firework_Child",
+            "PetSpaceCat_Emote_Dance_Firework_Child02": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Dance_Firework_Child02",
+            "PetSpaceCat_Emote_Joke_Tar02": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Joke_Tar02",
+            "PetSpaceCat_Emote_Taunt_light": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Taunt_light",
+            "PetSpaceCat_Emote_Joke_Mis02": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Joke_Mis02",
+            "PetSpaceCat_Emote_Joke_Mis03": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Joke_Mis03",
+            "PetSpaceCat_Emote_Joke_Tar03": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Joke_Tar03",
+            "PetSpaceCat_Emote_Dance_Circle02": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Dance_Circle02",
+            "PetSpaceCat_Emote_Joke_Body": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Joke_Body",
+            "PetSpaceCat_Emote_Laugh_DJ": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Laugh_DJ",
+            "PetSpaceCat_Emote_Laugh_Fire": "Characters/PetSpaceCat/Skins/Skin1/Particles/PetSpaceCat_Skin1_Emote_Laugh_Fire",
+            "PetSpaceCat_Emote_Dance_Spotlight": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Dance_Spotlight",
+            "PetSpaceCat_Emote_Laugh_TrailChild": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Laugh_TrailChild",
+            "PetSpaceCat_Emote_Dance_Firework_Child03": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Dance_Firework_Child03",
+            "PetSpaceCat_Emote_Joke_Ground_Smoke": "Characters/PetSpaceCat/Themes/Base/Root/Particles/PetSpaceCat_Base_Emote_Joke_Ground_Smoke"
         },
         "__type": "ResourceResolver"
     },

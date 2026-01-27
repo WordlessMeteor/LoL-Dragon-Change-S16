@@ -2528,6 +2528,65 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "ScrollSpeedBlend",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "__type": "IsDeadDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "value": [
+                                -0.019999999552965164,
+                                -0.6000000238418579,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "Float4LiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "ScrollSpeedBase",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "__type": "IsDeadDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "value": [
+                                -0.009999999776482582,
+                                -0.20000000298023224,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "Float4LiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Lillia/Skins/Skin51/Materials/Lillia_Skin51_Ribbon_Scroll_inst": {
@@ -45445,6 +45504,7 @@
                     ],
                     "__type": "VfxReflectionDefinitionData"
                 },
+                "{cb13aff1}": -60.0,
                 "disableBackfaceCull": true,
                 "isUniformScale": 1,
                 "isRotationEnabled": 1,
@@ -45513,6 +45573,7 @@
                     ],
                     "__type": "VfxReflectionDefinitionData"
                 },
+                "{cb13aff1}": -60.0,
                 "disableBackfaceCull": true,
                 "isUniformScale": 1,
                 "isRotationEnabled": 1,
@@ -55119,7 +55180,7 @@
             },
             {
                 "rate": {
-                    "constantValue": 10.0,
+                    "constantValue": 20.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
@@ -55291,50 +55352,11 @@
                     "__type": "ValueVector3"
                 },
                 "blendMode": 1,
-                "birthColor": {
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.5,
-                                    1.0
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
                 "Color": {
                     "constantValue": [
-                        0.6987563967704773,
-                        0.0,
-                        0.0,
+                        0.929198145866394,
+                        0.30936139822006226,
+                        0.30936139822006226,
                         1.0
                     ],
                     "dynamics": {
@@ -55345,21 +55367,21 @@
                         ],
                         "values": [
                             [
-                                0.6987563967704773,
-                                0.0,
-                                0.0,
+                                0.929198145866394,
+                                0.30936139822006226,
+                                0.30936139822006226,
                                 1.0
                             ],
                             [
-                                0.6987563967704773,
+                                0.5807151794433594,
                                 0.0,
                                 0.0,
-                                0.5300068855285645
+                                0.529411792755127
                             ],
                             [
-                                0.249360129237175,
+                                0.22251980006694794,
                                 0.0,
-                                0.0,
+                                0.006410510279238224,
                                 0.0
                             ]
                         ],
@@ -55367,7 +55389,7 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": 5,
+                "pass": 100,
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "isDirectionOriented": 1,
@@ -55436,7 +55458,7 @@
                                     1.0
                                 ],
                                 "keyValues": [
-                                    0.4000000059604645,
+                                    1.0,
                                     2.0
                                 ],
                                 "__type": "VfxProbabilityTableData"

@@ -14782,7 +14782,7 @@
             t.METAGAME_MESSENGER_MESSAGES = {
                 SHOW: "rcp-fe-lol-persistent-iframe-show",
                 HIDE: "rcp-fe-lol-persistent-iframe-hide",
-                KILL: "rcp-fe-lol-persistent-iframe-kill"
+                DESTROY: "rcp-fe-lol-persistent-iframe-kill"
             };
             const o = {
                 LOL_PATCH_NOTES: "lol-patch-notes",
@@ -15519,7 +15519,7 @@
                     iframeId: n.metagameId,
                     onShowMessage: i.METAGAME_MESSENGER_MESSAGES.SHOW,
                     onHideMessage: i.METAGAME_MESSENGER_MESSAGES.HIDE,
-                    onKillMessage: i.METAGAME_MESSENGER_MESSAGES.KILL,
+                    onDestroyMessage: i.METAGAME_MESSENGER_MESSAGES.DESTROY,
                     sendOnShowMessageOnCreate: t
                 }
             }, t.isAcPersistentLayerTab = function(e) {
@@ -22032,7 +22032,7 @@
                     iframeId: t,
                     onShowMessage: n,
                     onHideMessage: i,
-                    onKillMessage: s,
+                    onDestroyMessage: s,
                     sendOnShowMessageOnCreate: o = !0
                 }) {
                     if (!t) return void a.logger.warning("iframeId is required to use the PersistentLayerManager.");
@@ -22065,7 +22065,7 @@
                             frame: s,
                             onShowMessage: n,
                             onHideMessage: i,
-                            onKillMessage: a,
+                            onDestroyMessage: a,
                             timerId: null
                         }), {
                             frame: s,
@@ -22140,10 +22140,10 @@
                     let t = this._iFrameIdToManagedIframeMap.get(e);
                     if (t) try {
                         t.frame && t.frame.sendMessage({
-                            messageType: t?.onKillMessage
+                            messageType: t?.onDestroyMessage
                         }), t?.timerId && (clearTimeout(t.timerId), t.timerId = null);
                         let e = this._acPersistentContainer.querySelector(`iframe[src="${t.frame?.url}"]`);
-                        e && (e.onload = e.onerror = null, e.src = "about:blank", e.remove(), e = null), t.frame?.destroy && t.frame.destroy(), t.frame = null, t.onShowMessage = null, t.onHideMessage = null, t.onKillMessage = null, t = null
+                        e && (e.onload = e.onerror = null, e.src = "about:blank", e.remove(), e = null), t.frame?.destroy && t.frame.destroy(), t.frame = null, t.onShowMessage = null, t.onHideMessage = null, t.onDestroyMessage = null, t = null
                     } catch (t) {
                         a.logger.error(`Failed to destroy iframe with id ${e}:`, t)
                     } finally {
