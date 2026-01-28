@@ -4328,8 +4328,8 @@ var unityFramework = (() => {
         var No = new Uint32Array(288);
         for (Ro = 0; Ro < 288; ++Ro) Pn[Ro] = No.subarray(0, Ro + 1);
         var Oo, Uo = {
-                Sa: function() {
-                    window.addEventListener("message", (e => {
+                Ua: function() {
+                    this._myGlobalAudioEventListener = function(e) {
                         if ("rcp-fe-lol-home-section-show" == e.data.messageType || "rcp-fe-lol-home-show" == e.data.messageType || "rcp-fe-lol-persistent-iframe-show" == e.data.messageType) v("ClientBridge", "Unmute");
                         else if ("rcp-fe-lol-home-section-hide" == e.data.messageType || "rcp-fe-lol-home-hide" == e.data.messageType || "rcp-fe-lol-persistent-iframe-hide" == e.data.messageType) v("ClientBridge", "Mute");
                         else if ("rcp-fe-lol-home-settings-audio-response" == e.data.messageType) {
@@ -4337,10 +4337,10 @@ var unityFramework = (() => {
                                 t = JSON.stringify(r);
                             console.log("New audio settings: " + t), v("ClientBridge", "HandleClientAudioSettings", t)
                         } else console.log(e)
-                    }), !1)
+                    }, window.addEventListener("message", this._myGlobalAudioEventListener)
                 },
-                bb: function() {
-                    window.addEventListener("message", (e => {
+                db: function() {
+                    this._myGlobalListener = function(e) {
                         const {
                             messageType: r,
                             data: t
@@ -4391,7 +4391,7 @@ var unityFramework = (() => {
                             case "lol-metagames-get-build-version-response":
                                 v("ClientBridge", "SetClientBuildVersion", JSON.stringify(t))
                         }
-                    }), !1)
+                    }, window.addEventListener("message", this._myGlobalListener)
                 },
                 Md: function(e) {
                     O[e >>= 2] = o.pageStartupTime || 0, O[e + 1] = o.dataUrlLoadEndTime || 0, O[e + 2] = o.codeDownloadTimeEnd || 0
@@ -4399,7 +4399,7 @@ var unityFramework = (() => {
                 Nd: function(e, r) {
                     e >>= 3, r >>= 3, performance.memory ? (q[e] = performance.memory.totalJSHeapSize, q[r] = performance.memory.usedJSHeapSize) : (q[e] = NaN, q[r] = NaN)
                 },
-                Ya: function(e) {
+                _a: function(e) {
                     let r = ge(e);
                     window.parent.postMessage({
                         messageType: "lol-metagames",
@@ -4412,7 +4412,7 @@ var unityFramework = (() => {
                         }
                     }, "*")
                 },
-                Va: function() {
+                Xa: function() {
                     window.parent.postMessage({
                         messageType: "league-session-token-request",
                         type: "RClientWindowMessenger"
@@ -4423,7 +4423,7 @@ var unityFramework = (() => {
                         message: "Login error in Opal"
                     }))
                 },
-                Ua: function(e, r) {
+                Wa: function(e, r) {
                     let t = ge(e),
                         n = ge(r);
                     window.parent.postMessage({
@@ -4436,12 +4436,12 @@ var unityFramework = (() => {
                         }
                     }, "*")
                 },
-                _d: function() {
+                Zd: function() {
                     return he && he.activated || 0 != ye
                 },
-                xb: Te,
-                wb: Ne,
-                ma: function(e) {
+                zb: Te,
+                yb: Ne,
+                oa: function(e) {
                     if (!Oe) try {
                         ke(e)()
                     } catch (e) {
@@ -4453,10 +4453,10 @@ var unityFramework = (() => {
                     for (var t = "", n = 0; n < r; n++) t += String.fromCharCode(R[e + n]);
                     o.canvas.style.cursor = "url(data:image/cur;base64," + btoa(t) + "),default"
                 },
-                pa: function(e) {
+                ra: function(e) {
                     o.canvas.style.cursor = e ? "default" : "none"
                 },
-                oa: function(e, r, t, n) {
+                qa: function(e, r, t, n) {
                     t >>= 2, n >>= 2;
                     var o = document.querySelector(Ue()),
                         a = o && o.getBoundingClientRect();
@@ -4466,7 +4466,7 @@ var unityFramework = (() => {
                     var r = Ue();
                     return e.selector != r && (Qo(e.ptr), e.ptr = We(r), e.selector = r), e.ptr
                 },
-                Jd: function(e) {
+                Id: function(e) {
                     var r = ge(e);
                     window.open(r, "_blank", "")
                 },
@@ -4483,7 +4483,7 @@ var unityFramework = (() => {
                 Xd: function() {
                     return "undefined" != typeof GravitySensor ? Ve && Ve.activated : 0 != Le
                 },
-                tb: function(e, r) {
+                vb: function(e, r) {
                     if ("undefined" == typeof GravitySensor) return Te(0, Math.max(r, _e)), Je(0, Math.max(r, Ze)), void(Le = e);
 
                     function t(e) {
@@ -4500,14 +4500,14 @@ var unityFramework = (() => {
                         "granted" === e.state ? t(je) : Tr("No permission to use GravitySensor."), je = 0
                     })))
                 },
-                sb: function() {
+                ub: function() {
                     if (Le = 0, "undefined" == typeof GravitySensor) return 0 == ye && Ne(), void(0 == Ce && $e());
                     Ve && (Ve.stop(), Ve.removeEventListener("reading", He), Ve = null)
                 },
                 Wd: function() {
                     return Qe && Qe.activated || 0 != Be
                 },
-                rb: function(e, r) {
+                tb: function(e, r) {
                     if ("undefined" == typeof Gyroscope) return Me(), void(Be = e);
 
                     function t(e) {
@@ -4524,10 +4524,10 @@ var unityFramework = (() => {
                         "granted" === e.state ? t(rr) : Tr("No permission to use Gyroscope."), rr = 0
                     })))
                 },
-                qb: function() {
+                sb: function() {
                     Qe ? (Qe.stop(), Qe.removeEventListener("reading", er), Qe = null, Be = 0) : 0 != Be && (Be = 0, Ie())
                 },
-                Rc: function() {
+                Qc: function() {
                     const e = function(e) {
                         "canvas" !== e.target.localName && Go()
                     };
@@ -4558,8 +4558,8 @@ var unityFramework = (() => {
                 Yd: function() {
                     return Ye && Ye.activated || 0 != Ce
                 },
-                vb: Je,
-                ub: $e,
+                xb: Je,
+                wb: $e,
                 Sc: function(e, r) {
                     var t = ge(e);
                     switch ("function" == typeof dump && dump(t), r) {
@@ -4576,7 +4576,7 @@ var unityFramework = (() => {
                             console.error("Unknown console message type!"), console.error(t)
                     }
                 },
-                Qc: function(e, r) {
+                Pc: function(e, r) {
                     var t = Lo();
                     return e && qe(t, e, r), ze(t)
                 },
@@ -4586,7 +4586,7 @@ var unityFramework = (() => {
                 E: function() {
                     return or ? 0 : 1
                 },
-                ob: function(e, r) {
+                qb: function(e, r) {
                     var t = or && or.input ? or.input.value : nr || "";
                     return e && qe(t, e, r), ze(t)
                 },
@@ -4604,7 +4604,7 @@ var unityFramework = (() => {
                 Qd: function(e, r) {
                     or && ("number" === or.input.type ? (or.input.type = "text", or.input.setSelectionRange(e, e + r), or.input.type = "number") : or.input.setSelectionRange(e, e + r))
                 },
-                pb: function(e, r, t, n, o, a, i, s) {
+                rb: function(e, r, t, n, o, a, i, s) {
                     tr && (clearTimeout(tr), tr = null), e = ge(e), nr = e, i = ge(i);
                     var u, c = document.body,
                         f = !!or;
@@ -4642,19 +4642,19 @@ var unityFramework = (() => {
                         }
                     }
                 },
-                Xb: function() {
+                Zb: function() {
                     return o.webglContextAttributes.powerPreference
                 },
                 Ge: function() {
                     return o.webglContextAttributes.premultipliedAlpha
                 },
-                Fe: function() {
+                Ee: function() {
                     return o.webglContextAttributes.preserveDrawingBuffer
                 },
                 $d: function() {
                     return sr && sr.activated || 0 != ur
                 },
-                zb: function(e, r) {
+                Bb: function(e, r) {
                     function t(e) {
                         (sr = new RelativeOrientationSensor({
                             frequency: e,
@@ -4673,16 +4673,16 @@ var unityFramework = (() => {
                         })) ? t(fr) : Tr("No permissions to use RelativeOrientationSensor."), fr = 0
                     })))) : 0 == ur && (ur = e, Fe(1), window.addEventListener("deviceorientation", lr))
                 },
-                yb: function() {
+                Ab: function() {
                     sr ? (sr.stop(), sr.removeEventListener("reading", cr), sr = null) : 0 != ur && window.removeEventListener("deviceorientation", lr), ur = 0
                 },
-                Db: function() {
+                Fb: function() {
                     0 != De && Fe(De)
                 },
                 kd: function() {
                     o.QuitCleanup()
                 },
-                Vd: function() {
+                Ud: function() {
                     dr = 0, window.removeEventListener("resize", mr), screen.orientation && screen.orientation.removeEventListener("change", mr)
                 },
                 be: function(e) {
@@ -4877,7 +4877,7 @@ var unityFramework = (() => {
                         alert("Web Audio API is not supported in this browser")
                     }
                 },
-                Rb: function(e, r, t, n) {
+                Tb: function(e, r, t, n) {
                     if (0 == zr.audioWebEnabled) return 0;
                     var o, a = R.buffer.slice(e, e + r);
                     return r < 131072 && (t = 1), o = t ? function(e) {
@@ -4994,7 +4994,7 @@ var unityFramework = (() => {
                     }(e, r, t, n);
                     return zr.audioInstances[++zr.audioInstanceIdCounter] = o, zr.audioInstanceIdCounter
                 },
-                ra: function(e, r, t, n) {
+                ta: function(e, r, t, n) {
                     if (0 != zr.audioWebEnabled) {
                         Wr(r, 0);
                         var o = zr.audioInstances[e],
@@ -5011,11 +5011,11 @@ var unityFramework = (() => {
                         } else console.log("Trying to play sound which is not loaded.")
                     }
                 },
-                sa: function(e) {
+                ua: function(e) {
                     var r = zr.audioInstances[e];
                     r && r.release(), delete zr.audioInstances[e]
                 },
-                Eb: function() {
+                Gb: function() {
                     0 != zr.audioWebEnabled && "suspended" === zr.audioContext.state && zr.audioContext.resume().catch((function(e) {
                         console.warn("Could not resume audio context. Exception: " + e)
                     }))
@@ -5038,10 +5038,10 @@ var unityFramework = (() => {
                         console.error("JS_Sound_SetListenerPosition(x=" + e + ", y=" + r + ", z=" + t + ") threw an exception: " + n)
                     }
                 },
-                Tb: function(e, r) {
+                Vb: function(e, r) {
                     0 != zr.audioWebEnabled && zr.audioInstances[e].setLoop(r)
                 },
-                Sb: function(e, r, t) {
+                Ub: function(e, r, t) {
                     0 != zr.audioWebEnabled && zr.audioInstances[e].setLoopPoints(r, t)
                 },
                 U: function(e, r) {
@@ -5050,7 +5050,7 @@ var unityFramework = (() => {
                         r != t.isPaused() && (r ? t.pause() : t.resume())
                     }
                 },
-                Ub: function(e, r) {
+                Wb: function(e, r) {
                     if (0 != zr.audioWebEnabled) try {
                         zr.audioInstances[e].setPitch(r)
                     } catch (t) {
@@ -5068,11 +5068,11 @@ var unityFramework = (() => {
                     }
                 },
                 V: Wr,
-                Pb: function(e, r) {
+                Rb: function(e, r) {
                     var t = o.SystemInfo.browser;
                     return e && qe(t, e, r), ze(t)
                 },
-                lb: function(e, r) {
+                nb: function(e, r) {
                     var t = o.SystemInfo.browserVersion;
                     return e && qe(t, e, r), ze(t)
                 },
@@ -5090,35 +5090,35 @@ var unityFramework = (() => {
                 T: function(e, r) {
                     return e && qe(document.URL, e, r), ze(document.URL)
                 },
-                ib: function(e, r) {
+                kb: function(e, r) {
                     var t = o.SystemInfo.gpu;
                     return e && qe(t, e, r), ze(t)
                 },
-                kb: function(e, r) {
+                mb: function(e, r) {
                     var t = o.SystemInfo.language;
                     return e && qe(t, e, r), ze(t)
                 },
-                hb: function() {
+                ib: function() {
                     return o.matchWebGLToCanvasSize || void 0 === o.matchWebGLToCanvasSize
                 },
-                mb: function(e, r) {
+                ob: function(e, r) {
                     var t = o.SystemInfo.os + " " + o.SystemInfo.osVersion;
                     return e && qe(t, e, r), ze(t)
                 },
-                fb: function() {
+                hb: function() {
                     return 0 == o.matchWebGLToCanvasSize ? 1 : o.devicePixelRatio || window.devicePixelRatio || 1
                 },
                 qd: function(e, r) {
                     r >>= 3, q[e >>= 3] = o.SystemInfo.width, q[r] = o.SystemInfo.height
                 },
-                zc: function(e, r) {
+                Bc: function(e, r) {
                     return e && qe(o.streamingAssetsUrl, e, r), ze(o.streamingAssetsUrl)
                 },
                 ze: function() {
                     var e = Bo.getExtension("WEBGL_compressed_texture_astc");
                     return !(!e || !e.getSupportedProfiles) && e.getSupportedProfiles().includes("hdr")
                 },
-                eb: function() {
+                gb: function() {
                     return o.SystemInfo.hasCursorLock
                 },
                 wd: function() {
@@ -5127,7 +5127,7 @@ var unityFramework = (() => {
                 Y: function() {
                     return o.SystemInfo.hasWebGL
                 },
-                nb: function() {
+                pb: function() {
                     return o.SystemInfo.hasWebGPU
                 },
                 od: function() {
@@ -5194,7 +5194,7 @@ var unityFramework = (() => {
                     var n = Xr(e);
                     O[r] = ze(n), O[r + 1] = ze(t.url)
                 },
-                qa: function(e) {
+                sa: function(e) {
                     Yr.timer[e] && clearTimeout(Yr.timer[e]), delete Yr.requests[e], delete Yr.responses[e], delete Yr.abortControllers[e], delete Yr.timer[e]
                 },
                 ee: function(e, r, t, n, a, i) {
@@ -5270,7 +5270,7 @@ var unityFramework = (() => {
                     var t = Yr.requests[e];
                     t && (t.timeout = r)
                 },
-                Ta: function() {
+                Va: function() {
                     var e = [111039, 234043, 3040, 516029, 360035, 233020].map((e => ({
                         inventoryType: "CHAMPION_SKIN",
                         itemId: e
@@ -5284,13 +5284,19 @@ var unityFramework = (() => {
                         }
                     }, "*")
                 },
+                ka: function() {
+                    window.removeEventListener("message", this._myGlobalAudioEventListener), this._myGlobalAudioEventListener = null
+                },
+                la: function() {
+                    window.removeEventListener("message", this._myGlobalListener), this._myGlobalListener = null
+                },
                 Tc: function() {
                     window.parent.postMessage({
                         messageType: "rcp-fe-lol-home-settings-audio-observe",
                         type: "RClientWindowMessenger"
                     }, "*")
                 },
-                ab: function() {
+                cb: function() {
                     window.parent.postMessage({
                         messageType: "rcp-fe-lol-home-data-request",
                         type: "RClientWindowMessenger"
@@ -5302,7 +5308,7 @@ var unityFramework = (() => {
                         }
                     }, "*")
                 },
-                $a: function() {
+                bb: function() {
                     window.parent.postMessage({
                         messageType: "rcp-fe-lol-home-inventory-observe",
                         type: "RClientWindowMessenger",
@@ -5311,7 +5317,7 @@ var unityFramework = (() => {
                         }
                     }, "*")
                 },
-                Wa: function() {
+                Ya: function() {
                     window.parent.postMessage({
                         messageType: "lol-metagames",
                         type: "RClientWindowMessenger",
@@ -5323,13 +5329,13 @@ var unityFramework = (() => {
                         }
                     }, "*")
                 },
-                _a: function() {
+                ab: function() {
                     window.parent.postMessage({
                         messageType: "rcp-fe-lol-home-observe-missions",
                         type: "RClientWindowMessenger"
                     }, "*")
                 },
-                Za: function(e) {
+                $a: function(e) {
                     let r = ge(e);
                     window.parent.postMessage({
                         messageType: "rcp-fe-lol-home-missions-select-rewards",
@@ -5359,7 +5365,7 @@ var unityFramework = (() => {
                         }
                     }, "*")
                 },
-                Xa: function(e, r) {
+                Za: function(e, r) {
                     let t = ge(e),
                         n = ge(r);
                     window.parent.postMessage({
@@ -5375,7 +5381,7 @@ var unityFramework = (() => {
                     }, "*")
                 },
                 $f: function(e, r) {},
-                Ee: function(e, r, t, n, o) {
+                Fe: function(e, r, t, n, o) {
                     try {
                         for (var a = 0, i = r ? N[r >> 2] : 0, s = r ? N[r + 4 >> 2] : 0, u = t ? N[t >> 2] : 0, c = t ? N[t + 4 >> 2] : 0, f = n ? N[n >> 2] : 0, l = n ? N[n + 4 >> 2] : 0, d = 0, m = 0, p = 0, v = 0, g = 0, h = 0, y = (r ? N[r >> 2] : 0) | (t ? N[t >> 2] : 0) | (n ? N[n >> 2] : 0), b = (r ? N[r + 4 >> 2] : 0) | (t ? N[t + 4 >> 2] : 0) | (n ? N[n + 4 >> 2] : 0), w = function(e, r, t, n) {
                                 return e < 32 ? r & n : t & n
@@ -5393,7 +5399,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                gf: function(e, r, t, n, o, a) {
+                jf: function(e, r, t, n, o, a) {
                     try {
                         var i = Zr(e),
                             s = i.sock_ops.accept(i);
@@ -5404,7 +5410,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                Tf: function(e, r, t, n, o, a) {
+                Uf: function(e, r, t, n, o, a) {
                     try {
                         var i = Zr(e),
                             s = it(r, t);
@@ -5414,7 +5420,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                gb: function(e, r) {
+                jb: function(e, r) {
                     try {
                         return e = Ar.getStr(e), Pr.chmod(e, r), 0
                     } catch (e) {
@@ -5422,7 +5428,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                Df: function(e, r, t, n, o, a) {
+                Ff: function(e, r, t, n, o, a) {
                     try {
                         var i = Zr(e),
                             s = it(r, t);
@@ -5443,7 +5449,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                zd: function(e, r, t, n) {
+                Ad: function(e, r, t, n) {
                     try {
                         if (r = Ar.getStr(r), r = Ar.calculateAt(e, r), -8 & t) return -28;
                         var o = Pr.lookupPath(r, {
@@ -5497,7 +5503,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                Pg: function(e, r) {
+                Rg: function(e, r) {
                     try {
                         var t = Ar.getStreamFromFD(e);
                         return Ar.doStat(Pr.stat, t.path, r)
@@ -5561,7 +5567,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                Lf: function(e, r, t, n, o, a) {
+                Mf: function(e, r, t, n, o, a) {
                     try {
                         var i = Zr(e);
                         return 1 === r && 4 === t ? (N[n >> 2] = i.error, N[o >> 2] = 4, i.error = null, 0) : -50
@@ -5570,7 +5576,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                Vb: function(e, r, t) {
+                Xb: function(e, r, t) {
                     Ar.varargs = t;
                     try {
                         var n = Ar.getStreamFromFD(e);
@@ -5603,7 +5609,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                sf: function(e, r) {
+                tf: function(e, r) {
                     try {
                         var t = Zr(e);
                         return t.sock_ops.listen(t, r), 0
@@ -5612,7 +5618,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                qg: function(e, r) {
+                rg: function(e, r) {
                     try {
                         return e = Ar.getStr(e), Ar.doStat(Pr.lstat, e, r)
                     } catch (e) {
@@ -5628,7 +5634,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                zg: function(e, r, t, n) {
+                Bg: function(e, r, t, n) {
                     try {
                         r = Ar.getStr(r);
                         var o = 256 & n,
@@ -5639,7 +5645,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                Ac: function(e, r, t, n) {
+                Ec: function(e, r, t, n) {
                     Ar.varargs = n;
                     try {
                         r = Ar.getStr(r), r = Ar.calculateAt(e, r);
@@ -5650,7 +5656,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                Hd: function(e) {
+                Jd: function(e) {
                     try {
                         if (0 == e) throw new Pr.ErrnoError(21);
                         var r = st.createPipe();
@@ -5688,7 +5694,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                Ke: function(e, r, t, n, o, a) {
+                Le: function(e, r, t, n, o, a) {
                     try {
                         var i = Zr(e),
                             s = i.sock_ops.recvmsg(i, t);
@@ -5763,7 +5769,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                Te: function(e, r, t, n, o, a) {
+                Ue: function(e, r, t, n, o, a) {
                     try {
                         var i = Zr(e),
                             s = it(o, a, !0);
@@ -5773,7 +5779,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                cb: function(e, r, t) {
+                eb: function(e, r, t) {
                     try {
                         return Kr.createSocket(e, r, t).stream.fd
                     } catch (e) {
@@ -5813,7 +5819,7 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                ld: function(e, r, t) {
+                nd: function(e, r, t) {
                     try {
                         return r = Ar.getStr(r), r = Ar.calculateAt(e, r), 0 === t ? Pr.unlink(r) : 512 === t ? Pr.rmdir(r) : s("Invalid flags passed to unlinkat"), 0
                     } catch (e) {
@@ -5835,17 +5841,17 @@ var unityFramework = (() => {
                         return -e.errno
                     }
                 },
-                Dc: function() {
+                Hc: function() {
                     return true
                 },
-                Ud: function(e, r) {
+                Vd: function(e, r) {
                     var t = new Date(1e3 * lt(e));
                     N[r >> 2] = t.getUTCSeconds(), N[r + 4 >> 2] = t.getUTCMinutes(), N[r + 8 >> 2] = t.getUTCHours(), N[r + 12 >> 2] = t.getUTCDate(), N[r + 16 >> 2] = t.getUTCMonth(), N[r + 20 >> 2] = t.getUTCFullYear() - 1900, N[r + 24 >> 2] = t.getUTCDay();
                     var n = Date.UTC(t.getUTCFullYear(), 0, 1, 0, 0, 0, 0),
                         o = (t.getTime() - n) / 864e5 | 0;
                     N[r + 28 >> 2] = o
                 },
-                Zd: function(e, r) {
+                _d: function(e, r) {
                     var t = new Date(1e3 * lt(e));
                     N[r >> 2] = t.getSeconds(), N[r + 4 >> 2] = t.getMinutes(), N[r + 8 >> 2] = t.getHours(), N[r + 12 >> 2] = t.getDate(), N[r + 16 >> 2] = t.getMonth(), N[r + 20 >> 2] = t.getFullYear() - 1900, N[r + 24 >> 2] = t.getDay();
                     var n = 0 | vt(t);
@@ -5874,7 +5880,7 @@ var unityFramework = (() => {
                     var f = 0 | vt(r);
                     return N[e + 28 >> 2] = f, N[e >> 2] = r.getSeconds(), N[e + 4 >> 2] = r.getMinutes(), N[e + 8 >> 2] = r.getHours(), N[e + 12 >> 2] = r.getDate(), N[e + 16 >> 2] = r.getMonth(), N[e + 20 >> 2] = r.getYear(), r.getTime() / 1e3 | 0
                 },
-                Pc: function(e, r, t, n, o, a) {
+                Rc: function(e, r, t, n, o, a) {
                     try {
                         var i = Ar.getStreamFromFD(o);
                         2 & t && Ar.doMsync(e, i, r, n, a), Pr.munmap(i)
@@ -5905,8 +5911,8 @@ var unityFramework = (() => {
                 a: function() {
                     s("")
                 },
-                uc: function(e) {},
-                md: function() {
+                wc: function(e) {},
+                ld: function() {
                     Nr.mainLoop.pause(), Nr.mainLoop.func = null
                 },
                 jd: function(e) {
@@ -5915,7 +5921,7 @@ var unityFramework = (() => {
                 p: function() {
                     return Date.now()
                 },
-                Id: function() {},
+                Hd: function() {},
                 ud: function() {
                     if (!ht.fullscreenEnabled()) return -1;
                     ht.removeDeferredCalls(At);
@@ -5931,10 +5937,10 @@ var unityFramework = (() => {
                     return ht.removeDeferredCalls(Dt), document.exitPointerLock ? (document.exitPointerLock(), 0) : -1
                 },
                 pd: kt,
-                la: function(e) {
+                na: function(e) {
                     return ht.fullscreenEnabled() ? (Ft(e), 0) : -1
                 },
-                Ab: function(e, r) {
+                Cb: function(e, r) {
                     return e < 0 || e >= ht.lastGamepadState.length ? -5 : ht.lastGamepadState[e] ? (Mt(r, ht.lastGamepadState[e]), 0) : -7
                 },
                 te: function() {
@@ -5944,10 +5950,10 @@ var unityFramework = (() => {
                 ah: function() {
                     return 1e3
                 },
-                Bb: function() {
+                Db: function() {
                     return ht.lastGamepadState.length
                 },
-                nd: function() {
+                md: function() {
                     ht.removeAllEventListeners()
                 },
                 Be: function(e) {
@@ -6147,21 +6153,21 @@ var unityFramework = (() => {
                     }
                     Xt()
                 },
-                Cb: Zt,
-                jb: function(e, r, t, n, o) {
+                Eb: Zt,
+                lb: function(e, r, t, n, o) {
                     return Jt(e, r, t, n, 12, "blur")
                 },
-                ka: _t,
+                ma: _t,
                 Bd: function(e, r, t, n, o) {
                     return Jt(e, r, t, n, 13, "focus")
                 },
                 Cd: function(e, r, t, n, o) {
                     return ht.fullscreenEnabled() ? (e = wt(e)) ? ($t(e, r, t, n, 19, "webkitfullscreenchange"), $t(e, r, t, n, 19, "fullscreenchange")) : -4 : -1
                 },
-                Gb: function(e, r, t, n) {
+                Ib: function(e, r, t, n) {
                     return Zt() ? -1 : Qt(2, e, r, t, 26, "gamepadconnected")
                 },
-                Fb: function(e, r, t, n) {
+                Hb: function(e, r, t, n) {
                     return Zt() ? -1 : Qt(2, e, r, t, 27, "gamepaddisconnected")
                 },
                 Ed: function(e, r, t) {
@@ -6181,31 +6187,31 @@ var unityFramework = (() => {
                     return en(e, r, t, n, 3, "keyup")
                 },
                 id: Or,
-                Nb: function(e, r, t, n, o) {
+                Pb: function(e, r, t, n, o) {
                     return tn(e, r, t, n, 5, "mousedown")
                 },
-                Mb: function(e, r, t, n, o) {
+                Ob: function(e, r, t, n, o) {
                     return tn(e, r, t, n, 8, "mousemove")
                 },
-                Ob: function(e, r, t, n, o) {
+                Qb: function(e, r, t, n, o) {
                     return tn(e, r, t, n, 6, "mouseup")
                 },
-                Ad: function(e, r, t, n, o) {
+                zd: function(e, r, t, n, o) {
                     return document && document.body && (document.body.requestPointerLock || document.body.mozRequestPointerLock || document.body.webkitRequestPointerLock || document.body.msRequestPointerLock) ? (e = wt(e)) ? (nn(e, r, t, n, 20, "mozpointerlockchange"), nn(e, r, t, n, 20, "webkitpointerlockchange"), nn(e, r, t, n, 20, "mspointerlockchange"), nn(e, r, t, n, 20, "pointerlockchange")) : -4 : -1
                 },
-                Hb: function(e, r, t, n, o) {
+                Jb: function(e, r, t, n, o) {
                     return on(e, r, t, n, 25, "touchcancel")
                 },
-                Jb: function(e, r, t, n, o) {
+                Lb: function(e, r, t, n, o) {
                     return on(e, r, t, n, 23, "touchend")
                 },
-                Ib: function(e, r, t, n, o) {
+                Kb: function(e, r, t, n, o) {
                     return on(e, r, t, n, 24, "touchmove")
                 },
-                Kb: function(e, r, t, n, o) {
+                Mb: function(e, r, t, n, o) {
                     return on(e, r, t, n, 22, "touchstart")
                 },
-                Lb: function(e, r, t, n, o) {
+                Nb: function(e, r, t, n, o) {
                     return (e = wt(e)) ? void 0 !== e.onwheel ? function(e, r, t, n, o, a, i) {
                         ht.wheelEvent || (ht.wheelEvent = $o(104));
                         var s = {
@@ -6239,7 +6245,7 @@ var unityFramework = (() => {
                 X: function(e) {
                     return zt.makeContextCurrent(e) ? 0 : -5
                 },
-                lh: function(e, r) {
+                nh: function(e, r) {
                     var t = 0;
                     return fn().forEach((function(n, o) {
                         var a = r + t;
@@ -6268,7 +6274,7 @@ var unityFramework = (() => {
                         return e.errno
                     }
                 },
-                sc: function(e, r) {
+                vc: function(e, r) {
                     try {
                         var t = Ar.getStreamFromFD(e),
                             n = t.tty ? 2 : Pr.isDir(t.mode) ? 3 : Pr.isLink(t.mode) ? 7 : 4;
@@ -6278,7 +6284,7 @@ var unityFramework = (() => {
                         return e.errno
                     }
                 },
-                Qb: function(e, r, t, n) {
+                Sb: function(e, r, t, n) {
                     try {
                         var o = function(e, r, t, n) {
                             for (var o = 0, a = 0; a < t; a++) {
@@ -6298,7 +6304,7 @@ var unityFramework = (() => {
                         return e.errno
                     }
                 },
-                Le: function(e, r, t, n) {
+                Me: function(e, r, t, n) {
                     try {
                         if (r = ft(r), isNaN(r)) return 61;
                         var o = Ar.getStreamFromFD(e);
@@ -6308,7 +6314,7 @@ var unityFramework = (() => {
                         return e.errno
                     }
                 },
-                Ma: function(e, r, t, n) {
+                Oa: function(e, r, t, n) {
                     try {
                         var o = function(e, r, t, n) {
                             for (var o = 0, a = 0; a < t; a++) {
@@ -6368,7 +6374,7 @@ var unityFramework = (() => {
                 ne: function(e) {
                     return ln(ge(e))
                 },
-                db: function(e, r, t, n, o, a, i) {
+                fb: function(e, r, t, n, o, a, i) {
                     var s = at(e, r);
                     if (s.errno) return -6;
                     var u = s.port,
@@ -6389,13 +6395,13 @@ var unityFramework = (() => {
                 Ig: function(e, r) {
                     (e = zt.programs[e])[(r = zt.shaders[r]).shaderType] = r, Bo.attachShader(e, r)
                 },
-                cc: function(e, r) {
+                ec: function(e, r) {
                     Bo.beginQuery(e, zt.queries[r])
                 },
                 da: function(e, r, t) {
                     Bo.bindAttribLocation(zt.programs[e], r, ge(t))
                 },
-                Fa: function(e, r) {
+                Ha: function(e, r) {
                     34962 == e ? Bo.currentArrayBufferBinding = r : 34963 == e && (Bo.currentElementArrayBufferBinding = r), 35051 == e ? Bo.currentPixelPackBufferBinding = r : 35052 == e && (Bo.currentPixelUnpackBufferBinding = r), Bo.bindBuffer(e, zt.buffers[r])
                 },
                 Ye: function(e, r, t) {
@@ -6421,13 +6427,13 @@ var unityFramework = (() => {
                     var r = Bo.getParameter(34965);
                     Bo.currentElementArrayBufferBinding = r ? 0 | r.name : 0
                 },
-                wc: function(e) {
+                yc: function(e) {
                     Bo.blendEquation(e)
                 },
-                xc: function(e, r) {
+                zc: function(e, r) {
                     Bo.blendEquationSeparate(e, r)
                 },
-                yc: function(e, r, t, n) {
+                Ac: function(e, r, t, n) {
                     Bo.blendFuncSeparate(e, r, t, n)
                 },
                 ef: function(e, r, t, n, o, a, i, s, u, c) {
@@ -6439,13 +6445,13 @@ var unityFramework = (() => {
                 Dg: function(e, r, t, n) {
                     R.length <= 2147483648 ? t && Bo.bufferSubData(e, r, R, n, t) : Bo.bufferSubData(e, r, R.subarray(n, n + t))
                 },
-                Bg: function(e) {
+                Ag: function(e) {
                     return Bo.checkFramebufferStatus(e)
                 },
                 wg: function(e) {
                     Bo.clear(e)
                 },
-                Me: function(e, r, t, n) {
+                Ke: function(e, r, t, n) {
                     Bo.clearBufferfi(e, r, t, n)
                 },
                 Je: function(e, r, t) {
@@ -6468,13 +6474,13 @@ var unityFramework = (() => {
                 yg: function(e) {
                     Bo.clearDepth(e)
                 },
-                Ag: function(e) {
+                zg: function(e) {
                     Bo.clearStencil(e)
                 },
-                ta: function(e, r, t) {
+                va: function(e, r, t) {
                     return t = Number(t), Bo.clientWaitSync(zt.syncs[e], r, t)
                 },
-                Ea: function(e, r, t, n) {
+                Ga: function(e, r, t, n) {
                     Bo.colorMask(!!e, !!r, !!t, !!n)
                 },
                 vg: function(e) {
@@ -6498,10 +6504,10 @@ var unityFramework = (() => {
                 sg: function(e, r, t, n, o, a, i, s) {
                     Bo.copyTexImage2D(e, r, t, n, o, a, i, s)
                 },
-                vc: function(e, r, t, n, o, a, i, s) {
+                xc: function(e, r, t, n, o, a, i, s) {
                     Bo.copyTexSubImage2D(e, r, t, n, o, a, i, s)
                 },
-                rg: function() {
+                qg: function() {
                     var e = zt.getNewId(zt.programs),
                         r = Bo.createProgram();
                     return r.name = e, r.maxUniformLength = r.maxAttributeLength = r.maxUniformBlockNameLength = 0, r.uniformIdCounter = 1, zt.programs[e] = r, e
@@ -6533,7 +6539,7 @@ var unityFramework = (() => {
                         r ? (Bo.deleteProgram(r), r.name = 0, zt.programs[e] = null) : zt.recordError(1281)
                     }
                 },
-                bc: function(e, r) {
+                dc: function(e, r) {
                     for (var t = 0; t < e; t++) {
                         var n = N[r + 4 * t >> 2],
                             o = zt.queries[n];
@@ -6560,7 +6566,7 @@ var unityFramework = (() => {
                         r ? (Bo.deleteShader(r), zt.shaders[e] = null) : zt.recordError(1281)
                     }
                 },
-                Zb: function(e) {
+                $b: function(e) {
                     if (e) {
                         var r = zt.syncs[e];
                         r ? (Bo.deleteSync(r), r.name = 0, zt.syncs[e] = null) : zt.recordError(1281)
@@ -6621,10 +6627,10 @@ var unityFramework = (() => {
                 bg: function(e) {
                     zt.currentContext.clientBuffers[e].enabled = !0, Bo.enableVertexAttribArray(e)
                 },
-                dc: function(e) {
+                fc: function(e) {
                     Bo.endQuery(e)
                 },
-                Yb: function(e, r) {
+                _b: function(e, r) {
                     var t = Bo.fenceSync(e, r);
                     if (t) {
                         var n = zt.getNewId(zt.syncs);
@@ -6635,7 +6641,7 @@ var unityFramework = (() => {
                 _f: function() {
                     Bo.finish()
                 },
-                tc: function() {
+                uc: function() {
                     Bo.flush()
                 },
                 df: function(e, r, t) {
@@ -6661,7 +6667,7 @@ var unityFramework = (() => {
                 Vf: function(e, r) {
                     vn(e, r, "createFramebuffer", zt.framebuffers)
                 },
-                ac: function(e, r) {
+                cc: function(e, r) {
                     vn(e, r, "createQuery", zt.queries)
                 },
                 Wf: function(e, r) {
@@ -6673,7 +6679,7 @@ var unityFramework = (() => {
                 Yf: function(e, r) {
                     vn(e, r, "createTexture", zt.textures)
                 },
-                tf: function(e, r) {
+                sf: function(e, r) {
                     vn(e, r, "createVertexArray", zt.vaos)
                 },
                 Xf: function(e) {
@@ -6682,10 +6688,10 @@ var unityFramework = (() => {
                 Sg: function(e, r, t, n, o, a, i) {
                     gn("getActiveAttrib", e, r, t, n, o, a, i)
                 },
-                Da: function(e, r, t, n, o, a, i) {
+                Fa: function(e, r, t, n, o, a, i) {
                     gn("getActiveUniform", e, r, t, n, o, a, i)
                 },
-                va: function(e, r, t, n, o) {
+                xa: function(e, r, t, n, o) {
                     e = zt.programs[e];
                     var a = Bo.getActiveUniformBlockName(e, r);
                     if (a)
@@ -6722,13 +6728,13 @@ var unityFramework = (() => {
                         }
                     else zt.recordError(1281)
                 },
-                Rg: function(e, r) {
+                Qg: function(e, r) {
                     return Bo.getAttribLocation(zt.programs[e], ge(r))
                 },
-                Wb: function(e, r, t, n) {
+                Yb: function(e, r, t, n) {
                     n ? R.length <= 2147483648 ? t && Bo.getBufferSubData(e, r, R, n, t) : t && Bo.getBufferSubData(e, r, R.subarray(n, n + t)) : zt.recordError(1281)
                 },
-                Uf: function() {
+                Tf: function() {
                     var e = Bo.getError() || zt.lastError;
                     return zt.lastError = 0, e
                 },
@@ -6782,7 +6788,7 @@ var unityFramework = (() => {
                         } else zt.recordError(1281)
                     }(e, r, t, 0)
                 },
-                Ga: function(e, r) {
+                Ia: function(e, r) {
                     ! function(e, r, t) {
                         if (r) {
                             var n = void 0;
@@ -6897,7 +6903,7 @@ var unityFramework = (() => {
                             for (var i = 0; i < a.length && i < n; ++i) N[o + 4 * i >> 2] = a[i]
                     } else zt.recordError(1281)
                 },
-                _b: function(e, r, t, n, o) {
+                ac: function(e, r, t, n, o) {
                     zt.recordError(1282)
                 },
                 Ng: function(e, r, t, n) {
@@ -6927,7 +6933,7 @@ var unityFramework = (() => {
                     } else N[t >> 2] = Bo.getProgramParameter(e, r);
                     else zt.recordError(1281)
                 },
-                ec: function(e, r, t) {
+                gc: function(e, r, t) {
                     if (t) {
                         var n, o = zt.queries[e],
                             a = Bo.getQueryParameter(o, r);
@@ -7004,7 +7010,7 @@ var unityFramework = (() => {
                     }
                     return r
                 },
-                hf: function(e, r) {
+                gf: function(e, r) {
                     if (zt.currentContext.version < 2) return zt.recordError(1282), 0;
                     var t = zt.stringiCache[e];
                     if (t) return r < 0 || r >= t.length ? (zt.recordError(1281), 0) : t[r];
@@ -7021,10 +7027,10 @@ var unityFramework = (() => {
                 Nf: function(e, r, t) {
                     t ? N[t >> 2] = Bo.getTexParameter(e, r) : zt.recordError(1281)
                 },
-                Ue: function(e, r) {
+                Te: function(e, r) {
                     return Bo.getUniformBlockIndex(zt.programs[e], ge(r))
                 },
-                ua: function(e, r, t, n) {
+                wa: function(e, r, t, n) {
                     if (n)
                         if (r > 0 && (0 == t || 0 == n)) zt.recordError(1281);
                         else {
@@ -7051,7 +7057,7 @@ var unityFramework = (() => {
                     } else zt.recordError(1281);
                     return -1
                 },
-                rc: function(e, r, t) {
+                tc: function(e, r, t) {
                     ! function(e, r, t, n) {
                         if (t) {
                             bn(e = zt.programs[e]);
@@ -7073,7 +7079,7 @@ var unityFramework = (() => {
                         } else zt.recordError(1281)
                     }(e, r, t, 0)
                 },
-                Qg: function(e, r, t) {
+                Pg: function(e, r, t) {
                     ! function(e, r, t, n) {
                         if (t) {
                             zt.currentContext.clientBuffers[e].enabled && P("glGetVertexAttrib*v on client-side array: not supported, bad data returned");
@@ -7102,7 +7108,7 @@ var unityFramework = (() => {
                         } else zt.recordError(1281)
                     }(e, r, t, 5)
                 },
-                xa: function(e, r, t) {
+                za: function(e, r, t) {
                     for (var n = dn[r], o = 0; o < r; o++) n[o] = N[t + 4 * o >> 2];
                     Bo.invalidateFramebuffer(e, n)
                 },
@@ -7113,7 +7119,7 @@ var unityFramework = (() => {
                     var r = zt.vaos[e];
                     return r ? Bo.isVertexArray(r) : 0
                 },
-                Mf: function(e) {
+                Lf: function(e) {
                     function r(e, r) {
                         Object.keys(r).forEach((function(t) {
                             e[t] = r[t]
@@ -7141,13 +7147,13 @@ var unityFramework = (() => {
                         access: n
                     }, o) : 0
                 },
-                Ca: function(e, r) {
+                Ea: function(e, r) {
                     3317 == e && (zt.unpackAlignment = r), Bo.pixelStorei(e, r)
                 },
-                qc: function(e, r) {
+                sc: function(e, r) {
                     Bo.polygonOffset(e, r)
                 },
-                $b: function(e, r, t, n) {
+                bc: function(e, r, t, n) {
                     zt.recordError(1280)
                 },
                 Ne: function(e, r, t) {
@@ -7176,7 +7182,7 @@ var unityFramework = (() => {
                 Re: function(e, r, t) {
                     Bo.samplerParameteri(zt.samplers[e], r, t)
                 },
-                Ba: function(e, r, t, n) {
+                Da: function(e, r, t, n) {
                     Bo.scissor(e, r, t, n)
                 },
                 If: function(e, r, t, n) {
@@ -7421,7 +7427,7 @@ var unityFramework = (() => {
                 Hf: function(e, r, t, n) {
                     Bo.stencilOpSeparate(e, r, t, n)
                 },
-                Ef: function(e, r, t, n, o, a, i, s, u) {
+                Df: function(e, r, t, n, o, a, i, s, u) {
                     if (Bo.currentPixelUnpackBufferBinding) Bo.texImage2D(e, r, t, n, o, a, i, s, u);
                     else if (u)
                         if (R.length <= 2147483648) {
@@ -7439,17 +7445,17 @@ var unityFramework = (() => {
                         } else Bo.texImage3D(e, r, t, n, o, a, i, s, u, Cn(u, s, n, o, a, c));
                     else Bo.texImage3D(e, r, t, n, o, a, i, s, u, null)
                 },
-                Ff: function(e, r, t) {
+                Ef: function(e, r, t) {
                     Bo.texParameterf(e, r, t)
                 },
-                Aa: function(e, r, t) {
+                Ca: function(e, r, t) {
                     Bo.texParameteri(e, r, t)
                 },
                 Cf: function(e, r, t) {
                     var n = N[t >> 2];
                     Bo.texParameteri(e, r, n)
                 },
-                jf: function(e, r, t, n, o) {
+                hf: function(e, r, t, n, o) {
                     Bo.texStorage2D(e, r, t, n, o)
                 },
                 kf: function(e, r, t, n, o, a) {
@@ -7473,7 +7479,7 @@ var unityFramework = (() => {
                         } else Bo.texSubImage3D(e, r, t, n, o, a, i, s, u, c, Cn(c, u, a, i, s, f));
                     else Bo.texSubImage3D(e, r, t, n, o, a, i, s, u, c, null)
                 },
-                fc: function(e, r, t) {
+                hc: function(e, r, t) {
                     if (r <= 288)
                         for (var n = Ln[r - 1], o = 0; o < r; ++o) n[o] = U[t + 4 * o >> 2];
                     else n = U.subarray(t >> 2, t + 4 * r >> 2);
@@ -7482,49 +7488,49 @@ var unityFramework = (() => {
                 _: function(e, r) {
                     Bo.uniform1i(wn(e), r)
                 },
-                gc: function(e, r, t) {
+                ic: function(e, r, t) {
                     if (r <= 288)
                         for (var n = Bn[r - 1], o = 0; o < r; ++o) n[o] = N[t + 4 * o >> 2];
                     else n = N.subarray(t >> 2, t + 4 * r >> 2);
                     Bo.uniform1iv(wn(e), n)
                 },
-                hc: function(e, r, t) {
+                jc: function(e, r, t) {
                     if (r <= 288)
                         for (var n = Pn[r - 1], o = 0; o < r; ++o) n[o] = O[t + 4 * o >> 2];
                     else n = O.subarray(t >> 2, t + 4 * r >> 2);
                     Bo.uniform1uiv(wn(e), n)
                 },
-                ic: function(e, r, t) {
+                kc: function(e, r, t) {
                     if (r <= 144)
                         for (var n = Ln[2 * r - 1], o = 0; o < 2 * r; o += 2) n[o] = U[t + 4 * o >> 2], n[o + 1] = U[t + (4 * o + 4) >> 2];
                     else n = U.subarray(t >> 2, t + 8 * r >> 2);
                     Bo.uniform2fv(wn(e), n)
                 },
-                jc: function(e, r, t) {
+                lc: function(e, r, t) {
                     if (r <= 144)
                         for (var n = Bn[2 * r - 1], o = 0; o < 2 * r; o += 2) n[o] = N[t + 4 * o >> 2], n[o + 1] = N[t + (4 * o + 4) >> 2];
                     else n = N.subarray(t >> 2, t + 8 * r >> 2);
                     Bo.uniform2iv(wn(e), n)
                 },
-                kc: function(e, r, t) {
+                mc: function(e, r, t) {
                     if (r <= 144)
                         for (var n = Pn[2 * r - 1], o = 0; o < 2 * r; o += 2) n[o] = O[t + 4 * o >> 2], n[o + 1] = O[t + (4 * o + 4) >> 2];
                     else n = O.subarray(t >> 2, t + 8 * r >> 2);
                     Bo.uniform2uiv(wn(e), n)
                 },
-                za: function(e, r, t) {
+                Ba: function(e, r, t) {
                     if (r <= 96)
                         for (var n = Ln[3 * r - 1], o = 0; o < 3 * r; o += 3) n[o] = U[t + 4 * o >> 2], n[o + 1] = U[t + (4 * o + 4) >> 2], n[o + 2] = U[t + (4 * o + 8) >> 2];
                     else n = U.subarray(t >> 2, t + 12 * r >> 2);
                     Bo.uniform3fv(wn(e), n)
                 },
-                lc: function(e, r, t) {
+                nc: function(e, r, t) {
                     if (r <= 96)
                         for (var n = Bn[3 * r - 1], o = 0; o < 3 * r; o += 3) n[o] = N[t + 4 * o >> 2], n[o + 1] = N[t + (4 * o + 4) >> 2], n[o + 2] = N[t + (4 * o + 8) >> 2];
                     else n = N.subarray(t >> 2, t + 12 * r >> 2);
                     Bo.uniform3iv(wn(e), n)
                 },
-                mc: function(e, r, t) {
+                oc: function(e, r, t) {
                     if (r <= 96)
                         for (var n = Pn[3 * r - 1], o = 0; o < 3 * r; o += 3) n[o] = O[t + 4 * o >> 2], n[o + 1] = O[t + (4 * o + 4) >> 2], n[o + 2] = O[t + (4 * o + 8) >> 2];
                     else n = O.subarray(t >> 2, t + 12 * r >> 2);
@@ -7539,22 +7545,22 @@ var unityFramework = (() => {
                     } else n = U.subarray(t >> 2, t + 16 * r >> 2);
                     Bo.uniform4fv(wn(e), n)
                 },
-                nc: function(e, r, t) {
+                pc: function(e, r, t) {
                     if (r <= 72)
                         for (var n = Bn[4 * r - 1], o = 0; o < 4 * r; o += 4) n[o] = N[t + 4 * o >> 2], n[o + 1] = N[t + (4 * o + 4) >> 2], n[o + 2] = N[t + (4 * o + 8) >> 2], n[o + 3] = N[t + (4 * o + 12) >> 2];
                     else n = N.subarray(t >> 2, t + 16 * r >> 2);
                     Bo.uniform4iv(wn(e), n)
                 },
-                oc: function(e, r, t) {
+                qc: function(e, r, t) {
                     if (r <= 72)
                         for (var n = Pn[4 * r - 1], o = 0; o < 4 * r; o += 4) n[o] = O[t + 4 * o >> 2], n[o + 1] = O[t + (4 * o + 4) >> 2], n[o + 2] = O[t + (4 * o + 8) >> 2], n[o + 3] = O[t + (4 * o + 12) >> 2];
                     else n = O.subarray(t >> 2, t + 16 * r >> 2);
                     Bo.uniform4uiv(wn(e), n)
                 },
-                wa: function(e, r, t) {
+                ya: function(e, r, t) {
                     e = zt.programs[e], Bo.uniformBlockBinding(e, r, t)
                 },
-                pc: function(e, r, t, n) {
+                rc: function(e, r, t, n) {
                     if (r <= 32)
                         for (var o = Ln[9 * r - 1], a = 0; a < 9 * r; a += 9) o[a] = U[n + 4 * a >> 2], o[a + 1] = U[n + (4 * a + 4) >> 2], o[a + 2] = U[n + (4 * a + 8) >> 2], o[a + 3] = U[n + (4 * a + 12) >> 2], o[a + 4] = U[n + (4 * a + 16) >> 2], o[a + 5] = U[n + (4 * a + 20) >> 2], o[a + 6] = U[n + (4 * a + 24) >> 2], o[a + 7] = U[n + (4 * a + 28) >> 2], o[a + 8] = U[n + (4 * a + 32) >> 2];
                     else o = U.subarray(n >> 2, n + 36 * r >> 2);
@@ -7609,7 +7615,7 @@ var unityFramework = (() => {
                     });
                     i.clientside = !1, Bo.vertexAttribPointer(e, r, t, !!n, o, a)
                 },
-                ya: function(e, r, t, n) {
+                Aa: function(e, r, t, n) {
                     Bo.viewport(e, r, t, n)
                 },
                 dh: function() {
@@ -7629,17 +7635,17 @@ var unityFramework = (() => {
                         })), 1
                     }
                 },
-                na: On,
+                pa: On,
                 Yc: function(e, r, t, n, o) {
                     return On(e, r, t, n)
                 },
-                Qa: function(e) {
+                Sa: function(e) {
                     let r = 1,
                         t = 0;
                     for (let n of Un) jr[e].features.has(n) && (t |= r), r *= 2;
                     return t
                 },
-                Ra: function(e, r) {
+                Ta: function(e, r) {
                     let t = jr[e].limits;
                     r >>= 2;
                     for (let e of Gn) n = r, o = t[e], G[n >>> 1] = BigInt(o), r += 2;
@@ -7664,7 +7670,7 @@ var unityFramework = (() => {
                         o()
                     }))
                 },
-                Hc: function(e, r, t) {
+                Jc: function(e, r, t) {
                     e = jr[e];
                     try {
                         e.mappedRanges[r] = e.getMappedRange(r, t < 0 ? void 0 : t)
@@ -7673,15 +7679,15 @@ var unityFramework = (() => {
                     }
                     return r
                 },
-                Oa: function(e, r, t, n, o, a) {
+                Qa: function(e, r, t, n, o, a) {
                     jr[e].mapAsync(n, o, a < 0 ? void 0 : a).then((() => {
                         ke(r)(e, t, n, o, a)
                     }))
                 },
-                La: function(e, r, t, n, o) {
+                Na: function(e, r, t, n, o) {
                     R.set(new Uint8Array(jr[e].mappedRanges[r], t, o), n)
                 },
-                Gc: function(e) {
+                Ic: function(e) {
                     (e = jr[e]).unmap(), e.mappedRanges = {}
                 },
                 bh: function(e, r) {
@@ -7706,7 +7712,7 @@ var unityFramework = (() => {
                     let r = document.querySelector(Hr(e)).getContext("webgpu");
                     return r.wid ? r.wid : Mn(r)
                 },
-                Ec: function(e, r) {
+                Fc: function(e, r) {
                     e = jr[e];
                     let t = (r >>= 2) ? {
                         timestampWrites: $n(r)
@@ -7759,7 +7765,7 @@ var unityFramework = (() => {
                         buffer: jr[O[i + 4]]
                     }), [n, o, a])
                 },
-                Ic: function(e, r, t, n, o, a) {
+                Kc: function(e, r, t, n, o, a) {
                     jr[e].copyTextureToTexture(to(r), to(t), [n, o, a])
                 },
                 gh: function(e, r, t, n) {
@@ -7835,10 +7841,10 @@ var unityFramework = (() => {
                     let t;
                     return no(jr[e].createCommandEncoder(t), jr[e])
                 },
-                Pa: function(e) {
+                Ra: function(e) {
                     return no(jr[e].createCommandEncoder(), jr[e])
                 },
-                Fc: function(e, r, t, n, o, a) {
+                Gc: function(e, r, t, n, o, a) {
                     e = jr[e];
                     let i = {
                         layout: n > 1 ? jr[n] : fo,
@@ -8005,7 +8011,7 @@ var unityFramework = (() => {
                 J: function(e) {
                     jr[e].popDebugGroup()
                 },
-                Ja: function(e, r) {
+                La: function(e, r) {
                     jr[e].pushDebugGroup(Hr(r))
                 },
                 fa: function(e, r, t, n, o) {
@@ -8033,7 +8039,7 @@ var unityFramework = (() => {
                 q: function(e, r, t, n, o) {
                     jr[e].writeBuffer(jr[r], t, R, n, o)
                 },
-                Bc: function(e, r, t, n, o, a, i, s) {
+                Cc: function(e, r, t, n, o, a, i, s) {
                     jr[e].writeTexture(to(r), R, {
                         offset: t,
                         bytesPerRow: n,
@@ -8043,25 +8049,25 @@ var unityFramework = (() => {
                 B: function(e, r, t, n, o) {
                     jr[e].draw(r, t, n, o)
                 },
-                Cc: function(e, r, t, n, o, a) {
+                Dc: function(e, r, t, n, o, a) {
                     jr[e].drawIndexed(r, t, n, o, a)
                 },
-                Ia: function(e, r, t) {
+                Ka: function(e, r, t) {
                     jr[e].drawIndexedIndirect(jr[r], t)
                 },
-                Ha: function(e, r, t) {
+                Ja: function(e, r, t) {
                     jr[e].drawIndirect(jr[r], t)
                 },
-                Kc: function(e, r, t, n, o) {
+                mh: function(e, r, t, n, o) {
                     jr[e].setIndexBuffer(jr[r], yo[t], n, o < 0 ? void 0 : o)
                 },
-                Na: function(e, r, t, n, o) {
+                Pa: function(e, r, t, n, o) {
                     jr[e].setVertexBuffer(r, jr[t], n, o < 0 ? void 0 : o)
                 },
                 Zg: function(e, r, t, n, o) {
                     jr[e].setScissorRect(r, t, n, o)
                 },
-                Jc: function(e, r) {
+                lh: function(e, r) {
                     jr[e].setStencilReference(r)
                 },
                 Yg: function(e, r, t, n, o, a, i) {
@@ -8080,7 +8086,7 @@ var unityFramework = (() => {
                     } : void 0;
                     return no(jr[e].createView(t), jr[e])
                 },
-                Ka: function(e) {
+                Ma: function(e) {
                     return no(jr[e].createView(), jr[e])
                 }
             },
@@ -8091,7 +8097,7 @@ var unityFramework = (() => {
 
                 function s(e, r) {
                     var t, n = e.exports;
-                    return o.asm = n, A = o.asm.mh, j(), W = o.asm.Jh, t = o.asm.nh, X.unshift(t), ae(), n
+                    return o.asm = n, A = o.asm.oh, j(), W = o.asm.Lh, t = o.asm.ph, X.unshift(t), ae(), n
                 }
                 if (oe(), o.instantiateWasm) try {
                     return o.instantiateWasm(i, s)
@@ -8105,65 +8111,65 @@ var unityFramework = (() => {
                     return P("wasm streaming compile failed: " + e), P("falling back to ArrayBuffer instantiation"), le(r, t, a)
                 }))))).catch(n)
             }(), o._GetFakemodTimeInSeconds = function() {
-                return (zo = o._GetFakemodTimeInSeconds = o.asm.oh).apply(null, arguments)
+                return (zo = o._GetFakemodTimeInSeconds = o.asm.qh).apply(null, arguments)
             }),
             Go = o._ReleaseKeys = function() {
-                return (Go = o._ReleaseKeys = o.asm.ph).apply(null, arguments)
+                return (Go = o._ReleaseKeys = o.asm.rh).apply(null, arguments)
             },
             qo = o._GetCopyBufferAsCStr = function() {
-                return (qo = o._GetCopyBufferAsCStr = o.asm.qh).apply(null, arguments)
+                return (qo = o._GetCopyBufferAsCStr = o.asm.sh).apply(null, arguments)
             },
             Wo = (o._getMetricsInfo = function() {
-                return (o._getMetricsInfo = o.asm.rh).apply(null, arguments)
+                return (o._getMetricsInfo = o.asm.th).apply(null, arguments)
             }, o._SendMessageFloat = function() {
-                return (Wo = o._SendMessageFloat = o.asm.sh).apply(null, arguments)
+                return (Wo = o._SendMessageFloat = o.asm.uh).apply(null, arguments)
             }),
             Vo = o._SendMessageString = function() {
-                return (Vo = o._SendMessageString = o.asm.th).apply(null, arguments)
+                return (Vo = o._SendMessageString = o.asm.vh).apply(null, arguments)
             },
             Ho = o._SendMessage = function() {
-                return (Ho = o._SendMessage = o.asm.uh).apply(null, arguments)
+                return (Ho = o._SendMessage = o.asm.wh).apply(null, arguments)
             },
             jo = (o._SetFullscreen = function() {
-                return (o._SetFullscreen = o.asm.vh).apply(null, arguments)
+                return (o._SetFullscreen = o.asm.xh).apply(null, arguments)
             }, o._main = function() {
-                return (jo = o._main = o.asm.wh).apply(null, arguments)
+                return (jo = o._main = o.asm.yh).apply(null, arguments)
             }),
             Yo = o._SendPasteEvent = function() {
-                return (Yo = o._SendPasteEvent = o.asm.xh).apply(null, arguments)
+                return (Yo = o._SendPasteEvent = o.asm.zh).apply(null, arguments)
             },
             Xo = function() {
-                return (Xo = o.asm.yh).apply(null, arguments)
+                return (Xo = o.asm.Ah).apply(null, arguments)
             },
             Ko = function() {
-                return (Ko = o.asm.zh).apply(null, arguments)
+                return (Ko = o.asm.Bh).apply(null, arguments)
             },
             Zo = function() {
-                return (Zo = o.asm.Ah).apply(null, arguments)
+                return (Zo = o.asm.Ch).apply(null, arguments)
             },
             Jo = function() {
-                return (Jo = o.asm.Bh).apply(null, arguments)
+                return (Jo = o.asm.Dh).apply(null, arguments)
             },
             $o = function() {
-                return ($o = o.asm.Ch).apply(null, arguments)
+                return ($o = o.asm.Eh).apply(null, arguments)
             },
             Qo = function() {
-                return (Qo = o.asm.Dh).apply(null, arguments)
+                return (Qo = o.asm.Fh).apply(null, arguments)
             },
             ea = function() {
-                return (ea = o.asm.Eh).apply(null, arguments)
+                return (ea = o.asm.Gh).apply(null, arguments)
             },
             ra = function() {
-                return (ra = o.asm.Fh).apply(null, arguments)
+                return (ra = o.asm.Hh).apply(null, arguments)
             },
             ta = function() {
-                return (ta = o.asm.Gh).apply(null, arguments)
+                return (ta = o.asm.Ih).apply(null, arguments)
             },
             na = function() {
-                return (na = o.asm.Hh).apply(null, arguments)
+                return (na = o.asm.Jh).apply(null, arguments)
             },
             oa = function() {
-                return (oa = o.asm.Ih).apply(null, arguments)
+                return (oa = o.asm.Kh).apply(null, arguments)
             };
 
         function aa(e = E) {

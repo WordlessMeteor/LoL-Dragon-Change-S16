@@ -1228,7 +1228,10 @@
 }
 
 .paw-top-banner {
+    display: flex;
+    justify-content: flex-end;
     left: 0;
+    pointer-events: none;
     position: absolute;
     top: 0;
     width: 100%;
@@ -1291,11 +1294,13 @@
     background-color: #61718d;
     border-radius: 14px;
     display: flex;
-    padding: 4px 8px 3px 6px;
-    position: absolute;
-    right: 40px;
-    top: 8px;
-    z-index: 1
+    margin-right: 8px;
+    margin-top: 8px;
+    padding: 4px 8px 3px 6px
+}
+
+.paw-content>.paw-top-banner .silvershields-badge {
+    margin-right: 40px
 }
 
 .silvershields-badge-icon {

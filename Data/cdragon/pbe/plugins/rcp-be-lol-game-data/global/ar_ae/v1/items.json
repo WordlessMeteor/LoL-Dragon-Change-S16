@@ -435,6 +435,7 @@
             2015,
             2019,
             2021,
+            2517,
             6692,
             3123,
             3051,
@@ -1316,7 +1317,7 @@
     {
         "id": 1203,
         "name": "مهمة الدعم",
-        "description": "<mainText><stats></stats><br><br>Item_1203_Tooltip</mainText>",
+        "description": "<mainText><stats></stats><br><br>يتم وضع كواشف التحكم دائمًا في خانة مهمة الدور لديك. قم بترقية <font color = '#DBA12C'>عنصر الدعم</font> لديك لإكمال مهمتك. اكسب النقاط عبر إلحاق الضرر بالأبطال المعادين أو أبراج الحماية المعادية، أو قتل الأتباع قرب حليف. ستكسب النقاط بشكلٍ أسرع بكثير في المسار السفلي!<br><br><font color = '#00FF00'>الجوائز</font><br>• عنصر دعم مرقّى<br>• كواشف تحكم بسعر مخفض</mainText>",
         "active": true,
         "inStore": false,
         "from": [],
@@ -1431,7 +1432,7 @@
     {
         "id": 1208,
         "name": "مهمة الدعم",
-        "description": "<mainText><stats></stats><br><br>Item_1208_Tooltip</mainText>",
+        "description": "<mainText><stats></stats><br><br><font color = '#00FF00'>الجوائز</font><br>• عنصر دعم مرقّى<br>• كواشف تحكم بسعر مخفض</mainText>",
         "active": true,
         "inStore": false,
         "from": [],
@@ -3259,7 +3260,7 @@
     {
         "id": 2510,
         "name": "الفجر والغسق",
-        "description": "<mainText><stats><attention> 300</attention> صحة<br><attention> 70</attention> قوة القدرة<br><attention> 20</attention> تسارع القدرة<br><attention> 25%</attention> سرعة هجوم</stats><br><br><passive>نصل التعويذة</passive>  (0ث)<br>بعد استخدام قدرة، يلحق هجومك التالي <magicDamage>0 ضرر سحر إضافيًا</magicDamage>  <OnHit>عند الإصابة</OnHit> ويطبق تأثيرات  <OnHit>عند الإصابة</OnHit> مرة إضافية.</mainText>",
+        "description": "<mainText><stats><attention> 350</attention> صحة<br><attention> 70</attention> قوة القدرة<br><attention> 20</attention> تسارع القدرة<br><attention> 25%</attention> سرعة هجوم</stats><br><br><passive>نصل التعويذة</passive>  (0ث)<br>بعد استخدام قدرة، يلحق هجومك التالي <magicDamage>0 ضرر سحر إضافيًا</magicDamage>  <OnHit>عند الإصابة</OnHit> ويطبق تأثيرات  <OnHit>عند الإصابة</OnHit> مرة إضافية.</mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -3320,12 +3321,13 @@
     {
         "id": 2517,
         "name": "جوعٌ لا ينتهي",
-        "description": "<mainText><stats><attention> 60</attention> ضرر هجوم<br><attention> 5%</attention> علاج كامن<br><attention> 20%</attention> تماسك</stats><br><br><passive>المجاعة</passive><br>تكسب 0 تسارع قدرة.<br><br><passive>الوليمة</passive><br>عند موت بطلٍ ألحقت الضرر به خلال 3ث، تكسب <omnivamp>15% علاج كامن</omnivamp> لمدة 8ث. </mainText>",
+        "description": "<mainText><stats><attention> 65</attention> ضرر هجوم<br><attention> 5%</attention> علاج كامن<br><attention> 20%</attention> تماسك</stats><br><br><passive>المجاعة</passive><br>تكسب 0 تسارع قدرة.<br><br><passive>الوليمة</passive><br>عند موت بطلٍ ألحقت الضرر به خلال 3ث، تكسب <omnivamp>15% علاج كامن</omnivamp> لمدة 8ث. </mainText>",
         "active": false,
         "inStore": true,
         "from": [
             3133,
-            1037
+            1037,
+            1036
         ],
         "to": [],
         "categories": [
@@ -3342,8 +3344,8 @@
         "requiredBuffCurrencyCost": 0,
         "specialRecipe": 0,
         "isEnchantment": false,
-        "price": 1075,
-        "priceTotal": 3000,
+        "price": 825,
+        "priceTotal": 3100,
         "displayInItemSets": true,
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/2517_ADFighterOmnivamp.png"
     },
@@ -3398,8 +3400,8 @@
         "requiredBuffCurrencyCost": 0,
         "specialRecipe": 0,
         "isEnchantment": false,
-        "price": 1050,
-        "priceTotal": 3100,
+        "price": 750,
+        "priceTotal": 2800,
         "displayInItemSets": true,
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/2522_ManaActive.png"
     },
@@ -3466,7 +3468,7 @@
     {
         "id": 2525,
         "name": "حزام البروتوبلازم",
-        "description": "<mainText><stats><attention> 600</attention> صحة<br><attention> 15</attention> تسارع القدرة</stats><br><br><passive>عصب الحياة</passive>  (0ث)<br>إذا تلقيت ضررًا من شأنه أن ينقص صحتك تحت 30%، تكسب <health>0 صحة قصوى</health> لمدة 5ث، ثم تعالج بمقدار <health>0 صحة</health> خلال المدة. أثناء تجدد الصحة، تكسب 15% زيادة بالحجم و 10% سرعة حركة و 25% تماسك. </mainText>",
+        "description": "<mainText><stats><attention> 600</attention> صحة<br><attention> 20</attention> تسارع القدرة</stats><br><br><passive>عصب الحياة</passive>  (0ث)<br>إذا تلقيت ضررًا من شأنه أن ينقص صحتك تحت 30%، تكسب <health>0 صحة قصوى</health> لمدة 5ث، ثم تعالج بمقدار <health>0 صحة</health> خلال المدة. أثناء تجدد الصحة، تكسب 15% زيادة بالحجم و 10% سرعة حركة و 25% تماسك. </mainText>",
         "active": false,
         "inStore": true,
         "from": [

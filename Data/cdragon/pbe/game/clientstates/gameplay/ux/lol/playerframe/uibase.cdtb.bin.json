@@ -12025,6 +12025,18 @@
         "name": "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles",
         "Layer": 35,
         "ParentScene": "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root",
+        "SceneTransitionIn": {
+            "TransitionTime": 0.0,
+            "startAlpha": 255,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "SceneTransitionOut": {
+            "TransitionTime": 0.5,
+            "TransitionStartDelaySecs": 0.25,
+            "startAlpha": 255,
+            "endAlpha": 0,
+            "__type": "SceneAlphaTransitionData"
+        },
         "__type": "UISceneData"
     },
     "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/LevelUpFxOut": {
@@ -16130,19 +16142,22 @@
         "HitRegionElement": "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/Toggle1_HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
-                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/Toggle1_Default"
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/Toggle1_Default",
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/VFX_Highlight_V1"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "HoverStateElements": {
             "DisplayElementList": [
-                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/Toggle1_Default"
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/Toggle1_Default",
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/VFX_Highlight_V1"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "ClickedStateElements": {
             "DisplayElementList": [
-                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/Toggle1_Default"
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/Toggle1_Default",
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/VFX_Highlight_V1"
             ],
             "__type": "UiElementGroupButtonState"
         },
@@ -16160,7 +16175,7 @@
         },
         "SelectedClickedStateElements": {
             "DisplayElementList": [
-                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/VFX_Click_V1"
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/Toggle1_Selected"
             ],
             "__type": "UiElementGroupButtonState"
         },
@@ -16281,7 +16296,6 @@
     "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/VFX_Highlight_V1": {
         "name": "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/VFX_Highlight_V1",
         "Scene": "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles",
-        "Enabled": true,
         "Layer": 5,
         "Position": {
             "UIRect": {
@@ -16312,7 +16326,6 @@
     "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/VFX_Click_V1": {
         "name": "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle1/VFX_Click_V1",
         "Scene": "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles",
-        "Enabled": true,
         "Layer": 6,
         "Position": {
             "UIRect": {
@@ -16354,19 +16367,23 @@
         "HitRegionElement": "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/Toggle0_HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
-                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/Toggle0_Default"
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/Toggle0_Default",
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/VFX_Highlight_V0"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "HoverStateElements": {
             "DisplayElementList": [
-                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/Toggle0_Default"
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/Toggle0_Default",
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/VFX_Highlight_V0"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "ClickedStateElements": {
             "DisplayElementList": [
-                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/Toggle0_Default"
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/Toggle0_Default",
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/VFX_Highlight_V0",
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/VFX_Click_V0"
             ],
             "__type": "UiElementGroupButtonState"
         },
@@ -16384,7 +16401,7 @@
         },
         "SelectedClickedStateElements": {
             "DisplayElementList": [
-                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/VFX_Click_V0"
+                "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/Toggle0_Selected"
             ],
             "__type": "UiElementGroupButtonState"
         },
@@ -16394,7 +16411,6 @@
     "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/VFX_Click_V0": {
         "name": "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/VFX_Click_V0",
         "Scene": "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles",
-        "Enabled": true,
         "Layer": 6,
         "Position": {
             "UIRect": {
@@ -16466,7 +16482,6 @@
     "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/VFX_Highlight_V0": {
         "name": "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles/SummonerSpecialistToggle0/VFX_Highlight_V0",
         "Scene": "ClientStates/Gameplay/UX/LoL/PlayerFrame/UIBase/Player_Frame_Root/SummonerSpecialistToggles",
-        "Enabled": true,
         "Layer": 5,
         "Position": {
             "UIRect": {

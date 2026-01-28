@@ -207,6 +207,12 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
+        "mEmblems": [
+            {
+                "mEmblemData": "{2aabac22}",
+                "__type": "SkinEmblem"
+            }
+        ],
         "mResourceResolver": "Characters/Jayce/Skins/Skin44/Resources",
         "PersistentEffectConditions": [
             {
@@ -378,7 +384,7 @@
                 "birthColor": {
                     "constantValue": [
                         0.6705882549285889,
-                        0.42284274101257324,
+                        0.5922789573669434,
                         0.2235294133424759,
                         0.20000000298023224
                     ],
@@ -487,7 +493,7 @@
                 "birthColor": {
                     "constantValue": [
                         1.0,
-                        0.3700007498264313,
+                        0.8658427000045776,
                         0.14999619126319885,
                         0.6000000238418579
                     ],
@@ -6040,6 +6046,10 @@
                 "emitterName": "GroundSnow_Inside1",
                 "disabled": true,
                 "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "EmitterPosition": {
                     "constantValue": [
                         111.98627471923828,
@@ -6137,7 +6147,7 @@
                     },
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
-                "isLocalOrientation": 0,
+                "particleIsLocalOrientation": 1,
                 "birthScale0": {
                     "constantValue": [
                         0.5,
@@ -6164,6 +6174,10 @@
                 "emitterName": "GroundSnow_Inside2",
                 "disabled": true,
                 "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "EmitterPosition": {
                     "constantValue": [
                         111.98627471923828,
@@ -6261,6 +6275,7 @@
                     },
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "particleIsLocalOrientation": 1,
                 "birthRotation0": {
                     "constantValue": [
                         0.0,
@@ -6269,7 +6284,6 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
                         0.30000001192092896,
@@ -23968,7 +23982,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0051.SKINS_Jayce_Skin38.tex",
+                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0051_01.SKINS_Jayce_Skin38.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -23984,7 +23998,7 @@
                 "lifetime": 1.100000023841858,
                 "isSingleParticle": 1,
                 "emitterLinger": 1.0,
-                "emitterName": "Wall_Ball7",
+                "emitterName": "Wall_Ball12",
                 "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -24006,17 +24020,7 @@
                     },
                     "__type": "VfxPrimitiveMesh"
                 },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.06999313086271286,
-                        0.06999313086271286,
-                        0.45000380277633667
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": 2,
+                "blendMode": 1,
                 "alphaErosionDefinition": {
                     "erosionDriveCurve": {
                         "constantValue": -1.7999999523162842,
@@ -24034,184 +24038,6 @@
                                 -0.8384956121444702,
                                 -0.3930087387561798,
                                 -0.1770087480545044,
-                                -0.0,
-                                -0.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "erosionFeatherOut": 0.05000000074505806,
-                    "erosionMapName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0551.SKINS_Jayce_Skin38.tex",
-                    "erosionMapChannelMixer": {
-                        "constantValue": [
-                            1.0,
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "__type": "ValueColor"
-                    },
-                    "erosionMapAddressMode": 0,
-                    "__type": "VfxAlphaErosionDefinitionData"
-                },
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        -90.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        1.100000023841858,
-                        1.100000023841858,
-                        -1.100000023841858
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0893.SKINS_Jayce_Skin38.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 8.0,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.100000023841858,
-                "isSingleParticle": 1,
-                "emitterLinger": 1.0,
-                "emitterName": "Wall_Ball8",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        -345.0,
-                        85.0,
-                        20.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mMeshName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_E_Flower01.SKINS_Jayce_Skin38.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_E_Flower01.SKINS_Jayce_Skin38.skl",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "alphaErosionDefinition": {
-                    "erosionDriveCurve": {
-                        "constantValue": -1.7999999523162842,
-                        "dynamics": {
-                            "times": [
-                                0.0,
-                                0.04315726459026337,
-                                0.23829114437103271,
-                                1.0
-                            ],
-                            "values": [
-                                -1.7999999523162842,
-                                -0.6352791786193848,
-                                -0.0,
-                                -0.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "erosionFeatherOut": 0.05000000074505806,
-                    "erosionMapName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0551.SKINS_Jayce_Skin38.tex",
-                    "erosionMapChannelMixer": {
-                        "constantValue": [
-                            1.0,
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "__type": "ValueColor"
-                    },
-                    "erosionMapAddressMode": 0,
-                    "__type": "VfxAlphaErosionDefinitionData"
-                },
-                "doesCastShadow": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        -90.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        1.100000023841858,
-                        1.100000023841858,
-                        -1.100000023841858
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0651.SKINS_Jayce_Skin38.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 10.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 1.0,
-                "lifetime": 1.100000023841858,
-                "isSingleParticle": 1,
-                "emitterLinger": 1.0,
-                "emitterName": "Wall_Ball9",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        345.0,
-                        85.0,
-                        20.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mMeshName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_E_Flower01.SKINS_Jayce_Skin38.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_E_Flower01.SKINS_Jayce_Skin38.skl",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "alphaErosionDefinition": {
-                    "erosionDriveCurve": {
-                        "constantValue": -1.7999999523162842,
-                        "dynamics": {
-                            "times": [
-                                0.0,
-                                0.04315726459026337,
-                                0.23829114437103271,
-                                1.0
-                            ],
-                            "values": [
-                                -1.7999999523162842,
-                                -0.6352791786193848,
                                 -0.0,
                                 -0.0
                             ],
@@ -24234,132 +24060,6 @@
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "disableBackfaceCull": true,
-                "isUniformScale": 1,
-                "doesCastShadow": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        -90.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        1.100000023841858,
-                        1.100000023841858,
-                        1.100000023841858
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0651.SKINS_Jayce_Skin38.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 9.800000190734863,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.100000023841858,
-                "isSingleParticle": 1,
-                "emitterLinger": 1.0,
-                "emitterName": "Wall_Ball10",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        -345.0,
-                        85.0,
-                        20.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mMeshName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_E_Flower01.SKINS_Jayce_Skin38.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_E_Flower01.SKINS_Jayce_Skin38.skl",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.15000000596046448,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 1,
-                "alphaErosionDefinition": {
-                    "erosionDriveCurve": {
-                        "constantValue": -1.7999999523162842,
-                        "dynamics": {
-                            "times": [
-                                0.0,
-                                0.04038062319159508,
-                                0.0761476382613182,
-                                0.13537485897541046,
-                                0.23829114437103271,
-                                1.0
-                            ],
-                            "values": [
-                                -1.7999999523162842,
-                                -0.8384956121444702,
-                                -0.3930087387561798,
-                                -0.1770087480545044,
-                                -0.0,
-                                -0.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "erosionFeatherOut": 0.05000000074505806,
-                    "erosionMapName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0551.SKINS_Jayce_Skin38.tex",
-                    "erosionMapChannelMixer": {
-                        "constantValue": [
-                            1.0,
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "__type": "ValueColor"
-                    },
-                    "erosionMapAddressMode": 0,
-                    "__type": "VfxAlphaErosionDefinitionData"
-                },
                 "doesCastShadow": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -24422,112 +24122,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0652.SKINS_Jayce_Skin38.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 10.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 1.0,
-                "lifetime": 1.100000023841858,
-                "isSingleParticle": 1,
-                "emitterLinger": 1.0,
-                "emitterName": "Wall_Ball11",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        345.0,
-                        85.0,
-                        20.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mMeshName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_E_Flower01.SKINS_Jayce_Skin38.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_E_Flower01.SKINS_Jayce_Skin38.skl",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.06999313086271286,
-                        0.06999313086271286,
-                        0.45000380277633667
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": 2,
-                "alphaErosionDefinition": {
-                    "erosionDriveCurve": {
-                        "constantValue": -1.7999999523162842,
-                        "dynamics": {
-                            "times": [
-                                0.0,
-                                0.04038062319159508,
-                                0.0761476382613182,
-                                0.13537485897541046,
-                                0.23829114437103271,
-                                1.0
-                            ],
-                            "values": [
-                                -1.7999999523162842,
-                                -0.8384956121444702,
-                                -0.3930087387561798,
-                                -0.1770087480545044,
-                                -0.0,
-                                -0.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "erosionFeatherOut": 0.05000000074505806,
-                    "erosionMapName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0551.SKINS_Jayce_Skin38.tex",
-                    "erosionMapChannelMixer": {
-                        "constantValue": [
-                            1.0,
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "__type": "ValueColor"
-                    },
-                    "erosionMapAddressMode": 0,
-                    "__type": "VfxAlphaErosionDefinitionData"
-                },
-                "disableBackfaceCull": true,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        -90.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        1.100000023841858,
-                        1.100000023841858,
-                        -1.100000023841858
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0893.SKINS_Jayce_Skin38.tex",
+                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0051_01.SKINS_Jayce_Skin38.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -24592,6 +24187,7 @@
                     "__type": "ValueColor"
                 },
                 "alphaRef": 0,
+                "disableBackfaceCull": true,
                 "doesCastShadow": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -24632,200 +24228,6 @@
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_E_Flow0051.Chroma_Jayce_PetalsofSpring.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 0.30000001192092896,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 1.0,
-                "lifetime": 0.20000000298023224,
-                "isSingleParticle": 1,
-                "emitterName": "Wall_Ball_End2",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        350.0,
-                        98.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_E_Flower01.SKINS_Jayce_Skin38.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.11000228673219681,
-                        0.0800030529499054,
-                        0.3499961793422699
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": 1,
-                "alphaRef": 0,
-                "reflectionDefinition": {
-                    "fresnel": 0.10000000149011612,
-                    "fresnelColor": [
-                        0.38823530077934265,
-                        0.20392157137393951,
-                        0.09803921729326248,
-                        0.0
-                    ],
-                    "__type": "VfxReflectionDefinitionData"
-                },
-                "doesCastShadow": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        -90.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        1.100000023841858,
-                        1.100000023841858,
-                        1.100000023841858
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.4000000059604645
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0893.SKINS_Jayce_Skin38.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 0.30000001192092896,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 1.0,
-                "lifetime": 0.20000000298023224,
-                "isSingleParticle": 1,
-                "emitterName": "Wall_Ball_End3",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        350.0,
-                        98.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_E_Flower01.SKINS_Jayce_Skin38.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.5000076293945312,
-                        0.17000076174736023,
-                        0.6500037908554077
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": 2,
-                "alphaRef": 0,
-                "reflectionDefinition": {
-                    "fresnel": 0.10000000149011612,
-                    "fresnelColor": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.0
-                    ],
-                    "__type": "VfxReflectionDefinitionData"
-                },
-                "doesCastShadow": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        -90.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        1.100000023841858,
-                        1.100000023841858,
-                        1.100000023841858
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.4000000059604645
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0892.SKINS_Jayce_Skin38.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -24862,15 +24264,6 @@
                     "__type": "VfxPrimitiveMesh"
                 },
                 "blendMode": 3,
-                "birthColor": {
-                    "constantValue": [
-                        0.9411764740943909,
-                        0.7568627595901489,
-                        0.7568627595901489,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
                 "alphaRef": 0,
                 "doesCastShadow": 1,
                 "birthRotation0": {
@@ -24911,201 +24304,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jayce/Skins/Skin44/Particles/Jayce_Skin44_E_Flow0051.Chroma_Jayce_PetalsofSpring.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 0.30000001192092896,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 1.0,
-                "lifetime": 0.20000000298023224,
-                "isSingleParticle": 1,
-                "emitterName": "Wall_Ball_EndR2",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        -350.0,
-                        98.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_E_Flower01.SKINS_Jayce_Skin38.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.11000228673219681,
-                        0.0800030529499054,
-                        0.3499961793422699
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": 1,
-                "alphaRef": 0,
-                "reflectionDefinition": {
-                    "fresnel": 0.10000000149011612,
-                    "fresnelColor": [
-                        0.38823530077934265,
-                        0.20392157137393951,
-                        0.09803921729326248,
-                        0.0
-                    ],
-                    "__type": "VfxReflectionDefinitionData"
-                },
-                "doesCastShadow": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        90.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        -1.100000023841858,
-                        1.100000023841858,
-                        1.100000023841858
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.4000000059604645
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0893.SKINS_Jayce_Skin38.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 0.30000001192092896,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 1.0,
-                "lifetime": 0.20000000298023224,
-                "isSingleParticle": 1,
-                "emitterName": "Wall_Ball_EndR3",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        -350.0,
-                        98.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/Jayce_Skin38_E_Flower01.SKINS_Jayce_Skin38.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.5000076293945312,
-                        0.17000076174736023,
-                        0.6500037908554077
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": 2,
-                "alphaRef": 0,
-                "reflectionDefinition": {
-                    "fresnel": 0.10000000149011612,
-                    "fresnelColor": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.0
-                    ],
-                    "__type": "VfxReflectionDefinitionData"
-                },
-                "doesCastShadow": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        90.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        -1.100000023841858,
-                        1.100000023841858,
-                        1.100000023841858
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.4000000059604645
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0892.SKINS_Jayce_Skin38.tex",
+                "texture": "ASSETS/Characters/Jayce/Skins/Skin38/Particles/E_Flow0051_01.SKINS_Jayce_Skin38.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],

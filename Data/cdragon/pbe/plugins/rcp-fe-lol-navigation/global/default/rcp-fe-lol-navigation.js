@@ -22124,7 +22124,10 @@
                                 isHidden: !1,
                                 isQuickLoadEnabled: !0,
                                 audioManager: this._audioManager,
-                                renderer: a
+                                renderer: a,
+                                onIframeDestroyedFunction: () => {
+                                    this._destroyPersistentIframe(e)
+                                }
                             });
                         return s.appendTo(this._acPersistentContainer), s
                     } catch (n) {
@@ -22136,25 +22139,31 @@
                         this._destroyPersistentIframe(e)
                     }), 36e5)
                 }
-                _destroyPersistentIframe(e) {
-                    let t = this._iFrameIdToManagedIframeMap.get(e);
+                _triggerIframeCleanup(e) {
+                    const t = this._iFrameIdToManagedIframeMap.get(e);
                     if (t) try {
                         t.frame && t.frame.sendMessage({
                             messageType: t?.onDestroyMessage
-                        }), t?.timerId && (clearTimeout(t.timerId), t.timerId = null);
+                        })
+                    } catch (t) {
+                        a.logger.error(`Failed to trigger iframe cleanup for iframe with id ${e}:`, t)
+                    }
+                }
+                _destroyPersistentIframe(e) {
+                    let t = this._iFrameIdToManagedIframeMap.get(e);
+                    if (t) try {
+                        t?.timerId && (clearTimeout(t.timerId), t.timerId = null);
                         let e = this._acPersistentContainer.querySelector(`iframe[src="${t.frame?.url}"]`);
                         e && (e.onload = e.onerror = null, e.src = "about:blank", e.remove(), e = null), t.frame?.destroy && t.frame.destroy(), t.frame = null, t.onShowMessage = null, t.onHideMessage = null, t.onDestroyMessage = null, t = null
                     } catch (t) {
                         a.logger.error(`Failed to destroy iframe with id ${e}:`, t)
                     } finally {
-                        this._iFrameIdToManagedIframeMap.delete(e)
+                        this._iFrameIdToManagedIframeMap.delete(e), 0 === this._iFrameIdToManagedIframeMap.size && (this._iFrameIdToManagedIframeMap.clear(), this._iFrameIdToManagedIframeMap = new Map)
                     }
                 }
                 _destroyAllPersistentIframes() {
-                    if (0 !== this._iFrameIdToManagedIframeMap.size) {
-                        for (const e of this._iFrameIdToManagedIframeMap.keys()) this._destroyPersistentIframe(e);
-                        this._iFrameIdToManagedIframeMap.clear(), this._iFrameIdToManagedIframeMap = new Map
-                    }
+                    if (0 !== this._iFrameIdToManagedIframeMap.size)
+                        for (const e of this._iFrameIdToManagedIframeMap.keys()) this._triggerIframeCleanup(e)
                 }
                 _handleGameFlowData(e) {
                     if (e && this._iFrameIdToManagedIframeMap.size > 0) {

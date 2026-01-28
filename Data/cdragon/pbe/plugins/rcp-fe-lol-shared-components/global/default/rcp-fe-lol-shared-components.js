@@ -8707,7 +8707,7 @@
                 Metadata: () => y.default,
                 ParseError: () => C.default,
                 PhoneNumberMatcher: () => V,
-                PhoneNumberSearch: () => D,
+                PhoneNumberSearch: () => B,
                 PhoneNumberSearchCustom: () => h.PhoneNumberSearch,
                 findNumbers: () => H,
                 findPhoneNumbers: () => $,
@@ -8740,7 +8740,7 @@
                 parsePhoneNumberFromString: () => T,
                 parseRFC3966: () => Y,
                 searchNumbers: () => U,
-                searchPhoneNumbers: () => B,
+                searchPhoneNumbers: () => D,
                 searchPhoneNumbersCustom: () => p.searchPhoneNumbers
             });
             var a = n(211),
@@ -8826,12 +8826,12 @@
                 return e.push(a), p.default.apply(this, e)
             }
 
-            function B() {
+            function D() {
                 var e = Array.prototype.slice.call(arguments);
                 return e.push(a), p.searchPhoneNumbers.apply(this, e)
             }
 
-            function D(e, t) {
+            function B(e, t) {
                 h.PhoneNumberSearch.call(this, e, t, a)
             }
 
@@ -8889,7 +8889,7 @@
             function Q(e, t) {
                 return (0, y.getCountryCallingCode)(e, t)
             }
-            D.prototype = Object.create(h.PhoneNumberSearch.prototype, {}), D.prototype.constructor = D, V.prototype = Object.create(_.default.prototype, {}), V.prototype.constructor = V, G.prototype = Object.create(b.default.prototype, {}), G.prototype.constructor = G
+            B.prototype = Object.create(h.PhoneNumberSearch.prototype, {}), B.prototype.constructor = B, V.prototype = Object.create(_.default.prototype, {}), V.prototype.constructor = V, G.prototype = Object.create(b.default.prototype, {}), G.prototype.constructor = G
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
@@ -12689,8 +12689,8 @@
                 M = j(n(471)),
                 O = j(n(474)),
                 $ = j(n(477)),
-                B = j(n(480)),
-                D = j(n(486)),
+                D = j(n(480)),
+                B = j(n(486)),
                 H = j(n(501)),
                 U = j(n(504)),
                 V = j(n(507)),
@@ -12737,8 +12737,8 @@
                 ChatChannelSelectorComponent: M.default,
                 PlayerBlockSelectorComponent: O.default,
                 PlayerBlockSelectionComponent: $.default,
-                HonorV3ExplainerModalComponent: B.default,
-                HonorV3LevelExplainerCarouselComponent: D.default,
+                HonorV3ExplainerModalComponent: D.default,
+                HonorV3LevelExplainerCarouselComponent: B.default,
                 PlayerReadyStateBlockComponent: H.default,
                 WardSkinSelectComponent: U.default,
                 WardSkinPopupComponent: V.default,
@@ -14598,6 +14598,7 @@
                 }
             }
             n(418);
+            const o = "RClientWindowMessenger";
             e.exports = a.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["managed-iframe"],
@@ -14608,6 +14609,7 @@
                 navigationApi: null,
                 errorTimeoutMilliseconds: 3e4,
                 onIframeLoadedFunction: null,
+                onIframeDestroyedFunction: null,
                 isQuickLoadEnabled: !1,
                 componentIntializationTime: 0,
                 db: null,
@@ -14623,7 +14625,7 @@
                     return this.get("isLoading") || this.get("isInErrorState")
                 })),
                 init() {
-                    this._super(...arguments), this.set("componentInitializationTime", Date.now()), a.logger.info(`managed iframe has initialized: init time: ${this.get("componentInitializationTime")}`), this.set("listeners", a.Ember.A()), this.handleQuickLoad = this._handleQuickLoad.bind(this), this.get("isQuickLoadEnabled") && (window.addEventListener("message", this.handleQuickLoad), a.logger.info(`Quick Load as been attached to the iframe in ${Date.now()-this.get("componentInitializationTime")}ms`))
+                    this._super(...arguments), this.set("componentInitializationTime", Date.now()), a.logger.info(`managed iframe has initialized: init time: ${this.get("componentInitializationTime")}`), this.set("listeners", a.Ember.A()), this.handleQuickLoad = this._handleQuickLoad.bind(this), this.get("isQuickLoadEnabled") && (window.addEventListener("message", this.handleQuickLoad), a.logger.info(`Quick Load as been attached to the iframe in ${Date.now()-this.get("componentInitializationTime")}ms`)), this.handleIframeDestroyed = this._handleIframeDestroyed.bind(this), this.get("onIframeDestroyedFunction") && window.addEventListener("message", this.handleIframeDestroyed)
                 },
                 tryClearRenderTimeout() {
                     const e = this.get("clearRenderTimeout");
@@ -14702,7 +14704,7 @@
                         const {
                             data: t
                         } = e;
-                        if ("rcp-fe-lol-home-loaded" === t?.messageType && "RClientWindowMessenger" === t?.type) {
+                        if ("rcp-fe-lol-home-loaded" === t?.messageType && t?.type === o) {
                             this.setProperties({
                                 isInErrorState: !1,
                                 isLoading: !1
@@ -14710,6 +14712,14 @@
                             const e = this.get("onIframeLoadedFunction");
                             e && "function" == typeof e && e(this), this.set("isLoaded", !0), a.logger.info("rcp-fe-lol-home-loaded recieved via quickload: time to load: " + (Date.now() - this.get("componentInitializationTime"))), window.removeEventListener("message", this.handleQuickLoad)
                         }
+                    }
+                },
+                _handleIframeDestroyed(e) {
+                    if (this.get("onIframeDestroyedFunction") && "function" == typeof this.get("onIframeDestroyedFunction")) {
+                        const {
+                            data: t
+                        } = e;
+                        "rcp-fe-lol-persistent-iframe-destroyed" === t?.messageType && t?.type === o && (this.get("onIframeDestroyedFunction")(this), window.removeEventListener("message", this.handleIframeDestroyed))
                     }
                 },
                 cleanupListeners() {
@@ -17108,7 +17118,12 @@
                                     break;
                                 case r.METAGAMES_LCU_PATCHING_STATUS:
                                     ! function(e, t, n) {
-                                        if (l) return;
+                                        if (l && null != c) return void t.sendMessage({
+                                            messageType: r.METAGAMES_LCU_PATCHING_STATUS_RESPONSE,
+                                            data: {
+                                                isPatching: c
+                                            }
+                                        });
                                         l = !0, n.observe("/patcher/v1/products/league_of_legends/state", (e => {
                                             const n = e?.action === i.PATCHING || e?.action === i.REPAIRING;
                                             c !== n && (c = n, t.sendMessage({

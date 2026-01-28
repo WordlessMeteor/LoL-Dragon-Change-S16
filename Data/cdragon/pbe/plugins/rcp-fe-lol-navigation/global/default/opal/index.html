@@ -116,6 +116,7 @@
   </script>
   <script>
    (() => {
+        console.log("Starting DemaciaRising: CL 7414669");
         const urlParams = new URLSearchParams(window.location.search);
         const isModal = urlParams.has("isModal") && urlParams.get("isModal").toLowerCase() === 'true';
         const isDebugMode = urlParams.has("isDebugMode") && urlParams.get("isDebugMode").toLowerCase() === 'true';
@@ -256,6 +257,8 @@
           }
         };
 
+        let myUnityInstance;
+
         // message handlers
         // data payload: {isPatching: boolean}
         const handleLcuPatchingStatus = (data) => {
@@ -276,6 +279,7 @@
               // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
               // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
             }).then((unityInstance) => {
+              myUnityInstance = unityInstance;
                 setState(STATE.READY);
               })
               .then(() => {
@@ -315,6 +319,60 @@
 
         //Error Handling for Unity bootstrap / loading
         window.addEventListener('error', opalErrorListener);
+
+        const opalMouseDownListener = (event) => {
+          if (event.button === 1) { // Button code 1 is for the middle mouse button
+            event.preventDefault();
+          }
+        }
+
+        // Prevent middle mouse button from triggering default behavior (e.g., scrolling)
+        window.addEventListener("mousedown", opalMouseDownListener);
+
+        const opalKillIframeListener = (event) => {
+          if (event.data) {
+            const {messageType, data} = event.data;
+            if (messageType == "rcp-fe-lol-persistent-iframe-kill")
+            {
+              window.removeEventListener("error", opalErrorListener);
+              window.removeEventListener("mousedown", opalMouseDownListener);
+              window.removeEventListener("message", opalKillIframeListener);
+              myUnityInstance.Quit().then(() => {
+                console.log("DemaciaRising instance quit successfully");
+
+                // Clearing reference to free memory
+                const canvas = document.getElementById('unity-canvas');
+                if (canvas && canvas.getContextSafariWebGL2Fixed) {
+                  // Restore original getContext, breaking the closure
+                  canvas.getContext = canvas.getContextSafariWebGL2Fixed;
+                  delete canvas.getContextSafariWebGL2Fixed;
+                }
+                
+                // Remove Emscripten's shimmed globals that still hold references
+                for (const key of Object.getOwnPropertyNames(window)) {
+                  const desc = Object.getOwnPropertyDescriptor(window, key);
+                  if (desc && desc.get && desc.configurable) {
+                    // Don't remove parent yet for postMessage later
+                    if (key == "parent") {
+                      continue;
+                    }
+                    delete window[key];
+                  }
+                }
+
+                window.parent.postMessage({
+                  messageType: "rcp-fe-lol-persistent-iframe-destroyed",
+                  type: "RClientWindowMessenger"
+                }, "*");
+                delete window["parent"];
+              }).catch((error) => {
+                console.error("Error quitting Unity instance:", error);
+              });
+            }
+          }
+        }
+
+        window.addEventListener("message", opalKillIframeListener);
 
         // init
         const init = () => {
