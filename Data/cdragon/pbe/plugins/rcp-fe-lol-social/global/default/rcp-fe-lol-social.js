@@ -18625,7 +18625,7 @@
                 settingsService: r.Ember.inject.service("settings"),
                 isDiscordIntegrationEnabled: r.Ember.computed.alias("clientConfigService.discordIntegrationEnabled"),
                 isEnabled: r.Ember.computed("isDiscordIntegrationEnabled", "isTencent", (function() {
-                    return !!this.get("isDiscordIntegrationEnabled") && (!this.get("isTencent") && !o.contains(this.get("rsoAuthCountryCode")))
+                    return !!this.get("isDiscordIntegrationEnabled") && (!this.get("isTencent") && !o.includes(this.get("rsoAuthCountryCode")))
                 })),
                 isTencent: r.Ember.computed.equal("settingsService.region", "TENCENT"),
                 init: function() {

@@ -7116,7 +7116,7 @@
                     this.set("accountLoadout", e[0])
                 },
                 _handleSkinViewerSettings(e) {
-                    this.set("disableAllPurchase", e.DisableAllPurchase)
+                    this.set("disableAllPurchase", e?.DisableAllPurchase)
                 },
                 handleSkinsInventory(e) {
                     this.set("inventoryEntitledSkins", (e || []).map((e => e.itemId))), this._setSkinsOwnership(this.get("allSkins"))
@@ -7149,14 +7149,12 @@
                     const t = this.get("disableAllPurchase");
                     if (!e.length) return Promise.reject();
                     const n = e.map((e => e.id));
-                    return this._getCatalogSkinPurchaseInfo(n).then((n => {
-                        n.length && n.forEach((n => {
-                            if (!n) return;
-                            const o = e.find((e => e.id === (n.id || n.itemId))),
-                                s = this._isSkinPurchasable(n) && !t;
-                            i.Ember.set(o, "purchaseEnabled", s)
-                        }))
-                    }))
+                    return this._getCatalogSkinPurchaseInfo(n).then((n => n?.length ? (n.forEach((n => {
+                        if (!n) return;
+                        const o = e.find((e => e.id === (n.id || n.itemId))),
+                            s = this._isSkinPurchasable(n) && !t;
+                        i.Ember.set(o, "purchaseEnabled", s)
+                    })), Promise.resolve()) : Promise.resolve()))
                 },
                 _setSkinsOwnership(e = []) {
                     if (!e.length) return;
