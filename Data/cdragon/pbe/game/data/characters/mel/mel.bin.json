@@ -9745,8 +9745,17 @@
                                 "__type": "{f3cbe7b2}"
                             },
                             "mPart2": {
-                                "mDataValue": "ExplosionCount",
-                                "__type": "NamedDataValueCalculationPart"
+                                "mSubparts": [
+                                    {
+                                        "mDataValue": "ExplosionCount",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    {
+                                        "mNumber": -1.0,
+                                        "__type": "NumberCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
                             },
                             "__type": "ProductOfSubPartsCalculationPart"
                         }
