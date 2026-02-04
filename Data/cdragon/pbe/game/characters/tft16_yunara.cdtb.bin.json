@@ -78,8 +78,8 @@
                     "mName": "AttackSpeed",
                     "mValues": [
                         0.0,
-                        0.6499999761581421,
-                        0.6499999761581421,
+                        0.800000011920929,
+                        0.800000011920929,
                         3.0,
                         2.0,
                         0.0,
@@ -125,6 +125,19 @@
                         0.33000001311302185
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "APDamage",
+                    "mValues": [
+                        0.0,
+                        10.0,
+                        15.0,
+                        50.0,
+                        100.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -133,12 +146,8 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mSubpart": {
-                                "mDataValue": "AttackSpeed",
-                                "__type": "NamedDataValueCalculationPart"
-                            },
-                            "mRatio": 0.009999999776482582,
-                            "__type": "SubPartScaledProportionalToStat"
+                            "mDataValue": "AttackSpeed",
+                            "__type": "NamedDataValueCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -154,6 +163,14 @@
                             },
                             "mRatio": 1.0,
                             "mStat": 3,
+                            "__type": "SubPartScaledProportionalToStat"
+                        },
+                        {
+                            "mSubpart": {
+                                "mDataValue": "APDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -238,7 +255,7 @@
                                 },
                                 {
                                     "type": "ADDamage",
-                                    "nameOverride": "TFT_AD_PhysicalDamage_Scale",
+                                    "nameOverride": "Spell_TFT16_YunaraSpell_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

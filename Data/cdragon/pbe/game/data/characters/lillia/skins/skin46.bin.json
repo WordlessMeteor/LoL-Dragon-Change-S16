@@ -609,19 +609,24 @@
                 "OwnerCondition": {
                     "mDrivers": [
                         {
-                            "mDrivers": [
-                                {
-                                    "__type": "HasGearDynamicMaterialBoolDriver"
-                                },
-                                {
-                                    "mDriver": {
-                                        "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "__type": "NotMaterialDriver"
-                                }
-                            ],
-                            "__type": "AllTrueMaterialDriver"
+                            "__type": "HasGearDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mAnimationNames": [
+                                    "Respawn",
+                                    "Recall_Winddown"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"

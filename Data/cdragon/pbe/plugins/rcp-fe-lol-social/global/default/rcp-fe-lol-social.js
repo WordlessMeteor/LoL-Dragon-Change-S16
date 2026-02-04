@@ -3046,11 +3046,11 @@
                 I = U(n(129)),
                 T = U(n(130)),
                 O = U(n(131)),
-                R = U(n(132)),
-                M = U(n(133)),
+                M = U(n(132)),
+                R = U(n(133)),
                 D = U(n(134)),
-                P = U(n(135)),
-                N = U(n(136)),
+                N = U(n(135)),
+                P = U(n(136)),
                 j = U(n(137)),
                 L = U(n(138)),
                 z = U(n(139)),
@@ -3063,7 +3063,7 @@
                     default: e
                 }
             }
-            const H = [r.default, o.default, i.default, a.default, s.default, l.default, c.default, d.default, p.default, u.default, m.default, g.default, h.default, f.default, _.default, A.default, b.default, y.default, x.default, v.default, k.default, E.default, w.default, C.default, $.default, B.default, S.default, I.default, T.default, O.default, R.default, M.default, D.default, P.default, N.default, j.default, L.default, z.default, F.default, q.default, G.default]
+            const H = [r.default, o.default, i.default, a.default, s.default, l.default, c.default, d.default, p.default, u.default, m.default, g.default, h.default, f.default, _.default, A.default, b.default, y.default, x.default, v.default, k.default, E.default, w.default, C.default, $.default, B.default, S.default, I.default, T.default, O.default, M.default, R.default, D.default, N.default, P.default, j.default, L.default, z.default, F.default, q.default, G.default]
         }, e => {
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-arrow-toggle" noshadow>\r\n  <template>\r\n    <div class="arrow-toggle" class-use-animation="{{!data.disableAnimations}}"></div>\r\n  </template>\r\n</lol-social-element>\r\n'
@@ -4348,11 +4348,11 @@
                         I = "[object Set]",
                         T = "[object String]",
                         O = "[object Symbol]",
-                        R = "[object WeakMap]",
-                        M = "[object ArrayBuffer]",
+                        M = "[object WeakMap]",
+                        R = "[object ArrayBuffer]",
                         D = "[object DataView]",
-                        P = "[object Float32Array]",
-                        N = "[object Float64Array]",
+                        N = "[object Float32Array]",
+                        P = "[object Float64Array]",
                         j = "[object Int8Array]",
                         L = "[object Int16Array]",
                         z = "[object Int32Array]",
@@ -4402,11 +4402,11 @@
                         Ie = "\\xac\\xb1\\xd7\\xf7\\x00-\\x2f\\x3a-\\x40\\x5b-\\x60\\x7b-\\xbf\\u2000-\\u206f \\t\\x0b\\f\\xa0\\ufeff\\n\\r\\u2028\\u2029\\u1680\\u180e\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200a\\u202f\\u205f\\u3000",
                         Te = "['’]",
                         Oe = "[" + Ee + "]",
-                        Re = "[" + Ie + "]",
-                        Me = "[" + we + "]",
+                        Me = "[" + Ie + "]",
+                        Re = "[" + we + "]",
                         De = "\\d+",
-                        Pe = "[" + Ce + "]",
-                        Ne = "[" + $e + "]",
+                        Ne = "[" + Ce + "]",
+                        Pe = "[" + $e + "]",
                         je = "[^" + Ee + Ie + De + Ce + $e + Be + "]",
                         Le = "\\ud83c[\\udffb-\\udfff]",
                         ze = "[^" + Ee + "]",
@@ -4414,27 +4414,27 @@
                         qe = "[\\ud800-\\udbff][\\udc00-\\udfff]",
                         Ge = "[" + Be + "]",
                         Ue = "\\u200d",
-                        He = "(?:" + Ne + "|" + je + ")",
+                        He = "(?:" + Pe + "|" + je + ")",
                         We = "(?:" + Ge + "|" + je + ")",
                         Ve = "(?:['’](?:d|ll|m|re|s|t|ve))?",
                         Ye = "(?:['’](?:D|LL|M|RE|S|T|VE))?",
-                        Qe = "(?:" + Me + "|" + Le + ")" + "?",
+                        Qe = "(?:" + Re + "|" + Le + ")" + "?",
                         Ke = "[" + Se + "]?",
                         Ze = Ke + Qe + ("(?:" + Ue + "(?:" + [ze, Fe, qe].join("|") + ")" + Ke + Qe + ")*"),
-                        Xe = "(?:" + [Pe, Fe, qe].join("|") + ")" + Ze,
-                        Je = "(?:" + [ze + Me + "?", Me, Fe, qe, Oe].join("|") + ")",
+                        Xe = "(?:" + [Ne, Fe, qe].join("|") + ")" + Ze,
+                        Je = "(?:" + [ze + Re + "?", Re, Fe, qe, Oe].join("|") + ")",
                         et = RegExp(Te, "g"),
-                        tt = RegExp(Me, "g"),
+                        tt = RegExp(Re, "g"),
                         nt = RegExp(Le + "(?=" + Le + ")|" + Je + Ze, "g"),
-                        rt = RegExp([Ge + "?" + Ne + "+" + Ve + "(?=" + [Re, Ge, "$"].join("|") + ")", We + "+" + Ye + "(?=" + [Re, Ge + He, "$"].join("|") + ")", Ge + "?" + He + "+" + Ve, Ge + "+" + Ye, "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])", "\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])", De, Xe].join("|"), "g"),
+                        rt = RegExp([Ge + "?" + Pe + "+" + Ve + "(?=" + [Me, Ge, "$"].join("|") + ")", We + "+" + Ye + "(?=" + [Me, Ge + He, "$"].join("|") + ")", Ge + "?" + He + "+" + Ve, Ge + "+" + Ye, "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])", "\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])", De, Xe].join("|"), "g"),
                         ot = RegExp("[" + Ue + Ee + we + Se + "]"),
                         it = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/,
                         at = ["Array", "Buffer", "DataView", "Date", "Error", "Float32Array", "Float64Array", "Function", "Int8Array", "Int16Array", "Int32Array", "Map", "Math", "Object", "Promise", "RegExp", "Set", "String", "Symbol", "TypeError", "Uint8Array", "Uint8ClampedArray", "Uint16Array", "Uint32Array", "WeakMap", "_", "clearTimeout", "isFinite", "parseInt", "setTimeout"],
                         st = -1,
                         lt = {};
-                    lt[P] = lt[N] = lt[j] = lt[L] = lt[z] = lt[F] = lt[q] = lt[G] = lt[U] = !0, lt[A] = lt[b] = lt[M] = lt[y] = lt[D] = lt[x] = lt[v] = lt[k] = lt[w] = lt[C] = lt[$] = lt[S] = lt[I] = lt[T] = lt[R] = !1;
+                    lt[N] = lt[P] = lt[j] = lt[L] = lt[z] = lt[F] = lt[q] = lt[G] = lt[U] = !0, lt[A] = lt[b] = lt[R] = lt[y] = lt[D] = lt[x] = lt[v] = lt[k] = lt[w] = lt[C] = lt[$] = lt[S] = lt[I] = lt[T] = lt[M] = !1;
                     var ct = {};
-                    ct[A] = ct[b] = ct[M] = ct[D] = ct[y] = ct[x] = ct[P] = ct[N] = ct[j] = ct[L] = ct[z] = ct[w] = ct[C] = ct[$] = ct[S] = ct[I] = ct[T] = ct[O] = ct[F] = ct[q] = ct[G] = ct[U] = !0, ct[v] = ct[k] = ct[R] = !1;
+                    ct[A] = ct[b] = ct[R] = ct[D] = ct[y] = ct[x] = ct[N] = ct[P] = ct[j] = ct[L] = ct[z] = ct[w] = ct[C] = ct[$] = ct[S] = ct[I] = ct[T] = ct[O] = ct[F] = ct[q] = ct[G] = ct[U] = !0, ct[v] = ct[k] = ct[M] = !1;
                     var dt = {
                             "\\": "\\",
                             "'": "'",
@@ -4511,11 +4511,11 @@
                         return i
                     }
 
-                    function Rt(e, t) {
+                    function Mt(e, t) {
                         return !!(null == e ? 0 : e.length) && Gt(e, t, 0) > -1
                     }
 
-                    function Mt(e, t, n) {
+                    function Rt(e, t, n) {
                         for (var r = -1, o = null == e ? 0 : e.length; ++r < o;)
                             if (n(t, e[r])) return !0;
                         return !1
@@ -4526,12 +4526,12 @@
                         return o
                     }
 
-                    function Pt(e, t) {
+                    function Nt(e, t) {
                         for (var n = -1, r = t.length, o = e.length; ++n < r;) e[o + n] = t[n];
                         return e
                     }
 
-                    function Nt(e, t, n, r) {
+                    function Pt(e, t, n, r) {
                         var o = -1,
                             i = null == e ? 0 : e.length;
                         for (r && i && (n = e[++o]); ++o < i;) n = t(n, e[o], o, e);
@@ -4928,24 +4928,24 @@
                             Ie = t.String,
                             Te = t.TypeError,
                             Oe = r.prototype,
-                            Re = Ce.prototype,
-                            Me = Be.prototype,
+                            Me = Ce.prototype,
+                            Re = Be.prototype,
                             De = t["__core-js_shared__"],
-                            Pe = Re.toString,
-                            Ne = Me.hasOwnProperty,
+                            Ne = Me.toString,
+                            Pe = Re.hasOwnProperty,
                             je = 0,
                             Le = (n = /[^.]+$/.exec(De && De.keys && De.keys.IE_PROTO || "")) ? "Symbol(src)_1." + n : "",
-                            ze = Me.toString,
-                            Fe = Pe.call(Be),
+                            ze = Re.toString,
+                            Fe = Ne.call(Be),
                             qe = ht._,
-                            Ge = Se("^" + Pe.call(Ne).replace(oe, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
+                            Ge = Se("^" + Ne.call(Pe).replace(oe, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
                             Ue = At ? t.Buffer : o,
                             He = t.Symbol,
                             We = t.Uint8Array,
                             Ve = Ue ? Ue.allocUnsafe : o,
                             Ye = cn(Be.getPrototypeOf, Be),
                             Qe = Be.create,
-                            Ke = Me.propertyIsEnumerable,
+                            Ke = Re.propertyIsEnumerable,
                             Ze = Oe.splice,
                             Xe = He ? He.isConcatSpreadable : o,
                             Je = He ? He.iterator : o,
@@ -4980,11 +4980,11 @@
                             In = mi(Be, "create"),
                             Tn = Sn && new Sn,
                             On = {},
-                            Rn = ji(wn),
-                            Mn = ji(Cn),
+                            Mn = ji(wn),
+                            Rn = ji(Cn),
                             Dn = ji($n),
-                            Pn = ji(Bn),
-                            Nn = ji(Sn),
+                            Nn = ji(Bn),
+                            Pn = ji(Sn),
                             jn = He ? He.prototype : o,
                             Ln = jn ? jn.valueOf : o,
                             zn = jn ? jn.toString : o;
@@ -4992,7 +4992,7 @@
                         function Fn(e) {
                             if (ts(e) && !Ua(e) && !(e instanceof Hn)) {
                                 if (e instanceof Un) return e;
-                                if (Ne.call(e, "__wrapped__")) return Li(e)
+                                if (Pe.call(e, "__wrapped__")) return Li(e)
                             }
                             return new Un(e)
                         }
@@ -5063,7 +5063,7 @@
                                 a = n || r || o || i,
                                 s = a ? Zt(e.length, Ie) : [],
                                 l = s.length;
-                            for (var c in e) !t && !Ne.call(e, c) || a && ("length" == c || o && ("offset" == c || "parent" == c) || i && ("buffer" == c || "byteLength" == c || "byteOffset" == c) || yi(c, l)) || s.push(c);
+                            for (var c in e) !t && !Pe.call(e, c) || a && ("length" == c || o && ("offset" == c || "parent" == c) || i && ("buffer" == c || "byteLength" == c || "byteOffset" == c) || yi(c, l)) || s.push(c);
                             return s
                         }
 
@@ -5086,7 +5086,7 @@
 
                         function nr(e, t, n) {
                             var r = e[t];
-                            Ne.call(e, t) && za(r, n) && (n !== o || t in e) || ar(e, t, n)
+                            Pe.call(e, t) && za(r, n) && (n !== o || t in e) || ar(e, t, n)
                         }
 
                         function rr(e, t) {
@@ -5134,7 +5134,7 @@
                                 if (s = function(e) {
                                         var t = e.length,
                                             n = new e.constructor(t);
-                                        t && "string" == typeof e[0] && Ne.call(e, "index") && (n.index = e.index, n.input = e.input);
+                                        t && "string" == typeof e[0] && Pe.call(e, "index") && (n.index = e.index, n.input = e.input);
                                         return n
                                     }(e), !l) return To(e, s)
                             } else {
@@ -5154,7 +5154,7 @@
                                     s = function(e, t, n) {
                                         var r = e.constructor;
                                         switch (t) {
-                                            case M:
+                                            case R:
                                                 return Co(e);
                                             case y:
                                             case x:
@@ -5164,8 +5164,8 @@
                                                     var n = t ? Co(e.buffer) : e.buffer;
                                                     return new e.constructor(n, e.byteOffset, e.byteLength)
                                                 }(e, n);
-                                            case P:
                                             case N:
+                                            case P:
                                             case j:
                                             case L:
                                             case z:
@@ -5229,13 +5229,13 @@
 
                         function ur(e, t, n, r) {
                             var o = -1,
-                                i = Rt,
+                                i = Mt,
                                 a = !0,
                                 s = e.length,
                                 l = [],
                                 c = t.length;
                             if (!s) return l;
-                            n && (t = Dt(t, Xt(n))), r ? (i = Mt, a = !1) : t.length >= 200 && (i = en, a = !1, t = new Qn(t));
+                            n && (t = Dt(t, Xt(n))), r ? (i = Rt, a = !1) : t.length >= 200 && (i = en, a = !1, t = new Qn(t));
                             e: for (; ++o < s;) {
                                 var d = e[o],
                                     p = null == n ? d : n(d);
@@ -5266,10 +5266,10 @@
                                 var n = t[e];
                                 return n === a ? o : n
                             }
-                            return Ne.call(t, e) ? t[e] : o
+                            return Pe.call(t, e) ? t[e] : o
                         }, Wn.prototype.has = function(e) {
                             var t = this.__data__;
-                            return In ? t[e] !== o : Ne.call(t, e)
+                            return In ? t[e] !== o : Pe.call(t, e)
                         }, Wn.prototype.set = function(e, t) {
                             var n = this.__data__;
                             return this.size += this.has(e) ? 0 : 1, n[e] = In && t === o ? a : t, this
@@ -5361,12 +5361,12 @@
                                 a = e.length;
                             for (n || (n = bi), o || (o = []); ++i < a;) {
                                 var s = e[i];
-                                t > 0 && n(s) ? t > 1 ? Ar(s, t - 1, n, r, o) : Pt(o, s) : r || (o[o.length] = s)
+                                t > 0 && n(s) ? t > 1 ? Ar(s, t - 1, n, r, o) : Nt(o, s) : r || (o[o.length] = s)
                             }
                             return o
                         }
-                        var br = Po(),
-                            yr = Po(!0);
+                        var br = No(),
+                            yr = No(!0);
 
                         function xr(e, t) {
                             return e && br(e, t, Ts)
@@ -5383,18 +5383,18 @@
                         }
 
                         function Er(e, t) {
-                            for (var n = 0, r = (t = xo(t, e)).length; null != e && n < r;) e = e[Ni(t[n++])];
+                            for (var n = 0, r = (t = xo(t, e)).length; null != e && n < r;) e = e[Pi(t[n++])];
                             return n && n == r ? e : o
                         }
 
                         function wr(e, t, n) {
                             var r = t(e);
-                            return Ua(e) ? r : Pt(r, n(e))
+                            return Ua(e) ? r : Nt(r, n(e))
                         }
 
                         function Cr(e) {
                             return null == e ? e === o ? "[object Undefined]" : "[object Null]" : nt && nt in Be(e) ? function(e) {
-                                var t = Ne.call(e, nt),
+                                var t = Pe.call(e, nt),
                                     n = e[nt];
                                 try {
                                     e[nt] = o;
@@ -5413,7 +5413,7 @@
                         }
 
                         function Br(e, t) {
-                            return null != e && Ne.call(e, t)
+                            return null != e && Pe.call(e, t)
                         }
 
                         function Sr(e, t) {
@@ -5421,7 +5421,7 @@
                         }
 
                         function Ir(e, t, n) {
-                            for (var i = n ? Mt : Rt, a = e[0].length, s = e.length, l = s, c = r(s), d = 1 / 0, p = []; l--;) {
+                            for (var i = n ? Rt : Mt, a = e[0].length, s = e.length, l = s, c = r(s), d = 1 / 0, p = []; l--;) {
                                 var u = e[l];
                                 l && t && (u = Dt(u, Xt(t))), d = yn(u.length, d), c[l] = !n && (t || a >= 120 && u.length >= 120) ? new Qn(l && u) : o
                             }
@@ -5443,7 +5443,7 @@
                         }
 
                         function Tr(e, t, n) {
-                            var r = null == (e = Si(e, t = xo(t, e))) ? e : e[Ni(Ki(t))];
+                            var r = null == (e = Si(e, t = xo(t, e))) ? e : e[Pi(Ki(t))];
                             return null == r ? o : $t(r, e, n)
                         }
 
@@ -5451,7 +5451,7 @@
                             return ts(e) && Cr(e) == A
                         }
 
-                        function Rr(e, t, n, r, i) {
+                        function Mr(e, t, n, r, i) {
                             return e === t || (null == e || null == t || !ts(e) && !ts(t) ? e != e && t != t : function(e, t, n, r, i, a) {
                                 var s = Ua(e),
                                     l = Ua(t),
@@ -5469,7 +5469,7 @@
                                         case D:
                                             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) return !1;
                                             e = e.buffer, t = t.buffer;
-                                        case M:
+                                        case R:
                                             return !(e.byteLength != t.byteLength || !i(new We(e), new We(t)));
                                         case y:
                                         case x:
@@ -5496,8 +5496,8 @@
                                     return !1
                                 }(e, t, c, n, r, i, a);
                                 if (!(1 & n)) {
-                                    var g = p && Ne.call(e, "__wrapped__"),
-                                        h = u && Ne.call(t, "__wrapped__");
+                                    var g = p && Pe.call(e, "__wrapped__"),
+                                        h = u && Pe.call(t, "__wrapped__");
                                     if (g || h) {
                                         var f = g ? e.value() : e,
                                             _ = h ? t.value() : t;
@@ -5516,7 +5516,7 @@
                                         var u = c;
                                         for (; u--;) {
                                             var m = l[u];
-                                            if (!(s ? m in t : Ne.call(t, m))) return !1
+                                            if (!(s ? m in t : Pe.call(t, m))) return !1
                                         }
                                         var g = a.get(e);
                                         if (g && a.get(t)) return g == t;
@@ -5540,10 +5540,10 @@
                                         }
                                         return a.delete(e), a.delete(t), h
                                     }(e, t, n, r, i, a)
-                            }(e, t, n, r, Rr, i))
+                            }(e, t, n, r, Mr, i))
                         }
 
-                        function Mr(e, t, n, r) {
+                        function Rr(e, t, n, r) {
                             var i = n.length,
                                 a = i,
                                 s = !r;
@@ -5561,7 +5561,7 @@
                                 } else {
                                     var u = new Kn;
                                     if (r) var m = r(d, p, c, e, t, u);
-                                    if (!(m === o ? Rr(p, d, 3, r, u) : m)) return !1
+                                    if (!(m === o ? Mr(p, d, 3, r, u) : m)) return !1
                                 }
                             }
                             return !0
@@ -5572,14 +5572,14 @@
                             var t
                         }
 
-                        function Pr(e) {
+                        function Nr(e) {
                             return "function" == typeof e ? e : null == e ? rl : "object" == typeof e ? Ua(e) ? qr(e[0], e[1]) : Fr(e) : ul(e)
                         }
 
-                        function Nr(e) {
+                        function Pr(e) {
                             if (!wi(e)) return An(e);
                             var t = [];
-                            for (var n in Be(e)) Ne.call(e, n) && "constructor" != n && t.push(n);
+                            for (var n in Be(e)) Pe.call(e, n) && "constructor" != n && t.push(n);
                             return t
                         }
 
@@ -5592,7 +5592,7 @@
                             }(e);
                             var t = wi(e),
                                 n = [];
-                            for (var r in e)("constructor" != r || !t && Ne.call(e, r)) && n.push(r);
+                            for (var r in e)("constructor" != r || !t && Pe.call(e, r)) && n.push(r);
                             return n
                         }
 
@@ -5611,14 +5611,14 @@
                         function Fr(e) {
                             var t = ui(e);
                             return 1 == t.length && t[0][2] ? $i(t[0][0], t[0][1]) : function(n) {
-                                return n === e || Mr(n, e, t)
+                                return n === e || Rr(n, e, t)
                             }
                         }
 
                         function qr(e, t) {
-                            return vi(e) && Ci(t) ? $i(Ni(e), t) : function(n) {
+                            return vi(e) && Ci(t) ? $i(Pi(e), t) : function(n) {
                                 var r = Cs(n, e);
-                                return r === o && r === t ? $s(n, e) : Rr(t, r, 3)
+                                return r === o && r === t ? $s(n, e) : Mr(t, r, 3)
                             }
                         }
 
@@ -5746,7 +5746,7 @@
                         function eo(e, t, n, r) {
                             if (!es(e)) return e;
                             for (var i = -1, a = (t = xo(t, e)).length, s = a - 1, l = e; null != l && ++i < a;) {
-                                var c = Ni(t[i]),
+                                var c = Pi(t[i]),
                                     d = n;
                                 if (i != s) {
                                     var p = l[c];
@@ -5843,12 +5843,12 @@
 
                         function uo(e, t, n) {
                             var r = -1,
-                                o = Rt,
+                                o = Mt,
                                 i = e.length,
                                 a = !0,
                                 s = [],
                                 l = s;
-                            if (n) a = !1, o = Mt;
+                            if (n) a = !1, o = Rt;
                             else if (i >= 200) {
                                 var c = t ? null : Zo(e);
                                 if (c) return un(c);
@@ -5867,7 +5867,7 @@
                         }
 
                         function mo(e, t) {
-                            return null == (e = Si(e, t = xo(t, e))) || delete e[Ni(Ki(t))]
+                            return null == (e = Si(e, t = xo(t, e))) || delete e[Pi(Ki(t))]
                         }
 
                         function go(e, t, n, r) {
@@ -5882,8 +5882,8 @@
 
                         function fo(e, t) {
                             var n = e;
-                            return n instanceof Hn && (n = n.value()), Nt(t, (function(e, t) {
-                                return t.func.apply(t.thisArg, Pt([e], t.args))
+                            return n instanceof Hn && (n = n.value()), Pt(t, (function(e, t) {
+                                return t.func.apply(t.thisArg, Nt([e], t.args))
                             }), n)
                         }
 
@@ -5912,7 +5912,7 @@
                         }
 
                         function xo(e, t) {
-                            return Ua(e) ? e : vi(e, t) ? [e] : Pi(As(e))
+                            return Ua(e) ? e : vi(e, t) ? [e] : Ni(As(e))
                         }
                         var vo = Zr;
 
@@ -5989,7 +5989,7 @@
                             return n
                         }
 
-                        function Ro(e, t) {
+                        function Mo(e, t) {
                             return function(n, r) {
                                 var o = Ua(n) ? Bt : or,
                                     i = t ? t() : {};
@@ -5997,7 +5997,7 @@
                             }
                         }
 
-                        function Mo(e) {
+                        function Ro(e) {
                             return Zr((function(t, n) {
                                 var r = -1,
                                     i = n.length,
@@ -6021,7 +6021,7 @@
                             }
                         }
 
-                        function Po(e) {
+                        function No(e) {
                             return function(t, n, r) {
                                 for (var o = -1, i = Be(t), a = r(t), s = a.length; s--;) {
                                     var l = a[e ? s : ++o];
@@ -6031,7 +6031,7 @@
                             }
                         }
 
-                        function No(e) {
+                        function Po(e) {
                             return function(t) {
                                 var n = sn(t = As(t)) ? hn(t) : o,
                                     r = n ? n[0] : t.charAt(0),
@@ -6042,7 +6042,7 @@
 
                         function jo(e) {
                             return function(t) {
-                                return Nt(Zs(Gs(t).replace(et, "")), e, "")
+                                return Pt(Zs(Gs(t).replace(et, "")), e, "")
                             }
                         }
 
@@ -6206,7 +6206,7 @@
                             t |= m ? c : d, 4 & (t &= ~(m ? d : c)) || (t &= -4);
                             var g = [e, t, i, m ? a : o, m ? s : o, m ? o : a, m ? o : s, l, p, u],
                                 h = n.apply(o, g);
-                            return ki(e) && Ii(h, g), h.placeholder = r, Ri(h, e, t)
+                            return ki(e) && Ii(h, g), h.placeholder = r, Mi(h, e, t)
                         }
 
                         function Ko(e) {
@@ -6285,11 +6285,11 @@
                                     return (this && this !== ht && this instanceof t ? o : e).apply(r ? n : this, arguments)
                                 }
                             }(e, t, n);
-                            return Ri((x ? to : Ii)(k, v), e, t)
+                            return Mi((x ? to : Ii)(k, v), e, t)
                         }
 
                         function ei(e, t, n, r) {
-                            return e === o || za(e, Me[n]) && !Ne.call(r, n) ? t : e
+                            return e === o || za(e, Re[n]) && !Pe.call(r, n) ? t : e
                         }
 
                         function ti(e, t, n, r, i, a) {
@@ -6350,7 +6350,7 @@
                         } : ll;
 
                         function li(e) {
-                            for (var t = e.name + "", n = On[t], r = Ne.call(On, t) ? n.length : 0; r--;) {
+                            for (var t = e.name + "", n = On[t], r = Pe.call(On, t) ? n.length : 0; r--;) {
                                 var o = n[r],
                                     i = o.func;
                                 if (null == i || i == e) return o.name
@@ -6359,12 +6359,12 @@
                         }
 
                         function ci(e) {
-                            return (Ne.call(Fn, "placeholder") ? Fn : e).placeholder
+                            return (Pe.call(Fn, "placeholder") ? Fn : e).placeholder
                         }
 
                         function di() {
                             var e = Fn.iteratee || ol;
-                            return e = e === ol ? Pr : e, arguments.length ? e(arguments[0], arguments[1]) : e
+                            return e = e === ol ? Nr : e, arguments.length ? e(arguments[0], arguments[1]) : e
                         }
 
                         function pi(e, t) {
@@ -6396,14 +6396,14 @@
                                 })))
                             } : hl,
                             hi = bt ? function(e) {
-                                for (var t = []; e;) Pt(t, gi(e)), e = Ye(e);
+                                for (var t = []; e;) Nt(t, gi(e)), e = Ye(e);
                                 return t
                             } : hl,
                             fi = Cr;
 
                         function _i(e, t, n) {
                             for (var r = -1, o = (t = xo(t, e)).length, i = !1; ++r < o;) {
-                                var a = Ni(t[r]);
+                                var a = Pi(t[r]);
                                 if (!(i = null != e && n(e, a))) break;
                                 e = e[a]
                             }
@@ -6442,21 +6442,21 @@
                             if (e === n) return !0;
                             var r = si(n);
                             return !!r && e === r[0]
-                        }(wn && fi(new wn(new ArrayBuffer(1))) != D || Cn && fi(new Cn) != w || $n && fi($n.resolve()) != B || Bn && fi(new Bn) != I || Sn && fi(new Sn) != R) && (fi = function(e) {
+                        }(wn && fi(new wn(new ArrayBuffer(1))) != D || Cn && fi(new Cn) != w || $n && fi($n.resolve()) != B || Bn && fi(new Bn) != I || Sn && fi(new Sn) != M) && (fi = function(e) {
                             var t = Cr(e),
                                 n = t == $ ? e.constructor : o,
                                 r = n ? ji(n) : "";
                             if (r) switch (r) {
-                                case Rn:
-                                    return D;
                                 case Mn:
+                                    return D;
+                                case Rn:
                                     return w;
                                 case Dn:
                                     return B;
-                                case Pn:
-                                    return I;
                                 case Nn:
-                                    return R
+                                    return I;
+                                case Pn:
+                                    return M
                             }
                             return t
                         });
@@ -6464,7 +6464,7 @@
 
                         function wi(e) {
                             var t = e && e.constructor;
-                            return e === ("function" == typeof t && t.prototype || Me)
+                            return e === ("function" == typeof t && t.prototype || Re)
                         }
 
                         function Ci(e) {
@@ -6490,13 +6490,13 @@
                         function Si(e, t) {
                             return t.length < 2 ? e : Er(e, oo(t, 0, -1))
                         }
-                        var Ii = Mi(to),
+                        var Ii = Ri(to),
                             Ti = gt || function(e, t) {
                                 return ht.setTimeout(e, t)
                             },
-                            Oi = Mi(no);
+                            Oi = Ri(no);
 
-                        function Ri(e, t, n) {
+                        function Mi(e, t, n) {
                             var r = t + "";
                             return Oi(e, function(e, t) {
                                 var n = t.length;
@@ -6506,7 +6506,7 @@
                             }(r, function(e, t) {
                                 return St(_, (function(n) {
                                     var r = "_." + n[0];
-                                    t & n[1] && !Rt(e, r) && e.push(r)
+                                    t & n[1] && !Mt(e, r) && e.push(r)
                                 })), e.sort()
                             }(function(e) {
                                 var t = e.match(de);
@@ -6514,7 +6514,7 @@
                             }(r), n)))
                         }
 
-                        function Mi(e) {
+                        function Ri(e) {
                             var t = 0,
                                 n = 0;
                             return function() {
@@ -6538,8 +6538,8 @@
                             }
                             return e.length = t, e
                         }
-                        var Pi = function(e) {
-                            var t = Ma(e, (function(e) {
+                        var Ni = function(e) {
+                            var t = Ra(e, (function(e) {
                                     return 500 === n.size && n.clear(), e
                                 })),
                                 n = t.cache;
@@ -6551,7 +6551,7 @@
                             })), t
                         }));
 
-                        function Ni(e) {
+                        function Pi(e) {
                             if ("string" == typeof e || ls(e)) return e;
                             var t = e + "";
                             return "0" == t && 1 / e == -1 / 0 ? "-0" : t
@@ -6560,7 +6560,7 @@
                         function ji(e) {
                             if (null != e) {
                                 try {
-                                    return Pe.call(e)
+                                    return Ne.call(e)
                                 } catch (e) {}
                                 try {
                                     return e + ""
@@ -6715,8 +6715,8 @@
                                 return t && !e.length && e.push(o), e
                             }))) : this.thru(i)
                         }));
-                        var ha = Ro((function(e, t, n) {
-                            Ne.call(e, n) ? ++e[n] : ar(e, n, 1)
+                        var ha = Mo((function(e, t, n) {
+                            Pe.call(e, n) ? ++e[n] : ar(e, n, 1)
                         }));
                         var fa = zo(Gi),
                             _a = zo(Ui);
@@ -6728,8 +6728,8 @@
                         function ba(e, t) {
                             return (Ua(e) ? It : gr)(e, di(t, 3))
                         }
-                        var ya = Ro((function(e, t, n) {
-                            Ne.call(e, n) ? e[n].push(t) : ar(e, n, [t])
+                        var ya = Mo((function(e, t, n) {
+                            Pe.call(e, n) ? e[n].push(t) : ar(e, n, [t])
                         }));
                         var xa = Zr((function(e, t, n) {
                                 var o = -1,
@@ -6739,14 +6739,14 @@
                                     a[++o] = i ? $t(t, e, n) : Tr(e, t, n)
                                 })), a
                             })),
-                            va = Ro((function(e, t, n) {
+                            va = Mo((function(e, t, n) {
                                 ar(e, n, t)
                             }));
 
                         function ka(e, t) {
                             return (Ua(e) ? Dt : zr)(e, di(t, 3))
                         }
-                        var Ea = Ro((function(e, t, n) {
+                        var Ea = Mo((function(e, t, n) {
                             e[n ? 0 : 1].push(t)
                         }), (function() {
                             return [
@@ -6843,11 +6843,11 @@
                         var Oa = Zr((function(e, t) {
                                 return pr(e, 1, t)
                             })),
-                            Ra = Zr((function(e, t, n) {
+                            Ma = Zr((function(e, t, n) {
                                 return pr(e, fs(t) || 0, n)
                             }));
 
-                        function Ma(e, t) {
+                        function Ra(e, t) {
                             if ("function" != typeof e || null != t && "function" != typeof t) throw new Te(i);
                             var n = function() {
                                 var r = arguments,
@@ -6857,7 +6857,7 @@
                                 var a = e.apply(this, r);
                                 return n.cache = i.set(o, a) || i, a
                             };
-                            return n.cache = new(Ma.Cache || Yn), n
+                            return n.cache = new(Ra.Cache || Yn), n
                         }
 
                         function Da(e) {
@@ -6877,16 +6877,16 @@
                                 return !e.apply(this, t)
                             }
                         }
-                        Ma.Cache = Yn;
-                        var Pa = vo((function(e, t) {
+                        Ra.Cache = Yn;
+                        var Na = vo((function(e, t) {
                                 var n = (t = 1 == t.length && Ua(t[0]) ? Dt(t[0], Xt(di())) : Dt(Ar(t, 1), Xt(di()))).length;
                                 return Zr((function(r) {
                                     for (var o = -1, i = yn(r.length, n); ++o < i;) r[o] = t[o].call(this, r[o]);
                                     return $t(e, this, r)
                                 }))
                             })),
-                            Na = Zr((function(e, t) {
-                                var n = dn(t, ci(Na));
+                            Pa = Zr((function(e, t) {
+                                var n = dn(t, ci(Pa));
                                 return Jo(e, c, o, t, n)
                             })),
                             ja = Zr((function(e, t) {
@@ -6907,11 +6907,11 @@
                             Ga = Or(function() {
                                 return arguments
                             }()) ? Or : function(e) {
-                                return ts(e) && Ne.call(e, "callee") && !Ke.call(e, "callee")
+                                return ts(e) && Pe.call(e, "callee") && !Ke.call(e, "callee")
                             },
                             Ua = r.isArray,
                             Ha = xt ? Xt(xt) : function(e) {
-                                return ts(e) && Cr(e) == M
+                                return ts(e) && Cr(e) == R
                             };
 
                         function Wa(e) {
@@ -6966,8 +6966,8 @@
                             if (!ts(e) || Cr(e) != $) return !1;
                             var t = Ye(e);
                             if (null === t) return !0;
-                            var n = Ne.call(t, "constructor") && t.constructor;
-                            return "function" == typeof n && n instanceof n && Pe.call(n) == Fe
+                            var n = Pe.call(t, "constructor") && t.constructor;
+                            return "function" == typeof n && n instanceof n && Ne.call(n) == Fe
                         }
                         var is = Et ? Xt(Et) : function(e) {
                             return ts(e) && Cr(e) == S
@@ -7036,18 +7036,18 @@
                         function As(e) {
                             return null == e ? "" : po(e)
                         }
-                        var bs = Mo((function(e, t) {
+                        var bs = Ro((function(e, t) {
                                 if (wi(t) || Wa(t)) Oo(t, Ts(t), e);
                                 else
-                                    for (var n in t) Ne.call(t, n) && nr(e, n, t[n])
+                                    for (var n in t) Pe.call(t, n) && nr(e, n, t[n])
                             })),
-                            ys = Mo((function(e, t) {
+                            ys = Ro((function(e, t) {
                                 Oo(t, Os(t), e)
                             })),
-                            xs = Mo((function(e, t, n, r) {
+                            xs = Ro((function(e, t, n, r) {
                                 Oo(t, Os(t), e, r)
                             })),
-                            vs = Mo((function(e, t, n, r) {
+                            vs = Ro((function(e, t, n, r) {
                                 Oo(t, Ts(t), e, r)
                             })),
                             ks = oi(sr);
@@ -7060,12 +7060,12 @@
                                     for (var a = t[n], s = Os(a), l = -1, c = s.length; ++l < c;) {
                                         var d = s[l],
                                             p = e[d];
-                                        (p === o || za(p, Me[d]) && !Ne.call(e, d)) && (e[d] = a[d])
+                                        (p === o || za(p, Re[d]) && !Pe.call(e, d)) && (e[d] = a[d])
                                     }
                                 return e
                             })),
                             ws = Zr((function(e) {
-                                return e.push(o, ti), $t(Ms, o, e)
+                                return e.push(o, ti), $t(Rs, o, e)
                             }));
 
                         function Cs(e, t, n) {
@@ -7080,21 +7080,21 @@
                                 null != t && "function" != typeof t.toString && (t = ze.call(t)), e[t] = n
                             }), el(rl)),
                             Ss = Go((function(e, t, n) {
-                                null != t && "function" != typeof t.toString && (t = ze.call(t)), Ne.call(e, t) ? e[t].push(n) : e[t] = [n]
+                                null != t && "function" != typeof t.toString && (t = ze.call(t)), Pe.call(e, t) ? e[t].push(n) : e[t] = [n]
                             }), di),
                             Is = Zr(Tr);
 
                         function Ts(e) {
-                            return Wa(e) ? Zn(e) : Nr(e)
+                            return Wa(e) ? Zn(e) : Pr(e)
                         }
 
                         function Os(e) {
                             return Wa(e) ? Zn(e, !0) : jr(e)
                         }
-                        var Rs = Mo((function(e, t, n) {
+                        var Ms = Ro((function(e, t, n) {
                                 Gr(e, t, n)
                             })),
-                            Ms = Mo((function(e, t, n, r) {
+                            Rs = Ro((function(e, t, n, r) {
                                 Gr(e, t, n, r)
                             })),
                             Ds = oi((function(e, t) {
@@ -7107,7 +7107,7 @@
                                 for (var o = t.length; o--;) mo(n, t[o]);
                                 return n
                             }));
-                        var Ps = oi((function(e, t) {
+                        var Ns = oi((function(e, t) {
                             return null == e ? {} : function(e, t) {
                                 return Wr(e, t, (function(t, n) {
                                     return $s(e, n)
@@ -7115,7 +7115,7 @@
                             }(e, t)
                         }));
 
-                        function Ns(e, t) {
+                        function Ps(e, t) {
                             if (null == e) return {};
                             var n = Dt(ai(e), (function(e) {
                                 return [e]
@@ -7147,7 +7147,7 @@
                             Hs = jo((function(e, t, n) {
                                 return e + (n ? " " : "") + t.toLowerCase()
                             })),
-                            Ws = No("toLowerCase");
+                            Ws = Po("toLowerCase");
                         var Vs = jo((function(e, t, n) {
                             return e + (n ? "_" : "") + t.toLowerCase()
                         }));
@@ -7157,7 +7157,7 @@
                         var Qs = jo((function(e, t, n) {
                                 return e + (n ? " " : "") + t.toUpperCase()
                             })),
-                            Ks = No("toUpperCase");
+                            Ks = Po("toUpperCase");
 
                         function Zs(e, t, n) {
                             return e = As(e), (t = n ? o : t) === o ? function(e) {
@@ -7177,7 +7177,7 @@
                             })),
                             Js = oi((function(e, t) {
                                 return St(t, (function(t) {
-                                    t = Ni(t), ar(e, t, Sa(e[t], e))
+                                    t = Pi(t), ar(e, t, Sa(e[t], e))
                                 })), e
                             }));
 
@@ -7194,7 +7194,7 @@
                         }
 
                         function ol(e) {
-                            return Pr("function" == typeof e ? e : cr(e, 1))
+                            return Nr("function" == typeof e ? e : cr(e, 1))
                         }
                         var il = Zr((function(e, t) {
                                 return function(n) {
@@ -7225,7 +7225,7 @@
                                             thisArg: e
                                         }), n.__chain__ = t, n
                                     }
-                                    return r.apply(e, Pt([this.value()], arguments))
+                                    return r.apply(e, Nt([this.value()], arguments))
                                 })
                             })), e
                         }
@@ -7236,7 +7236,7 @@
                             pl = Ho(Lt);
 
                         function ul(e) {
-                            return vi(e) ? Vt(Ni(e)) : function(e) {
+                            return vi(e) ? Vt(Pi(e)) : function(e) {
                                 return function(t) {
                                     return Er(t, e)
                                 }
@@ -7293,7 +7293,7 @@
                             var e = arguments.length;
                             if (!e) return [];
                             for (var t = r(e - 1), n = arguments[0], o = e; o--;) t[o - 1] = arguments[o];
-                            return Pt(Ua(n) ? To(n) : [n], Ar(t, 1))
+                            return Nt(Ua(n) ? To(n) : [n], Ar(t, 1))
                         }, Fn.cond = function(e) {
                             var t = null == e ? 0 : e.length,
                                 n = di();
@@ -7322,7 +7322,7 @@
                         }, Fn.curryRight = function e(t, n, r) {
                             var i = Jo(t, l, o, o, o, o, o, n = r ? o : n);
                             return i.placeholder = e.placeholder, i
-                        }, Fn.debounce = Ta, Fn.defaults = Es, Fn.defaultsDeep = ws, Fn.defer = Oa, Fn.delay = Ra, Fn.difference = zi, Fn.differenceBy = Fi, Fn.differenceWith = qi, Fn.drop = function(e, t, n) {
+                        }, Fn.debounce = Ta, Fn.defaults = Es, Fn.defaultsDeep = ws, Fn.defer = Oa, Fn.delay = Ma, Fn.difference = zi, Fn.differenceBy = Fi, Fn.differenceWith = qi, Fn.drop = function(e, t, n) {
                             var r = null == e ? 0 : e.length;
                             return r ? oo(e, (t = n || t === o ? 1 : gs(t)) < 0 ? 0 : t, r) : []
                         }, Fn.dropRight = function(e, t, n) {
@@ -7379,17 +7379,17 @@
                             return Fr(cr(e, 1))
                         }, Fn.matchesProperty = function(e, t) {
                             return qr(e, cr(t, 1))
-                        }, Fn.memoize = Ma, Fn.merge = Rs, Fn.mergeWith = Ms, Fn.method = il, Fn.methodOf = al, Fn.mixin = sl, Fn.negate = Da, Fn.nthArg = function(e) {
+                        }, Fn.memoize = Ra, Fn.merge = Ms, Fn.mergeWith = Rs, Fn.method = il, Fn.methodOf = al, Fn.mixin = sl, Fn.negate = Da, Fn.nthArg = function(e) {
                             return e = gs(e), Zr((function(t) {
                                 return Ur(t, e)
                             }))
                         }, Fn.omit = Ds, Fn.omitBy = function(e, t) {
-                            return Ns(e, Da(di(t)))
+                            return Ps(e, Da(di(t)))
                         }, Fn.once = function(e) {
                             return Ba(2, e)
                         }, Fn.orderBy = function(e, t, n, r) {
                             return null == e ? [] : (Ua(t) || (t = null == t ? [] : [t]), Ua(n = r ? o : n) || (n = null == n ? [] : [n]), Hr(e, t, n))
-                        }, Fn.over = cl, Fn.overArgs = Pa, Fn.overEvery = dl, Fn.overSome = pl, Fn.partial = Na, Fn.partialRight = ja, Fn.partition = Ea, Fn.pick = Ps, Fn.pickBy = Ns, Fn.property = ul, Fn.propertyOf = function(e) {
+                        }, Fn.over = cl, Fn.overArgs = Na, Fn.overEvery = dl, Fn.overSome = pl, Fn.partial = Pa, Fn.partialRight = ja, Fn.partition = Ea, Fn.pick = Ns, Fn.pickBy = Ps, Fn.property = ul, Fn.propertyOf = function(e) {
                             return function(t) {
                                 return null == e ? o : Er(e, t)
                             }
@@ -7435,7 +7435,7 @@
                             return t = null == t ? 0 : bn(gs(t), 0), Zr((function(n) {
                                 var r = n[t],
                                     o = ko(n, 0, t);
-                                return r && Pt(o, r), $t(e, this, o)
+                                return r && Nt(o, r), $t(e, this, o)
                             }))
                         }, Fn.tail = function(e) {
                             var t = null == e ? 0 : e.length;
@@ -7461,7 +7461,7 @@
                                 trailing: o
                             })
                         }, Fn.thru = ma, Fn.toArray = us, Fn.toPairs = js, Fn.toPairsIn = Ls, Fn.toPath = function(e) {
-                            return Ua(e) ? Dt(e, Ni) : ls(e) ? [e] : To(Pi(As(e)))
+                            return Ua(e) ? Dt(e, Pi) : ls(e) ? [e] : To(Ni(As(e)))
                         }, Fn.toPlainObject = _s, Fn.transform = function(e, t, n) {
                             var r = Ua(e),
                                 o = r || Ya(e) || cs(e);
@@ -7489,7 +7489,7 @@
                         }, Fn.values = zs, Fn.valuesIn = function(e) {
                             return null == e ? [] : Jt(e, Os(e))
                         }, Fn.without = aa, Fn.words = Zs, Fn.wrap = function(e, t) {
-                            return Na(yo(t), e)
+                            return Pa(yo(t), e)
                         }, Fn.xor = sa, Fn.xorBy = la, Fn.xorWith = ca, Fn.zip = da, Fn.zipObject = function(e, t) {
                             return Ao(e || [], t || [], nr)
                         }, Fn.zipObjectDeep = function(e, t) {
@@ -7557,21 +7557,21 @@
                             if (Wa(e) && (Ua(e) || "string" == typeof e || "function" == typeof e.splice || Ya(e) || cs(e) || Ga(e))) return !e.length;
                             var t = fi(e);
                             if (t == w || t == I) return !e.size;
-                            if (wi(e)) return !Nr(e).length;
+                            if (wi(e)) return !Pr(e).length;
                             for (var n in e)
-                                if (Ne.call(e, n)) return !1;
+                                if (Pe.call(e, n)) return !1;
                             return !0
                         }, Fn.isEqual = function(e, t) {
-                            return Rr(e, t)
+                            return Mr(e, t)
                         }, Fn.isEqualWith = function(e, t, n) {
                             var r = (n = "function" == typeof n ? n : o) ? n(e, t) : o;
-                            return r === o ? Rr(e, t, o, n) : !!r
+                            return r === o ? Mr(e, t, o, n) : !!r
                         }, Fn.isError = Ka, Fn.isFinite = function(e) {
                             return "number" == typeof e && zt(e)
                         }, Fn.isFunction = Za, Fn.isInteger = Xa, Fn.isLength = Ja, Fn.isMap = ns, Fn.isMatch = function(e, t) {
-                            return e === t || Mr(e, t, ui(t))
+                            return e === t || Rr(e, t, ui(t))
                         }, Fn.isMatchWith = function(e, t, n) {
-                            return n = "function" == typeof n ? n : o, Mr(e, t, ui(t), n)
+                            return n = "function" == typeof n ? n : o, Rr(e, t, ui(t), n)
                         }, Fn.isNaN = function(e) {
                             return rs(e) && e != +e
                         }, Fn.isNative = function(e) {
@@ -7586,7 +7586,7 @@
                         }, Fn.isSet = as, Fn.isString = ss, Fn.isSymbol = ls, Fn.isTypedArray = cs, Fn.isUndefined = function(e) {
                             return e === o
                         }, Fn.isWeakMap = function(e) {
-                            return ts(e) && fi(e) == R
+                            return ts(e) && fi(e) == M
                         }, Fn.isWeakSet = function(e) {
                             return ts(e) && "[object WeakSet]" == Cr(e)
                         }, Fn.join = function(e, t) {
@@ -7649,7 +7649,7 @@
                             }
                             return Qr(e, t)
                         }, Fn.reduce = function(e, t, n) {
-                            var r = Ua(e) ? Nt : Qt,
+                            var r = Ua(e) ? Pt : Qt,
                                 o = arguments.length < 3;
                             return r(e, di(t, 4), n, o, mr)
                         }, Fn.reduceRight = function(e, t, n) {
@@ -7666,7 +7666,7 @@
                             var r = -1,
                                 i = (t = xo(t, e)).length;
                             for (i || (i = 1, e = o); ++r < i;) {
-                                var a = null == e ? o : e[Ni(t[r])];
+                                var a = null == e ? o : e[Pi(t[r])];
                                 a === o && (r = i, a = n), e = Za(a) ? a.call(e) : a
                             }
                             return e
@@ -7676,7 +7676,7 @@
                             if (null == e) return 0;
                             if (Wa(e)) return ss(e) ? gn(e) : e.length;
                             var t = fi(e);
-                            return t == w || t == I ? e.size : Nr(e).length
+                            return t == w || t == I ? e.size : Pr(e).length
                         }, Fn.snakeCase = Vs, Fn.some = function(e, t, n) {
                             var r = Ua(e) ? Lt : io;
                             return n && xi(e, t, n) && (t = o), r(e, di(t, 3))
@@ -7791,7 +7791,7 @@
                             var t = ++je;
                             return As(e) + t
                         }, Fn.upperCase = Qs, Fn.upperFirst = Ks, Fn.each = Aa, Fn.eachRight = ba, Fn.first = Wi, sl(Fn, (xl = {}, xr(Fn, (function(e, t) {
-                            Ne.call(Fn.prototype, t) || (xl[t] = e)
+                            Pe.call(Fn.prototype, t) || (xl[t] = e)
                         })), xl), {
                             chain: !1
                         }), Fn.VERSION = "4.17.10", St(["bind", "bindKey", "curry", "curryRight", "partial", "partialRight"], (function(e) {
@@ -7859,7 +7859,7 @@
                                     c = s[0],
                                     d = l || Ua(t),
                                     p = function(e) {
-                                        var t = i.apply(Fn, Pt([e], s));
+                                        var t = i.apply(Fn, Nt([e], s));
                                         return r && u ? t[0] : t
                                     };
                                 d && n && "function" == typeof c && 1 != c.length && (l = d = !1);
@@ -12942,39 +12942,40 @@
                     ClashRosterPanelItemComponent: n(319).default,
                     DiscordBannerComponent: n(321).default,
                     EphemeralActionTooltipComponent: n(323).default,
-                    FriendFinderAddSummonerByNameComponent: n(324).default,
-                    FriendFinderButtonComponent: n(326).default,
-                    FriendFinderModalComponent: n(327).default,
-                    FriendFinderRecentlyPlayedComponent: n(328).default,
-                    FriendFinderRecentSummonerComponent: n(329).default,
-                    FriendFinderRequestedPlayerComponent: n(333).default,
-                    FriendFinderRequestedPlayersComponent: n(334).default,
-                    HovercardComponentComponent: n(335).default,
-                    HovercardContentComponent: n(338).default,
-                    HovercardShellComponent: n(342).default,
-                    IdentityAndPartiesComponent: n(345).default,
-                    SidebarMainComponent: n(346).default,
-                    SocialAvatarComponent: n(348).default,
-                    SocialButtonComponent: n(350).default,
-                    SocialFriendRequestComponent: n(351).default,
-                    SocialFriendRequestsComponent: n(354).default,
-                    SocialFriendRequestsModalComponent: n(356).default,
-                    SocialIdentityComponent: n(358).default,
-                    SocialMenuComponent: n(359).default,
-                    SocialMenuInputComponent: n(361).default,
-                    SocialMenuItemComponent: n(362).default,
-                    SocialPanelComponent: n(364).default,
-                    SocialRosterComponent: n(365).default,
-                    SocialRosterGroupComponent: n(368).default,
-                    SocialRosterGroupNameComponent: n(372).default,
-                    SocialRosterMemberComponent: n(374).default,
-                    SocialStatusWrapperComponent: n(377).default,
-                    SocialTextTooltipComponent: n(379).default,
-                    SocialTooltipComponent: n(380).default,
-                    TooltipMessageComponent: n(381).default,
-                    UikitRadioComponent: n(382).default,
-                    VersionBarComponent: n(383).default,
-                    VngAgeRatingComponent: n(384).default,
+                    DiscordEatComponent: n(324).default,
+                    FriendFinderAddSummonerByNameComponent: n(325).default,
+                    FriendFinderButtonComponent: n(327).default,
+                    FriendFinderModalComponent: n(328).default,
+                    FriendFinderRecentlyPlayedComponent: n(329).default,
+                    FriendFinderRecentSummonerComponent: n(330).default,
+                    FriendFinderRequestedPlayerComponent: n(334).default,
+                    FriendFinderRequestedPlayersComponent: n(335).default,
+                    HovercardComponentComponent: n(336).default,
+                    HovercardContentComponent: n(339).default,
+                    HovercardShellComponent: n(343).default,
+                    IdentityAndPartiesComponent: n(346).default,
+                    SidebarMainComponent: n(347).default,
+                    SocialAvatarComponent: n(349).default,
+                    SocialButtonComponent: n(351).default,
+                    SocialFriendRequestComponent: n(352).default,
+                    SocialFriendRequestsComponent: n(355).default,
+                    SocialFriendRequestsModalComponent: n(357).default,
+                    SocialIdentityComponent: n(359).default,
+                    SocialMenuComponent: n(360).default,
+                    SocialMenuInputComponent: n(362).default,
+                    SocialMenuItemComponent: n(363).default,
+                    SocialPanelComponent: n(365).default,
+                    SocialRosterComponent: n(366).default,
+                    SocialRosterGroupComponent: n(369).default,
+                    SocialRosterGroupNameComponent: n(373).default,
+                    SocialRosterMemberComponent: n(375).default,
+                    SocialStatusWrapperComponent: n(378).default,
+                    SocialTextTooltipComponent: n(380).default,
+                    SocialTooltipComponent: n(381).default,
+                    TooltipMessageComponent: n(382).default,
+                    UikitRadioComponent: n(383).default,
+                    VersionBarComponent: n(384).default,
+                    VngAgeRatingComponent: n(385).default,
                     DiscordButtonComponent: d,
                     DiscordPopupComponent: u,
                     DiscordCongratsPopupComponent: p,
@@ -12984,104 +12985,105 @@
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
                     SharedNotificationsService: c,
-                    AnalyticsService: n(386).default,
-                    BanNotificationService: n(387).default,
-                    ChatErrorsService: n(388).default,
-                    ChatRestrictionService: n(389).default,
-                    ChatWindowSettingsService: n(390).default,
-                    ClashService: n(391).default,
-                    ClientConfigService: n(392).default,
-                    CodeOfConductService: n(393).default,
-                    ConversationsService: n(396).default,
-                    DiagnosticAssistantService: n(397).default,
-                    DiscordIntegrationService: n(398).default,
-                    DragStateService: n(399).default,
-                    EogService: n(400).default,
-                    FriendFinderService: n(401).default,
-                    FriendGroupsService: n(402).default,
-                    FriendHovercardsService: n(403).default,
-                    FriendRequestsService: n(404).default,
-                    FriendsService: n(405).default,
-                    GameDataService: n(406).default,
-                    GameflowService: n(407).default,
-                    GameInvitesService: n(408).default,
-                    GameQueuesService: n(409).default,
-                    GenericAssetsService: n(410).default,
-                    HoneyfruitService: n(411).default,
-                    LeaverBusterService: n(412).default,
-                    LobbyService: n(416).default,
-                    MapsService: n(417).default,
-                    MatchmakingService: n(418).default,
-                    NotificationsService: n(419).default,
-                    OpenPartiesService: n(420).default,
-                    PatcherService: n(421).default,
-                    PlatformConfigService: n(422).default,
-                    ProductsService: n(423).default,
-                    ProfileChampionInfoService: n(424).default,
-                    ProfilesService: n(425).default,
-                    ReformCardService: n(426).default,
-                    RemedyService: n(444).default,
-                    ReporterFeedbackMessagesService: n(445).default,
-                    ReporterFeedbackService: n(446).default,
-                    RequestCacheService: n(447).default,
-                    SettingsService: n(448).default,
-                    SocialButtonsService: n(449).default,
-                    SocialPlatformConfigService: n(376).default,
-                    SocialSessionService: n(450).default,
-                    SocialSettingsService: n(451).default,
-                    SpectatorService: n(452).default,
-                    StatusUpdatesService: n(453).default,
-                    StoreService: n(454).default,
-                    SummonerService: n(455).default,
-                    SystemService: n(456).default,
-                    TopNavUpdatesService: n(457).default,
-                    UxSettingsService: n(458).default,
+                    AnalyticsService: n(387).default,
+                    BanNotificationService: n(388).default,
+                    ChatErrorsService: n(389).default,
+                    ChatRestrictionService: n(390).default,
+                    ChatWindowSettingsService: n(391).default,
+                    ClashService: n(392).default,
+                    ClientConfigService: n(393).default,
+                    CodeOfConductService: n(394).default,
+                    ConversationsService: n(397).default,
+                    DiagnosticAssistantService: n(398).default,
+                    DiscordIntegrationService: n(399).default,
+                    DragStateService: n(400).default,
+                    EogService: n(401).default,
+                    FriendFinderService: n(402).default,
+                    FriendGroupsService: n(403).default,
+                    FriendHovercardsService: n(404).default,
+                    FriendRequestsService: n(405).default,
+                    FriendsService: n(406).default,
+                    GameDataService: n(407).default,
+                    GameflowService: n(408).default,
+                    GameInvitesService: n(409).default,
+                    GameQueuesService: n(410).default,
+                    GenericAssetsService: n(411).default,
+                    HoneyfruitService: n(412).default,
+                    LeaverBusterService: n(413).default,
+                    LobbyService: n(417).default,
+                    MapsService: n(418).default,
+                    MatchmakingService: n(419).default,
+                    NotificationsService: n(420).default,
+                    OpenPartiesService: n(421).default,
+                    PatcherService: n(422).default,
+                    PlatformConfigService: n(423).default,
+                    ProductsService: n(424).default,
+                    ProfileChampionInfoService: n(425).default,
+                    ProfilesService: n(426).default,
+                    ReformCardService: n(427).default,
+                    RemedyService: n(445).default,
+                    ReporterFeedbackMessagesService: n(446).default,
+                    ReporterFeedbackService: n(447).default,
+                    RequestCacheService: n(448).default,
+                    SettingsService: n(449).default,
+                    SocialButtonsService: n(450).default,
+                    SocialPlatformConfigService: n(377).default,
+                    SocialSessionService: n(451).default,
+                    SocialSettingsService: n(452).default,
+                    SpectatorService: n(453).default,
+                    StatusUpdatesService: n(454).default,
+                    StoreService: n(455).default,
+                    SummonerService: n(456).default,
+                    SystemService: n(457).default,
+                    TopNavUpdatesService: n(458).default,
+                    UxSettingsService: n(459).default,
                     MissionsService: m.MissionsService,
                     TEMPLATES: {
-                        application: n(459),
-                        index: n(460),
-                        "components/actions-bar": n(461),
-                        "components/actions-folder-input": n(462),
-                        "components/arrow-toggle": n(463),
-                        "components/availability-hitbox": n(464),
-                        "components/chat-toggle-button": n(465),
-                        "components/clash-roster-panel": n(466),
-                        "components/clash-roster-panel-item": n(467),
-                        "components/content-block-attention": n(468),
-                        "components/discord-banner": n(469),
-                        "components/ephemeral-action-tooltip": n(470),
-                        "components/friend-finder-add-summoner-by-name": n(471),
-                        "components/friend-finder-button": n(472),
-                        "components/friend-finder-modal": n(473),
-                        "components/friend-finder-recent-summoner": n(474),
-                        "components/friend-finder-recently-played": n(475),
-                        "components/friend-finder-requested-player": n(476),
-                        "components/friend-finder-requested-players": n(477),
-                        "components/hovercard-name-alias-mode": n(478),
-                        "components/hovercard-name-summoner-mode": n(479),
-                        "components/identity-and-parties": n(480),
-                        "components/sidebar-main": n(481),
-                        "components/social-avatar": n(482),
-                        "components/social-button": n(483),
-                        "components/social-friend-request": n(484),
-                        "components/social-friend-requests-modal": n(485),
-                        "components/social-friend-requests": n(486),
-                        "components/social-identity": n(487),
-                        "components/social-menu-input": n(488),
-                        "components/social-menu-item": n(489),
-                        "components/social-menu": n(490),
-                        "components/social-panel": n(491),
-                        "components/social-roster-group-name": n(492),
-                        "components/social-roster-group": n(493),
-                        "components/social-roster-member": n(494),
-                        "components/social-roster": n(495),
-                        "components/social-status-wrapper": n(496),
-                        "components/social-text-tooltip": n(497),
-                        "components/social-tooltip": n(498),
-                        "components/tooltip-message": n(499),
-                        "components/uikit-radio": n(500),
-                        "components/version-bar": n(501),
-                        "components/vng-age-rating": n(502),
+                        application: n(460),
+                        index: n(461),
+                        "components/actions-bar": n(462),
+                        "components/actions-folder-input": n(463),
+                        "components/arrow-toggle": n(464),
+                        "components/availability-hitbox": n(465),
+                        "components/chat-toggle-button": n(466),
+                        "components/clash-roster-panel": n(467),
+                        "components/clash-roster-panel-item": n(468),
+                        "components/content-block-attention": n(469),
+                        "components/discord-banner": n(470),
+                        "components/ephemeral-action-tooltip": n(471),
+                        "components/discord-eat": n(472),
+                        "components/friend-finder-add-summoner-by-name": n(473),
+                        "components/friend-finder-button": n(474),
+                        "components/friend-finder-modal": n(475),
+                        "components/friend-finder-recent-summoner": n(476),
+                        "components/friend-finder-recently-played": n(477),
+                        "components/friend-finder-requested-player": n(478),
+                        "components/friend-finder-requested-players": n(479),
+                        "components/hovercard-name-alias-mode": n(480),
+                        "components/hovercard-name-summoner-mode": n(481),
+                        "components/identity-and-parties": n(482),
+                        "components/sidebar-main": n(483),
+                        "components/social-avatar": n(484),
+                        "components/social-button": n(485),
+                        "components/social-friend-request": n(486),
+                        "components/social-friend-requests-modal": n(487),
+                        "components/social-friend-requests": n(488),
+                        "components/social-identity": n(489),
+                        "components/social-menu-input": n(490),
+                        "components/social-menu-item": n(491),
+                        "components/social-menu": n(492),
+                        "components/social-panel": n(493),
+                        "components/social-roster-group-name": n(494),
+                        "components/social-roster-group": n(495),
+                        "components/social-roster-member": n(496),
+                        "components/social-roster": n(497),
+                        "components/social-status-wrapper": n(498),
+                        "components/social-text-tooltip": n(499),
+                        "components/social-tooltip": n(500),
+                        "components/tooltip-message": n(501),
+                        "components/uikit-radio": n(502),
+                        "components/version-bar": n(503),
+                        "components/vng-age-rating": n(504),
                         "components/missions-button": m.MissionsButtonComponentTemplate
                     }
                 };
@@ -13089,11 +13091,11 @@
                     name: "RemedyReceived",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    RemediesReceivedComponent: n(503).default,
-                    RemedyRewardCardComponent: n(511).default,
+                    RemediesReceivedComponent: n(505).default,
+                    RemedyRewardCardComponent: n(513).default,
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
-                    RemedyService: n(444).default
+                    RemedyService: n(445).default
                 }), r.emberApplicationFactory.setFactoryDefinition({
                     name: "HostageDetectedComponent",
                     tra: r.traService,
@@ -13101,14 +13103,14 @@
                     HostageDetectedComponent: n(305).HostageDetectedComponent,
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
-                    RemedyService: n(444).default
+                    RemedyService: n(445).default
                 }), r.emberApplicationFactory.setFactoryDefinition({
                     name: "CredibilityBehaviorWarning",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    CredibilityBehaviorWarningComponent: n(514).default,
-                    CredibilityBehaviorWarningOptionComponent: n(518).default,
-                    RemedyService: n(444).default
+                    CredibilityBehaviorWarningComponent: n(516).default,
+                    CredibilityBehaviorWarningOptionComponent: n(520).default,
+                    RemedyService: n(445).default
                 })
             };
             var r = n(1);
@@ -13159,8 +13161,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "xRf/AcB/",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\hostage-detected-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\hostage-detected-component\\\\style.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","span",[]],["static-attr","class","hostage-detected-notification-title"],["flush-element"],["append",["unknown",["hostageDetectedNotificationTitle"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","hostage-detected-notification-body"],["flush-element"],["append",["helper",["sanitize"],[["get",["hostageDetectedNotificationBody"]]],null],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "uHAEaUc7",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\hostage-detected-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\hostage-detected-component\\\\style.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","span",[]],["static-attr","class","hostage-detected-notification-title"],["flush-element"],["append",["unknown",["hostageDetectedNotificationTitle"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","hostage-detected-notification-body"],["flush-element"],["append",["helper",["sanitize"],[["get",["hostageDetectedNotificationBody"]]],null],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -13746,7 +13748,37 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(325);
+                o = r.Ember.Component.extend({
+                    classNames: ["discord-eat"],
+                    isModalQueueEmpty: !0,
+                    shouldShowEat: !0,
+                    discordIntegrationService: r.Ember.inject.service("discord-integration"),
+                    showEphemeralActionTooltip: r.Ember.computed("discordIntegrationService.shouldShowDiscordBetaEat", "isModalQueueEmpty", "shouldShowEat", (function() {
+                        return this.get("shouldShowEat") && this.get("isModalQueueEmpty") && this.get("discordIntegrationService.shouldShowDiscordBetaEat")
+                    })),
+                    didInsertElement() {
+                        this._super(...arguments), r.modalManager.addModalQueueObserver(this, this.checkModalQueueEmpty)
+                    },
+                    didDestroyElement() {
+                        this._super(...arguments), r.modalManager.removeModalQueueObserver(this.checkModalQueueEmpty)
+                    },
+                    checkModalQueueEmpty(e) {
+                        this.set("isModalQueueEmpty", e)
+                    },
+                    actions: {
+                        markToolTipRead: function() {
+                            this.get("discordIntegrationService").markDiscordBetaEatSeen(), this.set("shouldShowEat", !1)
+                        }
+                    }
+                });
+            t.default = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(1),
+                o = n(326);
             const {
                 RunMixin: i
             } = r.EmberAddons.EmberLifeline, a = (e, t) => "string" == typeof e && "string" == typeof t && e.toUpperCase() === t.toUpperCase();
@@ -14080,10 +14112,10 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(330),
-                i = n(331),
-                a = n(332),
-                s = n(325),
+                o = n(331),
+                i = n(332),
+                a = n(333),
+                s = n(326),
                 l = r.Ember.Component.extend({
                     classNames: ["lol-friend-finder-recent-summoner"],
                     summoner: {},
@@ -14230,9 +14262,9 @@
                 i = (r = n(310)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(331),
-                s = n(332),
-                l = n(330);
+                a = n(332),
+                s = n(333),
+                l = n(331);
             var c = o.Ember.Component.extend({
                 classNames: ["lol-friend-finder-requested-player"],
                 tra: o.Ember.inject.service("tra"),
@@ -14317,7 +14349,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(336);
+                o = n(337);
             const {
                 RunMixin: i
             } = r.EmberAddons.EmberLifeline, a = "show-hovercard", s = "hide-hovercard", l = {
@@ -14341,7 +14373,7 @@
             let c = !1;
             var d = r.Ember.Component.extend(i, {
                 tagName: "template",
-                layout: n(337),
+                layout: n(338),
                 socialPlatformConfig: r.Ember.inject.service(),
                 puuid: null,
                 summonerId: null,
@@ -14482,8 +14514,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "4IyxGYGM",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-component.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\hovercard-component.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-root-container lol-uikit-tooltip-target"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasShown"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["hovercard-shell"],null,[["direction","directionRef","hovercardReadyPromiseResolve","puuid","getTarget","getHovercardRoot","openPartyDescription","summonerIdArg","isHovercardShowing"],[["get",["direction"]],["get",["directionRef"]],["get",["hovercardReadyPromiseResolve"]],["get",["puuid"]],["helper",["action"],[["get",[null]],"getTarget"],null],["helper",["action"],[["get",[null]],"getHovercardRoot"],null],["get",["openPartyDescription"]],["get",["summonerId"]],["get",["isHovercardShowing"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "zMfhrEfe",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-component.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\hovercard-component.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-root-container lol-uikit-tooltip-target"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasShown"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["hovercard-shell"],null,[["direction","directionRef","hovercardReadyPromiseResolve","puuid","getTarget","getHovercardRoot","openPartyDescription","summonerIdArg","isHovercardShowing"],[["get",["direction"]],["get",["directionRef"]],["get",["hovercardReadyPromiseResolve"]],["get",["puuid"]],["helper",["action"],[["get",[null]],"getTarget"],null],["helper",["action"],[["get",[null]],"getHovercardRoot"],null],["get",["openPartyDescription"]],["get",["summonerId"]],["get",["isHovercardShowing"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -14492,12 +14524,12 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(339),
-                i = n(340);
+                o = n(340),
+                i = n(341);
             var a = r.Ember.Component.extend({
                 clientConfig: r.Ember.inject.service("client-config"),
                 tagName: "",
-                layout: n(341),
+                layout: n(342),
                 loggedIn: null,
                 isKnown: null,
                 me: null,
@@ -14870,8 +14902,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "fmlho2Kq",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\hovercard-content.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","id","hover-card-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","style",["unknown",["backdropStyles"]],null],["static-attr","id","hover-card-backdrop"],["static-attr","class","hover-card-backdrop"],["flush-element"],["close-element"],["text","\\n"],["block",["each"],[["get",["backdropOverlays"]]],null,43],["text","  "],["open-element","div",[]],["static-attr","class","hover-card-header-left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["masteryScore"]]],null,42],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-header-right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["role"]]],null,41],["block",["if"],[["get",["position"]]],null,40],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["summonerIdAndNotRemote"]]],null,39,33],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-footer"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-bottom-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["gntOnlyAndOffline"]]],null,29],["block",["if"],[["get",["noteOfflineGnt"]]],null,28,27],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-note-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-note-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-note"],["flush-element"],["append",["unknown",["note"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-status-message-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-status-message-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-status-message"],["flush-element"],["text","“"],["append",["unknown",["statusMessage"]],false],["text","”"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text","- "],["append",["unknown",["remotePlatformId"]],false],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["remotePlatformId"]]],null,2]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text","- "],["append",["unknown",["remoteProductName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardAvailabilityMessageClasses"]],null],["flush-element"],["text","\\n            "],["append",["unknown",["availabilityTra"]],false],["text","\\n"],["block",["if"],[["get",["remoteProductName"]]],null,4,3],["text","          "],["close-element"],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasAvailabilityString"]]],null,5]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["hover-card-game-status ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["gameStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["gameStatusNotOutOfGame"]]],null,7,6]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-gameinfo"],["flush-element"],["text","\\n            "],["append",["unknown",["tournamentStatusTra"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["tournamentStatusNotNone"]]],null,9,8]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["flush-element"],["text"," - "],["append",["unknown",["mapName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-gameinfo"],["flush-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","availability_championSelect"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["mapName"]]],null,11],["text","            "],["open-element","span",[]],["flush-element"],["text"," ("],["append",["unknown",["gameQueueTypeString"]],false],["text",")"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["gameStatusChampionSelect"]]],null,12,10]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","open-party-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","open-party-availability"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["dynamic-attr","class",["unknown",["hCardAvailabilityIconClasses"]],null],["flush-element"],["close-element"],["text","\\n                  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardAvailabilityMessageClasses"]],null],["flush-element"],["append",["unknown",["availabilityTra"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hovercard-open-party"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hovercard-open-party-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["availabilityAway"]]],null,15,14],["text","              "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardOpenPartyClasses"]],null],["flush-element"],["append",["unknown",["partyOccupancyString"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","open-party-string"],["flush-element"],["append",["unknown",["tra","open_party"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardOpenPartySummonersClasses"]],null],["flush-element"],["text","\\n              "],["append",["unknown",["partySummonerNames"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showPartyBlock"]]],null,16,13]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","hover-card-time"],["flush-element"],["text","\\n              "],["append",["unknown",["gameStartFormatted"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["flush-element"],["text"," - "],["append",["unknown",["championName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["flush-element"],["append",["unknown",["gameMode"]],false],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["gameMode"]]],null,20]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["flush-element"],["text","("],["append",["unknown",["gameQueueTypeString"]],false],["text",")"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["flush-element"],["append",["unknown",["mapName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["mapName"]]],null,23],["block",["if"],[["get",["gameType"]]],null,22]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-gameinfo"],["flush-element"],["text","\\n"],["block",["if"],[["get",["mapNameOrGameType"]]],null,24,21],["block",["if"],[["get",["championName"]]],null,19],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["gameStart"]]],null,18]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hover-card-availability"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["availabilityClasses"]],null],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["gameStatusInGame"]]],null,25,17],["text","      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["statusMessage"]]],null,1],["text","\\n"],["block",["if"],[["get",["note"]]],null,0],["text","    "]],"locals":[]},{"statements":[["block",["if"],[["get",["knownNotGnt"]]],null,26]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hover-card-note-wrapper-offline-gnt"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hover-card-note-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hover-card-note"],["flush-element"],["append",["unknown",["note"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hover-card-availability offline"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","hover-card-availability-icon offline"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hover-card-availability-message offline"],["flush-element"],["append",["unknown",["tra","availability_offline"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","hover-card-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","hover-card-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","icon-ring"],["static-attr","class","no-image"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","icon-image"],["dynamic-attr","src",["unknown",["productIconUrl"]],null],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","icon-ring"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","hover-card-info-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-identity"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","hover-card-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["productIconUrl"]]],null,32,31],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","hover-card-info"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","aliasComponent","gameName","tagLine"],["component","hovercard-name-alias-mode",["get",["gameName"]],["get",["gameTag"]]]]],false],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,30],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-challenge-crystal"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hover-card-rank-img-container"],["flush-element"],["open-element","img",[]],["static-attr","class","hover-card-crystal-image"],["dynamic-attr","src",["unknown",["challengeMiniCrystalPath"]],null],["flush-element"],["close-element"],["close-element"],["text","\\n            "],["append",["unknown",["challengeCrystalLevelSummary"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-rank"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hover-card-rank-img-container"],["flush-element"],["open-element","img",[]],["static-attr","class","hover-card-rank-image"],["dynamic-attr","src",["unknown",["rankedMiniRegaliaPath"]],null],["flush-element"],["close-element"],["close-element"],["text","\\n            "],["append",["unknown",["rankedSummary"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-title-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-title"],["flush-element"],["append",["unknown",["summonerTitle"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","hover-card-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","hover-card-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-regalia-hovercard-v2-element",[]],["static-attr","ref","regaliaElement"],["dynamic-attr","summoner-id",["unknown",["summonerId"]],null],["dynamic-attr","puuid",["unknown",["puuid"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","hover-card-info-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-identity"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isHovercardShowing"]]],null,38],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","hover-card-info hover-card-info-line-height-override"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","aliasComponent","gameName","tagLine"],["component","hovercard-name-alias-mode",["get",["gameName"]],["get",["gameTag"]]]]],false],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,37],["block",["if"],[["get",["summonerTitle"]]],null,36],["text","      "],["open-element","div",[]],["static-attr","class","hover-card-ranked-description"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showRankData"]]],null,35],["block",["if"],[["get",["showChallengeCrystalData"]]],null,34],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["positionClasses"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["roleClasses"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","hover-card-mastery-image"],["flush-element"],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","hover-card-mastery-score"],["flush-element"],["append",["unknown",["masteryScore"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","hover-card-backdrop-overlay"],["dynamic-attr","style",["get",["overlay"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":["overlay"]}],"hasPartials":false}',
+                id: "VexHSUJ6",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\hovercard-content.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","id","hover-card-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","style",["unknown",["backdropStyles"]],null],["static-attr","id","hover-card-backdrop"],["static-attr","class","hover-card-backdrop"],["flush-element"],["close-element"],["text","\\n"],["block",["each"],[["get",["backdropOverlays"]]],null,43],["text","  "],["open-element","div",[]],["static-attr","class","hover-card-header-left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["masteryScore"]]],null,42],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-header-right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["role"]]],null,41],["block",["if"],[["get",["position"]]],null,40],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["summonerIdAndNotRemote"]]],null,39,33],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-footer"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-bottom-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["gntOnlyAndOffline"]]],null,29],["block",["if"],[["get",["noteOfflineGnt"]]],null,28,27],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-note-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-note-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-note"],["flush-element"],["append",["unknown",["note"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-status-message-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-status-message-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-status-message"],["flush-element"],["text","“"],["append",["unknown",["statusMessage"]],false],["text","”"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text","- "],["append",["unknown",["remotePlatformId"]],false],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["remotePlatformId"]]],null,2]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text","- "],["append",["unknown",["remoteProductName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardAvailabilityMessageClasses"]],null],["flush-element"],["text","\\n            "],["append",["unknown",["availabilityTra"]],false],["text","\\n"],["block",["if"],[["get",["remoteProductName"]]],null,4,3],["text","          "],["close-element"],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasAvailabilityString"]]],null,5]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["hover-card-game-status ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["gameStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["gameStatusNotOutOfGame"]]],null,7,6]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-gameinfo"],["flush-element"],["text","\\n            "],["append",["unknown",["tournamentStatusTra"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["tournamentStatusNotNone"]]],null,9,8]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["flush-element"],["text"," - "],["append",["unknown",["mapName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-gameinfo"],["flush-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","availability_championSelect"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["mapName"]]],null,11],["text","            "],["open-element","span",[]],["flush-element"],["text"," ("],["append",["unknown",["gameQueueTypeString"]],false],["text",")"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["gameStatusChampionSelect"]]],null,12,10]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","open-party-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","open-party-availability"],["flush-element"],["text","\\n                  "],["open-element","span",[]],["dynamic-attr","class",["unknown",["hCardAvailabilityIconClasses"]],null],["flush-element"],["close-element"],["text","\\n                  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardAvailabilityMessageClasses"]],null],["flush-element"],["append",["unknown",["availabilityTra"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hovercard-open-party"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hovercard-open-party-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["availabilityAway"]]],null,15,14],["text","              "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardOpenPartyClasses"]],null],["flush-element"],["append",["unknown",["partyOccupancyString"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","open-party-string"],["flush-element"],["append",["unknown",["tra","open_party"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["unknown",["hCardOpenPartySummonersClasses"]],null],["flush-element"],["text","\\n              "],["append",["unknown",["partySummonerNames"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showPartyBlock"]]],null,16,13]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","hover-card-time"],["flush-element"],["text","\\n              "],["append",["unknown",["gameStartFormatted"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["flush-element"],["text"," - "],["append",["unknown",["championName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["flush-element"],["append",["unknown",["gameMode"]],false],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["block",["if"],[["get",["gameMode"]]],null,20]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["flush-element"],["text","("],["append",["unknown",["gameQueueTypeString"]],false],["text",")"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["flush-element"],["append",["unknown",["mapName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["mapName"]]],null,23],["block",["if"],[["get",["gameType"]]],null,22]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-gameinfo"],["flush-element"],["text","\\n"],["block",["if"],[["get",["mapNameOrGameType"]]],null,24,21],["block",["if"],[["get",["championName"]]],null,19],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["gameStart"]]],null,18]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hover-card-availability"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["availabilityClasses"]],null],["flush-element"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["gameStatusInGame"]]],null,25,17],["text","      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["statusMessage"]]],null,1],["text","\\n"],["block",["if"],[["get",["note"]]],null,0],["text","    "]],"locals":[]},{"statements":[["block",["if"],[["get",["knownNotGnt"]]],null,26]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hover-card-note-wrapper-offline-gnt"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hover-card-note-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hover-card-note"],["flush-element"],["append",["unknown",["note"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","hover-card-availability offline"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","hover-card-availability-icon offline"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","hover-card-availability-message offline"],["flush-element"],["append",["unknown",["tra","availability_offline"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","hover-card-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","hover-card-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","icon-ring"],["static-attr","class","no-image"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","icon-image"],["dynamic-attr","src",["unknown",["productIconUrl"]],null],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","icon-ring"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","hover-card-info-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-identity"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","hover-card-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["productIconUrl"]]],null,32,31],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","hover-card-info"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","aliasComponent","gameName","tagLine"],["component","hovercard-name-alias-mode",["get",["gameName"]],["get",["gameTag"]]]]],false],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,30],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-challenge-crystal"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hover-card-rank-img-container"],["flush-element"],["open-element","img",[]],["static-attr","class","hover-card-crystal-image"],["dynamic-attr","src",["unknown",["challengeMiniCrystalPath"]],null],["flush-element"],["close-element"],["close-element"],["text","\\n            "],["append",["unknown",["challengeCrystalLevelSummary"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","hover-card-rank"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","hover-card-rank-img-container"],["flush-element"],["open-element","img",[]],["static-attr","class","hover-card-rank-image"],["dynamic-attr","src",["unknown",["rankedMiniRegaliaPath"]],null],["flush-element"],["close-element"],["close-element"],["text","\\n            "],["append",["unknown",["rankedSummary"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-title-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","hover-card-title"],["flush-element"],["append",["unknown",["summonerTitle"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","hover-card-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","hover-card-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","hover-card-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-regalia-hovercard-v2-element",[]],["static-attr","ref","regaliaElement"],["dynamic-attr","summoner-id",["unknown",["summonerId"]],null],["dynamic-attr","puuid",["unknown",["puuid"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","hover-card-info-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-identity"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isHovercardShowing"]]],null,38],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","hover-card-info hover-card-info-line-height-override"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","aliasComponent","gameName","tagLine"],["component","hovercard-name-alias-mode",["get",["gameName"]],["get",["gameTag"]]]]],false],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,37],["block",["if"],[["get",["summonerTitle"]]],null,36],["text","      "],["open-element","div",[]],["static-attr","class","hover-card-ranked-description"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showRankData"]]],null,35],["block",["if"],[["get",["showChallengeCrystalData"]]],null,34],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["positionClasses"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["roleClasses"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","hover-card-mastery-image"],["flush-element"],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","hover-card-mastery-score"],["flush-element"],["append",["unknown",["masteryScore"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","hover-card-backdrop-overlay"],["dynamic-attr","style",["get",["overlay"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":["overlay"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -14880,17 +14912,17 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(336),
-                a = n(339),
-                s = n(340),
-                l = n(343),
+                i = n(337),
+                a = n(340),
+                s = n(341),
+                l = n(344),
                 c = (r = n(310)) && r.__esModule ? r : {
                     default: r
                 };
             const d = /\W+/g;
             var p = o.Ember.Component.extend({
                 tagName: "",
-                layout: n(344),
+                layout: n(345),
                 friendHovercardsService: o.Ember.inject.service("friend-hovercards"),
                 profileChampionInfo: o.Ember.inject.service(),
                 socialPlatformConfig: o.Ember.inject.service(),
@@ -15081,8 +15113,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "7LdYsse0",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-shell.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\hovercard-shell.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["rootClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["containerClasses"]],null],["flush-element"],["text","\\n    "],["append",["helper",["hovercard-content"],null,[["loggedIn","isKnown","me","rawChampionsInfo","champion","puuid","friendInfo","accountId","summonerName","gameName","gameTag","puuid","availability","isDiscordOnline","isLeagueOffline","gameStatus","playerChallengeSummary","playerRankedSummary","gntOnlyAndOffline","regaliaEnabled","remoteProduct","remotePlatform","notRemoteProduct","summonerIconUrl","getHovercardRoot","__canRenderHovercard","openPartyDescription","isHovercardShowing","discordId"],[["get",["loggedIn"]],["get",["isKnown"]],["get",["me"]],["get",["rawChampionsInfo"]],["get",["champion"]],["get",["puuid"]],["get",["friendInfo"]],["get",["accountId"]],["get",["summonerName"]],["get",["gameName"]],["get",["gameTag"]],["get",["puuid"]],["get",["availability"]],["get",["isDiscordOnline"]],["get",["isLeagueOffline"]],["get",["gameStatus"]],["get",["playerChallengeSummary"]],["get",["playerRankedSummary"]],["get",["gntOnlyAndOffline"]],["get",["regaliaEnabled"]],["get",["remoteProduct"]],["get",["remotePlatform"]],["get",["notRemoteProduct"]],["get",["summonerIconUrl"]],["get",["getHovercardRoot"]],["get",["canRenderHovercard"]],["get",["openPartyDescription"]],["get",["isHovercardShowing"]],["get",["discordId"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["canRenderHovercard"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","id","border-container"],["static-attr","data-class-has-regalia","--isRegaliaEnabled"],["flush-element"],["text","\\n    "],["open-element","svg",[]],["static-attr","id","border"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["static-attr","width","100%"],["static-attr","height","100%"],["static-attr","version","1.1"],["flush-element"],["text","\\n      "],["open-element","defs",[]],["flush-element"],["text","\\n        "],["open-element","linearGradient",[]],["static-attr","id","gradient"],["dynamic-attr","x1",["unknown",["svgLinGradPos","x1"]],null],["dynamic-attr","y1",["unknown",["svgLinGradPos","y1"]],null],["dynamic-attr","x2",["unknown",["svgLinGradPos","x2"]],null],["dynamic-attr","y2",["unknown",["svgLinGradPos","y2"]],null],["flush-element"],["text","\\n          "],["open-element","stop",[]],["static-attr","offset","60%"],["static-attr","stop-color","#785A28"],["flush-element"],["close-element"],["text","\\n          "],["open-element","stop",[]],["static-attr","offset","100%"],["static-attr","stop-color","#463714"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","path",[]],["static-attr","id","tick-path"],["static-attr","d","M369.5 6.5 l 3 1 v 59.5 l 2 2 v 1 l -2 2 v 59.5 l -3 1 v -52.5 l 10.5 -10.5 l -10.5 -10.5 z"],["static-attr","fill","#010A13"],["static-attr","stroke","#785A28"],["static-attr","stroke-width","1"],["flush-element"],["close-element"],["text","\\n      "],["open-element","path",[]],["static-attr","id","border-path"],["static-attr","d","M1 1 h 368 v 57.5 l 11 11 l -11 11 v 57.5 H 1 Z"],["static-attr","fill","transparent"],["static-attr","stroke","url(#gradient)"],["static-attr","stroke-width","2"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "+RvYxB6a",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-shell.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\hovercard-shell.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["rootClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["containerClasses"]],null],["flush-element"],["text","\\n    "],["append",["helper",["hovercard-content"],null,[["loggedIn","isKnown","me","rawChampionsInfo","champion","puuid","friendInfo","accountId","summonerName","gameName","gameTag","puuid","availability","isDiscordOnline","isLeagueOffline","gameStatus","playerChallengeSummary","playerRankedSummary","gntOnlyAndOffline","regaliaEnabled","remoteProduct","remotePlatform","notRemoteProduct","summonerIconUrl","getHovercardRoot","__canRenderHovercard","openPartyDescription","isHovercardShowing","discordId"],[["get",["loggedIn"]],["get",["isKnown"]],["get",["me"]],["get",["rawChampionsInfo"]],["get",["champion"]],["get",["puuid"]],["get",["friendInfo"]],["get",["accountId"]],["get",["summonerName"]],["get",["gameName"]],["get",["gameTag"]],["get",["puuid"]],["get",["availability"]],["get",["isDiscordOnline"]],["get",["isLeagueOffline"]],["get",["gameStatus"]],["get",["playerChallengeSummary"]],["get",["playerRankedSummary"]],["get",["gntOnlyAndOffline"]],["get",["regaliaEnabled"]],["get",["remoteProduct"]],["get",["remotePlatform"]],["get",["notRemoteProduct"]],["get",["summonerIconUrl"]],["get",["getHovercardRoot"]],["get",["canRenderHovercard"]],["get",["openPartyDescription"]],["get",["isHovercardShowing"]],["get",["discordId"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["canRenderHovercard"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","id","border-container"],["static-attr","data-class-has-regalia","--isRegaliaEnabled"],["flush-element"],["text","\\n    "],["open-element","svg",[]],["static-attr","id","border"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["static-attr","width","100%"],["static-attr","height","100%"],["static-attr","version","1.1"],["flush-element"],["text","\\n      "],["open-element","defs",[]],["flush-element"],["text","\\n        "],["open-element","linearGradient",[]],["static-attr","id","gradient"],["dynamic-attr","x1",["unknown",["svgLinGradPos","x1"]],null],["dynamic-attr","y1",["unknown",["svgLinGradPos","y1"]],null],["dynamic-attr","x2",["unknown",["svgLinGradPos","x2"]],null],["dynamic-attr","y2",["unknown",["svgLinGradPos","y2"]],null],["flush-element"],["text","\\n          "],["open-element","stop",[]],["static-attr","offset","60%"],["static-attr","stop-color","#785A28"],["flush-element"],["close-element"],["text","\\n          "],["open-element","stop",[]],["static-attr","offset","100%"],["static-attr","stop-color","#463714"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","path",[]],["static-attr","id","tick-path"],["static-attr","d","M369.5 6.5 l 3 1 v 59.5 l 2 2 v 1 l -2 2 v 59.5 l -3 1 v -52.5 l 10.5 -10.5 l -10.5 -10.5 z"],["static-attr","fill","#010A13"],["static-attr","stroke","#785A28"],["static-attr","stroke-width","1"],["flush-element"],["close-element"],["text","\\n      "],["open-element","path",[]],["static-attr","id","border-path"],["static-attr","d","M1 1 h 368 v 57.5 l 11 11 l -11 11 v 57.5 H 1 Z"],["static-attr","fill","transparent"],["static-attr","stroke","url(#gradient)"],["static-attr","stroke-width","2"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -15101,7 +15133,7 @@
             }), t.default = void 0;
             var r = n(1);
             const o = n(153),
-                i = n(347),
+                i = n(348),
                 a = (0, r.emberDataBinding)({
                     Ember: r.Ember,
                     websocket: (0, r.getProvider)().getSocket(),
@@ -15197,7 +15229,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(349);
+            n(350);
             var o = r.Ember.Component.extend({
                 avatarClassNames: "",
                 championId: null,
@@ -15276,14 +15308,14 @@
             var r = n(1),
                 o = n(247),
                 i = s(n(310)),
-                a = s(n(352));
+                a = s(n(353));
 
             function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(353);
+            n(354);
             var l = r.Ember.Component.extend({
                 classNames: ["lol-social-friend-request"],
                 closeModal: null,
@@ -15458,7 +15490,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(355);
+            n(356);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-friend-requests"],
                 alertNewFriendRequests: !1,
@@ -15528,7 +15560,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(357);
+            n(358);
             var o = r.Ember.Component.extend({
                 friendsService: r.Ember.inject.service("friends"),
                 friendRequestsService: r.Ember.inject.service("friendRequests"),
@@ -15698,7 +15730,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(360);
+            n(361);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-menu"],
                 keepOpenOnScroll: !1,
@@ -15799,7 +15831,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(363);
+            n(364);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-menu-item"]
             });
@@ -15852,7 +15884,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(366),
+                o = n(367),
                 i = s(n(310)),
                 a = s(n(288));
 
@@ -15861,7 +15893,7 @@
                     default: e
                 }
             }
-            n(367);
+            n(368);
             var l = r.Ember.Component.extend(a.default, {
                 classNames: ["lol-social-roster", "social-ember-fade-in"],
                 scrollTop: 0,
@@ -16201,18 +16233,18 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(366),
+                o = n(367),
                 i = c(n(310)),
-                a = c(n(369)),
+                a = c(n(370)),
                 s = c(n(288)),
-                l = c(n(370));
+                l = c(n(371));
 
             function c(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(371);
+            n(372);
             var d = r.Ember.Component.extend(a.default, s.default, l.default, {
                 classNames: ["lol-social-roster-group"],
                 attributeBindings: ["draggable"],
@@ -16449,10 +16481,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(370)) && r.__esModule ? r : {
+                i = (r = n(371)) && r.__esModule ? r : {
                     default: r
                 };
-            n(373);
+            n(374);
             var a = o.Ember.Component.extend(i.default, {
                 classNames: ["lol-social-roster-group-name"],
                 group: null,
@@ -16530,13 +16562,13 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = c(n(370)),
-                i = n(366),
+                o = c(n(371)),
+                i = n(367),
                 a = c(n(310)),
                 s = n(247),
-                l = c(n(369));
-            n(375);
-            c(n(376));
+                l = c(n(370));
+            n(376);
+            c(n(377));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -17223,8 +17255,8 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(366);
-            n(378);
+                o = n(367);
+            n(379);
             const i = "outOfGame",
                 a = "NONE";
             var s = r.Ember.Component.extend({
@@ -17335,7 +17367,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(366),
+                o = n(367),
                 i = r.Ember.Component.extend({
                     tagName: "template",
                     type: "top",
@@ -17580,7 +17612,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(385);
+            n(386);
             var o = r.Ember.Component.extend({
                 classNames: ["vng-age-rating"],
                 classNameBindings: ["isHidden:vng-age-rating-hidden"],
@@ -17775,7 +17807,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(370)) && r.__esModule ? r : {
+                i = (r = n(371)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "ForcedShutdown",
@@ -17869,7 +17901,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(370)) && r.__esModule ? r : {
+                i = (r = n(371)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -18135,6 +18167,10 @@
                 default: !1,
                 name: "discordIntegrationEnabled",
                 path: "lol.client_settings.discordIntegration.enabled"
+            }, {
+                default: !1,
+                name: "discordBetaIntegrationEnabled",
+                path: "lol.client_settings.discordIntegrationBeta.enabled"
             }];
             var i = r.Ember.Service.extend({
                 init: function() {
@@ -18161,7 +18197,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(370)) && r.__esModule ? r : {
+                i = (r = n(371)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Service.extend(i.default, {
@@ -18173,7 +18209,7 @@
                         name: "CodeOfConduct",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        CodeOfConductComponent: n(394).default
+                        CodeOfConductComponent: n(395).default
                     })
                 },
                 handleCodeOfConductNotification: function(e) {
@@ -18202,7 +18238,7 @@
             const o = (0, r.getProvider)().get("rcp-fe-lol-uikit").getTemplateHelper();
             var i = r.Ember.Component.extend({
                 classNames: ["code-of-conduct"],
-                layout: n(395),
+                layout: n(396),
                 didInsertElement: function() {
                     this._super(...arguments), this.unlockRule(1)
                 },
@@ -18270,8 +18306,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "u28G/olt",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\code-of-conduct\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\code-of-conduct\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\code-of-conduct\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","code-of-conduct-content-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","code-of-conduct-close-button"],["modifier",["action"],[["get",[null]],"closeModalWithoutAccepting"]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","code-of-conduct-logos-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/logo-riot.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-divider.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-lol.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-divider.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-tft.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","code-of-conduct-title-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","header-title"],["flush-element"],["append",["unknown",["tra","player_behavior_code_of_conduct_header"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","header-subtitle"],["flush-element"],["append",["unknown",["tra","player_behavior_code_of_conduct_subheader"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rules-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["rulesToAcknowledge"]]],null,0],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","more-info-link"],["flush-element"],["text","\\n    "],["append",["helper",["sanitize"],[["get",["tra","player_behavior_code_of_conduct_link_more_info"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["rule-item-container rule-item-",["unknown",["ruleItem","id"]]," ",["helper",["if"],[["get",["ruleItem","accepted"]],"accepted"],null]]]],["modifier",["action"],[["get",[null]],"unlockNextRule",["get",["ruleItem"]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","rule-item-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rule-item-checkbox-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rule-item-checkbox"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rule-item-body-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rule-item-subheader"],["flush-element"],["append",["unknown",["ruleItem","subheader"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rule-item-body"],["flush-element"],["append",["unknown",["ruleItem","body"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["ruleItem"]}],"hasPartials":false}',
+                id: "LSxrjfBW",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\code-of-conduct\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\code-of-conduct\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\code-of-conduct\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","code-of-conduct-content-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","code-of-conduct-close-button"],["modifier",["action"],[["get",[null]],"closeModalWithoutAccepting"]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","code-of-conduct-logos-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/logo-riot.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-divider.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-lol.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-divider.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n    "],["open-element","img",[]],["static-attr","src","/fe/lol-social/code-of-conduct/game-logo-tft.png"],["static-attr","class","code-of-conduct-logo"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","code-of-conduct-title-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","header-title"],["flush-element"],["append",["unknown",["tra","player_behavior_code_of_conduct_header"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","header-subtitle"],["flush-element"],["append",["unknown",["tra","player_behavior_code_of_conduct_subheader"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rules-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["rulesToAcknowledge"]]],null,0],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","more-info-link"],["flush-element"],["text","\\n    "],["append",["helper",["sanitize"],[["get",["tra","player_behavior_code_of_conduct_link_more_info"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["rule-item-container rule-item-",["unknown",["ruleItem","id"]]," ",["helper",["if"],[["get",["ruleItem","accepted"]],"accepted"],null]]]],["modifier",["action"],[["get",[null]],"unlockNextRule",["get",["ruleItem"]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","rule-item-content"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rule-item-checkbox-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rule-item-checkbox"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rule-item-body-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rule-item-subheader"],["flush-element"],["append",["unknown",["ruleItem","subheader"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rule-item-body"],["flush-element"],["append",["unknown",["ruleItem","body"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["ruleItem"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -18618,9 +18654,13 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            const o = ["TUR", "RUS", "CHN", "ARE"];
-            var i = r.Ember.Service.extend({
+            const o = ["TUR", "RUS", "CHN", "ARE"],
+                i = "/lol-settings/v2/ready",
+                a = "/lol-settings/v2/account/LCUPreferences/lol-general",
+                s = "discord-beta-eat-seen";
+            var l = r.Ember.Service.extend({
                 rsoAuthCountryCode: "",
+                isDiscordBetaEatSeen: !1,
                 clientConfigService: r.Ember.inject.service("client-config"),
                 settingsService: r.Ember.inject.service("settings"),
                 isDiscordIntegrationEnabled: r.Ember.computed.alias("clientConfigService.discordIntegrationEnabled"),
@@ -18628,16 +18668,36 @@
                     return !!this.get("isDiscordIntegrationEnabled") && (!this.get("isTencent") && !o.includes(this.get("rsoAuthCountryCode")))
                 })),
                 isTencent: r.Ember.computed.equal("settingsService.region", "TENCENT"),
+                shouldShowDiscordBetaEat: r.Ember.computed("isDiscordBetaEatSeen", "isEnabled", (function() {
+                    return this.get("isEnabled") && !this.get("isDiscordBetaEatSeen")
+                })),
+                markDiscordBetaEatSeen: function() {
+                    this.set("isDiscordBetaEatSeen", !0);
+                    try {
+                        r.db.patch(a, {
+                            schemaVersion: 1,
+                            data: {
+                                [s]: !0
+                            }
+                        })
+                    } catch (e) {
+                        r.logger.error("Failed saving Discord Beta EAT seen", e)
+                    }
+                },
                 init: function() {
                     this._super(...arguments), r.db.observe("/lol-rso-auth/v1/authorization/country", this, (e => {
                         this.set("rsoAuthCountryCode", e.toUpperCase())
+                    })), r.db.observe(i, this, (e => {
+                        this.isSettingsReady && (r.db.observe(a, this, (e => {
+                            e?.data && this.set("isDiscordBetaEatSeen", Boolean(e.data[s]))
+                        })), r.db.unobserve(i, this))
                     }))
                 },
                 willDestroy() {
-                    this._super(...arguments), r.db.unobserve("/lol-rso-auth/v1/authorization/country", this)
+                    this._super(...arguments), r.db.unobserve("/lol-rso-auth/v1/authorization/country", this), r.db.unobserve(a, this), r.db.unobserve(i, this)
                 }
             });
-            t.default = i
+            t.default = l
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -18714,7 +18774,7 @@
                 i = (r = n(158)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(366);
+                a = n(367);
             var s = o.Ember.Service.extend({
                 friendsService: o.Ember.inject.service("friends"),
                 systemService: o.Ember.inject.service("system"),
@@ -18847,7 +18907,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(339);
+                o = n(340);
             const i = "/lol-chat/v2/friend-requests",
                 a = "/lol-chat/v1/blocked-players",
                 s = "/lol-client-config/v3/client-config/lol.client_settings.match_history.recently_played_summoners.friend_finder_disabled",
@@ -18951,8 +19011,8 @@
                 i = (r = n(160)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(339),
-                s = n(366);
+                a = n(340),
+                s = n(367);
             const l = "/lol-chat/v1/friends",
                 c = "/lol-honor-v2/v1/recognition-history",
                 d = "/lol-client-config/v3/client-config/lol.client_settings.discordIntegration.enabled";
@@ -19327,7 +19387,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(370)) && r.__esModule ? r : {
+                i = (r = n(371)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -19344,7 +19404,7 @@
                 d = "OnLockoutWarning",
                 p = "RankedRestrictedGames",
                 u = ["InProgress", "WaitingForStats", "PreEndOfGame"],
-                m = n(413),
+                m = n(414),
                 g = o.Ember.get;
             var h = o.Ember.Service.extend(a, i.default, {
                 init() {
@@ -19355,7 +19415,7 @@
                         name: "LeaverBusterWarning",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        LeaverBusterWarningComponent: n(414).default
+                        LeaverBusterWarningComponent: n(415).default
                     })
                 },
                 notificationObserver: o.Ember.on("init", o.Ember.observer("leaverBusterNotifications.[]", "gameflow.phase", (function() {
@@ -19476,7 +19536,7 @@
             var r = n(1),
                 o = r.Ember.Component.extend({
                     classNames: ["leaver-buster-dialog"],
-                    layout: n(415),
+                    layout: n(416),
                     agreeText: r.Ember.computed("tra.leaver_buster_warning_agree", "tra.leaver_buster_warning_agree_prompt$html", "notificationContext.agreeText", (function() {
                         return this.get("tra").formatString("leaver_buster_warning_agree_prompt$html", {
                             leaverBusterWarningAgree: this.get("notificationContext.agreeText")
@@ -19503,8 +19563,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "OUJIMIC3",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\leaver-buster-warning\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\leaver-buster-warning\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\leaver-buster-warning\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","h4",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["notificationContext","header"]]],null],false],["close-element"],["text","\\n  "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["notificationContext","body"]]],null],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-input",[]],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["type","class","value","maxlength"],["text","leaver-buster-warning-input",["get",["inputValue"]],"70"]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","p",[]],["static-attr","class","leaver-buster-agree-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["agreeText"]]],null],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "OuwrNedX",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\leaver-buster-warning\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\leaver-buster-warning\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\leaver-buster-warning\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","h4",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["notificationContext","header"]]],null],false],["close-element"],["text","\\n  "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["notificationContext","body"]]],null],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-input",[]],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["type","class","value","maxlength"],["text","leaver-buster-warning-input",["get",["inputValue"]],"70"]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","p",[]],["static-attr","class","leaver-buster-agree-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["agreeText"]]],null],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -19836,7 +19896,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = n(339);
+            var r = n(340);
             const o = n(1),
                 {
                     dataBinding: i,
@@ -19918,7 +19978,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(370)) && r.__esModule ? r : {
+                i = (r = n(371)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "PERMA_BAN";
@@ -19931,22 +19991,22 @@
                         name: "ReformCard",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardComponent: n(427).default,
-                        ReformCardChatLogComponent: n(429).default,
-                        ReformCardMatchHistoryComponent: n(431).default
+                        ReformCardComponent: n(428).default,
+                        ReformCardChatLogComponent: n(430).default,
+                        ReformCardMatchHistoryComponent: n(432).default
                     }), o.emberApplicationFactory.setFactoryDefinition({
                         name: "ReformCardV2",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardV2Component: n(433).default,
-                        ReformCardV2ChatLogComponent: n(435).default,
-                        ReformCardV2MatchHistoryComponent: n(437).default
+                        ReformCardV2Component: n(434).default,
+                        ReformCardV2ChatLogComponent: n(436).default,
+                        ReformCardV2MatchHistoryComponent: n(438).default
                     }), o.emberApplicationFactory.setFactoryDefinition({
                         name: "ReformCardV3",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardV3Component: n(439).default,
-                        ReformCardV3ChatLogComponent: n(442).default
+                        ReformCardV3Component: n(440).default,
+                        ReformCardV3ChatLogComponent: n(443).default
                     }))
                 },
                 initDataBindings() {
@@ -20029,7 +20089,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(428)) && r.__esModule ? r : {
+                i = (r = n(429)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20163,8 +20223,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "lUCY6yuZ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","reform-card-content"],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","h2",[]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-subhead"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-player-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-body"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isCustomMessage"]]],null,4,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["reform-card-chat-log"],null,[["reformCard","summonerName"],[["get",["reformCard"]],["get",["summonerName"]]]]],false],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowChatLogs"]]],null,0]],"locals":[]},{"statements":[["text","          "],["append",["helper",["reform-card-match-history"],null,[["reformCard"],[["get",["reformCard"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["descriptionText"]]],null],false],["close-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["explanationText"]]],null],false],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowMatchHistory"]]],null,2,1]],"locals":[]},{"statements":[["text","        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["trimmedCustomMessage"]]],null],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "hQVygwJI",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","reform-card-content"],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","h2",[]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","heading-spacer"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-subhead"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-player-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-body"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isCustomMessage"]]],null,4,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["reform-card-chat-log"],null,[["reformCard","summonerName"],[["get",["reformCard"]],["get",["summonerName"]]]]],false],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowChatLogs"]]],null,0]],"locals":[]},{"statements":[["text","          "],["append",["helper",["reform-card-match-history"],null,[["reformCard"],[["get",["reformCard"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["descriptionText"]]],null],false],["close-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["explanationText"]]],null],false],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowMatchHistory"]]],null,2,1]],"locals":[]},{"statements":[["text","        "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["trimmedCustomMessage"]]],null],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -20173,7 +20233,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(430)) && r.__esModule ? r : {
+                i = (r = n(431)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -20237,8 +20297,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "V3oSVxqq",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\chat-log\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\chat-log\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\chat-log\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header"],["flush-element"],["text","\\n  "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","player_behavior_reform_card_logs_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-copy-log-container"],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","href","#"],["static-attr","class","chat-log-header-copy-log-link"],["modifier",["action"],[["get",[null]],"copyText"]],["flush-element"],["append",["unknown",["copyLinkText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-body"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gamesChatLogs"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",": "],["append",["get",["chatLog"]],false],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["append",["unknown",["gameChatLogs","title"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLogs","chatLogs"]]],null,0]],"locals":["gameChatLogs"]}],"hasPartials":false}',
+                id: "5oXzPu/s",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\chat-log\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\chat-log\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\chat-log\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header"],["flush-element"],["text","\\n  "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","player_behavior_reform_card_logs_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-copy-log-container"],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","href","#"],["static-attr","class","chat-log-header-copy-log-link"],["modifier",["action"],[["get",[null]],"copyText"]],["flush-element"],["append",["unknown",["copyLinkText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-body"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gamesChatLogs"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",": "],["append",["get",["chatLog"]],false],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["append",["unknown",["gameChatLogs","title"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLogs","chatLogs"]]],null,0]],"locals":["gameChatLogs"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -20247,7 +20307,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(432)) && r.__esModule ? r : {
+                i = (r = n(433)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20275,8 +20335,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "lpw7hxaj",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\match-history\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\match-history\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\match-history\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["matchHistoryGameIdTexts"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","class","reform-card-match-history-game-id-text"],["flush-element"],["append",["unknown",["gameIdText","text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":["gameIdText"]}],"hasPartials":false}',
+                id: "55NTBIWL",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\match-history\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\match-history\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-component\\\\match-history\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["matchHistoryGameIdTexts"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","class","reform-card-match-history-game-id-text"],["flush-element"],["append",["unknown",["gameIdText","text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":["gameIdText"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -20285,7 +20345,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(434)) && r.__esModule ? r : {
+                i = (r = n(435)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20453,8 +20513,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "lhv6nz7O",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","reform-card-content"],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-scrollable-content"],["flush-element"],["text","\\n      "],["open-element","h2",[]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-body"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","reform-card-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isCustomMessage"]]],null,4,3],["text","        "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowMatchHistory"]]],null,2,1],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["reform-card-v2-chat-log"],null,[["reformCard","summonerName"],[["get",["reformCard"]],["get",["summonerName"]]]]],false],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowChatLogs"]]],null,0]],"locals":[]},{"statements":[["text","          "],["append",["helper",["reform-card-v2-match-history"],null,[["reformCard"],[["get",["reformCard"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["descriptionText"]]],null],false],["close-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["explanationText"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["trimmedCustomMessage"]]],null],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "gug5V5Q9",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","reform-card-content"],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-scrollable-content"],["flush-element"],["text","\\n      "],["open-element","h2",[]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-body"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","reform-card-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isCustomMessage"]]],null,4,3],["text","        "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowMatchHistory"]]],null,2,1],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["reform-card-v2-chat-log"],null,[["reformCard","summonerName"],[["get",["reformCard"]],["get",["summonerName"]]]]],false],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowChatLogs"]]],null,0]],"locals":[]},{"statements":[["text","          "],["append",["helper",["reform-card-v2-match-history"],null,[["reformCard"],[["get",["reformCard"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["descriptionText"]]],null],false],["close-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["explanationText"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["trimmedCustomMessage"]]],null],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -20463,7 +20523,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(436)) && r.__esModule ? r : {
+                i = (r = n(437)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -20508,8 +20568,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "Y9v3TySx",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\chat-log\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\chat-log\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\chat-log\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-title"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","player_behavior_reform_card_logs_title"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-copy-log-container"],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","href","#"],["static-attr","class","chat-log-header-copy-log-link"],["modifier",["action"],[["get",[null]],"copyText"]],["flush-element"],["append",["unknown",["copyLinkText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-body"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["reformCard","punishedForReformCardChatLogs","length"]]],null,9,8],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",":"],["close-element"],["text","\\n                "],["append",["get",["chatLog"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader-text"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","player_behavior_reform_card_postgame_header"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLog","postGameChatLogs"]]],null,0]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",":"],["close-element"],["text","\\n                "],["append",["get",["chatLog"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader-text"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","player_behavior_reform_card_ingame_header"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLog","inGameChatLogs"]]],null,2]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",":"],["close-element"],["text","\\n                "],["append",["get",["chatLog"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader-text"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","player_behavior_reform_card_pregame_header"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLog","preGameChatLogs"]]],null,4]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","id",["concat",[["get",["index"]]]]],["dynamic-attr","class",["concat",["reform-card-scrollable-game ",["helper",["unless"],[["get",["index"]],"selected"],null]]]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-hidden-header"],["flush-element"],["text","\\n            "],["append",["unknown",["gameChatLog","title"]],false],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["gameChatLog","preGameChatLogs","length"]]],null,5],["block",["if"],[["get",["gameChatLog","inGameChatLogs","length"]]],null,3],["block",["if"],[["get",["gameChatLog","postGameChatLogs","length"]]],null,1],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["gameChatLog","index"]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","id",["concat",[["get",["index"]]]]],["dynamic-attr","class",["concat",["reform-card-chat-tab ",["helper",["unless"],[["get",["index"]],"selected"],null]]]],["modifier",["action"],[["get",[null]],"selectGame",["get",["index"]]]],["flush-element"],["text","\\n          "],["append",["unknown",["gameChatLog","title"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["gameChatLog","index"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","reform-card-chat-tab-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["allChatLogs"]]],null,7],["text","      "],["open-element","hr",[]],["static-attr","class","reform-card-chat-tab-line"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["each"],[["get",["allChatLogs"]]],null,6]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable-game selected"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","player_behavior_reform_card_no_logs_text"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Rg1PIpy1",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\chat-log\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\chat-log\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\chat-log\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-title"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","player_behavior_reform_card_logs_title"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-copy-log-container"],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","href","#"],["static-attr","class","chat-log-header-copy-log-link"],["modifier",["action"],[["get",[null]],"copyText"]],["flush-element"],["append",["unknown",["copyLinkText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-body"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["reformCard","punishedForReformCardChatLogs","length"]]],null,9,8],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",":"],["close-element"],["text","\\n                "],["append",["get",["chatLog"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader-text"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","player_behavior_reform_card_postgame_header"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLog","postGameChatLogs"]]],null,0]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",":"],["close-element"],["text","\\n                "],["append",["get",["chatLog"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader-text"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","player_behavior_reform_card_ingame_header"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLog","inGameChatLogs"]]],null,2]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["summonerName"]],false],["text",":"],["close-element"],["text","\\n                "],["append",["get",["chatLog"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["chatLog"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-subheader-text"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","player_behavior_reform_card_pregame_header"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["each"],[["get",["gameChatLog","preGameChatLogs"]]],null,4]],"locals":[]},{"statements":[["text","      "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","id",["concat",[["get",["index"]]]]],["dynamic-attr","class",["concat",["reform-card-scrollable-game ",["helper",["unless"],[["get",["index"]],"selected"],null]]]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-hidden-header"],["flush-element"],["text","\\n            "],["append",["unknown",["gameChatLog","title"]],false],["text","\\n          "],["close-element"],["text","\\n"],["block",["if"],[["get",["gameChatLog","preGameChatLogs","length"]]],null,5],["block",["if"],[["get",["gameChatLog","inGameChatLogs","length"]]],null,3],["block",["if"],[["get",["gameChatLog","postGameChatLogs","length"]]],null,1],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["gameChatLog","index"]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","id",["concat",[["get",["index"]]]]],["dynamic-attr","class",["concat",["reform-card-chat-tab ",["helper",["unless"],[["get",["index"]],"selected"],null]]]],["modifier",["action"],[["get",[null]],"selectGame",["get",["index"]]]],["flush-element"],["text","\\n          "],["append",["unknown",["gameChatLog","title"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["gameChatLog","index"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","reform-card-chat-tab-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["allChatLogs"]]],null,7],["text","      "],["open-element","hr",[]],["static-attr","class","reform-card-chat-tab-line"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["each"],[["get",["allChatLogs"]]],null,6]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable-game selected"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","player_behavior_reform_card_no_logs_text"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -20518,7 +20578,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(438)) && r.__esModule ? r : {
+                i = (r = n(439)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20546,8 +20606,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "0zB8AyYa",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\match-history\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\match-history\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\match-history\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["matchHistoryGameIdTexts"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","class","reform-card-match-history-game-id-text"],["flush-element"],["append",["unknown",["gameIdText","text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":["gameIdText"]}],"hasPartials":false}',
+                id: "F7r+NveS",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\match-history\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\match-history\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v2-component\\\\match-history\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["matchHistoryGameIdTexts"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","class","reform-card-match-history-game-id-text"],["flush-element"],["append",["unknown",["gameIdText","text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":["gameIdText"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -20556,10 +20616,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(440)) && r.__esModule ? r : {
+                i = (r = n(441)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(441);
+                a = n(442);
             const s = o.Ember.Object.extend(o.Ember.PromiseProxyMixin);
             var l = o.Ember.Component.extend({
                 classNames: ["player-behavior-reform-card-v3"],
@@ -20599,8 +20659,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "V4A3u53N",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","reform-card-content"],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-scrollable-content"],["flush-element"],["text","\\n      "],["open-element","h2",[]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-body"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPenalties"]]],null,3],["text","        "],["open-element","div",[]],["static-attr","class","reform-card-text body-text"],["flush-element"],["append",["unknown",["bodyText"]],true],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGameId"]]],null,1],["block",["if"],[["get",["hasChatLogEvidence"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["reform-card-v3-chat-log"],null,[["gameId","reformCard","displayName"],[["get",["gameId"]],["get",["reformCard"]],["get",["displayName"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","h4",[]],["static-attr","class","game-id-text"],["flush-element"],["append",["unknown",["gameIdText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","li",[]],["flush-element"],["append",["get",["penalty"]],true],["close-element"],["text","\\n"]],"locals":["penalty"]},{"statements":[["text","          "],["open-element","h4",[]],["static-attr","class","reform-card-subhead"],["flush-element"],["append",["unknown",["penaltyHeader"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","reform-card-text"],["flush-element"],["text","\\n            "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["penalties"]]],null,2],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "EsGHni70",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class","reform-card-content"],["static-attr","type","dialog-large"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","reform-card-scrollable"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-scrollable-content"],["flush-element"],["text","\\n      "],["open-element","h2",[]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n      "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","reform-card-body"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPenalties"]]],null,3],["text","        "],["open-element","div",[]],["static-attr","class","reform-card-text body-text"],["flush-element"],["append",["unknown",["bodyText"]],true],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGameId"]]],null,1],["block",["if"],[["get",["hasChatLogEvidence"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","hr",[]],["static-attr","class","reform-card-subhead-rule"],["flush-element"],["close-element"],["text","\\n          "],["append",["helper",["reform-card-v3-chat-log"],null,[["gameId","reformCard","displayName"],[["get",["gameId"]],["get",["reformCard"]],["get",["displayName"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","h4",[]],["static-attr","class","game-id-text"],["flush-element"],["append",["unknown",["gameIdText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","li",[]],["flush-element"],["append",["get",["penalty"]],true],["close-element"],["text","\\n"]],"locals":["penalty"]},{"statements":[["text","          "],["open-element","h4",[]],["static-attr","class","reform-card-subhead"],["flush-element"],["append",["unknown",["penaltyHeader"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","reform-card-text"],["flush-element"],["text","\\n            "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["penalties"]]],null,2],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t) => {
@@ -20616,7 +20676,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(443)) && r.__esModule ? r : {
+                i = (r = n(444)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -20652,8 +20712,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "XUaRwpLg",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\chat-log\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\chat-log\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\chat-log\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-title"],["flush-element"],["text","\\n    "],["append",["unknown",["chatLogsHeader"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-copy-log-container"],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","href","#"],["static-attr","class","chat-log-header-copy-log-link"],["modifier",["action"],[["get",[null]],"copyText"]],["flush-element"],["append",["unknown",["copyLinkText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-body"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","id",["concat",[["unknown",["index"]]]]],["dynamic-attr","class",["concat",["reform-card-scrollable-game ",["helper",["unless"],[["get",["index"]],"selected"],null]]]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["text","\\n"],["block",["each"],[["get",["chatLogLines"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["displayName"]],false],["text",":"],["close-element"],["text","\\n          "],["append",["get",["chatLogLine"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["chatLogLine"]}],"hasPartials":false}',
+                id: "ju6wnoir",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\chat-log\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\chat-log\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\reform-card-v3-component\\\\chat-log\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-title"],["flush-element"],["text","\\n    "],["append",["unknown",["chatLogsHeader"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-header-copy-log-container"],["flush-element"],["text","\\n    "],["open-element","a",[]],["static-attr","href","#"],["static-attr","class","chat-log-header-copy-log-link"],["modifier",["action"],[["get",[null]],"copyText"]],["flush-element"],["append",["unknown",["copyLinkText"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","reform-card-chat-log-body"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","id",["concat",[["unknown",["index"]]]]],["dynamic-attr","class",["concat",["reform-card-scrollable-game ",["helper",["unless"],[["get",["index"]],"selected"],null]]]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-game"],["flush-element"],["text","\\n"],["block",["each"],[["get",["chatLogLines"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","reform-card-chat-log-example"],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","reform-card-chat-log-name"],["flush-element"],["append",["unknown",["displayName"]],false],["text",":"],["close-element"],["text","\\n          "],["append",["get",["chatLogLine"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["chatLogLine"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -20662,7 +20722,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(370)) && r.__esModule ? r : {
+                i = (r = n(371)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "/client-config/v2/config/lol.client_settings.remedy.obfuscated_player_name";
@@ -20773,7 +20833,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(370)) && r.__esModule ? r : {
+                i = (r = n(371)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -21262,309 +21322,316 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "ZM5XO5v4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\application.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["unknown",["outlet"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "wgkxZKnM",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\application.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["unknown",["outlet"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "6EyPc83a",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\index.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["unknown",["sidebar-main"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "1X23RG/w",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\index.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["unknown",["sidebar-main"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "uc197kLH",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\actions-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\actions-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-actions-bar actions"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["actionsBarClasses"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","buttons"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","friend-header"],["flush-element"],["append",["unknown",["tra","friend_header"]],false],["close-element"],["text","\\n      "],["append",["helper",["friend-finder-button"],null,[["disabled"],[["get",["friendFinderButtonDisabled"]]]]],false],["text","\\n"],["block",["if"],[["get",["notChatGBG"]]],null,12],["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["optionsButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openOptionsMenu"],null],null],["static-attr","data-dd-action-name","button.social.options"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showGroupingNotification"]]],null,10,7],["text","      "],["close-element"],["text","\\n      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["filterButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openSlidingFilter"],null],null],["static-attr","data-dd-action-name","button.social.filter"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["left",true]],5],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["folderAddOpen"]]],null,4],["text","\\n    "],["open-element","div",[]],["static-attr","class","search-box"],["static-attr","id","actions-bar-search-input"],["flush-element"],["text","\\n      "],["append",["helper",["player-name-input"],null,[["placeholder","gameNameInputSupplementalClass","singleInputSupplementalClass","gameNameInputHandler","tagLineInputHandler","singleInputHandler"],[["get",["tra","filter_placeholder"]],"search-input__game-name","search-input__single-input",["helper",["action"],[["get",[null]],"filterGameNameValueChangeHandler"],null],["helper",["action"],[["get",[null]],"filterTagLineValueChangeHandler"],null],["helper",["action"],[["get",[null]],"filterSingleInputValueChangeHandler"],null]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["optionsOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeOptionsMenu"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2"],["static-attr","caretless","true"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["optionsMenuClasses"]],null],["flush-element"],["text","\\n"],["block",["uikit-radio"],null,[["selected"],[["helper",["action"],[["get",[null]],"updateSort"],null]]],3],["text","\\n"],["block",["if"],[["get",["allowGroupByGame"]]],null,2],["text","\\n"],["block",["unless"],[["get",["isTencent"]]],null,1],["text","\\n      "],["open-element","div",[]],["static-attr","id","group-offline-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n          "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupOffline"],null],null],["dynamic-attr","checked",["unknown",["chatGroupOfflineOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_offline"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isDiscordEnabled"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","group-mobile-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupDiscord"],null],null],["dynamic-attr","checked",["unknown",["chatGroupDiscordOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_discord"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","group-mobile-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupMobile"],null],null],["dynamic-attr","checked",["unknown",["chatGroupMobileOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_mobile"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","gbg-menuitem"],["static-attr","class","lol-social-menu-item menu-item-separator"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","gbg-checkbox"],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGBG"],null],null],["dynamic-attr","checked",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","class","gbg-label"],["flush-element"],["text","\\n              "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","dropdown_gbg"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","menuitem-sublabel"],["flush-element"],["append",["unknown",["tra","dropdown_disables_folders"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","title","alphabetical"],["dynamic-attr","selected",["unknown",["sortingAlphabetical"]],null],["flush-element"],["append",["unknown",["tra","menu_item_sort_alphabetically"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","title","availability"],["dynamic-attr","selected",["unknown",["sortingAvailability"]],null],["flush-element"],["append",["unknown",["tra","menu_item_sort_status"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["actions-folder-input"],null,[["onFolderInputClose"],[["helper",["action"],[["get",[null]],"closeFolderInput"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tra","tooltip_filter"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_options"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["bottom",true]],6]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","roster_attention_grouping_changes"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["content-block-attention"],null,null,8]],"locals":[]},{"statements":[["block",["social-tooltip"],null,[["direction","type","onclick"],["left","attention",["helper",["action"],[["get",[null]],"closeAttentionTooltip"],null]]],9]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_new_folder"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["folderButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"addFolder"],null],null],["static-attr","data-dd-action-name","button.social.add_folder"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["bottom",true]],11],["text","        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "PuWhtzDQ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\actions-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\actions-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-actions-bar actions"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["actionsBarClasses"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","buttons"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","friend-header"],["flush-element"],["append",["unknown",["tra","friend_header"]],false],["close-element"],["text","\\n      "],["append",["helper",["friend-finder-button"],null,[["disabled"],[["get",["friendFinderButtonDisabled"]]]]],false],["text","\\n"],["block",["if"],[["get",["notChatGBG"]]],null,12],["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["optionsButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openOptionsMenu"],null],null],["static-attr","data-dd-action-name","button.social.options"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showGroupingNotification"]]],null,10,7],["text","      "],["close-element"],["text","\\n      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["filterButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openSlidingFilter"],null],null],["static-attr","data-dd-action-name","button.social.filter"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["left",true]],5],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["folderAddOpen"]]],null,4],["text","\\n    "],["open-element","div",[]],["static-attr","class","search-box"],["static-attr","id","actions-bar-search-input"],["flush-element"],["text","\\n      "],["append",["helper",["player-name-input"],null,[["placeholder","gameNameInputSupplementalClass","singleInputSupplementalClass","gameNameInputHandler","tagLineInputHandler","singleInputHandler"],[["get",["tra","filter_placeholder"]],"search-input__game-name","search-input__single-input",["helper",["action"],[["get",[null]],"filterGameNameValueChangeHandler"],null],["helper",["action"],[["get",[null]],"filterTagLineValueChangeHandler"],null],["helper",["action"],[["get",[null]],"filterSingleInputValueChangeHandler"],null]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["optionsOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeOptionsMenu"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2"],["static-attr","caretless","true"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["optionsMenuClasses"]],null],["flush-element"],["text","\\n"],["block",["uikit-radio"],null,[["selected"],[["helper",["action"],[["get",[null]],"updateSort"],null]]],3],["text","\\n"],["block",["if"],[["get",["allowGroupByGame"]]],null,2],["text","\\n"],["block",["unless"],[["get",["isTencent"]]],null,1],["text","\\n      "],["open-element","div",[]],["static-attr","id","group-offline-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n          "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupOffline"],null],null],["dynamic-attr","checked",["unknown",["chatGroupOfflineOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_offline"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isDiscordEnabled"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","group-mobile-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupDiscord"],null],null],["dynamic-attr","checked",["unknown",["chatGroupDiscordOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_discord"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","group-mobile-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupMobile"],null],null],["dynamic-attr","checked",["unknown",["chatGroupMobileOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_mobile"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","gbg-menuitem"],["static-attr","class","lol-social-menu-item menu-item-separator"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","gbg-checkbox"],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGBG"],null],null],["dynamic-attr","checked",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","class","gbg-label"],["flush-element"],["text","\\n              "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","dropdown_gbg"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","menuitem-sublabel"],["flush-element"],["append",["unknown",["tra","dropdown_disables_folders"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","title","alphabetical"],["dynamic-attr","selected",["unknown",["sortingAlphabetical"]],null],["flush-element"],["append",["unknown",["tra","menu_item_sort_alphabetically"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","title","availability"],["dynamic-attr","selected",["unknown",["sortingAvailability"]],null],["flush-element"],["append",["unknown",["tra","menu_item_sort_status"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["actions-folder-input"],null,[["onFolderInputClose"],[["helper",["action"],[["get",[null]],"closeFolderInput"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tra","tooltip_filter"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_options"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["bottom",true]],6]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","roster_attention_grouping_changes"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["content-block-attention"],null,null,8]],"locals":[]},{"statements":[["block",["social-tooltip"],null,[["direction","type","onclick"],["left","attention",["helper",["action"],[["get",[null]],"closeAttentionTooltip"],null]]],9]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_new_folder"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["folderButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"addFolder"],null],null],["static-attr","data-dd-action-name","button.social.add_folder"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["bottom",true]],11],["text","        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "6v/O443P",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\actions-folder-input.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\actions-folder-input.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","folder-name"],["flush-element"],["text","\\n\\n  "],["open-element","form",[]],["dynamic-attr","onsubmit",["helper",["action"],[["get",[null]],"onSubmit"],null],null],["static-attr","class","folder-name-contents layout"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","flat-input"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","type","text"],["dynamic-attr","class",["unknown",["folderInputClasses"]],null],["dynamic-attr","value",["unknown",["folderNameText"]],null],["dynamic-attr","onkeydown",["helper",["action"],[["get",[null]],"onKeyEvent"],null],null],["dynamic-attr","onblur",["helper",["action"],[["get",[null]],"onCancel"],null],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"onInput"],[["value"],["target.value"]]],null],["static-attr","maxlength","25"],["dynamic-attr","placeholder",["unknown",["placeholderText"]],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["errorMessage"]]],null,1],["text","  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isSaving"]]],null,0],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","animation"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","success-message"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","group_new_group_created"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["tooltip-message"],null,[["position","messagePacket","delay"],["bottom",["get",["errorMessage"]],-1]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "fo2k17eg",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\actions-folder-input.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\actions-folder-input.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","folder-name"],["flush-element"],["text","\\n\\n  "],["open-element","form",[]],["dynamic-attr","onsubmit",["helper",["action"],[["get",[null]],"onSubmit"],null],null],["static-attr","class","folder-name-contents layout"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","flat-input"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","type","text"],["dynamic-attr","class",["unknown",["folderInputClasses"]],null],["dynamic-attr","value",["unknown",["folderNameText"]],null],["dynamic-attr","onkeydown",["helper",["action"],[["get",[null]],"onKeyEvent"],null],null],["dynamic-attr","onblur",["helper",["action"],[["get",[null]],"onCancel"],null],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"onInput"],[["value"],["target.value"]]],null],["static-attr","maxlength","25"],["dynamic-attr","placeholder",["unknown",["placeholderText"]],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["errorMessage"]]],null,1],["text","  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isSaving"]]],null,0],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","animation"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","success-message"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","group_new_group_created"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["tooltip-message"],null,[["position","messagePacket","delay"],["bottom",["get",["errorMessage"]],-1]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "FVnhORQI",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\arrow-toggle.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\arrow-toggle.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\arrow-toggle.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["arrowToggleClasses"]],null],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "FyCmWmmT",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\arrow-toggle.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\arrow-toggle.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\arrow-toggle.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["arrowToggleClasses"]],null],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "BQWtpD9S",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\availability-hitbox.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\availability-hitbox.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\availability-hitbox.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-availability-hitbox"],["flush-element"],["text","\\n"],["block",["if"],[["get",["me"]]],null,3,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["availability-icon ",["unknown",["availabilityIconClasses"]]," ",["helper",["if"],[["get",["large"]],"large"],null]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","discord-online"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isDiscordOnline"]]],null,1,0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleAvailability"],null],null],["static-attr","class","availability-hitbox"],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["availability-icon ",["helper",["if"],[["get",["availability"]],["get",["availability"]],"offline"],null]," ",["helper",["if"],[["get",["large"]],"large"],null]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "hLjEmM4/",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\availability-hitbox.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\availability-hitbox.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\availability-hitbox.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-availability-hitbox"],["flush-element"],["text","\\n"],["block",["if"],[["get",["me"]]],null,3,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["availability-icon ",["unknown",["availabilityIconClasses"]]," ",["helper",["if"],[["get",["large"]],"large"],null]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","discord-online"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isDiscordOnline"]]],null,1,0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleAvailability"],null],null],["static-attr","class","availability-hitbox"],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["availability-icon ",["helper",["if"],[["get",["availability"]],["get",["availability"]],"offline"],null]," ",["helper",["if"],[["get",["large"]],"large"],null]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "IGgMxnx9",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\chat-toggle-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\chat-toggle-button.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["toggleButtonClasses"]],null],["dynamic-attr","onMouseDown",["helper",["action"],[["get",[null]],"toggleChatWindow"],null],null],["static-attr","data-dd-action-name","button.social.chat"],["flush-element"],["text","\\n"],["block",["if"],[["get",["unreadMessageCount"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-count-badge"],["flush-element"],["append",["unknown",["unreadMessageCount"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "cqO98npX",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\chat-toggle-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\chat-toggle-button.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["toggleButtonClasses"]],null],["dynamic-attr","onMouseDown",["helper",["action"],[["get",[null]],"toggleChatWindow"],null],null],["static-attr","data-dd-action-name","button.social.chat"],["flush-element"],["text","\\n"],["block",["if"],[["get",["unreadMessageCount"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-count-badge"],["flush-element"],["append",["unknown",["unreadMessageCount"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "/GMpENcx",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\clash-roster-panel.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\clash-roster-panel.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\clash-roster-panel.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","clash-roster-item-scroll"],["flush-element"],["text","\\n"],["block",["each"],[["get",["clashRosters"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["clash-roster-panel-item"],null,[["roster"],[["get",["roster"]]]]],false],["text","\\n"]],"locals":["roster"]}],"hasPartials":false}',
+                id: "RdXOf7rr",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\clash-roster-panel.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\clash-roster-panel.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\clash-roster-panel.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","clash-roster-item-scroll"],["flush-element"],["text","\\n"],["block",["each"],[["get",["clashRosters"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["clash-roster-panel-item"],null,[["roster"],[["get",["roster"]]]]],false],["text","\\n"]],"locals":["roster"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "F5CFA3vr",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\clash-roster-panel-item.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\clash-roster-panel-item.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\clash-roster-panel-item.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","clash-roster-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleClick"],null],null],["dynamic-attr","data-id",["unknown",["roster","multiUserChatId"]],null],["dynamic-attr","data-name",["unknown",["roster","shortName"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","clash-roster-info-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","clash-roster-icon"],["dynamic-attr","src",["unknown",["roster","iconSrc"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","clash-roster-info-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["roster?","isRegistered"]]],null,3,2],["block",["if"],[["get",["clashRosterParticipantCount"]]],null,1],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowUnreadMessageCount"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","social-count-badge unread-count"],["flush-element"],["text","\\n        "],["append",["unknown",["conversation","unreadMessageCount"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","clash-roster-members-online"],["flush-element"],["text","\\n          "],["append",["unknown",["clashRosterParticipantCount"]],false],["text","\\n          "],["append",["unknown",["tra","clash_chat_roster_online_label"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","clash-roster-name"],["flush-element"],["append",["unknown",["tra","clash_chat_roster_pending_name"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","clash-roster-name-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","clash-roster-shortName"],["flush-element"],["append",["unknown",["roster","shortName"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","clash-roster-name"],["flush-element"],["append",["unknown",["roster?","name"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "gCQCVahw",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\clash-roster-panel-item.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\clash-roster-panel-item.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\clash-roster-panel-item.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","clash-roster-item"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleClick"],null],null],["dynamic-attr","data-id",["unknown",["roster","multiUserChatId"]],null],["dynamic-attr","data-name",["unknown",["roster","shortName"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","clash-roster-info-container"],["flush-element"],["text","\\n    "],["open-element","img",[]],["static-attr","class","clash-roster-icon"],["dynamic-attr","src",["unknown",["roster","iconSrc"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","clash-roster-info-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["roster?","isRegistered"]]],null,3,2],["block",["if"],[["get",["clashRosterParticipantCount"]]],null,1],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowUnreadMessageCount"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","social-count-badge unread-count"],["flush-element"],["text","\\n        "],["append",["unknown",["conversation","unreadMessageCount"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","clash-roster-members-online"],["flush-element"],["text","\\n          "],["append",["unknown",["clashRosterParticipantCount"]],false],["text","\\n          "],["append",["unknown",["tra","clash_chat_roster_online_label"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","clash-roster-name"],["flush-element"],["append",["unknown",["tra","clash_chat_roster_pending_name"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","clash-roster-name-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","clash-roster-shortName"],["flush-element"],["append",["unknown",["roster","shortName"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","clash-roster-name"],["flush-element"],["append",["unknown",["roster?","name"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "clfs0rk4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\content-block-attention.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class",""],["static-attr","type","attention"],["flush-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["yield","default"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "CyqGhase",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\content-block-attention.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["static-attr","class",""],["static-attr","type","attention"],["flush-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["yield","default"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "8lM6unxC",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\discord-banner.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\discord-banner.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\discord-banner.js\\" "],["text","\\n"],["open-element","p",[]],["static-attr","class","header-text"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_discord_banner"]],false],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","discord-banner-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","discord-banner-content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","discord-banner-logo"],["flush-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","discord-banner-text"],["flush-element"],["text","\\n      "],["append",["unknown",["bannerText"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","discord-banner-button"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","link-profile-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDiscordPopup"],null],null],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","button-text"],["flush-element"],["append",["unknown",["buttonText"]],false],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","button-arrow"],["flush-element"],["text","↗"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["discord-popup"],null,[["showModal"],[["get",["showDiscordPopup"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "fyDorTP8",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\discord-banner.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\discord-banner.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\discord-banner.js\\" "],["text","\\n"],["open-element","p",[]],["static-attr","class","header-text"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_discord_banner"]],false],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","discord-banner-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","discord-banner-content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","discord-banner-logo"],["flush-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","discord-banner-text"],["flush-element"],["text","\\n      "],["append",["unknown",["bannerText"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","discord-banner-button"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","link-profile-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDiscordPopup"],null],null],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","button-text"],["flush-element"],["append",["unknown",["buttonText"]],false],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","button-arrow"],["flush-element"],["text","↗"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["discord-popup"],null,[["showModal"],[["get",["showDiscordPopup"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "m9b3sAAi",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\ephemeral-action-tooltip.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\ephemeral-action-tooltip.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\ephemeral-action-tooltip.js\\" "],["text","\\n"],["block",["if"],[["get",["showEphemeralActionTooltip"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"attentionTooltipRead"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip-content-decoration"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip-icon"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["ephemeralActionTooltip","iconUrl"]]]]],["static-attr","alt","Profile attention tooltip icon"],["static-attr","class","menu-item-attention-tooltip-icon-profile"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip-text"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip-text-title"],["flush-element"],["text","\\n          "],["append",["unknown",["ephemeralActionTooltip","title"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip-text-msg"],["flush-element"],["text","\\n          "],["append",["unknown",["ephemeralActionTooltip","description"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "1vz+B58Y",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\ephemeral-action-tooltip.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\ephemeral-action-tooltip.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\ephemeral-action-tooltip.js\\" "],["text","\\n"],["block",["if"],[["get",["showEphemeralActionTooltip"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"attentionTooltipRead"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip-content-decoration"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip-icon"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["ephemeralActionTooltip","iconUrl"]]]]],["static-attr","alt","Profile attention tooltip icon"],["static-attr","class","menu-item-attention-tooltip-icon-profile"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip-text"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip-text-title"],["flush-element"],["text","\\n          "],["append",["unknown",["ephemeralActionTooltip","title"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","menu-item-attention-tooltip-text-msg"],["flush-element"],["text","\\n          "],["append",["unknown",["ephemeralActionTooltip","description"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "hcszUypj",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-add-summoner-by-name.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-add-summoner-by-name.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","description"],["flush-element"],["append",["unknown",["instructions"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-name-input-wrapper"],["flush-element"],["text","\\n  "],["append",["helper",["player-name-input"],null,[["enableSubmitButton","submitButtonText","disabled","enterKeyPressHandler","validationHandler","successHandler","errorHandler"],[true,["get",["tra","friend_finder_modal_button_add_friend"]],["get",["working"]],["helper",["action"],[["get",[null]],"enterKeyPressHandler"],null],["helper",["action"],[["get",[null]],"validationHandler"],null],["helper",["action"],[["get",[null]],"successHandler"],null],["helper",["action"],[["get",[null]],"errorHandler"],null]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "e+pfq4zO",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\discord-eat.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\discord-eat.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\discord-eat.js\\" "],["text","\\n"],["block",["if"],[["get",["showEphemeralActionTooltip"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"markToolTipRead"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-content-decoration"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-icon"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-static-assets/images/discord-eat-logo.png"],["static-attr","alt","Profile attention tooltip icon"],["static-attr","class","discord-attention-tooltip-icon-profile"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-text"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-text-title"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","discord_beta_eat_title"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-text-msg"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","discord_beta_eat_description"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "RVOoUziy",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-button.js\\" "],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["unknown",["buttonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openModal"],null],null],["static-attr","data-dd-action-name","button.social.add_friend"],["flush-element"],["close-element"],["text","\\n\\n"],["append",["helper",["friend-finder-modal"],null,[["isModalOpen","onClose"],[["get",["isModalOpen"]],["helper",["action"],[["get",[null]],"closeModal"],null]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "RQ8IQ21f",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-add-summoner-by-name.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-add-summoner-by-name.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","description"],["flush-element"],["append",["unknown",["instructions"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-name-input-wrapper"],["flush-element"],["text","\\n  "],["append",["helper",["player-name-input"],null,[["enableSubmitButton","submitButtonText","disabled","enterKeyPressHandler","validationHandler","successHandler","errorHandler"],[true,["get",["tra","friend_finder_modal_button_add_friend"]],["get",["working"]],["helper",["action"],[["get",[null]],"enterKeyPressHandler"],null],["helper",["action"],[["get",[null]],"validationHandler"],null],["helper",["action"],[["get",[null]],"successHandler"],null],["helper",["action"],[["get",[null]],"errorHandler"],null]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "112XKvWl",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-modal.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-modal.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-friend-finder-modal"],["flush-element"],["text","\\n  "],["open-element","h4",[]],["static-attr","class","title"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","modal-body"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","recently-played-panel active"],["flush-element"],["text","\\n      "],["append",["unknown",["friend-finder-add-summoner-by-name"]],false],["text","\\n      "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasSentFriendRequests"]]],null,2],["block",["if"],[["get",["friendRequestsService","friendableRecentlyHonored","length"]]],null,1],["block",["if"],[["get",["shouldShowDiscordBanner"]]],null,0],["text","        "],["append",["helper",["friend-finder-recently-played"],null,[["isLoading","friendableSummoners","emptyText","titleText","closeModal","source"],[["get",["friendRequestsService","isLoadingRecentlyPlayedSummoners"]],["get",["friendRequestsService","friendableRecentlyPlayed"]],["get",["tra","recently_played_empty"]],["get",["tra","friend_finder_modal_recently_played_with"]],["get",["onClose"]],"recently-played"]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["discord-congrats-popup"],null,[["showModal"],[["get",["showCongratsPopup"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["discord-banner"],null,[["playerName","bannerText","buttonText","onAuthorize","onDeny","onModalOpened","onModalClosed"],[["get",["currentSummoner","displayName"]],["get",["tra","friend_finder_modal_discord_banner_text"]],["get",["tra","friend_finder_modal_discord_button_text"]],["helper",["action"],[["get",[null]],"handleDiscordAuthorize"],null],["helper",["action"],[["get",[null]],"handleDiscordDeny"],null],["helper",["action"],[["get",[null]],"trackDiscordModalOpen"],null],["helper",["action"],[["get",[null]],"trackDiscordModalClose"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["friend-finder-recently-played"],null,[["titleIconUrl","isLoading","friendableSummoners","titleText","closeModal","source"],["/fe/lol-social/recently-honored-default-icon.png",["get",["friendRequestsService","isLoadingHonorRecognition"]],["get",["friendRequestsService","friendableRecentlyHonored"]],["get",["tra","friend_finder_modal_recently_honored"]],["get",["onClose"]],"recently-honored"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["friend-finder-requested-players"],null,[["closeModal"],[["get",["onClose"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "mRzGSvdk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-button.js\\" "],["text","\\n"],["open-element","span",[]],["dynamic-attr","class",["unknown",["buttonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openModal"],null],null],["static-attr","data-dd-action-name","button.social.add_friend"],["flush-element"],["close-element"],["text","\\n\\n"],["append",["helper",["friend-finder-modal"],null,[["isModalOpen","onClose"],[["get",["isModalOpen"]],["helper",["action"],[["get",[null]],"closeModal"],null]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "IfqBcTWT",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-recent-summoner.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-recent-summoner.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-identity"],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["championId","hideindicator"],[["get",["summoner","championId"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-name-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","summonerName"],["short",["get",["summoner","puuid"]],"summoner-name","summoner-name",["get",["summoner","summonerName"]]]]],false],["text","\\n\\n    "],["append",["helper",["player-name"],null,[["format","puuid"],["full",["get",["summoner","puuid"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["append",["helper",["tooltip-message"],null,[["position","width","messagePacket"],["bottom","300px",["get",["messagePacket"]]]]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["requested"]]],null,3,2],["text","\\n"],["append",["helper",["hovercard-component"],null,[["options","summonerId","puuid"],[["get",["hovercardOptions"]],["get",["summoner","summonerId"]],["get",["summoner","puuid"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","add-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"submitAddFriend"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["width","height"],["16px","16px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["working"]]],null,1,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","added"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "CTT6m2cg",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-modal.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-modal.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-friend-finder-modal"],["flush-element"],["text","\\n  "],["open-element","h4",[]],["static-attr","class","title"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","modal-body"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","recently-played-panel active"],["flush-element"],["text","\\n      "],["append",["unknown",["friend-finder-add-summoner-by-name"]],false],["text","\\n      "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasSentFriendRequests"]]],null,2],["block",["if"],[["get",["friendRequestsService","friendableRecentlyHonored","length"]]],null,1],["block",["if"],[["get",["shouldShowDiscordBanner"]]],null,0],["text","        "],["append",["helper",["friend-finder-recently-played"],null,[["isLoading","friendableSummoners","emptyText","titleText","closeModal","source"],[["get",["friendRequestsService","isLoadingRecentlyPlayedSummoners"]],["get",["friendRequestsService","friendableRecentlyPlayed"]],["get",["tra","recently_played_empty"]],["get",["tra","friend_finder_modal_recently_played_with"]],["get",["onClose"]],"recently-played"]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["discord-congrats-popup"],null,[["showModal"],[["get",["showCongratsPopup"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["discord-banner"],null,[["playerName","bannerText","buttonText","onAuthorize","onDeny","onModalOpened","onModalClosed"],[["get",["currentSummoner","displayName"]],["get",["tra","friend_finder_modal_discord_banner_text"]],["get",["tra","friend_finder_modal_discord_button_text"]],["helper",["action"],[["get",[null]],"handleDiscordAuthorize"],null],["helper",["action"],[["get",[null]],"handleDiscordDeny"],null],["helper",["action"],[["get",[null]],"trackDiscordModalOpen"],null],["helper",["action"],[["get",[null]],"trackDiscordModalClose"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["friend-finder-recently-played"],null,[["titleIconUrl","isLoading","friendableSummoners","titleText","closeModal","source"],["/fe/lol-social/recently-honored-default-icon.png",["get",["friendRequestsService","isLoadingHonorRecognition"]],["get",["friendRequestsService","friendableRecentlyHonored"]],["get",["tra","friend_finder_modal_recently_honored"]],["get",["onClose"]],"recently-honored"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["friend-finder-requested-players"],null,[["closeModal"],[["get",["onClose"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "PhlLzVn6",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-recently-played.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-recently-played.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header"],["flush-element"],["block",["if"],[["get",["titleIconUrl","length"]]],null,5],["append",["unknown",["titleText"]],false],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isLoading"]]],null,4,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","no-recently-played-summoners"],["flush-element"],["append",["unknown",["emptyText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["friend-finder-recent-summoner"],null,[["summoner","closeModal","source"],[["get",["summoner"]],["get",["closeModal"]],["get",["source"]]]]],false],["text","\\n"]],"locals":["summoner"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","recent-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["friendableSummoners"]]],[["key"],["summonerId"]],1],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasFriendableSummoners"]]],null,2,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","img",[]],["static-attr","class","header-icon"],["dynamic-attr","src",["unknown",["titleIconUrl"]],null],["static-attr","alt","recently-honored-icon"],["flush-element"],["close-element"]],"locals":[]}],"hasPartials":false}',
+                id: "kT9v22Bf",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-recent-summoner.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-recent-summoner.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-identity"],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["championId","hideindicator"],[["get",["summoner","championId"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-name-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","summonerName"],["short",["get",["summoner","puuid"]],"summoner-name","summoner-name",["get",["summoner","summonerName"]]]]],false],["text","\\n\\n    "],["append",["helper",["player-name"],null,[["format","puuid"],["full",["get",["summoner","puuid"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["append",["helper",["tooltip-message"],null,[["position","width","messagePacket"],["bottom","300px",["get",["messagePacket"]]]]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["requested"]]],null,3,2],["text","\\n"],["append",["helper",["hovercard-component"],null,[["options","summonerId","puuid"],[["get",["hovercardOptions"]],["get",["summoner","summonerId"]],["get",["summoner","puuid"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","add-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"submitAddFriend"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["width","height"],["16px","16px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["working"]]],null,1,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","added"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "calU9hw8",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-requested-player.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-requested-player.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerIdentityClasses"]],null],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["iconId","hideindicator"],[["get",["iconId"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-name-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","gameName","tagLine","summonerName"],["short",["get",["puuid"]],"player-name","player-name",["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["hasGameNameAndTagLine"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["working"]]],null,1,0],["text","\\n"],["append",["helper",["hovercard-component"],null,[["options","puuid","summonerId"],[["get",["hovercardOptions"]],["get",["puuid"]],["get",["summonerId"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","remove-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"removeFriendRequest"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["width","height"],["16px","16px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","player-gnt"],["flush-element"],["text","\\n        "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","gameName","tagLine","summonerName"],["full",["get",["puuid"]],"player-game-name","player-game-tag",["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "KdQ0N4up",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-recently-played.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-recently-played.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header"],["flush-element"],["block",["if"],[["get",["titleIconUrl","length"]]],null,5],["append",["unknown",["titleText"]],false],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isLoading"]]],null,4,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","no-recently-played-summoners"],["flush-element"],["append",["unknown",["emptyText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["friend-finder-recent-summoner"],null,[["summoner","closeModal","source"],[["get",["summoner"]],["get",["closeModal"]],["get",["source"]]]]],false],["text","\\n"]],"locals":["summoner"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","recent-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["friendableSummoners"]]],[["key"],["summonerId"]],1],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasFriendableSummoners"]]],null,2,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","img",[]],["static-attr","class","header-icon"],["dynamic-attr","src",["unknown",["titleIconUrl"]],null],["static-attr","alt","recently-honored-icon"],["flush-element"],["close-element"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "Pa1dWBC1",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-requested-players.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-requested-players.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_requested_summoners"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","id","requested-players-list"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["sentFriendRequests"]]],[["key"],["idToUse"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["friend-finder-requested-player"],null,[["player","closeModal"],[["get",["player"]],["get",["closeModal"]]]]],false],["text","\\n"]],"locals":["player"]}],"hasPartials":false}',
+                id: "PWrMBFCn",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-requested-player.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-requested-player.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerIdentityClasses"]],null],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["iconId","hideindicator"],[["get",["iconId"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-name-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","gameName","tagLine","summonerName"],["short",["get",["puuid"]],"player-name","player-name",["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["hasGameNameAndTagLine"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["working"]]],null,1,0],["text","\\n"],["append",["helper",["hovercard-component"],null,[["options","puuid","summonerId"],[["get",["hovercardOptions"]],["get",["puuid"]],["get",["summonerId"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","remove-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"removeFriendRequest"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["width","height"],["16px","16px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","player-gnt"],["flush-element"],["text","\\n        "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","gameName","tagLine","summonerName"],["full",["get",["puuid"]],"player-game-name","player-game-tag",["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "kmwxQjAU",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-name-alias-mode.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-name-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-name"],["flush-element"],["append",["unknown",["playerName","gameName"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-game-tag"],["flush-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-separator"],["flush-element"],["text","#"],["close-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-text"],["flush-element"],["append",["unknown",["playerName","tagLine"]],false],["close-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "r4dhHKAn",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-requested-players.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-requested-players.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","header"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_requested_summoners"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","id","requested-players-list"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["sentFriendRequests"]]],[["key"],["idToUse"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["friend-finder-requested-player"],null,[["player","closeModal"],[["get",["player"]],["get",["closeModal"]]]]],false],["text","\\n"]],"locals":["player"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "2wONRzgH",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-name-summoner-mode.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["showGameNameAndTag"]]],null,0],["open-element","div",[]],["static-attr","class","hover-card-name-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-name"],["flush-element"],["text","\\n"],["text","    "],["append",["helper",["if"],[["get",["summonerIdAndNotRemote"]],["get",["playerName","summonerName"]],["get",["playerName","gameName"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","hover-card-game-name-and-tag-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-game-name"],["flush-element"],["append",["unknown",["playerName","gameName"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-game-tag"],["flush-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-separator"],["flush-element"],["text","#"],["close-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-text"],["flush-element"],["append",["unknown",["playerName","tagLine"]],false],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "z/HZoVuf",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-name-alias-mode.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-name-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-name"],["flush-element"],["append",["unknown",["playerName","gameName"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","hover-card-game-tag"],["flush-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-separator"],["flush-element"],["text","#"],["close-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-text"],["flush-element"],["append",["unknown",["playerName","tagLine"]],false],["close-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "byvQ1G2o",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\identity-and-parties.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\identity-and-parties.js\\" "],["text","\\n"],["append",["unknown",["social-identity"]],false],["text","\\n\\n"],["open-element","lol-social-panel",[]],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "MBAVPt8g",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\hovercard-name-summoner-mode.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["showGameNameAndTag"]]],null,0],["open-element","div",[]],["static-attr","class","hover-card-name-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","hover-card-name"],["flush-element"],["text","\\n"],["text","    "],["append",["helper",["if"],[["get",["summonerIdAndNotRemote"]],["get",["playerName","summonerName"]],["get",["playerName","gameName"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","hover-card-game-name-and-tag-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-game-name"],["flush-element"],["append",["unknown",["playerName","gameName"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","hover-card-game-tag"],["flush-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-separator"],["flush-element"],["text","#"],["close-element"],["open-element","span",[]],["static-attr","class","hover-card-game-tag-text"],["flush-element"],["append",["unknown",["playerName","tagLine"]],false],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "/Rj25qTl",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\sidebar-main.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\sidebar-main.js\\" "],["text","\\n"],["append",["unknown",["social-panel"]],false],["text","\\n"],["append",["unknown",["vng-age-rating"]],false],["text","\\n"],["open-element","div",[]],["static-attr","class","alpha-version-panel"],["flush-element"],["text","\\n  "],["append",["unknown",["chat-toggle-button"]],false],["text","\\n\\n"],["block",["if"],[["get",["missionsButtonEnabled"]]],null,3],["text","\\n"],["block",["each"],[["get",["socialButtons"]]],null,2],["text","\\n  "],["append",["unknown",["version-bar"]],false],["text","\\n\\n  "],["open-element","button",[]],["dynamic-attr","class",["unknown",["bugReportButtonClassNames"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"reportBug"],null],null],["dynamic-attr","disabled",["unknown",["bugReportDisabled"]],null],["static-attr","data-dd-action-name","button.social.report_bug"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDiagnosticAssistantNeedNotify"]]],null,1],["block",["social-text-tooltip"],null,[["direction"],["left"]],0],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["unknown",["ephemeral-action-tooltip"]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["tra","tooltip_report_bug"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","bug-report-button-notification"],["flush-element"],["append",["unknown",["call-to-action-pip"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["social-button"],null,[["buttonPacket"],[["get",["socialButton"]]]]],false],["text","\\n"]],"locals":["socialButton"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-button"],["flush-element"],["text","\\n      "],["append",["unknown",["missions-button"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "CyT2FhPG",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\identity-and-parties.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\identity-and-parties.js\\" "],["text","\\n"],["append",["unknown",["social-identity"]],false],["text","\\n\\n"],["open-element","lol-social-panel",[]],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "7lsB0xfV",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-avatar.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-avatar.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-avatar.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-social-avatar ",["unknown",["avatarClassNames"]]]]],["dynamic-attr","large",["unknown",["large"]],null],["dynamic-attr","me",["unknown",["me"]],null],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["block",["if"],[["get",["showSummonerLevel"]]],null,2,1],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","        "],["append",["helper",["availability-hitbox"],null,[["large","member","availability","me","discordAvailability"],[["get",["large"]],["get",["member"]],["get",["availability"]],["get",["me"]],["get",["discordAvailability"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["comment"," Original summoner icon rendering "],["text","\\n      "],["open-element","img",[]],["dynamic-attr","class",["concat",["icon-image ",["helper",["if"],[["get",["iconUrl"]],"has-icon"],null]," ",["helper",["if"],[["get",["remoteProduct"]],"remote"],null]]]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["icon-ring ",["helper",["if"],[["get",["iconUrl"]],"has-icon"],null]," ",["helper",["if"],[["get",["remoteProduct"]],"remote"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeIcon"],null],null],["flush-element"],["close-element"],["text","\\n"],["block",["unless"],[["get",["hideindicator"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-radial-progress",[]],["static-attr","class","summoner-level-icon"],["static-attr","type","custom"],["dynamic-attr","percent",["unknown",["percentCompleteForNextLevel"]],null],["static-attr","start-angle","240"],["static-attr","end-angle","-60"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeIcon"],null],null],["flush-element"],["text","\\n"],["text","      "],["open-element","div",[]],["static-attr","slot","bottom"],["static-attr","class","bottom unfilled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","middle"],["static-attr","class","middle filled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","top"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","center xp-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["icon-image ",["helper",["if"],[["get",["iconUrl"]],"has-icon"],null]]]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","summoner-level-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-level ",["helper",["if"],[["get",["hasLongSummonerLevel"]],"has-long-summoner-level"],null]]]],["flush-element"],["append",["unknown",["summonerLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "REXj/uHe",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\sidebar-main.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\sidebar-main.js\\" "],["text","\\n"],["append",["unknown",["social-panel"]],false],["text","\\n"],["append",["unknown",["vng-age-rating"]],false],["text","\\n"],["open-element","div",[]],["static-attr","class","alpha-version-panel"],["flush-element"],["text","\\n  "],["append",["unknown",["chat-toggle-button"]],false],["text","\\n\\n"],["block",["if"],[["get",["missionsButtonEnabled"]]],null,3],["text","\\n"],["block",["each"],[["get",["socialButtons"]]],null,2],["text","\\n  "],["append",["unknown",["version-bar"]],false],["text","\\n\\n  "],["open-element","button",[]],["dynamic-attr","class",["unknown",["bugReportButtonClassNames"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"reportBug"],null],null],["dynamic-attr","disabled",["unknown",["bugReportDisabled"]],null],["static-attr","data-dd-action-name","button.social.report_bug"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDiagnosticAssistantNeedNotify"]]],null,1],["block",["social-text-tooltip"],null,[["direction"],["left"]],0],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["unknown",["discord-eat"]],false],["text","\\n"],["append",["unknown",["ephemeral-action-tooltip"]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["tra","tooltip_report_bug"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","bug-report-button-notification"],["flush-element"],["append",["unknown",["call-to-action-pip"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["social-button"],null,[["buttonPacket"],[["get",["socialButton"]]]]],false],["text","\\n"]],"locals":["socialButton"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-button"],["flush-element"],["text","\\n      "],["append",["unknown",["missions-button"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "HWB9ddCG",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-button.js\\" "],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "7CBXcNPn",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-avatar.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-avatar.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-avatar.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-social-avatar ",["unknown",["avatarClassNames"]]]]],["dynamic-attr","large",["unknown",["large"]],null],["dynamic-attr","me",["unknown",["me"]],null],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["block",["if"],[["get",["showSummonerLevel"]]],null,2,1],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","        "],["append",["helper",["availability-hitbox"],null,[["large","member","availability","me","discordAvailability"],[["get",["large"]],["get",["member"]],["get",["availability"]],["get",["me"]],["get",["discordAvailability"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["comment"," Original summoner icon rendering "],["text","\\n      "],["open-element","img",[]],["dynamic-attr","class",["concat",["icon-image ",["helper",["if"],[["get",["iconUrl"]],"has-icon"],null]," ",["helper",["if"],[["get",["remoteProduct"]],"remote"],null]]]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["icon-ring ",["helper",["if"],[["get",["iconUrl"]],"has-icon"],null]," ",["helper",["if"],[["get",["remoteProduct"]],"remote"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeIcon"],null],null],["flush-element"],["close-element"],["text","\\n"],["block",["unless"],[["get",["hideindicator"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-radial-progress",[]],["static-attr","class","summoner-level-icon"],["static-attr","type","custom"],["dynamic-attr","percent",["unknown",["percentCompleteForNextLevel"]],null],["static-attr","start-angle","240"],["static-attr","end-angle","-60"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeIcon"],null],null],["flush-element"],["text","\\n"],["text","      "],["open-element","div",[]],["static-attr","slot","bottom"],["static-attr","class","bottom unfilled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","middle"],["static-attr","class","middle filled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","top"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","center xp-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["icon-image ",["helper",["if"],[["get",["iconUrl"]],"has-icon"],null]]]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","summoner-level-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-level ",["helper",["if"],[["get",["hasLongSummonerLevel"]],"has-long-summoner-level"],null]]]],["flush-element"],["append",["unknown",["summonerLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "yhOpZzGB",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-request.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-request.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-request.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["friendRequestClasses"]],null],["dynamic-attr","oncontextmenu",["helper",["action"],[["get",[null]],"openContextMenu"],null],null],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["avatarClassNames","member","iconId","hideindicator"],["friend-icon",["get",["friendRequest"]],["get",["friendRequest","icon"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-text"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","member-game-name-tagline"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-player-name",[]],["static-attr","render-mode","fullAlias"],["dynamic-attr","game-name",["unknown",["friendRequest","gameName"]],null],["dynamic-attr","tag-line",["unknown",["friendRequest","tagLine"]],null],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,6],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","friend-request-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["accepted"]]],null,5,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-buttons"],["flush-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["acceptRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"acceptRequest"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["declineRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"declineRequest"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["blockRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"blockRequest"],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["unknown",["tra","friend_request"]],false],["text","\\n      "]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","recently-honored-description"],["flush-element"],["open-element","img",[]],["static-attr","class","recently-honored-icon"],["static-attr","role","presentation"],["dynamic-attr","src",["unknown",["recentlyHonoredImage"]],null],["flush-element"],["close-element"],["append",["unknown",["tra","previously_honored"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["friendRequest","hasHonorRecognition"]]],null,1,0]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","action-message"],["flush-element"],["append",["unknown",["tra","friend_request_declined"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["declined"]]],null,3,2]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","action-message"],["flush-element"],["append",["unknown",["tra","friend_request_accepted"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","friend-request-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","friend-request-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","friend-request-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "ihi7sBip",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-button.js\\" "],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "f4ol6W6A",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-requests-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-requests-modal.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-requests-modal.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-friend-requests-modal"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","friend-request-title"],["flush-element"],["append",["unknown",["tra","group_label_friend_requests"]],false],["text","\\n      ("],["append",["unknown",["incomingFriendRequests","length"]],false],["text",")\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","friend-request-list"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["friendRequestsWithHonorInfo"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["social-friend-request"],null,[["closeModal","friendRequest"],[["get",["closeModal"]],["get",["friendRequest"]]]]],false],["text","\\n"]],"locals":["friendRequest"]}],"hasPartials":false}',
+                id: "3hRDDuXr",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-request.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-request.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-request.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["friendRequestClasses"]],null],["dynamic-attr","oncontextmenu",["helper",["action"],[["get",[null]],"openContextMenu"],null],null],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["avatarClassNames","member","iconId","hideindicator"],["friend-icon",["get",["friendRequest"]],["get",["friendRequest","icon"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-text"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","member-game-name-tagline"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-player-name",[]],["static-attr","render-mode","fullAlias"],["dynamic-attr","game-name",["unknown",["friendRequest","gameName"]],null],["dynamic-attr","tag-line",["unknown",["friendRequest","tagLine"]],null],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["discordId"]]],null,6],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","friend-request-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["accepted"]]],null,5,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-buttons"],["flush-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["acceptRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"acceptRequest"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["declineRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"declineRequest"],null],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["dynamic-attr","class",["unknown",["blockRequestClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"blockRequest"],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["unknown",["tra","friend_request"]],false],["text","\\n      "]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","recently-honored-description"],["flush-element"],["open-element","img",[]],["static-attr","class","recently-honored-icon"],["static-attr","role","presentation"],["dynamic-attr","src",["unknown",["recentlyHonoredImage"]],null],["flush-element"],["close-element"],["append",["unknown",["tra","previously_honored"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["friendRequest","hasHonorRecognition"]]],null,1,0]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","action-message"],["flush-element"],["append",["unknown",["tra","friend_request_declined"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["declined"]]],null,3,2]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","action-message"],["flush-element"],["append",["unknown",["tra","friend_request_accepted"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","friend-request-discord-id"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","friend-request-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","friend-request-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "2k86Phsk",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-requests.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-requests.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-requests.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","friend-requests"],["dynamic-attr","disabled",["unknown",["isInGame"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openModal"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-requests-header"],["flush-element"],["append",["unknown",["tra","group_label_friend_requests"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","social-count-badge"],["flush-element"],["append",["unknown",["friendRequestsCount"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showFriendRequestModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["social-friend-requests-modal"],null,[["closeModal"],[["helper",["action"],[["get",[null]],"closeModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["displayModal","type","okText","dismissible","dismissibleType","onClose"],[["get",["showFriendRequestModal"]],"DialogAlert",["get",["tra","friend_request_close"]],true,"outside",["helper",["action"],[["get",[null]],"closeModal"],null]]],0]],"locals":[]}],"hasPartials":false}',
+                id: "aL9a/sJI",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-requests-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-requests-modal.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-requests-modal.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-friend-requests-modal"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-request-header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","friend-request-title"],["flush-element"],["append",["unknown",["tra","group_label_friend_requests"]],false],["text","\\n      ("],["append",["unknown",["incomingFriendRequests","length"]],false],["text",")\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","friend-request-list"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["friendRequestsWithHonorInfo"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["social-friend-request"],null,[["closeModal","friendRequest"],[["get",["closeModal"]],["get",["friendRequest"]]]]],false],["text","\\n"]],"locals":["friendRequest"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "9wvuEr9j",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-identity.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-identity.js\\" "],["text","\\n"],["block",["if"],[["get",["hasUnreadNotifications"]]],null,6],["text","\\n"],["block",["social-avatar"],null,[["avatarClassNames","iconId","large","me"],[["get",["avatarClassNames"]],["get",["avatarIcon"]],true,true]],5],["text","\\n"],["open-element","div",[]],["static-attr","class","details"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["transitionContainerClassNames"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["viewProfileTransitionClassNames"]],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","details-view-profile"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","details-view-profile-icon"],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["tra","social_identity_view_profile"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerNameTransitionClassNames"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","gameName","tagLine"],["short",["get",["puuid"]],["get",["summonerName"]],["get",["gameName"]],["get",["tagLine"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lower-details"],["flush-element"],["text","\\n      "],["append",["helper",["availability-hitbox"],null,[["availability","large","me"],[["get",["availability"]],true,true]]],false],["text","\\n"],["block",["if"],[["get",["availability"]]],null,4],["block",["if"],[["get",["playerNotificationsEnabled"]]],null,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["isMenuOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"doCloseMenu"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2"],["static-attr","offsety","2"],["static-attr","caretless","true"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","identity-menu"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isMenuOpen"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["tooltip-message"],null,[["position","messagePacket","delay","selector"],["bottom",["get",["statusInputMessagePacket"]],-1,".social-status-change-input"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["social-menu-input"],null,[["error","currentInput","saveMessage","placeholderText","onCancel","onChange","onSave","maxLength"],[["get",["statusError"]],["get",["statusMessage"]],["get",["tra","menu_item_status_saved"]],["get",["tra","menu_item_set_status"]],["helper",["action"],[["get",[null]],"doCloseMenu"],null],["helper",["action"],[["get",[null]],"doClearStatusError"],null],["helper",["action"],[["get",[null]],"saveNewMessage"],null],"25"]]],false],["text","\\n"],["block",["if"],[["get",["statusInputMessagePacket"]]],null,0]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_notifications"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-player-notifications-button",[]],["static-attr","class","notifications-button"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction"],["left"]],2],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["unknown",["statusClassNames"]],null],["modifier",["action"],[["get",[null]],"openMenu"]],["flush-element"],["text","\\n          "],["append",["helper",["social-status-wrapper"],null,[["class","friend"],["identity-message",["get",["meObj"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["hovercard-component"],null,[["canShow","summonerId","puuid","openPartyDescription"],[["get",["canShowHovercard"]],["get",["summonerId"]],["get",["meObj","puuid"]],["get",["openPartyDescription"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","identity-rewards-unread-pip"],["flush-element"],["append",["unknown",["call-to-action-pip"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "XBLFMKlw",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-friend-requests.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-friend-requests.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-friend-requests.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","friend-requests"],["dynamic-attr","disabled",["unknown",["isInGame"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openModal"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","friend-requests-header"],["flush-element"],["append",["unknown",["tra","group_label_friend_requests"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","social-count-badge"],["flush-element"],["append",["unknown",["friendRequestsCount"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showFriendRequestModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["social-friend-requests-modal"],null,[["closeModal"],[["helper",["action"],[["get",[null]],"closeModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["displayModal","type","okText","dismissible","dismissibleType","onClose"],[["get",["showFriendRequestModal"]],"DialogAlert",["get",["tra","friend_request_close"]],true,"outside",["helper",["action"],[["get",[null]],"closeModal"],null]]],0]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "ua4C6+mG",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-menu-input.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-menu-input.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["wrapperClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["animationClasses"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","input-message"],["flush-element"],["text","\\n      "],["append",["unknown",["saveMessage"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showIcon"]]],null,0],["text","\\n  "],["open-element","form",[]],["dynamic-attr","onsubmit",["helper",["action"],[["get",[null]],"onSubmit"],null],null],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","flat-input"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","type","text"],["dynamic-attr","class",["concat",["input social-status-change-input ",["unknown",["inputClass"]]]]],["dynamic-attr","value",["unknown",["currentInputValue"]],null],["dynamic-attr","onblur",["helper",["action"],[["get",[null]],"onBlur"],null],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"onInput"],[["value"],["target.value"]]],null],["dynamic-attr","maxlength",["unknown",["maxLength"]],null],["dynamic-attr","placeholder",["unknown",["placeholderText"]],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["input-icon ",["unknown",["inputIconClasses"]]]]],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "xQgbGSW7",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-identity.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-identity.js\\" "],["text","\\n"],["block",["if"],[["get",["hasUnreadNotifications"]]],null,6],["text","\\n"],["block",["social-avatar"],null,[["avatarClassNames","iconId","large","me"],[["get",["avatarClassNames"]],["get",["avatarIcon"]],true,true]],5],["text","\\n"],["open-element","div",[]],["static-attr","class","details"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["transitionContainerClassNames"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["viewProfileTransitionClassNames"]],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","details-view-profile"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","details-view-profile-icon"],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["tra","social_identity_view_profile"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerNameTransitionClassNames"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","gameName","tagLine"],["short",["get",["puuid"]],["get",["summonerName"]],["get",["gameName"]],["get",["tagLine"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lower-details"],["flush-element"],["text","\\n      "],["append",["helper",["availability-hitbox"],null,[["availability","large","me"],[["get",["availability"]],true,true]]],false],["text","\\n"],["block",["if"],[["get",["availability"]]],null,4],["block",["if"],[["get",["playerNotificationsEnabled"]]],null,3],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["isMenuOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"doCloseMenu"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2"],["static-attr","offsety","2"],["static-attr","caretless","true"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","identity-menu"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isMenuOpen"]]],null,1],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["tooltip-message"],null,[["position","messagePacket","delay","selector"],["bottom",["get",["statusInputMessagePacket"]],-1,".social-status-change-input"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["social-menu-input"],null,[["error","currentInput","saveMessage","placeholderText","onCancel","onChange","onSave","maxLength"],[["get",["statusError"]],["get",["statusMessage"]],["get",["tra","menu_item_status_saved"]],["get",["tra","menu_item_set_status"]],["helper",["action"],[["get",[null]],"doCloseMenu"],null],["helper",["action"],[["get",[null]],"doClearStatusError"],null],["helper",["action"],[["get",[null]],"saveNewMessage"],null],"25"]]],false],["text","\\n"],["block",["if"],[["get",["statusInputMessagePacket"]]],null,0]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_notifications"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-player-notifications-button",[]],["static-attr","class","notifications-button"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction"],["left"]],2],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["unknown",["statusClassNames"]],null],["modifier",["action"],[["get",[null]],"openMenu"]],["flush-element"],["text","\\n          "],["append",["helper",["social-status-wrapper"],null,[["class","friend"],["identity-message",["get",["meObj"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["hovercard-component"],null,[["canShow","summonerId","puuid","openPartyDescription"],[["get",["canShowHovercard"]],["get",["summonerId"]],["get",["meObj","puuid"]],["get",["openPartyDescription"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","identity-rewards-unread-pip"],["flush-element"],["append",["unknown",["call-to-action-pip"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "43DlkyqQ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-menu-item.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-menu-item.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-menu-item.js\\" "],["text","\\n"],["yield","default"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "k1xJGG5X",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-menu-input.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-menu-input.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["wrapperClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["animationClasses"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","input-message"],["flush-element"],["text","\\n      "],["append",["unknown",["saveMessage"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showIcon"]]],null,0],["text","\\n  "],["open-element","form",[]],["dynamic-attr","onsubmit",["helper",["action"],[["get",[null]],"onSubmit"],null],null],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","flat-input"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","type","text"],["dynamic-attr","class",["concat",["input social-status-change-input ",["unknown",["inputClass"]]]]],["dynamic-attr","value",["unknown",["currentInputValue"]],null],["dynamic-attr","onblur",["helper",["action"],[["get",[null]],"onBlur"],null],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"onInput"],[["value"],["target.value"]]],null],["dynamic-attr","maxlength",["unknown",["maxLength"]],null],["dynamic-attr","placeholder",["unknown",["placeholderText"]],null],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["input-icon ",["unknown",["inputIconClasses"]]]]],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "9BuhqonR",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-menu.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-menu.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-menu.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","social-menu-container"],["static-attr","tabIndex","-1"],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "JMIlSgjL",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-menu-item.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-menu-item.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-menu-item.js\\" "],["text","\\n"],["yield","default"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "BpaIEuNV",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-panel.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-panel.js\\" "],["text","\\n"],["append",["unknown",["identity-and-parties"]],false],["text","\\n\\n"],["block",["if"],[["get",["chatAndFriendsInitializing"]]],null,3,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-social-lower-pane-container"],["flush-element"],["text","\\n    "],["append",["unknown",["actions-bar"]],false],["text","\\n    "],["append",["unknown",["social-roster"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","roster disconnected centered social-ember-fade-in"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","message"],["flush-element"],["append",["unknown",["tra","system_message_disconnected"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["chatSessionSessionStateDisconnected"]]],null,1,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","roster inprogress centered social-ember-fade-in"],["static-attr","animate","fade"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","spinner"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "oFWWkyeg",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-menu.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-menu.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-menu.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","social-menu-container"],["static-attr","tabIndex","-1"],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "tUmajhC1",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-group-name.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-group-name.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-group-name.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-roster-group-name group-name"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isSaved"]]],null,2],["text","\\n  "],["open-element","div",[]],["static-attr","class","group-name-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isEditingName"]]],null,1,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","group-label"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["groupLabelClasses"]],null],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","group-label-locale-direction-override"],["flush-element"],["append",["unknown",["groupLocalizedLabel"]],false],["close-element"],["text","\\n          "],["append",["unknown",["friendCount"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["social-menu-input"],null,[["inputClass","currentInput","onSave","onCancel","maxLength"],["group-name-input",["get",["groupLocalizedLabel"]],["helper",["action"],[["get",[null]],"handleSubmit"],null],["helper",["action"],[["get",[null]],"cancelInput"],null],"25"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","group-name-animation"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "6qoD1Pdu",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-panel.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-panel.js\\" "],["text","\\n"],["append",["unknown",["identity-and-parties"]],false],["text","\\n\\n"],["block",["if"],[["get",["chatAndFriendsInitializing"]]],null,3,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-social-lower-pane-container"],["flush-element"],["text","\\n    "],["append",["unknown",["actions-bar"]],false],["text","\\n    "],["append",["unknown",["social-roster"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","roster disconnected centered social-ember-fade-in"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","message"],["flush-element"],["append",["unknown",["tra","system_message_disconnected"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["chatSessionSessionStateDisconnected"]]],null,1,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","roster inprogress centered social-ember-fade-in"],["static-attr","animate","fade"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","spinner"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "PV/awWHo",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-group.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-group.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-group.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["groupClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","group-header"],["static-attr","class","social-arrow-hit"],["dynamic-attr","index",["unknown",["index"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"toggleCollapse"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["arrowContainerClasses"]],null],["flush-element"],["text","\\n      "],["append",["helper",["arrow-toggle"],null,[["class","open"],["arrow",["get",["isNotCollapsed"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["append",["helper",["social-roster-group-name"],null,[["group","isEditingName","onCancelEdit"],[["get",["group"]],["get",["isEditingName"]],["helper",["action"],[["get",[null]],"handleCancelEdit"],null]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isDraggingRosterMember"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","drop-area-arrow"],["static-attr","animate","slide"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","drop-area"],["dynamic-attr","style",["unknown",["dropAreaStyle"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["showDropArrow"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "QwtdSPs8",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-group-name.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-group-name.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-group-name.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-roster-group-name group-name"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isSaved"]]],null,2],["text","\\n  "],["open-element","div",[]],["static-attr","class","group-name-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isEditingName"]]],null,1,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","group-label"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["groupLabelClasses"]],null],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","group-label-locale-direction-override"],["flush-element"],["append",["unknown",["groupLocalizedLabel"]],false],["close-element"],["text","\\n          "],["append",["unknown",["friendCount"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["social-menu-input"],null,[["inputClass","currentInput","onSave","onCancel","maxLength"],["group-name-input",["get",["groupLocalizedLabel"]],["helper",["action"],[["get",[null]],"handleSubmit"],null],["helper",["action"],[["get",[null]],"cancelInput"],null],"25"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","group-name-animation"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "HYdFhYxM",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-member.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-member.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-member.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["memberClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","open-party-indicator"],["flush-element"],["close-element"],["text","\\n\\n  "],["append",["helper",["social-avatar"],null,[["avatarClassNames","member","iconId","availability","discordAvailability"],["member-icon",["get",["friend"]],["get",["friend","icon"]],["get",["friend","availability"]],["get",["isDiscordFriendOnline"]]]]],false],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","member-name-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","member-name"],["flush-element"],["append",["unknown",["gameName"]],false],["close-element"],["text","\\n    "],["append",["helper",["social-status-wrapper"],null,[["class","friend"],["member-status",["get",["friend"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showUnreadMessageCount"]]],null,6],["text","\\n"],["block",["if"],[["get",["isOpenPartyJoinable"]]],null,5],["text","\\n"],["block",["if"],[["get",["isMuted"]]],null,4],["text","\\n"],["block",["if"],[["get",["showDiscordOfflineIcon"]]],null,3],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isEditingNote"]]],null,2],["text","\\n"],["append",["helper",["hovercard-component"],null,[["summonerId","puuid","targetDomNode","options","openPartyDescription"],[["get",["friend","summonerId"]],["get",["friend","puuid"]],["get",["hovercardData","domNode"]],["get",["hovercardData","options"]],["get",["hovercardData","openPartyDescription"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["social-menu-input"],null,[["class","currentInput","saveMessage","placeholderText","onSave","onCancel","iconName","maxLength"],["edit-note-input",["get",["editingNoteInputValue"]],["get",["tra","roster_note_saved"]],["get",["tra","roster_note"]],["helper",["action"],[["get",[null]],"saveNote"],null],["helper",["action"],[["get",[null]],"closeMenu"],null],"note","140"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["social-menu-item"],null,null,0]],"locals":[]},{"statements":[["block",["social-menu"],null,[["class","onRequestClose"],["edit-note-menu",["helper",["action"],[["get",[null]],"closeMenu"],null]]],1]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","muted-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["partyJoinClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"joinParty"],null],null],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"showJoinOpenPartyTooltip"],null],null],["dynamic-attr","disabled",["unknown",["isJoinOpenPartyDisabled"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-count-badge unread-count"],["flush-element"],["text","\\n      "],["append",["unknown",["unreadMessageCount"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "9hgu6PJ3",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-group.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-group.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-group.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["groupClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","group-header"],["static-attr","class","social-arrow-hit"],["dynamic-attr","index",["unknown",["index"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"toggleCollapse"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["arrowContainerClasses"]],null],["flush-element"],["text","\\n      "],["append",["helper",["arrow-toggle"],null,[["class","open"],["arrow",["get",["isNotCollapsed"]]]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["append",["helper",["social-roster-group-name"],null,[["group","isEditingName","onCancelEdit"],[["get",["group"]],["get",["isEditingName"]],["helper",["action"],[["get",[null]],"handleCancelEdit"],null]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isDraggingRosterMember"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","drop-area-arrow"],["static-attr","animate","slide"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","drop-area"],["dynamic-attr","style",["unknown",["dropAreaStyle"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["showDropArrow"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "96djn1T2",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowClash"]]],null,9],["open-element","div",[]],["dynamic-attr","class",["unknown",["activitySectionClasses"]],null],["flush-element"],["text","\\n  "],["append",["unknown",["social-friend-requests"]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["hasNoFriends"]]],null,8,7],["text","\\n"],["open-element","div",[]],["static-attr","class","preload-drag-grip"],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","roster-drop-marker"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","more-unread below"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","more-unread-bar"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"jumpBelow"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","more-unread-text-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-text"],["flush-element"],["append",["unknown",["tra","roster_more_unreads"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-arrow"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","more-unread above"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","more-unread-bar"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"jumpAbove"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","more-unread-text-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-text"],["flush-element"],["append",["unknown",["tra","roster_more_unreads"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-arrow"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["social-roster-member"],null,[["memberModel"],[["get",["groupOrFriend"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["groupOrFriend","groupModel","group","collapsed"]]],null,3]],"locals":[]},{"statements":[["text","        "],["append",["helper",["social-roster-group"],null,[["groupModel"],[["get",["groupOrFriend"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["groupOrFriend","isGroup"]]],null,5,4]],"locals":["groupOrFriend","index"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","list-container"],["flush-element"],["text","\\n"],["block",["ember-collection"],null,[["class","items","scroll-top","scroll-change","cell-layout"],["roster-scrollable",["get",["rosterModel"]],["get",["scrollTop"]],["helper",["action"],[["get",[null]],"scrollChange"],null],["helper",["mixed-grid-layout"],[["get",["itemSizes"]]],null]]],6],["text","\\n"],["block",["if"],[["get",["unreadAbove"]]],null,2],["text","\\n"],["block",["if"],[["get",["unreadBelow"]]],null,1],["text","\\n"],["block",["if"],[["get",["shouldHideFriendsAndMetaGroups"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","list-content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","no-friends"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","system_message_no_friends"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["unknown",["clash-roster-panel"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "xqCqJ7WB",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-member.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-member.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-member.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["memberClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","open-party-indicator"],["flush-element"],["close-element"],["text","\\n\\n  "],["append",["helper",["social-avatar"],null,[["avatarClassNames","member","iconId","availability","discordAvailability"],["member-icon",["get",["friend"]],["get",["friend","icon"]],["get",["friend","availability"]],["get",["isDiscordFriendOnline"]]]]],false],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","member-name-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","member-name"],["flush-element"],["append",["unknown",["gameName"]],false],["close-element"],["text","\\n    "],["append",["helper",["social-status-wrapper"],null,[["class","friend"],["member-status",["get",["friend"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showUnreadMessageCount"]]],null,6],["text","\\n"],["block",["if"],[["get",["isOpenPartyJoinable"]]],null,5],["text","\\n"],["block",["if"],[["get",["isMuted"]]],null,4],["text","\\n"],["block",["if"],[["get",["showDiscordOfflineIcon"]]],null,3],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isEditingNote"]]],null,2],["text","\\n"],["append",["helper",["hovercard-component"],null,[["summonerId","puuid","targetDomNode","options","openPartyDescription"],[["get",["friend","summonerId"]],["get",["friend","puuid"]],["get",["hovercardData","domNode"]],["get",["hovercardData","options"]],["get",["hovercardData","openPartyDescription"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["social-menu-input"],null,[["class","currentInput","saveMessage","placeholderText","onSave","onCancel","iconName","maxLength"],["edit-note-input",["get",["editingNoteInputValue"]],["get",["tra","roster_note_saved"]],["get",["tra","roster_note"]],["helper",["action"],[["get",[null]],"saveNote"],null],["helper",["action"],[["get",[null]],"closeMenu"],null],"note","140"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["social-menu-item"],null,null,0]],"locals":[]},{"statements":[["block",["social-menu"],null,[["class","onRequestClose"],["edit-note-menu",["helper",["action"],[["get",[null]],"closeMenu"],null]]],1]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","muted-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["partyJoinClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"joinParty"],null],null],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"showJoinOpenPartyTooltip"],null],null],["dynamic-attr","disabled",["unknown",["isJoinOpenPartyDisabled"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-count-badge unread-count"],["flush-element"],["text","\\n      "],["append",["unknown",["unreadMessageCount"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "T/nAo84M",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-status-wrapper.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-status-wrapper.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-status-wrapper.js\\" "],["text","\\n"],["block",["if"],[["get",["isInGameOrChampSelect"]]],null,16,15]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text"," - "],["append",["unknown",["friend","platformId"]],false],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isRemotePlatform"]]],null,0]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text"," - "],["append",["unknown",["friend","productName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isRemoteProduct"]]],null,2,1]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["availabilityString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasAvailability"]]],null,4,3]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","status-message-quoted"],["flush-element"],["text","\\n        “"],["append",["unknown",["statusMessage"]],false],["text","”\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["status-message-wrapper ",["unknown",["availability"]]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasStatusMessage"]]],null,6,5],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message game-status ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["gameStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasGameStatus"]]],null,8,7]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message open-party ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["partyOccupancyString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isOpenPartyJoinable"]]],null,10,9]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["static-attr","class","status-message game-status dnd"],["flush-element"],["append",["unknown",["tournamentStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasTournamentStatus"]]],null,12,11]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["static-attr","class","status-message game-status dnd"],["flush-element"],["append",["unknown",["availabilityString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isRemoteDnd"]]],null,14,13]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message game-status ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["gameStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "QmqwBEg5",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowClash"]]],null,9],["open-element","div",[]],["dynamic-attr","class",["unknown",["activitySectionClasses"]],null],["flush-element"],["text","\\n  "],["append",["unknown",["social-friend-requests"]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["hasNoFriends"]]],null,8,7],["text","\\n"],["open-element","div",[]],["static-attr","class","preload-drag-grip"],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","roster-drop-marker"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","more-unread below"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","more-unread-bar"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"jumpBelow"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","more-unread-text-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-text"],["flush-element"],["append",["unknown",["tra","roster_more_unreads"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-arrow"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","more-unread above"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","more-unread-bar"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"jumpAbove"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","more-unread-text-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-text"],["flush-element"],["append",["unknown",["tra","roster_more_unreads"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","more-unread-arrow"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["social-roster-member"],null,[["memberModel"],[["get",["groupOrFriend"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["groupOrFriend","groupModel","group","collapsed"]]],null,3]],"locals":[]},{"statements":[["text","        "],["append",["helper",["social-roster-group"],null,[["groupModel"],[["get",["groupOrFriend"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["groupOrFriend","isGroup"]]],null,5,4]],"locals":["groupOrFriend","index"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","list-container"],["flush-element"],["text","\\n"],["block",["ember-collection"],null,[["class","items","scroll-top","scroll-change","cell-layout"],["roster-scrollable",["get",["rosterModel"]],["get",["scrollTop"]],["helper",["action"],[["get",[null]],"scrollChange"],null],["helper",["mixed-grid-layout"],[["get",["itemSizes"]]],null]]],6],["text","\\n"],["block",["if"],[["get",["unreadAbove"]]],null,2],["text","\\n"],["block",["if"],[["get",["unreadBelow"]]],null,1],["text","\\n"],["block",["if"],[["get",["shouldHideFriendsAndMetaGroups"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","list-content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","no-friends"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","system_message_no_friends"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["unknown",["clash-roster-panel"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "ScyM/iiH",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-text-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-text-tooltip.js\\" "],["text","\\n"],["block",["social-tooltip"],null,[["direction","restrictArea","clearOnClick"],[["get",["direction"]],["get",["restrictArea"]],["get",["clearOnClick"]]]],0]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","style","white-space: nowrap"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["text","\\n      "],["yield","default"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "eRfUPPX8",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-status-wrapper.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-status-wrapper.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-status-wrapper.js\\" "],["text","\\n"],["block",["if"],[["get",["isInGameOrChampSelect"]]],null,16,15]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text"," - "],["append",["unknown",["friend","platformId"]],false],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isRemotePlatform"]]],null,0]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","status-message-product-name"],["flush-element"],["text"," - "],["append",["unknown",["friend","productName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isRemoteProduct"]]],null,2,1]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["availabilityString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasAvailability"]]],null,4,3]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["static-attr","class","status-message-quoted"],["flush-element"],["text","\\n        “"],["append",["unknown",["statusMessage"]],false],["text","”\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["status-message-wrapper ",["unknown",["availability"]]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasStatusMessage"]]],null,6,5],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message game-status ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["gameStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasGameStatus"]]],null,8,7]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message open-party ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["partyOccupancyString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isOpenPartyJoinable"]]],null,10,9]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["static-attr","class","status-message game-status dnd"],["flush-element"],["append",["unknown",["tournamentStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["hasTournamentStatus"]]],null,12,11]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["static-attr","class","status-message game-status dnd"],["flush-element"],["append",["unknown",["availabilityString"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isRemoteDnd"]]],null,14,13]],"locals":[]},{"statements":[["text","  "],["open-element","span",[]],["dynamic-attr","class",["concat",["status-message game-status ",["unknown",["availability"]]]]],["flush-element"],["append",["unknown",["gameStatusString"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "NY+RCxPh",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-tooltip.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"clickHandler"],null],null],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "PHMK7Edr",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-text-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-text-tooltip.js\\" "],["text","\\n"],["block",["social-tooltip"],null,[["direction","restrictArea","clearOnClick"],[["get",["direction"]],["get",["restrictArea"]],["get",["clearOnClick"]]]],0]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","style","white-space: nowrap"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["text","\\n      "],["yield","default"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "rAxZw2HT",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\tooltip-message.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\tooltip-message.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class",""],["static-attr","type","tooltip-small"],["dynamic-attr","style",["unknown",["styleContent"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["messagePacketLocal"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","h6",[]],["flush-element"],["append",["unknown",["messagePacketLocal","title"]],false],["close-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["messagePacketLocal","text"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "E2+Gwpts",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-tooltip.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-tooltip.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"clickHandler"],null],null],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "fkUthVYO",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\uikit-radio.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\uikit-radio.js\\" "],["text","\\n"],["yield","default"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "Ny977feJ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\tooltip-message.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\tooltip-message.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class",""],["static-attr","type","tooltip-small"],["dynamic-attr","style",["unknown",["styleContent"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["messagePacketLocal"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","h6",[]],["flush-element"],["append",["unknown",["messagePacketLocal","title"]],false],["close-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["messagePacketLocal","text"]],false],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "cv3Gb5tm",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\version-bar.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\version-bar.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\version-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","version-bar-container"],["static-attr","draggable","true"],["dynamic-attr","onDragStart",["helper",["action"],[["get",[null]],"onDragStart"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayLegacyPatchNumbers"]]],null,6,3],["block",["if"],[["get",["patchlineVisibleName"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","span",[]],["flush-element"],["open-element","br",[]],["flush-element"],["close-element"],["append",["unknown",["patchlineVisibleName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","br",[]],["flush-element"],["close-element"],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["openDevPanelHint"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["lolTextShorthand"]],false],["text","\\n      "],["append",["unknown",["lolExternalPatchVersion"]],false],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n      "],["append",["unknown",["tftTextShorthand"]],false],["text","\\n      "],["append",["unknown",["tftExternalPatchVersion"]],false],["text","\\n"],["block",["if"],[["get",["isDevPanelSupported"]]],null,1]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction"],["top"]],2],["text","    "],["append",["unknown",["lolExternalPatchVersion"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","br",[]],["flush-element"],["close-element"],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["openDevPanelHint"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      V"],["append",["unknown",["fullVersion"]],false],["text","\\n"],["block",["if"],[["get",["isDevPanelSupported"]]],null,4]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction","reShowFlag"],["top",["get",["showExpandedDetail"]]]],5],["text","    V"],["append",["unknown",["versionDisplay"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "GXkXzLYA",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\uikit-radio.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\uikit-radio.js\\" "],["text","\\n"],["yield","default"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "0mIvGH/G",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\vng-age-rating.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\vng-age-rating.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\vng-age-rating.js\\" "],["text","\\n"],["block",["if"],[["get",["isVisible"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","svg",[]],["static-attr","viewBox","0 0 253 45"],["static-attr","class","vng-age-rating-container"],["flush-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","vng-age-rating-1"],["static-attr","d","M67.828,22.089H318.67V68.911H67.828V22.089Z"],["static-attr","transform","translate(-67.313 -21.594)"],["flush-element"],["close-element"],["text","\\n    "],["open-element","rect",[]],["static-attr","class","vng-age-rating-2"],["static-attr","x","57.688"],["static-attr","y","5.406"],["static-attr","width","1"],["static-attr","height","36"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","vng-age-rating-3"],["static-attr","d","M138.587,39.674a2.147,2.147,0,0,1-.584,1.37,2.007,2.007,0,0,1-1.376.412,1.722,1.722,0,0,1-1.52-.762,3.928,3.928,0,0,1-.519-2.213V37.687a3.7,3.7,0,0,1,.556-2.173,1.814,1.814,0,0,1,1.557-.741,1.858,1.858,0,0,1,1.324.427,2.211,2.211,0,0,1,.562,1.391h1.548a3.353,3.353,0,0,0-1.051-2.27,3.456,3.456,0,0,0-2.383-.8,3.59,3.59,0,0,0-1.938.522,3.38,3.38,0,0,0-1.287,1.486,5.235,5.235,0,0,0-.448,2.23v0.835a5.191,5.191,0,0,0,.461,2.168,3.318,3.318,0,0,0,1.256,1.44,3.485,3.485,0,0,0,1.882.507,3.6,3.6,0,0,0,2.451-.8,3.23,3.23,0,0,0,1.057-2.233h-1.548Zm4.263-6.523h-1.493v9.435h1.493V37.838a1.438,1.438,0,0,1,1.339-.8,1.218,1.218,0,0,1,.875.286,1.311,1.311,0,0,1,.3.974v4.287h1.493V38.243q-0.031-2.426-2.156-2.426a2.335,2.335,0,0,0-1.849.848V33.151Zm5.233,6.124a3.573,3.573,0,0,0,.848,2.506,2.891,2.891,0,0,0,2.242.928,3.1,3.1,0,0,0,1.624-.424,2.783,2.783,0,0,0,1.088-1.2,3.965,3.965,0,0,0,.377-1.757V39.152a3.919,3.919,0,0,0-.4-1.738,1.534,1.534,0,0,0,.9-0.777,3.1,3.1,0,0,0,.27-1.373H154.01a2.652,2.652,0,0,1-.147,1.026,0.8,0.8,0,0,1-.473.442,2.9,2.9,0,0,0-2.23-.915,3.064,3.064,0,0,0-1.609.421,2.813,2.813,0,0,0-1.084,1.2,3.934,3.934,0,0,0-.384,1.766v0.074ZM150,37.6a1.371,1.371,0,0,1,1.161-.581,1.391,1.391,0,0,1,1.177.581,2.64,2.64,0,0,1,.433,1.606,2.961,2.961,0,0,1-.421,1.726,1.364,1.364,0,0,1-1.176.59,1.379,1.379,0,0,1-1.18-.581,2.681,2.681,0,0,1-.424-1.606A2.906,2.906,0,0,1,150,37.6Zm7.212-1.655h-1.493v6.646h1.493V35.94Zm-1.367-1.164a0.829,0.829,0,0,0,.623.224,0.84,0.84,0,0,0,.627-0.224,0.769,0.769,0,0,0,.221-0.562,0.788,0.788,0,0,0-.221-0.571,0.834,0.834,0,0,0-.627-0.227,0.823,0.823,0,0,0-.623.227,0.794,0.794,0,0,0-.218.571A0.775,0.775,0,0,0,155.844,34.776Zm6.563,7a2.293,2.293,0,0,0,1.91.931,2.228,2.228,0,0,0,1.7-.688v3.12h1.492v-9.2h-1.326l-0.086.657a2.178,2.178,0,0,0-1.763-.78,2.315,2.315,0,0,0-1.929.915,3.927,3.927,0,0,0-.713,2.475A4.112,4.112,0,0,0,162.407,41.778Zm1.183-4.192a1.3,1.3,0,0,1,1.121-.571,1.416,1.416,0,0,1,1.3.725v3.022a1.415,1.415,0,0,1-1.315.755,1.284,1.284,0,0,1-1.115-.581,2.775,2.775,0,0,1-.4-1.6A3.02,3.02,0,0,1,163.59,37.586Zm9.585,5h1.406V35.94h-1.492v4.773a1.475,1.475,0,0,1-1.468.78,1.034,1.034,0,0,1-1.051-1.265V35.94h-1.492v4.306a2.69,2.69,0,0,0,.556,1.83,2.062,2.062,0,0,0,1.637.633,2.315,2.315,0,0,0,1.867-.774Zm8.421,0v-0.1a3.4,3.4,0,0,1-.252-1.431v-3a2.093,2.093,0,0,0-.712-1.649,2.792,2.792,0,0,0-1.862-.587,3.467,3.467,0,0,0-1.391.27,2.422,2.422,0,0,0-.986.746,1.66,1.66,0,0,0-.362,1.023h1.493a0.789,0.789,0,0,1,.325-0.648,1.317,1.317,0,0,1,.836-0.255,1.144,1.144,0,0,1,.878.31,1.166,1.166,0,0,1,.289.826v0.436h-0.916a3.826,3.826,0,0,0-2.257.568,1.887,1.887,0,0,0-.789,1.631,1.83,1.83,0,0,0,.632,1.413,2.512,2.512,0,0,0,3.379-.172,2.28,2.28,0,0,0,.172.62H181.6Zm-3.928-1.33a0.874,0.874,0,0,1-.286-0.685,0.934,0.934,0,0,1,.418-0.817,2.2,2.2,0,0,1,1.247-.289h0.805v1.253a1.443,1.443,0,0,1-.587.577,1.7,1.7,0,0,1-.832.215A1.1,1.1,0,0,1,177.668,41.256Zm0.4-6.247,1.2,0,1.7-1.861h-1.7Zm11.923-1.4H189.8L186.307,34.9v1.253L188.5,35.4v7.185h1.487V33.612Zm8,0.577a3.3,3.3,0,0,0-3.986,0A2.325,2.325,0,0,0,193.267,36a2.093,2.093,0,0,0,.334,1.17,2.335,2.335,0,0,0,.912.808,2.449,2.449,0,0,0-1.068.878,2.272,2.272,0,0,0-.381,1.29,2.345,2.345,0,0,0,.8,1.867,3.622,3.622,0,0,0,4.26,0,2.345,2.345,0,0,0,.8-1.87,2.246,2.246,0,0,0-.378-1.278,2.553,2.553,0,0,0-1.078-.891,2.341,2.341,0,0,0,.921-0.808,2.073,2.073,0,0,0,.338-1.17A2.328,2.328,0,0,0,197.99,34.189Zm-0.937,6.947a1.636,1.636,0,0,1-2.113-.012,1.438,1.438,0,0,1-.384-1.05A1.482,1.482,0,0,1,194.947,39a1.377,1.377,0,0,1,1.041-.405,1.392,1.392,0,0,1,1.047.409,1.475,1.475,0,0,1,.4,1.072A1.443,1.443,0,0,1,197.053,41.136Zm-0.147-4.1a1.314,1.314,0,0,1-1.812,0,1.6,1.6,0,0,1,0-1.956,1.3,1.3,0,0,1,1.812.018A1.563,1.563,0,0,1,196.906,37.033Zm9.168,0.24a4.663,4.663,0,0,0-.741-2.813,3.008,3.008,0,0,0-4.391.025,4.8,4.8,0,0,0-.722,2.893v1.548a4.671,4.671,0,0,0,.752,2.829,2.583,2.583,0,0,0,2.184.955,2.549,2.549,0,0,0,2.2-.98,4.878,4.878,0,0,0,.722-2.908V37.273Zm-1.493,1.9a3.64,3.64,0,0,1-.363,1.778,1.154,1.154,0,0,1-1.062.568,1.177,1.177,0,0,1-1.1-.614,3.887,3.887,0,0,1-.35-1.867V37.009a3.5,3.5,0,0,1,.363-1.735,1.314,1.314,0,0,1,2.168.031,3.788,3.788,0,0,1,.344,1.846v2.021Zm11.861,0.068a4.061,4.061,0,0,0-.691-2.515,2.267,2.267,0,0,0-1.907-.906,2.193,2.193,0,0,0-1.788.8L212,35.94h-1.376v9.2h1.492V41.99a2.433,2.433,0,0,0,3.631-.2,3.962,3.962,0,0,0,.7-2.46V39.238Zm-1.889,1.7a1.286,1.286,0,0,1-1.115.574,1.388,1.388,0,0,1-1.327-.774V37.795a1.375,1.375,0,0,1,1.315-.756,1.288,1.288,0,0,1,1.133.584,2.773,2.773,0,0,1,.4,1.579A3.053,3.053,0,0,1,214.553,40.943Zm4.622-7.792h-1.492v9.435h1.492V37.838a1.438,1.438,0,0,1,1.339-.8,1.22,1.22,0,0,1,.876.286,1.315,1.315,0,0,1,.3.974v4.287h1.492V38.243q-0.03-2.426-2.156-2.426a2.338,2.338,0,0,0-1.849.848V33.151Zm9.576,9.435h1.407V35.94h-1.493v4.773a1.475,1.475,0,0,1-1.468.78,1.034,1.034,0,0,1-1.05-1.265V35.94h-1.493v4.306a2.7,2.7,0,0,0,.556,1.83,2.063,2.063,0,0,0,1.637.633,2.314,2.314,0,0,0,1.867-.774Zm-2.088-7.577,1.2,0,1.7-1.861h-1.7Zm5.393-.685V35.94h-1.093v1.106h1.093v3.765a1.6,1.6,0,0,0,1.72,1.9,3.679,3.679,0,0,0,.983-0.141V41.413a2.31,2.31,0,0,1-.523.061,0.7,0.7,0,0,1-.537-0.169,0.819,0.819,0,0,1-.15-0.55v-3.71h1.173V35.94h-1.173V34.324h-1.493Zm6.935,1.615v6.646h1.492V37.77a1.315,1.315,0,0,1,1.272-.731,1.065,1.065,0,0,1,1.2,1.173v4.373h1.492l-0.006-4.558a1.441,1.441,0,0,1,.451-0.716,1.245,1.245,0,0,1,.833-0.273,1.209,1.209,0,0,1,.915.295,1.323,1.323,0,0,1,.276.928v4.324h1.493V38.219a2.673,2.673,0,0,0-.55-1.794,2.072,2.072,0,0,0-1.637-.608,2.357,2.357,0,0,0-2.039,1.02,1.838,1.838,0,0,0-1.824-1.02,2.393,2.393,0,0,0-1.917.817L240.4,35.94h-1.406Zm10.669,3.335a3.588,3.588,0,0,0,.845,2.5,2.882,2.882,0,0,0,2.251.937,3.082,3.082,0,0,0,1.624-.424,2.8,2.8,0,0,0,1.082-1.2,3.965,3.965,0,0,0,.377-1.757l-0.006-.35a3.406,3.406,0,0,0-.906-2.3,2.9,2.9,0,0,0-2.183-.866,3.065,3.065,0,0,0-1.61.421,2.825,2.825,0,0,0-1.087,1.2,3.919,3.919,0,0,0-.387,1.76v0.074Zm1.923-1.68a1.369,1.369,0,0,1,1.161-.581,1.383,1.383,0,0,1,1.176.59,2.641,2.641,0,0,1,.433,1.6,2.954,2.954,0,0,1-.421,1.726,1.363,1.363,0,0,1-1.176.59,1.379,1.379,0,0,1-1.18-.581,2.682,2.682,0,0,1-.423-1.606A2.9,2.9,0,0,1,251.583,37.6Zm1.578-3.879h-0.9l-1.83,1.453,1.185,0,1.094-.872,1.1,0.872,1.186,0Zm0.59-1.56a0.442,0.442,0,0,1-.135.314,0.405,0.405,0,0,1-.3.14,1.47,1.47,0,0,1-.624-0.2,1.488,1.488,0,0,0-.648-0.2,0.846,0.846,0,0,0-.641.3,0.985,0.985,0,0,0-.274.692l0.553,0.148a0.431,0.431,0,0,1,.126-0.3,0.388,0.388,0,0,1,.292-0.135,1.392,1.392,0,0,1,.6.2,1.462,1.462,0,0,0,.678.2,0.856,0.856,0,0,0,.648-0.293,0.96,0.96,0,0,0,.274-0.676Zm4.938,3.784H257.2v6.646h1.492V35.94Zm-1.366-1.164a0.829,0.829,0,0,0,.623.224,0.843,0.843,0,0,0,.627-0.224,0.769,0.769,0,0,0,.221-0.562,0.788,0.788,0,0,0-.221-0.571,0.837,0.837,0,0,0-.627-0.227,0.823,0.823,0,0,0-.623.227,0.79,0.79,0,0,0-.218.571A0.771,0.771,0,0,0,257.323,34.776Zm6.1,1.164v6.646h1.493v-4.73a1.438,1.438,0,0,1,1.345-.817,1.151,1.151,0,0,1,.894.3,1.37,1.37,0,0,1,.273.937v4.306h1.493V38.194q-0.037-2.377-2.113-2.377a2.389,2.389,0,0,0-1.935.891l-0.043-.768h-1.407Zm7.5,5.841a2.329,2.329,0,0,0,1.907.928,2.2,2.2,0,0,0,1.72-.719v0.448a1.541,1.541,0,0,1-.43,1.182,1.65,1.65,0,0,1-1.173.4,2.132,2.132,0,0,1-1.7-.817l-0.707.9a2.541,2.541,0,0,0,1.06.8,3.541,3.541,0,0,0,1.428.3,3.1,3.1,0,0,0,2.2-.755,2.68,2.68,0,0,0,.814-2.064V35.94H274.7l-0.068.669a2.189,2.189,0,0,0-1.787-.792,2.336,2.336,0,0,0-1.932.925,3.883,3.883,0,0,0-.728,2.472A4.01,4.01,0,0,0,270.922,41.781Zm1.155-4.158a1.318,1.318,0,0,1,1.145-.584,1.416,1.416,0,0,1,1.327.756v2.924a1.437,1.437,0,0,1-1.339.774,1.313,1.313,0,0,1-1.133-.574,2.67,2.67,0,0,1-.409-1.575A2.991,2.991,0,0,1,272.077,37.623Zm10.992,4.963v-0.1a3.4,3.4,0,0,1-.252-1.431v-3A2.094,2.094,0,0,0,282.1,36.4a2.789,2.789,0,0,0-1.861-.587,3.46,3.46,0,0,0-1.391.27,2.416,2.416,0,0,0-.986.746,1.654,1.654,0,0,0-.362,1.023H279a0.79,0.79,0,0,1,.326-0.648,1.314,1.314,0,0,1,.835-0.255,1.143,1.143,0,0,1,.878.31,1.162,1.162,0,0,1,.289.826v0.436h-0.915a3.823,3.823,0,0,0-2.257.568,1.886,1.886,0,0,0-.79,1.631A1.827,1.827,0,0,0,278,42.138a2.51,2.51,0,0,0,3.378-.172,2.317,2.317,0,0,0,.172.62h1.524Zm-3.928-1.33a0.87,0.87,0,0,1-.286-0.685,0.934,0.934,0,0,1,.418-0.817,2.2,2.2,0,0,1,1.247-.289h0.8v1.253a1.435,1.435,0,0,1-.586.577,1.7,1.7,0,0,1-.833.215A1.1,1.1,0,0,1,279.141,41.256Zm0.734-8.1h-1.7l1.659,1.861,1.24,0Zm5.331,2.789H283.6l2.334,6.61-0.215.571a1.369,1.369,0,0,1-.451.691,1.456,1.456,0,0,1-.851.206L284.131,44v1.16a2.663,2.663,0,0,0,.719.111,2.148,2.148,0,0,0,2.064-1.677l2.641-7.653h-1.591l-1.351,4.509ZM136.584,56.987a1.505,1.505,0,0,1-.9.224,1.552,1.552,0,0,1-.977-0.286,1.049,1.049,0,0,1-.4-0.814h-1.45a1.922,1.922,0,0,0,.356,1.112,2.4,2.4,0,0,0,1,.811,3.441,3.441,0,0,0,1.456.295,3.166,3.166,0,0,0,1.947-.556,1.731,1.731,0,0,0,.744-1.453,1.635,1.635,0,0,0-.243-0.909,1.959,1.959,0,0,0-.743-0.642A5.538,5.538,0,0,0,136,54.309a3.958,3.958,0,0,1-1.167-.384,0.6,0.6,0,0,1-.289-0.534,0.716,0.716,0,0,1,.31-0.608,1.324,1.324,0,0,1,.8-0.227,1.223,1.223,0,0,1,.847.286,0.92,0.92,0,0,1,.32.716h1.492a1.869,1.869,0,0,0-.734-1.53,2.98,2.98,0,0,0-1.925-.59,2.865,2.865,0,0,0-1.843.577,1.77,1.77,0,0,0-.725,1.437,1.7,1.7,0,0,0,1.118,1.566,5.609,5.609,0,0,0,1.272.405,3.5,3.5,0,0,1,1.09.368,0.677,0.677,0,0,1,.329.608A0.694,0.694,0,0,1,136.584,56.987Zm7.5,1.014a2.681,2.681,0,0,0,1.066-.924l-0.8-.768a2.021,2.021,0,0,1-1.67.829,1.652,1.652,0,0,1-1.214-.479,2,2,0,0,1-.549-1.3h4.342v-0.6a3.659,3.659,0,0,0-.74-2.451,2.607,2.607,0,0,0-2.1-.866,2.847,2.847,0,0,0-1.548.436,2.922,2.922,0,0,0-1.078,1.219,3.987,3.987,0,0,0-.384,1.778v0.184a3.244,3.244,0,0,0,.881,2.38,3.09,3.09,0,0,0,2.3.894A3.336,3.336,0,0,0,144.081,58Zm-0.7-4.981a1.818,1.818,0,0,1,.4,1.133v0.111h-2.844a2.238,2.238,0,0,1,.482-1.2A1.388,1.388,0,0,1,143.378,53.019Zm0.264-4.186a0.645,0.645,0,0,1-.166.464,0.528,0.528,0,0,1-.4.175,1.788,1.788,0,0,1-.814-0.276,1.813,1.813,0,0,0-.844-0.277,1.224,1.224,0,0,0-.974.461,1.7,1.7,0,0,0-.39,1.136l0.915,0.049a0.643,0.643,0,0,1,.163-0.458,0.519,0.519,0,0,1,.4-0.175,1.081,1.081,0,0,1,.292.037,2.466,2.466,0,0,1,.454.221,2.62,2.62,0,0,0,.5.236,1.462,1.462,0,0,0,.415.052,1.242,1.242,0,0,0,.979-0.448,1.651,1.651,0,0,0,.39-1.124Zm11.394,9.373V58.1a3.4,3.4,0,0,1-.252-1.431v-3a2.09,2.09,0,0,0-.712-1.649,2.789,2.789,0,0,0-1.861-.587,3.469,3.469,0,0,0-1.392.27,2.412,2.412,0,0,0-.985.746,1.655,1.655,0,0,0-.363,1.023h1.493a0.789,0.789,0,0,1,.325-0.648,1.317,1.317,0,0,1,.836-0.255,1.143,1.143,0,0,1,.878.31,1.162,1.162,0,0,1,.289.826v0.436h-0.915a3.827,3.827,0,0,0-2.258.568,1.887,1.887,0,0,0-.789,1.631,1.827,1.827,0,0,0,.633,1.413,2.511,2.511,0,0,0,3.378-.172,2.28,2.28,0,0,0,.172.62h1.523Zm-3.928-1.33a0.873,0.873,0,0,1-.285-0.685,0.936,0.936,0,0,1,.417-0.817,2.2,2.2,0,0,1,1.247-.289h0.805v1.253a1.437,1.437,0,0,1-.587.577,1.7,1.7,0,0,1-.832.215A1.106,1.106,0,0,1,151.108,56.877Zm1.711-6.41V50.043a1.159,1.159,0,0,0,.682-0.3,0.826,0.826,0,0,0,.239-0.608,0.97,0.97,0,0,0-.525-0.86,3.058,3.058,0,0,0-1.563-.319l-0.043.755q0.921,0,.921.442a0.3,0.3,0,0,1-.2.3,2.138,2.138,0,0,1-.648.117l0.043,0.9h1.094Zm3.507,1.093v6.646h1.493v-4.73a1.438,1.438,0,0,1,1.345-.817,1.152,1.152,0,0,1,.894.3,1.37,1.37,0,0,1,.273.937v4.306h1.493V53.815q-0.038-2.377-2.113-2.377a2.389,2.389,0,0,0-1.935.891l-0.043-.768h-1.407Zm8.489-2.789h-1.493v9.435h1.493V53.459a1.438,1.438,0,0,1,1.339-.8,1.216,1.216,0,0,1,.875.286,1.311,1.311,0,0,1,.3.974v4.287h1.493V53.864q-0.031-2.426-2.156-2.426a2.335,2.335,0,0,0-1.849.848V48.772Zm10.116,0h-1.492v9.435h1.492V53.459a1.439,1.439,0,0,1,1.34-.8,1.219,1.219,0,0,1,.875.286,1.315,1.315,0,0,1,.3.974v4.287h1.492V53.864q-0.03-2.426-2.156-2.426a2.338,2.338,0,0,0-1.849.848V48.772ZM186.8,51.014l-0.013.467a1.031,1.031,0,0,1-.23.67,1.016,1.016,0,0,1-.642.246V51.561h-1.492v4.773a1.476,1.476,0,0,1-1.469.78,1.034,1.034,0,0,1-1.05-1.265V51.561h-1.492v4.306a2.7,2.7,0,0,0,.555,1.831,2.065,2.065,0,0,0,1.637.633,2.317,2.317,0,0,0,1.868-.774l0.037,0.651h1.406V53.188a2,2,0,0,0,1.434-.574,2.408,2.408,0,0,0,.44-1.6H186.8Zm1.142,3.882a3.573,3.573,0,0,0,.848,2.506,2.891,2.891,0,0,0,2.242.928,3.1,3.1,0,0,0,1.624-.424,2.783,2.783,0,0,0,1.088-1.2,3.965,3.965,0,0,0,.377-1.757V54.773a3.919,3.919,0,0,0-.4-1.738,1.533,1.533,0,0,0,.9-0.777,3.1,3.1,0,0,0,.27-1.373h-1.025a2.648,2.648,0,0,1-.148,1.026,0.8,0.8,0,0,1-.473.442,2.9,2.9,0,0,0-2.23-.915,3.064,3.064,0,0,0-1.609.421,2.813,2.813,0,0,0-1.084,1.2,3.934,3.934,0,0,0-.384,1.766V54.9Zm1.917-1.68a1.368,1.368,0,0,1,1.16-.581,1.391,1.391,0,0,1,1.177.581,2.64,2.64,0,0,1,.433,1.606,2.961,2.961,0,0,1-.421,1.726,1.364,1.364,0,0,1-1.176.59,1.379,1.379,0,0,1-1.18-.581,2.682,2.682,0,0,1-.423-1.606A2.9,2.9,0,0,1,189.858,53.216Zm1.713-2.749V50.043a1.159,1.159,0,0,0,.682-0.3,0.823,0.823,0,0,0,.24-0.608,0.969,0.969,0,0,0-.526-0.86,3.058,3.058,0,0,0-1.563-.319l-0.043.755q0.921,0,.922.442a0.3,0.3,0,0,1-.2.3,2.138,2.138,0,0,1-.648.117l0.043,0.9h1.093Zm3.888,1.093v6.646h1.493v-4.73a1.438,1.438,0,0,1,1.345-.817,1.15,1.15,0,0,1,.894.3,1.37,1.37,0,0,1,.273.937v4.306h1.493V53.815q-0.038-2.377-2.113-2.377a2.389,2.389,0,0,0-1.935.891l-0.043-.768h-1.407Zm7.5,5.841a2.331,2.331,0,0,0,1.907.928,2.2,2.2,0,0,0,1.72-.719v0.448a1.541,1.541,0,0,1-.43,1.182,1.647,1.647,0,0,1-1.173.4,2.133,2.133,0,0,1-1.695-.817l-0.707.9a2.54,2.54,0,0,0,1.06.8,3.541,3.541,0,0,0,1.428.3,3.1,3.1,0,0,0,2.2-.755A2.677,2.677,0,0,0,208.076,58V51.561h-1.345l-0.068.669a2.189,2.189,0,0,0-1.787-.792,2.336,2.336,0,0,0-1.932.924,3.889,3.889,0,0,0-.728,2.472A4.016,4.016,0,0,0,202.956,57.4Zm1.155-4.158a1.318,1.318,0,0,1,1.146-.584,1.414,1.414,0,0,1,1.326.756v2.924a1.436,1.436,0,0,1-1.339.774,1.313,1.313,0,0,1-1.133-.574,2.678,2.678,0,0,1-.408-1.575A3,3,0,0,1,204.111,53.244Zm9.776-1.683H212.24l2.027,3.274-2.1,3.372h1.658l1.321-2.273,1.327,2.273h1.646l-2.1-3.372,2.033-3.274h-1.658l-1.266,2.187Zm10.675,6.646V58.1a3.4,3.4,0,0,1-.252-1.431v-3a2.093,2.093,0,0,0-.712-1.649,2.789,2.789,0,0,0-1.861-.587,3.469,3.469,0,0,0-1.392.27,2.412,2.412,0,0,0-.985.746A1.655,1.655,0,0,0,219,53.477h1.493a0.789,0.789,0,0,1,.325-0.648,1.317,1.317,0,0,1,.836-0.255,1.144,1.144,0,0,1,.878.31,1.166,1.166,0,0,1,.289.826v0.436H221.9a3.826,3.826,0,0,0-2.257.568,1.887,1.887,0,0,0-.789,1.631,1.827,1.827,0,0,0,.633,1.413,2.511,2.511,0,0,0,3.378-.172,2.28,2.28,0,0,0,.172.62h1.523Zm-3.928-1.33a0.874,0.874,0,0,1-.286-0.685,0.937,0.937,0,0,1,.418-0.817,2.2,2.2,0,0,1,1.247-.289h0.805v1.253a1.437,1.437,0,0,1-.587.577,1.7,1.7,0,0,1-.832.215A1.106,1.106,0,0,1,220.634,56.877ZM219.5,50.618l1.308,0,0.977-.872,0.976,0.872,1.3,0-1.788-1.533h-0.989Zm4.1-.971,0.964,0,1.327-1.64h-1.364Zm6.333,8.56h1.406V51.561h-1.492v4.773a1.475,1.475,0,0,1-1.468.78,1.035,1.035,0,0,1-1.051-1.265V51.561H225.84v4.306A2.69,2.69,0,0,0,226.4,57.7a2.062,2.062,0,0,0,1.637.633,2.315,2.315,0,0,0,1.867-.774Zm12.678-8.562H241.54V48.772h-1.493v0.872h-1.542v1.044h1.542v1.486a2.168,2.168,0,0,0-1.707-.737,2.284,2.284,0,0,0-1.911.931,3.951,3.951,0,0,0-.712,2.466,4.09,4.09,0,0,0,.722,2.555,2.268,2.268,0,0,0,1.888.94,2.2,2.2,0,0,0,1.788-.811l0.073,0.688h1.352V50.688h1.075V49.644Zm-5.013,3.59a1.276,1.276,0,0,1,1.118-.574,1.387,1.387,0,0,1,1.327.8V56.3a1.409,1.409,0,0,1-1.339.817,1.266,1.266,0,0,1-1.109-.568,2.767,2.767,0,0,1-.39-1.582A3.082,3.082,0,0,1,237.6,53.234ZM248.164,58a2.681,2.681,0,0,0,1.066-.924l-0.8-.768a2.02,2.02,0,0,1-1.67.829,1.648,1.648,0,0,1-1.213-.479,1.993,1.993,0,0,1-.55-1.3h4.342v-0.6a3.659,3.659,0,0,0-.74-2.451,2.607,2.607,0,0,0-2.1-.866,2.849,2.849,0,0,0-1.548.436,2.922,2.922,0,0,0-1.078,1.219,3.987,3.987,0,0,0-.384,1.778v0.184a3.244,3.244,0,0,0,.881,2.38,3.09,3.09,0,0,0,2.3.894A3.333,3.333,0,0,0,248.164,58Zm-0.7-4.981a1.818,1.818,0,0,1,.4,1.133v0.111h-2.844a2.231,2.231,0,0,1,.483-1.2A1.387,1.387,0,0,1,247.461,53.019Zm-3.36-2.4,1.308,0,0.977-.872,0.977,0.872,1.3,0-1.787-1.533h-0.989Zm4.1-.971,0.965,0,1.326-1.64h-1.363Zm2.267,1.913v6.646h1.492v-4.73a1.44,1.44,0,0,1,1.346-.817,1.149,1.149,0,0,1,.893.3,1.365,1.365,0,0,1,.274.937v4.306h1.492V53.815q-0.036-2.377-2.113-2.377a2.392,2.392,0,0,0-1.935.891l-0.043-.768h-1.406Zm13.568,5.427a1.505,1.505,0,0,1-.9.224,1.552,1.552,0,0,1-.977-0.286,1.049,1.049,0,0,1-.4-0.814h-1.45a1.922,1.922,0,0,0,.356,1.112,2.4,2.4,0,0,0,1,.811,3.441,3.441,0,0,0,1.456.295,3.166,3.166,0,0,0,1.947-.556,1.731,1.731,0,0,0,.744-1.453,1.635,1.635,0,0,0-.243-0.909,1.959,1.959,0,0,0-.743-0.642,5.538,5.538,0,0,0-1.379-.461,3.958,3.958,0,0,1-1.167-.384,0.6,0.6,0,0,1-.289-0.534,0.716,0.716,0,0,1,.31-0.608,1.324,1.324,0,0,1,.8-0.227,1.223,1.223,0,0,1,.847.286,0.92,0.92,0,0,1,.32.716h1.492a1.869,1.869,0,0,0-.734-1.53,2.98,2.98,0,0,0-1.925-.59,2.865,2.865,0,0,0-1.843.577,1.77,1.77,0,0,0-.725,1.437,1.7,1.7,0,0,0,1.118,1.566,5.609,5.609,0,0,0,1.272.405,3.5,3.5,0,0,1,1.09.368,0.677,0.677,0,0,1,.329.608A0.694,0.694,0,0,1,264.039,56.987Zm9.429-5.973-0.012.467a1.036,1.036,0,0,1-.231.67,1.015,1.015,0,0,1-.641.246V51.561h-1.493v4.773a1.475,1.475,0,0,1-1.468.78,1.034,1.034,0,0,1-1.05-1.265V51.561H267.08v4.306a2.69,2.69,0,0,0,.556,1.831,2.062,2.062,0,0,0,1.637.633,2.315,2.315,0,0,0,1.867-.774l0.037,0.651h1.407V53.188a2,2,0,0,0,1.434-.574,2.414,2.414,0,0,0,.439-1.6h-0.989Zm-4.324-.261,1.2,0,1.7-1.861h-1.7Zm7.349,5.854a2.724,2.724,0,0,1-.39-1.612v-0.24a2.68,2.68,0,0,1,.4-1.594,1.314,1.314,0,0,1,1.118-.525,1.256,1.256,0,0,1,.931.369,1.368,1.368,0,0,1,.39.94h1.407a2.476,2.476,0,0,0-.784-1.815,2.728,2.728,0,0,0-1.931-.691,2.81,2.81,0,0,0-2.212.912,3.524,3.524,0,0,0-.81,2.429v0.154a3.584,3.584,0,0,0,.816,2.494,2.835,2.835,0,0,0,2.212.9,2.931,2.931,0,0,0,1.339-.313,2.546,2.546,0,0,0,.983-0.851,2.2,2.2,0,0,0,.387-1.158h-1.407a1.113,1.113,0,0,1-.393.8,1.35,1.35,0,0,1-.928.326A1.313,1.313,0,0,1,276.493,56.607Zm12.245,1.6h1.726l-2.733-3.876,2.469-2.77h-1.794l-1.836,2.07-0.467.584V48.772H284.61v9.435H286.1V56.038l0.663-.682Zm3.907-9.435h-1.493v9.435h1.493V53.459a1.437,1.437,0,0,1,1.339-.8,1.218,1.218,0,0,1,.875.286,1.311,1.311,0,0,1,.3.974v4.287h1.492V53.864q-0.03-2.426-2.156-2.426a2.335,2.335,0,0,0-1.848.848V48.772Zm5.233,6.124a3.583,3.583,0,0,0,.845,2.5,2.882,2.882,0,0,0,2.251.937,3.085,3.085,0,0,0,1.624-.424,2.786,2.786,0,0,0,1.081-1.2,3.951,3.951,0,0,0,.378-1.757l-0.006-.35a3.406,3.406,0,0,0-.906-2.3,2.9,2.9,0,0,0-2.184-.866,3.064,3.064,0,0,0-1.609.421,2.825,2.825,0,0,0-1.087,1.2,3.919,3.919,0,0,0-.387,1.76V54.9Zm1.923-1.68a1.368,1.368,0,0,1,1.16-.581,1.384,1.384,0,0,1,1.177.59,2.648,2.648,0,0,1,.433,1.6,2.961,2.961,0,0,1-.421,1.726,1.364,1.364,0,0,1-1.176.59,1.379,1.379,0,0,1-1.18-.581,2.682,2.682,0,0,1-.423-1.606A2.9,2.9,0,0,1,299.8,53.216Zm1.689-2.749V50.043a1.159,1.159,0,0,0,.682-0.3,0.826,0.826,0,0,0,.239-0.608,0.97,0.97,0,0,0-.525-0.86,3.058,3.058,0,0,0-1.563-.319l-0.043.755q0.921,0,.921.442a0.3,0.3,0,0,1-.2.3,2.138,2.138,0,0,1-.648.117l0.043,0.9h1.094ZM309.742,58a2.688,2.688,0,0,0,1.066-.924L310,56.309a2.021,2.021,0,0,1-1.671.829,1.652,1.652,0,0,1-1.213-.479,2,2,0,0,1-.55-1.3h4.343v-0.6a3.665,3.665,0,0,0-.74-2.451,2.61,2.61,0,0,0-2.1-.866,2.852,2.852,0,0,0-1.548.436,2.928,2.928,0,0,0-1.078,1.219,4,4,0,0,0-.383,1.778v0.184a3.24,3.24,0,0,0,.881,2.38,3.088,3.088,0,0,0,2.3.894A3.337,3.337,0,0,0,309.742,58Zm-0.7-4.981a1.818,1.818,0,0,1,.4,1.133v0.111h-2.844a2.23,2.23,0,0,1,.482-1.2A1.388,1.388,0,0,1,309.039,53.019Z"],["static-attr","transform","translate(-67.313 -21.594)"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","vng-age-rating-5"],["static-attr","d","M81.252,59.693h5.515V30.471H82.322a5.413,5.413,0,0,1-1.914,2.922,5.221,5.221,0,0,1-3.19.988H76.766V39.69h0.617a8.693,8.693,0,0,0,2.161-.268,4.07,4.07,0,0,0,1.708-.844V59.693Zm23.933-17.9a5.781,5.781,0,0,0,.762-3.087V36.645a6.42,6.42,0,0,0-2.038-5.062,8.16,8.16,0,0,0-5.618-1.811,9.536,9.536,0,0,0-3.149.494,7.059,7.059,0,0,0-2.428,1.4,6.2,6.2,0,0,0-1.564,2.2,7.3,7.3,0,0,0-.556,2.9v1.893a7.383,7.383,0,0,0,.885,3.828,6.413,6.413,0,0,0,2.614,2.387,6.466,6.466,0,0,0-2.881,2.161,5.539,5.539,0,0,0-.988,3.313v2.428a7.17,7.17,0,0,0,2.14,5.577,8.585,8.585,0,0,0,6.009,1.955,8.337,8.337,0,0,0,5.926-2.037,7.209,7.209,0,0,0,2.182-5.536v-2.3a7.828,7.828,0,0,0-.906-4.054A6.527,6.527,0,0,0,102.7,43.93,6.192,6.192,0,0,0,105.185,41.789Zm-9.2-5.268q0-2.922,2.3-2.922t2.3,2.963v2.675a4.337,4.337,0,0,1-.37,1.935,3.028,3.028,0,0,1-1.194,1.235l-0.453-.165a4.96,4.96,0,0,1-1.955-1.194,2.825,2.825,0,0,1-.638-1.976V36.521Zm4.9,16.546q0,3.087-2.469,3.087-2.593,0-2.593-3.128v-3.21a4.659,4.659,0,0,1,.412-2.12,3.2,3.2,0,0,1,1.441-1.338l0.494,0.206a5.213,5.213,0,0,1,2.119,1.276,3.24,3.24,0,0,1,.6,2.14v3.087Z"],["static-attr","transform","translate(-67.313 -21.594)"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","vng-age-rating-6"],["static-attr","d","M120.012,34.414H116.2v-3.9h-3.053v3.9H109.4v2.908h3.751v4.217H116.2V37.322h3.81V34.414Z"],["static-attr","transform","translate(-67.313 -21.594)"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "eB01o+7Y",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\version-bar.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\version-bar.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\version-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","version-bar-container"],["static-attr","draggable","true"],["dynamic-attr","onDragStart",["helper",["action"],[["get",[null]],"onDragStart"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayLegacyPatchNumbers"]]],null,6,3],["block",["if"],[["get",["patchlineVisibleName"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","span",[]],["flush-element"],["open-element","br",[]],["flush-element"],["close-element"],["append",["unknown",["patchlineVisibleName"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","br",[]],["flush-element"],["close-element"],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["openDevPanelHint"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["lolTextShorthand"]],false],["text","\\n      "],["append",["unknown",["lolExternalPatchVersion"]],false],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n      "],["append",["unknown",["tftTextShorthand"]],false],["text","\\n      "],["append",["unknown",["tftExternalPatchVersion"]],false],["text","\\n"],["block",["if"],[["get",["isDevPanelSupported"]]],null,1]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction"],["top"]],2],["text","    "],["append",["unknown",["lolExternalPatchVersion"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","br",[]],["flush-element"],["close-element"],["open-element","br",[]],["flush-element"],["close-element"],["text","\\n        "],["append",["unknown",["openDevPanelHint"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      V"],["append",["unknown",["fullVersion"]],false],["text","\\n"],["block",["if"],[["get",["isDevPanelSupported"]]],null,4]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction","reShowFlag"],["top",["get",["showExpandedDetail"]]]],5],["text","    V"],["append",["unknown",["versionDisplay"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, n) => {
+            const r = n(1).Ember;
+            e.exports = r.HTMLBars.template({
+                id: "LdBRk3YV",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\vng-age-rating.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\vng-age-rating.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\vng-age-rating.js\\" "],["text","\\n"],["block",["if"],[["get",["isVisible"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","svg",[]],["static-attr","viewBox","0 0 253 45"],["static-attr","class","vng-age-rating-container"],["flush-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","vng-age-rating-1"],["static-attr","d","M67.828,22.089H318.67V68.911H67.828V22.089Z"],["static-attr","transform","translate(-67.313 -21.594)"],["flush-element"],["close-element"],["text","\\n    "],["open-element","rect",[]],["static-attr","class","vng-age-rating-2"],["static-attr","x","57.688"],["static-attr","y","5.406"],["static-attr","width","1"],["static-attr","height","36"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","vng-age-rating-3"],["static-attr","d","M138.587,39.674a2.147,2.147,0,0,1-.584,1.37,2.007,2.007,0,0,1-1.376.412,1.722,1.722,0,0,1-1.52-.762,3.928,3.928,0,0,1-.519-2.213V37.687a3.7,3.7,0,0,1,.556-2.173,1.814,1.814,0,0,1,1.557-.741,1.858,1.858,0,0,1,1.324.427,2.211,2.211,0,0,1,.562,1.391h1.548a3.353,3.353,0,0,0-1.051-2.27,3.456,3.456,0,0,0-2.383-.8,3.59,3.59,0,0,0-1.938.522,3.38,3.38,0,0,0-1.287,1.486,5.235,5.235,0,0,0-.448,2.23v0.835a5.191,5.191,0,0,0,.461,2.168,3.318,3.318,0,0,0,1.256,1.44,3.485,3.485,0,0,0,1.882.507,3.6,3.6,0,0,0,2.451-.8,3.23,3.23,0,0,0,1.057-2.233h-1.548Zm4.263-6.523h-1.493v9.435h1.493V37.838a1.438,1.438,0,0,1,1.339-.8,1.218,1.218,0,0,1,.875.286,1.311,1.311,0,0,1,.3.974v4.287h1.493V38.243q-0.031-2.426-2.156-2.426a2.335,2.335,0,0,0-1.849.848V33.151Zm5.233,6.124a3.573,3.573,0,0,0,.848,2.506,2.891,2.891,0,0,0,2.242.928,3.1,3.1,0,0,0,1.624-.424,2.783,2.783,0,0,0,1.088-1.2,3.965,3.965,0,0,0,.377-1.757V39.152a3.919,3.919,0,0,0-.4-1.738,1.534,1.534,0,0,0,.9-0.777,3.1,3.1,0,0,0,.27-1.373H154.01a2.652,2.652,0,0,1-.147,1.026,0.8,0.8,0,0,1-.473.442,2.9,2.9,0,0,0-2.23-.915,3.064,3.064,0,0,0-1.609.421,2.813,2.813,0,0,0-1.084,1.2,3.934,3.934,0,0,0-.384,1.766v0.074ZM150,37.6a1.371,1.371,0,0,1,1.161-.581,1.391,1.391,0,0,1,1.177.581,2.64,2.64,0,0,1,.433,1.606,2.961,2.961,0,0,1-.421,1.726,1.364,1.364,0,0,1-1.176.59,1.379,1.379,0,0,1-1.18-.581,2.681,2.681,0,0,1-.424-1.606A2.906,2.906,0,0,1,150,37.6Zm7.212-1.655h-1.493v6.646h1.493V35.94Zm-1.367-1.164a0.829,0.829,0,0,0,.623.224,0.84,0.84,0,0,0,.627-0.224,0.769,0.769,0,0,0,.221-0.562,0.788,0.788,0,0,0-.221-0.571,0.834,0.834,0,0,0-.627-0.227,0.823,0.823,0,0,0-.623.227,0.794,0.794,0,0,0-.218.571A0.775,0.775,0,0,0,155.844,34.776Zm6.563,7a2.293,2.293,0,0,0,1.91.931,2.228,2.228,0,0,0,1.7-.688v3.12h1.492v-9.2h-1.326l-0.086.657a2.178,2.178,0,0,0-1.763-.78,2.315,2.315,0,0,0-1.929.915,3.927,3.927,0,0,0-.713,2.475A4.112,4.112,0,0,0,162.407,41.778Zm1.183-4.192a1.3,1.3,0,0,1,1.121-.571,1.416,1.416,0,0,1,1.3.725v3.022a1.415,1.415,0,0,1-1.315.755,1.284,1.284,0,0,1-1.115-.581,2.775,2.775,0,0,1-.4-1.6A3.02,3.02,0,0,1,163.59,37.586Zm9.585,5h1.406V35.94h-1.492v4.773a1.475,1.475,0,0,1-1.468.78,1.034,1.034,0,0,1-1.051-1.265V35.94h-1.492v4.306a2.69,2.69,0,0,0,.556,1.83,2.062,2.062,0,0,0,1.637.633,2.315,2.315,0,0,0,1.867-.774Zm8.421,0v-0.1a3.4,3.4,0,0,1-.252-1.431v-3a2.093,2.093,0,0,0-.712-1.649,2.792,2.792,0,0,0-1.862-.587,3.467,3.467,0,0,0-1.391.27,2.422,2.422,0,0,0-.986.746,1.66,1.66,0,0,0-.362,1.023h1.493a0.789,0.789,0,0,1,.325-0.648,1.317,1.317,0,0,1,.836-0.255,1.144,1.144,0,0,1,.878.31,1.166,1.166,0,0,1,.289.826v0.436h-0.916a3.826,3.826,0,0,0-2.257.568,1.887,1.887,0,0,0-.789,1.631,1.83,1.83,0,0,0,.632,1.413,2.512,2.512,0,0,0,3.379-.172,2.28,2.28,0,0,0,.172.62H181.6Zm-3.928-1.33a0.874,0.874,0,0,1-.286-0.685,0.934,0.934,0,0,1,.418-0.817,2.2,2.2,0,0,1,1.247-.289h0.805v1.253a1.443,1.443,0,0,1-.587.577,1.7,1.7,0,0,1-.832.215A1.1,1.1,0,0,1,177.668,41.256Zm0.4-6.247,1.2,0,1.7-1.861h-1.7Zm11.923-1.4H189.8L186.307,34.9v1.253L188.5,35.4v7.185h1.487V33.612Zm8,0.577a3.3,3.3,0,0,0-3.986,0A2.325,2.325,0,0,0,193.267,36a2.093,2.093,0,0,0,.334,1.17,2.335,2.335,0,0,0,.912.808,2.449,2.449,0,0,0-1.068.878,2.272,2.272,0,0,0-.381,1.29,2.345,2.345,0,0,0,.8,1.867,3.622,3.622,0,0,0,4.26,0,2.345,2.345,0,0,0,.8-1.87,2.246,2.246,0,0,0-.378-1.278,2.553,2.553,0,0,0-1.078-.891,2.341,2.341,0,0,0,.921-0.808,2.073,2.073,0,0,0,.338-1.17A2.328,2.328,0,0,0,197.99,34.189Zm-0.937,6.947a1.636,1.636,0,0,1-2.113-.012,1.438,1.438,0,0,1-.384-1.05A1.482,1.482,0,0,1,194.947,39a1.377,1.377,0,0,1,1.041-.405,1.392,1.392,0,0,1,1.047.409,1.475,1.475,0,0,1,.4,1.072A1.443,1.443,0,0,1,197.053,41.136Zm-0.147-4.1a1.314,1.314,0,0,1-1.812,0,1.6,1.6,0,0,1,0-1.956,1.3,1.3,0,0,1,1.812.018A1.563,1.563,0,0,1,196.906,37.033Zm9.168,0.24a4.663,4.663,0,0,0-.741-2.813,3.008,3.008,0,0,0-4.391.025,4.8,4.8,0,0,0-.722,2.893v1.548a4.671,4.671,0,0,0,.752,2.829,2.583,2.583,0,0,0,2.184.955,2.549,2.549,0,0,0,2.2-.98,4.878,4.878,0,0,0,.722-2.908V37.273Zm-1.493,1.9a3.64,3.64,0,0,1-.363,1.778,1.154,1.154,0,0,1-1.062.568,1.177,1.177,0,0,1-1.1-.614,3.887,3.887,0,0,1-.35-1.867V37.009a3.5,3.5,0,0,1,.363-1.735,1.314,1.314,0,0,1,2.168.031,3.788,3.788,0,0,1,.344,1.846v2.021Zm11.861,0.068a4.061,4.061,0,0,0-.691-2.515,2.267,2.267,0,0,0-1.907-.906,2.193,2.193,0,0,0-1.788.8L212,35.94h-1.376v9.2h1.492V41.99a2.433,2.433,0,0,0,3.631-.2,3.962,3.962,0,0,0,.7-2.46V39.238Zm-1.889,1.7a1.286,1.286,0,0,1-1.115.574,1.388,1.388,0,0,1-1.327-.774V37.795a1.375,1.375,0,0,1,1.315-.756,1.288,1.288,0,0,1,1.133.584,2.773,2.773,0,0,1,.4,1.579A3.053,3.053,0,0,1,214.553,40.943Zm4.622-7.792h-1.492v9.435h1.492V37.838a1.438,1.438,0,0,1,1.339-.8,1.22,1.22,0,0,1,.876.286,1.315,1.315,0,0,1,.3.974v4.287h1.492V38.243q-0.03-2.426-2.156-2.426a2.338,2.338,0,0,0-1.849.848V33.151Zm9.576,9.435h1.407V35.94h-1.493v4.773a1.475,1.475,0,0,1-1.468.78,1.034,1.034,0,0,1-1.05-1.265V35.94h-1.493v4.306a2.7,2.7,0,0,0,.556,1.83,2.063,2.063,0,0,0,1.637.633,2.314,2.314,0,0,0,1.867-.774Zm-2.088-7.577,1.2,0,1.7-1.861h-1.7Zm5.393-.685V35.94h-1.093v1.106h1.093v3.765a1.6,1.6,0,0,0,1.72,1.9,3.679,3.679,0,0,0,.983-0.141V41.413a2.31,2.31,0,0,1-.523.061,0.7,0.7,0,0,1-.537-0.169,0.819,0.819,0,0,1-.15-0.55v-3.71h1.173V35.94h-1.173V34.324h-1.493Zm6.935,1.615v6.646h1.492V37.77a1.315,1.315,0,0,1,1.272-.731,1.065,1.065,0,0,1,1.2,1.173v4.373h1.492l-0.006-4.558a1.441,1.441,0,0,1,.451-0.716,1.245,1.245,0,0,1,.833-0.273,1.209,1.209,0,0,1,.915.295,1.323,1.323,0,0,1,.276.928v4.324h1.493V38.219a2.673,2.673,0,0,0-.55-1.794,2.072,2.072,0,0,0-1.637-.608,2.357,2.357,0,0,0-2.039,1.02,1.838,1.838,0,0,0-1.824-1.02,2.393,2.393,0,0,0-1.917.817L240.4,35.94h-1.406Zm10.669,3.335a3.588,3.588,0,0,0,.845,2.5,2.882,2.882,0,0,0,2.251.937,3.082,3.082,0,0,0,1.624-.424,2.8,2.8,0,0,0,1.082-1.2,3.965,3.965,0,0,0,.377-1.757l-0.006-.35a3.406,3.406,0,0,0-.906-2.3,2.9,2.9,0,0,0-2.183-.866,3.065,3.065,0,0,0-1.61.421,2.825,2.825,0,0,0-1.087,1.2,3.919,3.919,0,0,0-.387,1.76v0.074Zm1.923-1.68a1.369,1.369,0,0,1,1.161-.581,1.383,1.383,0,0,1,1.176.59,2.641,2.641,0,0,1,.433,1.6,2.954,2.954,0,0,1-.421,1.726,1.363,1.363,0,0,1-1.176.59,1.379,1.379,0,0,1-1.18-.581,2.682,2.682,0,0,1-.423-1.606A2.9,2.9,0,0,1,251.583,37.6Zm1.578-3.879h-0.9l-1.83,1.453,1.185,0,1.094-.872,1.1,0.872,1.186,0Zm0.59-1.56a0.442,0.442,0,0,1-.135.314,0.405,0.405,0,0,1-.3.14,1.47,1.47,0,0,1-.624-0.2,1.488,1.488,0,0,0-.648-0.2,0.846,0.846,0,0,0-.641.3,0.985,0.985,0,0,0-.274.692l0.553,0.148a0.431,0.431,0,0,1,.126-0.3,0.388,0.388,0,0,1,.292-0.135,1.392,1.392,0,0,1,.6.2,1.462,1.462,0,0,0,.678.2,0.856,0.856,0,0,0,.648-0.293,0.96,0.96,0,0,0,.274-0.676Zm4.938,3.784H257.2v6.646h1.492V35.94Zm-1.366-1.164a0.829,0.829,0,0,0,.623.224,0.843,0.843,0,0,0,.627-0.224,0.769,0.769,0,0,0,.221-0.562,0.788,0.788,0,0,0-.221-0.571,0.837,0.837,0,0,0-.627-0.227,0.823,0.823,0,0,0-.623.227,0.79,0.79,0,0,0-.218.571A0.771,0.771,0,0,0,257.323,34.776Zm6.1,1.164v6.646h1.493v-4.73a1.438,1.438,0,0,1,1.345-.817,1.151,1.151,0,0,1,.894.3,1.37,1.37,0,0,1,.273.937v4.306h1.493V38.194q-0.037-2.377-2.113-2.377a2.389,2.389,0,0,0-1.935.891l-0.043-.768h-1.407Zm7.5,5.841a2.329,2.329,0,0,0,1.907.928,2.2,2.2,0,0,0,1.72-.719v0.448a1.541,1.541,0,0,1-.43,1.182,1.65,1.65,0,0,1-1.173.4,2.132,2.132,0,0,1-1.7-.817l-0.707.9a2.541,2.541,0,0,0,1.06.8,3.541,3.541,0,0,0,1.428.3,3.1,3.1,0,0,0,2.2-.755,2.68,2.68,0,0,0,.814-2.064V35.94H274.7l-0.068.669a2.189,2.189,0,0,0-1.787-.792,2.336,2.336,0,0,0-1.932.925,3.883,3.883,0,0,0-.728,2.472A4.01,4.01,0,0,0,270.922,41.781Zm1.155-4.158a1.318,1.318,0,0,1,1.145-.584,1.416,1.416,0,0,1,1.327.756v2.924a1.437,1.437,0,0,1-1.339.774,1.313,1.313,0,0,1-1.133-.574,2.67,2.67,0,0,1-.409-1.575A2.991,2.991,0,0,1,272.077,37.623Zm10.992,4.963v-0.1a3.4,3.4,0,0,1-.252-1.431v-3A2.094,2.094,0,0,0,282.1,36.4a2.789,2.789,0,0,0-1.861-.587,3.46,3.46,0,0,0-1.391.27,2.416,2.416,0,0,0-.986.746,1.654,1.654,0,0,0-.362,1.023H279a0.79,0.79,0,0,1,.326-0.648,1.314,1.314,0,0,1,.835-0.255,1.143,1.143,0,0,1,.878.31,1.162,1.162,0,0,1,.289.826v0.436h-0.915a3.823,3.823,0,0,0-2.257.568,1.886,1.886,0,0,0-.79,1.631A1.827,1.827,0,0,0,278,42.138a2.51,2.51,0,0,0,3.378-.172,2.317,2.317,0,0,0,.172.62h1.524Zm-3.928-1.33a0.87,0.87,0,0,1-.286-0.685,0.934,0.934,0,0,1,.418-0.817,2.2,2.2,0,0,1,1.247-.289h0.8v1.253a1.435,1.435,0,0,1-.586.577,1.7,1.7,0,0,1-.833.215A1.1,1.1,0,0,1,279.141,41.256Zm0.734-8.1h-1.7l1.659,1.861,1.24,0Zm5.331,2.789H283.6l2.334,6.61-0.215.571a1.369,1.369,0,0,1-.451.691,1.456,1.456,0,0,1-.851.206L284.131,44v1.16a2.663,2.663,0,0,0,.719.111,2.148,2.148,0,0,0,2.064-1.677l2.641-7.653h-1.591l-1.351,4.509ZM136.584,56.987a1.505,1.505,0,0,1-.9.224,1.552,1.552,0,0,1-.977-0.286,1.049,1.049,0,0,1-.4-0.814h-1.45a1.922,1.922,0,0,0,.356,1.112,2.4,2.4,0,0,0,1,.811,3.441,3.441,0,0,0,1.456.295,3.166,3.166,0,0,0,1.947-.556,1.731,1.731,0,0,0,.744-1.453,1.635,1.635,0,0,0-.243-0.909,1.959,1.959,0,0,0-.743-0.642A5.538,5.538,0,0,0,136,54.309a3.958,3.958,0,0,1-1.167-.384,0.6,0.6,0,0,1-.289-0.534,0.716,0.716,0,0,1,.31-0.608,1.324,1.324,0,0,1,.8-0.227,1.223,1.223,0,0,1,.847.286,0.92,0.92,0,0,1,.32.716h1.492a1.869,1.869,0,0,0-.734-1.53,2.98,2.98,0,0,0-1.925-.59,2.865,2.865,0,0,0-1.843.577,1.77,1.77,0,0,0-.725,1.437,1.7,1.7,0,0,0,1.118,1.566,5.609,5.609,0,0,0,1.272.405,3.5,3.5,0,0,1,1.09.368,0.677,0.677,0,0,1,.329.608A0.694,0.694,0,0,1,136.584,56.987Zm7.5,1.014a2.681,2.681,0,0,0,1.066-.924l-0.8-.768a2.021,2.021,0,0,1-1.67.829,1.652,1.652,0,0,1-1.214-.479,2,2,0,0,1-.549-1.3h4.342v-0.6a3.659,3.659,0,0,0-.74-2.451,2.607,2.607,0,0,0-2.1-.866,2.847,2.847,0,0,0-1.548.436,2.922,2.922,0,0,0-1.078,1.219,3.987,3.987,0,0,0-.384,1.778v0.184a3.244,3.244,0,0,0,.881,2.38,3.09,3.09,0,0,0,2.3.894A3.336,3.336,0,0,0,144.081,58Zm-0.7-4.981a1.818,1.818,0,0,1,.4,1.133v0.111h-2.844a2.238,2.238,0,0,1,.482-1.2A1.388,1.388,0,0,1,143.378,53.019Zm0.264-4.186a0.645,0.645,0,0,1-.166.464,0.528,0.528,0,0,1-.4.175,1.788,1.788,0,0,1-.814-0.276,1.813,1.813,0,0,0-.844-0.277,1.224,1.224,0,0,0-.974.461,1.7,1.7,0,0,0-.39,1.136l0.915,0.049a0.643,0.643,0,0,1,.163-0.458,0.519,0.519,0,0,1,.4-0.175,1.081,1.081,0,0,1,.292.037,2.466,2.466,0,0,1,.454.221,2.62,2.62,0,0,0,.5.236,1.462,1.462,0,0,0,.415.052,1.242,1.242,0,0,0,.979-0.448,1.651,1.651,0,0,0,.39-1.124Zm11.394,9.373V58.1a3.4,3.4,0,0,1-.252-1.431v-3a2.09,2.09,0,0,0-.712-1.649,2.789,2.789,0,0,0-1.861-.587,3.469,3.469,0,0,0-1.392.27,2.412,2.412,0,0,0-.985.746,1.655,1.655,0,0,0-.363,1.023h1.493a0.789,0.789,0,0,1,.325-0.648,1.317,1.317,0,0,1,.836-0.255,1.143,1.143,0,0,1,.878.31,1.162,1.162,0,0,1,.289.826v0.436h-0.915a3.827,3.827,0,0,0-2.258.568,1.887,1.887,0,0,0-.789,1.631,1.827,1.827,0,0,0,.633,1.413,2.511,2.511,0,0,0,3.378-.172,2.28,2.28,0,0,0,.172.62h1.523Zm-3.928-1.33a0.873,0.873,0,0,1-.285-0.685,0.936,0.936,0,0,1,.417-0.817,2.2,2.2,0,0,1,1.247-.289h0.805v1.253a1.437,1.437,0,0,1-.587.577,1.7,1.7,0,0,1-.832.215A1.106,1.106,0,0,1,151.108,56.877Zm1.711-6.41V50.043a1.159,1.159,0,0,0,.682-0.3,0.826,0.826,0,0,0,.239-0.608,0.97,0.97,0,0,0-.525-0.86,3.058,3.058,0,0,0-1.563-.319l-0.043.755q0.921,0,.921.442a0.3,0.3,0,0,1-.2.3,2.138,2.138,0,0,1-.648.117l0.043,0.9h1.094Zm3.507,1.093v6.646h1.493v-4.73a1.438,1.438,0,0,1,1.345-.817,1.152,1.152,0,0,1,.894.3,1.37,1.37,0,0,1,.273.937v4.306h1.493V53.815q-0.038-2.377-2.113-2.377a2.389,2.389,0,0,0-1.935.891l-0.043-.768h-1.407Zm8.489-2.789h-1.493v9.435h1.493V53.459a1.438,1.438,0,0,1,1.339-.8,1.216,1.216,0,0,1,.875.286,1.311,1.311,0,0,1,.3.974v4.287h1.493V53.864q-0.031-2.426-2.156-2.426a2.335,2.335,0,0,0-1.849.848V48.772Zm10.116,0h-1.492v9.435h1.492V53.459a1.439,1.439,0,0,1,1.34-.8,1.219,1.219,0,0,1,.875.286,1.315,1.315,0,0,1,.3.974v4.287h1.492V53.864q-0.03-2.426-2.156-2.426a2.338,2.338,0,0,0-1.849.848V48.772ZM186.8,51.014l-0.013.467a1.031,1.031,0,0,1-.23.67,1.016,1.016,0,0,1-.642.246V51.561h-1.492v4.773a1.476,1.476,0,0,1-1.469.78,1.034,1.034,0,0,1-1.05-1.265V51.561h-1.492v4.306a2.7,2.7,0,0,0,.555,1.831,2.065,2.065,0,0,0,1.637.633,2.317,2.317,0,0,0,1.868-.774l0.037,0.651h1.406V53.188a2,2,0,0,0,1.434-.574,2.408,2.408,0,0,0,.44-1.6H186.8Zm1.142,3.882a3.573,3.573,0,0,0,.848,2.506,2.891,2.891,0,0,0,2.242.928,3.1,3.1,0,0,0,1.624-.424,2.783,2.783,0,0,0,1.088-1.2,3.965,3.965,0,0,0,.377-1.757V54.773a3.919,3.919,0,0,0-.4-1.738,1.533,1.533,0,0,0,.9-0.777,3.1,3.1,0,0,0,.27-1.373h-1.025a2.648,2.648,0,0,1-.148,1.026,0.8,0.8,0,0,1-.473.442,2.9,2.9,0,0,0-2.23-.915,3.064,3.064,0,0,0-1.609.421,2.813,2.813,0,0,0-1.084,1.2,3.934,3.934,0,0,0-.384,1.766V54.9Zm1.917-1.68a1.368,1.368,0,0,1,1.16-.581,1.391,1.391,0,0,1,1.177.581,2.64,2.64,0,0,1,.433,1.606,2.961,2.961,0,0,1-.421,1.726,1.364,1.364,0,0,1-1.176.59,1.379,1.379,0,0,1-1.18-.581,2.682,2.682,0,0,1-.423-1.606A2.9,2.9,0,0,1,189.858,53.216Zm1.713-2.749V50.043a1.159,1.159,0,0,0,.682-0.3,0.823,0.823,0,0,0,.24-0.608,0.969,0.969,0,0,0-.526-0.86,3.058,3.058,0,0,0-1.563-.319l-0.043.755q0.921,0,.922.442a0.3,0.3,0,0,1-.2.3,2.138,2.138,0,0,1-.648.117l0.043,0.9h1.093Zm3.888,1.093v6.646h1.493v-4.73a1.438,1.438,0,0,1,1.345-.817,1.15,1.15,0,0,1,.894.3,1.37,1.37,0,0,1,.273.937v4.306h1.493V53.815q-0.038-2.377-2.113-2.377a2.389,2.389,0,0,0-1.935.891l-0.043-.768h-1.407Zm7.5,5.841a2.331,2.331,0,0,0,1.907.928,2.2,2.2,0,0,0,1.72-.719v0.448a1.541,1.541,0,0,1-.43,1.182,1.647,1.647,0,0,1-1.173.4,2.133,2.133,0,0,1-1.695-.817l-0.707.9a2.54,2.54,0,0,0,1.06.8,3.541,3.541,0,0,0,1.428.3,3.1,3.1,0,0,0,2.2-.755A2.677,2.677,0,0,0,208.076,58V51.561h-1.345l-0.068.669a2.189,2.189,0,0,0-1.787-.792,2.336,2.336,0,0,0-1.932.924,3.889,3.889,0,0,0-.728,2.472A4.016,4.016,0,0,0,202.956,57.4Zm1.155-4.158a1.318,1.318,0,0,1,1.146-.584,1.414,1.414,0,0,1,1.326.756v2.924a1.436,1.436,0,0,1-1.339.774,1.313,1.313,0,0,1-1.133-.574,2.678,2.678,0,0,1-.408-1.575A3,3,0,0,1,204.111,53.244Zm9.776-1.683H212.24l2.027,3.274-2.1,3.372h1.658l1.321-2.273,1.327,2.273h1.646l-2.1-3.372,2.033-3.274h-1.658l-1.266,2.187Zm10.675,6.646V58.1a3.4,3.4,0,0,1-.252-1.431v-3a2.093,2.093,0,0,0-.712-1.649,2.789,2.789,0,0,0-1.861-.587,3.469,3.469,0,0,0-1.392.27,2.412,2.412,0,0,0-.985.746A1.655,1.655,0,0,0,219,53.477h1.493a0.789,0.789,0,0,1,.325-0.648,1.317,1.317,0,0,1,.836-0.255,1.144,1.144,0,0,1,.878.31,1.166,1.166,0,0,1,.289.826v0.436H221.9a3.826,3.826,0,0,0-2.257.568,1.887,1.887,0,0,0-.789,1.631,1.827,1.827,0,0,0,.633,1.413,2.511,2.511,0,0,0,3.378-.172,2.28,2.28,0,0,0,.172.62h1.523Zm-3.928-1.33a0.874,0.874,0,0,1-.286-0.685,0.937,0.937,0,0,1,.418-0.817,2.2,2.2,0,0,1,1.247-.289h0.805v1.253a1.437,1.437,0,0,1-.587.577,1.7,1.7,0,0,1-.832.215A1.106,1.106,0,0,1,220.634,56.877ZM219.5,50.618l1.308,0,0.977-.872,0.976,0.872,1.3,0-1.788-1.533h-0.989Zm4.1-.971,0.964,0,1.327-1.64h-1.364Zm6.333,8.56h1.406V51.561h-1.492v4.773a1.475,1.475,0,0,1-1.468.78,1.035,1.035,0,0,1-1.051-1.265V51.561H225.84v4.306A2.69,2.69,0,0,0,226.4,57.7a2.062,2.062,0,0,0,1.637.633,2.315,2.315,0,0,0,1.867-.774Zm12.678-8.562H241.54V48.772h-1.493v0.872h-1.542v1.044h1.542v1.486a2.168,2.168,0,0,0-1.707-.737,2.284,2.284,0,0,0-1.911.931,3.951,3.951,0,0,0-.712,2.466,4.09,4.09,0,0,0,.722,2.555,2.268,2.268,0,0,0,1.888.94,2.2,2.2,0,0,0,1.788-.811l0.073,0.688h1.352V50.688h1.075V49.644Zm-5.013,3.59a1.276,1.276,0,0,1,1.118-.574,1.387,1.387,0,0,1,1.327.8V56.3a1.409,1.409,0,0,1-1.339.817,1.266,1.266,0,0,1-1.109-.568,2.767,2.767,0,0,1-.39-1.582A3.082,3.082,0,0,1,237.6,53.234ZM248.164,58a2.681,2.681,0,0,0,1.066-.924l-0.8-.768a2.02,2.02,0,0,1-1.67.829,1.648,1.648,0,0,1-1.213-.479,1.993,1.993,0,0,1-.55-1.3h4.342v-0.6a3.659,3.659,0,0,0-.74-2.451,2.607,2.607,0,0,0-2.1-.866,2.849,2.849,0,0,0-1.548.436,2.922,2.922,0,0,0-1.078,1.219,3.987,3.987,0,0,0-.384,1.778v0.184a3.244,3.244,0,0,0,.881,2.38,3.09,3.09,0,0,0,2.3.894A3.333,3.333,0,0,0,248.164,58Zm-0.7-4.981a1.818,1.818,0,0,1,.4,1.133v0.111h-2.844a2.231,2.231,0,0,1,.483-1.2A1.387,1.387,0,0,1,247.461,53.019Zm-3.36-2.4,1.308,0,0.977-.872,0.977,0.872,1.3,0-1.787-1.533h-0.989Zm4.1-.971,0.965,0,1.326-1.64h-1.363Zm2.267,1.913v6.646h1.492v-4.73a1.44,1.44,0,0,1,1.346-.817,1.149,1.149,0,0,1,.893.3,1.365,1.365,0,0,1,.274.937v4.306h1.492V53.815q-0.036-2.377-2.113-2.377a2.392,2.392,0,0,0-1.935.891l-0.043-.768h-1.406Zm13.568,5.427a1.505,1.505,0,0,1-.9.224,1.552,1.552,0,0,1-.977-0.286,1.049,1.049,0,0,1-.4-0.814h-1.45a1.922,1.922,0,0,0,.356,1.112,2.4,2.4,0,0,0,1,.811,3.441,3.441,0,0,0,1.456.295,3.166,3.166,0,0,0,1.947-.556,1.731,1.731,0,0,0,.744-1.453,1.635,1.635,0,0,0-.243-0.909,1.959,1.959,0,0,0-.743-0.642,5.538,5.538,0,0,0-1.379-.461,3.958,3.958,0,0,1-1.167-.384,0.6,0.6,0,0,1-.289-0.534,0.716,0.716,0,0,1,.31-0.608,1.324,1.324,0,0,1,.8-0.227,1.223,1.223,0,0,1,.847.286,0.92,0.92,0,0,1,.32.716h1.492a1.869,1.869,0,0,0-.734-1.53,2.98,2.98,0,0,0-1.925-.59,2.865,2.865,0,0,0-1.843.577,1.77,1.77,0,0,0-.725,1.437,1.7,1.7,0,0,0,1.118,1.566,5.609,5.609,0,0,0,1.272.405,3.5,3.5,0,0,1,1.09.368,0.677,0.677,0,0,1,.329.608A0.694,0.694,0,0,1,264.039,56.987Zm9.429-5.973-0.012.467a1.036,1.036,0,0,1-.231.67,1.015,1.015,0,0,1-.641.246V51.561h-1.493v4.773a1.475,1.475,0,0,1-1.468.78,1.034,1.034,0,0,1-1.05-1.265V51.561H267.08v4.306a2.69,2.69,0,0,0,.556,1.831,2.062,2.062,0,0,0,1.637.633,2.315,2.315,0,0,0,1.867-.774l0.037,0.651h1.407V53.188a2,2,0,0,0,1.434-.574,2.414,2.414,0,0,0,.439-1.6h-0.989Zm-4.324-.261,1.2,0,1.7-1.861h-1.7Zm7.349,5.854a2.724,2.724,0,0,1-.39-1.612v-0.24a2.68,2.68,0,0,1,.4-1.594,1.314,1.314,0,0,1,1.118-.525,1.256,1.256,0,0,1,.931.369,1.368,1.368,0,0,1,.39.94h1.407a2.476,2.476,0,0,0-.784-1.815,2.728,2.728,0,0,0-1.931-.691,2.81,2.81,0,0,0-2.212.912,3.524,3.524,0,0,0-.81,2.429v0.154a3.584,3.584,0,0,0,.816,2.494,2.835,2.835,0,0,0,2.212.9,2.931,2.931,0,0,0,1.339-.313,2.546,2.546,0,0,0,.983-0.851,2.2,2.2,0,0,0,.387-1.158h-1.407a1.113,1.113,0,0,1-.393.8,1.35,1.35,0,0,1-.928.326A1.313,1.313,0,0,1,276.493,56.607Zm12.245,1.6h1.726l-2.733-3.876,2.469-2.77h-1.794l-1.836,2.07-0.467.584V48.772H284.61v9.435H286.1V56.038l0.663-.682Zm3.907-9.435h-1.493v9.435h1.493V53.459a1.437,1.437,0,0,1,1.339-.8,1.218,1.218,0,0,1,.875.286,1.311,1.311,0,0,1,.3.974v4.287h1.492V53.864q-0.03-2.426-2.156-2.426a2.335,2.335,0,0,0-1.848.848V48.772Zm5.233,6.124a3.583,3.583,0,0,0,.845,2.5,2.882,2.882,0,0,0,2.251.937,3.085,3.085,0,0,0,1.624-.424,2.786,2.786,0,0,0,1.081-1.2,3.951,3.951,0,0,0,.378-1.757l-0.006-.35a3.406,3.406,0,0,0-.906-2.3,2.9,2.9,0,0,0-2.184-.866,3.064,3.064,0,0,0-1.609.421,2.825,2.825,0,0,0-1.087,1.2,3.919,3.919,0,0,0-.387,1.76V54.9Zm1.923-1.68a1.368,1.368,0,0,1,1.16-.581,1.384,1.384,0,0,1,1.177.59,2.648,2.648,0,0,1,.433,1.6,2.961,2.961,0,0,1-.421,1.726,1.364,1.364,0,0,1-1.176.59,1.379,1.379,0,0,1-1.18-.581,2.682,2.682,0,0,1-.423-1.606A2.9,2.9,0,0,1,299.8,53.216Zm1.689-2.749V50.043a1.159,1.159,0,0,0,.682-0.3,0.826,0.826,0,0,0,.239-0.608,0.97,0.97,0,0,0-.525-0.86,3.058,3.058,0,0,0-1.563-.319l-0.043.755q0.921,0,.921.442a0.3,0.3,0,0,1-.2.3,2.138,2.138,0,0,1-.648.117l0.043,0.9h1.094ZM309.742,58a2.688,2.688,0,0,0,1.066-.924L310,56.309a2.021,2.021,0,0,1-1.671.829,1.652,1.652,0,0,1-1.213-.479,2,2,0,0,1-.55-1.3h4.343v-0.6a3.665,3.665,0,0,0-.74-2.451,2.61,2.61,0,0,0-2.1-.866,2.852,2.852,0,0,0-1.548.436,2.928,2.928,0,0,0-1.078,1.219,4,4,0,0,0-.383,1.778v0.184a3.24,3.24,0,0,0,.881,2.38,3.088,3.088,0,0,0,2.3.894A3.337,3.337,0,0,0,309.742,58Zm-0.7-4.981a1.818,1.818,0,0,1,.4,1.133v0.111h-2.844a2.23,2.23,0,0,1,.482-1.2A1.388,1.388,0,0,1,309.039,53.019Z"],["static-attr","transform","translate(-67.313 -21.594)"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","vng-age-rating-5"],["static-attr","d","M81.252,59.693h5.515V30.471H82.322a5.413,5.413,0,0,1-1.914,2.922,5.221,5.221,0,0,1-3.19.988H76.766V39.69h0.617a8.693,8.693,0,0,0,2.161-.268,4.07,4.07,0,0,0,1.708-.844V59.693Zm23.933-17.9a5.781,5.781,0,0,0,.762-3.087V36.645a6.42,6.42,0,0,0-2.038-5.062,8.16,8.16,0,0,0-5.618-1.811,9.536,9.536,0,0,0-3.149.494,7.059,7.059,0,0,0-2.428,1.4,6.2,6.2,0,0,0-1.564,2.2,7.3,7.3,0,0,0-.556,2.9v1.893a7.383,7.383,0,0,0,.885,3.828,6.413,6.413,0,0,0,2.614,2.387,6.466,6.466,0,0,0-2.881,2.161,5.539,5.539,0,0,0-.988,3.313v2.428a7.17,7.17,0,0,0,2.14,5.577,8.585,8.585,0,0,0,6.009,1.955,8.337,8.337,0,0,0,5.926-2.037,7.209,7.209,0,0,0,2.182-5.536v-2.3a7.828,7.828,0,0,0-.906-4.054A6.527,6.527,0,0,0,102.7,43.93,6.192,6.192,0,0,0,105.185,41.789Zm-9.2-5.268q0-2.922,2.3-2.922t2.3,2.963v2.675a4.337,4.337,0,0,1-.37,1.935,3.028,3.028,0,0,1-1.194,1.235l-0.453-.165a4.96,4.96,0,0,1-1.955-1.194,2.825,2.825,0,0,1-.638-1.976V36.521Zm4.9,16.546q0,3.087-2.469,3.087-2.593,0-2.593-3.128v-3.21a4.659,4.659,0,0,1,.412-2.12,3.2,3.2,0,0,1,1.441-1.338l0.494,0.206a5.213,5.213,0,0,1,2.119,1.276,3.24,3.24,0,0,1,.6,2.14v3.087Z"],["static-attr","transform","translate(-67.313 -21.594)"],["flush-element"],["close-element"],["text","\\n    "],["open-element","path",[]],["static-attr","class","vng-age-rating-6"],["static-attr","d","M120.012,34.414H116.2v-3.9h-3.053v3.9H109.4v2.908h3.751v4.217H116.2V37.322h3.81V34.414Z"],["static-attr","transform","translate(-67.313 -21.594)"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -21573,11 +21640,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(504)) && r.__esModule ? r : {
+                i = (r = n(506)) && r.__esModule ? r : {
                     default: r
                 };
-            n(505);
-            var a = n(506);
+            n(507);
+            var a = n(508);
             var s = o.Ember.Component.extend({
                 classNames: ["remedies-received-component"],
                 layout: i.default,
@@ -21631,8 +21698,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "279dm2j7",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\index.js\\" "],["text","\\n"],["open-element","span",[]],["static-attr","class","remedy-received-notification-title"],["flush-element"],["append",["unknown",["remedyReceivedNotificationTitle"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","remedy-received-notification-description-top"],["flush-element"],["append",["helper",["sanitize"],[["get",["remedyFeedbackTopText"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["didReceiveRemedies"]]],null,1],["open-element","span",[]],["static-attr","class","remedy-received-notification-description-bottom"],["flush-element"],["append",["unknown",["remedyFeedbackBottomText"]],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["remedy-reward-card"],null,[["remedyRewardType","rewardAmount"],[["get",["remedy","remedyRewardType"]],["get",["remedy","rewardAmount"]]]]],false],["text","\\n"]],"locals":["remedy"]},{"statements":[["text","  "],["open-element","span",[]],["static-attr","class","remedy-received-notification-description-middle"],["flush-element"],["append",["unknown",["tra","remedy_feedback_rewards_received_description"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","remedy-rewards-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["remedies"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Nqzn9oc5",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\index.js\\" "],["text","\\n"],["open-element","span",[]],["static-attr","class","remedy-received-notification-title"],["flush-element"],["append",["unknown",["remedyReceivedNotificationTitle"]],false],["close-element"],["text","\\n"],["open-element","span",[]],["static-attr","class","remedy-received-notification-description-top"],["flush-element"],["append",["helper",["sanitize"],[["get",["remedyFeedbackTopText"]]],null],false],["close-element"],["text","\\n"],["block",["if"],[["get",["didReceiveRemedies"]]],null,1],["open-element","span",[]],["static-attr","class","remedy-received-notification-description-bottom"],["flush-element"],["append",["unknown",["remedyFeedbackBottomText"]],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["remedy-reward-card"],null,[["remedyRewardType","rewardAmount"],[["get",["remedy","remedyRewardType"]],["get",["remedy","rewardAmount"]]]]],false],["text","\\n"]],"locals":["remedy"]},{"statements":[["text","  "],["open-element","span",[]],["static-attr","class","remedy-received-notification-description-middle"],["flush-element"],["append",["unknown",["tra","remedy_feedback_rewards_received_description"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","remedy-rewards-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["remedies"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -21664,13 +21731,13 @@
             t.ARAM_REROLL_REFUND_REWARD_TYPE = p;
             const u = "LP_CONSOLATION";
             t.LP_CONSOLATION_REWARD_TYPE = u;
-            const m = n(507);
+            const m = n(509);
             t.ARAM_REROLL_ICON_PATH = m;
-            const g = n(508);
+            const g = n(510);
             t.XP_BOOST_ICON_PATH = g;
-            const h = n(509);
+            const h = n(511);
             t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = h;
-            const f = n(510);
+            const f = n(512);
             t.LP_CONSOLATION_REMEDY_ICON_PATH = f;
             const _ = {};
             t.REMEDY_ICON_MAP = _, _[c] = g, _[d] = h, _[p] = m, _[u] = f
@@ -21692,11 +21759,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(506),
-                a = (r = n(512)) && r.__esModule ? r : {
+                i = n(508),
+                a = (r = n(514)) && r.__esModule ? r : {
                     default: r
                 };
-            n(513);
+            n(515);
             const s = {};
             s[i.XP_BOOSTED_GAMES_REWARD_TYPE] = "xp_boosted_games_reward_description", s[i.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE] = "autofill_protected_games_reward_description", s[i.ARAM_REROLL_REFUND_REWARD_TYPE] = "aram_reroll_refund_reward_description", s[i.LP_CONSOLATION_REWARD_TYPE] = "lp_consolation_reward_description";
             var l = o.Ember.Component.extend({
@@ -21718,8 +21785,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "vXPIiYU4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\remedy-reward-card-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\remedy-reward-card-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\remedy-reward-card-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","remedy-reward-container"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","remedy-reward-icon"],["dynamic-attr","src",["unknown",["remedyIconPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","span",[]],["static-attr","class","remedy-reward-description"],["flush-element"],["append",["unknown",["remedyRewardDescription"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "PMBZjGxh",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\remedy-reward-card-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\remedy-reward-card-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\remedies-received-component\\\\remedy-reward-card-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","remedy-reward-container"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","remedy-reward-icon"],["dynamic-attr","src",["unknown",["remedyIconPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","span",[]],["static-attr","class","remedy-reward-description"],["flush-element"],["append",["unknown",["remedyRewardDescription"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -21731,11 +21798,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(515),
-                a = (r = n(516)) && r.__esModule ? r : {
+                i = n(517),
+                a = (r = n(518)) && r.__esModule ? r : {
                     default: r
                 };
-            n(517);
+            n(519);
             var s = o.Ember.Component.extend({
                 classNames: ["credibility-behavior-warning-component"],
                 layout: a.default,
@@ -21788,8 +21855,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "RXe7blq2",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","behavior-warning-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-title-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","behavior-warning-title-flair"],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","behavior-warning-title"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","behavior-warning-title-flair behavior-warning-title-flair-flipped"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-description"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_description"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-description"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_description_2"]],true],["close-element"],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playToWinOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_to_win_option_title"]],["get",["tra","behavior_warning_play_to_win_option_description"]]]]],false],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playFairOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_fair_option_title"]],["get",["tra","behavior_warning_play_fair_option_description"]]]]],false],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playWithRespectOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_with_respect_option_title"]],["get",["tra","behavior_warning_play_with_respect_option_description"]]]]],false],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playSomethingElseOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_something_else_option_title"]],["get",["tra","behavior_warning_play_something_else_option_description"]]]]],false],["text","\\n  "],["open-element","span",[]],["static-attr","class","credibility_behavior_warning_acknowledge_label"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_acknowledge_label"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","behavior-warning-confirmation-input"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["type","value","maxlength","placeholder","key-up"],["text",["get",["confirmationInputText"]],"70",["get",["tra","credibility_behavior_i_understand"]],"updatedConfirmationText"]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "SgpI7O2Y",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","behavior-warning-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-title-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","behavior-warning-title-flair"],["flush-element"],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","behavior-warning-title"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","behavior-warning-title-flair behavior-warning-title-flair-flipped"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-description"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_description"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-description"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_description_2"]],true],["close-element"],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playToWinOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_to_win_option_title"]],["get",["tra","behavior_warning_play_to_win_option_description"]]]]],false],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playFairOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_fair_option_title"]],["get",["tra","behavior_warning_play_fair_option_description"]]]]],false],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playWithRespectOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_with_respect_option_title"]],["get",["tra","behavior_warning_play_with_respect_option_description"]]]]],false],["text","\\n  "],["append",["helper",["credibility-behavior-warning-option"],null,[["optionKey","onClickHandler","optionTitle","optionDescription"],[["get",["playSomethingElseOptionKey"]],["helper",["action"],[["get",[null]],"checkBehaviorWarningOption"],null],["get",["tra","behavior_warning_play_something_else_option_title"]],["get",["tra","behavior_warning_play_something_else_option_description"]]]]],false],["text","\\n  "],["open-element","span",[]],["static-attr","class","credibility_behavior_warning_acknowledge_label"],["flush-element"],["append",["unknown",["tra","credibility_behavior_warning_acknowledge_label"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-flat-input",[]],["static-attr","class","behavior-warning-confirmation-input"],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["type","value","maxlength","placeholder","key-up"],["text",["get",["confirmationInputText"]],"70",["get",["tra","credibility_behavior_i_understand"]],"updatedConfirmationText"]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -21801,10 +21868,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(519)) && r.__esModule ? r : {
+                i = (r = n(521)) && r.__esModule ? r : {
                     default: r
                 };
-            n(520);
+            n(522);
             var a = o.Ember.Component.extend({
                 classNames: ["credibility-behavior-warning-option"],
                 layout: i.default,
@@ -21821,8 +21888,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "xMP8C/+q",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\credibility-behavior-warning-option\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\credibility-behavior-warning-option\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\Releases_16_3\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\credibility-behavior-warning-option\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","behavior-warning-option-container"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"updateIsCheckBoxChecked"],null],null],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","behavior-warning-option-checkbox"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"updateIsCheckBoxChecked"],null],null],["flush-element"],["text","\\n    "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","checked",["unknown",["isCheckboxChecked"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"updateIsCheckBoxChecked"],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-option-text"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","behavior-warning-option-inner-container"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","behavior-warning-option-title"],["flush-element"],["append",["unknown",["optionTitle"]],false],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","behavior-warning-option-description"],["flush-element"],["append",["unknown",["optionDescription"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "1A8k0NGQ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\credibility-behavior-warning-option\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\credibility-behavior-warning-option\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\lib\\\\player-behavior\\\\addon\\\\credibility-behavior-warning\\\\credibility-behavior-warning-option\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","behavior-warning-option-container"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"updateIsCheckBoxChecked"],null],null],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","behavior-warning-option-checkbox"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"updateIsCheckBoxChecked"],null],null],["flush-element"],["text","\\n    "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","checked",["unknown",["isCheckboxChecked"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"updateIsCheckBoxChecked"],null],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","behavior-warning-option-text"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","behavior-warning-option-inner-container"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","behavior-warning-option-title"],["flush-element"],["append",["unknown",["optionTitle"]],false],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","behavior-warning-option-description"],["flush-element"],["append",["unknown",["optionDescription"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -21830,7 +21897,7 @@
             n.r(t)
         }, (e, t, n) => {
             "use strict";
-            n(522), n(523), n(524), n(527), n(529), n(542), n(544), n(547), n(548), n(550), n(551), n(553), n(554), n(556), n(557), n(558), n(560), n(561), n(563), n(564)
+            n(524), n(525), n(526), n(529), n(531), n(544), n(546), n(549), n(550), n(552), n(553), n(555), n(556), n(558), n(559), n(560), n(562), n(563), n(565), n(566)
         }, (e, t, n) => {
             "use strict";
             const r = n(1);
@@ -21932,7 +21999,7 @@
                     computed: i
                 } = o;
             o.defineElement("lol-player-notifications-button", {
-                styles: n(525),
+                styles: n(527),
                 computed: {
                     notifications: i.resource("/player-notifications/v1/notifications"),
                     toastNotifications: "notifications.reduce(reduceToasts, [])",
@@ -22014,7 +22081,7 @@
             var r = n(201),
                 o = n(202),
                 i = n(205),
-                a = n(526),
+                a = n(528),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "/* notifications button styles */\n.player-notifications-button {\n  position: relative;\n  cursor: pointer;\n  width: 18px;\n  height: 18px;\n}\n.player-notifications-button-icon {\n  outline: none;\n  border: none;\n  background: none;\n  padding: 0;\n  width: 18px;\n  height: 18px;\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #c8aa6e;\n  -webkit-mask-size: contain;\n}\n.player-notifications-button-icon:hover {\n  background-color: #f0e6d2;\n}\n.player-notifications-button-icon:active,\n.player-notifications-button.open .player-notifications-button-icon {\n  background-color: #785a28;\n}\n.player-notifications-button.disabled .player-notifications-button-icon {\n  background-color: #5c5b57;\n}\n.player-notifications-button.disabled {\n  pointer-events: none;\n}\n.player-notifications-button-unread-pip {\n  position: absolute;\n  top: 1px;\n  right: -1px;\n  width: 8px;\n  height: 8px;\n  box-sizing: border-box;\n  border-radius: 50%;\n  flex-shrink: 0;\n  background: #010a13;\n  box-shadow: 0 0 0 2px #010a13;\n  background-color: #c89b3c;\n}\n", "", {
@@ -22035,7 +22102,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-default-toast", {
-                styles: n(528)
+                styles: n(530)
             })
         }, (e, t, n) => {
             var r = n(201),
@@ -22050,7 +22117,7 @@
             }]), e.exports = o
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(530)) && r.__esModule ? r : {
+            var r, o = (r = n(532)) && r.__esModule ? r : {
                 default: r
             };
             const i = n(1),
@@ -22059,7 +22126,7 @@
                     tra: s
                 } = i;
             a.defineElement("lol-player-notifications-item", {
-                styles: n(540),
+                styles: n(542),
                 dismiss: function() {
                     Object.prototype.hasOwnProperty.call(this.notification, "dismissible") && !this.notification.dismissible || (this.notification.state = "dismissed", i.ajax.delete("/player-notifications/v1/notifications/" + this.notification.id).then((() => {
                         i.playerNotificationsPrivateApi.dispatch("remove", this.notification)
@@ -22091,15 +22158,15 @@
             }), t.default = function(e) {
                 return m.get(e) || e
             };
-            var r = u(n(531)),
-                o = u(n(532)),
-                i = u(n(533)),
-                a = u(n(534)),
-                s = u(n(535)),
-                l = u(n(536)),
-                c = u(n(537)),
-                d = u(n(538)),
-                p = u(n(539));
+            var r = u(n(533)),
+                o = u(n(534)),
+                i = u(n(535)),
+                a = u(n(536)),
+                s = u(n(537)),
+                l = u(n(538)),
+                c = u(n(539)),
+                d = u(n(540)),
+                p = u(n(541));
 
             function u(e) {
                 return e && e.__esModule ? e : {
@@ -22148,7 +22215,7 @@
             var r = n(201),
                 o = n(202),
                 i = n(205),
-                a = n(541),
+                a = n(543),
                 s = o(r),
                 l = i(a);
             s.push([e.id, ".player-notifications-item {\n  display: flex;\n  padding: 12px 18px 10px;\n  border-bottom: thin solid #1e282d;\n}\n.player-notifications-item:hover {\n  background: #1e2328;\n}\n.player-notifications-item:hover .text {\n  color: #f0e6d2;\n}\n.player-notifications-item:hover .time {\n  color: #a09b8c;\n}\n.player-notifications-item-image {\n  width: 56px;\n  height: 56px;\n  flex: 0 0 auto;\n  margin: 0 18px 0 0;\n}\n.player-notifications-item-image:lang(ar-ae) {\n  margin: 0 0 0 18px;\n}\n.player-notifications-item-text {\n  display: flex;\n  flex-direction: column;\n  flex: 1 1 auto;\n  overflow: hidden;\n}\n.player-notifications-item-dismiss-button {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n}\n.player-notifications-item-dismiss-button {\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #cdbe91;\n  -webkit-mask-size: contain;\n  width: 18px;\n  height: 18px;\n  flex: 0 0 auto;\n}\n.player-notifications-item-dismiss-button:hover {\n  background-color: #f0e6d2;\n}\n.player-notifications-item-dismiss-button:active {\n  background-color: #463714;\n}\n.text {\n  color: #a09b8c;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\nh6.unread,\nh6.toast {\n  color: #c89b3c;\n}\n.text-unread,\n.text-toast {\n  color: #f0e6d2;\n}\n.time {\n  color: #3c3c41;\n}\n.time-unread,\n.time-toast {\n  color: #a09b8c;\n}\n", "", {
@@ -22170,7 +22237,7 @@
                 } = r,
                 i = /^(\/|https?:\/\/)/;
             o.defineElement("lol-player-notifications-toast", {
-                styles: n(543),
+                styles: n(545),
                 attached: function() {
                     const e = this.querySelector(".player-notifications-toast-container");
                     let t = this.notification.backgroundUrl;
@@ -22202,7 +22269,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-tray", {
-                styles: n(545),
+                styles: n(547),
                 dismissAll: function() {
                     r.modalManager.add({
                         type: "DialogConfirm",
@@ -22234,7 +22301,7 @@
             var r = n(201),
                 o = n(202),
                 i = n(205),
-                a = n(546),
+                a = n(548),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "lol-player-notifications-tray {\n  display: block;\n  width: 414px;\n  height: 402px;\n}\n.notifications-tray {\n  display: flex;\n  flex-direction: column;\n}\n.notifications-tray-header {\n  display: flex;\n  align-items: center;\n  height: 46px;\n  padding: 0 18px;\n  border-bottom: thin solid #463714;\n}\n.notifications-tray-title {\n  flex-grow: 1;\n}\n.notifications-dismiss-all-btn {\n  width: 16px;\n  height: 16px;\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #cdbe91;\n  -webkit-mask-size: contain;\n  cursor: pointer;\n}\n.notifications-dismiss-all-btn:hover {\n  background-color: #f0e6d2;\n}\n.notifications-dismiss-all-btn:active {\n  background-color: #463714;\n}\n.notifications-dismiss-all-btn:lang(ar-ae) {\n  transform: scaleX(-1);\n}\n.notifications-tray-body {\n  flex-grow: 1;\n  height: 355px;\n}\n", "", {
@@ -22264,7 +22331,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-esports-toast", {
-                styles: n(549)
+                styles: n(551)
             })
         }, (e, t, n) => {
             var r = n(201),
@@ -22288,14 +22355,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(530)) && r.__esModule ? r : {
+            var r, o = (r = n(532)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-esports-tft-toast", {
-                styles: n(552),
+                styles: n(554),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -22330,7 +22397,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-merch-toast", {
-                styles: n(555)
+                styles: n(557)
             })
         }, (e, t, n) => {
             var r = n(201),
@@ -22365,14 +22432,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(530)) && r.__esModule ? r : {
+            var r, o = (r = n(532)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-rewards-program-toast", {
-                styles: n(559),
+                styles: n(561),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -22430,7 +22497,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-rgm-toast", {
-                styles: n(562)
+                styles: n(564)
             })
         }, (e, t, n) => {
             var r = n(201),
@@ -22454,14 +22521,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(530)) && r.__esModule ? r : {
+            var r, o = (r = n(532)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-xbox-gamepass-toast", {
-                styles: n(565),
+                styles: n(567),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -22520,21 +22587,21 @@
                         r.tournaments.persistentPanel = e || null, i.sync()
                     },
                     getHovercardTemplates: () => ({
-                        "components/hovercard-name-alias-mode": n(478),
-                        "components/hovercard-name-summoner-mode": n(479)
+                        "components/hovercard-name-alias-mode": n(480),
+                        "components/hovercard-name-summoner-mode": n(481)
                     }),
                     getHovercardComponent: () => {
                         const {
                             PlayerNameComponent: e
                         } = s;
                         return {
-                            HovercardComponentComponent: n(335).default,
-                            HovercardShellComponent: n(342).default,
-                            HovercardContentComponent: n(338).default,
-                            SocialSessionService: n(450).default,
-                            SocialPlatformConfigService: n(376).default,
-                            SocialSettingsService: n(451).default,
-                            ProfileChampionInfoService: n(424).default,
+                            HovercardComponentComponent: n(336).default,
+                            HovercardShellComponent: n(343).default,
+                            HovercardContentComponent: n(339).default,
+                            SocialSessionService: n(451).default,
+                            SocialPlatformConfigService: n(377).default,
+                            SocialSettingsService: n(452).default,
+                            ProfileChampionInfoService: n(425).default,
                             PlayerNameComponent: e
                         }
                     },
@@ -22675,7 +22742,7 @@
                     g.setChatWindowVisibility = e => {
                         t.setVisibility(e)
                     }
-                })), e.default.playerNotificationsApi = new r.default, e.default.playerNotificationsPrivateApi = e.default.playerNotificationsApi._api, n(521);
+                })), e.default.playerNotificationsApi = new r.default, e.default.playerNotificationsPrivateApi = e.default.playerNotificationsApi._api, n(523);
                 const y = f.create("rcp-fe-lol-social");
                 _.bump().then((e => {
                     e.getElement().appendChild(b)
@@ -22686,7 +22753,7 @@
                         friendFinder: x.__container__.lookup("service:friend-finder"),
                         topNavUpdates: x.__container__.lookup("service:top-nav-updates")
                     };
-                return n(566)(v)
+                return n(568)(v)
             }))
         }), {
             once: !0
