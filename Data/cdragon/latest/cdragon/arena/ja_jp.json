@@ -379,11 +379,7 @@
                             "__type": "StatByNamedDataValueCalculationPart",
                             "mDataValue": "APRatio"
                         }
-                    ],
-                    "mMultiplier": {
-                        "__type": "NamedDataValueCalculationPart",
-                        "mDataValue": "APRatio"
-                    }
+                    ]
                 }
             },
             "dataValues": {
@@ -2045,7 +2041,7 @@
             "id": 26,
             "name": "瞬きより速く",
             "rarity": 0,
-            "tooltip": "自分の移動速度が敵を上回っている場合、対象に追加ダメージを与える(<speed>移動速度差10</speed>につき、@BonusDamagePerMSDifference*1000@%の追加ダメージ)。<br>このラウンドの追加ダメージ: @f1@<br>追加ダメージの合計: @f2@"
+            "tooltip": "自身の移動速度が敵を上回っている場合、対象に追加ダメージを与える(<speed>移動速度差10</speed>につき、@BonusDamagePerMSDifference*1000@%の追加ダメージ)。<br>このラウンドの追加ダメージ: @f1@<br>追加ダメージの合計: @f2@"
         },
         {
             "apiName": "ShadowRunner",
@@ -2494,13 +2490,13 @@
                 "OnHitMod": 0.4000000059604645,
                 "SecondMissileDelay": 0.15000000596046448
             },
-            "desc": "通常攻撃時、2本目の矢を放ってダメージの@AttackReduction*100@%を与え、{{ Item_Keyword_OnHit }}を@OnHitMod*100@%の効果量で適用する。<attackSpeed>合計攻撃速度が@AttackSpeed*100@%</attackSpeed>増加する。",
+            "desc": "通常攻撃時、矢を放ってダメージの@AttackReduction*100@%を与え、{{ Item_Keyword_OnHit }}を@OnHitMod*100@%の効果量で適用する。<attackSpeed>合計攻撃速度が@AttackSpeed*100@%</attackSpeed>増加する。",
             "iconLarge": "assets/ux/cherry/augments/icons/dualwield_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/dualwield_small.png",
             "id": 225,
             "name": "二刀流",
             "rarity": 2,
-            "tooltip": "通常攻撃時、2本目の矢を放ってダメージの@AttackReduction*100@%を与え、{{ Item_Keyword_OnHit }}を@OnHitMod*100@%の効果量で適用する。<attackSpeed>合計攻撃速度が@AttackSpeed*100@%</attackSpeed>増加する。"
+            "tooltip": "通常攻撃時、矢を放ってダメージの@AttackReduction*100@%を与え、{{ Item_Keyword_OnHit }}を@OnHitMod*100@%の効果量で適用する。<attackSpeed>合計攻撃速度が@AttackSpeed*100@%</attackSpeed>増加する。"
         },
         {
             "apiName": "Augment405",

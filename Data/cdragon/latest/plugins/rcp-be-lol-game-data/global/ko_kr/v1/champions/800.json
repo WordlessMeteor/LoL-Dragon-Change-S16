@@ -298,7 +298,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "멜이 대상 지점 주위에 폭발하는 투사체를 퍼부어 해당 지역 안에 있는 적에게 반복해서 피해를 입힙니다.",
-            "dynamicDescription": "멜이 대상 지점 주위에 폭발하는 투사체 @ExplosionCount@개를 퍼붓습니다.<br><br>각 폭발은 <magicDamage>@TotalExplosionDamage@의 마법 피해</magicDamage>를 입히며 모두 합쳐 최대 <magicDamage>@AllDamageHit@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "멜이 대상 지점 주위에 폭발하는 투사체 @ExplosionCount@개를 퍼붓습니다.<br><br>첫 번째 폭발은 <magicDamage>@InitialExplosionDamage@의 마법 피해</magicDamage>를, 이후 각 폭발은 <magicDamage>@TotalExplosionDamage@의 마법 피해</magicDamage>를 입히며, 모두 합쳐 최대 <magicDamage>@AllDamageHit@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "멜이 자신을 방어막으로 감싸 적 투사체를 공격자에게 반사하고 자신이 받는 피해를 막으며 이동 속도를 얻습니다.",
-            "dynamicDescription": "멜이 자신을 방어막으로 감싸 적 챔피언이 날리는 투사체를 반사하고 자신이 받는 피해를 막으며 @Duration@초 동안 <speed>이동 속도가 @MoveSpeed*100@% 증가했다가 점차 감소</speed>합니다.<br><br>반사된 투사체는 <magicDamage>최초 피해량의 @DamagePercent@에 해당하는 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "멜이 자신을 방어막으로 감싸 적 챔피언이 날리는 투사체를 반사하고 @Duration@초 동안 <shield>@ShieldAmount@의 보호막</shield>을 얻으며 @MoveSpeedDuration@초 동안 <speed>이동 속도가 @MoveSpeed*100@% 증가했다가 점차 감소</speed>합니다.<br><br>반사된 투사체는 <magicDamage>최초 피해량의 @DamagePercent@에 해당하는 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "멜이 전방으로 찬란한 구체를 발사하여 중심에 있는 적을 속박하는 한편 그 주변에 있는 적을 둔화시키며 지속 피해를 입힙니다.",
             "dynamicDescription": "멜이 찬란한 구체를 발사하여 중심에 있는 적을 @RootDuration@초 동안 <status>속박</status>하고 <magicDamage>@Damage@의 마법 피해</magicDamage>를 입힙니다.<br><br>구체는 그 주변에 적대적 영역을 형성하여 적을 @AreaSlowAmount*100@% <status>둔화</status>시키고 <magicDamage>초당 @AreaDamagePerSecond@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,
@@ -616,12 +616,12 @@
                 90.0
             ],
             "cooldownCoefficients": [
-                12.0,
-                11.5,
                 11.0,
                 10.5,
                 10.0,
-                10.0
+                9.5,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

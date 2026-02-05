@@ -298,7 +298,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تطلق ميل وابلًا من المقذوفات التي تنفجر حول موضع الهدف، ملحقةً الضرر بشكلٍ متكرر بالأعداء ضمن تلك المنطقة.",
-            "dynamicDescription": "تطلق ميل وابلًا من @ExplosionCount@ المقذوفات التي تنفجر في المنطقة المحيطة بموقع الهدف.<br><br>يلحق كل انفجار <magicDamage>@TotalExplosionDamage@ ضرر سحر</magicDamage>، يصل إلى إجمالي <magicDamage>@AllDamageHit@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تطلق ميل وابلًا من @ExplosionCount@ المقذوفات التي تنفجر في المنطقة المحيطة بموقع الهدف.<br><br>تلحق الإصابة الأولى من الانفجار <magicDamage>@InitialExplosionDamage@ ضرر سحر</magicDamage> ويلحق كل انفجار لاحق <magicDamage>@TotalExplosionDamage@ ضرر سحر</magicDamage>، ليبلغ الإجمالي <magicDamage>@AllDamageHit@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تشكل ميل حاجزًا حول نفسها يرد مقذوفات العدو ليعيدها إلى مرسلها، كما يمنع عنها الضرر ويمنحها سرعة حركة.",
-            "dynamicDescription": "تشكل ميل حاجزًا حول نفسها يرد مقذوفات أبطال العدو، كما يمنع عنها الضرر ويكسبها <speed>@MoveSpeed*100@% سرعة حركة متلاشية</speed> لمدة @Duration@ث.<br><br>تلحق المقذوفات المرتدة <magicDamage>@DamagePercent@ من الضرر الأصلي على شكل ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تشكل ميل حاجزًا حول نفسها يرد مقذوفات أبطال العدو، فتكسب درعًا بقيمة <shield>@ShieldAmount@ </shield> لمدة @Duration@ث و <speed>@MoveSpeed*100@% سرعة حركة متلاشية</speed> لمدة @MoveSpeedDuration@ث.<br><br>تلحق المقذوفات المرتدة <magicDamage>@DamagePercent@ من الضرر الأصلي على شكل ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "تقوم ميل بإطلاق كرة مشعة إلى الأمام، مما يؤدي إلى تثبيت الواقعين في مركزها، بينما تعمل المنطقة المحيطة بها على إبطاء الأعداء وإلحاق الضرر بهم بمرور الوقت.",
             "dynamicDescription": "تطلق ميل كرة مشعة، مما يؤدي إلى <status>تثبيت</status> الأعداء في مركزها لمدة @RootDuration@ث وتلحق <magicDamage>@Damage@ ضرر سحر</magicDamage>.<br><br>تقوم الكرة ببناء منطقة عدائية حولها تتسبب في <status>إبطاء</status> الأعداء بنسبة @AreaSlowAmount*100@% وتلحق <magicDamage>@AreaDamagePerSecond@ ضرر سحر كل ثانية</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,
@@ -616,12 +616,12 @@
                 90.0
             ],
             "cooldownCoefficients": [
-                12.0,
-                11.5,
                 11.0,
                 10.5,
                 10.0,
-                10.0
+                9.5,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

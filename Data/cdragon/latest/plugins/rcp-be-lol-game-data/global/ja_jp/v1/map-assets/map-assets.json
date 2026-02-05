@@ -290,23 +290,12 @@
             "gameModeDescription": "10体のランダムに選択されたチャンピオンが、狭い橋上で戦います。立ちはだかる敵を倒しながら、敵のネクサスを目指しましょう。",
             "name": "ランダムマップ",
             "gameMutator": "",
-            "isRGM": true,
+            "isRGM": false,
             "tftSetOverride": "",
             "properties": {
                 "suppressRunesMasteriesPerks": true
             },
-            "perPositionRequiredSummonerSpells": {
-                "any": {
-                    "spells": [
-                        4
-                    ]
-                },
-                "none": {
-                    "spells": [
-                        4
-                    ]
-                }
-            },
+            "perPositionRequiredSummonerSpells": {},
             "perPositionDisallowedSummonerSpells": {},
             "assets": {
                 "champ-select-flyout-background": "lol-game-data/assets/content/src/LeagueClient/GameModeAssets/ARAM/img/champ-select-flyout-background.png",
@@ -343,8 +332,9 @@
                 "icon-victory-video": "lol-game-data/assets/content/src/LeagueClient/GameModeAssets/ARAM/video/icon-victory.webm"
             },
             "locStrings": {
-                "tutorial_title": "ランダムミッド: メイヘムへようこそ",
-                "tutorial_confirm_label": "サイコー！"
+                "tutorial_title": "ランダムミッド: メイヘム",
+                "tutorial_confirm_label": "レッツゴー！",
+                "tutorial_subheader": "ルナーフェスティバル アップデート"
             },
             "categorizedContentBundles": {},
             "tutorialCards": [
@@ -352,6 +342,12 @@
                     "header": "オーグメント",
                     "footer": "",
                     "description": "お気に入りのオーグメントで素早くパワーアップ。レベルを上げてオーグメントを増やして勝利を掴みましょう。",
+                    "imagePath": "lol-game-data/assets/ASSETS/LeagueClient/GameModeAssets/Kiwi/kiwi-tutorial-landscale-img.png"
+                },
+                {
+                    "header": "メイヘム進行状況コース",
+                    "footer": "",
+                    "description": "よりカオスなメイヘムでこの新年を祝おう！プレイして、メイヘム進行状況コースで新たなオーグメントや強化要素、限定報酬を獲得しよう！",
                     "imagePath": "lol-game-data/assets/ASSETS/LeagueClient/GameModeAssets/Kiwi/kiwi-tutorial-landscale-img.png"
                 }
             ]

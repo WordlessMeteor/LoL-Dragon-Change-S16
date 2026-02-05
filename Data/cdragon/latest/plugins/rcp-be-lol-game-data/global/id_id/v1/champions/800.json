@@ -298,7 +298,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Mel menembakkan rentetan proyektil yang meledak di sekitar lokasi target, menghasilkan damage berulang kali pada musuh di area itu.",
-            "dynamicDescription": "Mel melepaskan rentetan @ExplosionCount@ proyektil yang meledak di area sekitar lokasi target.<br><br>Tiap ledakan menghasilkan <magicDamage>@TotalExplosionDamage@ magic damage</magicDamage>, menambahkan hingga total <magicDamage>@AllDamageHit@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel melepaskan rentetan @ExplosionCount@ proyektil yang meledak di area sekitar lokasi target.<br><br>Ledakan pertama memberikan <magicDamage>@InitialExplosionDamage@ magic damage</magicDamage>, dan setiap ledakan berikutnya memberikan <magicDamage>@TotalExplosionDamage@ magic damage</magicDamage>, dengan total hingga <magicDamage>@AllDamageHit@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Mel membentuk barrier di sekitarnya yang memantulkan proyektil musuh ke arah penyerang, mencegahnya menerima damage, dan memberinya movement speed.",
-            "dynamicDescription": "Mel membentuk barrier di sekitarnya yang memantulkan proyektil dari champion musuh, mencegahnya menerima damage, dan memberinya <speed>@MoveSpeed*100@% Move Speed yang berkurang</speed> selama @Duration@ detik.<br><br>Proyektil yang dipantulkan menghasilkan <magicDamage>@DamagePercent@ damage awal sebagai magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel membentuk penghalang di sekeliling dirinya yang memantulkan proyektil dari champion musuh, mendapatkan <shield>@ShieldAmount@ Shield</shield> selama @Duration@ detik dan <speed>@MoveSpeed*100@% Move Speed yang berkurang seiring waktu</speed> selama @MoveSpeedDuration@ detik.<br><br>Proyektil yang dipantulkan menghasilkan <magicDamage>@DamagePercent@ damage awal sebagai magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "Mel menembakkan orb pijar ke depan, menerapkan root pada mereka yang berada di pusatnya. Sementara itu, area di sekitarnya menerapkan slow pada musuh dan menghasilkan damage berkelanjutan.",
             "dynamicDescription": "Mel menembakkan orb bercahaya, menerapkan <status>Root</status> pada musuh yang berada di pusatnya selama @RootDuration@ detik dan menghasilkan <magicDamage>@Damage@ magic damage</magicDamage>.<br><br>Orb ini menciptakan area berbahaya di sekitarnya yang menerapkan <status>Slow</status> pada musuh sebesar @AreaSlowAmount*100@% dan menghasilkan <magicDamage>@AreaDamagePerSecond@ magic damage per detik</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,
@@ -616,12 +616,12 @@
                 90.0
             ],
             "cooldownCoefficients": [
-                12.0,
-                11.5,
                 11.0,
                 10.5,
                 10.0,
-                10.0
+                9.5,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

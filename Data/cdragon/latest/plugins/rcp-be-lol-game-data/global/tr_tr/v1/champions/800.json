@@ -298,7 +298,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Mel hedef konumdaki rakiplere art arda hasar vererek patlayan bir atış salvosu gönderir.",
-            "dynamicDescription": "Mel hedef konumdaki alanda patlayan @ExplosionCount@ atışlık bir salvo gönderir.<br><br>Her patlama <magicDamage>@TotalExplosionDamage@ Büyü Hasarı</magicDamage> verir ve toplam büyü hasarı en fazla <magicDamage>@AllDamageHit@</magicDamage> olabilir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel hedef konumdaki alanda patlayan @ExplosionCount@ atışlık bir salvo gönderir.<br><br>İlk patlama <magicDamage>@InitialExplosionDamage@ Büyü Hasarı</magicDamage>, daha sonraki her patlama <magicDamage>@TotalExplosionDamage@ Büyü Hasarı</magicDamage> verir. Toplam büyü hasarı en fazla <magicDamage>@AllDamageHit@</magicDamage> olabilir.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Mel rakip atışları saldıran hedefe geri yansıtan, kendisinin hasar almasını engelleyen ve hareket hızı kazandıran bir bariyer oluşturur.",
-            "dynamicDescription": "Mel @Duration@ saniyeliğine rakip şampiyonların atışlarını geri yansıtan, kendisinin hasar almasını engelleyen ve <speed>azalarak kaybolacak şekilde %@MoveSpeed*100@ Hareket Hızı</speed> kazandıran bir bariyer oluşturur.<br><br>Yansıtılan atışlar <magicDamage>asıl hasarın @DamagePercent@ kadarına eşdeğer miktarda büyü hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel @Duration@ saniyeliğine rakip şampiyonların atışlarını geri yansıtan, kendisine <shield>@ShieldAmount@ Kalkan</shield> sağlayan ve @MoveSpeedDuration@ saniyeliğine <speed>azalarak kaybolacak şekilde %@MoveSpeed*100@ Hareket Hızı</speed> kazandıran bir bariyer oluşturur.<br><br>Yansıtılan atışlar <magicDamage>asıl hasarın @DamagePercent@ kadarına eşdeğer miktarda büyü hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "Mel ileriye parıldayan bir küre gönderir. Kürenin merkezinde kalan rakipler sabitlenirken etrafındaki alanda yer alanlar yavaşlar ve zamanla hasar alır.",
             "dynamicDescription": "Mel parıldayan bir küre gönderir. Kürenin merkezinde kalan rakipler @RootDuration@ saniyeliğine <status>sabitlenir</status> ve <magicDamage>@Damage@ Büyü Hasarı</magicDamage> alır.<br><br>Kürenin etrafındaki alanda yer alan rakipler %@AreaSlowAmount*100@ <status>yavaşlar</status> ve <magicDamage>saniye başına @AreaDamagePerSecond@ Büyü Hasarı</magicDamage> alır.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,
@@ -616,12 +616,12 @@
                 90.0
             ],
             "cooldownCoefficients": [
-                12.0,
-                11.5,
                 11.0,
                 10.5,
                 10.0,
-                10.0
+                9.5,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

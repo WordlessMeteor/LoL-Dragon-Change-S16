@@ -298,7 +298,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Mel fires a barrage of projectiles that explode around a target location, dealing damage repeatedly to enemies within the area.",
-            "dynamicDescription": "Mel unleashes a barrage of @ExplosionCount@ projectiles that explode in the area around a target location.<br><br>Each explosion deals <magicDamage>@TotalExplosionDamage@ magic damage</magicDamage>, adding up to <magicDamage>@AllDamageHit@ magic damage</magicDamage> total.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel unleashes a barrage of @ExplosionCount@ projectiles that explode in the area around a target location.<br><br>The first explosion hit deals <magicDamage>@InitialExplosionDamage@ magic damage</magicDamage> and each subsequent explosion deals <magicDamage>@TotalExplosionDamage@ magic damage</magicDamage>, adding up to <magicDamage>@AllDamageHit@ magic damage</magicDamage> total.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Mel forms a barrier around herself that reflects enemy projectiles back at the attacker, prevents her from taking damage, and grants her movement speed.",
-            "dynamicDescription": "Mel forms a barrier around herself that reflects projectiles from enemy champions, prevents her from taking damage, and gives her <speed>@MoveSpeed*100@% decaying Move Speed</speed> for @Duration@ second(s).<br><br>Reflected projectiles deal <magicDamage>@DamagePercent@ original damage as magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel forms a barrier around herself that reflects projectiles from enemy champions, gaining <shield>@ShieldAmount@ Shields</shield> for @Duration@ seconds and <speed>@MoveSpeed*100@% decaying Move Speed</speed> for @MoveSpeedDuration@ seconds.<br><br>Reflected projectiles deal <magicDamage>@DamagePercent@ original damage as magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "Mel fires a radiant orb forward, rooting those at its center while the area around it slows enemies and deals damage over time.",
             "dynamicDescription": "Mel fires a radiating orb, <status>Rooting</status> enemies at its center for @RootDuration@ seconds and dealing <magicDamage>@Damage@ magic damage</magicDamage>.<br><br>The orb builds up a hostile area around it that <status>Slows</status> enemies by @AreaSlowAmount*100@% and deals <magicDamage>@AreaDamagePerSecond@ magic damage per second</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,
@@ -616,12 +616,12 @@
                 90.0
             ],
             "cooldownCoefficients": [
-                12.0,
-                11.5,
                 11.0,
                 10.5,
                 10.0,
-                10.0
+                9.5,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

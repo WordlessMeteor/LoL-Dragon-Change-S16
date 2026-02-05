@@ -1,0 +1,88 @@
+{
+    "{192d8480}": {
+        "mCascadeBlendValue": 0.0,
+        "mClipDataMap": {
+            "{c93c0909}": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Idle1": {
+                        "mEffectKey": "TFT_LunarRevelModern_Skin1_Idle",
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT_LunarRevelModern_Props/Skins/Skin01/Animations/Skin1_level1.TFT_ArenaSkin_LunarRevel_Modern.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{cb3c0c2f}": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Idle1": {
+                        "mEffectKey": "TFT_LunarRevelModern_Skin1_Idle_Level7",
+                        "mParticleEventDataPairList": [
+                            {
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "{6e50ed3e}": {
+                        "mShowSubmeshList": [
+                            "{6045e83f}"
+                        ],
+                        "mHideSubmeshList": [
+                            "Leaf",
+                            "Branches",
+                            "Tail"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT_LunarRevelModern_Props/Skins/Skin01/Animations/Skin1_level7.TFT_ArenaSkin_LunarRevel_Modern.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Idle": {
+                "mFlags": 2,
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "{c93c0909}",
+                        "mValue": 1.0,
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "{cb3c0c2f}",
+                        "mValue": 7.0,
+                        "mHoldAnimationToLower": 9.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "TftArenaOwnerLevelParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
+            }
+        },
+        "mTrackDataMap": {
+            "Default": {
+                "__type": "TrackData"
+            }
+        },
+        "__type": "AnimationGraphData"
+    },
+    "__linked": []
+}

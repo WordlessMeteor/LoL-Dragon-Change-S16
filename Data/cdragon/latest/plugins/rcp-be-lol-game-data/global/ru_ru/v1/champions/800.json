@@ -298,7 +298,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Мэл выпускает несколько снарядов, которые взрываются в выбранном месте, нанося урон врагам в области поражения.",
-            "dynamicDescription": "Мэл выпускает залп из @ExplosionCount@ снарядов, которые взрываются в выбранном месте.<br><br>Каждый взрыв наносит <magicDamage>@TotalExplosionDamage@ магического урона</magicDamage> (до <magicDamage>@AllDamageHit@ магического урона</magicDamage> суммарно).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Мэл выпускает залп из @ExplosionCount@ снарядов, которые взрываются в выбранном месте.<br><br>Первый взрыв наносит <magicDamage>@InitialExplosionDamage@ ед. магического урона</magicDamage>, а каждый последующий взрыв наносит <magicDamage>@TotalExplosionDamage@ ед. магического урона</magicDamage> (до <magicDamage>@AllDamageHit@ ед. магического урона</magicDamage> суммарно).@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Мэл создает вокруг себя барьер, который отражает вражеские снаряды обратно в атакующих и предотвращает получение урона. Кроме того, у Мэл увеличивается скорость передвижения.",
-            "dynamicDescription": "Мэл создает вокруг себя барьер, который отражает снаряды, выпускаемые вражескими чемпионами, обратно в атакующих и предотвращает получение урона. Кроме того, <speed>скорость передвижения</speed> Мэл увеличивается на <speed>@MoveSpeed*100@%</speed> на @Duration@ сек. (ускорение постепенно ослабевает).<br><br>Отраженные снаряды наносят <magicDamage>магический урон в размере @DamagePercent@ от изначального</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Мэл создает вокруг себя барьер, который отражает снаряды, выпускаемые вражескими чемпионами, обратно в атакующих. Кроме того, Мэл получает <shield>щит прочностью @ShieldAmount@</shield> на @Duration@ сек., а ее <speed>скорость передвижения</speed> увеличивается на <speed>@MoveSpeed*100@%</speed> на @MoveSpeedDuration@ сек. (ускорение постепенно ослабевает).<br><br>Отраженные снаряды наносят <magicDamage>магический урон в размере @DamagePercent@ от изначального</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "Мэл выпускает сферу света, наносящую периодический урон. Враги в центре сферы обездвиживаются, а по краям – замедляются.",
             "dynamicDescription": "Мэл выпускает сферу света, которая <status>обездвиживает</status> врагов в центре на @RootDuration@ сек. и наносит им <magicDamage>@Damage@ магического урона</magicDamage>.<br><br>Враги, попавшие в область вокруг сферы, <status>замедляются</status> на @AreaSlowAmount*100@% и получают <magicDamage>@AreaDamagePerSecond@ магического урона в секунду</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,
@@ -616,12 +616,12 @@
                 90.0
             ],
             "cooldownCoefficients": [
-                12.0,
-                11.5,
                 11.0,
                 10.5,
                 10.0,
-                10.0
+                9.5,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

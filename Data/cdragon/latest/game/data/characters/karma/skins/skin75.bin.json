@@ -743,7 +743,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Karma/Skins/Skin70/Particles/common_sphere_02.SKINS_Karma_Skin70.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Karma/Skins/Skin70/Particles/common_sphere_02.SKINS_Karma_Skin70.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -1738,7 +1738,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Karma/Skins/Skin70/Particles/common_sphere_02.SKINS_Karma_Skin70.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Karma/Skins/Skin70/Particles/common_sphere_02.SKINS_Karma_Skin70.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -5394,7 +5394,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Karma/Skins/Skin70/Particles/common_sphere_02.SKINS_Karma_Skin70.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Karma/Skins/Skin70/Particles/common_sphere_02.SKINS_Karma_Skin70.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -67406,7 +67406,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Karma/Skins/Skin70/Particles/Tapered_helix_02.SKINS_Karma_Skin70.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Karma/Skins/Skin70/Particles/Tapered_helix_02.SKINS_Karma_Skin70.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -124602,6 +124602,40 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "VCDissolve_Pattern_Tilling",
+                "value": [
+                    0.019999999552965164,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VCDissolve_Pattern_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VCDissolve_Width",
+                "value": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VCDissolve_Value",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "AllFeatureOpener",
                 "value": [
                     0.20000000298023224,
@@ -125177,6 +125211,17 @@
                 "__type": "StaticMaterialSwitchDef"
             },
             {
+                "name": "DISSOLVE_VCBASED",
+                "on": false,
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISSOLVE_VCREVERSE",
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "STYLIZEDHIGHLIGHT",
                 "on": false,
                 "Group": "Stylized Highlight",
@@ -125369,6 +125414,16 @@
         "name": "Characters/Karma/Skins/Skin75/Materials/Karma_MAT_FishFlow_inst",
         "samplerValues": [
             {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "MatCap_Tex",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -125418,6 +125473,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "ScreenSpace_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_Alpha_Override",
                 "__type": "StaticMaterialShaderParamDef"
@@ -125648,6 +125723,21 @@
             }
         ],
         "switches": [
+            {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "OVERRIDE_DIFFUSE_ALPHA",
                 "on": false,

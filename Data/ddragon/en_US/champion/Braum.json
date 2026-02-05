@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.2.1",
+    "version": "16.3.1",
     "data": {
         "Braum": {
             "id": "Braum",
@@ -97,7 +97,7 @@
                 "difficulty": 3
             },
             "stats": {
-                "hp": 630,
+                "hp": 610,
                 "hpperlevel": 112,
                 "mp": 311,
                 "mpperlevel": 45,
@@ -131,7 +131,7 @@
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -158,10 +158,10 @@
                         null,
                         [
                             75,
-                            125,
-                            175,
-                            225,
-                            275
+                            120,
+                            165,
+                            210,
+                            255
                         ],
                         [
                             70,
@@ -229,7 +229,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "75/125/175/225/275",
+                        "75/120/165/210/255",
                         "70",
                         "30",
                         "0.02",

@@ -145,6 +145,9 @@
                 canInvitePlayer(e) {
                     return u.default.canInvitePlayer(e)
                 }
+                canInvitePlayerByPuuid(e) {
+                    return u.default.canInvitePlayerByPuuid(e)
+                }
                 invitePlayer(e, t) {
                     return u.default.invitePlayer(e, t)
                 }
@@ -2455,10 +2458,14 @@
             "use strict";
             e.exports = {
                 _canInvitePlayerCallback: null,
+                _canInvitePlayerByPuuidCallback: null,
                 _inviteCallback: null,
                 _inviteDiscordCallback: null,
                 _registerCanInviteCallback: function(e) {
                     this._canInvitePlayerCallback = e
+                },
+                _registerCanInviteByPuuidCallback: function(e) {
+                    this._canInvitePlayerByPuuidCallback = e
                 },
                 _registerInviteCallback: function(e) {
                     this._inviteCallback = e
@@ -2468,6 +2475,9 @@
                 },
                 canInvitePlayer(e) {
                     return !!this._canInvitePlayerCallback && this._canInvitePlayerCallback(e)
+                },
+                canInvitePlayerByPuuid(e) {
+                    return !!this._canInvitePlayerByPuuidCallback && this._canInvitePlayerByPuuidCallback(e)
                 },
                 invitePlayer(e, t) {
                     return this._inviteCallback ? this._inviteCallback(e, t) : Promise.reject(new Error("APPLICATION_NOT_INITIALIZED"))
@@ -6914,10 +6924,13 @@
                 isLobbyFull: i.Ember.computed.alias("lobbiesService.isLobbyFull"),
                 isCustomUI: i.Ember.computed.alias("lobbiesService.isCustomUI"),
                 setupCallbacks: i.Ember.on("init", (function() {
-                    s.default._registerCanInviteCallback(this.canInvitePlayer.bind(this)), s.default._registerInviteCallback(this.invitePlayer.bind(this)), s.default._registerInviteDiscordCallback(this.invitePlayerDiscord.bind(this))
+                    s.default._registerCanInviteCallback(this.canInvitePlayer.bind(this)), s.default._registerCanInviteByPuuidCallback(this.canInvitePlayerByPuuid.bind(this)), s.default._registerInviteCallback(this.invitePlayer.bind(this)), s.default._registerInviteDiscordCallback(this.invitePlayerDiscord.bind(this))
                 })),
                 canInvitePlayer: function(e) {
                     return !(!e || !this.get("currentPlayerCanInvite")) && ((!this.get("isLobbyFull") || !this.get("isCustomUI")) && !this.playerInParty(e))
+                },
+                canInvitePlayerByPuuid: function(e) {
+                    return !(!e || !this.get("currentPlayerCanInvite")) && ((!this.get("isLobbyFull") || !this.get("isCustomUI")) && !this.playerInPartyByPuuid(e))
                 },
                 invitePlayer: function(e, t = null, n = null) {
                     return new Promise(((o, s) => {
@@ -6950,6 +6963,15 @@
                         const n = this.get("lobbiesService.currentPartyMembers");
                         if (!n || !n.length) return !1;
                         t = !!n.find((t => t.summonerId === e))
+                    }
+                    return t
+                },
+                playerInPartyByPuuid: function(e) {
+                    let t = !1;
+                    if (e) {
+                        const n = this.get("lobbiesService.currentPartyMembers");
+                        if (!n?.length) return !1;
+                        t = n.some((t => t.puuid === e))
                     }
                     return t
                 },
@@ -17966,7 +17988,7 @@
                     return Promise.allSettled(e.map((e => e.perks ? Promise.resolve(e.perks) : this.getLastUsedQuickPlayPageForChampPosition(e.championId, e.positionPreference)))).then((t => (t.forEach(((t, n) => {
                         t.value ? e[n].perks = t.value : i.logger.error(`Failed to get perks page for champId: ${e[n].championId} position: \n            ${e[n].positionPreference} error: ${t.reason}`)
                     })), this.putQuickPlaySlots(e).catch((e => {
-                        i.logger.error(e)
+                        i.logger.error("Quickplay put slots error: ", e)
                     })))))
                 },
                 isChampionNavSelected: i.Ember.computed("selectingNavItemId", (function() {
@@ -18030,7 +18052,7 @@
                         n[t].skinId = e;
                         const o = n[t].championId;
                         return this.putQuickPlaySlots(n).then((() => this.get("quickPlayService").saveLastSelectedSkinForChampion(o, e))).catch((e => {
-                            i.logger.error(e)
+                            i.logger.error("Quickplay put slots error: ", e)
                         }))
                     }
                 },
@@ -18059,7 +18081,7 @@
                             r.championId = e, r.skinId = t.getDefaultSkinForChampion(e)
                         }
                         return this.getLastUsedQuickPlayPageForChampPosition(e, r.positionPreference).then((e => (r.perks = e, this.putQuickPlaySlots(n).catch((e => {
-                            i.logger.error(e)
+                            i.logger.error("Quickplay put slots error: ", e)
                         })))))
                     }
                 },
@@ -18082,7 +18104,7 @@
                             n = (0, s.getSpellIdsWithSmiteAssignedIfAppropriate)(t, e.positionPreference, m, c);
                         e.spell1 = n[0], e.spell2 = n[1]
                     })), this.putQuickPlaySlots(n).catch((e => {
-                        i.logger.error(e)
+                        i.logger.error("Quickplay put slots error: ", e)
                     }))
                 },
                 getPlayerSlotsSetRequestBase() {
@@ -18092,7 +18114,7 @@
                 _handleSwapSlots() {
                     const e = this.getPlayerSlotsSetRequestBase();
                     return this.putQuickPlaySlots(e.reverse()).catch((e => {
-                        i.logger.error(e)
+                        i.logger.error("Quickplay put slots error: ", e)
                     }))
                 },
                 persistFlashPreferenceSetting(e) {
@@ -18131,7 +18153,7 @@
                         const t = this.getPlayerSlotsSetRequestBase(),
                             n = this.get("selectingSlotIndex");
                         return t[n].spell1 = e[0], t[n].spell2 = e[1], 4 === e[0] && this.persistFlashPreferenceSetting(!1), 4 === e[1] && this.persistFlashPreferenceSetting(!0), this.putQuickPlaySlots(t).catch((e => {
-                            i.logger.error(e)
+                            i.logger.error("Quickplay put slots error: ", e)
                         }))
                     },
                     handleSwapSlots() {
@@ -18142,7 +18164,7 @@
                     },
                     putQuickPlaySlotsAction(e) {
                         return this.putQuickPlaySlots(e).catch((e => {
-                            i.logger.error(e)
+                            i.logger.error("Quickplay put slots error: ", e)
                         }))
                     },
                     setWardSkinViaLoadouts(e, t, n) {
@@ -18334,7 +18356,7 @@
                             n = (0, s.getSpellIdsWithSmiteAssignedIfAppropriate)(t, e.positionPreference, m, c);
                         e.spell1 = n[0], e.spell2 = n[1]
                     })), this.putQuickPlaySlots(n).catch((e => {
-                        i.logger.error(e)
+                        i.logger.error("Quickplay put slots error: ", e)
                     }))
                 },
                 putQuickPlaySlots(e) {

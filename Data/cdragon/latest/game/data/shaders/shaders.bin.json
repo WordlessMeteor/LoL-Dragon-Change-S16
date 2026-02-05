@@ -1536,6 +1536,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Bloom_Tint_Color",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Bloom_Tint_Color",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Bloom_Strength",
                 "logicalParameters": [
                     {
@@ -1622,6 +1639,10 @@
             },
             {
                 "name": "USE_FBM_ALPHA",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_BLOOM_TINT_COLOR",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -22559,6 +22580,68 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "VCDissolve_Pattern_Intensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VCDissolve_Pattern_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VCDissolve_Pattern_Tilling",
+                "data": [
+                    0.019999999552965164,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VCDissolve_Pattern_Tilling",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VCDissolve_Value",
+                "logicalParameters": [
+                    {
+                        "name": "VCDissolve_Value",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VCDissolve_Width",
+                "data": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VCDissolve_Width",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Dissolve_SmoothStep",
                 "data": [
                     0.0,
@@ -22857,6 +22940,15 @@
             },
             {
                 "name": "TRANSITIONEFFECT",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "DISSOLVE_VCREVERSE",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "DISSOLVE_VCBASED",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -33291,6 +33383,40 @@
         "ShadingModel": "{baebc346}",
         "parameters": [
             {
+                "name": "ScreenSpace_Tiling",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ScreenSpace_Tiling",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ScreenSpace_Texture_Tint",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "TintColor",
                 "data": [
                     1.0,
@@ -33696,6 +33822,10 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "FADE_DIFFUSE_ONLY_W_MASK",
                 "__type": "ShaderStaticSwitch"
             },
@@ -33708,15 +33838,33 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "BLOOM_SCROLLTEX_ONLY",
                 "__type": "ShaderStaticSwitch"
             },
             {
                 "name": "INVERT_BLOOM_FRESNEL",
                 "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "__type": "ShaderStaticSwitch"
             }
         ],
         "textures": [
+            {
+                "name": "Pattern_Mask",
+                "defaultTexturePath": "ASSETS/Shared/Materials/AlphaTest.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "ScreenSpace_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "ShaderTexture"
+            },
             {
                 "name": "AdditiveScrollTex",
                 "defaultTexturePath": "ASSETS/Shared/Materials/BC_TestTexture.tex",
@@ -69729,6 +69877,395 @@
             }
         ],
         "objectPath": "Shaders/SkinnedMesh/Diffuse_Alpha_mult",
+        "__type": "CustomShaderDef"
+    },
+    "Shaders/StaticMesh/Mantis_Env_Baked_PBR": {
+        "ShadingModel": "{c63393ed}",
+        "parameters": [
+            {
+                "name": "WaterFlowTiling",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "WaterFlowTiling",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "WaterFlowStrength",
+                "data": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "WaterFlowStrength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "WaterFlowSpeed",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "WaterFlowSpeed",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "WaterDistortion",
+                "data": [
+                    0.006000000052154064,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "WaterDistortion",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "NormalIntensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "NormalIntensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "CausticsChromaticAberration",
+                "data": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "CausticsChromaticAberration",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "CausticsFlowMult",
+                "data": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "CausticsFlowMult",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "CausticsTiling",
+                "data": [
+                    3.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "CausticsTiling",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "CausticsDistortion",
+                "data": [
+                    0.125,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "CausticsDistortion",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "CausticsStrengthForDepths",
+                "data": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "CausticsStrengthForDepths",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "CausticsStrength",
+                "data": [
+                    1.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "CausticsStrength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "CausticsTint",
+                "logicalParameters": [
+                    {
+                        "name": "CausticsTint",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "WaterColorBiasShallow",
+                "logicalParameters": [
+                    {
+                        "name": "WaterColorBiasShallow",
+                        "fields": 7,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "WaterColorBias",
+                "logicalParameters": [
+                    {
+                        "name": "WaterColorBias",
+                        "fields": 7,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "WaterTransparency",
+                "data": [
+                    0.6000000238418579,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "WaterTransparency",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "WaterShallowContrast",
+                "data": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "WaterShallowContrast",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "WaterTint",
+                "data": [
+                    0.10746929049491882,
+                    0.2695048451423645,
+                    0.3161364197731018,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "WaterTint",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "WaterRoughness",
+                "logicalParameters": [
+                    {
+                        "name": "WaterRoughness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "PlanarReflectionStrength",
+                "data": [
+                    0.4000000059604645,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "PlanarReflectionStrength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ReflectionDistortionStrength",
+                "data": [
+                    0.029999999329447746,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ReflectionDistortionStrength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ReflectionOffsetBias",
+                "data": [
+                    -0.019999999552965164,
+                    -0.019999999552965164,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ReflectionOffsetBias",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            }
+        ],
+        "staticSwitches": [
+            {
+                "name": "USE_WATER",
+                "__type": "ShaderStaticSwitch"
+            }
+        ],
+        "textures": [
+            {
+                "name": "CurlNormal",
+                "defaultTexturePath": "ASSETS/Shared/Materials/CurlNoiseFlow_NM.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "WaterNormal",
+                "defaultTexturePath": "ASSETS/Shared/Materials/velvet_NM.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "BAKED_NORMAL_TEXTURE",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Cobble_moss_NM.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "BAKED_DIFFUSE_TEXTURE",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Cobble_moss_Albedo.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Caustics",
+                "defaultTexturePath": "ASSETS/Shared/Materials/velvet_Mantis_Caustics_Mask_03.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "BAKED_RMA_TEXTURE",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Cobble_moss_rma.tex",
+                "__type": "ShaderTexture"
+            }
+        ],
+        "featureDefines": {
+            "FEATURE_BAKED_PAINT": "1",
+            "FEATURE_NAVMESH_MASK": "1",
+            "FEATURE_SCREENSPACE_UV": "1",
+            "FEATURE_TANGENT": "1",
+            "FEATURE_WORLD_NORMAL": "1",
+            "FEATURE_WORLD_POSITION": "1"
+        },
+        "featureMask": 2,
+        "objectPath": "Shaders/StaticMesh/Mantis_Env_Baked_PBR",
         "__type": "CustomShaderDef"
     },
     "Shaders/SkinnedMesh/ScrollingUVs_Simple": {

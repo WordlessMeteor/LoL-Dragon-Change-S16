@@ -10570,6 +10570,7 @@
                 },
                 "pass": 140,
                 "alphaRef": 0,
+                "miscRenderFlags": 1,
                 "isUniformScale": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -11018,7 +11019,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.20000000298023224,
-                "lifetime": 4.0,
+                "lifetime": 5.0,
                 "emitterName": "trail Outlines",
                 "EmitterPosition": {
                     "constantValue": [
@@ -11144,6 +11145,7 @@
                     "erosionMapAddressMode": 0,
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "miscRenderFlags": 1,
                 "birthScale0": {
                     "constantValue": [
                         100.0,
@@ -11263,6 +11265,7 @@
                 },
                 "pass": 20,
                 "alphaRef": 0,
+                "miscRenderFlags": 1,
                 "birthScale0": {
                     "constantValue": [
                         50.0,
@@ -11423,6 +11426,7 @@
                     "erosionMapAddressMode": 0,
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "miscRenderFlags": 1,
                 "isUniformScale": 1,
                 "isRandomStartFrame": 1,
                 "birthRotation0": {
@@ -11745,6 +11749,7 @@
                     },
                     "__type": "ValueColor"
                 },
+                "miscRenderFlags": 1,
                 "isDirectionOriented": 1,
                 "isUniformScale": 1,
                 "birthRotation0": {
@@ -11943,6 +11948,7 @@
                     "__type": "ValueColor"
                 },
                 "pass": 150,
+                "miscRenderFlags": 1,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
@@ -12201,6 +12207,7 @@
                 },
                 "pass": 1,
                 "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
                 "isUniformScale": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -12311,6 +12318,7 @@
                     "__type": "ValueColor"
                 },
                 "pass": 200,
+                "miscRenderFlags": 1,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
@@ -12369,6 +12377,7 @@
                 },
                 "pass": 210,
                 "meshRenderFlags": 0,
+                "miscRenderFlags": 1,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
@@ -12451,6 +12460,7 @@
                     ],
                     "__type": "VfxReflectionDefinitionData"
                 },
+                "miscRenderFlags": 1,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
@@ -12474,7 +12484,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.10000000149011612,
-                "lifetime": 4.0,
+                "lifetime": 5.0,
                 "isSingleParticle": 1,
                 "emitterName": "missileHead1",
                 "bindWeight": {
@@ -17097,7 +17107,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Seraphine/Skins/Skin43/Particles/Seraphine_Skin43_Q_Feathers.SKINS_Seraphine_Skin43.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Seraphine/Skins/Skin43/Particles/Seraphine_Skin43_Q_Feathers.SKINS_Seraphine_Skin43.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -31876,6 +31886,16 @@
         "name": "Characters/Seraphine/Skins/Skin48/Materials/Seraphine_Hair",
         "samplerValues": [
             {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "MatCap_Tex",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -31925,6 +31945,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "ScreenSpace_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_Alpha_Override",
                 "__type": "StaticMaterialShaderParamDef"
@@ -32114,6 +32154,21 @@
         ],
         "switches": [
             {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "OVERRIDE_DIFFUSE_ALPHA",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -32277,6 +32332,16 @@
         "name": "Characters/Seraphine/Skins/Skin48/Materials/Seraphine_Cloth_Iridescent",
         "samplerValues": [
             {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "MatCap_Tex",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -32326,6 +32391,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "ScreenSpace_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_Alpha_Override",
                 "__type": "StaticMaterialShaderParamDef"
@@ -32496,6 +32581,21 @@
             }
         ],
         "switches": [
+            {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "OVERRIDE_DIFFUSE_ALPHA",
                 "on": false,
@@ -33936,6 +34036,16 @@
         "name": "Characters/Seraphine/Skins/Skin48/Materials/Seraphine_Body_Iridescent",
         "samplerValues": [
             {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "MatCap_Tex",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -33985,6 +34095,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "ScreenSpace_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_Alpha_Override",
                 "__type": "StaticMaterialShaderParamDef"
@@ -34155,6 +34285,21 @@
             }
         ],
         "switches": [
+            {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "OVERRIDE_DIFFUSE_ALPHA",
                 "on": false,

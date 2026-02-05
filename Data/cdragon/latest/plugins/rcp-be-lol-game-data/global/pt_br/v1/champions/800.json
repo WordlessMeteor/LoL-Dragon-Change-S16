@@ -298,7 +298,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Mel dispara uma saraivada de projéteis que explodem ao redor de um local-alvo, causando dano repetidamente aos inimigos dentro da área.",
-            "dynamicDescription": "Mel dispara uma saraivada de @ExplosionCount@ projéteis que explodem na área ao redor de um local-alvo.<br><br>Cada explosão causa <magicDamage>@TotalExplosionDamage@ de Dano Mágico</magicDamage>, totalizando <magicDamage>@AllDamageHit@ de Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel dispara uma saraivada de @ExplosionCount@ projéteis que explodem na área ao redor de um local-alvo.<br><br>O primeiro acerto da explosão causa <magicDamage>@InitialExplosionDamage@ de Dano Mágico</magicDamage> e cada explosão subsequente causa <magicDamage>@TotalExplosionDamage@ de Dano Mágico</magicDamage>, somando até <magicDamage>@AllDamageHit@ de Dano Mágico</magicDamage> no total.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Mel envolve-se em uma barreira que reflete projéteis inimigos de volta para o atacante, evita sofrer dano e concede Velocidade de Movimento.",
-            "dynamicDescription": "Mel envolve-se em uma barreira que reflete projéteis de Campeões inimigos, evita sofrer dano e concede <speed>@MoveSpeed*100@% de Velocidade de Movimento que decai</speed> por @Duration@s.<br><br>Projéteis refletidos causam <magicDamage>@DamagePercent@ do dano original como Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel forma ao redor de si uma barreira que reflete projéteis de Campeões inimigos, recebendo <shield>@ShieldAmount@ Escudos</shield> por @Duration@s e <speed>@MoveSpeed*100@% de Velocidade de Movimento decrescente</speed> por @MoveSpeedDuration@s.<br><br>Projéteis refletidos causam <magicDamage>@DamagePercent@ do dano original como Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "Mel dispara um orbe radiante à frente, enraizando quem for pego no centro e causando Lentidão e dano ao longo do tempo aos inimigos na área ao redor.",
             "dynamicDescription": "Mel dispara um orbe radiante, <status>Enraizando</status> inimigos pegos no centro por @RootDuration@s e causando <magicDamage>@Damage@ de Dano Mágico</magicDamage>.<br><br>O orbe cria uma área hostil ao redor, causando @AreaSlowAmount*100@% de <status>Lentidão</status> aos inimigos e <magicDamage>@AreaDamagePerSecond@ de Dano Mágico por segundo</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,
@@ -616,12 +616,12 @@
                 90.0
             ],
             "cooldownCoefficients": [
-                12.0,
-                11.5,
                 11.0,
                 10.5,
                 10.0,
-                10.0
+                9.5,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

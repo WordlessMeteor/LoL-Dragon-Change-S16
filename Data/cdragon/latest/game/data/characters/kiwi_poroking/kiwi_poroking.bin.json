@@ -1,0 +1,185 @@
+{
+    "Characters/Kiwi_PoroKing/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/Kiwi_PoroKing/Spells/Kiwi_PoroKingBasicAttack": {
+        "ObjectName": "Kiwi_PoroKingBasicAttack",
+        "mScriptName": "Kiwi_PoroKingBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 4234,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3506999909877777,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 35.0,
+            "missileSpeed": 467.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "globalhit_yellow_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{407f3827}": {
+        "ObjectName": "Kiwi_PoroKingCritAttack",
+        "mScriptName": "Kiwi_PoroKingCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 4234,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "delayCastOffsetPercent": -0.3506999909877777,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 35.0,
+            "missileSpeed": 467.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "globalhit_yellow_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Kiwi_PoroKing/CharacterRecords/Root": {
+        "mCharacterName": "Kiwi_PoroKing",
+        "mFallbackCharacterName": "HA_AP_Poro",
+        "baseHP": 800.0,
+        "hpPerLevel": 125.0,
+        "baseStaticHPRegen": 0.0,
+        "primaryAbilityResource": {
+            "arBase": 0.0,
+            "arBaseStaticRegen": 0.0,
+            "arIsShown": false,
+            "VisibilityFlags": 0,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamage": 70.0,
+        "damagePerLevel": 5.0,
+        "baseArmor": 38.0,
+        "armorPerLevel": 5.5,
+        "baseSpellBlock": 32.0,
+        "spellBlockPerLevel": 2.049999952316284,
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeed": 355.0,
+        "attackRange": 175.0,
+        "attackSpeed": 0.75,
+        "attackSpeedRatio": 0.75,
+        "basicAttack": {
+            "mAttackTotalTime": 1.3329999446868896,
+            "mAttackCastTime": 0.25,
+            "mAttackName": "Kiwi_PoroKingBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "towerTargetingPriorityBoost": 10.0,
+        "experienceRadius": 400.0,
+        "spellNames": [
+            "Kiwi_PoroKingFall",
+            "PoroLob",
+            "Kiwi_PoroKingFall",
+            "Kiwi_PoroKingFall"
+        ],
+        "criticalAttack": "Kiwi_PoroKingCritAttack",
+        "passiveName": "Kiwi_ARAM_PoroKing_Passive_Name",
+        "passiveLuaName": "Kiwi_PoroKing_Passive",
+        "passiveToolTip": "",
+        "passiveSpell": "Kiwi_PoroKing_Passive",
+        "weaponMaterials": [
+            "Kiwi_PoroKingBasicAttack"
+        ],
+        "minimapIconOverride": "KingPoro",
+        "selectionHeight": 100.0,
+        "selectionRadius": 115.0,
+        "pathfindingCollisionRadius": 50.0,
+        "unitTagsString": "Champion",
+        "RecSpellRankUpInfolist": {
+            "RecSpellRankUpInfos": [
+                {
+                    "mDefaultPriority": [
+                        3,
+                        0,
+                        2,
+                        1
+                    ],
+                    "__type": "RecSpellRankUpInfo"
+                }
+            ],
+            "__type": "RecSpellRankUpInfoList"
+        },
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "__type": "CharacterRecord"
+    },
+    "__linked": []
+}

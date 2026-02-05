@@ -11879,7 +11879,7 @@
         "trait_id": "TFT16_AatroxUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_9_Darkin.png",
-        "tooltip_text": "厄薩斯增加相當於全能吸血的物攻。<br><br>首次死亡後，短暫進入無法被指定狀態，並在@HealDuration@秒內回復到滿血狀態。隨後，他的最大魔力減少@ManaReduction@，同時獲得@Durability*100@%續戰力。",
+        "tooltip_text": "厄薩斯增加自身全能吸血@OmnivampToADRatio*100@%的物攻。<br><br>首次死亡後，短暫進入無法被指定狀態，並在@HealDuration@秒內回復到滿血狀態。隨後，他的最大魔力減少@ManaReduction@，同時獲得@Durability*100@%續戰力。",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -11897,7 +11897,7 @@
                     },
                     {
                         "name": "OmnivampToADRatio",
-                        "value": 1.0
+                        "value": 1.5
                     }
                 ]
             }
@@ -11923,7 +11923,7 @@
                 "constants": [
                     {
                         "name": "BonusStardustPerOneStar",
-                        "value": 0.2
+                        "value": 0.25
                     },
                     {
                         "name": "BonusStardustPerThreeStar",
@@ -11931,7 +11931,7 @@
                     },
                     {
                         "name": "BonusStardustPerTwoStar",
-                        "value": 0.33
+                        "value": 0.3
                     }
                 ],
                 "min_units": 1,
@@ -12092,11 +12092,11 @@
                     },
                     {
                         "name": "FlatHealthPerItem1Star",
-                        "value": 250.0
+                        "value": 350.0
                     },
                     {
                         "name": "FlatHealthPerItem2Star",
-                        "value": 450.0
+                        "value": 600.0
                     },
                     {
                         "name": "FlatHealthPerItem3Star",
@@ -12738,7 +12738,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.2
+                        "value": 0.22
                     },
                     {
                         "name": "BonusDamage",
@@ -12754,7 +12754,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "BonusDamage",
@@ -12845,11 +12845,11 @@
                 "constants": [
                     {
                         "name": "AD1",
-                        "value": 15.0
+                        "value": 20.0
                     },
                     {
                         "name": "AD2",
-                        "value": 25.0
+                        "value": 30.0
                     },
                     {
                         "name": "AD3",
@@ -12857,11 +12857,11 @@
                     },
                     {
                         "name": "Amp1",
-                        "value": 10.0
+                        "value": 12.0
                     },
                     {
                         "name": "Amp2",
-                        "value": 18.0
+                        "value": 20.0
                     },
                     {
                         "name": "Amp3",
@@ -12869,11 +12869,11 @@
                     },
                     {
                         "name": "Crit1",
-                        "value": 30.0
+                        "value": 40.0
                     },
                     {
                         "name": "Crit2",
-                        "value": 60.0
+                        "value": 70.0
                     },
                     {
                         "name": "Crit3",
@@ -12905,11 +12905,11 @@
                     },
                     {
                         "name": "Vamp1",
-                        "value": 15.0
+                        "value": 20.0
                     },
                     {
                         "name": "Vamp2",
-                        "value": 25.0
+                        "value": 30.0
                     },
                     {
                         "name": "Vamp3",
@@ -12990,7 +12990,7 @@
         "trait_id": "TFT16_Ionia",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Ionia.TFT_Set16.png",
-        "tooltip_text": "愛歐尼亞英雄獲得護盾、物攻與魔攻。他們每場對戰的建構路線都不一樣。<br><br>@TFTUnitProperty.trait:TFT16_Ionia_PathTooltip@<br><br><row>(@MinUnits@) @ShieldAmount*100@% %i:scaleHealth%護盾、@ADAP*100@% %i:scaleAD%%i:scaleAP%</row><br><row>(@MinUnits@) @ShieldAmount*100@% %i:scaleHealth%護盾、@ADAP*100@% %i:scaleAD%%i:scaleAP%</row><br><row>(@MinUnits@) @ShieldAmount*100@% %i:scaleHealth%護盾、@ADAP*100@% %i:scaleAD%%i:scaleAP%</row>",
+        "tooltip_text": "愛歐尼亞英雄獲得護盾、物攻與魔攻。他們每場對戰的建構路線都不一樣。<br><br>@TFTUnitProperty.trait:TFT16_Ionia_PathTooltip@<br><br><row>(@MinUnits@)獲得1個每場對戰都會改變的增益</row><br><row>(@MinUnits@)獲得1個每場對戰都會改變的增益</row><br><row>(@MinUnits@)獲得1個每場對戰都會改變的增益</row>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -13077,7 +13077,7 @@
                     },
                     {
                         "name": "BladesPercentChance",
-                        "value": 35.0
+                        "value": 38.0
                     },
                     {
                         "name": "DeterminationFlatDamage",
@@ -13145,7 +13145,7 @@
                     },
                     {
                         "name": "BladesPercentChance",
-                        "value": 40.0
+                        "value": 45.0
                     },
                     {
                         "name": "DeterminationFlatDamage",
@@ -16192,7 +16192,7 @@
                     },
                     {
                         "name": "GalioAD",
-                        "value": 75.0
+                        "value": 85.0
                     },
                     {
                         "name": "GalioBonusArmor",
@@ -16488,7 +16488,7 @@
         "trait_id": "TFT4_Dragonsoul",
         "set": "TFTSet4",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_4_Dragonblood.png",
-        "tooltip_text": "在戰鬥中前幾名受到傷害的龍魂者友軍會獲得巨龍賜福。在帶有賜福時，此單位會獲得額外屬性，並且每第5次普攻會發射一道龍焰爆裂，造成目標@DragonBreathDamage@%最大生命的魔法傷害。<br><br>在死亡時，這個賜福會傳遞給相距最近且未受到賜福的的友方龍魂者英雄。<br><br><expandRow>(@MinUnits@) 提供@NumBlessings@個賜福；@BonusSP@% %i:scaleAS% %i:scaleAP% </expandRow><br>",
+        "tooltip_text": "戰鬥開始：在戰鬥中前幾名受到傷害的龍魂者友軍會獲得巨龍賜福。帶有賜福時，此單位的數值提高，並且每5次攻擊會發射一道龍魂衝擊波，造成@DragonBreathDamage@%目標最大生命的魔法傷害。<br><br>死亡時，這個賜福會傳遞給最靠近且未受到賜福的友方龍魂者英雄。<br><br><expandRow>(@MinUnits@) @NumBlessings@賜福；@BonusSP@% %i:scaleAS% %i:scaleAP% </expandRow><br>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -16519,11 +16519,11 @@
                 "constants": [
                     {
                         "name": "BonusAS",
-                        "value": 90.0
+                        "value": 75.0
                     },
                     {
                         "name": "BonusSP",
-                        "value": 90.0
+                        "value": 75.0
                     },
                     {
                         "name": "DragonBreathDamage",
@@ -16609,7 +16609,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 25.0
+                        "value": 20.0
                     },
                     {
                         "name": "MaxStacks",
@@ -16625,7 +16625,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 35.0
+                        "value": 30.0
                     },
                     {
                         "name": "MaxStacks",
@@ -17130,7 +17130,7 @@
                     },
                     {
                         "name": "ShieldAmount",
-                        "value": 175.0
+                        "value": 200.0
                     }
                 ],
                 "min_units": 2,
@@ -17150,7 +17150,7 @@
                     },
                     {
                         "name": "ShieldAmount",
-                        "value": 225.0
+                        "value": 250.0
                     }
                 ],
                 "min_units": 4,
@@ -17170,7 +17170,7 @@
                     },
                     {
                         "name": "ShieldAmount",
-                        "value": 275.0
+                        "value": 300.0
                     }
                 ],
                 "min_units": 6,
@@ -17190,7 +17190,7 @@
                     },
                     {
                         "name": "ShieldAmount",
-                        "value": 500.0
+                        "value": 525.0
                     }
                 ],
                 "min_units": 8,
@@ -17666,11 +17666,11 @@
                 "constants": [
                     {
                         "name": "AlliedOmnivampPercent",
-                        "value": 10.0
+                        "value": 15.0
                     },
                     {
                         "name": "TraitOmnivampPercent",
-                        "value": 40.0
+                        "value": 50.0
                     }
                 ],
                 "min_units": 2,
@@ -17682,11 +17682,11 @@
                 "constants": [
                     {
                         "name": "AlliedOmnivampPercent",
-                        "value": 25.0
+                        "value": 30.0
                     },
                     {
                         "name": "TraitOmnivampPercent",
-                        "value": 100.0
+                        "value": 110.0
                     }
                 ],
                 "min_units": 4,
@@ -17698,11 +17698,11 @@
                 "constants": [
                     {
                         "name": "AlliedOmnivampPercent",
-                        "value": 50.0
+                        "value": 60.0
                     },
                     {
                         "name": "TraitOmnivampPercent",
-                        "value": 125.0
+                        "value": 135.0
                     }
                 ],
                 "min_units": 6,

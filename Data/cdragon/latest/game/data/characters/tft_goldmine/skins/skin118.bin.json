@@ -1,0 +1,110 @@
+{
+    "{7d383973}": {
+        "championSkinName": "TFT_Targon_Home",
+        "skinAnimationProperties": {
+            "animationGraphData": "{d369d984}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TFT_GoldMine/Skins/Skin118/TFT_GoldMine_Skin118.TFT_ArenaSkin_Targon.skl",
+            "simpleSkin": "ASSETS/Characters/TFT_GoldMine/Skins/Skin118/TFT_GoldMine_Skin118.TFT_ArenaSkin_Targon.skn",
+            "selfIllumination": 2.0,
+            "Material": "Characters/TFT_GoldMine/Skins/Skin118/Materials/Targon_Goldmine_Home_Mat",
+            "castShadows": false,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "idleParticlesEffects": [
+            {
+                "effectKey": "{ab656bba}",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
+        "mResourceResolver": "{2ef3daa1}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "{2ef3daa1}": {
+        "resourceMap": {
+            "{ab656bba}": "Maps/Shipping/Map22/Particles/TFT_Arenas/TFT_GoldMines",
+            "{a096c3ba}": "Characters/TFT_GoldMine/Skins/Skin118/Particle/TFT_Targon_Goldmine118_ToGetMoney",
+            "{52e51db3}": "{00000000}",
+            "{d4f15938}": "{00000000}",
+            "{aa7ed856}": "Characters/TFT_GoldMine/Skins/Skin118/Particle/TFT_Tagon_Goldmine118_Death_01",
+            "{66f94844}": "Characters/TFT_GoldMine/Skins/Skin118/Particle/TFT_Targon_Goldmine118_Idle_01",
+            "{4f1c2757}": "Characters/TFT_GoldMine/Skins/Skin118/Particle/TFT_Targon_Goldmine118_Spawn_01",
+            "{a97ed6c3}": "Characters/TFT_GoldMine/Skins/Skin118/Particle/TFT_Tagon_Goldmine118_Death_02",
+            "{69f94cfd}": "Characters/TFT_GoldMine/Skins/Skin118/Particle/TFT_Targon_Goldmine118_Idle_02",
+            "{501c28ea}": "Characters/TFT_GoldMine/Skins/Skin118/Particle/TFT_Targon_Goldmine118_Spawn_02",
+            "{a87ed530}": "Characters/TFT_GoldMine/Skins/Skin118/Particle/TFT_Tagon_Goldmine118_Death_03"
+        },
+        "__type": "ResourceResolver"
+    },
+    "Characters/TFT_GoldMine/Skins/Skin118/Materials/Targon_Goldmine_Home_Mat": {
+        "name": "Characters/TFT_GoldMine/Skins/Skin118/Materials/Targon_Goldmine_Home_Mat",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT_GoldMine/Skins/Skin118/TFT_Targon_GoldMine_Home_Tx.TFT_ArenaSkin_Targon.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "ShadowClip",
+                "value": [
+                    0.33000001311302185,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Only",
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "writeMask": 15,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": [
+        "DATA/Characters/TFT_GoldMine/TFT_GoldMine.bin",
+        "DATA/Characters/TFT_GoldMine/Animations/Skin118.bin",
+        "DATA/TFT_GoldMine_Skins_Skin118_Skins_Skin119.bin"
+    ]
+}

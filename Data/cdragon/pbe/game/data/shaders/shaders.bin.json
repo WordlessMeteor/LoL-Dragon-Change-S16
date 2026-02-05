@@ -58297,6 +58297,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "EmissiveFresnelSmoothStep",
+                "data": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "EmissiveFresnelSmoothStep",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "EmissiveFresnelSize",
                 "data": [
                     1.0,
@@ -58425,6 +58442,11 @@
             },
             {
                 "name": "DEBUG_VIEW_BEAUTY_LIGHT",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_EFFECT_MASK",
+                "onByDefault": true,
                 "__type": "ShaderStaticSwitch"
             },
             {

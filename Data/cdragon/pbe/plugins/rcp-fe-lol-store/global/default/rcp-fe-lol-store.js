@@ -288,7 +288,7 @@
                     this._api = e, this.displayNameLocKey = "navbar_store", this.show = this.show.bind(this), this.hide = this.hide.bind(this)
                 }
                 show(e) {
-                    const t = e || {
+                    const t = e && Object.keys(e).length > 0 ? e : {
                         viaNav: !0
                     };
                     return this._api.showStore(t)

@@ -298,7 +298,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Mel vystřelí salvu projektilů, které vybuchnou kolem cílového místa a nepřátelům v oblasti opakovaně způsobí poškození.",
-            "dynamicDescription": "Mel vystřelí salvu @ExplosionCount@ projektilů, které vybuchnou v oblasti kolem cílové pozice.<br><br>Každý výbuch způsobí <magicDamage>@TotalExplosionDamage@ bodů magického poškození</magicDamage>, celkově tak může způsobit až <magicDamage>@AllDamageHit@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel vystřelí salvu @ExplosionCount@ projektilů, které vybuchnou v oblasti kolem cílové pozice.<br><br>Zásah prvním výbuchem způsobí <magicDamage>@InitialExplosionDamage@ bodů magického poškození</magicDamage> a všechny následující výbuchy způsobují <magicDamage>@TotalExplosionDamage@ bodů magického poškození</magicDamage>, celkově tak lze způsobit až <magicDamage>@AllDamageHit@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Mel kolem sebe vytvoří bariéru, která odráží nepřátelské projektily zpět na útočníka a zabraňuje jí utrpět poškození, sama navíc získá bonus k rychlosti pohybu.",
-            "dynamicDescription": "Mel kolem sebe vytvoří bariéru, která odráží projektily vystřelené nepřátelskými šampiony, zabraňuje jí utrpět poškození a poskytuje jí na @Duration@&nbsp;sek. <speed>@MoveSpeed*100@&nbsp;% k rychlosti pohybu</speed>, tento bonus postupně odeznívá.<br><br>Odražené projektily způsobují <magicDamage>magické poškození ve výši @DamagePercent@ původního poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel kolem sebe vytvoří bariéru, která odráží projektily vystřelené nepřátelskými šampiony, a získá na @Duration@&nbsp;sek. <shield>štít o síle @ShieldAmount@ bodů</shield> a <speed>@MoveSpeed*100@% bonus k rychlosti pohybu</speed>, jenž během @MoveSpeedDuration@&nbsp;sek. postupně odeznívá.<br><br>Odražené projektily způsobují <magicDamage>magické poškození ve výši @DamagePercent@ původního poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "Mel před sebe vystřelí zářivou kouli, která znehybní nepřátele ve svém středu, okolní jednotky zpomalí a způsobí postupné poškození.",
             "dynamicDescription": "Mel vystřelí zářivou kouli, která na @RootDuration@&nbsp;sek. <status>znehybní</status> nepřátele ve svém středu a způsobí jim <magicDamage>@Damage@ bodů magického poškození</magicDamage>.<br><br>Koule kolem sebe vytvoří nehostinnou oblast, která <status>zpomaluje</status> nepřátele o @AreaSlowAmount*100@&nbsp;% a způsobuje jim <magicDamage>@AreaDamagePerSecond@ bodů magického poškození za sekundu</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,
@@ -616,12 +616,12 @@
                 90.0
             ],
             "cooldownCoefficients": [
-                12.0,
-                11.5,
                 11.0,
                 10.5,
                 10.0,
-                10.0
+                9.5,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

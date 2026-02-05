@@ -8346,6 +8346,233 @@ div.player-name-input__split-inputs-wrapper {
     fill: #0596aa
 }
 
+.next-reward-title {
+    font-family: var(--font-display)
+}
+
+.next-reward-label,
+.next-reward-xp-label {
+    font-family: var(--font-body)
+}
+
+.next-reward-label,
+.next-reward-title,
+.next-reward-xp-label {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.next-reward-title,
+.next-reward-xp-label {
+    text-transform: uppercase
+}
+
+.next-reward-title:lang(el-gr),
+.next-reward-title:lang(ja-jp),
+.next-reward-title:lang(ko-kr),
+.next-reward-title:lang(th-th),
+.next-reward-title:lang(tr-tr),
+.next-reward-title:lang(zh-tw),
+.next-reward-xp-label:lang(el-gr),
+.next-reward-xp-label:lang(ja-jp),
+.next-reward-xp-label:lang(ko-kr),
+.next-reward-xp-label:lang(th-th),
+.next-reward-xp-label:lang(tr-tr),
+.next-reward-xp-label:lang(zh-tw) {
+    text-transform: none
+}
+
+.next-reward-title {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.next-reward-title:lang(ja-jp) {
+    font-size: 13px
+}
+
+.next-reward-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.next-reward-xp-label {
+    color: #ccc4b3;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .02625em;
+    line-height: 16px
+}
+
+.next-reward-xp-label:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.next-reward-label {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.next-reward-label:lang(ja-jp) {
+    font-size: 13px
+}
+
+.next-reward-label:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.pass-progression-widget {
+    padding: 8px 10px
+}
+
+.pass-progression-widget.is-level-zero .left-column .pass-progression-widget-level-reward-icon {
+    border: none;
+    box-shadow: none;
+    margin: 2px;
+    outline: none
+}
+
+.pass-progression-widget:not(.is-level-zero) .left-column .pass-progression-widget-level-reward-icon {
+    border-image: linear-gradient(#70603e, #2e230f);
+    border-image-slice: 1;
+    position: relative
+}
+
+.pass-progression-widget:not(.is-level-zero) .left-column .pass-progression-widget-level-reward-icon:after {
+    background-color: rgba(0, 0, 0, .5);
+    background-image: url(/fe/lol-static-assets/images/pass-progression-check-pip.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.pass-progression-widget.is-max-level .right-column .pass-progression-widget-level-reward-icon {
+    border-image: linear-gradient(#70603e, #2e230f);
+    border-image-slice: 1;
+    position: relative
+}
+
+.pass-progression-widget.is-max-level .right-column .pass-progression-widget-level-reward-icon:after {
+    background-color: rgba(0, 0, 0, .5);
+    background-image: url(/fe/lol-static-assets/images/pass-progression-check-pip.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.pass-progression-widget .pass-progression-widget-level:last-child {
+    background: #005a82
+}
+
+.pass-progression-widget-rewards-content {
+    display: flex;
+    margin-bottom: 12px
+}
+
+.pass-progression-widget-rewards-content .right-column {
+    display: flex;
+    flex-grow: 1
+}
+
+.pass-progression-widget-level-reward-icon {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-image: linear-gradient(#c8aa6e, #785a28);
+    border-image-slice: 1;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: inset 0 0 4px 1px #000;
+    height: 48px;
+    outline: 1px solid #010a13;
+    width: 48px
+}
+
+.pass-progression-widget-next-reward-wrapper {
+    flex-grow: 1;
+    padding: 0 10px;
+    text-align: right
+}
+
+.pass-progression-widget-level-progress {
+    display: flex
+}
+
+.next-reward-title {
+    color: #c89b3c;
+    margin-bottom: 2px
+}
+
+.next-reward-label {
+    color: #f0e6d2;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 144px
+}
+
+.next-reward-xp-label span {
+    color: #0596aa
+}
+
+.pass-progression-current-level-progress-fillbar {
+    background-color: #3c3c41;
+    background-image: linear-gradient(90deg, #005a82, #0a96aa 58.33%, #b2d9db);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    border-top: 1px solid rgba(0, 0, 0, .5);
+    flex-grow: 1;
+    height: 4px;
+    margin-top: 2px
+}
+
+.pass-progression-widget-level {
+    background: #005a82;
+    clip-path: polygon(7.5px 0, calc(100% - 7.5px) 0, 100% 50%, calc(100% - 7.5px) 100%, 7.5px 100%, 0 50%);
+    height: 20px;
+    margin-bottom: -5px;
+    margin-top: -5px
+}
+
+.pass-progression-widget-level:first-child {
+    margin-right: -3px
+}
+
+.pass-progression-widget-level:last-child {
+    background: #3c3c41;
+    margin-left: -3px
+}
+
+.pass-progression-widget-level-content {
+    background: #010a13;
+    clip-path: polygon(9px 10%, calc(100% - 9px) 10%, 93% 50%, calc(100% - 9px) 90%, 9px 90%, 7% 50%);
+    color: #a09b8c;
+    height: 20px;
+    text-align: center;
+    width: 40px
+}
+
 .multi-purchase-slider {
     font-family: var(--font-body);
     -webkit-font-feature-settings: "kern" 1;

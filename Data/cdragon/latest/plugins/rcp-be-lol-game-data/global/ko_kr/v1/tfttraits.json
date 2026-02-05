@@ -11879,7 +11879,7 @@
         "trait_id": "TFT16_AatroxUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_9_Darkin.png",
-        "tooltip_text": "아트록스가 자신의 모든 피해 흡혈만큼 공격력을 얻습니다.<br><br>첫 사망 시 잠시 대상으로 지정할 수 없는 상태가 되고 @HealDuration@초에 걸쳐 체력을 모두 회복합니다. 이후 아트록스의 최대 마나가 @ManaReduction@ 감소하고 내구력을 @Durability*100@% 얻습니다.",
+        "tooltip_text": "아트록스가 자신 모든 피해 흡혈의 @OmnivampToADRatio*100@%만큼 공격력을 얻습니다.<br><br>첫 사망 시 잠시 대상으로 지정할 수 없는 상태가 되고 @HealDuration@초에 걸쳐 체력을 모두 회복합니다. 이후 아트록스의 최대 마나가 @ManaReduction@ 감소하고 내구력을 @Durability*100@% 얻습니다.",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -11897,7 +11897,7 @@
                     },
                     {
                         "name": "OmnivampToADRatio",
-                        "value": 1.0
+                        "value": 1.5
                     }
                 ]
             }
@@ -11923,7 +11923,7 @@
                 "constants": [
                     {
                         "name": "BonusStardustPerOneStar",
-                        "value": 0.2
+                        "value": 0.25
                     },
                     {
                         "name": "BonusStardustPerThreeStar",
@@ -11931,7 +11931,7 @@
                     },
                     {
                         "name": "BonusStardustPerTwoStar",
-                        "value": 0.33
+                        "value": 0.3
                     }
                 ],
                 "min_units": 1,
@@ -12092,11 +12092,11 @@
                     },
                     {
                         "name": "FlatHealthPerItem1Star",
-                        "value": 250.0
+                        "value": 350.0
                     },
                     {
                         "name": "FlatHealthPerItem2Star",
-                        "value": 450.0
+                        "value": 600.0
                     },
                     {
                         "name": "FlatHealthPerItem3Star",
@@ -12738,7 +12738,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.2
+                        "value": 0.22
                     },
                     {
                         "name": "BonusDamage",
@@ -12754,7 +12754,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "BonusDamage",
@@ -12845,11 +12845,11 @@
                 "constants": [
                     {
                         "name": "AD1",
-                        "value": 15.0
+                        "value": 20.0
                     },
                     {
                         "name": "AD2",
-                        "value": 25.0
+                        "value": 30.0
                     },
                     {
                         "name": "AD3",
@@ -12857,11 +12857,11 @@
                     },
                     {
                         "name": "Amp1",
-                        "value": 10.0
+                        "value": 12.0
                     },
                     {
                         "name": "Amp2",
-                        "value": 18.0
+                        "value": 20.0
                     },
                     {
                         "name": "Amp3",
@@ -12869,11 +12869,11 @@
                     },
                     {
                         "name": "Crit1",
-                        "value": 30.0
+                        "value": 40.0
                     },
                     {
                         "name": "Crit2",
-                        "value": 60.0
+                        "value": 70.0
                     },
                     {
                         "name": "Crit3",
@@ -12905,11 +12905,11 @@
                     },
                     {
                         "name": "Vamp1",
-                        "value": 15.0
+                        "value": 20.0
                     },
                     {
                         "name": "Vamp2",
-                        "value": 25.0
+                        "value": 30.0
                     },
                     {
                         "name": "Vamp3",
@@ -12990,7 +12990,7 @@
         "trait_id": "TFT16_Ionia",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Ionia.TFT_Set16.png",
-        "tooltip_text": "아이오니아가 보호막, 공격력, 주문력을 얻습니다. 게임마다 아이오니아는 다른 길로 나아갑니다. <br><br>@TFTUnitProperty.trait:TFT16_Ionia_PathTooltip@<br><br><row>(@MinUnits@) @ShieldAmount*100@% %i:scaleHealth% 보호막, @ADAP*100@% %i:scaleAD%%i:scaleAP%</row><br><row>(@MinUnits@) @ShieldAmount*100@% %i:scaleHealth% 보호막, @ADAP*100@% %i:scaleAD%%i:scaleAP%</row><br><row>(@MinUnits@) @ShieldAmount*100@% %i:scaleHealth% 보호막, @ADAP*100@% %i:scaleAD%%i:scaleAP%</row>",
+        "tooltip_text": "아이오니아가 보호막, 공격력, 주문력을 얻습니다. 게임마다 아이오니아는 다른 길로 나아갑니다. <br><br>@TFTUnitProperty.trait:TFT16_Ionia_PathTooltip@<br><br><row>(@MinUnits@) 게임마다 다른 효과 획득</row><br><row>(@MinUnits@) 게임마다 다른 효과 획득</row><br><row>(@MinUnits@) 게임마다 다른 효과 획득</row>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -13077,7 +13077,7 @@
                     },
                     {
                         "name": "BladesPercentChance",
-                        "value": 35.0
+                        "value": 38.0
                     },
                     {
                         "name": "DeterminationFlatDamage",
@@ -13145,7 +13145,7 @@
                     },
                     {
                         "name": "BladesPercentChance",
-                        "value": 40.0
+                        "value": 45.0
                     },
                     {
                         "name": "DeterminationFlatDamage",
@@ -16192,7 +16192,7 @@
                     },
                     {
                         "name": "GalioAD",
-                        "value": 75.0
+                        "value": 85.0
                     },
                     {
                         "name": "GalioBonusArmor",
@@ -16488,7 +16488,7 @@
         "trait_id": "TFT4_Dragonsoul",
         "set": "TFTSet4",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_4_Dragonblood.png",
-        "tooltip_text": "전투에서 최초 피해를 입은 용의 영혼 아군 몇 명이 용의 축복을 받습니다. 해당 유닛은 추가 능력치를 획득하고 5번째 공격마다 용의 영혼을 폭발시켜 대상 최대 체력의 @DragonBreathDamage@%만큼 마법 피해를 입힙니다.<br><br>사망 시 축복은 축복이 없던 가장 가까운 용의 영혼 아군에게 전달됩니다.<br><br><expandRow>(@MinUnits@) 축복 @NumBlessings@, @BonusSP@% %i:scaleAS% %i:scaleAP% </expandRow><br>",
+        "tooltip_text": "전투 시작: 전투에서 최초 피해를 입은 용의 영혼 아군 몇 명이 용의 축복을 받습니다. 해당 유닛은 추가 능력치를 획득하고 5번째 공격마다 용의 영혼을 폭발시켜 대상 최대 체력의 @DragonBreathDamage@%만큼 마법 피해를 입힙니다.<br><br>사망 시 축복은 축복이 없던 가장 가까운 용의 영혼 아군에게 전달됩니다.<br><br><expandRow>(@MinUnits@) 축복 @NumBlessings@, @BonusSP@% %i:scaleAS% %i:scaleAP% </expandRow><br>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -16519,11 +16519,11 @@
                 "constants": [
                     {
                         "name": "BonusAS",
-                        "value": 90.0
+                        "value": 75.0
                     },
                     {
                         "name": "BonusSP",
-                        "value": 90.0
+                        "value": 75.0
                     },
                     {
                         "name": "DragonBreathDamage",
@@ -16609,7 +16609,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 25.0
+                        "value": 20.0
                     },
                     {
                         "name": "MaxStacks",
@@ -16625,7 +16625,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 35.0
+                        "value": 30.0
                     },
                     {
                         "name": "MaxStacks",
@@ -17130,7 +17130,7 @@
                     },
                     {
                         "name": "ShieldAmount",
-                        "value": 175.0
+                        "value": 200.0
                     }
                 ],
                 "min_units": 2,
@@ -17150,7 +17150,7 @@
                     },
                     {
                         "name": "ShieldAmount",
-                        "value": 225.0
+                        "value": 250.0
                     }
                 ],
                 "min_units": 4,
@@ -17170,7 +17170,7 @@
                     },
                     {
                         "name": "ShieldAmount",
-                        "value": 275.0
+                        "value": 300.0
                     }
                 ],
                 "min_units": 6,
@@ -17190,7 +17190,7 @@
                     },
                     {
                         "name": "ShieldAmount",
-                        "value": 500.0
+                        "value": 525.0
                     }
                 ],
                 "min_units": 8,
@@ -17666,11 +17666,11 @@
                 "constants": [
                     {
                         "name": "AlliedOmnivampPercent",
-                        "value": 10.0
+                        "value": 15.0
                     },
                     {
                         "name": "TraitOmnivampPercent",
-                        "value": 40.0
+                        "value": 50.0
                     }
                 ],
                 "min_units": 2,
@@ -17682,11 +17682,11 @@
                 "constants": [
                     {
                         "name": "AlliedOmnivampPercent",
-                        "value": 25.0
+                        "value": 30.0
                     },
                     {
                         "name": "TraitOmnivampPercent",
-                        "value": 100.0
+                        "value": 110.0
                     }
                 ],
                 "min_units": 4,
@@ -17698,11 +17698,11 @@
                 "constants": [
                     {
                         "name": "AlliedOmnivampPercent",
-                        "value": 50.0
+                        "value": 60.0
                     },
                     {
                         "name": "TraitOmnivampPercent",
-                        "value": 125.0
+                        "value": 135.0
                     }
                 ],
                 "min_units": 6,

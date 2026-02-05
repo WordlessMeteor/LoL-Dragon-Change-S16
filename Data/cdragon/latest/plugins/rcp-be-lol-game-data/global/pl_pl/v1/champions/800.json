@@ -298,7 +298,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Mel wystrzeliwuje serię pocisków, które wybuchają w lokalizacji wroga, zadając wielokrotne obrażenia wrogom znajdującym się w tym obszarze.",
-            "dynamicDescription": "Mel uwalnia serię @ExplosionCount@ pocisków, które wybuchają na obszarze dookoła wybranego miejsca.<br><br>Każdy wybuch zadaje <magicDamage>@TotalExplosionDamage@ pkt. obrażeń magicznych</magicDamage>, łącznie do <magicDamage>@AllDamageHit@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel uwalnia serię @ExplosionCount@ pocisków, które wybuchają na obszarze dookoła wybranego miejsca.<br><br>Pierwsza eksplozja zadaje <magicDamage>@InitialExplosionDamage@ pkt. obrażeń magicznych</magicDamage>, a każda kolejna — <magicDamage>@TotalExplosionDamage@ pkt. obrażeń magicznych</magicDamage>, łącznie zadając <magicDamage>@AllDamageHit@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Mel tworzy wokół siebie barierę, która odbija wrogie pociski w kierunku przeciwników, chroni przed obrażeniami i zapewnia jej prędkość ruchu.",
-            "dynamicDescription": "Mel tworzy wokół siebie barierę, która odbija pociski wrogich bohaterów, chroni przed obrażeniami i zapewnia jej <speed>@MoveSpeed*100@% zanikającej prędkości ruchu</speed> na @Duration@ sek.<br><br>Odbite pociski zadają <magicDamage>@DamagePercent@ obrażeń wyjściowych jako obrażenia magiczne</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel tworzy wokół siebie barierę, która odbija pociski wrogich bohaterów, osłania się <shield>tarczą o wytrzymałości @ShieldAmount@ pkt.</shield> na @Duration@ sek. i zyskuje <speed>@MoveSpeed*100@% zanikającej prędkości ruchu</speed> na @MoveSpeedDuration@ sek.<br><br>Odbite pociski zadają <magicDamage>@DamagePercent@ obrażeń wyjściowych jako obrażenia magiczne</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "Mel wystrzeliwuje świetlistą kulę naprzód. Jednostki w jej centrum zostają unieruchomione, a wrogowie w otaczającym kulę obszarze są spowolnieni i otrzymują obrażenia w czasie.",
             "dynamicDescription": "Mel wystrzeliwuje świetlistą kulę, <status>unieruchamiając</status> wrogów w jej centrum na @RootDuration@ sek. i zadając im <magicDamage>@Damage@ pkt. obrażeń magicznych</magicDamage>.<br><br>Dookoła kuli powstaje nieprzyjazny obszar, który <status>spowalnia</status> wrogów o @AreaSlowAmount*100@% i zadaje <magicDamage>@AreaDamagePerSecond@ pkt. obrażeń magicznych na sekundę</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,
@@ -616,12 +616,12 @@
                 90.0
             ],
             "cooldownCoefficients": [
-                12.0,
-                11.5,
                 11.0,
                 10.5,
                 10.0,
-                10.0
+                9.5,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

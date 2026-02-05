@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.2.1",
+    "version": "16.3.1",
     "data": {
         "Mel": {
             "id": "Mel",
@@ -85,15 +85,17 @@
                     "id": "MelQ",
                     "name": "Radiant Volley",
                     "description": "Mel fires a barrage of projectiles that explode around a target location, dealing damage repeatedly to enemies within the area.",
-                    "tooltip": "Mel unleashes a barrage of {{ explosioncount }} projectiles that explode in the area around a target location.<br /><br />Each explosion deals <magicDamage>{{ totalexplosiondamage }} magic damage</magicDamage>, adding up to <magicDamage>{{ alldamagehit }} magic damage</magicDamage> total.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Mel unleashes a barrage of {{ explosioncount }} projectiles that explode in the area around a target location.<br /><br />The first explosion hit deals <magicDamage>{{ initialexplosiondamage }} magic damage</magicDamage> and each subsequent explosion deals <magicDamage>{{ totalexplosiondamage }} magic damage</magicDamage>, adding up to <magicDamage>{{ alldamagehit }} magic damage</magicDamage> total.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
+                            "Initial Damage",
                             "Explosion Damage",
                             "Explosion Count",
                             "Cooldown",
                             "Mana Cost"
                         ],
                         "effect": [
+                            "{{ initialdamage }} -> {{ initialdamageNL }}",
                             "{{ explosiondamage }} -> {{ explosiondamageNL }}",
                             "{{ explosioncount }} -> {{ explosioncountNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
@@ -111,12 +113,12 @@
                     "cooldownBurn": "10/9/8/7/6",
                     "cost": [
                         70,
+                        75,
                         80,
-                        90,
-                        100,
-                        110
+                        85,
+                        90
                     ],
-                    "costBurn": "70/80/90/100/110",
+                    "costBurn": "70/75/80/85/90",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -230,15 +232,17 @@
                     "id": "MelW",
                     "name": "Rebuttal",
                     "description": "Mel forms a barrier around herself that reflects enemy projectiles back at the attacker, prevents her from taking damage, and grants her movement speed.",
-                    "tooltip": "Mel forms a barrier around herself that reflects projectiles from enemy champions, prevents her from taking damage, and gives her <speed>{{ movespeed*100 }}% decaying Move Speed</speed> for {{ duration }} second(s).<br /><br />Reflected projectiles deal <magicDamage>{{ damagepercent }} original damage as magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Mel forms a barrier around herself that reflects projectiles from enemy champions, gaining <shield>{{ shieldamount }} Shields</shield> for {{ duration }} seconds and <speed>{{ movespeed*100 }}% decaying Move Speed</speed> for {{ movespeedduration }} seconds.<br /><br />Reflected projectiles deal <magicDamage>{{ damagepercent }} original damage as magic damage</magicDamage>.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Reflected Damage",
+                            "Shield Amount",
                             "Cooldown",
                             "Mana Cost"
                         ],
                         "effect": [
                             "{{ basedamagepercent*100.000000 }}% -> {{ basedamagepercentnl*100.000000 }}%",
+                            "{{ baseshieldamount }} -> {{ baseshieldamountNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -377,14 +381,12 @@
                     "leveltip": {
                         "label": [
                             "Damage",
-                            "Root Duration",
                             "Damage Per Second",
                             "Cooldown",
-                            "@AbilityResourceName@ Cost"
+                            "Mana Cost"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ rootduration }} -> {{ rootdurationNL }}",
                             "{{ baseareadamage }} -> {{ baseareadamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
@@ -392,13 +394,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        12,
-                        11.5,
                         11,
                         10.5,
-                        10
+                        10,
+                        9.5,
+                        9
                     ],
-                    "cooldownBurn": "12/11.5/11/10.5/10",
+                    "cooldownBurn": "11/10.5/10/9.5/9",
                     "cost": [
                         50,
                         60,
@@ -498,13 +500,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        1050,
-                        1050,
-                        1050,
-                        1050,
-                        1050
+                        1000,
+                        1000,
+                        1000,
+                        1000,
+                        1000
                     ],
-                    "rangeBurn": "1050",
+                    "rangeBurn": "1000",
                     "image": {
                         "full": "MelE.png",
                         "sprite": "spell8.png",

@@ -12771,7 +12771,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Nautilus/Skins/Skin39/Particles/Tapered_helix_02.SKINS_Nautilus_Skin39.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Nautilus/Skins/Skin39/Particles/Tapered_helix_02.SKINS_Nautilus_Skin39.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -17951,7 +17951,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Nautilus/Skins/Skin39/Particles/Chogath_Lighting_Cyl.SKINS_Nautilus_Skin39.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Nautilus/Skins/Skin39/Particles/Chogath_Lighting_Cyl.SKINS_Nautilus_Skin39.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -29824,7 +29824,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Nautilus/Skins/Skin39/Particles/Tapered_helix_02.SKINS_Nautilus_Skin39.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Nautilus/Skins/Skin39/Particles/Tapered_helix_02.SKINS_Nautilus_Skin39.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -47809,6 +47809,16 @@
         "name": "Characters/Nautilus/Skins/Skin40/Materials/Nautilus_Skin40_OIAS_inst",
         "samplerValues": [
             {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "MatCap_Tex",
                 "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Particles/Nautilus_Skin39_Gold_Matcap.SKINS_Nautilus_Skin39.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -47858,6 +47868,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "ScreenSpace_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_Alpha_Override",
                 "__type": "StaticMaterialShaderParamDef"
@@ -48046,6 +48076,21 @@
             }
         ],
         "switches": [
+            {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "OVERRIDE_DIFFUSE_ALPHA",
                 "on": false,
@@ -48169,6 +48214,16 @@
         "name": "Characters/Nautilus/Skins/Skin40/Materials/Nautilus_Skin40_Weapon_OIAS_inst",
         "samplerValues": [
             {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "MatCap_Tex",
                 "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Particles/Nautilus_Skin39_Gold_Matcap.SKINS_Nautilus_Skin39.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -48218,6 +48273,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "ScreenSpace_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_Alpha_Override",
                 "__type": "StaticMaterialShaderParamDef"
@@ -48406,6 +48481,21 @@
             }
         ],
         "switches": [
+            {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "OVERRIDE_DIFFUSE_ALPHA",
                 "on": false,
@@ -48708,6 +48798,16 @@
         "name": "Characters/Nautilus/Skins/Skin40/Materials/Nautilus_Skin40_Water_OIAS_inst",
         "samplerValues": [
             {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "ScreenSpace_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "MatCap_Tex",
                 "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Particles/Nautilus_Skin39_Gold_Matcap.SKINS_Nautilus_Skin39.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -48757,6 +48857,26 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "ScreenSpace_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Texture_Tint",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Diffuse_Alpha_Override",
                 "__type": "StaticMaterialShaderParamDef"
@@ -48963,6 +49083,21 @@
             }
         ],
         "switches": [
+            {
+                "name": "POST_LIGHTING_ON_SCROLLTEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_SCREENSPACE_TEX_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCREEN_SPACE_TEXTURE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "OVERRIDE_DIFFUSE_ALPHA",
                 "on": false,
@@ -49283,6 +49418,40 @@
             },
             {
                 "name": "Dissolve_Bias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VCDissolve_Pattern_Tilling",
+                "value": [
+                    0.019999999552965164,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VCDissolve_Pattern_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VCDissolve_Width",
+                "value": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VCDissolve_Value",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
@@ -49827,6 +49996,17 @@
             {
                 "name": "DISSOLVE",
                 "on": false,
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISSOLVE_VCBASED",
+                "on": false,
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISSOLVE_VCREVERSE",
                 "Group": "Dissolve",
                 "__type": "StaticMaterialSwitchDef"
             },

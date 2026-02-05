@@ -298,7 +298,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Mel tire une rafale de projectiles qui explosent sur une zone et infligent des dégâts répétés aux ennemis qui s'y trouvent.",
-            "dynamicDescription": "Mel tire une rafale de @ExplosionCount@ projectiles qui explosent sur une zone autour d'un endroit ciblé.<br><br>Chaque explosion inflige <magicDamage>@TotalExplosionDamage@ pts de dégâts magiques</magicDamage> (max <magicDamage>@AllDamageHit@ pts de dégâts magiques</magicDamage> au total).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel tire une rafale de @ExplosionCount@ projectiles qui explosent sur une zone autour d'un endroit ciblé.<br><br>La première explosion inflige <magicDamage>@InitialExplosionDamage@ pts de dégâts magiques</magicDamage> et chaque explosion suivante inflige <magicDamage>@TotalExplosionDamage@ pts de dégâts magiques</magicDamage>, pour un maximum de <magicDamage>@AllDamageHit@ pts de dégâts magiques</magicDamage> au total.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -309,11 +309,11 @@
             ],
             "costCoefficients": [
                 70.0,
+                75.0,
                 80.0,
+                85.0,
                 90.0,
-                100.0,
-                110.0,
-                110.0
+                90.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -448,7 +448,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Mel crée une barrière autour d'elle qui renvoie les projectiles ennemis à l'envoyeur. Cela la protège des dégâts et augmente sa vitesse de déplacement.",
-            "dynamicDescription": "Mel crée une barrière autour d'elle qui renvoie les projectiles des champions ennemis à l'envoyeur. Cela la protège des dégâts et lui octroie <speed>+@MoveSpeed*100@% de vitesse de déplacement</speed> (diminuant progressivement) pendant @Duration@ sec.<br><br>Les projectiles renvoyés infligent des <magicDamage>dégâts magiques équivalents à @DamagePercent@ des dégâts d'origine</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel crée une barrière autour d'elle qui renvoie les projectiles des champions ennemis à l'envoyeur. Elle gagne alors un <shield>bouclier de @ShieldAmount@ PV</shield> pendant @Duration@ sec et <speed>@MoveSpeed*100@% de vitesse de déplacement</speed> qui diminue en @MoveSpeedDuration@ sec.<br><br>Les projectiles renvoyés infligent <magicDamage>@DamagePercent@ des dégâts d'origine en dégâts magiques</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -600,12 +600,12 @@
             "description": "Mel lance un orbe brillant qui immobilise les ennemis touchés par le centre du projectile et qui ralentit ceux qui se trouvent en périphérie tout en leur infligeant des dégâts sur la durée.",
             "dynamicDescription": "Mel lance un orbe brillant qui <status>immobilise</status> les ennemis touchés par le centre du projectile pendant @RootDuration@ sec et qui inflige <magicDamage>@Damage@ pts de dégâts magiques</magicDamage>.<br><br>L'orbe génère une aura néfaste autour de lui qui <status>ralentit</status> les ennemis de @AreaSlowAmount*100@% et inflige <magicDamage>@AreaDamagePerSecond@ pts de dégâts magiques par seconde</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "costCoefficients": [
                 50.0,
@@ -616,12 +616,12 @@
                 90.0
             ],
             "cooldownCoefficients": [
-                12.0,
-                11.5,
                 11.0,
                 10.5,
                 10.0,
-                10.0
+                9.5,
+                9.0,
+                9.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

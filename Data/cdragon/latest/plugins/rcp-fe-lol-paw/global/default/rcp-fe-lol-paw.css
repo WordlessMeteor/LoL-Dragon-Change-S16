@@ -1228,7 +1228,10 @@
 }
 
 .paw-top-banner {
+    display: flex;
+    justify-content: flex-end;
     left: 0;
+    pointer-events: none;
     position: absolute;
     top: 0;
     width: 100%;
@@ -1284,6 +1287,33 @@
 .badge-position-top-right {
     right: 38px;
     top: -2px
+}
+
+.silvershields-badge {
+    align-items: center;
+    background-color: #61718d;
+    border-radius: 14px;
+    display: flex;
+    margin-right: 8px;
+    margin-top: 8px;
+    padding: 4px 8px 3px 6px
+}
+
+.paw-content>.paw-top-banner .silvershields-badge {
+    margin-right: 40px
+}
+
+.silvershields-badge-icon {
+    height: 15px;
+    margin-right: 4px;
+    width: 15px
+}
+
+.silvershields-badge-text {
+    color: #fff;
+    font-family: $fonts_lol_display;
+    font-size: 12px;
+    font-weight: 600
 }
 
 .related-items-overlay .related-item-entry,
@@ -1487,6 +1517,14 @@
     font-size: 12px;
     line-height: 1.4;
     max-height: 38px
+}
+
+.paw-silvershields-promo-text {
+    color: #a09b8c;
+    font-size: 11px;
+    line-height: 1.4;
+    margin-top: 8px;
+    text-align: center
 }
 
 .paw-item-splash {

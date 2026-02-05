@@ -290,23 +290,12 @@
             "gameModeDescription": "Ten randomly-selected champions assemble on a narrow bridge. Cross to the other side and destroy everything in your path.",
             "name": "Random Map",
             "gameMutator": "",
-            "isRGM": true,
+            "isRGM": false,
             "tftSetOverride": "",
             "properties": {
                 "suppressRunesMasteriesPerks": true
             },
-            "perPositionRequiredSummonerSpells": {
-                "any": {
-                    "spells": [
-                        4
-                    ]
-                },
-                "none": {
-                    "spells": [
-                        4
-                    ]
-                }
-            },
+            "perPositionRequiredSummonerSpells": {},
             "perPositionDisallowedSummonerSpells": {},
             "assets": {
                 "champ-select-flyout-background": "lol-game-data/assets/content/src/LeagueClient/GameModeAssets/ARAM/img/champ-select-flyout-background.png",
@@ -343,15 +332,22 @@
                 "icon-victory-video": "lol-game-data/assets/content/src/LeagueClient/GameModeAssets/ARAM/video/icon-victory.webm"
             },
             "locStrings": {
-                "tutorial_title": "Welcome To ARAM: MAYHEM",
-                "tutorial_confirm_label": "Awesome!"
+                "tutorial_title": "ARAM: MAYHEM",
+                "tutorial_confirm_label": "LET'S GO!",
+                "tutorial_subheader": "LUNAR REVEL UPDATE"
             },
             "categorizedContentBundles": {},
             "tutorialCards": [
                 {
                     "header": "Augments",
                     "footer": "",
-                    "description": "Power up quickly with your favorite augments and earn more as you level up to secure victory.",
+                    "description": "Power up quickly with your favorite Augments and earn more as you level up to secure victory.",
+                    "imagePath": "lol-game-data/assets/ASSETS/LeagueClient/GameModeAssets/Kiwi/kiwi-tutorial-landscale-img.png"
+                },
+                {
+                    "header": "Mayhem Progression Track",
+                    "footer": "",
+                    "description": "Celebrate this new year with a little more Mayhem! Play to earn new Augments, enhancements, and exclusive rewards from the Mayhem Progression Track!",
                     "imagePath": "lol-game-data/assets/ASSETS/LeagueClient/GameModeAssets/Kiwi/kiwi-tutorial-landscale-img.png"
                 }
             ]
