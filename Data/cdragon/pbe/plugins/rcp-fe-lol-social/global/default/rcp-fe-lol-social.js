@@ -3051,8 +3051,8 @@
                 D = U(n(134)),
                 N = U(n(135)),
                 P = U(n(136)),
-                j = U(n(137)),
-                L = U(n(138)),
+                L = U(n(137)),
+                j = U(n(138)),
                 z = U(n(139)),
                 F = U(n(140)),
                 q = U(n(141)),
@@ -3063,7 +3063,7 @@
                     default: e
                 }
             }
-            const H = [r.default, o.default, i.default, a.default, s.default, l.default, c.default, d.default, p.default, u.default, m.default, g.default, h.default, f.default, _.default, A.default, b.default, y.default, x.default, v.default, k.default, E.default, w.default, C.default, $.default, B.default, S.default, I.default, T.default, O.default, M.default, R.default, D.default, N.default, P.default, j.default, L.default, z.default, F.default, q.default, G.default]
+            const H = [r.default, o.default, i.default, a.default, s.default, l.default, c.default, d.default, p.default, u.default, m.default, g.default, h.default, f.default, _.default, A.default, b.default, y.default, x.default, v.default, k.default, E.default, w.default, C.default, $.default, B.default, S.default, I.default, T.default, O.default, M.default, R.default, D.default, N.default, P.default, L.default, j.default, z.default, F.default, q.default, G.default]
         }, e => {
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-arrow-toggle" noshadow>\r\n  <template>\r\n    <div class="arrow-toggle" class-use-animation="{{!data.disableAnimations}}"></div>\r\n  </template>\r\n</lol-social-element>\r\n'
@@ -4353,8 +4353,8 @@
                         D = "[object DataView]",
                         N = "[object Float32Array]",
                         P = "[object Float64Array]",
-                        j = "[object Int8Array]",
-                        L = "[object Int16Array]",
+                        L = "[object Int8Array]",
+                        j = "[object Int16Array]",
                         z = "[object Int32Array]",
                         F = "[object Uint8Array]",
                         q = "[object Uint8ClampedArray]",
@@ -4407,34 +4407,34 @@
                         De = "\\d+",
                         Ne = "[" + Ce + "]",
                         Pe = "[" + $e + "]",
-                        je = "[^" + Ee + Ie + De + Ce + $e + Be + "]",
-                        Le = "\\ud83c[\\udffb-\\udfff]",
+                        Le = "[^" + Ee + Ie + De + Ce + $e + Be + "]",
+                        je = "\\ud83c[\\udffb-\\udfff]",
                         ze = "[^" + Ee + "]",
                         Fe = "(?:\\ud83c[\\udde6-\\uddff]){2}",
                         qe = "[\\ud800-\\udbff][\\udc00-\\udfff]",
                         Ge = "[" + Be + "]",
                         Ue = "\\u200d",
-                        He = "(?:" + Pe + "|" + je + ")",
-                        We = "(?:" + Ge + "|" + je + ")",
+                        He = "(?:" + Pe + "|" + Le + ")",
+                        We = "(?:" + Ge + "|" + Le + ")",
                         Ve = "(?:['’](?:d|ll|m|re|s|t|ve))?",
                         Ye = "(?:['’](?:D|LL|M|RE|S|T|VE))?",
-                        Qe = "(?:" + Re + "|" + Le + ")" + "?",
+                        Qe = "(?:" + Re + "|" + je + ")" + "?",
                         Ke = "[" + Se + "]?",
                         Ze = Ke + Qe + ("(?:" + Ue + "(?:" + [ze, Fe, qe].join("|") + ")" + Ke + Qe + ")*"),
                         Xe = "(?:" + [Ne, Fe, qe].join("|") + ")" + Ze,
                         Je = "(?:" + [ze + Re + "?", Re, Fe, qe, Oe].join("|") + ")",
                         et = RegExp(Te, "g"),
                         tt = RegExp(Re, "g"),
-                        nt = RegExp(Le + "(?=" + Le + ")|" + Je + Ze, "g"),
+                        nt = RegExp(je + "(?=" + je + ")|" + Je + Ze, "g"),
                         rt = RegExp([Ge + "?" + Pe + "+" + Ve + "(?=" + [Me, Ge, "$"].join("|") + ")", We + "+" + Ye + "(?=" + [Me, Ge + He, "$"].join("|") + ")", Ge + "?" + He + "+" + Ve, Ge + "+" + Ye, "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])", "\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])", De, Xe].join("|"), "g"),
                         ot = RegExp("[" + Ue + Ee + we + Se + "]"),
                         it = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/,
                         at = ["Array", "Buffer", "DataView", "Date", "Error", "Float32Array", "Float64Array", "Function", "Int8Array", "Int16Array", "Int32Array", "Map", "Math", "Object", "Promise", "RegExp", "Set", "String", "Symbol", "TypeError", "Uint8Array", "Uint8ClampedArray", "Uint16Array", "Uint32Array", "WeakMap", "_", "clearTimeout", "isFinite", "parseInt", "setTimeout"],
                         st = -1,
                         lt = {};
-                    lt[N] = lt[P] = lt[j] = lt[L] = lt[z] = lt[F] = lt[q] = lt[G] = lt[U] = !0, lt[A] = lt[b] = lt[R] = lt[y] = lt[D] = lt[x] = lt[v] = lt[k] = lt[w] = lt[C] = lt[$] = lt[S] = lt[I] = lt[T] = lt[M] = !1;
+                    lt[N] = lt[P] = lt[L] = lt[j] = lt[z] = lt[F] = lt[q] = lt[G] = lt[U] = !0, lt[A] = lt[b] = lt[R] = lt[y] = lt[D] = lt[x] = lt[v] = lt[k] = lt[w] = lt[C] = lt[$] = lt[S] = lt[I] = lt[T] = lt[M] = !1;
                     var ct = {};
-                    ct[A] = ct[b] = ct[R] = ct[D] = ct[y] = ct[x] = ct[N] = ct[P] = ct[j] = ct[L] = ct[z] = ct[w] = ct[C] = ct[$] = ct[S] = ct[I] = ct[T] = ct[O] = ct[F] = ct[q] = ct[G] = ct[U] = !0, ct[v] = ct[k] = ct[M] = !1;
+                    ct[A] = ct[b] = ct[R] = ct[D] = ct[y] = ct[x] = ct[N] = ct[P] = ct[L] = ct[j] = ct[z] = ct[w] = ct[C] = ct[$] = ct[S] = ct[I] = ct[T] = ct[O] = ct[F] = ct[q] = ct[G] = ct[U] = !0, ct[v] = ct[k] = ct[M] = !1;
                     var dt = {
                             "\\": "\\",
                             "'": "'",
@@ -4538,13 +4538,13 @@
                         return n
                     }
 
-                    function jt(e, t, n, r) {
+                    function Lt(e, t, n, r) {
                         var o = null == e ? 0 : e.length;
                         for (r && o && (n = e[--o]); o--;) n = t(n, e[o], o, e);
                         return n
                     }
 
-                    function Lt(e, t) {
+                    function jt(e, t) {
                         for (var n = -1, r = null == e ? 0 : e.length; ++n < r;)
                             if (t(e[n], n, e)) return !0;
                         return !1
@@ -4933,8 +4933,8 @@
                             De = t["__core-js_shared__"],
                             Ne = Me.toString,
                             Pe = Re.hasOwnProperty,
-                            je = 0,
-                            Le = (n = /[^.]+$/.exec(De && De.keys && De.keys.IE_PROTO || "")) ? "Symbol(src)_1." + n : "",
+                            Le = 0,
+                            je = (n = /[^.]+$/.exec(De && De.keys && De.keys.IE_PROTO || "")) ? "Symbol(src)_1." + n : "",
                             ze = Re.toString,
                             Fe = Ne.call(Be),
                             qe = ht._,
@@ -4980,19 +4980,19 @@
                             In = mi(Be, "create"),
                             Tn = Sn && new Sn,
                             On = {},
-                            Mn = ji(wn),
-                            Rn = ji(Cn),
-                            Dn = ji($n),
-                            Nn = ji(Bn),
-                            Pn = ji(Sn),
-                            jn = He ? He.prototype : o,
-                            Ln = jn ? jn.valueOf : o,
-                            zn = jn ? jn.toString : o;
+                            Mn = Li(wn),
+                            Rn = Li(Cn),
+                            Dn = Li($n),
+                            Nn = Li(Bn),
+                            Pn = Li(Sn),
+                            Ln = He ? He.prototype : o,
+                            jn = Ln ? Ln.valueOf : o,
+                            zn = Ln ? Ln.toString : o;
 
                         function Fn(e) {
                             if (ts(e) && !Ua(e) && !(e instanceof Hn)) {
                                 if (e instanceof Un) return e;
-                                if (Pe.call(e, "__wrapped__")) return Li(e)
+                                if (Pe.call(e, "__wrapped__")) return ji(e)
                             }
                             return new Un(e)
                         }
@@ -5166,8 +5166,8 @@
                                                 }(e, n);
                                             case N:
                                             case P:
-                                            case j:
                                             case L:
+                                            case j:
                                             case z:
                                             case F:
                                             case q:
@@ -5187,7 +5187,7 @@
                                             case I:
                                                 return new r;
                                             case O:
-                                                return o = e, Ln ? Be(Ln.call(o)) : {}
+                                                return o = e, jn ? Be(jn.call(o)) : {}
                                         }
                                         var o
                                     }(e, u, l)
@@ -5491,7 +5491,7 @@
                                             var d = ri(s(e), s(t), r, o, i, a);
                                             return a.delete(e), d;
                                         case O:
-                                            if (Ln) return Ln.call(e) == Ln.call(t)
+                                            if (jn) return jn.call(e) == jn.call(t)
                                     }
                                     return !1
                                 }(e, t, c, n, r, i, a);
@@ -5568,7 +5568,7 @@
                         }
 
                         function Dr(e) {
-                            return !(!es(e) || (t = e, Le && Le in t)) && (Za(e) ? Ge : Ae).test(ji(e));
+                            return !(!es(e) || (t = e, je && je in t)) && (Za(e) ? Ge : Ae).test(Li(e));
                             var t
                         }
 
@@ -5583,7 +5583,7 @@
                             return t
                         }
 
-                        function jr(e) {
+                        function Lr(e) {
                             if (!es(e)) return function(e) {
                                 var t = [];
                                 if (null != e)
@@ -5596,7 +5596,7 @@
                             return n
                         }
 
-                        function Lr(e, t) {
+                        function jr(e, t) {
                             return e < t
                         }
 
@@ -6040,13 +6040,13 @@
                             }
                         }
 
-                        function jo(e) {
+                        function Lo(e) {
                             return function(t) {
                                 return Pt(Zs(Gs(t).replace(et, "")), e, "")
                             }
                         }
 
-                        function Lo(e) {
+                        function jo(e) {
                             return function() {
                                 var t = arguments;
                                 switch (t.length) {
@@ -6118,7 +6118,7 @@
                                 h = 2 & t,
                                 f = 24 & t,
                                 _ = 512 & t,
-                                A = h ? o : Lo(e);
+                                A = h ? o : jo(e);
                             return function p() {
                                 for (var b = arguments.length, y = r(b), x = b; x--;) y[x] = arguments[x];
                                 if (f) var v = ci(p),
@@ -6141,7 +6141,7 @@
                                         e[r] = yi(a, n) ? i[a] : o
                                     }
                                     return e
-                                }(y, c) : _ && b > 1 && y.reverse(), m && d < b && (y.length = d), this && this !== ht && this instanceof p && (C = A || Lo(C)), C.apply(w, y)
+                                }(y, c) : _ && b > 1 && y.reverse(), m && d < b && (y.length = d), this && this !== ht && this instanceof p && (C = A || jo(C)), C.apply(w, y)
                             }
                         }
 
@@ -6263,7 +6263,7 @@
                                     null == e[9] && (e[9] = t[9]);
                                     e[0] = t[0], e[1] = o
                                 }(v, x), e = v[0], t = v[1], n = v[2], a = v[3], m = v[4], !(f = v[9] = v[9] === o ? _ ? 0 : e.length : bn(v[9] - A, 0)) && 24 & t && (t &= -25), t && 1 != t) k = 8 == t || t == l ? function(e, t, n) {
-                                var i = Lo(e);
+                                var i = jo(e);
                                 return function a() {
                                     for (var s = arguments.length, l = r(s), c = s, d = ci(a); c--;) l[c] = arguments[c];
                                     var p = s < 3 && l[0] !== d && l[s - 1] !== d ? [] : dn(l, d);
@@ -6271,7 +6271,7 @@
                                 }
                             }(e, t, f) : t != c && 33 != t || m.length ? qo.apply(o, v) : function(e, t, n, o) {
                                 var i = 1 & t,
-                                    a = Lo(e);
+                                    a = jo(e);
                                 return function t() {
                                     for (var s = -1, l = arguments.length, c = -1, d = o.length, p = r(d + l), u = this && this !== ht && this instanceof t ? a : e; ++c < d;) p[c] = o[c];
                                     for (; l--;) p[c++] = arguments[++s];
@@ -6280,7 +6280,7 @@
                             }(e, t, n, a);
                             else var k = function(e, t, n) {
                                 var r = 1 & t,
-                                    o = Lo(e);
+                                    o = jo(e);
                                 return function t() {
                                     return (this && this !== ht && this instanceof t ? o : e).apply(r ? n : this, arguments)
                                 }
@@ -6320,7 +6320,7 @@
                                     break
                                 }
                                 if (m) {
-                                    if (!Lt(t, (function(e, t) {
+                                    if (!jt(t, (function(e, t) {
                                             if (!en(m, t) && (g === e || i(g, e, n, r, a))) return m.push(t)
                                         }))) {
                                         u = !1;
@@ -6445,7 +6445,7 @@
                         }(wn && fi(new wn(new ArrayBuffer(1))) != D || Cn && fi(new Cn) != w || $n && fi($n.resolve()) != B || Bn && fi(new Bn) != I || Sn && fi(new Sn) != M) && (fi = function(e) {
                             var t = Cr(e),
                                 n = t == $ ? e.constructor : o,
-                                r = n ? ji(n) : "";
+                                r = n ? Li(n) : "";
                             if (r) switch (r) {
                                 case Mn:
                                     return D;
@@ -6557,7 +6557,7 @@
                             return "0" == t && 1 / e == -1 / 0 ? "-0" : t
                         }
 
-                        function ji(e) {
+                        function Li(e) {
                             if (null != e) {
                                 try {
                                     return Ne.call(e)
@@ -6569,7 +6569,7 @@
                             return ""
                         }
 
-                        function Li(e) {
+                        function ji(e) {
                             if (e instanceof Hn) return e.clone();
                             var t = new Un(e.__wrapped__, e.__chain__);
                             return t.__actions__ = To(e.__actions__), t.__index__ = e.__index__, t.__values__ = e.__values__, t
@@ -6889,11 +6889,11 @@
                                 var n = dn(t, ci(Pa));
                                 return Jo(e, c, o, t, n)
                             })),
-                            ja = Zr((function(e, t) {
-                                var n = dn(t, ci(ja));
+                            La = Zr((function(e, t) {
+                                var n = dn(t, ci(La));
                                 return Jo(e, d, o, t, n)
                             })),
-                            La = oi((function(e, t) {
+                            ja = oi((function(e, t) {
                                 return Jo(e, u, o, o, o, t)
                             }));
 
@@ -6986,7 +6986,7 @@
                         var cs = Ct ? Xt(Ct) : function(e) {
                             return ts(e) && Ja(e.length) && !!lt[Cr(e)]
                         };
-                        var ds = Yo(Lr),
+                        var ds = Yo(jr),
                             ps = Yo((function(e, t) {
                                 return e <= t
                             }));
@@ -7089,7 +7089,7 @@
                         }
 
                         function Os(e) {
-                            return Wa(e) ? Zn(e, !0) : jr(e)
+                            return Wa(e) ? Zn(e, !0) : Lr(e)
                         }
                         var Ms = Ro((function(e, t, n) {
                                 Gr(e, t, n)
@@ -7124,13 +7124,13 @@
                                 return t(e, n[0])
                             }))
                         }
-                        var js = Xo(Ts),
-                            Ls = Xo(Os);
+                        var Ls = Xo(Ts),
+                            js = Xo(Os);
 
                         function zs(e) {
                             return null == e ? [] : Jt(e, Ts(e))
                         }
-                        var Fs = jo((function(e, t, n) {
+                        var Fs = Lo((function(e, t, n) {
                             return t = t.toLowerCase(), e + (n ? qs(t) : t)
                         }));
 
@@ -7141,20 +7141,20 @@
                         function Gs(e) {
                             return (e = As(e)) && e.replace(xe, rn).replace(tt, "")
                         }
-                        var Us = jo((function(e, t, n) {
+                        var Us = Lo((function(e, t, n) {
                                 return e + (n ? "-" : "") + t.toLowerCase()
                             })),
-                            Hs = jo((function(e, t, n) {
+                            Hs = Lo((function(e, t, n) {
                                 return e + (n ? " " : "") + t.toLowerCase()
                             })),
                             Ws = Po("toLowerCase");
-                        var Vs = jo((function(e, t, n) {
+                        var Vs = Lo((function(e, t, n) {
                             return e + (n ? "_" : "") + t.toLowerCase()
                         }));
-                        var Ys = jo((function(e, t, n) {
+                        var Ys = Lo((function(e, t, n) {
                             return e + (n ? " " : "") + Ks(t)
                         }));
-                        var Qs = jo((function(e, t, n) {
+                        var Qs = Lo((function(e, t, n) {
                                 return e + (n ? " " : "") + t.toUpperCase()
                             })),
                             Ks = Po("toUpperCase");
@@ -7233,7 +7233,7 @@
                         function ll() {}
                         var cl = Ho(Dt),
                             dl = Ho(Tt),
-                            pl = Ho(Lt);
+                            pl = Ho(jt);
 
                         function ul(e) {
                             return vi(e) ? Vt(Pi(e)) : function(e) {
@@ -7389,7 +7389,7 @@
                             return Ba(2, e)
                         }, Fn.orderBy = function(e, t, n, r) {
                             return null == e ? [] : (Ua(t) || (t = null == t ? [] : [t]), Ua(n = r ? o : n) || (n = null == n ? [] : [n]), Hr(e, t, n))
-                        }, Fn.over = cl, Fn.overArgs = Na, Fn.overEvery = dl, Fn.overSome = pl, Fn.partial = Pa, Fn.partialRight = ja, Fn.partition = Ea, Fn.pick = Ns, Fn.pickBy = Ps, Fn.property = ul, Fn.propertyOf = function(e) {
+                        }, Fn.over = cl, Fn.overArgs = Na, Fn.overEvery = dl, Fn.overSome = pl, Fn.partial = Pa, Fn.partialRight = La, Fn.partition = Ea, Fn.pick = Ns, Fn.pickBy = Ps, Fn.property = ul, Fn.propertyOf = function(e) {
                             return function(t) {
                                 return null == e ? o : Er(e, t)
                             }
@@ -7397,7 +7397,7 @@
                             return e && e.length && t && t.length ? Vr(e, t, di(n, 2)) : e
                         }, Fn.pullAllWith = function(e, t, n) {
                             return e && e.length && t && t.length ? Vr(e, t, o, n) : e
-                        }, Fn.pullAt = Ji, Fn.range = ml, Fn.rangeRight = gl, Fn.rearg = La, Fn.reject = function(e, t) {
+                        }, Fn.pullAt = Ji, Fn.range = ml, Fn.rangeRight = gl, Fn.rearg = ja, Fn.reject = function(e, t) {
                             return (Ua(e) ? Ot : _r)(e, Da(di(t, 3)))
                         }, Fn.remove = function(e, t) {
                             var n = [];
@@ -7460,7 +7460,7 @@
                                 maxWait: t,
                                 trailing: o
                             })
-                        }, Fn.thru = ma, Fn.toArray = us, Fn.toPairs = js, Fn.toPairsIn = Ls, Fn.toPath = function(e) {
+                        }, Fn.thru = ma, Fn.toArray = us, Fn.toPairs = Ls, Fn.toPairsIn = js, Fn.toPath = function(e) {
                             return Ua(e) ? Dt(e, Pi) : ls(e) ? [e] : To(Ni(As(e)))
                         }, Fn.toPlainObject = _s, Fn.transform = function(e, t, n) {
                             var r = Ua(e),
@@ -7494,7 +7494,7 @@
                             return Ao(e || [], t || [], nr)
                         }, Fn.zipObjectDeep = function(e, t) {
                             return Ao(e || [], t || [], eo)
-                        }, Fn.zipWith = pa, Fn.entries = js, Fn.entriesIn = Ls, Fn.extend = ys, Fn.extendWith = xs, sl(Fn, Fn), Fn.add = _l, Fn.attempt = Xs, Fn.camelCase = Fs, Fn.capitalize = qs, Fn.ceil = Al, Fn.clamp = function(e, t, n) {
+                        }, Fn.zipWith = pa, Fn.entries = Ls, Fn.entriesIn = js, Fn.extend = ys, Fn.extendWith = xs, sl(Fn, Fn), Fn.add = _l, Fn.attempt = Xs, Fn.camelCase = Fs, Fn.capitalize = qs, Fn.ceil = Al, Fn.clamp = function(e, t, n) {
                             return n === o && (n = t, t = o), n !== o && (n = (n = fs(n)) == n ? n : 0), t !== o && (t = (t = fs(t)) == t ? t : 0), lr(fs(e), t, n)
                         }, Fn.clone = function(e) {
                             return cr(e, 4)
@@ -7609,9 +7609,9 @@
                         }, Fn.meanBy = function(e, t) {
                             return Wt(e, di(t, 2))
                         }, Fn.min = function(e) {
-                            return e && e.length ? fr(e, rl, Lr) : o
+                            return e && e.length ? fr(e, rl, jr) : o
                         }, Fn.minBy = function(e, t) {
-                            return e && e.length ? fr(e, di(t, 2), Lr) : o
+                            return e && e.length ? fr(e, di(t, 2), jr) : o
                         }, Fn.stubArray = hl, Fn.stubFalse = fl, Fn.stubObject = function() {
                             return {}
                         }, Fn.stubString = function() {
@@ -7653,7 +7653,7 @@
                                 o = arguments.length < 3;
                             return r(e, di(t, 4), n, o, mr)
                         }, Fn.reduceRight = function(e, t, n) {
-                            var r = Ua(e) ? jt : Qt,
+                            var r = Ua(e) ? Lt : Qt,
                                 o = arguments.length < 3;
                             return r(e, di(t, 4), n, o, gr)
                         }, Fn.repeat = function(e, t, n) {
@@ -7678,7 +7678,7 @@
                             var t = fi(e);
                             return t == w || t == I ? e.size : Pr(e).length
                         }, Fn.snakeCase = Vs, Fn.some = function(e, t, n) {
-                            var r = Ua(e) ? Lt : io;
+                            var r = Ua(e) ? jt : io;
                             return n && xi(e, t, n) && (t = o), r(e, di(t, 3))
                         }, Fn.sortedIndex = function(e, t) {
                             return ao(e, t)
@@ -7788,7 +7788,7 @@
                         }, Fn.unescape = function(e) {
                             return (e = As(e)) && K.test(e) ? e.replace(Y, fn) : e
                         }, Fn.uniqueId = function(e) {
-                            var t = ++je;
+                            var t = ++Le;
                             return As(e) + t
                         }, Fn.upperCase = Qs, Fn.upperFirst = Ks, Fn.each = Aa, Fn.eachRight = ba, Fn.first = Wi, sl(Fn, (xl = {}, xr(Fn, (function(e, t) {
                             Pe.call(Fn.prototype, t) || (xl[t] = e)
@@ -7982,7 +7982,7 @@
                             }
                         }, Fn.prototype.plant = function(e) {
                             for (var t, n = this; n instanceof Gn;) {
-                                var r = Li(n);
+                                var r = ji(n);
                                 r.__index__ = 0, r.__values__ = o, t ? i.__wrapped__ = r : t = r;
                                 var i = r;
                                 n = n.__wrapped__
@@ -12995,13 +12995,13 @@
                     SocialRosterGroupComponent: n(368).default,
                     SocialRosterGroupNameComponent: n(372).default,
                     SocialRosterMemberComponent: n(374).default,
-                    SocialStatusWrapperComponent: n(377).default,
-                    SocialTextTooltipComponent: n(379).default,
-                    SocialTooltipComponent: n(380).default,
-                    TooltipMessageComponent: n(381).default,
-                    UikitRadioComponent: n(382).default,
-                    VersionBarComponent: n(383).default,
-                    VngAgeRatingComponent: n(384).default,
+                    SocialStatusWrapperComponent: n(376).default,
+                    SocialTextTooltipComponent: n(378).default,
+                    SocialTooltipComponent: n(379).default,
+                    TooltipMessageComponent: n(380).default,
+                    UikitRadioComponent: n(381).default,
+                    VersionBarComponent: n(382).default,
+                    VngAgeRatingComponent: n(383).default,
                     DiscordButtonComponent: d,
                     DiscordPopupComponent: u,
                     DiscordCongratsPopupComponent: p,
@@ -13011,49 +13011,49 @@
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
                     SharedNotificationsService: c,
-                    AnalyticsService: n(386).default,
-                    BanNotificationService: n(387).default,
-                    ChatErrorsService: n(388).default,
-                    ChatRestrictionService: n(389).default,
-                    ChatWindowSettingsService: n(390).default,
-                    ClashService: n(391).default,
-                    ClientConfigService: n(392).default,
-                    CodeOfConductService: n(393).default,
-                    ConversationsService: n(396).default,
-                    DiagnosticAssistantService: n(397).default,
-                    DiscordIntegrationService: n(398).default,
-                    DragStateService: n(399).default,
-                    EogService: n(400).default,
-                    FriendFinderService: n(401).default,
-                    FriendGroupsService: n(402).default,
-                    FriendHovercardsService: n(403).default,
-                    FriendRequestsService: n(404).default,
-                    FriendsService: n(405).default,
-                    GameDataService: n(406).default,
-                    GameflowService: n(407).default,
-                    GameInvitesService: n(408).default,
-                    GameQueuesService: n(409).default,
-                    GenericAssetsService: n(410).default,
-                    HoneyfruitService: n(411).default,
-                    LeaverBusterService: n(412).default,
-                    LobbyService: n(416).default,
-                    MapsService: n(417).default,
-                    MatchmakingService: n(418).default,
-                    NotificationsService: n(419).default,
-                    OpenPartiesService: n(420).default,
-                    PatcherService: n(421).default,
-                    PlatformConfigService: n(422).default,
-                    ProductsService: n(423).default,
-                    ProfileChampionInfoService: n(424).default,
-                    ProfilesService: n(425).default,
-                    ReformCardService: n(426).default,
-                    RemedyService: n(444).default,
-                    ReporterFeedbackMessagesService: n(445).default,
-                    ReporterFeedbackService: n(446).default,
-                    RequestCacheService: n(447).default,
-                    SettingsService: n(448).default,
-                    SocialButtonsService: n(449).default,
-                    SocialPlatformConfigService: n(376).default,
+                    AnalyticsService: n(385).default,
+                    BanNotificationService: n(386).default,
+                    ChatErrorsService: n(387).default,
+                    ChatRestrictionService: n(388).default,
+                    ChatWindowSettingsService: n(389).default,
+                    ClashService: n(390).default,
+                    ClientConfigService: n(391).default,
+                    CodeOfConductService: n(392).default,
+                    ConversationsService: n(395).default,
+                    DiagnosticAssistantService: n(396).default,
+                    DiscordIntegrationService: n(397).default,
+                    DragStateService: n(398).default,
+                    EogService: n(399).default,
+                    FriendFinderService: n(400).default,
+                    FriendGroupsService: n(401).default,
+                    FriendHovercardsService: n(402).default,
+                    FriendRequestsService: n(403).default,
+                    FriendsService: n(404).default,
+                    GameDataService: n(405).default,
+                    GameflowService: n(406).default,
+                    GameInvitesService: n(407).default,
+                    GameQueuesService: n(408).default,
+                    GenericAssetsService: n(409).default,
+                    HoneyfruitService: n(410).default,
+                    LeaverBusterService: n(411).default,
+                    LobbyService: n(415).default,
+                    MapsService: n(416).default,
+                    MatchmakingService: n(417).default,
+                    NotificationsService: n(418).default,
+                    OpenPartiesService: n(419).default,
+                    PatcherService: n(420).default,
+                    PlatformConfigService: n(421).default,
+                    ProductsService: n(422).default,
+                    ProfileChampionInfoService: n(423).default,
+                    ProfilesService: n(424).default,
+                    ReformCardService: n(425).default,
+                    RemedyService: n(443).default,
+                    ReporterFeedbackMessagesService: n(444).default,
+                    ReporterFeedbackService: n(445).default,
+                    RequestCacheService: n(446).default,
+                    SettingsService: n(447).default,
+                    SocialButtonsService: n(448).default,
+                    SocialPlatformConfigService: n(449).default,
                     SocialSessionService: n(450).default,
                     SocialSettingsService: n(451).default,
                     SpectatorService: n(452).default,
@@ -13119,7 +13119,7 @@
                     RemedyRewardCardComponent: n(510).default,
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
-                    RemedyService: n(444).default
+                    RemedyService: n(443).default
                 }), r.emberApplicationFactory.setFactoryDefinition({
                     name: "HostageDetectedComponent",
                     tra: r.traService,
@@ -13127,14 +13127,14 @@
                     HostageDetectedComponent: n(305).HostageDetectedComponent,
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
-                    RemedyService: n(444).default
+                    RemedyService: n(443).default
                 }), r.emberApplicationFactory.setFactoryDefinition({
                     name: "CredibilityBehaviorWarning",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
                     CredibilityBehaviorWarningComponent: n(513).default,
                     CredibilityBehaviorWarningOptionComponent: n(517).default,
-                    RemedyService: n(444).default
+                    RemedyService: n(443).default
                 })
             };
             var r = n(1);
@@ -16121,7 +16121,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.VALID_AVAILABILITIES = t.TOOLTIP_DIRECTIONS = t.SOCIAL_RELATIONSHIP_TYPES = t.META_GROUPS = t.MAXIMUM_ROSTER_SIZE = t.DRAG_DROP_MIME_TYPES = t.DRAG_DROP_EVENT_TYPES = t.AVAILABILITY_SORT = t.AVAILABILITY = void 0;
+            }), t.VALID_AVAILABILITIES = t.TOOLTIP_DIRECTIONS = t.SOCIAL_RELATIONSHIP_TYPES = t.META_GROUPS = t.MAXIMUM_ROSTER_SIZE = t.DRAG_DROP_MIME_TYPES = t.DRAG_DROP_EVENT_TYPES = t.DISCORD_ONLINE_STATUS_TYPES = t.AVAILABILITY_SORT = t.AVAILABILITY = void 0;
             t.MAXIMUM_ROSTER_SIZE = 375;
             t.META_GROUPS = {
                 DEFAULT: "**DEFAULT",
@@ -16217,6 +16217,10 @@
             t.DRAG_DROP_EVENT_TYPES = {
                 ROSTER_GROUP: "roster-group",
                 ROSTER_MEMBER: "roster-member"
+            };
+            t.DISCORD_ONLINE_STATUS_TYPES = {
+                ONLINE: "online",
+                OFFLINE: "offline"
             };
             t.SOCIAL_RELATIONSHIP_TYPES = {
                 BLOCKED: "blocked",
@@ -16566,14 +16570,13 @@
                 a = c(n(310)),
                 s = n(248),
                 l = c(n(369));
-            n(375);
-            c(n(376));
 
             function c(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
+            n(375);
             var d = r.Ember.Component.extend(l.default, o.default, {
                 classNames: ["lol-social-roster-member"],
                 classNameBindings: ["useMessagesMutedClass:muted", "showUnreadMessageCount:has-unread", "isOffline:offline"],
@@ -16691,14 +16694,21 @@
                 })),
                 isDiscordFriendOffline: r.Ember.computed("friend", "isFriendLinkedToDiscord", (function() {
                     const e = this.get("friend");
-                    return this.get("isFriendLinkedToDiscord") && "offline" === e?.discordInfo?.onlineStatus
+                    return this.get("isFriendLinkedToDiscord") && e?.discordInfo?.onlineStatus === i.DISCORD_ONLINE_STATUS_TYPES.OFFLINE
                 })),
                 showDiscordOfflineIcon: r.Ember.computed("isDisordFriendOffline", "isFriendLinkedToDiscord", "isOffline", (function() {
                     return this.get("isFriendLinkedToDiscord") && this.get("isDisordFriendOffline") && this.get("isOffline")
                 })),
                 isDiscordFriendOnline: r.Ember.computed("friend", "isFriendLinkedToDiscord", "isOffline", (function() {
                     const e = this.get("friend");
-                    return this.get("isFriendLinkedToDiscord") && this.get("isOffline") && "online" === e?.discordInfo?.onlineStatus
+                    return this.get("isFriendLinkedToDiscord") && this.get("isOffline") && e?.discordInfo?.onlineStatus === i.DISCORD_ONLINE_STATUS_TYPES.ONLINE
+                })),
+                isInvitableViaDiscord: r.Ember.computed("isDiscordFriendOffline", "isFriendLinkedToDiscord", "isFriendRemote", "isOffline", (function() {
+                    const e = this.get("isDiscordFriendOffline"),
+                        t = this.get("isFriendLinkedToDiscord"),
+                        n = this.get("isFriendRemote"),
+                        r = this.get("isOffline");
+                    return !!t && (!(!n && !r) && (!e || !r))
                 })),
                 unreadMessageCount: r.Ember.computed("conversation", (function() {
                     const e = this.get("conversation");
@@ -17044,12 +17054,12 @@
                             action: () => this.inviteFriend(e),
                             label: r.tra.get("context_menu_invite_to_game"),
                             disabled: !t.canInviteToGame(e),
-                            hidden: !this.get("isFriendSummoner")
+                            hidden: this.get("isInvitableViaDiscord")
                         }, {
                             action: () => this.inviteFriendDiscord(e),
                             label: r.tra.get("context_menu_invite_by_discord"),
                             disabled: !t.canInviteToGameViaDiscord(e),
-                            hidden: this.get("isFriendSummoner") || !this.get("isFriendLinkedToDiscord")
+                            hidden: !this.get("isInvitableViaDiscord")
                         }, {
                             action: () => this.openChat(!0),
                             label: r.tra.get("context_menu_send_message"),
@@ -17194,68 +17204,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            const r = n(1),
-                {
-                    dataBinding: o,
-                    Ember: i,
-                    socket: a,
-                    _: s,
-                    data: l
-                } = r,
-                c = o.bindTo(a),
-                d = "/lol-platform-config/v1/namespaces/Chat",
-                p = "/lol-platform-config/v1/namespaces/LcuSocial",
-                u = "/lol-platform-config/v1/namespaces/PlayerNotification",
-                m = "/lol-platform-config/v1/namespaces/LcuHovercard";
-            var g = i.Service.extend({
-                chat: {},
-                lcuSocial: {},
-                playerNotification: {},
-                lcuHovercard: {},
-                autoLinkEnabled: i.computed.alias("lcuSocial.autoLinkEnabled"),
-                bypassGameRoomHistoryMerge: i.computed.alias("lcuSocial.bypassGameRoomHistoryMerge"),
-                chatWindowResizeEnabled: i.computed.alias("lcuSocial.chatWindowResizeEnabled"),
-                clearChatHistoryEnabled: i.computed.alias("lcuSocial.clearChatHistoryEnabled"),
-                friendRequestToastsDisabled: i.computed.alias("lcuSocial.friendRequestToastsDisabled"),
-                friendsListGiftingEnabled: i.computed.alias("lcuSocial.FriendsListGiftingEnabled"),
-                hovercardDisabled: i.computed.alias("lcuHovercard.Disabled"),
-                maximumRosterSize: i.computed.alias("chat.maximumRosterSize"),
-                playerNotificationsEnabled: i.computed.alias("playerNotification.Enabled"),
-                showDelay: i.computed("lcuHovercard.ShowDelay", (function() {
-                    return parseInt(this.get("lcuHovercard.ShowDelay"), 10)
-                })),
-                slashMeEnabled: i.computed.alias("lcuSocial.slashMeEnabled"),
-                sortConversationsByTimeEnabled: i.computed.alias("lcuSocial.sortConversationsByTimeEnabled"),
-                statusesDisabled: i.computed.alias("lcuSocial.StatusesDisabled"),
-                virtualizedMessagesEnabled: i.computed.alias("lcuSocial.virtualizedMessagesEnabled"),
-                virtualizedRosterEnabled: i.computed.alias("lcuSocial.virtualizedRosterEnabled"),
-                init() {
-                    this._super(...arguments), this._initObservers()
-                },
-                _initObservers() {
-                    c.observe(d, this, (e => {
-                        e && this.set("chat", e)
-                    })), c.observe(p, this, (e => {
-                        e && this.set("lcuSocial", e)
-                    })), c.observe(u, this, (e => {
-                        e && this.set("playerNotification", e)
-                    })), c.observe(m, this, (e => {
-                        e && this.set("lcuHovercard", e)
-                    }))
-                },
-                willDestroy() {
-                    this._super(...arguments), c.unobserve(d, this), c.unobserve(p, this), c.unobserve(u, this), c.unobserve(m, this)
-                }
-            });
-            t.default = g
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
             var r = n(1),
                 o = n(366);
-            n(378);
+            n(377);
             const i = "outOfGame",
                 a = "NONE";
             var s = r.Ember.Component.extend({
@@ -17611,7 +17562,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(385);
+            n(384);
             var o = r.Ember.Component.extend({
                 classNames: ["vng-age-rating"],
                 classNameBindings: ["isHidden:vng-age-rating-hidden"],
@@ -18208,7 +18159,7 @@
                         name: "CodeOfConduct",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        CodeOfConductComponent: n(394).default
+                        CodeOfConductComponent: n(393).default
                     })
                 },
                 handleCodeOfConductNotification: function(e) {
@@ -18237,7 +18188,7 @@
             const o = (0, r.getProvider)().get("rcp-fe-lol-uikit").getTemplateHelper();
             var i = r.Ember.Component.extend({
                 classNames: ["code-of-conduct"],
-                layout: n(395),
+                layout: n(394),
                 didInsertElement: function() {
                     this._super(...arguments), this.unlockRule(1)
                 },
@@ -18663,7 +18614,7 @@
                 clientConfigService: r.Ember.inject.service("client-config"),
                 settingsService: r.Ember.inject.service("settings"),
                 isDiscordIntegrationEnabled: r.Ember.computed.alias("clientConfigService.discordIntegrationEnabled"),
-                isEnabled: r.Ember.computed("isDiscordIntegrationEnabled", "isTencent", (function() {
+                isEnabled: r.Ember.computed("isDiscordIntegrationEnabled", "isTencent", "rsoAuthCountryCode", (function() {
                     if (!this.get("isDiscordIntegrationEnabled")) return !1;
                     if (this.get("isTencent")) return !1;
                     const e = this.get("rsoAuthCountryCode");
@@ -19114,7 +19065,7 @@
                 },
                 _isFriendDiscordLinked: e => e && null !== e.discordInfo,
                 _isFriendDiscordOnline(e) {
-                    return this._isFriendDiscordLinked(e) && "online" === e.discordInfo.onlineStatus
+                    return this._isFriendDiscordLinked(e) && e.discordInfo.onlineStatus === s.DISCORD_ONLINE_STATUS_TYPES.ONLINE
                 },
                 isFriendOnline(e) {
                     const t = this.get("settingsService.chatSettings").chatGroupMobile,
@@ -19205,8 +19156,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = n(1);
-            const o = {
+            var r = n(1),
+                o = n(366);
+            const i = {
                     NORMAL_GAME: "game_type_normal",
                     TUTORIAL_GAME: "game_type_tutorial",
                     PRACTICE_GAME: "game_type_practice",
@@ -19216,7 +19168,7 @@
                     COOP_VS_AI_GAME: "game_type_coop_vs_ai",
                     CUSTOM_GAME: "game_type_custom"
                 },
-                i = {
+                a = {
                     KINGPORO: "game_mode_poro_king",
                     ASCENSION: "game_mode_ascension",
                     SIEGE: "game_mode_siege",
@@ -19227,17 +19179,17 @@
                     DOOMBOTSTEEMO: "game_mode_doombotsteemo",
                     STARGUARDIAN: "game_mode_starguardian"
                 },
-                a = {
+                s = {
                     8: "game_map_crystal_scar",
                     10: "game_map_twisted_treeline",
                     11: "game_map_summoners_rift",
                     12: "game_map_howling_abyss",
                     16: "game_map_cosmic_ruins"
                 },
-                s = "inQueue",
-                l = "offline",
-                c = ["6v6", "OneForAll", "CounterPick"];
-            var d = r.Ember.Service.extend({
+                l = "inQueue",
+                c = "offline",
+                d = ["6v6", "OneForAll", "CounterPick"];
+            var p = r.Ember.Service.extend({
                 isPatcherConnected: !0,
                 gameInvites: [],
                 lobby: null,
@@ -19257,10 +19209,10 @@
                     const n = this._isGameInviteAcceptable(t) - this._isGameInviteAcceptable(e);
                     return n || this.get("tra").moment(t.timestamp) - this.get("tra").moment(e.timestamp)
                 },
-                _getPriorityGameMutators: e => e ? c.filter((t => e.indexOf(t) > -1)) : [],
+                _getPriorityGameMutators: e => e ? d.filter((t => e.indexOf(t) > -1)) : [],
                 _availableForGame(e) {
                     const t = e.lol && e.lol.gameStatus;
-                    return t !== s && t !== l && e.availability !== l
+                    return t !== l && t !== c && e.availability !== c
                 },
                 init() {
                     this._super(...arguments), r.navigation.subscribe("isConnectedToServer", (e => {
@@ -19281,19 +19233,19 @@
                     if (e) {
                         const t = this._getPriorityGameMutators(e.gameMutators);
                         if (t.length > 0) return this.get("tra").formatString("game_mutator_" + t[0]);
-                        const n = i[e.gameMode];
+                        const n = a[e.gameMode];
                         return void 0 === n ? this.get("mapsService.mapNames")[e.mapId] : this.get("tra").formatString(n)
                     }
                 },
                 gameTypeStringFromMetadata(e) {
                     if (e) {
                         if (this._getPriorityGameMutators(e.gameMutators).length > 0) return this.get("tra.game_type_featured");
-                        if (void 0 === i[e.gameMode]) {
+                        if (void 0 === a[e.gameMode]) {
                             if ("RANKED_GAME" === e.gameType) {
                                 if (420 === e.queueId) return this.get("tra.game_type_ranked_soloduo");
                                 if (440 === e.queueId) return this.get("tra.game_type_ranked_flex")
                             }
-                            return this.get("tra").formatString(o[e.gameType])
+                            return this.get("tra").formatString(i[e.gameType])
                         }
                         return this.get("tra.game_type_featured")
                     }
@@ -19301,18 +19253,18 @@
                 mapKeyFromMetadata(e) {
                     if (e) {
                         if (this._getPriorityGameMutators(e.gameMutators).length > 0) return "game_map_rotating_game_mode";
-                        return void 0 === i[e.gameMode] ? a[e.mapId] : "game_map_rotating_game_mode"
+                        return void 0 === a[e.gameMode] ? s[e.mapId] : "game_map_rotating_game_mode"
                     }
                 },
                 canInviteToGame(e) {
                     return !!e && (!(!e || !this._availableForGame(e)) && (!this.get("friendsService").isFriendRemote(e) && r.parties.canInvitePlayer(e.summonerId)))
                 },
-                canInviteToGameViaDiscord: e => !!e && ("online" === e?.discordInfo?.onlineStatus && r.parties.canInvitePlayerByPuuid(e.puuid)),
+                canInviteToGameViaDiscord: e => !!e && (e?.discordInfo?.onlineStatus === o.DISCORD_ONLINE_STATUS_TYPES.ONLINE && r.parties.canInvitePlayerByPuuid(e.puuid)),
                 willDestroy() {
                     this._super(...arguments), r.db.unobserve("/lol-lobby/v2/received-invitations", this), r.db.unobserve("/lol-lobby/v2/lobby", this)
                 }
             });
-            t.default = d
+            t.default = p
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -19406,7 +19358,7 @@
                 d = "OnLockoutWarning",
                 p = "RankedRestrictedGames",
                 u = ["InProgress", "WaitingForStats", "PreEndOfGame"],
-                m = n(413),
+                m = n(412),
                 g = o.Ember.get;
             var h = o.Ember.Service.extend(a, i.default, {
                 init() {
@@ -19417,7 +19369,7 @@
                         name: "LeaverBusterWarning",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        LeaverBusterWarningComponent: n(414).default
+                        LeaverBusterWarningComponent: n(413).default
                     })
                 },
                 notificationObserver: o.Ember.on("init", o.Ember.observer("leaverBusterNotifications.[]", "gameflow.phase", (function() {
@@ -19538,7 +19490,7 @@
             var r = n(1),
                 o = r.Ember.Component.extend({
                     classNames: ["leaver-buster-dialog"],
-                    layout: n(415),
+                    layout: n(414),
                     agreeText: r.Ember.computed("tra.leaver_buster_warning_agree", "tra.leaver_buster_warning_agree_prompt$html", "notificationContext.agreeText", (function() {
                         return this.get("tra").formatString("leaver_buster_warning_agree_prompt$html", {
                             leaverBusterWarningAgree: this.get("notificationContext.agreeText")
@@ -19993,22 +19945,22 @@
                         name: "ReformCard",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardComponent: n(427).default,
-                        ReformCardChatLogComponent: n(429).default,
-                        ReformCardMatchHistoryComponent: n(431).default
+                        ReformCardComponent: n(426).default,
+                        ReformCardChatLogComponent: n(428).default,
+                        ReformCardMatchHistoryComponent: n(430).default
                     }), o.emberApplicationFactory.setFactoryDefinition({
                         name: "ReformCardV2",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardV2Component: n(433).default,
-                        ReformCardV2ChatLogComponent: n(435).default,
-                        ReformCardV2MatchHistoryComponent: n(437).default
+                        ReformCardV2Component: n(432).default,
+                        ReformCardV2ChatLogComponent: n(434).default,
+                        ReformCardV2MatchHistoryComponent: n(436).default
                     }), o.emberApplicationFactory.setFactoryDefinition({
                         name: "ReformCardV3",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardV3Component: n(439).default,
-                        ReformCardV3ChatLogComponent: n(442).default
+                        ReformCardV3Component: n(438).default,
+                        ReformCardV3ChatLogComponent: n(441).default
                     }))
                 },
                 initDataBindings() {
@@ -20091,7 +20043,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(428)) && r.__esModule ? r : {
+                i = (r = n(427)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20235,7 +20187,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(430)) && r.__esModule ? r : {
+                i = (r = n(429)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -20309,7 +20261,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(432)) && r.__esModule ? r : {
+                i = (r = n(431)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20347,7 +20299,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(434)) && r.__esModule ? r : {
+                i = (r = n(433)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20525,7 +20477,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(436)) && r.__esModule ? r : {
+                i = (r = n(435)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -20580,7 +20532,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(438)) && r.__esModule ? r : {
+                i = (r = n(437)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20618,10 +20570,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(440)) && r.__esModule ? r : {
+                i = (r = n(439)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(441);
+                a = n(440);
             const s = o.Ember.Object.extend(o.Ember.PromiseProxyMixin);
             var l = o.Ember.Component.extend({
                 classNames: ["player-behavior-reform-card-v3"],
@@ -20678,7 +20630,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(443)) && r.__esModule ? r : {
+                i = (r = n(442)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -20954,6 +20906,65 @@
                 }
             });
             t.default = r
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            const r = n(1),
+                {
+                    dataBinding: o,
+                    Ember: i,
+                    socket: a,
+                    _: s,
+                    data: l
+                } = r,
+                c = o.bindTo(a),
+                d = "/lol-platform-config/v1/namespaces/Chat",
+                p = "/lol-platform-config/v1/namespaces/LcuSocial",
+                u = "/lol-platform-config/v1/namespaces/PlayerNotification",
+                m = "/lol-platform-config/v1/namespaces/LcuHovercard";
+            var g = i.Service.extend({
+                chat: {},
+                lcuSocial: {},
+                playerNotification: {},
+                lcuHovercard: {},
+                autoLinkEnabled: i.computed.alias("lcuSocial.autoLinkEnabled"),
+                bypassGameRoomHistoryMerge: i.computed.alias("lcuSocial.bypassGameRoomHistoryMerge"),
+                chatWindowResizeEnabled: i.computed.alias("lcuSocial.chatWindowResizeEnabled"),
+                clearChatHistoryEnabled: i.computed.alias("lcuSocial.clearChatHistoryEnabled"),
+                friendRequestToastsDisabled: i.computed.alias("lcuSocial.friendRequestToastsDisabled"),
+                friendsListGiftingEnabled: i.computed.alias("lcuSocial.FriendsListGiftingEnabled"),
+                hovercardDisabled: i.computed.alias("lcuHovercard.Disabled"),
+                maximumRosterSize: i.computed.alias("chat.maximumRosterSize"),
+                playerNotificationsEnabled: i.computed.alias("playerNotification.Enabled"),
+                showDelay: i.computed("lcuHovercard.ShowDelay", (function() {
+                    return parseInt(this.get("lcuHovercard.ShowDelay"), 10)
+                })),
+                slashMeEnabled: i.computed.alias("lcuSocial.slashMeEnabled"),
+                sortConversationsByTimeEnabled: i.computed.alias("lcuSocial.sortConversationsByTimeEnabled"),
+                statusesDisabled: i.computed.alias("lcuSocial.StatusesDisabled"),
+                virtualizedMessagesEnabled: i.computed.alias("lcuSocial.virtualizedMessagesEnabled"),
+                virtualizedRosterEnabled: i.computed.alias("lcuSocial.virtualizedRosterEnabled"),
+                init() {
+                    this._super(...arguments), this._initObservers()
+                },
+                _initObservers() {
+                    c.observe(d, this, (e => {
+                        e && this.set("chat", e)
+                    })), c.observe(p, this, (e => {
+                        e && this.set("lcuSocial", e)
+                    })), c.observe(u, this, (e => {
+                        e && this.set("playerNotification", e)
+                    })), c.observe(m, this, (e => {
+                        e && this.set("lcuHovercard", e)
+                    }))
+                },
+                willDestroy() {
+                    this._super(...arguments), c.unobserve(d, this), c.unobserve(p, this), c.unobserve(u, this), c.unobserve(m, this)
+                }
+            });
+            t.default = g
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -22552,9 +22563,9 @@
                             HovercardShellComponent: n(342).default,
                             HovercardContentComponent: n(338).default,
                             SocialSessionService: n(450).default,
-                            SocialPlatformConfigService: n(376).default,
+                            SocialPlatformConfigService: n(449).default,
                             SocialSettingsService: n(451).default,
-                            ProfileChampionInfoService: n(424).default,
+                            ProfileChampionInfoService: n(423).default,
                             PlayerNameComponent: e
                         }
                     },

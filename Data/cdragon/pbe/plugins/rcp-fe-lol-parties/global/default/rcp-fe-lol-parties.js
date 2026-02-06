@@ -7966,7 +7966,10 @@
                 },
                 _initObservers() {
                     this._binding.addObserver(l, this, (e => {
-                        e && (this.set("tftEventsData", e.subNavTabs), e.subNavTabs.length > 1 ? i.logger.error("Currently only displaying one event in the TFT Hub is supported - received " + e.length + " events.") : 1 === e.subNavTabs.length && this.set("tftEvent", e.subNavTabs[0]))
+                        if (!e) return;
+                        this.set("tftEventsData", e.subNavTabs);
+                        const t = e.subNavTabs.filter((e => "skill-tree" === e.eventHubTemplateType));
+                        t.length > 1 ? i.logger.error("Currently only displaying one skill tree event in the TFT Hub is supported - received " + t.length + " skill tree events.") : 1 === t.length && this.set("tftEvent", t[0])
                     })), this._binding.addObserver(a, this, (e => {
                         e && (this.set("skillTreeEnabled", Boolean(e)), e && this._binding.addObserver(o, this, (e => {
                             e && (this.set("skillTreeData", e), e?.playerProgression?.rank && this._binding.addObserver(r + e.playerProgression.rank, this, (e => {

@@ -24659,7 +24659,6 @@
                 statusTicker: i.Ember.inject.service(),
                 sortedIncidents: i.Ember.computed.alias("statusTicker.sortedIncidentsWithShutdown"),
                 statusTickerUrl: null,
-                loadStatusTickerContent: !0,
                 offlineOrShuttingDown: i.Ember.computed("statusTicker.highestSeverity", (function() {
                     const e = this.get("statusTicker"),
                         t = e.get("highestSeverity");
@@ -24701,11 +24700,11 @@
                     this._super(...arguments), this.element.querySelector(".ticker-toggle").addEventListener("willHide", (() => {
                         this.get("soundChannel").playSound("/fe/lol-navigation/sfx-servicestatus-button-click-off.ogg")
                     })), this.assignStatusFlyout(), this.get("shouldShowFlyout") && this.sendFlyoutManagerShowEvent(), i.db.observe("/lol-service-status/v1/lcu-status", this, (e => {
-                        this.isDestroyed || this.isDestroying || (this.set("statusUrl", e.humanReadableUrl), this.triggerContentRerender())
+                        this.isDestroyed || this.isDestroying || this.set("statusUrl", e.humanReadableUrl)
                     }))
                 },
                 willDestroyElement: function() {
-                    this._super(...arguments), i.db.unobserve("/lol-service-status/v1/lcu-status", this), o.unassignFlyout(this.element.querySelector(".ticker-toggle"))
+                    this._super(...arguments), i.db.unobserve("/lol-service-status/v1/lcu-status", this), o.unassignFlyout(this.element.querySelector(".ticker-toggle")), this.set("assignedFlyout", !1)
                 },
                 showStatusFlyout: function() {
                     this.set("shouldShowFlyout", !0), this.sendFlyoutManagerShowEvent()
@@ -24715,9 +24714,10 @@
                     this.element && e && o.sendEvent(e, "show")
                 },
                 assignStatusFlyout: function() {
+                    if (this.get("assignedFlyout")) return;
                     const e = this.element.querySelector(".ticker-toggle"),
-                        t = this.element.querySelector(".navigation-status-ticker-content-no-link");
-                    o.assignFlyout(e, "StatusTickerContent", {}, {
+                        t = this.element.querySelector(".navigation-status-ticker-content");
+                    o.assignFlyout(e, t, {}, {
                         showEvent: "show",
                         hideEvent: "hide",
                         targetAnchor: {
@@ -24737,15 +24737,7 @@
                         backdropCutout: !1,
                         ComponentFactory: i.default.ComponentFactory,
                         domNode: t
-                    })
-                },
-                __observeShowFlyout__antipattern: i.Ember.observer("sortedIncidents", (function() {
-                    o.isActive() || (this.triggerContentRerender(), this.assignStatusFlyout())
-                })),
-                triggerContentRerender() {
-                    this.set("loadStatusTickerContent", "false"), this.runTask((() => {
-                        this.set("loadStatusTickerContent", "true")
-                    }))
+                    }), this.set("assignedFlyout", !0)
                 },
                 actions: {
                     toggleFlyout: function() {
@@ -25403,7 +25395,7 @@
             "use strict";
             const i = n(1).Ember.Component.extend({
                 layout: n(431),
-                classNameBindings: ["statusUrl:navigation-status-ticker-content:navigation-status-ticker-content-no-link"],
+                classNames: ["navigation-status-ticker-content"],
                 init() {
                     this._super(...arguments), this.externalLinkText = this.get("tra.externalLink")
                 },
@@ -28317,8 +28309,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "XqLDwMh9",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\templates\\\\components\\\\status-ticker.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\components\\\\status-ticker.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","ticker-button"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ticker-toggle"],["modifier",["action"],[["get",[null]],"toggleFlyout"]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["loadStatusTickerContent"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","style","display:none;"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","style","display:none;"],["flush-element"],["text","\\n    "],["append",["helper",["status-ticker-content"],null,[["sortedIncidents","statusUrl"],[["get",["sortedIncidents"]],["get",["statusUrl"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "oLPTsxrG",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\templates\\\\components\\\\status-ticker.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\components\\\\status-ticker.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","ticker-button"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ticker-toggle"],["modifier",["action"],[["get",[null]],"toggleFlyout"]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","style","display:none;"],["flush-element"],["text","\\n  "],["append",["helper",["status-ticker-content"],null,[["sortedIncidents","statusUrl"],[["get",["sortedIncidents"]],["get",["statusUrl"]]]]],false],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
