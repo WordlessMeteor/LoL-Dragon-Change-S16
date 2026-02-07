@@ -456,19 +456,33 @@
             c.playSanctumBannerVideo = function(e) {
                 const t = e.rollVignetteSkinIntroWebmPath ?? e.skinIntroAnimationPath,
                     n = e.rollVignetteSkinIntroSfxPath ?? e.skinIntroSfxPath;
-                if (!t?.endsWith(".webm")) return void o.logger.warning("Invalid video path", t);
-                return new Promise(((s, a) => {
+                if (!t?.endsWith(".webm")) return o.logger.warning("Invalid video path", t), Promise.resolve();
+                if (u) return o.logger.warning("Sanctum banner video already playing, skipping duplicate request"), Promise.resolve();
+                return u = !0, new Promise(((s, a) => {
+                    let i;
                     try {
-                        const a = o.Viewport.getApiKey("rcp-fe-lol-loot-moon-skin ftux"),
-                            i = o.Viewport.fullScreen().getScreenRoot(a, "rcp-fe-lol-loot"),
-                            l = document.createElement("video");
-                        l.setAttribute("no-controls", !0), l.setAttribute("autoplay", !0), l.setAttribute("preload", "auto"), l.setAttribute("src", t), l.style.width = "100%", l.style.height = "100%", l.style.position = "absolute", l.style["z-index"] = "1", l.style["pointer-events"] = "auto", l.addEventListener("ended", function() {
-                            this._updateWatchedSanctumBannerVideos(t), i.release(), this._screenRoot.bump(), s()
+                        const l = o.Viewport.getApiKey("rcp-fe-lol-loot-moon-skin ftux");
+                        i = o.Viewport.fullScreen().getScreenRoot(l, "rcp-fe-lol-loot");
+                        const c = document.createElement("video");
+                        c.setAttribute("no-controls", !0), c.setAttribute("autoplay", !0), c.setAttribute("preload", "auto"), c.setAttribute("src", t), c.style.width = "100%", c.style.height = "100%", c.style.position = "absolute", c.style["z-index"] = "1", c.style["pointer-events"] = "auto";
+                        const m = () => {
+                            u = !1, c.remove(), i.release(), this._screenRoot.bump()
+                        };
+                        c.addEventListener("ended", function() {
+                            this._updateWatchedSanctumBannerVideos(t), m(), s()
                         }.bind(this), {
                             once: !0
-                        }), (0, r.playSfx)(n, !0), i._element.appendChild(l), i.bump(), (0, r.playVo)(e.hubIntroVo, this.locale)
+                        }), c.addEventListener("pause", (() => {
+                            m(), s()
+                        }), {
+                            once: !0
+                        }), c.addEventListener("error", (e => {
+                            o.logger.error("Sanctum banner video error", e), m(), a(e)
+                        }), {
+                            once: !0
+                        }), (0, r.playSfx)(n, !0), i._element.appendChild(c), i.bump(), (0, r.playVo)(e.hubIntroVo, this.locale)
                     } catch (e) {
-                        a(e)
+                        u = !1, i && (i.release(), this._screenRoot.bump()), a(e)
                     }
                 }))
             }.bind(c), c.playUnwatchedMostRecentBannerVideo = function() {
@@ -502,9 +516,11 @@
                 const t = o.db.get(i.LOL_SETTINGS_PATHS.LOOT_SETTINGS).then((e => this.lootSettings = e)),
                     n = o.db.get(i.REGION_LOCALE_PATH).then((e => this.locale = e.locale));
                 return Promise.allSettled([e, t, n])
-            }.bind(c), Object.seal(c);
-            var u = c;
-            t.default = u
+            }.bind(c);
+            let u = !1;
+            Object.seal(c);
+            var m = c;
+            t.default = m
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

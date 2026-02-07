@@ -7968,7 +7968,7 @@
                     this._binding.addObserver(l, this, (e => {
                         if (!e) return;
                         this.set("tftEventsData", e.subNavTabs);
-                        const t = e.subNavTabs.filter((e => "skill-tree" === e.eventHubTemplateType));
+                        const t = e.subNavTabs.filter((e => e?.queueIds.length > 0));
                         t.length > 1 ? i.logger.error("Currently only displaying one skill tree event in the TFT Hub is supported - received " + t.length + " skill tree events.") : 1 === t.length && this.set("tftEvent", t[0])
                     })), this._binding.addObserver(a, this, (e => {
                         e && (this.set("skillTreeEnabled", Boolean(e)), e && this._binding.addObserver(o, this, (e => {
