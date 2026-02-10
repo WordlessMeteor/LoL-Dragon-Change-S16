@@ -360,8 +360,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -369,6 +367,8 @@
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -417,7 +417,7 @@
                             "Elements": [
                                 {
                                     "type": "Damage",
-                                    "nameOverride": "Spell_ListType_ModifiedMagicDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -520,7 +520,7 @@
     },
     "Characters/TFT5_Teemo/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Teemo",
-        "baseHP": 900.0,
+        "baseHP": 800.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 160.0,
         "healthBarFullParallax": true,
@@ -532,10 +532,10 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 65.0,
-        "baseArmor": 40.0,
-        "baseSpellBlock": 40.0,
+        "baseArmor": 30.0,
+        "baseSpellBlock": 30.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 890.0,
         "attackSpeed": 0.800000011920929,

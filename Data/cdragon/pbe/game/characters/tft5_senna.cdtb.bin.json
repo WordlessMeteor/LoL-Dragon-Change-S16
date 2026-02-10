@@ -203,9 +203,9 @@
                     "mName": "Damage",
                     "mValues": [
                         0.0,
-                        220.0,
-                        330.0,
-                        510.0,
+                        200.0,
+                        300.0,
+                        450.0,
                         0.0,
                         0.0,
                         0.0
@@ -216,9 +216,9 @@
                     "mName": "StunDuration",
                     "mValues": [
                         0.0,
-                        1.25,
-                        1.25,
                         1.5,
+                        2.0,
+                        3.0,
                         0.0,
                         0.0,
                         0.0
@@ -228,8 +228,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -310,8 +308,7 @@
                             "Elements": [
                                 {
                                     "type": "Damage",
-                                    "nameOverride": "Spell_ListType_ModifiedMagicDamage",
-                                    "Style": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -344,11 +341,11 @@
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 35.0,
+        "baseDamage": 55.0,
         "baseArmor": 15.0,
         "baseSpellBlock": 15.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 890.0,
         "attackSpeed": 0.699999988079071,

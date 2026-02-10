@@ -19,6 +19,13 @@
             "selfIllumination": 0.699999988079071,
             "Material": "Characters/TFT5_Kennen/Skins/Skin0/Materials/TierUpgrade",
             "initialSubmeshToHide": "Dart",
+            "materialOverride": [
+                {
+                    "Material": "Characters/TFT5_Kennen/Skins/Skin0/Materials/Vertex_Wobble_VertexColorControlled_Pan_Noise_Fresnel_inst",
+                    "submesh": "HairVFX",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
             "materialController": {
                 "__type": "{eaf8e31e}"
             },
@@ -12821,16 +12828,218 @@
         "soundPersistentDefault": "Play_sfx_tft5_Kennen_tft5_KennenE_buffdeactivate",
         "__type": "VfxSystemDefinitionData"
     },
-    "Characters/TFT5_Kennen/Skins/Skin0/Resources": {
-        "resourceMap": {
-            "TFT5_Kennen_BA_mis": "Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Base_BA_mis",
-            "TFT5_Kennen_E_Body_Child": "Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Base_E_Body_Child",
-            "TFT5_Kennen_E_Buff_Cas": "Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Base_E_Buff_Cas",
-            "TFT5_Kennen_E_Buff_Off": "Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Base_E_Buff_Off",
-            "TFT5_Kennen_E_Tar": "Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Base_E_Tar",
-            "TFT5_Kennen_E_Active_Beam": "Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Base_E_Active_Beam"
+    "Characters/TFT5_Kennen/Skins/Skin0/Materials/Vertex_Wobble_VertexColorControlled_Pan_Noise_Fresnel_inst": {
+        "name": "Characters/TFT5_Kennen/Skins/Skin0/Materials/Vertex_Wobble_VertexColorControlled_Pan_Noise_Fresnel_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT5_Kennen/Skins/Skin0/TFT5_Kennen_Skin0_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Scrolling_Noise_Texture",
+                "texturePath": "ASSETS/Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Skin0_Material_Add.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Wobble_Rate",
+                "value": [
+                    14.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Wobble_Amplitude",
+                "value": [
+                    0.07500000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Wobble_Offset",
+                "value": [
+                    -9.479999542236328,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ColorFresnelSize",
+                "value": [
+                    4.492499828338623,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Color_Fresnel_color",
+                "value": [
+                    1.0,
+                    0.7686274647712708,
+                    0.22745098173618317,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UVNoiseScale",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "NoiseScrollSpeed",
+                "value": [
+                    0.05000000074505806,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "HairRotateVector",
+                "value": [
+                    21.0,
+                    24.0,
+                    -4.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SineWobbleMult",
+                "value": [
+                    0.10499999672174454,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotatePivotPoint",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Green_Time_Offset_Mult",
+                "value": [
+                    0.4000000059604645,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Control",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "INVERT_COLOR_FRESNEL",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
         },
-        "__type": "ResourceResolver"
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Vertex_Wobble_VertexColorControlled_Pan_Noise_Fresnel",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "RotatePivotPoint",
+                    "driver": {
+                        "__type": "PlayerPositionDynamicMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "NoiseScrollSpeed",
+                    "Enabled": false,
+                    "driver": {
+                        "mBoolDriver": {
+                            "__type": "IsDeadDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": 0.0,
+                        "mOffValue": 0.07999999821186066,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Wobble_Amplitude",
+                    "driver": {
+                        "mBoolDriver": {
+                            "__type": "IsDeadDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": 0.0,
+                        "mOffValue": 0.07500000298023224,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
     },
     "Characters/TFT5_Kennen/Skins/Skin0/Materials/TierUpgrade": {
         "name": "Characters/TFT5_Kennen/Skins/Skin0/Materials/TierUpgrade",
@@ -13398,6 +13607,17 @@
             "__type": "DynamicMaterialDef"
         },
         "__type": "StaticMaterialDef"
+    },
+    "Characters/TFT5_Kennen/Skins/Skin0/Resources": {
+        "resourceMap": {
+            "TFT5_Kennen_BA_mis": "Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Base_BA_mis",
+            "TFT5_Kennen_E_Body_Child": "Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Base_E_Body_Child",
+            "TFT5_Kennen_E_Buff_Cas": "Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Base_E_Buff_Cas",
+            "TFT5_Kennen_E_Buff_Off": "Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Base_E_Buff_Off",
+            "TFT5_Kennen_E_Tar": "Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Base_E_Tar",
+            "TFT5_Kennen_E_Active_Beam": "Characters/TFT5_Kennen/Skins/Skin0/Particles/TFT5_Kennen_Base_E_Active_Beam"
+        },
+        "__type": "ResourceResolver"
     },
     "__linked": [
         "Characters/TFT5_Kennen",

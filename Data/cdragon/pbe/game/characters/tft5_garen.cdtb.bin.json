@@ -267,9 +267,9 @@
                     "mName": "PercentMaxHealth",
                     "mValues": [
                         0.0,
-                        0.20000000298023224,
-                        0.30000001192092896,
-                        4.0,
+                        0.25,
+                        0.3499999940395355,
+                        2.0,
                         0.0,
                         0.0,
                         0.0
@@ -280,8 +280,8 @@
                     "mName": "ShieldPercent",
                     "mValues": [
                         0.5,
-                        0.30000001192092896,
-                        0.30000001192092896,
+                        0.4000000059604645,
+                        0.550000011920929,
                         2.0,
                         0.5,
                         0.5,
@@ -331,8 +331,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedPercentMaxHealth": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -349,8 +347,6 @@
                     "__type": "GameCalculation"
                 },
                 "ModifiedShieldPercent": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -406,14 +402,14 @@
                                 {
                                     "type": "PercentMaxHealth",
                                     "multiplier": 100.0,
-                                    "nameOverride": "Spell_TFT5_GarenR_PercentMaxHealth",
+                                    "nameOverride": "Spell_ListType_MaxHealthDamage",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "ShieldPercent",
                                     "multiplier": 100.0,
-                                    "nameOverride": "Spell_TFT5_GarenR_Shield",
+                                    "nameOverride": "Spell_ListType_Shield",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -490,7 +486,7 @@
     },
     "Characters/TFT5_Garen/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Garen",
-        "baseHP": 1200.0,
+        "baseHP": 1050.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
@@ -501,11 +497,11 @@
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 60.0,
+        "baseDamage": 80.0,
         "baseArmor": 60.0,
         "baseSpellBlock": 60.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
         "attackSpeed": 0.75,

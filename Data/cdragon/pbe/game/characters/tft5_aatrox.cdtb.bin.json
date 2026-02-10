@@ -7,20 +7,19 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 80.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 50.0,
+        "baseDamage": 60.0,
         "baseArmor": 35.0,
         "baseSpellBlock": 35.0,
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
-        "attackSpeed": 0.699999988079071,
-        "attackSpeedRatio": 0.699999988079071,
+        "attackSpeed": 0.6499999761581421,
+        "attackSpeedRatio": 0.6499999761581421,
         "basicAttack": {
             "mAttackName": "TFT5_AatroxBasicAttack",
             "__type": "AttackSlotData"
@@ -196,9 +195,9 @@
                     "mName": "PercentAttackDamage",
                     "mValues": [
                         0.0,
-                        450.0,
-                        450.0,
-                        475.0,
+                        260.0,
+                        280.0,
+                        360.0,
                         0.0,
                         0.0,
                         0.0
@@ -209,9 +208,9 @@
                     "mName": "Heal",
                     "mValues": [
                         0.0,
-                        250.0,
+                        200.0,
                         300.0,
-                        375.0,
+                        400.0,
                         0.0,
                         0.0,
                         0.0
@@ -225,8 +224,6 @@
                         "mNumber": 0.009999999776482582,
                         "__type": "NumberCalculationPart"
                     },
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mStat": 2,
@@ -240,8 +237,6 @@
                     "__type": "GameCalculation"
                 },
                 "ModifiedHeal": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -249,6 +244,8 @@
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -288,15 +285,14 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "Heal",
-                                    "nameOverride": "Spell_TFT5_AatroxP_TotalDamage",
+                                    "type": "PercentAttackDamage",
+                                    "nameOverride": "Spell_TFT5_AatroxP_PercentAD",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "Heal",
-                                    "nameOverride": "Spell_TFT5_AatroxP_Heal",
-                                    "Style": 1,
+                                    "nameOverride": "Spell_ListType_Heal",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

@@ -227,8 +227,8 @@
                     "mValues": [
                         200.0,
                         120.0,
-                        150.0,
-                        200.0,
+                        180.0,
+                        360.0,
                         200.0,
                         200.0,
                         200.0
@@ -264,8 +264,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedShieldAmount": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -281,8 +279,6 @@
                     "__type": "GameCalculation"
                 },
                 "ModifiedHitDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -386,12 +382,12 @@
                             "Elements": [
                                 {
                                     "type": "ShieldAmount",
-                                    "nameOverride": "Spell_TFT5_LuxW_Shield",
+                                    "nameOverride": "Spell_ListType_ShieldAmount",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "HitDamage",
-                                    "nameOverride": "Spell_TFT5_LuxW_TooltipDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -929,7 +925,7 @@
     },
     "Characters/TFT5_Lux/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Lux",
-        "baseHP": 650.0,
+        "baseHP": 600.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
@@ -941,14 +937,14 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 40.0,
-        "baseArmor": 25.0,
-        "baseSpellBlock": 25.0,
+        "baseArmor": 20.0,
+        "baseSpellBlock": 20.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 890.0,
-        "attackSpeed": 0.75,
-        "attackSpeedRatio": 0.75,
+        "attackSpeed": 0.6499999761581421,
+        "attackSpeedRatio": 0.6499999761581421,
         "expGivenOnDeath": 0.0,
         "goldGivenOnDeath": 0.0,
         "spellNames": [

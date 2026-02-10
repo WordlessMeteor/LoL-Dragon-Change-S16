@@ -13,14 +13,14 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 50.0,
-        "baseArmor": 45.0,
-        "baseSpellBlock": 45.0,
+        "baseArmor": 35.0,
+        "baseSpellBlock": 35.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 420.0,
-        "attackSpeed": 0.6499999761581421,
-        "attackSpeedRatio": 0.6499999761581421,
+        "attackSpeed": 0.6000000238418579,
+        "attackSpeedRatio": 0.6000000238418579,
         "basicAttack": {
             "mAttackProbability": 0.5,
             "mAttackName": "TFT5_RakanBasicAttack",
@@ -272,9 +272,9 @@
                     "mName": "HealPercent",
                     "mValues": [
                         0.0,
-                        0.30000001192092896,
-                        0.4000000059604645,
+                        0.3499999940395355,
                         0.5,
+                        0.699999988079071,
                         0.0,
                         0.0,
                         0.0
@@ -284,8 +284,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedHealing": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -302,8 +300,6 @@
                     "__type": "GameCalculation"
                 },
                 "ModifiedDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -378,8 +374,7 @@
                             "Elements": [
                                 {
                                     "type": "Damage",
-                                    "nameOverride": "Spell_ListType_ModifiedMagicDamage",
-                                    "Style": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {

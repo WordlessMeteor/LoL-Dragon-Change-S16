@@ -97,7 +97,7 @@
                     "mValues": [
                         100.0,
                         300.0,
-                        375.0,
+                        450.0,
                         3000.0,
                         1.0,
                         1.0,
@@ -134,8 +134,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedShieldAmount": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -143,6 +141,8 @@
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -179,8 +179,7 @@
                             "Elements": [
                                 {
                                     "type": "ShieldAmount",
-                                    "nameOverride": "Spell_TFT5_RellE_ModifiedShield",
-                                    "Style": 1,
+                                    "nameOverride": "Spell_ListType_ShieldAmount",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -205,7 +204,7 @@
     },
     "Characters/TFT5_Rell/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Rell",
-        "baseHP": 1050.0,
+        "baseHP": 900.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 220.0,
         "healthBarFullParallax": true,
@@ -220,7 +219,7 @@
         "baseArmor": 60.0,
         "baseSpellBlock": 60.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
         "attackSpeed": 0.6000000238418579,

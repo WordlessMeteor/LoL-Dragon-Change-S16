@@ -15728,14 +15728,14 @@
                                 if (!a) throw new Error("selectedRewardGroups name must be set");
                                 return e(t, a)
                             })).then((() => {
-                                t.sendMessage(s, {
+                                t.sendMessage({
                                     messageType: r.missionsSelectRewardsResponse,
                                     data: {
                                         success: !0
                                     }
                                 })
                             })).catch((e => {
-                                a.logger.warning("Error handling message.", e), t.sendMessage(s, {
+                                a.logger.warning("Error handling message.", e), t.sendMessage({
                                     messageType: r.missionsSelectRewardsResponse,
                                     data: {
                                         success: !1,

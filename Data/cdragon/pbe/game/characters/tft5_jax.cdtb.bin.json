@@ -230,8 +230,6 @@
                         "mNumber": 0.009999999776482582,
                         "__type": "NumberCalculationPart"
                     },
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mStat": 2,
@@ -245,8 +243,6 @@
                     "__type": "GameCalculation"
                 },
                 "ModifiedAS": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -254,6 +250,8 @@
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -294,15 +292,9 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "PercentAttackDamage",
-                                    "nameOverride": "Spell_TFT5_JaxQ_TotalDamage",
-                                    "Style": 2,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "PercentAttackSpeed",
                                     "multiplier": 100.0,
-                                    "nameOverride": "Spell_TFT5_JaxQ_AttackSpeed",
+                                    "nameOverride": "Spell_ListType_AttackSpeed",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -320,7 +312,7 @@
     },
     "Characters/TFT5_Jax/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Jax",
-        "baseHP": 1050.0,
+        "baseHP": 950.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
@@ -331,11 +323,11 @@
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 75.0,
+        "baseDamage": 80.0,
         "baseArmor": 50.0,
         "baseSpellBlock": 50.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
         "attackSpeed": 0.8999999761581421,

@@ -62,9 +62,9 @@
                     "mName": "ShieldAmount",
                     "mValues": [
                         0.0,
-                        300.0,
+                        250.0,
                         350.0,
-                        450.0,
+                        600.0,
                         0.0,
                         0.0,
                         0.0
@@ -88,9 +88,9 @@
                     "mName": "PercentAD",
                     "mValues": [
                         0.0,
-                        150.0,
-                        150.0,
-                        165.0,
+                        120.0,
+                        130.0,
+                        180.0,
                         0.0,
                         0.0,
                         0.0
@@ -104,8 +104,6 @@
                         "mNumber": 0.009999999776482582,
                         "__type": "NumberCalculationPart"
                     },
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mStat": 2,
@@ -119,8 +117,6 @@
                     "__type": "GameCalculation"
                 },
                 "ModifiedShieldAmount": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -174,14 +170,12 @@
                             "Elements": [
                                 {
                                     "type": "ShieldAmount",
-                                    "nameOverride": "Spell_TFT5_UdyrSpell_ModifiedShield",
-                                    "Style": 1,
+                                    "nameOverride": "Spell_ListType_ShieldAmount",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "PercentAD",
-                                    "nameOverride": "Spell_TFT5_UdyrSpell_PhysicalDamage",
-                                    "Style": 1,
+                                    "nameOverride": "Spell_ListType_ADScaling",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -515,7 +509,7 @@
         "baseArmor": 30.0,
         "baseSpellBlock": 30.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
         "attackSpeed": 0.75,
@@ -545,9 +539,9 @@
             "{00000000}"
         ],
         "extraSpells": [
-            "",
+            "TFT5_UdyrBearAttack",
             "TFT5_UdyrTurtleAttack",
-            "",
+            "TFT5_UdyrPhoenixAttack",
             "TFT5_UdyrTigerAttack",
             "",
             "",

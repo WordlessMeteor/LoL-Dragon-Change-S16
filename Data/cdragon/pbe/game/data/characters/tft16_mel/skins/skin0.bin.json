@@ -1,5 +1,5 @@
 {
-    "{622037a7}": {
+    "Characters/TFT16_Mel/Skins/Skin0": {
         "skinAudioProperties": {
             "tagEventList": [
                 "Mel",
@@ -646,7 +646,8 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "lifetime": 10.0,
+                "particleLinger": 0.699999988079071,
+                "lifetime": 45.0,
                 "emitterName": "GroundFlamering",
                 "importance": 3,
                 "bindWeight": {
@@ -670,7 +671,6 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.10000000149011612,
                             0.5,
                             1.0
                         ],
@@ -680,12 +680,6 @@
                                 1.0,
                                 1.0,
                                 0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
                             ],
                             [
                                 1.0,
@@ -775,8 +769,8 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 1.2000000476837158,
-                "lifetime": 10.0,
+                "particleLinger": 0.699999988079071,
+                "lifetime": 45.0,
                 "fieldCollectionDefinition": {
                     "fieldNoiseDefinitions": [
                         {
@@ -1130,9 +1124,11 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 10.0,
+                    "constantValue": 45.0,
                     "__type": "ValueFloat"
                 },
+                "particleLingerType": 1,
+                "particleLinger": 0.30000001192092896,
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "GroundFlamering1",
@@ -1158,7 +1154,9 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.029999999329447746
+                            0.004999999888241291,
+                            0.9950000047683716,
+                            1.0
                         ],
                         "values": [
                             [
@@ -1172,6 +1170,18 @@
                                 1.0,
                                 1.0,
                                 1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
                             ]
                         ],
                         "__type": "VfxAnimatedColorVariableData"
@@ -2305,9 +2315,10 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 10.0,
+                    "constantValue": 45.0,
                     "__type": "ValueFloat"
                 },
+                "particleLingerType": 1,
                 "particleLinger": 0.30000001192092896,
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
@@ -2409,8 +2420,8 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.029999999329447746,
-                            0.8999999761581421,
+                            0.004999999888241291,
+                            0.9950000047683716,
                             1.0
                         ],
                         "values": [
@@ -2585,9 +2596,10 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 10.0,
+                    "constantValue": 45.0,
                     "__type": "ValueFloat"
                 },
+                "particleLingerType": 1,
                 "particleLinger": 0.30000001192092896,
                 "isSingleParticle": 1,
                 "emitterName": "CycloneDark",
@@ -2687,8 +2699,8 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.029999999329447746,
-                            0.800000011920929,
+                            0.004999999888241291,
+                            0.9950000047683716,
                             1.0
                         ],
                         "values": [
@@ -2825,9 +2837,10 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 10.0,
+                    "constantValue": 45.0,
                     "__type": "ValueFloat"
                 },
+                "particleLingerType": 1,
                 "particleLinger": 0.30000001192092896,
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
@@ -2965,8 +2978,8 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.05000000074505806,
-                            0.8999999761581421,
+                            0.004999999888241291,
+                            0.9950000047683716,
                             1.0
                         ],
                         "values": [
@@ -15705,7 +15718,7 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "lifetime": 10.0,
+                "lifetime": 45.0,
                 "emitterName": "Core_particles",
                 "importance": 1,
                 "birthVelocity": {
@@ -15934,7 +15947,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 10.0,
+                    "constantValue": 45.0,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -15973,7 +15986,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.019999999552965164
+                            0.004999999888241291
                         ],
                         "values": [
                             [
@@ -16001,7 +16014,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 10.0,
+                    "constantValue": 45.0,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -16026,6 +16039,7 @@
                 "miscRenderFlags": 1,
                 "stencilMode": 1,
                 "stencilRef": 16,
+                "isUniformScale": 1,
                 "isGroundLayer": 1,
                 "birthScale0": {
                     "constantValue": [
@@ -16039,7 +16053,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.019999999552965164
+                            0.004999999888241291
                         ],
                         "values": [
                             [
@@ -16067,7 +16081,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 10.0,
+                    "constantValue": 45.0,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -16106,7 +16120,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.019999999552965164
+                            0.004999999888241291
                         ],
                         "values": [
                             [
@@ -16136,7 +16150,8 @@
                     "constantValue": 0.3499999940395355,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 10.0,
+                "particleLinger": 0.3499999940395355,
+                "lifetime": 45.0,
                 "rateByVelocityFunction": {
                     "constantValue": [
                         0.5,
@@ -16172,7 +16187,9 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.05000000074505806
+                            0.004999999888241291,
+                            0.9950000047683716,
+                            1.0
                         ],
                         "values": [
                             [
@@ -16186,6 +16203,18 @@
                                 1.0,
                                 1.0,
                                 1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
                             ]
                         ],
                         "__type": "VfxAnimatedColorVariableData"
@@ -16319,7 +16348,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 10.0,
+                    "constantValue": 45.0,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.25,
@@ -16412,7 +16441,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.019999999552965164
+                            0.004999999888241291
                         ],
                         "values": [
                             [
@@ -16455,8 +16484,8 @@
                     "constantValue": 0.5,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": null,
-                "lifetime": 10.0,
+                "particleLinger": 0.5,
+                "lifetime": 45.0,
                 "emitterName": "end_projectile",
                 "importance": 1,
                 "worldAcceleration": {
@@ -16824,7 +16853,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 10.0,
+                    "constantValue": 45.0,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -16862,7 +16891,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.019999999552965164
+                            0.004999999888241291
                         ],
                         "values": [
                             [
@@ -16892,7 +16921,8 @@
                     "constantValue": 0.4000000059604645,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 10.0,
+                "particleLinger": 0.4000000059604645,
+                "lifetime": 45.0,
                 "rateByVelocityFunction": {
                     "constantValue": [
                         0.5,
@@ -17003,7 +17033,9 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.05000000074505806
+                            0.004999999888241291,
+                            0.9950000047683716,
+                            1.0
                         ],
                         "values": [
                             [
@@ -17017,6 +17049,18 @@
                                 1.0,
                                 1.0,
                                 1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
                             ]
                         ],
                         "__type": "VfxAnimatedColorVariableData"
@@ -17148,7 +17192,8 @@
                     "constantValue": 0.3499999940395355,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 10.0,
+                "particleLinger": 0.3499999940395355,
+                "lifetime": 45.0,
                 "rateByVelocityFunction": {
                     "constantValue": [
                         0.5,
@@ -17259,7 +17304,9 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.05000000074505806
+                            0.004999999888241291,
+                            0.9950000047683716,
+                            1.0
                         ],
                         "values": [
                             [
@@ -17273,6 +17320,18 @@
                                 1.0,
                                 1.0,
                                 1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
                             ]
                         ],
                         "__type": "VfxAnimatedColorVariableData"
@@ -17405,7 +17464,8 @@
                     "constantValue": 0.4000000059604645,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 10.0,
+                "particleLinger": 0.4000000059604645,
+                "lifetime": 45.0,
                 "rateByVelocityFunction": {
                     "constantValue": [
                         0.5,
@@ -17516,7 +17576,9 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.05000000074505806
+                            0.004999999888241291,
+                            0.9950000047683716,
+                            1.0
                         ],
                         "values": [
                             [
@@ -17530,6 +17592,18 @@
                                 1.0,
                                 1.0,
                                 1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
                             ]
                         ],
                         "__type": "VfxAnimatedColorVariableData"

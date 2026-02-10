@@ -300,6 +300,60 @@
             }
         ],
         "mResourceResolver": "Characters/Mordekaiser/Skins/Skin15/Resources",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "mDriver": {
+                                "__type": "IsEnemyDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "Spell": "{79b559d5}",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "effectKey": "Mordekaiser_Passive_buf_AOE_Ally",
+                        "scale": 0.800000011920929,
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "effectKey": "{c6919458}",
+                        "scale": 0.800000011920929,
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "__type": "IsEnemyDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "Spell": "{79b559d5}",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "effectKey": "{e36dee08}",
+                        "scale": 0.800000011920929,
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Mordekaiser/Skins/Skin15/Materials/Mordekaiser_MAT_UltimateHardlight": {

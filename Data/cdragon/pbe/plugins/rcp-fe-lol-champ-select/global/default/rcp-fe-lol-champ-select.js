@@ -3982,7 +3982,7 @@
                     }
                 },
                 _handleCreateChampionGridSelectTelemetry() {
-                    this.get("summoner.isPickIntenting") ? (this._isChampIntentTimer = i.Telemetry.startTimer("champ-select-intent-pick-time"), this.debounceTask("_recordTelemetryPickIntent", f)) : this.get("summoner.isBanningNow") ? (this._isChampBanTimer = i.Telemetry.startTimer("champ-select-ban-pick-time"), this.debounceTask("_recordTelemetryBan", f)) : (this._isChampSelectTimer = i.Telemetry.startTimer("champ-select-pick-time"), this.debounceTask("_recordTelemetryPick", f))
+                    this.get("summoner.isPickIntenting") ? (this._isChampIntentTimer = i.Telemetry.startTimer("champ-select-intent-pick-time"), this.debounceTask("_recordTelemetryPickIntent", f)) : this.get("summoner.isBanningNow") ? (this._isChampBanTimer = i.Telemetry.startTimer("champ-select-ban-pick-time"), this.debounceTask("_recordTelemetryBan", f)) : this.get("summoner.isPickingNow") && (this._isChampSelectTimer = i.Telemetry.startTimer("champ-select-pick-time"), this.debounceTask("_recordTelemetryPick", f))
                 },
                 _handleRecordChampionGridSelectTelemetry() {
                     this.get("summoner.isPickIntenting") ? i.Telemetry.stopAndRecordTimer(this._isChampIntentTimer) : this.get("summoner.isBanningNow") ? i.Telemetry.stopAndRecordTimer(this._isChampBanTimer) : i.Telemetry.stopAndRecordTimer(this._isChampSelectTimer), this._handleCreateChampionGridSelectTelemetry()
@@ -4177,8 +4177,12 @@
                         l = !!a && a.length >= 1,
                         r = this.get("debouncedSearchText")?.trim()?.length > 0,
                         c = this.get("filters")?.some((e => e.get("value"))),
-                        m = `${t}-${o?"data1":"data0"}-${l?"display1":r||c?"displayF":"display0"}`;
-                    i.Telemetry.recordNonTimingTracingEvent(m)
+                        m = r || c,
+                        p = `${t}-${o?"data1":"data0"}-${l?"display1":m?"displayF":"display0"}`;
+                    if (i.Telemetry.recordNonTimingTracingEvent(p), "champ-select-grid-m-pick" === t && !o && !l && !m) {
+                        const e = this.get("champSelectService.champSelectSession.queueId");
+                        i.logger.error("Empty grid during pick phase", e)
+                    }
                 },
                 _resetAnimation: function(e) {
                     this._onAnimatingUpdateTimer && (this.cancelTask(this._onAnimatingUpdateTimer), this._onAnimatingUpdateTimer = null);
