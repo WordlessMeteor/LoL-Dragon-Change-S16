@@ -18121,6 +18121,14 @@
                 default: !1,
                 name: "discordBetaIntegrationEnabled",
                 path: "lol.client_settings.discordIntegrationBeta.enabled"
+            }, {
+                default: "",
+                name: "discordIntegrationCountryCodeAllowlist",
+                path: "lol.client_settings.discordIntegration.countryCodeAllowlist"
+            }, {
+                default: "",
+                name: "discordBetaIntegrationCountryCodeBlocklist",
+                path: "lol.client_settings.discordIntegration.countryCodeBlocklist"
             }];
             var i = r.Ember.Service.extend({
                 init: function() {
@@ -18604,21 +18612,25 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            const o = ["TUR", "RUS", "CHN", "ARE"],
-                i = ["USA", "BRA"],
-                a = "/lol-settings/v2/account/LCUPreferences/lol-general",
-                s = "discord-beta-eat-seen";
-            var l = r.Ember.Service.extend({
+            const o = "/lol-settings/v2/account/LCUPreferences/lol-general",
+                i = "discord-beta-eat-seen";
+            var a = r.Ember.Service.extend({
                 rsoAuthCountryCode: "",
                 isDiscordBetaEatSeen: !0,
                 clientConfigService: r.Ember.inject.service("client-config"),
                 settingsService: r.Ember.inject.service("settings"),
+                countryCodeAllowlist: r.Ember.computed("clientConfigService.discordIntegrationCountryCodeAllowlist", (function() {
+                    return this.get("clientConfigService.discordIntegrationCountryCodeAllowlist")?.toLowerCase().split(",") || []
+                })),
+                countryCodeBlocklist: r.Ember.computed("clientConfigService.discordBetaIntegrationCountryCodeBlocklist", (function() {
+                    return this.get("clientConfigService.discordBetaIntegrationCountryCodeBlocklist")?.toLowerCase().split(",") || []
+                })),
                 isDiscordIntegrationEnabled: r.Ember.computed.alias("clientConfigService.discordIntegrationEnabled"),
                 isEnabled: r.Ember.computed("isDiscordIntegrationEnabled", "isTencent", "rsoAuthCountryCode", (function() {
                     if (!this.get("isDiscordIntegrationEnabled")) return !1;
                     if (this.get("isTencent")) return !1;
-                    const e = this.get("rsoAuthCountryCode");
-                    return !o.includes(e) && !!i.includes(e)
+                    const e = this.get("rsoAuthCountryCode").toLowerCase();
+                    return !!this.get("countryCodeAllowlist").includes(e) && !this.get("countryCodeBlocklist").includes(e)
                 })),
                 isTencent: r.Ember.computed.equal("settingsService.region", "TENCENT"),
                 shouldShowDiscordBetaEat: r.Ember.computed("isDiscordBetaEatSeen", "isEnabled", (function() {
@@ -18627,10 +18639,10 @@
                 markDiscordBetaEatSeen: function() {
                     this.set("isDiscordBetaEatSeen", !0);
                     try {
-                        r.db.patch(a, {
+                        r.db.patch(o, {
                             schemaVersion: 1,
                             data: {
-                                [s]: !0
+                                [i]: !0
                             }
                         })
                     } catch (e) {
@@ -18640,15 +18652,15 @@
                 init: function() {
                     this._super(...arguments), r.db.observe("/lol-rso-auth/v1/authorization/country", this, (e => {
                         this.set("rsoAuthCountryCode", e.toUpperCase())
-                    })), r.db.observe(a, this, (e => {
-                        e?.data && this.set("isDiscordBetaEatSeen", Boolean(e.data[s]))
+                    })), r.db.observe(o, this, (e => {
+                        e?.data && this.set("isDiscordBetaEatSeen", Boolean(e.data[i]))
                     }))
                 },
                 willDestroy() {
-                    this._super(...arguments), r.db.unobserve("/lol-rso-auth/v1/authorization/country", this), r.db.unobserve(a, this)
+                    this._super(...arguments), r.db.unobserve("/lol-rso-auth/v1/authorization/country", this), r.db.unobserve(o, this)
                 }
             });
-            t.default = l
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

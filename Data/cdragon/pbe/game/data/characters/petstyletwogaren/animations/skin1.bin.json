@@ -1074,7 +1074,7 @@
                 ],
                 "__type": "SequencerClipData"
             },
-            "Idle1": {
+            "{e0bca822}": {
                 "mClipNameList": [
                     "Idle01",
                     "Idle01",
@@ -1656,6 +1656,20 @@
                     "{1ea9f0d0}"
                 ],
                 "__type": "ParallelClipData"
+            },
+            "Idle1": {
+                "Updater": {
+                    "driver": {
+                        "Submeshes": [
+                            "Table_A"
+                        ],
+                        "__type": "SubmeshVisibilityBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mTrueConditionClipName": "Joke_Loop",
+                "mFalseConditionClipName": "{e0bca822}",
+                "__type": "ConditionBoolClipData"
             }
         },
         "mMaskDataMap": {

@@ -944,7 +944,7 @@
                 },
                 "__type": "SequencerClipData"
             },
-            "Idle1": {
+            "{a09935cc}": {
                 "mClipNameList": [
                     "Idle01",
                     "Idle01",
@@ -1243,6 +1243,20 @@
                     "{1ea9f0d0}"
                 ],
                 "__type": "ParallelClipData"
+            },
+            "Idle1": {
+                "Updater": {
+                    "driver": {
+                        "Submeshes": [
+                            "stone"
+                        ],
+                        "__type": "SubmeshVisibilityBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mTrueConditionClipName": "Idle02",
+                "mFalseConditionClipName": "{a09935cc}",
+                "__type": "ConditionBoolClipData"
             }
         },
         "mMaskDataMap": {

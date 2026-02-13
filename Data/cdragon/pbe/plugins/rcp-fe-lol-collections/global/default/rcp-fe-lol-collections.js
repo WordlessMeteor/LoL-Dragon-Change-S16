@@ -11630,7 +11630,7 @@
                     this.set("shouldActivateDeleteSlot", !1), this.get("emotesService").setIsDragging(!1)
                 },
                 init: function() {
-                    this._super(...arguments);
+                    this._super(...arguments), this.set("isDemacia", this.componentFactoryApp?.model?.isDemacia || !1);
                     const e = [];
                     Object.values(l).forEach((t => {
                         const n = this.get("selectedTab") === t;
@@ -11730,8 +11730,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "qGj7SjvA",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-collections\\\\src\\\\lib\\\\emote-panel\\\\addon\\\\app\\\\components\\\\emote-root\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-collections\\\\src\\\\lib\\\\emote-panel\\\\addon\\\\app\\\\components\\\\emote-root\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-collections\\\\src\\\\lib\\\\emote-panel\\\\addon\\\\app\\\\components\\\\emote-root\\\\index.js\\" "],["text","\\n"],["block",["unless"],[["get",["emotesService","isLoaded"]]],null,4],["open-element","div",[]],["dynamic-attr","class",["concat",["emotes-root ",["helper",["if"],[["get",["emotesService","isLoaded"]],"loaded","loading"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["emote-inventory"]],false],["text","\\n"],["block",["if"],[["get",["emotesLoadout"]]],null,3],["text","\\n  "],["open-element","div",[]],["static-attr","class","nav-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-navigation-bar",[]],["static-attr","type","nav-bar-secondary"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tabs"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["append",["helper",["emote-delete-slot"],null,[["isActive"],[["get",["shouldActivateDeleteSlot"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["modifier",["action"],[["get",[null]],"selectTab",["get",["tab"]]]],["flush-element"],["text","\\n          "],["open-element","lol-uikit-navigation-item",[]],["dynamic-attr","active",["concat",[["helper",["if"],[["get",["tab","selected"]],"true"],null]]]],["flush-element"],["text","\\n            "],["append",["unknown",["tab","name"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["tab"]},{"statements":[["text","      "],["append",["unknown",["emote-reactions"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["unknown",["emote-wheel"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isEmoteWheelTabSelected"]]],null,2],["text","\\n"],["block",["if"],[["get",["isReactionTabSelected"]]],null,1]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","emotes-loading-section"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["width","height"],["50px","50px"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "gIKP7Z0Q",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-collections\\\\src\\\\lib\\\\emote-panel\\\\addon\\\\app\\\\components\\\\emote-root\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-collections\\\\src\\\\lib\\\\emote-panel\\\\addon\\\\app\\\\components\\\\emote-root\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-collections\\\\src\\\\lib\\\\emote-panel\\\\addon\\\\app\\\\components\\\\emote-root\\\\index.js\\" "],["text","\\n"],["block",["unless"],[["get",["emotesService","isLoaded"]]],null,12],["open-element","div",[]],["dynamic-attr","class",["concat",["emotes-root ",["helper",["if"],[["get",["emotesService","isLoaded"]],"loaded","loading"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDemacia"]]],null,11,10],["text","\\n"],["block",["if"],[["get",["emotesLoadout"]]],null,9],["text","\\n"],["block",["if"],[["get",["isDemacia"]]],null,2,1],["text","\\n  "],["append",["helper",["emote-delete-slot"],null,[["isActive"],[["get",["shouldActivateDeleteSlot"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["modifier",["action"],[["get",[null]],"selectTab",["get",["tab"]]]],["flush-element"],["text","\\n          "],["open-element","lol-uikit-navigation-item",[]],["dynamic-attr","active",["concat",[["helper",["if"],[["get",["tab","selected"]],"true"],null]]]],["flush-element"],["text","\\n            "],["append",["unknown",["tab","name"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["tab"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","nav-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-navigation-bar",[]],["static-attr","type","nav-bar-secondary"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tabs"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["demacia-navigation"],null,[["tabs","onSelectCallback"],[["get",["tabs"]],["helper",["action"],[["get",[null]],"selectTab"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["emote-reactions"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["demacia-emote-reactions"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isDemacia"]]],null,4,3]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["emote-wheel"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["demacia-emote-wheel"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isDemacia"]]],null,7,6]],"locals":[]},{"statements":[["block",["if"],[["get",["isEmoteWheelTabSelected"]]],null,8],["text","\\n"],["block",["if"],[["get",["isReactionTabSelected"]]],null,5]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["emote-inventory"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["demacia-emote-inventory"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","emotes-loading-section"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["width","height"],["50px","50px"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -15386,9 +15386,13 @@
                 }
                 getCurrentPlayerEmotePanel() {
                     return new Promise((e => {
-                        e(o.ComponentFactory.create(i.EMBER_APP_NAME, {
-                            isFromExternalSource: !0
-                        }))
+                        e(function() {
+                            const e = {
+                                isFromExternalSource: !0
+                            };
+                            0;
+                            return o.ComponentFactory.create(i.EMBER_APP_NAME, e)
+                        }())
                     }))
                 }
                 willHide() {}
@@ -15416,6 +15420,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.EMBER_APP_NAME = void 0, t.default = function(e) {
+                0;
                 0;
                 return function() {
                     const e = function() {
