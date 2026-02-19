@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "每@CastsToGainXP@次施放技能，【时光守护者】会储存<TFTBonus>@XPPerCast@</TFTBonus>经验值。若储存的经验值足够你升级，他会传输给你所需的经验值。<br><br>若你已是10级，他转而获得<TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>伤害增幅。<br><br><rules>已储存的经验值：@TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "每@CastsToGainXP@次施放技能，【时光守护者】会储存<TFTBonus>@XPPerCast@</TFTBonus>经验值。若储存的经验值足够你升级，他会传输给你所需的经验值。<br><br>若你已是10级，他转而获得<TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>伤害增幅。<br><br><rules>已储存的经验值：@TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br>在【恭喜发财】中，获取经验值所需的施放技能次数提升至@CastsToGainXPCT@，直到阶段3-5为止。</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,6 +12270,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 4.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13758,7 +13762,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "每一秒，【恕瑞玛】弈子获得@ASPerSecond*100@%攻击速度和回复@HealthRestorePerSecond@生命值。战斗开始时，他们获得额外的效果。<br><br><row>(@MinUnits@) @BonusHealth*100@%最大生命值</row><br><row>(@MinUnits@) @ArmorMR@护甲和魔抗</row><br><row>(@MinUnits@)每@GodhoodCadence@秒，一个【恕瑞玛】弈子会飞升成神。</row>",
+        "tooltip_text": "每一秒，【恕瑞玛】弈子们获得@ASPerSecond*100@%攻击速度并回复@HealthRestorePerSecond@生命值。在战斗开始时，他们获得额外效果。<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>棱彩阶：解锁【内瑟斯】、【雷克顿】、以及【泽拉斯】，然后登场【（4) 恕瑞玛】</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@%最大生命值</row><br><row>(@MinUnits@) @ArmorMR@护甲和魔抗</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>每@GodhoodCadence@秒，一个【恕瑞玛】弈子会飞升成神。</ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>仅在【内瑟斯】、【雷克顿】和【泽拉斯】都已被解锁时可用。</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13838,7 +13842,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13846,7 +13850,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13854,8 +13858,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14558,7 +14562,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "在每个对战回合结束后，一个【飞升法杖】会出现在你的商店。它们拥有强大的效果，并且能够用金币购买。@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "在每个对战回合结束后，一个【飞升法杖】会出现在你的商店。它们拥有强大的效果，并且能够用金币购买。@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>在【恭喜发财】中，【命定寻获】随机法杖和【忠实追随者】随机法杖在你达到7级之前都不会出现。</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

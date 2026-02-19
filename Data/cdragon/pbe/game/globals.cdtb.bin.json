@@ -18860,6 +18860,13 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{26e258d3}": {
+        "mExpandedMutator": "EnableGDUManifest",
+        "mMutators": [
+            "WriteGDUManifest(1)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
     "{27950af5}": {
         "mExpandedMutator": "VoiceChat",
         "mMutators": [
@@ -19489,7 +19496,7 @@
         "mExpandedMutator": "TFT_Event_CT",
         "mMutators": [
             "TFTSetOverride(TFTSetEventCT)",
-            "AudioFeature(TFTSet15)",
+            "AudioFeature(TFTSet16)",
             "TFT_RolesRevamped(1)"
         ],
         "__type": "GameMutatorExpansions"
@@ -20896,6 +20903,13 @@
         "mMutators": [
             "MapID(0)?MapSkinName(LightingPlayground)",
             "CLASSIC"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
+    "{edc7e60f}": {
+        "mExpandedMutator": "DisableGPPMetadata",
+        "mMutators": [
+            "DontWriteGPPMetadata(1)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -23256,7 +23270,9 @@
             "{e2213221}": false,
             "{2094dd6e}": true,
             "{724bed8c}": true,
+            "{46a63d99}": true,
             "{7aacbbbc}": true,
+            "{a882cddf}": true,
             "__type": "LoLFeatureToggles"
         },
         "mGameplayToggles": {
@@ -24220,7 +24236,8 @@
             "GDSEnum::CharacterKeywords",
             "TFTFavoredCombinations",
             "GDSEnum::TFTTraitSetStyle",
-            "ItemIconType"
+            "ItemIconType",
+            "PlayerInputType"
         ],
         "__type": "GameModeConstantStringVector"
     },

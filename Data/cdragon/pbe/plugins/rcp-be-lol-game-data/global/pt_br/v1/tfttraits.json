@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "A cada @CastsToGainXP@ conjurações, o Guardião do Tempo armazena <TFTBonus>@XPPerCast@</TFTBonus> de EXP. Se ele tiver guardado o suficiente para você subir de nível, ele transfere a EXP&nbsp;necessária. <br><br>Se você estiver no nível 10, ele recebe <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;de Amplificação de Dano em vez disso.<br><br><rules>EXP armazenada: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "A cada @CastsToGainXP@ conjurações, o Guardião do Tempo armazena <TFTBonus>@XPPerCast@</TFTBonus> de EXP. Se ele tiver guardado o suficiente para você subir de nível, ele transfere a EXP&nbsp;necessária. <br><br>Se você estiver no nível 10, ele recebe <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;de Amplificação de Dano em vez disso.<br><br><rules>EXP armazenada: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>Em Tesouro do Choncc, a quantidade de conjurações necessárias para obter EXP aumenta para @CastsToGainXPCT@ até o Estágio 3-5.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,6 +12270,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 4.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13758,7 +13762,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "A cada segundo, shurimanes recebem @ASPerSecond*100@% de Velocidade de Ataque e restauram @HealthRestorePerSecond@ de Vida. Recebem efeitos adicionais no início do combate.<br><br><row>(@MinUnits@) @BonusHealth*100@% de Vida máxima</row><br><row>(@MinUnits@) @ArmorMR@ de Armadura e Resistência Mágica</row><br><row>(@MinUnits@) Um shurimane atinge a DIVINDADE a cada @GodhoodCadence@s.</row>",
+        "tooltip_text": "A cada segundo, shurimanes recebem @ASPerSecond*100@% de Velocidade de Ataque e restauram @HealthRestorePerSecond@ de Vida. Recebem efeitos adicionais no início do combate.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismático: habilite Nasus, Renekton e Xerath, depois coloque em campo 4 shurimanes</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% de Vida máxima</row><br><row>(@MinUnits@) @ArmorMR@ de Armadura e Resistência Mágica</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Um shurimane atinge a DIVINDADE a cada @GodhoodCadence@s. </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>Disponível apenas quando Nasus, Renekton e Xerath tiverem sido habilitados.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13838,7 +13842,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13846,7 +13850,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13854,8 +13858,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14558,7 +14562,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Após cada combate, um Talismã Ascendente aparece na loja. Ele contém efeitos poderosos que ficam à venda por ouro.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "Após cada combate, um Talismã Ascendente aparece na loja. Ele contém efeitos poderosos que ficam à venda por ouro.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>Em Tesouro do Choncc, os Talismãs Achado Fatídico e Seguidores Fiéis não podem aparecer até que você atinja o nível 7.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

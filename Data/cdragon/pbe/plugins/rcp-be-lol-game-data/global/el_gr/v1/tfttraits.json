@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Κάθε @CastsToGainXP@ χρήσεις ικανότητας, ο Φύλακας του Χρόνου αποθηκεύει <TFTBonus>@XPPerCast@</TFTBonus> ΕΜΠ. Αν έχει αποθηκεύσει αρκετή για να ανεβείτε επίπεδο, σας μεταβιβάζει την ΕΜΠ&nbsp;που απαιτείται. <br><br>Αν είστε στο επίπεδο 10, αποκτά <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;Ενίσχυση Ζημιάς.<br><br><rules>Αποθηκευμένη ΕΜΠ: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "Κάθε @CastsToGainXP@ χρήσεις ικανότητας, ο Φύλακας του Χρόνου αποθηκεύει <TFTBonus>@XPPerCast@</TFTBonus> ΕΜΠ. Αν έχει αποθηκεύσει αρκετή για να ανεβείτε επίπεδο, σας μεταβιβάζει την ΕΜΠ&nbsp;που απαιτείται. <br><br>Αν είστε στο επίπεδο 10, αποκτά <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;Ενίσχυση Ζημιάς.<br><br><rules>Αποθηκευμένη ΕΜΠ: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>Στον Θησαυρό του Τσονκκ, ο αριθμός των χρήσεων που απαιτούνται για την απόκτηση ΕΜΠ αυξάνεται σε @CastsToGainXPCT@ μέχρι τη Φάση 3-5.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,6 +12270,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 4.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13758,7 +13762,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Κάθε δευτ., οι μονάδες της Σουρίμα αποκτούν @ASPerSecond*100@% Ταχύτητα Επίθεσης και αναπληρώνουν @HealthRestorePerSecond@ Ζωή. Στην αρχή της μάχης, αποκτούν επιπλέον επιδράσεις.<br><br><row>(@MinUnits@) @BonusHealth*100@% μέγιστη Ζωή</row><br><row>(@MinUnits@) @ArmorMR@ Θωράκιση και Αντίσταση Μαγείας</row><br><row>(@MinUnits@) Μία μονάδα της Σουρίμα εξυψώνεται και αποκτά τις δυνάμεις ενός ΘΕΟΥ κάθε @GodhoodCadence@ δευτερόλεπτα.</row>",
+        "tooltip_text": "Κάθε δευτερόλεπτο, οι μονάδες της Σουρίμα αποκτούν @ASPerSecond*100@% Ταχύτητα Επίθεσης και αναπληρώνουν @HealthRestorePerSecond@ Ζωή. Στην αρχή της μάχης, αποκτούν επιπλέον επιδράσεις.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Πρισματική: Ξεκλειδώστε τον Νάσους, τον Ρένεκτον και τον Ζέραθ και, στη συνέχεια, βάλτε στο παιχνίδι 4 Ήρωες από τη Σουρίμα</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% μέγιστη Ζωή</row><br><row>(@MinUnits@) @ArmorMR@ Θωράκιση και Αντίσταση Μαγείας</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Μία μονάδα της Σουρίμα εξυψώνεται και αποκτά τις δυνάμεις ενός ΘΕΟΥ κάθε @GodhoodCadence@ δευτ. </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>Διατίθεται μόνο όταν ο Νάσους, ο Ρένεκτον και ο Ζέραθ έχουν ξεκλειδωθεί.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13838,7 +13842,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13846,7 +13850,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13854,8 +13858,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14558,7 +14562,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Μετά από κάθε μάχη, εμφανίζεται ένα Εξυψωμένο Φυλαχτό στο Κατάστημά σας. Πρόκειται για ισχυρές επιδράσεις που μπορείτε να αγοράσετε με Χρυσό.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "Μετά από κάθε μάχη, εμφανίζεται ένα Εξυψωμένο Φυλαχτό στο Κατάστημά σας. Πρόκειται για ισχυρές επιδράσεις που μπορείτε να αγοράσετε με Χρυσό.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>Στον Θησαυρό του Τσονκκ, το Γούρι Μοιραίο Εύρημα και το Γούρι Πιστοί Ακόλουθοι δεν μπορούν να εμφανιστούν μέχρι να φτάσετε στο επίπεδο 7.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

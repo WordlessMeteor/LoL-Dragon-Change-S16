@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Every @CastsToGainXP@ casts, the Chronokeeper stores <TFTBonus>@XPPerCast@</TFTBonus> XP. If he has enough stored for you to level up, he transfers you the required&nbsp;XP. <br><br>If you are level 10, he instead gains <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;Damage Amp.<br><br><rules>Stored XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "Every @CastsToGainXP@ casts, the Chronokeeper stores <TFTBonus>@XPPerCast@</TFTBonus> XP. If he has enough stored for you to level up, he transfers you the required&nbsp;XP. <br><br>If you are level 10, he instead gains <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;Damage Amp.<br><br><rules>Stored XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>In Choncc's Treasure, the amount of casts required to gain XP is increased to @CastsToGainXPCT@ until Stage 3-5.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,6 +12270,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 4.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13758,7 +13762,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Each second, Shurimans gain @ASPerSecond*100@% Attack Speed and restore @HealthRestorePerSecond@ Health. At combat start, they gain additional effects.<br><br><row>(@MinUnits@) @BonusHealth*100@% max Health</row><br><row>(@MinUnits@) @ArmorMR@ Armor and Magic Resist</row><br><row>(@MinUnits@) A Shuriman ascends to GODHOOD every @GodhoodCadence@ seconds.</row>",
+        "tooltip_text": "Each second, Shurimans gain @ASPerSecond*100@% Attack Speed and restore @HealthRestorePerSecond@ Health. At combat start, they gain additional effects.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismatic: Unlock Nasus, Renekton, and Xerath, then field 4 Shurima</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% max Health</row><br><row>(@MinUnits@) @ArmorMR@ Armor and Magic Resist</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>A Shuriman ascends to GODHOOD every @GodhoodCadence@ seconds </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>Only available when Nasus, Renekton, and Xerath have been unlocked.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13838,7 +13842,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13846,7 +13850,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13854,8 +13858,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14558,7 +14562,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "After each combat, an Ascendant Charm appears in your shop. These are powerful effects that can be bought for gold.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "After each combat, an Ascendant Charm appears in your shop. These are powerful effects that can be bought for gold.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>In Choncc's Treasure, the Fateful Find Charm and the Faithful Followers Charm cannot appear until you are level 7.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

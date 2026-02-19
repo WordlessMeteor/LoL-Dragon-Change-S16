@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Az Idő őre @CastsToGainXP@ varázslatonként eltárol <TFTBonus>@XPPerCast@</TFTBonus> TP-t. Ha eleget tárolt el a szintlépésedhez, elküldi neked a szükséges&nbsp;TP-t. <br><br>Ha 10. szintű vagy, ehelyett <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;sebzésnövelést kap.<br><br><rules>Tárolt TP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "Az Idő őre @CastsToGainXP@ varázslatonként eltárol <TFTBonus>@XPPerCast@</TFTBonus> TP-t. Ha eleget tárolt el a szintlépésedhez, elküldi neked a szükséges&nbsp;TP-t. <br><br>Ha 10. szintű vagy, ehelyett <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;sebzésnövelést kap.<br><br><rules>Tárolt TP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>A Choncc kincsében a tapasztalatszerzéshez szükséges elsütések száma a 3-5. szakaszig @CastsToGainXPCT@ lesz.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,6 +12270,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 4.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13758,7 +13762,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "A Shurimaiak másodpercenként @ASPerSecond*100@% támadási sebességet kapnak, és @HealthRestorePerSecond@ életerőt gyógyulnak. A csata kezdetén bónusz hatásokra tesznek szert.<br><br><row>(@MinUnits@) @BonusHealth*100@% maximális életerő</row><br><row>(@MinUnits@) @ArmorMR@ páncél és varázsellenállás</row><br><row>(@MinUnits@) @GodhoodCadence@ másodpercenként egy Shurimai ISTENNÉ válik.</row>",
+        "tooltip_text": "A Shurimaiak másodpercenként @ASPerSecond*100@% támadási sebességet kapnak, és @HealthRestorePerSecond@ életerőt gyógyulnak. A csata kezdetén bónusz hatásokra tesznek szert.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Spektrum: Oldd fel Nasust, Renektont és Xerathot, majd állíts harcba 4 Shurimai egységet</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% maximális életerő</row><br><row>(@MinUnits@) @ArmorMR@ páncél és varázsellenállás</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>@GodhoodCadence@ másodpercenként egy Shurimai ISTENNÉ válik </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>Csak akkor érhető el, ha Nasus, Renekton és Xerath már fel van oldva.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13838,7 +13842,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13846,7 +13850,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13854,8 +13858,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14558,7 +14562,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Minden csata után megjelenik egy Felemelkedett bűbáj a boltodban. Ezek erőteljes hatások, amelyek aranyért vásárolhatók meg.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "Minden csata után megjelenik egy Felemelkedett bűbáj a boltodban. Ezek erőteljes hatások, amelyek aranyért vásárolhatók meg.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>A Choncc kincsében a 7. szintig nem jelenhet meg a Sorsszerű fogás bűbáj és a Hűséges követők bűbáj.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

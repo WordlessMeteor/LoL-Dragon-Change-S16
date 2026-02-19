@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Setiap @CastsToGainXP@ cast, the Chronokeeper menyimpan <TFTBonus>@XPPerCast@</TFTBonus> XP. Jika XP yang dia simpan cukup untuk membuatmu naik level, dia akan memberimu XP&nbsp;yang diperlukan. <br><br>Jika kamu sudah level 10, dia jadi mendapatkan <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;Damage Amp.<br><br><rules>XP yang disimpan: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "Setiap @CastsToGainXP@ cast, the Chronokeeper menyimpan <TFTBonus>@XPPerCast@</TFTBonus> XP. Jika XP yang dia simpan cukup untuk membuatmu naik level, dia akan memberimu XP&nbsp;yang diperlukan. <br><br>Jika kamu sudah level 10, dia jadi mendapatkan <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;Damage Amp.<br><br><rules>XP yang disimpan: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>Di Choncc's Treasure, jumlah cast yang dibutuhkan untuk mendapatkan XP meningkat jadi @CastsToGainXPCT@ hingga Babak 3-5.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,6 +12270,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 4.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13758,7 +13762,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Setiap detik, champion Shurima mendapatkan @ASPerSecond*100@% Attack Speed dan memulihkan @HealthRestorePerSecond@ Health. Pada awal combat, mereka mendapatkan efek tambahan.<br><br><row>(@MinUnits@) @BonusHealth*100@% Health maksimum</row><br><row>(@MinUnits@) @ArmorMR@ Armor dan Magic Resist</row><br><row>(@MinUnits@) Satu champion Shurima berubah menjadi DEWA setiap @GodhoodCadence@ detik.</row>",
+        "tooltip_text": "Setiap detik, champion Shurima mendapatkan @ASPerSecond*100@% Attack Speed dan memulihkan @HealthRestorePerSecond@ Health. Pada awal combat, mereka mendapatkan efek tambahan.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismatic: Buka Nasus, Renekton, dan Xerath, lalu kerahkan 4 Shurima</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% Health maksimum</row><br><row>(@MinUnits@) @ArmorMR@ Armor dan Magic Resist</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Satu champion Shurima berubah menjadi DEWA setiap @GodhoodCadence@ detik </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>Hanya bisa jika Nasus, Renekton, dan Xerath sudah dibuka.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13838,7 +13842,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13846,7 +13850,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13854,8 +13858,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14558,7 +14562,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Setelah tiap combat, satu Ascendant Charm bisa muncul di shop kamu. Efek yang kuat ini bisa dibeli dengan gold.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "Setelah tiap combat, satu Ascendant Charm bisa muncul di shop kamu. Efek yang kuat ini bisa dibeli dengan gold.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>Di Choncc's Treasure, Fateful Find Charm dan Faithful Followers Charm tidak bisa muncul sampai kamu mencapai level 7.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

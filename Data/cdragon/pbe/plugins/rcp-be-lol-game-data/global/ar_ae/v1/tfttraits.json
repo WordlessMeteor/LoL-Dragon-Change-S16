@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "كل @CastsToGainXP@ من عمليات الإلقاء، يخزن حافظ الزمن <TFTBonus>@XPPerCast@</TFTBonus> من نقاط الخبرة. إذا امتلك ما يكفي لترقية مستواك، يحول نقاط الخبرة&nbsp;المطلوبة إليك. <br><br>إذا كنت قد بلغت المستوى 10، يكسب بدل ذلك <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;تضخيم ضرر.<br><br><rules>نقاط الخبرة المخزنة: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "كل @CastsToGainXP@ من عمليات الإلقاء، يخزن حافظ الزمن <TFTBonus>@XPPerCast@</TFTBonus> من نقاط الخبرة. إذا امتلك ما يكفي لترقية مستواك، يحول نقاط الخبرة&nbsp;المطلوبة إليك. <br><br>إذا كنت قد بلغت المستوى 10، يكسب بدل ذلك <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;تضخيم ضرر.<br><br><rules>نقاط الخبرة المخزنة: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>في كنز تشونك، يزداد عدد الإلقاءات المطلوبة لكسب نقاط الخبرة إلى @CastsToGainXPCT@ حتى المرحلة 5-3.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,6 +12270,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 4.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13758,7 +13762,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "كل ثانية، يكسب أبطال شوريما @ASPerSecond*100@% سرعة هجوم ويستعيدون @HealthRestorePerSecond@ صحة. عند بداية القتال، يكسبون تأثيرات إضافية.<br><br><row>(@MinUnits@) @BonusHealth*100@% صحة قصوى</row><br><row>(@MinUnits@) @ArmorMR@ دروع ومقاومة سحر</row><br><row>(@MinUnits@) يرتقي بطلٌ من شوريما فيصبح خارقًا كل @GodhoodCadence@ث.</row>",
+        "tooltip_text": "كل ثانية، يكسب أبطال شوريما @ASPerSecond*100@% سرعة هجوم ويستعيدون @HealthRestorePerSecond@ صحة. عند بداية القتال، يكسبون تأثيرات إضافية.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>موشورية: افتح ناسوس ورينيكتون وزيراث، ثم أدخل 4 وحدات شوريما</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% صحة قصوى</row><br><row>(@MinUnits@) @ArmorMR@ دروع ومقاومة سحر</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>يرتقي بطلٌ من شوريما فيصبح خارقًا كل @GodhoodCadence@ث </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>تتوفر حصرًا بعد فتح كلٍ من ناسوس ورينيكتون وزيراث.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13838,7 +13842,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13846,7 +13850,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13854,8 +13858,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14558,7 +14562,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "بعد كل معركة، تظهر تميمة مرتقٍ في متجرك. وهي تأثيرات قوية يمكن شراؤها مقابل الذهب.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "بعد كل معركة، تظهر تميمة مرتقٍ في متجرك. وهي تأثيرات قوية يمكن شراؤها مقابل الذهب.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>في كنز تشونك، لا يمكن أن تظهر تميمة اكتشاف مصيري وتميمة أتباع مخلصون حتى تصل إلى المستوى 7.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

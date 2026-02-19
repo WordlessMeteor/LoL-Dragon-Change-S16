@@ -58365,6 +58365,17 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Bloom_Amount",
+                "logicalParameters": [
+                    {
+                        "name": "Bloom_Amount",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "UV_Noise_Scale",
                 "data": [
                     2.5,
@@ -58489,12 +58500,13 @@
             }
         ],
         "featureDefines": {
+            "FEATURE_BLOOM": "1",
             "FEATURE_SCREENSPACE_UV": "1",
             "FEATURE_SHADOW": "1",
             "FEATURE_WORLD_NORMAL": "1",
             "FEATURE_WORLD_POSITION": "1"
         },
-        "featureMask": 16,
+        "featureMask": 17,
         "objectPath": "Shaders/SkinnedMesh/TFT_ParallaxScollingUVs_ChampTiers",
         "__type": "CustomShaderDef"
     },
