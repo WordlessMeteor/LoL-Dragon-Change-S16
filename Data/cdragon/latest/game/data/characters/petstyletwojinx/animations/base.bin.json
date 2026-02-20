@@ -164,16 +164,6 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "Idle1": {
-                "mSelectorPairDataList": [
-                    {
-                        "mClipName": "Idle",
-                        "mProbability": 100.0,
-                        "__type": "SelectorPairData"
-                    }
-                ],
-                "__type": "SelectorClipData"
-            },
             "Interact": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
@@ -831,7 +821,7 @@
                 "EndFrame": 64.0,
                 "__type": "AtomicClipData"
             },
-            "Idle": {
+            "{a09935cc}": {
                 "mClipNameList": [
                     "Idle01",
                     "Idle01",
@@ -1860,15 +1850,8 @@
                 "mChangeAnimationMidPlay": true,
                 "SyncFrameOnChangeAnim": true,
                 "mTrueConditionClipName": "{5e5fc064}",
-                "mFalseConditionClipName": "{b62a6094}",
+                "mFalseConditionClipName": "{cbbc33f4}",
                 "__type": "ConditionBoolClipData"
-            },
-            "{b62a6094}": {
-                "mClipNameList": [
-                    "{cbbc33f4}",
-                    "Idle02"
-                ],
-                "__type": "SequencerClipData"
             },
             "{5e5fc064}": {
                 "mTrackDataName": "Base",
@@ -1987,6 +1970,20 @@
                 },
                 "mTrueConditionClipName": "Death_Vfx",
                 "mFalseConditionClipName": "Death_Base",
+                "__type": "ConditionBoolClipData"
+            },
+            "Idle1": {
+                "Updater": {
+                    "driver": {
+                        "Submeshes": [
+                            "Base_Up"
+                        ],
+                        "__type": "SubmeshVisibilityBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mTrueConditionClipName": "Idle02",
+                "mFalseConditionClipName": "{a09935cc}",
                 "__type": "ConditionBoolClipData"
             }
         },
@@ -2392,10 +2389,6 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11374364255061796459": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
             "13328384923734369899": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
@@ -2421,10 +2414,6 @@
                 "__type": "TimeBlendData"
             },
             "8149099641443538203": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "11374364255307519259": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -2464,10 +2453,6 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13222943558037265414": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
             "3084207952412274552": {
                 "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
@@ -2504,16 +2489,8 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "5822263359937567750": {
-                "mClipName": "{c1f81f80}",
-                "__type": "TransitionClipBlendData"
-            },
             "5822263360392523640": {
                 "mClipName": "{c1f81f80}",
-                "__type": "TransitionClipBlendData"
-            },
-            "2786235696625081350": {
-                "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
             "2786235697080037240": {
@@ -2549,10 +2526,6 @@
                 "__type": "TimeBlendData"
             },
             "6521702303004925307": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "6521702301669383174": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -2613,10 +2586,6 @@
                 "__type": "TimeBlendData"
             },
             "8580522735949455740": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "8580522736459832326": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -2772,14 +2741,6 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11374364254226621431": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "11374364254366736764": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
             "13328384922899194871": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
@@ -2912,10 +2873,6 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
-            "11374364253137162265": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
             "13328384921809735705": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
@@ -2981,10 +2938,6 @@
                 "__type": "TimeBlendData"
             },
             "9182313507755084594": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "11374364253269216050": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
@@ -3080,23 +3033,15 @@
                 "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
-            "5606085385208323078": {
-                "mClipName": "Idle_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "11374364255382402097": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
             "13328384924158145606": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "5606085385831698323": {
+            "5606085385254417868": {
                 "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
-            "12308382023038390163": {
+            "12308382022461109708": {
                 "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
@@ -3190,10 +3135,6 @@
             },
             "8149099639670100212": {
                 "mClipName": "{b7687cd9}",
-                "__type": "TransitionClipBlendData"
-            },
-            "10305945119422536710": {
-                "mClipName": "{c1f81f80}",
                 "__type": "TransitionClipBlendData"
             },
             "13332298554089665585": {
@@ -3888,38 +3829,6 @@
                 "mClipName": "{b7687cd9}",
                 "__type": "TransitionClipBlendData"
             },
-            "13126410253414256330": {
-                "mClipName": "{b7687cd9}",
-                "__type": "TransitionClipBlendData"
-            },
-            "13126410254051759533": {
-                "mClipName": "{b7687cd9}",
-                "__type": "TransitionClipBlendData"
-            },
-            "13126410255095698043": {
-                "mClipName": "{b7687cd9}",
-                "__type": "TransitionClipBlendData"
-            },
-            "13126410254001426676": {
-                "mClipName": "{b7687cd9}",
-                "__type": "TransitionClipBlendData"
-            },
-            "13126410255561926716": {
-                "mClipName": "{b7687cd9}",
-                "__type": "TransitionClipBlendData"
-            },
-            "13126410256740709810": {
-                "mClipName": "{b7687cd9}",
-                "__type": "TransitionClipBlendData"
-            },
-            "13126410254138108613": {
-                "mClipName": "{b7687cd9}",
-                "__type": "TransitionClipBlendData"
-            },
-            "13126410253344879258": {
-                "mClipName": "{b7687cd9}",
-                "__type": "TransitionClipBlendData"
-            },
             "9933913010203348682": {
                 "mClipName": "{b7687cd9}",
                 "__type": "TransitionClipBlendData"
@@ -3960,12 +3869,16 @@
                 "mClipName": "{b7687cd9}",
                 "__type": "TransitionClipBlendData"
             },
-            "13126410253752035120": {
+            "9933913010541127472": {
                 "mClipName": "{b7687cd9}",
                 "__type": "TransitionClipBlendData"
             },
-            "9933913010541127472": {
-                "mClipName": "{b7687cd9}",
+            "3901331248617353080": {
+                "mClipName": "Idle02",
+                "__type": "TransitionClipBlendData"
+            },
+            "9933913012588507000": {
+                "mClipName": "Idle02",
                 "__type": "TransitionClipBlendData"
             }
         },

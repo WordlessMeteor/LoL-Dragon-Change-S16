@@ -119,9 +119,9 @@
                     "mName": "FlatDamageReduction",
                     "mValues": [
                         0.0,
-                        35.0,
-                        45.0,
-                        80.0,
+                        30.0,
+                        40.0,
+                        120.0,
                         160.0,
                         200.0,
                         240.0
@@ -144,8 +144,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedDamageReduction": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -153,6 +151,8 @@
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -333,11 +333,11 @@
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 65.0,
+        "baseDamage": 80.0,
         "baseArmor": 40.0,
         "baseSpellBlock": 40.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
         "attackSpeed": 0.550000011920929,

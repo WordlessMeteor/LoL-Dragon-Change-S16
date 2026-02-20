@@ -489,8 +489,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -510,8 +508,6 @@
                         "mNumber": 0.009999999776482582,
                         "__type": "NumberCalculationPart"
                     },
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mStat": 2,
@@ -545,12 +541,12 @@
                             "Elements": [
                                 {
                                     "type": "MagicDamage",
-                                    "nameOverride": "Spell_ListType_ModifiedMagicDamage",
+                                    "nameOverride": "Spell_ListType_BonusMagicDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "PercentOfAD",
-                                    "nameOverride": "Spell_TFT5_VarusE_PhysicalDamage",
+                                    "nameOverride": "Spell_ListType_AttackDamageBonus",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -582,11 +578,11 @@
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 60.0,
+        "baseDamage": 65.0,
         "baseArmor": 20.0,
         "baseSpellBlock": 20.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 890.0,
         "attackSpeed": 0.75,

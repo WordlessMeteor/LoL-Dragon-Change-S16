@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.3.1",
+    "version": "16.4.1",
     "data": {
         "Kennen": {
             "id": "Kennen",
@@ -569,23 +569,21 @@
                         "label": [
                             "伤害",
                             "护甲加成",
-                            "魔法抗性加成",
-                            "冷却时间"
+                            "魔法抗性加成"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ kennenrdefenses }} -> {{ kennenrdefensesNL }}",
-                            "{{ kennenrdefenses }} -> {{ kennenrdefensesNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}"
+                            "{{ kennenrdefenses }} -> {{ kennenrdefensesNL }}"
                         ]
                     },
                     "maxrank": 3,
                     "cooldown": [
                         120,
-                        100,
-                        80
+                        120,
+                        120
                     ],
-                    "cooldownBurn": "120/100/80",
+                    "cooldownBurn": "120",
                     "cost": [
                         0,
                         0,

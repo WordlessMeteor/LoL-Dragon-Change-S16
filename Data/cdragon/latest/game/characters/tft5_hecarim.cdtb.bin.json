@@ -149,8 +149,8 @@
                     "mName": "Damage",
                     "mValues": [
                         40.0,
-                        250.0,
-                        375.0,
+                        200.0,
+                        400.0,
                         600.0,
                         520.0,
                         640.0,
@@ -213,8 +213,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -230,8 +228,6 @@
                     "__type": "GameCalculation"
                 },
                 "ModifiedHealing": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -301,13 +297,8 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "Healing",
-                                    "nameOverride": "Spell_TFT5_HecarimW_Healing",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "Damage",
-                                    "nameOverride": "Spell_TFT5_Footer_ModifiedDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -379,7 +370,7 @@
         "baseArmor": 45.0,
         "baseSpellBlock": 45.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
         "attackSpeed": 0.550000011920929,

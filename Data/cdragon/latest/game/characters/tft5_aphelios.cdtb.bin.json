@@ -187,8 +187,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedBaseDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -196,6 +194,8 @@
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -277,13 +277,6 @@
                                 {
                                     "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_BonusDamage",
-                                    "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "BaseDamage",
-                                    "nameOverride": "Spell_TFT5_ApheliosR_Damage",
-                                    "Style": 2,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -412,22 +405,22 @@
     },
     "Characters/TFT5_Aphelios/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Aphelios",
-        "baseHP": 850.0,
+        "baseHP": 650.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 140.0,
+            "arBase": 170.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 70.0,
-        "baseArmor": 30.0,
-        "baseSpellBlock": 30.0,
+        "baseDamage": 65.0,
+        "baseArmor": 25.0,
+        "baseSpellBlock": 25.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 890.0,
         "attackSpeed": 0.8500000238418579,

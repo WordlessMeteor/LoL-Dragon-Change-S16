@@ -1,7 +1,7 @@
 {
     "Characters/TFT5_Kennen/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Kennen",
-        "baseHP": 650.0,
+        "baseHP": 600.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 150.0,
         "healthBarFullParallax": true,
@@ -16,11 +16,11 @@
         "baseArmor": 30.0,
         "baseSpellBlock": 30.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 420.0,
-        "attackSpeed": 0.699999988079071,
-        "attackSpeedRatio": 0.699999988079071,
+        "attackSpeed": 0.6499999761581421,
+        "attackSpeedRatio": 0.6499999761581421,
         "basicAttack": {
             "mAttackName": "TFT5_KennenBasicAttack",
             "__type": "AttackSlotData"
@@ -97,8 +97,8 @@
                     "mValues": [
                         0.0,
                         1.5,
-                        1.75,
                         2.0,
+                        2.5,
                         0.0,
                         0.0,
                         0.0
@@ -108,8 +108,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -117,6 +115,8 @@
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -160,7 +160,7 @@
                             "Elements": [
                                 {
                                     "type": "Damage",
-                                    "nameOverride": "Spell_ListType_ModifiedMagicDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {

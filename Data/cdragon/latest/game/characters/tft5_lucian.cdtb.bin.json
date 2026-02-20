@@ -127,9 +127,9 @@
                     "mName": "BaseDamage",
                     "mValues": [
                         30.0,
-                        45.0,
+                        40.0,
                         70.0,
-                        210.0,
+                        400.0,
                         100.0,
                         80.0,
                         90.0
@@ -140,9 +140,9 @@
                     "mName": "TADRatio",
                     "mValues": [
                         0.5,
-                        0.6000000238418579,
-                        0.6000000238418579,
-                        1.2000000476837158,
+                        0.5,
+                        0.5,
+                        0.5,
                         0.5,
                         0.5,
                         0.5
@@ -178,8 +178,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -187,6 +185,8 @@
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -212,55 +212,6 @@
                                 "__type": "ProductOfSubPartsCalculationPart"
                             },
                             "__type": "ProductOfSubPartsCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "ModifiedShots": {
-                    "mFormulaParts": [
-                        {
-                            "mSubparts": [
-                                {
-                                    "mDataValue": "NumShots",
-                                    "__type": "NamedDataValueCalculationPart"
-                                },
-                                {
-                                    "mPart1": {
-                                        "mDataValue": "AttacksPerSecondCoefficient",
-                                        "__type": "NamedDataValueCalculationPart"
-                                    },
-                                    "mPart2": {
-                                        "mPart1": {
-                                            "mDataValue": "Duration",
-                                            "__type": "NamedDataValueCalculationPart"
-                                        },
-                                        "mPart2": {
-                                            "mStat": 4,
-                                            "mCoefficient": 1.0,
-                                            "__type": "StatByCoefficientCalculationPart"
-                                        },
-                                        "__type": "ProductOfSubPartsCalculationPart"
-                                    },
-                                    "__type": "ProductOfSubPartsCalculationPart"
-                                }
-                            ],
-                            "__type": "SumOfSubPartsCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "ModifiedAttackDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
-                    "mFormulaParts": [
-                        {
-                            "mSubpart": {
-                                "mDataValue": "tADRatio",
-                                "__type": "NamedDataValueCalculationPart"
-                            },
-                            "mRatio": 1.0,
-                            "mStat": 2,
-                            "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -340,20 +291,7 @@
                                 {
                                     "type": "BaseDamage",
                                     "typeIndex": 2,
-                                    "nameOverride": "Spell_TFT5_LucianR_MagicDamage",
-                                    "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "BaseDamage",
-                                    "nameOverride": "Spell_TFT5_LucianR_PhysicalDamage",
-                                    "Style": 2,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "NumShots",
-                                    "nameOverride": "Spell_TFT5_LucianR_TotalShots",
-                                    "Style": 2,
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1171,7 +1109,7 @@
     },
     "Characters/TFT5_Lucian/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Lucian",
-        "baseHP": 850.0,
+        "baseHP": 700.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 70.0,
         "primaryAbilityResource": {
@@ -1182,10 +1120,10 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 75.0,
-        "baseArmor": 30.0,
-        "baseSpellBlock": 30.0,
+        "baseArmor": 25.0,
+        "baseSpellBlock": 25.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 890.0,
         "attackSpeed": 0.75,
@@ -1228,7 +1166,7 @@
             "TFT5_LucianBasicAttack",
             "TFT5_LucianBasicAttack2",
             "TFT5_LucianCritAttack",
-            "",
+            "TFT5_LucianCritAttack2",
             "TFT5_LucianPassiveShot",
             "",
             "TFT5_LucianPassiveAttack",

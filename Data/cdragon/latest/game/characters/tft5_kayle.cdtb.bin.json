@@ -156,8 +156,6 @@
                         "mNumber": 0.009999999776482582,
                         "__type": "NumberCalculationPart"
                     },
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -172,8 +170,6 @@
                     "__type": "GameCalculation"
                 },
                 "TotalAoEDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -181,6 +177,8 @@
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -225,11 +223,6 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "AscensionDelay",
-                                    "nameOverride": "Spell_TFT5_KayleP_AscensionTime",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "PercentAttackDamage",
                                     "nameOverride": "Spell_TFT5_KayleP_PercentAD",
                                     "Style": 1,
@@ -238,7 +231,11 @@
                                 {
                                     "type": "AoEDamage",
                                     "nameOverride": "Spell_TFT5_KayleP_AoeDamage",
-                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "AscensionDelay",
+                                    "nameOverride": "Spell_TFT5_KayleP_AscensionTime",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -410,7 +407,7 @@
     },
     "Characters/TFT5_Kayle/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Kayle",
-        "baseHP": 900.0,
+        "baseHP": 800.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 250.0,
         "healthBarFullParallax": true,
@@ -424,13 +421,14 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamage": 85.0,
-        "baseArmor": 40.0,
-        "baseSpellBlock": 40.0,
+        "baseArmor": 25.0,
+        "baseSpellBlock": 25.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 890.0,
-        "attackSpeed": 1.0,
+        "attackSpeed": 1.149999976158142,
+        "attackSpeedRatio": 1.149999976158142,
         "basicAttack": {
             "mAttackName": "TFT5_KayleBasicAttack",
             "__type": "AttackSlotData"

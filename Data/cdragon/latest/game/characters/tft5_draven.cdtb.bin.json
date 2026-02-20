@@ -1004,9 +1004,9 @@
                     "mName": "ADMult",
                     "mValues": [
                         1.0,
-                        2.0,
-                        2.0999999046325684,
-                        4.199999809265137,
+                        1.399999976158142,
+                        1.5,
+                        4.0,
                         3.0,
                         3.5,
                         4.0
@@ -1017,9 +1017,9 @@
                     "mName": "Damage",
                     "mValues": [
                         0.0,
-                        50.0,
-                        75.0,
-                        225.0,
+                        125.0,
+                        200.0,
+                        700.0,
                         0.0,
                         0.0,
                         0.0
@@ -1046,9 +1046,15 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
+                            "mSubpart": {
+                                "mDataValue": "ADMult",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 1.0,
                             "mStat": 2,
-                            "mDataValue": "ADMult",
-                            "__type": "StatByNamedDataValueCalculationPart"
+                            "mStyleTag": "scaleAD",
+                            "mStyleTagIfScaled": "scaleAD",
+                            "__type": "SubPartScaledProportionalToStat"
                         },
                         {
                             "mSubpart": {
@@ -1056,6 +1062,23 @@
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mRatio": 0.009999999776482582,
+                            "mStyleTag": "scaleAD",
+                            "mStyleTagIfScaled": "scaleAD",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -1156,20 +1179,13 @@
                                     "type": "ADMult",
                                     "typeIndex": 5,
                                     "multiplier": 100.0,
-                                    "nameOverride": "Spell_TFT5_DravenSpinning_PercentAttackDamage",
+                                    "nameOverride": "Spell_ListType_PercentAttackDamage",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "Damage",
-                                    "nameOverride": "Spell_TFT5_DravenSpinning_BonusDamage",
-                                    "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Damage",
-                                    "nameOverride": "Spell_TFT5_DravenSpinning_Damage",
-                                    "Style": 2,
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1560,7 +1576,7 @@
     },
     "Characters/TFT5_Draven/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Draven",
-        "baseHP": 900.0,
+        "baseHP": 700.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 65.0,
         "primaryAbilityResource": {
@@ -1570,14 +1586,14 @@
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 75.0,
-        "baseArmor": 40.0,
-        "baseSpellBlock": 40.0,
+        "baseDamage": 85.0,
+        "baseArmor": 30.0,
+        "baseSpellBlock": 30.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 660.0,
-        "attackSpeed": 0.8500000238418579,
+        "attackSpeed": 0.800000011920929,
         "attackSpeedRatio": 0.800000011920929,
         "basicAttack": {
             "mAttackCastTime": 0.6499999761581421,
@@ -1611,8 +1627,8 @@
             "{00000000}"
         ],
         "extraSpells": [
-            "",
-            "",
+            "TFT5_DravenDoubleShotMissile",
+            "TFT5_DravenR",
             "TFT5_DravenSpinningAttack",
             "TFT5_DravenSpinningReturn",
             "TFT5_DravenSpinningAttackCrit",

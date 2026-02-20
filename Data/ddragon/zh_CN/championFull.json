@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "16.3.1",
+    "version": "16.4.1",
     "data": {
         "Aatrox": {
             "id": "Aatrox",
@@ -6061,25 +6061,23 @@
                         "label": [
                             "护盾值",
                             "伤害回敬",
-                            "冷却时间",
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
                             "{{ shieldamount }} -> {{ shieldamountNL }}",
                             "{{ damagereflection }} -> {{ damagereflectionNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        12,
-                        11.5,
-                        11,
-                        10.5,
+                        10,
+                        10,
+                        10,
+                        10,
                         10
                     ],
-                    "cooldownBurn": "12/11.5/11/10.5/10",
+                    "cooldownBurn": "10",
                     "cost": [
                         60,
                         65,
@@ -13016,11 +13014,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
-                        120,
-                        100,
-                        80
+                        130,
+                        115,
+                        100
                     ],
-                    "cooldownBurn": "120/100/80",
+                    "cooldownBurn": "130/115/100",
                     "cost": [
                         100,
                         100,
@@ -14930,7 +14928,7 @@
                     "id": "CamilleE",
                     "name": "钩索",
                     "description": "卡蜜尔将她自己拉向一个墙体，然后跳下并在落地时击飞敌方英雄。",
-                    "tooltip": "卡蜜尔发射一个可附着在地形上的钩索，并将卡蜜尔拉到钩索处，并使此技能可以在1秒内<recast>再次施放</recast>。<br /><br /><recast>再次施放：</recast>卡蜜尔从墙体上跳下，与命中的第一个敌方英雄进行碰撞。在着陆时，她会对附近的敌人造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>并对附近的敌方英雄造成{{ knockupduration }}秒<status>晕眩</status>。朝着敌方英雄突进时，突进距离翻倍并在碰撞后提供<attackSpeed>{{ asbuff*100 }}%攻击速度</attackSpeed>，持续{{ asduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "卡蜜尔发射一个可附着在地形上的钩索，并将卡蜜尔拉到钩索处，并使此技能可以在1秒内<recast>再次施放</recast>。<br /><br /><recast>再次施放：</recast>卡蜜尔从墙体上进行冲刺，与命中的第一个敌方英雄进行碰撞。在着陆时，她获得持续 {{ asduration }}秒的<attackSpeed>{{ asbuff*100 }}%攻击速度</attackSpeed>，对附近的敌人们造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>，并对附近的敌方英雄们造成{{ knockupduration }}秒<status>晕眩</status>。朝着敌方英雄冲刺时，冲刺距离翻倍。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -31958,11 +31956,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
-                        140,
-                        115,
+                        120,
+                        100,
                         80
                     ],
-                    "cooldownBurn": "140/115/80",
+                    "cooldownBurn": "120/100/80",
                     "cost": [
                         100,
                         100,
@@ -37822,7 +37820,7 @@
                 "mpperlevel": 50,
                 "movespeed": 325,
                 "armor": 26,
-                "armorperlevel": 4.7,
+                "armorperlevel": 4.2,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 525,
@@ -41306,7 +41304,7 @@
             },
             "stats": {
                 "hp": 646,
-                "hpperlevel": 119,
+                "hpperlevel": 113,
                 "mp": 400,
                 "mpperlevel": 87,
                 "movespeed": 335,
@@ -41663,10 +41661,10 @@
                         ],
                         [
                             50,
+                            55,
                             60,
-                            70,
-                            80,
-                            90
+                            65,
+                            70
                         ],
                         [
                             1,
@@ -41728,7 +41726,7 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "50/60/70/80/90",
+                        "50/55/60/65/70",
                         "1",
                         "0",
                         "0",
@@ -44601,23 +44599,21 @@
                         "label": [
                             "伤害",
                             "护甲加成",
-                            "魔法抗性加成",
-                            "冷却时间"
+                            "魔法抗性加成"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ kennenrdefenses }} -> {{ kennenrdefensesNL }}",
-                            "{{ kennenrdefenses }} -> {{ kennenrdefensesNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}"
+                            "{{ kennenrdefenses }} -> {{ kennenrdefensesNL }}"
                         ]
                     },
                     "maxrank": 3,
                     "cooldown": [
                         120,
-                        100,
-                        80
+                        120,
+                        120
                     ],
-                    "cooldownBurn": "120/100/80",
+                    "cooldownBurn": "120",
                     "cost": [
                         0,
                         0,
@@ -49125,12 +49121,12 @@
                 {
                     "id": "LeeSinWOne",
                     "name": "金钟罩/铁布衫",
-                    "description": "金钟罩：李青冲向目标友军，为他自身提供护盾值。如果该友军是一名英雄，则也会获得护盾值。在使用【金钟罩】后，李青可以施放【铁布衫】。<br>铁布衫：李青艰苦卓绝的训练让他能在战斗中激发潜能。李青获得生命偷取和法术吸血。",
-                    "tooltip": "李青突进至一名友军或守卫处。如果目标友军是一名英雄，李青会为自己和目标友军提供持续{{ shieldduration }}秒的<shield>{{ shieldamount }}护盾值</shield>，并且这个技能的冷却时间会减少{{ w1cooldownrecovered*100 }}%。李青可以在接下来的{{ w1reactivatetime }}秒内<recast>再次施放</recast>此技能。<br /><br /><recast>再次施放：</recast>李青获得持续{{ lifestealandspellvamptime }}秒的{{ lifestealandspellvamp }}%生命偷取和法术吸血。{{ spellmodifierdescriptionappend }}",
+                    "description": "金钟罩：李青冲向目标友军，为他自身提供护盾值。如果该友军是一名英雄，则也会获得护盾值。在使用【金钟罩】后，李青可以施放【铁布衫】。<br>铁布衫：李青艰苦卓绝的训练让他能在战斗中激发潜能。李青获得全能吸血。",
+                    "tooltip": "李青冲刺至一名友军或守卫处。如果目标友军是一名英雄，李青会为自己和目标友军提供持续{{ shieldduration }}秒的<shield>{{ shieldamount }}护盾值</shield>，并且这个技能的冷却时间会缩短{{ w1cooldownrecovered*100 }}%。李青可以在接下来的{{ w1reactivatetime }}秒内<recast>再次施放</recast>此技能。<br /><br /><recast>再次施放：</recast>李青获得持续{{ lifestealandspellvamptime }}秒的{{ lifestealandspellvamp }}%全能吸血。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "金钟罩伤害吸收",
-                            "铁布衫生命偷取/法术吸血百分比"
+                            "铁布衫 全能吸血百分比"
                         ],
                         "effect": [
                             "{{ shieldvalue }} -> {{ shieldvalueNL }}",
@@ -53203,7 +53199,7 @@
             "stats": {
                 "hp": 580,
                 "hpperlevel": 99,
-                "mp": 480,
+                "mp": 440,
                 "mpperlevel": 23.5,
                 "movespeed": 330,
                 "armor": 21,
@@ -53213,7 +53209,7 @@
                 "attackrange": 550,
                 "hpregen": 5.5,
                 "hpregenperlevel": 0.55,
-                "mpregen": 7,
+                "mpregen": 9,
                 "mpregenperlevel": 0.8,
                 "crit": 0,
                 "critperlevel": 0,
@@ -53230,23 +53226,21 @@
                     "tooltip": "拉克丝朝目标地点发射一团光球，<status>束缚</status>前2名敌人{{ e3 }}秒并对每个敌人造<magicDamage>{{ totaldamagett }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "伤害",
-                            "冷却时间"
+                            "伤害"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        11,
-                        10.5,
                         10,
-                        9.5,
-                        9
+                        10,
+                        10,
+                        10,
+                        10
                     ],
-                    "cooldownBurn": "11/10.5/10/9.5/9",
+                    "cooldownBurn": "10",
                     "cost": [
                         50,
                         50,
@@ -53259,18 +53253,18 @@
                     "effect": [
                         null,
                         [
-                            80,
-                            120,
-                            160,
-                            200,
-                            240
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            50,
-                            50,
-                            50,
-                            50,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             2,
@@ -53331,8 +53325,8 @@
                     ],
                     "effectBurn": [
                         null,
-                        "80/120/160/200/240",
-                        "50",
+                        "0",
+                        "0",
                         "2",
                         "0",
                         "0",
@@ -53376,20 +53370,20 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ baseshieldamount }} -> {{ baseshieldamountNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        14,
-                        13,
                         12,
+                        11.5,
                         11,
+                        10.5,
                         10
                     ],
-                    "cooldownBurn": "14/13/12/11/10",
+                    "cooldownBurn": "12/11.5/11/10.5/10",
                     "cost": [
                         60,
                         65,
@@ -53409,11 +53403,11 @@
                             10
                         ],
                         [
-                            40,
-                            55,
-                            70,
-                            85,
-                            100
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             2.5,
@@ -53475,7 +53469,7 @@
                     "effectBurn": [
                         null,
                         "2/4/6/8/10",
-                        "40/55/70/85/100",
+                        "0",
                         "2.5",
                         "100",
                         "0",
@@ -56681,7 +56675,7 @@
             },
             "stats": {
                 "hp": 630,
-                "hpperlevel": 93,
+                "hpperlevel": 99,
                 "mp": 480,
                 "mpperlevel": 28,
                 "movespeed": 330,
@@ -60859,8 +60853,8 @@
                 "spellblock": 32,
                 "spellblockperlevel": 2.05,
                 "attackrange": 125,
-                "hpregen": 7.5,
-                "hpregenperlevel": 0.7,
+                "hpregen": 6.25,
+                "hpregenperlevel": 0.6,
                 "mpregen": 7.5,
                 "mpregenperlevel": 1,
                 "crit": 0,
@@ -60904,13 +60898,13 @@
                     ],
                     "cooldownBurn": "9/8.5/8/7.5/7",
                     "cost": [
-                        55,
+                        50,
                         60,
-                        65,
                         70,
-                        75
+                        80,
+                        90
                     ],
-                    "costBurn": "55/60/65/70/75",
+                    "costBurn": "50/60/70/80/90",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -61188,13 +61182,13 @@
                     ],
                     "cooldownBurn": "11/10/9/8/7",
                     "cost": [
-                        35,
-                        35,
-                        35,
-                        35,
-                        35
+                        40,
+                        40,
+                        40,
+                        40,
+                        40
                     ],
-                    "costBurn": "35",
+                    "costBurn": "40",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -71271,7 +71265,7 @@
             },
             "stats": {
                 "hp": 590,
-                "hpperlevel": 121,
+                "hpperlevel": 115,
                 "mp": 375,
                 "mpperlevel": 60,
                 "movespeed": 335,
@@ -78071,7 +78065,7 @@
                 "difficulty": 10
             },
             "stats": {
-                "hp": 655,
+                "hp": 640,
                 "hpperlevel": 105,
                 "mp": 150,
                 "mpperlevel": 0,
@@ -90015,14 +90009,12 @@
                     "leveltip": {
                         "label": [
                             "伤害",
-                            "减速",
                             "距离",
                             "冷却时间",
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ slow*-100.000000 }}% -> {{ slownl*-100.000000 }}%",
                             "{{ castrange }} -> {{ castrangeNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
@@ -98917,12 +98909,12 @@
             },
             "stats": {
                 "hp": 630,
-                "hpperlevel": 104,
+                "hpperlevel": 98,
                 "mp": 300,
                 "mpperlevel": 40,
                 "movespeed": 330,
                 "armor": 27,
-                "armorperlevel": 4.2,
+                "armorperlevel": 4,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 550,
@@ -108699,13 +108691,13 @@
                     ],
                     "cooldownBurn": "10/9.5/9/8.5/8",
                     "cost": [
-                        50,
-                        50,
-                        50,
-                        50,
-                        50
+                        35,
+                        35,
+                        35,
+                        35,
+                        35
                     ],
-                    "costBurn": "50",
+                    "costBurn": "35",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -108834,13 +108826,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        20,
-                        19,
                         18,
                         17,
-                        16
+                        16,
+                        15,
+                        14
                     ],
-                    "cooldownBurn": "20/19/18/17/16",
+                    "cooldownBurn": "18/17/16/15/14",
                     "cost": [
                         60,
                         55,
@@ -108983,13 +108975,13 @@
                     ],
                     "cooldownBurn": "12/11/10/9/8",
                     "cost": [
-                        30,
-                        30,
-                        30,
-                        30,
-                        30
+                        20,
+                        20,
+                        20,
+                        20,
+                        20
                     ],
-                    "costBurn": "30",
+                    "costBurn": "20",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -114768,7 +114760,7 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -114793,11 +114785,11 @@
                     "effect": [
                         null,
                         [
-                            40,
-                            55,
-                            70,
-                            85,
-                            100
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             8,
@@ -114865,7 +114857,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "40/55/70/85/100",
+                        "0",
                         "8",
                         "800",
                         "-0.4",
@@ -115214,9 +115206,9 @@
                     "effect": [
                         null,
                         [
-                            150,
-                            250,
-                            350
+                            0,
+                            0,
+                            0
                         ],
                         [
                             1.1,
@@ -115266,7 +115258,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "150/250/350",
+                        "0",
                         "1.1",
                         "700/850/1000",
                         "-0.3/-0.4/-0.5",

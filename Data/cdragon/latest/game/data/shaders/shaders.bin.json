@@ -32357,6 +32357,7 @@
             }
         ],
         "featureDefines": {
+            "DEBUG_USES_LINEAR_SPACE": "1",
             "FEATURE_BLOOM": "1",
             "FEATURE_DISPLACEMENT": "1",
             "FEATURE_SCREENSPACE_UV": "1",
@@ -58296,6 +58297,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "EmissiveFresnelSmoothStep",
+                "data": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "EmissiveFresnelSmoothStep",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "EmissiveFresnelSize",
                 "data": [
                     1.0,
@@ -58424,6 +58442,11 @@
             },
             {
                 "name": "DEBUG_VIEW_BEAUTY_LIGHT",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_EFFECT_MASK",
+                "onByDefault": true,
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -63307,6 +63330,7 @@
             }
         ],
         "featureDefines": {
+            "DEBUG_USES_LINEAR_SPACE": "1",
             "FEATURE_BLOOM": "1",
             "FEATURE_DISPLACEMENT": "1",
             "FEATURE_VERTEX_COLOR_VS": "1",
@@ -70257,6 +70281,7 @@
             }
         ],
         "featureDefines": {
+            "DEBUG_USES_LINEAR_SPACE": "1",
             "FEATURE_BAKED_PAINT": "1",
             "FEATURE_NAVMESH_MASK": "1",
             "FEATURE_SCREENSPACE_UV": "1",

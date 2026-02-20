@@ -127,8 +127,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedMagicDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -144,8 +142,6 @@
                     "__type": "GameCalculation"
                 },
                 "ModifiedPercentHealed": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -199,20 +195,14 @@
                             "Elements": [
                                 {
                                     "type": "MagicDamage",
-                                    "nameOverride": "Spell_TFT5_Footer_ModifiedMagicDamage",
+                                    "nameOverride": "Spell_ListType_MagicDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "PercentDamageReduction",
                                     "multiplier": 100.0,
-                                    "nameOverride": "Spell_TFT5_GalioW_Durability",
+                                    "nameOverride": "Spell_ListType_DamageReduction",
                                     "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "PercentHealed",
-                                    "nameOverride": "Spell_TFT5_GalioW_PercentHeal",
-                                    "Style": 2,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -316,13 +306,13 @@
     },
     "Characters/TFT5_Galio/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Galio",
-        "baseHP": 1100.0,
+        "baseHP": 1000.0,
         "baseStaticHPRegen": 0.0,
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 160.0,
+            "arBase": 180.0,
             "arBaseStaticRegen": 0.0,
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
@@ -331,7 +321,7 @@
         "baseArmor": 60.0,
         "baseSpellBlock": 60.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
         "attackSpeed": 0.6000000238418579,
@@ -390,7 +380,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 100.0,
+        "mInitialMana": 120.0,
         "mShopData": "{40be4e5e}",
         "__type": "TFTCharacterRecord"
     },

@@ -75,6 +75,20 @@
         ],
         "paramValues": [
             {
+                "name": "Bloom_Amount",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissiveFresnelSmoothStep",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Paralax_Tint_Color",
                 "value": [
                     1.0,
@@ -412,6 +426,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_EFFECT_MASK",
+                "Group": "Emissive Fresnel",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "HISTOGRAMSCAN_MASK",
                 "on": false,

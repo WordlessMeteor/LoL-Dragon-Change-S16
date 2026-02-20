@@ -16,11 +16,11 @@
         "baseArmor": 40.0,
         "baseSpellBlock": 40.0,
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
+        "critDamageMultiplier": 1.2999999523162842,
         "baseMoveSpeed": 500.0,
         "attackRange": 180.0,
-        "attackSpeed": 0.550000011920929,
-        "attackSpeedRatio": 0.550000011920929,
+        "attackSpeed": 0.5,
+        "attackSpeedRatio": 0.5,
         "basicAttack": {
             "mAttackName": "TFT5_GragasBasicAttack",
             "__type": "AttackSlotData"
@@ -156,9 +156,9 @@
                     "mName": "MagicDamage",
                     "mValues": [
                         0.0,
-                        200.0,
-                        300.0,
-                        500.0,
+                        175.0,
+                        250.0,
+                        475.0,
                         0.0,
                         0.0,
                         0.0
@@ -182,9 +182,9 @@
                     "mName": "DamageReduction",
                     "mValues": [
                         0.0,
-                        40.0,
+                        35.0,
                         45.0,
-                        55.0,
+                        60.0,
                         0.0,
                         0.0,
                         0.0
@@ -194,8 +194,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -248,12 +246,13 @@
                             "Elements": [
                                 {
                                     "type": "MagicDamage",
-                                    "nameOverride": "Spell_TFT5_Footer_ModifiedDamage",
+                                    "nameOverride": "Spell_ListType_MagicDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "DamageReduction",
-                                    "nameOverride": "Spell_TFT5_GalioW_Durability",
+                                    "nameOverride": "Spell_ListType_DamageReduction",
+                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
