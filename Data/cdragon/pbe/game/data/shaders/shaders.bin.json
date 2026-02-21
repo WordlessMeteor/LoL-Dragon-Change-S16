@@ -70201,6 +70201,108 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "SparkleStrength",
+                "data": [
+                    0.44999998807907104,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleStrength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleThreshold",
+                "data": [
+                    0.949999988079071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleThreshold",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleSoftness",
+                "data": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleSoftness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleSpeed",
+                "data": [
+                    0.019999999552965164,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleSpeed",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleTiling",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleTiling",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleMaskThreshold",
+                "data": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleMaskThreshold",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "PlanarReflectionStrength",
                 "data": [
                     0.4000000059604645,
@@ -70267,6 +70369,23 @@
                     }
                 ],
                 "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleBloom",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleBloom",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
             }
         ],
         "staticSwitches": [
@@ -70307,18 +70426,25 @@
                 "name": "BAKED_RMA_TEXTURE",
                 "defaultTexturePath": "ASSETS/Shared/Materials/Cobble_moss_rma.tex",
                 "__type": "ShaderTexture"
+            },
+            {
+                "name": "Sparkle",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Sparkle_M.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
             }
         ],
         "featureDefines": {
             "DEBUG_USES_LINEAR_SPACE": "1",
             "FEATURE_BAKED_PAINT": "1",
+            "FEATURE_BLOOM": "1",
             "FEATURE_NAVMESH_MASK": "1",
             "FEATURE_SCREENSPACE_UV": "1",
             "FEATURE_TANGENT": "1",
             "FEATURE_WORLD_NORMAL": "1",
             "FEATURE_WORLD_POSITION": "1"
         },
-        "featureMask": 2,
+        "featureMask": 3,
         "objectPath": "Shaders/StaticMesh/Mantis_Env_Baked_PBR",
         "__type": "CustomShaderDef"
     },

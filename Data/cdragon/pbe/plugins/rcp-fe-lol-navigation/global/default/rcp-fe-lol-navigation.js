@@ -18925,8 +18925,8 @@
                     if (0 === e?.length) this.set("shouldShowObjectiveCard", !1);
                     else if (e) {
                         const t = this._getFeaturedMission(e);
-                        t || (i.logger.error("No featured mission found for series name: ", this.get("seriesName")), this.set("isErrored", !0)), t && (this.set("missionData", this.processMission(t)), this._isMissionFullyCompleted(t) && this.set("isRewardFulfilled", !0), this.set("shouldShowObjectiveCard", !0))
-                    } else this.get("shouldShowObjectiveCard") && (i.logger.error("No series data found for series name: ", this.get("seriesName")), this.set("isErrored", !0));
+                        t || (i.logger.info("No featured mission found for series name: ", this.get("seriesName")), this.set("isErrored", !0)), t && (this.set("missionData", this.processMission(t)), this._isMissionFullyCompleted(t) && this.set("isRewardFulfilled", !0), this.set("shouldShowObjectiveCard", !0))
+                    } else this.get("shouldShowObjectiveCard") && (i.logger.info("No series data found for series name: ", this.get("seriesName")), this.set("isErrored", !0));
                     this.set("isMissionReady", !0)
                 },
                 mouseEnter: function() {

@@ -2951,7 +2951,9 @@
                     endEvent_rosterFirstReady: () => a(r.rosterFirstReady),
                     countRosterFlicker: e => s(r.rosterFirstReady, e),
                     recordEvent_codeOfConductSeen: () => l(r.codeOfConductSeen),
-                    customEvent_rgmNotifications: e => c(r.rgmNotifications, e)
+                    customEvent_rgmNotifications: e => c(r.rgmNotifications, e),
+                    recordDmReportInitiated: () => l(r.dmReportInitiated),
+                    recordDmReportSubmitted: () => l(r.dmReportSubmitted)
                 })
             };
             let n = null;
@@ -2981,6 +2983,16 @@
                     },
                     rgmNotifications: {
                         event: "rgm_notifications"
+                    },
+                    dmReportInitiated: {
+                        event: "dm-report-initiated",
+                        unit: "click",
+                        isSampled: !1
+                    },
+                    dmReportSubmitted: {
+                        event: "dm-report-submitted",
+                        unit: "click",
+                        isSampled: !1
                     }
                 },
                 o = e => {
@@ -10232,34 +10244,35 @@
                 }).acceptPromise
             }, t.confirmReportFriendForAbusiveTextHelper = function(e, t, n) {
                 if (!e) return;
-                const a = e.gameTag || e.tagLine,
+                const s = e.gameTag || e.tagLine,
                     {
-                        name: s,
-                        gameName: l
+                        name: l,
+                        gameName: c
                     } = e,
-                    c = r.playerNames.formatPlayerName({
-                        gameName: l,
-                        tagLine: a,
-                        summonerName: s
+                    d = r.playerNames.formatPlayerName({
+                        gameName: c,
+                        tagLine: s,
+                        summonerName: l
                     }).playerNameFull;
-                l && a || r.logger.error("Error setting name for confirm report friend modal: missing gameName and tagLine");
-                const d = r.templateHelper.contentBlockDialog(r.tra.get("roster_confirm_report_dm_title"), r.tra.formatString("roster_confirm_report_dm_text", {
-                    name: c
+                c && s || r.logger.error("Error setting name for confirm report friend modal: missing gameName and tagLine");
+                const p = r.templateHelper.contentBlockDialog(r.tra.get("roster_confirm_report_dm_title"), r.tra.formatString("roster_confirm_report_dm_text", {
+                    name: d
                 }), "dialog-medium", "confirm-unfriend-block-report-action");
-                let p = !1;
+                let u = !1;
                 if ("function" == typeof n) {
                     const e = document.createElement("lol-uikit-flat-checkbox"),
                         t = document.createElement("input");
                     t.slot = "input", t.type = "checkbox", t.addEventListener("change", (e => {
-                        p = !!e?.target?.checked
+                        u = !!e?.target?.checked
                     }));
                     const n = document.createElement("label");
-                    n.slot = "label", n.textContent = r.tra.get("roster_confirm_report_dm_also_block"), e.appendChild(t), e.appendChild(n), d.appendChild(e)
+                    n.slot = "label", n.textContent = r.tra.get("roster_confirm_report_dm_also_block"), e.appendChild(t), e.appendChild(n), p.appendChild(e)
                 }
+                r.datadogRum.startOperation(r.datadogRum.XP_SOCIAL_FRIEND_REPORT_DM), r.SocialTelemetry.recordDmReportInitiated();
                 return r.modalManager.add({
                     type: "DialogConfirm",
                     data: {
-                        contents: d,
+                        contents: p,
                         acceptText: r.tra.get("context_menu_report_friend"),
                         declineText: r.tra.get("roster_confirm_cancel"),
                         closeButton: !1
@@ -10270,15 +10283,16 @@
                     throw new Error("submitReport must be a function")
                 })).then((() => {
                     o(e)
-                })).catch((t => t ? (i(e, t), Promise.reject(t)) : Promise.resolve())).then((() => {
-                    p && "function" == typeof n && n(e)
+                })).catch((t => t ? (i(e, t), Promise.reject(t)) : (a(), Promise.resolve()))).then((() => {
+                    u && "function" == typeof n && n(e)
                 })).catch((e => {
                     r.logger.error("Error blocking friend after report", e)
                 }))
-            }, t.doReportSubmittedFailureToast = i, t.doReportSubmittedSuccessToast = o;
+            }, t.handleReportSubmittedCancelled = a, t.handleReportSubmittedFailed = i, t.handleReportSubmittedSuccess = o;
             var r = n(1);
 
             function o(e) {
+                r.datadogRum.stopOperationWithOk(r.datadogRum.XP_SOCIAL_FRIEND_REPORT_DM), r.SocialTelemetry.recordDmReportSubmitted();
                 const t = e.gameTag || e.tagLine,
                     n = r.playerNames.formatPlayerName({
                         gameName: e.gameName,
@@ -10299,6 +10313,7 @@
             }
 
             function i(e, t) {
+                r.datadogRum.stopOperationWithError(r.datadogRum.XP_SOCIAL_FRIEND_REPORT_DM, t);
                 const n = r.playerNames.formatPlayerName({
                         gameName: e.gameName,
                         tagLine: e.gameTag || e.tagLine,
@@ -10315,6 +10330,10 @@
                         dismissable: !1
                     }
                 }), r.logger.error("Error submitting report for friend", t)
+            }
+
+            function a() {
+                r.datadogRum.stopOperationWithAbort(r.datadogRum.XP_SOCIAL_FRIEND_REPORT_DM)
             }
         }, e => {
             "use strict";
@@ -11299,7 +11318,7 @@
                     return void 0 !== this.data.blockedPlayers.byId[e.id]
                 },
                 conversationIsFriend: function(e) {
-                    return void 0 !== this.data.friends.byId[e.id]
+                    return this.data.friends && void 0 !== this.data.friends.byId[e.id]
                 },
                 openCreatePanel: function() {
                     this.data.chatWindow.openCreatePanel(), this.createPanelOpened()
@@ -17236,9 +17255,9 @@
                         g = this.get("friendRequestsService");
                     let h = !1;
                     const f = () => p ? c.submitDirectMessageReport(e).then((() => {
-                        (0, s.doReportSubmittedSuccessToast)(e)
+                        (0, s.handleReportSubmittedSuccess)(e)
                     })).catch((t => {
-                        t && (0, s.doReportSubmittedFailureToast)(e, t)
+                        t ? (0, s.handleReportSubmittedFailed)(e, t) : (0, s.handleReportSubmittedCancelled)()
                     })) : Promise.resolve();
                     r.modalManager.add({
                         type: "DialogConfirm",

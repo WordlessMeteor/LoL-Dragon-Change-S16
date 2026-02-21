@@ -533,7 +533,7 @@
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-02-05 09-09-50</td>
-			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td style="text-align:center;">CDragon: 1/2/1<br>DDragon: 2/1</td>
 			<td>
 				CDragon: <br>
 					<ul style="list-style-type: disc; margin-left: 20px;">
@@ -653,7 +653,7 @@
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-02-20 10-17-45</td>
-			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td style="text-align:center;">CDragon: 1/2/1<br>DDragon: 2/1</td>
 			<td>
 				CDragon: <br>
 					<ul style="list-style-type: disc; margin-left: 20px;">
@@ -661,6 +661,17 @@
 						<li>PBE: 16.5.747.3672 -> 16.5.747.6431</li>
 					</ul>
 				DDragon: 16.3.1 -> 16.4.1
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-02-21 10-55-16</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Latest: Within-patch change</li>
+						<li>PBE: 16.5.747.6431 -> 16.5.747.9730</li>
+					</ul>
 			</td>
 		</tr>
 	</tbody>
