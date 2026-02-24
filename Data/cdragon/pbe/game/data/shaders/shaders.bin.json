@@ -70004,6 +70004,40 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "FoamCut",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FoamCut",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FoamColor",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FoamColor",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "CausticsChromaticAberration",
                 "data": [
                     0.5,
@@ -70414,6 +70448,12 @@
             {
                 "name": "BAKED_DIFFUSE_TEXTURE",
                 "defaultTexturePath": "ASSETS/Shared/Materials/Cobble_moss_Albedo.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Foam",
+                "defaultTexturePath": "ASSETS/Shared/Materials/water_foam_omni_M.tex",
+                "samplerName": "Wrap_No_Mip",
                 "__type": "ShaderTexture"
             },
             {

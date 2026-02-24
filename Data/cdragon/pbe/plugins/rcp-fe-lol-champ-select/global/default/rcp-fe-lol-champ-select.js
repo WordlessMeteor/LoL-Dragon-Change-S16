@@ -4159,29 +4159,36 @@
                     this.set("gridScrollTop", void 0), this._resetAnimation(t), this.set("championConfigurationsSorted", e)
                 },
                 _recordTelemetryPickIntent: function() {
-                    this._firePickTelemetry(S, "champ-select-grid-m-pickintent", this.get("pickableChampionSet"))
+                    const e = this.get("pickableChampionSet");
+                    this._firePickTelemetry(S, "champ-select-grid-m-pickintent", e, "intent")
                 },
                 _recordTelemetryBan: function() {
-                    this._firePickTelemetry(b, "champ-select-grid-m-ban", this.get("bannableChampionSet"))
+                    const e = this.get("bannableChampionSet");
+                    this._firePickTelemetry(b, "champ-select-grid-m-ban", e, "ban")
                 },
                 _recordTelemetryPick: function() {
-                    this._firePickTelemetry(_, "champ-select-grid-m-pick", this.get("pickableChampionSet"))
+                    const e = this.get("pickableChampionSet");
+                    this._firePickTelemetry(_, "champ-select-grid-m-pick", e, "pick")
                 },
-                _firePickTelemetry: function(e, t, n) {
-                    const s = this.get("champSelectGameId");
-                    if (!s) return;
-                    if (e.includes(s)) return;
-                    e.push(s);
-                    const o = !!n && n.size >= 1,
-                        a = this.get("championConfigurationsSorted"),
-                        l = !!a && a.length >= 1,
-                        r = this.get("debouncedSearchText")?.trim()?.length > 0,
-                        c = this.get("filters")?.some((e => e.get("value"))),
-                        m = r || c,
-                        p = `${t}-${o?"data1":"data0"}-${l?"display1":m?"displayF":"display0"}`;
-                    if (i.Telemetry.recordNonTimingTracingEvent(p), "champ-select-grid-m-pick" === t && !o && !l && !m) {
+                _firePickTelemetry: function(e, t, n, s) {
+                    const o = this.get("champSelectGameId");
+                    if (!o) return;
+                    if (e.includes(o)) return;
+                    e.push(o);
+                    const a = !!n && n.size >= 1,
+                        l = this.get("championConfigurationsSorted"),
+                        r = !!l && l.length >= 1,
+                        c = this.get("debouncedSearchText")?.trim()?.length > 0,
+                        m = this.get("filters")?.some((e => e.get("value"))),
+                        p = c || m,
+                        d = `${t}-${a?"data1":"data0"}-${r?"display1":p?"displayF":"display0"}`;
+                    if (i.Telemetry.recordNonTimingTracingEvent(d), !r && !p) {
                         const e = this.get("champSelectService.champSelectSession.queueId");
-                        i.logger.error("Empty grid during pick phase", e)
+                        i.logger.error("Empty grid during phase", {
+                            phase: s,
+                            anySelectable: a,
+                            queueId: e
+                        })
                     }
                 },
                 _resetAnimation: function(e) {
