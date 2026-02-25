@@ -6154,6 +6154,23 @@
                     }
                 ],
                 "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Alpha_Override",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Alpha_Override",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
             }
         ],
         "staticSwitches": [
@@ -6175,6 +6192,10 @@
             },
             {
                 "name": "ENABLE_TRANSITION",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "OVERRIDE_ALPHA",
                 "__type": "ShaderStaticSwitch"
             }
         ],

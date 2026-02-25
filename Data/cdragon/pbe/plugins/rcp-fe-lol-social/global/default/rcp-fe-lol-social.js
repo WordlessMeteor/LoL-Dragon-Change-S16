@@ -3060,22 +3060,22 @@
                 O = U(n(131)),
                 M = U(n(132)),
                 R = U(n(133)),
-                D = U(n(134)),
-                N = U(n(135)),
+                N = U(n(134)),
+                D = U(n(135)),
                 P = U(n(136)),
                 L = U(n(137)),
                 j = U(n(138)),
                 z = U(n(139)),
                 F = U(n(140)),
-                q = U(n(141)),
-                G = U(n(142));
+                G = U(n(141)),
+                q = U(n(142));
 
             function U(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            const H = [r.default, o.default, i.default, a.default, s.default, l.default, c.default, d.default, p.default, u.default, m.default, g.default, h.default, f.default, _.default, A.default, b.default, y.default, x.default, v.default, k.default, E.default, w.default, C.default, $.default, B.default, S.default, I.default, T.default, O.default, M.default, R.default, D.default, N.default, P.default, L.default, j.default, z.default, F.default, q.default, G.default]
+            const H = [r.default, o.default, i.default, a.default, s.default, l.default, c.default, d.default, p.default, u.default, m.default, g.default, h.default, f.default, _.default, A.default, b.default, y.default, x.default, v.default, k.default, E.default, w.default, C.default, $.default, B.default, S.default, I.default, T.default, O.default, M.default, R.default, N.default, D.default, P.default, L.default, j.default, z.default, F.default, G.default, q.default]
         }, e => {
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-social-element name="lol-social-arrow-toggle" noshadow>\r\n  <template>\r\n    <div class="arrow-toggle" class-use-animation="{{!data.disableAnimations}}"></div>\r\n  </template>\r\n</lol-social-element>\r\n'
@@ -4364,15 +4364,15 @@
                         O = "[object Symbol]",
                         M = "[object WeakMap]",
                         R = "[object ArrayBuffer]",
-                        D = "[object DataView]",
-                        N = "[object Float32Array]",
+                        N = "[object DataView]",
+                        D = "[object Float32Array]",
                         P = "[object Float64Array]",
                         L = "[object Int8Array]",
                         j = "[object Int16Array]",
                         z = "[object Int32Array]",
                         F = "[object Uint8Array]",
-                        q = "[object Uint8ClampedArray]",
-                        G = "[object Uint16Array]",
+                        G = "[object Uint8ClampedArray]",
+                        q = "[object Uint16Array]",
                         U = "[object Uint32Array]",
                         H = /\b__p \+= '';/g,
                         W = /\b(__p \+=) '' \+/g,
@@ -4418,37 +4418,37 @@
                         Oe = "[" + Ee + "]",
                         Me = "[" + Ie + "]",
                         Re = "[" + we + "]",
-                        De = "\\d+",
-                        Ne = "[" + Ce + "]",
+                        Ne = "\\d+",
+                        De = "[" + Ce + "]",
                         Pe = "[" + $e + "]",
-                        Le = "[^" + Ee + Ie + De + Ce + $e + Be + "]",
+                        Le = "[^" + Ee + Ie + Ne + Ce + $e + Be + "]",
                         je = "\\ud83c[\\udffb-\\udfff]",
                         ze = "[^" + Ee + "]",
                         Fe = "(?:\\ud83c[\\udde6-\\uddff]){2}",
-                        qe = "[\\ud800-\\udbff][\\udc00-\\udfff]",
-                        Ge = "[" + Be + "]",
+                        Ge = "[\\ud800-\\udbff][\\udc00-\\udfff]",
+                        qe = "[" + Be + "]",
                         Ue = "\\u200d",
                         He = "(?:" + Pe + "|" + Le + ")",
-                        We = "(?:" + Ge + "|" + Le + ")",
+                        We = "(?:" + qe + "|" + Le + ")",
                         Ve = "(?:['’](?:d|ll|m|re|s|t|ve))?",
                         Ye = "(?:['’](?:D|LL|M|RE|S|T|VE))?",
                         Qe = "(?:" + Re + "|" + je + ")" + "?",
                         Ke = "[" + Se + "]?",
-                        Ze = Ke + Qe + ("(?:" + Ue + "(?:" + [ze, Fe, qe].join("|") + ")" + Ke + Qe + ")*"),
-                        Xe = "(?:" + [Ne, Fe, qe].join("|") + ")" + Ze,
-                        Je = "(?:" + [ze + Re + "?", Re, Fe, qe, Oe].join("|") + ")",
+                        Ze = Ke + Qe + ("(?:" + Ue + "(?:" + [ze, Fe, Ge].join("|") + ")" + Ke + Qe + ")*"),
+                        Xe = "(?:" + [De, Fe, Ge].join("|") + ")" + Ze,
+                        Je = "(?:" + [ze + Re + "?", Re, Fe, Ge, Oe].join("|") + ")",
                         et = RegExp(Te, "g"),
                         tt = RegExp(Re, "g"),
                         nt = RegExp(je + "(?=" + je + ")|" + Je + Ze, "g"),
-                        rt = RegExp([Ge + "?" + Pe + "+" + Ve + "(?=" + [Me, Ge, "$"].join("|") + ")", We + "+" + Ye + "(?=" + [Me, Ge + He, "$"].join("|") + ")", Ge + "?" + He + "+" + Ve, Ge + "+" + Ye, "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])", "\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])", De, Xe].join("|"), "g"),
+                        rt = RegExp([qe + "?" + Pe + "+" + Ve + "(?=" + [Me, qe, "$"].join("|") + ")", We + "+" + Ye + "(?=" + [Me, qe + He, "$"].join("|") + ")", qe + "?" + He + "+" + Ve, qe + "+" + Ye, "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])", "\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])", Ne, Xe].join("|"), "g"),
                         ot = RegExp("[" + Ue + Ee + we + Se + "]"),
                         it = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/,
                         at = ["Array", "Buffer", "DataView", "Date", "Error", "Float32Array", "Float64Array", "Function", "Int8Array", "Int16Array", "Int32Array", "Map", "Math", "Object", "Promise", "RegExp", "Set", "String", "Symbol", "TypeError", "Uint8Array", "Uint8ClampedArray", "Uint16Array", "Uint32Array", "WeakMap", "_", "clearTimeout", "isFinite", "parseInt", "setTimeout"],
                         st = -1,
                         lt = {};
-                    lt[N] = lt[P] = lt[L] = lt[j] = lt[z] = lt[F] = lt[q] = lt[G] = lt[U] = !0, lt[A] = lt[b] = lt[R] = lt[y] = lt[D] = lt[x] = lt[v] = lt[k] = lt[w] = lt[C] = lt[$] = lt[S] = lt[I] = lt[T] = lt[M] = !1;
+                    lt[D] = lt[P] = lt[L] = lt[j] = lt[z] = lt[F] = lt[G] = lt[q] = lt[U] = !0, lt[A] = lt[b] = lt[R] = lt[y] = lt[N] = lt[x] = lt[v] = lt[k] = lt[w] = lt[C] = lt[$] = lt[S] = lt[I] = lt[T] = lt[M] = !1;
                     var ct = {};
-                    ct[A] = ct[b] = ct[R] = ct[D] = ct[y] = ct[x] = ct[N] = ct[P] = ct[L] = ct[j] = ct[z] = ct[w] = ct[C] = ct[$] = ct[S] = ct[I] = ct[T] = ct[O] = ct[F] = ct[q] = ct[G] = ct[U] = !0, ct[v] = ct[k] = ct[M] = !1;
+                    ct[A] = ct[b] = ct[R] = ct[N] = ct[y] = ct[x] = ct[D] = ct[P] = ct[L] = ct[j] = ct[z] = ct[w] = ct[C] = ct[$] = ct[S] = ct[I] = ct[T] = ct[O] = ct[F] = ct[G] = ct[q] = ct[U] = !0, ct[v] = ct[k] = ct[M] = !1;
                     var dt = {
                             "\\": "\\",
                             "'": "'",
@@ -4526,7 +4526,7 @@
                     }
 
                     function Mt(e, t) {
-                        return !!(null == e ? 0 : e.length) && Gt(e, t, 0) > -1
+                        return !!(null == e ? 0 : e.length) && qt(e, t, 0) > -1
                     }
 
                     function Rt(e, t, n) {
@@ -4535,12 +4535,12 @@
                         return !1
                     }
 
-                    function Dt(e, t) {
+                    function Nt(e, t) {
                         for (var n = -1, r = null == e ? 0 : e.length, o = Array(r); ++n < r;) o[n] = t(e[n], n, e);
                         return o
                     }
 
-                    function Nt(e, t) {
+                    function Dt(e, t) {
                         for (var n = -1, r = t.length, o = e.length; ++n < r;) e[o + n] = t[n];
                         return e
                     }
@@ -4572,20 +4572,20 @@
                         })), r
                     }
 
-                    function qt(e, t, n, r) {
+                    function Gt(e, t, n, r) {
                         for (var o = e.length, i = n + (r ? 1 : -1); r ? i-- : ++i < o;)
                             if (t(e[i], i, e)) return i;
                         return -1
                     }
 
-                    function Gt(e, t, n) {
+                    function qt(e, t, n) {
                         return t == t ? function(e, t, n) {
                             var r = n - 1,
                                 o = e.length;
                             for (; ++r < o;)
                                 if (e[r] === t) return r;
                             return -1
-                        }(e, t, n) : qt(e, Ht, n)
+                        }(e, t, n) : Gt(e, Ht, n)
                     }
 
                     function Ut(e, t, n, r) {
@@ -4641,7 +4641,7 @@
                     }
 
                     function Jt(e, t) {
-                        return Dt(t, (function(t) {
+                        return Nt(t, (function(t) {
                             return e[t]
                         }))
                     }
@@ -4651,12 +4651,12 @@
                     }
 
                     function tn(e, t) {
-                        for (var n = -1, r = e.length; ++n < r && Gt(t, e[n], 0) > -1;);
+                        for (var n = -1, r = e.length; ++n < r && qt(t, e[n], 0) > -1;);
                         return n
                     }
 
                     function nn(e, t) {
-                        for (var n = e.length; n-- && Gt(t, e[n], 0) > -1;);
+                        for (var n = e.length; n-- && qt(t, e[n], 0) > -1;);
                         return n
                     }
                     var rn = Yt({
@@ -4944,15 +4944,15 @@
                             Oe = r.prototype,
                             Me = Ce.prototype,
                             Re = Be.prototype,
-                            De = t["__core-js_shared__"],
-                            Ne = Me.toString,
+                            Ne = t["__core-js_shared__"],
+                            De = Me.toString,
                             Pe = Re.hasOwnProperty,
                             Le = 0,
-                            je = (n = /[^.]+$/.exec(De && De.keys && De.keys.IE_PROTO || "")) ? "Symbol(src)_1." + n : "",
+                            je = (n = /[^.]+$/.exec(Ne && Ne.keys && Ne.keys.IE_PROTO || "")) ? "Symbol(src)_1." + n : "",
                             ze = Re.toString,
-                            Fe = Ne.call(Be),
-                            qe = ht._,
-                            Ge = Se("^" + Ne.call(Pe).replace(oe, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
+                            Fe = De.call(Be),
+                            Ge = ht._,
+                            qe = Se("^" + De.call(Pe).replace(oe, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
                             Ue = At ? t.Buffer : o,
                             He = t.Symbol,
                             We = t.Uint8Array,
@@ -4996,8 +4996,8 @@
                             On = {},
                             Mn = Li(wn),
                             Rn = Li(Cn),
-                            Dn = Li($n),
-                            Nn = Li(Bn),
+                            Nn = Li($n),
+                            Dn = Li(Bn),
                             Pn = Li(Sn),
                             Ln = He ? He.prototype : o,
                             jn = Ln ? Ln.valueOf : o,
@@ -5010,7 +5010,7 @@
                             }
                             return new Un(e)
                         }
-                        var qn = function() {
+                        var Gn = function() {
                             function e() {}
                             return function(t) {
                                 if (!es(t)) return {};
@@ -5021,7 +5021,7 @@
                             }
                         }();
 
-                        function Gn() {}
+                        function qn() {}
 
                         function Un(e, t) {
                             this.__wrapped__ = e, this.__actions__ = [], this.__chain__ = !!t, this.__index__ = 0, this.__values__ = o
@@ -5071,7 +5071,7 @@
 
                         function Zn(e, t) {
                             var n = Ua(e),
-                                r = !n && Ga(e),
+                                r = !n && qa(e),
                                 o = !n && !r && Ya(e),
                                 i = !n && !r && !o && cs(e),
                                 a = n || r || o || i,
@@ -5087,11 +5087,11 @@
                         }
 
                         function Jn(e, t) {
-                            return Di(To(e), lr(t, 0, e.length))
+                            return Ni(To(e), lr(t, 0, e.length))
                         }
 
                         function er(e) {
-                            return Di(To(e))
+                            return Ni(To(e))
                         }
 
                         function tr(e, t, n) {
@@ -5173,19 +5173,19 @@
                                             case y:
                                             case x:
                                                 return new r(+e);
-                                            case D:
+                                            case N:
                                                 return function(e, t) {
                                                     var n = t ? Co(e.buffer) : e.buffer;
                                                     return new e.constructor(n, e.byteOffset, e.byteLength)
                                                 }(e, n);
-                                            case N:
+                                            case D:
                                             case P:
                                             case L:
                                             case j:
                                             case z:
                                             case F:
-                                            case q:
                                             case G:
+                                            case q:
                                             case U:
                                                 return $o(e, n);
                                             case w:
@@ -5249,7 +5249,7 @@
                                 l = [],
                                 c = t.length;
                             if (!s) return l;
-                            n && (t = Dt(t, Xt(n))), r ? (i = Rt, a = !1) : t.length >= 200 && (i = en, a = !1, t = new Qn(t));
+                            n && (t = Nt(t, Xt(n))), r ? (i = Rt, a = !1) : t.length >= 200 && (i = en, a = !1, t = new Qn(t));
                             e: for (; ++o < s;) {
                                 var d = e[o],
                                     p = null == n ? d : n(d);
@@ -5269,7 +5269,7 @@
                             imports: {
                                 _: Fn
                             }
-                        }, Fn.prototype = Gn.prototype, Fn.prototype.constructor = Fn, Un.prototype = qn(Gn.prototype), Un.prototype.constructor = Un, Hn.prototype = qn(Gn.prototype), Hn.prototype.constructor = Hn, Wn.prototype.clear = function() {
+                        }, Fn.prototype = qn.prototype, Fn.prototype.constructor = Fn, Un.prototype = Gn(qn.prototype), Un.prototype.constructor = Un, Hn.prototype = Gn(qn.prototype), Hn.prototype.constructor = Hn, Wn.prototype.clear = function() {
                             this.__data__ = In ? In(null) : {}, this.size = 0
                         }, Wn.prototype.delete = function(e) {
                             var t = this.has(e) && delete this.__data__[e];
@@ -5343,8 +5343,8 @@
                             }
                             return n.set(e, t), this.size = n.size, this
                         };
-                        var mr = Do(xr),
-                            gr = Do(vr, !0);
+                        var mr = No(xr),
+                            gr = No(vr, !0);
 
                         function hr(e, t) {
                             var n = !0;
@@ -5375,12 +5375,12 @@
                                 a = e.length;
                             for (n || (n = bi), o || (o = []); ++i < a;) {
                                 var s = e[i];
-                                t > 0 && n(s) ? t > 1 ? Ar(s, t - 1, n, r, o) : Nt(o, s) : r || (o[o.length] = s)
+                                t > 0 && n(s) ? t > 1 ? Ar(s, t - 1, n, r, o) : Dt(o, s) : r || (o[o.length] = s)
                             }
                             return o
                         }
-                        var br = No(),
-                            yr = No(!0);
+                        var br = Do(),
+                            yr = Do(!0);
 
                         function xr(e, t) {
                             return e && br(e, t, Ts)
@@ -5403,7 +5403,7 @@
 
                         function wr(e, t, n) {
                             var r = t(e);
-                            return Ua(e) ? r : Nt(r, n(e))
+                            return Ua(e) ? r : Dt(r, n(e))
                         }
 
                         function Cr(e) {
@@ -5437,7 +5437,7 @@
                         function Ir(e, t, n) {
                             for (var i = n ? Rt : Mt, a = e[0].length, s = e.length, l = s, c = r(s), d = 1 / 0, p = []; l--;) {
                                 var u = e[l];
-                                l && t && (u = Dt(u, Xt(t))), d = yn(u.length, d), c[l] = !n && (t || a >= 120 && u.length >= 120) ? new Qn(l && u) : o
+                                l && t && (u = Nt(u, Xt(t))), d = yn(u.length, d), c[l] = !n && (t || a >= 120 && u.length >= 120) ? new Qn(l && u) : o
                             }
                             u = e[0];
                             var m = -1,
@@ -5480,7 +5480,7 @@
                                 }
                                 if (m && !p) return a || (a = new Kn), s || cs(e) ? ri(e, t, n, r, i, a) : function(e, t, n, r, o, i, a) {
                                     switch (n) {
-                                        case D:
+                                        case N:
                                             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) return !1;
                                             e = e.buffer, t = t.buffer;
                                         case R:
@@ -5581,13 +5581,13 @@
                             return !0
                         }
 
-                        function Dr(e) {
-                            return !(!es(e) || (t = e, je && je in t)) && (Za(e) ? Ge : Ae).test(Li(e));
+                        function Nr(e) {
+                            return !(!es(e) || (t = e, je && je in t)) && (Za(e) ? qe : Ae).test(Li(e));
                             var t
                         }
 
-                        function Nr(e) {
-                            return "function" == typeof e ? e : null == e ? rl : "object" == typeof e ? Ua(e) ? qr(e[0], e[1]) : Fr(e) : ul(e)
+                        function Dr(e) {
+                            return "function" == typeof e ? e : null == e ? rl : "object" == typeof e ? Ua(e) ? Gr(e[0], e[1]) : Fr(e) : ul(e)
                         }
 
                         function Pr(e) {
@@ -5629,14 +5629,14 @@
                             }
                         }
 
-                        function qr(e, t) {
+                        function Gr(e, t) {
                             return vi(e) && Ci(t) ? $i(Pi(e), t) : function(n) {
                                 var r = Cs(n, e);
                                 return r === o && r === t ? $s(n, e) : Mr(t, r, 3)
                             }
                         }
 
-                        function Gr(e, t, n, r, i) {
+                        function qr(e, t, n, r, i) {
                             e !== t && br(t, (function(a, s) {
                                 if (es(a)) i || (i = new Kn),
                                     function(e, t, n, r, i, a, s) {
@@ -5650,11 +5650,11 @@
                                             var m = Ua(c),
                                                 g = !m && Ya(c),
                                                 h = !m && !g && cs(c);
-                                            p = c, m || g || h ? Ua(l) ? p = l : Va(l) ? p = To(l) : g ? (u = !1, p = wo(c, !0)) : h ? (u = !1, p = $o(c, !0)) : p = [] : os(c) || Ga(c) ? (p = l, Ga(l) ? p = _s(l) : (!es(l) || r && Za(l)) && (p = Ai(c))) : u = !1
+                                            p = c, m || g || h ? Ua(l) ? p = l : Va(l) ? p = To(l) : g ? (u = !1, p = wo(c, !0)) : h ? (u = !1, p = $o(c, !0)) : p = [] : os(c) || qa(c) ? (p = l, qa(l) ? p = _s(l) : (!es(l) || r && Za(l)) && (p = Ai(c))) : u = !1
                                         }
                                         u && (s.set(c, p), i(p, c, r, a, s), s.delete(c));
                                         tr(e, n, p)
-                                    }(e, t, s, n, Gr, r, i);
+                                    }(e, t, s, n, qr, r, i);
                                 else {
                                     var l = r ? r(pn(e, s), a, s + "", e, t, i) : o;
                                     l === o && (l = a), tr(e, s, l)
@@ -5669,9 +5669,9 @@
 
                         function Hr(e, t, n) {
                             var r = -1;
-                            t = Dt(t.length ? t : [rl], Xt(di()));
+                            t = Nt(t.length ? t : [rl], Xt(di()));
                             var o = zr(e, (function(e, n, o) {
-                                var i = Dt(t, (function(t) {
+                                var i = Nt(t, (function(t) {
                                     return t(e)
                                 }));
                                 return {
@@ -5710,11 +5710,11 @@
                         }
 
                         function Vr(e, t, n, r) {
-                            var o = r ? Ut : Gt,
+                            var o = r ? Ut : qt,
                                 i = -1,
                                 a = t.length,
                                 s = e;
-                            for (e === t && (t = To(t)), n && (s = Dt(e, Xt(n))); ++i < a;)
+                            for (e === t && (t = To(t)), n && (s = Nt(e, Xt(n))); ++i < a;)
                                 for (var l = 0, c = t[i], d = n ? n(c) : c;
                                     (l = o(s, d, l, r)) > -1;) s !== e && Ze.call(s, l, 1), Ze.call(e, l, 1);
                             return e
@@ -5754,7 +5754,7 @@
 
                         function Jr(e, t) {
                             var n = zs(e);
-                            return Di(n, lr(t, 0, n.length))
+                            return Ni(n, lr(t, 0, n.length))
                         }
 
                         function eo(e, t, n, r) {
@@ -5783,7 +5783,7 @@
                             } : rl;
 
                         function ro(e) {
-                            return Di(zs(e))
+                            return Ni(zs(e))
                         }
 
                         function oo(e, t, n) {
@@ -5849,7 +5849,7 @@
 
                         function po(e) {
                             if ("string" == typeof e) return e;
-                            if (Ua(e)) return Dt(e, po) + "";
+                            if (Ua(e)) return Nt(e, po) + "";
                             if (ls(e)) return zn ? zn.call(e) : "";
                             var t = e + "";
                             return "0" == t && 1 / e == -1 / 0 ? "-0" : t
@@ -5897,7 +5897,7 @@
                         function fo(e, t) {
                             var n = e;
                             return n instanceof Hn && (n = n.value()), Pt(t, (function(e, t) {
-                                return t.func.apply(t.thisArg, Nt([e], t.args))
+                                return t.func.apply(t.thisArg, Dt([e], t.args))
                             }), n)
                         }
 
@@ -5926,7 +5926,7 @@
                         }
 
                         function xo(e, t) {
-                            return Ua(e) ? e : vi(e, t) ? [e] : Ni(As(e))
+                            return Ua(e) ? e : vi(e, t) ? [e] : Di(As(e))
                         }
                         var vo = Zr;
 
@@ -6025,7 +6025,7 @@
                             }))
                         }
 
-                        function Do(e, t) {
+                        function No(e, t) {
                             return function(n, r) {
                                 if (null == n) return n;
                                 if (!Wa(n)) return e(n, r);
@@ -6035,7 +6035,7 @@
                             }
                         }
 
-                        function No(e) {
+                        function Do(e) {
                             return function(t, n, r) {
                                 for (var o = -1, i = Be(t), a = r(t), s = a.length; s--;) {
                                     var l = a[e ? s : ++o];
@@ -6056,7 +6056,7 @@
 
                         function Lo(e) {
                             return function(t) {
-                                return Pt(Zs(Gs(t).replace(et, "")), e, "")
+                                return Pt(Zs(qs(t).replace(et, "")), e, "")
                             }
                         }
 
@@ -6081,7 +6081,7 @@
                                     case 7:
                                         return new e(t[0], t[1], t[2], t[3], t[4], t[5], t[6])
                                 }
-                                var n = qn(e.prototype),
+                                var n = Gn(e.prototype),
                                     r = e.apply(n, t);
                                 return es(r) ? r : n
                             }
@@ -6126,7 +6126,7 @@
                             }))
                         }
 
-                        function qo(e, t, n, i, a, s, l, c, d, u) {
+                        function Go(e, t, n, i, a, s, l, c, d, u) {
                             var m = t & p,
                                 g = 1 & t,
                                 h = 2 & t,
@@ -6142,7 +6142,7 @@
                                     }(y, v);
                                 if (i && (y = So(y, i, a, f)), s && (y = Io(y, s, l, f)), b -= k, f && b < u) {
                                     var E = dn(y, v);
-                                    return Qo(e, t, qo, p.placeholder, n, y, E, c, d, u - b)
+                                    return Qo(e, t, Go, p.placeholder, n, y, E, c, d, u - b)
                                 }
                                 var w = g ? n : this,
                                     C = h ? w[e] : e;
@@ -6159,7 +6159,7 @@
                             }
                         }
 
-                        function Go(e, t) {
+                        function qo(e, t) {
                             return function(n, r) {
                                 return function(e, t, n, r) {
                                     return xr(e, (function(e, o, i) {
@@ -6183,7 +6183,7 @@
 
                         function Ho(e) {
                             return oi((function(t) {
-                                return t = Dt(t, Xt(di())), Zr((function(n) {
+                                return t = Nt(t, Xt(di())), Zr((function(n) {
                                     var r = this;
                                     return e(t, (function(e) {
                                         return $t(e, r, n)
@@ -6241,7 +6241,7 @@
                             return function(t) {
                                 var n = fi(t);
                                 return n == w ? ln(t) : n == I ? mn(t) : function(e, t) {
-                                    return Dt(t, (function(t) {
+                                    return Nt(t, (function(t) {
                                         return [t, e[t]]
                                     }))
                                 }(t, e(t))
@@ -6281,9 +6281,9 @@
                                 return function a() {
                                     for (var s = arguments.length, l = r(s), c = s, d = ci(a); c--;) l[c] = arguments[c];
                                     var p = s < 3 && l[0] !== d && l[s - 1] !== d ? [] : dn(l, d);
-                                    return (s -= p.length) < n ? Qo(e, t, qo, a.placeholder, o, l, p, o, o, n - s) : $t(this && this !== ht && this instanceof a ? i : e, this, l)
+                                    return (s -= p.length) < n ? Qo(e, t, Go, a.placeholder, o, l, p, o, o, n - s) : $t(this && this !== ht && this instanceof a ? i : e, this, l)
                                 }
-                            }(e, t, f) : t != c && 33 != t || m.length ? qo.apply(o, v) : function(e, t, n, o) {
+                            }(e, t, f) : t != c && 33 != t || m.length ? Go.apply(o, v) : function(e, t, n, o) {
                                 var i = 1 & t,
                                     a = jo(e);
                                 return function t() {
@@ -6307,7 +6307,7 @@
                         }
 
                         function ti(e, t, n, r, i, a) {
-                            return es(e) && es(t) && (a.set(t, e), Gr(e, t, o, ti, a), a.delete(t)), e
+                            return es(e) && es(t) && (a.set(t, e), qr(e, t, o, ti, a), a.delete(t)), e
                         }
 
                         function ni(e) {
@@ -6378,7 +6378,7 @@
 
                         function di() {
                             var e = Fn.iteratee || ol;
-                            return e = e === ol ? Nr : e, arguments.length ? e(arguments[0], arguments[1]) : e
+                            return e = e === ol ? Dr : e, arguments.length ? e(arguments[0], arguments[1]) : e
                         }
 
                         function pi(e, t) {
@@ -6402,7 +6402,7 @@
                             var n = function(e, t) {
                                 return null == e ? o : e[t]
                             }(e, t);
-                            return Dr(n) ? n : o
+                            return Nr(n) ? n : o
                         }
                         var gi = bt ? function(e) {
                                 return null == e ? [] : (e = Be(e), Ot(bt(e), (function(t) {
@@ -6410,7 +6410,7 @@
                                 })))
                             } : hl,
                             hi = bt ? function(e) {
-                                for (var t = []; e;) Nt(t, gi(e)), e = Ye(e);
+                                for (var t = []; e;) Dt(t, gi(e)), e = Ye(e);
                                 return t
                             } : hl,
                             fi = Cr;
@@ -6421,15 +6421,15 @@
                                 if (!(i = null != e && n(e, a))) break;
                                 e = e[a]
                             }
-                            return i || ++r != o ? i : !!(o = null == e ? 0 : e.length) && Ja(o) && yi(a, o) && (Ua(e) || Ga(e))
+                            return i || ++r != o ? i : !!(o = null == e ? 0 : e.length) && Ja(o) && yi(a, o) && (Ua(e) || qa(e))
                         }
 
                         function Ai(e) {
-                            return "function" != typeof e.constructor || wi(e) ? {} : qn(Ye(e))
+                            return "function" != typeof e.constructor || wi(e) ? {} : Gn(Ye(e))
                         }
 
                         function bi(e) {
-                            return Ua(e) || Ga(e) || !!(Xe && e && e[Xe])
+                            return Ua(e) || qa(e) || !!(Xe && e && e[Xe])
                         }
 
                         function yi(e, t) {
@@ -6456,25 +6456,25 @@
                             if (e === n) return !0;
                             var r = si(n);
                             return !!r && e === r[0]
-                        }(wn && fi(new wn(new ArrayBuffer(1))) != D || Cn && fi(new Cn) != w || $n && fi($n.resolve()) != B || Bn && fi(new Bn) != I || Sn && fi(new Sn) != M) && (fi = function(e) {
+                        }(wn && fi(new wn(new ArrayBuffer(1))) != N || Cn && fi(new Cn) != w || $n && fi($n.resolve()) != B || Bn && fi(new Bn) != I || Sn && fi(new Sn) != M) && (fi = function(e) {
                             var t = Cr(e),
                                 n = t == $ ? e.constructor : o,
                                 r = n ? Li(n) : "";
                             if (r) switch (r) {
                                 case Mn:
-                                    return D;
+                                    return N;
                                 case Rn:
                                     return w;
-                                case Dn:
-                                    return B;
                                 case Nn:
+                                    return B;
+                                case Dn:
                                     return I;
                                 case Pn:
                                     return M
                             }
                             return t
                         });
-                        var Ei = De ? Za : fl;
+                        var Ei = Ne ? Za : fl;
 
                         function wi(e) {
                             var t = e && e.constructor;
@@ -6541,7 +6541,7 @@
                             }
                         }
 
-                        function Di(e, t) {
+                        function Ni(e, t) {
                             var n = -1,
                                 r = e.length,
                                 i = r - 1;
@@ -6552,7 +6552,7 @@
                             }
                             return e.length = t, e
                         }
-                        var Ni = function(e) {
+                        var Di = function(e) {
                             var t = Ra(e, (function(e) {
                                     return 500 === n.size && n.clear(), e
                                 })),
@@ -6574,7 +6574,7 @@
                         function Li(e) {
                             if (null != e) {
                                 try {
-                                    return Ne.call(e)
+                                    return De.call(e)
                                 } catch (e) {}
                                 try {
                                     return e + ""
@@ -6595,23 +6595,23 @@
                                 var n = Ki(t);
                                 return Va(n) && (n = o), Va(e) ? ur(e, Ar(t, 1, Va, !0), di(n, 2)) : []
                             })),
-                            qi = Zr((function(e, t) {
+                            Gi = Zr((function(e, t) {
                                 var n = Ki(t);
                                 return Va(n) && (n = o), Va(e) ? ur(e, Ar(t, 1, Va, !0), o, n) : []
                             }));
 
-                        function Gi(e, t, n) {
+                        function qi(e, t, n) {
                             var r = null == e ? 0 : e.length;
                             if (!r) return -1;
                             var o = null == n ? 0 : gs(n);
-                            return o < 0 && (o = bn(r + o, 0)), qt(e, di(t, 3), o)
+                            return o < 0 && (o = bn(r + o, 0)), Gt(e, di(t, 3), o)
                         }
 
                         function Ui(e, t, n) {
                             var r = null == e ? 0 : e.length;
                             if (!r) return -1;
                             var i = r - 1;
-                            return n !== o && (i = gs(n), i = n < 0 ? bn(r + i, 0) : yn(i, r - 1)), qt(e, di(t, 3), i, !0)
+                            return n !== o && (i = gs(n), i = n < 0 ? bn(r + i, 0) : yn(i, r - 1)), Gt(e, di(t, 3), i, !0)
                         }
 
                         function Hi(e) {
@@ -6622,17 +6622,17 @@
                             return e && e.length ? e[0] : o
                         }
                         var Vi = Zr((function(e) {
-                                var t = Dt(e, bo);
+                                var t = Nt(e, bo);
                                 return t.length && t[0] === e[0] ? Ir(t) : []
                             })),
                             Yi = Zr((function(e) {
                                 var t = Ki(e),
-                                    n = Dt(e, bo);
+                                    n = Nt(e, bo);
                                 return t === Ki(n) ? t = o : n.pop(), n.length && n[0] === e[0] ? Ir(n, di(t, 2)) : []
                             })),
                             Qi = Zr((function(e) {
                                 var t = Ki(e),
-                                    n = Dt(e, bo);
+                                    n = Nt(e, bo);
                                 return (t = "function" == typeof t ? t : o) && n.pop(), n.length && n[0] === e[0] ? Ir(n, o, t) : []
                             }));
 
@@ -6648,7 +6648,7 @@
                         var Ji = oi((function(e, t) {
                             var n = null == e ? 0 : e.length,
                                 r = sr(e, t);
-                            return Yr(e, Dt(t, (function(e) {
+                            return Yr(e, Nt(t, (function(e) {
                                 return yi(e, n) ? +e : e
                             })).sort(Bo)), r
                         }));
@@ -6674,14 +6674,14 @@
                             return e = Ot(e, (function(e) {
                                 if (Va(e)) return t = bn(e.length, t), !0
                             })), Zt(t, (function(t) {
-                                return Dt(e, Vt(t))
+                                return Nt(e, Vt(t))
                             }))
                         }
 
                         function ia(e, t) {
                             if (!e || !e.length) return [];
                             var n = oa(e);
-                            return null == t ? n : Dt(n, (function(e) {
+                            return null == t ? n : Nt(n, (function(e) {
                                 return $t(t, o, e)
                             }))
                         }
@@ -6732,7 +6732,7 @@
                         var ha = Mo((function(e, t, n) {
                             Pe.call(e, n) ? ++e[n] : ar(e, n, 1)
                         }));
-                        var fa = zo(Gi),
+                        var fa = zo(qi),
                             _a = zo(Ui);
 
                         function Aa(e, t) {
@@ -6758,7 +6758,7 @@
                             }));
 
                         function ka(e, t) {
-                            return (Ua(e) ? Dt : zr)(e, di(t, 3))
+                            return (Ua(e) ? Nt : zr)(e, di(t, 3))
                         }
                         var Ea = Mo((function(e, t, n) {
                             e[n ? 0 : 1].push(t)
@@ -6874,7 +6874,7 @@
                             return n.cache = new(Ra.Cache || Yn), n
                         }
 
-                        function Da(e) {
+                        function Na(e) {
                             if ("function" != typeof e) throw new Te(i);
                             return function() {
                                 var t = arguments;
@@ -6892,8 +6892,8 @@
                             }
                         }
                         Ra.Cache = Yn;
-                        var Na = vo((function(e, t) {
-                                var n = (t = 1 == t.length && Ua(t[0]) ? Dt(t[0], Xt(di())) : Dt(Ar(t, 1), Xt(di()))).length;
+                        var Da = vo((function(e, t) {
+                                var n = (t = 1 == t.length && Ua(t[0]) ? Nt(t[0], Xt(di())) : Nt(Ar(t, 1), Xt(di()))).length;
                                 return Zr((function(r) {
                                     for (var o = -1, i = yn(r.length, n); ++o < i;) r[o] = t[o].call(this, r[o]);
                                     return $t(e, this, r)
@@ -6915,10 +6915,10 @@
                             return e === t || e != e && t != t
                         }
                         var Fa = Yo($r),
-                            qa = Yo((function(e, t) {
+                            Ga = Yo((function(e, t) {
                                 return e >= t
                             })),
-                            Ga = Or(function() {
+                            qa = Or(function() {
                                 return arguments
                             }()) ? Or : function(e) {
                                 return ts(e) && Pe.call(e, "callee") && !Ke.call(e, "callee")
@@ -6981,7 +6981,7 @@
                             var t = Ye(e);
                             if (null === t) return !0;
                             var n = Pe.call(t, "constructor") && t.constructor;
-                            return "function" == typeof n && n instanceof n && Ne.call(n) == Fe
+                            return "function" == typeof n && n instanceof n && De.call(n) == Fe
                         }
                         var is = Et ? Xt(Et) : function(e) {
                             return ts(e) && Cr(e) == S
@@ -7090,10 +7090,10 @@
                         function $s(e, t) {
                             return null != e && _i(e, t, Sr)
                         }
-                        var Bs = Go((function(e, t, n) {
+                        var Bs = qo((function(e, t, n) {
                                 null != t && "function" != typeof t.toString && (t = ze.call(t)), e[t] = n
                             }), el(rl)),
-                            Ss = Go((function(e, t, n) {
+                            Ss = qo((function(e, t, n) {
                                 null != t && "function" != typeof t.toString && (t = ze.call(t)), Pe.call(e, t) ? e[t].push(n) : e[t] = [n]
                             }), di),
                             Is = Zr(Tr);
@@ -7106,22 +7106,22 @@
                             return Wa(e) ? Zn(e, !0) : Lr(e)
                         }
                         var Ms = Ro((function(e, t, n) {
-                                Gr(e, t, n)
+                                qr(e, t, n)
                             })),
                             Rs = Ro((function(e, t, n, r) {
-                                Gr(e, t, n, r)
+                                qr(e, t, n, r)
                             })),
-                            Ds = oi((function(e, t) {
+                            Ns = oi((function(e, t) {
                                 var n = {};
                                 if (null == e) return n;
                                 var r = !1;
-                                t = Dt(t, (function(t) {
+                                t = Nt(t, (function(t) {
                                     return t = xo(t, e), r || (r = t.length > 1), t
                                 })), Oo(e, ai(e), n), r && (n = cr(n, 7, ni));
                                 for (var o = t.length; o--;) mo(n, t[o]);
                                 return n
                             }));
-                        var Ns = oi((function(e, t) {
+                        var Ds = oi((function(e, t) {
                             return null == e ? {} : function(e, t) {
                                 return Wr(e, t, (function(t, n) {
                                     return $s(e, n)
@@ -7131,7 +7131,7 @@
 
                         function Ps(e, t) {
                             if (null == e) return {};
-                            var n = Dt(ai(e), (function(e) {
+                            var n = Nt(ai(e), (function(e) {
                                 return [e]
                             }));
                             return t = di(t), Wr(e, n, (function(e, n) {
@@ -7145,14 +7145,14 @@
                             return null == e ? [] : Jt(e, Ts(e))
                         }
                         var Fs = Lo((function(e, t, n) {
-                            return t = t.toLowerCase(), e + (n ? qs(t) : t)
+                            return t = t.toLowerCase(), e + (n ? Gs(t) : t)
                         }));
 
-                        function qs(e) {
+                        function Gs(e) {
                             return Ks(As(e).toLowerCase())
                         }
 
-                        function Gs(e) {
+                        function qs(e) {
                             return (e = As(e)) && e.replace(xe, rn).replace(tt, "")
                         }
                         var Us = Lo((function(e, t, n) {
@@ -7208,7 +7208,7 @@
                         }
 
                         function ol(e) {
-                            return Nr("function" == typeof e ? e : cr(e, 1))
+                            return Dr("function" == typeof e ? e : cr(e, 1))
                         }
                         var il = Zr((function(e, t) {
                                 return function(n) {
@@ -7239,13 +7239,13 @@
                                             thisArg: e
                                         }), n.__chain__ = t, n
                                     }
-                                    return r.apply(e, Nt([this.value()], arguments))
+                                    return r.apply(e, Dt([this.value()], arguments))
                                 })
                             })), e
                         }
 
                         function ll() {}
-                        var cl = Ho(Dt),
+                        var cl = Ho(Nt),
                             dl = Ho(Tt),
                             pl = Ho(jt);
 
@@ -7307,11 +7307,11 @@
                             var e = arguments.length;
                             if (!e) return [];
                             for (var t = r(e - 1), n = arguments[0], o = e; o--;) t[o - 1] = arguments[o];
-                            return Nt(Ua(n) ? To(n) : [n], Ar(t, 1))
+                            return Dt(Ua(n) ? To(n) : [n], Ar(t, 1))
                         }, Fn.cond = function(e) {
                             var t = null == e ? 0 : e.length,
                                 n = di();
-                            return e = t ? Dt(e, (function(e) {
+                            return e = t ? Nt(e, (function(e) {
                                 if ("function" != typeof e[1]) throw new Te(i);
                                 return [n(e[0]), e[1]]
                             })) : [], Zr((function(n) {
@@ -7328,7 +7328,7 @@
                                 }
                             }(cr(e, 1))
                         }, Fn.constant = el, Fn.countBy = ha, Fn.create = function(e, t) {
-                            var n = qn(e);
+                            var n = Gn(e);
                             return null == t ? n : ir(n, t)
                         }, Fn.curry = function e(t, n, r) {
                             var i = Jo(t, 8, o, o, o, o, o, n = r ? o : n);
@@ -7336,7 +7336,7 @@
                         }, Fn.curryRight = function e(t, n, r) {
                             var i = Jo(t, l, o, o, o, o, o, n = r ? o : n);
                             return i.placeholder = e.placeholder, i
-                        }, Fn.debounce = Ta, Fn.defaults = Es, Fn.defaultsDeep = ws, Fn.defer = Oa, Fn.delay = Ma, Fn.difference = zi, Fn.differenceBy = Fi, Fn.differenceWith = qi, Fn.drop = function(e, t, n) {
+                        }, Fn.debounce = Ta, Fn.defaults = Es, Fn.defaultsDeep = ws, Fn.defer = Oa, Fn.delay = Ma, Fn.difference = zi, Fn.differenceBy = Fi, Fn.differenceWith = Gi, Fn.drop = function(e, t, n) {
                             var r = null == e ? 0 : e.length;
                             return r ? oo(e, (t = n || t === o ? 1 : gs(t)) < 0 ? 0 : t, r) : []
                         }, Fn.dropRight = function(e, t, n) {
@@ -7392,18 +7392,18 @@
                         }, Fn.matches = function(e) {
                             return Fr(cr(e, 1))
                         }, Fn.matchesProperty = function(e, t) {
-                            return qr(e, cr(t, 1))
-                        }, Fn.memoize = Ra, Fn.merge = Ms, Fn.mergeWith = Rs, Fn.method = il, Fn.methodOf = al, Fn.mixin = sl, Fn.negate = Da, Fn.nthArg = function(e) {
+                            return Gr(e, cr(t, 1))
+                        }, Fn.memoize = Ra, Fn.merge = Ms, Fn.mergeWith = Rs, Fn.method = il, Fn.methodOf = al, Fn.mixin = sl, Fn.negate = Na, Fn.nthArg = function(e) {
                             return e = gs(e), Zr((function(t) {
                                 return Ur(t, e)
                             }))
-                        }, Fn.omit = Ds, Fn.omitBy = function(e, t) {
-                            return Ps(e, Da(di(t)))
+                        }, Fn.omit = Ns, Fn.omitBy = function(e, t) {
+                            return Ps(e, Na(di(t)))
                         }, Fn.once = function(e) {
                             return Ba(2, e)
                         }, Fn.orderBy = function(e, t, n, r) {
                             return null == e ? [] : (Ua(t) || (t = null == t ? [] : [t]), Ua(n = r ? o : n) || (n = null == n ? [] : [n]), Hr(e, t, n))
-                        }, Fn.over = cl, Fn.overArgs = Na, Fn.overEvery = dl, Fn.overSome = pl, Fn.partial = Pa, Fn.partialRight = La, Fn.partition = Ea, Fn.pick = Ns, Fn.pickBy = Ps, Fn.property = ul, Fn.propertyOf = function(e) {
+                        }, Fn.over = cl, Fn.overArgs = Da, Fn.overEvery = dl, Fn.overSome = pl, Fn.partial = Pa, Fn.partialRight = La, Fn.partition = Ea, Fn.pick = Ds, Fn.pickBy = Ps, Fn.property = ul, Fn.propertyOf = function(e) {
                             return function(t) {
                                 return null == e ? o : Er(e, t)
                             }
@@ -7412,7 +7412,7 @@
                         }, Fn.pullAllWith = function(e, t, n) {
                             return e && e.length && t && t.length ? Vr(e, t, o, n) : e
                         }, Fn.pullAt = Ji, Fn.range = ml, Fn.rangeRight = gl, Fn.rearg = ja, Fn.reject = function(e, t) {
-                            return (Ua(e) ? Ot : _r)(e, Da(di(t, 3)))
+                            return (Ua(e) ? Ot : _r)(e, Na(di(t, 3)))
                         }, Fn.remove = function(e, t) {
                             var n = [];
                             if (!e || !e.length) return n;
@@ -7449,7 +7449,7 @@
                             return t = null == t ? 0 : bn(gs(t), 0), Zr((function(n) {
                                 var r = n[t],
                                     o = ko(n, 0, t);
-                                return r && Nt(o, r), $t(e, this, o)
+                                return r && Dt(o, r), $t(e, this, o)
                             }))
                         }, Fn.tail = function(e) {
                             var t = null == e ? 0 : e.length;
@@ -7475,13 +7475,13 @@
                                 trailing: o
                             })
                         }, Fn.thru = ma, Fn.toArray = us, Fn.toPairs = Ls, Fn.toPairsIn = js, Fn.toPath = function(e) {
-                            return Ua(e) ? Dt(e, Pi) : ls(e) ? [e] : To(Ni(As(e)))
+                            return Ua(e) ? Nt(e, Pi) : ls(e) ? [e] : To(Di(As(e)))
                         }, Fn.toPlainObject = _s, Fn.transform = function(e, t, n) {
                             var r = Ua(e),
                                 o = r || Ya(e) || cs(e);
                             if (t = di(t, 4), null == n) {
                                 var i = e && e.constructor;
-                                n = o ? r ? new i : [] : es(e) && Za(i) ? qn(Ye(e)) : {}
+                                n = o ? r ? new i : [] : es(e) && Za(i) ? Gn(Ye(e)) : {}
                             }
                             return (o ? St : xr)(e, (function(e, r, o) {
                                 return t(n, e, r, o)
@@ -7508,7 +7508,7 @@
                             return Ao(e || [], t || [], nr)
                         }, Fn.zipObjectDeep = function(e, t) {
                             return Ao(e || [], t || [], eo)
-                        }, Fn.zipWith = pa, Fn.entries = Ls, Fn.entriesIn = js, Fn.extend = ys, Fn.extendWith = xs, sl(Fn, Fn), Fn.add = _l, Fn.attempt = Xs, Fn.camelCase = Fs, Fn.capitalize = qs, Fn.ceil = Al, Fn.clamp = function(e, t, n) {
+                        }, Fn.zipWith = pa, Fn.entries = Ls, Fn.entriesIn = js, Fn.extend = ys, Fn.extendWith = xs, sl(Fn, Fn), Fn.add = _l, Fn.attempt = Xs, Fn.camelCase = Fs, Fn.capitalize = Gs, Fn.ceil = Al, Fn.clamp = function(e, t, n) {
                             return n === o && (n = t, t = o), n !== o && (n = (n = fs(n)) == n ? n : 0), t !== o && (t = (t = fs(t)) == t ? t : 0), lr(fs(e), t, n)
                         }, Fn.clone = function(e) {
                             return cr(e, 4)
@@ -7520,7 +7520,7 @@
                             return cr(e, 4, t = "function" == typeof t ? t : o)
                         }, Fn.conformsTo = function(e, t) {
                             return null == t || dr(e, t, Ts(t))
-                        }, Fn.deburr = Gs, Fn.defaultTo = function(e, t) {
+                        }, Fn.deburr = qs, Fn.defaultTo = function(e, t) {
                             return null == e || e != e ? t : e
                         }, Fn.divide = bl, Fn.endsWith = function(e, t, n) {
                             e = As(e), t = po(t);
@@ -7534,7 +7534,7 @@
                         }, Fn.every = function(e, t, n) {
                             var r = Ua(e) ? Tt : hr;
                             return n && xi(e, t, n) && (t = o), r(e, di(t, 3))
-                        }, Fn.find = fa, Fn.findIndex = Gi, Fn.findKey = function(e, t) {
+                        }, Fn.find = fa, Fn.findIndex = qi, Fn.findKey = function(e, t) {
                             return Ft(e, di(t, 3), xr)
                         }, Fn.findLast = _a, Fn.findLastIndex = Ui, Fn.findLastKey = function(e, t) {
                             return Ft(e, di(t, 3), vr)
@@ -7546,29 +7546,29 @@
                             return e && xr(e, di(t, 3))
                         }, Fn.forOwnRight = function(e, t) {
                             return e && vr(e, di(t, 3))
-                        }, Fn.get = Cs, Fn.gt = Fa, Fn.gte = qa, Fn.has = function(e, t) {
+                        }, Fn.get = Cs, Fn.gt = Fa, Fn.gte = Ga, Fn.has = function(e, t) {
                             return null != e && _i(e, t, Br)
                         }, Fn.hasIn = $s, Fn.head = Wi, Fn.identity = rl, Fn.includes = function(e, t, n, r) {
                             e = Wa(e) ? e : zs(e), n = n && !r ? gs(n) : 0;
                             var o = e.length;
-                            return n < 0 && (n = bn(o + n, 0)), ss(e) ? n <= o && e.indexOf(t, n) > -1 : !!o && Gt(e, t, n) > -1
+                            return n < 0 && (n = bn(o + n, 0)), ss(e) ? n <= o && e.indexOf(t, n) > -1 : !!o && qt(e, t, n) > -1
                         }, Fn.indexOf = function(e, t, n) {
                             var r = null == e ? 0 : e.length;
                             if (!r) return -1;
                             var o = null == n ? 0 : gs(n);
-                            return o < 0 && (o = bn(r + o, 0)), Gt(e, t, o)
+                            return o < 0 && (o = bn(r + o, 0)), qt(e, t, o)
                         }, Fn.inRange = function(e, t, n) {
                             return t = ms(t), n === o ? (n = t, t = 0) : n = ms(n),
                                 function(e, t, n) {
                                     return e >= yn(t, n) && e < bn(t, n)
                                 }(e = fs(e), t, n)
-                        }, Fn.invoke = Is, Fn.isArguments = Ga, Fn.isArray = Ua, Fn.isArrayBuffer = Ha, Fn.isArrayLike = Wa, Fn.isArrayLikeObject = Va, Fn.isBoolean = function(e) {
+                        }, Fn.invoke = Is, Fn.isArguments = qa, Fn.isArray = Ua, Fn.isArrayBuffer = Ha, Fn.isArrayLike = Wa, Fn.isArrayLikeObject = Va, Fn.isBoolean = function(e) {
                             return !0 === e || !1 === e || ts(e) && Cr(e) == y
                         }, Fn.isBuffer = Ya, Fn.isDate = Qa, Fn.isElement = function(e) {
                             return ts(e) && 1 === e.nodeType && !os(e)
                         }, Fn.isEmpty = function(e) {
                             if (null == e) return !0;
-                            if (Wa(e) && (Ua(e) || "string" == typeof e || "function" == typeof e.splice || Ya(e) || cs(e) || Ga(e))) return !e.length;
+                            if (Wa(e) && (Ua(e) || "string" == typeof e || "function" == typeof e.splice || Ya(e) || cs(e) || qa(e))) return !e.length;
                             var t = fi(e);
                             if (t == w || t == I) return !e.size;
                             if (wi(e)) return !Pr(e).length;
@@ -7590,7 +7590,7 @@
                             return rs(e) && e != +e
                         }, Fn.isNative = function(e) {
                             if (Ei(e)) throw new we("Unsupported core-js use. Try https://npms.io/search?q=ponyfill.");
-                            return Dr(e)
+                            return Nr(e)
                         }, Fn.isNil = function(e) {
                             return null == e
                         }, Fn.isNull = function(e) {
@@ -7613,7 +7613,7 @@
                                 for (var r = n + 1; r--;)
                                     if (e[r] === t) return r;
                                 return r
-                            }(e, t, i) : qt(e, Ht, i, !0)
+                            }(e, t, i) : Gt(e, Ht, i, !0)
                         }, Fn.lowerCase = Hs, Fn.lowerFirst = Ws, Fn.lt = ds, Fn.lte = ps, Fn.max = function(e) {
                             return e && e.length ? fr(e, rl, $r) : o
                         }, Fn.maxBy = function(e, t) {
@@ -7635,7 +7635,7 @@
                         }, Fn.multiply = vl, Fn.nth = function(e, t) {
                             return e && e.length ? Ur(e, gs(t)) : o
                         }, Fn.noConflict = function() {
-                            return ht._ === this && (ht._ = qe), this
+                            return ht._ === this && (ht._ = Ge), this
                         }, Fn.noop = ll, Fn.now = Ca, Fn.pad = function(e, t, n) {
                             e = As(e);
                             var r = (t = gs(t)) ? gn(e) : 0;
@@ -7852,7 +7852,7 @@
                                 return Tr(n, e, t)
                             }))
                         })), Hn.prototype.reject = function(e) {
-                            return this.filter(Da(di(e)))
+                            return this.filter(Na(di(e)))
                         }, Hn.prototype.slice = function(e, t) {
                             e = gs(e);
                             var n = this;
@@ -7873,7 +7873,7 @@
                                     c = s[0],
                                     d = l || Ua(t),
                                     p = function(e) {
-                                        var t = i.apply(Fn, Nt([e], s));
+                                        var t = i.apply(Fn, Dt([e], s));
                                         return r && u ? t[0] : t
                                     };
                                 d && n && "function" == typeof c && 1 != c.length && (l = d = !1);
@@ -7915,7 +7915,7 @@
                                     func: n
                                 })
                             }
-                        })), On[qo(o, 2).name] = [{
+                        })), On[Go(o, 2).name] = [{
                             name: "wrapper",
                             func: o
                         }], Hn.prototype.clone = function() {
@@ -7995,7 +7995,7 @@
                                 value: e ? o : this.__values__[this.__index__++]
                             }
                         }, Fn.prototype.plant = function(e) {
-                            for (var t, n = this; n instanceof Gn;) {
+                            for (var t, n = this; n instanceof qn;) {
                                 var r = ji(n);
                                 r.__index__ = 0, r.__values__ = o, t ? i.__wrapped__ = r : t = r;
                                 var i = r;
@@ -9783,36 +9783,36 @@
                 "./availability-hitbox/availability-hitbox.js": 205,
                 "./avatar/avatar.js": 210,
                 "./chat-room/chat-room.js": 216,
-                "./chat-toggle-button/chat-toggle-button.js": 222,
-                "./chat-window/chat-input/chat-input.js": 225,
-                "./chat-window/chat-message/chat-message.js": 227,
-                "./chat-window/chat-messages/chat-messages.js": 228,
-                "./chat-window/chat-messages/virtualized-messages.js": 229,
-                "./chat-window/chat-window-controller.js": 233,
-                "./chat-window/chat-window/chat-window.js": 234,
-                "./clash-roster-panel-item/clash-roster-panel-item.js": 245,
-                "./clash-roster-panel/clash-roster-panel.js": 247,
-                "./friend-request-modal/friend-request-modal.js": 249,
-                "./friend-request/friend-request.js": 251,
-                "./friend-requests/friend-requests.js": 258,
-                "./game-invite/game-invite.js": 260,
-                "./game-invites/game-invites.js": 263,
-                "./game-panel/game-panel.js": 266,
-                "./game-queue/game-queue.js": 268,
-                "./input/input.js": 271,
-                "./link-warning-dialog/link-warning-dialog.js": 272,
-                "./link-warning/link-warning.js": 274,
-                "./menu-input/menu-input.js": 276,
-                "./menu-item/menu-item.js": 279,
-                "./menu/menu.js": 282,
-                "./panel/panel.js": 284,
-                "./roster-group-name/roster-group-name.js": 288,
-                "./roster-group/roster-group.js": 290,
-                "./roster-member/context-menu-items.js": 237,
-                "./roster-member/roster-member.js": 294,
-                "./roster/roster.js": 301,
-                "./roster/virtualize-roster-members.js": 302,
-                "./status/status.js": 305
+                "./chat-toggle-button/chat-toggle-button.js": 232,
+                "./chat-window/chat-input/chat-input.js": 235,
+                "./chat-window/chat-message/chat-message.js": 237,
+                "./chat-window/chat-messages/chat-messages.js": 238,
+                "./chat-window/chat-messages/virtualized-messages.js": 239,
+                "./chat-window/chat-window-controller.js": 243,
+                "./chat-window/chat-window/chat-window.js": 244,
+                "./clash-roster-panel-item/clash-roster-panel-item.js": 254,
+                "./clash-roster-panel/clash-roster-panel.js": 256,
+                "./friend-request-modal/friend-request-modal.js": 258,
+                "./friend-request/friend-request.js": 260,
+                "./friend-requests/friend-requests.js": 267,
+                "./game-invite/game-invite.js": 269,
+                "./game-invites/game-invites.js": 272,
+                "./game-panel/game-panel.js": 275,
+                "./game-queue/game-queue.js": 277,
+                "./input/input.js": 280,
+                "./link-warning-dialog/link-warning-dialog.js": 281,
+                "./link-warning/link-warning.js": 283,
+                "./menu-input/menu-input.js": 285,
+                "./menu-item/menu-item.js": 288,
+                "./menu/menu.js": 291,
+                "./panel/panel.js": 293,
+                "./roster-group-name/roster-group-name.js": 297,
+                "./roster-group/roster-group.js": 299,
+                "./roster-member/context-menu-items.js": 247,
+                "./roster-member/roster-member.js": 303,
+                "./roster/roster.js": 310,
+                "./roster/virtualize-roster-members.js": 311,
+                "./status/status.js": 314
             };
 
             function o(e) {
@@ -10022,10 +10022,10 @@
             "use strict";
             const {
                 components: r
-            } = n(1), o = n(217), i = n(219), a = "focused-chat-box", s = ["INPUT", "TEXTAREA", "LOL-PARTIES-COSMETICS-PANEL"];
+            } = n(1), o = n(217), i = n(229), a = "focused-chat-box", s = ["INPUT", "TEXTAREA", "LOL-PARTIES-COSMETICS-PANEL"];
             r.defineElement("lol-social-chat-room", o, i, {
-                styles: n(220),
-                frameStyles: n(221),
+                styles: n(230),
+                frameStyles: n(231),
                 isClickingInChat: !1,
                 isOpeningLink: !1,
                 isPlayerChatMessagesVisible: !0,
@@ -10158,7 +10158,8 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var r = n(218);
+            var r = n(218),
+                o = n(219);
             e.exports = {
                 showInputContextMenu: function(e) {
                     e.preventDefault(), e.stopPropagation(), this.data.contextMenuManager && (this.data.contextMenuManager.setMenuItems([{
@@ -10185,9 +10186,17 @@
                 showMessagesContextMenu: function(e) {
                     e.preventDefault(), e.stopPropagation();
                     const t = e.target.ownerDocument,
-                        n = [],
-                        o = this.data.clientConfig.dmReportingEnabled || !1;
-                    if (this.conversation && "chat" === this.conversation.type && o) {
+                        n = [];
+                    t.getSelection().toString() && n.push({
+                        action: function() {
+                            t.execCommand("copy")
+                        },
+                        target: this,
+                        label: this.t("context_menu_copy"),
+                        icon: (0, o.createContextMenuIcon)(o.ICON_NAMES.COPY)
+                    });
+                    const i = this.data.clientConfig.dmReportingEnabled || !1;
+                    if (this.conversation && "chat" === this.conversation.type && i) {
                         const e = {
                                 puuid: this.conversation.id.split("@")[0],
                                 gameName: this.conversation.gameName,
@@ -10198,18 +10207,13 @@
                             action: () => (0, r.confirmReportFriendForAbusiveTextHelper)(e, this.data.submitDirectMessageReport, t),
                             target: this,
                             label: this.t("context_menu_report_friend"),
-                            hidden: !o,
+                            hidden: !i,
                             disabled: this.data.conversationAlreadyReported(this.conversation),
-                            class: "danger-text"
+                            class: "danger-text",
+                            icon: (0, o.createContextMenuIcon)(o.ICON_NAMES.REPORT)
                         })
                     }
-                    t.getSelection().toString() && n.push({
-                        action: function() {
-                            t.execCommand("copy")
-                        },
-                        target: this,
-                        label: this.t("context_menu_copy")
-                    }), this.data.contextMenuManager && n.length > 0 && (this.data.contextMenuManager.setMenuItems(n), this.data.contextMenuManager.openAtEvent(e))
+                    this.data.contextMenuManager && n.length > 0 && (this.data.contextMenuManager.setMenuItems(n), this.data.contextMenuManager.openAtEvent(e))
                 }
             }
         }, (e, t, n) => {
@@ -10335,6 +10339,96 @@
             function a() {
                 r.datadogRum.stopOperationWithAbort(r.datadogRum.XP_SOCIAL_FRIEND_REPORT_DM)
             }
+        }, (e, t, n) => {
+            "use strict";
+            const r = n(220),
+                o = n(221),
+                i = n(222),
+                a = n(223),
+                s = n(224),
+                l = n(225),
+                c = n(226),
+                d = n(227),
+                p = n(228),
+                u = "#ff2345",
+                m = {
+                    INVITE: "invite",
+                    NOTE: "note",
+                    GIFT: "gift",
+                    BLOCK: "block",
+                    REPORT: "report",
+                    COPY: "copy",
+                    SPECTATE: "spectate",
+                    SEND_MESSAGE: "send-message",
+                    PROFILE: "profile",
+                    FOLDER: "folder"
+                };
+            e.exports = {
+                ICON_NAMES: m,
+                createContextMenuIcon: function(e) {
+                    if (!e) return null;
+                    const t = document.createElement("div");
+                    switch (t.className = `lol-social-context-menu-icon ${e}`, t.setAttribute("aria-hidden", "true"), t.style.width = "18px", t.style.height = "18px", t.style.display = "block", t.style.backgroundColor = "#c8aa6e", t.style.webkitMaskRepeat = "no-repeat", t.style.webkitMaskPosition = "center", t.style.webkitMaskSize = "contain", e) {
+                        case m.INVITE:
+                            t.style.webkitMaskImage = `url(${r})`;
+                            break;
+                        case m.NOTE:
+                            t.style.width = "22px", t.style.height = "22px", t.style.webkitMaskImage = `url(${i})`;
+                            break;
+                        case m.GIFT:
+                            t.style.webkitMaskImage = `url(${a})`;
+                            break;
+                        case m.BLOCK:
+                            t.style.webkitMaskImage = `url(${s})`, t.style.backgroundColor = u;
+                            break;
+                        case m.REPORT:
+                            t.style.webkitMaskImage = `url(${l})`, t.style.backgroundColor = u;
+                            break;
+                        case m.COPY:
+                            t.style.webkitMaskImage = "url(/fe/lol-static-assets/images/game-id-clipboard-copy.svg)";
+                            break;
+                        case m.SPECTATE:
+                            t.style.webkitMaskImage = `url(${c})`;
+                            break;
+                        case m.SEND_MESSAGE:
+                            t.style.webkitMaskImage = `url(${d})`;
+                            break;
+                        case m.PROFILE:
+                            t.style.webkitMaskImage = `url(${o})`;
+                            break;
+                        case m.FOLDER:
+                            t.style.webkitMaskImage = `url(${p})`
+                    }
+                    return t
+                }
+            }
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "party-invite-mask.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "profile-mask.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "add-note-mask.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "gift-mask.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "block-mask.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "report-mask.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "spectate-mask.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "message-mask.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "folder-mask.svg"
         }, e => {
             "use strict";
             e.exports = {
@@ -10395,7 +10489,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-chat-toggle-button", {
-                styles: n(223),
+                styles: n(233),
                 attached: function() {
                     this.closeChatWindowImmediatelyIfOpen()
                 },
@@ -10416,7 +10510,7 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(224),
+                a = n(234),
                 s = o(r),
                 l = i(a);
             s.push([e.id, ".social-count-badge {\n  font-family: var(--font-body);\n}\n.social-count-badge {\n  font-weight: bold;\n  border-radius: 3px;\n  background-color: #c89b3c;\n  color: #010a13;\n  padding: 0 6px;\n  height: 16px;\n  font-size: 12px;\n  display: flex;\n  align-items: center;\n}\n.social-count-badge.will-animate-in {\n  opacity: 0;\n}\n.social-count-badge.animate-in {\n  opacity: 1;\n  transition: opacity 0.3s ease-in-out;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\nlol-social-chat-toggle-button .chat-button,\nlol-social-chat-toggle-button .chat-button.toggled {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n}\nlol-social-chat-toggle-button {\n  background-color: #010a13;\n  z-index: 0;\n}\nlol-social-chat-toggle-button .chat-button {\n  background-image: url(" + l + ");\n  background-size: cover;\n  background-position-y: 0px;\n  width: 38px;\n  height: 32px;\n}\nlol-social-chat-toggle-button .chat-button:hover {\n  background-position-y: -32px;\n}\nlol-social-chat-toggle-button .chat-button:active {\n  background-position-y: -64px;\n}\nlol-social-chat-toggle-button .chat-button:disabled,\nlol-social-chat-toggle-button .chat-button[disabled],\nlol-social-chat-toggle-button .chat-button.disabled {\n  cursor: default;\n  background-position-y: -96px;\n}\nlol-social-chat-toggle-button .chat-button.toggled {\n  background-image: url(" + l + ");\n  background-size: cover;\n  background-position-y: -96px;\n}\nlol-social-chat-toggle-button .chat-button.toggled:hover {\n  background-position-y: -128px;\n}\nlol-social-chat-toggle-button .chat-button.toggled:active {\n  background-position-y: -160px;\n}\nlol-social-chat-toggle-button .chat-button.toggled:disabled,\nlol-social-chat-toggle-button .chat-button.toggled[disabled],\nlol-social-chat-toggle-button .chat-button.toggled.disabled {\n  cursor: default;\n  background-position-y: -192px;\n}\nlol-social-chat-toggle-button .chat-button.unread.use-animation {\n  animation: pulseChatButton 750ms infinite alternate ease-in-out;\n}\nlol-social-chat-toggle-button .chat-button.unread:not(.use-animation) {\n  -webkit-filter: brightness(1.5) saturate(1.5);\n}\nlol-social-chat-toggle-button .chat-button[disabled] {\n  background-position-y: 0;\n  opacity: 0.5;\n  cursor: default;\n}\nlol-social-chat-toggle-button .social-count-badge {\n  width: fit-content;\n  transform: translate(25px, -50%);\n  box-shadow: 0 0 2px rgba(1,10,19,0.5);\n}\n@-moz-keyframes pulseChatButton {\n  from {\n    filter: brightness(1) saturate(1);\n  }\n  to {\n    filter: brightness(1.5) saturate(1.5);\n  }\n}\n@-webkit-keyframes pulseChatButton {\n  from {\n    filter: brightness(1) saturate(1);\n  }\n  to {\n    filter: brightness(1.5) saturate(1.5);\n  }\n}\n@-o-keyframes pulseChatButton {\n  from {\n    filter: brightness(1) saturate(1);\n  }\n  to {\n    filter: brightness(1.5) saturate(1.5);\n  }\n}\n@keyframes pulseChatButton {\n  from {\n    filter: brightness(1) saturate(1);\n  }\n  to {\n    filter: brightness(1.5) saturate(1.5);\n  }\n}\n", "", {
@@ -10442,7 +10536,7 @@
                 l = "championSelect",
                 c = "postGame";
             o.defineElement("lol-social-chat-input", i, {
-                styles: n(226),
+                styles: n(236),
                 isPlayerChatToggledOn: !0,
                 computed: {
                     canHidePlayerMessages: "hasAttribute('can-hide-player-messages')",
@@ -10665,10 +10759,10 @@
                     components: o
                 } = r,
                 i = n(217),
-                a = n(229);
+                a = n(239);
             o.defineElement("lol-social-chat-messages", i, a, {
-                styles: n(231),
-                frameStyles: n(232),
+                styles: n(241),
+                frameStyles: n(242),
                 computed: {
                     filteredMessages: "messages | filter(notJoinLeaveMessages)",
                     roomType: "getAttribute('room-type')",
@@ -10724,7 +10818,7 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(230)) && r.__esModule ? r : {
+            var r, o = (r = n(240)) && r.__esModule ? r : {
                 default: r
             };
             const i = n(1),
@@ -11137,9 +11231,9 @@
                 o = n(218);
             const {
                 computed: i
-            } = r.components, a = n(219), s = n(235), l = n(236), c = n(237);
+            } = r.components, a = n(229), s = n(245), l = n(246), c = n(247);
             r.components.defineElement("lol-social-chat-window", a, s, l, {
-                styles: n(238),
+                styles: n(248),
                 computed: {
                     disconnected: 'data.chatSession.sessionState === "disconnected"',
                     visible: "data.chatWindow.isOpen && !disconnected",
@@ -11381,8 +11475,12 @@
                 } = n(1),
                 {
                     confirmReportFriendForAbusiveTextHelper: l
-                } = n(218);
-            let c = null;
+                } = n(218),
+                {
+                    createContextMenuIcon: c,
+                    ICON_NAMES: d
+                } = n(219);
+            let p = null;
             e.exports = {
                 giveGift: function(e) {
                     i.navigateTo("rcp-fe-lol-store", {
@@ -11413,20 +11511,27 @@
                     await a.hasPrivateProfile(e.summonerId) ? a.showAlertSummonerIsPrivate(e.name) : "spectating" === e.lol.gameStatus ? r.spectateGame(e.lol.dropInSpectateGameId, e.lol.gameQueueType, e.lol.isObservable, e.lol.spectatingTargetPuuid) : r.spectateGame(e.name, e.lol.gameQueueType, e.lol.isObservable, e.lol.puuid)
                 },
                 makeSpectateContextMenuItem: function(e) {
-                    null !== c && (this.removeTooltips(c), c = null);
+                    null !== p && (this.removeTooltips(p), p = null);
                     const t = this.isSpectatable(e);
                     if (!t.hide) {
                         const n = {
                             action: "spectateGame",
                             args: [e],
                             target: this,
-                            disabled: t.disable
+                            disabled: t.disable,
+                            icon: c(d.SPECTATE)
                         };
                         if (t.tooltip) {
                             const e = document.createElement("div");
-                            e.className = "menu-item", e.innerText = this.t("context_menu_spectate_game"), n.element = e, this.tooltip(e, t.tooltip, {
+                            e.className = "menu-item with-icon";
+                            const r = document.createElement("div");
+                            r.className = "menu-item-icon";
+                            const o = c(d.SPECTATE);
+                            o && r.appendChild(o);
+                            const i = document.createElement("div");
+                            i.className = "menu-item-label", i.innerText = this.t("context_menu_spectate_game"), e.appendChild(r), e.appendChild(i), n.element = e, this.tooltip(e, t.tooltip, {
                                 direction: "left"
-                            }), c = e
+                            }), p = e
                         } else n.label = this.t("context_menu_spectate_game");
                         return n
                     }
@@ -11538,46 +11643,56 @@
         }, (e, t, n) => {
             "use strict";
             const r = n(144),
-                o = n(235);
+                o = n(245),
+                {
+                    ICON_NAMES: i,
+                    createContextMenuIcon: a
+                } = n(219);
             e.exports = {
                 inviteToGame: (e, t) => ({
                     action: "inviteToGame",
                     args: [t],
                     target: e,
                     label: r.t("context_menu_invite_to_game"),
-                    disabled: !r.canInviteToGame(t)
+                    disabled: !r.canInviteToGame(t),
+                    icon: a(i.INVITE)
                 }),
                 openChat: (e, t) => ({
                     action: "openChat",
                     args: [t],
                     target: e,
-                    label: r.t("context_menu_send_message")
+                    label: r.t("context_menu_send_message"),
+                    icon: a(i.SEND_MESSAGE)
                 }),
                 viewProfile: (e, t) => ({
                     action: "viewProfile",
                     args: [t],
                     target: e,
                     label: r.t("context_menu_view_profile"),
-                    disabled: !r.profilesEnabled
+                    disabled: !r.profilesEnabled,
+                    icon: a(i.PROFILE)
                 }),
                 giveGift: (e, t) => r.platformConfig.friendsListGiftingEnabled ? {
                     action: "giveGift",
                     args: [t],
                     target: e,
                     label: r.t("context_menu_give_gift"),
-                    disabled: !o.checkIfGiftable(t)
+                    disabled: !o.checkIfGiftable(t),
+                    icon: a(i.GIFT)
                 } : null,
                 editNote: (e, t) => ({
                     action: "editNote",
                     target: e,
                     noClickSound: !0,
-                    label: t.note ? r.t("context_menu_edit_note") : r.t("context_menu_add_note")
+                    label: t.note ? r.t("context_menu_edit_note") : r.t("context_menu_add_note"),
+                    icon: a(i.NOTE)
                 }),
                 moveFriend(e, t) {
                     if (!r.friendGroups || 1 === r.friendGroups.length) return null;
                     const n = r.friendGroups.byId[t.displayGroupId];
                     return !n || n.isMetaGroup ? null : {
                         label: r.t("context_menu_move_to_group"),
+                        icon: a(i.FOLDER),
                         submenu: r.friendGroups.map((n => {
                             let o = n.name;
                             return "**Default" === n.name ? o = r.t("group_label_default") : n.isMetaGroup && (o = r.t("group_label_" + n.name.toLowerCase())), {
@@ -11599,13 +11714,15 @@
                     action: "confirmRemoveFriend",
                     args: [t],
                     target: e,
-                    label: r.t("context_menu_unfriend")
+                    label: r.t("context_menu_unfriend"),
+                    icon: a(i.BLOCK)
                 }),
                 blockFriend: (e, t) => ({
                     action: "confirmBlockFriend",
                     args: [t],
                     target: e,
-                    label: r.t("context_menu_block")
+                    label: r.t("context_menu_block"),
+                    icon: a(i.BLOCK)
                 }),
                 reportFriend(e, t) {
                     const n = !(!r.clientConfig || !r.clientConfig.dmReportingEnabled),
@@ -11617,7 +11734,8 @@
                         label: r.t("context_menu_report_friend"),
                         hidden: !n,
                         disabled: o,
-                        class: "danger-text"
+                        class: "danger-text",
+                        icon: a(i.REPORT)
                     }
                 }
             }
@@ -11625,12 +11743,12 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(239),
-                s = n(240),
-                l = n(241),
-                c = n(242),
-                d = n(243),
-                p = n(244),
+                a = n(249),
+                s = n(250),
+                l = n(251),
+                c = n(252),
+                d = n(253),
+                p = n(225),
                 u = o(r),
                 m = i(a),
                 g = i(s),
@@ -11638,12 +11756,12 @@
                 f = i(c),
                 _ = i(d),
                 A = i(p);
-            u.push([e.id, "lol-social-chat-window .chat-header .chat-header-clash-title-prefix {\n  font-family: var(--font-display);\n}\n.social-count-badge,\nlol-social-chat-window .conversation,\nlol-social-chat-window .conversation-title,\nlol-social-chat-window .more-unread .bar,\nlol-social-chat-window .chat-header,\nlol-social-chat-window .chat-name-info .chat-subtitle-parts,\nlol-social-chat-window .participants,\nlol-social-chat-window .chat-input,\nlol-social-chat-window .create-panel .create-panel-search-match,\nlol-social-chat-window lol-social-menu-item {\n  font-family: var(--font-body);\n}\nlol-social-chat-window .conversation,\nlol-social-chat-window .conversation-title,\nlol-social-chat-window .chat-header,\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix,\nlol-social-chat-window .chat-name-info .chat-subtitle-parts,\nlol-social-chat-window .participants,\nlol-social-chat-window .chat-input,\nlol-social-chat-window .create-panel .create-panel-search-match,\nlol-social-chat-window lol-social-menu-item {\n  -webkit-user-select: none;\n}\nlol-social-chat-window .conversation,\nlol-social-chat-window .conversation-title,\nlol-social-chat-window .chat-header,\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix,\nlol-social-chat-window .chat-name-info .chat-subtitle-parts,\nlol-social-chat-window .participants,\nlol-social-chat-window .chat-input,\nlol-social-chat-window .create-panel .create-panel-search-match,\nlol-social-chat-window lol-social-menu-item {\n  font-kerning: normal;\n  -webkit-font-feature-settings: \"kern\" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-chat-window .more-unread .bar,\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix {\n  text-transform: uppercase;\n}\nlol-social-chat-window .more-unread .bar:lang(ko-kr),\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(ko-kr),\nlol-social-chat-window .more-unread .bar:lang(ja-jp),\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(ja-jp),\nlol-social-chat-window .more-unread .bar:lang(tr-tr),\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(tr-tr),\nlol-social-chat-window .more-unread .bar:lang(el-gr),\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(el-gr),\nlol-social-chat-window .more-unread .bar:lang(th-th),\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(th-th),\nlol-social-chat-window .more-unread .bar:lang(zh-tw),\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(zh-tw) {\n  text-transform: none;\n}\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-chat-window .conversation-title,\nlol-social-chat-window .chat-header,\nlol-social-chat-window .participants,\nlol-social-chat-window .chat-input {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-chat-window .conversation-title:lang(ar-ae),\nlol-social-chat-window .chat-header:lang(ar-ae),\nlol-social-chat-window .participants:lang(ar-ae),\nlol-social-chat-window .chat-input:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-chat-window .conversation,\nlol-social-chat-window .chat-name-info .chat-subtitle-parts,\nlol-social-chat-window .create-panel .create-panel-search-match {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-chat-window .conversation:lang(ja-jp),\nlol-social-chat-window .chat-name-info .chat-subtitle-parts:lang(ja-jp),\nlol-social-chat-window .create-panel .create-panel-search-match:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-chat-window .conversation:lang(ar-ae),\nlol-social-chat-window .chat-name-info .chat-subtitle-parts:lang(ar-ae),\nlol-social-chat-window .create-panel .create-panel-search-match:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-chat-window lol-social-menu-item {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.1em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-chat-window lol-social-menu-item:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-chat-window lol-social-menu-item:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-chat-window .conversation.unread .conversation-title,\nlol-social-chat-window .chat-header {\n  color: #f0e6d2;\n}\n.social-scroll {\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.social-scroll::-webkit-scrollbar {\n  width: 11px;\n  background: none;\n}\n.social-scroll::-webkit-scrollbar-thumb {\n  border: 3px solid transparent;\n  background-color: #1e2328;\n  border-radius: 6px;\n  background-clip: padding-box;\n}\n.social-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #785a28;\n}\n.social-scroll::-webkit-scrollbar-thumb:hover {\n  background-color: #cdbe91;\n}\n.social-scroll::-webkit-scrollbar-thumb:active {\n  background-color: #463714;\n}\n.social-blue-scroll {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.social-blue-scroll::-webkit-scrollbar {\n  width: 9px;\n  background: transparent;\n}\n.social-blue-scroll::-webkit-scrollbar-thumb {\n  background: transparent;\n  border-radius: 6px;\n  border: 2px solid transparent;\n  background-clip: padding-box;\n}\n.social-blue-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #0596aa;\n}\n.social-count-badge {\n  font-weight: bold;\n  border-radius: 3px;\n  background-color: #c89b3c;\n  color: #010a13;\n  padding: 0 6px;\n  height: 16px;\n  font-size: 12px;\n  display: flex;\n  align-items: center;\n}\n.social-count-badge.will-animate-in {\n  opacity: 0;\n}\n.social-count-badge.animate-in {\n  opacity: 1;\n  transition: opacity 0.3s ease-in-out;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\nlol-social-chat-window .conversation-close-button,\nlol-social-chat-window .conversation-cannot-close-button,\nlol-social-chat-window .close-window-button,\nlol-social-chat-window .conversation-settings-button,\nlol-social-chat-window .conversation-report-button {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n}\nlol-social-chat-window {\n  position: absolute;\n  width: 550px;\n  height: 366px;\n  min-height: 366px;\n  max-height: 640px;\n  pointer-events: none;\n  right: 0;\n  bottom: 0;\n  transform: translateZ(0);\n  will-change: transform;\n}\nlol-social-chat-window:lang(ar-ae) {\n  direction: rtl;\n}\nlol-social-chat-window .hidden {\n  display: none !important;\n}\nlol-social-chat-window #chat-window-wrapper {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(1,10,19,0.88);\n  border: thin solid #1e282d;\n  box-sizing: border-box;\n  pointer-events: auto;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  overflow: hidden;\n}\nlol-social-chat-window #chat-window-wrapper.use-animation {\n  transition: all 350ms cubic-bezier(0, 0, 0, 1);\n}\nlol-social-chat-window #chat-window-wrapper:not(.open) {\n  height: 0;\n  width: 0;\n}\nlol-social-chat-window #chat-window-wrapper.button-inside .chat-input {\n  margin-right: 41px;\n}\nlol-social-chat-window .conversations {\n  position: relative;\n  width: 199px;\n  height: auto;\n  border-right: thin solid #1e282d;\n  box-sizing: border-box;\n  flex-shrink: 0;\n}\nlol-social-chat-window .conversations:not(.scrolled-to-bottom) {\n  -webkit-mask-image: -webkit-gradient(linear, left bottom, left 87%, from(rgba(0,0,0,0.1)), to(#000));\n}\nlol-social-chat-window .conversations.has-button {\n  margin-bottom: 36px;\n}\nlol-social-chat-window .conversations:lang(ar-ae) {\n  border-right: none;\n  border-left: thin solid #1e282d;\n}\nlol-social-chat-window .conversation {\n  display: flex;\n  align-items: center;\n  height: 60px;\n  cursor: pointer;\n  padding: 0 0 0 10px;\n}\nlol-social-chat-window .conversation:lang(ar-ae) {\n  padding: 0 10px 0 0;\n}\nlol-social-chat-window .conversation.active .conversation-subtitle {\n  color: #a09b8c;\n}\nlol-social-chat-window .conversation.active .conversation-subtitle.blocked,\nlol-social-chat-window .conversation.active .conversation-subtitle.unavailable {\n  font-style: italic;\n}\nlol-social-chat-window .conversation.active .conversation-subtitle.blocked {\n  color: #be1e37;\n}\nlol-social-chat-window .conversation:hover {\n  background-color: #1e2328;\n}\nlol-social-chat-window .conversation:hover .conversation-close-button {\n  display: block;\n}\nlol-social-chat-window .conversation:hover .conversation-cannot-close-button {\n  display: block;\n}\nlol-social-chat-window .conversation:hover .conversation-muted:not([permanent]) {\n  display: none;\n}\nlol-social-chat-window .conversation:hover .conversation-subtitle {\n  color: #f0e6d2;\n}\nlol-social-chat-window .conversation:hover .conversation-subtitle.blocked,\nlol-social-chat-window .conversation:hover .conversation-subtitle.unavailable {\n  font-style: italic;\n}\nlol-social-chat-window .conversation:hover .conversation-subtitle.blocked {\n  color: #be1e37;\n}\nlol-social-chat-window .conversation.active {\n  padding: 0;\n  background: rgba(240,230,210,0.18);\n}\nlol-social-chat-window .conversation.active::before {\n  content: '';\n  width: 6px;\n  height: 100%;\n  background-color: #c89b3c;\n  margin: 0 10px 0 0;\n}\nlol-social-chat-window .conversation.active:lang(ar-ae)::before {\n  margin: 0 0 0 10px;\n}\nlol-social-chat-window .conversation.animate-move {\n  background-color: #fff;\n  box-shadow: 0 0 8px rgba(0,0,0,0.7);\n}\nlol-social-chat-window .clash-seperator {\n  height: 1px;\n  max-width: 100%;\n  margin: 8px 10px;\n  background: rgba(240,230,210,0.3);\n}\nlol-social-chat-window .conversation-titles-container {\n  flex: 1;\n  overflow: hidden;\n  margin: 0 5px 0 0;\n}\nlol-social-chat-window .conversation-titles-container:lang(ar-ae) {\n  margin: 0 0 0 5px;\n}\nlol-social-chat-window .clash-icon {\n  width: 32px;\n  height: 32px;\n  margin: 0 6px 0 0;\n}\nlol-social-chat-window .clash-icon:lang(ar-ae) {\n  margin: 0 0 0 6px;\n}\nlol-social-chat-window .conversation-title,\nlol-social-chat-window .conversation-subtitle {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  position: relative;\n}\nlol-social-chat-window .conversation-title.blocked,\nlol-social-chat-window .conversation-subtitle.blocked,\nlol-social-chat-window .conversation-title.unavailable,\nlol-social-chat-window .conversation-subtitle.unavailable {\n  font-style: italic;\n}\nlol-social-chat-window .conversation-title.blocked,\nlol-social-chat-window .conversation-subtitle.blocked {\n  color: #802626;\n}\nlol-social-chat-window .conversation-title {\n  color: #f0e6d2;\n}\nlol-social-chat-window .conversation-subtitle {\n  color: #5b5a56;\n}\nlol-social-chat-window .conversation-subtitle.blocked,\nlol-social-chat-window .conversation-subtitle.unavailable {\n  font-style: italic;\n}\nlol-social-chat-window .conversation-subtitle.blocked {\n  color: #802626;\n}\nlol-social-chat-window .conversation.unread {\n  background: rgba(240,230,210,0.18);\n}\nlol-social-chat-window .conversation.unread.use-animation {\n  animation: highlight 825ms 4 alternate;\n}\nlol-social-chat-window .conversation.unread.use-animation .social-count-badge {\n  animation: highlightBadge 825ms 4 alternate;\n}\nlol-social-chat-window .conversation.unread .conversation-title {\n  font-weight: bold;\n}\nlol-social-chat-window .conversation.unread .conversation-subtitle {\n  color: #c89b3c;\n  font-weight: bold;\n}\nlol-social-chat-window .conversation-close-button {\n  -webkit-mask: url(" + m + ") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #c8aa6e;\n  -webkit-mask-size: contain;\n  display: none;\n  width: 18px;\n  height: 18px;\n  margin: 0 3px 0 auto;\n}\nlol-social-chat-window .conversation-close-button:hover {\n  background-color: #f0e6d2;\n}\nlol-social-chat-window .conversation-close-button:active {\n  background-color: #463714;\n}\nlol-social-chat-window .conversation-close-button:lang(ar-ae) {\n  margin: 0 auto 0 3px;\n}\nlol-social-chat-window .conversation-cannot-close-button {\n  -webkit-mask: url(" + g + ") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #5b5a56;\n  -webkit-mask-size: contain;\n  display: none;\n  width: 18px;\n  height: 18px;\n  margin: 0 3px 0 auto;\n}\nlol-social-chat-window .conversation-cannot-close-button:lang(ar-ae) {\n  margin: 0 auto 0 3px;\n}\nlol-social-chat-window .conversation-muted {\n  -webkit-mask: url(" + h + ") no-repeat center;\n  -webkit-mask-size: 16px;\n  background-color: #5b5a56;\n  width: 22px;\n  height: 22px;\n}\nlol-social-chat-window .social-count-badge {\n  margin: 0 3px;\n}\nlol-social-chat-window .conversations-list {\n  display: flex;\n  flex-direction: column;\n}\nlol-social-chat-window .more-unread {\n  position: absolute;\n  left: 0;\n  width: 179px;\n  padding: 0 4px;\n  box-sizing: border-box;\n  background-color: rgba(1,10,19,0.5);\n  cursor: pointer;\n}\nlol-social-chat-window .more-unread .bar {\n  background-color: #c89b3c;\n  text-align: center;\n  vertical-align: middle;\n  line-height: 24px;\n  font-weight: 900;\n  color: #010a13;\n  font-size: 12px;\n}\nlol-social-chat-window .more-unread .arrow {\n  position: absolute;\n  left: 50%;\n  margin-left: -6px;\n  border: 4px solid transparent;\n}\nlol-social-chat-window .more-unread.below {\n  bottom: 0;\n  padding-bottom: 20px;\n}\nlol-social-chat-window .more-unread.below .arrow {\n  border-top: 6px solid #f0e6d2;\n  bottom: 4px;\n}\nlol-social-chat-window .more-unread.above {\n  top: 0;\n  padding-top: 20px;\n}\nlol-social-chat-window .more-unread.above .arrow {\n  border-bottom: 6px solid #f0e6d2;\n  top: 4px;\n}\nlol-social-chat-window .chat-area {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\nlol-social-chat-window .chat-area .chat-input .chat-toggle-button {\n  display: none;\n}\nlol-social-chat-window .chat-header {\n  color: #f0e6d2;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  height: 48px;\n  border-bottom: thin solid #785a28;\n  padding: 0 0 0 8px;\n  box-sizing: border-box;\n  flex-shrink: 0;\n  overflow: hidden;\n}\nlol-social-chat-window .chat-header:lang(ar-ae) {\n  padding: 0 8px 0 0;\n}\nlol-social-chat-window .chat-header .spacer {\n  flex: 1;\n}\nlol-social-chat-window .chat-header.room-header .chat-name {\n  cursor: pointer;\n}\nlol-social-chat-window .chat-header .chat-header-clash-title-container {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  align-items: flex-end;\n}\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix {\n  color: #c8aa6e;\n  flex-direction: row;\n  overflow: hidden;\n  margin: 0 7px 0 0;\n}\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(ar-ae) {\n  margin: 0 0 0 7px;\n}\nlol-social-chat-window .chat-header .chat-header-clash-title-main {\n  text-overflow: ellipsis;\n  max-width: 150px;\n  flex-direction: row;\n  overflow: hidden;\n}\nlol-social-chat-window .chat-header .chat-header-title {\n  text-overflow: ellipsis;\n  max-width: 200px;\n  flex-direction: row;\n  overflow: hidden;\n}\nlol-social-chat-window .chat-header .chat-participants-count {\n  display: flex;\n  flex-direction: column;\n  margin: 0 0 0 5px;\n}\nlol-social-chat-window .chat-header .chat-participants-count:lang(ar-ae) {\n  margin: 0 5px 0 0;\n}\nlol-social-chat-window .toggle-btn {\n  margin: 2px 0 0 8px;\n}\nlol-social-chat-window .toggle-btn:lang(ar-ae) {\n  margin: 2px 8px 0 0;\n}\nlol-social-chat-window .status,\nlol-social-chat-window .avatar {\n  flex-shrink: 0;\n  margin: 0 8px 0 0;\n}\nlol-social-chat-window .status:lang(ar-ae),\nlol-social-chat-window .avatar:lang(ar-ae) {\n  margin: 0 0 0 8px;\n}\nlol-social-chat-window .chat-name {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  overflow: hidden;\n  justify-content: flex-start;\n  flex-direction: row;\n}\nlol-social-chat-window .chat-name-info {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  max-width: 250px;\n  word-break: keep-all;\n}\nlol-social-chat-window .chat-name-info > div {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  overflow: hidden;\n  justify-content: flex-start;\n  flex-direction: row;\n}\nlol-social-chat-window .chat-name-info .chat-name {\n  height: auto;\n}\nlol-social-chat-window .chat-name-info .chat-subtitle-parts {\n  color: #5b5a56;\n  margin-top: -2px;\n  flex-direction: row;\n  align-items: center;\n}\nlol-social-chat-window .chat-name-info .chat-subtitle-parts .chat-gnt {\n  margin-left: 0;\n}\nlol-social-chat-window .chat-name-info .chat-subtitle-parts .chat-state-separator {\n  margin-left: 4px;\n  margin-right: 4px;\n}\nlol-social-chat-window .chat-name-info .chat-subtitle-parts .chat-state {\n  font-style: italic;\n}\nlol-social-chat-window .chat-name-info .chat-subtitle-parts .chat-state.blocked {\n  padding-right: 2px;\n  color: #be1e37;\n}\nlol-social-chat-window .chat-name-info .gameTag {\n  color: #5b5a56;\n}\nlol-social-chat-window .header-button {\n  height: 18px;\n  width: 18px;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  align-self: flex-start;\n  margin: 8px 5px 0 0;\n}\nlol-social-chat-window .header-button:lang(ar-ae) {\n  margin: 8px 0 0 5px;\n}\nlol-social-chat-window .close-window-button {\n  -webkit-mask: url(" + f + ") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #a09b8c;\n  -webkit-mask-size: contain;\n}\nlol-social-chat-window .close-window-button:hover {\n  background-color: #f0e6d2;\n}\nlol-social-chat-window .close-window-button:active {\n  background-color: #3c3c41;\n}\nlol-social-chat-window .conversation-settings-button {\n  -webkit-mask: url(" + _ + ") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #a09b8c;\n  -webkit-mask-size: contain;\n}\nlol-social-chat-window .conversation-settings-button:hover {\n  background-color: #f0e6d2;\n}\nlol-social-chat-window .conversation-settings-button:active {\n  background-color: #3c3c41;\n}\nlol-social-chat-window .conversation-settings-button[disabled] {\n  background-color: #5c5b57;\n  cursor: default;\n  pointer-events: none;\n}\nlol-social-chat-window .conversation-report-button {\n  -webkit-mask: url(" + A + ") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #a09b8c;\n  -webkit-mask-size: contain;\n}\nlol-social-chat-window .conversation-report-button:hover {\n  background-color: #f0e6d2;\n}\nlol-social-chat-window .conversation-report-button:active {\n  background-color: #3c3c41;\n}\nlol-social-chat-window .conversation-report-button[reported] {\n  cursor: default;\n  pointer-events: auto;\n  background-color: #ff657d;\n  opacity: 0.55;\n}\nlol-social-chat-window .conversation-report-button:not([reported]):hover {\n  background-color: #ff2345;\n}\nlol-social-chat-window .conversation-report-button:not([reported]):active {\n  background-color: #ff3958;\n}\nlol-social-chat-window .participants {\n  color: #f0e6d2;\n  z-index: 1;\n  margin-top: -1px;\n  padding-bottom: 4px;\n  width: 100%;\n  max-height: calc(100% - 51px);\n  background: #010a13;\n  border-bottom: thin solid #785a28;\n}\nlol-social-chat-window .participants .participant {\n  display: flex;\n  align-items: center;\n  padding: 6px;\n}\nlol-social-chat-window .participants .participant .avatar {\n  margin: 0 8px 0 0;\n}\nlol-social-chat-window .participants .participant .avatar:lang(ar-ae) {\n  margin: 0 0 0 8px;\n}\nlol-social-chat-window .messages {\n  flex: 1;\n}\nlol-social-chat-window .chat-input {\n  color: #f0e6d2;\n  padding: 5px 8px;\n  flex-shrink: 0;\n}\nlol-social-chat-window .chat-input:lang(ar-ae) {\n  padding: 5px 8px;\n  direction: rtl;\n}\nlol-social-chat-window .create-panel .create-panel-search-input {\n  margin-bottom: 5px;\n}\nlol-social-chat-window .create-panel .create-panel-gnt {\n  color: #5b5a56;\n}\nlol-social-chat-window .create-panel .create-panel-gnt .create-panel-game-name.only-name {\n  color: #a09b8c;\n}\nlol-social-chat-window .create-panel .create-panel-search-match {\n  color: #a09b8c;\n  display: flex;\n  align-items: center;\n  padding: 5px 10px;\n  letter-spacing: 0.05em;\n}\nlol-social-chat-window .create-panel .create-panel-search-match:hover {\n  color: #f0e6d2;\n  cursor: pointer;\n}\nlol-social-chat-window .create-panel .create-panel-search-match:hover .create-panel-gnt {\n  color: #a09b8c;\n}\nlol-social-chat-window .create-panel .create-panel-search-match:hover .create-panel-gnt .create-panel-game-name.only-name {\n  color: #f0e6d2;\n}\nlol-social-chat-window .create-panel .create-chat-input {\n  height: 32px;\n  width: 349px;\n  position: absolute;\n  bottom: 0;\n}\nlol-social-chat-window .settings-menu {\n  position: absolute;\n  top: 47px;\n  right: 0;\n  min-width: 180px;\n  border: thin solid #785a28;\n  background-color: #010a13;\n}\nlol-social-chat-window .settings-menu:lang(ar-ae) {\n  right: auto;\n  left: 0;\n}\nlol-social-chat-window lol-social-menu-item {\n  color: #cdbe91;\n  padding: 0;\n}\nlol-social-chat-window lol-social-menu-item:lang(ar-ae) {\n  text-align: right;\n}\nlol-social-chat-window label.conversation-mute-label {\n  margin: 2px 0 0 10px;\n}\nlol-social-chat-window label.conversation-mute-label:lang(ar-ae) {\n  margin: 2px 10px 0 0;\n}\nlol-social-chat-window lol-uikit-flat-checkbox,\nlol-social-chat-window .clear-history {\n  padding: 8px 10px;\n}\nlol-social-chat-window lol-uikit-flat-checkbox .hide-offline-label {\n  color: #cdbe91;\n}\nlol-social-chat-window lol-uikit-flat-checkbox:hover .hide-offline-label {\n  color: #f0e6d2;\n}\nlol-social-chat-window .resizer {\n  position: absolute;\n  top: -5px;\n  left: 0;\n  height: 10px;\n  width: 100%;\n  cursor: n-resize;\n}\nlol-social-chat-window .new-chat-button {\n  height: 32px;\n  width: 191px;\n  padding: 4px 4px 0px 4px;\n  position: absolute;\n  left: 0;\n  bottom: 0;\n}\nlol-social-chat-window .new-chat-button:lang(ar-ae) {\n  left: auto;\n  right: 0;\n}\n@-moz-keyframes fadein {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadein {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-o-keyframes fadein {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadein {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n", "", {
+            u.push([e.id, "lol-social-chat-window .chat-header .chat-header-clash-title-prefix {\n  font-family: var(--font-display);\n}\n.social-count-badge,\nlol-social-chat-window .conversation,\nlol-social-chat-window .conversation-title,\nlol-social-chat-window .more-unread .bar,\nlol-social-chat-window .chat-header,\nlol-social-chat-window .chat-name-info .chat-subtitle-parts,\nlol-social-chat-window .participants,\nlol-social-chat-window .chat-input,\nlol-social-chat-window .create-panel .create-panel-search-match,\nlol-social-chat-window lol-social-menu-item {\n  font-family: var(--font-body);\n}\nlol-social-chat-window .conversation,\nlol-social-chat-window .conversation-title,\nlol-social-chat-window .chat-header,\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix,\nlol-social-chat-window .chat-name-info .chat-subtitle-parts,\nlol-social-chat-window .participants,\nlol-social-chat-window .chat-input,\nlol-social-chat-window .create-panel .create-panel-search-match,\nlol-social-chat-window lol-social-menu-item {\n  -webkit-user-select: none;\n}\nlol-social-chat-window .conversation,\nlol-social-chat-window .conversation-title,\nlol-social-chat-window .chat-header,\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix,\nlol-social-chat-window .chat-name-info .chat-subtitle-parts,\nlol-social-chat-window .participants,\nlol-social-chat-window .chat-input,\nlol-social-chat-window .create-panel .create-panel-search-match,\nlol-social-chat-window lol-social-menu-item {\n  font-kerning: normal;\n  -webkit-font-feature-settings: \"kern\" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-chat-window .more-unread .bar,\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix {\n  text-transform: uppercase;\n}\nlol-social-chat-window .more-unread .bar:lang(ko-kr),\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(ko-kr),\nlol-social-chat-window .more-unread .bar:lang(ja-jp),\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(ja-jp),\nlol-social-chat-window .more-unread .bar:lang(tr-tr),\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(tr-tr),\nlol-social-chat-window .more-unread .bar:lang(el-gr),\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(el-gr),\nlol-social-chat-window .more-unread .bar:lang(th-th),\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(th-th),\nlol-social-chat-window .more-unread .bar:lang(zh-tw),\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(zh-tw) {\n  text-transform: none;\n}\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-chat-window .conversation-title,\nlol-social-chat-window .chat-header,\nlol-social-chat-window .participants,\nlol-social-chat-window .chat-input {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-chat-window .conversation-title:lang(ar-ae),\nlol-social-chat-window .chat-header:lang(ar-ae),\nlol-social-chat-window .participants:lang(ar-ae),\nlol-social-chat-window .chat-input:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-chat-window .conversation,\nlol-social-chat-window .chat-name-info .chat-subtitle-parts,\nlol-social-chat-window .create-panel .create-panel-search-match {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-chat-window .conversation:lang(ja-jp),\nlol-social-chat-window .chat-name-info .chat-subtitle-parts:lang(ja-jp),\nlol-social-chat-window .create-panel .create-panel-search-match:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-chat-window .conversation:lang(ar-ae),\nlol-social-chat-window .chat-name-info .chat-subtitle-parts:lang(ar-ae),\nlol-social-chat-window .create-panel .create-panel-search-match:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-chat-window lol-social-menu-item {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.1em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\nlol-social-chat-window lol-social-menu-item:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-chat-window lol-social-menu-item:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-chat-window .conversation.unread .conversation-title,\nlol-social-chat-window .chat-header {\n  color: #f0e6d2;\n}\n.social-scroll {\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.social-scroll::-webkit-scrollbar {\n  width: 11px;\n  background: none;\n}\n.social-scroll::-webkit-scrollbar-thumb {\n  border: 3px solid transparent;\n  background-color: #1e2328;\n  border-radius: 6px;\n  background-clip: padding-box;\n}\n.social-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #785a28;\n}\n.social-scroll::-webkit-scrollbar-thumb:hover {\n  background-color: #cdbe91;\n}\n.social-scroll::-webkit-scrollbar-thumb:active {\n  background-color: #463714;\n}\n.social-blue-scroll {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.social-blue-scroll::-webkit-scrollbar {\n  width: 9px;\n  background: transparent;\n}\n.social-blue-scroll::-webkit-scrollbar-thumb {\n  background: transparent;\n  border-radius: 6px;\n  border: 2px solid transparent;\n  background-clip: padding-box;\n}\n.social-blue-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #0596aa;\n}\n.social-count-badge {\n  font-weight: bold;\n  border-radius: 3px;\n  background-color: #c89b3c;\n  color: #010a13;\n  padding: 0 6px;\n  height: 16px;\n  font-size: 12px;\n  display: flex;\n  align-items: center;\n}\n.social-count-badge.will-animate-in {\n  opacity: 0;\n}\n.social-count-badge.animate-in {\n  opacity: 1;\n  transition: opacity 0.3s ease-in-out;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\nlol-social-chat-window .conversation-close-button,\nlol-social-chat-window .conversation-cannot-close-button,\nlol-social-chat-window .close-window-button,\nlol-social-chat-window .conversation-settings-button,\nlol-social-chat-window .conversation-report-button {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n}\nlol-social-chat-window {\n  position: absolute;\n  width: 550px;\n  height: 366px;\n  min-height: 366px;\n  max-height: 640px;\n  pointer-events: none;\n  right: 0;\n  bottom: 0;\n  transform: translateZ(0);\n  will-change: transform;\n}\nlol-social-chat-window:lang(ar-ae) {\n  direction: rtl;\n}\nlol-social-chat-window .hidden {\n  display: none !important;\n}\nlol-social-chat-window #chat-window-wrapper {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(1,10,19,0.88);\n  border: thin solid #1e282d;\n  box-sizing: border-box;\n  pointer-events: auto;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  overflow: hidden;\n}\nlol-social-chat-window #chat-window-wrapper.use-animation {\n  transition: all 350ms cubic-bezier(0, 0, 0, 1);\n}\nlol-social-chat-window #chat-window-wrapper:not(.open) {\n  height: 0;\n  width: 0;\n}\nlol-social-chat-window #chat-window-wrapper.button-inside .chat-input {\n  margin-right: 41px;\n}\nlol-social-chat-window .conversations {\n  position: relative;\n  width: 199px;\n  height: auto;\n  border-right: thin solid #1e282d;\n  box-sizing: border-box;\n  flex-shrink: 0;\n}\nlol-social-chat-window .conversations:not(.scrolled-to-bottom) {\n  -webkit-mask-image: -webkit-gradient(linear, left bottom, left 87%, from(rgba(0,0,0,0.1)), to(#000));\n}\nlol-social-chat-window .conversations.has-button {\n  margin-bottom: 36px;\n}\nlol-social-chat-window .conversations:lang(ar-ae) {\n  border-right: none;\n  border-left: thin solid #1e282d;\n}\nlol-social-chat-window .conversation {\n  display: flex;\n  align-items: center;\n  height: 60px;\n  cursor: pointer;\n  padding: 0 0 0 10px;\n}\nlol-social-chat-window .conversation:lang(ar-ae) {\n  padding: 0 10px 0 0;\n}\nlol-social-chat-window .conversation.active .conversation-subtitle {\n  color: #a09b8c;\n}\nlol-social-chat-window .conversation.active .conversation-subtitle.blocked,\nlol-social-chat-window .conversation.active .conversation-subtitle.unavailable {\n  font-style: italic;\n}\nlol-social-chat-window .conversation.active .conversation-subtitle.blocked {\n  color: #be1e37;\n}\nlol-social-chat-window .conversation:hover {\n  background-color: #1e2328;\n}\nlol-social-chat-window .conversation:hover .conversation-close-button {\n  display: block;\n}\nlol-social-chat-window .conversation:hover .conversation-cannot-close-button {\n  display: block;\n}\nlol-social-chat-window .conversation:hover .conversation-muted:not([permanent]) {\n  display: none;\n}\nlol-social-chat-window .conversation:hover .conversation-subtitle {\n  color: #f0e6d2;\n}\nlol-social-chat-window .conversation:hover .conversation-subtitle.blocked,\nlol-social-chat-window .conversation:hover .conversation-subtitle.unavailable {\n  font-style: italic;\n}\nlol-social-chat-window .conversation:hover .conversation-subtitle.blocked {\n  color: #be1e37;\n}\nlol-social-chat-window .conversation.active {\n  padding: 0;\n  background: rgba(240,230,210,0.18);\n}\nlol-social-chat-window .conversation.active::before {\n  content: '';\n  width: 6px;\n  height: 100%;\n  background-color: #c89b3c;\n  margin: 0 10px 0 0;\n}\nlol-social-chat-window .conversation.active:lang(ar-ae)::before {\n  margin: 0 0 0 10px;\n}\nlol-social-chat-window .conversation.animate-move {\n  background-color: #fff;\n  box-shadow: 0 0 8px rgba(0,0,0,0.7);\n}\nlol-social-chat-window .clash-seperator {\n  height: 1px;\n  max-width: 100%;\n  margin: 8px 10px;\n  background: rgba(240,230,210,0.3);\n}\nlol-social-chat-window .conversation-titles-container {\n  flex: 1;\n  overflow: hidden;\n  margin: 0 5px 0 0;\n}\nlol-social-chat-window .conversation-titles-container:lang(ar-ae) {\n  margin: 0 0 0 5px;\n}\nlol-social-chat-window .clash-icon {\n  width: 32px;\n  height: 32px;\n  margin: 0 6px 0 0;\n}\nlol-social-chat-window .clash-icon:lang(ar-ae) {\n  margin: 0 0 0 6px;\n}\nlol-social-chat-window .conversation-title,\nlol-social-chat-window .conversation-subtitle {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  position: relative;\n}\nlol-social-chat-window .conversation-title.blocked,\nlol-social-chat-window .conversation-subtitle.blocked,\nlol-social-chat-window .conversation-title.unavailable,\nlol-social-chat-window .conversation-subtitle.unavailable {\n  font-style: italic;\n}\nlol-social-chat-window .conversation-title.blocked,\nlol-social-chat-window .conversation-subtitle.blocked {\n  color: #802626;\n}\nlol-social-chat-window .conversation-title {\n  color: #f0e6d2;\n}\nlol-social-chat-window .conversation-subtitle {\n  color: #5b5a56;\n}\nlol-social-chat-window .conversation-subtitle.blocked,\nlol-social-chat-window .conversation-subtitle.unavailable {\n  font-style: italic;\n}\nlol-social-chat-window .conversation-subtitle.blocked {\n  color: #802626;\n}\nlol-social-chat-window .conversation.unread {\n  background: rgba(240,230,210,0.18);\n}\nlol-social-chat-window .conversation.unread.use-animation {\n  animation: highlight 825ms 4 alternate;\n}\nlol-social-chat-window .conversation.unread.use-animation .social-count-badge {\n  animation: highlightBadge 825ms 4 alternate;\n}\nlol-social-chat-window .conversation.unread .conversation-title {\n  font-weight: bold;\n}\nlol-social-chat-window .conversation.unread .conversation-subtitle {\n  color: #c89b3c;\n  font-weight: bold;\n}\nlol-social-chat-window .conversation-close-button {\n  -webkit-mask: url(" + m + ") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #c8aa6e;\n  -webkit-mask-size: contain;\n  display: none;\n  width: 18px;\n  height: 18px;\n  margin: 0 3px 0 auto;\n}\nlol-social-chat-window .conversation-close-button:hover {\n  background-color: #f0e6d2;\n}\nlol-social-chat-window .conversation-close-button:active {\n  background-color: #463714;\n}\nlol-social-chat-window .conversation-close-button:lang(ar-ae) {\n  margin: 0 auto 0 3px;\n}\nlol-social-chat-window .conversation-cannot-close-button {\n  -webkit-mask: url(" + g + ") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #5b5a56;\n  -webkit-mask-size: contain;\n  display: none;\n  width: 18px;\n  height: 18px;\n  margin: 0 3px 0 auto;\n}\nlol-social-chat-window .conversation-cannot-close-button:lang(ar-ae) {\n  margin: 0 auto 0 3px;\n}\nlol-social-chat-window .conversation-muted {\n  -webkit-mask: url(" + h + ") no-repeat center;\n  -webkit-mask-size: 16px;\n  background-color: #5b5a56;\n  width: 22px;\n  height: 22px;\n}\nlol-social-chat-window .social-count-badge {\n  margin: 0 3px;\n}\nlol-social-chat-window .conversations-list {\n  display: flex;\n  flex-direction: column;\n}\nlol-social-chat-window .more-unread {\n  position: absolute;\n  left: 0;\n  width: 179px;\n  padding: 0 4px;\n  box-sizing: border-box;\n  background-color: rgba(1,10,19,0.5);\n  cursor: pointer;\n}\nlol-social-chat-window .more-unread .bar {\n  background-color: #c89b3c;\n  text-align: center;\n  vertical-align: middle;\n  line-height: 24px;\n  font-weight: 900;\n  color: #010a13;\n  font-size: 12px;\n}\nlol-social-chat-window .more-unread .arrow {\n  position: absolute;\n  left: 50%;\n  margin-left: -6px;\n  border: 4px solid transparent;\n}\nlol-social-chat-window .more-unread.below {\n  bottom: 0;\n  padding-bottom: 20px;\n}\nlol-social-chat-window .more-unread.below .arrow {\n  border-top: 6px solid #f0e6d2;\n  bottom: 4px;\n}\nlol-social-chat-window .more-unread.above {\n  top: 0;\n  padding-top: 20px;\n}\nlol-social-chat-window .more-unread.above .arrow {\n  border-bottom: 6px solid #f0e6d2;\n  top: 4px;\n}\nlol-social-chat-window .chat-area {\n  position: relative;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\nlol-social-chat-window .chat-area .chat-input .chat-toggle-button {\n  display: none;\n}\nlol-social-chat-window .chat-header {\n  color: #f0e6d2;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  height: 48px;\n  border-bottom: thin solid #785a28;\n  padding: 0 0 0 8px;\n  box-sizing: border-box;\n  flex-shrink: 0;\n  overflow: hidden;\n}\nlol-social-chat-window .chat-header:lang(ar-ae) {\n  padding: 0 8px 0 0;\n}\nlol-social-chat-window .chat-header .spacer {\n  flex: 1;\n}\nlol-social-chat-window .chat-header.room-header .chat-name {\n  cursor: pointer;\n}\nlol-social-chat-window .chat-header .chat-header-clash-title-container {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  align-items: flex-end;\n}\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix {\n  color: #c8aa6e;\n  flex-direction: row;\n  overflow: hidden;\n  margin: 0 7px 0 0;\n}\nlol-social-chat-window .chat-header .chat-header-clash-title-prefix:lang(ar-ae) {\n  margin: 0 0 0 7px;\n}\nlol-social-chat-window .chat-header .chat-header-clash-title-main {\n  text-overflow: ellipsis;\n  max-width: 150px;\n  flex-direction: row;\n  overflow: hidden;\n}\nlol-social-chat-window .chat-header .chat-header-title {\n  text-overflow: ellipsis;\n  max-width: 200px;\n  flex-direction: row;\n  overflow: hidden;\n}\nlol-social-chat-window .chat-header .chat-participants-count {\n  display: flex;\n  flex-direction: column;\n  margin: 0 0 0 5px;\n}\nlol-social-chat-window .chat-header .chat-participants-count:lang(ar-ae) {\n  margin: 0 5px 0 0;\n}\nlol-social-chat-window .toggle-btn {\n  margin: 2px 0 0 8px;\n}\nlol-social-chat-window .toggle-btn:lang(ar-ae) {\n  margin: 2px 8px 0 0;\n}\nlol-social-chat-window .status,\nlol-social-chat-window .avatar {\n  flex-shrink: 0;\n  margin: 0 8px 0 0;\n}\nlol-social-chat-window .status:lang(ar-ae),\nlol-social-chat-window .avatar:lang(ar-ae) {\n  margin: 0 0 0 8px;\n}\nlol-social-chat-window .chat-name {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  overflow: hidden;\n  justify-content: flex-start;\n  flex-direction: row;\n}\nlol-social-chat-window .chat-name-info {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  max-width: 250px;\n  word-break: keep-all;\n}\nlol-social-chat-window .chat-name-info > div {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  overflow: hidden;\n  justify-content: flex-start;\n  flex-direction: row;\n}\nlol-social-chat-window .chat-name-info .chat-name {\n  height: auto;\n}\nlol-social-chat-window .chat-name-info .chat-subtitle-parts {\n  color: #5b5a56;\n  margin-top: -2px;\n  flex-direction: row;\n  align-items: center;\n}\nlol-social-chat-window .chat-name-info .chat-subtitle-parts .chat-gnt {\n  margin-left: 0;\n}\nlol-social-chat-window .chat-name-info .chat-subtitle-parts .chat-state-separator {\n  margin-left: 4px;\n  margin-right: 4px;\n}\nlol-social-chat-window .chat-name-info .chat-subtitle-parts .chat-state {\n  font-style: italic;\n}\nlol-social-chat-window .chat-name-info .chat-subtitle-parts .chat-state.blocked {\n  padding-right: 2px;\n  color: #be1e37;\n}\nlol-social-chat-window .chat-name-info .gameTag {\n  color: #5b5a56;\n}\nlol-social-chat-window .header-button {\n  height: 18px;\n  width: 18px;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  align-self: flex-start;\n  margin: 8px 5px 0 0;\n}\nlol-social-chat-window .header-button:lang(ar-ae) {\n  margin: 8px 0 0 5px;\n}\nlol-social-chat-window .close-window-button {\n  -webkit-mask: url(" + f + ") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #a09b8c;\n  -webkit-mask-size: contain;\n}\nlol-social-chat-window .close-window-button:hover {\n  background-color: #f0e6d2;\n}\nlol-social-chat-window .close-window-button:active {\n  background-color: #3c3c41;\n}\nlol-social-chat-window .conversation-settings-button {\n  -webkit-mask: url(" + _ + ") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #a09b8c;\n  -webkit-mask-size: contain;\n}\nlol-social-chat-window .conversation-settings-button:hover {\n  background-color: #f0e6d2;\n}\nlol-social-chat-window .conversation-settings-button:active {\n  background-color: #3c3c41;\n}\nlol-social-chat-window .conversation-settings-button[disabled] {\n  background-color: #5c5b57;\n  cursor: default;\n  pointer-events: none;\n}\nlol-social-chat-window .conversation-report-button {\n  -webkit-mask: url(" + A + ") no-repeat center;\n  -webkit-mask-size: 5px;\n  background-color: #a09b8c;\n  -webkit-mask-size: contain;\n}\nlol-social-chat-window .conversation-report-button:hover {\n  background-color: #f0e6d2;\n}\nlol-social-chat-window .conversation-report-button:active {\n  background-color: #3c3c41;\n}\nlol-social-chat-window .conversation-report-button[reported] {\n  cursor: default;\n  pointer-events: auto;\n  background-color: #ff657d;\n  opacity: 0.55;\n}\nlol-social-chat-window .conversation-report-button:not([reported]):hover {\n  background-color: #ff2345;\n}\nlol-social-chat-window .conversation-report-button:not([reported]):active {\n  background-color: #ff3958;\n}\nlol-social-chat-window .participants {\n  color: #f0e6d2;\n  z-index: 1;\n  margin-top: -1px;\n  padding-bottom: 4px;\n  width: 100%;\n  max-height: calc(100% - 51px);\n  background: #010a13;\n  border-bottom: thin solid #785a28;\n}\nlol-social-chat-window .participants .participant {\n  display: flex;\n  align-items: center;\n  padding: 6px;\n}\nlol-social-chat-window .participants .participant .avatar {\n  margin: 0 8px 0 0;\n}\nlol-social-chat-window .participants .participant .avatar:lang(ar-ae) {\n  margin: 0 0 0 8px;\n}\nlol-social-chat-window .messages {\n  flex: 1;\n}\nlol-social-chat-window .chat-input {\n  color: #f0e6d2;\n  padding: 5px 8px;\n  flex-shrink: 0;\n}\nlol-social-chat-window .chat-input:lang(ar-ae) {\n  padding: 5px 8px;\n  direction: rtl;\n}\nlol-social-chat-window .create-panel .create-panel-search-input {\n  margin-bottom: 5px;\n}\nlol-social-chat-window .create-panel .create-panel-gnt {\n  color: #5b5a56;\n}\nlol-social-chat-window .create-panel .create-panel-gnt .create-panel-game-name.only-name {\n  color: #a09b8c;\n}\nlol-social-chat-window .create-panel .create-panel-search-match {\n  color: #a09b8c;\n  display: flex;\n  align-items: center;\n  padding: 5px 10px;\n  letter-spacing: 0.05em;\n}\nlol-social-chat-window .create-panel .create-panel-search-match:hover {\n  color: #f0e6d2;\n  cursor: pointer;\n}\nlol-social-chat-window .create-panel .create-panel-search-match:hover .create-panel-gnt {\n  color: #a09b8c;\n}\nlol-social-chat-window .create-panel .create-panel-search-match:hover .create-panel-gnt .create-panel-game-name.only-name {\n  color: #f0e6d2;\n}\nlol-social-chat-window .create-panel .create-chat-input {\n  height: 32px;\n  width: 349px;\n  position: absolute;\n  bottom: 0;\n}\nlol-social-chat-window .settings-menu {\n  position: absolute;\n  top: 47px;\n  right: 0;\n  min-width: 180px;\n  border: thin solid #785a28;\n  background-color: #010a13;\n}\nlol-social-chat-window .settings-menu:lang(ar-ae) {\n  right: auto;\n  left: 0;\n}\nlol-social-chat-window lol-social-menu-item {\n  color: #cdbe91;\n  padding: 0;\n}\nlol-social-chat-window lol-social-menu-item:lang(ar-ae) {\n  text-align: right;\n}\nlol-social-chat-window label.conversation-mute-label {\n  margin: 2px 0 0 10px;\n}\nlol-social-chat-window label.conversation-mute-label:lang(ar-ae) {\n  margin: 2px 10px 0 0;\n}\nlol-social-chat-window lol-uikit-flat-checkbox,\nlol-social-chat-window .clear-history {\n  padding: 8px 10px;\n}\nlol-social-chat-window lol-uikit-flat-checkbox .hide-offline-label {\n  color: #cdbe91;\n}\nlol-social-chat-window lol-uikit-flat-checkbox:hover .hide-offline-label {\n  color: #f0e6d2;\n}\nlol-social-chat-window .resizer {\n  position: absolute;\n  top: -5px;\n  left: 0;\n  height: 10px;\n  width: 100%;\n  cursor: n-resize;\n}\nlol-social-chat-window .new-chat-button {\n  height: 32px;\n  width: 191px;\n  padding: 4px 4px 0px 4px;\n  position: absolute;\n  left: 0;\n  bottom: 0;\n}\nlol-social-chat-window .new-chat-button:lang(ar-ae) {\n  left: auto;\n  right: 0;\n}\n@-moz-keyframes fadein {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadein {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-o-keyframes fadein {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadein {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/chat-window/chat-window/chat-window.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/styles/scroll.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/styles/count-badge.styl", "webpack://./fe/rcp-fe-lol-social/src/web-components/styles/button.styl"],
                 names: [],
-                mappings: "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",
-                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/colors';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit'\r\n@require 'riotclient-lol-asset-csslib/styles/animations'\r\n\r\n@require '../../styles/scroll';\r\n@require '../../styles/count-badge';\r\n@require '../../styles/button';\r\n\r\n// Gold button with image mask\r\nmask-button-gold($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_gold3;\r\n  &:hover { background-color: $color_palette_gold1; }\r\n  &:active { background-color: $color_palette_gold6; }\r\n}\r\n\r\n// Gray inactive button with image mask\r\nmask-button-grey-inactive($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_grey1_5;\r\n}\r\n\r\n// Gray button with image mask\r\nmask-button-grey($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_grey1;\r\n  &:hover { background-color: $color_palette_gold1; }\r\n  &:active { background-color: $color_palette_grey2; }\r\n}\r\n\r\nlol-social-chat-window {\r\n  position: absolute;\r\n  // We need the host to have a size so that the chat window can expand into it. Because the chat window is resizable,\r\n  // we can't hard-code any values in the transition, so we just animate from 0 to 100% and have it scale to the size\r\n  // of the host.\r\n  width: 550px;\r\n  // This is the default height of the chat window and will be overridden by the saved chat window height when docked.\r\n  height: 366px;\r\n  min-height: 366px;\r\n  max-height: 640px;\r\n  // Don't allow any interaction with this div. It's invisible and acts as a placeholder for the chat window expand.\r\n  pointer-events: none;\r\n  right: 0;\r\n  bottom: 0;\r\n  //the transform and will-change are to fix a bug where the chat window can turn black and not redraw correctly after\r\n  //being detached and losing focus.\r\n  transform: translateZ(0);\r\n  will-change: transform;\r\n\r\n  &:lang(ar-ae) {\r\n    direction: rtl;\r\n  }\r\n\r\n  @keyframes fadein {\r\n    from { opacity: 0; }\r\n    to { opacity: 1; }\r\n  }\r\n\r\n  .hidden {\r\n    display: none !important;\r\n  }\r\n\r\n  // Wrapper needed to show and collapse the chat window without affecting the chat button.\r\n  #chat-window-wrapper {\r\n    display: flex;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: alpha($color_palette_almostBlack, 0.88);\r\n    border: thin solid $color_palette_frameGrey;\r\n    box-sizing: border-box;\r\n    pointer-events: auto;\r\n    position: absolute;\r\n    bottom: 0;\r\n    right: 0;\r\n    overflow: hidden;\r\n\r\n    &.use-animation {\r\n      transition: all 350ms $easing_circular_ease_out;\r\n    }\r\n\r\n    &:not(.open) {\r\n      height: 0;\r\n      width: 0;\r\n    }\r\n\r\n    &.button-inside {\r\n      // Add spacing for the toggle button.\r\n      .chat-input {\r\n        margin-right: 41px;\r\n      }\r\n    }\r\n  }\r\n\r\n  // -----------------------------------------------------------------------------------------------------------\r\n  //  LEFT PANE\r\n  // -----------------------------------------------------------------------------------------------------------\r\n\r\n  // Container for the left pane\r\n  .conversations {\r\n    position: relative;\r\n    width: 199px;\r\n    height: auto;\r\n    border-right: thin solid $color_palette_frameGrey;\r\n    box-sizing: border-box;\r\n    flex-shrink: 0;\r\n    &:not(.scrolled-to-bottom) {\r\n      -webkit-mask-image: -webkit-gradient(linear, left bottom, left 87%, from(rgba(0,0,0,0.1)), to(rgba(0,0,0,1)));\r\n    }\r\n    &.has-button {\r\n      margin-bottom: 36px;\r\n    }\r\n    &:lang(ar-ae) {\r\n      border-right: none;\r\n      border-left: thin solid $color_palette_frameGrey;\r\n    }\r\n  }\r\n\r\n  // A conversation in the conversation list\r\n  .conversation {\r\n    @extend $typekit_text_s;\r\n    display: flex;\r\n    align-items: center;\r\n    height: 60px;\r\n    cursor: pointer;\r\n    padding: 0 0 0 10px;\r\n    &:lang(ar-ae) {\r\n      padding: 0 10px 0 0;\r\n    }\r\n\r\n    &.active .conversation-subtitle {\r\n      color: $color_palette_grey1;\r\n\r\n      &.blocked, &.unavailable {\r\n        font-style: italic;\r\n      }\r\n      &.blocked {\r\n        color: $colors_cardinal;\r\n      }\r\n\r\n    }\r\n\r\n    &:hover {\r\n      background-color: $color_palette_grey3;\r\n\r\n      // Show the close button on hover.\r\n      .conversation-close-button {\r\n        display: block;\r\n      }\r\n\r\n      // Show the cannot close button on hover.\r\n      .conversation-cannot-close-button {\r\n        display: block;\r\n      }\r\n\r\n      // Only hide the conversation muted icon on hover if it doesn't have the permanent attribute.\r\n      .conversation-muted:not([permanent]) {\r\n        display: none;\r\n      }\r\n\r\n      .conversation-subtitle {\r\n        color: $color_palette_gold1;\r\n\r\n        &.blocked, &.unavailable {\r\n          font-style: italic;\r\n        }\r\n        &.blocked {\r\n          color: $colors_cardinal;\r\n        }\r\n      }\r\n    }\r\n\r\n    // Gold vertical bar indicating whether this is the active chat or not\r\n    &.active {\r\n      padding: 0;\r\n      background: alpha($color_palette_gold1, 0.18);\r\n    }\r\n    &.active::before {\r\n      content: '';\r\n      width: 6px;\r\n      height: 100%;\r\n      background-color: $color_palette_gold4;\r\n      margin: 0 10px 0 0;\r\n    }\r\n    &.active:lang(ar-ae)::before {\r\n      margin: 0 0 0 10px;\r\n    }\r\n\r\n    &.animate-move {\r\n      background-color: #fff;\r\n      box-shadow: 0 0 8px rgba(0, 0, 0, .7);\r\n    }\r\n  }\r\n\r\n  .clash-seperator {\r\n    height: 1px;\r\n    max-width: 100%;\r\n    margin: 8px 10px;\r\n    background: alpha($color_palette_gold1, 0.3);\r\n  }\r\n\r\n  // Container for the name and subtitles\r\n  .conversation-titles-container {\r\n    flex: 1;\r\n    overflow: hidden;\r\n    margin: 0 5px 0 0;\r\n    &:lang(ar-ae) {\r\n      margin: 0 0 0 5px;\r\n    }\r\n  }\r\n\r\n  .clash-icon {\r\n    width: 32px;\r\n    height: 32px;\r\n    margin: 0 6px 0 0;\r\n    &:lang(ar-ae) {\r\n      margin: 0 0 0 6px;\r\n    }\r\n  }\r\n\r\n  .conversation-title, .conversation-subtitle {\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n    position: relative; // This style is needed to properly hide characters that overflow vertically on windows\r\n\r\n    &.blocked, &.unavailable {\r\n      font-style: italic;\r\n    }\r\n    &.blocked {\r\n      color: $colors_crownOfThorns;\r\n    }\r\n  }\r\n\r\n  .conversation-title {\r\n    @extend $typekit_text_m;\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  .conversation-subtitle {\r\n    color: $color_palette_grey1_5;\r\n\r\n    &.blocked, &.unavailable {\r\n      font-style: italic;\r\n    }\r\n    &.blocked {\r\n      color: $colors_crownOfThorns;\r\n    }\r\n  }\r\n\r\n  // Styling for unread message from player.\r\n  .conversation.unread {\r\n    background: alpha($color_palette_gold1, 0.18);\r\n    &.use-animation {\r\n      animation: highlight 825ms 4 alternate;\r\n      .social-count-badge {\r\n        animation: highlightBadge 825ms 4 alternate;\r\n      }\r\n    }\r\n\r\n    .conversation-title {\r\n      @extend $typekit_modifier_highlight;\r\n      font-weight: bold;\r\n    }\r\n\r\n    .conversation-subtitle {\r\n      color: $color_palette_gold4;\r\n      font-weight: bold;\r\n    }\r\n  }\r\n\r\n  .conversation-close-button {\r\n    mask-button-gold('../../../images/x_mask.png');\r\n    -webkit-mask-size: contain;\r\n    display: none;\r\n    width: 18px;\r\n    height: 18px;\r\n    margin: 0 3px 0 auto;\r\n    &:lang(ar-ae) {\r\n      margin: 0 auto 0 3px;\r\n    }\r\n  }\r\n\r\n  .conversation-cannot-close-button {\r\n    mask-button-grey-inactive('../../../images/x_block_mask.png');\r\n    -webkit-mask-size: contain;\r\n    display: none;\r\n    width: 18px;\r\n    height: 18px;\r\n    margin: 0 3px 0 auto;\r\n    &:lang(ar-ae) {\r\n      margin: 0 auto 0 3px;\r\n    }\r\n  }\r\n\r\n  .conversation-muted {\r\n    -webkit-mask: url('../../../images/mute_mask.png') no-repeat center;\r\n    -webkit-mask-size: 16px;\r\n    background-color: $color_palette_grey1_5;\r\n    width: 22px;\r\n    height: 22px;\r\n  }\r\n\r\n  // Add a bit of spacing to around the count badge so that it's not right up against the scroll bar\r\n  .social-count-badge {\r\n    margin: 0 3px;\r\n  }\r\n\r\n  .conversations-list {\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n\r\n  .more-unread {\r\n    position: absolute;\r\n    left: 0;\r\n    width: 179px;\r\n    padding: 0 4px;\r\n    box-sizing: border-box;\r\n    background-color: alpha($color_palette_almostBlack, 0.5);\r\n    cursor: pointer;\r\n\r\n    .bar {\r\n      @extend $fonts_lol_body;\r\n      @extend $text-transform-uppercase;\r\n      background-color: $color_palette_gold4;\r\n      text-align: center;\r\n      vertical-align: middle;\r\n      line-height: 24px;\r\n      font-weight: 900;\r\n      color: $color_palette_almostBlack;\r\n      font-size: 12px;\r\n    }\r\n\r\n    .arrow {\r\n      position: absolute;\r\n      left: 50%;\r\n      margin-left: -6px;\r\n      border: 4px solid transparent;\r\n    }\r\n\r\n    &.below {\r\n      bottom: 0;\r\n      padding-bottom: 20px;\r\n\r\n      .arrow {\r\n        border-top: 6px solid $color_palette_gold1;\r\n        bottom: 4px;\r\n      }\r\n    }\r\n\r\n    &.above {\r\n      top: 0;\r\n      padding-top: 20px;\r\n\r\n      .arrow {\r\n        border-bottom: 6px solid $color_palette_gold1;\r\n        top: 4px;\r\n      }\r\n    }\r\n  }\r\n\r\n  // -----------------------------------------------------------------------------------------------------------\r\n  //  RIGHT PANE\r\n  // -----------------------------------------------------------------------------------------------------------\r\n\r\n  // Container for the right pane\r\n   .chat-area {\r\n    position: relative;\r\n    width: 100%;\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n    .chat-input {\r\n      .chat-toggle-button {\r\n        display: none;\r\n      }\r\n    }\r\n  }\r\n\r\n  // Header that displays player name, avatar, and status\r\n  .chat-header {\r\n    @extend $typekit_text_m;\r\n    @extend $typekit_modifier_highlight;\r\n    color: $color_palette_gold1;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n    height: 48px;\r\n    border-bottom: thin solid $color_palette_gold5;\r\n    padding: 0 0 0 8px;\r\n    box-sizing: border-box;\r\n    flex-shrink: 0;\r\n    overflow: hidden;\r\n\r\n    &:lang(ar-ae) {\r\n      padding: 0 8px 0 0;\r\n    }\r\n\r\n    .spacer {\r\n      flex:1;\r\n    }\r\n    &.room-header .chat-name {\r\n      cursor: pointer;\r\n    }\r\n\r\n    .chat-header-clash-title-container {\r\n      display: flex;\r\n      flex-direction: row;\r\n      flex-wrap: nowrap;\r\n      align-items: flex-end;\r\n    }\r\n    .chat-header-clash-title-prefix {\r\n      @extend $typekit_h4;\r\n      color: $color_palette_gold3;\r\n      flex-direction: row;\r\n      overflow: hidden;\r\n      margin: 0 7px 0 0;\r\n      &:lang(ar-ae) {\r\n        margin: 0 0 0 7px;\r\n      }\r\n    }\r\n    .chat-header-clash-title-main {\r\n      text-overflow: ellipsis;\r\n      max-width: 150px;\r\n      flex-direction: row;\r\n      overflow: hidden;\r\n    }\r\n    .chat-header-title {\r\n      text-overflow: ellipsis;\r\n      max-width: 200px;\r\n      flex-direction: row;\r\n      overflow: hidden;\r\n    }\r\n    .chat-participants-count {\r\n      display: flex;\r\n      flex-direction: column;\r\n      margin: 0 0 0 5px;\r\n      &:lang(ar-ae) {\r\n        margin: 0 5px 0 0;\r\n      }\r\n    }\r\n  }\r\n\r\n  .toggle-btn {\r\n    margin: 2px 0 0 8px;\r\n\r\n    &:lang(ar-ae) {\r\n      margin: 2px 8px 0 0;\r\n    }\r\n  }\r\n\r\n  // Add a bit of spacing between the status, avatar, and summoner name\r\n  .status, .avatar {\r\n    flex-shrink: 0;\r\n    margin: 0 8px 0 0;\r\n    &:lang(ar-ae) {\r\n      margin: 0 0 0 8px;\r\n    }\r\n  }\r\n\r\n  .chat-name {\r\n    display: flex;\r\n    height: 100%;\r\n    align-items: center;\r\n    overflow: hidden;\r\n    justify-content: flex-start;\r\n    flex-direction: row;\r\n  }\r\n\r\n  .chat-name-info {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    max-width: 250px;\r\n    word-break: keep-all;\r\n\r\n    > div {\r\n      display: flex;\r\n      height: 100%;\r\n      align-items: center;\r\n      overflow: hidden;\r\n      justify-content: flex-start;\r\n      flex-direction: row;\r\n    }\r\n\r\n    .chat-name {\r\n      height: auto;\r\n    }\r\n\r\n    .chat-subtitle-parts {\r\n      @extend $typekit_text_s;\r\n      color: $color_palette_grey1_5;\r\n      margin-top: -2px;\r\n      flex-direction: row;\r\n      align-items: center;\r\n\r\n      .chat-gnt {\r\n        margin-left: 0;\r\n      }\r\n\r\n      .chat-state-separator {\r\n        margin-left: 4px;\r\n        margin-right: 4px;\r\n      }\r\n\r\n      .chat-state {\r\n        font-style: italic;\r\n        &.blocked {\r\n          padding-right: 2px;\r\n          color: $colors_cardinal;\r\n        }\r\n      }\r\n    }\r\n\r\n\r\n    .gameTag {\r\n      color: $color_palette_grey1_5;\r\n    }\r\n  }\r\n\r\n  .header-button {\r\n    height: 18px;\r\n    width: 18px;\r\n    cursor: pointer;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    align-self: flex-start;\r\n    margin: 8px 5px 0 0;\r\n    &:lang(ar-ae) {\r\n      margin: 8px 0 0 5px;\r\n    }\r\n  }\r\n\r\n  // Minimize window icon on the upper right\r\n  .close-window-button {\r\n    mask-button-grey('../../../images/icon_minimize.png');\r\n    -webkit-mask-size: contain;\r\n  }\r\n\r\n  .conversation-settings-button {\r\n    mask-button-grey('../../../images/control_settings_mask.png');\r\n    -webkit-mask-size: contain;\r\n\r\n    &[disabled] {\r\n      background-color: $color_palette_grey_disabled;\r\n      cursor: default;\r\n      pointer-events: none;\r\n    }\r\n  }\r\n\r\n  .conversation-report-button {\r\n    mask-button-grey('../../../images/report_mask.png');\r\n    -webkit-mask-size: contain;\r\n\r\n    &[reported] {\r\n      cursor: default;\r\n      pointer-events: auto;\r\n      background-color: lighten($colors_torchRed, 30%);\r\n      opacity: 0.55;\r\n    }\r\n\r\n    &:not([reported]):hover {\r\n      background-color: $colors_torchRed;\r\n    }\r\n\r\n    &:not([reported]):active {\r\n      background-color: lighten($colors_torchRed, 10%);\r\n    }\r\n  }\r\n\r\n  .participants {\r\n    @extend $typekit_text_m;\r\n    color: $color_palette_gold1;\r\n    z-index: 1;\r\n    margin-top: -1px;\r\n    padding-bottom: 4px;\r\n    width: 100%;\r\n    max-height: calc(100% - 51px);\r\n    background: $color_palette_almostBlack;\r\n    border-bottom: thin solid $color_palette_gold5;\r\n\r\n    .participant {\r\n      display: flex;\r\n      align-items: center;\r\n      padding: 6px;\r\n\r\n      .avatar {\r\n        margin: 0 8px 0 0;\r\n        &:lang(ar-ae) {\r\n          margin: 0 0 0 8px;\r\n        }\r\n      }\r\n    }\r\n  }\r\n\r\n  // Message history list\r\n  .messages {\r\n    flex: 1;\r\n  }\r\n\r\n  // Chat input field at the bottom\r\n  .chat-input {\r\n    @extend $typekit_text_m;\r\n    color: $color_palette_gold1;\r\n    padding: 5px 8px;\r\n    flex-shrink: 0;\r\n\r\n    &:lang(ar-ae) {\r\n      // Required to override the padding set in .chat-input:lang(ar-ae)\r\n      // in ..\\..\\chat-input\\chat-input.styl\r\n      padding: 5px 8px;\r\n      direction: rtl;\r\n    }\r\n  }\r\n\r\n  .create-panel {\r\n\r\n    .create-panel-search-input {\r\n      margin-bottom: 5px;\r\n    }\r\n\r\n    .create-panel-gnt {\r\n      color: $color_palette_grey1_5;\r\n\r\n      // If the game name is the only name, make it appear brighter\r\n      .create-panel-game-name.only-name {\r\n        color: $color_palette_grey1;\r\n      }\r\n    }\r\n\r\n    .create-panel-search-match {\r\n      @extend $typekit_text_s;\r\n      color: $color_palette_grey1;\r\n      display: flex;\r\n      align-items: center;\r\n      padding: 5px 10px;\r\n      letter-spacing: 0.05em;\r\n\r\n      &:hover {\r\n        color: $color_palette_gold1;\r\n        cursor: pointer;\r\n\r\n        .create-panel-gnt {\r\n          color: $color_palette_grey1;\r\n\r\n          // If the game name is the only name, make it appear brighter\r\n          .create-panel-game-name.only-name {\r\n            color: $color_palette_gold1;\r\n          }\r\n        }\r\n      }\r\n    }\r\n\r\n    .create-chat-input {\r\n      height: 32px;\r\n      width: 349px;\r\n      position: absolute;\r\n      bottom: 0;\r\n    }\r\n  }\r\n\r\n  // -----------------------------------------------------------------------------------------------------------\r\n  //  Options menu (menu for cog icon in the actions bar)\r\n  // -----------------------------------------------------------------------------------------------------------\r\n  .settings-menu {\r\n    position: absolute;\r\n    top: 47px;\r\n    right: 0;\r\n    min-width: 180px;\r\n    border: thin solid $color_palette_gold5;\r\n    background-color: $color_palette_almostBlack;\r\n    &:lang(ar-ae) {\r\n      right: auto;\r\n      left: 0;\r\n    }\r\n  }\r\n\r\n  lol-social-menu-item {\r\n    @extend $typekit_label;\r\n    color: $color_palette_gold2;\r\n    // Remove the padding for the menu-item because it interferes with the hover for lol-uikit-flat-checkbox\r\n    padding: 0;\r\n    &:lang(ar-ae) {\r\n      text-align: right;\r\n    }\r\n  }\r\n\r\n  label.conversation-mute-label {\r\n    margin: 2px 0 0 10px;\r\n\r\n    &:lang(ar-ae) {\r\n      margin: 2px 10px 0 0;\r\n    }\r\n  }\r\n\r\n  // Add the padding back in manually\r\n  lol-uikit-flat-checkbox, .clear-history {\r\n    padding: 8px 10px;\r\n  }\r\n\r\n  lol-uikit-flat-checkbox {\r\n    .hide-offline-label {\r\n      color: $color_palette_gold2;\r\n    }\r\n\r\n    &:hover .hide-offline-label {\r\n      color: $color_palette_gold1;\r\n    }\r\n  }\r\n\r\n  .resizer {\r\n    position: absolute;\r\n    top: -5px;\r\n    left: 0;\r\n    height: 10px;\r\n    width: 100%;\r\n    cursor: n-resize;\r\n  }\r\n\r\n  .new-chat-button {\r\n    height: 32px;\r\n    width: 191px;\r\n    padding: 4px 4px 0px 4px;\r\n    position: absolute;\r\n    left: 0;\r\n    bottom: 0;\r\n    &:lang(ar-ae) {\r\n      left: auto;\r\n      right: 0;\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit'\r\n\r\n.social-scroll {\r\n  overflow-y: auto;\r\n  overflow-x: hidden;\r\n}\r\n.social-scroll::-webkit-scrollbar {\r\n  width: 11px;\r\n  background: none;\r\n}\r\n.social-scroll::-webkit-scrollbar-thumb {\r\n  border: 3px solid transparent;\r\n  background-color: $color_palette_grey3;\r\n  border-radius: 6px;\r\n  background-clip: padding-box;\r\n}\r\n\r\n.social-scroll:hover::-webkit-scrollbar-thumb {\r\n  background-color: $color_palette_gold5;\r\n}\r\n\r\n.social-scroll::-webkit-scrollbar-thumb:hover {\r\n  background-color: $color_palette_gold2;\r\n}\r\n\r\n.social-scroll::-webkit-scrollbar-thumb:active {\r\n  background-color: $color_palette_gold6;\r\n}\r\n\r\n.social-blue-scroll {\r\n  overflow-x: hidden;\r\n  overflow-y: auto;\r\n}\r\n\r\n.social-blue-scroll::-webkit-scrollbar {\r\n  width: 9px;\r\n  background: transparent;\r\n}\r\n\r\n.social-blue-scroll::-webkit-scrollbar-thumb {\r\n  background: transparent;\r\n  border-radius: 6px;\r\n  border: 2px solid transparent;\r\n  background-clip: padding-box;\r\n}\r\n\r\n.social-blue-scroll:hover::-webkit-scrollbar-thumb {\r\n  background-color: $color_palette_blue3;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit'\r\n\r\n/* The count badge is common styling for the unread message count\r\n   badge that is used in several places throughout the social panel.\r\n   To use it attach this class to a div that has a text counter inside it. */\r\n.social-count-badge {\r\n  @extend $fonts_lol_body;\r\n  font-weight: bold;\r\n  border-radius: 3px;\r\n  background-color: $color_palette_gold4;\r\n  color: $color_palette_almostBlack;\r\n  padding: 0 6px;\r\n  height: 16px;\r\n  font-size: 12px;\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n.social-count-badge.will-animate-in {\r\n  opacity: 0;\r\n}\r\n.social-count-badge.animate-in {\r\n  opacity: 1;\r\n  transition: opacity .3s ease-in-out;\r\n}\r\n\r\n@keyframes highlight {\r\n  from { background: alpha($color_palette_gold1, 0.18); }\r\n  to { background: alpha($color_palette_gold1, 0.40); }\r\n}\r\n\r\n@keyframes highlightBadge {\r\n  from { -webkit-filter: brightness(1.0) saturate(1.0); }\r\n  to { -webkit-filter: brightness(1.35) saturate(1.35); }\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit'\r\n\r\n// Base styles for all buttons\r\n$button_base {\r\n  outline: none;\r\n  border: none;\r\n  background: none;\r\n  cursor: pointer;\r\n  padding: 0;\r\n}\r\n\r\n// Disable stylint because it complains about these one-liners. However, they're not as easy to mentally parse\r\n// if they were multi-line.\r\n// @stylint off\r\n\r\n// Gold button with image mask\r\nmask-button-gold($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_gold3;\r\n  &:hover { background-color: $color_palette_gold1; }\r\n  &:active { background-color: $color_palette_gold6; }\r\n}\r\n\r\n// Blue button with image mask\r\nmask-button-blue($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_paladinBlue2;\r\n  &:hover { background-color: $color_palette_blue1; }\r\n  &:active { background-color: $color_palette_blue4; }\r\n}\r\n\r\n// Gray button with image mask\r\nmask-button-grey($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_grey1;\r\n  &:hover { background-color: $color_palette_gold1; }\r\n  &:active { background-color: $color_palette_grey2; }\r\n}\r\n\r\n// Gray inactive button with image mask\r\nmask-button-grey-inactive($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_grey1_5;\r\n}\r\n\r\n// Spritesheet button. This assumes that the spritesheet images are stacked vertically ordered as: default ->\r\n// hover -> active -> disabled. Also supports an offset number to support toggle buttons ordered as:\r\n// default -> hover -> active -> disabled ->\r\n// default toggled -> hover toggled -> active toggled -> disabled toggled\r\nspritesheet-button($spritesheet, $spriteHeight, $offsetY = 0) {\r\n  @extend $button_base;\r\n  background-image: url($spritesheet);\r\n  background-size: cover;\r\n  background-position-y: -($offsetY)px;\r\n  &:hover { background-position-y: unit(-($spriteHeight + $offsetY), px); }\r\n  &:active { background-position-y: unit(-(2 * $spriteHeight + $offsetY), px); }\r\n  &:disabled, &[disabled], &.disabled {\r\n    cursor: default;\r\n    background-position-y: unit(-(3 * $spriteHeight + $offsetY), px);\r\n  }\r\n}\r\n\r\n// Re-enable stylint checks\r\n// @stylint on\r\n"],
+                mappings: "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",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/colors';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit'\r\n@require 'riotclient-lol-asset-csslib/styles/animations'\r\n\r\n@require '../../styles/scroll';\r\n@require '../../styles/count-badge';\r\n@require '../../styles/button';\r\n\r\n// Gold button with image mask\r\nmask-button-gold($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_gold3;\r\n  &:hover { background-color: $color_palette_gold1; }\r\n  &:active { background-color: $color_palette_gold6; }\r\n}\r\n\r\n// Gray inactive button with image mask\r\nmask-button-grey-inactive($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_grey1_5;\r\n}\r\n\r\n// Gray button with image mask\r\nmask-button-grey($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_grey1;\r\n  &:hover { background-color: $color_palette_gold1; }\r\n  &:active { background-color: $color_palette_grey2; }\r\n}\r\n\r\nlol-social-chat-window {\r\n  position: absolute;\r\n  // We need the host to have a size so that the chat window can expand into it. Because the chat window is resizable,\r\n  // we can't hard-code any values in the transition, so we just animate from 0 to 100% and have it scale to the size\r\n  // of the host.\r\n  width: 550px;\r\n  // This is the default height of the chat window and will be overridden by the saved chat window height when docked.\r\n  height: 366px;\r\n  min-height: 366px;\r\n  max-height: 640px;\r\n  // Don't allow any interaction with this div. It's invisible and acts as a placeholder for the chat window expand.\r\n  pointer-events: none;\r\n  right: 0;\r\n  bottom: 0;\r\n  //the transform and will-change are to fix a bug where the chat window can turn black and not redraw correctly after\r\n  //being detached and losing focus.\r\n  transform: translateZ(0);\r\n  will-change: transform;\r\n\r\n  &:lang(ar-ae) {\r\n    direction: rtl;\r\n  }\r\n\r\n  @keyframes fadein {\r\n    from { opacity: 0; }\r\n    to { opacity: 1; }\r\n  }\r\n\r\n  .hidden {\r\n    display: none !important;\r\n  }\r\n\r\n  // Wrapper needed to show and collapse the chat window without affecting the chat button.\r\n  #chat-window-wrapper {\r\n    display: flex;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: alpha($color_palette_almostBlack, 0.88);\r\n    border: thin solid $color_palette_frameGrey;\r\n    box-sizing: border-box;\r\n    pointer-events: auto;\r\n    position: absolute;\r\n    bottom: 0;\r\n    right: 0;\r\n    overflow: hidden;\r\n\r\n    &.use-animation {\r\n      transition: all 350ms $easing_circular_ease_out;\r\n    }\r\n\r\n    &:not(.open) {\r\n      height: 0;\r\n      width: 0;\r\n    }\r\n\r\n    &.button-inside {\r\n      // Add spacing for the toggle button.\r\n      .chat-input {\r\n        margin-right: 41px;\r\n      }\r\n    }\r\n  }\r\n\r\n  // -----------------------------------------------------------------------------------------------------------\r\n  //  LEFT PANE\r\n  // -----------------------------------------------------------------------------------------------------------\r\n\r\n  // Container for the left pane\r\n  .conversations {\r\n    position: relative;\r\n    width: 199px;\r\n    height: auto;\r\n    border-right: thin solid $color_palette_frameGrey;\r\n    box-sizing: border-box;\r\n    flex-shrink: 0;\r\n    &:not(.scrolled-to-bottom) {\r\n      -webkit-mask-image: -webkit-gradient(linear, left bottom, left 87%, from(rgba(0,0,0,0.1)), to(rgba(0,0,0,1)));\r\n    }\r\n    &.has-button {\r\n      margin-bottom: 36px;\r\n    }\r\n    &:lang(ar-ae) {\r\n      border-right: none;\r\n      border-left: thin solid $color_palette_frameGrey;\r\n    }\r\n  }\r\n\r\n  // A conversation in the conversation list\r\n  .conversation {\r\n    @extend $typekit_text_s;\r\n    display: flex;\r\n    align-items: center;\r\n    height: 60px;\r\n    cursor: pointer;\r\n    padding: 0 0 0 10px;\r\n    &:lang(ar-ae) {\r\n      padding: 0 10px 0 0;\r\n    }\r\n\r\n    &.active .conversation-subtitle {\r\n      color: $color_palette_grey1;\r\n\r\n      &.blocked, &.unavailable {\r\n        font-style: italic;\r\n      }\r\n      &.blocked {\r\n        color: $colors_cardinal;\r\n      }\r\n\r\n    }\r\n\r\n    &:hover {\r\n      background-color: $color_palette_grey3;\r\n\r\n      // Show the close button on hover.\r\n      .conversation-close-button {\r\n        display: block;\r\n      }\r\n\r\n      // Show the cannot close button on hover.\r\n      .conversation-cannot-close-button {\r\n        display: block;\r\n      }\r\n\r\n      // Only hide the conversation muted icon on hover if it doesn't have the permanent attribute.\r\n      .conversation-muted:not([permanent]) {\r\n        display: none;\r\n      }\r\n\r\n      .conversation-subtitle {\r\n        color: $color_palette_gold1;\r\n\r\n        &.blocked, &.unavailable {\r\n          font-style: italic;\r\n        }\r\n        &.blocked {\r\n          color: $colors_cardinal;\r\n        }\r\n      }\r\n    }\r\n\r\n    // Gold vertical bar indicating whether this is the active chat or not\r\n    &.active {\r\n      padding: 0;\r\n      background: alpha($color_palette_gold1, 0.18);\r\n    }\r\n    &.active::before {\r\n      content: '';\r\n      width: 6px;\r\n      height: 100%;\r\n      background-color: $color_palette_gold4;\r\n      margin: 0 10px 0 0;\r\n    }\r\n    &.active:lang(ar-ae)::before {\r\n      margin: 0 0 0 10px;\r\n    }\r\n\r\n    &.animate-move {\r\n      background-color: #fff;\r\n      box-shadow: 0 0 8px rgba(0, 0, 0, .7);\r\n    }\r\n  }\r\n\r\n  .clash-seperator {\r\n    height: 1px;\r\n    max-width: 100%;\r\n    margin: 8px 10px;\r\n    background: alpha($color_palette_gold1, 0.3);\r\n  }\r\n\r\n  // Container for the name and subtitles\r\n  .conversation-titles-container {\r\n    flex: 1;\r\n    overflow: hidden;\r\n    margin: 0 5px 0 0;\r\n    &:lang(ar-ae) {\r\n      margin: 0 0 0 5px;\r\n    }\r\n  }\r\n\r\n  .clash-icon {\r\n    width: 32px;\r\n    height: 32px;\r\n    margin: 0 6px 0 0;\r\n    &:lang(ar-ae) {\r\n      margin: 0 0 0 6px;\r\n    }\r\n  }\r\n\r\n  .conversation-title, .conversation-subtitle {\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\r\n    position: relative; // This style is needed to properly hide characters that overflow vertically on windows\r\n\r\n    &.blocked, &.unavailable {\r\n      font-style: italic;\r\n    }\r\n    &.blocked {\r\n      color: $colors_crownOfThorns;\r\n    }\r\n  }\r\n\r\n  .conversation-title {\r\n    @extend $typekit_text_m;\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  .conversation-subtitle {\r\n    color: $color_palette_grey1_5;\r\n\r\n    &.blocked, &.unavailable {\r\n      font-style: italic;\r\n    }\r\n    &.blocked {\r\n      color: $colors_crownOfThorns;\r\n    }\r\n  }\r\n\r\n  // Styling for unread message from player.\r\n  .conversation.unread {\r\n    background: alpha($color_palette_gold1, 0.18);\r\n    &.use-animation {\r\n      animation: highlight 825ms 4 alternate;\r\n      .social-count-badge {\r\n        animation: highlightBadge 825ms 4 alternate;\r\n      }\r\n    }\r\n\r\n    .conversation-title {\r\n      @extend $typekit_modifier_highlight;\r\n      font-weight: bold;\r\n    }\r\n\r\n    .conversation-subtitle {\r\n      color: $color_palette_gold4;\r\n      font-weight: bold;\r\n    }\r\n  }\r\n\r\n  .conversation-close-button {\r\n    mask-button-gold('../../../images/x_mask.png');\r\n    -webkit-mask-size: contain;\r\n    display: none;\r\n    width: 18px;\r\n    height: 18px;\r\n    margin: 0 3px 0 auto;\r\n    &:lang(ar-ae) {\r\n      margin: 0 auto 0 3px;\r\n    }\r\n  }\r\n\r\n  .conversation-cannot-close-button {\r\n    mask-button-grey-inactive('../../../images/x_block_mask.png');\r\n    -webkit-mask-size: contain;\r\n    display: none;\r\n    width: 18px;\r\n    height: 18px;\r\n    margin: 0 3px 0 auto;\r\n    &:lang(ar-ae) {\r\n      margin: 0 auto 0 3px;\r\n    }\r\n  }\r\n\r\n  .conversation-muted {\r\n    -webkit-mask: url('../../../images/mute_mask.png') no-repeat center;\r\n    -webkit-mask-size: 16px;\r\n    background-color: $color_palette_grey1_5;\r\n    width: 22px;\r\n    height: 22px;\r\n  }\r\n\r\n  // Add a bit of spacing to around the count badge so that it's not right up against the scroll bar\r\n  .social-count-badge {\r\n    margin: 0 3px;\r\n  }\r\n\r\n  .conversations-list {\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n\r\n  .more-unread {\r\n    position: absolute;\r\n    left: 0;\r\n    width: 179px;\r\n    padding: 0 4px;\r\n    box-sizing: border-box;\r\n    background-color: alpha($color_palette_almostBlack, 0.5);\r\n    cursor: pointer;\r\n\r\n    .bar {\r\n      @extend $fonts_lol_body;\r\n      @extend $text-transform-uppercase;\r\n      background-color: $color_palette_gold4;\r\n      text-align: center;\r\n      vertical-align: middle;\r\n      line-height: 24px;\r\n      font-weight: 900;\r\n      color: $color_palette_almostBlack;\r\n      font-size: 12px;\r\n    }\r\n\r\n    .arrow {\r\n      position: absolute;\r\n      left: 50%;\r\n      margin-left: -6px;\r\n      border: 4px solid transparent;\r\n    }\r\n\r\n    &.below {\r\n      bottom: 0;\r\n      padding-bottom: 20px;\r\n\r\n      .arrow {\r\n        border-top: 6px solid $color_palette_gold1;\r\n        bottom: 4px;\r\n      }\r\n    }\r\n\r\n    &.above {\r\n      top: 0;\r\n      padding-top: 20px;\r\n\r\n      .arrow {\r\n        border-bottom: 6px solid $color_palette_gold1;\r\n        top: 4px;\r\n      }\r\n    }\r\n  }\r\n\r\n  // -----------------------------------------------------------------------------------------------------------\r\n  //  RIGHT PANE\r\n  // -----------------------------------------------------------------------------------------------------------\r\n\r\n  // Container for the right pane\r\n   .chat-area {\r\n    position: relative;\r\n    width: 100%;\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n    .chat-input {\r\n      .chat-toggle-button {\r\n        display: none;\r\n      }\r\n    }\r\n  }\r\n\r\n  // Header that displays player name, avatar, and status\r\n  .chat-header {\r\n    @extend $typekit_text_m;\r\n    @extend $typekit_modifier_highlight;\r\n    color: $color_palette_gold1;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: flex-end;\r\n    height: 48px;\r\n    border-bottom: thin solid $color_palette_gold5;\r\n    padding: 0 0 0 8px;\r\n    box-sizing: border-box;\r\n    flex-shrink: 0;\r\n    overflow: hidden;\r\n\r\n    &:lang(ar-ae) {\r\n      padding: 0 8px 0 0;\r\n    }\r\n\r\n    .spacer {\r\n      flex:1;\r\n    }\r\n    &.room-header .chat-name {\r\n      cursor: pointer;\r\n    }\r\n\r\n    .chat-header-clash-title-container {\r\n      display: flex;\r\n      flex-direction: row;\r\n      flex-wrap: nowrap;\r\n      align-items: flex-end;\r\n    }\r\n    .chat-header-clash-title-prefix {\r\n      @extend $typekit_h4;\r\n      color: $color_palette_gold3;\r\n      flex-direction: row;\r\n      overflow: hidden;\r\n      margin: 0 7px 0 0;\r\n      &:lang(ar-ae) {\r\n        margin: 0 0 0 7px;\r\n      }\r\n    }\r\n    .chat-header-clash-title-main {\r\n      text-overflow: ellipsis;\r\n      max-width: 150px;\r\n      flex-direction: row;\r\n      overflow: hidden;\r\n    }\r\n    .chat-header-title {\r\n      text-overflow: ellipsis;\r\n      max-width: 200px;\r\n      flex-direction: row;\r\n      overflow: hidden;\r\n    }\r\n    .chat-participants-count {\r\n      display: flex;\r\n      flex-direction: column;\r\n      margin: 0 0 0 5px;\r\n      &:lang(ar-ae) {\r\n        margin: 0 5px 0 0;\r\n      }\r\n    }\r\n  }\r\n\r\n  .toggle-btn {\r\n    margin: 2px 0 0 8px;\r\n\r\n    &:lang(ar-ae) {\r\n      margin: 2px 8px 0 0;\r\n    }\r\n  }\r\n\r\n  // Add a bit of spacing between the status, avatar, and summoner name\r\n  .status, .avatar {\r\n    flex-shrink: 0;\r\n    margin: 0 8px 0 0;\r\n    &:lang(ar-ae) {\r\n      margin: 0 0 0 8px;\r\n    }\r\n  }\r\n\r\n  .chat-name {\r\n    display: flex;\r\n    height: 100%;\r\n    align-items: center;\r\n    overflow: hidden;\r\n    justify-content: flex-start;\r\n    flex-direction: row;\r\n  }\r\n\r\n  .chat-name-info {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    max-width: 250px;\r\n    word-break: keep-all;\r\n\r\n    > div {\r\n      display: flex;\r\n      height: 100%;\r\n      align-items: center;\r\n      overflow: hidden;\r\n      justify-content: flex-start;\r\n      flex-direction: row;\r\n    }\r\n\r\n    .chat-name {\r\n      height: auto;\r\n    }\r\n\r\n    .chat-subtitle-parts {\r\n      @extend $typekit_text_s;\r\n      color: $color_palette_grey1_5;\r\n      margin-top: -2px;\r\n      flex-direction: row;\r\n      align-items: center;\r\n\r\n      .chat-gnt {\r\n        margin-left: 0;\r\n      }\r\n\r\n      .chat-state-separator {\r\n        margin-left: 4px;\r\n        margin-right: 4px;\r\n      }\r\n\r\n      .chat-state {\r\n        font-style: italic;\r\n        &.blocked {\r\n          padding-right: 2px;\r\n          color: $colors_cardinal;\r\n        }\r\n      }\r\n    }\r\n\r\n\r\n    .gameTag {\r\n      color: $color_palette_grey1_5;\r\n    }\r\n  }\r\n\r\n  .header-button {\r\n    height: 18px;\r\n    width: 18px;\r\n    cursor: pointer;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    align-self: flex-start;\r\n    margin: 8px 5px 0 0;\r\n    &:lang(ar-ae) {\r\n      margin: 8px 0 0 5px;\r\n    }\r\n  }\r\n\r\n  // Minimize window icon on the upper right\r\n  .close-window-button {\r\n    mask-button-grey('../../../images/icon_minimize.png');\r\n    -webkit-mask-size: contain;\r\n  }\r\n\r\n  .conversation-settings-button {\r\n    mask-button-grey('../../../images/control_settings_mask.png');\r\n    -webkit-mask-size: contain;\r\n\r\n    &[disabled] {\r\n      background-color: $color_palette_grey_disabled;\r\n      cursor: default;\r\n      pointer-events: none;\r\n    }\r\n  }\r\n\r\n  .conversation-report-button {\r\n    mask-button-grey('../../../images/report-mask.svg');\r\n    -webkit-mask-size: contain;\r\n\r\n    &[reported] {\r\n      cursor: default;\r\n      pointer-events: auto;\r\n      background-color: lighten($colors_torchRed, 30%);\r\n      opacity: 0.55;\r\n    }\r\n\r\n    &:not([reported]):hover {\r\n      background-color: $colors_torchRed;\r\n    }\r\n\r\n    &:not([reported]):active {\r\n      background-color: lighten($colors_torchRed, 10%);\r\n    }\r\n  }\r\n\r\n  .participants {\r\n    @extend $typekit_text_m;\r\n    color: $color_palette_gold1;\r\n    z-index: 1;\r\n    margin-top: -1px;\r\n    padding-bottom: 4px;\r\n    width: 100%;\r\n    max-height: calc(100% - 51px);\r\n    background: $color_palette_almostBlack;\r\n    border-bottom: thin solid $color_palette_gold5;\r\n\r\n    .participant {\r\n      display: flex;\r\n      align-items: center;\r\n      padding: 6px;\r\n\r\n      .avatar {\r\n        margin: 0 8px 0 0;\r\n        &:lang(ar-ae) {\r\n          margin: 0 0 0 8px;\r\n        }\r\n      }\r\n    }\r\n  }\r\n\r\n  // Message history list\r\n  .messages {\r\n    flex: 1;\r\n  }\r\n\r\n  // Chat input field at the bottom\r\n  .chat-input {\r\n    @extend $typekit_text_m;\r\n    color: $color_palette_gold1;\r\n    padding: 5px 8px;\r\n    flex-shrink: 0;\r\n\r\n    &:lang(ar-ae) {\r\n      // Required to override the padding set in .chat-input:lang(ar-ae)\r\n      // in ..\\..\\chat-input\\chat-input.styl\r\n      padding: 5px 8px;\r\n      direction: rtl;\r\n    }\r\n  }\r\n\r\n  .create-panel {\r\n\r\n    .create-panel-search-input {\r\n      margin-bottom: 5px;\r\n    }\r\n\r\n    .create-panel-gnt {\r\n      color: $color_palette_grey1_5;\r\n\r\n      // If the game name is the only name, make it appear brighter\r\n      .create-panel-game-name.only-name {\r\n        color: $color_palette_grey1;\r\n      }\r\n    }\r\n\r\n    .create-panel-search-match {\r\n      @extend $typekit_text_s;\r\n      color: $color_palette_grey1;\r\n      display: flex;\r\n      align-items: center;\r\n      padding: 5px 10px;\r\n      letter-spacing: 0.05em;\r\n\r\n      &:hover {\r\n        color: $color_palette_gold1;\r\n        cursor: pointer;\r\n\r\n        .create-panel-gnt {\r\n          color: $color_palette_grey1;\r\n\r\n          // If the game name is the only name, make it appear brighter\r\n          .create-panel-game-name.only-name {\r\n            color: $color_palette_gold1;\r\n          }\r\n        }\r\n      }\r\n    }\r\n\r\n    .create-chat-input {\r\n      height: 32px;\r\n      width: 349px;\r\n      position: absolute;\r\n      bottom: 0;\r\n    }\r\n  }\r\n\r\n  // -----------------------------------------------------------------------------------------------------------\r\n  //  Options menu (menu for cog icon in the actions bar)\r\n  // -----------------------------------------------------------------------------------------------------------\r\n  .settings-menu {\r\n    position: absolute;\r\n    top: 47px;\r\n    right: 0;\r\n    min-width: 180px;\r\n    border: thin solid $color_palette_gold5;\r\n    background-color: $color_palette_almostBlack;\r\n    &:lang(ar-ae) {\r\n      right: auto;\r\n      left: 0;\r\n    }\r\n  }\r\n\r\n  lol-social-menu-item {\r\n    @extend $typekit_label;\r\n    color: $color_palette_gold2;\r\n    // Remove the padding for the menu-item because it interferes with the hover for lol-uikit-flat-checkbox\r\n    padding: 0;\r\n    &:lang(ar-ae) {\r\n      text-align: right;\r\n    }\r\n  }\r\n\r\n  label.conversation-mute-label {\r\n    margin: 2px 0 0 10px;\r\n\r\n    &:lang(ar-ae) {\r\n      margin: 2px 10px 0 0;\r\n    }\r\n  }\r\n\r\n  // Add the padding back in manually\r\n  lol-uikit-flat-checkbox, .clear-history {\r\n    padding: 8px 10px;\r\n  }\r\n\r\n  lol-uikit-flat-checkbox {\r\n    .hide-offline-label {\r\n      color: $color_palette_gold2;\r\n    }\r\n\r\n    &:hover .hide-offline-label {\r\n      color: $color_palette_gold1;\r\n    }\r\n  }\r\n\r\n  .resizer {\r\n    position: absolute;\r\n    top: -5px;\r\n    left: 0;\r\n    height: 10px;\r\n    width: 100%;\r\n    cursor: n-resize;\r\n  }\r\n\r\n  .new-chat-button {\r\n    height: 32px;\r\n    width: 191px;\r\n    padding: 4px 4px 0px 4px;\r\n    position: absolute;\r\n    left: 0;\r\n    bottom: 0;\r\n    &:lang(ar-ae) {\r\n      left: auto;\r\n      right: 0;\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit'\r\n\r\n.social-scroll {\r\n  overflow-y: auto;\r\n  overflow-x: hidden;\r\n}\r\n.social-scroll::-webkit-scrollbar {\r\n  width: 11px;\r\n  background: none;\r\n}\r\n.social-scroll::-webkit-scrollbar-thumb {\r\n  border: 3px solid transparent;\r\n  background-color: $color_palette_grey3;\r\n  border-radius: 6px;\r\n  background-clip: padding-box;\r\n}\r\n\r\n.social-scroll:hover::-webkit-scrollbar-thumb {\r\n  background-color: $color_palette_gold5;\r\n}\r\n\r\n.social-scroll::-webkit-scrollbar-thumb:hover {\r\n  background-color: $color_palette_gold2;\r\n}\r\n\r\n.social-scroll::-webkit-scrollbar-thumb:active {\r\n  background-color: $color_palette_gold6;\r\n}\r\n\r\n.social-blue-scroll {\r\n  overflow-x: hidden;\r\n  overflow-y: auto;\r\n}\r\n\r\n.social-blue-scroll::-webkit-scrollbar {\r\n  width: 9px;\r\n  background: transparent;\r\n}\r\n\r\n.social-blue-scroll::-webkit-scrollbar-thumb {\r\n  background: transparent;\r\n  border-radius: 6px;\r\n  border: 2px solid transparent;\r\n  background-clip: padding-box;\r\n}\r\n\r\n.social-blue-scroll:hover::-webkit-scrollbar-thumb {\r\n  background-color: $color_palette_blue3;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit'\r\n\r\n/* The count badge is common styling for the unread message count\r\n   badge that is used in several places throughout the social panel.\r\n   To use it attach this class to a div that has a text counter inside it. */\r\n.social-count-badge {\r\n  @extend $fonts_lol_body;\r\n  font-weight: bold;\r\n  border-radius: 3px;\r\n  background-color: $color_palette_gold4;\r\n  color: $color_palette_almostBlack;\r\n  padding: 0 6px;\r\n  height: 16px;\r\n  font-size: 12px;\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n.social-count-badge.will-animate-in {\r\n  opacity: 0;\r\n}\r\n.social-count-badge.animate-in {\r\n  opacity: 1;\r\n  transition: opacity .3s ease-in-out;\r\n}\r\n\r\n@keyframes highlight {\r\n  from { background: alpha($color_palette_gold1, 0.18); }\r\n  to { background: alpha($color_palette_gold1, 0.40); }\r\n}\r\n\r\n@keyframes highlightBadge {\r\n  from { -webkit-filter: brightness(1.0) saturate(1.0); }\r\n  to { -webkit-filter: brightness(1.35) saturate(1.35); }\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit'\r\n\r\n// Base styles for all buttons\r\n$button_base {\r\n  outline: none;\r\n  border: none;\r\n  background: none;\r\n  cursor: pointer;\r\n  padding: 0;\r\n}\r\n\r\n// Disable stylint because it complains about these one-liners. However, they're not as easy to mentally parse\r\n// if they were multi-line.\r\n// @stylint off\r\n\r\n// Gold button with image mask\r\nmask-button-gold($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_gold3;\r\n  &:hover { background-color: $color_palette_gold1; }\r\n  &:active { background-color: $color_palette_gold6; }\r\n}\r\n\r\n// Blue button with image mask\r\nmask-button-blue($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_paladinBlue2;\r\n  &:hover { background-color: $color_palette_blue1; }\r\n  &:active { background-color: $color_palette_blue4; }\r\n}\r\n\r\n// Gray button with image mask\r\nmask-button-grey($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_grey1;\r\n  &:hover { background-color: $color_palette_gold1; }\r\n  &:active { background-color: $color_palette_grey2; }\r\n}\r\n\r\n// Gray inactive button with image mask\r\nmask-button-grey-inactive($imageUrl) {\r\n  @extend $button_base;\r\n  -webkit-mask: url($imageUrl) no-repeat center;\r\n  // The size of the mask should be 1/4 the image width or height, whichever is larger.\r\n  -webkit-mask-size: (max(image-size($imageUrl)[0], image-size($imageUrl)[1]) / 4)px;\r\n  background-color: $color_palette_grey1_5;\r\n}\r\n\r\n// Spritesheet button. This assumes that the spritesheet images are stacked vertically ordered as: default ->\r\n// hover -> active -> disabled. Also supports an offset number to support toggle buttons ordered as:\r\n// default -> hover -> active -> disabled ->\r\n// default toggled -> hover toggled -> active toggled -> disabled toggled\r\nspritesheet-button($spritesheet, $spriteHeight, $offsetY = 0) {\r\n  @extend $button_base;\r\n  background-image: url($spritesheet);\r\n  background-size: cover;\r\n  background-position-y: -($offsetY)px;\r\n  &:hover { background-position-y: unit(-($spriteHeight + $offsetY), px); }\r\n  &:active { background-position-y: unit(-(2 * $spriteHeight + $offsetY), px); }\r\n  &:disabled, &[disabled], &.disabled {\r\n    cursor: default;\r\n    background-position-y: unit(-(3 * $spriteHeight + $offsetY), px);\r\n  }\r\n}\r\n\r\n// Re-enable stylint checks\r\n// @stylint on\r\n"],
                 sourceRoot: ""
             }]), e.exports = u
         }, (e, t, n) => {
@@ -11663,15 +11781,12 @@
             e.exports = n.p + "control_settings_mask.png"
         }, (e, t, n) => {
             "use strict";
-            e.exports = n.p + "report_mask.png"
-        }, (e, t, n) => {
-            "use strict";
             const r = n(1),
                 {
                     components: o
                 } = r;
             o.defineElement("lol-social-clash-roster-panel-item", {
-                styles: n(246),
+                styles: n(255),
                 computed: {
                     conversation: "data.getClashConversation(roster.multiUserChatId)",
                     clashRosterParticipants: "data.participants[conversation.id]",
@@ -11699,7 +11814,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-clash-roster-panel", {
-                styles: n(248)
+                styles: n(257)
             })
         }, (e, t, n) => {
             var r = n(203),
@@ -11719,7 +11834,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-friend-request-modal", {
-                styles: n(250),
+                styles: n(259),
                 attached: function() {
                     this.honorRecognitionHistoryPuuids = new Set((this.data.honorRecognitionHistory || []).map((({
                         puuid: e
@@ -11747,13 +11862,13 @@
             "use strict";
             var r = n(1),
                 o = n(218);
-            const i = n(252),
-                a = n(235),
+            const i = n(261),
+                a = n(245),
                 {
                     computed: s
                 } = r.components;
             r.components.defineElement("lol-social-friend-request", i, a, {
-                styles: n(253),
+                styles: n(262),
                 computed: {
                     summonerInfo: s.resource("/lol-summoner/v2/summoner-icons?ids=[{{friend.summonerId}}]"),
                     icon: "summonerInfo[0].profileIconId"
@@ -11837,11 +11952,11 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(254),
-                s = n(255),
-                l = n(256),
-                c = n(257),
-                d = n(239),
+                a = n(263),
+                s = n(264),
+                l = n(265),
+                c = n(266),
+                d = n(249),
                 p = n(208),
                 u = o(r),
                 m = i(a),
@@ -11880,7 +11995,7 @@
                     computed: i
                 } = o;
             o.defineElement("lol-social-friend-requests", {
-                styles: n(259),
+                styles: n(268),
                 computed: {
                     gameflow: i.resource("/lol-gameflow/v1/session"),
                     inGame: "gameflow.gameClient.running"
@@ -11943,9 +12058,9 @@
         }, (e, t, n) => {
             "use strict";
             var r = n(1);
-            const o = n(252);
+            const o = n(261);
             r.components.defineElement("lol-social-game-invite", o, {
-                styles: n(261),
+                styles: n(270),
                 computed: {
                     inviterName: "data.getFormattedDisplayName(gameInvite)",
                     isAcceptable: "data.isGameInviteAcceptable(gameInvite)",
@@ -12029,8 +12144,8 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(262),
-                s = n(239),
+                a = n(271),
+                s = n(249),
                 l = o(r),
                 c = i(a),
                 d = i(s);
@@ -12052,7 +12167,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-game-invites", {
-                styles: n(264),
+                styles: n(273),
                 clearAll: function() {
                     this.sounds.play("click");
                     for (let e = this.data.gameInvites.length - 1; e >= 0; e--) this.data.declineGameInvite(this.data.gameInvites[e])
@@ -12065,7 +12180,7 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(265),
+                a = n(274),
                 s = o(r),
                 l = i(a);
             s.push([e.id, 'lol-social-game-invites .game-invite-heading {\n  font-family: var(--font-display);\n}\n.social-count-badge {\n  font-family: var(--font-body);\n}\nlol-social-game-invites .game-invite-heading {\n  -webkit-user-select: none;\n}\nlol-social-game-invites .game-invite-heading {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-game-invites .game-invite-heading {\n  text-transform: uppercase;\n}\nlol-social-game-invites .game-invite-heading:lang(ko-kr),\nlol-social-game-invites .game-invite-heading:lang(ja-jp),\nlol-social-game-invites .game-invite-heading:lang(tr-tr),\nlol-social-game-invites .game-invite-heading:lang(el-gr),\nlol-social-game-invites .game-invite-heading:lang(th-th),\nlol-social-game-invites .game-invite-heading:lang(zh-tw) {\n  text-transform: none;\n}\nlol-social-game-invites .game-invite-heading {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\nlol-social-game-invites .game-invite-heading:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-game-invites .game-invite-heading:lang(ar-ae) {\n  letter-spacing: 0;\n}\n.social-scroll {\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.social-scroll::-webkit-scrollbar {\n  width: 11px;\n  background: none;\n}\n.social-scroll::-webkit-scrollbar-thumb {\n  border: 3px solid transparent;\n  background-color: #1e2328;\n  border-radius: 6px;\n  background-clip: padding-box;\n}\n.social-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #785a28;\n}\n.social-scroll::-webkit-scrollbar-thumb:hover {\n  background-color: #cdbe91;\n}\n.social-scroll::-webkit-scrollbar-thumb:active {\n  background-color: #463714;\n}\n.social-blue-scroll {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.social-blue-scroll::-webkit-scrollbar {\n  width: 9px;\n  background: transparent;\n}\n.social-blue-scroll::-webkit-scrollbar-thumb {\n  background: transparent;\n  border-radius: 6px;\n  border: 2px solid transparent;\n  background-clip: padding-box;\n}\n.social-blue-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #0596aa;\n}\n.social-count-badge {\n  font-weight: bold;\n  border-radius: 3px;\n  background-color: #c89b3c;\n  color: #010a13;\n  padding: 0 6px;\n  height: 16px;\n  font-size: 12px;\n  display: flex;\n  align-items: center;\n}\n.social-count-badge.will-animate-in {\n  opacity: 0;\n}\n.social-count-badge.animate-in {\n  opacity: 1;\n  transition: opacity 0.3s ease-in-out;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\nlol-social-game-invites .clear-all-button {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n}\nlol-social-game-invites .game-invite-heading {\n  display: flex;\n  align-items: center;\n  height: 32px;\n  color: #a09b8c;\n  padding: 0 5px 0 9px;\n  flex-shrink: 0;\n  pointer-events: none;\n  margin-top: 1px;\n}\nlol-social-game-invites .hover-highlight {\n  pointer-events: auto;\n}\nlol-social-game-invites .hover-highlight:hover {\n  background: linear-gradient(to right, rgba(10,203,230,0.2), rgba(10,203,230,0));\n  cursor: pointer;\n  color: #f0e6d2;\n}\nlol-social-game-invites .hover-highlight:active {\n  color: #cdbe91;\n}\nlol-social-game-invites .game-invite-heading-container {\n  flex: 1;\n  display: flex;\n  margin-right: 7px;\n  overflow: hidden;\n}\nlol-social-game-invites .game-invite-heading-text {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\nlol-social-game-invites .game-invite-count {\n  padding-left: 5px;\n}\nlol-social-game-invites .clear-all-button {\n  -webkit-mask: url(' + l + ") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #c8aa6e;\n  width: 18px;\n  height: 18px;\n  pointer-events: auto;\n}\nlol-social-game-invites .clear-all-button:hover {\n  background-color: #f0e6d2;\n}\nlol-social-game-invites .clear-all-button:active {\n  background-color: #463714;\n}\nlol-social-game-invites lol-social-arrow-toggle {\n  width: 18px;\n  height: 18px;\n}\nlol-social-game-invites lol-social-game-invite {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  flex-shrink: 0;\n}\nlol-social-game-invites .game-invite-scroll {\n  flex-grow: 1;\n}\n", "", {
@@ -12086,7 +12201,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-game-panel", {
-                styles: n(267),
+                styles: n(276),
                 created: function() {
                     this.listen("gameInviteAdded", this.playVideo), this.listen("partyInviteAdded", this.playVideo), this.listen("gameSearchStarted", this.playVideo), this.watch("data.gameInvites.length > 0 || data.gameSearch", (function(e, t) {
                         e ? this.sounds.delayedPlay("menuOpen", 150) : t && this.sounds.delayedPlay("menuClose", 150)
@@ -12114,7 +12229,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-game-queue", {
-                styles: n(269),
+                styles: n(278),
                 createLowPriorityTooltip: function(e, t) {
                     const n = document.createElement("lol-uikit-tooltip"),
                         r = t.templateHelper.contentBlockTooltip(t.t("tooltip_low_priority_queue_title"), t.t("tooltip_low_priority_queue_body"), "tooltip-large"),
@@ -12165,8 +12280,8 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(270),
-                s = n(239),
+                a = n(279),
+                s = n(249),
                 l = o(r),
                 c = i(a),
                 d = i(s);
@@ -12202,7 +12317,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-link-warning-dialog", {
-                styles: n(273),
+                styles: n(282),
                 dispatch: function(e) {
                     this.dispatchEvent(new Event(e))
                 }
@@ -12225,7 +12340,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-link-warning", {
-                styles: n(275),
+                styles: n(284),
                 doNotShowAgain: !1,
                 toggleChatLinkWarning: function() {
                     this.data.playerSettings.linkClickWarningEnabled = !this.doNotShowAgain
@@ -12249,7 +12364,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-menu-input", {
-                styles: n(277),
+                styles: n(286),
                 attached: function() {
                     this.saved = !1, this.saving = !1, this.closing = !1, this.afterSync((() => {
                         this.input && (this.input.focus(), this.input.select())
@@ -12285,7 +12400,7 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(278),
+                a = n(287),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "lol-social-menu-input {\n  display: block;\n}\nlol-social-menu-input .wrapper {\n  width: 100%;\n  position: relative;\n  overflow: hidden;\n}\nlol-social-menu-input .note,\nlol-social-menu-input .note-saving {\n  -webkit-mask: url(" + l + ") no-repeat center;\n  -webkit-mask-size: contain;\n  background-color: #c8aa6e;\n}\nlol-social-menu-input .note-saving {\n  background-color: #f0e6d2;\n}\nlol-social-menu-input .input-icon {\n  width: 18px;\n  height: 18px;\n  position: absolute;\n  left: 10px;\n  top: 5px;\n  cursor: default;\n}\nlol-social-menu-input .input-icon:lang(ar-ae) {\n  left: auto;\n  right: 10px;\n}\nlol-social-menu-input .input.has-icon {\n  padding: 0 6px 0 34px;\n}\nlol-social-menu-input .input.has-icon:lang(ar-ae) {\n  padding: 0 34px 0 6px;\n}\nlol-social-menu-input .input {\n  width: 100%;\n  padding: 0 30px 0 6px;\n  height: 34px;\n}\nlol-social-menu-input .input:lang(ar-ae) {\n  padding: 0 6px 0 30px;\n}\nlol-social-menu-input .input.saving {\n  display: block;\n  border-color: transparent;\n  border-image: none;\n  box-shadow: none;\n  background: none;\n}\nlol-social-menu-input .input.saving:not(.saved) {\n  visibility: hidden;\n}\nlol-social-menu-input .animation {\n  position: absolute;\n  background: #785a28;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 100%;\n  transition: all 0.3s cubic-bezier(0, 0, 0, 1);\n  overflow: hidden;\n}\nlol-social-menu-input .animation .input-message {\n  position: absolute;\n  box-sizing: border-box;\n  font-size: 12px;\n  letter-spacing: 0.05em;\n  line-height: 16px;\n  color: #f0e6d2;\n  height: 30px;\n  padding: 7px;\n  width: 222px;\n}\nlol-social-menu-input .animation .input-message.has-icon {\n  padding-left: 34px;\n}\nlol-social-menu-input .animation.will-animate-in {\n  right: 100%;\n}\nlol-social-menu-input .animation.animate-in {\n  right: 0;\n}\nlol-social-menu-input .animation.animate-in .input-message {\n  left: 0;\n  right: auto;\n}\nlol-social-menu-input .animation.will-animate-out {\n  right: 0;\n  left: 0;\n}\nlol-social-menu-input .animation.animate-out {\n  transition-delay: 0.3s;\n  left: 100%;\n}\nlol-social-menu-item lol-social-menu-input {\n  margin: -10px -11px;\n}\nlol-social-menu-item:last-child lol-social-menu-input {\n  margin-bottom: -11px;\n}\n", "", {
@@ -12306,13 +12421,13 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-menu-item", {
-                styles: n(280)
+                styles: n(289)
             })
         }, (e, t, n) => {
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(281),
+                a = n(290),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "lol-social-menu-item {\n  font-family: var(--font-body);\n}\nlol-social-menu-item {\n  display: block;\n  width: 100%;\n  box-sizing: border-box;\n  word-break: break-word;\n  color: #cdbe91;\n  font-size: 12px;\n  line-height: 16px;\n  text-align: left;\n  cursor: pointer;\n  padding: 8px 10px;\n  outline: none;\n  transition: padding 0.05s ease-in-out;\n}\nlol-social-menu-item:hover:not([has-input]) {\n  color: #f0e6d2;\n  background: rgba(240,230,210,0.1);\n}\n.context lol-social-menu-item:active,\n.context lol-social-menu-item.active,\n.context lol-social-menu-item:hover:active {\n  color: #cdbe91;\n  background: none;\n}\n.context lol-social-menu-item:active,\n.context lol-social-menu-item.active {\n  background: url(" + l + ") no-repeat top;\n  padding-left: 16px;\n  padding-right: 4px;\n}\n.context lol-social-menu-item:hover:active {\n  background-position-y: -18px;\n}\n", "", {
@@ -12333,7 +12448,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-menu", {
-                styles: n(283),
+                styles: n(292),
                 created: function() {
                     this.listen("focusout", this.handleFocusOut), this.listen("click", this.handleClick), this.hasAttribute("keep-open-on-scroll") || this.listen(window, "mousewheel", this.requestClose)
                 },
@@ -12373,7 +12488,7 @@
                     logger: i
                 } = r;
             o.defineElement("lol-social-panel", {
-                styles: n(285),
+                styles: n(294),
                 created: function() {
                     this.data.track("chatErrors", (e => {
                         this.onChatError(e)
@@ -12397,8 +12512,8 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(286),
-                s = n(287),
+                a = n(295),
+                s = n(296),
                 l = o(r),
                 c = i(a),
                 d = i(s);
@@ -12422,7 +12537,7 @@
             const o = "offline",
                 i = "mobile";
             r.components.defineElement("lol-social-roster-group-name", {
-                styles: n(289),
+                styles: n(298),
                 computed: {
                     filterByName: 'group.isMetaGroup ? "displayGroupId" : "groupId"',
                     groupFriends: "data.friends | filter(filterByName, group.id)",
@@ -12500,12 +12615,12 @@
         }, (e, t, n) => {
             "use strict";
             var r = n(1);
-            const o = n(291);
+            const o = n(300);
             r.components.defineElement("lol-social-roster-group", o, {
                 FRIEND_HEIGHT: 48,
                 ARROW_CONTAIN_HEIGHT: 56,
                 GROUP_NAME_HEIGHT: 28,
-                styles: n(292),
+                styles: n(301),
                 acceptMimes: ["application/riot.roster-member+json"],
                 computed: {
                     groupFriendsLength: "data.friends.filter(friendFilter.bind(this)).length",
@@ -12627,7 +12742,7 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(293),
+                a = n(302),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "lol-social-roster-group .group-header {\n  font-family: var(--font-display);\n}\n.social-count-badge {\n  font-family: var(--font-body);\n}\nlol-social-roster-group .group-header {\n  -webkit-user-select: none;\n}\nlol-social-roster-group .group-header {\n  font-kerning: normal;\n  -webkit-font-feature-settings: \"kern\" 1;\n  -webkit-font-smoothing: antialiased;\n}\nlol-social-roster-group .group-header {\n  text-transform: uppercase;\n}\nlol-social-roster-group .group-header:lang(ko-kr),\nlol-social-roster-group .group-header:lang(ja-jp),\nlol-social-roster-group .group-header:lang(tr-tr),\nlol-social-roster-group .group-header:lang(el-gr),\nlol-social-roster-group .group-header:lang(th-th),\nlol-social-roster-group .group-header:lang(zh-tw) {\n  text-transform: none;\n}\nlol-social-roster-group .group-header {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\nlol-social-roster-group .group-header:lang(ja-jp) {\n  font-size: 13px;\n}\nlol-social-roster-group .group-header:lang(ar-ae) {\n  letter-spacing: 0;\n}\nlol-social-roster-group .group-header {\n  color: #a09b8c;\n}\nlol-social-roster-group .group.unread .group-header {\n  color: #f0e6d2;\n}\n.social-count-badge {\n  font-weight: bold;\n  border-radius: 3px;\n  background-color: #c89b3c;\n  color: #010a13;\n  padding: 0 6px;\n  height: 16px;\n  font-size: 12px;\n  display: flex;\n  align-items: center;\n}\n.social-count-badge.will-animate-in {\n  opacity: 0;\n}\n.social-count-badge.animate-in {\n  opacity: 1;\n  transition: opacity 0.3s ease-in-out;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\nlol-social-roster-group {\n  display: block;\n}\nlol-social-roster-group:lang(ar-ae) {\n  direction: rtl;\n}\nlol-social-roster-group .hidden {\n  display: none !important;\n}\nlol-social-roster-group .group {\n  position: relative;\n}\nlol-social-roster-group .group.unread .group-header {\n  font-weight: bold;\n  background: rgba(240,230,210,0.18);\n}\nlol-social-roster-group .group.unread .unread-count {\n  margin-top: 4px;\n  margin-right: 10px;\n}\nlol-social-roster-group .group.unread.use-animation .group-header {\n  animation: highlight 825ms 4 alternate;\n}\nlol-social-roster-group .group.unread.use-animation .social-count-badge {\n  animation: highlightBadge 825ms 4 alternate;\n}\nlol-social-roster-group .group .unread-dot {\n  height: 10px;\n  width: 10px;\n  border-radius: 5px;\n  background-color: #c89b3c;\n}\nlol-social-roster-group .group-header {\n  background: rgba(1,10,19,0.45);\n  height: 24px;\n  cursor: pointer;\n  display: flex;\n  margin-bottom: 4px;\n}\nlol-social-roster-group .group-header:hover {\n  background: rgba(240,230,210,0.1);\n  color: #f0e6d2;\n}\nlol-social-roster-group .group-header:active {\n  color: #cdbe91;\n}\nlol-social-roster-group .group-header.dragging {\n  opacity: 0.5;\n}\nlol-social-roster-group .group-header.drag-capture {\n  border: thin solid #785a28;\n  padding: 0 9px;\n  line-height: 20px;\n}\nlol-social-roster-group .group-header.drag-capture .arrow-container {\n  display: none;\n}\nlol-social-roster-group .group-name {\n  width: 100%;\n  height: 100%;\n  display: flex;\n}\nlol-social-roster-group.drop-available .drop-area {\n  overflow: hidden;\n  position: absolute;\n  margin-top: -28px;\n  box-sizing: border-box;\n  width: 100%;\n  height: 100%;\n  z-index: 2;\n}\nlol-social-roster-group.dropping .drop-area {\n  border: thin solid transparent;\n  border-image: linear-gradient(to bottom, #785a28 0%, #c89b3c 100%) 1 1;\n  background: linear-gradient(to bottom, transparent 28px, rgba(1,10,19,0.75) 28px);\n}\nlol-social-roster-group.dropping .drop-area .drop-area-arrow {\n  content: '';\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  margin: auto;\n  width: 32px;\n  height: 28px;\n  background-image: url(" + l + ");\n  background-position-y: -28px;\n  background-size: cover;\n  align-self: center;\n}\nlol-social-roster-group.dropping .group-header {\n  background-color: #3c3c41;\n  color: #f0e6d2;\n}\nlol-social-roster-group.dropping .arrow {\n  -webkit-filter: brightness(2);\n}\nlol-social-roster-group .arrow-container {\n  display: flex;\n  justify-content: flex-end;\n  width: 18px;\n  opacity: 1;\n}\nlol-social-roster-group .arrow-container.use-animation {\n  transition: width 250ms cubic-bezier(0, 0, 0, 1), opacity 250ms ease-out;\n}\nlol-social-roster-group .arrow-container.hide {\n  width: 0;\n  opacity: 0;\n}\n@-moz-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-webkit-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-o-keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@keyframes highlight {\n  from {\n    background: rgba(240,230,210,0.18);\n  }\n  to {\n    background: rgba(240,230,210,0.4);\n  }\n}\n@-moz-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-webkit-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@-o-keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n@keyframes highlightBadge {\n  from {\n    -webkit-filter: brightness(1) saturate(1);\n  }\n  to {\n    -webkit-filter: brightness(1.35) saturate(1.35);\n  }\n}\n", "", {
@@ -12645,11 +12760,11 @@
             "use strict";
             var r = n(1),
                 o = n(218);
-            const i = n(237),
-                a = n(252),
-                s = n(235);
+            const i = n(247),
+                a = n(261),
+                s = n(245);
             r.components.defineElement("lol-social-roster-member", a, s, {
-                styles: n(295),
+                styles: n(304),
                 computed: {
                     conversation: "member && data.getConversation(member.id)",
                     isInQueueOrGame: 'member.availability === "dnd"',
@@ -12889,13 +13004,13 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(296),
-                s = n(241),
-                l = n(297),
-                c = n(298),
-                d = n(299),
-                p = n(287),
-                u = n(300),
+                a = n(305),
+                s = n(251),
+                l = n(306),
+                c = n(307),
+                d = n(308),
+                p = n(296),
+                u = n(309),
                 m = o(r),
                 g = i(a),
                 h = i(s),
@@ -12933,9 +13048,9 @@
                 components: r,
                 SocialTelemetry: o,
                 logger: i
-            } = n(1), a = n(302), s = n(291), l = n(236);
+            } = n(1), a = n(311), s = n(300), l = n(246);
             r.defineElement("lol-social-roster", s, l, a, {
-                styles: n(303),
+                styles: n(312),
                 acceptMimes: ["application/riot.roster-group+json"],
                 groupMime: "application/riot.roster-group+json",
                 created: function() {
@@ -13003,11 +13118,11 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(230)) && r.__esModule ? r : {
+            var r, o = (r = n(240)) && r.__esModule ? r : {
                 default: r
             };
             const i = n(144),
-                a = n(236),
+                a = n(246),
                 s = {
                     useUniquePool: !0,
                     minItemHeight: 28,
@@ -13103,8 +13218,8 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(296),
-                s = n(304),
+                a = n(305),
+                s = n(313),
                 l = o(r),
                 c = i(a),
                 d = i(s);
@@ -13126,7 +13241,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-social-status", {
-                styles: n(306),
+                styles: n(315),
                 computed: {
                     gameStatus: 'friend.lol.gameStatus || "outOfGame"',
                     tournamentStatus: 'friend.lol.clashTournamentState || "NONE"',
@@ -13182,49 +13297,49 @@
                     Router: r.Ember.Router.extend({
                         location: "none"
                     }),
-                    ApplicationController: n(311).default,
-                    ActionsBarComponent: n(312).default,
-                    ActionsFolderInputComponent: n(314).default,
-                    ArrowToggleComponent: n(315).default,
-                    AvailabilityHitboxComponent: n(317).default,
-                    ChatToggleButtonComponent: n(319).default,
-                    ClashRosterPanelComponent: n(320).default,
-                    ClashRosterPanelItemComponent: n(322).default,
-                    DiscordBannerComponent: n(324).default,
-                    DiscordEatComponent: n(326).default,
-                    FriendFinderAddSummonerByNameComponent: n(327).default,
-                    FriendFinderButtonComponent: n(329).default,
-                    FriendFinderModalComponent: n(330).default,
-                    FriendFinderRecentlyPlayedComponent: n(331).default,
-                    FriendFinderRecentSummonerComponent: n(332).default,
-                    FriendFinderRequestedPlayerComponent: n(336).default,
-                    FriendFinderRequestedPlayersComponent: n(337).default,
-                    HovercardComponentComponent: n(338).default,
-                    HovercardContentComponent: n(341).default,
-                    HovercardShellComponent: n(345).default,
-                    IdentityAndPartiesComponent: n(348).default,
-                    SidebarMainComponent: n(349).default,
-                    SocialAvatarComponent: n(351).default,
-                    SocialButtonComponent: n(353).default,
-                    SocialFriendRequestComponent: n(354).default,
-                    SocialFriendRequestsComponent: n(357).default,
-                    SocialFriendRequestsModalComponent: n(359).default,
-                    SocialIdentityComponent: n(361).default,
-                    SocialMenuComponent: n(362).default,
-                    SocialMenuInputComponent: n(364).default,
-                    SocialMenuItemComponent: n(365).default,
-                    SocialPanelComponent: n(367).default,
-                    SocialRosterComponent: n(368).default,
-                    SocialRosterGroupComponent: n(371).default,
-                    SocialRosterGroupNameComponent: n(375).default,
-                    SocialRosterMemberComponent: n(377).default,
-                    SocialStatusWrapperComponent: n(379).default,
-                    SocialTextTooltipComponent: n(381).default,
-                    SocialTooltipComponent: n(382).default,
-                    TooltipMessageComponent: n(383).default,
-                    UikitRadioComponent: n(384).default,
-                    VersionBarComponent: n(385).default,
-                    VngAgeRatingComponent: n(386).default,
+                    ApplicationController: n(320).default,
+                    ActionsBarComponent: n(321).default,
+                    ActionsFolderInputComponent: n(323).default,
+                    ArrowToggleComponent: n(324).default,
+                    AvailabilityHitboxComponent: n(326).default,
+                    ChatToggleButtonComponent: n(328).default,
+                    ClashRosterPanelComponent: n(329).default,
+                    ClashRosterPanelItemComponent: n(331).default,
+                    DiscordBannerComponent: n(333).default,
+                    DiscordEatComponent: n(335).default,
+                    FriendFinderAddSummonerByNameComponent: n(336).default,
+                    FriendFinderButtonComponent: n(338).default,
+                    FriendFinderModalComponent: n(339).default,
+                    FriendFinderRecentlyPlayedComponent: n(340).default,
+                    FriendFinderRecentSummonerComponent: n(341).default,
+                    FriendFinderRequestedPlayerComponent: n(345).default,
+                    FriendFinderRequestedPlayersComponent: n(346).default,
+                    HovercardComponentComponent: n(347).default,
+                    HovercardContentComponent: n(350).default,
+                    HovercardShellComponent: n(354).default,
+                    IdentityAndPartiesComponent: n(357).default,
+                    SidebarMainComponent: n(358).default,
+                    SocialAvatarComponent: n(360).default,
+                    SocialButtonComponent: n(362).default,
+                    SocialFriendRequestComponent: n(363).default,
+                    SocialFriendRequestsComponent: n(366).default,
+                    SocialFriendRequestsModalComponent: n(368).default,
+                    SocialIdentityComponent: n(370).default,
+                    SocialMenuComponent: n(371).default,
+                    SocialMenuInputComponent: n(373).default,
+                    SocialMenuItemComponent: n(374).default,
+                    SocialPanelComponent: n(376).default,
+                    SocialRosterComponent: n(377).default,
+                    SocialRosterGroupComponent: n(380).default,
+                    SocialRosterGroupNameComponent: n(384).default,
+                    SocialRosterMemberComponent: n(386).default,
+                    SocialStatusWrapperComponent: n(388).default,
+                    SocialTextTooltipComponent: n(390).default,
+                    SocialTooltipComponent: n(391).default,
+                    TooltipMessageComponent: n(392).default,
+                    UikitRadioComponent: n(393).default,
+                    VersionBarComponent: n(394).default,
+                    VngAgeRatingComponent: n(395).default,
                     DiscordButtonComponent: d,
                     DiscordPopupComponent: u,
                     DiscordCongratsPopupComponent: p,
@@ -13234,104 +13349,104 @@
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
                     SharedNotificationsService: c,
-                    AnalyticsService: n(388).default,
-                    BanNotificationService: n(389).default,
-                    ChatErrorsService: n(390).default,
-                    ChatRestrictionService: n(391).default,
-                    ChatWindowSettingsService: n(392).default,
-                    ClashService: n(393).default,
-                    ClientConfigService: n(394).default,
-                    CodeOfConductService: n(395).default,
-                    ConversationsService: n(398).default,
-                    DiagnosticAssistantService: n(399).default,
-                    DiscordIntegrationService: n(400).default,
-                    DragStateService: n(401).default,
-                    EogService: n(402).default,
-                    FriendFinderService: n(403).default,
-                    FriendGroupsService: n(404).default,
-                    FriendHovercardsService: n(405).default,
-                    FriendRequestsService: n(406).default,
-                    FriendsService: n(407).default,
-                    GameDataService: n(408).default,
-                    GameflowService: n(409).default,
-                    GameInvitesService: n(410).default,
-                    GameQueuesService: n(411).default,
-                    GenericAssetsService: n(412).default,
-                    HoneyfruitService: n(413).default,
-                    LeaverBusterService: n(414).default,
-                    LobbyService: n(418).default,
-                    MapsService: n(419).default,
-                    MatchmakingService: n(420).default,
-                    NotificationsService: n(421).default,
-                    OpenPartiesService: n(422).default,
-                    PatcherService: n(423).default,
-                    PlatformConfigService: n(424).default,
-                    ProductsService: n(425).default,
-                    ProfileChampionInfoService: n(426).default,
-                    ProfilesService: n(427).default,
-                    ReformCardService: n(428).default,
-                    RemedyService: n(446).default,
-                    ReportedPlayersService: n(447).default,
-                    ReporterFeedbackMessagesService: n(448).default,
-                    ReporterFeedbackService: n(449).default,
-                    RequestCacheService: n(450).default,
-                    SettingsService: n(451).default,
-                    SocialButtonsService: n(452).default,
-                    SocialPlatformConfigService: n(453).default,
-                    SocialSessionService: n(454).default,
-                    SocialSettingsService: n(455).default,
-                    SpectatorService: n(456).default,
-                    StatusUpdatesService: n(457).default,
-                    StoreService: n(458).default,
-                    SummonerService: n(459).default,
-                    SystemService: n(460).default,
-                    UxSettingsService: n(461).default,
+                    AnalyticsService: n(397).default,
+                    BanNotificationService: n(398).default,
+                    ChatErrorsService: n(399).default,
+                    ChatRestrictionService: n(400).default,
+                    ChatWindowSettingsService: n(401).default,
+                    ClashService: n(402).default,
+                    ClientConfigService: n(403).default,
+                    CodeOfConductService: n(404).default,
+                    ConversationsService: n(407).default,
+                    DiagnosticAssistantService: n(408).default,
+                    DiscordIntegrationService: n(409).default,
+                    DragStateService: n(410).default,
+                    EogService: n(411).default,
+                    FriendFinderService: n(412).default,
+                    FriendGroupsService: n(413).default,
+                    FriendHovercardsService: n(414).default,
+                    FriendRequestsService: n(415).default,
+                    FriendsService: n(416).default,
+                    GameDataService: n(417).default,
+                    GameflowService: n(418).default,
+                    GameInvitesService: n(419).default,
+                    GameQueuesService: n(420).default,
+                    GenericAssetsService: n(421).default,
+                    HoneyfruitService: n(422).default,
+                    LeaverBusterService: n(423).default,
+                    LobbyService: n(427).default,
+                    MapsService: n(428).default,
+                    MatchmakingService: n(429).default,
+                    NotificationsService: n(430).default,
+                    OpenPartiesService: n(431).default,
+                    PatcherService: n(432).default,
+                    PlatformConfigService: n(433).default,
+                    ProductsService: n(434).default,
+                    ProfileChampionInfoService: n(435).default,
+                    ProfilesService: n(436).default,
+                    ReformCardService: n(437).default,
+                    RemedyService: n(455).default,
+                    ReportedPlayersService: n(456).default,
+                    ReporterFeedbackMessagesService: n(457).default,
+                    ReporterFeedbackService: n(458).default,
+                    RequestCacheService: n(459).default,
+                    SettingsService: n(460).default,
+                    SocialButtonsService: n(461).default,
+                    SocialPlatformConfigService: n(462).default,
+                    SocialSessionService: n(463).default,
+                    SocialSettingsService: n(464).default,
+                    SpectatorService: n(465).default,
+                    StatusUpdatesService: n(466).default,
+                    StoreService: n(467).default,
+                    SummonerService: n(468).default,
+                    SystemService: n(469).default,
+                    UxSettingsService: n(470).default,
                     MissionsService: m.MissionsService,
                     TEMPLATES: {
-                        application: n(462),
-                        index: n(463),
-                        "components/actions-bar": n(464),
-                        "components/actions-folder-input": n(465),
-                        "components/arrow-toggle": n(466),
-                        "components/availability-hitbox": n(467),
-                        "components/chat-toggle-button": n(468),
-                        "components/clash-roster-panel": n(469),
-                        "components/clash-roster-panel-item": n(470),
-                        "components/content-block-attention": n(471),
-                        "components/discord-banner": n(472),
-                        "components/discord-eat": n(473),
-                        "components/friend-finder-add-summoner-by-name": n(474),
-                        "components/friend-finder-button": n(475),
-                        "components/friend-finder-modal": n(476),
-                        "components/friend-finder-recent-summoner": n(477),
-                        "components/friend-finder-recently-played": n(478),
-                        "components/friend-finder-requested-player": n(479),
-                        "components/friend-finder-requested-players": n(480),
-                        "components/hovercard-name-alias-mode": n(481),
-                        "components/hovercard-name-summoner-mode": n(482),
-                        "components/identity-and-parties": n(483),
-                        "components/sidebar-main": n(484),
-                        "components/social-avatar": n(485),
-                        "components/social-button": n(486),
-                        "components/social-friend-request": n(487),
-                        "components/social-friend-requests-modal": n(488),
-                        "components/social-friend-requests": n(489),
-                        "components/social-identity": n(490),
-                        "components/social-menu-input": n(491),
-                        "components/social-menu-item": n(492),
-                        "components/social-menu": n(493),
-                        "components/social-panel": n(494),
-                        "components/social-roster-group-name": n(495),
-                        "components/social-roster-group": n(496),
-                        "components/social-roster-member": n(497),
-                        "components/social-roster": n(498),
-                        "components/social-status-wrapper": n(499),
-                        "components/social-text-tooltip": n(500),
-                        "components/social-tooltip": n(501),
-                        "components/tooltip-message": n(502),
-                        "components/uikit-radio": n(503),
-                        "components/version-bar": n(504),
-                        "components/vng-age-rating": n(505),
+                        application: n(471),
+                        index: n(472),
+                        "components/actions-bar": n(473),
+                        "components/actions-folder-input": n(474),
+                        "components/arrow-toggle": n(475),
+                        "components/availability-hitbox": n(476),
+                        "components/chat-toggle-button": n(477),
+                        "components/clash-roster-panel": n(478),
+                        "components/clash-roster-panel-item": n(479),
+                        "components/content-block-attention": n(480),
+                        "components/discord-banner": n(481),
+                        "components/discord-eat": n(482),
+                        "components/friend-finder-add-summoner-by-name": n(483),
+                        "components/friend-finder-button": n(484),
+                        "components/friend-finder-modal": n(485),
+                        "components/friend-finder-recent-summoner": n(486),
+                        "components/friend-finder-recently-played": n(487),
+                        "components/friend-finder-requested-player": n(488),
+                        "components/friend-finder-requested-players": n(489),
+                        "components/hovercard-name-alias-mode": n(490),
+                        "components/hovercard-name-summoner-mode": n(491),
+                        "components/identity-and-parties": n(492),
+                        "components/sidebar-main": n(493),
+                        "components/social-avatar": n(494),
+                        "components/social-button": n(495),
+                        "components/social-friend-request": n(496),
+                        "components/social-friend-requests-modal": n(497),
+                        "components/social-friend-requests": n(498),
+                        "components/social-identity": n(499),
+                        "components/social-menu-input": n(500),
+                        "components/social-menu-item": n(501),
+                        "components/social-menu": n(502),
+                        "components/social-panel": n(503),
+                        "components/social-roster-group-name": n(504),
+                        "components/social-roster-group": n(505),
+                        "components/social-roster-member": n(506),
+                        "components/social-roster": n(507),
+                        "components/social-status-wrapper": n(508),
+                        "components/social-text-tooltip": n(509),
+                        "components/social-tooltip": n(510),
+                        "components/tooltip-message": n(511),
+                        "components/uikit-radio": n(512),
+                        "components/version-bar": n(513),
+                        "components/vng-age-rating": n(514),
                         "components/missions-button": m.MissionsButtonComponentTemplate
                     }
                 };
@@ -13339,30 +13454,30 @@
                     name: "RemedyReceived",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    RemediesReceivedComponent: n(506).default,
-                    RemedyRewardCardComponent: n(514).default,
+                    RemediesReceivedComponent: n(515).default,
+                    RemedyRewardCardComponent: n(523).default,
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
-                    RemedyService: n(446).default
+                    RemedyService: n(455).default
                 }), r.emberApplicationFactory.setFactoryDefinition({
                     name: "HostageDetectedComponent",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    HostageDetectedComponent: n(308).HostageDetectedComponent,
+                    HostageDetectedComponent: n(317).HostageDetectedComponent,
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
-                    RemedyService: n(446).default
+                    RemedyService: n(455).default
                 }), r.emberApplicationFactory.setFactoryDefinition({
                     name: "CredibilityBehaviorWarning",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    CredibilityBehaviorWarningComponent: n(517).default,
-                    CredibilityBehaviorWarningOptionComponent: n(521).default,
-                    RemedyService: n(446).default
+                    CredibilityBehaviorWarningComponent: n(526).default,
+                    CredibilityBehaviorWarningOptionComponent: n(530).default,
+                    RemedyService: n(455).default
                 })
             };
             var r = n(1);
-            n(308);
+            n(317);
             const o = {
                     EMBER_CLI_COMPAT: !0
                 },
@@ -13377,9 +13492,9 @@
                 value: !0
             }), t.HostageDetectedComponent = void 0;
             const r = n(1);
-            n(309), t.HostageDetectedComponent = r.Ember.Component.extend({
+            n(318), t.HostageDetectedComponent = r.Ember.Component.extend({
                 classNames: ["hostage-detected-component"],
-                layout: n(310),
+                layout: n(319),
                 offenderPuuid: "",
                 didReceiveAttrs: function() {
                     this._super(...arguments);
@@ -13443,7 +13558,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(313)) && r.__esModule ? r : {
+                i = (r = n(322)) && r.__esModule ? r : {
                     default: r
                 };
             const {
@@ -13702,7 +13817,7 @@
                         } r.default = e, n && n.set(e, r);
                     return r
                 }(n(1)),
-                i = (r = n(313)) && r.__esModule ? r : {
+                i = (r = n(322)) && r.__esModule ? r : {
                     default: r
                 };
 
@@ -13785,7 +13900,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(316);
+            n(325);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-arrow-toggle"],
                 attributeBindings: ["open", "point-down"],
@@ -13804,10 +13919,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(313)) && r.__esModule ? r : {
+                i = (r = n(322)) && r.__esModule ? r : {
                     default: r
                 };
-            n(318);
+            n(327);
             var a = o.Ember.Component.extend({
                 availability: "",
                 large: !1,
@@ -13861,7 +13976,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(313)) && r.__esModule ? r : {
+                i = (r = n(322)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -13891,7 +14006,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(321);
+            n(330);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-clash-roster-panel-item"],
                 clashService: r.Ember.inject.service("clash"),
@@ -13907,7 +14022,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(323);
+            n(332);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-clash-roster-panel-item"],
                 roster: {},
@@ -13942,7 +14057,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(325);
+            n(334);
             var o = r.Ember.Component.extend({
                 classNames: ["discord-banner"],
                 showDiscordPopup: !1,
@@ -13995,7 +14110,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(328);
+                o = n(337);
             const {
                 RunMixin: i
             } = r.EmberAddons.EmberLifeline, a = (e, t) => "string" == typeof e && "string" == typeof t && e.toUpperCase() === t.toUpperCase();
@@ -14212,7 +14327,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(313)) && r.__esModule ? r : {
+                i = (r = n(322)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -14330,11 +14445,12 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(333),
-                i = n(334),
-                a = n(335),
-                s = n(328),
-                l = r.Ember.Component.extend({
+                o = n(342),
+                i = n(343),
+                a = n(344),
+                s = n(337),
+                l = n(219),
+                c = r.Ember.Component.extend({
                     classNames: ["lol-friend-finder-recent-summoner"],
                     summoner: {},
                     working: !1,
@@ -14367,7 +14483,7 @@
                         }))
                     },
                     getContextMenuItems() {
-                        return [(0, i.cmAct)((() => this.openProfile()), "friend_finder_view_profile"), (0, i.cmAct)((() => this.blockPlayer()), "friend_finder_block")]
+                        return [(0, i.cmAct)((() => this.openProfile()), "friend_finder_view_profile", {}, (0, l.createContextMenuIcon)(l.ICON_NAMES.PROFILE)), (0, i.cmAct)((() => this.blockPlayer()), "friend_finder_block", {}, (0, l.createContextMenuIcon)(l.ICON_NAMES.BLOCK))]
                     },
                     showTooltipMessage(e, t) {
                         this.set("messagePacket", {
@@ -14411,7 +14527,7 @@
                         this._super(...arguments), this.element.removeEventListener("contextmenu", this.contextMenuHandler)
                     }
                 });
-            t.default = l
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -14443,10 +14559,11 @@
                 n && 0 !== r.contextMenuManager.filterVisible(n).length && (t.preventDefault(), t.stopPropagation(), r.contextMenuManager.setMenuItems(n), r.contextMenuManager.openAtEvent(t))
             }
             t.getContextMenuHandler = e => o.bind(null, e);
-            t.cmAct = (e, t, n = {}) => ({
+            t.cmAct = (e, t, n = {}, o = null) => ({
                 action: e,
                 label: r.tra.get(t),
-                target: n
+                target: n,
+                icon: o
             })
         }, (e, t, n) => {
             "use strict";
@@ -14477,13 +14594,14 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(313)) && r.__esModule ? r : {
+                i = (r = n(322)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(334),
-                s = n(335),
-                l = n(333);
-            var c = o.Ember.Component.extend({
+                a = n(343),
+                s = n(344),
+                l = n(342),
+                c = n(219);
+            var d = o.Ember.Component.extend({
                 classNames: ["lol-friend-finder-requested-player"],
                 tra: o.Ember.inject.service("tra"),
                 player: {},
@@ -14536,7 +14654,7 @@
                     }))
                 },
                 getContextMenuItems() {
-                    return this.get("puuid") || this.get("summonerId") ? [(0, a.cmAct)((() => this.openProfile()), "friend_finder_view_profile"), (0, a.cmAct)((() => this.blockPlayer()), "friend_finder_block")] : null
+                    return this.get("puuid") || this.get("summonerId") ? [(0, a.cmAct)((() => this.openProfile()), "friend_finder_view_profile", {}, (0, c.createContextMenuIcon)(c.ICON_NAMES.PROFILE)), (0, a.cmAct)((() => this.blockPlayer()), "friend_finder_block", {}, (0, c.createContextMenuIcon)(c.ICON_NAMES.BLOCK))] : null
                 },
                 actions: {
                     removeFriendRequest() {
@@ -14547,7 +14665,7 @@
                     this._super(...arguments), this.element.removeEventListener("contextmenu", this.contextMenuHandler)
                 }
             });
-            t.default = c
+            t.default = d
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -14567,7 +14685,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(339);
+                o = n(348);
             const {
                 RunMixin: i
             } = r.EmberAddons.EmberLifeline, a = "show-hovercard", s = "hide-hovercard", l = {
@@ -14591,7 +14709,7 @@
             let c = !1;
             var d = r.Ember.Component.extend(i, {
                 tagName: "template",
-                layout: n(340),
+                layout: n(349),
                 socialPlatformConfig: r.Ember.inject.service(),
                 puuid: null,
                 summonerId: null,
@@ -14742,12 +14860,12 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(342),
-                i = n(343);
+                o = n(351),
+                i = n(352);
             var a = r.Ember.Component.extend({
                 clientConfig: r.Ember.inject.service("client-config"),
                 tagName: "",
-                layout: n(344),
+                layout: n(353),
                 loggedIn: null,
                 isKnown: null,
                 me: null,
@@ -15130,17 +15248,17 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(339),
-                a = n(342),
-                s = n(343),
-                l = n(346),
-                c = (r = n(313)) && r.__esModule ? r : {
+                i = n(348),
+                a = n(351),
+                s = n(352),
+                l = n(355),
+                c = (r = n(322)) && r.__esModule ? r : {
                     default: r
                 };
             const d = /\W+/g;
             var p = o.Ember.Component.extend({
                 tagName: "",
-                layout: n(347),
+                layout: n(356),
                 friendHovercardsService: o.Ember.inject.service("friend-hovercards"),
                 profileChampionInfo: o.Ember.inject.service(),
                 socialPlatformConfig: o.Ember.inject.service(),
@@ -15351,7 +15469,7 @@
             }), t.default = void 0;
             var r = n(1);
             const o = n(153),
-                i = n(350),
+                i = n(359),
                 a = (0, r.emberDataBinding)({
                     Ember: r.Ember,
                     websocket: (0, r.getProvider)().getSocket(),
@@ -15447,7 +15565,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(352);
+            n(361);
             var o = r.Ember.Component.extend({
                 avatarClassNames: "",
                 championId: null,
@@ -15525,15 +15643,15 @@
             }), t.default = void 0;
             var r = n(1),
                 o = n(218),
-                i = s(n(313)),
-                a = s(n(355));
+                i = s(n(322)),
+                a = s(n(364));
 
             function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(356);
+            n(365);
             var l = r.Ember.Component.extend({
                 classNames: ["lol-social-friend-request"],
                 closeModal: null,
@@ -15708,7 +15826,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(358);
+            n(367);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-friend-requests"],
                 alertNewFriendRequests: !1,
@@ -15778,7 +15896,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(360);
+            n(369);
             var o = r.Ember.Component.extend({
                 friendsService: r.Ember.inject.service("friends"),
                 friendRequestsService: r.Ember.inject.service("friendRequests"),
@@ -15803,7 +15921,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = a(n(313)),
+                o = a(n(322)),
                 i = a(n(153));
 
             function a(e) {
@@ -15948,7 +16066,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(363);
+            n(372);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-menu"],
                 keepOpenOnScroll: !1,
@@ -15978,7 +16096,7 @@
                 value: !0
             }), t.default = t.SAVING_ANIMATION_MS = void 0;
             var r, o = n(1),
-                i = (r = n(313)) && r.__esModule ? r : {
+                i = (r = n(322)) && r.__esModule ? r : {
                     default: r
                 };
             t.SAVING_ANIMATION_MS = 300;
@@ -16049,7 +16167,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(366);
+            n(375);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-menu-item"]
             });
@@ -16102,16 +16220,16 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(369),
-                i = s(n(313)),
-                a = s(n(291));
+                o = n(378),
+                i = s(n(322)),
+                a = s(n(300));
 
             function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(370);
+            n(379);
             var l = r.Ember.Component.extend(a.default, {
                 classNames: ["lol-social-roster", "social-ember-fade-in"],
                 scrollTop: 0,
@@ -16460,18 +16578,18 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(369),
-                i = c(n(313)),
-                a = c(n(372)),
-                s = c(n(291)),
-                l = c(n(373));
+                o = n(378),
+                i = c(n(322)),
+                a = c(n(381)),
+                s = c(n(300)),
+                l = c(n(382));
 
             function c(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(374);
+            n(383);
             var d = r.Ember.Component.extend(a.default, s.default, l.default, {
                 classNames: ["lol-social-roster-group"],
                 attributeBindings: ["draggable"],
@@ -16708,10 +16826,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(373)) && r.__esModule ? r : {
+                i = (r = n(382)) && r.__esModule ? r : {
                     default: r
                 };
-            n(376);
+            n(385);
             var a = o.Ember.Component.extend(i.default, {
                 classNames: ["lol-social-roster-group-name"],
                 group: null,
@@ -16789,19 +16907,20 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = c(n(373)),
-                i = n(369),
-                a = c(n(313)),
+                o = d(n(382)),
+                i = n(378),
+                a = d(n(322)),
                 s = n(218),
-                l = c(n(372));
+                l = n(219),
+                c = d(n(381));
 
-            function c(e) {
+            function d(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(378);
-            var d = r.Ember.Component.extend(l.default, o.default, {
+            n(387);
+            var p = r.Ember.Component.extend(c.default, o.default, {
                 classNames: ["lol-social-roster-member"],
                 classNameBindings: ["useMessagesMutedClass:muted", "showUnreadMessageCount:has-unread", "isOffline:offline"],
                 attributeBindings: ["draggable"],
@@ -16963,6 +17082,7 @@
                         label: r.tra.get("context_menu_move_to_group"),
                         disabled: !1,
                         hidden: this.get("isFriendDiscordOnly"),
+                        icon: (0, l.createContextMenuIcon)(l.ICON_NAMES.FOLDER),
                         submenu: t.map((t => {
                             let o = t.name;
                             return "**Default" === t.name ? o = r.tra.get("group_label_default") : t.isMetaGroup && (o = r.tra.get("group_label_" + t.name.toLowerCase())), {
@@ -17095,11 +17215,18 @@
                         action: this.spectateGame,
                         label: r.tra.get("context_menu_spectate_game"),
                         disabled: t.disabled,
-                        hidden: !this.get("isFriendSummoner") || t.hidden
+                        hidden: !this.get("isFriendSummoner") || t.hidden,
+                        icon: (0, l.createContextMenuIcon)(l.ICON_NAMES.SPECTATE)
                     };
                     if (t.tooltip) {
                         const e = document.createElement("div");
-                        e.className = "menu-item", e.innerText = r.tra.get("context_menu_spectate_game"), n.element = e, this._createTextTooltip(e, t.tooltip, {
+                        e.className = "menu-item with-icon";
+                        const o = document.createElement("div");
+                        o.className = "menu-item-icon";
+                        const i = (0, l.createContextMenuIcon)(l.ICON_NAMES.SPECTATE);
+                        i && o.appendChild(i);
+                        const a = document.createElement("div");
+                        a.className = "menu-item-label", a.innerText = r.tra.get("context_menu_spectate_game"), e.appendChild(o), e.appendChild(a), n.element = e, this._createTextTooltip(e, t.tooltip, {
                             direction: "left"
                         }), this.set("lastSpectateTooltipElem", e)
                     }
@@ -17320,44 +17447,52 @@
                             action: () => this.inviteFriend(e),
                             label: r.tra.get("context_menu_invite_to_game"),
                             disabled: !t.canInviteToGame(e),
-                            hidden: this.get("isInvitableViaDiscord")
+                            hidden: this.get("isInvitableViaDiscord"),
+                            icon: (0, l.createContextMenuIcon)(l.ICON_NAMES.INVITE)
                         }, {
                             action: () => this.inviteFriendDiscord(e),
                             label: r.tra.get("context_menu_invite_by_discord"),
                             disabled: !t.canInviteToGameViaDiscord(e),
-                            hidden: !this.get("isInvitableViaDiscord")
+                            hidden: !this.get("isInvitableViaDiscord"),
+                            icon: (0, l.createContextMenuIcon)(l.ICON_NAMES.INVITE)
                         }, {
                             action: () => this.openChat(!0),
                             label: r.tra.get("context_menu_send_message"),
                             disabled: !1,
-                            hidden: this.get("isFriendDiscordOnly")
+                            hidden: this.get("isFriendDiscordOnly"),
+                            icon: (0, l.createContextMenuIcon)(l.ICON_NAMES.SEND_MESSAGE)
                         }, await this.get("makeSpectateContextMenuItem"), {
                             action: () => this.viewProfile(e),
                             label: r.tra.get("context_menu_view_profile"),
                             disabled: !n.profilesEnabled,
-                            hidden: !this.get("isFriendSummoner") || this.get("isFriendRemote")
+                            hidden: !this.get("isFriendSummoner") || this.get("isFriendRemote"),
+                            icon: (0, l.createContextMenuIcon)(l.ICON_NAMES.PROFILE)
                         }, {
                             action: () => this.giveGift(e),
                             label: r.tra.get("context_menu_give_gift"),
                             disabled: !this.get("isGiftable"),
-                            hidden: !this.get("isFriendSummoner") || !this.get("socialPlatformConfigService.friendsListGiftingEnabled")
+                            hidden: !this.get("isFriendSummoner") || !this.get("socialPlatformConfigService.friendsListGiftingEnabled"),
+                            icon: (0, l.createContextMenuIcon)(l.ICON_NAMES.GIFT)
                         }, {
                             action: this.beginEditingNote,
                             label: e.note ? r.tra.get("context_menu_edit_note") : r.tra.get("context_menu_add_note"),
                             disabled: !1,
-                            hidden: this.get("isFriendDiscordOnly")
+                            hidden: this.get("isFriendDiscordOnly"),
+                            icon: (0, l.createContextMenuIcon)(l.ICON_NAMES.NOTE)
                         }, this.get("makeMoveToContextMenuItem"), {
                             action: () => this.tryRemoveOrBlockFriend(e),
                             label: r.tra.get("context_menu_unfriend_block"),
                             disabled: !1,
                             hidden: this.get("isFriendDiscordOnly"),
-                            class: "danger-text"
+                            class: "danger-text",
+                            icon: (0, l.createContextMenuIcon)(l.ICON_NAMES.BLOCK)
                         }, {
                             action: () => this.confirmReportFriend(e),
                             label: r.tra.get("context_menu_report_friend"),
                             disabled: o.playerAlreadyReported(e.puuid),
                             hidden: !i,
-                            class: "danger-text"
+                            class: "danger-text",
+                            icon: (0, l.createContextMenuIcon)(l.ICON_NAMES.REPORT)
                         }].filter((e => e && !e.hidden)),
                         s = [];
                     for (const e of a)
@@ -17367,7 +17502,8 @@
                                 disabled: n,
                                 element: r,
                                 label: o,
-                                submenu: i
+                                submenu: i,
+                                icon: a
                             } = e;
                             s.push({
                                 action: t,
@@ -17376,6 +17512,7 @@
                                 label: o,
                                 target: this,
                                 submenu: i,
+                                icon: a,
                                 class: e.class
                             })
                         } return s
@@ -17464,7 +17601,7 @@
                     }
                 }
             });
-            t.default = d
+            t.default = p
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -17474,8 +17611,8 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(369);
-            n(380);
+                o = n(378);
+            n(389);
             const i = "outOfGame",
                 a = "NONE";
             var s = r.Ember.Component.extend({
@@ -17586,7 +17723,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(369),
+                o = n(378),
                 i = r.Ember.Component.extend({
                     tagName: "template",
                     type: "top",
@@ -17831,7 +17968,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(387);
+            n(396);
             var o = r.Ember.Component.extend({
                 classNames: ["vng-age-rating"],
                 classNameBindings: ["isHidden:vng-age-rating-hidden"],
@@ -18026,7 +18163,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(373)) && r.__esModule ? r : {
+                i = (r = n(382)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "ForcedShutdown",
@@ -18120,7 +18257,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(373)) && r.__esModule ? r : {
+                i = (r = n(382)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -18428,7 +18565,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(373)) && r.__esModule ? r : {
+                i = (r = n(382)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Service.extend(i.default, {
@@ -18440,7 +18577,7 @@
                         name: "CodeOfConduct",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        CodeOfConductComponent: n(396).default
+                        CodeOfConductComponent: n(405).default
                     })
                 },
                 handleCodeOfConductNotification: function(e) {
@@ -18469,7 +18606,7 @@
             const o = (0, r.getProvider)().get("rcp-fe-lol-uikit").getTemplateHelper();
             var i = r.Ember.Component.extend({
                 classNames: ["code-of-conduct"],
-                layout: n(397),
+                layout: n(406),
                 didInsertElement: function() {
                     this._super(...arguments), this.unlockRule(1)
                 },
@@ -18992,7 +19129,7 @@
                 i = (r = n(158)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(369);
+                a = n(378);
             var s = o.Ember.Service.extend({
                 friendsService: o.Ember.inject.service("friends"),
                 systemService: o.Ember.inject.service("system"),
@@ -19125,7 +19262,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(342);
+                o = n(351);
             const i = "/lol-chat/v2/friend-requests",
                 a = "/lol-chat/v1/blocked-players",
                 s = "/lol-client-config/v3/client-config/lol.client_settings.match_history.recently_played_summoners.friend_finder_disabled",
@@ -19229,8 +19366,8 @@
                 i = (r = n(160)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(342),
-                s = n(369);
+                a = n(351),
+                s = n(378);
             const l = "/lol-chat/v1/friends",
                 c = "/lol-honor-v2/v1/recognition-history",
                 d = "/lol-client-config/v3/client-config/lol.client_settings.discordIntegration.enabled";
@@ -19424,7 +19561,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(369);
+                o = n(378);
             const i = {
                     NORMAL_GAME: "game_type_normal",
                     TUTORIAL_GAME: "game_type_tutorial",
@@ -19608,7 +19745,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(373)) && r.__esModule ? r : {
+                i = (r = n(382)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -19625,7 +19762,7 @@
                 d = "OnLockoutWarning",
                 p = "RankedRestrictedGames",
                 u = ["InProgress", "WaitingForStats", "PreEndOfGame"],
-                m = n(415),
+                m = n(424),
                 g = o.Ember.get;
             var h = o.Ember.Service.extend(a, i.default, {
                 init() {
@@ -19636,7 +19773,7 @@
                         name: "LeaverBusterWarning",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        LeaverBusterWarningComponent: n(416).default
+                        LeaverBusterWarningComponent: n(425).default
                     })
                 },
                 notificationObserver: o.Ember.on("init", o.Ember.observer("leaverBusterNotifications.[]", "gameflow.phase", (function() {
@@ -19757,7 +19894,7 @@
             var r = n(1),
                 o = r.Ember.Component.extend({
                     classNames: ["leaver-buster-dialog"],
-                    layout: n(417),
+                    layout: n(426),
                     agreeText: r.Ember.computed("tra.leaver_buster_warning_agree", "tra.leaver_buster_warning_agree_prompt$html", "notificationContext.agreeText", (function() {
                         return this.get("tra").formatString("leaver_buster_warning_agree_prompt$html", {
                             leaverBusterWarningAgree: this.get("notificationContext.agreeText")
@@ -20117,7 +20254,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = n(342);
+            var r = n(351);
             const o = n(1),
                 {
                     dataBinding: i,
@@ -20199,7 +20336,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(373)) && r.__esModule ? r : {
+                i = (r = n(382)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "PERMA_BAN";
@@ -20212,22 +20349,22 @@
                         name: "ReformCard",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardComponent: n(429).default,
-                        ReformCardChatLogComponent: n(431).default,
-                        ReformCardMatchHistoryComponent: n(433).default
+                        ReformCardComponent: n(438).default,
+                        ReformCardChatLogComponent: n(440).default,
+                        ReformCardMatchHistoryComponent: n(442).default
                     }), o.emberApplicationFactory.setFactoryDefinition({
                         name: "ReformCardV2",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardV2Component: n(435).default,
-                        ReformCardV2ChatLogComponent: n(437).default,
-                        ReformCardV2MatchHistoryComponent: n(439).default
+                        ReformCardV2Component: n(444).default,
+                        ReformCardV2ChatLogComponent: n(446).default,
+                        ReformCardV2MatchHistoryComponent: n(448).default
                     }), o.emberApplicationFactory.setFactoryDefinition({
                         name: "ReformCardV3",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardV3Component: n(441).default,
-                        ReformCardV3ChatLogComponent: n(444).default
+                        ReformCardV3Component: n(450).default,
+                        ReformCardV3ChatLogComponent: n(453).default
                     }))
                 },
                 initDataBindings() {
@@ -20310,7 +20447,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(430)) && r.__esModule ? r : {
+                i = (r = n(439)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20454,7 +20591,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(432)) && r.__esModule ? r : {
+                i = (r = n(441)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -20528,7 +20665,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(434)) && r.__esModule ? r : {
+                i = (r = n(443)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20566,7 +20703,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(436)) && r.__esModule ? r : {
+                i = (r = n(445)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20744,7 +20881,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(438)) && r.__esModule ? r : {
+                i = (r = n(447)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -20799,7 +20936,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(440)) && r.__esModule ? r : {
+                i = (r = n(449)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -20837,10 +20974,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(442)) && r.__esModule ? r : {
+                i = (r = n(451)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(443);
+                a = n(452);
             const s = o.Ember.Object.extend(o.Ember.PromiseProxyMixin);
             var l = o.Ember.Component.extend({
                 classNames: ["player-behavior-reform-card-v3"],
@@ -20897,7 +21034,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(445)) && r.__esModule ? r : {
+                i = (r = n(454)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -20943,7 +21080,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(373)) && r.__esModule ? r : {
+                i = (r = n(382)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "/client-config/v2/config/lol.client_settings.remedy.obfuscated_player_name";
@@ -21083,7 +21220,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(373)) && r.__esModule ? r : {
+                i = (r = n(382)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -21900,11 +22037,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(507)) && r.__esModule ? r : {
+                i = (r = n(516)) && r.__esModule ? r : {
                     default: r
                 };
-            n(508);
-            var a = n(509);
+            n(517);
+            var a = n(518);
             var s = o.Ember.Component.extend({
                 classNames: ["remedies-received-component"],
                 layout: i.default,
@@ -21995,13 +22132,13 @@
             t.ARAM_REROLL_REFUND_REWARD_TYPE = m;
             const g = "LP_CONSOLATION";
             t.LP_CONSOLATION_REWARD_TYPE = g;
-            const h = n(510);
+            const h = n(519);
             t.ARAM_REROLL_ICON_PATH = h;
-            const f = n(511);
+            const f = n(520);
             t.XP_BOOST_ICON_PATH = f;
-            const _ = n(512);
+            const _ = n(521);
             t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = _;
-            const A = n(513);
+            const A = n(522);
             t.LP_CONSOLATION_REMEDY_ICON_PATH = A;
             const b = {};
             t.REMEDY_ICON_MAP = b, b[p] = f, b[u] = _, b[m] = h, b[g] = A
@@ -22023,11 +22160,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(509),
-                a = (r = n(515)) && r.__esModule ? r : {
+                i = n(518),
+                a = (r = n(524)) && r.__esModule ? r : {
                     default: r
                 };
-            n(516);
+            n(525);
             const s = {};
             s[i.XP_BOOSTED_GAMES_REWARD_TYPE] = "xp_boosted_games_reward_description", s[i.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE] = "autofill_protected_games_reward_description", s[i.ARAM_REROLL_REFUND_REWARD_TYPE] = "aram_reroll_refund_reward_description", s[i.LP_CONSOLATION_REWARD_TYPE] = "lp_consolation_reward_description";
             var l = o.Ember.Component.extend({
@@ -22062,11 +22199,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(518),
-                a = (r = n(519)) && r.__esModule ? r : {
+                i = n(527),
+                a = (r = n(528)) && r.__esModule ? r : {
                     default: r
                 };
-            n(520);
+            n(529);
             var s = o.Ember.Component.extend({
                 classNames: ["credibility-behavior-warning-component"],
                 layout: a.default,
@@ -22132,10 +22269,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(522)) && r.__esModule ? r : {
+                i = (r = n(531)) && r.__esModule ? r : {
                     default: r
                 };
-            n(523);
+            n(532);
             var a = o.Ember.Component.extend({
                 classNames: ["credibility-behavior-warning-option"],
                 layout: i.default,
@@ -22161,7 +22298,7 @@
             n.r(t)
         }, (e, t, n) => {
             "use strict";
-            n(525), n(526), n(527), n(530), n(532), n(545), n(547), n(550), n(551), n(553), n(554), n(556), n(557), n(559), n(560), n(561), n(563), n(564), n(566), n(567)
+            n(534), n(535), n(536), n(539), n(541), n(554), n(556), n(559), n(560), n(562), n(563), n(565), n(566), n(568), n(569), n(570), n(572), n(573), n(575), n(576)
         }, (e, t, n) => {
             "use strict";
             const r = n(1);
@@ -22263,7 +22400,7 @@
                     computed: i
                 } = o;
             o.defineElement("lol-player-notifications-button", {
-                styles: n(528),
+                styles: n(537),
                 computed: {
                     notifications: i.resource("/player-notifications/v1/notifications"),
                     toastNotifications: "notifications.reduce(reduceToasts, [])",
@@ -22345,7 +22482,7 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(529),
+                a = n(538),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "/* notifications button styles */\n.player-notifications-button {\n  position: relative;\n  cursor: pointer;\n  width: 18px;\n  height: 18px;\n}\n.player-notifications-button-icon {\n  outline: none;\n  border: none;\n  background: none;\n  padding: 0;\n  width: 18px;\n  height: 18px;\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #c8aa6e;\n  -webkit-mask-size: contain;\n}\n.player-notifications-button-icon:hover {\n  background-color: #f0e6d2;\n}\n.player-notifications-button-icon:active,\n.player-notifications-button.open .player-notifications-button-icon {\n  background-color: #785a28;\n}\n.player-notifications-button.disabled .player-notifications-button-icon {\n  background-color: #5c5b57;\n}\n.player-notifications-button.disabled {\n  pointer-events: none;\n}\n.player-notifications-button-unread-pip {\n  position: absolute;\n  top: 1px;\n  right: -1px;\n  width: 8px;\n  height: 8px;\n  box-sizing: border-box;\n  border-radius: 50%;\n  flex-shrink: 0;\n  background: #010a13;\n  box-shadow: 0 0 0 2px #010a13;\n  background-color: #c89b3c;\n}\n", "", {
@@ -22366,7 +22503,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-default-toast", {
-                styles: n(531)
+                styles: n(540)
             })
         }, (e, t, n) => {
             var r = n(203),
@@ -22381,7 +22518,7 @@
             }]), e.exports = o
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(533)) && r.__esModule ? r : {
+            var r, o = (r = n(542)) && r.__esModule ? r : {
                 default: r
             };
             const i = n(1),
@@ -22390,7 +22527,7 @@
                     tra: s
                 } = i;
             a.defineElement("lol-player-notifications-item", {
-                styles: n(543),
+                styles: n(552),
                 dismiss: function() {
                     Object.prototype.hasOwnProperty.call(this.notification, "dismissible") && !this.notification.dismissible || (this.notification.state = "dismissed", i.ajax.delete("/player-notifications/v1/notifications/" + this.notification.id).then((() => {
                         i.playerNotificationsPrivateApi.dispatch("remove", this.notification)
@@ -22422,15 +22559,15 @@
             }), t.default = function(e) {
                 return m.get(e) || e
             };
-            var r = u(n(534)),
-                o = u(n(535)),
-                i = u(n(536)),
-                a = u(n(537)),
-                s = u(n(538)),
-                l = u(n(539)),
-                c = u(n(540)),
-                d = u(n(541)),
-                p = u(n(542));
+            var r = u(n(543)),
+                o = u(n(544)),
+                i = u(n(545)),
+                a = u(n(546)),
+                s = u(n(547)),
+                l = u(n(548)),
+                c = u(n(549)),
+                d = u(n(550)),
+                p = u(n(551));
 
             function u(e) {
                 return e && e.__esModule ? e : {
@@ -22479,7 +22616,7 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(544),
+                a = n(553),
                 s = o(r),
                 l = i(a);
             s.push([e.id, ".player-notifications-item {\n  display: flex;\n  padding: 12px 18px 10px;\n  border-bottom: thin solid #1e282d;\n}\n.player-notifications-item:hover {\n  background: #1e2328;\n}\n.player-notifications-item:hover .text {\n  color: #f0e6d2;\n}\n.player-notifications-item:hover .time {\n  color: #a09b8c;\n}\n.player-notifications-item-image {\n  width: 56px;\n  height: 56px;\n  flex: 0 0 auto;\n  margin: 0 18px 0 0;\n}\n.player-notifications-item-image:lang(ar-ae) {\n  margin: 0 0 0 18px;\n}\n.player-notifications-item-text {\n  display: flex;\n  flex-direction: column;\n  flex: 1 1 auto;\n  overflow: hidden;\n}\n.player-notifications-item-dismiss-button {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n}\n.player-notifications-item-dismiss-button {\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #cdbe91;\n  -webkit-mask-size: contain;\n  width: 18px;\n  height: 18px;\n  flex: 0 0 auto;\n}\n.player-notifications-item-dismiss-button:hover {\n  background-color: #f0e6d2;\n}\n.player-notifications-item-dismiss-button:active {\n  background-color: #463714;\n}\n.text {\n  color: #a09b8c;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\nh6.unread,\nh6.toast {\n  color: #c89b3c;\n}\n.text-unread,\n.text-toast {\n  color: #f0e6d2;\n}\n.time {\n  color: #3c3c41;\n}\n.time-unread,\n.time-toast {\n  color: #a09b8c;\n}\n", "", {
@@ -22501,7 +22638,7 @@
                 } = r,
                 i = /^(\/|https?:\/\/)/;
             o.defineElement("lol-player-notifications-toast", {
-                styles: n(546),
+                styles: n(555),
                 attached: function() {
                     const e = this.querySelector(".player-notifications-toast-container");
                     let t = this.notification.backgroundUrl;
@@ -22533,7 +22670,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-tray", {
-                styles: n(548),
+                styles: n(557),
                 dismissAll: function() {
                     r.modalManager.add({
                         type: "DialogConfirm",
@@ -22565,7 +22702,7 @@
             var r = n(203),
                 o = n(204),
                 i = n(207),
-                a = n(549),
+                a = n(558),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "lol-player-notifications-tray {\n  display: block;\n  width: 414px;\n  height: 402px;\n}\n.notifications-tray {\n  display: flex;\n  flex-direction: column;\n}\n.notifications-tray-header {\n  display: flex;\n  align-items: center;\n  height: 46px;\n  padding: 0 18px;\n  border-bottom: thin solid #463714;\n}\n.notifications-tray-title {\n  flex-grow: 1;\n}\n.notifications-dismiss-all-btn {\n  width: 16px;\n  height: 16px;\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #cdbe91;\n  -webkit-mask-size: contain;\n  cursor: pointer;\n}\n.notifications-dismiss-all-btn:hover {\n  background-color: #f0e6d2;\n}\n.notifications-dismiss-all-btn:active {\n  background-color: #463714;\n}\n.notifications-dismiss-all-btn:lang(ar-ae) {\n  transform: scaleX(-1);\n}\n.notifications-tray-body {\n  flex-grow: 1;\n  height: 355px;\n}\n", "", {
@@ -22595,7 +22732,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-esports-toast", {
-                styles: n(552)
+                styles: n(561)
             })
         }, (e, t, n) => {
             var r = n(203),
@@ -22619,14 +22756,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(533)) && r.__esModule ? r : {
+            var r, o = (r = n(542)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-esports-tft-toast", {
-                styles: n(555),
+                styles: n(564),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -22661,7 +22798,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-merch-toast", {
-                styles: n(558)
+                styles: n(567)
             })
         }, (e, t, n) => {
             var r = n(203),
@@ -22696,14 +22833,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(533)) && r.__esModule ? r : {
+            var r, o = (r = n(542)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-rewards-program-toast", {
-                styles: n(562),
+                styles: n(571),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -22761,7 +22898,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-rgm-toast", {
-                styles: n(565)
+                styles: n(574)
             })
         }, (e, t, n) => {
             var r = n(203),
@@ -22785,14 +22922,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(533)) && r.__esModule ? r : {
+            var r, o = (r = n(542)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-xbox-gamepass-toast", {
-                styles: n(568),
+                styles: n(577),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -22851,21 +22988,21 @@
                         r.tournaments.persistentPanel = e || null, i.sync()
                     },
                     getHovercardTemplates: () => ({
-                        "components/hovercard-name-alias-mode": n(481),
-                        "components/hovercard-name-summoner-mode": n(482)
+                        "components/hovercard-name-alias-mode": n(490),
+                        "components/hovercard-name-summoner-mode": n(491)
                     }),
                     getHovercardComponent: () => {
                         const {
                             PlayerNameComponent: e
                         } = s;
                         return {
-                            HovercardComponentComponent: n(338).default,
-                            HovercardShellComponent: n(345).default,
-                            HovercardContentComponent: n(341).default,
-                            SocialSessionService: n(454).default,
-                            SocialPlatformConfigService: n(453).default,
-                            SocialSettingsService: n(455).default,
-                            ProfileChampionInfoService: n(426).default,
+                            HovercardComponentComponent: n(347).default,
+                            HovercardShellComponent: n(354).default,
+                            HovercardContentComponent: n(350).default,
+                            SocialSessionService: n(463).default,
+                            SocialPlatformConfigService: n(462).default,
+                            SocialSettingsService: n(464).default,
+                            ProfileChampionInfoService: n(435).default,
                             PlayerNameComponent: e
                         }
                     },
@@ -23001,13 +23138,13 @@
                 });
                 const {
                     ComponentFactory: f
-                } = e.default, _ = e.default.Viewport.sidebar().getScreenRoot("social"), A = n(307).default, b = document.createElement("div");
+                } = e.default, _ = e.default.Viewport.sidebar().getScreenRoot("social"), A = n(316).default, b = document.createElement("div");
                 b.classList.add("social-plugin-home"), A(b, (e => {
                     const t = e.__container__.lookup("service:conversations");
                     g.setChatWindowVisibility = e => {
                         t.setVisibility(e)
                     }
-                })), e.default.playerNotificationsApi = new r.default, e.default.playerNotificationsPrivateApi = e.default.playerNotificationsApi._api, n(524);
+                })), e.default.playerNotificationsApi = new r.default, e.default.playerNotificationsPrivateApi = e.default.playerNotificationsApi._api, n(533);
                 const y = f.create("rcp-fe-lol-social");
                 _.bump().then((e => {
                     e.getElement().appendChild(b)
@@ -23017,7 +23154,7 @@
                         friendFinder: x.__container__.lookup("service:friend-finder"),
                         socialButtons: x.__container__.lookup("service:social-buttons")
                     };
-                return n(569)(v)
+                return n(578)(v)
             }))
         }), {
             once: !0
