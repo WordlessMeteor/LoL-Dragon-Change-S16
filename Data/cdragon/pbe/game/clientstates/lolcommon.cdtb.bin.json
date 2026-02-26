@@ -4707,70 +4707,6 @@
                         },
                         "template": "{099c9758}",
                         "__type": "{81580a34}"
-                    },
-                    {
-                        "Filter": {
-                            "__type": "{d4737a04}"
-                        },
-                        "LiveUpdate": true,
-                        "option": 27,
-                        "template": "{2f26143a}",
-                        "LabelTraKey": "PORO_WASD_Option_MovementRotation_Description",
-                        "__type": "OptionItemCheckbox"
-                    },
-                    {
-                        "Filter": {
-                            "__type": "{d4737a04}"
-                        },
-                        "LiveUpdate": true,
-                        "option": 15,
-                        "template": "{eeccf10a}",
-                        "LabelTraKey": "PORO_WASD_Options_FlashHandlingType_Label",
-                        "TooltipTraKey": "PORO_WASD_Options_FlashHandlingType_Tooltip",
-                        "{a4b002d7}": [
-                            {
-                                "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Only",
-                                "value": 1,
-                                "__type": "OptionItemDropdownItem"
-                            },
-                            {
-                                "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Enhanced",
-                                "__type": "OptionItemDropdownItem"
-                            },
-                            {
-                                "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Fallback",
-                                "value": 2,
-                                "__type": "OptionItemDropdownItem"
-                            }
-                        ],
-                        "__type": "OptionItemDropdown"
-                    }
-                ],
-                "__type": "OptionItemGroup"
-            },
-            {
-                "Filter": {
-                    "ShowInLolReplay": false,
-                    "ShowInTftGame": false,
-                    "ShowInTftReplay": false,
-                    "{64bc3430}": false,
-                    "{047600fd}": false,
-                    "__type": "OptionItemFilter_GameStyle"
-                },
-                "template": "{3cd8d5b2}",
-                "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_label",
-                "items": [
-                    {
-                        "option": 103,
-                        "template": "{2f26143a}",
-                        "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_ReplaceQuickCastWithIndicator",
-                        "__type": "OptionItemCheckbox"
-                    },
-                    {
-                        "option": 104,
-                        "template": "{2f26143a}",
-                        "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_CastThePressedSpell",
-                        "__type": "OptionItemCheckbox"
                     }
                 ],
                 "__type": "OptionItemGroup"
@@ -4782,6 +4718,16 @@
                 "template": "{3cd8d5b2}",
                 "LabelTraKey": "Options_WASDAdvancedSettings",
                 "items": [
+                    {
+                        "Filter": {
+                            "__type": "{d4737a04}"
+                        },
+                        "LiveUpdate": true,
+                        "option": 27,
+                        "template": "{2f26143a}",
+                        "LabelTraKey": "PORO_WASD_Option_MovementRotation_Description",
+                        "__type": "OptionItemCheckbox"
+                    },
                     {
                         "Filter": {
                             "__type": "{d4737a04}"
@@ -4835,15 +4781,32 @@
                             }
                         ],
                         "__type": "OptionItemDropdown"
+                    }
+                ],
+                "__type": "OptionItemGroup"
+            },
+            {
+                "Filter": {
+                    "ShowInLolReplay": false,
+                    "ShowInTftGame": false,
+                    "ShowInTftReplay": false,
+                    "{64bc3430}": false,
+                    "{047600fd}": false,
+                    "__type": "OptionItemFilter_GameStyle"
+                },
+                "template": "{3cd8d5b2}",
+                "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_label",
+                "items": [
+                    {
+                        "option": 103,
+                        "template": "{2f26143a}",
+                        "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_ReplaceQuickCastWithIndicator",
+                        "__type": "OptionItemCheckbox"
                     },
                     {
-                        "Filter": {
-                            "__type": "{d4737a04}"
-                        },
-                        "LiveUpdate": true,
-                        "option": 27,
+                        "option": 104,
                         "template": "{2f26143a}",
-                        "LabelTraKey": "PORO_WASD_Option_MovementRotation_Description",
+                        "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_CastThePressedSpell",
                         "__type": "OptionItemCheckbox"
                     }
                 ],

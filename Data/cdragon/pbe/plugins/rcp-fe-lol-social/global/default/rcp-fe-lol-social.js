@@ -13316,20 +13316,20 @@
                     FriendFinderRequestedPlayersComponent: n(346).default,
                     HovercardComponentComponent: n(347).default,
                     HovercardContentComponent: n(350).default,
-                    HovercardShellComponent: n(354).default,
-                    IdentityAndPartiesComponent: n(357).default,
-                    SidebarMainComponent: n(358).default,
-                    SocialAvatarComponent: n(360).default,
-                    SocialButtonComponent: n(362).default,
-                    SocialFriendRequestComponent: n(363).default,
-                    SocialFriendRequestsComponent: n(366).default,
-                    SocialFriendRequestsModalComponent: n(368).default,
-                    SocialIdentityComponent: n(370).default,
-                    SocialMenuComponent: n(371).default,
-                    SocialMenuInputComponent: n(373).default,
-                    SocialMenuItemComponent: n(374).default,
-                    SocialPanelComponent: n(376).default,
-                    SocialRosterComponent: n(377).default,
+                    HovercardShellComponent: n(355).default,
+                    IdentityAndPartiesComponent: n(358).default,
+                    SidebarMainComponent: n(359).default,
+                    SocialAvatarComponent: n(361).default,
+                    SocialButtonComponent: n(363).default,
+                    SocialFriendRequestComponent: n(364).default,
+                    SocialFriendRequestsComponent: n(367).default,
+                    SocialFriendRequestsModalComponent: n(369).default,
+                    SocialIdentityComponent: n(371).default,
+                    SocialMenuComponent: n(372).default,
+                    SocialMenuInputComponent: n(374).default,
+                    SocialMenuItemComponent: n(375).default,
+                    SocialPanelComponent: n(377).default,
+                    SocialRosterComponent: n(378).default,
                     SocialRosterGroupComponent: n(380).default,
                     SocialRosterGroupNameComponent: n(384).default,
                     SocialRosterMemberComponent: n(386).default,
@@ -13591,7 +13591,6 @@
                 groupByProductsShown: o.Ember.computed.alias("settingsService.playerSettings.groupByProductShown"),
                 groupByProductsNotShown: o.Ember.computed.not("settingsService.playerSettings.groupByProductShown"),
                 showGroupingNotification: o.Ember.computed.and("allowGroupByGame", "groupByProductsNotShown", "chatGBG", "groupingNotificationNotDismissed"),
-                isDiscordEnabled: o.Ember.computed.alias("discordIntegrationService.isEnabled"),
                 isTencent: o.Ember.computed.equal("baseSettingsService.region", "TENCENT"),
                 inGame: o.Ember.computed.alias("sessionService.gameflow.gameClient.running"),
                 optionsOpen: !1,
@@ -13646,6 +13645,9 @@
                 })),
                 groupMobileMenuClasses: o.Ember.computed("allowGroupByGame", (function() {
                     return this.get("allowGroupByGame") ? "" : "separator"
+                })),
+                shouldShowDiscordGroupOption: o.Ember.computed("discordIntegrationService.isEnabled", "discordIntegrationService.isLinked", (function() {
+                    return this.get("discordIntegrationService.isEnabled") && this.get("discordIntegrationService.isLinked")
                 })),
                 didInsertElement() {
                     this._super(...arguments), this.runTask((function() {
@@ -14861,11 +14863,12 @@
             }), t.default = void 0;
             var r = n(1),
                 o = n(351),
-                i = n(352);
-            var a = r.Ember.Component.extend({
+                i = n(352),
+                a = n(353);
+            var s = r.Ember.Component.extend({
                 clientConfig: r.Ember.inject.service("client-config"),
                 tagName: "",
-                layout: n(353),
+                layout: n(354),
                 loggedIn: null,
                 isKnown: null,
                 me: null,
@@ -15003,10 +15006,13 @@
                 notGnt: r.Ember.computed.not("gntOnlyAndOffline"),
                 noteOfflineGnt: r.Ember.computed.and("note", "gntOnlyAndOffline", "isKnown"),
                 knownNotGnt: r.Ember.computed.and("notGnt", "isKnown"),
-                pty: r.Ember.computed("lol.pty", "gameStatus", (function() {
+                isPartyOpen: r.Ember.computed("lol.ptyType", (function() {
+                    return this.get("lol.ptyType") === a.PARTY_TYPES.OPEN
+                })),
+                pty: r.Ember.computed("lol.pty", "isPartyOpen", "gameStatus", (function() {
                     const e = this.get("lol.pty"),
                         t = this.get("gameStatus");
-                    return "inQueue" === t || "championSelect" === t ? "" : e
+                    return this.get("isPartyOpen") && "inQueue" !== t && "championSelect" !== t ? e : ""
                 })),
                 partyOccupancyString: r.Ember.computed("pty", "openPartyDescription", (function() {
                     const e = this.get("pty"),
@@ -15015,7 +15021,6 @@
                 })),
                 remote: r.Ember.computed.or("remotePlatform", "remoteProduct"),
                 availabilityClasses: r.Ember.computed("pty", "availability", "showDiscordIcon", (function() {
-                    this.get("pty");
                     const e = ["hover-card-availability-icon"];
                     if (!this.get("pty")) {
                         this.get("showDiscordIcon") ? e.push("discord") : (e.push(this.get("availability")), this.get("summonerId") !== this.get("me.summonerId") && this.get("remote") && e.push("remote"))
@@ -15197,7 +15202,7 @@
                 },
                 actions: {}
             });
-            t.default = a
+            t.default = s
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -15235,6 +15240,120 @@
             t.userAvailability = {
                 OFFLINE: "offline"
             }
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.VALID_AVAILABILITIES = t.TOOLTIP_DIRECTIONS = t.SOCIAL_RELATIONSHIP_TYPES = t.PARTY_TYPES = t.META_GROUPS = t.MAXIMUM_ROSTER_SIZE = t.DRAG_DROP_MIME_TYPES = t.DRAG_DROP_EVENT_TYPES = t.DISCORD_ONLINE_STATUS_TYPES = t.AVAILABILITY_SORT = t.AVAILABILITY = void 0;
+            t.MAXIMUM_ROSTER_SIZE = 375;
+            t.META_GROUPS = {
+                DEFAULT: "**DEFAULT",
+                OTHER_SHARDS: "**OTHERSHARDS",
+                OTHER: "**OTHER"
+            };
+            const n = {
+                AVAILABLE: "available",
+                AWAY: "away",
+                CHAT: "chat",
+                DND: "dnd",
+                MOBILE: "mobile",
+                OFFLINE: "offline",
+                ONLINE: "online",
+                SPECTATING: "spectating",
+                UNDEFINED: ""
+            };
+            t.AVAILABILITY = n;
+            const r = new Set([n.CHAT, n.AWAY, n.DND, n.OFFLINE, n.MOBILE]);
+            t.VALID_AVAILABILITIES = r;
+            const o = {
+                [n.UNDEFINED]: 5,
+                [n.OFFLINE]: 5,
+                [n.AWAY]: 4,
+                [n.MOBILE]: 3,
+                [n.DND]: 2,
+                [n.SPECTATING]: 2,
+                [n.ONLINE]: 1,
+                [n.CHAT]: 1,
+                [n.AVAILABLE]: 1
+            };
+            t.AVAILABILITY_SORT = o;
+            t.TOOLTIP_DIRECTIONS = {
+                left: {
+                    targetAnchor: {
+                        x: "left",
+                        y: "center"
+                    },
+                    tooltipAnchor: {
+                        x: "right",
+                        y: "center"
+                    }
+                },
+                right: {
+                    targetAnchor: {
+                        x: "right",
+                        y: "center"
+                    },
+                    tooltipAnchor: {
+                        x: "left",
+                        y: "center"
+                    }
+                },
+                top: {
+                    targetAnchor: {
+                        x: "center",
+                        y: "top"
+                    },
+                    tooltipAnchor: {
+                        x: "center",
+                        y: "bottom"
+                    }
+                },
+                upperleft: {
+                    targetAnchor: {
+                        x: "left",
+                        y: "top"
+                    },
+                    tooltipAnchor: {
+                        x: "right",
+                        y: "center"
+                    },
+                    offset: {
+                        x: -15,
+                        y: -5
+                    }
+                },
+                bottom: {
+                    targetAnchor: {
+                        x: "center",
+                        y: "bottom"
+                    },
+                    tooltipAnchor: {
+                        x: "center",
+                        y: "top"
+                    }
+                }
+            };
+            t.DRAG_DROP_MIME_TYPES = {
+                ROSTER_GROUP: "application/riot.roster-group+json",
+                ROSTER_MEMBER: "application/riot.roster-member+json"
+            };
+            t.DRAG_DROP_EVENT_TYPES = {
+                ROSTER_GROUP: "roster-group",
+                ROSTER_MEMBER: "roster-member"
+            };
+            t.DISCORD_ONLINE_STATUS_TYPES = {
+                ONLINE: "online",
+                OFFLINE: "offline"
+            };
+            t.SOCIAL_RELATIONSHIP_TYPES = {
+                BLOCKED: "blocked",
+                FRIEND: "friend",
+                NONE: "none"
+            };
+            t.PARTY_TYPES = {
+                OPEN: "open",
+                CLOSED: "closed"
+            }
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
@@ -15251,14 +15370,14 @@
                 i = n(348),
                 a = n(351),
                 s = n(352),
-                l = n(355),
+                l = n(356),
                 c = (r = n(322)) && r.__esModule ? r : {
                     default: r
                 };
             const d = /\W+/g;
             var p = o.Ember.Component.extend({
                 tagName: "",
-                layout: n(356),
+                layout: n(357),
                 friendHovercardsService: o.Ember.inject.service("friend-hovercards"),
                 profileChampionInfo: o.Ember.inject.service(),
                 socialPlatformConfig: o.Ember.inject.service(),
@@ -15469,7 +15588,7 @@
             }), t.default = void 0;
             var r = n(1);
             const o = n(153),
-                i = n(359),
+                i = n(360),
                 a = (0, r.emberDataBinding)({
                     Ember: r.Ember,
                     websocket: (0, r.getProvider)().getSocket(),
@@ -15565,7 +15684,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(361);
+            n(362);
             var o = r.Ember.Component.extend({
                 avatarClassNames: "",
                 championId: null,
@@ -15644,14 +15763,14 @@
             var r = n(1),
                 o = n(218),
                 i = s(n(322)),
-                a = s(n(364));
+                a = s(n(365));
 
             function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(365);
+            n(366);
             var l = r.Ember.Component.extend({
                 classNames: ["lol-social-friend-request"],
                 closeModal: null,
@@ -15826,7 +15945,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(367);
+            n(368);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-friend-requests"],
                 alertNewFriendRequests: !1,
@@ -15896,7 +16015,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(369);
+            n(370);
             var o = r.Ember.Component.extend({
                 friendsService: r.Ember.inject.service("friends"),
                 friendRequestsService: r.Ember.inject.service("friendRequests"),
@@ -16066,7 +16185,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(372);
+            n(373);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-menu"],
                 keepOpenOnScroll: !1,
@@ -16167,7 +16286,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(375);
+            n(376);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-menu-item"]
             });
@@ -16220,7 +16339,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(378),
+                o = n(353),
                 i = s(n(322)),
                 a = s(n(300));
 
@@ -16459,116 +16578,6 @@
                 }
             });
             t.default = l
-        }, (e, t) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.VALID_AVAILABILITIES = t.TOOLTIP_DIRECTIONS = t.SOCIAL_RELATIONSHIP_TYPES = t.META_GROUPS = t.MAXIMUM_ROSTER_SIZE = t.DRAG_DROP_MIME_TYPES = t.DRAG_DROP_EVENT_TYPES = t.DISCORD_ONLINE_STATUS_TYPES = t.AVAILABILITY_SORT = t.AVAILABILITY = void 0;
-            t.MAXIMUM_ROSTER_SIZE = 375;
-            t.META_GROUPS = {
-                DEFAULT: "**DEFAULT",
-                OTHER_SHARDS: "**OTHERSHARDS",
-                OTHER: "**OTHER"
-            };
-            const n = {
-                AVAILABLE: "available",
-                AWAY: "away",
-                CHAT: "chat",
-                DND: "dnd",
-                MOBILE: "mobile",
-                OFFLINE: "offline",
-                ONLINE: "online",
-                SPECTATING: "spectating",
-                UNDEFINED: ""
-            };
-            t.AVAILABILITY = n;
-            const r = new Set([n.CHAT, n.AWAY, n.DND, n.OFFLINE, n.MOBILE]);
-            t.VALID_AVAILABILITIES = r;
-            const o = {
-                [n.UNDEFINED]: 5,
-                [n.OFFLINE]: 5,
-                [n.AWAY]: 4,
-                [n.MOBILE]: 3,
-                [n.DND]: 2,
-                [n.SPECTATING]: 2,
-                [n.ONLINE]: 1,
-                [n.CHAT]: 1,
-                [n.AVAILABLE]: 1
-            };
-            t.AVAILABILITY_SORT = o;
-            t.TOOLTIP_DIRECTIONS = {
-                left: {
-                    targetAnchor: {
-                        x: "left",
-                        y: "center"
-                    },
-                    tooltipAnchor: {
-                        x: "right",
-                        y: "center"
-                    }
-                },
-                right: {
-                    targetAnchor: {
-                        x: "right",
-                        y: "center"
-                    },
-                    tooltipAnchor: {
-                        x: "left",
-                        y: "center"
-                    }
-                },
-                top: {
-                    targetAnchor: {
-                        x: "center",
-                        y: "top"
-                    },
-                    tooltipAnchor: {
-                        x: "center",
-                        y: "bottom"
-                    }
-                },
-                upperleft: {
-                    targetAnchor: {
-                        x: "left",
-                        y: "top"
-                    },
-                    tooltipAnchor: {
-                        x: "right",
-                        y: "center"
-                    },
-                    offset: {
-                        x: -15,
-                        y: -5
-                    }
-                },
-                bottom: {
-                    targetAnchor: {
-                        x: "center",
-                        y: "bottom"
-                    },
-                    tooltipAnchor: {
-                        x: "center",
-                        y: "top"
-                    }
-                }
-            };
-            t.DRAG_DROP_MIME_TYPES = {
-                ROSTER_GROUP: "application/riot.roster-group+json",
-                ROSTER_MEMBER: "application/riot.roster-member+json"
-            };
-            t.DRAG_DROP_EVENT_TYPES = {
-                ROSTER_GROUP: "roster-group",
-                ROSTER_MEMBER: "roster-member"
-            };
-            t.DISCORD_ONLINE_STATUS_TYPES = {
-                ONLINE: "online",
-                OFFLINE: "offline"
-            };
-            t.SOCIAL_RELATIONSHIP_TYPES = {
-                BLOCKED: "blocked",
-                FRIEND: "friend",
-                NONE: "none"
-            }
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -16578,7 +16587,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(378),
+                o = n(353),
                 i = c(n(322)),
                 a = c(n(381)),
                 s = c(n(300)),
@@ -16908,7 +16917,7 @@
             }), t.default = void 0;
             var r = n(1),
                 o = d(n(382)),
-                i = n(378),
+                i = n(353),
                 a = d(n(322)),
                 s = n(218),
                 l = n(219),
@@ -17437,7 +17446,7 @@
                         n = this.get("friendRequestsService");
                     (0, s.confirmReportFriendForAbusiveTextHelper)(e, t.submitDirectMessageReport.bind(t), n.blockPlayer.bind(n))
                 },
-                contextMenuModel: r.Ember.computed("friend", "gameInvitesService", "profilesService", "reportedPlayersService.playersReportedForDms", "clientConfigService.dmReportingEnabled", (async function() {
+                contextMenuModel: r.Ember.computed("friend", "gameInvitesService.lobby", "reportedPlayersService.playersReportedForDms", "clientConfigService.dmReportingEnabled", (async function() {
                     const e = this.get("friend"),
                         t = this.get("gameInvitesService"),
                         n = this.get("profilesService"),
@@ -17611,7 +17620,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(378);
+                o = n(353);
             n(389);
             const i = "outOfGame",
                 a = "NONE";
@@ -17723,7 +17732,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(378),
+                o = n(353),
                 i = r.Ember.Component.extend({
                     tagName: "template",
                     type: "top",
@@ -19022,21 +19031,24 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            const o = "/lol-settings/v2/account/LCUPreferences/lol-general",
-                i = "discord-beta-eat-seen";
-            var a = r.Ember.Service.extend({
+            const o = "/lol-chat/v1/is-discord-integration-enabled",
+                i = "/lol-chat/v1/is-discord-linked",
+                a = "/lol-settings/v2/account/LCUPreferences/lol-general",
+                s = "discord-beta-eat-seen";
+            var l = r.Ember.Service.extend({
                 isDiscordBetaEatSeen: !0,
-                isEnabled: r.isDiscordIntegrationEnabled,
-                shouldShowDiscordBetaEat: r.Ember.computed("isDiscordBetaEatSeen", "isEnabled", (function() {
-                    return this.get("isEnabled") && !this.get("isDiscordBetaEatSeen")
+                isEnabled: !1,
+                isLinked: !1,
+                shouldShowDiscordBetaEat: r.Ember.computed("isDiscordBetaEatSeen", "isEnabled", "isLinked", (function() {
+                    return this.get("isEnabled") && !this.get("isLinked") && !this.get("isDiscordBetaEatSeen")
                 })),
                 markDiscordBetaEatSeen: function() {
                     this.set("isDiscordBetaEatSeen", !0);
                     try {
-                        r.db.patch(o, {
+                        r.db.patch(a, {
                             schemaVersion: 1,
                             data: {
-                                [i]: !0
+                                [s]: !0
                             }
                         })
                     } catch (e) {
@@ -19045,14 +19057,18 @@
                 },
                 init: function() {
                     this._super(...arguments), r.db.observe(o, this, (e => {
-                        e?.data && this.set("isDiscordBetaEatSeen", Boolean(e.data[i]))
+                        this.set("isEnabled", Boolean(e))
+                    })), r.db.observe(i, this, (e => {
+                        this.set("isLinked", Boolean(e))
+                    })), r.db.observe(a, this, (e => {
+                        e?.data && this.set("isDiscordBetaEatSeen", Boolean(e.data[s]))
                     }))
                 },
                 willDestroy() {
-                    this._super(...arguments), r.db.unobserve(o, this)
+                    this._super(...arguments), r.db.unobserve(o, this), r.db.unobserve(i, this), r.db.unobserve(a, this)
                 }
             });
-            t.default = a
+            t.default = l
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -19129,7 +19145,7 @@
                 i = (r = n(158)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(378);
+                a = n(353);
             var s = o.Ember.Service.extend({
                 friendsService: o.Ember.inject.service("friends"),
                 systemService: o.Ember.inject.service("system"),
@@ -19367,7 +19383,7 @@
                     default: r
                 },
                 a = n(351),
-                s = n(378);
+                s = n(353);
             const l = "/lol-chat/v1/friends",
                 c = "/lol-honor-v2/v1/recognition-history",
                 d = "/lol-client-config/v3/client-config/lol.client_settings.discordIntegration.enabled";
@@ -19561,7 +19577,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(378);
+                o = n(353);
             const i = {
                     NORMAL_GAME: "game_type_normal",
                     TUTORIAL_GAME: "game_type_tutorial",
@@ -19602,6 +19618,8 @@
                 patcherService: r.Ember.inject.service("patcher"),
                 settingsService: r.Ember.inject.service("settings"),
                 socialSessionService: r.Ember.inject.service("social-session"),
+                gameMode: r.Ember.computed.alias("lobby.gameConfig.gameMode"),
+                isTFT: r.Ember.computed.equal("gameMode", "TFT"),
                 _isGameInviteAcceptable(e) {
                     if (e && e.invitationMetaData && this.get("isPatcherConnected")) {
                         const t = this.get("socialSessionService.me");
@@ -19663,7 +19681,9 @@
                 canInviteToGame(e) {
                     return !!e && (!(!e || !this._availableForGame(e)) && (!this.get("friendsService").isFriendRemote(e) && r.parties.canInvitePlayer(e.summonerId)))
                 },
-                canInviteToGameViaDiscord: e => !!e && (e?.discordInfo?.onlineStatus === o.DISCORD_ONLINE_STATUS_TYPES.ONLINE && r.parties.canInvitePlayerByPuuid(e.puuid)),
+                canInviteToGameViaDiscord(e) {
+                    return !!e && (!this.get("isTFT") && (e?.discordInfo?.onlineStatus === o.DISCORD_ONLINE_STATUS_TYPES.ONLINE && r.parties.canInvitePlayerByPuuid(e.puuid)))
+                },
                 willDestroy() {
                     this._super(...arguments), r.db.unobserve("/lol-lobby/v2/received-invitations", this), r.db.unobserve("/lol-lobby/v2/lobby", this)
                 }
@@ -20072,8 +20092,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = n(1);
-            const o = {
+            var r = n(1),
+                o = n(353);
+            const i = {
                 queue_id_800: "Intermediate",
                 queue_id_810: "Intro",
                 queue_id_820: "Beginner",
@@ -20084,7 +20105,7 @@
                 queue_id_880: "BetaBeginner",
                 queue_id_890: "BetaIntermediate"
             };
-            var i = r.Ember.Service.extend({
+            var a = r.Ember.Service.extend({
                 gameQueuesService: r.Ember.inject.service("game-queues"),
                 mapsService: r.Ember.inject.service("maps"),
                 friendsService: r.Ember.inject.service("friends"),
@@ -20098,7 +20119,7 @@
                     return r.db.post(`/lol-lobby/v2/party/${t}/join`)
                 },
                 hasOpenParty(e) {
-                    return !this.get("friendsService").isFriendRemote(e) && !!(e && e.lol && e.lol.pty)
+                    return !this.get("friendsService").isFriendRemote(e) && !(!e?.lol?.pty || e?.lol?.ptyType !== o.PARTY_TYPES.OPEN)
                 },
                 openPartyJoinable(e) {
                     return !(!e || "chat" !== e.availability && "away" !== e.availability) && (!this.get("systemService.needsHardwareUpgrade") && this.hasOpenParty(e))
@@ -20128,7 +20149,7 @@
                 },
                 getBotQueueDifficultyString(e) {
                     if (e && e.id) {
-                        const t = o[`queue_id_${e.id}`];
+                        const t = i[`queue_id_${e.id}`];
                         return this.get("tra").formatString(`queue_bot_${t}`)
                     }
                     return ""
@@ -20167,7 +20188,7 @@
                     }
                 }
             });
-            t.default = i
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -21740,8 +21761,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "PuWhtzDQ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\actions-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\actions-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-actions-bar actions"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["actionsBarClasses"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","buttons"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","friend-header"],["flush-element"],["append",["unknown",["tra","friend_header"]],false],["close-element"],["text","\\n      "],["append",["helper",["friend-finder-button"],null,[["disabled"],[["get",["friendFinderButtonDisabled"]]]]],false],["text","\\n"],["block",["if"],[["get",["notChatGBG"]]],null,12],["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["optionsButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openOptionsMenu"],null],null],["static-attr","data-dd-action-name","button.social.options"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showGroupingNotification"]]],null,10,7],["text","      "],["close-element"],["text","\\n      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["filterButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openSlidingFilter"],null],null],["static-attr","data-dd-action-name","button.social.filter"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["left",true]],5],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["folderAddOpen"]]],null,4],["text","\\n    "],["open-element","div",[]],["static-attr","class","search-box"],["static-attr","id","actions-bar-search-input"],["flush-element"],["text","\\n      "],["append",["helper",["player-name-input"],null,[["placeholder","gameNameInputSupplementalClass","singleInputSupplementalClass","gameNameInputHandler","tagLineInputHandler","singleInputHandler"],[["get",["tra","filter_placeholder"]],"search-input__game-name","search-input__single-input",["helper",["action"],[["get",[null]],"filterGameNameValueChangeHandler"],null],["helper",["action"],[["get",[null]],"filterTagLineValueChangeHandler"],null],["helper",["action"],[["get",[null]],"filterSingleInputValueChangeHandler"],null]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["optionsOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeOptionsMenu"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2"],["static-attr","caretless","true"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["optionsMenuClasses"]],null],["flush-element"],["text","\\n"],["block",["uikit-radio"],null,[["selected"],[["helper",["action"],[["get",[null]],"updateSort"],null]]],3],["text","\\n"],["block",["if"],[["get",["allowGroupByGame"]]],null,2],["text","\\n"],["block",["unless"],[["get",["isTencent"]]],null,1],["text","\\n      "],["open-element","div",[]],["static-attr","id","group-offline-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n          "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupOffline"],null],null],["dynamic-attr","checked",["unknown",["chatGroupOfflineOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_offline"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isDiscordEnabled"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","group-mobile-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupDiscord"],null],null],["dynamic-attr","checked",["unknown",["chatGroupDiscordOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_discord"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","group-mobile-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupMobile"],null],null],["dynamic-attr","checked",["unknown",["chatGroupMobileOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_mobile"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","gbg-menuitem"],["static-attr","class","lol-social-menu-item menu-item-separator"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","gbg-checkbox"],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGBG"],null],null],["dynamic-attr","checked",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","class","gbg-label"],["flush-element"],["text","\\n              "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","dropdown_gbg"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","menuitem-sublabel"],["flush-element"],["append",["unknown",["tra","dropdown_disables_folders"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","title","alphabetical"],["dynamic-attr","selected",["unknown",["sortingAlphabetical"]],null],["flush-element"],["append",["unknown",["tra","menu_item_sort_alphabetically"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","title","availability"],["dynamic-attr","selected",["unknown",["sortingAvailability"]],null],["flush-element"],["append",["unknown",["tra","menu_item_sort_status"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["actions-folder-input"],null,[["onFolderInputClose"],[["helper",["action"],[["get",[null]],"closeFolderInput"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tra","tooltip_filter"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_options"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["bottom",true]],6]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","roster_attention_grouping_changes"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["content-block-attention"],null,null,8]],"locals":[]},{"statements":[["block",["social-tooltip"],null,[["direction","type","onclick"],["left","attention",["helper",["action"],[["get",[null]],"closeAttentionTooltip"],null]]],9]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_new_folder"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["folderButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"addFolder"],null],null],["static-attr","data-dd-action-name","button.social.add_folder"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["bottom",true]],11],["text","        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "ttFu+v+b",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\actions-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\actions-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-social-actions-bar actions"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["unknown",["actionsBarClasses"]],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","buttons"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","friend-header"],["flush-element"],["append",["unknown",["tra","friend_header"]],false],["close-element"],["text","\\n      "],["append",["helper",["friend-finder-button"],null,[["disabled"],[["get",["friendFinderButtonDisabled"]]]]],false],["text","\\n"],["block",["if"],[["get",["notChatGBG"]]],null,12],["text","      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["optionsButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openOptionsMenu"],null],null],["static-attr","data-dd-action-name","button.social.options"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showGroupingNotification"]]],null,10,7],["text","      "],["close-element"],["text","\\n      "],["open-element","span",[]],["dynamic-attr","class",["unknown",["filterButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openSlidingFilter"],null],null],["static-attr","data-dd-action-name","button.social.filter"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["left",true]],5],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["folderAddOpen"]]],null,4],["text","\\n    "],["open-element","div",[]],["static-attr","class","search-box"],["static-attr","id","actions-bar-search-input"],["flush-element"],["text","\\n      "],["append",["helper",["player-name-input"],null,[["placeholder","gameNameInputSupplementalClass","singleInputSupplementalClass","gameNameInputHandler","tagLineInputHandler","singleInputHandler"],[["get",["tra","filter_placeholder"]],"search-input__game-name","search-input__single-input",["helper",["action"],[["get",[null]],"filterGameNameValueChangeHandler"],null],["helper",["action"],[["get",[null]],"filterTagLineValueChangeHandler"],null],["helper",["action"],[["get",[null]],"filterSingleInputValueChangeHandler"],null]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["optionsOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"closeOptionsMenu"],null],null],["static-attr","direction","bottom"],["static-attr","offsetx","-2"],["static-attr","caretless","true"],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["optionsMenuClasses"]],null],["flush-element"],["text","\\n"],["block",["uikit-radio"],null,[["selected"],[["helper",["action"],[["get",[null]],"updateSort"],null]]],3],["text","\\n"],["block",["if"],[["get",["allowGroupByGame"]]],null,2],["text","\\n"],["block",["unless"],[["get",["isTencent"]]],null,1],["text","\\n      "],["open-element","div",[]],["static-attr","id","group-offline-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n          "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupOffline"],null],null],["dynamic-attr","checked",["unknown",["chatGroupOfflineOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_offline"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["shouldShowDiscordGroupOption"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","group-mobile-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupDiscord"],null],null],["dynamic-attr","checked",["unknown",["chatGroupDiscordOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_discord"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","group-mobile-menuitem"],["static-attr","class","lol-social-menu-item"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGroupMobile"],null],null],["dynamic-attr","checked",["unknown",["chatGroupMobileOrChatGBG"]],null],["dynamic-attr","disabled",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["flush-element"],["append",["unknown",["tra","dropdown_group_mobile"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","id","gbg-menuitem"],["static-attr","class","lol-social-menu-item menu-item-separator"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","gbg-checkbox"],["flush-element"],["text","\\n            "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"saveRosterGBG"],null],null],["dynamic-attr","checked",["unknown",["chatGBG"]],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","class","gbg-label"],["flush-element"],["text","\\n              "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","dropdown_gbg"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","menuitem-sublabel"],["flush-element"],["append",["unknown",["tra","dropdown_disables_folders"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","title","alphabetical"],["dynamic-attr","selected",["unknown",["sortingAlphabetical"]],null],["flush-element"],["append",["unknown",["tra","menu_item_sort_alphabetically"]],false],["close-element"],["text","\\n        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","title","availability"],["dynamic-attr","selected",["unknown",["sortingAvailability"]],null],["flush-element"],["append",["unknown",["tra","menu_item_sort_status"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["actions-folder-input"],null,[["onFolderInputClose"],[["helper",["action"],[["get",[null]],"closeFolderInput"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tra","tooltip_filter"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_options"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["bottom",true]],6]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","roster_attention_grouping_changes"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["content-block-attention"],null,null,8]],"locals":[]},{"statements":[["block",["social-tooltip"],null,[["direction","type","onclick"],["left","attention",["helper",["action"],[["get",[null]],"closeAttentionTooltip"],null]]],9]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","tooltip_new_folder"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["unknown",["folderButtonClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"addFolder"],null],null],["static-attr","data-dd-action-name","button.social.add_folder"],["flush-element"],["text","\\n"],["block",["social-text-tooltip"],null,[["direction","clearOnClick"],["bottom",true]],11],["text","        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -22997,7 +23018,7 @@
                         } = s;
                         return {
                             HovercardComponentComponent: n(347).default,
-                            HovercardShellComponent: n(354).default,
+                            HovercardShellComponent: n(355).default,
                             HovercardContentComponent: n(350).default,
                             SocialSessionService: n(463).default,
                             SocialPlatformConfigService: n(462).default,
@@ -23078,7 +23099,6 @@
                     emberL10n: e => e.get("rcp-fe-ember-libs").getEmberL10n("1"),
                     flyoutManager: e => e.get("rcp-fe-lol-uikit").getFlyoutManager(),
                     iconPicker: e => e.get("rcp-fe-lol-shared-components").getApi_SummonerIconPicker(),
-                    isDiscordIntegrationEnabled: e => e.get("rcp-fe-common-libs").isDiscordIntegrationEnabled,
                     l10n: e => e.get("rcp-fe-lol-l10n"),
                     layerManager: e => e.get("rcp-fe-lol-uikit").getLayerManager(),
                     LeagueTierNames: e => e.get("rcp-fe-lol-shared-components").getApi_LeagueTierNames(),

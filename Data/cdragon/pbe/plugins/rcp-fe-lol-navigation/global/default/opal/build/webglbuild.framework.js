@@ -4328,7 +4328,7 @@ var unityFramework = (() => {
         var No = new Uint32Array(288);
         for (Ro = 0; Ro < 288; ++Ro) Pn[Ro] = No.subarray(0, Ro + 1);
         var Oo, Uo = {
-                Ua: function() {
+                Ta: function() {
                     this._myGlobalAudioEventListener = function(e) {
                         if ("rcp-fe-lol-home-section-show" == e.data.messageType || "rcp-fe-lol-home-show" == e.data.messageType || "rcp-fe-lol-persistent-iframe-show" == e.data.messageType) v("ClientBridge", "Unmute");
                         else if ("rcp-fe-lol-home-section-hide" == e.data.messageType || "rcp-fe-lol-home-hide" == e.data.messageType || "rcp-fe-lol-persistent-iframe-hide" == e.data.messageType) v("ClientBridge", "Mute");
@@ -4412,7 +4412,7 @@ var unityFramework = (() => {
                         }
                     }, "*")
                 },
-                Xa: function() {
+                Wa: function() {
                     window.parent.postMessage({
                         messageType: "league-session-token-request",
                         type: "RClientWindowMessenger"
@@ -4423,7 +4423,7 @@ var unityFramework = (() => {
                         message: "Login error in Opal"
                     }))
                 },
-                Wa: function(e, r) {
+                Va: function(e, r) {
                     let t = ge(e),
                         n = ge(r);
                     window.parent.postMessage({
@@ -4441,7 +4441,7 @@ var unityFramework = (() => {
                 },
                 zb: Te,
                 yb: Ne,
-                oa: function(e) {
+                na: function(e) {
                     if (!Oe) try {
                         ke(e)()
                     } catch (e) {
@@ -4453,10 +4453,10 @@ var unityFramework = (() => {
                     for (var t = "", n = 0; n < r; n++) t += String.fromCharCode(R[e + n]);
                     o.canvas.style.cursor = "url(data:image/cur;base64," + btoa(t) + "),default"
                 },
-                ra: function(e) {
+                qa: function(e) {
                     o.canvas.style.cursor = e ? "default" : "none"
                 },
-                qa: function(e, r, t, n) {
+                pa: function(e, r, t, n) {
                     t >>= 2, n >>= 2;
                     var o = document.querySelector(Ue()),
                         a = o && o.getBoundingClientRect();
@@ -4994,7 +4994,7 @@ var unityFramework = (() => {
                     }(e, r, t, n);
                     return zr.audioInstances[++zr.audioInstanceIdCounter] = o, zr.audioInstanceIdCounter
                 },
-                ta: function(e, r, t, n) {
+                sa: function(e, r, t, n) {
                     if (0 != zr.audioWebEnabled) {
                         Wr(r, 0);
                         var o = zr.audioInstances[e],
@@ -5011,7 +5011,7 @@ var unityFramework = (() => {
                         } else console.log("Trying to play sound which is not loaded.")
                     }
                 },
-                ua: function(e) {
+                ta: function(e) {
                     var r = zr.audioInstances[e];
                     r && r.release(), delete zr.audioInstances[e]
                 },
@@ -5194,7 +5194,7 @@ var unityFramework = (() => {
                     var n = Xr(e);
                     O[r] = ze(n), O[r + 1] = ze(t.url)
                 },
-                sa: function(e) {
+                ra: function(e) {
                     Yr.timer[e] && clearTimeout(Yr.timer[e]), delete Yr.requests[e], delete Yr.responses[e], delete Yr.abortControllers[e], delete Yr.timer[e]
                 },
                 ee: function(e, r, t, n, a, i) {
@@ -5270,8 +5270,8 @@ var unityFramework = (() => {
                     var t = Yr.requests[e];
                     t && (t.timeout = r)
                 },
-                Va: function() {
-                    var e = [111039, 234043, 3040, 516029, 360035, 233020].map((e => ({
+                Ua: function() {
+                    var e = [111039, 234043, 3040, 516029, 360035, 233020, 234043, 51054, 147059, 22084, 78042, 350070, 115043, 876046, 164044, 157088, 55070, 126038].map((e => ({
                         inventoryType: "CHAMPION_SKIN",
                         itemId: e
                     })));
@@ -5284,10 +5284,10 @@ var unityFramework = (() => {
                         }
                     }, "*")
                 },
-                ka: function() {
+                ja: function() {
                     window.removeEventListener("message", this._myGlobalAudioEventListener), this._myGlobalAudioEventListener = null
                 },
-                la: function() {
+                ka: function() {
                     window.removeEventListener("message", this._myGlobalListener), this._myGlobalListener = null
                 },
                 Tc: function() {
@@ -5317,7 +5317,7 @@ var unityFramework = (() => {
                         }
                     }, "*")
                 },
-                Ya: function() {
+                Xa: function() {
                     window.parent.postMessage({
                         messageType: "lol-metagames",
                         type: "RClientWindowMessenger",
@@ -5346,7 +5346,7 @@ var unityFramework = (() => {
                         }
                     }, "*")
                 },
-                ja: function(e, r, t) {
+                Za: function(e, r, t) {
                     let n = ge(e),
                         o = ge(r),
                         a = JSON.parse(ge(t));
@@ -5365,7 +5365,7 @@ var unityFramework = (() => {
                         }
                     }, "*")
                 },
-                Za: function(e, r) {
+                Ya: function(e, r) {
                     let t = ge(e),
                         n = ge(r);
                     window.parent.postMessage({
@@ -5937,7 +5937,7 @@ var unityFramework = (() => {
                     return ht.removeDeferredCalls(Dt), document.exitPointerLock ? (document.exitPointerLock(), 0) : -1
                 },
                 pd: kt,
-                na: function(e) {
+                ma: function(e) {
                     return ht.fullscreenEnabled() ? (Ft(e), 0) : -1
                 },
                 Cb: function(e, r) {
@@ -6157,7 +6157,7 @@ var unityFramework = (() => {
                 lb: function(e, r, t, n, o) {
                     return Jt(e, r, t, n, 12, "blur")
                 },
-                ma: _t,
+                la: _t,
                 Bd: function(e, r, t, n, o) {
                     return Jt(e, r, t, n, 13, "focus")
                 },
@@ -6314,7 +6314,7 @@ var unityFramework = (() => {
                         return e.errno
                     }
                 },
-                Oa: function(e, r, t, n) {
+                Na: function(e, r, t, n) {
                     try {
                         var o = function(e, r, t, n) {
                             for (var o = 0, a = 0; a < t; a++) {
@@ -6401,7 +6401,7 @@ var unityFramework = (() => {
                 da: function(e, r, t) {
                     Bo.bindAttribLocation(zt.programs[e], r, ge(t))
                 },
-                Ha: function(e, r) {
+                Ga: function(e, r) {
                     34962 == e ? Bo.currentArrayBufferBinding = r : 34963 == e && (Bo.currentElementArrayBufferBinding = r), 35051 == e ? Bo.currentPixelPackBufferBinding = r : 35052 == e && (Bo.currentPixelUnpackBufferBinding = r), Bo.bindBuffer(e, zt.buffers[r])
                 },
                 Ye: function(e, r, t) {
@@ -6477,10 +6477,10 @@ var unityFramework = (() => {
                 zg: function(e) {
                     Bo.clearStencil(e)
                 },
-                va: function(e, r, t) {
+                ua: function(e, r, t) {
                     return t = Number(t), Bo.clientWaitSync(zt.syncs[e], r, t)
                 },
-                Ga: function(e, r, t, n) {
+                Fa: function(e, r, t, n) {
                     Bo.colorMask(!!e, !!r, !!t, !!n)
                 },
                 vg: function(e) {
@@ -6688,10 +6688,10 @@ var unityFramework = (() => {
                 Sg: function(e, r, t, n, o, a, i) {
                     gn("getActiveAttrib", e, r, t, n, o, a, i)
                 },
-                Fa: function(e, r, t, n, o, a, i) {
+                Ea: function(e, r, t, n, o, a, i) {
                     gn("getActiveUniform", e, r, t, n, o, a, i)
                 },
-                xa: function(e, r, t, n, o) {
+                wa: function(e, r, t, n, o) {
                     e = zt.programs[e];
                     var a = Bo.getActiveUniformBlockName(e, r);
                     if (a)
@@ -6788,7 +6788,7 @@ var unityFramework = (() => {
                         } else zt.recordError(1281)
                     }(e, r, t, 0)
                 },
-                Ia: function(e, r) {
+                Ha: function(e, r) {
                     ! function(e, r, t) {
                         if (r) {
                             var n = void 0;
@@ -7030,7 +7030,7 @@ var unityFramework = (() => {
                 Te: function(e, r) {
                     return Bo.getUniformBlockIndex(zt.programs[e], ge(r))
                 },
-                wa: function(e, r, t, n) {
+                va: function(e, r, t, n) {
                     if (n)
                         if (r > 0 && (0 == t || 0 == n)) zt.recordError(1281);
                         else {
@@ -7108,7 +7108,7 @@ var unityFramework = (() => {
                         } else zt.recordError(1281)
                     }(e, r, t, 5)
                 },
-                za: function(e, r, t) {
+                ya: function(e, r, t) {
                     for (var n = dn[r], o = 0; o < r; o++) n[o] = N[t + 4 * o >> 2];
                     Bo.invalidateFramebuffer(e, n)
                 },
@@ -7147,7 +7147,7 @@ var unityFramework = (() => {
                         access: n
                     }, o) : 0
                 },
-                Ea: function(e, r) {
+                Da: function(e, r) {
                     3317 == e && (zt.unpackAlignment = r), Bo.pixelStorei(e, r)
                 },
                 sc: function(e, r) {
@@ -7182,7 +7182,7 @@ var unityFramework = (() => {
                 Re: function(e, r, t) {
                     Bo.samplerParameteri(zt.samplers[e], r, t)
                 },
-                Da: function(e, r, t, n) {
+                Ca: function(e, r, t, n) {
                     Bo.scissor(e, r, t, n)
                 },
                 If: function(e, r, t, n) {
@@ -7448,7 +7448,7 @@ var unityFramework = (() => {
                 Ef: function(e, r, t) {
                     Bo.texParameterf(e, r, t)
                 },
-                Ca: function(e, r, t) {
+                Ba: function(e, r, t) {
                     Bo.texParameteri(e, r, t)
                 },
                 Cf: function(e, r, t) {
@@ -7518,7 +7518,7 @@ var unityFramework = (() => {
                     else n = O.subarray(t >> 2, t + 8 * r >> 2);
                     Bo.uniform2uiv(wn(e), n)
                 },
-                Ba: function(e, r, t) {
+                Aa: function(e, r, t) {
                     if (r <= 96)
                         for (var n = Ln[3 * r - 1], o = 0; o < 3 * r; o += 3) n[o] = U[t + 4 * o >> 2], n[o + 1] = U[t + (4 * o + 4) >> 2], n[o + 2] = U[t + (4 * o + 8) >> 2];
                     else n = U.subarray(t >> 2, t + 12 * r >> 2);
@@ -7557,7 +7557,7 @@ var unityFramework = (() => {
                     else n = O.subarray(t >> 2, t + 16 * r >> 2);
                     Bo.uniform4uiv(wn(e), n)
                 },
-                ya: function(e, r, t) {
+                xa: function(e, r, t) {
                     e = zt.programs[e], Bo.uniformBlockBinding(e, r, t)
                 },
                 rc: function(e, r, t, n) {
@@ -7615,7 +7615,7 @@ var unityFramework = (() => {
                     });
                     i.clientside = !1, Bo.vertexAttribPointer(e, r, t, !!n, o, a)
                 },
-                Aa: function(e, r, t, n) {
+                za: function(e, r, t, n) {
                     Bo.viewport(e, r, t, n)
                 },
                 dh: function() {
@@ -7635,17 +7635,17 @@ var unityFramework = (() => {
                         })), 1
                     }
                 },
-                pa: On,
+                oa: On,
                 Yc: function(e, r, t, n, o) {
                     return On(e, r, t, n)
                 },
-                Sa: function(e) {
+                Ra: function(e) {
                     let r = 1,
                         t = 0;
                     for (let n of Un) jr[e].features.has(n) && (t |= r), r *= 2;
                     return t
                 },
-                Ta: function(e, r) {
+                Sa: function(e, r) {
                     let t = jr[e].limits;
                     r >>= 2;
                     for (let e of Gn) n = r, o = t[e], G[n >>> 1] = BigInt(o), r += 2;
@@ -7679,12 +7679,12 @@ var unityFramework = (() => {
                     }
                     return r
                 },
-                Qa: function(e, r, t, n, o, a) {
+                Pa: function(e, r, t, n, o, a) {
                     jr[e].mapAsync(n, o, a < 0 ? void 0 : a).then((() => {
                         ke(r)(e, t, n, o, a)
                     }))
                 },
-                Na: function(e, r, t, n, o) {
+                Ma: function(e, r, t, n, o) {
                     R.set(new Uint8Array(jr[e].mappedRanges[r], t, o), n)
                 },
                 Ic: function(e) {
@@ -7841,7 +7841,7 @@ var unityFramework = (() => {
                     let t;
                     return no(jr[e].createCommandEncoder(t), jr[e])
                 },
-                Ra: function(e) {
+                Qa: function(e) {
                     return no(jr[e].createCommandEncoder(), jr[e])
                 },
                 Gc: function(e, r, t, n, o, a) {
@@ -8011,7 +8011,7 @@ var unityFramework = (() => {
                 J: function(e) {
                     jr[e].popDebugGroup()
                 },
-                La: function(e, r) {
+                Ka: function(e, r) {
                     jr[e].pushDebugGroup(Hr(r))
                 },
                 fa: function(e, r, t, n, o) {
@@ -8052,16 +8052,16 @@ var unityFramework = (() => {
                 Dc: function(e, r, t, n, o, a) {
                     jr[e].drawIndexed(r, t, n, o, a)
                 },
-                Ka: function(e, r, t) {
+                Ja: function(e, r, t) {
                     jr[e].drawIndexedIndirect(jr[r], t)
                 },
-                Ja: function(e, r, t) {
+                Ia: function(e, r, t) {
                     jr[e].drawIndirect(jr[r], t)
                 },
                 mh: function(e, r, t, n, o) {
                     jr[e].setIndexBuffer(jr[r], yo[t], n, o < 0 ? void 0 : o)
                 },
-                Pa: function(e, r, t, n, o) {
+                Oa: function(e, r, t, n, o) {
                     jr[e].setVertexBuffer(r, jr[t], n, o < 0 ? void 0 : o)
                 },
                 Zg: function(e, r, t, n, o) {
@@ -8086,7 +8086,7 @@ var unityFramework = (() => {
                     } : void 0;
                     return no(jr[e].createView(t), jr[e])
                 },
-                Ma: function(e) {
+                La: function(e) {
                     return no(jr[e].createView(), jr[e])
                 }
             },

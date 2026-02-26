@@ -70245,6 +70245,74 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "ShallowWaterTint",
+                "data": [
+                    0.10746929049491882,
+                    0.2695048451423645,
+                    0.3161364197731018,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShallowWaterTint",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamSpeed",
+                "data": [
+                    0.125,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamSpeed",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamContrast",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamContrast",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamColor",
+                "data": [
+                    0.43552300333976746,
+                    0.5714503526687622,
+                    0.5761348605155945,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamColor",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "WaterRoughness",
                 "logicalParameters": [
                     {
@@ -70480,6 +70548,18 @@
             {
                 "name": "Caustics",
                 "defaultTexturePath": "ASSETS/Shared/Materials/velvet_Mantis_Caustics_Mask_03.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Water_SDF_Packed",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Water/Water_SDF_NM.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "WorldNoise",
+                "defaultTexturePath": "ASSETS/Shared/Materials/water_foam_omni_M.tex",
                 "samplerName": "Wrap_No_Mip",
                 "__type": "ShaderTexture"
             },
