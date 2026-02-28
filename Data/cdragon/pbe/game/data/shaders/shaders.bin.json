@@ -58386,11 +58386,11 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "Bloom_Amount",
+                "name": "Bloom_Color",
                 "logicalParameters": [
                     {
-                        "name": "Bloom_Amount",
-                        "fields": 1,
+                        "name": "Bloom_Color",
+                        "fields": 15,
                         "__type": "ShaderLogicalParameter"
                     }
                 ],
@@ -58496,6 +58496,10 @@
             {
                 "name": "ADD_FX_LIGHTING",
                 "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "VETEX_COLOR_BLOOM_MASK",
+                "__type": "ShaderStaticSwitch"
             }
         ],
         "textures": [
@@ -58524,10 +58528,11 @@
             "FEATURE_BLOOM": "1",
             "FEATURE_SCREENSPACE_UV": "1",
             "FEATURE_SHADOW": "1",
+            "FEATURE_VERTEX_COLOR_VS": "1",
             "FEATURE_WORLD_NORMAL": "1",
             "FEATURE_WORLD_POSITION": "1"
         },
-        "featureMask": 17,
+        "featureMask": 49,
         "objectPath": "Shaders/SkinnedMesh/TFT_ParallaxScollingUVs_ChampTiers",
         "__type": "CustomShaderDef"
     },
@@ -70025,40 +70030,6 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "FoamCut",
-                "data": [
-                    2.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "FoamCut",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "FoamColor",
-                "data": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "FoamColor",
-                        "fields": 15,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
                 "name": "CausticsChromaticAberration",
                 "data": [
                     0.5,
@@ -70255,6 +70226,40 @@
                 "logicalParameters": [
                     {
                         "name": "ShallowWaterTint",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FoamCut",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FoamCut",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FoamColor",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FoamColor",
                         "fields": 15,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -70540,12 +70545,6 @@
                 "__type": "ShaderTexture"
             },
             {
-                "name": "Foam",
-                "defaultTexturePath": "ASSETS/Shared/Materials/water_foam_omni_M.tex",
-                "samplerName": "Wrap_No_Mip",
-                "__type": "ShaderTexture"
-            },
-            {
                 "name": "Caustics",
                 "defaultTexturePath": "ASSETS/Shared/Materials/velvet_Mantis_Caustics_Mask_03.tex",
                 "samplerName": "Wrap_No_Mip",
@@ -70554,6 +70553,12 @@
             {
                 "name": "Water_SDF_Packed",
                 "defaultTexturePath": "ASSETS/Shared/Materials/Water/Water_SDF_NM.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Foam",
+                "defaultTexturePath": "ASSETS/Shared/Materials/water_foam_omni_M.tex",
                 "samplerName": "Wrap_No_Mip",
                 "__type": "ShaderTexture"
             },
