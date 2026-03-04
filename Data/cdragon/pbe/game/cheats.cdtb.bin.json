@@ -829,6 +829,76 @@
         },
         "__type": "ScriptCheat"
     },
+    "{194c9014}": {
+        "mName": "RemoveStackx10",
+        "mCheatMenuUIData": {
+            "mDisplayName": "Remove Stack x10",
+            "mTooltipText": "Removes ten stacks of passive",
+            "__type": "CheatMenuUIData"
+        },
+        "mTarget": 0,
+        "__type": "ScriptCheat"
+    },
+    "{1d3e6d44}": {
+        "mName": "AddStack",
+        "mCheatMenuUIData": {
+            "mDisplayName": "Add Stack",
+            "mTooltipText": "Adds one stack of passive",
+            "__type": "CheatMenuUIData"
+        },
+        "mTarget": 0,
+        "__type": "ScriptCheat"
+    },
+    "{7f71e84f}": {
+        "mName": "RemoveStack",
+        "mCheatMenuUIData": {
+            "mDisplayName": "Remove Stack",
+            "mTooltipText": "Removes one stack of passive",
+            "__type": "CheatMenuUIData"
+        },
+        "mTarget": 0,
+        "__type": "ScriptCheat"
+    },
+    "{b67f1408}": {
+        "mName": "EndTransformOnArrival",
+        "mCheatMenuUIData": {
+            "mDisplayName": "EndTransformOnArrival",
+            "mTooltipText": "When the ultimate dash finishes, instantly ends transform. Toggles on and off.",
+            "__type": "CheatMenuUIData"
+        },
+        "mTarget": 0,
+        "__type": "ScriptCheat"
+    },
+    "{cb61ea1d}": {
+        "mName": "RemoveAllStacks",
+        "mCheatMenuUIData": {
+            "mDisplayName": "Remove All Stacks",
+            "mTooltipText": "Removes all stacks of passive",
+            "__type": "CheatMenuUIData"
+        },
+        "mTarget": 0,
+        "__type": "ScriptCheat"
+    },
+    "{cd00f20a}": {
+        "mName": "EndTransform",
+        "mCheatMenuUIData": {
+            "mDisplayName": "End Transform",
+            "mTooltipText": "Immediately ends ultimate transformation",
+            "__type": "CheatMenuUIData"
+        },
+        "mTarget": 0,
+        "__type": "ScriptCheat"
+    },
+    "{f91e947d}": {
+        "mName": "AddStackx10",
+        "mCheatMenuUIData": {
+            "mDisplayName": "Add Stack x10",
+            "mTooltipText": "Adds ten stacks of passive",
+            "__type": "CheatMenuUIData"
+        },
+        "mTarget": 0,
+        "__type": "ScriptCheat"
+    },
     "{1e4964fa}": {
         "mName": "Briar_ToggleFrenzyPrototype",
         "mCheatMenuUIData": {
@@ -12229,6 +12299,31 @@
         "mIsUIAlwaysShown": true,
         "__type": "CheatSet"
     },
+    "{75b14c2f}": {
+        "mName": "ShyvanaCheatSet",
+        "mGameModeName": "CLASSIC",
+        "AssociatedChampions": [
+            {
+                "champion": "Characters/Shyvana",
+                "__type": "{9d79fb9f}"
+            }
+        ],
+        "{bd50bdef}": [
+            {
+                "{928eb9b4}": [
+                    "{f91e947d}",
+                    "{1d3e6d44}",
+                    "{7f71e84f}",
+                    "{194c9014}",
+                    "{cb61ea1d}",
+                    "{cd00f20a}",
+                    "{b67f1408}"
+                ],
+                "__type": "CheatPage"
+            }
+        ],
+        "__type": "CheatSet"
+    },
     "{801d7ed4}": {
         "mName": "LeBlanc_ReworkCheatSet",
         "mGameModeName": "CLASSIC",
@@ -13798,6 +13893,19 @@
         ],
         "__type": "PresetEnvironmentArtCheat"
     },
+    "{38022cd2}": {
+        "mName": "SpawnChaosBotInvulnerable",
+        "mCheatMenuUIData": {
+            "mDisplayName": "SpawnChaosBotInvulnerable",
+            "mDynamicTooltipText": "<titleLeft>Kill</titleLeft><titleRight>@Hotkey@</titleRight><mainText>Spawn invulnerable chaos bot.</mainText>",
+            "__type": "CheatMenuUIData"
+        },
+        "mFlags": 6,
+        "mTeam": 200,
+        "mPlayerName": "ChaosBot",
+        "mCharacterName": "Annie",
+        "__type": "SpawnBotCheat"
+    },
     "{3c832f38}": {
         "mName": "ForceSpawnNeutralCampsWithBaron",
         "mCheatMenuUIData": {
@@ -14063,6 +14171,18 @@
         "UseTargetAsCaster": true,
         "__type": "ToggleBuffCheat"
     },
+    "{8bf0e435}": {
+        "mName": "DamageNearestEpicMinion",
+        "mCheatMenuUIData": {
+            "mDisplayName": "DamageNearestEpicMinion",
+            "mDynamicTooltipText": "<titleLeft>Kill</titleLeft><titleRight>@Hotkey@</titleRight><mainText>Damage nearest epic minion large amount.</mainText>",
+            "__type": "CheatMenuUIData"
+        },
+        "mPercentageOfAttack": 0.949999988079071,
+        "mDamageType": 2,
+        "{68100794}": 1,
+        "__type": "DamageUnitCheat"
+    },
     "{8f262616}": {
         "mName": "ToggleTeamSelf",
         "mTarget": 0,
@@ -14156,6 +14276,18 @@
         "mGoldAmount": 100000.0,
         "__type": "AddGoldCheat"
     },
+    "{a2dca742}": {
+        "mName": "SpawnOrderBotInvulnerable",
+        "mCheatMenuUIData": {
+            "mDisplayName": "SpawnOrderBotInvulnerable",
+            "mDynamicTooltipText": "<titleLeft>Kill</titleLeft><titleRight>@Hotkey@</titleRight><mainText>Spawn invulnerable order bot.</mainText>",
+            "__type": "CheatMenuUIData"
+        },
+        "mFlags": 6,
+        "mPlayerName": "OrderBot",
+        "mCharacterName": "Ahri",
+        "__type": "SpawnBotCheat"
+    },
     "{a3837e76}": {
         "mName": "SpawnMinionImmobile",
         "mCheatMenuUIData": {
@@ -14174,6 +14306,18 @@
     "{a655abd5}": {
         "mName": "DrawRuler",
         "__type": "{7fa4f1c6}"
+    },
+    "{aafe8a06}": {
+        "mName": "DamageNearestEnemyHero",
+        "mCheatMenuUIData": {
+            "mDisplayName": "DamageNearestEnemyHero",
+            "mDynamicTooltipText": "<titleLeft>Kill</titleLeft><titleRight>@Hotkey@</titleRight><mainText>Damage nearest enemy hero largest amount.</mainText>",
+            "__type": "CheatMenuUIData"
+        },
+        "mPercentageOfAttack": 0.949999988079071,
+        "mDamageType": 2,
+        "{68100794}": 2,
+        "__type": "DamageUnitCheat"
     },
     "{ab92425e}": {
         "mName": "SelfDamage",

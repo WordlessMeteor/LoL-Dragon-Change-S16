@@ -3315,6 +3315,88 @@
         ],
         "paramValues": [
             {
+                "name": "TranslationTimingOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TranslationSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TranslationDistance",
+                "value": [
+                    25.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TranslationVector",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotateVector",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WS_RotatePivotPoint",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotationSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotationTimingOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotationMult",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotationDistance",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BaseTex_TintColor",
                 "value": [
                     0.5,
@@ -3549,6 +3631,28 @@
         ],
         "switches": [
             {
+                "name": "USE_SINUSOIDAL_MOVEMENT",
+                "on": false,
+                "Group": "Sinusoidal Movement",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_TRANSLATION",
+                "Group": "Sinusoidal Movement",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ROTATION",
+                "on": false,
+                "Group": "Sinusoidal Movement",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_WORLD_OFFSET",
+                "Group": "Sinusoidal Movement",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "ENV_TRANSITION",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -3561,10 +3665,6 @@
             {
                 "name": "EMISSION_SINGLE_DIRECTION_ON",
                 "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "MULTIPLY_ALPHA",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -3614,8 +3714,8 @@
         ],
         "shaderMacros": {
             "NO_BAKED_LIGHTING": "1",
-            "DISABLE_FOW": "1",
-            "DISABLE_DEPTH_FOG": "1"
+            "DISABLE_DEPTH_FOG": "1",
+            "DISABLE_FOW": "1"
         },
         "techniques": [
             {
@@ -3786,6 +3886,88 @@
         ],
         "paramValues": [
             {
+                "name": "TranslationTimingOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TranslationSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TranslationDistance",
+                "value": [
+                    25.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TranslationVector",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotateVector",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WS_RotatePivotPoint",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotationSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotationTimingOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotationMult",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotationDistance",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BaseTex_TintColor",
                 "value": [
                     0.5,
@@ -4020,6 +4202,28 @@
         ],
         "switches": [
             {
+                "name": "USE_SINUSOIDAL_MOVEMENT",
+                "on": false,
+                "Group": "Sinusoidal Movement",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_TRANSLATION",
+                "Group": "Sinusoidal Movement",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ROTATION",
+                "on": false,
+                "Group": "Sinusoidal Movement",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_WORLD_OFFSET",
+                "Group": "Sinusoidal Movement",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "ENV_TRANSITION",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -4032,10 +4236,6 @@
             {
                 "name": "EMISSION_SINGLE_DIRECTION_ON",
                 "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "MULTIPLY_ALPHA",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -4085,8 +4285,8 @@
         ],
         "shaderMacros": {
             "NO_BAKED_LIGHTING": "1",
-            "DISABLE_FOW": "1",
-            "DISABLE_DEPTH_FOG": "1"
+            "DISABLE_DEPTH_FOG": "1",
+            "DISABLE_FOW": "1"
         },
         "techniques": [
             {

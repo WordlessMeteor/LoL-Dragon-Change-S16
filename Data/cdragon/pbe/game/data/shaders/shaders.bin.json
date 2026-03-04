@@ -5974,6 +5974,10 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "USE_B_MASK",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "ENABLE_DEPTHFOG",
                 "__type": "ShaderStaticSwitch"
             },
@@ -70520,6 +70524,11 @@
             {
                 "name": "USE_WATER",
                 "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_VOID",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
             }
         ],
         "textures": [
@@ -70540,6 +70549,42 @@
                 "__type": "ShaderTexture"
             },
             {
+                "name": "VoidNormal2",
+                "defaultTexturePath": "ASSETS/Maps/TerrainPaint/PaintLayers/Mantis/VisualSpike/Mantis_VisualSpike_VoidTendrils_AB_NM.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "VoidHeight",
+                "defaultTexturePath": "ASSETS/Maps/TerrainPaint/PaintLayers/Mantis/VisualSpike/Mantis_VisualSpike_VoidTendrils_AC_H.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "VoidAlbedo2",
+                "defaultTexturePath": "ASSETS/Maps/TerrainPaint/PaintLayers/Mantis/VisualSpike/Mantis_VisualSpike_VoidTendrils_AB_ALB.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "VoidNormal",
+                "defaultTexturePath": "ASSETS/Maps/TerrainPaint/PaintLayers/Mantis/VisualSpike/Mantis_VisualSpike_VoidTendrils_AC_NM.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Foam",
+                "defaultTexturePath": "ASSETS/Shared/Materials/water_foam_omni_M.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Water_SDF_Packed",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Water/Water_SDF_NM.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
                 "name": "BAKED_DIFFUSE_TEXTURE",
                 "defaultTexturePath": "ASSETS/Shared/Materials/Cobble_moss_Albedo.tex",
                 "__type": "ShaderTexture"
@@ -70551,24 +70596,6 @@
                 "__type": "ShaderTexture"
             },
             {
-                "name": "Water_SDF_Packed",
-                "defaultTexturePath": "ASSETS/Shared/Materials/Water/Water_SDF_NM.tex",
-                "samplerName": "Wrap_No_Mip",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "Foam",
-                "defaultTexturePath": "ASSETS/Shared/Materials/water_foam_omni_M.tex",
-                "samplerName": "Wrap_No_Mip",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "WorldNoise",
-                "defaultTexturePath": "ASSETS/Shared/Materials/water_foam_omni_M.tex",
-                "samplerName": "Wrap_No_Mip",
-                "__type": "ShaderTexture"
-            },
-            {
                 "name": "BAKED_RMA_TEXTURE",
                 "defaultTexturePath": "ASSETS/Shared/Materials/Cobble_moss_rma.tex",
                 "__type": "ShaderTexture"
@@ -70576,6 +70603,12 @@
             {
                 "name": "Sparkle",
                 "defaultTexturePath": "ASSETS/Shared/Materials/Sparkle_M.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "ManaThread",
+                "defaultTexturePath": "ASSETS/Shared/Materials/ManaThreads_M.tex",
                 "samplerName": "Wrap_No_Mip",
                 "__type": "ShaderTexture"
             }
