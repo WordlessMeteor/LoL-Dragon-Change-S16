@@ -1,6 +1,6 @@
 {
     "type": "tft-unlockable",
-    "version": "16.4.1",
+    "version": "16.5.1",
     "data": {
         "TFT16_Aatrox": {
             "requiredPlayerLevel": 8,
@@ -10,7 +10,7 @@
                 [
                     {
                         "description": "一个在开始战斗时拥有@RequiredValue@% %i: scaleSV% 全能吸血的弈子",
-                        "requiredValue": 40
+                        "requiredValue": 30
                     }
                 ]
             }
@@ -38,7 +38,7 @@
                 [
                     {
                         "description": "在第2阶段选秀前刷新@RequiredValue@次",
-                        "requiredValue": 4
+                        "requiredValue": 3
                     }
                 ]
             }
@@ -72,26 +72,26 @@
             }
         },
         "TFT16_Darius": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 5,
             "requiresPostCombatUnlock": true,
-            "fieldInCombat": false,
+            "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "使【德莱文】掉落@RequiredValue@金币",
+                        "description": "【德莱文】配备着@RequiredValue@件装备",
                         "requiredValue": 1
                     }
                 ]
             }
         },
         "TFT16_Diana": {
-            "requiredPlayerLevel": 6,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "配备着@RequiredValue@件装备的2星【蕾欧娜】",
+                        "description": "【蕾欧娜】配备着@RequiredValue@件装备",
                         "requiredValue": 3
                     }
                 ]
@@ -111,14 +111,14 @@
             }
         },
         "TFT16_Galio": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
                         "description": "@RequiredValue@独特星级总数的%i: TFT16Demacia% 【德玛西亚】",
-                        "requiredTotalStarLevels": 12,
+                        "requiredTotalStarLevels": 8,
                         [
                             {
                                 "traitId": "TFT16_Demacia",
@@ -136,21 +136,21 @@
             "conditions": {
                 [
                     {
-                        "description": "配备着@RequiredValue@件装备的【崔斯特】",
+                        "description": "一个%i: TFT16Bilgewater%&nbsp;【比尔吉沃特】单位配备着@RequiredValue@件装备",
                         "requiredValue": 2
                     }
                 ]
             }
         },
         "TFT16_Gwen": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 5,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "收集@RequiredValue@个%i: Set16ShadowIsles%【暗影岛】灵魂",
-                        "requiredValue": 20
+                        "description": "@RequiredValue@个灵魂&nbsp;%i: scaleSouls%",
+                        "requiredValue": 10
                     }
                 ]
             }
@@ -163,33 +163,33 @@
                 [
                     {
                         "description": "配备着@RequiredValue@件装备的一个%i: TFT16Longshot%【狙神】单位",
-                        "requiredValue": 3
+                        "requiredValue": 2
                     }
                 ]
             }
         },
         "TFT16_Kalista": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "收集@RequiredValue@个%i: Set16ShadowIsles%【暗影岛】灵魂",
-                        "requiredValue": 70
+                        "description": "@RequiredValue@个灵魂&nbsp;%i: scaleSouls%",
+                        "requiredValue": 30
                     }
                 ]
             }
         },
         "TFT16_Kennen": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 5,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
                         "description": "@RequiredValue@独特星级总数的%i: TFT16Ionia%【艾欧尼亚】、%i: TFT16Yordle%【约德尔人】或%i: TFT16Defender%【护卫】参加战斗。",
-                        "requiredTotalStarLevels": 7,
+                        "requiredTotalStarLevels": 5,
                         [
                             {
                                 "traitId": "TFT16_Ionia",
@@ -209,7 +209,7 @@
             }
         },
         "TFT16_Kobuko": {
-            "requiredPlayerLevel": 7,
+            "requiredPlayerLevel": 6,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
@@ -249,13 +249,13 @@
             }
         },
         "TFT16_Mel": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "携带着一件装备的2星【安蓓萨】在战斗中阵亡",
+                        "description": "携带着一件装备的【安蓓萨】在战斗中阵亡",
                         "requiredValue": 1
                     }
                 ]
@@ -275,14 +275,14 @@
             }
         },
         "TFT16_Nidalee": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "两个2星【妮蔻】",
-                        "requiredValue": 2
+                        "description": "2星【妮蔻】配备着@RequiredValue@件装备",
+                        "requiredValue": 3
                     }
                 ]
             }
@@ -327,14 +327,14 @@
             }
         },
         "TFT16_RiftHerald": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
                         "description": "让%i: TFT16Void%【虚空】处于已激活状态达@RequiredValue@场玩家对战",
-                        "requiredValue": 8
+                        "requiredValue": 2
                     }
                 ]
             }
@@ -347,7 +347,7 @@
                 [
                     {
                         "description": "@RequiredValue@个地区羁绊处于激活状态",
-                        "requiredValue": 4
+                        "requiredValue": 3
                     }
                 ]
             }
@@ -389,7 +389,7 @@
             "conditions": {
                 [
                     {
-                        "description": "配备着一件【石像鬼石板甲】的一个非坦克弈子",
+                        "description": "一个术师或射手弈子携带着至少一件【锁子甲】装备",
                         "requiredValue": 1
                     }
                 ]
@@ -402,10 +402,6 @@
             "conditions": {
                 [
                     {
-                        "description": "售出1个2星【嘉文四世】",
-                        "requiredValue": 1
-                    },
-                    {
                         "description": "售出1个2星【盖伦】",
                         "requiredValue": 1
                     }
@@ -413,14 +409,14 @@
             }
         },
         "TFT16_THex": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
                         "description": "@RequiredValue@独特星级总数的%i: TFT16Piltover%【皮尔特沃夫】",
-                        "requiredTotalStarLevels": 9,
+                        "requiredTotalStarLevels": 7,
                         [
                             {
                                 "traitId": "TFT16_Piltover",
@@ -432,27 +428,33 @@
             }
         },
         "TFT16_TahmKench": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": false,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
                         "description": "用掉@RequiredValue@枚%i: TFT16Bilgewater%【比尔吉沃特】银蛇币",
-                        "requiredValue": 450
+                        "requiredValue": 350
                     }
                 ]
             }
         },
         "TFT16_Thresh": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "收集@RequiredValue@个%i: Set16ShadowIsles%【暗影岛】灵魂",
-                        "requiredValue": 175
+                        "description": "@RequiredValue@独特星级总数的%i: Set16ShadowIsles%&nbsp;【暗影岛】",
+                        "requiredTotalStarLevels": 5,
+                        [
+                            {
+                                "traitId": "TFT16_ShadowIsles",
+                                "traitName": "暗影岛"
+                            }
+                        ]
                     }
                 ]
             }
@@ -477,8 +479,8 @@
             "conditions": {
                 [
                     {
-                        "description": "配备着@RequiredValue@件【灭世者的死亡之帽】的一个单位",
-                        "requiredValue": 2
+                        "description": "一个【约德尔人】配备着@RequiredValue@件【灭世者的死亡之帽】",
+                        "requiredValue": 1
                     }
                 ]
             }
@@ -491,7 +493,7 @@
                 [
                     {
                         "description": "一个在战斗开始时拥有@RequiredValue@ %i: scaleHealth% 生命值的单位",
-                        "requiredValue": 3800
+                        "requiredValue": 3400
                     }
                 ]
             }
@@ -527,15 +529,14 @@
             }
         },
         "TFT16_Yone": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "@RequiredValue@星@ChampName@",
-                        "requiredLevel": 3,
-                        "characterId": "TFT16_Yasuo"
+                        "description": "@RequiredValue@件装备配备在2星【亚索】身上",
+                        "requiredValue": 3
                     }
                 ]
             }
@@ -547,7 +548,7 @@
             "conditions": {
                 [
                     {
-                        "description": "2星【佛耶戈】配备着@RequiredValue@件装备",
+                        "description": "【佛耶戈】配备着@RequiredValue@件装备",
                         "requiredValue": 1
                     }
                 ]
@@ -578,7 +579,7 @@
                 [
                     {
                         "description": "配备着@RequiredValue@件装备的一个%i: TFT16Yordle%【约德尔人】或%i: TFT16Zaun%【祖安】弈子",
-                        "requiredValue": 3
+                        "requiredValue": 2
                     }
                 ]
             }
@@ -591,7 +592,7 @@
                 [
                     {
                         "description": "一个在开始战斗时拥有@RequiredValue@% %i: scaleSV% 全能吸血的弈子",
-                        "requiredValue": 40
+                        "requiredValue": 30
                     }
                 ]
             }
@@ -655,24 +656,24 @@
         "TFT16_Darius": {
             "requiredPlayerLevel": 0,
             "requiresPostCombatUnlock": true,
-            "fieldInCombat": false,
+            "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "使【德莱文】掉落@RequiredValue@金币",
+                        "description": "【德莱文】配备着@RequiredValue@件装备",
                         "requiredValue": 1
                     }
                 ]
             }
         },
         "TFT16_Diana": {
-            "requiredPlayerLevel": 6,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "配备着@RequiredValue@件装备的2星【蕾欧娜】",
+                        "description": "【蕾欧娜】配备着@RequiredValue@件装备",
                         "requiredValue": 3
                     }
                 ]
@@ -692,14 +693,14 @@
             }
         },
         "TFT16_Galio": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
                         "description": "@RequiredValue@独特星级总数的%i: TFT16Demacia% 【德玛西亚】",
-                        "requiredTotalStarLevels": 12,
+                        "requiredTotalStarLevels": 8,
                         [
                             {
                                 "traitId": "TFT16_Demacia",
@@ -717,21 +718,21 @@
             "conditions": {
                 [
                     {
-                        "description": "配备着@RequiredValue@件装备的【崔斯特】",
+                        "description": "一个%i: TFT16Bilgewater%&nbsp;【比尔吉沃特】单位配备着@RequiredValue@件装备",
                         "requiredValue": 2
                     }
                 ]
             }
         },
         "TFT16_Gwen": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 5,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "收集@RequiredValue@个%i: Set16ShadowIsles%【暗影岛】灵魂",
-                        "requiredValue": 20
+                        "description": "@RequiredValue@个灵魂&nbsp;%i: scaleSouls%",
+                        "requiredValue": 10
                     }
                 ]
             }
@@ -744,33 +745,33 @@
                 [
                     {
                         "description": "配备着@RequiredValue@件装备的一个%i: TFT16Longshot%【狙神】单位",
-                        "requiredValue": 3
+                        "requiredValue": 2
                     }
                 ]
             }
         },
         "TFT16_Kalista": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "收集@RequiredValue@个%i: Set16ShadowIsles%【暗影岛】灵魂",
-                        "requiredValue": 70
+                        "description": "@RequiredValue@个灵魂&nbsp;%i: scaleSouls%",
+                        "requiredValue": 30
                     }
                 ]
             }
         },
         "TFT16_Kennen": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 5,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
                         "description": "@RequiredValue@独特星级总数的%i: TFT16Ionia%【艾欧尼亚】、%i: TFT16Yordle%【约德尔人】或%i: TFT16Defender%【护卫】参加战斗。",
-                        "requiredTotalStarLevels": 7,
+                        "requiredTotalStarLevels": 5,
                         [
                             {
                                 "traitId": "TFT16_Ionia",
@@ -790,7 +791,7 @@
             }
         },
         "TFT16_Kobuko": {
-            "requiredPlayerLevel": 7,
+            "requiredPlayerLevel": 6,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
@@ -830,13 +831,13 @@
             }
         },
         "TFT16_Mel": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "携带着一件装备的2星【安蓓萨】在战斗中阵亡",
+                        "description": "携带着一件装备的【安蓓萨】在战斗中阵亡",
                         "requiredValue": 1
                     }
                 ]
@@ -856,14 +857,14 @@
             }
         },
         "TFT16_Nidalee": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "两个2星【妮蔻】",
-                        "requiredValue": 2
+                        "description": "2星【妮蔻】配备着@RequiredValue@件装备",
+                        "requiredValue": 3
                     }
                 ]
             }
@@ -915,7 +916,7 @@
                 [
                     {
                         "description": "让%i: TFT16Void%【虚空】处于已激活状态达@RequiredValue@场战斗",
-                        "requiredValue": 8
+                        "requiredValue": 2
                     }
                 ]
             }
@@ -928,7 +929,7 @@
                 [
                     {
                         "description": "@RequiredValue@个地区羁绊处于激活状态",
-                        "requiredValue": 4
+                        "requiredValue": 3
                     }
                 ]
             }
@@ -966,7 +967,7 @@
             "conditions": {
                 [
                     {
-                        "description": "配备着一件【石像鬼石板甲】的一个非坦克弈子",
+                        "description": "一个术师或射手弈子携带着至少一件【锁子甲】装备",
                         "requiredValue": 1
                     }
                 ]
@@ -978,10 +979,6 @@
             "fieldInCombat": false,
             "conditions": {
                 [
-                    {
-                        "description": "售出1个2星【嘉文四世】",
-                        "requiredValue": 1
-                    },
                     {
                         "description": "售出1个2星【盖伦】",
                         "requiredValue": 1
@@ -997,7 +994,7 @@
                 [
                     {
                         "description": "@RequiredValue@独特星级总数的%i: TFT16Piltover%【皮尔特沃夫】",
-                        "requiredTotalStarLevels": 9,
+                        "requiredTotalStarLevels": 7,
                         [
                             {
                                 "traitId": "TFT16_Piltover",
@@ -1016,7 +1013,7 @@
                 [
                     {
                         "description": "用掉@RequiredValue@枚%i: TFT16Bilgewater%【比尔吉沃特】银蛇币",
-                        "requiredValue": 450
+                        "requiredValue": 350
                     }
                 ]
             }
@@ -1028,7 +1025,7 @@
             "conditions": {
                 [
                     {
-                        "description": "收集@RequiredValue@个%i: Set16ShadowIsles%【暗影岛】灵魂",
+                        "description": "@RequiredValue@个灵魂&nbsp;%i: scaleSouls%",
                         "requiredValue": 175
                     }
                 ]
@@ -1054,8 +1051,8 @@
             "conditions": {
                 [
                     {
-                        "description": "配备着@RequiredValue@件【灭世者的死亡之帽】的一个单位",
-                        "requiredValue": 2
+                        "description": "一个【约德尔人】配备着@RequiredValue@件【灭世者的死亡之帽】",
+                        "requiredValue": 1
                     }
                 ]
             }
@@ -1068,7 +1065,7 @@
                 [
                     {
                         "description": "一个在战斗开始时拥有@RequiredValue@ %i: scaleHealth% 生命值的单位",
-                        "requiredValue": 3800
+                        "requiredValue": 3400
                     }
                 ]
             }
@@ -1080,12 +1077,12 @@
             "conditions": {
                 [
                     {
-                        "description": "@RequiredValue@星@ChampName@",
+                        "description": "【金克丝】配备着@RequiredValue@件装备",
                         "requiredLevel": 1,
                         "characterId": "TFT16_Jinx"
                     },
                     {
-                        "description": "@RequiredValue@星@ChampName@",
+                        "description": "【蔚】配备着@RequiredValue@件装备",
                         "requiredLevel": 2,
                         "characterId": "TFT16_Vi"
                     }
@@ -1106,15 +1103,14 @@
             }
         },
         "TFT16_Yone": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "@RequiredValue@星@ChampName@",
-                        "requiredLevel": 3,
-                        "characterId": "TFT16_Yasuo"
+                        "description": "@RequiredValue@件装备配备在2星【亚索】身上",
+                        "requiredValue": 2
                     }
                 ]
             }
@@ -1126,8 +1122,8 @@
             "conditions": {
                 [
                     {
-                        "description": "2星【佛耶戈】配备着@RequiredValue@件装备",
-                        "requiredValue": 2
+                        "description": "【佛耶戈】配备着@RequiredValue@件装备",
+                        "requiredValue": 1
                     }
                 ]
             }
@@ -1157,7 +1153,589 @@
                 [
                     {
                         "description": "配备着@RequiredValue@件装备的一个%i: TFT16Yordle%【约德尔人】或%i: TFT16Zaun%【祖安】弈子",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Aatrox": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "一个在开始战斗时拥有@RequiredValue@% %i: scaleSV% 全能吸血的弈子",
+                        "requiredValue": 30
+                    }
+                ]
+            }
+        },
+        "TFT16_AurelionSol": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@个独特的%i: TFT16Targon%【巨神峰】弈子",
+                        "requiredContributionCount": 5,
+                        "traitId": "TFT16_Targon",
+                        "traitName": "巨神峰"
+                    }
+                ]
+            }
+        },
+        "TFT16_Bard": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "在第2阶段选秀前刷新@RequiredValue@次",
                         "requiredValue": 3
+                    }
+                ]
+            }
+        },
+        "TFT16_BaronNashor": {
+            "requiredPlayerLevel": 10,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "登场@RequiredValue@个独特的%i: TFT16Void%【虚空】单位。",
+                        "requiredContributionCount": 7,
+                        "traitId": "TFT16_Void",
+                        "traitName": "虚空"
+                    }
+                ]
+            }
+        },
+        "TFT16_Brock": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "在本局游戏的过程中收集@RequiredValue@ %i: Set16Ixtal% 个【以绪塔尔】【太阳碎片】",
+                        "requiredValue": 500
+                    }
+                ]
+            }
+        },
+        "TFT16_Darius": {
+            "requiredPlayerLevel": 5,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "【德莱文】配备着@RequiredValue@件装备",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Diana": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "【蕾欧娜】配备着@RequiredValue@件装备",
+                        "requiredValue": 3
+                    }
+                ]
+            }
+        },
+        "TFT16_Fizz": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@个独特的%i: TFT16Yordle%【约德尔人】或%i: TFT16Bilgewater%【比尔吉沃特】单位。",
+                        "requiredValue": 5
+                    }
+                ]
+            }
+        },
+        "TFT16_Galio": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@独特星级总数的%i: TFT16Demacia% 【德玛西亚】",
+                        "requiredTotalStarLevels": 8,
+                        [
+                            {
+                                "traitId": "TFT16_Demacia",
+                                "traitName": "德玛西亚"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "TFT16_Graves": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "一个%i: TFT16Bilgewater%&nbsp;【比尔吉沃特】单位配备着@RequiredValue@件装备",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Gwen": {
+            "requiredPlayerLevel": 5,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@个灵魂&nbsp;%i: scaleSouls%",
+                        "requiredValue": 10
+                    }
+                ]
+            }
+        },
+        "TFT16_Kaisa": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "配备着@RequiredValue@件装备的一个%i: TFT16Longshot%【狙神】单位",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Kalista": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@个灵魂&nbsp;%i: scaleSouls%",
+                        "requiredValue": 30
+                    }
+                ]
+            }
+        },
+        "TFT16_Kennen": {
+            "requiredPlayerLevel": 5,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@独特星级总数的%i: TFT16Ionia%【艾欧尼亚】、%i: TFT16Yordle%【约德尔人】或%i: TFT16Defender%【护卫】参加战斗。",
+                        "requiredTotalStarLevels": 5,
+                        [
+                            {
+                                "traitId": "TFT16_Ionia",
+                                "traitName": "艾欧尼亚"
+                            },
+                            {
+                                "traitId": "TFT16_Yordle",
+                                "traitName": "约德尔人"
+                            },
+                            {
+                                "traitId": "TFT16_Defender",
+                                "traitName": "护卫"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "TFT16_Kobuko": {
+            "requiredPlayerLevel": 6,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@独特星级总数的%i: TFT16Yordle%【约德尔人】、%i: TFT16Brawler%【斗士】或%i: TFT16Invoker%【神谕者】",
+                        "requiredTotalStarLevels": 6,
+                        [
+                            {
+                                "traitId": "TFT16_Yordle",
+                                "traitName": "约德尔人"
+                            },
+                            {
+                                "traitId": "TFT16_Brawler",
+                                "traitName": "斗士"
+                            },
+                            {
+                                "traitId": "TFT16_Invoker",
+                                "traitName": "神谕者"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "TFT16_Leblanc": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "配备着@RequiredValue@件装备的【赛恩】",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Mel": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "携带着一件装备的【安蓓萨】在战斗中阵亡",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Nasus": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "带着【阿兹尔】连续输掉@RequiredValue@场战斗。<br><rules>(会在你每次解锁一个【恕瑞玛】弈子后变得更困难！) </rules>",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Nidalee": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "2星【妮蔻】配备着@RequiredValue@件装备",
+                        "requiredValue": 3
+                    }
+                ]
+            }
+        },
+        "TFT16_Orianna": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "一个配备着@RequiredValue@件装备的%i: TFT16Piltover%【皮尔特沃夫】单位",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Poppy": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "一个配备着@RequiredValue@件装备的%i: TFT16Demacia%【德玛西亚】弈子或%i: TFT16Yordle%【约德尔人】",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Renekton": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "带着【阿兹尔】连续赢得@RequiredValue@场战斗。<br><rules>(会在你每次解锁一个【恕瑞玛】弈子后变得更困难！) </rules>",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_RiftHerald": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "让%i: TFT16Void%【虚空】处于已激活状态达@RequiredValue@场玩家对战",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Ryze": {
+            "requiredPlayerLevel": 9,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@个地区羁绊处于激活状态",
+                        "requiredValue": 3
+                    }
+                ]
+            }
+        },
+        "TFT16_Sett": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "仅1个单位处在战场的前两排",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Singed": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@个独特的%i: TFT16Zaun%【祖安】弈子或%i: TFT16Juggernaut%【主宰】",
+                        "requiredValue": 4
+                    },
+                    {
+                        "description": "失去@RequiredValue@玩家生命值",
+                        "requiredValue": 35
+                    }
+                ]
+            }
+        },
+        "TFT16_Skarner": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "一个术师或射手弈子携带着至少一件【锁子甲】装备",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Sylas": {
+            "requiredPlayerLevel": 9,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "售出1个2星【盖伦】",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_THex": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@独特星级总数的%i: TFT16Piltover%【皮尔特沃夫】",
+                        "requiredTotalStarLevels": 7,
+                        [
+                            {
+                                "traitId": "TFT16_Piltover",
+                                "traitName": "皮尔特沃夫"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "TFT16_TahmKench": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "用掉@RequiredValue@枚%i: TFT16Bilgewater%【比尔吉沃特】银蛇币",
+                        "requiredValue": 350
+                    }
+                ]
+            }
+        },
+        "TFT16_Thresh": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@独特星级总数的%i: Set16ShadowIsles%&nbsp;【暗影岛】",
+                        "requiredTotalStarLevels": 5,
+                        [
+                            {
+                                "traitId": "TFT16_ShadowIsles",
+                                "traitName": "暗影岛"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "TFT16_Tryndamere": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "配备着@RequiredValue@件装备的【艾希】",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Veigar": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "一个【约德尔人】配备着@RequiredValue@件【灭世者的死亡之帽】",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Volibear": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "一个在战斗开始时拥有@RequiredValue@ %i: scaleHealth% 生命值的单位",
+                        "requiredValue": 3400
+                    }
+                ]
+            }
+        },
+        "TFT16_Warwick": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "【金克丝】配备着@RequiredValue@件装备",
+                        "requiredValue": 1
+                    },
+                    {
+                        "description": "【蔚】配备着@RequiredValue@件装备",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Xerath": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "带着【阿兹尔】以胜负交替的方式进行@RequiredValue@场战斗。<br><rules>(会在你每次解锁一个【恕瑞玛】弈子后变得更困难！)</rules>",
+                        "requiredValue": 3
+                    }
+                ]
+            }
+        },
+        "TFT16_Yone": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@件装备配备在2星【亚索】身上",
+                        "requiredValue": 3
+                    }
+                ]
+            }
+        },
+        "TFT16_Yorick": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "【佛耶戈】配备着@RequiredValue@件装备",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Zaahen": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "拥有【暮光试炼】强化符文",
+                        "requiredValue": 1
+                    },
+                    {
+                        "description": "登场一个3星【赵信】进行@RequiredValue@场战斗。 ",
+                        "requiredValue": 5
+                    }
+                ]
+            }
+        },
+        "TFT16_Ziggs": {
+            "requiredPlayerLevel": 9,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "配备着@RequiredValue@件装备的一个%i: TFT16Yordle%【约德尔人】或%i: TFT16Zaun%【祖安】弈子",
+                        "requiredValue": 2
                     }
                 ]
             }

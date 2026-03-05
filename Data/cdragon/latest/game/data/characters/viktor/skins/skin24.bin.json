@@ -57,9 +57,9 @@
                         "Play_vo_ViktorSkin24_Kill3DJinxSkin60",
                         "Play_vo_ViktorSkin24_Kill3DMel",
                         "Play_vo_ViktorSkin24_Kill3DPenta",
+                        "Play_vo_ViktorSkin24_Kill3DR",
                         "Play_vo_ViktorSkin24_Kill3DSingedSkin28",
                         "Play_vo_ViktorSkin24_Kill3DTurret",
-                        "Play_vo_ViktorSkin24_Kill3DUltimate",
                         "Play_vo_ViktorSkin24_Kill3DViSkin48",
                         "Play_vo_ViktorSkin24_Kill3DWarwickSkin56",
                         "Play_vo_ViktorSkin24_Laugh3DGeneral",
@@ -170056,8 +170056,8 @@
                         "mRuleName": "Kill Champion - R",
                         "mAudioAction": {
                             "mMaxOccurences": 1,
-                            "mSelfEventName": "Kill3DUltimate",
-                            "mEnemyEventName": "Kill3DUltimate",
+                            "mSelfEventName": "Kill3DR",
+                            "mEnemyEventName": "Kill3DR",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
                         },
@@ -171016,7 +171016,6 @@
                     {
                         "mRuleName": "Kill Turret",
                         "mAudioAction": {
-                            "mMaxOccurences": 4,
                             "mSelfEventName": "Kill3DTurret",
                             "mAllyEventName": "Kill3DTurret",
                             "mWaitForAnnouncerQueue": true,
@@ -171186,6 +171185,7 @@
                             }
                         ],
                         "mAudioAction": {
+                            "mMaxOccurences": 1,
                             "mSelfEventName": "Spell2DRRankOne",
                             "__type": "ContextualActionPlayVO"
                         },
@@ -171395,9 +171395,6 @@
                         "__type": "ContextualRule"
                     }
                 ],
-                "__type": "ContextualSituation"
-            },
-            "SpellHit": {
                 "__type": "ContextualSituation"
             }
         },

@@ -6154,6 +6154,23 @@
                     }
                 ],
                 "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Alpha_Override",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Alpha_Override",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
             }
         ],
         "staticSwitches": [
@@ -6175,6 +6192,10 @@
             },
             {
                 "name": "ENABLE_TRANSITION",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "OVERRIDE_ALPHA",
                 "__type": "ShaderStaticSwitch"
             }
         ],
@@ -58365,6 +58386,17 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Bloom_Color",
+                "logicalParameters": [
+                    {
+                        "name": "Bloom_Color",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "UV_Noise_Scale",
                 "data": [
                     2.5,
@@ -58464,6 +58496,10 @@
             {
                 "name": "ADD_FX_LIGHTING",
                 "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "VETEX_COLOR_BLOOM_MASK",
+                "__type": "ShaderStaticSwitch"
             }
         ],
         "textures": [
@@ -58489,12 +58525,14 @@
             }
         ],
         "featureDefines": {
+            "FEATURE_BLOOM": "1",
             "FEATURE_SCREENSPACE_UV": "1",
             "FEATURE_SHADOW": "1",
+            "FEATURE_VERTEX_COLOR_VS": "1",
             "FEATURE_WORLD_NORMAL": "1",
             "FEATURE_WORLD_POSITION": "1"
         },
-        "featureMask": 16,
+        "featureMask": 49,
         "objectPath": "Shaders/SkinnedMesh/TFT_ParallaxScollingUVs_ChampTiers",
         "__type": "CustomShaderDef"
     },
@@ -70178,10 +70216,214 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "ShallowWaterTint",
+                "data": [
+                    0.10746929049491882,
+                    0.2695048451423645,
+                    0.3161364197731018,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShallowWaterTint",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FoamCut",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FoamCut",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FoamColor",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FoamColor",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamSpeed",
+                "data": [
+                    0.125,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamSpeed",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamContrast",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamContrast",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamColor",
+                "data": [
+                    0.43552300333976746,
+                    0.5714503526687622,
+                    0.5761348605155945,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamColor",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "WaterRoughness",
                 "logicalParameters": [
                     {
                         "name": "WaterRoughness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleStrength",
+                "data": [
+                    0.44999998807907104,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleStrength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleThreshold",
+                "data": [
+                    0.949999988079071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleThreshold",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleSoftness",
+                "data": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleSoftness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleSpeed",
+                "data": [
+                    0.019999999552965164,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleSpeed",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleTiling",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleTiling",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleMaskThreshold",
+                "data": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleMaskThreshold",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -70238,6 +70480,40 @@
                     }
                 ],
                 "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "PlanarReflectionContrast",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "PlanarReflectionContrast",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SparkleBloom",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SparkleBloom",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
             }
         ],
         "staticSwitches": [
@@ -70275,21 +70551,46 @@
                 "__type": "ShaderTexture"
             },
             {
+                "name": "Water_SDF_Packed",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Water/Water_SDF_NM.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Foam",
+                "defaultTexturePath": "ASSETS/Shared/Materials/water_foam_omni_M.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "WorldNoise",
+                "defaultTexturePath": "ASSETS/Shared/Materials/water_foam_omni_M.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
                 "name": "BAKED_RMA_TEXTURE",
                 "defaultTexturePath": "ASSETS/Shared/Materials/Cobble_moss_rma.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Sparkle",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Sparkle_M.tex",
+                "samplerName": "Wrap_No_Mip",
                 "__type": "ShaderTexture"
             }
         ],
         "featureDefines": {
             "DEBUG_USES_LINEAR_SPACE": "1",
             "FEATURE_BAKED_PAINT": "1",
+            "FEATURE_BLOOM": "1",
             "FEATURE_NAVMESH_MASK": "1",
             "FEATURE_SCREENSPACE_UV": "1",
             "FEATURE_TANGENT": "1",
             "FEATURE_WORLD_NORMAL": "1",
             "FEATURE_WORLD_POSITION": "1"
         },
-        "featureMask": 2,
+        "featureMask": 3,
         "objectPath": "Shaders/StaticMesh/Mantis_Env_Baked_PBR",
         "__type": "CustomShaderDef"
     },

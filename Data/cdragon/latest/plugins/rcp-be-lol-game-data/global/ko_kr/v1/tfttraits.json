@@ -12216,7 +12216,7 @@
                 "constants": [
                     {
                         "name": "BonusPercentHealth",
-                        "value": 0.45
+                        "value": 0.4
                     }
                 ],
                 "min_units": 4,
@@ -12228,7 +12228,7 @@
                 "constants": [
                     {
                         "name": "BonusPercentHealth",
-                        "value": 0.65
+                        "value": 0.6
                     }
                 ],
                 "min_units": 6,
@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "스킬을 @CastsToGainXP@회 사용할 때마다 시간의 수호자가 <TFTBonus>@XPPerCast@</TFTBonus>의 경험치를 저장합니다. 플레이어가 레벨 업할 만큼 저장했다면 해당하는 경험치를 플레이어에게 이전합니다. <br><br>10레벨이라면 대신 시간의 수호자가 피해 증폭을 <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus> 얻습니다.<br><br><rules>(저장한 경험치: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@)</rules>",
+        "tooltip_text": "스킬을 @CastsToGainXP@회 사용할 때마다 시간의 수호자가 <TFTBonus>@XPPerCast@</TFTBonus>의 경험치를 저장합니다. 플레이어가 레벨 업할 만큼 저장했다면 해당하는 경험치를 플레이어에게 이전합니다. <br><br>10레벨이라면 대신 시간의 수호자가 피해 증폭을 <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus> 얻습니다.<br><br><rules>저장한 경험치: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>배불뚝이의 보물에서는 스테이지 3-5까지 경험치 획득에 필요한 주문 사용 횟수가 @CastsToGainXPCT@회로 증가합니다.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,6 +12270,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -12476,7 +12480,7 @@
                 "constants": [
                     {
                         "name": "ArmorMR",
-                        "value": 30.0
+                        "value": 35.0
                     }
                 ],
                 "min_units": 5,
@@ -12488,7 +12492,7 @@
                 "constants": [
                     {
                         "name": "ArmorMR",
-                        "value": 30.0
+                        "value": 35.0
                     }
                 ],
                 "min_units": 7,
@@ -13000,8 +13004,12 @@
             {
                 "constants": [
                     {
+                        "name": "BladesAP",
+                        "value": 15.0
+                    },
+                    {
                         "name": "BladesFlatDamage",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "BladesForceProcThreshold",
@@ -13049,7 +13057,7 @@
                     },
                     {
                         "name": "Transcendence3StarBuff",
-                        "value": 1.0
+                        "value": 1.3
                     },
                     {
                         "name": "TranscendenceHealth",
@@ -13068,8 +13076,12 @@
             {
                 "constants": [
                     {
+                        "name": "BladesAP",
+                        "value": 25.0
+                    },
+                    {
                         "name": "BladesFlatDamage",
-                        "value": 8.0
+                        "value": 0.0
                     },
                     {
                         "name": "BladesForceProcThreshold",
@@ -13117,7 +13129,7 @@
                     },
                     {
                         "name": "Transcendence3StarBuff",
-                        "value": 1.0
+                        "value": 1.3
                     },
                     {
                         "name": "TranscendenceHealth",
@@ -13136,8 +13148,12 @@
             {
                 "constants": [
                     {
+                        "name": "BladesAP",
+                        "value": 50.0
+                    },
+                    {
                         "name": "BladesFlatDamage",
-                        "value": 15.0
+                        "value": 0.0
                     },
                     {
                         "name": "BladesForceProcThreshold",
@@ -13185,7 +13201,7 @@
                     },
                     {
                         "name": "Transcendence3StarBuff",
-                        "value": 1.0
+                        "value": 1.3
                     },
                     {
                         "name": "TranscendenceHealth",
@@ -13758,7 +13774,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "매초 슈리마가 공격 속도를 @ASPerSecond*100@% 얻고 체력을 @HealthRestorePerSecond@ 회복합니다. 전투 시작 시 추가 효과를 얻습니다.<br><br><row>(@MinUnits@) 최대 체력 @BonusHealth*100@%</row><br><row>(@MinUnits@) 방어력 및 마법 저항력 @ArmorMR@</row><br><row>(@MinUnits@) 슈리마가 @GodhoodCadence@초마다 신성 초월</row>",
+        "tooltip_text": "매초 슈리마가 공격 속도를 @ASPerSecond*100@% 얻고 체력을 @HealthRestorePerSecond@ 회복합니다. 전투 시작 시 추가 효과를 얻습니다.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>프리즘: 나서스, 레넥톤, 제라스 해금 후 슈리마 4명 배치</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) 최대 체력 @BonusHealth*100@%</row><br><row>(@MinUnits@) 방어력 및 마법 저항력 @ArmorMR@</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>슈리마가 @GodhoodCadence@초마다 신성 초월 </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>나서스, 레넥톤, 제라스가 해금되었을 때만 활성화됩니다.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13838,7 +13854,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13846,7 +13862,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13854,8 +13870,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -13901,7 +13917,7 @@
                 "constants": [
                     {
                         "name": "BonusAD",
-                        "value": 0.22
+                        "value": 0.2
                     },
                     {
                         "name": "BonusOmnivamp",
@@ -13917,7 +13933,7 @@
                 "constants": [
                     {
                         "name": "BonusAD",
-                        "value": 0.33
+                        "value": 0.3
                     },
                     {
                         "name": "BonusOmnivamp",
@@ -13933,7 +13949,7 @@
                 "constants": [
                     {
                         "name": "BonusAD",
-                        "value": 0.44
+                        "value": 0.4
                     },
                     {
                         "name": "BonusOmnivamp",
@@ -14558,7 +14574,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "전투를 마칠 때마다 초월체 주술이 상점에 등장합니다. 주술은 강력한 효과를 제공하며 골드로 구매할 수 있습니다.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "전투를 마칠 때마다 초월체 주술이 상점에 등장합니다. 주술은 강력한 효과를 제공하며 골드로 구매할 수 있습니다.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>배불뚝이의 보물에서는 신실한 추종자 주술이 7레벨 전까지 등장하지 않습니다.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -16078,7 +16094,7 @@
                     },
                     {
                         "name": "BonusHealth",
-                        "value": 400.0
+                        "value": 425.0
                     }
                 ],
                 "min_units": 2,
@@ -16094,7 +16110,7 @@
                     },
                     {
                         "name": "BonusHealth",
-                        "value": 700.0
+                        "value": 750.0
                     }
                 ],
                 "min_units": 4,
@@ -16110,7 +16126,7 @@
                     },
                     {
                         "name": "BonusHealth",
-                        "value": 1000.0
+                        "value": 1100.0
                     }
                 ],
                 "min_units": 6,

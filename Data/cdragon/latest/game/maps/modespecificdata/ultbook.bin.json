@@ -77835,6 +77835,19 @@
                     "__type": "SpellDataValue"
                 },
                 {
+                    "mName": "OnHitADRatio",
+                    "mValues": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
                     "mName": "WQHealthDamage",
                     "mValues": [
                         0.03999999910593033,
@@ -77885,6 +77898,7 @@
                     "__type": "GameCalculation"
                 },
                 "OnHitDamage": {
+                    "{72c5c2a8}": 1,
                     "mFormulaParts": [
                         {
                             "mDataValue": "VarusWOnHitDamage",
@@ -77892,6 +77906,12 @@
                         },
                         {
                             "mDataValue": "OnHitRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mDataValue": "OnHitADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -77915,6 +77935,18 @@
                     "__type": "GameCalculationModified"
                 }
             },
+            "{fe87f21e}": [
+                {
+                    "{6166b756}": "OnHitDamage",
+                    "{01987941}": [
+                        {
+                            "level": 1,
+                            "__type": "SpellSlotEqualOrGreaterThanLevelRequirement"
+                        }
+                    ],
+                    "__type": "{fe87f21e}"
+                }
+            ],
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/Characters/Varus/HUD/Icons2D/VarusW.dds",
@@ -78722,6 +78754,7 @@
                     "__type": "GameCalculation"
                 },
                 "{540bce84}": {
+                    "{72c5c2a8}": 1,
                     "mFormulaParts": [
                         {
                             "mNumber": 1.0,
@@ -78816,6 +78849,7 @@
                     "__type": "GameCalculation"
                 },
                 "ExecuteDamage": {
+                    "{72c5c2a8}": 1,
                     "mFormulaParts": [
                         {
                             "mStartValue": 8.0,
@@ -78826,6 +78860,23 @@
                     "__type": "GameCalculation"
                 }
             },
+            "{fe87f21e}": [
+                {
+                    "{6166b756}": "PercentHealth1000Cuts",
+                    "__type": "{fe87f21e}"
+                },
+                {
+                    "{6166b756}": "ExecuteDamage",
+                    "{01987941}": [
+                        {
+                            "mInvertResult": true,
+                            "{137cf12a}": "ExecuteThreshold",
+                            "__type": "AboveHealthPercentCastRequirement"
+                        }
+                    ],
+                    "__type": "{fe87f21e}"
+                }
+            ],
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/Characters/Gwen/HUD/Icons2D/Gwen_Passive.dds"

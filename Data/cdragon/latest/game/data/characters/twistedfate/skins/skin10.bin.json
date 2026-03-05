@@ -11011,6 +11011,7 @@
                     },
                     "__type": "ValueColor"
                 },
+                "isRandomStartFrame": 1,
                 "birthRotation0": {
                     "constantValue": [
                         0.0,
@@ -11040,7 +11041,7 @@
                 "numFrames": 4,
                 "startFrame": 2,
                 "texDiv": [
-                    1.0,
+                    2.0,
                     2.0
                 ],
                 "__type": "VfxEmitterDefinitionData"
@@ -11141,6 +11142,7 @@
                 },
                 "pass": 1,
                 "disableBackfaceCull": true,
+                "isRandomStartFrame": 1,
                 "birthRotation0": {
                     "constantValue": [
                         0.0,
@@ -11363,7 +11365,7 @@
                         1.0,
                         1.0,
                         1.0,
-                        0.3199969530105591
+                        0.3000076413154602
                     ],
                     "__type": "ValueColor"
                 },
@@ -11371,8 +11373,8 @@
                     "constantValue": [
                         1.0,
                         0.0,
-                        0.45566490292549133,
-                        0.47058823704719543
+                        0.4599984884262085,
+                        1.0
                     ],
                     "dynamics": {
                         "times": [
@@ -11385,25 +11387,25 @@
                             [
                                 1.0,
                                 0.0,
-                                0.45566490292549133,
+                                0.4599984884262085,
                                 0.0
                             ],
                             [
                                 1.0,
                                 0.0,
-                                0.45566490292549133,
-                                0.47058823704719543
+                                0.4599984884262085,
+                                1.0
                             ],
                             [
                                 1.0,
                                 0.0,
-                                0.45566490292549133,
-                                0.47058823704719543
+                                0.4599984884262085,
+                                1.0
                             ],
                             [
                                 1.0,
                                 0.0,
-                                0.45566490292549133,
+                                0.4599984884262085,
                                 0.0
                             ]
                         ],
@@ -11422,20 +11424,6 @@
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/Characters/TwistedFate/skins/base/Particles/common_glow-soft.tex",
-                "birthUVOffset": {
-                    "constantValue": [
-                        0.5,
-                        0.0
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "uvScale": {
-                    "constantValue": [
-                        2.0,
-                        1.0
-                    ],
-                    "__type": "ValueVector2"
-                },
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11535,161 +11523,6 @@
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/Characters/TwistedFate/skins/base/Particles/common_glow-soft.tex",
-                "birthUVOffset": {
-                    "constantValue": [
-                        0.5,
-                        0.0
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "uvScale": {
-                    "constantValue": [
-                        2.0,
-                        1.0
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 2.4000000953674316,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 6.199999809265137,
-                    "__type": "ValueFloat"
-                },
-                "emitterName": "Card_Orbit7",
-                "importance": 3,
-                "birthOrbitalVelocity": {
-                    "constantValue": [
-                        0.0,
-                        1.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        0.0,
-                        100.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        60.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/TwistedFate/skins/base/Particles/common_cardburst.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "particleColorTexture": "ASSETS/Characters/TwistedFate/skins/base/Particles/common_tf_card_buff_rgb.tex",
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.6824902892112732,
-                        0.5121385455131531,
-                        0.7490196228027344
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.05000000074505806,
-                            0.9800000190734863,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        0.0,
-                        -40.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthRotationalVelocity0": {
-                    "constantValue": [
-                        0.0,
-                        0.0,
-                        -300.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "isLocalOrientation": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        3.0,
-                        1.600000023841858,
-                        3.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/TwistedFate/skins/Skin10/Particles/TwistedFate_Skin10_E_Glyphs.tex",
-                "numFrames": 4,
-                "startFrame": 2,
-                "texDiv": [
-                    1.0,
-                    2.0
-                ],
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/TwistedFate/skins/Skin10/Particles/TwistedFate_Skin10_Recall_Glow_WispMult.tex",
-                    "birthUvScrollRateMult": {
-                        "constantValue": [
-                            0.0,
-                            2.0
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "__type": "VfxTextureMultDefinitionData"
-                },
                 "__type": "VfxEmitterDefinitionData"
             }
         ],

@@ -228276,15 +228276,102 @@
                 "TextureName": "Mask_Tex",
                 "texturePath": "ASSETS/Shared/Materials/SRX_Cloud.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FlagMask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
             {
+                "name": "TranslationTimingOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TranslationSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TranslationDistance",
+                "value": [
+                    25.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TranslationVector",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotateVector",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WS_RotatePivotPoint",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotationSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotationTimingOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotationMult",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RotationDistance",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BaseTex_TintColor",
                 "value": [
-                    0.5000076293945312,
-                    0.5000076293945312,
-                    0.5000076293945312,
+                    0.5,
+                    0.5,
+                    0.5,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -228341,12 +228428,6 @@
             },
             {
                 "name": "FLOW_Center",
-                "value": [
-                    0.17000000178813934,
-                    -0.019999999552965164,
-                    0.0,
-                    0.0
-                ],
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
@@ -228422,9 +228503,136 @@
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Starting_Color",
+                "value": [
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.10000000149011612,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TransparentSpeed",
+                "value": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TransparentOutSpeed",
+                "value": [
+                    10.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WindScale",
+                "value": [
+                    1200.0,
+                    250.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WindIntensity",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WindSpeed",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AdditionalWPO",
+                "value": [
+                    -0.20000000298023224,
+                    0.10000000149011612,
+                    0.10000000149011612,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformWaveController",
+                "value": [
+                    0.20000000298023224,
+                    5.0,
+                    1.2000000476837158,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformMaskStrength",
+                "value": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DeformWaveStrength",
+                "value": [
+                    3.0,
+                    4.0,
+                    3.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
             }
         ],
         "switches": [
+            {
+                "name": "USE_SINUSOIDAL_MOVEMENT",
+                "on": false,
+                "Group": "Sinusoidal Movement",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_TRANSLATION",
+                "Group": "Sinusoidal Movement",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ROTATION",
+                "on": false,
+                "Group": "Sinusoidal Movement",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_WORLD_OFFSET",
+                "Group": "Sinusoidal Movement",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ENV_TRANSITION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "EMISSION_ROTATE_ON",
                 "on": false,
@@ -228450,18 +228658,39 @@
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "DISABLE_FIRE_FX",
+                "name": "VERTEX_ANIMATION_ON",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "VERTEX_ANIMATION_ON",
+                "name": "TRANSPARENT_ANIMATION_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "FOLIAGEWIND_ANIMATION_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "FOLIAGEWIND_ANIMATION_CLIP_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "FLAG_ANIMATION_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TWO_D_DEFORM_ON",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
             }
         ],
         "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1"
+            "NO_BAKED_LIGHTING": "1",
+            "DISABLE_DEPTH_FOG": "1"
         },
         "techniques": [
             {
@@ -311822,7 +312051,7 @@
                 "__type": "MapSunProperties"
             },
             {
-                "TerrainPaintTexturePath": "ASSETS/Maps/TerrainPaint/Maps/MapGeometry/SR/Base_SRX.png",
+                "TerrainPaintTexturePath": "ASSETS/Maps/TerrainPaint/Maps/MapGeometry/SR/Base_SRX.tex",
                 "__type": "MapTerrainPaint"
             },
             null,

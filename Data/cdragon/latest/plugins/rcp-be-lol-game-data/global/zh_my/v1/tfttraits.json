@@ -12216,7 +12216,7 @@
                 "constants": [
                     {
                         "name": "BonusPercentHealth",
-                        "value": 0.45
+                        "value": 0.4
                     }
                 ],
                 "min_units": 4,
@@ -12228,7 +12228,7 @@
                 "constants": [
                     {
                         "name": "BonusPercentHealth",
-                        "value": 0.65
+                        "value": 0.6
                     }
                 ],
                 "min_units": 6,
@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "每@CastsToGainXP@次施法，时光守护者会储存<TFTBonus>@XPPerCast@</TFTBonus>经验值。如果他储存的经验值足以让你升级，便会将升级所需的经验值转移给你。<br><br>如果你已经10级，则他改为获得<TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>伤害增幅。<br><br><rules>已储存经验值：@TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "每@CastsToGainXP@次施法，时光守护者会储存<TFTBonus>@XPPerCast@</TFTBonus>经验值。如果他储存的经验值足以让你升级，便会将升级所需的经验值转移给你。<br><br>如果你已经10级，则他改为获得<TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>伤害增幅。<br><br><rules>已储存经验值：@TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>在巴豆龙的宝藏中，获得经验值所需的施放次数增加至@CastsToGainXPCT@，直至3-5阶段。</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,6 +12270,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -12476,7 +12480,7 @@
                 "constants": [
                     {
                         "name": "ArmorMR",
-                        "value": 30.0
+                        "value": 35.0
                     }
                 ],
                 "min_units": 5,
@@ -12488,7 +12492,7 @@
                 "constants": [
                     {
                         "name": "ArmorMR",
-                        "value": 30.0
+                        "value": 35.0
                     }
                 ],
                 "min_units": 7,
@@ -13000,8 +13004,12 @@
             {
                 "constants": [
                     {
+                        "name": "BladesAP",
+                        "value": 15.0
+                    },
+                    {
                         "name": "BladesFlatDamage",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "BladesForceProcThreshold",
@@ -13049,7 +13057,7 @@
                     },
                     {
                         "name": "Transcendence3StarBuff",
-                        "value": 1.0
+                        "value": 1.3
                     },
                     {
                         "name": "TranscendenceHealth",
@@ -13068,8 +13076,12 @@
             {
                 "constants": [
                     {
+                        "name": "BladesAP",
+                        "value": 25.0
+                    },
+                    {
                         "name": "BladesFlatDamage",
-                        "value": 8.0
+                        "value": 0.0
                     },
                     {
                         "name": "BladesForceProcThreshold",
@@ -13117,7 +13129,7 @@
                     },
                     {
                         "name": "Transcendence3StarBuff",
-                        "value": 1.0
+                        "value": 1.3
                     },
                     {
                         "name": "TranscendenceHealth",
@@ -13136,8 +13148,12 @@
             {
                 "constants": [
                     {
+                        "name": "BladesAP",
+                        "value": 50.0
+                    },
+                    {
                         "name": "BladesFlatDamage",
-                        "value": 15.0
+                        "value": 0.0
                     },
                     {
                         "name": "BladesForceProcThreshold",
@@ -13185,7 +13201,7 @@
                     },
                     {
                         "name": "Transcendence3StarBuff",
-                        "value": 1.0
+                        "value": 1.3
                     },
                     {
                         "name": "TranscendenceHealth",
@@ -13758,7 +13774,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "苏瑞玛人每秒获得@ASPerSecond*100@%攻击速度并回复@HealthRestorePerSecond@生命值。战斗开始时，他们会获得额外效果。<br><br><row>（@MinUnits@）@BonusHealth*100@%最大生命值</row><br><row>（@MinUnits@）@ArmorMR@物理防御和魔法防御</row><br><row>（@MinUnits@）每过@GodhoodCadence@秒，一名苏瑞玛人就会升华至神格形态。</row>",
+        "tooltip_text": "苏瑞玛人每秒获得@ASPerSecond*100@%攻击速度并回复@HealthRestorePerSecond@生命值。战斗开始时，他们会获得额外效果。<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>棱彩：解锁纳瑟斯、雷尼克顿、齐勒斯，随后部署4个苏瑞玛</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>（@MinUnits@）@BonusHealth*100@%最大生命值</row><br><row>（@MinUnits@）@ArmorMR@物理防御和魔法防御</row><br><row>（@MinUnits@）只有在纳瑟斯、雷尼克顿和齐勒斯解锁的情况下，<ShowIf.TFT16_Shurima_PrismaticActive>每@GodhoodCadence@秒一个苏瑞玛升华为神</ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>。</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13838,7 +13854,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13846,7 +13862,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13854,8 +13870,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -13901,7 +13917,7 @@
                 "constants": [
                     {
                         "name": "BonusAD",
-                        "value": 0.22
+                        "value": 0.2
                     },
                     {
                         "name": "BonusOmnivamp",
@@ -13917,7 +13933,7 @@
                 "constants": [
                     {
                         "name": "BonusAD",
-                        "value": 0.33
+                        "value": 0.3
                     },
                     {
                         "name": "BonusOmnivamp",
@@ -13933,7 +13949,7 @@
                 "constants": [
                     {
                         "name": "BonusAD",
-                        "value": 0.44
+                        "value": 0.4
                     },
                     {
                         "name": "BonusOmnivamp",
@@ -14558,7 +14574,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "每次战斗结束后，你的商店都会出现一个升华符咒。符咒蕴含强力效果，可通过金钱购买。@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "每次战斗结束后，你的商店都会出现一个升华符咒。符咒蕴含强力效果，可通过金钱购买。@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>在巴豆龙的宝藏中，未达到7级时，忠实的追随者护符不会出现。</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -16078,7 +16094,7 @@
                     },
                     {
                         "name": "BonusHealth",
-                        "value": 400.0
+                        "value": 425.0
                     }
                 ],
                 "min_units": 2,
@@ -16094,7 +16110,7 @@
                     },
                     {
                         "name": "BonusHealth",
-                        "value": 700.0
+                        "value": 750.0
                     }
                 ],
                 "min_units": 4,
@@ -16110,7 +16126,7 @@
                     },
                     {
                         "name": "BonusHealth",
-                        "value": 1000.0
+                        "value": 1100.0
                     }
                 ],
                 "min_units": 6,

@@ -1,6 +1,6 @@
 {
     "type": "tft-unlockable",
-    "version": "16.4.1",
+    "version": "16.5.1",
     "data": {
         "TFT16_Aatrox": {
             "requiredPlayerLevel": 8,
@@ -10,7 +10,7 @@
                 [
                     {
                         "description": "A champion who starts combat with @RequiredValue@% %i: scaleSV%&nbsp;Omnivamp",
-                        "requiredValue": 40
+                        "requiredValue": 30
                     }
                 ]
             }
@@ -38,7 +38,7 @@
                 [
                     {
                         "description": "Reroll @RequiredValue@ times before Stage 2 Carousel",
-                        "requiredValue": 4
+                        "requiredValue": 3
                     }
                 ]
             }
@@ -72,26 +72,26 @@
             }
         },
         "TFT16_Darius": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 5,
             "requiresPostCombatUnlock": true,
-            "fieldInCombat": false,
+            "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "Have Draven drop @RequiredValue@ gold",
+                        "description": "Draven with @RequiredValue@ item equipped",
                         "requiredValue": 1
                     }
                 ]
             }
         },
         "TFT16_Diana": {
-            "requiredPlayerLevel": 6,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "2-star Leona with @RequiredValue@ items equipped",
+                        "description": "Leona with @RequiredValue@ items equipped",
                         "requiredValue": 3
                     }
                 ]
@@ -111,14 +111,14 @@
             }
         },
         "TFT16_Galio": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
                         "description": "@RequiredValue@ unique star levels of %i: TFT16Demacia%&nbsp;Demacia",
-                        "requiredTotalStarLevels": 12,
+                        "requiredTotalStarLevels": 8,
                         [
                             {
                                 "traitId": "TFT16_Demacia",
@@ -136,21 +136,21 @@
             "conditions": {
                 [
                     {
-                        "description": "Twisted Fate with @RequiredValue@ items equipped",
+                        "description": "a %i: TFT16Bilgewater%&nbsp;Bilgewater unit with @RequiredValue@ items equipped",
                         "requiredValue": 2
                     }
                 ]
             }
         },
         "TFT16_Gwen": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 5,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "Collect @RequiredValue@ %i: Set16ShadowIsles% Shadow Isles Souls",
-                        "requiredValue": 20
+                        "description": "@RequiredValue@ souls&nbsp;%i: scaleSouls%",
+                        "requiredValue": 10
                     }
                 ]
             }
@@ -163,26 +163,26 @@
                 [
                     {
                         "description": "a %i: TFT16Longshot%&nbsp;Longshot unit with @RequiredValue@ items equipped",
-                        "requiredValue": 3
+                        "requiredValue": 2
                     }
                 ]
             }
         },
         "TFT16_Kalista": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "Collect @RequiredValue@ %i: Set16ShadowIsles% Shadow Isles Souls",
-                        "requiredValue": 70
+                        "description": "@RequiredValue@ souls&nbsp;%i: scaleSouls%",
+                        "requiredValue": 30
                     }
                 ]
             }
         },
         "TFT16_Kennen": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 5,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
@@ -191,7 +191,7 @@
                         "description": "@RequiredValue@ unique star levels of %i: TFT16Ionia%&nbsp;Ionia,
                          %i: TFT16Yordle%&nbsp;Yordle,
                          or %i: TFT16Defender%&nbsp;Defender in combat.",
-                        "requiredTotalStarLevels": 7,
+                        "requiredTotalStarLevels": 5,
                         [
                             {
                                 "traitId": "TFT16_Ionia",
@@ -211,7 +211,7 @@
             }
         },
         "TFT16_Kobuko": {
-            "requiredPlayerLevel": 7,
+            "requiredPlayerLevel": 6,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
@@ -253,13 +253,13 @@
             }
         },
         "TFT16_Mel": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "2-star Ambessa with an item dies in combat",
+                        "description": "Ambessa with an item dies in combat",
                         "requiredValue": 1
                     }
                 ]
@@ -279,14 +279,14 @@
             }
         },
         "TFT16_Nidalee": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "Two 2-star Neekos",
-                        "requiredValue": 2
+                        "description": "2-star Neeko with @RequiredValue@ items equipped",
+                        "requiredValue": 3
                     }
                 ]
             }
@@ -331,14 +331,14 @@
             }
         },
         "TFT16_RiftHerald": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
                         "description": "Have %i: TFT16Void%&nbsp;Void active for @RequiredValue@ player combats",
-                        "requiredValue": 8
+                        "requiredValue": 2
                     }
                 ]
             }
@@ -351,7 +351,7 @@
                 [
                     {
                         "description": "@RequiredValue@ Region Traits together",
-                        "requiredValue": 4
+                        "requiredValue": 3
                     }
                 ]
             }
@@ -393,7 +393,7 @@
             "conditions": {
                 [
                     {
-                        "description": "A non-Tank with a Gargoyle's Stoneplate equipped",
+                        "description": "A Caster or Marksman with at least 1 Chain Vest item equipped",
                         "requiredValue": 1
                     }
                 ]
@@ -406,10 +406,6 @@
             "conditions": {
                 [
                     {
-                        "description": "Sell a 2-star Jarvan IV",
-                        "requiredValue": 1
-                    },
-                    {
                         "description": "Sell a 2-star Garen",
                         "requiredValue": 1
                     }
@@ -417,14 +413,14 @@
             }
         },
         "TFT16_THex": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
                         "description": "@RequiredValue@ unique star levels of %i: TFT16Piltover%&nbsp;Piltover",
-                        "requiredTotalStarLevels": 9,
+                        "requiredTotalStarLevels": 7,
                         [
                             {
                                 "traitId": "TFT16_Piltover",
@@ -436,27 +432,33 @@
             }
         },
         "TFT16_TahmKench": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": false,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
                         "description": "Spend @RequiredValue@ %i: TFT16Bilgewater%&nbsp;Bilgewater Silver Serpents",
-                        "requiredValue": 450
+                        "requiredValue": 350
                     }
                 ]
             }
         },
         "TFT16_Thresh": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "Collect @RequiredValue@ %i: Set16ShadowIsles% Shadow Isles Souls",
-                        "requiredValue": 175
+                        "description": "@RequiredValue@ unique star levels of %i: Set16ShadowIsles%&nbsp;ShadowIsles",
+                        "requiredTotalStarLevels": 5,
+                        [
+                            {
+                                "traitId": "TFT16_ShadowIsles",
+                                "traitName": "Shadow Isles"
+                            }
+                        ]
                     }
                 ]
             }
@@ -481,8 +483,8 @@
             "conditions": {
                 [
                     {
-                        "description": "Unit with @RequiredValue@ Rabadon's Deathcaps equipped",
-                        "requiredValue": 2
+                        "description": "A Yordle with @RequiredValue@ Rabadon's Deathcap equipped",
+                        "requiredValue": 1
                     }
                 ]
             }
@@ -495,7 +497,7 @@
                 [
                     {
                         "description": "A unit that starts combat with @RequiredValue@ %i: scaleHealth%&nbsp;Health",
-                        "requiredValue": 3800
+                        "requiredValue": 3400
                     }
                 ]
             }
@@ -531,15 +533,14 @@
             }
         },
         "TFT16_Yone": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "@RequiredValue@-star @ChampName@",
-                        "requiredLevel": 3,
-                        "characterId": "TFT16_Yasuo"
+                        "description": "@RequiredValue@ items equipped on 2-star Yasuo",
+                        "requiredValue": 3
                     }
                 ]
             }
@@ -551,7 +552,7 @@
             "conditions": {
                 [
                     {
-                        "description": "2-star Viego with @RequiredValue@ item equipped",
+                        "description": "Viego with @RequiredValue@ item equipped",
                         "requiredValue": 1
                     }
                 ]
@@ -582,7 +583,7 @@
                 [
                     {
                         "description": "A %i: TFT16Yordle%&nbsp;Yordle or a %i: TFT16Zaun%&nbsp;Zaunite with @RequiredValue@ items equipped",
-                        "requiredValue": 3
+                        "requiredValue": 2
                     }
                 ]
             }
@@ -595,7 +596,7 @@
                 [
                     {
                         "description": "A champion who starts combat with @RequiredValue@% %i: scaleSV%&nbsp;Omnivamp",
-                        "requiredValue": 40
+                        "requiredValue": 30
                     }
                 ]
             }
@@ -659,24 +660,24 @@
         "TFT16_Darius": {
             "requiredPlayerLevel": 0,
             "requiresPostCombatUnlock": true,
-            "fieldInCombat": false,
+            "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "Have Draven drop @RequiredValue@ gold",
+                        "description": "Draven with @RequiredValue@ item equipped",
                         "requiredValue": 1
                     }
                 ]
             }
         },
         "TFT16_Diana": {
-            "requiredPlayerLevel": 6,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "2-star Leona with @RequiredValue@ items equipped",
+                        "description": "Leona with @RequiredValue@ items equipped",
                         "requiredValue": 3
                     }
                 ]
@@ -696,14 +697,14 @@
             }
         },
         "TFT16_Galio": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
                         "description": "@RequiredValue@ unique star levels of %i: TFT16Demacia%&nbsp;Demacia",
-                        "requiredTotalStarLevels": 12,
+                        "requiredTotalStarLevels": 8,
                         [
                             {
                                 "traitId": "TFT16_Demacia",
@@ -721,21 +722,21 @@
             "conditions": {
                 [
                     {
-                        "description": "Twisted Fate with @RequiredValue@ items equipped",
+                        "description": "a %i: TFT16Bilgewater%&nbsp;Bilgewater unit with @RequiredValue@ items equipped",
                         "requiredValue": 2
                     }
                 ]
             }
         },
         "TFT16_Gwen": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 5,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "Collect @RequiredValue@ %i: Set16ShadowIsles% Shadow Isles Souls",
-                        "requiredValue": 20
+                        "description": "@RequiredValue@ souls&nbsp;%i: scaleSouls%",
+                        "requiredValue": 10
                     }
                 ]
             }
@@ -748,26 +749,26 @@
                 [
                     {
                         "description": "a %i: TFT16Longshot%&nbsp;Longshot unit with @RequiredValue@ items equipped",
-                        "requiredValue": 3
+                        "requiredValue": 2
                     }
                 ]
             }
         },
         "TFT16_Kalista": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "Collect @RequiredValue@ %i: Set16ShadowIsles% Shadow Isles Souls",
-                        "requiredValue": 70
+                        "description": "@RequiredValue@ souls&nbsp;%i: scaleSouls%",
+                        "requiredValue": 30
                     }
                 ]
             }
         },
         "TFT16_Kennen": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 5,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
@@ -776,7 +777,7 @@
                         "description": "@RequiredValue@ unique star levels of %i: TFT16Ionia%&nbsp;Ionia,
                          %i: TFT16Yordle%&nbsp;Yordle,
                          or %i: TFT16Defender%&nbsp;Defender in combat.",
-                        "requiredTotalStarLevels": 7,
+                        "requiredTotalStarLevels": 5,
                         [
                             {
                                 "traitId": "TFT16_Ionia",
@@ -796,7 +797,7 @@
             }
         },
         "TFT16_Kobuko": {
-            "requiredPlayerLevel": 7,
+            "requiredPlayerLevel": 6,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
@@ -838,13 +839,13 @@
             }
         },
         "TFT16_Mel": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 8,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": false,
             "conditions": {
                 [
                     {
-                        "description": "2-star Ambessa with an item dies in combat",
+                        "description": "Ambessa with an item dies in combat",
                         "requiredValue": 1
                     }
                 ]
@@ -865,14 +866,14 @@
             }
         },
         "TFT16_Nidalee": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "Two 2-star Neekos",
-                        "requiredValue": 2
+                        "description": "2-star Neeko with @RequiredValue@ items equipped",
+                        "requiredValue": 3
                     }
                 ]
             }
@@ -925,7 +926,7 @@
                 [
                     {
                         "description": "Have %i: TFT16Void%&nbsp;Void active for @RequiredValue@ combats",
-                        "requiredValue": 8
+                        "requiredValue": 2
                     }
                 ]
             }
@@ -938,7 +939,7 @@
                 [
                     {
                         "description": "@RequiredValue@ Region Traits together",
-                        "requiredValue": 4
+                        "requiredValue": 3
                     }
                 ]
             }
@@ -976,7 +977,7 @@
             "conditions": {
                 [
                     {
-                        "description": "A non-Tank with a Gargoyle's Stoneplate equipped",
+                        "description": "A Caster or Marksman with at least 1 Chain Vest item equipped",
                         "requiredValue": 1
                     }
                 ]
@@ -988,10 +989,6 @@
             "fieldInCombat": false,
             "conditions": {
                 [
-                    {
-                        "description": "Sell a 2-star Jarvan IV",
-                        "requiredValue": 1
-                    },
                     {
                         "description": "Sell a 2-star Garen",
                         "requiredValue": 1
@@ -1007,7 +1004,7 @@
                 [
                     {
                         "description": "@RequiredValue@ unique star levels of %i: TFT16Piltover%&nbsp;Piltover",
-                        "requiredTotalStarLevels": 9,
+                        "requiredTotalStarLevels": 7,
                         [
                             {
                                 "traitId": "TFT16_Piltover",
@@ -1026,7 +1023,7 @@
                 [
                     {
                         "description": "Spend @RequiredValue@ %i: TFT16Bilgewater%&nbsp;Bilgewater Silver Serpents",
-                        "requiredValue": 450
+                        "requiredValue": 350
                     }
                 ]
             }
@@ -1038,7 +1035,7 @@
             "conditions": {
                 [
                     {
-                        "description": "Collect @RequiredValue@ %i: Set16ShadowIsles% Shadow Isles Souls",
+                        "description": "@RequiredValue@ souls&nbsp;%i: scaleSouls%",
                         "requiredValue": 175
                     }
                 ]
@@ -1064,8 +1061,8 @@
             "conditions": {
                 [
                     {
-                        "description": "Unit with @RequiredValue@ Rabadon's Deathcaps equipped",
-                        "requiredValue": 2
+                        "description": "A Yordle with @RequiredValue@ Rabadon's Deathcap equipped",
+                        "requiredValue": 1
                     }
                 ]
             }
@@ -1078,7 +1075,7 @@
                 [
                     {
                         "description": "A unit that starts combat with @RequiredValue@ %i: scaleHealth%&nbsp;Health",
-                        "requiredValue": 3800
+                        "requiredValue": 3400
                     }
                 ]
             }
@@ -1090,12 +1087,12 @@
             "conditions": {
                 [
                     {
-                        "description": "@RequiredValue@-star @ChampName@",
+                        "description": "Jinx with @RequiredValue@ item equipped",
                         "requiredLevel": 1,
                         "characterId": "TFT16_Jinx"
                     },
                     {
-                        "description": "@RequiredValue@-star @ChampName@",
+                        "description": "Vi with @RequiredValue@ item equipped",
                         "requiredLevel": 2,
                         "characterId": "TFT16_Vi"
                     }
@@ -1116,15 +1113,14 @@
             }
         },
         "TFT16_Yone": {
-            "requiredPlayerLevel": 0,
+            "requiredPlayerLevel": 7,
             "requiresPostCombatUnlock": true,
             "fieldInCombat": true,
             "conditions": {
                 [
                     {
-                        "description": "@RequiredValue@-star @ChampName@",
-                        "requiredLevel": 3,
-                        "characterId": "TFT16_Yasuo"
+                        "description": "@RequiredValue@ items equipped on 2-star Yasuo",
+                        "requiredValue": 2
                     }
                 ]
             }
@@ -1136,8 +1132,8 @@
             "conditions": {
                 [
                     {
-                        "description": "2-star Viego with @RequiredValue@ item equipped",
-                        "requiredValue": 2
+                        "description": "Viego with @RequiredValue@ item equipped",
+                        "requiredValue": 1
                     }
                 ]
             }
@@ -1167,7 +1163,593 @@
                 [
                     {
                         "description": "A %i: TFT16Yordle%&nbsp;Yordle or a %i: TFT16Zaun%&nbsp;Zaunite with @RequiredValue@ items equipped",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Aatrox": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "A champion who starts combat with @RequiredValue@% %i: scaleSV%&nbsp;Omnivamp",
+                        "requiredValue": 30
+                    }
+                ]
+            }
+        },
+        "TFT16_AurelionSol": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@ unique %i: TFT16Targon%&nbsp;Targonians",
+                        "requiredContributionCount": 5,
+                        "traitId": "TFT16_Targon",
+                        "traitName": "Targon"
+                    }
+                ]
+            }
+        },
+        "TFT16_Bard": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "Reroll @RequiredValue@ times before Stage 2 Carousel",
                         "requiredValue": 3
+                    }
+                ]
+            }
+        },
+        "TFT16_BaronNashor": {
+            "requiredPlayerLevel": 10,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "Field @RequiredValue@ unique %i: TFT16Void%&nbsp;Void units.",
+                        "requiredContributionCount": 7,
+                        "traitId": "TFT16_Void",
+                        "traitName": "Void"
+                    }
+                ]
+            }
+        },
+        "TFT16_Brock": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "Collect @RequiredValue@ %i: Set16Ixtal%&nbsp;Ixtal Sunshards over the course of the game",
+                        "requiredValue": 500
+                    }
+                ]
+            }
+        },
+        "TFT16_Darius": {
+            "requiredPlayerLevel": 5,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "Draven with @RequiredValue@ item equipped",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Diana": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "Leona with @RequiredValue@ items equipped",
+                        "requiredValue": 3
+                    }
+                ]
+            }
+        },
+        "TFT16_Fizz": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@ unique %i: TFT16Yordle%&nbsp;Yordles or %i: TFT16Bilgewater%&nbsp;Bilgewater units",
+                        "requiredValue": 5
+                    }
+                ]
+            }
+        },
+        "TFT16_Galio": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@ unique star levels of %i: TFT16Demacia%&nbsp;Demacia",
+                        "requiredTotalStarLevels": 8,
+                        [
+                            {
+                                "traitId": "TFT16_Demacia",
+                                "traitName": "Demacia"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "TFT16_Graves": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "a %i: TFT16Bilgewater%&nbsp;Bilgewater unit with @RequiredValue@ items equipped",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Gwen": {
+            "requiredPlayerLevel": 5,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@ souls&nbsp;%i: scaleSouls%",
+                        "requiredValue": 10
+                    }
+                ]
+            }
+        },
+        "TFT16_Kaisa": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "a %i: TFT16Longshot%&nbsp;Longshot unit with @RequiredValue@ items equipped",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Kalista": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@ souls&nbsp;%i: scaleSouls%",
+                        "requiredValue": 30
+                    }
+                ]
+            }
+        },
+        "TFT16_Kennen": {
+            "requiredPlayerLevel": 5,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@ unique star levels of %i: TFT16Ionia%&nbsp;Ionia,
+                         %i: TFT16Yordle%&nbsp;Yordle,
+                         or %i: TFT16Defender%&nbsp;Defender in combat.",
+                        "requiredTotalStarLevels": 5,
+                        [
+                            {
+                                "traitId": "TFT16_Ionia",
+                                "traitName": "Ionia"
+                            },
+                            {
+                                "traitId": "TFT16_Yordle",
+                                "traitName": "Yordle"
+                            },
+                            {
+                                "traitId": "TFT16_Defender",
+                                "traitName": "Defender"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "TFT16_Kobuko": {
+            "requiredPlayerLevel": 6,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@ unique star levels of %i: TFT16Yordle%&nbsp;Yordle,
+                         %i: TFT16Brawler%&nbsp;Bruiser,
+                         or %i: TFT16Invoker%&nbsp;Invoker",
+                        "requiredTotalStarLevels": 6,
+                        [
+                            {
+                                "traitId": "TFT16_Yordle",
+                                "traitName": "Yordle"
+                            },
+                            {
+                                "traitId": "TFT16_Brawler",
+                                "traitName": "Bruiser"
+                            },
+                            {
+                                "traitId": "TFT16_Invoker",
+                                "traitName": "Invoker"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "TFT16_Leblanc": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "Sion with @RequiredValue@ items equipped",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Mel": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "Ambessa with an item dies in combat",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Nasus": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "Lose @RequiredValue@ combats in a row with Azir.<br><rules>(Gets harder each time you unlock a Shuriman!) </rules>",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Nidalee": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "2-star Neeko with @RequiredValue@ items equipped",
+                        "requiredValue": 3
+                    }
+                ]
+            }
+        },
+        "TFT16_Orianna": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "a %i: TFT16Piltover%&nbsp;Piltover unit with @RequiredValue@ items equipped",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Poppy": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "%i: TFT16Demacia%&nbsp;Demacian or a %i: TFT16Yordle%&nbsp;Yordle with @RequiredValue@ items equipped",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Renekton": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "Win @RequiredValue@ combats in a row with Azir.<br><rules>(Gets harder each time you unlock a Shuriman!) </rules>",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_RiftHerald": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "Have %i: TFT16Void%&nbsp;Void active for @RequiredValue@ player combats",
+                        "requiredValue": 2
+                    }
+                ]
+            }
+        },
+        "TFT16_Ryze": {
+            "requiredPlayerLevel": 9,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@ Region Traits together",
+                        "requiredValue": 3
+                    }
+                ]
+            }
+        },
+        "TFT16_Sett": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "Only 1 unit in the two front rows of the battlefield",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Singed": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@ unique %i: TFT16Zaun%&nbsp;Zaunites or %i: TFT16Juggernaut%&nbsp;Juggernauts",
+                        "requiredValue": 4
+                    },
+                    {
+                        "description": "Lose @RequiredValue@ Player Health",
+                        "requiredValue": 35
+                    }
+                ]
+            }
+        },
+        "TFT16_Skarner": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "A Caster or Marksman with at least 1 Chain Vest item equipped",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Sylas": {
+            "requiredPlayerLevel": 9,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "Sell a 2-star Garen",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_THex": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@ unique star levels of %i: TFT16Piltover%&nbsp;Piltover",
+                        "requiredTotalStarLevels": 7,
+                        [
+                            {
+                                "traitId": "TFT16_Piltover",
+                                "traitName": "Piltover"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "TFT16_TahmKench": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "Spend @RequiredValue@ %i: TFT16Bilgewater%&nbsp;Bilgewater Silver Serpents",
+                        "requiredValue": 350
+                    }
+                ]
+            }
+        },
+        "TFT16_Thresh": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@ unique star levels of %i: Set16ShadowIsles%&nbsp;ShadowIsles",
+                        "requiredTotalStarLevels": 5,
+                        [
+                            {
+                                "traitId": "TFT16_ShadowIsles",
+                                "traitName": "Shadow Isles"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "TFT16_Tryndamere": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "Ashe with @RequiredValue@ items equipped",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Veigar": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "A Yordle with @RequiredValue@ Rabadon's Deathcap equipped",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Volibear": {
+            "requiredPlayerLevel": 8,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "A unit that starts combat with @RequiredValue@ %i: scaleHealth%&nbsp;Health",
+                        "requiredValue": 3400
+                    }
+                ]
+            }
+        },
+        "TFT16_Warwick": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "Jinx with @RequiredValue@ item equipped",
+                        "requiredValue": 1
+                    },
+                    {
+                        "description": "Vi with @RequiredValue@ item equipped",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Xerath": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": false,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "Alternate between winning and losing for @RequiredValue@ combats with Azir.<br><rules>(Gets harder each time you unlock a Shuriman!) </rules>",
+                        "requiredValue": 3
+                    }
+                ]
+            }
+        },
+        "TFT16_Yone": {
+            "requiredPlayerLevel": 7,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "@RequiredValue@ items equipped on 2-star Yasuo",
+                        "requiredValue": 3
+                    }
+                ]
+            }
+        },
+        "TFT16_Yorick": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "Viego with @RequiredValue@ item equipped",
+                        "requiredValue": 1
+                    }
+                ]
+            }
+        },
+        "TFT16_Zaahen": {
+            "requiredPlayerLevel": 0,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": false,
+            "conditions": {
+                [
+                    {
+                        "description": "Have the 'Trials of Twilight' Augment",
+                        "requiredValue": 1
+                    },
+                    {
+                        "description": "Field a 3-star Xin Zhao for @RequiredValue@ combats. ",
+                        "requiredValue": 5
+                    }
+                ]
+            }
+        },
+        "TFT16_Ziggs": {
+            "requiredPlayerLevel": 9,
+            "requiresPostCombatUnlock": true,
+            "fieldInCombat": true,
+            "conditions": {
+                [
+                    {
+                        "description": "A %i: TFT16Yordle%&nbsp;Yordle or a %i: TFT16Zaun%&nbsp;Zaunite with @RequiredValue@ items equipped",
+                        "requiredValue": 2
                     }
                 ]
             }

@@ -1263,8 +1263,8 @@ lol-uikit-content-block.voice-settings-push-to-talk-alert b {
 
 .lol-settings-voice-push-to-talk {
     display: flex;
-    flex-direction: column;
-    position: absolute;
+    flex-direction: row;
+    margin-top: 10px;
     right: 171px;
     top: 290px
 }
@@ -1355,6 +1355,20 @@ lol-uikit-content-block.voice-settings-push-to-talk-alert b {
 .confirm-friend-actions p {
     direction: ltr;
     text-align: left
+}
+
+.confirm-unfriend-block-report-action {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.confirm-unfriend-block-report-action p {
+    text-align: center
+}
+
+.confirm-unfriend-block-report-action strong {
+    font-weight: 900
 }
 
 .lol-blocked-player {

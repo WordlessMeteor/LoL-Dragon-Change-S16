@@ -118416,12 +118416,63 @@
         "type": 0,
         "samplerValues": [
             {
+                "TextureName": "NoiseTexture",
+                "texturePath": "ASSETS/Shared/Materials/Water_Wave_small.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "ColorTexture",
                 "texturePath": "ASSETS/Maps/Particles/TFT/StarGuardian/TFT8_Starguardian_Starsmap03.tex",
+                "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "AlphaClipValue",
+                "value": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ProgressScope",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MinTransitionFactor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaxTransitionFactor",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EdgeNoiseIntensity",
+                "value": [
+                    0.6000000238418579,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "NoiseTexTilling",
                 "value": [
@@ -118443,16 +118494,6 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "EdgeRange",
-                "value": [
-                    0.28600001335144043,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
                 "name": "Color",
                 "value": [
                     0.6666666865348816,
@@ -118463,9 +118504,9 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "EdgeAlpha",
+                "name": "EdgeRange",
                 "value": [
-                    0.7900000214576721,
+                    0.28600001335144043,
                     0.0,
                     0.0,
                     0.0
@@ -118481,12 +118522,59 @@
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ParamStage1",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "centeroffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distance",
+                "value": [
+                    1000.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ratio",
+                "value": [
+                    1.2999999523162842,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
             }
         ],
         "switches": [
             {
                 "name": "ALPHACLIP",
                 "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEBUG_MODE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "INVERSE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BASE_ON_MAP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TRANSITION_OUT",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],
@@ -118903,12 +118991,63 @@
         "type": 0,
         "samplerValues": [
             {
+                "TextureName": "NoiseTexture",
+                "texturePath": "ASSETS/Shared/Materials/Water_Wave_small.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "ColorTexture",
                 "texturePath": "ASSETS/Characters/Udyr/Skins/Base/Particles/Udyr_Base_VGU_Generic_Erosion01.tex",
+                "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "AlphaClipValue",
+                "value": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ProgressScope",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MinTransitionFactor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaxTransitionFactor",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EdgeNoiseIntensity",
+                "value": [
+                    0.6000000238418579,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "NoiseTexTilling",
                 "value": [
@@ -118930,16 +119069,6 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "EdgeRange",
-                "value": [
-                    0.2720000147819519,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
                 "name": "Color",
                 "value": [
                     0.24705882370471954,
@@ -118950,9 +119079,9 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "EdgeAlpha",
+                "name": "EdgeRange",
                 "value": [
-                    1.0,
+                    0.2720000147819519,
                     0.0,
                     0.0,
                     0.0
@@ -118968,12 +119097,59 @@
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ParamStage1",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "centeroffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distance",
+                "value": [
+                    1000.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ratio",
+                "value": [
+                    1.2999999523162842,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
             }
         ],
         "switches": [
             {
                 "name": "ALPHACLIP",
                 "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEBUG_MODE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "INVERSE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BASE_ON_MAP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TRANSITION_OUT",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],
@@ -119434,12 +119610,63 @@
         "type": 0,
         "samplerValues": [
             {
+                "TextureName": "NoiseTexture",
+                "texturePath": "ASSETS/Shared/Materials/Water_Wave_small.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "ColorTexture",
                 "texturePath": "ASSETS/Characters/Zoe/Skins/Skin22/Particles/Zoe_Skin22_Z_Nova_Mult.tex",
+                "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "AlphaClipValue",
+                "value": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ProgressScope",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MinTransitionFactor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaxTransitionFactor",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EdgeNoiseIntensity",
+                "value": [
+                    0.6000000238418579,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "NoiseTexTilling",
                 "value": [
@@ -119461,16 +119688,6 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "EdgeRange",
-                "value": [
-                    0.3959999978542328,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
                 "name": "Color",
                 "value": [
                     0.0117647061124444,
@@ -119481,9 +119698,9 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "EdgeAlpha",
+                "name": "EdgeRange",
                 "value": [
-                    1.0,
+                    0.3959999978542328,
                     0.0,
                     0.0,
                     0.0
@@ -119493,9 +119710,37 @@
             {
                 "name": "EdgeRangeOuter",
                 "value": [
-                    0.15649999678134918,
+                    0.15600000321865082,
                     0.0,
                     0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ParamStage1",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "centeroffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distance",
+                "value": [
+                    1000.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ratio",
+                "value": [
+                    1.2999999523162842,
+                    1.0,
+                    1.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -119505,6 +119750,25 @@
             {
                 "name": "ALPHACLIP",
                 "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEBUG_MODE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "INVERSE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BASE_ON_MAP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TRANSITION_OUT",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],
@@ -119643,12 +119907,63 @@
         "type": 0,
         "samplerValues": [
             {
+                "TextureName": "NoiseTexture",
+                "texturePath": "ASSETS/Shared/Materials/Water_Wave_small.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "ColorTexture",
                 "texturePath": "ASSETS/Maps/Particles/TFT/StarGuardian/TFT8_Starguardian_Starsmap03.tex",
+                "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "AlphaClipValue",
+                "value": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ProgressScope",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MinTransitionFactor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaxTransitionFactor",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EdgeNoiseIntensity",
+                "value": [
+                    0.6000000238418579,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "NoiseTexTilling",
                 "value": [
@@ -119670,16 +119985,6 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "EdgeRange",
-                "value": [
-                    0.4399999976158142,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
                 "name": "Color",
                 "value": [
                     1.0,
@@ -119690,9 +119995,9 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "EdgeAlpha",
+                "name": "EdgeRange",
                 "value": [
-                    1.0,
+                    0.4399999976158142,
                     0.0,
                     0.0,
                     0.0
@@ -119710,11 +120015,29 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "AlphaClipValue",
+                "name": "ParamStage1",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "centeroffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distance",
                 "value": [
-                    0.20000000298023224,
+                    1000.0,
                     0.0,
                     0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ratio",
+                "value": [
+                    1.2999999523162842,
+                    1.0,
+                    1.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -119723,6 +120046,25 @@
         "switches": [
             {
                 "name": "ALPHACLIP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEBUG_MODE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "INVERSE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BASE_ON_MAP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TRANSITION_OUT",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],
@@ -120297,12 +120639,113 @@
         "type": 0,
         "samplerValues": [
             {
+                "TextureName": "NoiseTexture",
+                "texturePath": "ASSETS/Shared/Materials/Water_Wave_small.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "ColorTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/TFT/StarGuardian/Textures/TransitionNoise2.tex",
+                "texturePath": "ASSETS/Maps/Particles/TFT/StarGuardian/TFT8_Starguardian_Starsmap03.tex",
+                "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "AlphaClipValue",
+                "value": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ProgressScope",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MinTransitionFactor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaxTransitionFactor",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EdgeNoiseIntensity",
+                "value": [
+                    0.6000000238418579,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "NoiseTexTilling",
+                "value": [
+                    1.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ColorTexTilling",
+                "value": [
+                    8.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Color",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EdgeRange",
+                "value": [
+                    0.4399999976158142,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EdgeRangeOuter",
+                "value": [
+                    0.09849999845027924,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "ParamStage1",
                 "value": [
@@ -120312,11 +120755,54 @@
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "centeroffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distance",
+                "value": [
+                    1000.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ratio",
+                "value": [
+                    1.2999999523162842,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
             }
         ],
         "switches": [
             {
                 "name": "ALPHACLIP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEBUG_MODE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "INVERSE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BASE_ON_MAP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TRANSITION_OUT",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],

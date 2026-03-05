@@ -5192,9 +5192,9 @@
             {
                 "name": "TintColor",
                 "value": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5000076293945312,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -5208,15 +5208,15 @@
         ],
         "shaderMacros": {
             "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
+            "PREMULTIPLIED_ALPHA": "1",
+            "DISABLE_DEPTH_FOG": "1"
         },
         "techniques": [
             {
                 "name": "normal",
                 "passes": [
                     {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
                         "blendEnable": true,
                         "cullEnable": false,
                         "dstColorBlendFactor": 7,
@@ -82500,7 +82500,7 @@
                 "__type": "MapSunProperties"
             },
             {
-                "TerrainPaintTexturePath": "ASSETS/Maps/TerrainPaint/Maps/MapGeometry/SR/Base_SRX.png",
+                "TerrainPaintTexturePath": "ASSETS/Maps/TerrainPaint/Maps/MapGeometry/SR/Base_SRX.tex",
                 "__type": "MapTerrainPaint"
             }
         ],

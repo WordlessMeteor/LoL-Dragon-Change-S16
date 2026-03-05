@@ -46,7 +46,6 @@
         "__type": "OptionsViewController"
     },
     "{03f7c297}": {
-        "TabNameTraKey": "options_tab_hotkeys",
         "Filter": {
             "Filter": {
                 "__type": "{4e771e24}"
@@ -54,6 +53,7 @@
             "{93bef4c5}": false,
             "__type": "OptionItemFilter_Not"
         },
+        "TabNameTraKey": "options_tab_hotkeys",
         "{a4b002d7}": [
             {
                 "Filter": {
@@ -2275,12 +2275,12 @@
                 "LabelTraKey": "Options_Interface_InterfaceSize_label",
                 "items": [
                     {
-                        "LiveUpdate": true,
                         "Filter": {
                             "ShowInTftGame": false,
                             "ShowInTftReplay": false,
                             "__type": "OptionItemFilter_GameStyle"
                         },
+                        "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_HUDScale",
                         "option": 17,
@@ -2288,12 +2288,12 @@
                         "__type": "OptionItemSliderFloat"
                     },
                     {
-                        "LiveUpdate": true,
                         "Filter": {
                             "ShowInTftGame": false,
                             "ShowInTftReplay": false,
                             "__type": "OptionItemFilter_GameStyle"
                         },
+                        "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_CursorScale",
                         "option": 12,
@@ -2302,13 +2302,13 @@
                         "__type": "OptionItemSliderFloat"
                     },
                     {
-                        "LiveUpdate": true,
                         "Filter": {
                             "ShowInLolReplay": false,
                             "ShowInTftGame": false,
                             "ShowInTftReplay": false,
                             "__type": "OptionItemFilter_GameStyle"
                         },
+                        "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_ShopScale",
                         "option": 32,
@@ -2323,13 +2323,13 @@
                         "__type": "OptionItemSliderInt"
                     },
                     {
-                        "LiveUpdate": true,
                         "Filter": {
                             "ShowInLolReplay": false,
                             "ShowInTftReplay": false,
                             "{047600fd}": false,
                             "__type": "OptionItemFilter_GameStyle"
                         },
+                        "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_MinimapScale",
                         "option": 22,
@@ -2337,7 +2337,6 @@
                         "__type": "OptionItemSliderFloat"
                     },
                     {
-                        "LiveUpdate": true,
                         "Filter": {
                             "ShowInLolGame": false,
                             "ShowInTftGame": false,
@@ -2345,6 +2344,7 @@
                             "{64bc3430}": false,
                             "__type": "OptionItemFilter_GameStyle"
                         },
+                        "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_MinimapScaleSpectator",
                         "option": 23,
@@ -2352,32 +2352,31 @@
                         "__type": "OptionItemSliderFloat"
                     },
                     {
-                        "LiveUpdate": true,
                         "Filter": {
                             "ShowInTftGame": false,
                             "ShowInTftReplay": false,
                             "__type": "OptionItemFilter_GameStyle"
                         },
+                        "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_ObjectivePlanningScale",
                         "option": 25,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
-                        "LiveUpdate": true,
                         "Filter": {
                             "ShowInLolReplay": false,
                             "ShowInTftGame": false,
                             "ShowInTftReplay": false,
                             "__type": "OptionItemFilter_GameStyle"
                         },
+                        "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_DeathRecapScale",
                         "option": 13,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
-                        "LiveUpdate": true,
                         "Filter": {
                             "Filters": [
                                 {
@@ -2393,6 +2392,7 @@
                             ],
                             "__type": "OptionItemFilter_And"
                         },
+                        "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_PracticeToolScale",
                         "option": 27,
@@ -2423,12 +2423,12 @@
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "LiveUpdate": true,
                                 "Filter": {
                                     "ShowInTftGame": false,
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
+                                "LiveUpdate": true,
                                 "option": 31,
                                 "template": "{eeccf10a}",
                                 "LabelTraKey": "Options_Interface_HealthAndResourceBars_ShowNamesAboveHealthbar",
@@ -2453,12 +2453,12 @@
                         ],
                         "itemsRight": [
                             {
-                                "LiveUpdate": true,
                                 "Filter": {
                                     "ShowInTftGame": false,
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
+                                "LiveUpdate": true,
                                 "option": 89,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_HealthAndResourceBars_ShowLossOfControlUI",
@@ -2476,6 +2476,12 @@
                                 "option": 43,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_HealthAndResourceBars_EnableStreamerMode",
+                                "__type": "OptionItemCheckbox"
+                            },
+                            {
+                                "option": 86,
+                                "template": "{2f26143a}",
+                                "LabelTraKey": "Options_Interface_HealthAndResrouceBars_ShowLastHitAssist",
                                 "__type": "OptionItemCheckbox"
                             }
                         ],
@@ -2606,12 +2612,18 @@
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "LiveUpdate": true,
+                                "option": 75,
+                                "template": "{2f26143a}",
+                                "LabelTraKey": "Options_Interface_AbilityAndAttackDisplay_ShowAutoAttackRangeIndicatorLine",
+                                "__type": "OptionItemCheckbox"
+                            },
+                            {
                                 "Filter": {
                                     "ShowInTftGame": false,
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
+                                "LiveUpdate": true,
                                 "option": 7,
                                 "template": "{eeccf10a}",
                                 "LabelTraKey": "Options_Interface_AbilityCooldownDisplay_label",
@@ -2671,25 +2683,25 @@
                     {
                         "ItemsEither": [
                             {
-                                "LiveUpdate": true,
                                 "Filter": {
                                     "ShowInTftGame": false,
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
+                                "LiveUpdate": true,
                                 "option": 91,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Minimap_ShowNeutralCamps",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "LiveUpdate": true,
                                 "Filter": {
                                     "ShowInLolReplay": false,
                                     "ShowInTftGame": false,
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
+                                "LiveUpdate": true,
                                 "option": 42,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Minimap_ShowMinimapOnLeft",
@@ -3160,10 +3172,10 @@
                 "LabelTraKey": "Options_Controls_label",
                 "items": [
                     {
-                        "LiveUpdate": true,
                         "Filter": {
                             "__type": "OptionItemFilter_Osx"
                         },
+                        "LiveUpdate": true,
                         "option": 63,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Game_Controls_OSXMouseAcceleration",
@@ -3754,11 +3766,11 @@
         "__type": "OptionsTab"
     },
     "{808d8e46}": {
-        "TabNameTraKey": "Options_Tab_Voice",
-        "AddPaddingAfterLastItem": false,
         "Filter": {
             "__type": "OptionItemFilter_VoiceChat"
         },
+        "TabNameTraKey": "Options_Tab_Voice",
+        "AddPaddingAfterLastItem": false,
         "{a4b002d7}": [
             {
                 "template": "{3cd8d5b2}",
@@ -4620,10 +4632,10 @@
                 "__type": "OptionItemLabel"
             },
             {
-                "ShowOnPlatform": 2,
                 "Filter": {
                     "__type": "OptionItemFilter_PromoteAccount"
                 },
+                "ShowOnPlatform": 2,
                 "Action": 2,
                 "DescriptionTraKey": "standalone_settings_General_AccountInfo",
                 "LabelTraKey": "standalone_common_Settings_General_CreateAccountButtonText",
@@ -4638,10 +4650,10 @@
                 "__type": "OptionItemButton"
             },
             {
-                "ShowOnPlatform": 2,
                 "Filter": {
                     "__type": "OptionItemFilter_Ios"
                 },
+                "ShowOnPlatform": 2,
                 "Action": 1,
                 "LabelTraKey": "standalone_Settings_General_DeleteButtonText",
                 "template": "{276cbc55}",
@@ -4651,10 +4663,10 @@
         "__type": "OptionsTab"
     },
     "{e82739cc}": {
-        "TabNameTraKey": "Options_Tab_hotkeys_WASD",
         "Filter": {
             "__type": "{4e771e24}"
         },
+        "TabNameTraKey": "Options_Tab_hotkeys_WASD",
         "{a4b002d7}": [
             {
                 "Filter": {
@@ -4695,26 +4707,63 @@
                         },
                         "template": "{099c9758}",
                         "__type": "{81580a34}"
-                    },
+                    }
+                ],
+                "__type": "OptionItemGroup"
+            },
+            {
+                "Filter": {
+                    "__type": "{d4737a04}"
+                },
+                "template": "{3cd8d5b2}",
+                "LabelTraKey": "Options_WASDAdvancedSettings",
+                "items": [
                     {
-                        "LiveUpdate": true,
                         "Filter": {
                             "__type": "{d4737a04}"
                         },
+                        "LiveUpdate": true,
                         "option": 27,
                         "template": "{2f26143a}",
                         "LabelTraKey": "PORO_WASD_Option_MovementRotation_Description",
                         "__type": "OptionItemCheckbox"
                     },
                     {
-                        "LiveUpdate": true,
                         "Filter": {
                             "__type": "{d4737a04}"
                         },
+                        "LiveUpdate": true,
                         "option": 15,
                         "template": "{eeccf10a}",
                         "LabelTraKey": "PORO_WASD_Options_FlashHandlingType_Label",
                         "TooltipTraKey": "PORO_WASD_Options_FlashHandlingType_Tooltip",
+                        "{a4b002d7}": [
+                            {
+                                "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Only",
+                                "value": 1,
+                                "__type": "OptionItemDropdownItem"
+                            },
+                            {
+                                "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Enhanced",
+                                "__type": "OptionItemDropdownItem"
+                            },
+                            {
+                                "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Fallback",
+                                "value": 2,
+                                "__type": "OptionItemDropdownItem"
+                            }
+                        ],
+                        "__type": "OptionItemDropdown"
+                    },
+                    {
+                        "Filter": {
+                            "__type": "{d4737a04}"
+                        },
+                        "LiveUpdate": true,
+                        "option": 8,
+                        "template": "{eeccf10a}",
+                        "LabelTraKey": "PORO_WASD_Options_DashHandlingType_Label",
+                        "TooltipTraKey": "PORO_WASD_Options_DashHandlingType_Tooltip",
                         "{a4b002d7}": [
                             {
                                 "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Only",
@@ -4758,80 +4807,6 @@
                         "option": 104,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_CastThePressedSpell",
-                        "__type": "OptionItemCheckbox"
-                    }
-                ],
-                "__type": "OptionItemGroup"
-            },
-            {
-                "Filter": {
-                    "__type": "{d4737a04}"
-                },
-                "template": "{3cd8d5b2}",
-                "LabelTraKey": "Options_WASDAdvancedSettings",
-                "items": [
-                    {
-                        "LiveUpdate": true,
-                        "Filter": {
-                            "__type": "{d4737a04}"
-                        },
-                        "option": 15,
-                        "template": "{eeccf10a}",
-                        "LabelTraKey": "PORO_WASD_Options_FlashHandlingType_Label",
-                        "TooltipTraKey": "PORO_WASD_Options_FlashHandlingType_Tooltip",
-                        "{a4b002d7}": [
-                            {
-                                "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Only",
-                                "value": 1,
-                                "__type": "OptionItemDropdownItem"
-                            },
-                            {
-                                "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Enhanced",
-                                "__type": "OptionItemDropdownItem"
-                            },
-                            {
-                                "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Fallback",
-                                "value": 2,
-                                "__type": "OptionItemDropdownItem"
-                            }
-                        ],
-                        "__type": "OptionItemDropdown"
-                    },
-                    {
-                        "LiveUpdate": true,
-                        "Filter": {
-                            "__type": "{d4737a04}"
-                        },
-                        "option": 8,
-                        "template": "{eeccf10a}",
-                        "LabelTraKey": "PORO_WASD_Options_DashHandlingType_Label",
-                        "TooltipTraKey": "PORO_WASD_Options_DashHandlingType_Tooltip",
-                        "{a4b002d7}": [
-                            {
-                                "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Only",
-                                "value": 1,
-                                "__type": "OptionItemDropdownItem"
-                            },
-                            {
-                                "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Enhanced",
-                                "__type": "OptionItemDropdownItem"
-                            },
-                            {
-                                "TRAKey": "PORO_WASD_Options_FlashHandlingType_Cursor_Fallback",
-                                "value": 2,
-                                "__type": "OptionItemDropdownItem"
-                            }
-                        ],
-                        "__type": "OptionItemDropdown"
-                    },
-                    {
-                        "LiveUpdate": true,
-                        "Filter": {
-                            "__type": "{d4737a04}"
-                        },
-                        "option": 27,
-                        "template": "{2f26143a}",
-                        "LabelTraKey": "PORO_WASD_Option_MovementRotation_Description",
                         "__type": "OptionItemCheckbox"
                     }
                 ],
@@ -5671,10 +5646,10 @@
                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PlayerMovement_label",
                         "items": [
                             {
-                                "LiveUpdate": true,
                                 "Filter": {
                                     "__type": "{d4737a04}"
                                 },
+                                "LiveUpdate": true,
                                 "template": "{25013f75}",
                                 "Header": {
                                     "Column1LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set1_label",
@@ -7253,6 +7228,11 @@
                                     {
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_CameraControl_DragScrollLock",
                                         "EventName": "[GameEvents]evtDragScrollLock",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "PORO_ELEPHANT_Options_Scout_Ahead_Mode_Toggle",
+                                        "EventName": "[GameEvents]evtFreeDynamicCameraToggle",
                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                     }
                                 ],

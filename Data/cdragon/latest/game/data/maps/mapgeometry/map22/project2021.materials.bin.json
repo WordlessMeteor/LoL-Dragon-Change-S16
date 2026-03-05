@@ -1549,6 +1549,8 @@
             {
                 "TextureName": "DiffuseTexture",
                 "texturePath": "ASSETS/Maps/KitPieces/TFT/Set14/Textures/Project_Arena_Board_A.TFT_ArenaSkin_Project2021.tex",
+                "addressU": 1,
+                "addressV": 1,
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
@@ -1569,41 +1571,7 @@
         ],
         "paramValues": [
             {
-                "name": "TintColor_R",
-                "value": [
-                    0.6413061618804932,
-                    0.4576943516731262,
-                    0.4010376036167145,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "TintColor_G",
-                "value": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "TintColor_B",
-                "value": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Transform",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Noise_Control",
+                "name": "NoiseControl",
                 "value": [
                     2.0,
                     2.0,
@@ -1611,9 +1579,36 @@
                     0.05000000074505806
                 ],
                 "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor_R",
+                "value": [
+                    0.6399939060211182,
+                    0.4599984884262085,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor_G",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor_B",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Transform",
+                "__type": "StaticMaterialShaderParamDef"
             }
         ],
         "switches": [
+            {
+                "name": "ENV_TRANSITION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "TRANSITION_END",
                 "on": false,
