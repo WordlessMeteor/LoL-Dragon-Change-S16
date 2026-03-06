@@ -40978,6 +40978,7 @@
             {
                 "TextureName": "Mask",
                 "texturePath": "ASSETS/Characters/Yunara/Skins/Skin01/Yunara_Skin01_Mask_TX_CM.Yunara.tex",
+                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -40990,6 +40991,7 @@
             {
                 "TextureName": "FlowmapTex",
                 "texturePath": "ASSETS/Characters/Yunara/Skins/Skin01/Yunara_Skin01_FlowMap_TX_CM.Yunara.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -41005,6 +41007,7 @@
             {
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Characters/Yunara/Skins/Skin01/Yunara_Skin01_VertexDeformMask_TX_CM.Yunara.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -41015,6 +41018,7 @@
             {
                 "TextureName": "BloomColor",
                 "texturePath": "ASSETS/Characters/Yunara/Skins/Skin08/Yunara_Skin08_TX_CM.Chroma_Yunara_Onsen.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -41025,6 +41029,7 @@
             {
                 "TextureName": "HighLightShape",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -41044,6 +41049,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "BloomColorOverlay",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
@@ -41579,16 +41594,6 @@
                     0.0,
                     0.0,
                     0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "BloomColorOverlay",
-                "value": [
-                    0.6745098233222961,
-                    0.9254902005195618,
-                    0.7372549176216125,
-                    1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
             },

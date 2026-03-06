@@ -48098,6 +48098,7 @@
             {
                 "TextureName": "Mask",
                 "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Nautilus_Skin39_Water_Mask_TX_CM.SKINS_Nautilus_Skin39.tex",
+                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -48110,6 +48111,7 @@
             {
                 "TextureName": "FlowmapTex",
                 "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Nautilus_Skin39_Water_Flow_TX_CM.SKINS_Nautilus_Skin39.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -48125,6 +48127,7 @@
             {
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Nautilus_Skin39_Black_TX_CM.SKINS_Nautilus_Skin39.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -48135,6 +48138,7 @@
             {
                 "TextureName": "BloomColor",
                 "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Nautilus_Skin39_Black_TX_CM.SKINS_Nautilus_Skin39.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -48145,6 +48149,7 @@
             {
                 "TextureName": "HighLightShape",
                 "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Nautilus_Skin39_Black_TX_CM.SKINS_Nautilus_Skin39.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -48164,6 +48169,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "BloomColorOverlay",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
@@ -48692,16 +48707,6 @@
                     0.5,
                     0.0,
                     0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "BloomColorOverlay",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"

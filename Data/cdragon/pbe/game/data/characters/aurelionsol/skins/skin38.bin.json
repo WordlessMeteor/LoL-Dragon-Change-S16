@@ -275,7 +275,7 @@
             "rigPoseModifierData": [
                 {
                     "mStartingJointName": "L_Head_Wisp4",
-                    "mEndingJointName": "{a3e46f71}",
+                    "mEndingJointName": "L_Head_Wisp7",
                     "mDefaultMaskName": "{cfb11fcd}",
                     "mMaxBoneAngle": 45.0,
                     "OnlyActivateInTurns": true,
@@ -283,7 +283,7 @@
                 },
                 {
                     "mStartingJointName": "R_Head_Wisp4",
-                    "mEndingJointName": "{d696264b}",
+                    "mEndingJointName": "R_Head_Wisp7",
                     "mDefaultMaskName": "{cfb11fcd}",
                     "mMaxBoneAngle": 45.0,
                     "OnlyActivateInTurns": true,
@@ -305,7 +305,7 @@
                 },
                 {
                     "mStartingJointName": "tail1",
-                    "mEndingJointName": "{40812ef3}",
+                    "mEndingJointName": "Tail17",
                     "mDefaultMaskName": "{a2c0a94a}",
                     "__type": "ConformToPathRigPoseModifierData"
                 },
@@ -6671,7 +6671,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{7c9e48d5}"
+                            "NewHair"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -65218,10 +65218,10 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{7c9e48d5}"
+                            "NewHair"
                         ],
                         "mSubmeshesToDrawAlways": [
-                            "{7c9e48d5}"
+                            "NewHair"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -65315,18 +65315,18 @@
                     "mMesh": {
                         "mSubmeshesToDraw": [
                             "BODY",
-                            "{7c9e48d5}",
-                            "{9358de90}",
+                            "NewHair",
+                            "Legfur",
                             "Rock",
-                            "{1dfd1f7a}",
+                            "BackHair",
                             "Mouth"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "BODY",
-                            "{7c9e48d5}",
-                            "{9358de90}",
+                            "NewHair",
+                            "Legfur",
                             "Rock",
-                            "{1dfd1f7a}",
+                            "BackHair",
                             "Mouth"
                         ],
                         "mLockMeshToAttachment": true,
@@ -65430,18 +65430,18 @@
                     "mMesh": {
                         "mSubmeshesToDraw": [
                             "BODY",
-                            "{7c9e48d5}",
-                            "{9358de90}",
+                            "NewHair",
+                            "Legfur",
                             "Rock",
-                            "{1dfd1f7a}",
+                            "BackHair",
                             "Mouth"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "BODY",
-                            "{7c9e48d5}",
-                            "{9358de90}",
+                            "NewHair",
+                            "Legfur",
                             "Rock",
-                            "{1dfd1f7a}",
+                            "BackHair",
                             "Mouth"
                         ],
                         "mLockMeshToAttachment": true,
@@ -65555,11 +65555,11 @@
                     "mMesh": {
                         "mSubmeshesToDraw": [
                             "Rock",
-                            "{1dfd1f7a}"
+                            "BackHair"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "Rock",
-                            "{1dfd1f7a}"
+                            "BackHair"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -65741,12 +65741,12 @@
                     "mMesh": {
                         "mSubmeshesToDraw": [
                             "BODY",
-                            "{9358de90}",
+                            "Legfur",
                             "Mouth"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "BODY",
-                            "{9358de90}",
+                            "Legfur",
                             "Mouth"
                         ],
                         "mLockMeshToAttachment": true,
@@ -136813,8 +136813,8 @@
                     "mMesh": {
                         "mSubmeshesToDraw": [
                             "BODY",
-                            "{1dfd1f7a}",
-                            "{9358de90}"
+                            "BackHair",
+                            "Legfur"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -136947,7 +136947,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{7c9e48d5}"
+                            "NewHair"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -160775,6 +160775,7 @@
             {
                 "TextureName": "Mask",
                 "texturePath": "ASSETS/Shared/Materials/OnsenTexture/black.tex",
+                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -160787,6 +160788,7 @@
             {
                 "TextureName": "FlowmapTex",
                 "texturePath": "ASSETS/Shared/Materials/OnsenTexture/black.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -160802,6 +160804,7 @@
             {
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -160812,6 +160815,7 @@
             {
                 "TextureName": "BloomColor",
                 "texturePath": "ASSETS/Characters/AurelionSol/Skins/Skin38/AurelionSol_Skin38_TX_CM_Backhairmask.SKINS_AurelionSol_Skin38.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -160822,6 +160826,7 @@
             {
                 "TextureName": "HighLightShape",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -160841,6 +160846,16 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "BloomColorOverlay",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
@@ -161376,16 +161391,6 @@
                     0.0,
                     0.0,
                     0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "BloomColorOverlay",
-                "value": [
-                    1.0,
-                    0.6419928073883057,
-                    0.0,
-                    1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
             },

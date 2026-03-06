@@ -883,7 +883,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "在短暂的延迟后，卡西奥佩娅用毒素引爆一片区域，并且如果命中了一名敌方英雄，就会获得移动速度加成。",
-            "dynamicDescription": "卡西奥佩娅引爆毒性气体，使敌人<keywordMajor>中毒</keywordMajor>并且在@Effect2Amount@秒内造成<magicDamage>@TooltipTotalDamage@魔法伤害</magicDamage>。命中一名英雄会为卡西奥佩娅提供在@Effect4Amount@秒里持续衰减的<speed>@Effect3Amount@%移动速度</speed>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "卡西奥佩娅引爆毒性气体，使敌人<keywordMajor>中毒</keywordMajor>并且在@PoisonDuration@秒内造成<magicDamage>@TooltipTotalDamage@魔法伤害</magicDamage>。命中一名英雄会为卡西奥佩娅提供在@ChampHitMSDuration@秒里持续衰减的<speed>@ChampHitMSBonus@%移动速度</speed>。@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1033,7 +1033,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "卡西奥佩娅释放出若干团毒云，对经过毒云的敌人造成减速效果、缚地效果和轻量伤害。被缚地的敌人无法使用位移技能。",
-            "dynamicDescription": "卡西奥佩娅吐出毒液，留下一团持续@Effect4Amount@秒的毒云。毒云内的敌人们每秒受到<magicDamage>@DamagePerSecond@魔法伤害</magicDamage>，<keywordMajor>中毒</keywordMajor>，<status>缚地</status>，以及<status>减速</status>@Effect2Amount@%。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "卡西奥佩娅吐出毒液，留下一团持续@CloudDuration@秒的毒云。对毒云内的敌人们造成每秒<magicDamage>@DamagePerSecond@魔法伤害</magicDamage>、<keywordMajor>中毒</keywordMajor>、<status>缚地</status>、以及@SlowPercent@%<status>减速</status>。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
