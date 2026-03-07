@@ -792,5 +792,16 @@
 					</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-03-07 11-05-24</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Latest: Within-patch change</li>
+						<li>PBE: 16.6.751.4335 -> 16.6.751.7822</li>
+					</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>

@@ -280,6 +280,52 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "Fury_Generation",
+                            "values": [
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "FuryDragonFormMult",
+                            "values": [
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "FuryGain",
+                            "values": [
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "Damage": {
                     "mFormulaParts": [
@@ -2671,6 +2717,39 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "BonusArmor",
+                            "values": [
+                                1.2000000476837158,
+                                1.2000000476837158,
+                                1.2000000476837158,
+                                1.2000000476837158,
+                                1.2000000476837158,
+                                1.2000000476837158,
+                                1.2000000476837158
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "BonusMagicResist",
+                            "values": [
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "{85edcc8c}": {
                     "mSimpleTooltipCalculationDisplay": 5,
@@ -8483,6 +8562,23 @@
                     2
                 ],
                 "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "Top",
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    0,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    0,
+                    1,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
             }
         ],
         "__type": "RecSpellRankUpInfoList"
@@ -8724,6 +8820,7 @@
             "ShyvanaBasicAttack"
         ],
         "mUseCCAnimations": true,
+        "outlineBBoxExpansion": 100.0,
         "selectionHeight": 100.0,
         "selectionRadius": 100.0,
         "pathfindingCollisionRadius": 35.0,

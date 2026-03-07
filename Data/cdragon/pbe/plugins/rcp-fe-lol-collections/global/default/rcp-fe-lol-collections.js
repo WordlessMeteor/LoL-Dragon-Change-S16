@@ -1175,10 +1175,18 @@
                             u = (0, s.dataBinding)("/lol-store", s.socket).get(`/v1/catalog?inventoryType=${JSON.stringify([o.CHAMPION_SKIN,o.BUNDLES])}`),
                             h = (0, s.dataBinding)("/lol-loot", s.socket).get("/v1/loot-items");
                         return Promise.all([t, n, i, r, l, a, c, p, u, h, d, m]).then((e => {
-                            const [t, n, s, i, r, l, a, c, d, m, p, u] = e, h = this.getSkinsById(s, t), {
-                                championBySkinId: g,
-                                championsById: f
-                            } = this.getChampionsInfo(a), y = this.getOwnershipById(l), _ = this.getCatalogDataById(d), b = this.getIsInBundleById(_), k = this.getLootItemSet(m), E = this.getSkinAugmentsById(u);
+                            const [t, n, s, i, r, l, a, c, d, m, p, u] = e;
+                            this.hideSkinsByIds(s, [86043]);
+                            const h = this.getSkinsById(s, t),
+                                {
+                                    championBySkinId: g,
+                                    championsById: f
+                                } = this.getChampionsInfo(a),
+                                y = this.getOwnershipById(l),
+                                _ = this.getCatalogDataById(d),
+                                b = this.getIsInBundleById(_),
+                                k = this.getLootItemSet(m),
+                                E = this.getSkinAugmentsById(u);
                             this.joinPurchaseData(h, _, b, k), this.joinOwnershipData(h, y), this.joinChampionData(h, g), this.joinSetData(h, i, r), this.joinSkinBorderData(h, p), this.joinSkinAugmentsData(h, E);
                             const S = this.getSortableMasteries(c, f),
                                 v = this.getRarities(h),
@@ -1404,6 +1412,11 @@
                         isUnownedShown: this.controller.get("isUnownedShown")
                     };
                     this.get("settingsPreferences").setSkinsAccountSettings(e)
+                },
+                hideSkinsByIds(e, t) {
+                    e && Array.isArray(t) && t.forEach((t => {
+                        e[t] && delete e[t]
+                    }))
                 },
                 actions: {
                     refreshCurrentRoute() {

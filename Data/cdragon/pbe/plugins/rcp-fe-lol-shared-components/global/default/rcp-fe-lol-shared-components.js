@@ -13603,8 +13603,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "aIbaYPpm",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\templates\\\\components\\\\discord-popup.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\components\\\\discord-popup.js\\" "],["text","\\n"],["block",["if"],[["get",["showModal"]]],null,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["unknown",["tra","discord_popup_title"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tra","discord_popup_title"]],false],["text",","],["open-element","br",[]],["flush-element"],["close-element"],["append",["unknown",["displayName"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-popup-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-header"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-static-assets/images/discord_popup_banner.png"],["static-attr","class","discord-popup-banner"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","discord-popup-header-discord-beta"],["flush-element"],["append",["unknown",["discord-beta"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-title"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayName"]]],null,1,0],["text","      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-subtitle"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","discord_popup_sub_title"]],false],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-divider"],["flush-element"],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-permissions"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","permission-item"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","checkbox-filled"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","permission-text"],["flush-element"],["append",["unknown",["tra","discord_popup_permission_1"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","permission-item"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","checkbox-filled"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","permission-text"],["flush-element"],["append",["unknown",["tra","discord_popup_permission_2"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","permission-item"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","checkbox-filled"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","permission-text"],["flush-element"],["append",["unknown",["tra","discord_popup_permission_3"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-divider"],["flush-element"],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-footer"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","footer-text"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","discord_popup_footer_text"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","privacy-text"],["flush-element"],["text","\\n          "],["append",["helper",["sanitize"],[["get",["tra","discord_popup_footer_privacy_text"]]],null],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissibleType","acceptText","declineText","closeButton","shouldKeepCancelButton","onAccept","onDecline","onClose","show"],["DialogConfirm","inside",["get",["tra","discord_popup_authorize_button"]],["get",["tra","discord_popup_deny_button"]],true,true,["helper",["action"],[["get",[null]],"onAuthorize"],null],["helper",["action"],[["get",[null]],"onDeny"],null],["helper",["action"],[["get",[null]],"onClose"],null],["get",["showModal"]]]],2]],"locals":[]}],"hasPartials":false}',
+                id: "sKBAQutz",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\templates\\\\components\\\\discord-popup.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\components\\\\discord-popup.js\\" "],["text","\\n"],["block",["if"],[["get",["showModal"]]],null,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["unknown",["tra","discord_popup_title"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["tra","discord_popup_title"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-popup-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-header"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-static-assets/images/discord_popup_banner.png"],["static-attr","class","discord-popup-banner"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","discord-popup-header-discord-beta"],["flush-element"],["append",["unknown",["discord-beta"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-title"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayName"]]],null,1,0],["text","      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-subtitle"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","discord_popup_sub_title"]],false],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-divider"],["flush-element"],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-permissions"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","permission-item"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","checkbox-filled"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","permission-text"],["flush-element"],["append",["unknown",["tra","discord_popup_permission_1"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","permission-item"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","checkbox-filled"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","permission-text"],["flush-element"],["append",["unknown",["tra","discord_popup_permission_2"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","permission-item"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","checkbox-filled"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","permission-text"],["flush-element"],["append",["unknown",["tra","discord_popup_permission_3"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-divider"],["flush-element"],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","discord-popup-footer"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","footer-text"],["flush-element"],["text","\\n          "],["append",["helper",["sanitize"],[["get",["tra","discord_popup_footer_text"]]],null],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","privacy-text"],["flush-element"],["text","\\n          "],["append",["helper",["sanitize"],[["get",["tra","discord_popup_footer_privacy_text"]]],null],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissibleType","acceptText","declineText","closeButton","shouldKeepCancelButton","onAccept","onDecline","onClose","show"],["DialogConfirm","inside",["get",["tra","discord_popup_authorize_button"]],["get",["tra","discord_popup_deny_button"]],true,true,["helper",["action"],[["get",[null]],"onAuthorize"],null],["helper",["action"],[["get",[null]],"onDeny"],null],["helper",["action"],[["get",[null]],"onClose"],null],["get",["showModal"]]]],2]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -13614,9 +13614,23 @@
             }), t.default = void 0;
             var a = n(1);
             n(348);
-            var r = a.Ember.Component.extend({
-                showModal: !1,
+            const r = a.Ember.Object.extend(a.Ember.PromiseProxyMixin);
+            var s = a.Ember.Component.extend({
                 layout: n(349),
+                showModal: !1,
+                tra: a.tra,
+                displayName: a.Ember.computed.readOnly("playerNameProxy.content.playerNameFull"),
+                playerNameProxy: a.Ember.computed((function() {
+                    return r.create({
+                        promise: a.playerNames.getCurrentPlayerName()
+                    })
+                })),
+                popupMessage: a.Ember.computed("displayName", (function() {
+                    const e = this.get("displayName");
+                    return this.get("tra").formatString("discord_congrats_popup_message", {
+                        playerName: e
+                    })
+                })),
                 didInsertElement() {
                     this._super(...arguments)
                 },
@@ -13632,15 +13646,15 @@
                     }
                 }
             });
-            t.default = r
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "b88iHoxE",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\templates\\\\components\\\\discord-congrats-popup.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\components\\\\discord-congrats-popup.js\\" "],["text","\\n"],["block",["if"],[["get",["showModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-congrats-popup-content"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","discord_checkmark"],["static-attr","src","/fe/lol-static-assets/images/discord_checkmark.svg"],["flush-element"],["close-element"],["text","\\n      \\n      "],["open-element","div",[]],["static-attr","class","congrats-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","discord_congrats_popup_title"]],false],["text","\\n      "],["close-element"],["text","\\n      \\n      "],["open-element","div",[]],["static-attr","class","congrats-message"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","discord_congrats_popup_message"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissibleType","acceptText","closeButton","onAccept","onClose","show"],["DialogConfirm","inside",["get",["tra","discord_congrats_popup_okay_button"]],true,["helper",["action"],[["get",[null]],"onClose"],null],["helper",["action"],[["get",[null]],"onClose"],null],["get",["showModal"]]]],0]],"locals":[]}],"hasPartials":false}',
+                id: "bwVUrDOO",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\templates\\\\components\\\\discord-congrats-popup.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\components\\\\discord-congrats-popup.js\\" "],["text","\\n"],["block",["if"],[["get",["showModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-congrats-popup-content"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","discord_checkmark"],["static-attr","src","/fe/lol-static-assets/images/discord_checkmark.svg"],["flush-element"],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","congrats-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","discord_congrats_popup_title"]],false],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","congrats-message"],["flush-element"],["text","\\n        "],["append",["unknown",["popupMessage"]],false],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","congrats-message"],["flush-element"],["text","\\n        "],["append",["helper",["sanitize"],[["get",["tra","discord_congrats_popup_account_management_text"]]],null],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissibleType","acceptText","closeButton","onAccept","onClose","show"],["DialogConfirm","inside",["get",["tra","discord_congrats_popup_okay_button"]],true,["helper",["action"],[["get",[null]],"onClose"],null],["helper",["action"],[["get",[null]],"onClose"],null],["get",["showModal"]]]],0]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -21753,20 +21767,21 @@
             n(579);
             var i = n(124);
             const o = {
-                [i.ID_LIST_MAPPING_TYPES.champion]: {
-                    width: 80,
-                    height: 100
+                    [i.ID_LIST_MAPPING_TYPES.champion]: {
+                        width: 80,
+                        height: 100
+                    },
+                    [i.ID_LIST_MAPPING_TYPES.skin]: {
+                        width: 160,
+                        height: 195
+                    },
+                    [i.ID_LIST_MAPPING_TYPES.item]: {
+                        width: 80,
+                        height: 100
+                    }
                 },
-                [i.ID_LIST_MAPPING_TYPES.skin]: {
-                    width: 160,
-                    height: 195
-                },
-                [i.ID_LIST_MAPPING_TYPES.item]: {
-                    width: 80,
-                    height: 100
-                }
-            };
-            var l = r.Ember.Component.extend({
+                l = [86043];
+            var c = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["challenge-requirements-grid-component"],
                 classNameBindings: ["challenge.idListType"],
@@ -21783,7 +21798,7 @@
                         a[e] && (a[e].isComplete = !0)
                     })), Object.values(a).forEach((e => {
                         e && e.name && e.name.length > 25 && n !== i.ID_LIST_MAPPING_TYPES.skin && (e.showTooltip = !0)
-                    })), Object.values(a).filter((e => e.id && e.name)).sort(((e, t) => e.name.localeCompare(t.name)))
+                    })), Object.values(a).filter((e => e.id && !l.includes(e.id) && e.name)).sort(((e, t) => e.name.localeCompare(t.name)))
                 })),
                 itemSizes: r.Ember.computed("challengeRequirements.[]", "challenge.idListType", (function() {
                     const e = this.get("challenge.idListType"),
@@ -21804,7 +21819,7 @@
                     }
                 }
             });
-            t.default = l
+            t.default = c
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({

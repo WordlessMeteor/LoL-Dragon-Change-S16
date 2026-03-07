@@ -47797,7 +47797,7 @@
                         if (4 === h.readyState)
                             if (s.ALLOWED_SUCCESS_STATUSES.includes(h.status)) t(h.responseText);
                             else {
-                                const t = new Error(`jsonRequest of ${u} failed with HTTP Error ${h.status}`);
+                                const t = new Error(`jsonRequest of ${e} ${u} from ${l} failed with HTTP Error ${h.status}`);
                                 t.url = u, t.status = h.status, t.text = h.responseText;
                                 try {
                                     t.data = JSON.parse(h.responseText)

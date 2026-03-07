@@ -6408,8 +6408,9 @@
                 skins: s.Ember.computed("championService.summonerChampion", "champion", "disabledChampionSkins", (function() {
                     const e = this.get("disabledChampionSkins") || [];
                     let t = this.get("championService.summonerChampion.skins");
-                    const n = this.get("champion.skins");
-                    return t && n ? (t = t.filter((t => !e.includes(t.id))), s.Ember.set(t[0], "isBase", n[0].isBase), t) : s.Ember.A([])
+                    const n = [86043],
+                        i = this.get("champion.skins");
+                    return t && i ? (t = t.filter((t => !e.includes(t.id) && !n.includes(t.id))), s.Ember.set(t[0], "isBase", i[0].isBase), t) : s.Ember.A([])
                 })),
                 activeSkinIndex: s.Ember.computed("skins", "inputSkinId", (function() {
                     const e = this.get("skins"),

@@ -13840,6 +13840,12 @@
         },
         "__type": "{276246d8}"
     },
+    "{614ead1a}": {
+        "{9bfe08c0}": [
+            "{a044616f}"
+        ],
+        "__type": "{eb5adb26}"
+    },
     "{77721865}": {
         "{7cf5e3eb}": "{33022444}",
         "__type": "{c5e719b6}"
@@ -13870,6 +13876,115 @@
             "{692658d3}"
         ],
         "__type": "{f2d18d28}"
+    },
+    "{a044616f}": {
+        "AugmentNameId": "BigDragonEnergy",
+        "NameTra": "Cherry_BigDragonEnergy_Name",
+        "DescriptionTra": "Cherry_BigDragonEnergy_Summary",
+        "AugmentTooltipTra": "Cherry_BigDragonEnergy_Tooltip",
+        "RootSpell": "{6dbfce45}",
+        "mBuildTags": 64,
+        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/FromBeginningToEnd_large.tex",
+        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/FromBeginningToEnd_small.tex",
+        "AugmentDisplayTags": [
+            2
+        ],
+        "rarity": 1,
+        "AugmentPlatformId": 387,
+        "__type": "AugmentData"
+    },
+    "{6dbfce45}": {
+        "ObjectName": "Augment_BigDragonEnergy",
+        "mScriptName": "Augment_BigDragonEnergy",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "DragonFormMulti",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_BigDragonEnergy",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Cherry_BigDragonEnergy_Name",
+                        "keySummary": "Cherry_BigDragonEnergy_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{d7c27163}": {
+        "mObjectName": "Spell",
+        "mInputLocKeysWithDefaults": {
+            "keyName": "",
+            "keySummary": "",
+            "keyTooltip": "",
+            "keyCost": "Spell_Default_Cost",
+            "keyCooldown": "Spell_Default_Cooldown",
+            "keyTooltipExtended": "Spell_Default_TooltipExtended",
+            "keyTooltipExtendedBelowLine": "Spell_Default_ExtendedBelowLine",
+            "keyTooltipSimple": "Spell_Default_TooltipSimple",
+            "keyNameUnformatted": "Spell_Default_NameUnformatted",
+            "keyHotkey": "Spell_Default_Hotkey",
+            "keyPickChoiceName": "Spell_Default_PickChoiceName",
+            "keyPickChoiceDescription": "Spell_Default_PickChoiceDescription"
+        },
+        "mListNames": [
+            "LevelUp"
+        ],
+        "mListTypeChoices": {
+            "Cooldown": "Spell_ListType_Cooldown",
+            "Cost": "Spell_ListType_Cost",
+            "Effect%dAmount": "",
+            "CastRange": "Spell_ListType_Range",
+            "CastRangeDisplayOverride": "Spell_ListType_Range",
+            "AmmoRechargeTime": "Spell_ListType_RechargeTime",
+            "BaseCost": "Spell_ListType_Cost"
+        },
+        "mListStyles": {
+            "0": "Spell_ListStyle_Default",
+            "1": "Spell_ListType_Percent"
+        },
+        "mUsesListValues": true,
+        "mListValueSeparator": "Template_Spell_ValueSeparator",
+        "mListGridPrefix": "Template_Spell_GridPrefix",
+        "mListGridPostfix": "Template_Spell_GridPostfix",
+        "mListGridSeparator": "Template_Spell_GridSeparator",
+        "mOutputStrings": {
+            "Description": "Template_Spell_Description",
+            "DisplayName": "Template_Spell_DisplayName",
+            "Tooltip": "Template_Spell_Tooltip",
+            "TooltipSimple": "Template_Spell_TooltipSimple",
+            "TooltipExtended": "Template_Spell_TooltipExtended",
+            "TooltipLevelUp": "Template_Spell_TooltipLevelUp",
+            "TooltipLevelUpUnlearned": "Template_Spell_TooltipLevelUpUnlearned",
+            "TooltipWithExtendedBehaviorHint": "Template_Spell_TooltipWithExtendedBehaviorHint",
+            "TooltipContent": "Template_Spell_TooltipContent",
+            "TooltipContentExtended": "Template_Spell_TooltipContentExtended",
+            "TooltipLevelUpList": "Template_Spell_TooltipLevelUpList",
+            "TooltipLevelUpGrid": "Template_Spell_TooltipLevelUpGrid",
+            "PickChoiceName": "Template_Spell_PickChoiceName",
+            "PickChoiceDescription": "Template_Spell_PickChoiceDescription"
+        },
+        "__type": "TooltipFormat"
     },
     "__linked": []
 }

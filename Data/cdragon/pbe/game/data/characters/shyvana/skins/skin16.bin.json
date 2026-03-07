@@ -83,13 +83,13 @@
                         "Play_vo_ShyvanaSkin08_Ping2DTarget",
                         "Play_vo_ShyvanaSkin08_Recall3DGeneral",
                         "Play_vo_ShyvanaSkin08_Respawn2DGeneral",
-                        "Play_vo_ShyvanaSkin08_ReworkBasicAttack2_cast3D",
-                        "Play_vo_ShyvanaSkin08_ReworkBasicAttack_cast3D",
-                        "Play_vo_ShyvanaSkin08_ReworkCritAttack_cast3D",
-                        "Play_vo_ShyvanaSkin08_ReworkE_cast3D",
-                        "Play_vo_ShyvanaSkin08_ReworkQAttack2_cast3D",
-                        "Play_vo_ShyvanaSkin08_ReworkQAttack_cast3D",
-                        "Play_vo_ShyvanaSkin08_ReworkR_cast3D",
+                        "Play_vo_ShyvanaSkin08_ShyvanaBasicAttack2_cast3D",
+                        "Play_vo_ShyvanaSkin08_ShyvanaBasicAttack_cast3D",
+                        "Play_vo_ShyvanaSkin08_ShyvanaCritAttack_cast3D",
+                        "Play_vo_ShyvanaSkin08_ShyvanaE_cast3D",
+                        "Play_vo_ShyvanaSkin08_ShyvanaQAttack2_cast3D",
+                        "Play_vo_ShyvanaSkin08_ShyvanaQAttack_cast3D",
+                        "Play_vo_ShyvanaSkin08_ShyvanaR_cast3D",
                         "Play_vo_ShyvanaSkin08_Spell2DRankUpGeneral",
                         "Play_vo_ShyvanaSkin08_Spell2DRRankOne",
                         "Play_vo_ShyvanaSkin08_Spell3DPMax",
@@ -222,7 +222,7 @@
                 250.0,
                 150.0
             ],
-            "Material": "{e9f724e0}",
+            "Material": "Characters/Shyvana/Skins/Skin16/Materials/AlphaBlend_Additive_Scroll_Packed_inst",
             "reflectionFresnelColor": [
                 0,
                 0,
@@ -232,7 +232,7 @@
             "initialSubmeshToHide": "lambert2",
             "materialOverride": [
                 {
-                    "Material": "{ecfb1571}",
+                    "Material": "Characters/Shyvana/Skins/Skin16/Materials/HKG_MatCap_Diff_Alpha_inst",
                     "submesh": "Green_Metal",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -273,7 +273,7 @@
         "mResourceResolver": "Characters/Shyvana/Skins/Skin16/Resources",
         "__type": "SkinCharacterDataProperties"
     },
-    "{07d75523}": {
+    "Characters/Shyvana/Skins/Skin16/Particles/Shyvana_Skin16_Skin08_Q_Skin08ReadyOnHand": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2032,15 +2032,15 @@
             "Shyvana_human_idle_left": "{db2f9380}",
             "Shyvana_human_idle_right": "{fff894b5}",
             "Shyvana_BA_tar": "{a5defc24}",
-            "{77aaf2e9}": "{07d75523}",
+            "{77aaf2e9}": "Characters/Shyvana/Skins/Skin16/Particles/Shyvana_Skin16_Skin08_Q_Skin08ReadyOnHand",
             "{1660f663}": "{87b6fd50}",
             "{06204cc3}": "Characters/Shyvana/Skins/Skin8/Particles/Shyvana_Skin08_Q_Tar",
             "Shyvana_W_tar": "{97913541}",
             "Shyvana_E_mis": "{09eb7bc3}",
-            "{1ff6ccf9}": "{3ad773c4}",
+            "Shyvana_E_AoE": "{3ad773c4}",
             "{32e29959}": "{9ae7ab06}",
             "{e9a53306}": "{2f35abaa}",
-            "{0827ed03}": "{3da083e4}",
+            "Shyvana_Q_3_tar": "{3da083e4}",
             "{ca55f1a5}": "{de4e161f}",
             "{a6a1a47f}": "{5ed3d0da}",
             "{c648d848}": "{a59c644f}",
@@ -2054,22 +2054,22 @@
             "{dc92227a}": "{be001f59}",
             "{02ae890a}": "{d606a628}",
             "{1a68236a}": "{0b973db0}",
-            "{519ea4fa}": "{019e09a5}",
+            "Shyvana_W_DR": "{019e09a5}",
             "{7abe245e}": "{510db3b8}",
-            "{c8d63f3d}": "{9ab6c4e6}",
+            "Shyvana_E_DoT_Tar": "{9ab6c4e6}",
             "{5179a861}": "{4672675c}",
             "{81f5e55b}": "{5f258f7a}",
-            "{898e63dd}": "{6d378380}",
-            "{d81a0b85}": "{8db43e5e}",
+            "Shyvana_R_Cast_Transform": "{6d378380}",
+            "Shyvana_E_Cast": "{8db43e5e}",
             "{b5203963}": "{90a6944d}",
             "{01a168ac}": "{7f3ff64d}",
-            "{c31fccc4}": "{a40e3035}",
+            "Shyvana_Q_Ready_OnWing": "{a40e3035}",
             "{076468bb}": "{9ae7ab06}",
-            "{a3a43744}": "{a59af103}",
-            "{24b5c89b}": "{b505bbfe}",
-            "{642b7e6f}": "{81c305ae}",
-            "{e79ffd1e}": "{87a36f37}",
-            "{30466c3a}": "{79c52efb}",
+            "Shyvana_Emote_Joke": "{a59af103}",
+            "Shyvana_Emote_Death": "{b505bbfe}",
+            "Shyvana_Emote_Recall_OnBase": "{81c305ae}",
+            "Shyvana_Emote_Recall_OnHand_R": "{87a36f37}",
+            "Shyvana_R_Untransform": "{79c52efb}",
             "{4b18e153}": "{05a4718b}",
             "{bbcf18c1}": "{1242b0bf}",
             "{1677d6b9}": "{8cb950f0}",
@@ -2089,7 +2089,7 @@
         },
         "__type": "ResourceResolver"
     },
-    "{e9f724e0}": {
+    "Characters/Shyvana/Skins/Skin16/Materials/AlphaBlend_Additive_Scroll_Packed_inst": {
         "name": "Characters/Shyvana/Skins/Skin16/Materials/AlphaBlend_Additive_Scroll_Packed_inst",
         "samplerValues": [
             {
@@ -2835,7 +2835,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{ecfb1571}": {
+    "Characters/Shyvana/Skins/Skin16/Materials/HKG_MatCap_Diff_Alpha_inst": {
         "name": "Characters/Shyvana/Skins/Skin16/Materials/HKG_MatCap_Diff_Alpha_inst",
         "samplerValues": [
             {

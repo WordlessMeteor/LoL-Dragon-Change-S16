@@ -77,13 +77,13 @@
                         "Play_vo_Shyvana_Ping2DTarget",
                         "Play_vo_Shyvana_Recall3DGeneral",
                         "Play_vo_Shyvana_Respawn2DGeneral",
-                        "Play_vo_Shyvana_ReworkBasicAttack2_cast3D",
-                        "Play_vo_Shyvana_ReworkBasicAttack_cast3D",
-                        "Play_vo_Shyvana_ReworkCritAttack_cast3D",
-                        "Play_vo_Shyvana_ReworkE_cast3D",
-                        "Play_vo_Shyvana_ReworkQAttack2_cast3D",
-                        "Play_vo_Shyvana_ReworkQAttack_cast3D",
-                        "Play_vo_Shyvana_ReworkR_cast3D",
+                        "Play_vo_Shyvana_ShyvanaBasicAttack2_cast3D",
+                        "Play_vo_Shyvana_ShyvanaBasicAttack_cast3D",
+                        "Play_vo_Shyvana_ShyvanaCritAttack_cast3D",
+                        "Play_vo_Shyvana_ShyvanaE_cast3D",
+                        "Play_vo_Shyvana_ShyvanaQAttack2_cast3D",
+                        "Play_vo_Shyvana_ShyvanaQAttack_cast3D",
+                        "Play_vo_Shyvana_ShyvanaR_cast3D",
                         "Play_vo_Shyvana_Spell2DRankUpGeneral",
                         "Play_vo_Shyvana_Spell2DRRankOne",
                         "Play_vo_Shyvana_Spell3DPMax",
@@ -228,17 +228,17 @@
             "submeshRenderOrder": "Body Tail Muslin Lotus Tower Weaponhair",
             "materialOverride": [
                 {
-                    "Material": "{0654735d}",
+                    "Material": "Characters/Shyvana/Skins/Skin25/Materials/Shyvana_Rework_Skin25_Body",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{0654735d}",
+                    "Material": "Characters/Shyvana/Skins/Skin25/Materials/Shyvana_Rework_Skin25_Body",
                     "submesh": "Tail",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{82e252ed}",
+                    "Material": "Characters/Shyvana/Skins/Skin25/Materials/Shyvana_Rework_Skin25_Weaponhair",
                     "submesh": "Weaponhair",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -277,12 +277,12 @@
         "armorMaterial": "Metal",
         "idleParticlesEffects": [
             {
-                "effectKey": "{d249b063}",
+                "effectKey": "Shyvana_Idle_Head_01",
                 "boneName": "C_Hair4",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             },
             {
-                "effectKey": "{bb29674e}",
+                "effectKey": "Shyvana_Idle_Hand_01",
                 "boneName": "R_weapon",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
@@ -318,7 +318,7 @@
                 "PersistentVfxs": [
                     {
                         "boneName": "L_weapon",
-                        "effectKey": "{b70abbaf}",
+                        "effectKey": "Shyvana_Idle_Hand_L",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -327,7 +327,7 @@
         ],
         "__type": "SkinCharacterDataProperties"
     },
-    "{0654735d}": {
+    "Characters/Shyvana/Skins/Skin25/Materials/Shyvana_Rework_Skin25_Body": {
         "name": "Characters/Shyvana/Skins/Skin25/Materials/Shyvana_Rework_Skin25_Body",
         "samplerValues": [
             {
@@ -1073,7 +1073,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{82e252ed}": {
+    "Characters/Shyvana/Skins/Skin25/Materials/Shyvana_Rework_Skin25_Weaponhair": {
         "name": "Characters/Shyvana/Skins/Skin25/Materials/Shyvana_Rework_Skin25_Weaponhair",
         "samplerValues": [
             {
@@ -1381,7 +1381,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{4539e41a}": {
+    "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Idle_Hand_L": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1518,7 +1518,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{97772404}": {
+    "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Idle_Head_01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1903,7 +1903,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{99c2f903}": {
+    "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Z_Recall_Ground": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.30000001192092896,
@@ -9937,7 +9937,7 @@
         "particlePath": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Z_Recall_Ground",
         "__type": "VfxSystemDefinitionData"
     },
-    "{9d7b98d5}": {
+    "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Idle_Hand_01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -10176,7 +10176,7 @@
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{b945d6a0}": {
+    "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_R_Cast_Transform_Dragon": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -10702,7 +10702,7 @@
         "particlePath": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_R_Cast_Transform_Dragon",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d1d02015}": {
+    "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_R_AoE": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -16377,16 +16377,16 @@
             "{06204cc3}": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Q_Tar",
             "Shyvana_W_tar": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_W_tar",
             "Shyvana_E_mis": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_E_mis",
-            "{1ff6ccf9}": "{1f2fd40e}",
+            "Shyvana_E_AoE": "{1f2fd40e}",
             "{32e29959}": "{43d0281c}",
             "{e9a53306}": "{8905f8b4}",
-            "{0827ed03}": "{1371c4e4}",
+            "Shyvana_Q_3_tar": "{1371c4e4}",
             "{ca55f1a5}": "{82a568a1}",
             "{a6a1a47f}": "{fe562a18}",
             "{c648d848}": "{8933f637}",
-            "{7b29335a}": "{d1d02015}",
+            "{7b29335a}": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_R_AoE",
             "{f88ad57c}": "{80278f9b}",
-            "{f3701423}": "{b945d6a0}",
+            "{f3701423}": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_R_Cast_Transform_Dragon",
             "{0783e42e}": "{0a8dfcad}",
             "{44400177}": "{7cb87a0d}",
             "{4a400ae9}": "{5eb84ad3}",
@@ -16394,22 +16394,22 @@
             "{dc92227a}": "{c1f0ae47}",
             "{02ae890a}": "{d3b40b3c}",
             "{1a68236a}": "{aa905c04}",
-            "{519ea4fa}": "{4556c4ab}",
+            "Shyvana_W_DR": "{4556c4ab}",
             "{7abe245e}": "{23ea6f4a}",
-            "{c8d63f3d}": "{83e64db6}",
+            "Shyvana_E_DoT_Tar": "{83e64db6}",
             "{5179a861}": "{7f785d7a}",
             "{81f5e55b}": "{6db86270}",
-            "{898e63dd}": "{15ec3ce0}",
-            "{d81a0b85}": "{cf0855b0}",
+            "Shyvana_R_Cast_Transform": "{15ec3ce0}",
+            "Shyvana_E_Cast": "{cf0855b0}",
             "{b5203963}": "{042f22eb}",
             "{01a168ac}": "{04a4e443}",
-            "{c31fccc4}": "{91cf03d1}",
+            "Shyvana_Q_Ready_OnWing": "{91cf03d1}",
             "{076468bb}": "{43d0281c}",
-            "{a3a43744}": "{f49b6b55}",
-            "{24b5c89b}": "{8c8ed3a8}",
-            "{642b7e6f}": "{a125378c}",
-            "{e79ffd1e}": "{5a3bf331}",
-            "{30466c3a}": "{3e617c31}",
+            "Shyvana_Emote_Joke": "{f49b6b55}",
+            "Shyvana_Emote_Death": "{8c8ed3a8}",
+            "Shyvana_Emote_Recall_OnBase": "{a125378c}",
+            "Shyvana_Emote_Recall_OnHand_R": "{5a3bf331}",
+            "Shyvana_R_Untransform": "{3e617c31}",
             "{4b18e153}": "{2c510fb8}",
             "{bbcf18c1}": "{5acf4840}",
             "{1677d6b9}": "{8cb950f0}",
@@ -16419,11 +16419,11 @@
             "Shyvana_E_mis_Child": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_E_mis_Child",
             "Shyvana_E_mis_Child_L": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_E_mis_Child_L",
             "Shyvana_Q_Tar_child": "Characters/Shyvana/Skins/Skin17/Particles/Shyvana_Skin17_Q_Tar_child",
-            "{d249b063}": "{97772404}",
-            "{bb29674e}": "{9d7b98d5}",
-            "{b70abbaf}": "{4539e41a}",
+            "Shyvana_Idle_Head_01": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Idle_Head_01",
+            "Shyvana_Idle_Hand_01": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Idle_Hand_01",
+            "Shyvana_Idle_Hand_L": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Idle_Hand_L",
             "{e22fa41c}": "{5926d489}",
-            "{992b75f6}": "{99c2f903}",
+            "Shyvana_Z_Recall_Ground": "Characters/Shyvana/Skins/Skin25/Particles/Shyvana_Skin25_Z_Recall_Ground",
             "{e6385d25}": "{b73ff20e}",
             "{4bdc9236}": "{d5a80ab5}",
             "{25858545}": "{1e41f3aa}",

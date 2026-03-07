@@ -3681,7 +3681,6 @@
             {
                 "TextureName": "Mask",
                 "texturePath": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Sona_Skin66_Scarf_Mask.SKINS_Sona_Skin66.tex",
-                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -3732,12 +3731,12 @@
             {
                 "TextureName": "HighLightShape",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -3748,16 +3747,47 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
             {
-                "name": "BloomColorOverlay",
+                "name": "modelHeight",
                 "value": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -4295,6 +4325,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "BloomColorOverlay",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BloomNoiseIntensity",
                 "value": [
                     0.16500000655651093,
@@ -4424,6 +4464,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
@@ -4558,7 +4608,6 @@
             {
                 "TextureName": "Mask",
                 "texturePath": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Sona_Skin66_MaskBody_TX_CM01.SKINS_Sona_Skin66.tex",
-                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -4609,12 +4658,12 @@
             {
                 "TextureName": "HighLightShape",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -4625,16 +4674,47 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
             {
-                "name": "BloomColorOverlay",
+                "name": "modelHeight",
                 "value": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -5166,6 +5246,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "BloomColorOverlay",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BloomNoiseIntensity",
                 "value": [
                     0.16500000655651093,
@@ -5295,6 +5385,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
@@ -5429,7 +5529,6 @@
             {
                 "TextureName": "Mask",
                 "texturePath": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Sona_Skin66_MaskBody_TX_CM01.SKINS_Sona_Skin66.tex",
-                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -5480,12 +5579,12 @@
             {
                 "TextureName": "HighLightShape",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -5496,16 +5595,47 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
             {
-                "name": "BloomColorOverlay",
+                "name": "modelHeight",
                 "value": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -6025,6 +6155,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "BloomColorOverlay",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BloomNoiseIntensity",
                 "value": [
                     1.0,
@@ -6154,6 +6294,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
@@ -6287,7 +6437,6 @@
             {
                 "TextureName": "Mask",
                 "texturePath": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Sona_Skin66_MaskCloudWP_TX_CM01.SKINS_Sona_Skin66.tex",
-                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -6338,12 +6487,12 @@
             {
                 "TextureName": "HighLightShape",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -6354,16 +6503,47 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
             {
-                "name": "BloomColorOverlay",
+                "name": "modelHeight",
                 "value": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -6895,6 +7075,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "BloomColorOverlay",
+                "value": [
+                    0.22745098173618317,
+                    0.41960784792900085,
+                    0.5215686559677124,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BloomNoiseIntensity",
                 "value": [
                     0.125,
@@ -7024,6 +7214,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
@@ -7157,7 +7357,6 @@
             {
                 "TextureName": "Mask",
                 "texturePath": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Sona_Skin66_MaskBody_TX_CM01.SKINS_Sona_Skin66.tex",
-                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -7208,12 +7407,12 @@
             {
                 "TextureName": "HighLightShape",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -7224,16 +7423,47 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
             {
-                "name": "BloomColorOverlay",
+                "name": "modelHeight",
                 "value": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -7759,6 +7989,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "BloomColorOverlay",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BloomNoiseIntensity",
                 "value": [
                     0.16500000655651093,
@@ -7888,6 +8128,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
@@ -8023,7 +8273,6 @@
             {
                 "TextureName": "Mask",
                 "texturePath": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Sona_Skin66_MaskBody_TX_CM01.SKINS_Sona_Skin66.tex",
-                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -8074,12 +8323,12 @@
             {
                 "TextureName": "HighLightShape",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -8090,16 +8339,47 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
             {
-                "name": "BloomColorOverlay",
+                "name": "modelHeight",
                 "value": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -8637,6 +8917,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "BloomColorOverlay",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BloomNoiseIntensity",
                 "value": [
                     0.16500000655651093,
@@ -8766,6 +9056,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
@@ -9296,7 +9596,6 @@
             {
                 "TextureName": "Mask",
                 "texturePath": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Sona_Skin66_MaskBody_TX_CM01.SKINS_Sona_Skin66.tex",
-                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -9347,12 +9646,12 @@
             {
                 "TextureName": "HighLightShape",
                 "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -9363,16 +9662,47 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
             {
-                "name": "BloomColorOverlay",
+                "name": "modelHeight",
                 "value": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -9886,6 +10216,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "BloomColorOverlay",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BloomNoiseIntensity",
                 "value": [
                     0.16500000655651093,
@@ -10015,6 +10355,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,

@@ -1028,7 +1028,8 @@
                 CHERRY: "CHERRY",
                 STRAWBERRY: "STRAWBERRY",
                 PRACTICETOOL: "PRACTICETOOL",
-                WIPMODEWIP: "WIPMODEWIP"
+                WIPMODEWIP: "WIPMODEWIP",
+                WIPMODEWIP5: "WIPMODEWIP5"
             };
             t.ONE_PAGE_TUTORIAL_GAME_MODES = ["ARAM", "TFT", "CHERRY", "STRAWBERRY", "ULTBOOK", "SWIFTPLAY", "BRAWL", "RUBY", "RUBY_TRIAL_1", "RUBY_TRIAL_2", "RUBY_TRIAL_3", "GRAPE", "GUAVA", "KIWI", "LIME", "ORANGE", "PAPAYA", "PEACH", "PEAR", "PLUM", "TOMATO"];
             t.ONE_PAGE_TUTORIAL_LONG_CARD_LAYOUT_GAME_MODES = ["CHERRY", "STRAWBERRY", "ULTBOOK", "SWIFTPLAY"];
@@ -1432,10 +1433,26 @@
                         playerSlotCount: 3
                     },
                     4020: {
-                        subteamCount: 2,
+                        subteamCount: 4,
                         playerSlotCount: 3
                     },
                     4021: {
+                        subteamCount: 4,
+                        playerSlotCount: 3
+                    },
+                    4030: {
+                        subteamCount: 4,
+                        playerSlotCount: 3
+                    },
+                    4031: {
+                        subteamCount: 4,
+                        playerSlotCount: 3
+                    },
+                    4032: {
+                        subteamCount: 4,
+                        playerSlotCount: 3
+                    },
+                    4033: {
                         subteamCount: 4,
                         playerSlotCount: 3
                     }
@@ -4921,9 +4938,10 @@
             }), t.default = void 0;
             var i = n(1);
             const o = "/lol-chat/v1/is-discord-integration-enabled",
-                s = "/lol-chat/v1/is-discord-linked",
-                a = e => `/lol-lobby/v2/ags/${e}/joinCode`;
-            var r = i.Ember.Service.extend({
+                s = "/lol-chat/v1/is-discord-link-available",
+                a = "/lol-chat/v1/is-discord-linked",
+                r = e => `/lol-lobby/v2/ags/${e}/joinCode`;
+            var l = i.Ember.Service.extend({
                 isEnabled: !1,
                 isLinkAvailable: !1,
                 isLinked: !1,
@@ -4933,7 +4951,7 @@
                         this.set("isEnabled", Boolean(e))
                     })), i.db.observe(s, this, (e => {
                         this.set("isLinkAvailable", Boolean(e))
-                    })), i.db.observe(s, this, (e => {
+                    })), i.db.observe(a, this, (e => {
                         this.set("isLinked", Boolean(e))
                     }))
                 },
@@ -4942,12 +4960,12 @@
                     let t;
                     this.set("agsActivityId", e);
                     try {
-                        t = await i.db.get(a(e))
+                        t = await i.db.get(r(e))
                     } catch (e) {
                         i.logger.warning("Could not GET shared join code: ", e)
                     }
                     if (!t) try {
-                        t = await i.db.post(a(e))
+                        t = await i.db.post(r(e))
                     } catch (e) {
                         i.logger.error("Could not POST shared join code (this is a bug): ", e)
                     }
@@ -4955,13 +4973,13 @@
                 },
                 deleteSmartUrl() {
                     const e = this.get("agsActivityId");
-                    e && i.db.delete(a(e))
+                    e && i.db.delete(r(e))
                 },
                 willDestroy() {
-                    this._super(...arguments), this.deleteSmartUrl(), i.db.unobserve(o, this), i.db.unobserve("/lol-chat/v1/is-discord-link-available", this), i.db.unobserve(s, this)
+                    this._super(...arguments), this.deleteSmartUrl(), i.db.unobserve(o, this), i.db.unobserve(s, this), i.db.unobserve(a, this)
                 }
             });
-            t.default = r
+            t.default = l
         }, (e, t, n) => {
             "use strict";
             var i = n(1);
@@ -6303,7 +6321,8 @@
                 isTFT: o.Ember.computed.equal("lobby.gameConfig.gameMode", r.GAME_MODES.TFT),
                 isClassic: o.Ember.computed.equal("lobby.gameConfig.gameMode", r.GAME_MODES.CLASSIC),
                 isWIPModeWIP: o.Ember.computed.equal("lobby.gameConfig.gameMode", r.GAME_MODES.WIPMODEWIP),
-                isSR: o.Ember.computed.or("isWIPModeWIP", "isClassic"),
+                isWIPModeWIP5: o.Ember.computed.equal("lobby.gameConfig.gameMode", r.GAME_MODES.WIPMODEWIP5),
+                isSR: o.Ember.computed.or("isWIPModeWIP", "isWIPModeWIP5", "isClassic"),
                 isPracticeToolGame: o.Ember.computed.equal("lobby.gameConfig.gameMode", r.GAME_MODES.PRACTICETOOL),
                 team100: o.Ember.computed.alias("lobby.gameConfig.customTeam100"),
                 team200: o.Ember.computed.alias("lobby.gameConfig.customTeam200"),
@@ -7157,7 +7176,7 @@
             e.exports = i.Ember.Service.extend({
                 championAssetSubstitution: i.Ember.inject.service(),
                 init: function() {
-                    this._super(...arguments), this.get("championAssetSubstitution"), this.set("championByChampId", new Map), this.set("perksSelections", []), this.getGameDataSummonerSpells(), this.getGameDataPerks(), this.getGameDataPerkStyles(), this.getGameDataWardSkins(), i.db.observe("/lol-loadouts/v4/loadouts/scope/account", this, this._handleAccountLoadouts), i.db.observe("/lol-summoner/v1/current-summoner", this, this.handleCurrentSummoner), i.db.observe("/lol-lobby/v2/lobby", this, this.handleLobby), i.db.observe("/lol-matchmaking/v1/ready-check", this, this._handleReadyCheck), i.db.observe("/lol-platform-config/v1/namespaces/DisabledChampions", this, this.handleDisabledChampions), i.db.observe("/lol-gameflow/v1/session", this, this.handleGameflowSession), i.db.observe("/lol-perks/v1/pages", this, this.handlePerksPages), i.db.observe("/lol-platform-config/v1/namespaces/ClientSystemStates/gameModeToInactiveSpellIds", this, this.handleGameModeToInactiveSpellIds), i.db.observe(c, this, this.handleSettingsReady), i.db.observe("/lol-platform-config/v1/namespaces/SkinsViewer", this, this._handleSkinViewerSettings)
+                    this._super(...arguments), this.get("championAssetSubstitution"), this.set("championByChampId", new Map), this.set("perksSelections", []), this.getGameDataSummonerSpells(), this.getGameDataPerks(), this.getGameDataPerkStyles(), this.getGameDataWardSkins(), i.db.observe("/lol-loadouts/v4/loadouts/scope/account", this, this._handleAccountLoadouts), i.db.observe("/lol-summoner/v1/current-summoner", this, this.handleCurrentSummoner), i.db.observe("/lol-lobby/v2/lobby", this, this.handleLobby), i.db.observe("/lol-matchmaking/v1/ready-check", this, this._handleReadyCheck), i.db.observe("/lol-client-config/v3/client-config/operational.champions.globallyDisabledChampions", this, this.handleDisabledChampions), i.db.observe("/lol-gameflow/v1/session", this, this.handleGameflowSession), i.db.observe("/lol-perks/v1/pages", this, this.handlePerksPages), i.db.observe("/lol-platform-config/v1/namespaces/ClientSystemStates/gameModeToInactiveSpellIds", this, this.handleGameModeToInactiveSpellIds), i.db.observe(c, this, this.handleSettingsReady), i.db.observe("/lol-platform-config/v1/namespaces/SkinsViewer", this, this._handleSkinViewerSettings)
                 },
                 isMemberReady: i.Ember.computed.equal("isPlayerReady", "true"),
                 isPartyReady: i.Ember.computed("currentPartyMembers.@each.memberData", "currentSummoner.puuid", (function() {
@@ -21120,8 +21139,8 @@
                 lobbiesService: i.Ember.inject.service("lobbies"),
                 summonerService: i.Ember.inject.service("summoner"),
                 isDiscordEnabled: i.Ember.computed.alias("discordIntegrationService.isEnabled"),
-                isDiscordLinkAvailable: i.Ember.computed.alias("discordIntegrationService.isLinked"),
-                isDiscordLinked: i.Ember.computed.alias("discordIntegrationService.isLinkAvailable"),
+                isDiscordLinkAvailable: i.Ember.computed.alias("discordIntegrationService.isLinkAvailable"),
+                isDiscordLinked: i.Ember.computed.alias("discordIntegrationService.isLinked"),
                 currentPartyMemberIds: i.Ember.computed.alias("lobbiesService.currentPartyMemberIds"),
                 isCurrentPlayerPartyLeader: i.Ember.computed.alias("lobbiesService.isCurrentPlayerPartyLeader"),
                 currentPartyIsFull: i.Ember.computed.alias("lobbiesService.currentPartyIsFull"),
@@ -21384,7 +21403,7 @@
                             t = this.aggregateSelectedPlayers();
                         let n, o = t;
                         if (this.get("isDiscordEnabled") && this.get("isDiscordLinked") && e?.length && (n = t.filterBy("isDiscordInviteFlow", !0), o = t.filterBy("isDiscordInviteFlow", !1)), o?.length) {
-                            const e = o.mapBy("summonerId");
+                            const e = o.map((e => e.summonerId));
                             this.get("lobbiesService").invitePlayers(e).catch((e => {
                                 i.logger.trace("Unable to invite summoners", e)
                             }))

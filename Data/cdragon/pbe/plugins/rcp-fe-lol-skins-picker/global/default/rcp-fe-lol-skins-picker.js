@@ -2034,19 +2034,20 @@
                         n = this.get("championsById"),
                         i = this.get("skinsGameData");
                     let o = [];
-                    const s = {
-                        playerSkinInfo: e,
-                        skinsGameData: i,
-                        playerChampionInfo: t,
-                        championsById: n
-                    };
-                    if (this._dataInitReady(s)) {
-                        const s = N(this, "isTencentRegion");
-                        o = e.map((0, r.addSkinStaticData)({
+                    const s = [86043],
+                        a = {
+                            playerSkinInfo: e,
+                            skinsGameData: i,
+                            playerChampionInfo: t,
+                            championsById: n
+                        };
+                    if (this._dataInitReady(a)) {
+                        const a = N(this, "isTencentRegion");
+                        o = e.filter((e => !s.includes(e.id))).map((0, r.addSkinStaticData)({
                             playerChampionInfo: t,
                             skinsGameData: i,
                             championsById: n,
-                            isTencentRegion: s
+                            isTencentRegion: a
                         })), this._handleDataReady(o)
                     }
                     return o

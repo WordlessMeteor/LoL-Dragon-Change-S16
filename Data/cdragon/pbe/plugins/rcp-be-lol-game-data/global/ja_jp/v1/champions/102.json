@@ -771,7 +771,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "シールドと移動速度を獲得し、少ししてから周囲を爆発させる。ドラゴンフォーム中は、爆発が敵チャンピオンに命中すると自身の体力が回復する。",
-            "dynamicDescription": "@Duration@秒間、炎をその身にまとい、<shield>@Calc_Shield@のシールド</shield>を獲得する。このシールドは近くにいる敵チャンピオン1体につき<shield>@Calc_Shield_Per_Nearby_Champion@</shield>増加する。さらに<speed>@MoveSpeed@の移動速度</speed>を獲得する。敵に向かって移動する際の移動速度は<speed>@MoveSpeedTowardsEnemies@</speed>に増加する。<br><br>効果終了時、<shield>シールド</shield>が破壊された時、または<recast>再発動</recast>時に周囲を爆発させ、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与える。<br><br><keywordMajor>ドラゴンフォーム</keywordMajor>: 爆発が敵チャンピオンに命中すると、シヴァーナは自身の減少体力に応じて<healing>@Calc_Heal_Min@ - @Calc_Heal_Max@</healing>の体力を回復する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@Duration@秒間、炎をその身にまとい、<shield>@Calc_Shield@のシールド</shield>を獲得する。このシールドは近くにいる敵チャンピオン1体につき<shield>@Calc_Shield_Per_Nearby_Champion@</shield>増加する。さらに<speed>@MoveSpeed@の移動速度</speed>を獲得し、敵に向かって移動する際の移動速度は<speed>@MoveSpeedTowardsEnemies@</speed>に増加する。<br><br>効果終了時、<shield>シールド</shield>が破壊された時、または<recast>再発動</recast>時に周囲を爆発させ、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与える。<br><br><keywordMajor>ドラゴンフォーム</keywordMajor>: 爆発が敵チャンピオンに命中すると、シヴァーナは自身の減少体力に応じて<healing>@Calc_Heal_Min@ - @Calc_Heal_Max@</healing>の体力を回復する。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -920,8 +920,8 @@
             "abilityVideoImagePath": "champion-abilities/0102/ability_0102_E1.jpg",
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "火球を放ち、大型の標的に命中すると、対象にスロウ効果を付与する。ドラゴンフォーム中は敵を貫通し、大型の敵に命中すると爆発して、炎の軌跡を残す。",
-            "dynamicDescription": "シヴァーナが指定地点に火球を放ち、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与え、@SlowDuration@秒間@Calc_Slow@の<status>スロウ効果</status>を付与する。敵に命中するか、終点に到達すると爆発する。<br><br><keywordMajor>ドラゴンフォーム</keywordMajor>中のシヴァーナの火炎弾が巨大化し、敵を貫通する。チャンピオン、大型モンスターに命中するか、終点に到達すると炎のパルスを発生させ、<magicDamage>@Calc_Dragon_Damage@の魔法ダメージ</magicDamage>を与え、<status>@SlowDuration@秒間@Calc_Slow_Dragon@の「スロウ」効果</status>を付与する。火球は@GroundLingerDuration@秒間、軌跡を残す。軌跡は<magicDamage>毎秒@DamagePerSecond@の魔法ダメージ</magicDamage>を与える。 @SpellModifierDescriptionAppend@",
+            "description": "火球を放ち、大型の対象に命中すると爆発して、スロウ効果を付与する。ドラゴンフォーム中は敵を貫通し、大型の敵に命中すると爆発して、炎の軌跡を残す。",
+            "dynamicDescription": "指定地点に火球を放ち、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与え、@SlowDuration@秒間@Calc_Slow@の<status>スロウ効果</status>を付与する。敵に命中するか、終点に到達すると爆発する。<br><br><keywordMajor>ドラゴンフォーム</keywordMajor>中のシヴァーナの火炎弾が巨大化し、敵を貫通する。チャンピオン、大型モンスターに命中するか、終点に到達すると炎のパルスを発生させ、<magicDamage>@Calc_Dragon_Damage@の魔法ダメージ</magicDamage>を与え、<status>@SlowDuration@秒間@Calc_Slow_Dragon@の「スロウ」効果</status>を付与する。火球は@GroundLingerDuration@秒間、軌跡を残す。軌跡は<magicDamage>毎秒@DamagePerSecond@の魔法ダメージ</magicDamage>を与える。 @SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1064,13 +1064,13 @@
         },
         {
             "spellKey": "r",
-            "name": "龍の降臨",
+            "name": "龍族の血統",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/Shyvana_R.Shyvana_Rework.png",
             "abilityVideoPath": "champion-abilities/0102/ability_0102_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0102/ability_0102_R1.jpg",
             "cost": "<keywordMajor>ドラゴンフューリー</keywordMajor>100が必要",
-            "cooldown": "クールダウンなし",
-            "description": "ドラゴンに変身して前方にジャンプし、進路上の敵をフィアー状態にする。ドラゴンフォーム中は巨大化し、通常スキルが強化される。",
+            "cooldown": "クールダウン無し",
+            "description": "ドラゴンに変身して前方にジャンプし、進路上の敵を逃走させる。ドラゴンフォーム中は巨大化し、通常スキルが強化される。",
             "dynamicDescription": "<spellPassive>固有スキル</spellPassive>: シヴァーナは通常攻撃とスキルを敵に命中させると<keywordMajor>ドラゴンフューリー</keywordMajor>を獲得する。この効果は<keywordMajor>ドラゴンフォーム</keywordMajor>中は増加し、チャンピオン以外に範囲攻撃を命中させた場合は減少する。<br><br><spellActive>有効</spellActive>: <keywordMajor>ドラゴンフォーム</keywordMajor>に変身し、<attention>アンストッパブル状態</attention>になって指定した地点まで飛翔する。飛翔中に眼下の敵に炎を浴びせ、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与えて<status>@FearDuration@秒間逃走</status>させる。<br><br>変身中、シヴァーナの通常スキルが強化され、<scaleHealth>@Calc_Bonus_Health@の追加体力</scaleHealth>、サイズの増加、および攻撃射程の増加を獲得する。時間経過と共に<keywordMajor>ドラゴンフューリー</keywordMajor>は失われ、<keywordMajor>ドラゴンフューリー</keywordMajor>が尽きると変身状態が終了する。@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,

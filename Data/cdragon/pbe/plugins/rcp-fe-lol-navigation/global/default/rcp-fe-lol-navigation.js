@@ -11605,14 +11605,15 @@
                             if (a.MissionsDataHelpers.isLevelMission(t)) {
                                 i.missionsSounds.getSound("LEVEL_UP_CIRCLE_FILL").play();
                                 let e = Math.round(this.get("eogBlock.preLevelUpExperienceTotal") / this.get("eogBlock.preLevelUpNextLevelXp") * 100);
-                                this.$("#level-up-circle")[0].animateFill([{
+                                const t = this.$("#level-up-circle")[0];
+                                t && "function" == typeof t.animateFill && t.animateFill([{
                                     percent: e,
                                     animateFillDuration: .25
                                 }, {
                                     percent: 100 - e,
                                     animateFillDuration: .9
                                 }]).then((() => {
-                                    this.$("#level-up-circle")[0].activateGlow()
+                                    "function" == typeof t.activateGlow && t.activateGlow()
                                 }))
                             }
                         } else "hide-level-up" === e ? this.get("largeAreaAnimationsEnabled") && !a.MissionsDataHelpers.isLevelMission(t) && i.missionsSounds.getSound("REWARD_REVEAL").play() : "complete" === e && this.get("fadeOutIntro")()
