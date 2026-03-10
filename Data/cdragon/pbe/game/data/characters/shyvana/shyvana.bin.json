@@ -204,13 +204,13 @@
                 {
                     "name": "FearDuration",
                     "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1015,13 +1015,13 @@
                 {
                     "name": "Damage_Monster_Bonus",
                     "values": [
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1444,26 +1444,26 @@
                 {
                     "name": "SlowDuration",
                     "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "SlowAmount",
                     "values": [
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929
+                        0.25,
+                        0.30000001192092896,
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104,
+                        0.5,
+                        0.550000011920929
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1526,6 +1526,12 @@
                         {
                             "mDataValue": "BaseDamage",
                             "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mCoefficient": 0.5,
+                            "__type": "StatByCoefficientCalculationPart"
                         },
                         {
                             "mCoefficient": 0.699999988079071,
@@ -1593,7 +1599,7 @@
                 },
                 "{a428c732}": {
                     "mMultiplier": {
-                        "mNumber": 0.5,
+                        "mNumber": 1.0,
                         "__type": "NumberCalculationPart"
                     },
                     "mSimpleTooltipCalculationDisplay": 6,
@@ -1697,6 +1703,13 @@
                                 {
                                     "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SlowAmount",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -2116,8 +2129,7 @@
                         },
                         {
                             "mStat": 12,
-                            "mStatFormula": 2,
-                            "mCoefficient": 0.07500000298023224,
+                            "mCoefficient": 0.05000000074505806,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -2628,26 +2640,26 @@
                 {
                     "name": "BonusArmor",
                     "values": [
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "BonusMagicResist",
                     "values": [
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2762,7 +2774,7 @@
                             "__type": "BuffCounterByNamedDataValueCalculationPart"
                         }
                     ],
-                    "mPrecision": 2,
+                    "mPrecision": 1,
                     "__type": "GameCalculation"
                 },
                 "{db8f0776}": {
@@ -2776,29 +2788,7 @@
                             "__type": "BuffCounterByNamedDataValueCalculationPart"
                         }
                     ],
-                    "mPrecision": 2,
-                    "__type": "GameCalculation"
-                },
-                "{ff538a86}": {
-                    "mFormulaParts": [
-                        {
-                            "mBuffName": "{bba88b2a}",
-                            "mIconKey": "%i:Shyvana%",
-                            "mCoefficient": 1.0,
-                            "__type": "BuffCounterByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "{88790bb8}": {
-                    "mFormulaParts": [
-                        {
-                            "mBuffName": "{bba88b2a}",
-                            "mIconKey": "%i:Shyvana%",
-                            "mCoefficient": 2.0,
-                            "__type": "BuffCounterByCoefficientCalculationPart"
-                        }
-                    ],
+                    "mPrecision": 1,
                     "__type": "GameCalculation"
                 }
             },
@@ -8569,13 +8559,13 @@
                 "mDefaultPriority": [
                     3,
                     2,
-                    0,
-                    1
+                    1,
+                    0
                 ],
                 "mEarlyLevelOverrides": [
                     2,
-                    0,
                     1,
+                    0,
                     2
                 ],
                 "__type": "RecSpellRankUpInfo"

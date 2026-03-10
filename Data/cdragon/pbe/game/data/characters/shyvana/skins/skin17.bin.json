@@ -297,18 +297,22 @@
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
-                    "mDrivers": [
-                        {
-                            "mDriver": {
+                    "mDriver": {
+                        "mDrivers": [
+                            {
+                                "Spell": "Characters/Viego/Spells/ViegoPassiveAbility/ViegoPassiveSoul",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            {
                                 "mAnimationNames": [
                                     "Recall"
                                 ],
                                 "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
-                            },
-                            "__type": "NotMaterialDriver"
-                        }
-                    ],
-                    "__type": "OneTrueMaterialDriver"
+                            }
+                        ],
+                        "__type": "OneTrueMaterialDriver"
+                    },
+                    "__type": "NotMaterialDriver"
                 },
                 "PersistentVfxs": [
                     {
