@@ -4818,6 +4818,7 @@
                 "lifetime": 3.0,
                 "isSingleParticle": 1,
                 "emitterName": "startFlash1",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -4874,6 +4875,7 @@
                 "lifetime": 3.0,
                 "isSingleParticle": 1,
                 "emitterName": "startFlash2",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -4980,6 +4982,7 @@
                 "lifetime": 3.0,
                 "isSingleParticle": 1,
                 "emitterName": "startFlash4",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -5085,6 +5088,7 @@
                 },
                 "lifetime": 10.0,
                 "emitterName": "Avatar_outer Edge2",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -10306,6 +10310,7 @@
                 "lifetime": 6.0,
                 "isSingleParticle": 1,
                 "emitterName": "Flash",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -17719,6 +17724,188 @@
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.7000000476837158,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": null,
+                "lifetime": 0.10000000149011612,
+                "isSingleParticle": 1,
+                "emitterName": "Avatar_lineglow",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Gun_Handle",
+                            "Gun_Barrel_Black",
+                            "Gun_Barrel_White"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.4000000059604645
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        0.7269550561904907,
+                        0.48644235730171204,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.6000000238418579,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.9333333373069763,
+                                0.3135884702205658,
+                                0.1945769488811493,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.7269550561904907,
+                                0.48644235730171204,
+                                1.0
+                            ],
+                            [
+                                0.7945982813835144,
+                                0.07204658538103104,
+                                0.4387964606285095,
+                                1.0
+                            ],
+                            [
+                                0.20277714729309082,
+                                0.09166944026947021,
+                                0.15871819853782654,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 22,
+                "{cb13aff1}": -2.0,
+                "disableBackfaceCull": true,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Gun_PipeGlow.SKINS_Senna_Skin72.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.7000000476837158,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": null,
+                "lifetime": 0.10000000149011612,
+                "isSingleParticle": 1,
+                "emitterName": "Avatar_lineglow1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Gun_Handle",
+                            "Gun_Barrel_Black",
+                            "Gun_Barrel_White"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.46999314427375793
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        0.7269550561904907,
+                        0.48644235730171204,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.6000000238418579,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.9333333373069763,
+                                0.3135884702205658,
+                                0.1945769488811493,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.7269550561904907,
+                                0.48644235730171204,
+                                1.0
+                            ],
+                            [
+                                0.9531853199005127,
+                                0.21009428799152374,
+                                0.2876419425010681,
+                                1.0
+                            ],
+                            [
+                                0.4287022054195404,
+                                0.030970603227615356,
+                                0.06739751994609833,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 20,
+                "{cb13aff1}": -2.0,
+                "disableBackfaceCull": true,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Gun_PipeGlow.SKINS_Senna_Skin72.tex",
+                "__type": "VfxEmitterDefinitionData"
             }
         ],
         "visibilityRadius": 3000.0,
@@ -21340,8 +21527,16 @@
                     "__type": "ValueColor"
                 },
                 "pass": -2,
-                "{cb13aff1}": -10.0,
+                "alphaRef": 0,
                 "isUniformScale": 1,
+                "scale0": {
+                    "constantValue": [
+                        1.0019999742507935,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "texture": "ASSETS/Characters/Senna/Skins/Skin75/Senna_Skin75_Gun_TX_CM.Chroma_Senna_WarHounds.tex",
                 "paletteDefinition": {
                     "palleteSrcMixColor": {
@@ -21469,8 +21664,16 @@
                     "__type": "ValueColor"
                 },
                 "pass": -3,
-                "{cb13aff1}": -10.0,
+                "alphaRef": 0,
                 "isUniformScale": 1,
+                "scale0": {
+                    "constantValue": [
+                        1.0019999742507935,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "texture": "ASSETS/Characters/Senna/Skins/Skin75/Senna_Skin75_Gun_TX_CM.Chroma_Senna_WarHounds.tex",
                 "paletteDefinition": {
                     "palleteSrcMixColor": {
@@ -27490,7 +27693,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 10.0,
+                    "constantValue": 9.0,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 3.0,
@@ -27534,6 +27737,7 @@
                     ],
                     "__type": "VfxReflectionDefinitionData"
                 },
+                "{cb13aff1}": -60.0,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "texture": "ASSETS/Characters/Senna/Skins/Skin75/Senna_Skin75_VFX_Body_TX_CM.Chroma_Senna_WarHounds.tex",
@@ -27760,7 +27964,7 @@
                     "constantValue": 0.699999988079071,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 10.0,
+                "lifetime": 9.0,
                 "emitterName": "Avatar_outer Edge1",
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -36180,6 +36384,7 @@
                 "lifetime": 3.0,
                 "isSingleParticle": 1,
                 "emitterName": "startFlash1",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -36286,6 +36491,7 @@
                 "lifetime": 3.0,
                 "isSingleParticle": 1,
                 "emitterName": "startFlash2",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -36391,6 +36597,7 @@
                 },
                 "lifetime": 10.0,
                 "emitterName": "Avatar_outer Edge1",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -36547,6 +36754,7 @@
                 "lifetime": 3.0,
                 "isSingleParticle": 1,
                 "emitterName": "startFlash3",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"

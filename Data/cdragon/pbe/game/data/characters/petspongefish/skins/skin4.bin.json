@@ -114,13 +114,6 @@
             "EnablePicking": false,
             "__type": "SkinMeshDataProperties"
         },
-        "idleParticlesEffects": [
-            {
-                "effectKey": "PetSpongeFish_Emote_Idle_Ground",
-                "boneName": "C_Buffbone_Glb_Layout_Loc",
-                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
-            }
-        ],
         "iconCircle": "ASSETS/Characters/PetSpongeFish/HUD/Icon_SpongeFish_Base_Variant4_Tier1.LL_SpongeFish_Base_Variant4.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_HealthBar",
@@ -40636,7 +40629,7 @@
         "particlePath": "Characters/PetSpongeFish/Skins/Skin4/Particles/PetSpongeFish_Skin4_Emote_dance_WaterGround",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a4447837}": {
+    "Characters/PetSpongeFish/Skins/Skin4/Particles/PetSpongeFish_Skin4_Emote_Idle_Ground_trail": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -49966,15 +49959,14 @@
         "complexEmitterDefinitionData": [
             {
                 "rate": {
-                    "constantValue": 1.0,
+                    "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": -1.0,
+                    "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
+                "particleLinger": 0.5,
                 "emitterName": "Ground",
                 "importance": 3,
                 "bindWeight": {
@@ -50022,6 +50014,37 @@
                         0.3799954354763031,
                         0.25999847054481506
                     ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
                     "__type": "ValueColor"
                 },
                 "pass": -990,
@@ -50078,15 +50101,14 @@
             },
             {
                 "rate": {
-                    "constantValue": 1.5,
+                    "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": -1.0,
+                    "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 0.10000000149011612,
-                "isSingleParticle": 1,
+                "particleLinger": 0.5,
                 "emitterName": "Ground1",
                 "importance": 3,
                 "bindWeight": {
@@ -50151,7 +50173,7 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        400.0,
+                        200.0,
                         1.0,
                         1.0
                     ],
@@ -50202,20 +50224,14 @@
             },
             {
                 "rate": {
-                    "constantValue": 4.0,
+                    "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 1.2000000476837158,
+                    "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "rateByVelocityFunction": {
-                    "constantValue": [
-                        0.0,
-                        2.0
-                    ],
-                    "__type": "ValueVector2"
-                },
+                "particleLinger": 0.5,
                 "emitterName": "distortion",
                 "Linger": {
                     "SeparateLingerColor": {
@@ -50505,10 +50521,10 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": -1.0,
+                    "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "isSingleParticle": 1,
+                "particleLinger": 0.5,
                 "emitterName": "Wave",
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -58689,7 +58705,7 @@
             "PetSpongeFish_Emote_Laugh_trail": "Characters/PetSpongeFish/Skins/Skin4/Particles/PetSpongeFish_Skin4_Emote_Laugh_trail",
             "PetSpongeFish_Emote_cast": "Characters/PetSpongeFish/Skins/Skin4/Particles/PetSpongeFish_Skin4_Emote_cast",
             "PetSpongeFish_Emote_cast_boom": "Characters/PetSpongeFish/Skins/Skin4/Particles/PetSpongeFish_Skin4_Emote_cast_boom",
-            "{3efb85c9}": "{a4447837}"
+            "{3efb85c9}": "Characters/PetSpongeFish/Skins/Skin4/Particles/PetSpongeFish_Skin4_Emote_Idle_Ground_trail"
         },
         "__type": "ResourceResolver"
     },

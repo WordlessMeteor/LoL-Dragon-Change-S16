@@ -8424,7 +8424,7 @@
                 }
                 return o.Lodash.defaults(e, h)
             }, _.prototype.registerTarget = function(e, t, n, r) {
-                if (!e) return void o.logger.error("Attempted to register tooltip with invalid target:", e);
+                if (!e) return void o.logger.warning("Attempted to register tooltip with invalid target");
                 const i = this.defaults(r),
                     a = {
                         show: this.showTooltip.bind(this, e),
