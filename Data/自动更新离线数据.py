@@ -3,7 +3,7 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 from wcwidth import wcswidth
 from humanize import naturalsize
-from typing import Any, IO
+from typing import Any, IO, Literal
 
 cwd: str = os.getcwd()
 if cwd.endswith("Data"): #允许用户直接双击脚本（Users are allowed to double click this program）
@@ -366,6 +366,8 @@ while True:
                 cdragon_folders = list(set(cdragon_folders))
                 cdragon_folders.sort()
         else:
+            text_folders_exported_latest: list[str] = []
+            text_folders_exported_pbe: list[str] = []
             if option == "1" or option == "2":
                 logPrint("正在读取正式服在线索引……\nReading the online index file of live data resources...", print_time = True)
                 source, status, session = requestUrl("GET", "https://raw.communitydragon.org/latest/cdragon/files.exported.txt", session)
@@ -380,7 +382,7 @@ while True:
                 files_exported_latest: list[str] = source.text.strip("\n").split("\n")
                 #files_exported_latest: list[str] = requests.get("https://raw.communitydragon.org/latest/cdragon/files.exported.txt").text.strip("\n").split("\n")
                 text_files_exported_latest: list[str] = [file for file in files_exported_latest if file.endswith(TEXT_EXTENSIONS)]
-                text_folders_exported_latest: list[str] = list(set(list(map(lambda x: os.path.dirname(x) + "/" if "/" in x else "", text_files_exported_latest))))
+                text_folders_exported_latest = list(set(list(map(lambda x: os.path.dirname(x) + "/" if "/" in x else "", text_files_exported_latest))))
                 text_folders_exported_latest.sort()
             if option == "1" or option == "3":
                 logPrint("正在读取美测服在线索引……\nReading the online index file of pbe data resources...", print_time = True)
@@ -395,7 +397,7 @@ while True:
                     exit()
                 files_exported_pbe: list[str] = source.text.strip("\n").split("\n")
                 text_files_exported_pbe: list[str] = [file for file in files_exported_pbe if file.endswith(TEXT_EXTENSIONS)]
-                text_folders_exported_pbe: list[str] = list(set(list(map(lambda x: os.path.dirname(x) + "/" if "/" in x else "", text_files_exported_pbe))))
+                text_folders_exported_pbe = list(set(list(map(lambda x: os.path.dirname(x) + "/" if "/" in x else "", text_files_exported_pbe))))
                 text_folders_exported_pbe.sort()
             if option in {"1", "2", "3"}:
                 if option == "2":
