@@ -82,19 +82,23 @@
                     const a = (0, s.default)(l.Ember, t);
                     this._tra = t, this._traService = a, this._provider = e
                 }
+                _destroyMatchHistory(e = {}) {
+                    e.matchHistorySection.component && e.rootElement && (e.rootElement.removeChild(e.matchHistorySection.component.domNode), e.matchHistorySection.component.emberAppInstancePromise.then((e => e.destroy())), e.matchHistorySection.component = null)
+                }
                 displayMatchSummary(e = {}) {
                     l.Telemetry.startTracingEvent("profile-match-history-rendered"), new Promise((e => {
                         Promise.resolve().then((() => {
                             o || (o = a(4)), e(o)
                         }).bind(null, a)).catch(a.oe)
                     })).then((t => {
+                        this._destroyMatchHistory(e);
                         const a = !(!e || !e.summonerId) && e.summonerId,
                             n = t(this._provider, this._traService, a, e.rootElement);
                         e.matchHistorySection.component = n
                     }))
                 }
                 hideMatchSummary(e = {}) {
-                    e.matchHistorySection.component && e.rootElement && (e.rootElement.removeChild(e.matchHistorySection.component.domNode), e.matchHistorySection.component.emberAppInstancePromise.then((e => e.destroy())), e.matchHistorySection.component = null)
+                    this._destroyMatchHistory(e)
                 }
             }
             e.exports = function(e, t) {

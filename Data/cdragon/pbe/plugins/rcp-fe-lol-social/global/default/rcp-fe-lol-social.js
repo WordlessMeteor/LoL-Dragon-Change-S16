@@ -14097,10 +14097,9 @@
                 large: !1,
                 me: !1,
                 member: null,
-                discordAvailability: null,
+                isDiscordOnline: !1,
                 openPartiesService: o.Ember.inject.service("open-parties"),
                 socialSessionService: o.Ember.inject.service("social-session"),
-                isDiscordOnline: o.Ember.computed.bool("discordAvailability"),
                 availabilityIconClass: o.Ember.computed("member", "openPartiesService", (function() {
                     const e = this.get("member");
                     return e && this.get("openPartiesService").showOpenParty(e) ? "open-party" : this.get("availability") || "offline"
@@ -14625,6 +14624,7 @@
                     source: "",
                     analyticsService: r.Ember.inject.service("analytics"),
                     friendRequestsService: r.Ember.inject.service("friendRequests"),
+                    discordId: r.Ember.computed.alias("summoner.discordId"),
                     gameName: r.Ember.computed.alias("summoner.gameName"),
                     tagLine: r.Ember.computed.alias("summoner.gameTag"),
                     puuid: r.Ember.computed.alias("summoner.puuid"),
@@ -14779,6 +14779,7 @@
                 tra: o.Ember.inject.service("tra"),
                 player: {},
                 working: !1,
+                friendsService: o.Ember.inject.service("friends"),
                 friendRequestsService: o.Ember.inject.service("friendRequests"),
                 iconId: o.Ember.computed.alias("player.icon"),
                 playerIdentityClasses: o.Ember.computed("working", (function() {
@@ -14808,6 +14809,11 @@
                 hasGameNameAndTagLine: o.Ember.computed.and("gameName", "tagLine"),
                 hovercardOptions: o.Ember.computed("player.id", (function() {
                     return (0, l.getHovercardOptions)(this.get("player.id"))
+                })),
+                discordId: o.Ember.computed("friendsService.puuidToDiscordIdMap", "puuid", (function() {
+                    const e = this.get("friendsService.puuidToDiscordIdMap"),
+                        t = this.get("puuid");
+                    return Object.prototype.hasOwnProperty.call(e, t) ? e[t] : null
                 })),
                 didInsertElement() {
                     this._super(...arguments), this.contextMenuHandler = (0, a.getContextMenuHandler)((() => this.getContextMenuItems())), this.element.addEventListener("contextmenu", this.contextMenuHandler)
@@ -15857,9 +15863,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = n(1);
+            var r, o = n(1),
+                i = (r = n(325)) && r.__esModule ? r : {
+                    default: r
+                };
             n(365);
-            var o = r.Ember.Component.extend({
+            var a = o.Ember.Component.extend({
                 avatarClassNames: "",
                 championId: null,
                 hideindicator: !1,
@@ -15867,52 +15876,58 @@
                 large: !1,
                 me: !1,
                 member: null,
-                discordAvailability: null,
-                gameDataService: r.Ember.inject.service("game-data"),
-                productsService: r.Ember.inject.service("products"),
-                socialSessionService: r.Ember.inject.service("social-session"),
-                meObj: r.Ember.computed.alias("socialSessionService.me"),
-                championSummary: r.Ember.computed.alias("gameDataService.championSummary"),
-                profileIcons: r.Ember.computed.alias("gameDataService.profileIcons"),
-                currentSummoner: r.Ember.computed.alias("socialSessionService.currentSummoner"),
-                percentCompleteForNextLevel: r.Ember.computed.alias("currentSummoner.percentCompleteForNextLevel"),
-                showSummonerLevel: r.Ember.computed.alias("me"),
-                summonerLevel: r.Ember.computed.alias("currentSummoner.summonerLevel"),
-                availability: r.Ember.computed("meObj.availability", (function() {
+                isDiscordOnline: !1,
+                gameDataService: o.Ember.inject.service("game-data"),
+                productsService: o.Ember.inject.service("products"),
+                socialSessionService: o.Ember.inject.service("social-session"),
+                meObj: o.Ember.computed.alias("socialSessionService.me"),
+                championSummary: o.Ember.computed.alias("gameDataService.championSummary"),
+                profileIcons: o.Ember.computed.alias("gameDataService.profileIcons"),
+                currentSummoner: o.Ember.computed.alias("socialSessionService.currentSummoner"),
+                percentCompleteForNextLevel: o.Ember.computed.alias("currentSummoner.percentCompleteForNextLevel"),
+                showSummonerLevel: o.Ember.computed.alias("me"),
+                summonerLevel: o.Ember.computed.alias("currentSummoner.summonerLevel"),
+                availability: o.Ember.computed("meObj.availability", (function() {
                     const e = this.get("meObj.availability");
                     return e || "offline"
                 })),
-                hasLongSummonerLevel: r.Ember.computed("summonerLevel", (function() {
+                hasLongSummonerLevel: o.Ember.computed("summonerLevel", (function() {
                     return this.get("summonerLevel") > 999
                 })),
-                remoteProduct: r.Ember.computed("me", "member", "meObj", (function() {
+                iconClassNames: o.Ember.computed("iconUrl", "remoteProduct", (function() {
+                    return (0, i.default)({
+                        "has-icon": Boolean(this.get("iconUrl")),
+                        remote: this.get("remoteProduct")
+                    })
+                })),
+                remoteProduct: o.Ember.computed("me", "member", "meObj", (function() {
                     const e = this.get("member"),
                         t = this.get("me"),
                         n = this.get("meObj");
                     return !(!e || t) && (e.platformId && n.platformId !== e.platformId)
                 })),
-                summonerIconUrl: r.Ember.computed("iconId", "profileIcons", (function() {
+                summonerIconUrl: o.Ember.computed("iconId", "profileIcons", (function() {
                     return this.get("profileIcons") && null != this.get("iconId") && -1 !== this.get("iconId") ? this.get("profileIcons").find((e => e.id === this.get("iconId")))?.imagePath : ""
                 })),
-                championIconUrl: r.Ember.computed("championSummary", (function() {
+                championIconUrl: o.Ember.computed("championSummary", (function() {
                     return this.get("championId") && this.get("championSummary") && -1 !== this.get("championId") ? this.get("championSummary").find((e => e.id === this.get("championId"))).squarePortraitPath : ""
                 })),
-                productIconUrl: r.Ember.computed("member", "productsService", "remoteProduct", (function() {
+                productIconUrl: o.Ember.computed("member", "productsService", "remoteProduct", (function() {
                     const e = this.get("member"),
                         t = this.get("remoteProduct"),
                         n = this.get("productsService");
                     return e && t ? n.getIconUrl(e.product, e.patchline) : ""
                 })),
-                iconUrl: r.Ember.computed("remoteProduct", "productIconUrl", "summonerIconUrl", "championIconUrl", (function() {
-                    return this.get("remoteProduct") ? this.get("productIconUrl") : this.get("summonerIconUrl") || this.get("championIconUrl")
+                iconUrl: o.Ember.computed("remoteProduct", "productIconUrl", "summonerIconUrl", "championIconUrl", "isDiscordOnline", (function() {
+                    return this.get("isDiscordOnline") ? "/fe/lol-social/discord-friend.png" : this.get("remoteProduct") ? this.get("productIconUrl") : this.get("summonerIconUrl") || this.get("championIconUrl")
                 })),
                 actions: {
                     changeIcon: function() {
-                        r.sounds.play("click"), r.navigation.navigatePluginById("rcp-fe-lol-profiles-main")
+                        o.sounds.play("click"), o.navigation.navigatePluginById("rcp-fe-lol-profiles-main")
                     }
                 }
             });
-            t.default = o
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -17169,7 +17184,7 @@
                     return !!this.get("friend.summonerId")
                 })),
                 gameName: r.Ember.computed.alias("friend.gameName"),
-                memberClasses: r.Ember.computed("friend", "isOpenPartyJoinable", "unreadMessageCount", "uxSettingsService.disableAnimations", "isFriendLinkedToDiscord", "isDiscordFriendOnline", "isDiscordFriendOffline", (function() {
+                memberClasses: r.Ember.computed("friend", "isOpenPartyJoinable", "unreadMessageCount", "uxSettingsService.disableAnimations", "isFriendLinkedToDiscord", "isDiscordOnline", "isDiscordFriendOffline", (function() {
                     const e = this.get("uxSettingsService.disableAnimations"),
                         t = this.get("friend"),
                         n = this.get("isContextMenuOpened"),
@@ -17177,7 +17192,7 @@
                         o = this.get("isOpenPartyJoinable"),
                         i = !e,
                         a = this.get("isFriendLinkedToDiscord"),
-                        l = this.get("isDiscordFriendOnline"),
+                        l = this.get("isDiscordOnline"),
                         c = "offline" === t?.availability && (!a || this.get("isDiscordFriendOffline"));
                     return (0, s.default)({
                         member: !0,
@@ -17188,7 +17203,7 @@
                         "use-animation": i,
                         "open-party": o,
                         "discord-linked": a,
-                        "discord-online-league-offline": l && c
+                        "discord-online-league-offline": l
                     })
                 })),
                 notDragCapture: r.Ember.computed.not("dragCapture"),
@@ -17229,7 +17244,7 @@
                 showDiscordOfflineIcon: r.Ember.computed("isDisordFriendOffline", "isFriendLinkedToDiscord", "isOffline", (function() {
                     return this.get("isFriendLinkedToDiscord") && this.get("isDisordFriendOffline") && this.get("isOffline")
                 })),
-                isDiscordFriendOnline: r.Ember.computed("friend", "isFriendLinkedToDiscord", "isOffline", (function() {
+                isDiscordOnline: r.Ember.computed("friend", "isFriendLinkedToDiscord", "isOffline", (function() {
                     const e = this.get("friend");
                     return this.get("isFriendLinkedToDiscord") && this.get("isOffline") && e?.discordInfo?.onlineStatus === i.DISCORD_ONLINE_STATUS_TYPES.ONLINE
                 })),
@@ -19622,6 +19637,7 @@
                     return !!(this.get("friends") && this.get("socialSessionService.me") && this.get("openPartiesService"))
                 },
                 _getAvailabilitySort: e => s.AVAILABILITY_SORT[e],
+                _getDiscordOrRiotAvailability: e => e.availability === s.AVAILABILITY.OFFLINE && e.discordOnlineStatus === s.DISCORD_ONLINE_STATUS_TYPES.ONLINE ? s.AVAILABILITY.CHAT : e?.availability || s.AVAILABILITY.OFFLINE,
                 _friendSort(e, t) {
                     const n = this.get("settingsService.chatSettings.sortBy"),
                         r = this._getAvailabilitySort,
@@ -19629,7 +19645,7 @@
                         i = this.get("openPartiesService");
                     let a = 0;
                     if (!n || "availability" === n) {
-                        if (a = r(e.availability) - r(t.availability), 0 === a) {
+                        if (a = r(this._getDiscordOrRiotAvailability(e)) - r(this._getDiscordOrRiotAvailability(t)), 0 === a) {
                             const n = i.hasOpenParty(e),
                                 r = i.hasOpenParty(t);
                             n && !r ? a = -1 : r && !n && (a = 1)
@@ -19655,7 +19671,7 @@
                             const e = n.puuid;
                             Object.prototype.hasOwnProperty.call(t, e) || n.discordId && (t[e] = n.discordId)
                         }
-                        this.set("puuidToDiscordIdMap", t)
+                        this.set("puuidToDiscordIdMap", structuredClone(t))
                     }
                     return e.map((e => {
                         if (e.lol && e.lol.pty) try {
@@ -22055,8 +22071,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "sPCvy8wK",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-recent-summoner.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-recent-summoner.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-identity"],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["championId","hideindicator"],[["get",["summoner","championId"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-name-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","gameName","tagLine","puuid","gameNameClass"],["short",["get",["gameName"]],["get",["tagLine"]],["get",["puuid"]],"summoner-name"]]],false],["text","\\n\\n    "],["append",["helper",["player-name"],null,[["format","gameName","tagLine","puuid"],["full",["get",["gameName"]],["get",["tagLine"]],["get",["puuid"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n  "],["append",["helper",["tooltip-message"],null,[["position","width","messagePacket"],["bottom","300px",["get",["messagePacket"]]]]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["computedRequested"]]],null,3,2],["text","\\n"],["append",["helper",["hovercard-component"],null,[["options","summonerId","puuid"],[["get",["hovercardOptions"]],["get",["summoner","summonerId"]],["get",["puuid"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","add-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"submitAddFriend"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["width","height"],["16px","16px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["working"]]],null,1,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","added"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "ErQz0KdO",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-recent-summoner.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-recent-summoner.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-identity"],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["isDiscordOnline","championId","hideindicator"],[["get",["discordId"]],["get",["summoner","championId"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-name-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","gameName","tagLine","puuid","gameNameClass"],["short",["get",["gameName"]],["get",["tagLine"]],["get",["puuid"]],"summoner-name"]]],false],["text","\\n\\n    "],["append",["helper",["player-name"],null,[["format","gameName","tagLine","puuid"],["full",["get",["gameName"]],["get",["tagLine"]],["get",["puuid"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["discordId"]]],null,4],["text","  "],["close-element"],["text","\\n\\n  "],["append",["helper",["tooltip-message"],null,[["position","width","messagePacket"],["bottom","300px",["get",["messagePacket"]]]]],false],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["computedRequested"]]],null,3,2],["text","\\n"],["append",["helper",["hovercard-component"],null,[["options","summonerId","puuid"],[["get",["hovercardOptions"]],["get",["summoner","summonerId"]],["get",["puuid"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","add-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"submitAddFriend"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["width","height"],["16px","16px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["working"]]],null,1,0]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","added"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","friend-request-discord-id"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","friend-request-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","friend-request-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -22069,8 +22085,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "PWrMBFCn",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-requested-player.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-requested-player.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerIdentityClasses"]],null],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["iconId","hideindicator"],[["get",["iconId"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-name-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","gameName","tagLine","summonerName"],["short",["get",["puuid"]],"player-name","player-name",["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["hasGameNameAndTagLine"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["working"]]],null,1,0],["text","\\n"],["append",["helper",["hovercard-component"],null,[["options","puuid","summonerId"],[["get",["hovercardOptions"]],["get",["puuid"]],["get",["summonerId"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","remove-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"removeFriendRequest"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["width","height"],["16px","16px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","player-gnt"],["flush-element"],["text","\\n        "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","gameName","tagLine","summonerName"],["full",["get",["puuid"]],"player-game-name","player-game-tag",["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "WHHILFLU",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-requested-player.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-requested-player.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerIdentityClasses"]],null],["flush-element"],["text","\\n  "],["append",["helper",["social-avatar"],null,[["iconId","hideindicator"],[["get",["iconId"]],true]]],false],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-name-wrapper"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","gameName","tagLine","summonerName"],["short",["get",["puuid"]],"player-name","player-name",["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["hasGameNameAndTagLine"]]],null,3],["block",["if"],[["get",["discordId"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["working"]]],null,1,0],["text","\\n"],["append",["helper",["hovercard-component"],null,[["options","puuid","summonerId"],[["get",["hovercardOptions"]],["get",["puuid"]],["get",["summonerId"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","remove-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"removeFriendRequest"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["uikit-spinner"],null,[["width","height"],["16px","16px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","friend-request-discord-id"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","friend-request-discord-icon"],["static-attr","src","/fe/lol-static-assets/images/discord_blue.svg"],["static-attr","alt","Discord"],["flush-element"],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","friend-request-discord-text"],["flush-element"],["append",["unknown",["discordId"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","player-gnt"],["flush-element"],["text","\\n        "],["append",["helper",["player-name"],null,[["format","puuid","gameNameClass","summonerNameClass","gameName","tagLine","summonerName"],["full",["get",["puuid"]],"player-game-name","player-game-tag",["get",["gameName"]],["get",["tagLine"]],["get",["summonerName"]]]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -22111,8 +22127,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "7CBXcNPn",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-avatar.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-avatar.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-avatar.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-social-avatar ",["unknown",["avatarClassNames"]]]]],["dynamic-attr","large",["unknown",["large"]],null],["dynamic-attr","me",["unknown",["me"]],null],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["block",["if"],[["get",["showSummonerLevel"]]],null,2,1],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","        "],["append",["helper",["availability-hitbox"],null,[["large","member","availability","me","discordAvailability"],[["get",["large"]],["get",["member"]],["get",["availability"]],["get",["me"]],["get",["discordAvailability"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["comment"," Original summoner icon rendering "],["text","\\n      "],["open-element","img",[]],["dynamic-attr","class",["concat",["icon-image ",["helper",["if"],[["get",["iconUrl"]],"has-icon"],null]," ",["helper",["if"],[["get",["remoteProduct"]],"remote"],null]]]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["icon-ring ",["helper",["if"],[["get",["iconUrl"]],"has-icon"],null]," ",["helper",["if"],[["get",["remoteProduct"]],"remote"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeIcon"],null],null],["flush-element"],["close-element"],["text","\\n"],["block",["unless"],[["get",["hideindicator"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-radial-progress",[]],["static-attr","class","summoner-level-icon"],["static-attr","type","custom"],["dynamic-attr","percent",["unknown",["percentCompleteForNextLevel"]],null],["static-attr","start-angle","240"],["static-attr","end-angle","-60"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeIcon"],null],null],["flush-element"],["text","\\n"],["text","      "],["open-element","div",[]],["static-attr","slot","bottom"],["static-attr","class","bottom unfilled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","middle"],["static-attr","class","middle filled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","top"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","center xp-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["icon-image ",["helper",["if"],[["get",["iconUrl"]],"has-icon"],null]]]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","summoner-level-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-level ",["helper",["if"],[["get",["hasLongSummonerLevel"]],"has-long-summoner-level"],null]]]],["flush-element"],["append",["unknown",["summonerLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "2iJTh2hy",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-avatar.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-avatar.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-avatar.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-social-avatar ",["unknown",["avatarClassNames"]]]]],["dynamic-attr","large",["unknown",["large"]],null],["dynamic-attr","me",["unknown",["me"]],null],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["block",["if"],[["get",["showSummonerLevel"]]],null,2,1],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[{"statements":[["text","        "],["append",["helper",["availability-hitbox"],null,[["large","member","availability","me","isDiscordOnline"],[["get",["large"]],["get",["member"]],["get",["availability"]],["get",["me"]],["get",["isDiscordOnline"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["comment"," Original summoner icon rendering "],["text","\\n      "],["open-element","img",[]],["dynamic-attr","class",["concat",["icon-image ",["unknown",["iconClassNames"]]]]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["icon-ring ",["unknown",["iconClassNames"]]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeIcon"],null],null],["flush-element"],["close-element"],["text","\\n"],["block",["unless"],[["get",["hideindicator"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-radial-progress",[]],["static-attr","class","summoner-level-icon"],["static-attr","type","custom"],["dynamic-attr","percent",["unknown",["percentCompleteForNextLevel"]],null],["static-attr","start-angle","240"],["static-attr","end-angle","-60"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"changeIcon"],null],null],["flush-element"],["text","\\n"],["text","      "],["open-element","div",[]],["static-attr","slot","bottom"],["static-attr","class","bottom unfilled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","middle"],["static-attr","class","middle filled xp-ring"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","top"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","center xp-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["icon-image ",["helper",["if"],[["get",["iconUrl"]],"has-icon"],null]]]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","summoner-level-ring"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["summoner-level ",["helper",["if"],[["get",["hasLongSummonerLevel"]],"has-long-summoner-level"],null]]]],["flush-element"],["append",["unknown",["summonerLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -22195,8 +22211,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "xqCqJ7WB",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-member.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-member.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-member.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["memberClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","open-party-indicator"],["flush-element"],["close-element"],["text","\\n\\n  "],["append",["helper",["social-avatar"],null,[["avatarClassNames","member","iconId","availability","discordAvailability"],["member-icon",["get",["friend"]],["get",["friend","icon"]],["get",["friend","availability"]],["get",["isDiscordFriendOnline"]]]]],false],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","member-name-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","member-name"],["flush-element"],["append",["unknown",["gameName"]],false],["close-element"],["text","\\n    "],["append",["helper",["social-status-wrapper"],null,[["class","friend"],["member-status",["get",["friend"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showUnreadMessageCount"]]],null,6],["text","\\n"],["block",["if"],[["get",["isOpenPartyJoinable"]]],null,5],["text","\\n"],["block",["if"],[["get",["isMuted"]]],null,4],["text","\\n"],["block",["if"],[["get",["showDiscordOfflineIcon"]]],null,3],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isEditingNote"]]],null,2],["text","\\n"],["append",["helper",["hovercard-component"],null,[["summonerId","puuid","targetDomNode","options","openPartyDescription"],[["get",["friend","summonerId"]],["get",["friend","puuid"]],["get",["hovercardData","domNode"]],["get",["hovercardData","options"]],["get",["hovercardData","openPartyDescription"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["social-menu-input"],null,[["class","currentInput","saveMessage","placeholderText","onSave","onCancel","iconName","maxLength"],["edit-note-input",["get",["editingNoteInputValue"]],["get",["tra","roster_note_saved"]],["get",["tra","roster_note"]],["helper",["action"],[["get",[null]],"saveNote"],null],["helper",["action"],[["get",[null]],"closeMenu"],null],"note","140"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["social-menu-item"],null,null,0]],"locals":[]},{"statements":[["block",["social-menu"],null,[["class","onRequestClose"],["edit-note-menu",["helper",["action"],[["get",[null]],"closeMenu"],null]]],1]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","muted-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["partyJoinClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"joinParty"],null],null],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"showJoinOpenPartyTooltip"],null],null],["dynamic-attr","disabled",["unknown",["isJoinOpenPartyDisabled"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-count-badge unread-count"],["flush-element"],["text","\\n      "],["append",["unknown",["unreadMessageCount"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "2l6+Xr3v",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\social-roster-member.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\social-roster-member.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\social-roster-member.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["unknown",["memberClasses"]],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","open-party-indicator"],["flush-element"],["close-element"],["text","\\n\\n  "],["append",["helper",["social-avatar"],null,[["avatarClassNames","member","iconId","availability","isDiscordOnline"],["member-icon",["get",["friend"]],["get",["friend","icon"]],["get",["friend","availability"]],["get",["isDiscordOnline"]]]]],false],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","member-name-wrapper"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","member-name"],["flush-element"],["append",["unknown",["gameName"]],false],["close-element"],["text","\\n    "],["append",["helper",["social-status-wrapper"],null,[["class","friend"],["member-status",["get",["friend"]]]]],false],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showUnreadMessageCount"]]],null,6],["text","\\n"],["block",["if"],[["get",["isOpenPartyJoinable"]]],null,5],["text","\\n"],["block",["if"],[["get",["isMuted"]]],null,4],["text","\\n"],["block",["if"],[["get",["showDiscordOfflineIcon"]]],null,3],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isEditingNote"]]],null,2],["text","\\n"],["append",["helper",["hovercard-component"],null,[["summonerId","puuid","targetDomNode","options","openPartyDescription"],[["get",["friend","summonerId"]],["get",["friend","puuid"]],["get",["hovercardData","domNode"]],["get",["hovercardData","options"]],["get",["hovercardData","openPartyDescription"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["social-menu-input"],null,[["class","currentInput","saveMessage","placeholderText","onSave","onCancel","iconName","maxLength"],["edit-note-input",["get",["editingNoteInputValue"]],["get",["tra","roster_note_saved"]],["get",["tra","roster_note"]],["helper",["action"],[["get",[null]],"saveNote"],null],["helper",["action"],[["get",[null]],"closeMenu"],null],"note","140"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["social-menu-item"],null,null,0]],"locals":[]},{"statements":[["block",["social-menu"],null,[["class","onRequestClose"],["edit-note-menu",["helper",["action"],[["get",[null]],"closeMenu"],null]]],1]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","muted-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["partyJoinClasses"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"joinParty"],null],null],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"showJoinOpenPartyTooltip"],null],null],["dynamic-attr","disabled",["unknown",["isJoinOpenPartyDisabled"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-count-badge unread-count"],["flush-element"],["text","\\n      "],["append",["unknown",["unreadMessageCount"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

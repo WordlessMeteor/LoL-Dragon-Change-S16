@@ -225,7 +225,7 @@
             "rarityGemPath": null,
             "skinLines": [
                 {
-                    "id": 4
+                    "id": 8
                 }
             ],
             "description": "韓国で開催された2014年のWorldsを記念。"
@@ -621,7 +621,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "次の通常攻撃で、対象とその周囲の両方を攻撃する。このスキルは再発動が可能。ドラゴンフォーム中は再発動が1回追加され、単体の敵に大ダメージを与える。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> シヴァーナの通常攻撃は、<OnHit>%i:OnHit%通常攻撃時</OnHit>に<magicDamage>@Calc_Max_Health_Damage@最大体力に応じた魔法ダメージ</magicDamage>を与える。さらにこのスキルのクールダウンが@Cooldown_Reduction@秒短縮される。<br><br><spellActive>発動効果:</spellActive> シヴァーナの次の通常攻撃が対象とその周囲に命中し、<physicalDamage>@Calc_Damage@の物理ダメージ</physicalDamage>を与える。このスキルは、通常攻撃後または短い時間経過後、@RecastDuration@秒以内であれば<recast>再発動</recast>できる。<br><br><keywordMajor>ドラゴンフォーム:</keywordMajor> 追加で<recast>再発動</recast>が可能になり、次の通常攻撃で対象に噛みついて<trueDamage>@Calc_Dragon_Form_Damage@の確定ダメージ</trueDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 通常攻撃が、<OnHit>%i:OnHit%通常攻撃時</OnHit>に<magicDamage>最大体力の@Calc_Max_Health_Damage@にあたる魔法ダメージ</magicDamage>を与える。さらにこのスキルのクールダウンが@Cooldown_Reduction@秒短縮される。<br><br><spellActive>発動効果:</spellActive> 次の通常攻撃が対象とその周囲に命中し、<physicalDamage>@Calc_Damage@の物理ダメージ</physicalDamage>を与える。このスキルは、通常攻撃後または少ししてから、@RecastDuration@秒以内であれば<recast>再発動</recast>できる。<br><br><keywordMajor>ドラゴンフォーム:</keywordMajor> 追加で<recast>再発動</recast>が可能になり、次の通常攻撃で対象に噛みついて<trueDamage>@Calc_Dragon_Form_Damage@の確定ダメージ</trueDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -921,7 +921,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "火球を放ち、大型の対象に命中すると爆発して、スロウ効果を付与する。ドラゴンフォーム中は敵を貫通し、大型の敵に命中すると爆発して、炎の軌跡を残す。",
-            "dynamicDescription": "指定地点に火球を放ち、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与え、@SlowDuration@秒間@Calc_Slow@の<status>スロウ効果</status>を付与する。敵に命中するか、終点に到達すると爆発する。<br><br><keywordMajor>ドラゴンフォーム:</keywordMajor> シヴァーナの火球が巨大化し、敵を貫通する。チャンピオン、大型モンスターに命中するか、終点に到達すると炎のパルスを発生させ、<magicDamage>@Calc_Dragon_Damage@の魔法ダメージ</magicDamage>を与え、<status>@SlowDuration@秒間@Calc_Slow_Dragon@のスロウ効果</status>を付与する。火球は@GroundLingerDuration@秒間、軌跡を残す。軌跡は<magicDamage>毎秒@DamagePerSecond@の魔法ダメージ</magicDamage>を与える。 @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "指定地点に火球を放ち、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与え、@SlowDuration@秒間@Calc_Slow@の<status>スロウ効果</status>を付与する。敵に命中するか、終点に到達すると爆発する。<br><br><keywordMajor>ドラゴンフォーム:</keywordMajor> 火球が巨大化し、敵を貫通する。チャンピオン、大型モンスターに命中するか、終点に到達すると炎のパルスを発生させ、<magicDamage>@Calc_Dragon_Damage@の魔法ダメージ</magicDamage>を与え、<status>@SlowDuration@秒間@Calc_Slow_Dragon@のスロウ効果</status>を付与する。火球は@GroundLingerDuration@秒間、軌跡を残す。軌跡は<magicDamage>毎秒@DamagePerSecond@の魔法ダメージ</magicDamage>を与える。 @SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1071,7 +1071,7 @@
             "cost": "<keywordMajor>ドラゴンフューリー</keywordMajor>100が必要",
             "cooldown": "クールダウン無し",
             "description": "ドラゴンに変身して前方にジャンプし、進路上の敵を逃走させる。ドラゴンフォーム中は巨大化し、通常スキルが強化される。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> シヴァーナは通常攻撃とスキルを敵に命中させると<keywordMajor>@Fury_Generation@ドラゴンフューリー</keywordMajor>を獲得する。この効果は<keywordMajor>ドラゴンフォーム</keywordMajor>中は@TT_Fury_Mult@増加し、チャンピオン以外に範囲攻撃を命中させた場合は@TT_Fury_AoE_Penalty@減少する。<br><br><spellActive>発動効果</spellActive>: <keywordMajor>ドラゴンフォーム</keywordMajor>に変身し、<attention>アンストッパブル状態</attention>になって指定した地点まで飛翔する。飛翔中に眼下の敵に炎を浴びせ、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与えて<status>@FearDuration@秒間逃走</status>させる。<br><br>変身中、シヴァーナの通常スキルが強化され、<scaleHealth>@Calc_Bonus_Health@の追加体力</scaleHealth>、サイズの増加、および攻撃射程の増加を獲得する。時間経過と共に<keywordMajor>ドラゴンフューリー</keywordMajor>は失われ、<keywordMajor>ドラゴンフューリー</keywordMajor>が尽きると変身状態が終了する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果</spellPassive>: 通常攻撃とスキルを敵に命中させると<keywordMajor>ドラゴンフューリーを@Fury_Generation@</keywordMajor>獲得する。この効果は<keywordMajor>ドラゴンフォーム</keywordMajor>中は@TT_Fury_Mult@増加し、チャンピオン以外に範囲攻撃を命中させた場合は@TT_Fury_AoE_Penalty@減少する。<br><br><spellActive>発動効果</spellActive>: <keywordMajor>ドラゴンフォーム</keywordMajor>に変身し、<attention>アンストッパブル状態</attention>になって指定した地点まで飛翔する。飛翔中に眼下の敵に炎を浴びせ、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与えて<status>@FearDuration@秒間逃走</status>させる。<br><br>変身中、シヴァーナの通常スキルが強化され、<scaleHealth>@Calc_Bonus_Health@の追加体力</scaleHealth>、スキル範囲、および射程距離の増加を獲得する。時間経過と共に<keywordMajor>ドラゴンフューリー</keywordMajor>は失われ、<keywordMajor>ドラゴンフューリー</keywordMajor>が尽きると変身状態が終了する。@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,

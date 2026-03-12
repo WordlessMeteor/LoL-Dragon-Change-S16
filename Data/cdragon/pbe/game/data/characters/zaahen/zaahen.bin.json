@@ -1307,26 +1307,26 @@
                 {
                     "name": "MonsterDamageCap",
                     "values": [
-                        100.0,
-                        100.0,
-                        100.0,
-                        100.0,
-                        100.0,
-                        100.0,
-                        100.0
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "MonsterDamageBonus",
                     "values": [
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2201,26 +2201,26 @@
                 {
                     "name": "InitialBaseDamage",
                     "values": [
-                        15.0,
-                        35.0,
-                        55.0,
-                        75.0,
-                        95.0,
-                        115.0,
-                        135.0
+                        20.0,
+                        40.0,
+                        60.0,
+                        80.0,
+                        100.0,
+                        120.0,
+                        140.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "SecondaryBaseDamage",
                     "values": [
-                        15.0,
-                        35.0,
-                        55.0,
-                        75.0,
-                        95.0,
-                        115.0,
-                        135.0
+                        10.0,
+                        30.0,
+                        50.0,
+                        70.0,
+                        90.0,
+                        110.0,
+                        130.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2261,7 +2261,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.4000000059604645,
+                            "mCoefficient": 0.5,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -2276,7 +2276,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.4000000059604645,
+                            "mCoefficient": 0.30000001192092896,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -2392,6 +2392,11 @@
                                 {
                                     "type": "InitialBaseDamage",
                                     "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SecondaryBaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
