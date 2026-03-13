@@ -1887,6 +1887,7 @@
                 "lifetime": 4.0,
                 "isSingleParticle": 1,
                 "emitterName": "ScreenSpace",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -1894,7 +1895,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{3368b8e9}"
+                            "LittleLegendA"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -2065,7 +2066,6 @@
                 "lifetime": 6.0,
                 "isSingleParticle": 1,
                 "emitterName": "Flash",
-                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -2189,6 +2189,130 @@
                 "isUniformScale": 1,
                 "texture": "ASSETS/Characters/Senna/Skins/Skin72/Particles/3161color-hold.SKINS_Senna_Skin72.tex",
                 "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 6.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.5,
+                "lifetime": 4.0,
+                "isSingleParticle": 1,
+                "emitterName": "darkFill",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "LittleLegendA"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "constantValue": [
+                        0.0,
+                        0.07058823853731155,
+                        0.09019608050584793,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.9034367799758911,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.07058823853731155,
+                                0.09019608050584793,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.07058823853731155,
+                                0.09019608050584793,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.07058823853731155,
+                                0.09019608050584793,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 15,
+                "alphaRef": 0,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.019955653697252274,
+                                0.6374796628952026,
+                                0.6936002969741821,
+                                0.9048923254013062,
+                                0.9761062860488892,
+                                1.0
+                            ],
+                            "values": [
+                                0.04054053872823715,
+                                0.04054053872823715,
+                                0.12367850542068481,
+                                0.8975011110305786,
+                                0.9870343208312988,
+                                0.9870343208312988
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionFeatherIn": 0.30000001192092896,
+                    "erosionFeatherOut": 0.30000001192092896,
+                    "erosionMapName": "ASSETS/Characters/Senna/Skins/Skin72/Particles/Senna_Ground_A_Errode.SKINS_Senna_Skin72.tex",
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "depthBiasFactors": [
+                    -1.0,
+                    -5.0
+                ],
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Characters/Senna/Skins/Skin72/Particles/color-hold.SKINS_Senna_Skin72.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        -0.20000000298023224,
+                        -0.10000000149011612
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texDiv": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "VfxEmitterDefinitionData"
             }
         ],
         "particleName": "Senna_Skin79_Z_Joke_PetC",
@@ -2227,9 +2351,9 @@
                 "blendMode": 1,
                 "Color": {
                     "constantValue": [
-                        0.27933165431022644,
-                        0.26431676745414734,
-                        0.3013351559638977,
+                        0.1444419026374817,
+                        0.08307011425495148,
+                        0.11613641679286957,
                         1.0
                     ],
                     "dynamics": {
@@ -2240,21 +2364,21 @@
                         ],
                         "values": [
                             [
-                                0.27933165431022644,
-                                0.26431676745414734,
-                                0.3013351559638977,
+                                0.1444419026374817,
+                                0.08307011425495148,
+                                0.11613641679286957,
                                 1.0
                             ],
                             [
-                                0.27933165431022644,
-                                0.26431676745414734,
-                                0.3013351559638977,
+                                0.1444419026374817,
+                                0.08307011425495148,
+                                0.11613641679286957,
                                 1.0
                             ],
                             [
-                                0.2761574387550354,
-                                0.26431676745414734,
-                                0.3013351559638977,
+                                0.14280052483081818,
+                                0.08307011425495148,
+                                0.11613641679286957,
                                 0.0
                             ]
                         ],
@@ -2262,7 +2386,7 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": 18,
+                "pass": 20,
                 "alphaRef": 0,
                 "alphaErosionDefinition": {
                     "erosionDriveCurve": {
@@ -2359,10 +2483,10 @@
                 "blendMode": 4,
                 "Color": {
                     "constantValue": [
-                        0.3761043846607208,
-                        0.35791561007499695,
-                        0.38840314745903015,
-                        0.20000000298023224
+                        0.5600060820579529,
+                        0.1900053471326828,
+                        0.4899977147579193,
+                        0.1900053471326828
                     ],
                     "dynamics": {
                         "times": [
@@ -2373,27 +2497,27 @@
                         ],
                         "values": [
                             [
-                                0.3761043846607208,
-                                0.35791561007499695,
-                                0.38840314745903015,
+                                0.5600060820579529,
+                                0.1900053471326828,
+                                0.4899977147579193,
                                 0.0
                             ],
                             [
-                                0.3761043846607208,
-                                0.35791561007499695,
-                                0.38840314745903015,
-                                0.20000000298023224
+                                0.5600060820579529,
+                                0.1900053471326828,
+                                0.4899977147579193,
+                                0.1900053471326828
                             ],
                             [
-                                0.3761043846607208,
-                                0.35791561007499695,
-                                0.38840314745903015,
-                                0.20000000298023224
+                                0.5600060820579529,
+                                0.1900053471326828,
+                                0.4899977147579193,
+                                0.1900053471326828
                             ],
                             [
-                                0.3761043846607208,
-                                0.35791561007499695,
-                                0.38840314745903015,
+                                0.5600060820579529,
+                                0.1900053471326828,
+                                0.4899977147579193,
                                 0.0
                             ]
                         ],
@@ -2401,7 +2525,7 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": 20,
+                "pass": 21,
                 "alphaErosionDefinition": {
                     "erosionDriveCurve": {
                         "dynamics": {
@@ -31299,6 +31423,7 @@
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "darkEdges",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -31465,6 +31590,7 @@
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "stoneDrainWhite",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -31663,6 +31789,7 @@
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "stoneDrainBlack",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -35452,6 +35579,724 @@
                     2.0
                 ],
                 "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.30000001192092896,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "stoneDrainWhite1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        -0.0010000000474974513,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Gun_Barrel_White"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "Gun_Barrel_White"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.006651884876191616,
+                            0.10000000149011612,
+                            0.9456276893615723,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 4,
+                "alphaRef": 0,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "constantValue": -1.0,
+                        "dynamics": {
+                            "times": [
+                                0.0,
+                                0.03589766100049019,
+                                0.13188277184963226,
+                                0.16499534249305725,
+                                0.19604037702083588,
+                                0.2288316935300827,
+                                0.27110713720321655,
+                                0.30421972274780273,
+                                0.3751242160797119,
+                                0.41265180706977844,
+                                0.47390586137771606,
+                                0.6695936918258667,
+                                0.8321031928062439,
+                                1.0
+                            ],
+                            "values": [
+                                -0.0,
+                                -0.08455076813697815,
+                                -0.6282685995101929,
+                                -0.7142074704170227,
+                                -0.6804236769676208,
+                                -0.7952885031700134,
+                                -0.7547479867935181,
+                                -0.8265157341957092,
+                                -0.7929145097732544,
+                                -0.8265157341957092,
+                                -0.7982915639877319,
+                                -0.5803506374359131,
+                                -0.20733968913555145,
+                                -0.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionFeatherIn": 0.05000000074505806,
+                    "erosionFeatherOut": 0.05000000074505806,
+                    "erosionSliceWidth": 1.100000023841858,
+                    "erosionMapName": "ASSETS/Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_charErosions.SKINS_Senna_Skin72.tex",
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "erosionMapAddressMode": 0,
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "depthBiasFactors": [
+                    -1.0,
+                    -12.0
+                ],
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Characters/Senna/Skins/Skin72/Senna_Skin72_Gun_TX_CM.SKINS_Senna_Skin72.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 4.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.30000001192092896,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "stoneDrain2",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        -0.0010000000474974513,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Gun_Barrel_White",
+                            "Gun_Barrel_Black"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "Gun_Barrel_White",
+                            "Gun_Barrel_Black"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.006651884876191616,
+                            0.10000000149011612,
+                            0.9456276893615723,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 5,
+                "alphaRef": 0,
+                "reflectionDefinition": {
+                    "reflectionFresnelColor": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "fresnel": 2.0,
+                    "fresnelColor": [
+                        1.0,
+                        0.30980393290519714,
+                        0.7358815670013428,
+                        1.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "depthBiasFactors": [
+                    -1.0,
+                    -12.0
+                ],
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Characters/Senna/Skins/Skin72/Senna_Skin72_Gun_TX_CM.SKINS_Senna_Skin72.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin72/Particles/causticMist.SKINS_Senna_Skin72.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.10000000149011612,
+                            -0.20000000298023224
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.5,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 4.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.30000001192092896,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "mistAabsorbed2",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        -0.0010000000474974513,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Gun_Barrel_White",
+                            "Gun_Barrel_Black"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "Gun_Barrel_White",
+                            "Gun_Barrel_Black"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.20935377478599548,
+                        0.10148775577545166,
+                        0.15410086512565613,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.08869179338216782,
+                            0.8081554174423218,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 1,
+                "alphaRef": 0,
+                "depthBiasFactors": [
+                    -1.0,
+                    -12.0
+                ],
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Characters/Senna/Skins/Skin72/Particles/causticMist.SKINS_Senna_Skin72.tex",
+                "uvMode": 1,
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        0.20000000298023224
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin72/Particles/causticMist.SKINS_Senna_Skin72.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.25,
+                            0.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.5,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 4.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.30000001192092896,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "darkEdges1",
+                "disabled": true,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        -0.0010000000474974513,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Gun_Barrel_White",
+                            "Gun_Barrel_Black"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "Gun_Barrel_White",
+                            "Gun_Barrel_Black"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 2,
+                "Color": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.9456276893615723,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 2,
+                "alphaRef": 0,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "constantValue": -1.0,
+                        "dynamics": {
+                            "times": [
+                                0.0,
+                                0.05574707314372063,
+                                0.1601104438304901,
+                                0.239935964345932,
+                                0.4219795763492584,
+                                0.5178700089454651,
+                                0.8675799369812012,
+                                1.0
+                            ],
+                            "values": [
+                                -1.0,
+                                -0.8692810535430908,
+                                -0.42757463455200195,
+                                -0.28378379344940186,
+                                -0.28378379344940186,
+                                -0.39489489793777466,
+                                -0.8627451062202454,
+                                -1.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionFeatherIn": 0.0,
+                    "erosionSliceWidth": 0.800000011920929,
+                    "erosionMapName": "ASSETS/Characters/Senna/Skins/Skin72/Particles/Senna_Ground_A_Errode.SKINS_Senna_Skin72.tex",
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "erosionMapAddressMode": 0,
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "reflectionDefinition": {
+                    "reflectionFresnelColor": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.0
+                    ],
+                    "fresnel": 0.10000000149011612,
+                    "fresnelColor": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "depthBiasFactors": [
+                    -1.0,
+                    -12.0
+                ],
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Characters/Senna/Skins/Skin72/Particles/Senna_Ground_A_Errode.SKINS_Senna_Skin72.tex",
+                "paletteDefinition": {
+                    "paletteTexture": "ASSETS/Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_colorGrad.SKINS_Senna_Skin72.tex",
+                    "paletteSelector": {
+                        "constantValue": [
+                            7.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "paletteCount": 32,
+                    "__type": "VfxPaletteDefinitionData"
+                },
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        0.20000000298023224
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin72/Particles/Senna_Ground_A_Errode.SKINS_Senna_Skin72.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            1.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.30000001192092896,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "stoneDrainBlack1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        -0.0010000000474974513,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Gun_Barrel_Black"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "Gun_Barrel_Black"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.9456276893615723,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 4,
+                "alphaRef": 0,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "constantValue": -0.699999988079071,
+                        "dynamics": {
+                            "times": [
+                                0.0,
+                                0.03589766100049019,
+                                0.13188277184963226,
+                                0.16499534249305725,
+                                0.19604037702083588,
+                                0.2288316935300827,
+                                0.27110713720321655,
+                                0.30421972274780273,
+                                0.3751242160797119,
+                                0.41265180706977844,
+                                0.47390586137771606,
+                                0.6695936918258667,
+                                0.8321031928062439,
+                                1.0
+                            ],
+                            "values": [
+                                -0.0,
+                                -0.059185538440942764,
+                                -0.43978801369667053,
+                                -0.4999452233314514,
+                                -0.4762965738773346,
+                                -0.5567019581794739,
+                                -0.5283235907554626,
+                                -0.578561007976532,
+                                -0.555040180683136,
+                                -0.578561007976532,
+                                -0.5588040947914124,
+                                -0.4062454402446747,
+                                -0.14513778686523438,
+                                -0.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionFeatherIn": 0.05000000074505806,
+                    "erosionFeatherOut": 0.05000000074505806,
+                    "erosionSliceWidth": 1.100000023841858,
+                    "erosionMapName": "ASSETS/Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_charErosions.SKINS_Senna_Skin72.tex",
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "erosionMapAddressMode": 0,
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "depthBiasFactors": [
+                    -1.0,
+                    -12.0
+                ],
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Characters/Senna/Skins/Skin72/Senna_Skin72_Gun_TX_CM.SKINS_Senna_Skin72.tex",
+                "__type": "VfxEmitterDefinitionData"
             }
         ],
         "visibilityRadius": 3000.0,
@@ -36843,127 +37688,127 @@
     },
     "Characters/Senna/Skins/Skin79/Resources": {
         "resourceMap": {
-            "Senna_R_Tar": "{8c26536d}",
-            "Senna_W_hit": "{d053621a}",
+            "Senna_R_Tar": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_R_Hit",
+            "Senna_W_hit": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_W_hit",
             "Senna_W_Cas": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_W_Cas",
-            "Senna_W_AoE": "{e7d1b9e4}",
-            "Senna_W_hit_impact": "{589b9670}",
-            "Senna_W_Root": "{b303f9f5}",
-            "Senna_BA_warning": "{c973c24e}",
-            "Senna_P_soulSteal": "{44eb74d4}",
-            "Senna_W_Mis": "{9a0ff380}",
-            "Senna_P_soul_ready": "{f5644a50}",
-            "Senna_BA_Hit": "{42b42413}",
+            "Senna_W_AoE": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_W_AoE",
+            "Senna_W_hit_impact": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_W_HitImpact",
+            "Senna_W_Root": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_W_Root",
+            "Senna_BA_warning": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_BAWarning",
+            "Senna_P_soulSteal": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_P_soulSteal",
+            "Senna_W_Mis": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_W_Mis",
+            "Senna_P_soul_ready": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_P_SoulReady",
+            "Senna_BA_Hit": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_BAHit",
             "{44c62f3c}": "Characters/Senna/Skins/Skin0/Particles/Senna_Base_Q_Warning",
-            "Senna_Q_AOE": "{f6c9b25e}",
-            "Senna_Q_hitFlash": "{74a49cba}",
-            "Senna_P_soul": "{dd16cb09}",
-            "Senna_R_centerBeam": "{3667ad16}",
-            "Senna_R_Shield": "{a23e0911}",
-            "Senna_R_areaWarning": "{aa56db33}",
-            "{3571f10b}": "{4fe8821c}",
-            "Senna_E_ShadowPerson": "{72ff66fe}",
-            "Senna_E_Ally_mistBuffed": "{3439c3c4}",
+            "Senna_Q_AOE": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Q_AOE",
+            "Senna_Q_hitFlash": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Q_hitFlash",
+            "Senna_P_soul": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_P_soul",
+            "Senna_R_centerBeam": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_R_centerBeam",
+            "Senna_R_Shield": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_R_Shield",
+            "Senna_R_areaWarning": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_R_areaWarning",
+            "{3571f10b}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_AllyEnterMist",
+            "Senna_E_ShadowPerson": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_ShadowPerson",
+            "Senna_E_Ally_mistBuffed": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_AllyMistBuffed",
             "Senna_R_Cast": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_R_Cast",
-            "Senna_Q_Cast": "{e69196a0}",
-            "Senna_BA_Avatar": "{bb81e7d3}",
+            "Senna_Q_Cast": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Q_Cast",
+            "Senna_BA_Avatar": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_BAAvatar",
             "Senna_E_mistArea": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_E_mistArea",
-            "Senna_Q_tacLight": "{9c839bb3}",
-            "Senna_Q_tacLight_beam": "{f52a0eec}",
-            "Senna_Q_hitFlash_heal": "{e658d33c}",
+            "Senna_Q_tacLight": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Q_tacLight",
+            "Senna_Q_tacLight_beam": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Q_TacLightBeam",
+            "Senna_Q_hitFlash_heal": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Q_HitFlashHeal",
             "Senna_R_areaWarning_tendrils": "Characters/Senna/Skins/Skin0/Particles/Senna_Base_R_areaWarning_tendrils",
-            "Senna_Idle_capeMist": "{b3ce7e88}",
+            "Senna_Idle_capeMist": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Idle_capeMist",
             "Senna_Idle_lightCrystal": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_Idle_lightCrystal",
-            "Senna_E_cas": "{f67b41d0}",
+            "Senna_E_cas": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_cas",
             "Senna_Q_Warning": "Characters/Senna/Skins/Skin0/Particles/Senna_Base_Q_Warning",
-            "Senna_Q_Warning_enemy": "{23e408f7}",
-            "Senna_Q_Warning_Ally": "{1e62ae1b}",
-            "Senna_E_mist_buffedAllyPOV": "{5f966269}",
-            "Senna_E_mistArea_outro": "{34fb7776}",
-            "Senna_E_mistArea_enemyPov": "{9cd5f026}",
-            "Senna_E_Senna_Soul": "{be709ae8}",
-            "Senna_E_Ally_mistBuffed_Ring": "{af1be61e}",
-            "Senna_E_CameraVFX": "{7f4e09c8}",
+            "Senna_Q_Warning_enemy": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Q_WarningEnemy",
+            "Senna_Q_Warning_Ally": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Q_WarningAlly",
+            "Senna_E_mist_buffedAllyPOV": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_MistBuffedAllyPOV",
+            "Senna_E_mistArea_outro": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_MistAreaOutro",
+            "Senna_E_mistArea_enemyPov": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_MistAreaEnemyPov",
+            "Senna_E_Senna_Soul": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_Senna_Soul",
+            "Senna_E_Ally_mistBuffed_Ring": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_AllyMistBuffedRing",
+            "Senna_E_CameraVFX": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_CameraVFX",
             "Senna_E_Senna_smokeTrail": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_E_Senna_smokeTrail",
-            "Senna_E_ShadowPerson_trail": "{63016aea}",
-            "Senna_E_ShadowPerson_Arm_01": "{53e52e33}",
-            "Senna_E_ShadowPerson_Arm_02": "{54e52fc6}",
-            "Senna_E_ShadowPerson_Arm_03": "{55e53159}",
-            "Senna_E_ShadowPerson_Arm_04": "{56e532ec}",
+            "Senna_E_ShadowPerson_trail": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_ShadowPersonTrail",
+            "Senna_E_ShadowPerson_Arm_01": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_ShadowPersonArm01",
+            "Senna_E_ShadowPerson_Arm_02": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_ShadowPersonArm02",
+            "Senna_E_ShadowPerson_Arm_03": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_ShadowPersonArm03",
+            "Senna_E_ShadowPerson_Arm_04": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_ShadowPersonArm04",
             "Senna_E_mistArea_wave": "Characters/Senna/Skins/Skin0/Particles/Senna_Base_E_mistArea_wave",
-            "Senna_E_Ally_mistBuff_Pop": "{445f56a8}",
+            "Senna_E_Ally_mistBuff_Pop": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_AllyMistBuffPop",
             "Senna_E_mistArea_Pop": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_E_MistAreaPop",
-            "{7038c479}": "{3c09c036}",
-            "{5cd1fd53}": "{63b1b7fd}",
-            "Senna_E_mistArea_Attacking": "{4f1625a5}",
-            "Senna_E_shadowPerson_dispel": "{61a22e1f}",
-            "Senna_P_purifiedSoul": "{b7b41f07}",
+            "{7038c479}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_homeguardRun",
+            "{5cd1fd53}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_HomeguardRunSmokeTrail",
+            "Senna_E_mistArea_Attacking": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_MistAreaAttacking",
+            "Senna_E_shadowPerson_dispel": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_ShadowPersonDispel",
+            "Senna_P_purifiedSoul": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_P_purifiedSoul",
             "Senna_P_purifiedSoul_avatar": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_P_PurifiedSoulAvatar",
-            "Senna_Idle_GunSmoke": "{1ecb6e2d}",
-            "{1b2ec8b9}": "{379e0c57}",
-            "Senna_P_Soul_Spawn": "{50141aa4}",
-            "Senna_P_Soul_Land": "{f2c40808}",
-            "Senna_P_Soul_Death": "{8f1ebf90}",
+            "Senna_Idle_GunSmoke": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Idle_GunSmoke",
+            "{1b2ec8b9}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Idle_capeTrail",
+            "Senna_P_Soul_Spawn": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_P_SoulSpawn",
+            "Senna_P_Soul_Land": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_P_SoulLand",
+            "Senna_P_Soul_Death": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_P_Soul_Death",
             "{06232f98}": "Characters/Senna/CAC/Senna_Conversation_Base",
-            "Senna_BA_muzzleFlash": "{2e81c1b7}",
-            "Senna_BA_chargeUp": "{fc757d4f}",
-            "Senna_R_Hit_ally": "{1a07797f}",
-            "Senna_P_Soul_Take": "{a5186c7a}",
-            "Senna_R_Cast_muzzle": "{1b298656}",
-            "Senna_Q_hitFlash_heal_Avatar": "{e8b766c5}",
-            "Senna_Q_hitFlash_Avatar": "{cedcf44b}",
-            "Senna_E_ShadowPerson_Scratch_01": "{aa785727}",
-            "Senna_P_Soul_Spawn_EnemyPov": "{d80268f9}",
-            "Senna_Recall_Avatar": "{fa57db36}",
+            "Senna_BA_muzzleFlash": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_BAMuzzleFlash",
+            "Senna_BA_chargeUp": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_BAChargeUp",
+            "Senna_R_Hit_ally": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_R_HitAlly",
+            "Senna_P_Soul_Take": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_P_SoulTake",
+            "Senna_R_Cast_muzzle": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_R_CastMuzzle",
+            "Senna_Q_hitFlash_heal_Avatar": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Q_HitFlashHealAvatar",
+            "Senna_Q_hitFlash_Avatar": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Q_HitFlashAvatar",
+            "Senna_E_ShadowPerson_Scratch_01": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_ShadowPersonScratch01",
+            "Senna_P_Soul_Spawn_EnemyPov": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_P_SoulSpawnEnemyPov",
+            "Senna_Recall_Avatar": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Recall_Avatar",
             "Senna_P_Soul_SFX_OnKill": "Characters/Senna/Skins/Skin0/Particles/Senna_Base_P_Soul_SFX_OnKill",
-            "Senna_Recall_Spinner": "{c5319eac}",
-            "Senna_Recall_avatar_sennaEmbers": "{79bb27f9}",
-            "Senna_Recall_CrystalEmbers": "{c2e4bf5f}",
-            "Senna_R_areaWarning_enemy": "{da0c3a19}",
-            "Senna_Recall_innerLight": "{c1383923}",
-            "Senna_E_Ally_mistBuffed_outside": "{9a8b2523}",
-            "Senna_R_holyWave": "{3b0cb317}",
-            "Senna_E_Ally_mistBuffed_outside_Blue": "{15f9a517}",
-            "Senna_W_AoE_Enemy": "{b94ded98}",
-            "Senna_P_Soul_Land_Enemy": "{532be0e4}",
+            "Senna_Recall_Spinner": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Recall_Spinner",
+            "Senna_Recall_avatar_sennaEmbers": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Recall_AvatarSennaEmbers",
+            "Senna_Recall_CrystalEmbers": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Recall_CrystalEmbers",
+            "Senna_R_areaWarning_enemy": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_R_AreaWarningEnemy",
+            "Senna_Recall_innerLight": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Recall_innerLight",
+            "Senna_E_Ally_mistBuffed_outside": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_AllyMistBuffedOutside",
+            "Senna_R_holyWave": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_R_holyWave",
+            "Senna_E_Ally_mistBuffed_outside_Blue": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_AllyMistBuffedOutsideBlue",
+            "Senna_W_AoE_Enemy": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_W_AoEEnemy",
+            "Senna_P_Soul_Land_Enemy": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_P_SoulLandEnemy",
             "Senna_Z_Joke": "Characters/Senna/Skins/Skin0/Particles/Senna_Base_Z_Joke",
             "Senna_Z_Joke_TFT_Portal": "Characters/Senna/Skins/Skin0/Particles/Senna_Base_Z_Joke_TFT_Portal",
-            "Senna_E_cas_onSenna": "{2e838d98}",
-            "Senna_E_cas_reEnter": "{9f4ae699}",
+            "Senna_E_cas_onSenna": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_CasOnSenna",
+            "Senna_E_cas_reEnter": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_E_CasReEnter",
             "Senna_Z_Joke_Pet_A": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_Z_Joke_PetA",
-            "Senna_Z_Joke_Pet_B": "{c447f071}",
+            "Senna_Z_Joke_Pet_B": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_Joke_PetB",
             "Senna_Z_Joke_Pet_C": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_Z_Joke_PetC",
-            "Senna_Z_Joke_Pet_Trail": "{c091810a}",
-            "Senna_Z_Joke_Pet_Disapear": "{93cea732}",
+            "Senna_Z_Joke_Pet_Trail": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_Joke_PetTrailA",
+            "Senna_Z_Joke_Pet_Disapear": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_Joke_PetDisapear",
             "Senna_Z_Taunt": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_Z_Taunt",
-            "Senna_Z_Taunt_Drips": "{2d4929d7}",
-            "Senna_Z_Taunt_Tendies": "{e0aaeaf7}",
-            "Senna_Z_Joke_Pet_Revealed_A": "{c81d2d2c}",
+            "Senna_Z_Taunt_Drips": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_Taunt_Drips",
+            "Senna_Z_Taunt_Tendies": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_Taunt_Tendies",
+            "Senna_Z_Joke_Pet_Revealed_A": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_Joke_PetRevealedA",
             "Senna_Z_Death": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_Z_Death",
-            "Senna_Z_Death_Core": "{64cbaaac}",
-            "Senna_Z_Death_innerLight": "{9409e84b}",
-            "Senna_Idle_GunSmoke_Child": "{cb568425}",
-            "Senna_Idle_Cape_Brief": "{f566bc23}",
-            "Senna_Z_Death_Hole": "{f7d140a1}",
-            "Senna_R_Cast_Child": "{5ade6ba7}",
+            "Senna_Z_Death_Core": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_Death_Core",
+            "Senna_Z_Death_innerLight": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_Death_innerLight",
+            "Senna_Idle_GunSmoke_Child": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Idle_GunSmokeChild",
+            "Senna_Idle_Cape_Brief": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Idle_CapeBrief",
+            "Senna_Z_Death_Hole": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_Death_Hole",
+            "Senna_R_Cast_Child": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_R_CastChild",
             "{192f0250}": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_W_MisChild",
             "{ee477d85}": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_W_MIsChildChild00",
-            "{72e5d556}": "{a2224413}",
+            "{72e5d556}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Q_WarningAllyChild",
             "{fb250022}": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_R_CastChildRminicast",
-            "{11a543c7}": "{85096e79}",
-            "{c7e4563b}": "{4f8dff11}",
+            "{11a543c7}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_SmokePush",
+            "{c7e4563b}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_FireInHead",
             "{da38869e}": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_Z_Drive",
-            "{fe095b5f}": "{8bce6f5f}",
-            "{420963e2}": "{e56cd2e7}",
+            "{fe095b5f}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_ExhaustPipeSmoke",
+            "{420963e2}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_GroundFire",
             "{c9f31f15}": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_Z_MotoSeat",
             "{7b719b02}": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_Z_Start",
-            "{dc2ea249}": "{3e22d8b2}",
-            "{de2ea56f}": "{3822cf40}",
-            "{dd2ea3dc}": "{3922d0d3}",
-            "{9947dd69}": "{d58b265c}",
+            "{dc2ea249}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_W_MisChild04",
+            "{de2ea56f}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_W_MisChild02",
+            "{dd2ea3dc}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_W_MisChild03",
+            "{9947dd69}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_WindSwipe",
             "{0de62b97}": "{00000000}",
             "{cd34e943}": "Characters/Senna/Skins/Skin79/Particles/Senna_Skin79_Idle_FlameHair",
-            "{1a65d089}": "{1f8a11f4}"
+            "{1a65d089}": "Characters/Senna/Skins/Skin72/Particles/Senna_Skin72_Z_SmokePipemoto"
         },
         "__type": "ResourceResolver"
     },

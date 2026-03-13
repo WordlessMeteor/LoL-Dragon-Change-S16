@@ -44801,76 +44801,8 @@
         "__type": "CustomShaderDef"
     },
     "Shaders/SkinnedMesh/TFT_Jelly_ChampTiers": {
-        "ShadingModel": "{baebc346}",
+        "ShadingModel": "{14b3e471}",
         "parameters": [
-            {
-                "name": "albedoNewMin",
-                "data": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "albedoNewMin",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "albedoNewMax",
-                "data": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "albedoNewMax",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "rimOffset",
-                "data": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "rimOffset",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "modelHeight",
-                "data": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "modelHeight",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
             {
                 "name": "Light_Intensity",
                 "data": [
@@ -45002,6 +44934,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "MatCap_Alpha_Power",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "MatCap_Alpha_Power",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Dissolve_SmoothStep",
                 "data": [
                     0.0,
@@ -45120,23 +45069,6 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "MatCap_Intensity",
-                "data": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "MatCap_Intensity",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
                 "name": "Diffuse_Tint_Color",
                 "data": [
                     1.0,
@@ -45148,6 +45080,23 @@
                     {
                         "name": "Diffuse_Tint_Color",
                         "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "MatCap_Intensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "MatCap_Intensity",
+                        "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
                 ],
@@ -45218,21 +45167,19 @@
         ],
         "staticSwitches": [
             {
-                "name": "USE_RIM",
-                "onByDefault": true,
-                "__type": "ShaderStaticSwitch"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "onByDefault": true,
-                "__type": "ShaderStaticSwitch"
-            },
-            {
                 "name": "ADD_BEAUTY_SHADOW",
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "ADD_MATCAP_TO_ALPHA",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "USE_SCALAR_MATCAP",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "MATCAP_INTENSITY__MULT",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -45270,16 +45217,6 @@
         ],
         "textures": [
             {
-                "name": "Diffuse_Texture",
-                "defaultTexturePath": "ASSETS/Characters/Lulu/Skins/Base/Lulu_base_TX_CM.tex",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "Light_Mask",
-                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
-                "__type": "ShaderTexture"
-            },
-            {
                 "name": "MatCap_Texture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/MatCap_BS0.tex",
                 "__type": "ShaderTexture"
@@ -45288,10 +45225,19 @@
                 "name": "Mask_Texture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "ShaderTexture"
+            },
+            {
+                "name": "Diffuse_Texture",
+                "defaultTexturePath": "ASSETS/Characters/Lulu/Skins/Base/Lulu_base_TX_CM.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Light_Mask",
+                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "ShaderTexture"
             }
         ],
         "featureDefines": {
-            "DEBUG_USES_LINEAR_SPACE": "1",
             "FEATURE_BLOOM": "1",
             "FEATURE_SHADOW": "1",
             "FEATURE_WORLD_NORMAL": "1",

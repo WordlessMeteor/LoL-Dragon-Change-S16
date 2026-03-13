@@ -2835,6 +2835,16 @@
         ],
         "paramValues": [
             {
+                "name": "MatCap_Alpha_Power",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Bloom_Intensity",
                 "value": [
                     1.0,
@@ -3033,6 +3043,18 @@
         ],
         "switches": [
             {
+                "name": "ADD_MATCAP_TO_ALPHA",
+                "on": false,
+                "Group": "MatCap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MATCAP_INTENSITY__MULT",
+                "on": false,
+                "Group": "MatCap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "ADD_BEAUTY_LIGHTING",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -3072,11 +3094,13 @@
             {
                 "name": "USE_SCALAR_MATCAP",
                 "on": false,
+                "Group": "MatCap",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "USE_MULT_BLEND_MATCAP",
                 "on": false,
+                "Group": "MatCap",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],
