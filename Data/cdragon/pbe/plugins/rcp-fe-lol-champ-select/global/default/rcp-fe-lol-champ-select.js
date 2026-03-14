@@ -2583,7 +2583,7 @@
                         i = () => {
                             this.runTask((() => {
                                 if (this.get("champSelectMusicFile") !== n || t.isPlaying()) return void this.removeObserver("session.timer.timeRemaining", this, i);
-                                const s = this.get("session.timer.timeRemaining");
+                                const s = this.get("session.timer.inBanPickPhase") ? this.get("session.timer.timeRemaining") + 45 : this.get("session.timer.timeRemaining");
                                 s && (this.removeObserver("session.timer.timeRemaining", this, i), t.play({
                                     offset: Math.max(e / 1e3 - s, 0),
                                     when: Math.max(s - e / 1e3, 0)

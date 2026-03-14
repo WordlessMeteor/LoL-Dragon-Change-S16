@@ -661,6 +661,7 @@
                     "mAnimationFilePath": "ASSETS/Characters/ShyvanaDragon/Skins/Base/Animations/Spell1_Wing_to_Run.Shyvana_Rework.anm",
                     "__type": "AnimationResourceData"
                 },
+                "startFrame": 7.0,
                 "__type": "AtomicClipData"
             },
             "Attack1_To_Run": {
@@ -796,7 +797,7 @@
                     },
                     "{ce0a98cc}": {
                         "mStartFrame": 52.0,
-                        "mEffectKey": "{622e1091}",
+                        "mEffectKey": "ShyvanaDragon_Recall_HeadFire",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "c_buffbone_glb_head_loc",
@@ -807,7 +808,7 @@
                     },
                     "{cd54b7c5}": {
                         "mStartFrame": 133.0,
-                        "mEffectKey": "{58267c2c}",
+                        "mEffectKey": "ShyvanaDragon_Recall_WingL",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{b66c9dbb}",
@@ -822,7 +823,7 @@
                     },
                     "{df54d41b}": {
                         "mStartFrame": 133.0,
-                        "mEffectKey": "{6e269ece}",
+                        "mEffectKey": "ShyvanaDragon_Recall_WingR",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{3c37c065}",
@@ -848,7 +849,7 @@
                     },
                     "{335d99d5}": {
                         "mStartFrame": 210.0,
-                        "mEffectKey": "{58267c2c}",
+                        "mEffectKey": "ShyvanaDragon_Recall_WingL",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{b66c9dbb}",
@@ -863,7 +864,7 @@
                     },
                     "{bb89fc8b}": {
                         "mStartFrame": 210.0,
-                        "mEffectKey": "{6e269ece}",
+                        "mEffectKey": "ShyvanaDragon_Recall_WingR",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{3c37c065}",
@@ -959,7 +960,7 @@
                     },
                     "{b73a53c5}": {
                         "mStartFrame": 29.0,
-                        "mEffectKey": "{901d1051}",
+                        "mEffectKey": "ShyvanaDragon_Winddown",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "C_Buffbone_GLB_Layout_Loc",
@@ -1193,8 +1194,26 @@
                 },
                 "mChangeAnimationMidPlay": true,
                 "mTrueConditionClipName": "Homeguard",
-                "mFalseConditionClipName": "Run_Slow",
+                "mFalseConditionClipName": "{c380648a}",
                 "__type": "ConditionBoolClipData"
+            },
+            "{c380648a}": {
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Slow",
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Homeguard",
+                        "mValue": 446.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "MoveSpeedParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
             }
         },
         "mMaskDataMap": {
@@ -2565,15 +2584,15 @@
                 "__type": "TimeBlendData"
             },
             "7827523572997379355": {
-                "mTime": 0.0,
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "7827523570096476446": {
-                "mTime": 0.0,
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "7827523570079698827": {
-                "mTime": 0.0,
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "2075725347541832987": {
@@ -8062,6 +8081,10 @@
             },
             "13793459114272740714": {
                 "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "14087370180422202259": {
+                "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
             "9259107431367134467": {

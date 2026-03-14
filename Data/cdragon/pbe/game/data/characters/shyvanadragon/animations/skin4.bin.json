@@ -656,6 +656,7 @@
                     "mAnimationFilePath": "ASSETS/Characters/ShyvanaDragon/Skins/Base/Animations/Spell1_Wing_to_Run.Shyvana_Rework.anm",
                     "__type": "AnimationResourceData"
                 },
+                "startFrame": 7.0,
                 "__type": "AtomicClipData"
             },
             "Attack1_To_Run": {
@@ -1122,8 +1123,26 @@
                 },
                 "mChangeAnimationMidPlay": true,
                 "mTrueConditionClipName": "Homeguard",
-                "mFalseConditionClipName": "Run_Slow",
+                "mFalseConditionClipName": "{c380648a}",
                 "__type": "ConditionBoolClipData"
+            },
+            "{c380648a}": {
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Slow",
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Homeguard",
+                        "mValue": 446.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "MoveSpeedParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
             }
         },
         "mMaskDataMap": {
@@ -2096,15 +2115,15 @@
                 "__type": "TimeBlendData"
             },
             "7827523572997379355": {
-                "mTime": 0.0,
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "7827523570096476446": {
-                "mTime": 0.0,
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "7827523570079698827": {
-                "mTime": 0.0,
+                "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
             "2075725347541832987": {
@@ -7593,6 +7612,10 @@
             },
             "13793459114272740714": {
                 "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "14087370180422202259": {
+                "mTime": 0.0,
                 "__type": "TimeBlendData"
             }
         },
