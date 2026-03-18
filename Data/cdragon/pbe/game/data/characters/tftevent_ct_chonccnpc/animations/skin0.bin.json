@@ -927,6 +927,278 @@
                     "Cast_To_Idle"
                 ],
                 "__type": "SequencerClipData"
+            },
+            "Run_Base": {
+                "mTrackDataName": "Default",
+                "mTickDuration": 0.5,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFTEvent_CT_ChonccNPC/Skins/Base/Animations/TFTEvent_CT_ChonccNPC_Run.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Run": {
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Base",
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
+                "Updater": {
+                    "__type": "MoveSpeedParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "__type": "ConditionFloatClipData"
+            },
+            "Run_To_Idle": {
+                "mTrackDataName": "Default",
+                "mTickDuration": 0.5,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFTEvent_CT_ChonccNPC/Skins/Base/Animations/TFTEvent_CT_ChonccNPC_Run_to_Idle.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Idle_To_Run": {
+                "mTrackDataName": "Default",
+                "mTickDuration": 0.5,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFTEvent_CT_ChonccNPC/Skins/Base/Animations/TFTEvent_CT_ChonccNPC_Idle_to_Run.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{7cb45153}": {
+                "mClipNameList": [
+                    "Dance_In",
+                    "{946f0726}"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "{946f0726}": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{a97c2af4}": {
+                        "mSoundName": "Play_sfx_TFTEvent_CT_ChonccNPC_dance_loop3d",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{079cf037}": {
+                        "mStartFrame": 4.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_TailSlap",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "tail4",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{089cf1ca}": {
+                        "mStartFrame": 46.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_TailSlap",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "tail4",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{099cf35d}": {
+                        "mStartFrame": 57.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_TailSlap",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "tail4",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{029ce858}": {
+                        "mStartFrame": 172.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_TailSlap",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "tail4",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsKillEvent": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "{a1f6f291}": {
+                        "mStartFrame": 90.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_TailSlap",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "tail4",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{6bb8ed0e}": {
+                        "mStartFrame": 23.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_Dance_Clap",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "r_finger2",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{d01d7574}": {
+                        "mStartFrame": 67.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_Dance_Clap",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "r_finger2",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{d11d7707}": {
+                        "mStartFrame": 112.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_Dance_Clap",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "r_finger2",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{ce1d724e}": {
+                        "mStartFrame": 157.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_Dance_Clap",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "r_finger2",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{a6da4b66}": {
+                        "mStartFrame": 124.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_Dance",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "R_Buffbone_Glb_Hand_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{a5da49d3}": {
+                        "mStartFrame": 131.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_Dance",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "l_buffbone_glb_hand_loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{a4da4840}": {
+                        "mStartFrame": 142.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_Dance",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "R_Buffbone_Glb_Hand_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{abda5345}": {
+                        "mStartFrame": 147.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_Dance",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "l_buffbone_glb_hand_loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{06ad8d51}": {
+                        "mStartFrame": 96.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_GLB_Layout_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "scale": 2.0,
+                        "__type": "ParticleEventData"
+                    },
+                    "{c150e813}": {
+                        "mStartFrame": 90.0,
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_GLB_Layout_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{16ead1fd}": {
+                        "mStartFrame": 124.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_Joke_04",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_VFXBellyR_loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{1b3e1a6d}": {
+                        "mStartFrame": 140.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_Joke_01",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_VFXBellyR_loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{13eacd44}": {
+                        "mStartFrame": 130.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_Joke_04",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_VFXBellyL_loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{14eaced7}": {
+                        "mStartFrame": 147.0,
+                        "mEffectKey": "TFTEvent_CT_ChonccNPC_Joke_04",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_VFXBellyL_loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFTEvent_CT_ChonccNPC/Skins/Base/Animations/TFTEvent_CT_ChonccNPC_Dance_Loop.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
             }
         },
         "mTrackDataMap": {

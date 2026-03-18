@@ -1168,7 +1168,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "올라프가 지정한 곳에 도끼를 던져 맞은 적에게 피해를 입히고 방어력과 이동 속도를 감소시킵니다. 올라프가 도끼를 다시 집으면 이 스킬의 재사용 대기시간이 초기화됩니다.",
-            "dynamicDescription": "올라프가 도끼를 던져 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 최대 @Effect3Amount@초 동안 @SlowAmount*100@% <status>둔화</status>시킵니다. (지속시간은 도끼가 날아간 거리에 비례합니다.) 도끼에 맞은 적 챔피언은 @DebuffDuration@초 동안 <scaleArmor>방어력이 @ShredAmount*100@%</scaleArmor> 감소합니다.<br><br>올라프가 도끼를 집으면 이 스킬의 재사용 대기시간이 @TooltipCDRefund@초로 감소하거나, 또는 @TooltipCDRefund@초가 지나면 스킬을 바로 재사용할 수 있습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "올라프가 도끼를 던져 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 최대 @MaxSlowDuration@초 동안 @SlowAmount*100@% <status>둔화</status>시킵니다. (지속시간은 도끼가 날아간 거리에 비례합니다.) 도끼에 맞은 적 챔피언은 @DebuffDuration@초 동안 <scaleArmor>방어력이 @ShredAmount*100@%</scaleArmor> 감소합니다.<br><br>올라프가 도끼를 집으면 이 스킬의 재사용 대기시간이 @TooltipCDRefund@초로 감소하거나, @TooltipCDRefund@초가 지나면 스킬을 바로 재사용할 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

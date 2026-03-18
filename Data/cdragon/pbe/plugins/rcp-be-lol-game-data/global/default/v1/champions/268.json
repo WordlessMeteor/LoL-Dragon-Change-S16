@@ -686,7 +686,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Azir sends all Sand Soldiers towards a location. Sand Soldiers deal magic damage to enemies they pass through and apply a slow for 1 second.",
-            "dynamicDescription": "Azir orders all <keywordMajor>Sand Soldiers</keywordMajor> to an area, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to enemies they pass through and <status>Slowing</status> them by @Effect2Amount*-100@% for 1 second.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Azir orders all <keywordMajor>Sand Soldiers</keywordMajor> to an area, dealing <magicDamage>@TotalDamage@ magic damage</magicDamage> to enemies they pass through and <status>Slowing</status> them by @SlowAmount*-100@% for 1 second.@SpellModifierDescriptionAppend@",
             "range": [
                 740.0,
                 740.0,
@@ -726,13 +726,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

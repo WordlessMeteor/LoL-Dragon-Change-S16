@@ -48135,16 +48135,17 @@
                         const r = await t();
                         Object.assign(e, r)
                     }
-                    const n = await fetch(t, {
-                            method: r,
-                            headers: {
-                                "Content-Type": "application/json"
-                            },
-                            body: JSON.stringify(e)
-                        }),
-                        i = await n.text();
-                    if (!n.ok) throw new Error(`Telemetry request failure (${n.status}): ${i}`);
-                    return i
+                    const i = {
+                        method: r,
+                        headers: {
+                            "Content-Type": "application/json"
+                        }
+                    };
+                    r !== n && (i.body = JSON.stringify(e));
+                    const o = await fetch(t, i),
+                        s = await o.text();
+                    if (!o.ok) throw new Error(`Telemetry request failure (${o.status}): ${s}`);
+                    return s
                 }
                 _getData(t, e) {
                     return this._makeRestRequest(t, e, n)

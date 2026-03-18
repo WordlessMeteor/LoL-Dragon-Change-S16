@@ -1113,6 +1113,27 @@
         ],
         "__type": "ViewControllerList"
     },
+    "{8dbf9508}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "Map": "Maps/Shipping/Map11",
+                    "__type": "ViewControllerFilter_Map"
+                },
+                {
+                    "Filter": {
+                        "__type": "ViewControllerFilter_Spectator"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                }
+            ],
+            "__type": "ViewControllerFilter_And"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/LoL/AprilFools2026/AprilFools2026NarrativeBarks"
+        ],
+        "__type": "ViewControllerList"
+    },
     "{90c14627}": {
         "Filter": {
             "Filters": [
@@ -2315,7 +2336,8 @@
             "{59793893}",
             "{9192c3da}",
             "{831cd35b}",
-            "{27ebc1ed}"
+            "{27ebc1ed}",
+            "{8dbf9508}"
         ],
         "__type": "ViewControllerSet"
     },
@@ -23274,6 +23296,62 @@
     "ClientStates/Gameplay/UX/TFT/UiMaterials/Augments": {
         "FilepathHash": "clientstates/gameplay/ux/tft/uimaterials/augments",
         "__type": "BinFileContainer"
+    },
+    "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventPM/TFTEventPM_Item_HextechSniper": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventPM/TFTEventPM_Item_HextechSniper",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/TFT/Icons/Items/Hexcore/Caitlyn_AceintheHole.TFT_Event_PM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Artifact_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
     },
     "ClientStates/Gameplay/UX/DeathRecap/UIBase": {
         "FilepathHash": "clientstates/gameplay/ux/deathrecap/uibase",

@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Olaf lanza un hacha al suelo hacia una ubicación objetivo para infligir daño a los enemigos que atraviesa y reducir su velocidad de movimiento y armadura. Si Olaf toma el hacha, el enfriamiento de esta habilidad se restablece.",
-            "dynamicDescription": "Olaf lanza un hacha, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> y <status>ralentiza</status> un @SlowAmount*100@% hasta por @Effect3Amount@ seg (según la distancia recorrida). Los campeones alcanzados pierden un <scaleArmor>@ShredAmount*100@% de Armadura</scaleArmor> durante @DebuffDuration@ seg.<br><br>Si Olaf toma el hacha, el enfriamiento de esta habilidad se reduce a @TooltipCDRefund@ seg o se devuelve totalmente si transcurren @TooltipCDRefund@ seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf arroja un hacha que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> y <status>ralentiza</status> un @SlowAmount*100@% durante @MaxSlowDuration@ seg como máximo (según la distancia recorrida). Los campeones impactados pierden un <scaleArmor>@ShredAmount*100@% de Armadura</scaleArmor> durante @DebuffDuration@ seg.<br><br>Si Olaf recoge el hacha, el enfriamiento de esta habilidad se reduce a @TooltipCDRefund@ seg. Si ya habían transcurrido @TooltipCDRefund@ seg del lanzamiento del hacha, el enfriamiento se restablece por completo.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

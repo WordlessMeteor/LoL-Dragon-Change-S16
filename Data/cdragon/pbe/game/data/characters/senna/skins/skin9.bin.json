@@ -66948,6 +66948,452 @@
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 100.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 2.0,
+                "lifetime": 12.0,
+                "emitterLinger": 2.0,
+                "emitterName": "warningBlight",
+                "importance": 3,
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -1000.0,
+                        10.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                1000.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveArbitraryTrail"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.0960250273346901,
+                        0.12257572263479233,
+                        0.24231326580047607,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.0010000000474974513,
+                            0.006000000052154064,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0960250273346901,
+                                0.12257572263479233,
+                                0.24231326580047607,
+                                0.0
+                            ],
+                            [
+                                0.0960250273346901,
+                                0.12257572263479233,
+                                0.24231326580047607,
+                                0.0
+                            ],
+                            [
+                                0.0960250273346901,
+                                0.12257572263479233,
+                                0.24231326580047607,
+                                1.0
+                            ],
+                            [
+                                0.0960250273346901,
+                                0.12257572263479233,
+                                0.24231326580047607,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.6899977326393127
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.7520192265510559,
+                            0.9238172769546509,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.6899977326393127
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.6899977326393127
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.2552996575832367
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -2,
+                "alphaRef": 0,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.0,
+                                0.5760626196861267,
+                                1.0
+                            ],
+                            "values": [
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionMapName": "ASSETS/Characters/Senna/Skins/Skin09/Particles/Senna_Skin09_R_Ground_Trail_Errode.tex",
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "miscRenderFlags": 3,
+                "isFollowingTerrain": 1,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        200.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.014059693552553654,
+                            0.03919735178351402,
+                            0.07585243880748749,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.8040540814399719,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.9383201003074646,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.012162208557129,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0499999523162842,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0499999523162842,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Senna/Skins/Skin09/Particles/Senna_Skin09_R_edge.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin09/Particles/21.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            -0.10000000149011612,
+                            0.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 100.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 2.0,
+                "lifetime": 12.0,
+                "emitterLinger": 2.0,
+                "emitterName": "warningBlight1",
+                "importance": 3,
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -1000.0,
+                        10.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                1000.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveArbitraryTrail"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.08337529748678207,
+                        0.10972762852907181,
+                        0.26025786995887756,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.0010000000474974513,
+                            0.006000000052154064,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.08337529748678207,
+                                0.10972762852907181,
+                                0.26025786995887756,
+                                0.0
+                            ],
+                            [
+                                0.08337529748678207,
+                                0.10972762852907181,
+                                0.26025786995887756,
+                                0.0
+                            ],
+                            [
+                                0.08337529748678207,
+                                0.10972762852907181,
+                                0.26025786995887756,
+                                1.0
+                            ],
+                            [
+                                0.08337529748678207,
+                                0.10972762852907181,
+                                0.26025786995887756,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.6899977326393127
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.7520192265510559,
+                            0.9238172769546509,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.6899977326393127
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.6899977326393127
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.2552996575832367
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -3,
+                "alphaRef": 0,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.0,
+                                0.5760626196861267,
+                                1.0
+                            ],
+                            "values": [
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionMapName": "ASSETS/Characters/Senna/Skins/Skin09/Particles/Senna_Skin09_R_Ground_Trail_Errode.tex",
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "miscRenderFlags": 3,
+                "isFollowingTerrain": 1,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        200.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.014059693552553654,
+                            0.03919735178351402,
+                            0.07585243880748749,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.8040540814399719,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.9383201003074646,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.012162208557129,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0499999523162842,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0499999523162842,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Senna/Skins/Skin09/Particles/Senna_Skin09_R_line_waveform.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Senna/Skins/Skin09/Particles/21.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            -0.10000000149011612,
+                            0.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
             }
         ],
         "visibilityRadius": 25000.0,

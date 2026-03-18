@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Olaf'ın hedef konuma fırlattığı balta, yolda biçtiği rakiplere hasar vererek bu rakiplerin zırhını ve hareket hızını azaltır. Olaf baltasını yerden alırsa bu yeteneğin bekleme süresi sıfırlanır.",
-            "dynamicDescription": "Olaf'ın fırlattığı balta <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir ve kat ettiği mesafeye bağlı olarak rakipleri en fazla @Effect3Amount@ saniyeliğine %@SlowAmount*100@ <status>yavaşlatır</status>. İsabet alan şampiyonlar @DebuffDuration@ saniyeliğine <scaleArmor>%@ShredAmount*100@ Zırh</scaleArmor> kaybeder.<br><br>Olaf baltasını yerden alırsa bu yeteneğin bekleme süresi azalarak @TooltipCDRefund@ saniye olur veya aradan @TooltipCDRefund@ saniye geçmişse tamamen iade edilir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf'ın fırlattığı balta <physicalDamage>@TotalDamage@ Fiziksel Hasar</physicalDamage> verir ve kat ettiği mesafeye bağlı olarak rakipleri en fazla @MaxSlowDuration@ saniyeliğine %@SlowAmount*100@ <status>yavaşlatır</status>. İsabet alan şampiyonlar @DebuffDuration@ saniyeliğine <scaleArmor>%@ShredAmount*100@ Zırh</scaleArmor> kaybeder.<br><br>Olaf baltasını yerden alırsa bu yeteneğin bekleme süresi azalarak @TooltipCDRefund@ saniye olur veya aradan @TooltipCDRefund@ saniye geçmişse tamamen iade edilir.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

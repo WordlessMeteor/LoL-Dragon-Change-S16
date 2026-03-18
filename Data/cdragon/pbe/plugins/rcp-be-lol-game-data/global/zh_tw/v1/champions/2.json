@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "歐拉夫向指定地點的地面擲出一把斧頭，對沿途穿過的敵人造成傷害，並降低他們的物理防禦及跑速。如果歐拉夫撿起斧頭，則該技能的冷卻時間將被重置。",
-            "dynamicDescription": "歐拉夫投擲一把斧頭，造成 <physicalDamage>@TotalDamage@ 物理傷害</physicalDamage>，並<status>緩速</status>敵人 @SlowAmount*100@%，持續最多 @Effect3Amount@ 秒（根據斧頭飛行距離而定）。命中的英雄失去 <scaleArmor>@ShredAmount*100@% 物理防禦</scaleArmor> @DebuffDuration@ 秒。<br><br>如果歐拉夫撿起斧頭，此技能的冷卻時間減少至 @TooltipCDRefund@ 秒，若超過 @TooltipCDRefund@ 秒再撿起則會重置技能冷卻時間。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "歐拉夫投擲一把斧頭，造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>，並<status>緩速</status>敵人 @SlowAmount*100@%，持續最多@MaxSlowDuration@秒(根據斧頭飛行距離而定)。遭斧頭命中的英雄損失<scaleArmor>@ShredAmount*100@%物防</scaleArmor>，持續@DebuffDuration@秒。<br><br>若歐拉夫撿起斧頭，此技能的冷卻時間減少至@TooltipCDRefund@秒，若超過@TooltipCDRefund@秒再撿起則會重置技能冷卻時間。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

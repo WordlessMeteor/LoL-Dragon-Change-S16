@@ -686,7 +686,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Azir schickt alle Sandsoldaten an einen Zielort. Sandsoldaten verursachen an allen Zielen, an denen sie vorübergehen, magischen Schaden und bewirken 1&nbsp;Sekunde lang eine Verlangsamung.",
-            "dynamicDescription": "Azir schickt alle <keywordMajor>Sandsoldaten</keywordMajor> zu einem Bereich. Gegner, die sie durchdringen, erleiden <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> und werden 1&nbsp;Sekunde um @Effect2Amount*-100@&nbsp;% <status>verlangsamt</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Azir schickt alle <keywordMajor>Sandsoldaten</keywordMajor> zu einem Bereich. Gegner, die sie durchdringen, erleiden <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> und werden 1&nbsp;Sekunde um @SlowAmount*-100@&nbsp;% <status>verlangsamt</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 740.0,
                 740.0,
@@ -726,13 +726,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

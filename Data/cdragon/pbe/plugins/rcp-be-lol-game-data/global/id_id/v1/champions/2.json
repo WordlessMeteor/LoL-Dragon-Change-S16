@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Olaf melemparkan kapak ke tanah di lokasi yang ditarget, memberikan damage ke musuh yang dilaluinya serta mengurangi Armor dan Move Speed mereka. Jika Olaf mengambil kapaknya, cooldown ability akan di-reset.",
-            "dynamicDescription": "Olaf melempar kapak, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> dan menerapkan <status>Slow</status> sebesar @SlowAmount*100@% hingga @Effect3Amount@ detik (berdasarkan jarak yang ditempuh). Champion yang terkena akan kehilangan <scaleArmor>@ShredAmount*100@% Armor</scaleArmor> selama @DebuffDuration@ detik.<br><br>Jika Olaf mengambil kapak, Cooldown Ability ini akan dikurangi menjadi @TooltipCDRefund@ detik, atau akan dikembalikan sepenuhnya jika @TooltipCDRefund@ detik telah berlalu.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf melempar kapak, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> dan menerapkan <status>Slow</status> sebesar @SlowAmount*100@% hingga @MaxSlowDuration@ detik (berdasarkan jarak yang ditempuh). Champion yang terkena akan kehilangan <scaleArmor>@ShredAmount*100@% Armor</scaleArmor> selama @DebuffDuration@ detik.<br><br>Jika Olaf mengambil kapak, Cooldown Ability ini akan dikurangi menjadi @TooltipCDRefund@ detik, atau akan dikembalikan sepenuhnya jika @TooltipCDRefund@ detik telah berlalu.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

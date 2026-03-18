@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Olaf ciska toporem w wybrane miejsce, zadając obrażenia trafionym wrogom oraz zmniejszając ich pancerz i prędkość ruchu. Jeśli następnie podniesie swoją broń, czas odnowienia umiejętności się zresetuje.",
-            "dynamicDescription": "Olaf rzuca toporem, zadając <physicalDamage>@TotalDamage@ pkt. obrażeń fizycznych</physicalDamage> i <status>spowalniając</status> wrogów o @SlowAmount*100@% na maksymalnie @Effect3Amount@ sek. w zależności od dystansu, jaki przebył topór. Trafieni bohaterowie tracą <scaleArmor>@ShredAmount*100@% pancerza</scaleArmor> na @DebuffDuration@ sek.<br><br>Jeśli następnie podniesie swój topór, czas odnowienia tej umiejętności zostanie skrócony do @TooltipCDRefund@ sek. albo w pełni zwrócony jeżeli upłynęło @TooltipCDRefund@ sek od użycia.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf rzuca toporem, zadając <physicalDamage>@TotalDamage@ pkt. obrażeń fizycznych</physicalDamage> i <status>spowalniając</status> wrogów o @SlowAmount*100@% na maksymalnie @MaxSlowDuration@ sek. w zależności od dystansu, jaki przebył topór. Bohaterowie tracą <scaleArmor>@ShredAmount*100@% pancerza</scaleArmor> na @DebuffDuration@ sek.<br><br>Jeśli Olaf potem podniesie swój topór, czas odnowienia tej umiejętności zostanie skrócony do @TooltipCDRefund@ sek. albo w pełni zwrócony jeżeli upłynęło @TooltipCDRefund@ sek. od użycia.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

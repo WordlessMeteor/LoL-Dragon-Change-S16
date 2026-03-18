@@ -84,7 +84,7 @@
                     "id": 38
                 }
             ],
-            "description": null
+            "description": "Tenía sentido que Shyvana quisiera jugar como un poderoso dragón en Barones y mazmorras, pero lo que más sorprendió a su grupo fue la alegre predilección por la destrucción que la partida sacaba a relucir en su amiga tan incondicionalmente disciplinada. Al descender sobre el campo de batalla con regocijo, el simple rugido de Shyvana escama de hierro lanza por los aires a los enemigos y a las figuritas (y a veces también a los aliados)."
         },
         {
             "id": 102002,
@@ -621,7 +621,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "El siguiente ataque de Shyvana golpea tanto al objetivo como la zona circundante. Esta habilidad se puede reactivar. Mientras está en forma de dragón, puede reactivarla una vez más, lo que inflige una gran cantidad de daño a un único objetivo.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Los ataques de Shyvana infligen un <magicDamage>@Calc_Max_Health_Damage@ de la vida máxima como daño mágico</magicDamage> <OnHit>%i:OnHit% al impactar</OnHit> y reducen el enfriamiento de esta habilidad en @Cooldown_Reduction@ s.<br><br><spellActive>Activa:</spellActive> El siguiente ataque de Shyvana golpea al objetivo y el área circundante, lo que inflige <physicalDamage>@Calc_Damage@ de daño físico</physicalDamage>. Esta habilidad se puede <recast>reactivar</recast> durante los siguientes @RecastDuration@ s tras un ataque o tras un breve retardo.<br><br><keywordMajor>Forma de dragón</keywordMajor>: Shyvana puede <recast>reactivarla</recast> una vez más, lo que provoca que muerda al objetivo de su siguiente ataque y le inflija <trueDamage>@Calc_Dragon_Form_Damage@ de daño verdadero</trueDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Los ataques de Shyvana infligen un <magicDamage>@Calc_Max_Health_Damage@ de daño mágico en función de la vida máxima</magicDamage> <OnHit>%i:OnHit% al impactar</OnHit> y reducen el enfriamiento de esta habilidad en @Cooldown_Reduction@ s.<br><br><spellActive>Activa:</spellActive> El siguiente ataque de Shyvana golpea al objetivo y el área circundante, lo que inflige <physicalDamage>@Calc_Damage@ de daño físico</physicalDamage>. Esta habilidad se puede <recast>reactivar</recast> durante los siguientes @RecastDuration@&nbsp;s tras un ataque o tras un breve retardo.<br><br><keywordMajor>Forma de dragón</keywordMajor>: Shyvana puede <recast>reactivarla</recast> una vez más, lo que provoca que muerda al objetivo de su siguiente ataque y le inflija <trueDamage>@Calc_Dragon_Form_Damage@ de daño verdadero</trueDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -771,7 +771,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Shyvana obtiene un escudo y velocidad de movimiento. Tras un breve retardo, detona e inflige daño a su alrededor.  Mientras está en forma de dragón, la explosión la cura si golpea a un campeón enemigo.",
-            "dynamicDescription": "Shyvana se envuelve en llamas durante @Duration@ s, lo que le otorga <shield>@Calc_Shield@ de escudo</shield>, que aumenta en <shield>@Calc_Shield_Per_Nearby_Champion@</shield> por cada campeón enemigo cercano, y un <speed>@MoveSpeed@ de velocidad de movimiento</speed>, que aumenta al <speed>@MoveSpeedTowardsEnemies@</speed> al moverse hacia campeones enemigos.<br><br>Cuando el efecto termina, el <shield>escudo</shield> se rompe, o al <recast>reactivar</recast> la habilidad, la zona a su alrededor explota e inflige <magicDamage>@Damage@ de daño mágico</magicDamage>.<br><br><keywordMajor>Forma de dragón:</keywordMajor> Si la detonación alcanza a un campeón enemigo, Shyvana <healing>recupera entre @Calc_Heal_Min@ y @Calc_Heal_Max@</healing> de vida según la vida que le falte.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana se envuelve en llamas durante @Duration@ s, lo que le otorga <shield>@Calc_Shield@ de escudo</shield>, que aumenta en <shield>@Calc_Shield_Per_Nearby_Champion@</shield> por cada campeón enemigo cercano, y un <speed>@MoveSpeed@ de velocidad de movimiento</speed>, que aumenta a un <speed>@MoveSpeedTowardsEnemies@</speed> al moverse hacia campeones enemigos.<br><br>Cuando el efecto termina, el <shield>escudo</shield> se rompe, o al <recast>reactivar</recast> la habilidad, el área a su alrededor explota e inflige <magicDamage>@Damage@ de daño mágico</magicDamage>.<br><br><keywordMajor>Forma de dragón:</keywordMajor> Si la detonación alcanza a un campeón enemigo, Shyvana <healing>recupera entre @Calc_Heal_Min@ y @Calc_Heal_Max@ de vida</healing> según la vida que le falte.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

@@ -686,7 +686,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "아지르가 모든 모래 병사를 특정 위치로 보냅니다. 모래 병사들은 통과하는 적에게 마법 피해를 입히고, 1초 둔화 효과를 적용합니다.",
-            "dynamicDescription": "아지르가 모든 <keywordMajor>모래 병사</keywordMajor>를 지정한 위치로 보냅니다. 모래 병사는 통과한 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히며 1초 동안 @Effect2Amount*-100@% <status>둔화</status>시킵니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "아지르가 모든 <keywordMajor>모래 병사</keywordMajor>를 지정한 위치로 보냅니다. 모래 병사는 통과한 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히며 1초 동안 @SlowAmount*-100@% <status>둔화</status>시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 740.0,
                 740.0,
@@ -726,13 +726,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

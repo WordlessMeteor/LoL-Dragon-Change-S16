@@ -95403,7 +95403,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Perks/Styles/Precision/Overheal/Particles/Perks_Overheal_Shield_Burst_Erosion.TFT_Set13.tex",
+                    "erosionMapName": "ASSETS/Perks/Styles/Precision/Overheal/Particles/Perks_Overheal_Shield_Burst_Erosion.SKINS_Swain_Skin42.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "disableBackfaceCull": true,
@@ -99995,7 +99995,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Perks/Styles/Precision/Overheal/Particles/Perks_Overheal_Shield_Burst_Erosion.TFT_Set13.tex",
+                    "erosionMapName": "ASSETS/Perks/Styles/Precision/Overheal/Particles/Perks_Overheal_Shield_Burst_Erosion.SKINS_Swain_Skin42.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "isUniformScale": 1,
@@ -190246,7 +190246,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Perks/Styles/Precision/Overheal/Particles/Perks_Overheal_Shield_Burst_Erosion.TFT_Set13.tex",
+                    "erosionMapName": "ASSETS/Perks/Styles/Precision/Overheal/Particles/Perks_Overheal_Shield_Burst_Erosion.SKINS_Swain_Skin42.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "isUniformScale": 1,
@@ -281273,7 +281273,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Perks/Styles/Precision/Overheal/Particles/Perks_Overheal_Shield_Burst_Erosion.TFT_Set13.tex",
+                    "erosionMapName": "ASSETS/Perks/Styles/Precision/Overheal/Particles/Perks_Overheal_Shield_Burst_Erosion.SKINS_Swain_Skin42.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "isUniformScale": 1,
@@ -294759,7 +294759,9 @@
             "mDefaultTextureName": "ASSETS/Maps/Info/Map21/2DLevelMiniMap.tex",
             "__type": "MinimapBackgroundConfig"
         },
+        "mMapObjectsCFG": "ASSETS/Maps/Deprecated/Map21/CFG/ObjectCFG.cfg",
         "mNavigationMesh": "ASSETS/Maps/NavGrid/Map21/AIPath.aimesh_ngrid",
+        "{d0a4e40b}": "ASSETS/Maps/Deprecated/Map21/Env_CubeMap.dds",
         "mWorldParticlesINI": "ASSETS/Maps/Particles/Deprecated/Map21/Particles.ini",
         "mGrassTintTexture": "ASSETS/Maps/Info/Map21/GrassTint.tex",
         "mSkyboxCubemapTexture": "",
@@ -297006,7 +297008,9 @@
             "mDefaultTextureName": "ASSETS/Maps/Info/Map21/2DLevelMiniMap.tex",
             "__type": "MinimapBackgroundConfig"
         },
+        "mMapObjectsCFG": "ASSETS/Maps/Deprecated/Map21/CFG/ObjectCFG.cfg",
         "mNavigationMesh": "ASSETS/Maps/NavGrid/Map21/AIPath.aimesh_ngrid",
+        "{d0a4e40b}": "ASSETS/Maps/Deprecated/Map21/Env_CubeMap.dds",
         "mWorldParticlesINI": "ASSETS/Maps/Particles/Deprecated/Map21/Particles.ini",
         "mGrassTintTexture": "ASSETS/Maps/Info/Map21/GrassTint.tex",
         "mResourceResolvers": [
@@ -303487,7 +303491,8 @@
             "{faaa3e19}",
             "{93ad7550}",
             "{976314f0}",
-            "{ccd81c43}"
+            "{ccd81c43}",
+            "{ec9ab829}"
         ],
         "__type": "MapAudioDataProperties"
     },
@@ -305683,6 +305688,38 @@
             "__type": "MusicAudioDataProperties"
         },
         "feature": "{96d74b19}",
+        "__type": "FeatureAudioDataProperties"
+    },
+    "{ec9ab829}": {
+        "bankUnits": [
+            {
+                "name": "ENV_Map11_Apricot2026",
+                "bankPath": [
+                    "ASSETS/Sounds/Wwise2016/SFX/Shared/ENV_Map11_Apricot2026_audio.bnk",
+                    "ASSETS/Sounds/Wwise2016/SFX/Shared/ENV_Map11_Apricot2026_events.bnk"
+                ],
+                "events": [
+                    "Play_sfx_Karthus_FoolishKarthus_OnCast",
+                    "Play_sfx_Karthus_FoolishKarthusCastSound_OnBuffActivate",
+                    "Play_sfx_Karthus_FoolishKarthusDamageSound_OnBuffActivate",
+                    "Play_sfx_Karthus_FoolishKarthusTarget_OnBuffActivate"
+                ],
+                "__type": "BankUnit"
+            }
+        ],
+        "music": {
+            "themeMusicID": "Play_mus_map11_phase_select_base",
+            "themeMusicTransitionID": "Play_mus_map11_phase_select_base_transition",
+            "legacyThemeMusicID": "Play_mus_map01_phase_select_base",
+            "legacyThemeMusicTransitionID": "Play_mus_map01_phase_select_base_transition",
+            "victoryMusicID": "Play_mus_map11_phase_victory_base",
+            "defeatMusicID": "Play_mus_map11_phase_defeat_base",
+            "victoryBannerSound": "Play_sfx_Env_SRUAP_Victory_Banner",
+            "defeatBannerSound": "Play_sfx_Env_SRUAP_Defeat_Banner",
+            "ambientEvent": "Play_sfx_Env_Map11_Ambience",
+            "__type": "MusicAudioDataProperties"
+        },
+        "feature": "{745d0dfb}",
         "__type": "FeatureAudioDataProperties"
     },
     "{faaa3e19}": {

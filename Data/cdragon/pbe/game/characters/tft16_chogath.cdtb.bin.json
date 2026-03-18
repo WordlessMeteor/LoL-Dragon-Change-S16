@@ -441,6 +441,19 @@
                         0.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusHPPerCast",
+                    "values": [
+                        0.0,
+                        10.0,
+                        15.0,
+                        25.0,
+                        40.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -564,6 +577,11 @@
                                 {
                                     "type": "APDamage",
                                     "nameOverride": "TFT_APHP_MagicDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BonusHPPerCast",
+                                    "nameOverride": "Spell_TFT16_SionSpell_HealthOnTakeDowns",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

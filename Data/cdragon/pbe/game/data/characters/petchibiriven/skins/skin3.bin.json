@@ -33190,6 +33190,64 @@
         "particlePath": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Emote_Joke_Weapon_Glow",
         "__type": "VfxSystemDefinitionData"
     },
+    "{323ef87b}": {
+        "complexEmitterDefinitionData": [
+            {
+                "particleLifetime": {
+                    "constantValue": 4.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Body",
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "BODY"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "BODY"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "alphaRef": 0,
+                "{cb13aff1}": 2.0,
+                "texture": "ASSETS/Characters/PetChibiRiven/Themes/PrestigeValiantSword/PetChibiRiven_PrestigeValiantSword_Body_TX_CM.CHIBI_Riven_PrestigeValiantSword.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "PetChibiRiven_Skin3_Emote_DeathAvatar",
+        "particlePath": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Emote_DeathAvatar",
+        "flags": 214,
+        "__type": "VfxSystemDefinitionData"
+    },
     "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Emote_Laugh_Sword_Child": {
         "complexEmitterDefinitionData": [
             {
@@ -141970,7 +142028,8 @@
             "PetChibiRiven_Skin3_Finisher_Weapon_Trail1": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Finisher_Weapon_Trail1",
             "PetChibiRiven_Skin3_Finisher_DragonGlow1": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Finisher_DragonGlow1",
             "PetChibiRiven_Skin3_Finisher_CamVfx3": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Finisher_CamVfx3",
-            "PetChibiRiven_Skin3_Finisher_Env03_Child": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Finisher_Env03_Child"
+            "PetChibiRiven_Skin3_Finisher_Env03_Child": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Finisher_Env03_Child",
+            "{60b4ff0b}": "{323ef87b}"
         },
         "__type": "ResourceResolver"
     },

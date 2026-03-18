@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Olaf throws an axe into the ground at a target location, dealing damage to enemies it passes through and reducing their Armor and Move Speed. If Olaf picks up the axe, the ability's cooldown is reset.",
-            "dynamicDescription": "Olaf throws an axe, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> and <status>Slowing</status> by @SlowAmount*100@% for up to @Effect3Amount@ seconds (based on distance travelled). Champions hit lose <scaleArmor>@ShredAmount*100@% Armor</scaleArmor> for @DebuffDuration@ seconds.<br><br>If Olaf picks up the axe, this Ability's Cooldown is reduced to @TooltipCDRefund@ seconds, or fully refunded if @TooltipCDRefund@ seconds has elapsed.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf throws an axe, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> and <status>Slowing</status> by @SlowAmount*100@% for up to @MaxSlowDuration@ seconds (based on distance travelled). Champions hit lose <scaleArmor>@ShredAmount*100@% Armor</scaleArmor> for @DebuffDuration@ seconds.<br><br>If Olaf picks up the axe, this Ability's Cooldown is reduced to @TooltipCDRefund@ seconds, or fully refunded if @TooltipCDRefund@ seconds has elapsed.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

@@ -84,7 +84,7 @@
                     "id": 38
                 }
             ],
-            "description": null
+            "description": "นับว่าไม่ใช่เรื่องแปลกอะไรที่ Shyvana จะอยากรับบทเป็นมังกรผู้ทรงพลังใน Riftquest แต่สิ่งที่ทำให้คนในปาร์ตี้ของเธอประหลาดใจยิ่งกว่าคือการได้เห็นด้านที่บ้าพลังและรักการทำลายล้างของเธอ ซึ่งถูกปลุกขึ้นมาจากสหายผู้เคร่งครัดในระเบียบวินัยผู้นี้ โดย Shyvana Ironscale พร้อมโฉบลงสู่สนามรบด้วยความยินดี และแค่เสียงคำรามของเธอก็สามารถส่งศัตรูและฟิกเกอร์ให้กระเด็นลอยออกไปไกลได้แล้ว (และบางครั้งก็รวมถึงเพื่อนร่วมทีมของเธอด้วย)"
         },
         {
             "id": 102002,
@@ -621,7 +621,7 @@
             "cost": "ไม่เสียอะไรเลย",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "การโจมตีครั้งถัดไปของ Shyvana จะสร้างความเสียหายแก่เป้าหมายและพื้นที่โดยรอบ สกิลนี้สามารถร่ายซ้ำได้อีกครั้ง เมื่ออยู่ในร่างมังกร เธอจะสามารถร่ายซ้ำเพิ่มได้อีกหนึ่งครั้ง สร้างความเสียหายมหาศาลให้กับเป้าหมายเดี่ยว",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> การโจมตีของ Shyvana จะสร้าง<magicDamage>ความเสียหายเวท @Calc_Max_Health_Damage@ จากพลังชีวิตสูงสุด</magicDamage>แบบ <OnHit>On-Hit %i:OnHit%</OnHit> และลดคูลดาวน์ของสกิลนี้ลง @Cooldown_Reduction@ วินาที<br><br><spellActive>กดใช้</spellActive> การโจมตีครั้งถัดไปของ Shyvana จะจู่โจมเป้าหมายและพื้นที่โดยรอบ สร้าง<physicalDamage>ความเสียหายกายภาพ @Calc_Damage@ หน่วย</physicalDamage> สกิลนี้สามารถ<recast>กดใช้ซ้ำ</recast>ได้หลังจากโจมตี หรือหลังจากดีเลย์สั้น ๆ ภายใน @RecastDuration@ วินาที<br><br><keywordMajor>ร่างมังกร</keywordMajor>: Shyvana สามารถ<recast>กดใช้</recast>สกิลนี้เพิ่มได้อีกหนึ่งครั้ง โดยเธอจะกัดเป้าหมายในการโจมตีครั้งถัดไป สร้าง<trueDamage>ความเสียหายจริง @Calc_Dragon_Form_Damage@ หน่วย</trueDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> การโจมตีของ Shyvana จะสร้าง<magicDamage>ความเสียหายเวท @Calc_Max_Health_Damage@ จากพลังชีวิตสูงสุด</magicDamage>แบบ <OnHit>On-Hit %i:OnHit%</OnHit> และลดคูลดาวน์ของสกิลนี้ลง @Cooldown_Reduction@ วินาที<br><br><spellActive>กดใช้:</spellActive> การโจมตีครั้งถัดไปของ Shyvana จะจู่โจมเป้าหมายและพื้นที่โดยรอบ สร้าง<physicalDamage>ความเสียหายกายภาพ @Calc_Damage@ หน่วย</physicalDamage> สกิลนี้สามารถ<recast>กดใช้ซ้ำ</recast>ได้หลังจากโจมตี หรือหลังจากดีเลย์สั้น ๆ ภายใน @RecastDuration@ วินาที<br><br><keywordMajor>ร่างมังกร:</keywordMajor> Shyvana สามารถ<recast>กดใช้</recast>สกิลนี้เพิ่มได้อีกหนึ่งครั้ง โดยเธอจะกัดเป้าหมายในการโจมตีครั้งถัดไป สร้าง<trueDamage>ความเสียหายจริง @Calc_Dragon_Form_Damage@ หน่วย</trueDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -771,7 +771,7 @@
             "cost": "ไม่เสียอะไรเลย",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Shyvana ได้รับโล่ป้องกัน ความเร็วเคลื่อนที่ และทำให้พื้นที่รอบตัวเธอระเบิดออกหลังผ่านไปชั่วครู่  เมื่ออยู่ในร่างมังกร การระเบิดจะฮีลเธอหากโจมตีโดนแชมเปี้ยนศัตรู",
-            "dynamicDescription": "Shyvana ห่อหุ้มตัวเองด้วยเปลวเพลิงเป็นเวลา @Duration@ วินาที ได้รับ<shield>โล่ป้องกัน @Calc_Shield@ หน่วย</shield> เพิ่มขึ้น <shield>@Calc_Shield_Per_Nearby_Champion@ หน่วย</shield>ต่อจำนวนแชมเปี้ยนศัตรูใกล้เคียง และได้รับ<speed>ความเร็วเคลื่อนที่ @MoveSpeed@</speed> ซึ่งเพิ่มขึ้นเป็น <speed>@MoveSpeedTowardsEnemies@ </speed>เมื่อเคลื่อนที่เข้าหาศัตรู<br><br>เมื่อเอฟเฟกต์สิ้นสุด <shield>โล่ป้องกัน</shield>ถูกทำลาย หรือเมื่อ<recast>กดใช้ซ้ำ</recast> เธอจะระเบิดพื้นที่รอบตัว สร้าง<magicDamage>ความเสียหายเวท @Damage@ หน่วย</magicDamage>แก่ศัตรู<br><br><keywordMajor>ร่างมังกร:</keywordMajor>: หากระเบิดโดนแชมเปี้ยนศัตรู Shyvana จะ<healing>ฟื้นฟูพลังชีวิต @Calc_Heal_Min@ ถึง @Calc_Heal_Max@ หน่วย</healing> ขึ้นอยู่กับพลังชีวิตที่หายไปของเธอ@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana ห่อหุ้มตัวเองด้วยเปลวเพลิงเป็นเวลา @Duration@ วินาที ได้รับ<shield>โล่ป้องกัน @Calc_Shield@ หน่วย</shield> เพิ่มขึ้น <shield>@Calc_Shield_Per_Nearby_Champion@ หน่วย</shield>ต่อจำนวนแชมเปี้ยนศัตรูใกล้เคียง และได้รับ<speed>ความเร็วเคลื่อนที่ @MoveSpeed@</speed> ซึ่งเพิ่มขึ้นเป็น <speed>@MoveSpeedTowardsEnemies@ </speed>เมื่อเคลื่อนที่เข้าหาศัตรู<br><br>เมื่อเอฟเฟกต์สิ้นสุด เมื่อ<shield>โล่ป้องกัน</shield>ถูกทำลาย หรือเมื่อ<recast>กดใช้ซ้ำ</recast> เธอจะระเบิดพื้นที่รอบตัว สร้าง<magicDamage>ความเสียหายเวท @Damage@ หน่วย</magicDamage>แก่ศัตรู<br><br><keywordMajor>ร่างมังกร:</keywordMajor> หากระเบิดโดนแชมเปี้ยนศัตรู Shyvana จะ<healing>ฟื้นฟูพลังชีวิต @Calc_Heal_Min@ ถึง @Calc_Heal_Max@ หน่วย</healing> ขึ้นอยู่กับพลังชีวิตที่หายไปของเธอ@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

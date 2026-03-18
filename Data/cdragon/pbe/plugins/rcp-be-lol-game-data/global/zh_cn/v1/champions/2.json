@@ -1222,7 +1222,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "奥拉夫将战斧投至目标区域，对所有被战斧穿过的敌人造成伤害并削减他们的护甲和移动速度。如果奥拉夫捡起斧头，那么该技能冷却时间就会重置。",
-            "dynamicDescription": "奥拉夫扔出一把斧头，造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>和至多持续@Effect3Amount@秒(基于斧头移动距离)的@SlowAmount*100@%<status>减速</status>。被斧头命中的英雄还会损失<scaleArmor>@ShredAmount*100@%护甲</scaleArmor>，持续@DebuffDuration@秒。<br><br>如果奥拉夫拾起了斧头，那么这个技能的冷却时间会缩短至@TooltipCDRefund@秒，如果在斧头被扔出@TooltipCDRefund@秒后拾起斧头，则完全返还冷却时间。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "奥拉夫扔出一把斧头，造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>和至多持续@MaxSlowDuration@秒(基于斧头移动距离)的@SlowAmount*100@%<status>减速</status>。被斧头命中的英雄还会损失<scaleArmor>@ShredAmount*100@%护甲</scaleArmor>，持续@DebuffDuration@秒。<br><br>如果奥拉夫拾起了斧头，那么这个技能的冷却时间会缩短至@TooltipCDRefund@秒，或在度过@TooltipCDRefund@秒之后完全返还。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1271,13 +1271,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

@@ -686,7 +686,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "すべての砂塵兵を指定地点に集結させる。砂塵兵は進路上でぶつかった全ての敵ユニットに、魔法ダメージと1秒間のスロウ効果を与える。",
-            "dynamicDescription": "すべての<keywordMajor>砂塵兵</keywordMajor>を指定範囲に集結させる。<keywordMajor>砂塵兵</keywordMajor>は進路上でぶつかった敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、1秒間@Effect2Amount*-100@%の<status>スロウ効果</status>を付与する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "すべての<keywordMajor>砂塵兵</keywordMajor>を指定範囲に集結させる。<keywordMajor>砂塵兵</keywordMajor>は進路上でぶつかった敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、1秒間@SlowAmount*-100@%の<status>スロウ効果</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 740.0,
                 740.0,
@@ -726,13 +726,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

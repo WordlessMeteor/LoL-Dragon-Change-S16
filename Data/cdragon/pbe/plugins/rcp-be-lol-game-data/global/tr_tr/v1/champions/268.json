@@ -686,7 +686,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Azir, tüm Kumdan Askerlere belli bir konuma gitme emri verir. Kumdan Askerler koşarlarken çarpıp içinden geçtikleri bütün hedeflere büyü hasarı verir ve 1 saniyeliğine yavaşlatma etkisi uygular.",
-            "dynamicDescription": "Azir tüm <keywordMajor>Kumdan Askerlerine</keywordMajor> bir bölgeye gitme emri verir. Askerler deşip geçtikleri rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve onları 1 saniyeliğine %@Effect2Amount*-100@ <status>yavaşlatır</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Azir tüm <keywordMajor>Kumdan Askerlerine</keywordMajor> bir bölgeye gitme emri verir. Askerler deşip geçtikleri rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve onları 1 saniyeliğine %@SlowAmount*-100@ <status>yavaşlatır</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 740.0,
                 740.0,
@@ -726,13 +726,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

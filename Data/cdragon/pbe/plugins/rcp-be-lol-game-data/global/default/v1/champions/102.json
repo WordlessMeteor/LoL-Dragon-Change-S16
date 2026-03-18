@@ -84,7 +84,7 @@
                     "id": 38
                 }
             ],
-            "description": null
+            "description": "It made sense that Shyvana wanted to play a powerful dragon in Riftquest, but what surprised her party more was the joyful penchant for destruction that the game brought out in their staunchly disciplined friend. Descending upon the battlefield with glee, Shyvana Ironscale's roar alone sends enemies and figurines flying (and sometimes her allies, too)."
         },
         {
             "id": 102002,
@@ -621,7 +621,7 @@
             "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Shyvana's next attack strikes both the target and the surrounding area. This Ability can be recast. While in Dragon Form, it gains an additional recast, dealing massive damage to a single target.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Shyvana's Attacks deal <magicDamage>@Calc_Max_Health_Damage@ max Health magic damage</magicDamage> <OnHit>%i:OnHit% On-Hit</OnHit> and reduce this Ability's cooldown by @Cooldown_Reduction@ seconds.<br><br><spellActive>Active:</spellActive> Shyvana's next Attack strikes the target and the surrounding area dealing <physicalDamage>@Calc_Damage@ physical damage</physicalDamage>. This Ability may be <recast>Recast</recast> after an Attack or short delay within the next @RecastDuration@ seconds.<br><br><keywordMajor>Dragon Form:</keywordMajor> Shyvana gains an additional <recast>Recast</recast>, causing her to bite the target of her next Attack dealing <trueDamage>@Calc_Dragon_Form_Damage@ true damage</trueDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Shyvana's Attacks deal <magicDamage>@Calc_Max_Health_Damage@ max Health magic damage</magicDamage> <OnHit>%i:OnHit% On-Hit</OnHit> and reduce this Ability's Cooldown by @Cooldown_Reduction@ seconds.<br><br><spellActive>Active:</spellActive> Shyvana's next Attack strikes the target and the surrounding area dealing <physicalDamage>@Calc_Damage@ physical damage</physicalDamage>. This Ability may be <recast>Recast</recast> after an Attack or short delay within the next @RecastDuration@ seconds.<br><br><keywordMajor>Dragon Form:</keywordMajor> Shyvana gains an additional <recast>Recast</recast>, causing her to bite the target of her next Attack dealing <trueDamage>@Calc_Dragon_Form_Damage@ true damage</trueDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -771,7 +771,7 @@
             "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Shyvana gains a shield, movement speed, and after a short delay, the area around her detonates.  While in Dragon Form, the explosion will heal her if it strikes an enemy champion.",
-            "dynamicDescription": "Shyvana wraps herself in flames for @Duration@ seconds, gaining <shield>@Calc_Shield@ Shield</shield>, increased by <shield>@Calc_Shield_Per_Nearby_Champion@</shield> per nearby enemy champion and <speed>@MoveSpeed@ Move Speed</speed>, increased to <speed>@MoveSpeedTowardsEnemies@</speed> when moving towards enemy champions.<br><br>When the effect ends, the <shield>shield</shield> is broken, or upon <recast>Recast</recast> the area around her detonates, dealing <magicDamage>@Damage@ magic damage</magicDamage>.<br><br><keywordMajor>Dragon Form:</keywordMajor> If the detonation hits an enemy champion Shyvana <healing>restores from @Calc_Heal_Min@ to @Calc_Heal_Max@</healing> Health based on her missing Health.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana wraps herself in flames for @Duration@ seconds, gaining <shield>@Calc_Shield@ Shield</shield>, increased by <shield>@Calc_Shield_Per_Nearby_Champion@</shield> per nearby enemy champion and <speed>@MoveSpeed@ Move Speed</speed>, increased to <speed>@MoveSpeedTowardsEnemies@</speed> when moving towards enemy champions.<br><br>When the effect ends, the <shield>Shield</shield> is broken, or upon <recast>Recast</recast> the area around her detonates, dealing <magicDamage>@Damage@ magic damage</magicDamage>.<br><br><keywordMajor>Dragon Form:</keywordMajor> If the detonation hits an enemy champion Shyvana <healing>restores from @Calc_Heal_Min@ to @Calc_Heal_Max@ Health</healing> based on her missing Health.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,

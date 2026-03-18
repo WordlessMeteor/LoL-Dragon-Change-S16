@@ -25693,6 +25693,310 @@
         "objectPath": "Shaders/SkinnedMesh/Specular_Fresnel_Masked",
         "__type": "CustomShaderDef"
     },
+    "{4ce35a18}": {
+        "ShadingModel": "{517a2639}",
+        "parameters": [
+            {
+                "name": "DeformWaveController",
+                "data": [
+                    0.10000000149011612,
+                    4.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "DeformWaveController",
+                        "fields": 7,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "DeformWaveStrength",
+                "data": [
+                    1.0,
+                    0.0,
+                    1.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "DeformWaveStrength",
+                        "fields": 7,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "DeformMaskStrength",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "DeformMaskStrength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Normal_Strength",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Normal_Strength",
+                        "fields": 7,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Outline_Color",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Outline_Color",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Outline_Control",
+                "logicalParameters": [
+                    {
+                        "name": "Outline_Control",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "TintColor",
+                "data": [
+                    0.3178606927394867,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "TintColor",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Sheen_TintColor",
+                "data": [
+                    0.21176470816135406,
+                    0.0,
+                    0.24562448263168335,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Sheen_TintColor",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SheenControl",
+                "data": [
+                    1.0,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SheenControl",
+                        "fields": 7,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Roughness_Value",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Roughness_Value",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "AO_Value",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "AO_Value",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Additive_Outline_Color",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Additive_Outline_Color",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "AdditiveOutline_Control",
+                "logicalParameters": [
+                    {
+                        "name": "AdditiveOutline_Control",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "AllAdditive_Strength",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "AllAdditive_Strength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            }
+        ],
+        "staticSwitches": [
+            {
+                "name": "TWO_D_DEFORM_ON",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "OUTLINE_MASK_ON",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "ADDITIVE_OUTLINE_MASK_ON",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "ALL_ADDITIVE_MASK_ON",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "ALL_ADDITIVE_ON",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "ADDITIVE_OUTLINE_ON",
+                "__type": "ShaderStaticSwitch"
+            }
+        ],
+        "textures": [
+            {
+                "name": "Mask_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/OutlineToneMap.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Normal_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Blank_NM.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "RA_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Cloth_test_RMA.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Diffuse_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/gradient_light_Dark.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "iridescentTex",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Default_Gradient.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "SS_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "ShaderTexture"
+            }
+        ],
+        "featureDefines": {
+            "DEBUG_USES_LINEAR_SPACE": "1",
+            "FEATURE_CLOTH_SUBSURFACE": "1",
+            "FEATURE_DISPLACEMENT": "1",
+            "FEATURE_TANGENT": "1",
+            "FEATURE_WORLD_NORMAL": "1",
+            "FEATURE_WORLD_POSITION": "1"
+        },
+        "featureMask": 6,
+        "objectPath": "Shaders/SkinnedMesh/Cloth_Base",
+        "__type": "CustomShaderDef"
+    },
     "Shaders/StaticMesh/Hologram_Rotate": {
         "parameters": [
             {
@@ -27326,6 +27630,51 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "TransitionBloomEdgeColor",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "TransitionBloomEdgeColor",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "TransitionBloomEdgeWidth",
+                "data": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "TransitionBloomEdgeWidth",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "TransitionEdgeBias",
+                "logicalParameters": [
+                    {
+                        "name": "TransitionEdgeBias",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Dissolve_Color",
                 "data": [
                     0.9960784316062927,
@@ -27697,6 +28046,23 @@
                 "logicalParameters": [
                     {
                         "name": "BloomIntensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "TransitionBloomEdgeIntensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "TransitionBloomEdgeIntensity",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -44801,8 +45167,76 @@
         "__type": "CustomShaderDef"
     },
     "Shaders/SkinnedMesh/TFT_Jelly_ChampTiers": {
-        "ShadingModel": "{14b3e471}",
+        "ShadingModel": "{baebc346}",
         "parameters": [
+            {
+                "name": "albedoNewMin",
+                "data": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "albedoNewMin",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "albedoNewMax",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "albedoNewMax",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "rimOffset",
+                "data": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "rimOffset",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "modelHeight",
+                "data": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "modelHeight",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
             {
                 "name": "Light_Intensity",
                 "data": [
@@ -45120,6 +45554,34 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "IntensityStrength",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "IntensityStrength",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "DisableColorCorrect",
+                "logicalParameters": [
+                    {
+                        "name": "DisableColorCorrect",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Light_FX_Opacity",
                 "data": [
                     1.0,
@@ -45166,6 +45628,16 @@
             }
         ],
         "staticSwitches": [
+            {
+                "name": "USE_RIM",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
             {
                 "name": "ADD_BEAUTY_SHADOW",
                 "__type": "ShaderStaticSwitch"
@@ -45238,6 +45710,7 @@
             }
         ],
         "featureDefines": {
+            "DEBUG_USES_LINEAR_SPACE": "1",
             "FEATURE_BLOOM": "1",
             "FEATURE_SHADOW": "1",
             "FEATURE_WORLD_NORMAL": "1",
@@ -59221,6 +59694,125 @@
                     }
                 ],
                 "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Invert_Vignette_Color",
+                "data": [
+                    0.8470588326454163,
+                    0.95686274766922,
+                    0.9372549057006836,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Invert_Vignette_Color",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Invert_Vignette_Size",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Invert_Vignette_Size",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Invert_Vignette_Sharpness",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Invert_Vignette_Sharpness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Saturation_Multiplier",
+                "data": [
+                    0.699999988079071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Saturation_Multiplier",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Darken_Vignette_Bias",
+                "data": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Darken_Vignette_Bias",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Darken_Vignette_Size",
+                "data": [
+                    0.8999999761581421,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Darken_Vignette_Size",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Darken_Vignette_Sharpness",
+                "data": [
+                    3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Darken_Vignette_Sharpness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
             }
         ],
         "staticSwitches": [
@@ -68873,6 +69465,85 @@
                     }
                 ],
                 "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Bloom_Fresnel_Size",
+                "data": [
+                    5.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Bloom_Fresnel_Size",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "BloomUV",
+                "data": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "BloomUV",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Bloom_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Gradient_UV_Scale",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Gradient_UV_Scale",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ScrollRate",
+                "logicalParameters": [
+                    {
+                        "name": "ScrollRate",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
             }
         ],
         "staticSwitches": [
@@ -68884,6 +69555,10 @@
             {
                 "name": "USE_ALBEDO_REMAP",
                 "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_FRESNEL_MASK",
                 "__type": "ShaderStaticSwitch"
             }
         ],
@@ -68897,11 +69572,25 @@
                 "name": "Alpha_Texture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "ShaderTexture"
+            },
+            {
+                "name": "Scroll_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Generic_Noise3.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "BloomGradient_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Particles/Ahri_Fire_FlameColor.tex",
+                "__type": "ShaderTexture"
             }
         ],
         "featureDefines": {
-            "DEBUG_USES_LINEAR_SPACE": "1"
+            "DEBUG_USES_LINEAR_SPACE": "1",
+            "FEATURE_BLOOM": "1",
+            "FEATURE_WORLD_NORMAL": "1",
+            "FEATURE_WORLD_POSITION": "1"
         },
+        "featureMask": 1,
         "objectPath": "Shaders/SkinnedMesh/ScrollingUVs_Masked_ColorDodge",
         "__type": "CustomShaderDef"
     },
@@ -83393,6 +84082,23 @@
                 "logicalParameters": [
                     {
                         "name": "Scroll_Speed",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Noise_Offset",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Noise_Offset",
                         "fields": 3,
                         "__type": "ShaderLogicalParameter"
                     }
