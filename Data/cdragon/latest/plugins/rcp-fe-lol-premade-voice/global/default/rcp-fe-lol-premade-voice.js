@@ -1882,17 +1882,18 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = l(n(16)),
-                i = l(n(17)),
-                a = n(75),
-                o = n(76);
+            var r = s(n(16)),
+                i = s(n(17)),
+                a = s(n(19)),
+                o = n(75),
+                l = n(76);
 
-            function l(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            class s extends r.default {
+            class c extends r.default {
                 templateMarkup() {
                     return n(77)
                 }
@@ -1913,7 +1914,7 @@
                             this._puuid = n;
                             break;
                         case "size":
-                            this._sizeAttribute = n, this._sizeAttribute && this._sizeAttribute in o.SIZES && this.addClass(this._sizeAttribute, this._selectors.halo)
+                            this._sizeAttribute = n, this._sizeAttribute && this._sizeAttribute in l.SIZES && this.addClass(this._sizeAttribute, this._selectors.halo)
                     }
                 }
                 _isParticipant(e) {
@@ -1922,11 +1923,11 @@
                 _updateHalo(e, t) {
                     const n = this.shadowRoot.querySelector(this._selectors.halo),
                         r = this._calculateBlurRadius(t);
-                    (0, a.applyBlur)(n, e, r)
+                    (0, o.applyBlur)(n, e, r)
                 }
                 _calculateBlurRadius(e) {
                     const t = this._sizeAttribute || "small";
-                    return (0, a.calculateBlurRadius)(t, e)
+                    return (0, o.calculateBlurRadius)(t, e)
                 }
                 _disconnectHalo() {
                     this._updateHalo(!1, 0)
@@ -1942,16 +1943,28 @@
                         this._updateHalo(e, n)
                     } else this._disconnectHalo()
                 }
+                _handleTeamVoiceSessionChanged(e) {
+                    if (!e || !e.participants) return;
+                    const t = (e.participants || []).find(this._isParticipant, this);
+                    if (t) {
+                        const {
+                            isSpeaking: e
+                        } = t, {
+                            energy: n
+                        } = t;
+                        this._updateHalo(e, n)
+                    }
+                }
                 getComponentFolderPath() {
                     return super.getComponentFolderPath(), "voice-halo"
                 }
                 _initDataBinding() {
-                    i.default.observe("participants", this._handleParticipantsChanged.bind(this))
+                    i.default.observe("participants", this._handleParticipantsChanged.bind(this)), a.default.observe("session", this._handleTeamVoiceSessionChanged.bind(this))
                 }
             }
-            s.tagName = "lol-parties-comm-halo";
-            var c = s;
-            t.default = c
+            c.tagName = "lol-parties-comm-halo";
+            var p = c;
+            t.default = p
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

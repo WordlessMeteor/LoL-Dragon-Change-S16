@@ -3873,6 +3873,29 @@
         ],
         "__type": "InputEventBool"
     },
+    "{7c6ebc93}": {
+        "name": "{f2395a83}",
+        "{8c61159d}": [
+            {
+                "FloatSource": {
+                    "Axis": 4,
+                    "__type": "GamepadAxisInputSourceFloat"
+                },
+                "__type": "InputSourceFloatAsBool"
+            },
+            {
+                "KeySequence": "[ ]",
+                "{371f336e}": {
+                    "{6bfb316f}": "evtCycleAllies",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectAlly1",
+                    "{5307f5e1}": "{affdb506}",
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
     "{8910c1f4}": {
         "name": "{4aee3444}",
         "{8c61159d}": [
@@ -4345,6 +4368,77 @@
         ],
         "__type": "InputEventBool"
     },
+    "{e3a324ce}": {
+        "name": "{6476eef4}",
+        "{93cf6a73}": [
+            {
+                "Axis": 2,
+                "__type": "GamepadAxisInputSourceFloat"
+            },
+            {
+                "BoolSource": {
+                    "KeySequence": "[ ]",
+                    "{371f336e}": {
+                        "{6bfb316f}": "evtMoveCursorLeft",
+                        "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
+                        "{5307f5e1}": "{affdb506}",
+                        "__type": "{c749aa30}"
+                    },
+                    "__type": "KeyInputSourceBool"
+                },
+                "OnValue": -1.0,
+                "__type": "InputSourceBoolAsFloat"
+            },
+            {
+                "BoolSource": {
+                    "KeySequence": "[ ]",
+                    "{371f336e}": {
+                        "{6bfb316f}": "evtMoveCursorRight",
+                        "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
+                        "{5307f5e1}": "{affdb506}",
+                        "__type": "{c749aa30}"
+                    },
+                    "__type": "KeyInputSourceBool"
+                },
+                "__type": "InputSourceBoolAsFloat"
+            }
+        ],
+        "{8e568fa0}": [
+            {
+                "Axis": 3,
+                "Invert": true,
+                "__type": "GamepadAxisInputSourceFloat"
+            },
+            {
+                "BoolSource": {
+                    "KeySequence": "[ ]",
+                    "{371f336e}": {
+                        "{6bfb316f}": "evtMoveCursorUp",
+                        "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
+                        "{5307f5e1}": "{affdb506}",
+                        "__type": "{c749aa30}"
+                    },
+                    "__type": "KeyInputSourceBool"
+                },
+                "OnValue": -1.0,
+                "__type": "InputSourceBoolAsFloat"
+            },
+            {
+                "BoolSource": {
+                    "KeySequence": "[ ]",
+                    "{371f336e}": {
+                        "{6bfb316f}": "evtMoveCursorDown",
+                        "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
+                        "{5307f5e1}": "{affdb506}",
+                        "__type": "{c749aa30}"
+                    },
+                    "__type": "KeyInputSourceBool"
+                },
+                "__type": "InputSourceBoolAsFloat"
+            }
+        ],
+        "__type": "InputEvent2Axis"
+    },
     "{024d2469}": {
         "name": "{3d12d32a}",
         "events": [
@@ -4398,7 +4492,9 @@
             "{69d9e2b4}",
             "{31718ebc}",
             "{85ddcca9}",
-            "{4c29ec64}"
+            "{4c29ec64}",
+            "{36feb9ca}",
+            "{e3a324ce}"
         ],
         "__type": "InputControlSet"
     },
@@ -4623,6 +4719,7 @@
             "{905b26e2}",
             "{915b2875}",
             "{8a5b1d70}",
+            "{7c6ebc93}",
             "{dd4088e6}",
             "{8910c1f4}",
             "{9fff936b}",
@@ -4665,8 +4762,7 @@
             "{7602fbbd}",
             "{a4602870}",
             "{46b1480d}",
-            "{4301f558}",
-            "{36feb9ca}"
+            "{4301f558}"
         ],
         "__type": "InputControlSet"
     },
@@ -5939,6 +6035,10 @@
                 "__type": "{c174810b}"
             },
             {
+                "{f248d989}": "{7c6ebc93}",
+                "__type": "{2af4e3d0}"
+            },
+            {
                 "{f248d989}": "{dd4088e6}",
                 "{24344877}": 1,
                 "__type": "{5014eb79}"
@@ -6152,10 +6252,6 @@
                 "__type": "{045d6060}"
             },
             {
-                "{f248d989}": "{36feb9ca}",
-                "__type": "{4146f732}"
-            },
-            {
                 "{f248d989}": "{671018be}",
                 "{5ff6cd50}": [
                     {
@@ -6339,6 +6435,10 @@
                 "{f248d989}": "{4c29ec64}",
                 "{00fbeff0}": 1,
                 "__type": "{e9b3cb22}"
+            },
+            {
+                "{f248d989}": "{36feb9ca}",
+                "__type": "{4146f732}"
             }
         ],
         "{5ff6cd50}": [
@@ -9536,6 +9636,36 @@
         ],
         "__type": "InputEventBool"
     },
+    "{8fefd008}": {
+        "name": "{1b84690d}",
+        "{8c61159d}": [
+            {
+                "Button": 1,
+                "__type": "GamepadButtonInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{91efd32e}": {
+        "name": "{198465e7}",
+        "{8c61159d}": [
+            {
+                "Button": 3,
+                "__type": "GamepadButtonInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{92efd4c1}": {
+        "name": "{18846454}",
+        "{8c61159d}": [
+            {
+                "Button": 2,
+                "__type": "GamepadButtonInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
     "{b439aac6}": {
         "name": "{78dccef3}",
         "{8c61159d}": [
@@ -9882,6 +10012,29 @@
         "{c43abb5a}": true,
         "__type": "InputEventBool"
     },
+    "{55334e27}": {
+        "name": "{f2395a83}",
+        "{8c61159d}": [
+            {
+                "FloatSource": {
+                    "Axis": 4,
+                    "__type": "GamepadAxisInputSourceFloat"
+                },
+                "__type": "InputSourceFloatAsBool"
+            },
+            {
+                "KeySequence": "[ ]",
+                "{371f336e}": {
+                    "{6bfb316f}": "CycleAllies",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectAlly1",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
     "{64907c52}": {
         "name": "{09eccf36}",
         "{8c61159d}": [
@@ -9987,6 +10140,77 @@
         ],
         "__type": "InputEventBool"
     },
+    "{451b3022}": {
+        "name": "{6476eef4}",
+        "{93cf6a73}": [
+            {
+                "Axis": 2,
+                "__type": "GamepadAxisInputSourceFloat"
+            },
+            {
+                "BoolSource": {
+                    "KeySequence": "[ ]",
+                    "{371f336e}": {
+                        "{6bfb316f}": "MoveCursorLeft",
+                        "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
+                        "{5307f5e1}": "{e5539ecf}",
+                        "__type": "{c749aa30}"
+                    },
+                    "__type": "KeyInputSourceBool"
+                },
+                "OnValue": -1.0,
+                "__type": "InputSourceBoolAsFloat"
+            },
+            {
+                "BoolSource": {
+                    "KeySequence": "[ ]",
+                    "{371f336e}": {
+                        "{6bfb316f}": "MoveCursorRight",
+                        "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
+                        "{5307f5e1}": "{e5539ecf}",
+                        "__type": "{c749aa30}"
+                    },
+                    "__type": "KeyInputSourceBool"
+                },
+                "__type": "InputSourceBoolAsFloat"
+            }
+        ],
+        "{8e568fa0}": [
+            {
+                "Axis": 3,
+                "Invert": true,
+                "__type": "GamepadAxisInputSourceFloat"
+            },
+            {
+                "BoolSource": {
+                    "KeySequence": "[ ]",
+                    "{371f336e}": {
+                        "{6bfb316f}": "MoveCursorUp",
+                        "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
+                        "{5307f5e1}": "{e5539ecf}",
+                        "__type": "{c749aa30}"
+                    },
+                    "__type": "KeyInputSourceBool"
+                },
+                "OnValue": -1.0,
+                "__type": "InputSourceBoolAsFloat"
+            },
+            {
+                "BoolSource": {
+                    "KeySequence": "[ ]",
+                    "{371f336e}": {
+                        "{6bfb316f}": "MoveCursorDown",
+                        "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
+                        "{5307f5e1}": "{e5539ecf}",
+                        "__type": "{c749aa30}"
+                    },
+                    "__type": "KeyInputSourceBool"
+                },
+                "__type": "InputSourceBoolAsFloat"
+            }
+        ],
+        "__type": "InputEvent2Axis"
+    },
     "{4d73ec3a}": {
         "name": "WASD_Direction",
         "Replicated": true,
@@ -10021,6 +10245,9 @@
                     "__type": "KeyInputSourceBool"
                 },
                 "__type": "InputSourceBoolAsFloat"
+            },
+            {
+                "__type": "GamepadAxisInputSourceFloat"
             }
         ],
         "{8e568fa0}": [
@@ -10054,6 +10281,10 @@
                 },
                 "OnValue": -1.0,
                 "__type": "InputSourceBoolAsFloat"
+            },
+            {
+                "Axis": 1,
+                "__type": "GamepadAxisInputSourceFloat"
             }
         ],
         "{7c96ce2b}": true,
@@ -10067,7 +10298,10 @@
             "{22f57c9c}",
             "{655846c1}",
             "{c3b40a7d}",
-            "{c1b578d8}"
+            "{c1b578d8}",
+            "{8fefd008}",
+            "{92efd4c1}",
+            "{91efd32e}"
         ],
         "__type": "InputControlSet"
     },
@@ -10096,7 +10330,9 @@
             "{0d32bdd1}",
             "{6fe944bb}",
             "{e6e21a78}",
-            "{ff507e30}"
+            "{ff507e30}",
+            "{b439aac6}",
+            "{451b3022}"
         ],
         "__type": "InputControlSet"
     },
@@ -10276,7 +10512,7 @@
             "{4b865eef}",
             "{189f1a32}",
             "{7507a2b1}",
-            "{b439aac6}"
+            "{55334e27}"
         ],
         "__type": "InputControlSet"
     },
@@ -10316,6 +10552,21 @@
                 "{f248d989}": "{c1b578d8}",
                 "{01d6318d}": 9,
                 "__type": "{c8d6dccd}"
+            },
+            {
+                "{f248d989}": "{8fefd008}",
+                "{961bc309}": 1,
+                "__type": "{c5d432c3}"
+            },
+            {
+                "{f248d989}": "{92efd4c1}",
+                "{961bc309}": 2,
+                "__type": "{c5d432c3}"
+            },
+            {
+                "{f248d989}": "{91efd32e}",
+                "{961bc309}": 3,
+                "__type": "{c5d432c3}"
             }
         ],
         "{5ff6cd50}": [
@@ -10460,6 +10711,10 @@
                 "{f248d989}": "{ff507e30}",
                 "{00fbeff0}": 1,
                 "__type": "{e9b3cb22}"
+            },
+            {
+                "{f248d989}": "{b439aac6}",
+                "__type": "{4146f732}"
             }
         ],
         "{5ff6cd50}": [
@@ -11806,8 +12061,8 @@
                 "__type": "{bb0904fc}"
             },
             {
-                "{f248d989}": "{b439aac6}",
-                "__type": "{4146f732}"
+                "{f248d989}": "{55334e27}",
+                "__type": "{2af4e3d0}"
             }
         ],
         "{5ff6cd50}": [
@@ -12326,6 +12581,7 @@
         "__type": "CharacterQuestListConfig"
     },
     "{79dadbd9}": {
+        "{6476eef4}": "{e3a324ce}",
         "{6cb6c4fd}": 10.0,
         "{c53c0790}": [
             "{9b88b0cf}",
@@ -12340,6 +12596,7 @@
         "__type": "{f2d18d28}"
     },
     "{fbd8448d}": {
+        "{6476eef4}": "{451b3022}",
         "{6cb6c4fd}": 10.0,
         "{c53c0790}": [
             "{bc703f68}",

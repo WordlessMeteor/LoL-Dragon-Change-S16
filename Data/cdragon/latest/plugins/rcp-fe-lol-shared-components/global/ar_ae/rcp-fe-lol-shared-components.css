@@ -2107,6 +2107,16 @@ div.preload-watch {
     text-transform: none
 }
 
+.discord-beta {
+    background-color: #463714;
+    border-radius: 2px;
+    color: #cdbe91;
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    padding: 2px 4px
+}
+
 .discord-button-wrapper__link-text {
     font-family: var(--font-display);
     -webkit-font-feature-settings: "kern" 1;
@@ -2160,6 +2170,7 @@ div.preload-watch {
 
 .discord-button-wrapper__link-text {
     color: #cdbe91;
+    margin: 3px;
     text-transform: uppercase
 }
 
@@ -2331,6 +2342,12 @@ div.preload-watch {
     width: 100%
 }
 
+.discord-popup-content .discord-popup-header .discord-popup-header-discord-beta {
+    position: absolute;
+    right: 142px;
+    top: 65px
+}
+
 .discord-popup-content .discord-popup-title {
     color: #f0e6d2
 }
@@ -2383,12 +2400,14 @@ div.preload-watch {
     font-family: var(--font-display)
 }
 
-.discord-congrats-popup-content .congrats-message {
+.discord-congrats-popup-content .congrats-message,
+.discord-congrats-popup-content .linkout {
     font-family: var(--font-body)
 }
 
 .discord-congrats-popup-content .congrats-message,
-.discord-congrats-popup-content .congrats-title {
+.discord-congrats-popup-content .congrats-title,
+.discord-congrats-popup-content .linkout {
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
@@ -2431,17 +2450,70 @@ div.preload-watch {
     letter-spacing: 0
 }
 
+.discord-congrats-popup-content .linkout {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    outline: 0;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.discord-congrats-popup-content .linkout:lang(ja-jp) {
+    font-size: 13px
+}
+
+.discord-congrats-popup-content .linkout:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.discord-congrats-popup-content .linkout {
+    color: #0596aa;
+    text-decoration: none
+}
+
+.discord-congrats-popup-content .linkout.hover,
+.discord-congrats-popup-content .linkout:hover {
+    color: #cdfafa
+}
+
+.discord-congrats-popup-content .linkout:after {
+    background-color: #0596aa;
+    content: "";
+    display: inline-block;
+    height: 9px;
+    margin: 0 0 0 5px;
+    -webkit-mask: url(/fe/lol-shared-components/external-link-mask.png) no-repeat;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+    width: 9px
+}
+
+.discord-congrats-popup-content .linkout:lang(ar-ae):after {
+    margin: 0 5px 0 0;
+    transform: scaleX(-1)
+}
+
+.discord-congrats-popup-content .linkout:hover:after {
+    background-color: #cdfafa
+}
+
 .discord-congrats-popup-content {
     align-items: center;
     align-self: stretch;
+    background-image: url(/fe/lol-static-assets/images/discord_popup_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    height: 200px;
     justify-content: center;
     padding: 16px 16px 48px;
     text-align: center;
-    width: 350px
+    width: 370px
+}
+
+.discord-congrats-popup-content .title-break {
+    color: #3c3c41;
+    width: 56px
 }
 
 .discord-congrats-popup-content .discord_checkmark {

@@ -1466,14 +1466,6 @@
                     4031: {
                         subteamCount: 4,
                         playerSlotCount: 3
-                    },
-                    4032: {
-                        subteamCount: 4,
-                        playerSlotCount: 3
-                    },
-                    4033: {
-                        subteamCount: 4,
-                        playerSlotCount: 3
                     }
                 },
                 CHALLENGES_CLIENT_STATES: {
@@ -4235,7 +4227,7 @@
                         this.set("championSummaryMap", n);
                         const a = e[2];
                         let r;
-                        r = "7d0ef399-dd59-4005-bf1d-e0b98cda8acb" === t[0].ChampionsCompletedTrack.Id ? s.ChampionIdToSeriesUuidMapping : "ed8db228-a535-4999-89d7-1afc7398655f" === t[0].ChampionsCompletedTrack.Id ? o.ChampionIdToSeriesUuuidMapping : a.reduce(((e, t) => (e[t.itemId] = t.itemInstanceId, e)), {}), this.set("championUuidMap", r)
+                        r = "01030e0d-e3e3-4034-93dc-44a88bcb8401" === t[0].ChampionsCompletedTrack.Id ? s.ChampionIdToSeriesUuidMapping : "7d0ef399-dd59-4005-bf1d-e0b98cda8acb" === t[0].ChampionsCompletedTrack.Id ? o.ChampionIdToSeriesUuidMapping : a.reduce(((e, t) => (e[t.itemId] = t.itemInstanceId, e)), {}), this.set("championUuidMap", r)
                     }))
                 },
                 initObservedData() {
@@ -4303,184 +4295,6 @@
                     (0, i.dataBinding)("/lol-lobby").put("/v2/lobby/memberData", t)
                 }
             })
-        }, (e, t) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.ChampionIdToSeriesUuuidMapping = void 0, t.ChampionIdToSeriesUuuidMapping = {
-                1: "0fb0c601-e926-4456-a39f-0f7455fdd0b0",
-                2: "a4c9d7b6-9508-45a8-a061-823525406bc5",
-                3: "29dbaad7-2f9f-4755-9f62-342903632ca8",
-                4: "f3ac71a3-ebe5-4622-baff-f18fc794ee54",
-                5: "a1d4f39b-7cd6-4294-941b-6f15995fe622",
-                6: "9ffd9f31-ae93-4cca-8c3a-946b76786153",
-                7: "f03cbc2b-8e53-4fbd-9e82-d4953c09fb3d",
-                8: "0508dd86-3d5a-4cf1-b619-605ba783eee8",
-                9: "8f073680-403d-479b-82a9-fc15b5245305",
-                10: "7f199356-269a-462b-8b42-63923a226af4",
-                11: "94170b50-03a6-4657-854d-29453c07143e",
-                12: "e0342045-714d-4635-bdc9-b2aeaf1bb186",
-                13: "26ced07f-4cab-490c-a03e-293ac30c59a1",
-                14: "fe16be8c-b829-4c17-8a91-4a2ca1a364f6",
-                15: "ad8bd191-03fd-4e64-9bba-cf1015c921e2",
-                16: "0450e6dc-5647-4cbe-8ec1-4a85d4cab5ea",
-                17: "d97609a4-3ec4-48c7-a69c-9f8534b5d520",
-                18: "00bc3e9e-c6da-458f-8e25-4a48227fb67a",
-                19: "09592248-c015-4614-81f9-d6dc117d067a",
-                20: "2b44fec4-8975-462b-8bcc-cc1cae188eef",
-                21: "104a7bc8-5901-486c-bdc0-a2e5907f6fb1",
-                22: "403ce7ba-5c19-4ccd-a967-eec8d910af65",
-                23: "555c1e12-8c8a-4a13-b15b-553a83da6117",
-                24: "e33f41a7-b134-47c7-bc3c-2262b70ce9c4",
-                25: "062f38a5-4411-4911-a5fc-2898ed798dfb",
-                26: "6bb4bddd-68ae-483c-bdfd-421b49e6b939",
-                27: "c2e4245f-d142-47ee-8f29-57a03a0e5bf1",
-                28: "55c294dd-f7bf-46fc-844c-3e8ced97fc76",
-                29: "91d9776a-e600-480e-acec-d3f12c5ac41b",
-                30: "255c344c-136e-4a51-81ad-6ebf5c8b4b00",
-                31: "97e508d9-710b-4d3b-8616-5ca9ce8a0162",
-                32: "26f9d901-d70b-431a-b256-7aeff3331942",
-                33: "73cc4f7e-7feb-4285-a050-2b2bf5ff1c4d",
-                34: "7f5fd588-7445-46c2-b64e-968e7e568c8f",
-                35: "3cccbb16-527d-4ad5-8411-8f7ea3b1733b",
-                36: "2ba015d5-e55a-4fa1-ab57-ae516e5d396a",
-                37: "929b5ed3-2797-4934-9719-19cedae48b9d",
-                38: "4507b4a1-0c84-457b-a022-7eaf4f1ef6f3",
-                39: "5b1945d0-957a-4b23-9a32-74fbe50a8998",
-                40: "63b22d4d-c261-4567-95b3-1d9e872fb598",
-                41: "4bad0721-db37-4169-9251-f8fa0c990f33",
-                42: "0602ef96-9ff1-4e94-9df9-91929600fd29",
-                43: "84a87da4-0811-4595-a986-31503d5a723b",
-                44: "43671e8c-e002-49d0-9d63-7f7e47270d49",
-                45: "c4ad8801-8e78-4cc5-a6ba-44645866820c",
-                48: "a2292379-c399-49cd-bd2b-255527ff0fe5",
-                50: "a794687d-26fa-40c2-aba1-a04ab4980bbb",
-                51: "42bd2bda-6930-4b09-8857-0dbd23aec412",
-                53: "55fffb23-3150-409d-87ff-83bf5e4bc9ad",
-                54: "deb02c63-9b03-48d5-92c7-0fa08cbb5656",
-                55: "d0957c63-98b6-4d5a-ad2b-1349c945c826",
-                56: "8240ef9d-4d41-4956-b452-e91d48f50b81",
-                57: "4a0006d3-04b3-4652-ab48-3fe0ccd97c80",
-                58: "2984e0ea-3c4f-46d0-932b-7199868d9054",
-                59: "b36f989c-6e1f-409c-940f-cd06dc222537",
-                60: "6096541f-6a03-4c00-afab-2c6f048cdbd3",
-                61: "40daabc3-2211-45ab-b6c7-de00a85b228c",
-                62: "578b5ecd-8b08-47f1-b75b-638b5bfef544",
-                63: "5ed21df5-8d35-48fc-81fa-3a1f41797fd1",
-                64: "afe595eb-a026-4fb5-a248-db8bfd35e4a0",
-                67: "9e98b327-5e2e-40d8-abaf-17342f733373",
-                68: "9917d5a0-5bb6-4615-80d6-52c493a7e2f6",
-                69: "8c77d4fc-8815-4601-9795-4f2951ccbaf2",
-                72: "a4b14cf7-590e-43ae-8627-9cc5d68f7f51",
-                74: "a485995e-41a1-4ca2-8423-67190e464ecb",
-                75: "517b1f91-91e8-4562-a633-74f1dae51d06",
-                76: "ccc2d9c9-6c8a-4a36-8796-9dce9299aced",
-                77: "f3d180e7-fb0c-4e18-a862-e13fcc35dc9e",
-                78: "3b0136b7-f426-4a1e-8abd-f4811eeb84b2",
-                79: "f09c5f06-220a-49c3-b730-323d3992f8f8",
-                80: "0fc9531a-1889-40a6-8ee7-1812d55e68d9",
-                81: "28679439-b684-47b2-a8c9-81c4049de36c",
-                82: "b4f0a467-86ab-4e6c-b833-431a24b3e4ae",
-                83: "01a35b22-66e0-4c3b-9112-2a75e8caa046",
-                84: "de4a988c-65cb-4c26-86d8-58a3a824addf",
-                85: "dcebedd0-de5a-46f5-8308-de901363612e",
-                86: "a50d5f6e-e9da-43b7-90ea-e2feca089e74",
-                89: "2577f6d5-7cdf-4e31-b0ef-80d88d202809",
-                90: "44afad84-8b09-4575-9d62-aead729f4dfb",
-                91: "dde10716-9687-45a5-915b-e1b84ecc4fa8",
-                92: "e8140522-cdbd-4621-aceb-863ab753eb0b",
-                96: "a8fc4158-4f91-4667-a318-ec6b7bc17780",
-                98: "d7d85cde-7ec7-4197-b86a-3a8af99b33c8",
-                99: "bce97820-b712-4b74-a0fb-dd1c5b3ecb30",
-                101: "fb151ce9-012e-41c5-b904-82a2a7a31788",
-                102: "9a79b994-ec41-43e6-9d78-239fc8244619",
-                103: "1566c64a-8ef5-4179-9a0e-17a594e8a1b9",
-                104: "46af71b3-9482-44b7-93d4-6c166efe8609",
-                105: "540f404c-9986-4d33-a9f6-096fc9954582",
-                106: "bb7eb4ef-5c37-4998-81bf-dfebba70e83d",
-                107: "dc136add-30e0-4e52-9149-999bef28bba6",
-                110: "8295ca2e-e0fe-4580-aeaf-6e417f405da1",
-                111: "28451f5a-5bae-4434-b6f0-1b1153f79f49",
-                112: "3b6704f9-c0d9-4a7e-bdcd-8634fc6b20e3",
-                113: "f08443c5-8c09-4fa4-bdb7-aebae7fcf5aa",
-                114: "4d5d02ee-7b3f-4fb3-914c-7340c68b54ac",
-                115: "a13b82fd-fa99-4470-a206-81ab7c57a0f0",
-                117: "ab31b4a2-e231-493b-83ca-25ca46b34cf5",
-                119: "86a47ecc-1633-4801-b725-79f56aca15ba",
-                120: "31a4b67e-f1bd-45b8-a174-549a58689602",
-                121: "5bd3cc67-65f8-407a-bd5e-41424f50ab06",
-                122: "bb63bac7-c3e4-443f-9232-92c59d3e8023",
-                126: "fe330337-f624-426d-b680-aee2b223423e",
-                127: "7e646555-8090-4a95-81a1-423daf2ed742",
-                131: "111fe091-b0e7-41c1-b10d-d3b09346aad1",
-                133: "dbcac9ed-e00c-4d8b-bedb-2e4cc452ecbf",
-                134: "5ecc4125-74ae-4be5-bf34-9aec14300c6a",
-                136: "84f11003-ef7b-4753-8042-a4896b4c4d9d",
-                141: "71e194d8-5bde-4e76-9942-459596609e85",
-                142: "660e1aed-14c2-4730-81d9-b1613ab84f33",
-                143: "cce36318-3502-4ff6-9e67-be995500077c",
-                145: "215f2232-65a7-424f-8a7c-e452f4e1a8d7",
-                147: "83732b7a-0b62-424d-a002-ea72f6c3c8bc",
-                150: "2c8a2c44-54ca-41a1-96fc-88881969ff3e",
-                154: "d81d63fe-7e3e-4241-a12d-d78c1c2cbba6",
-                157: "2b776309-7ada-463a-b700-d98e6f3ca976",
-                161: "82de7679-f844-4bfa-a387-48be410cbc9d",
-                163: "e4ff74b1-c81e-433d-801e-29fa15ddea3e",
-                164: "53970b74-cb74-41a7-9452-3d682022dd32",
-                166: "7100bd2a-4d0b-44cf-97cc-3b3cddf2f608",
-                200: "96d184dc-817e-4009-93b9-450e1f63d05b",
-                201: "9ab7d57e-a934-4674-85a7-d037413a276d",
-                202: "e9cb5655-b02d-43cc-933c-5c087cdda4a4",
-                203: "d60646f4-18fe-4d2e-857c-071389380cd2",
-                221: "d6703783-198b-4d75-b42d-5c85d3e76b72",
-                222: "7225fc48-5219-4360-885e-2e84f12781aa",
-                223: "2318f436-a0a9-4585-bb08-326e3fd3f21c",
-                233: "ba33f1d6-c37d-44bb-b0a4-37acb7cf9024",
-                234: "69d1a39c-6b33-4f5c-806a-53fd7d8499d2",
-                235: "44887108-5227-4f31-8b6f-623f030c5d36",
-                236: "527126fa-66d9-4cc3-a7b2-8828ec553a81",
-                238: "ecae9592-5b33-4c20-a535-2b85f9766771",
-                240: "2c5472a5-709d-4c75-be31-267009eb91e3",
-                245: "03ef4e03-1bc0-46c6-99ff-57aa11a169be",
-                246: "4e030021-eaf3-4df3-979e-29e1237bbb23",
-                254: "59f05c94-1df5-4531-9465-129dc21bdb7a",
-                266: "7cfe9b11-d47a-408e-8a3a-f55cc169d9c2",
-                267: "aed48782-d9d3-44b9-8001-f5bbd9e73c84",
-                268: "8871d291-b614-4945-897f-3b4c18938dbc",
-                350: "4d4f73ca-4116-44d5-8ca7-301291ec7655",
-                360: "0e77c054-343c-4b48-acb6-dc8cbe8f078e",
-                412: "feee849d-1cdc-46bb-8ad9-70cf80ac2959",
-                420: "354e9ea7-eafc-4459-980d-5e04c92cf660",
-                421: "50342448-cb64-43a5-bfe5-1a9d3da180dd",
-                427: "9c7fd390-7cae-4af7-97b0-0f3e0fbf523c",
-                429: "ae51ca0d-6824-4fde-9535-5e8a29365f57",
-                432: "8803332b-fcbe-406c-97f8-c253ddc405ec",
-                497: "50c27333-4907-4bc3-983e-c2aa8f4c66c0",
-                498: "54426203-1d95-425a-a510-60634d9a7f35",
-                516: "6d9e5147-eb71-4a47-b42b-1e278546bc92",
-                517: "af78c74f-51c7-4537-a01d-c5bb8b65302b",
-                518: "9108c9e6-6b04-409e-b546-a9899c71ae39",
-                523: "3f455af2-474a-41a8-b65c-7f2011f490fd",
-                526: "f75025dd-2d89-465b-ab1d-99b1a28753c3",
-                555: "c1bb1fbe-4c0a-4c7b-b5e9-6a4f3f94f767",
-                711: "89090b76-e359-4592-9d6a-95a71c3d3e14",
-                777: "102f7b60-6d25-4d9c-811f-41f5b2abd2d4",
-                799: "410dbb78-9d36-47a1-be87-532285e7143b",
-                800: "3419a049-b47a-415f-bdbc-0236e6e9545d",
-                804: "4fc02d9d-7c83-40d4-8d00-74612a4b5091",
-                875: "460341aa-7226-4c6c-8727-603abb2e9bca",
-                876: "645aae29-081f-4b68-88ed-b58451d62618",
-                887: "9a76b74f-7cc9-4142-849e-0dba6fee4eac",
-                888: "ce1ef0b4-2595-4085-9ef5-2bfab3d4c621",
-                893: "7e32baad-f4bd-41ef-988b-cd0b4f452beb",
-                895: "5b8a6a2e-77f5-4e56-8eb0-a15111048fe9",
-                897: "7a523da9-414d-46da-a5f7-20044d2a8e60",
-                901: "69cbefd2-0fef-4387-95bd-b258b21816ac",
-                902: "7b6eda60-0a36-4203-86fd-4e580912b71c",
-                904: "b9e3bf63-16ec-4fa2-b5fd-e7dbea2ebb16",
-                910: "d0df10f9-0d51-4715-92c8-5fe976a3e425",
-                950: "c21dc41e-2e74-44c5-a063-b2b96992bc65"
-            }
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -4658,6 +4472,185 @@
                 904: "37097933-57f6-4b5a-a70e-40618870dba3",
                 910: "23e4fbbe-3774-4cd4-9c1e-047534eb0984",
                 950: "02653e30-f584-4dce-acaa-ea9273c7beb5"
+            }
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.ChampionIdToSeriesUuidMapping = void 0, t.ChampionIdToSeriesUuidMapping = {
+                1: "74c08b9e-3066-4119-92b6-5c07eabd0ef3",
+                2: "dc65a9fd-663a-46b1-88ce-22b1f1e3f1f3",
+                3: "51097c46-1029-42d9-9d20-0dc1465adf9e",
+                4: "1bc51b55-e803-4c54-a2fb-c3ef776bfe15",
+                5: "59b8c4e5-f088-4c6d-9e4c-597439381845",
+                6: "20d7a2a2-99e5-4e47-9a9d-e2a98993e57f",
+                7: "fcef2e44-5b87-487b-8328-423d53f6e9c2",
+                8: "e3399e8e-eda8-490c-87d7-f771a6316e51",
+                9: "472678ad-96bd-4278-b6ab-2f392534f9fb",
+                10: "a99a3c32-2e51-4d1c-9213-5cf616e270bc",
+                11: "e2ced075-b0e1-411d-b884-a0aec6fb4128",
+                12: "922db87e-79c6-4b25-b057-505aab2d47f3",
+                13: "424285bb-037d-4cb2-bd3e-96f52a95d09b",
+                14: "2a00a5d8-11ff-43de-8425-16f8ad3f63e1",
+                15: "779251b4-6e36-4ec0-b3d2-1b3aa7e3b194",
+                16: "702a767b-7d92-43a7-8045-af5ef8f30f41",
+                17: "87ba8a9a-31d6-4983-b306-34b0f859db07",
+                18: "47c84d6a-d062-4a17-b4c4-e20cb741b3fd",
+                19: "f88b0d51-f5ce-42ba-8407-66fbb8ebbd42",
+                20: "6716ff0d-927d-4480-9cd9-37914b952e82",
+                21: "0e0425d1-3ca7-4818-9e49-73151d43353c",
+                22: "deb5fa4d-086a-4532-888b-09210fd9731a",
+                23: "77474276-cd26-44c1-baca-bdff702f56f4",
+                24: "9a8e42a9-265d-4ca4-a849-5b48bc42e211",
+                25: "45eb5f61-0b56-4e57-a1ef-93e27ceb1dc6",
+                26: "1d468d7d-c685-4127-9f0f-acba77b57ea8",
+                27: "15f2b156-3044-46a5-9b46-7398c0e4d443",
+                28: "0da153cb-fdd7-4327-930b-e183f0f474ca",
+                29: "b85ec99d-341a-4c1e-b389-9449751a4804",
+                30: "3bcd91cc-24c2-43ae-8ae0-d622de34c5c5",
+                31: "1b54ba7b-c62d-4c06-a42c-f94795aafd89",
+                32: "8dc68efe-09af-4424-90a1-e84a242bbcc8",
+                33: "520afdb1-522d-4f2e-b164-5027bb7e3afc",
+                34: "4a42f8ba-d1af-4b33-8f9b-12686b3ea6a5",
+                35: "244de800-003b-4a7c-888a-1121f576963c",
+                36: "8515386a-f110-430d-a405-3b5afdaf15d3",
+                37: "3593f5c9-b95f-43c0-ae52-e8b811312b2c",
+                38: "efefdd1a-a4fd-49ae-ac49-9fdf4645d679",
+                39: "18c8e5e6-98a7-471e-8b49-ce0f482052ca",
+                40: "f78bf3d0-0207-40b6-be95-76af665b864f",
+                41: "0ed21874-18d0-4e0f-8816-3b5effcb8c50",
+                42: "ecbb1b53-4a07-4c30-8121-5addd2abfb24",
+                43: "2c405801-e706-42d1-ae61-48f525d3c26e",
+                44: "12f476e4-40ef-4763-9b2e-c85bd8b40928",
+                45: "b9cd07f9-0c94-47df-bb98-3e48fc70cb98",
+                48: "a99f1f53-e1a6-49f5-9ef4-96f9d53f9c05",
+                50: "9a451bfc-7b44-42ff-8e2e-3e194552e9c8",
+                51: "0f01b330-dd96-4d95-af36-0a2eaee3fb76",
+                53: "605f0953-dff5-4d21-ba75-beec7a8c7b0d",
+                54: "34cccb30-dac7-4348-98b8-adf56c05912e",
+                55: "7c575a4f-3fbe-427d-99d0-304a62e7f8f7",
+                56: "b7e31ad1-0af5-4f29-a7e4-ab956b75ce5e",
+                57: "3a31ceed-73c6-49c1-971a-62e46c06a22c",
+                58: "91c33ce5-ddb7-4580-b5d1-ab3a11846c1f",
+                59: "ed5ad4f6-6d07-4809-bfea-9fd3da196af3",
+                60: "5d3129a8-b97b-4ab8-b6fc-e2353ac6aea8",
+                61: "0f9ae6b6-1c0e-414b-acae-f65fec5affae",
+                62: "6ef41d81-dffd-4be4-9361-65a43b0ead37",
+                63: "7f42a1bc-8600-4b3c-89e3-7a73f3a7074a",
+                64: "644ea5c8-2e4c-4997-949c-2ef5af1af351",
+                67: "bb805ea6-abc2-456b-b372-87c11270f638",
+                68: "eb404f50-d681-4ecf-bdaa-da924d2474d3",
+                69: "ebf43e98-7c44-4319-b4ca-9c1958bdd738",
+                72: "1724746a-d759-4a3b-8164-9fb17c755f74",
+                74: "3743a10f-9610-4a9f-ba57-61089042f261",
+                75: "69799c1f-a553-4c27-9445-a8d5f321297d",
+                76: "760daa10-c23f-49cd-9370-125c750493b3",
+                77: "fda42bb8-456b-4461-99a2-63fa1068aa18",
+                78: "86dc4bbe-68d2-48e0-aa8a-1859b3522e62",
+                79: "a8d409d4-b78e-42bd-be76-c11ea0a72f83",
+                80: "ca5b1cfc-d61f-4c53-b41a-5080d1dd3715",
+                81: "2192c1e1-cec1-4d7f-bda3-b42a8d8ed479",
+                82: "f8ed206f-3501-484d-a29f-80d39659462b",
+                83: "ea4581e0-cd9e-4c54-b519-d8944cf9dd56",
+                84: "d613c7ee-d146-460e-9651-e3e054367223",
+                85: "25842a25-0888-4fda-ad36-5dc46e7c189b",
+                86: "224bf9cf-2bd3-4adb-80ca-62c7aaa7b573",
+                89: "4424aa5d-94a6-402a-beab-5d680d942480",
+                90: "495918d4-f25a-4464-95e5-f736f4927343",
+                91: "8a13ccd0-15c5-415a-b977-74151ac7130f",
+                92: "46be48d4-b061-451b-a4c0-c78847fbadd1",
+                96: "cb111887-4ea0-4ffc-ab6c-5707448b8d66",
+                98: "1a794549-3b46-4d22-87df-6c4049a46ba7",
+                99: "5ad4c7e6-f790-4a81-86b1-038d11f3a45a",
+                101: "27216264-97b5-4e4d-8247-ddaedcefeb60",
+                102: "944db9c7-0cc0-43d2-badd-1d9f9be0fea3",
+                103: "7d86b609-609f-4fd8-8bee-37f906f170df",
+                104: "c921e3ef-f528-4824-b7b2-b317e7de4b17",
+                105: "04c3ae76-6546-422f-b6af-fe5dbf374f71",
+                106: "0315b284-73d1-4e88-ba83-1b366572211a",
+                107: "5c9e68d5-af88-495d-94bc-4e2b804e7d62",
+                110: "86dd7a0c-946a-46ce-ae54-4c91b1a16969",
+                111: "0bf4d2e8-0c71-41fa-8f24-cbc716e212c0",
+                112: "9f771622-080d-4b26-90a6-35cac3a540c8",
+                113: "f6ca7db4-aec8-411b-bdb7-455872d16fe8",
+                114: "b82e6376-6d35-46c6-aac3-3a6eed975e80",
+                115: "76e1f220-6088-4ce6-bb7d-447bb0b5691c",
+                117: "9cc848aa-2ad7-40d4-a324-5c062c905ffd",
+                119: "dd9c7c0d-c28b-4e0b-92b0-26e91745990c",
+                120: "fa0a6137-13a0-4746-b482-af9ac509c7f3",
+                121: "0942142c-7da4-4585-9752-4daaf347653e",
+                122: "3c3bc550-95e3-4eec-be40-0b2d9de99626",
+                126: "ee588f74-f3ac-4deb-9a9a-4636e515b819",
+                127: "b23998ea-0bf8-4f64-812d-30d973293785",
+                131: "908202b0-b461-4b89-87bb-3d056febb223",
+                133: "54fa0851-60b8-4658-9e77-c91ea235222e",
+                134: "f381bddb-7b7f-4fbc-ac4c-40fd456b93dc",
+                136: "c373e209-6548-4049-8d3d-0bb29fdce4a1",
+                141: "64b77ee4-dca7-4f09-a6d5-5505270ab0e3",
+                142: "03f27a39-1ae9-4074-8a3c-06bf1770cf66",
+                143: "c51f0072-576f-4724-849b-64e53327e116",
+                145: "d9d7f8ef-a9d1-4389-85c7-c946e864b0a3",
+                147: "88361034-3a2f-480d-a9ef-eb6b1301d6da",
+                150: "81400aed-7bf2-462a-a36c-6bc2fc29fc43",
+                154: "378557a2-fdc2-437a-8292-7e46be465a9f",
+                157: "c5d9db02-cda5-4ac1-96f4-e6c0917fcc35",
+                161: "8b84b214-f4ab-4c09-9f55-8f1dc9e5516e",
+                163: "b4f48b66-92f9-4e8a-893a-a336903005c5",
+                164: "a0aff128-4c54-40fb-99d6-bddc0f29f960",
+                166: "715ede3d-179c-4634-848c-ef8024203d7d",
+                200: "d54f9610-4117-41cf-b82b-a112e84101a6",
+                201: "4e2b0ab6-4b25-49d9-a42a-0d27cb7f1bff",
+                202: "a3592384-3a24-49e5-8a8f-5ba4dd9fb5bf",
+                203: "e5209d8c-6ead-430d-b4c7-48bd84c9b854",
+                221: "a7b41b2f-f4d6-43f1-9abc-f0f981876ea1",
+                222: "94e1fe00-fa38-4233-8106-e10386f31513",
+                223: "3ffbe1aa-6f3f-4ec7-ba6e-5c2656563b7b",
+                233: "91be1514-7894-4add-aa83-6e3e80796cfd",
+                234: "5e94cfec-4ff9-436b-a9a1-ad16afdb2a22",
+                235: "83238812-accb-4810-bed1-838862e844f7",
+                236: "53a7d975-dacb-4205-8afe-9a977d737106",
+                238: "1ddf663f-eadd-45f6-b34f-10038a29174d",
+                240: "674517e0-171a-4c10-b206-2042641bef3e",
+                245: "d2cb6391-0398-4740-b040-fa5cc0fbd029",
+                246: "1513899e-fb65-4ec0-9600-ecac346ceae7",
+                254: "5d9b00ef-540a-429c-919a-56a6ce022396",
+                266: "d252b6ee-1696-4952-99fd-b97988d5759e",
+                267: "3a1da052-d980-4248-b2f6-d5b0343e5400",
+                268: "22da6329-9ced-44cd-bc27-47e8b1f59ae5",
+                350: "71410b09-2ad8-492f-b381-f54cf69a97d5",
+                360: "2aee6e18-3222-493a-8d6c-8fe7c90703c3",
+                412: "6e0c55ba-a03c-4131-ac95-5e7fc597f249",
+                420: "39edb675-00c7-4980-a835-32afe1855d89",
+                421: "d469ce23-e0df-4ae1-a42b-37db142cce55",
+                427: "4f80ff67-e07c-4798-9dd5-f30f17746c55",
+                429: "6fd1d221-9770-402d-babf-37e66c95a054",
+                432: "50a80cba-aa5d-4cfe-bda9-17c2651951dd",
+                497: "1d6c9735-b76a-46b1-abf5-0398a72a481f",
+                498: "8e0053af-0531-403e-abd7-eab3690969be",
+                516: "ca59ee46-8fad-45b4-87e3-b8257abaa3d5",
+                517: "aa21d219-2f34-4a97-b4ec-50ba840715c6",
+                518: "1eb1f372-359c-430b-ae61-58ac1075998c",
+                523: "ed76df23-a5d8-4f43-92f7-21a6a283ff8e",
+                526: "9a1ce897-9226-4fd6-a097-e8d50f796ede",
+                555: "5253fba0-5e97-4de4-a76e-e41a0add64e0",
+                711: "1406ef60-b6fc-48d1-899a-343044b0bc58",
+                777: "caecfe7e-e53a-487b-81ad-295492705b16",
+                799: "cad957ff-dd43-4141-b77a-9ad002f1d532",
+                800: "263965b3-5785-40a0-a806-cb67d3dc986f",
+                804: "d97375b6-5063-4726-b2e9-8a549421d86c",
+                875: "c68a0ef8-dd7b-4217-8e78-5b307958a476",
+                876: "d9e23a70-860e-4660-a5ad-0457dd1733d9",
+                887: "a7efcbd4-796b-46d5-aed1-1d5b8de87d34",
+                888: "323f7e23-04f3-4c06-8238-ae5d4a2aac4f",
+                893: "6e689ae7-defb-4dfc-8392-512a28649345",
+                895: "7888acf2-8cfd-48b0-bb9e-b97f878ea6c4",
+                897: "2c2cf967-e606-4f6f-807e-947a7e5ce5a4",
+                901: "85b0f774-1be2-4469-b6e6-9734045d4599",
+                902: "bdfe451a-c82c-4e96-8ecb-35422a396f6a",
+                904: "cdaf3289-d5ea-47ec-bee3-a7e1a86c07db",
+                910: "c234b7a6-3e9f-4587-a973-b70bf0d742b8",
+                950: "d32debb5-c6ba-4689-acad-070d0572ee78",
+                4019: "638ceee5-a798-46f2-bbee-04bec157ee85"
             }
         }, (e, t, n) => {
             "use strict";
@@ -10395,17 +10388,22 @@
                     openCaptainMenu: function() {
                         this.get("contextMenuModel") && (this.contextMenuManager.setMenuItems(this.get("contextMenuModel")), this.contextMenuManager.openAtEvent(event))
                     },
-                    sendFriendRequest: function() {
+                    sendFriendRequest: async function() {
                         if (this.get("member")) {
-                            const e = {
-                                direction: "out",
-                                puuid: this.get("puuid")
-                            };
-                            this.sendFriendRequest(e), this.set("isFriended", !0);
-                            const t = this.get("tra").formatString("context_menu_friend_request_sent_to", {
-                                summonerName: this.get("member.displayName.playerNameFull")
+                            const e = this.get("puuid"),
+                                t = {
+                                    direction: "out",
+                                    puuid: e
+                                };
+                            this.sendFriendRequest(t), this.set("isFriended", !0);
+                            let n = this.get("member.displayName.playerNameFull");
+                            if (!n && e) {
+                                n = (await this.get("playerNames").getDisplayNameByPUUID(e)).playerName
+                            }
+                            const i = this.get("tra").formatString("context_menu_friend_request_sent_to", {
+                                summonerName: n
                             });
-                            this.showToast(t)
+                            this.showToast(i)
                         }
                     },
                     kick: async function() {
@@ -22808,6 +22806,11 @@
                 _disabledReasonMessage() {
                     const e = this._gameInvite;
                     if (e) {
+                        if ("ONHOLD" === e.state.toUpperCase() || this._gameSearch) return i.tra.get("parties_roster_invite_disabled_in_game_queue");
+                        if ("REVOKED" === e.state.toUpperCase()) return i.tra.get("parties_roster_invite_disabled_expired");
+                        if (this._isPatcherCheckingForUpdates()) return i.tra.get("parties_roster_invite_disabled_checking_updates");
+                        if (this._isPatching()) return i.tra.get("parties_roster_invite_disabled_patching");
+                        if (!this._patcherConnected) return i.tra.get("parties_roster_invite_disabled_patcher_disconnected");
                         if (!e.canAcceptInvitation) {
                             const t = e.restrictions[0] || {
                                     restrictionCode: "UnknownRestriction"
@@ -22816,7 +22819,7 @@
                                 o = t.restrictionArgs;
                             return i.tra.formatString(`parties_queue_restriction_player_${n}`, o)
                         }
-                        return "ONHOLD" === e.state.toUpperCase() || this._gameSearch ? i.tra.get("parties_roster_invite_disabled_in_game_queue") : "REVOKED" === e.state.toUpperCase() ? i.tra.get("parties_roster_invite_disabled_expired") : this._isPatcherCheckingForUpdates() ? i.tra.get("parties_roster_invite_disabled_checking_updates") : this._isPatching() ? i.tra.get("parties_roster_invite_disabled_patching") : this._patcherConnected ? null : i.tra.get("parties_roster_invite_disabled_patcher_disconnected")
+                        return null
                     }
                 }
                 _isPatcherCheckingForUpdates() {

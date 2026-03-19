@@ -847,7 +847,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Dopo un breve istante, Cassiopeia intossica un'area con una nuvola che infligge ingenti danni velenosi, ottenendo un bonus alla velocità di movimento se colpisce un campione.",
-            "dynamicDescription": "Cassiopeia emette un gas tossico, <keywordMajor>avvelenando</keywordMajor> i nemici e infliggendo <magicDamage>@TooltipTotalDamage@ danni magici</magicDamage> nell'arco di @Effect2Amount@ secondi. Se colpisce un campione, Cassiopeia ottiene <speed>@Effect3Amount@% velocità di movimento</speed> che decade nell'arco di @Effect4Amount@ secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Cassiopeia emette un gas tossico, <keywordMajor>avvelenando</keywordMajor> i nemici e infliggendo <magicDamage>@TooltipTotalDamage@ danni magici</magicDamage> nell'arco di @PoisonDuration@ secondo/i. Se colpisce un campione, Cassiopeia ottiene <speed>@ChampHitMSBonus@% velocità di movimento</speed> che decade nell'arco di @ChampHitMSDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -997,7 +997,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Cassiopeia rilascia varie nubi tossiche, che rallentano, ancorano e danneggiano lievemente i nemici che le attraversano. I nemici ancorati non possono usare abilità di movimento.",
-            "dynamicDescription": "Cassiopeia sputa veleno, lasciando nubi tossiche per @Effect4Amount@ secondi. I nemici nelle nubi subiscono <magicDamage>@DamagePerSecond@ danni magici</magicDamage> al secondo, sono <keywordMajor>avvelenati</keywordMajor>, <status>ancorati</status> e <status>rallentati</status> del @Effect2Amount@%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Cassiopeia sputa veleno, lasciando nubi tossiche per @CloudDuration@ secondo/i. I nemici nelle nubi subiscono <magicDamage>@DamagePerSecond@ danni magici</magicDamage> al secondo, sono <keywordMajor>avvelenati</keywordMajor>, <status>ancorati</status> e <status>rallentati</status> di un @SlowPercent@%.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

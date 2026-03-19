@@ -30194,7 +30194,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Yunara/Skins/Base/Particles/Base_Generic_Sparks_ADD.Yunara.tex",
+                "texture": "ASSETS/Characters/Yunara/Skins/Base/Particles/Base_Generic_Sparks_ADD.Shyvana_Rework.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -31024,7 +31024,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Yunara/Skins/Base/Particles/Base_Generic_Sparks_ADD.Yunara.tex",
+                "texture": "ASSETS/Characters/Yunara/Skins/Base/Particles/Base_Generic_Sparks_ADD.Shyvana_Rework.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -40990,6 +40990,7 @@
             {
                 "TextureName": "FlowmapTex",
                 "texturePath": "ASSETS/Characters/Yunara/Skins/Skin01/Yunara_Skin01_FlowMap_TX_CM.Yunara.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -41005,6 +41006,7 @@
             {
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Characters/Yunara/Skins/Skin01/Yunara_Skin01_VertexDeformMask_TX_CM.Yunara.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -41015,6 +41017,7 @@
             {
                 "TextureName": "BloomColor",
                 "texturePath": "ASSETS/Characters/Yunara/Skins/Skin09/Yunara_Skin09_TX_CM.Chroma_Yunara_Onsen.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -41030,6 +41033,7 @@
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -41040,10 +41044,51 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
@@ -41722,6 +41767,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,

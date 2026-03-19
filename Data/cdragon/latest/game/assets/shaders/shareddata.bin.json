@@ -25,7 +25,8 @@
             "{5d21b392}",
             "{8eddc9c2}",
             "{d234e251}",
-            "{d243ecdb}"
+            "{d243ecdb}",
+            "{7d8d2137}"
         ],
         "textures": [
             {
@@ -273,6 +274,10 @@
             {
                 "name": "LIGHT_REGION_TEXTURE_UPDATE",
                 "SAMPLER": "{a6bded4f}",
+                "__type": "X3DSharedTextureDef"
+            },
+            {
+                "name": "GAMEPLAY_TEXTURE",
                 "__type": "X3DSharedTextureDef"
             }
         ],
@@ -716,6 +721,19 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
+    "{7d8d2137}": {
+        "name": "GameplayTexture",
+        "type": 1,
+        "constants": [
+            {
+                "name": "GameplayTextureDataStream",
+                "type": 3,
+                "Count": 128,
+                "__type": "X3DSharedConstantDef"
+            }
+        ],
+        "__type": "X3DSharedConstantBufferDef"
+    },
     "{80b187e0}": {
         "name": "ParticleDecalVS",
         "frequency": 2,
@@ -1003,6 +1021,10 @@
             {
                 "name": "DYNAMIC_PARTICLE_ENABLE_MASK",
                 "type": 4,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "EMITTER_DEPTH_PUSH_PULL",
                 "__type": "X3DSharedConstantDef"
             }
         ],

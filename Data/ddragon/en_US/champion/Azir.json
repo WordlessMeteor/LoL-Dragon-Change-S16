@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.5.1",
+    "version": "16.6.1",
     "data": {
         "Azir": {
             "id": "Azir",
@@ -55,16 +55,156 @@
                     "chromas": true
                 },
                 {
+                    "id": "268006",
+                    "num": 6,
+                    "name": "Elderwood Azir (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 5
+                },
+                {
+                    "id": "268007",
+                    "num": 7,
+                    "name": "Elderwood Azir (Sapphire)",
+                    "chromas": false,
+                    "parentSkin": 5
+                },
+                {
+                    "id": "268008",
+                    "num": 8,
+                    "name": "Elderwood Azir (Turquoise)",
+                    "chromas": false,
+                    "parentSkin": 5
+                },
+                {
+                    "id": "268009",
+                    "num": 9,
+                    "name": "Elderwood Azir (Catseye)",
+                    "chromas": false,
+                    "parentSkin": 5
+                },
+                {
+                    "id": "268010",
+                    "num": 10,
+                    "name": "Elderwood Azir (Emerald)",
+                    "chromas": false,
+                    "parentSkin": 5
+                },
+                {
+                    "id": "268011",
+                    "num": 11,
+                    "name": "Elderwood Azir (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 5
+                },
+                {
+                    "id": "268012",
+                    "num": 12,
+                    "name": "Elderwood Azir (Emberwood)",
+                    "chromas": false,
+                    "parentSkin": 5
+                },
+                {
+                    "id": "268013",
+                    "num": 13,
+                    "name": "Elderwood Azir (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 5
+                },
+                {
                     "id": "268014",
                     "num": 14,
                     "name": "Worlds 2022 Azir",
                     "chromas": true
                 },
                 {
+                    "id": "268015",
+                    "num": 15,
+                    "name": "Worlds 2022 Azir (Tanzanite)",
+                    "chromas": false,
+                    "parentSkin": 14
+                },
+                {
+                    "id": "268016",
+                    "num": 16,
+                    "name": "Worlds 2022 Azir (Turquoise)",
+                    "chromas": false,
+                    "parentSkin": 14
+                },
+                {
+                    "id": "268017",
+                    "num": 17,
+                    "name": "Worlds 2022 Azir (Obsidian)",
+                    "chromas": false,
+                    "parentSkin": 14
+                },
+                {
+                    "id": "268018",
+                    "num": 18,
+                    "name": "Worlds 2022 Azir (One & Only)",
+                    "chromas": false,
+                    "parentSkin": 14
+                },
+                {
                     "id": "268019",
                     "num": 19,
                     "name": "Attorney Azir",
                     "chromas": true
+                },
+                {
+                    "id": "268020",
+                    "num": 20,
+                    "name": "Attorney Azir (Ruby)",
+                    "chromas": false,
+                    "parentSkin": 19
+                },
+                {
+                    "id": "268021",
+                    "num": 21,
+                    "name": "Attorney Azir (Rose Quartz)",
+                    "chromas": false,
+                    "parentSkin": 19
+                },
+                {
+                    "id": "268022",
+                    "num": 22,
+                    "name": "Attorney Azir (Citrine)",
+                    "chromas": false,
+                    "parentSkin": 19
+                },
+                {
+                    "id": "268023",
+                    "num": 23,
+                    "name": "Attorney Azir (Emerald)",
+                    "chromas": false,
+                    "parentSkin": 19
+                },
+                {
+                    "id": "268024",
+                    "num": 24,
+                    "name": "Attorney Azir (Jasper)",
+                    "chromas": false,
+                    "parentSkin": 19
+                },
+                {
+                    "id": "268025",
+                    "num": 25,
+                    "name": "Attorney Azir (Pearl)",
+                    "chromas": false,
+                    "parentSkin": 19
+                },
+                {
+                    "id": "268026",
+                    "num": 26,
+                    "name": "Attorney Azir (Sapphire)",
+                    "chromas": false,
+                    "parentSkin": 19
+                },
+                {
+                    "id": "268027",
+                    "num": 27,
+                    "name": "Attorney Azir (Obsidian)",
+                    "chromas": false,
+                    "parentSkin": 19
                 }
             ],
             "lore": "Azir was a mortal emperor of Shurima in a far distant age, a proud man who stood at the cusp of immortality. His hubris saw him betrayed and murdered at the moment of his greatest triumph, but now, millennia later, he has been reborn as an Ascended being of immense power. With his buried city risen from the sand, Azir seeks to restore Shurima to its former glory.",
@@ -122,11 +262,13 @@
                     "leveltip": {
                         "label": [
                             "Damage",
+                            "Total AP Ratio",
                             "Cooldown",
                             "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ apratio*100.000000 }}% -> {{ aprationl*100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -152,11 +294,11 @@
                     "effect": [
                         null,
                         [
-                            60,
-                            80,
-                            100,
-                            120,
-                            140
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             25,
@@ -194,11 +336,11 @@
                             200
                         ],
                         [
-                            325,
-                            325,
-                            325,
-                            325,
-                            325
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -224,13 +366,13 @@
                     ],
                     "effectBurn": [
                         null,
-                        "60/80/100/120/140",
+                        "0",
                         "25",
                         "0",
                         "70",
                         "1600",
                         "200",
-                        "325",
+                        "0",
                         "0",
                         "0",
                         "0"

@@ -1,0 +1,559 @@
+{
+    "Characters/NaafiriPackmate/Skins/Skin32": {
+        "championSkinName": "NaafiriPackmateSkin32",
+        "skinParent": 29,
+        "emoteLoadout": "{93f3114c}",
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Naafiri",
+                "NaafiriSkin29"
+            ],
+            "PlaysVo": false,
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/NaafiriPackmate/Animations/Skin29",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/NaafiriPackmate/Skins/Skin29/NaafiriPackmate_Skin29.SKINS_Naafiri_Skin29.skl",
+            "simpleSkin": "ASSETS/Characters/NaafiriPackmate/Skins/Skin29/NaafiriPackmate_Skin29.SKINS_Naafiri_Skin29.skn",
+            "texture": "ASSETS/Characters/NaafiriPackmate/Skins/Skin32/NaafiriPackmate_Skin32_TX_CM.Chroma_Naafiri_WarHounds.tex",
+            "skinScale": 0.949999988079071,
+            "selfIllumination": 0.8500000238418579,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "materialOverride": [
+                {
+                    "Material": "Characters/NaafiriPackmate/Skins/Skin32/Materials/NaafiriPackmate_Skin32_FlameBlade_Mat_inst",
+                    "submesh": "Flame",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "rigPoseModifierData": [
+                {
+                    "mStartingJointName": "pelvis",
+                    "mEndingJointName": "tail4",
+                    "mDefaultMaskName": "{4fc1e099}",
+                    "OnlyActivateInTurns": true,
+                    "__type": "ConformToPathRigPoseModifierData"
+                },
+                {
+                    "mStartingJointName": "Neck1",
+                    "mEndingJointName": "HEAD",
+                    "mDefaultMaskName": "{4fc1e099}",
+                    "mVelMultiplier": 5.0,
+                    "OnlyActivateInTurns": true,
+                    "ActivationAngle": 20.0,
+                    "__type": "ConformToPathRigPoseModifierData"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "iconCircle": "ASSETS/Characters/NaafiriPackmate/HUD/packmates_circle.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 9,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/NaafiriPackmate/Skins/Skin32/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/NaafiriPackmate/Skins/Skin32/Resources": {
+        "resourceMap": {
+            "NaafiriPackmate_Emote_Death_Packmate": "Characters/NaafiriPackmate/Skins/Skin29/Particles/NaafiriPackmate_Skin29_Emote_Death_Packmate",
+            "NaafiriPackmate_Emote_Digging01": "Characters/NaafiriPackmate/Skins/Skin29/Particles/NaafiriPackmate_Skin29_Emote_Digging01",
+            "NaafiriPackmate_Emote_Sitting": "Characters/NaafiriPackmate/Skins/Skin29/Particles/NaafiriPackmate_Skin29_Emote_Sitting",
+            "NaafiriPackmate_Emote_Dancing": "Characters/NaafiriPackmate/Skins/Skin29/Particles/NaafiriPackmate_Skin29_Emote_Dancing",
+            "{a47256aa}": "Characters/NaafiriPackmate/Skins/Skin29/Particles/NaafiriPackmate_Skin29_Passive_01",
+            "NaafiriPackmate_BasicAttack_Packmate_Leap": "Characters/NaafiriPackmate/Skins/Skin29/Particles/NaafiriPackmate_Skin29_BasicAttack_Packmate_Leap"
+        },
+        "__type": "ResourceResolver"
+    },
+    "Characters/NaafiriPackmate/Skins/Skin32/Materials/NaafiriPackmate_Skin32_FlameBlade_Mat_inst": {
+        "name": "Characters/NaafiriPackmate/Skins/Skin32/Materials/NaafiriPackmate_Skin32_FlameBlade_Mat_inst",
+        "samplerValues": [
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Mordekaiser/Skins/Skin54/Mordekaiser_Skin54_Spikes_Flame_TX_CM.SKINS_Mordekaiser_Skin54.tex",
+                "addressU": 2,
+                "addressV": 2,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Main_Texture",
+                "texturePath": "ASSETS/Characters/NaafiriPackmate/Skins/Skin32/NaafiriPackmate_Skin32_TX_CM.Chroma_Naafiri_WarHounds.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "OutlineMask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "addressU": 2,
+                "addressV": 2,
+                "addressW": 2,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Maintex_Alpha_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Size",
+                "value": [
+                    652.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Value",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Location",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Diffuse_Tex_B_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Diffuse_Tex_RG_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Main_Tex_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Texture_B_UV",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedBase",
+                "value": [
+                    0.0,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedBlend",
+                "value": [
+                    0.0,
+                    0.699999988079071,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Base_Tile",
+                "value": [
+                    1.0,
+                    5.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blend_Tile",
+                "value": [
+                    1.0,
+                    5.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BaseMat_Tint",
+                "value": [
+                    0.1921263486146927,
+                    0.8028992414474487,
+                    0.739284336566925,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BlendMat_Tint",
+                "value": [
+                    1.0,
+                    0.06996261328458786,
+                    0.998291015625,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaskStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomValue",
+                "value": [
+                    1.274999976158142,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTex_TintColor",
+                "value": [
+                    0.9386434555053711,
+                    0.7250782251358032,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineControl",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveController",
+                "value": [
+                    1.0,
+                    5.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveStrength",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaClipValue",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaClipNoiseStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_TintColor",
+                "value": [
+                    0.5777370929718018,
+                    0.31026169657707214,
+                    0.887342631816864,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "NoiseUV",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedMainTex",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTex_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Control",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_OUTLINE_W_DISCARD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_DIFFUSE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_OUTLINE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHA_MAIN_SCROLL_OUTLINE_ADD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_DIFFUSE_TEX_RG",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_DIFFUSE_TEX_B",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_MAIN_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MATCAP_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_OUTLINEMASK_B_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLENDCOLOR_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ADDITIVEALPHA_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MAINTEX_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_MASK_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_MAIN",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_MAINTEXCOLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEFORM_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TWO_D_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_MAINTEXALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHACLIP_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_TINTCOLOR_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SCROLL_MAIN_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/AlphaBlend_Additive_Scroll_Packed",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": [
+        "DATA/Characters/NaafiriPackmate/NaafiriPackmate.bin",
+        "DATA/Characters/NaafiriPackmate/Animations/Skin29.bin",
+        "DATA/NaafiriPackmate_Skins_Skin29_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37.bin"
+    ]
+}

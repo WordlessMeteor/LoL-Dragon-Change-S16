@@ -847,7 +847,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Cassiopeia ร่ายเวทระเบิดพิษในพื้นที่ หลังจากรอเวลาครู่หนึ่งมันจะระเบิดออก ทำให้เธอได้รับความเร็วเคลื่อนที่ หากเธอใช้โดนแชมเปี้ยนศัตรู",
-            "dynamicDescription": "Cassiopeia ระเบิดก๊าซพิษซึ่งทำให้ศัตรูติด<keywordMajor>พิษ</keywordMajor> และสร้าง<magicDamage>ความเสียหายเวท @TooltipTotalDamage@ หน่วย</magicDamage>ในช่วงเวลา @Effect2Amount@ วินาที การใช้สกิลโดนแชมเปี้ยนศัตรูจะมอบ<speed>ความเร็วเคลื่อนที่ @Effect3Amount@%</speed> ให้ Cassiopeia ที่จะค่อย ๆ ลดลงในช่วง @Effect4Amount@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Cassiopeia ระเบิดก๊าซพิษซึ่งทำให้ศัตรูติด<keywordMajor>พิษ</keywordMajor> และสร้าง<magicDamage>ความเสียหายเวท @TooltipTotalDamage@ หน่วย</magicDamage> ในช่วงเวลา @PoisonDuration@ วินาที การใช้สกิลโดนแชมเปี้ยนศัตรูจะทำให้ Cassiopeia ได้รับ<speed>ความเร็วเคลื่อนที่ @ChampHitMSBonus@%</speed> ที่จะค่อย ๆ ลดลงในช่วงเวลา @ChampHitMSDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -997,7 +997,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Cassiopeia ปล่อยหมอกพิษออกมา ส่งผลให้ศัตรูถูกสโลว์ ยึดกับพื้น และได้รับความเสียหายเล็กน้อยเมื่อเคลื่อนที่ผ่าน ศัตรูที่ถูกยึดกับพื้นจะไม่สามารถใช้สกิลเคลื่อนที่ได้",
-            "dynamicDescription": "Cassiopeia สร้างพื้นที่พิษขึ้นมาที่จะอยู่เป็นเวลา @Effect4Amount@ วินาที ศัตรูที่เข้ามาในพื้นที่จะได้รับ<magicDamage>ความเสียหายเวท @DamagePerSecond@ หน่วย</magicDamage>ต่อวินาที <keywordMajor>ติดพิษ</keywordMajor> <status>ถูกยึดติดกับพื้น</status> และ<status>ถูกสโลว์</status> @Effect2Amount@%@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Cassiopeia สร้างพื้นที่พิษที่จะคงอยู่เป็นเวลา @CloudDuration@ วินาที ศัตรูที่เข้ามาในพื้นที่พิษจะได้รับ<magicDamage>ความเสียหายเวท @DamagePerSecond@ หน่วย</magicDamage>ต่อวินาที และติด<keywordMajor>พิษ</keywordMajor> ถูก<status>ยึดติดกับพื้น</status> และ<status>สโลว์</status> @SlowPercent@%@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

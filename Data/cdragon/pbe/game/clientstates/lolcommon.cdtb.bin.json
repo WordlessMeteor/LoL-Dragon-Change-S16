@@ -3315,6 +3315,22 @@
                                 "LabelTraKey": "options_gameplay_autobuild_label",
                                 "TooltipTraKey": "options_gameplay_autobuild_tooltip",
                                 "__type": "OptionItemCheckbox"
+                            },
+                            {
+                                "Filter": {
+                                    "ShowInLolReplay": false,
+                                    "ShowInTftGame": false,
+                                    "ShowInTftReplay": false,
+                                    "ShowInTftPregame": false,
+                                    "{64bc3430}": false,
+                                    "{047600fd}": false,
+                                    "__type": "OptionItemFilter_GameStyle"
+                                },
+                                "option": 48,
+                                "template": "{2f26143a}",
+                                "LabelTraKey": "Options_Gameplay_LearnSpellOnCast_Label",
+                                "TooltipTraKey": "Options_Gameplay_LearnSpellOnCast_Tooltip",
+                                "__type": "OptionItemCheckbox"
                             }
                         ],
                         "__type": "OptionItemColumns"
@@ -5714,6 +5730,11 @@
                                         "__type": "OptionItemSecondaryHotkeys1Column_Row"
                                     },
                                     {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_CameraControl_CycleAllies",
+                                        "EventName": "[WASD]CycleAllies",
+                                        "__type": "OptionItemSecondaryHotkeys1Column_Row"
+                                    },
+                                    {
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_CameraControl_ToggleCameraLock",
                                         "EventName": "[WASD]CameraLockToggle",
                                         "__type": "OptionItemSecondaryHotkeys1Column_Row"
@@ -6104,6 +6125,50 @@
                                     }
                                 ],
                                 "__type": "OptionItemSecondaryHotkeys1Column"
+                            }
+                        ],
+                        "__type": "OptionItemGroup"
+                    },
+                    {
+                        "Filter": {
+                            "ShowInTftGame": false,
+                            "ShowInTftReplay": false,
+                            "__type": "OptionItemFilter_GameStyle"
+                        },
+                        "template": "{b5e1975a}",
+                        "LabelTraKey": "Options_Hotkeys_Cursor_Label",
+                        "items": [
+                            {
+                                "template": "{7df5fd7a}",
+                                "Header": {
+                                    "Column1LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set1_label",
+                                    "Column2LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set2_label",
+                                    "__type": "OptionItemSecondaryHotkeys2Column_Header"
+                                },
+                                "{349ad6a6}": true,
+                                "{098f86e0}": [
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_MoveCursorUp_Label",
+                                        "EventName": "[WASD]MoveCursorUp",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_MoveCursorDown_Label",
+                                        "EventName": "[WASD]MoveCursorDown",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_MoveCursorLeft_Label",
+                                        "EventName": "[WASD]MoveCursorLeft",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_MoveCursorRight_Label",
+                                        "EventName": "[WASD]MoveCursorRight",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    }
+                                ],
+                                "__type": "OptionItemSecondaryHotkeys2Column"
                             }
                         ],
                         "__type": "OptionItemGroup"
@@ -7196,6 +7261,11 @@
                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                     },
                                     {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_CameraControl_CycleAllies",
+                                        "EventName": "[GameEvents]evtCycleAllies",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_CameraControl_ToggleCameraLock",
                                         "EventName": "[GameEvents]evtCameraLockToggle",
                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
@@ -7692,6 +7762,59 @@
                                     {
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_ItemShop_SwitchShopTabs",
                                         "EventName": "[ShopEvents]evtShopSwitchTabs",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    }
+                                ],
+                                "__type": "OptionItemSecondaryHotkeys2Column"
+                            }
+                        ],
+                        "__type": "OptionItemGroup"
+                    },
+                    {
+                        "Filter": {
+                            "Filters": [
+                                {
+                                    "ShowInTftGame": false,
+                                    "ShowInTftReplay": false,
+                                    "__type": "OptionItemFilter_GameStyle"
+                                },
+                                {
+                                    "ToggleName": "KeybindingsInputPorting",
+                                    "__type": "OptionItemFilter_FeatureToggle"
+                                }
+                            ],
+                            "__type": "OptionItemFilter_And"
+                        },
+                        "template": "{b5e1975a}",
+                        "LabelTraKey": "Options_Hotkeys_Cursor_Label",
+                        "items": [
+                            {
+                                "template": "{7df5fd7a}",
+                                "Header": {
+                                    "Column1LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set1_label",
+                                    "Column2LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set2_label",
+                                    "__type": "OptionItemSecondaryHotkeys2Column_Header"
+                                },
+                                "{349ad6a6}": true,
+                                "{098f86e0}": [
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_MoveCursorUp_Label",
+                                        "EventName": "[GameEvents]evtMoveCursorUp",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_MoveCursorDown_Label",
+                                        "EventName": "[GameEvents]evtMoveCursorDown",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_MoveCursorLeft_Label",
+                                        "EventName": "[GameEvents]evtMoveCursorLeft",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_MoveCursorRight_Label",
+                                        "EventName": "[GameEvents]evtMoveCursorRight",
                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                     }
                                 ],

@@ -789,6 +789,7 @@
                 "__type": "KeyInputSourceBool"
             }
         ],
+        "{c43abb5a}": true,
         "__type": "InputEventBool"
     },
     "{ef414c97}": {
@@ -3026,7 +3027,7 @@
         "name": "{003a354a}",
         "{8c61159d}": [
             {
-                "KeySequence": "[L Shift][e]",
+                "KeySequence": "[Shift][e]",
                 "{371f336e}": {
                     "{6bfb316f}": "evtSmartCastSpell3",
                     "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_Strawberry_Cast_Ability",
@@ -3111,7 +3112,7 @@
         "name": "{6e187a28}",
         "{8c61159d}": [
             {
-                "KeySequence": "[L Shift][q]",
+                "KeySequence": "[Shift][q]",
                 "{371f336e}": {
                     "{6bfb316f}": "evtSmartCastSpell1",
                     "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_Strawberry_Cast_Ability",
@@ -3264,7 +3265,7 @@
         "name": "{d8a3bc7f}",
         "{8c61159d}": [
             {
-                "KeySequence": "[L Shift][w]",
+                "KeySequence": "[Shift][w]",
                 "{371f336e}": {
                     "{6bfb316f}": "evtSmartCastSpell2",
                     "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_Strawberry_Cast_Ability",
@@ -3417,7 +3418,7 @@
         "name": "{b919f631}",
         "{8c61159d}": [
             {
-                "KeySequence": "[L Shift][r]",
+                "KeySequence": "[Shift][r]",
                 "{371f336e}": {
                     "{6bfb316f}": "evtSmartCastSpell4",
                     "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_Strawberry_Cast_Ability",
@@ -3999,7 +4000,7 @@
         "name": "{85813fd3}",
         "{8c61159d}": [
             {
-                "KeySequence": "[L Shift][Button 2]",
+                "KeySequence": "[Shift][Button 2]",
                 "{371f336e}": {
                     "{6bfb316f}": "evtPlayerAttackMoveClick",
                     "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_PlayerMovement_PlayerAttackMoveClick",
@@ -4042,6 +4043,7 @@
                     "{b825b79c}": true,
                     "__type": "{c749aa30}"
                 },
+                "{611f9b5f}": true,
                 "__type": "KeyInputSourceBool"
             }
         ],
@@ -4166,6 +4168,7 @@
                     "{7b12f519}": false,
                     "__type": "{f07517b3}"
                 },
+                "{611f9b5f}": true,
                 "__type": "KeyInputSourceBool"
             }
         ],
@@ -4469,7 +4472,6 @@
             "{dd4088e6}",
             "{9fff936b}",
             "{8910c1f4}",
-            "{4c29ec64}",
             "{f257b603}",
             "{84d8022e}",
             "{9ec182ed}",
@@ -4484,7 +4486,8 @@
         "name": "{df691329}",
         "events": [
             "{d77f30cc}",
-            "{f5ce6f38}"
+            "{f5ce6f38}",
+            "{4c29ec64}"
         ],
         "__type": "InputControlSet"
     },
@@ -6415,6 +6418,11 @@
             {
                 "{f248d989}": "{d77f30cc}",
                 "__type": "{caefc854}"
+            },
+            {
+                "{f248d989}": "{4c29ec64}",
+                "{00fbeff0}": 1,
+                "__type": "{e9b3cb22}"
             }
         ],
         "{5ff6cd50}": [
@@ -6670,11 +6678,6 @@
                 "{f248d989}": "{8910c1f4}",
                 "{24344877}": 3,
                 "__type": "{5014eb79}"
-            },
-            {
-                "{f248d989}": "{4c29ec64}",
-                "{00fbeff0}": 1,
-                "__type": "{e9b3cb22}"
             },
             {
                 "{f248d989}": "{f257b603}",
@@ -9189,6 +9192,7 @@
                 "__type": "KeyInputSourceBool"
             }
         ],
+        "{c43abb5a}": true,
         "__type": "InputEventBool"
     },
     "{c8a7b3f6}": {
@@ -9252,6 +9256,252 @@
         ],
         "__type": "InputEventBool"
     },
+    "{0d32bdd1}": {
+        "name": "{88a9b502}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[Button 1]",
+                "{371f336e}": {
+                    "{6bfb316f}": "SelectObject",
+                    "{8c87107c}": "select",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_SelectObject",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            },
+            {
+                "KeySequence": "[Ctrl][Button 1]",
+                "__type": "KeyInputSourceBool"
+            },
+            {
+                "Button": 9,
+                "__type": "GamepadButtonInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{327bb234}": {
+        "name": "{41300a4f}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[Ctrl][Button 1]",
+                "{371f336e}": {
+                    "{6bfb316f}": "PetMoveClick",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_Strawberry_Cast_Ability",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "{7b12f519}": false,
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{6fe944bb}": {
+        "name": "{58c8a174}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[Button 1]",
+                "{371f336e}": {
+                    "{6bfb316f}": "InteractWithObject",
+                    "{8c87107c}": "InteractWithObject",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_InteractWithObject",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            },
+            {
+                "KeySequence": "[Ctrl][Button 1]",
+                "__type": "KeyInputSourceBool"
+            },
+            {
+                "__type": "GamepadButtonInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{6fede23b}": {
+        "name": "{07460e0a}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[F2]",
+                "{371f336e}": {
+                    "{6bfb316f}": "SelectAlly1",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectAlly1",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "{7b12f519}": false,
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "{c43abb5a}": true,
+        "__type": "InputEventBool"
+    },
+    "{70ede3ce}": {
+        "name": "{06460c77}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[F3]",
+                "{371f336e}": {
+                    "{6bfb316f}": "SelectAlly2",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectAlly2",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "{7b12f519}": false,
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "{c43abb5a}": true,
+        "__type": "InputEventBool"
+    },
+    "{71ede561}": {
+        "name": "{05460ae4}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[F4]",
+                "{371f336e}": {
+                    "{6bfb316f}": "SelectAlly3",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectAlly3",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "{7b12f519}": false,
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "{c43abb5a}": true,
+        "__type": "InputEventBool"
+    },
+    "{72ede6f4}": {
+        "name": "{04460951}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[F5]",
+                "{371f336e}": {
+                    "{6bfb316f}": "SelectAlly4",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectAlly4",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "{7b12f519}": false,
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "{c43abb5a}": true,
+        "__type": "InputEventBool"
+    },
+    "{8f318655}": {
+        "name": "{f12e3a42}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[Button 1]",
+                "{371f336e}": {
+                    "{6bfb316f}": "AutoAttack",
+                    "{8c87107c}": "AutoAttack",
+                    "{e8de69a5}": "WASD_Options_Hotkeys_PrimaryHotkeys_AutoAttack_label",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            },
+            {
+                "__type": "GamepadButtonInputSourceBool"
+            }
+        ],
+        "RepeatRate": 0.10000000149011612,
+        "__type": "InputEventBool"
+    },
+    "{b6962af1}": {
+        "name": "{fbf8c592}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[ ]",
+                "{371f336e}": {
+                    "{6bfb316f}": "ChampionOnly",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_TargetChampionsOnly",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "{7b12f519}": false,
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{cb888ca3}": {
+        "name": "{9165a7c4}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[Button 1]",
+                "{371f336e}": {
+                    "{6bfb316f}": "CastAction",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_Strawberry_Cast_Ability",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{e6e21a78}": {
+        "name": "{fef62751}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[Button 2]",
+                "{371f336e}": {
+                    "{6bfb316f}": "MinimapMove",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_Strawberry_Cast_Ability",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "{7b12f519}": false,
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            },
+            {
+                "__type": "GamepadButtonInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{eaaa4c94}": {
+        "name": "{ed8c1c0f}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[c]",
+                "{371f336e}": {
+                    "{6bfb316f}": "CancelCurrentActions",
+                    "{e8de69a5}": "PORO_WASD_Options_CancelCurrentActions",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{eedc885c}": {
+        "name": "{bad2948f}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[F1]",
+                "{371f336e}": {
+                    "{6bfb316f}": "SelectSelf",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectSelf",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "{7b12f519}": false,
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "{c43abb5a}": true,
+        "__type": "InputEventBool"
+    },
     "{22f57c9c}": {
         "name": "{071f267d}",
         "{8c61159d}": [
@@ -9282,6 +9532,27 @@
                     "__type": "{f07517b3}"
                 },
                 "__type": "KeyInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{b439aac6}": {
+        "name": "{78dccef3}",
+        "{8c61159d}": [
+            {
+                "KeySequence": "[Button 1]",
+                "{371f336e}": {
+                    "{6bfb316f}": "ClickOnShop",
+                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_Strawberry_Cast_Ability",
+                    "{5307f5e1}": "{e5539ecf}",
+                    "{7b12f519}": false,
+                    "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            },
+            {
+                "Button": 13,
+                "__type": "GamepadButtonInputSourceBool"
             }
         ],
         "__type": "InputEventBool"
@@ -9380,23 +9651,6 @@
                 "{371f336e}": {
                     "{6bfb316f}": "BackToGame",
                     "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_Menus_SystemMenu",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "{7b12f519}": false,
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "__type": "InputEventBool"
-    },
-    "{9777060c}": {
-        "name": "{1af57237}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[n]",
-                "{371f336e}": {
-                    "{6bfb316f}": "ToggleRangeIndicator",
-                    "{e8de69a5}": "PORO_ELEPHANT_Options_ToggleRangeIndicator",
                     "{5307f5e1}": "{e5539ecf}",
                     "{7b12f519}": false,
                     "__type": "{f07517b3}"
@@ -9610,216 +9864,6 @@
         ],
         "__type": "InputEventBool"
     },
-    "{327bb234}": {
-        "name": "{41300a4f}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[Ctrl][Button 1]",
-                "{371f336e}": {
-                    "{6bfb316f}": "PetMoveClick",
-                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_Strawberry_Cast_Ability",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "{7b12f519}": false,
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "__type": "InputEventBool"
-    },
-    "{58635482}": {
-        "name": "{25610853}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[Button 1]",
-                "{371f336e}": {
-                    "{6bfb316f}": "SmartInteract",
-                    "{e8de69a5}": "options_hotkeys_additionalHotkeys_SmartInteract",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "RepeatRate": 0.20000000298023224,
-        "__type": "InputEventBool"
-    },
-    "{6fede23b}": {
-        "name": "{07460e0a}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[F2]",
-                "{371f336e}": {
-                    "{6bfb316f}": "SelectAlly1",
-                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectAlly1",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "{7b12f519}": false,
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "{c43abb5a}": true,
-        "__type": "InputEventBool"
-    },
-    "{70ede3ce}": {
-        "name": "{06460c77}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[F3]",
-                "{371f336e}": {
-                    "{6bfb316f}": "SelectAlly2",
-                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectAlly2",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "{7b12f519}": false,
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "{c43abb5a}": true,
-        "__type": "InputEventBool"
-    },
-    "{71ede561}": {
-        "name": "{05460ae4}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[F4]",
-                "{371f336e}": {
-                    "{6bfb316f}": "SelectAlly3",
-                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectAlly3",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "{7b12f519}": false,
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "{c43abb5a}": true,
-        "__type": "InputEventBool"
-    },
-    "{72ede6f4}": {
-        "name": "{04460951}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[F5]",
-                "{371f336e}": {
-                    "{6bfb316f}": "SelectAlly4",
-                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectAlly4",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "{7b12f519}": false,
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "{c43abb5a}": true,
-        "__type": "InputEventBool"
-    },
-    "{b6962af1}": {
-        "name": "{fbf8c592}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[ ]",
-                "{371f336e}": {
-                    "{6bfb316f}": "ChampionOnly",
-                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_AbilitiesAndSummonerSpells_TargetChampionsOnly",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "{7b12f519}": false,
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "__type": "InputEventBool"
-    },
-    "{cb888ca3}": {
-        "name": "{9165a7c4}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[Button 1]",
-                "{371f336e}": {
-                    "{6bfb316f}": "CastAction",
-                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_Strawberry_Cast_Ability",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "__type": "InputEventBool"
-    },
-    "{e6e21a78}": {
-        "name": "{fef62751}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[Button 2]",
-                "{371f336e}": {
-                    "{6bfb316f}": "MinimapMove",
-                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_Strawberry_Cast_Ability",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "{7b12f519}": false,
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            },
-            {
-                "__type": "GamepadButtonInputSourceBool"
-            }
-        ],
-        "__type": "InputEventBool"
-    },
-    "{ea447d8e}": {
-        "name": "{39f9f5e7}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[ ]",
-                "{371f336e}": {
-                    "{6bfb316f}": "PlayerMoveClick",
-                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_ClickToMove",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "{7b12f519}": false,
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "__type": "InputEventBool"
-    },
-    "{eaaa4c94}": {
-        "name": "{ed8c1c0f}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[c]",
-                "{371f336e}": {
-                    "{6bfb316f}": "CancelCurrentActions",
-                    "{e8de69a5}": "PORO_WASD_Options_CancelCurrentActions",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "__type": "InputEventBool"
-    },
-    "{eedc885c}": {
-        "name": "{bad2948f}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[F1]",
-                "{371f336e}": {
-                    "{6bfb316f}": "SelectSelf",
-                    "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectSelf",
-                    "{5307f5e1}": "{e5539ecf}",
-                    "{7b12f519}": false,
-                    "__type": "{f07517b3}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "{c43abb5a}": true,
-        "__type": "InputEventBool"
-    },
     "{39af9fb7}": {
         "name": "{0aa6c7a3}",
         "{8c61159d}": [
@@ -9943,23 +9987,6 @@
         ],
         "__type": "InputEventBool"
     },
-    "{451b3022}": {
-        "name": "{6476eef4}",
-        "{93cf6a73}": [
-            {
-                "Axis": 2,
-                "__type": "GamepadAxisInputSourceFloat"
-            }
-        ],
-        "{8e568fa0}": [
-            {
-                "Axis": 3,
-                "Invert": true,
-                "__type": "GamepadAxisInputSourceFloat"
-            }
-        ],
-        "__type": "InputEvent2Axis"
-    },
     "{4d73ec3a}": {
         "name": "WASD_Direction",
         "Replicated": true,
@@ -9975,7 +10002,6 @@
                         "{b825b79c}": true,
                         "__type": "{f07517b3}"
                     },
-                    "{611f9b5f}": true,
                     "__type": "KeyInputSourceBool"
                 },
                 "OnValue": -1.0,
@@ -9992,7 +10018,6 @@
                         "{b825b79c}": true,
                         "__type": "{f07517b3}"
                     },
-                    "{611f9b5f}": true,
                     "__type": "KeyInputSourceBool"
                 },
                 "__type": "InputSourceBoolAsFloat"
@@ -10010,7 +10035,6 @@
                         "{b825b79c}": true,
                         "__type": "{f07517b3}"
                     },
-                    "{611f9b5f}": true,
                     "__type": "KeyInputSourceBool"
                 },
                 "__type": "InputSourceBoolAsFloat"
@@ -10026,7 +10050,6 @@
                         "{b825b79c}": true,
                         "__type": "{f07517b3}"
                     },
-                    "{611f9b5f}": true,
                     "__type": "KeyInputSourceBool"
                 },
                 "OnValue": -1.0,
@@ -10069,7 +10092,9 @@
             "{67be6718}",
             "{e880859e}",
             "{ff06da95}",
-            "{58635482}",
+            "{8f318655}",
+            "{0d32bdd1}",
+            "{6fe944bb}",
             "{e6e21a78}",
             "{ff507e30}"
         ],
@@ -10100,7 +10125,6 @@
             "{1391e4e1}",
             "{2d64e272}",
             "{327bb234}",
-            "{451b3022}",
             "{51eb9b80}",
             "{b2167abd}",
             "{f8fa9e7a}",
@@ -10135,7 +10159,6 @@
             "{38840aec}",
             "{b5229894}",
             "{2ceeea7b}",
-            "{ea447d8e}",
             "{aa110f35}",
             "{6d44cf88}",
             "{4dfe3218}",
@@ -10183,7 +10206,6 @@
             "{6d8772a9}",
             "{1495d0d3}",
             "{244d812c}",
-            "{9777060c}",
             "{ae450629}",
             "{cbd8c06a}",
             "{a863086c}",
@@ -10253,7 +10275,8 @@
             "{4efa1b9e}",
             "{4b865eef}",
             "{189f1a32}",
-            "{7507a2b1}"
+            "{7507a2b1}",
+            "{b439aac6}"
         ],
         "__type": "InputControlSet"
     },
@@ -10364,7 +10387,7 @@
                 "__type": "{0dde919c}"
             },
             {
-                "{f248d989}": "{58635482}",
+                "{f248d989}": "{8f318655}",
                 "{5ff6cd50}": [
                     {
                         "{fd36c650}": true,
@@ -10383,7 +10406,51 @@
                         "__type": "{2152c2a1}"
                     }
                 ],
-                "__type": "{c7b1ec51}"
+                "__type": "{3560aa93}"
+            },
+            {
+                "{f248d989}": "{0d32bdd1}",
+                "{5ff6cd50}": [
+                    {
+                        "{fd36c650}": true,
+                        "__type": "{a8b35a0d}"
+                    },
+                    {
+                        "{fd36c650}": true,
+                        "__type": "{ab2fec44}"
+                    },
+                    {
+                        "{fd36c650}": true,
+                        "{5e3d5ec0}": [
+                            2,
+                            6
+                        ],
+                        "__type": "{2152c2a1}"
+                    }
+                ],
+                "__type": "{44ad5085}"
+            },
+            {
+                "{f248d989}": "{6fe944bb}",
+                "{5ff6cd50}": [
+                    {
+                        "{fd36c650}": true,
+                        "__type": "{a8b35a0d}"
+                    },
+                    {
+                        "{fd36c650}": true,
+                        "__type": "{ab2fec44}"
+                    },
+                    {
+                        "{fd36c650}": true,
+                        "{5e3d5ec0}": [
+                            2,
+                            6
+                        ],
+                        "__type": "{2152c2a1}"
+                    }
+                ],
+                "__type": "{140a7767}"
             },
             {
                 "{f248d989}": "{e6e21a78}",
@@ -11710,6 +11777,16 @@
                 "__type": "{b5f38c13}"
             },
             {
+                "{f248d989}": "{bfa2ac48}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 8,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
                 "{f248d989}": "{4b865eef}",
                 "SpellSlot": {
                     "SlotType": 1,
@@ -11727,6 +11804,10 @@
                     }
                 ],
                 "__type": "{bb0904fc}"
+            },
+            {
+                "{f248d989}": "{b439aac6}",
+                "__type": "{4146f732}"
             }
         ],
         "{5ff6cd50}": [

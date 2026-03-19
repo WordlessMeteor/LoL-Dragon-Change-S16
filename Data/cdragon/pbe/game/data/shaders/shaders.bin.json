@@ -12614,6 +12614,57 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Dissolve_Texture_Intensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Dissolve_Texture_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "DissolveWidth",
+                "data": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "DissolveWidth",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "DissolveBias",
+                "data": [
+                    1.2000000476837158,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "DissolveBias",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Gradient_Intensity",
                 "data": [
                     1.0,
@@ -12852,6 +12903,57 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Dissolve_Color",
+                "data": [
+                    0.027450980618596077,
+                    0.9254902005195618,
+                    0.32549020648002625,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Dissolve_Color",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "DissolveIntensity",
+                "data": [
+                    10.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "DissolveIntensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Lighting_Intensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Lighting_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Bloom_Intensity",
                 "data": [
                     0.10000000149011612,
@@ -12903,6 +13005,11 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "DISSOLVE_OUT_ALPHA",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "GRADIENT_ON",
                 "__type": "ShaderStaticSwitch"
             },
@@ -12919,6 +13026,10 @@
             {
                 "name": "HOLES_ON",
                 "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_POST_LIGHT_ON_DISSOLVE",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -12943,6 +13054,16 @@
                 "__type": "ShaderTexture"
             },
             {
+                "name": "Alt_Diffuse_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Dissolve_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Particles/Base_plasma_noise.tex",
+                "__type": "ShaderTexture"
+            },
+            {
                 "name": "Flowmap",
                 "defaultTexturePath": "ASSETS/Shared/Materials/flowmap.tex",
                 "__type": "ShaderTexture"
@@ -12962,10 +13083,11 @@
             "DEBUG_USES_LINEAR_SPACE": "1",
             "FEATURE_BLOOM": "1",
             "FEATURE_SCREENSPACE_UV": "1",
+            "FEATURE_VERTEX_COLOR": "1",
             "FEATURE_WORLD_NORMAL": "1",
             "FEATURE_WORLD_POSITION": "1"
         },
-        "featureMask": 1,
+        "featureMask": 33,
         "objectPath": "Shaders/SkinnedMesh/Crepe_Anomaly_Mask",
         "__type": "CustomShaderDef"
     },
@@ -25693,7 +25815,7 @@
         "objectPath": "Shaders/SkinnedMesh/Specular_Fresnel_Masked",
         "__type": "CustomShaderDef"
     },
-    "{4ce35a18}": {
+    "Shaders/SkinnedMesh/Cloth_Base": {
         "ShadingModel": "{517a2639}",
         "parameters": [
             {

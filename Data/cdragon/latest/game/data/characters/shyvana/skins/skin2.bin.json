@@ -1,10 +1,10 @@
 {
     "Characters/Shyvana/Skins/Skin2": {
         "skinClassification": 1,
-        "championSkinName": "BoneShyvana",
-        "metaDataTags": "faction:demacia,gender:female,element:fire,skinline:legacy,appearance:dragon",
+        "championSkinName": "BaseShyvana",
+        "metaDataTags": "faction:demacia,gender:female,element:fire,skinline:prehistoric",
         "loadscreen": {
-            "image": "ASSETS/Characters/Shyvana/Skins/Skin02/ShyvanaLoadscreen_2.tex",
+            "image": "ASSETS/Characters/Shyvana/Skins/Skin02/ShyvanaLoadScreen_2.Shyvana_Rework.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -13,6 +13,111 @@
             ],
             "bankUnits": [
                 {
+                    "name": "Shyvana_Base_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Shyvana/Skins/Base/Shyvana_Base_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Shyvana/Skins/Base/Shyvana_Base_SFX_events.bnk"
+                    ],
+                    "events": [
+                        "Play_sfx_Shyvana_ShyvanaBasicAttack2_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaBasicAttack2_OnHit",
+                        "Play_sfx_Shyvana_ShyvanaBasicAttack_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaBasicAttack_OnHit",
+                        "Play_sfx_Shyvana_ShyvanaCritAttack_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaCritAttack_OnHit",
+                        "Play_sfx_Shyvana_ShyvanaDance3D_leadin",
+                        "Play_sfx_Shyvana_ShyvanaDance3D_loop",
+                        "Play_sfx_Shyvana_ShyvanaDeath3D_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaDragonBasicAttack2_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaDragonBasicAttack2_OnHit",
+                        "Play_sfx_Shyvana_ShyvanaDragonBasicAttack_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaDragonBasicAttack_OnHit",
+                        "Play_sfx_Shyvana_ShyvanaDragonCritAttack_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaDragonCritAttack_OnHit",
+                        "Play_sfx_Shyvana_ShyvanaDragonDance3D_leadin",
+                        "Play_sfx_Shyvana_ShyvanaDragonDance3D_loop",
+                        "Play_sfx_Shyvana_ShyvanaDragonDeath3D_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaDragonHomeguard3D_leadin",
+                        "Play_sfx_Shyvana_ShyvanaDragonHomeguard3D_loop",
+                        "Play_sfx_Shyvana_ShyvanaDragonJoke3D_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaDragonLaugh3D_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaDragonQ1_buffactivate_loop",
+                        "Play_sfx_Shyvana_ShyvanaDragonQ2_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaDragonQ3_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaDragonQ3_buffactivate_loop",
+                        "Play_sfx_Shyvana_ShyvanaDragonQ_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaDragonR_hit",
+                        "Play_sfx_Shyvana_ShyvanaDragonR_obd",
+                        "Play_sfx_Shyvana_ShyvanaDragonR_omc",
+                        "Play_sfx_Shyvana_ShyvanaDragonR_oncast",
+                        "Play_sfx_Shyvana_ShyvanaDragonR_ready_self",
+                        "Play_sfx_Shyvana_ShyvanaDragonR_untransform",
+                        "Play_sfx_Shyvana_ShyvanaDragonRecall3D_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaDragonRespawn3D_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaDragonRTransform_buffactivate_loop",
+                        "Play_sfx_Shyvana_ShyvanaDragonTaunt3D_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaDragonW_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaDragonW_buffcast",
+                        "Play_sfx_Shyvana_ShyvanaDragonW_buffdeactivate",
+                        "Play_sfx_Shyvana_ShyvanaDragonW_heal",
+                        "Play_sfx_Shyvana_ShyvanaDragonW_run_in",
+                        "Play_sfx_Shyvana_ShyvanaDragonW_runloop",
+                        "Play_sfx_Shyvana_ShyvanaE_hit",
+                        "Play_sfx_Shyvana_ShyvanaE_hitlocation",
+                        "Play_sfx_Shyvana_ShyvanaE_hitlocation_champ_sweetener",
+                        "Play_sfx_Shyvana_ShyvanaE_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaE_OnMissileLaunch",
+                        "Play_sfx_Shyvana_ShyvanaEDragon_hitlocation",
+                        "Play_sfx_Shyvana_ShyvanaEDragon_hitlocation_champ_sweetener",
+                        "Play_sfx_Shyvana_ShyvanaEDragon_hitlocation_dot",
+                        "Play_sfx_Shyvana_ShyvanaEDragon_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaEDragon_OnMissileCast",
+                        "Play_sfx_Shyvana_ShyvanaEDragon_OnMissileLaunch",
+                        "Play_sfx_Shyvana_ShyvanaHomeguard3D_footstep_01",
+                        "Play_sfx_Shyvana_ShyvanaHomeguard3D_footstep_02",
+                        "Play_sfx_Shyvana_ShyvanaJoke3D_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaLaugh3D_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaQ2_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaQ_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaQ_buffactivate_loop",
+                        "Play_sfx_Shyvana_ShyvanaQAttack2_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaQAttack2_OnHit",
+                        "Play_sfx_Shyvana_ShyvanaQAttack_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaQAttack_OnHit",
+                        "Play_sfx_Shyvana_ShyvanaQAttackDragon2_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaQAttackDragon2_OnHit",
+                        "Play_sfx_Shyvana_ShyvanaQAttackDragon3_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaQAttackDragon3_OnHit",
+                        "Play_sfx_Shyvana_ShyvanaQAttackDragon_OnCast",
+                        "Play_sfx_Shyvana_ShyvanaQAttackDragon_OnHit",
+                        "Play_sfx_Shyvana_ShyvanaQAttackReady2_OnBuffDeactivate",
+                        "Play_sfx_Shyvana_ShyvanaQAttackReady3_OnBuffDeactivate",
+                        "Play_sfx_Shyvana_ShyvanaQAttackReady_OnBuffDeactivate",
+                        "Play_sfx_Shyvana_ShyvanaRecall3D_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaRespawn3D_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaTaunt3D_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaW_buffactivate",
+                        "Play_sfx_Shyvana_ShyvanaW_buffcast",
+                        "Play_sfx_Shyvana_ShyvanaW_buffdeactivate",
+                        "Play_sfx_Shyvana_ShyvanaW_buffdeactivate_champ_hit",
+                        "Play_sfx_Shyvana_ShyvanaW_recast_ready_oc",
+                        "Play_sfx_Shyvana_ShyvanaW_run_footstep1",
+                        "Play_sfx_Shyvana_ShyvanaW_run_footstep2",
+                        "Stop_sfx_Shyvana_ShyvanaDragonQ1_buffactivate_loop",
+                        "Stop_sfx_Shyvana_ShyvanaDragonQ3_buffactivate_loop",
+                        "Stop_sfx_Shyvana_ShyvanaDragonR_obd",
+                        "Stop_sfx_Shyvana_ShyvanaDragonRTransform_buffactivate_loop",
+                        "Stop_sfx_Shyvana_ShyvanaDragonTaunt3D_buffactivate",
+                        "Stop_sfx_Shyvana_ShyvanaDragonW_heal",
+                        "Stop_sfx_Shyvana_ShyvanaE_hitlocation",
+                        "Stop_sfx_Shyvana_ShyvanaE_OnMissileLaunch",
+                        "Stop_sfx_Shyvana_ShyvanaEDragon_hitlocation_dot",
+                        "Stop_sfx_Shyvana_ShyvanaEDragon_hitlocation_trail",
+                        "Stop_sfx_Shyvana_ShyvanaQ_buffactivate_loop"
+                    ],
+                    "__type": "BankUnit"
+                },
+                {
                     "name": "Shyvana_Base_VO",
                     "bankPath": [
                         "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Shyvana/Skins/Base/Shyvana_Base_VO_audio.bnk",
@@ -20,40 +125,67 @@
                         "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Shyvana/Skins/Base/Shyvana_Base_VO_audio.wpk"
                     ],
                     "events": [
+                        "Play_vo_Shyvana_Attack2DBaron",
+                        "Play_vo_Shyvana_Attack2DDragon",
+                        "Play_vo_Shyvana_Attack2DElderDragon",
                         "Play_vo_Shyvana_Attack2DGeneral",
-                        "Play_vo_Shyvana_Death3D",
+                        "Play_vo_Shyvana_Death3DHuman",
+                        "Play_vo_Shyvana_Dragon_Attack2DGeneral",
+                        "Play_vo_Shyvana_Dragon_Joke3DGeneral",
+                        "Play_vo_Shyvana_Dragon_Kill3DGeneral",
+                        "Play_vo_Shyvana_Dragon_Kill3DPenta",
+                        "Play_vo_Shyvana_Dragon_Taunt3DGeneral",
+                        "Play_vo_Shyvana_EnemyTeamKill3DEpicMonster",
+                        "Play_vo_Shyvana_FirstEncounter3DAurelionSol",
+                        "Play_vo_Shyvana_FirstEncounter3DDemacia",
+                        "Play_vo_Shyvana_FirstEncounter3DGeneral",
+                        "Play_vo_Shyvana_FirstEncounter3DJarvanIV",
+                        "Play_vo_Shyvana_FirstEncounter3DMilio",
+                        "Play_vo_Shyvana_FirstEncounter3DPoppy",
+                        "Play_vo_Shyvana_FirstEncounter3DQuinn",
+                        "Play_vo_Shyvana_FirstEncounter3DSmolder",
                         "Play_vo_Shyvana_Joke3DGeneral",
+                        "Play_vo_Shyvana_JokeResponse3DGeneral",
+                        "Play_vo_Shyvana_Kill3DAurelionSol",
+                        "Play_vo_Shyvana_Kill3DDemacia",
+                        "Play_vo_Shyvana_Kill3DEpicMonsterAheadAllyTeam",
+                        "Play_vo_Shyvana_Kill3DEpicMonsterBehindAllyTeam",
+                        "Play_vo_Shyvana_Kill3DFirst",
+                        "Play_vo_Shyvana_Kill3DGeneral",
+                        "Play_vo_Shyvana_Kill3DJarvanIV",
+                        "Play_vo_Shyvana_Kill3DMilio",
+                        "Play_vo_Shyvana_Kill3DPenta",
+                        "Play_vo_Shyvana_Kill3DPoppy",
+                        "Play_vo_Shyvana_Kill3DQuinn",
+                        "Play_vo_Shyvana_Kill3DSmolder",
                         "Play_vo_Shyvana_Laugh3DGeneral",
+                        "Play_vo_Shyvana_Move2DFirst",
+                        "Play_vo_Shyvana_Move2DFirstAllyDemacia",
+                        "Play_vo_Shyvana_Move2DFirstAllyJarvanIV",
+                        "Play_vo_Shyvana_Move2DFirstAllyQuinn",
+                        "Play_vo_Shyvana_Move2DLong",
                         "Play_vo_Shyvana_Move2DStandard",
+                        "Play_vo_Shyvana_Ping2DAssistMe",
+                        "Play_vo_Shyvana_Ping2DDanger",
+                        "Play_vo_Shyvana_Ping2DEnemyMissing",
+                        "Play_vo_Shyvana_Ping2DOnMyWay",
+                        "Play_vo_Shyvana_Ping2DTarget",
+                        "Play_vo_Shyvana_Recall3DGeneral",
+                        "Play_vo_Shyvana_Respawn2DGeneral",
                         "Play_vo_Shyvana_ShyvanaBasicAttack2_cast3D",
-                        "Play_vo_Shyvana_ShyvanaBasicAttack3_cast3D",
                         "Play_vo_Shyvana_ShyvanaBasicAttack_cast3D",
                         "Play_vo_Shyvana_ShyvanaCritAttack_cast3D",
-                        "Play_vo_Shyvana_ShyvanaDoubleAttackHit_cast3D",
-                        "Play_vo_Shyvana_ShyvanaFireball_cast3D",
-                        "Play_vo_Shyvana_ShyvanaTransformCast_cast3D",
+                        "Play_vo_Shyvana_ShyvanaE_cast3D",
+                        "Play_vo_Shyvana_ShyvanaQAttack2_cast3D",
+                        "Play_vo_Shyvana_ShyvanaQAttack_cast3D",
+                        "Play_vo_Shyvana_ShyvanaR_cast3D",
+                        "Play_vo_Shyvana_Spell2DRankUpGeneral",
+                        "Play_vo_Shyvana_Spell2DRRankOne",
+                        "Play_vo_Shyvana_Spell3DPMax",
                         "Play_vo_Shyvana_Taunt3DGeneral",
-                        "Play_vo_ShyvanaDragon_Attack2DGeneral",
-                        "Play_vo_ShyvanaDragon_Death3D",
-                        "Play_vo_ShyvanaDragon_Laugh3DGeneral",
-                        "Play_vo_ShyvanaDragon_Move2DStandard",
-                        "Play_vo_ShyvanaDragon_ShyvanaBasicAttack2_cast3D",
-                        "Play_vo_ShyvanaDragon_ShyvanaBasicAttack3_cast3D",
-                        "Play_vo_ShyvanaDragon_ShyvanaBasicAttack_cast3D",
-                        "Play_vo_ShyvanaDragon_ShyvanaCritAttack_cast3D",
-                        "Play_vo_ShyvanaDragon_ShyvanaDoubleAttackHitDragon_cast3D",
-                        "Play_vo_ShyvanaDragon_ShyvanaFireballDragon2_cast3D",
-                        "Play_vo_ShyvanaDragon_Taunt3DGeneral"
+                        "Play_vo_Shyvana_TauntResponse3DGeneral"
                     ],
                     "voiceOver": true,
-                    "__type": "BankUnit"
-                },
-                {
-                    "name": "Shyvana_Base_SFX",
-                    "bankPath": [
-                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Shyvana/Skins/Base/Shyvana_Base_SFX_audio.bnk",
-                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Shyvana/Skins/Base/Shyvana_Base_SFX_events.bnk"
-                    ],
                     "__type": "BankUnit"
                 }
             ],
@@ -64,94 +196,847 @@
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
-            "skeleton": "ASSETS/Characters/Shyvana/Skins/Skin02/Shyvana_bone.skl",
-            "simpleSkin": "ASSETS/Characters/Shyvana/Skins/Skin02/Shyvana_bone.skn",
-            "texture": "ASSETS/Characters/Shyvana/Skins/Skin02/shyvana_bone_TX_CM.tex",
-            "skinScale": 1.2300000190734863,
+            "skeleton": "ASSETS/Characters/Shyvana/Skins/Skin02/Shyvana_Skin02.Shyvana_Rework.skl",
+            "simpleSkin": "ASSETS/Characters/Shyvana/Skins/Skin02/Shyvana_Skin02.Shyvana_Rework.skn",
+            "texture": "ASSETS/Characters/Shyvana/Skins/Skin02/Shyvana_Skin02_TX_CM.Shyvana_Rework.tex",
             "selfIllumination": 0.699999988079071,
+            "overrideBoundingBox": [
+                150.0,
+                250.0,
+                150.0
+            ],
+            "Material": "Characters/Shyvana/Skins/Skin2/Materials/VertexGlow_Mat_inst",
             "reflectionFresnelColor": [
                 0,
                 0,
                 0,
                 255
             ],
+            "rigPoseModifierData": [
+                {
+                    "mStartingJointName": "{43c14655}",
+                    "mEndingJointName": "{ec8505fd}",
+                    "mDefaultMaskName": "{4fc1e099}",
+                    "mMaxBoneAngle": 20.0,
+                    "__type": "ConformToPathRigPoseModifierData"
+                }
+            ],
             "__type": "SkinMeshDataProperties"
         },
         "armorMaterial": "Metal",
-        "idleParticlesEffects": [
-            {
-                "effectKey": "Shyvana_human_idle_left",
-                "boneName": "BUFFBONE_CSTM_EYE1",
-                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
-            },
-            {
-                "effectKey": "Shyvana_human_idle_right",
-                "boneName": "BUFFBONE_CSTM_EYE2",
-                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
-            }
-        ],
-        "extraCharacterPreloads": [
-            "ShyvanaDragon"
-        ],
         "mContextualActionData": "Characters/Shyvana/CAC/Shyvana_Base",
-        "iconCircle": "ASSETS/Characters/Shyvana/HUD/Shyvana_Circle_0.tex",
-        "iconSquare": "ASSETS/Characters/Shyvana/HUD/Shyvana_Square_0.tex",
-        "iconAvatar": "ASSETS/Characters/Shyvana/HUD/Shyvana_Circle_2.tex",
+        "iconCircle": "ASSETS/Characters/Shyvana/HUD/Shyvana_Circle_0.Shyvana_Rework.tex",
+        "iconSquare": "ASSETS/Characters/Shyvana/HUD/Shyvana_Square_0.Shyvana_Rework.tex",
+        "iconAvatar": "ASSETS/Characters/Shyvana/HUD/Shyvana_Circle_2.Shyvana_Rework.tex",
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
         "healthBarData": {
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mEmblems": [
+        "mResourceResolver": "Characters/Shyvana/Skins/Skin2/Resources",
+        "PersistentEffectConditions": [
             {
-                "mEmblemData": "Emblems/29",
-                "__type": "SkinEmblem"
+                "__type": "PersistentEffectConditionData"
             }
         ],
-        "mResourceResolver": "Characters/Shyvana/Skins/Skin2/Resources",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Shyvana/Skins/Skin2/Resources": {
         "resourceMap": {
-            "Shyvana_BA_Dragon_tar_01": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_BA_Dragon_tar_01",
-            "Shyvana_BA_tar_crit_01": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_BA_tar_crit_01",
-            "Shyvana_Death_sfx_01": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Death_sfx_01",
-            "Shyvana_Emote_Dance_sfx_01": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Emote_Dance_sfx_01",
-            "Shyvana_Emote_Joke_sfx_01": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Emote_Joke_sfx_01",
-            "Shyvana_E_impact": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_E_impact",
-            "Shyvana_E_indicator": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_E_indicator",
-            "Shyvana_E_mis": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_E_mis",
-            "Shyvana_E_reignite": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_E_reignite",
-            "Shyvana_E_tar": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_E_tar",
+            "Shyvana_BA_tar_crit_01": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_BA_tar_crit",
+            "Shyvana_Death_sfx_01": "{00000000}",
+            "Shyvana_Emote_Dance_sfx_01": "{00000000}",
+            "Shyvana_Emote_Joke_sfx_01": "{00000000}",
             "Shyvana_human_idle_left": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_human_idle_left",
             "Shyvana_human_idle_right": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_human_idle_right",
-            "Shyvana_Q_buf_L": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_buf_L",
-            "Shyvana_Q_buf_R": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_buf_R",
-            "Shyvana_Q_Tar": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_Tar",
-            "Shyvana_R_cas": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_base_R_cas",
-            "Shyvana_R_end": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_base_r_end",
-            "Shyvana_R_E_cas": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_E_cas",
-            "Shyvana_R_E_groundburn": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_E_groundburn",
-            "Shyvana_R_E_groundburn_Enemy": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_E_groundburn_Enemy",
-            "Shyvana_R_E_impact": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_E_impact",
-            "Shyvana_R_E_mis": "Characters/Shyvana/Skins/Skin0/Particles/shyvana_base_R_E_mis",
-            "Shyvana_R_E_mis_big": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_E_mis_big",
-            "Shyvana_R_E_mis_max": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_E_mis_max",
-            "Shyvana_R_idle": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_idle",
-            "Shyvana_R_impact": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_r_impact",
-            "Shyvana_R_skin": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_skin",
-            "Shyvana_W_Burnout": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_W_Burnout",
+            "Shyvana_BA_tar": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_BA_tar",
+            "{77aaf2e9}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_Ready_OnHand",
+            "{1660f663}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_AoE_Cone",
+            "{06204cc3}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_Tar",
             "Shyvana_W_tar": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_W_tar",
-            "Shyvana_E_burn": "{00000000}",
-            "Shyvana_BA_tar": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_BA_tar"
+            "Shyvana_E_mis": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_E_mis",
+            "Shyvana_E_AoE": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_E_AoE",
+            "{32e29959}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_RE_GroundTrail",
+            "{e9a53306}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_RE_GroundCircle",
+            "Shyvana_Q_3_tar": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_3_tar",
+            "{ca55f1a5}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_RE_Missile",
+            "{a6a1a47f}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_W_AoE",
+            "{c648d848}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_AoE_Circle",
+            "{7b29335a}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_AoE",
+            "{f88ad57c}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_Tar",
+            "{f3701423}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_Cast_Transform_Dragon",
+            "{0783e42e}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_W_DR_Hit",
+            "{44400177}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_BA_L",
+            "{4a400ae9}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_BA_R",
+            "{9c7497c1}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_W_DR_Buff",
+            "{dc92227a}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_RW_Heal",
+            "{02ae890a}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_Ready_OnTail",
+            "{1a68236a}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_Ready_OnHead",
+            "Shyvana_W_DR": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_W_DR",
+            "{7abe245e}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_Cast_TailSlam",
+            "Shyvana_E_DoT_Tar": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_E_DoT_Tar",
+            "{5179a861}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_W_BuildUp",
+            "{81f5e55b}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_BA_C",
+            "Shyvana_R_Cast_Transform": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_Cast_Transform",
+            "Shyvana_E_Cast": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_E_Cast",
+            "{b5203963}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_Cast_ConeSlash",
+            "{01a168ac}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_AoE_Landing",
+            "Shyvana_Q_Ready_OnWing": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Q_Ready_OnWing",
+            "Shyvana_Base_RE_GroundTrail": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_RE_GroundTrail",
+            "Shyvana_Emote_Joke": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Emote_Joke",
+            "Shyvana_Emote_Death": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Emote_Death",
+            "Shyvana_Emote_Recall_OnBase": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Emote_Recall_OnBase",
+            "Shyvana_Emote_Recall_OnHand_R": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_Emote_Recall_OnHand_R",
+            "Shyvana_R_Untransform": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_R_Untransform",
+            "{4b18e153}": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_RE_GroundTrail_RedOverlay",
+            "Shyvana_RE_GroundCircle_RedOverlay": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_RE_GroundCircle_RedOverlay",
+            "Shyvana_E_sfx_tar": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_E_sfx_tar",
+            "Shyvana_E_dragon_sfx_tar": "Characters/Shyvana/Skins/Skin0/Particles/Shyvana_Base_E_dragon_sfx_tar"
         },
         "__type": "ResourceResolver"
+    },
+    "Characters/Shyvana/Skins/Skin2/Materials/VertexGlow_Mat_inst": {
+        "name": "Characters/Shyvana/Skins/Skin2/Materials/VertexGlow_Mat_inst",
+        "samplerValues": [
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Mask",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Main_Texture",
+                "texturePath": "ASSETS/Characters/Shyvana/Skins/Skin02/Shyvana_Skin02_TX_CM.Shyvana_Rework.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "OutlineMask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "addressU": 2,
+                "addressV": 2,
+                "addressW": 2,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Pulse_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pulse_Speed_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Maintex_Alpha_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Size",
+                "value": [
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Value",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VColor_G_Mask_Discard_Location",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Diffuse_Tex_B_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Diffuse_Tex_RG_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Main_Tex_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_Control",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Texture_B_UV",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedBase",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedBlend",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Base_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blend_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BaseMat_Tint",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BlendMat_Tint",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaskStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomValue",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineColor",
+                "value": [
+                    1.0,
+                    0.7825589179992676,
+                    0.3323414921760559,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTex_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineControl",
+                "value": [
+                    0.10000000149011612,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineMask_Strength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveController",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "WaveStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaClipValue",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaClipNoiseStrength",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_TintColor",
+                "value": [
+                    1.0,
+                    0.3009994626045227,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "NoiseUV",
+                "value": [
+                    5.0,
+                    5.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollSpeedMainTex",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MainTex_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Control",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "ALPHABLEND_BLENDMAT",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PULSE_BLEND_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_DIFFUSE_W_DISCARD",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_OUTLINE_W_DISCARD",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_DIFFUSE",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VCOLOR_G_MASK_OUTLINE",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHA_MAIN_SCROLL_OUTLINE_ADD",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_DIFFUSE_TEX_RG",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_DIFFUSE_TEX_B",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORTION_MAIN_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MATCAP_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_OUTLINEMASK_B_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLENDCOLOR_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ADDITIVEALPHA_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MASK_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MAINTEX_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_MASK_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHABLEND_MAIN",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_MAINTEXCOLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "TWO_D_DEFORM_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_MAINTEXALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHACLIP_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM_TINTCOLOR_ON",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SCROLL_MAIN_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/AlphaBlend_Additive_Scroll_Packed",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "MaskStrength",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "mScriptName": "ShyvanaQEnhanced",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mScriptName": "ShyvanaW",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mScriptName": "ShyvanaQEnhanced2",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
+                        },
+                        "mTurnOnTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "OutlineMask_Strength",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "mScriptName": "ShyvanaQEnhanced",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mScriptName": "ShyvanaW",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mScriptName": "ShyvanaQEnhanced2",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
+                        },
+                        "mTurnOnTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "VColor_G_Mask_Discard_Location",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mDrivers": [
+                                        {
+                                            "mScriptName": "ShyvanaQEnhanced",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        },
+                                        {
+                                            "mScriptName": "ShyvanaW",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        }
+                                    ],
+                                    "__type": "AllTrueMaterialDriver"
+                                },
+                                "mValue": {
+                                    "value": [
+                                        0.0,
+                                        180.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "__type": "Float4LiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mDrivers": [
+                                        {
+                                            "mScriptName": "ShyvanaQEnhanced2",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        },
+                                        {
+                                            "mScriptName": "ShyvanaW",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        }
+                                    ],
+                                    "__type": "AllTrueMaterialDriver"
+                                },
+                                "mValue": {
+                                    "value": [
+                                        0.0,
+                                        50.0,
+                                        -160.0,
+                                        0.0
+                                    ],
+                                    "__type": "Float4LiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mDrivers": [
+                                        {
+                                            "mScriptName": "ShyvanaQEnhanced",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        }
+                                    ],
+                                    "__type": "OneTrueMaterialDriver"
+                                },
+                                "mValue": {
+                                    "value": [
+                                        0.0,
+                                        180.0,
+                                        50.0,
+                                        0.0
+                                    ],
+                                    "__type": "Float4LiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mDrivers": [
+                                        {
+                                            "mScriptName": "ShyvanaQEnhanced2",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        }
+                                    ],
+                                    "__type": "OneTrueMaterialDriver"
+                                },
+                                "mValue": {
+                                    "value": [
+                                        0.0,
+                                        100.0,
+                                        -135.0,
+                                        0.0
+                                    ],
+                                    "__type": "Float4LiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mDrivers": [
+                                        {
+                                            "mScriptName": "ShyvanaW",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        }
+                                    ],
+                                    "__type": "OneTrueMaterialDriver"
+                                },
+                                "mValue": {
+                                    "value": [
+                                        0.0,
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "__type": "Float4LiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "Float4LiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "VColor_G_Mask_Discard_Size",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mDrivers": [
+                                        {
+                                            "mScriptName": "ShyvanaQEnhanced",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        },
+                                        {
+                                            "mScriptName": "ShyvanaW",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        }
+                                    ],
+                                    "__type": "AllTrueMaterialDriver"
+                                },
+                                "mValue": {
+                                    "mValue": 400.0,
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mDrivers": [
+                                        {
+                                            "mScriptName": "ShyvanaQEnhanced2",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        },
+                                        {
+                                            "mScriptName": "ShyvanaW",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        }
+                                    ],
+                                    "__type": "AllTrueMaterialDriver"
+                                },
+                                "mValue": {
+                                    "mValue": 200.0,
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mDrivers": [
+                                        {
+                                            "mScriptName": "ShyvanaQEnhanced",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        }
+                                    ],
+                                    "__type": "OneTrueMaterialDriver"
+                                },
+                                "mValue": {
+                                    "mValue": 100.0,
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mDrivers": [
+                                        {
+                                            "mScriptName": "ShyvanaQEnhanced2",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        }
+                                    ],
+                                    "__type": "OneTrueMaterialDriver"
+                                },
+                                "mValue": {
+                                    "mValue": 100.0,
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mDrivers": [
+                                        {
+                                            "mScriptName": "ShyvanaW",
+                                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                                        }
+                                    ],
+                                    "__type": "OneTrueMaterialDriver"
+                                },
+                                "mValue": {
+                                    "mValue": 100.0,
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
     },
     "__linked": [
         "DATA/Characters/Shyvana/Shyvana.bin",
         "DATA/Shyvana_Skins_Skin0_Skins_Skin1_Skins_Skin2.bin",
+        "DATA/Shyvana_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin2_Skins_Skin4_Skins_Skin8_Skins_Skin9.bin",
         "DATA/Characters/Shyvana/Animations/Skin0.bin",
+        "DATA/Shyvana_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
         "DATA/Shyvana_Skins_Root_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
-        "DATA/Shyvana_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
-        "DATA/Shyvana_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7.bin"
+        "DATA/Shyvana_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin2_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Shyvana_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin4.bin"
     ]
 }

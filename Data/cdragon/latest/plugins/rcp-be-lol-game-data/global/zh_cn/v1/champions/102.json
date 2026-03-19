@@ -3,12 +3,12 @@
     "name": "龙血武姬",
     "alias": "Shyvana",
     "title": "希瓦娜",
-    "shortBio": "希瓦娜是一只魔法生物，心中有一块燃烧不灭的符文碎片。虽然她时常以人的形象出现，但她真正的形态是一条威猛的巨龙，可以用龙息烈焰吞噬敌人。希瓦娜曾拯救过皇子嘉文四世的性命，如今她心神不宁地在皇子的卫队中效力，力图让多疑的德玛西亚人接纳自己。",
+    "shortBio": "希瓦娜是一位迅猛的半龙人战士。 她平时以人的形象出现，但也能以巨龙的身姿统治天空，用龙息烈焰焚尽敌人。 作为皇子嘉文四世曾经的救命恩人，希瓦娜如今在皇子的卫队中效力。她兢兢业业，试图在多疑的德玛西亚人中求得接纳。",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 6,
         "difficulty": 1,
-        "damageType": "kMagic",
+        "damageType": "kMixed",
         "attackType": "melee"
     },
     "playstyleInfo": {
@@ -19,8 +19,8 @@
         "utility": 1
     },
     "championTagInfo": {
-        "championTagPrimary": "变换形态",
-        "championTagSecondary": "群体效果"
+        "championTagPrimary": "",
+        "championTagSecondary": ""
     },
     "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/102.png",
     "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/102.ogg",
@@ -28,20 +28,20 @@
     "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/102.ogg",
     "roles": [
         "fighter",
-        "mage"
+        "tank"
     ],
     "recommendedItemDefaults": [],
     "skins": [
         {
             "id": 102000,
-            "contentId": "eb37b9b2-13f8-4978-b069-bb86553cb4f1",
+            "contentId": "0b591b96-6840-4c00-a1c6-e087550d903a",
             "isBase": true,
             "name": "龙血武姬",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Base/Images/shyvana_splash_centered_0.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Base/Images/shyvana_splash_uncentered_0.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Base/Images/shyvana_splash_tile_0.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Base/ShyvanaLoadScreen.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Base/Images/Shyvana_splash_centered_0.Shyvana_Rework.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Base/Images/Shyvana_splash_uncentered_0.Shyvana_Rework.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Base/Images/Shyvana_splash_tile_0.Shyvana_Rework.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Base/ShyvanaLoadScreen_0.Shyvana_Rework.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -63,10 +63,10 @@
             "isBase": false,
             "name": "钢之逆鳞 希瓦娜",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin01/Images/shyvana_splash_centered_1.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin01/Images/shyvana_splash_uncentered_1.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin01/Images/shyvana_splash_tile_1.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin01/ShyvanaLoadscreen_1.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin01/Images/Shyvana_splash_centered_1.Shyvana_Rework.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin01/Images/Shyvana_splash_uncentered_1.Shyvana_Rework.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin01/Images/Shyvana_splash_tile_1.Shyvana_Rework.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin01/ShyvanaLoadScreen_1.Shyvana_Rework.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -76,21 +76,12 @@
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
             "chromaPath": null,
-            "emblems": [
-                {
-                    "name": "Epic",
-                    "emblemPath": {
-                        "large": "/lol-game-data/assets/v1/emblem-images/29.png",
-                        "small": "/lol-game-data/assets/v1/emblem-images/29.png"
-                    },
-                    "positions": {}
-                }
-            ],
-            "regionRarityId": 4,
-            "rarityGemPath": "/lol-game-data/assets/v1/rarity-gem-icons/4_large.png",
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
             "skinLines": [
                 {
-                    "id": 167
+                    "id": 38
                 }
             ],
             "description": null
@@ -101,10 +92,10 @@
             "isBase": false,
             "name": "骸骨之爪 希瓦娜",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin02/Images/shyvana_splash_centered_2.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin02/Images/shyvana_splash_uncentered_2.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin02/Images/shyvana_splash_tile_2.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin02/ShyvanaLoadscreen_2.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin02/Images/Shyvana_splash_centered_2.Shyvana_Rework.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin02/Images/Shyvana_splash_uncentered_2.Shyvana_Rework.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin02/Images/Shyvana_splash_tile_2.Shyvana_Rework.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin02/ShyvanaLoadScreen_2.Shyvana_Rework.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -114,18 +105,9 @@
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
             "chromaPath": null,
-            "emblems": [
-                {
-                    "name": "Epic",
-                    "emblemPath": {
-                        "large": "/lol-game-data/assets/v1/emblem-images/29.png",
-                        "small": "/lol-game-data/assets/v1/emblem-images/29.png"
-                    },
-                    "positions": {}
-                }
-            ],
-            "regionRarityId": 4,
-            "rarityGemPath": "/lol-game-data/assets/v1/rarity-gem-icons/4_large.png",
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
             "skinLines": [
                 {
                     "id": 32
@@ -139,12 +121,12 @@
             "isBase": false,
             "name": "黯黑魔龙 希瓦娜",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin03/Images/shyvana_splash_centered_3.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin03/Images/shyvana_splash_uncentered_3.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin03/Images/shyvana_splash_tile_3.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin03/ShyvanaLoadScreen_3.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin03/Images/Shyvana_splash_centered_3.Shyvana_Rework.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin03/Images/Shyvana_splash_uncentered_3.Shyvana_Rework.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin03/Images/Shyvana_splash_tile_3.Shyvana_Rework.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin03/ShyvanaLoadScreen_3.Shyvana_Rework.jpg",
             "skinType": "",
-            "rarity": "kLegendary",
+            "rarity": "kNoRarity",
             "isLegacy": false,
             "splashVideoPath": null,
             "previewVideoUrl": null,
@@ -152,18 +134,9 @@
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
             "chromaPath": null,
-            "emblems": [
-                {
-                    "name": "Legend",
-                    "emblemPath": {
-                        "large": "/lol-game-data/assets/v1/emblem-images/31.png",
-                        "small": "/lol-game-data/assets/v1/emblem-images/31.png"
-                    },
-                    "positions": {}
-                }
-            ],
-            "regionRarityId": 5,
-            "rarityGemPath": "/lol-game-data/assets/v1/rarity-gem-icons/5_large.png",
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
             "skinLines": [
                 {
                     "id": 167
@@ -177,12 +150,12 @@
             "isBase": false,
             "name": "冰霜亚龙 希瓦娜",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin04/Images/shyvana_splash_centered_4.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin04/Images/shyvana_splash_uncentered_4.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin04/Images/shyvana_splash_tile_4.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin04/ShyvanaLoadScreen_4.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin04/Images/Shyvana_splash_centered_4.Shyvana_Rework.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin04/Images/Shyvana_splash_uncentered_4.Shyvana_Rework.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin04/Images/Shyvana_splash_tile_4.Shyvana_Rework.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin04/ShyvanaLoadScreen_4.Shyvana_Rework.jpg",
             "skinType": "",
-            "rarity": "kLegendary",
+            "rarity": "kNoRarity",
             "isLegacy": false,
             "splashVideoPath": null,
             "previewVideoUrl": null,
@@ -190,18 +163,9 @@
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
             "chromaPath": null,
-            "emblems": [
-                {
-                    "name": "Superior Warrior",
-                    "emblemPath": {
-                        "large": "/lol-game-data/assets/v1/emblem-images/23.png",
-                        "small": "/lol-game-data/assets/v1/emblem-images/23.png"
-                    },
-                    "positions": {}
-                }
-            ],
-            "regionRarityId": 5,
-            "rarityGemPath": "/lol-game-data/assets/v1/rarity-gem-icons/5_large.png",
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
             "skinLines": [
                 {
                     "id": 129
@@ -215,11 +179,11 @@
             "isBase": false,
             "name": "冠军之血 希瓦娜",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin05/Images/shyvana_splash_centered_5.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin05/Images/shyvana_splash_uncentered_5.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin05/Images/shyvana_splash_tile_5.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin05/ShyvanaLoadScreen_5.jpg",
-            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin05/ShyvanaLoadScreen_5_LE.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin05/Images/Shyvana_splash_centered_5.Shyvana_Rework.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin05/Images/Shyvana_splash_uncentered_5.Shyvana_Rework.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin05/Images/Shyvana_splash_tile_5.Shyvana_Rework.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin05/ShyvanaLoadScreen_5.Shyvana_Rework.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin05/ShyvanaLoadScreen_5_LE.Shyvana_Rework.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": true,
@@ -256,18 +220,9 @@
                     ]
                 }
             ],
-            "emblems": [
-                {
-                    "name": "Limited",
-                    "emblemPath": {
-                        "large": "/lol-game-data/assets/v1/emblem-images/1.png",
-                        "small": "/lol-game-data/assets/v1/emblem-images/1.png"
-                    },
-                    "positions": {}
-                }
-            ],
-            "regionRarityId": 7,
-            "rarityGemPath": "/lol-game-data/assets/v1/rarity-gem-icons/7_large.png",
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
             "skinLines": [
                 {
                     "id": 8
@@ -281,10 +236,10 @@
             "isBase": false,
             "name": "银河魔装机神 希瓦娜",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/skin06/Images/shyvana_splash_centered_6.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/skin06/Images/shyvana_splash_uncentered_6.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/skin06/Images/shyvana_splash_tile_6.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/skin06/ShyvanaLoadscreen_6.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin06/Images/Shyvana_splash_centered_6.Shyvana_Rework.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin06/Images/Shyvana_splash_uncentered_6.Shyvana_Rework.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin06/Images/Shyvana_splash_tile_6.Shyvana_Rework.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin06/ShyvanaLoadScreen_6.Shyvana_Rework.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -294,18 +249,9 @@
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
             "chromaPath": null,
-            "emblems": [
-                {
-                    "name": "Epic",
-                    "emblemPath": {
-                        "large": "/lol-game-data/assets/v1/emblem-images/29.png",
-                        "small": "/lol-game-data/assets/v1/emblem-images/29.png"
-                    },
-                    "positions": {}
-                }
-            ],
-            "regionRarityId": 4,
-            "rarityGemPath": "/lol-game-data/assets/v1/rarity-gem-icons/4_large.png",
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
             "skinLines": [
                 {
                     "id": 21
@@ -319,11 +265,11 @@
             "isBase": false,
             "name": "破败军团 希瓦娜",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin08/Images/shyvana_splash_centered_8.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin08/Images/shyvana_splash_uncentered_8.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin08/Images/shyvana_splash_tile_8.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin08/ShyvanaLoadscreen_8.jpg",
-            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin08/ShyvanaLoadscreen_8_LE.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin08/Images/Shyvana_splash_centered_8.Shyvana_Rework.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin08/Images/Shyvana_splash_uncentered_8.Shyvana_Rework.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin08/Images/Shyvana_splash_tile_8.Shyvana_Rework.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin08/ShyvanaLoadScreen_8.Shyvana_Rework.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin08/ShyvanaLoadScreen_8_LE.Shyvana_Rework.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -496,11 +442,11 @@
             "isBase": false,
             "name": "玉剑传说 舞龙卫",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin17/Images/shyvana_splash_centered_17.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin17/Images/shyvana_splash_uncentered_17.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin17/Images/shyvana_splash_tile_17.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin17/ShyvanaLoadScreen_17.jpg",
-            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin17/ShyvanaLoadScreen_17_LE.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin17/Images/Shyvana_splash_centered_17.Shyvana_Rework.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin17/Images/Shyvana_splash_uncentered_17.Shyvana_Rework.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin17/Images/Shyvana_splash_tile_17.Shyvana_Rework.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin17/ShyvanaLoadScreen_17.Shyvana_Rework.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/Skins/Skin17/ShyvanaLoadScreen_17_LE.Shyvana_Rework.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -647,18 +593,9 @@
                     "rarities": []
                 }
             ],
-            "emblems": [
-                {
-                    "name": "We are Champions",
-                    "emblemPath": {
-                        "large": "/lol-game-data/assets/v1/emblem-images/81.png",
-                        "small": "/lol-game-data/assets/v1/emblem-images/81.png"
-                    },
-                    "positions": {}
-                }
-            ],
-            "regionRarityId": 7,
-            "rarityGemPath": "/lol-game-data/assets/v1/rarity-gem-icons/7_large.png",
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
             "skinLines": [
                 {
                     "id": 81
@@ -668,30 +605,30 @@
         }
     ],
     "passive": {
-        "name": "龙族之怒",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/ShyvanaReinforcedScales.png",
+        "name": "龙鳞铁衣",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/Shyvana_Passive.Shyvana_Rework.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "希瓦娜对巨龙们造成额外伤害并获得护甲加成和魔法抗性加成。被希瓦娜或她的友军击败的元素亚龙们会为她提供额外的护甲和魔法抗性加成。"
+        "description": "参与击杀敌方英雄、大型小兵和大型野怪后，希瓦娜会获得【龙鳞铁衣】层数，从而改进她的防御属性。"
     },
     "spells": [
         {
             "spellKey": "q",
-            "name": "龙牙突刺",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/ShyvanaTwinBite.png",
+            "name": "焚焰打击",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/Shyvana_Q1.Shyvana_Rework.png",
             "abilityVideoPath": "champion-abilities/0102/ability_0102_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0102/ability_0102_Q1.jpg",
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "希瓦娜的下次攻击将进行两次打击并为她接下来的若干次攻击提供攻击速度。每次普通攻击会减少【龙牙突刺】0.5 秒冷却时间。<br><br><font color='#FF3300'>魔龙形态：</font>【龙牙突刺】会顺劈希瓦娜面前的所有单位。",
-            "dynamicDescription": "希瓦娜的下次攻击会进行两次打击，造成<physicalDamage>@FirstHitDamageCalc@</physicalDamage>接<physicalDamage>@SecondHitDamageCalc@物理伤害</physicalDamage>。她的下2次攻击获得<speed> @BonusAS@%攻击速度</speed>。<br><br>攻击会使这个技能的冷却时间缩短@CDReductionOnHit@秒。<br><br><keywordMajor>魔龙形态：</keywordMajor>这些强化攻击会命中希瓦娜前方的所有单位。<br><br><rules>这个技能会在造成伤害时触发技能特效。</rules>@SpellModifierDescriptionAppend@",
+            "description": "希瓦娜的下次攻击会打击目标和周围区域。这个技能可以再次施放。在【魔龙形态】下，它提供一次额外的再次施放，对单体目标造成巨额伤害。",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>希瓦娜的攻击附带<magicDamage>@Calc_Max_Health_Damage@最大生命值的魔法伤害</magicDamage><OnHit>%i:OnHit%</OnHit>并使这个技能的冷却时间缩短@Cooldown_Reduction@秒。<br><br><spellActive>主动：</spellActive>希瓦娜的下次攻击会打击目标和周围区域，造成<physicalDamage>@Calc_Damage@物理伤害</physicalDamage>。在接下来的@RecastDuration@秒内，这个技能可以在一次攻击或短暂延迟后<recast>再次施放</recast>。<br><br><keywordMajor>魔龙形态：</keywordMajor>希瓦娜获得一次额外的<recast>再次施放</recast>，使她的下次攻击噬咬目标从而造成<trueDamage>@Calc_Dragon_Form_Damage@真实伤害</trueDamage>。@SpellModifierDescriptionAppend@",
             "range": [
-                650.0,
-                650.0,
-                650.0,
-                650.0,
-                650.0,
-                650.0
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
             ],
             "costCoefficients": [
                 0.0,
@@ -702,12 +639,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
+                10.0,
+                9.0,
                 8.0,
-                7.5,
                 7.0,
-                6.5,
                 6.0,
-                5.5
+                6.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -827,21 +764,21 @@
         },
         {
             "spellKey": "w",
-            "name": "烈火燎原",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/ShyvanaScorchedEarth.png",
+            "name": "烈火圣盾",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/Shyvana_W1.Shyvana_Rework.png",
             "abilityVideoPath": "champion-abilities/0102/ability_0102_W1.webm",
             "abilityVideoImagePath": "champion-abilities/0102/ability_0102_W1.jpg",
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "希瓦娜将自己围在火焰之中，每秒对周围的敌人造成伤害，并能移动得更快，持续3秒。在这个技能开启时，希瓦娜的普攻会对敌人造成基于此技能伤害的额外伤害。移动速度加成会随着技能的持续时间而减少。普通攻击会延长烈火燎原的持续时间。<br><br><font color='#FF3300'>魔龙形态：</font>烈火燎原会随体积增长。",
-            "dynamicDescription": "希瓦娜召唤一道烈焰风暴环绕于她，获得<speed>@FinalMSPerc@不断衰减的移动速度</speed>并且每秒造成<magicDamage>@DamagePerTickCalc@魔法伤害</magicDamage>，持续@BaseDuration@秒。 <br><br>烈焰风暴还会使希瓦娜的攻击对周围的敌人们造成额外的<magicDamage>@DamageOnHitCalc@魔法伤害</magicDamage>并使这个技能的持续时间延长@BonusDurationOnHit@秒。<br><br><keywordMajor>魔龙形态：</keywordMajor>烈焰风暴的半径得到提升。@SpellModifierDescriptionAppend@",
+            "description": "希瓦娜获得一个护盾和移动速度，并在短暂延迟后，她周围的区域会被引爆。在【魔龙形态】下，这次爆炸如果击中一个敌方英雄，则会治疗希瓦娜。",
+            "dynamicDescription": "希瓦娜将她自身包裹在烈焰中@Duration@秒，从而获得<shield>@Calc_Shield@护盾值</shield>，附近的每个敌方英雄都会使这个护盾值提升<shield>@Calc_Shield_Per_Nearby_Champion@</shield>；此外还会获得<speed>@MoveSpeed@移动速度</speed>，这个移速加成会在朝着敌方英雄移动时提升至<speed>@MoveSpeedTowardsEnemies@</speed>。<br><br>在这些效果结束时、<shield>护盾</shield>被打破时、或在<recast>再次施放</recast>时，她附近的区域会被引爆，造成<magicDamage>@Damage@魔法伤害</magicDamage>。<br><br><keywordMajor>魔龙形态：</keywordMajor>如果这次引爆命中了一个敌方英雄，那么希瓦娜会<healing>回复@Calc_Heal_Min@到@Calc_Heal_Max@生命值</healing>，基于她的已损失生命值。@SpellModifierDescriptionAppend@",
             "range": [
-                325.0,
-                325.0,
-                325.0,
-                325.0,
-                325.0,
-                325.0
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
             ],
             "costCoefficients": [
                 0.0,
@@ -852,10 +789,10 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                12.0,
-                12.0,
-                12.0,
-                12.0,
+                14.0,
+                13.5,
+                13.0,
+                12.5,
                 12.0,
                 12.0
             ],
@@ -977,21 +914,21 @@
         },
         {
             "spellKey": "e",
-            "name": "烈焰吐息",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/ShyvanaFlameBreath.png",
+            "name": "爆炎吐息",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/Shyvana_E.Shyvana_Rework.png",
             "abilityVideoPath": "champion-abilities/0102/ability_0102_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0102/ability_0102_E1.jpg",
             "cost": "无消耗",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "希瓦娜放出一枚火球，对沿途的所有目标造成魔法伤害，并在目标身上留下熔化护甲的燃渣，持续5秒。希瓦娜对被标记目标进行的普通攻击，会造成基于目标最大生命值的额外伤害。<br><br><font color='#FF3300'>魔龙形态：</font>烈焰吐息会在碰撞或在抵达目标位置后爆炸，造成额外伤害并灼烧大地一小段时间。",
-            "dynamicDescription": "希瓦娜释放一团火球来造成<magicDamage>@DamageCalc@魔法伤害</magicDamage>并标记@MarkDuration@秒。火球会在命中第一个英雄时停下。<br><br>希瓦娜对被标记目标的攻击会造成额外的<magicDamage>@PercentHPDamageOnHit@%最大生命值的魔法伤害</magicDamage>。<br><br><keywordMajor>魔龙形态：</keywordMajor>火球一旦命中或到达终点就会爆炸，造成额外的<magicDamage>@DragonExplosionCalc@魔法伤害</magicDamage>并灼烧大地，在4秒里持续造成共<magicDamage>@DragonDamageTotalCalc@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "description": "希瓦娜发射一团火球，火球在击中一个大型目标时爆炸并将其减速。在【魔龙形态】下，它会穿过敌人并在击中大型目标时爆炸，还会留下一条烈焰轨迹。",
+            "dynamicDescription": "希瓦娜向目标位置投出一团火球，造成<magicDamage>@Damage@魔法伤害</magicDamage>和<status>持续@SlowDuration@秒的@Calc_Slow@减速</status>。它会在击中一个敌人或达到终点时爆炸。<br><br><keywordMajor>魔龙形态：</keywordMajor>希瓦娜的火球更大并会穿过敌人们。在击中一个英雄、大型野怪、或达到它的终点时，它会触发一道烈焰脉冲来造成<magicDamage>@Calc_Dragon_Damage@魔法伤害</magicDamage>和<status>持续@SlowDuration@秒的@Calc_Slow_Dragon@减速</status>。火球留下一条持续@GroundLingerDuration@秒的轨迹，<magicDamage>每秒造成@DamagePerSecond@魔法伤害</magicDamage>。 @SpellModifierDescriptionAppend@",
             "range": [
-                925.0,
-                925.0,
-                925.0,
-                925.0,
-                925.0,
-                925.0
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
             ],
             "costCoefficients": [
                 0.0,
@@ -1003,11 +940,11 @@
             ],
             "cooldownCoefficients": [
                 12.0,
+                11.5,
                 11.0,
+                10.5,
                 10.0,
-                9.0,
-                8.0,
-                8.0
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -1061,12 +998,12 @@
                 ],
                 "Effect6Amount": [
                     0.0,
-                    60.0,
-                    100.0,
-                    140.0,
-                    180.0,
-                    220.0,
-                    260.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
                     0.0,
@@ -1128,20 +1065,20 @@
         {
             "spellKey": "r",
             "name": "魔龙降世",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/ShyvanaDragonsDescent.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/Shyvana_R.Shyvana_Rework.png",
             "abilityVideoPath": "champion-abilities/0102/ability_0102_R1.webm",
             "abilityVideoImagePath": "champion-abilities/0102/ability_0102_R1.jpg",
-            "cost": "<font color='#FF6633'>@FuryDrainPerSecond@怒气/秒</font>",
-            "cooldown": "<font color='#FF3300'>需要@FuryToActivate@怒气以激活</font>",
-            "description": "希瓦娜变成一条巨龙，并且飞向目标区域。沿途的敌人会受到魔法伤害，并被震向她的目标区域。<br><br>希瓦娜每秒都会被动获取怒气，并且她的每次普通攻击会提供2点怒气。",
-            "dynamicDescription": "<spellPassive>被动： </spellPassive>希瓦娜每秒生成<keywordMajor>@FuryGainPerTick@怒气</keywordMajor>，并且攻击生成额外的<keywordMajor>@FuryGainOnHit@怒气</keywordMajor>。<br><br><spellActive>主动： </spellActive>希瓦娜变形为<keywordMajor>魔龙形态</keywordMajor>，获得<healing>@BonusHP@最大生命值</healing>并向前飞行，造成<magicDamage>@DamageCalc@魔法伤害</magicDamage>并将敌人们<status>击退</status>向她的目标位置。@SpellModifierDescriptionAppend@",
+            "cost": "需要100<keywordMajor>龙怒</keywordMajor>",
+            "cooldown": "无冷却时间",
+            "description": "希瓦娜变形成一头魔龙并向前跳跃来使途经的敌人们因恐惧而逃跑。在【魔龙形态】下，她的体型变得更大并且她的基础技能都会获得强化。",
+            "dynamicDescription": "<spellPassive>被动</spellPassive>：希瓦娜的攻击和技能在击中敌人时会生成<keywordMajor>@Fury_Generation@龙怒</keywordMajor>，在<keywordMajor>魔龙形态</keywordMajor>下的生成量会提升@TT_Fury_Mult@，并且在击中一个区域内的非英雄单位时的生成量会降低@TT_Fury_AoE_Penalty@。<br><br><spellActive>主动</spellActive>：希瓦娜变形成她的<keywordMajor>魔龙形态</keywordMajor>，期间进入<attention>不可阻挡</attention>状态，在飞向目标位置的同时对下方的敌人们喷吐火焰，对其造成<magicDamage>@Damage@魔法伤害</magicDamage>并使其<status>逃跑@FearDuration@秒</status>。<br><br>在变形状态下，希瓦娜的基础技能都会获得强化，她会获得<scaleHealth>@Calc_Bonus_Health@额外生命值</scaleHealth>、体型和攻击距离。希瓦娜持续损失<keywordMajor>龙怒</keywordMajor>并且她的变形会在她没有剩余<keywordMajor>龙怒</keywordMajor>时结束。@SpellModifierDescriptionAppend@",
             "range": [
-                850.0,
-                850.0,
-                850.0,
-                850.0,
-                850.0,
-                850.0
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
             ],
             "costCoefficients": [
                 0.0,

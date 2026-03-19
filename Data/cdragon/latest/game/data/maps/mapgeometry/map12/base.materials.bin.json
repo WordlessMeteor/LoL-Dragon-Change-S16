@@ -86,32 +86,37 @@
         ],
         "paramValues": [
             {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
+                "name": "AlphaTestValue",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "AlphaTestValue",
+                "name": "TintColor",
+                "value": [
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.0
+                ],
                 "__type": "StaticMaterialShaderParamDef"
             }
         ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "DISABLE_FOW": "1",
+            "DISABLE_DEPTH_FOG": "1"
+        },
         "techniques": [
             {
                 "name": "normal",
                 "passes": [
                     {
                         "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "shaderMacros": {
-                            "DISABLE_FOW": "1",
-                            "DISABLE_DEPTH_FOG": "1"
-                        },
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
                         "dstColorBlendFactor": 7,
                         "dstAlphaBlendFactor": 7,
                         "__type": "StaticMaterialPassDef"
@@ -1164,33 +1169,37 @@
         ],
         "paramValues": [
             {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
+                "name": "AlphaTestValue",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "AlphaTestValue",
+                "name": "TintColor",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
                 "__type": "StaticMaterialShaderParamDef"
             }
         ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "DISABLE_FOW": "1",
+            "DISABLE_DEPTH_FOG": "1"
+        },
         "techniques": [
             {
                 "name": "normal",
                 "passes": [
                     {
                         "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "shaderMacros": {
-                            "DISABLE_FOW": "1",
-                            "DISABLE_DEPTH_FOG": "1"
-                        },
                         "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
                         "dstColorBlendFactor": 7,
                         "dstAlphaBlendFactor": 7,
                         "__type": "StaticMaterialPassDef"
@@ -1436,18 +1445,25 @@
         ],
         "paramValues": [
             {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
+                "name": "AlphaTestValue",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "AlphaTestValue",
+                "name": "TintColor",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
                 "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
             }
         ],
         "techniques": [
@@ -1460,8 +1476,6 @@
                             "DISABLE_FOW": "1",
                             "DISABLE_DEPTH_FOG": "1"
                         },
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
                         "dstColorBlendFactor": 7,
                         "dstAlphaBlendFactor": 7,
                         "__type": "StaticMaterialPassDef"

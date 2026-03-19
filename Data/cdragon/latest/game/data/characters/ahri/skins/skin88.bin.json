@@ -36224,6 +36224,7 @@
             {
                 "TextureName": "FlowmapTex",
                 "texturePath": "ASSETS/Shared/Materials/flowmap.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -36239,6 +36240,7 @@
             {
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Characters/Ahri/Skins/Skin88/Ahri_Skin88_Tails_VertexDeformMask_TX_CM.SKINS_Ahri_Skin88.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -36249,6 +36251,7 @@
             {
                 "TextureName": "BloomColor",
                 "texturePath": "ASSETS/Characters/Ahri/Skins/Skin88/Ahri_Skin88_Tail_BloomColor_TX_CM.SKINS_Ahri_Skin88.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -36264,6 +36267,7 @@
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -36274,10 +36278,51 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
@@ -36975,6 +37020,16 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
                 "Group": "Surface Scrolling Feature",
@@ -37151,6 +37206,7 @@
             {
                 "TextureName": "FlowmapTex",
                 "texturePath": "ASSETS/Shared/Materials/flowmap.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -37166,6 +37222,7 @@
             {
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Shared/Materials/OnsenTexture/black.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -37176,6 +37233,7 @@
             {
                 "TextureName": "BloomColor",
                 "texturePath": "ASSETS/Characters/Ahri/Skins/Skin88/Ahri_Skin88_Tail_BloomColor_TX_CM.SKINS_Ahri_Skin88.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -37191,6 +37249,7 @@
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -37201,10 +37260,51 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
@@ -37884,6 +37984,16 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
                 "Group": "Surface Scrolling Feature",
@@ -38027,6 +38137,7 @@
             {
                 "TextureName": "FlowmapTex",
                 "texturePath": "ASSETS/Characters/Ahri/Skins/Skin88/Ahri_Skin88_Dress_Flowmap2_TX_CM.SKINS_Ahri_Skin88.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -38042,6 +38153,7 @@
             {
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Characters/Ahri/Skins/Skin88/Ahri_Skin88_Dress_VertexDeformMask_TX_CM.SKINS_Ahri_Skin88.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -38052,6 +38164,7 @@
             {
                 "TextureName": "BloomColor",
                 "texturePath": "ASSETS/Characters/Ahri/Skins/Skin88/Ahri_Skin88_TX_CM.SKINS_Ahri_Skin88.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -38067,6 +38180,7 @@
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -38077,10 +38191,51 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
@@ -38772,6 +38927,16 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
                 "Group": "Surface Scrolling Feature",
@@ -38915,6 +39080,7 @@
             {
                 "TextureName": "FlowmapTex",
                 "texturePath": "ASSETS/Characters/Ahri/Skins/Skin88/Ahri_Skin88_Dress_Flowmap2_TX_CM.SKINS_Ahri_Skin88.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -38930,6 +39096,7 @@
             {
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Characters/Ahri/Skins/Skin88/Ahri_Skin88_Dress_Deform_Mask_TX_CM.SKINS_Ahri_Skin88.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -38940,6 +39107,7 @@
             {
                 "TextureName": "BloomColor",
                 "texturePath": "ASSETS/Characters/Ahri/Skins/Skin88/Ahri_Skin88_TX_CM.SKINS_Ahri_Skin88.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -38955,6 +39123,7 @@
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -38965,10 +39134,51 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
@@ -39641,6 +39851,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
