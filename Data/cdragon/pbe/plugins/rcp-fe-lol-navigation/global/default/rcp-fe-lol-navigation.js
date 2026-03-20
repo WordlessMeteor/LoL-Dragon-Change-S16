@@ -25215,6 +25215,10 @@
                 loyaltyTFTDamageSkinCount: {
                     locKey: "loyalty_navbar_badge_unlocked_damageskins_numerous",
                     rewardValueKey: "damageSkins"
+                },
+                loyaltyTFTZoomSkinCount: {
+                    locKey: "loyalty_navbar_badge_unlocked_zoomskins_numerous",
+                    rewardValueKey: "zoomSkins"
                 }
             };
             t.rewardsMap = [{
@@ -25251,6 +25255,12 @@
                 locKey: "rewards_program_loyalty_tft_damage_skin",
                 rewardKey: "loyaltyTFTDamageSkinCount",
                 icon: "/fe/lol-static-assets/images/loyaltyTFTDamageSkinCount_rewards.svg",
+                game: "tft",
+                type: "number"
+            }, {
+                locKey: "rewards_program_loyalty_tft_zoom_skin",
+                rewardKey: "loyaltyTFTZoomSkinCount",
+                icon: "/fe/lol-static-assets/images/loyaltyTFTZoomSkinCount_rewards.svg",
                 game: "tft",
                 type: "number"
             }]

@@ -594,23 +594,6 @@
         ],
         "__type": "InputEventBool"
     },
-    "{045a7695}": {
-        "name": "{807b4736}",
-        "{8c61159d}": [
-            {
-                "KeySequence": "[Button 2]",
-                "{371f336e}": {
-                    "{6bfb316f}": "evtPlayerPingCursorClose",
-                    "{e8de69a5}": "Options_Hotkeys_Ping_OpenTacticalWheel_Label",
-                    "{5307f5e1}": "{affdb506}",
-                    "{7b12f519}": false,
-                    "__type": "{c749aa30}"
-                },
-                "__type": "KeyInputSourceBool"
-            }
-        ],
-        "__type": "InputEventBool"
-    },
     "{1419703a}": {
         "name": "{bfa2cded}",
         "{8c61159d}": [
@@ -3877,11 +3860,8 @@
         "name": "{f2395a83}",
         "{8c61159d}": [
             {
-                "FloatSource": {
-                    "Axis": 4,
-                    "__type": "GamepadAxisInputSourceFloat"
-                },
-                "__type": "InputSourceFloatAsBool"
+                "Button": 8,
+                "__type": "GamepadButtonInputSourceBool"
             },
             {
                 "KeySequence": "[ ]",
@@ -3889,6 +3869,7 @@
                     "{6bfb316f}": "evtCycleAllies",
                     "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectAlly1",
                     "{5307f5e1}": "{affdb506}",
+                    "{7b12f519}": false,
                     "__type": "{f07517b3}"
                 },
                 "__type": "KeyInputSourceBool"
@@ -4382,6 +4363,7 @@
                         "{6bfb316f}": "evtMoveCursorLeft",
                         "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
                         "{5307f5e1}": "{affdb506}",
+                        "{7b12f519}": false,
                         "__type": "{c749aa30}"
                     },
                     "__type": "KeyInputSourceBool"
@@ -4396,6 +4378,7 @@
                         "{6bfb316f}": "evtMoveCursorRight",
                         "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
                         "{5307f5e1}": "{affdb506}",
+                        "{7b12f519}": false,
                         "__type": "{c749aa30}"
                     },
                     "__type": "KeyInputSourceBool"
@@ -4416,6 +4399,7 @@
                         "{6bfb316f}": "evtMoveCursorUp",
                         "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
                         "{5307f5e1}": "{affdb506}",
+                        "{7b12f519}": false,
                         "__type": "{c749aa30}"
                     },
                     "__type": "KeyInputSourceBool"
@@ -4430,6 +4414,7 @@
                         "{6bfb316f}": "evtMoveCursorDown",
                         "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
                         "{5307f5e1}": "{affdb506}",
+                        "{7b12f519}": false,
                         "__type": "{c749aa30}"
                     },
                     "__type": "KeyInputSourceBool"
@@ -4587,133 +4572,139 @@
         ],
         "__type": "InputControlSet"
     },
+    "{9d454f95}": {
+        "name": "{07121932}",
+        "events": [
+            "{94d2d692}",
+            "{e3ff16a7}",
+            "{beedefe4}",
+            "{92717e79}",
+            "{744e7e26}",
+            "{ad524f5b}",
+            "{b8064b1c}",
+            "{542632e3}",
+            "{78f41ebe}",
+            "{f05a1cb5}",
+            "{b7476f47}",
+            "{91de4432}",
+            "{f33616e5}",
+            "{e5cd1198}",
+            "{0e027e7b}",
+            "{bbb1f846}",
+            "{96b4fb96}",
+            "{a6cd2ce4}",
+            "{4900be51}",
+            "{c51ff4ee}",
+            "{88b09a23}",
+            "{ffa1bb20}",
+            "{4361325d}",
+            "{34e20270}",
+            "{d78441f1}",
+            "{d35b1584}",
+            "{66ff58e7}",
+            "{24864b3a}",
+            "{f789da7d}",
+            "{0c3cc540}",
+            "{46f37f27}",
+            "{560e30b0}",
+            "{337ab065}",
+            "{83c3ce86}",
+            "{c864bc5b}",
+            "{f04ea6d4}",
+            "{17be77d0}",
+            "{48bdd547}",
+            "{a173c0b2}",
+            "{07da07d9}",
+            "{6c4eec74}",
+            "{446694fb}",
+            "{5816c56b}",
+            "{919d7431}",
+            "{a66d771c}",
+            "{b76c7f19}",
+            "{652dd43a}",
+            "{e094a617}",
+            "{95d194b8}",
+            "{e8954535}",
+            "{7ab030e5}",
+            "{0f1aa974}",
+            "{3e9e380b}",
+            "{215f4fba}",
+            "{9d5a55f9}",
+            "{cabf4768}",
+            "{739954b9}",
+            "{f0baa7e6}",
+            "{6c48b0bc}",
+            "{4cef7083}",
+            "{1bb7e4bb}",
+            "{87d4d82c}",
+            "{8096b6f9}",
+            "{bc7db816}",
+            "{4f8fc68a}",
+            "{a22b7a55}",
+            "{0fcb8757}",
+            "{583b59d8}",
+            "{a395dc14}",
+            "{c53eb685}",
+            "{5efbb0b6}",
+            "{f46c9a2f}",
+            "{5f2c7d88}",
+            "{187ad719}",
+            "{4ad8e928}",
+            "{28c8a261}",
+            "{7fa5dbc6}",
+            "{aa72eccb}",
+            "{cdf15ec0}",
+            "{315dc0c9}",
+            "{76072c7d}",
+            "{7532fb92}",
+            "{a2fb89e6}",
+            "{d723f981}",
+            "{63945e54}",
+            "{0be225d7}",
+            "{8696da32}",
+            "{b3035e1d}",
+            "{e16c61cd}",
+            "{1a7bd8da}",
+            "{7dd77223}",
+            "{6a3ae486}",
+            "{955fb725}",
+            "{54827c70}",
+            "{4a0f2e77}",
+            "{3dee78aa}",
+            "{49c52fe4}",
+            "{4cc5349d}",
+            "{4bc5330a}",
+            "{46c52b2b}",
+            "{45c52998}",
+            "{48c52e51}",
+            "{fc743b64}",
+            "{ba96278b}",
+            "{9036b2e5}",
+            "{e19f786e}",
+            "{0be7a7ac}",
+            "{126aabba}",
+            "{d61cbf4b}"
+        ],
+        "__type": "InputControlSet"
+    },
     "{beb09e54}": {
         "name": "{1e4fa68d}",
         "events": [
             "{95a20294}",
             "{a94f7c91}",
-            "{94d2d692}",
             "{f257b603}",
-            "{b8064b1c}",
-            "{7ab030e5}",
-            "{46f37f27}",
-            "{a66d771c}",
-            "{f0baa7e6}",
             "{b8a206dc}",
-            "{28c8a261}",
             "{79b92b20}",
-            "{a6cd2ce4}",
             "{940382a0}",
-            "{744e7e26}",
             "{f862dacb}",
-            "{9d5a55f9}",
             "{84d8022e}",
-            "{c864bc5b}",
             "{9ec182ed}",
-            "{4f8fc68a}",
             "{103c9432}",
-            "{95d194b8}",
             "{670ad078}",
-            "{76072c7d}",
             "{06b82858}",
-            "{ffa1bb20}",
-            "{ad524f5b}",
-            "{cabf4768}",
-            "{f04ea6d4}",
-            "{0fcb8757}",
-            "{e8954535}",
-            "{7532fb92}",
-            "{4361325d}",
-            "{e3ff16a7}",
-            "{919d7431}",
-            "{542632e3}",
-            "{fc743b64}",
-            "{0f1aa974}",
-            "{ba96278b}",
-            "{560e30b0}",
-            "{9036b2e5}",
-            "{4cef7083}",
-            "{0be7a7ac}",
-            "{b76c7f19}",
-            "{126aabba}",
-            "{7fa5dbc6}",
-            "{d61cbf4b}",
-            "{4900be51}",
-            "{e19f786e}",
-            "{beedefe4}",
-            "{78f41ebe}",
-            "{3e9e380b}",
-            "{337ab065}",
-            "{87d4d82c}",
-            "{652dd43a}",
-            "{aa72eccb}",
-            "{c51ff4ee}",
-            "{b7476f47}",
-            "{a395dc14}",
-            "{17be77d0}",
-            "{7dd77223}",
-            "{739954b9}",
-            "{a2fb89e6}",
-            "{d78441f1}",
-            "{91de4432}",
-            "{c53eb685}",
-            "{48bdd547}",
-            "{6a3ae486}",
-            "{6c48b0bc}",
-            "{d723f981}",
-            "{d35b1584}",
-            "{f33616e5}",
-            "{5efbb0b6}",
-            "{a173c0b2}",
-            "{955fb725}",
-            "{66ff58e7}",
-            "{1bb7e4bb}",
-            "{63945e54}",
-            "{e5cd1198}",
-            "{f46c9a2f}",
-            "{07da07d9}",
-            "{54827c70}",
-            "{bc7db816}",
-            "{0be225d7}",
-            "{24864b3a}",
-            "{0e027e7b}",
-            "{5f2c7d88}",
-            "{6c4eec74}",
-            "{4a0f2e77}",
-            "{a22b7a55}",
-            "{8696da32}",
-            "{f789da7d}",
-            "{bbb1f846}",
-            "{187ad719}",
-            "{446694fb}",
-            "{3dee78aa}",
-            "{583b59d8}",
-            "{b3035e1d}",
-            "{0c3cc540}",
-            "{96b4fb96}",
-            "{315dc0c9}",
-            "{5816c56b}",
-            "{4ad8e928}",
-            "{e16c61cd}",
-            "{34e20270}",
-            "{1a7bd8da}",
-            "{92717e79}",
-            "{f05a1cb5}",
-            "{215f4fba}",
-            "{83c3ce86}",
-            "{8096b6f9}",
-            "{e094a617}",
-            "{cdf15ec0}",
-            "{88b09a23}",
             "{a2eb880c}",
-            "{49c52fe4}",
             "{4d9c6f1c}",
-            "{4cc5349d}",
             "{58a77a37}",
-            "{4bc5330a}",
-            "{46c52b2b}",
-            "{45c52998}",
-            "{48c52e51}",
             "{d806c9c0}",
             "{8f5b254f}",
             "{905b26e2}",
@@ -4765,6 +4756,975 @@
             "{4301f558}"
         ],
         "__type": "InputControlSet"
+    },
+    "{124720e3}": {
+        "{6bfb316f}": "PointAndClick spells",
+        "TRAKey": "Options_Hotkeys_AdvancedKeybindingOptions_label",
+        "{89ba4a26}": "{9d454f95}",
+        "{82d6dcb0}": [
+            {
+                "{f248d989}": "{94d2d692}",
+                "{3a3c1fee}": 4,
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{e3ff16a7}",
+                "SpellSlot": {
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{beedefe4}",
+                "SpellSlot": {
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{92717e79}",
+                "SpellSlot": {
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{744e7e26}",
+                "SpellSlot": {
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{ad524f5b}",
+                "SpellSlot": {
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{b8064b1c}",
+                "__type": "{51f3b0ef}"
+            },
+            {
+                "{f248d989}": "{542632e3}",
+                "SpellSlot": {
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{51f3b0ef}"
+            },
+            {
+                "{f248d989}": "{78f41ebe}",
+                "SpellSlot": {
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{51f3b0ef}"
+            },
+            {
+                "{f248d989}": "{f05a1cb5}",
+                "SpellSlot": {
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{51f3b0ef}"
+            },
+            {
+                "{f248d989}": "{b7476f47}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{91de4432}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{f33616e5}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{e5cd1198}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{0e027e7b}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{bbb1f846}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{96b4fb96}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 6,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{a6cd2ce4}",
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{4900be51}",
+                "SpellSlot": {
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{c51ff4ee}",
+                "SpellSlot": {
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{88b09a23}",
+                "SpellSlot": {
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{ffa1bb20}",
+                "SpellSlot": {
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{4361325d}",
+                "SpellSlot": {
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{34e20270}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 6,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{d78441f1}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{d35b1584}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{66ff58e7}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{24864b3a}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{f789da7d}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{0c3cc540}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{46f37f27}",
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{560e30b0}",
+                "SpellSlot": {
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{337ab065}",
+                "SpellSlot": {
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{83c3ce86}",
+                "SpellSlot": {
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{c864bc5b}",
+                "SpellSlot": {
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{f04ea6d4}",
+                "SpellSlot": {
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{17be77d0}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{48bdd547}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{a173c0b2}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{07da07d9}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{6c4eec74}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{446694fb}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{5816c56b}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 6,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{919d7431}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 7,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{a66d771c}",
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{b76c7f19}",
+                "SpellSlot": {
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{652dd43a}",
+                "SpellSlot": {
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{e094a617}",
+                "SpellSlot": {
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{95d194b8}",
+                "SpellSlot": {
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{e8954535}",
+                "SpellSlot": {
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{7ab030e5}",
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{0f1aa974}",
+                "SpellSlot": {
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{3e9e380b}",
+                "SpellSlot": {
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{215f4fba}",
+                "SpellSlot": {
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{9d5a55f9}",
+                "SpellSlot": {
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{cabf4768}",
+                "SpellSlot": {
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{739954b9}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{f0baa7e6}",
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{6c48b0bc}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{4cef7083}",
+                "SpellSlot": {
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{1bb7e4bb}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{87d4d82c}",
+                "SpellSlot": {
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{bc7db816}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{8096b6f9}",
+                "SpellSlot": {
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{a22b7a55}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{4f8fc68a}",
+                "SpellSlot": {
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{0fcb8757}",
+                "SpellSlot": {
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{583b59d8}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{a395dc14}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{c53eb685}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{5efbb0b6}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{f46c9a2f}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{5f2c7d88}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{187ad719}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{4ad8e928}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 6,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{28c8a261}",
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{7fa5dbc6}",
+                "SpellSlot": {
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{aa72eccb}",
+                "SpellSlot": {
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{cdf15ec0}",
+                "SpellSlot": {
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{315dc0c9}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 6,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{76072c7d}",
+                "SpellSlot": {
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{7532fb92}",
+                "SpellSlot": {
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{a2fb89e6}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{d723f981}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{63945e54}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{0be225d7}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{8696da32}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{b3035e1d}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{e16c61cd}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 6,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{1a7bd8da}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 6,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{7dd77223}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{6a3ae486}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 1,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{955fb725}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 2,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{54827c70}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 3,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{4a0f2e77}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 4,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{3dee78aa}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 5,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{49c52fe4}",
+                "__type": "{da5b233f}"
+            },
+            {
+                "{f248d989}": "{4cc5349d}",
+                "{534b6cc4}": 1,
+                "__type": "{da5b233f}"
+            },
+            {
+                "{f248d989}": "{4bc5330a}",
+                "{534b6cc4}": 2,
+                "__type": "{da5b233f}"
+            },
+            {
+                "{f248d989}": "{46c52b2b}",
+                "{534b6cc4}": 3,
+                "__type": "{da5b233f}"
+            },
+            {
+                "{f248d989}": "{45c52998}",
+                "{534b6cc4}": 4,
+                "__type": "{da5b233f}"
+            },
+            {
+                "{f248d989}": "{48c52e51}",
+                "{534b6cc4}": 5,
+                "__type": "{da5b233f}"
+            },
+            {
+                "{f248d989}": "{fc743b64}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 8,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{080929fe}"
+            },
+            {
+                "{f248d989}": "{ba96278b}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 8,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 1,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{9036b2e5}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 8,
+                    "__type": "{5f011348}"
+                },
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{e19f786e}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 8,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 3,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{0be7a7ac}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 8,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 6,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{126aabba}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 8,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 4,
+                "__type": "{b5f38c13}"
+            },
+            {
+                "{f248d989}": "{d61cbf4b}",
+                "SpellSlot": {
+                    "SlotType": 1,
+                    "Index": 8,
+                    "__type": "{5f011348}"
+                },
+                "{3a3c1fee}": 5,
+                "__type": "{b5f38c13}"
+            }
+        ],
+        "{5ff6cd50}": [
+            {
+                "__type": "{b7d27a44}"
+            },
+            {
+                "{5e3d5ec0}": [
+                    1
+                ],
+                "__type": "{49401c5c}"
+            },
+            {
+                "__type": "{f5e4e61d}"
+            }
+        ],
+        "__type": "{c8400f38}"
     },
     "{23a7b495}": {
         "{6bfb316f}": "PointAndClick Practice tool keybinds",
@@ -5000,11 +5960,6 @@
                 "__type": "{0a3412af}"
             },
             {
-                "{f248d989}": "{94d2d692}",
-                "{3a3c1fee}": 4,
-                "__type": "{080929fe}"
-            },
-            {
                 "{f248d989}": "{f257b603}",
                 "{00fbeff0}": 0,
                 "__type": "{e9b3cb22}"
@@ -5025,17 +5980,8 @@
                 "__type": "{c8d6dccd}"
             },
             {
-                "{f248d989}": "{b8064b1c}",
-                "__type": "{51f3b0ef}"
-            },
-            {
                 "{f248d989}": "{84d8022e}",
                 "__type": "{c8d6dccd}"
-            },
-            {
-                "{f248d989}": "{a6cd2ce4}",
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
             },
             {
                 "{f248d989}": "{9ec182ed}",
@@ -5043,18 +5989,9 @@
                 "__type": "{c8d6dccd}"
             },
             {
-                "{f248d989}": "{46f37f27}",
-                "__type": "{b5f38c13}"
-            },
-            {
                 "{f248d989}": "{103c9432}",
                 "{01d6318d}": 4,
                 "__type": "{c8d6dccd}"
-            },
-            {
-                "{f248d989}": "{a66d771c}",
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
             },
             {
                 "{f248d989}": "{670ad078}",
@@ -5062,24 +5999,9 @@
                 "__type": "{e9b3cb22}"
             },
             {
-                "{f248d989}": "{7ab030e5}",
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
                 "{f248d989}": "{06b82858}",
                 "{01d6318d}": 6,
                 "__type": "{c8d6dccd}"
-            },
-            {
-                "{f248d989}": "{f0baa7e6}",
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{28c8a261}",
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
             },
             {
                 "{f248d989}": "{79b92b20}",
@@ -5087,893 +6009,8 @@
                 "__type": "{c8d6dccd}"
             },
             {
-                "{f248d989}": "{744e7e26}",
-                "SpellSlot": {
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{9d5a55f9}",
-                "SpellSlot": {
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{c864bc5b}",
-                "SpellSlot": {
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{4f8fc68a}",
-                "SpellSlot": {
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{95d194b8}",
-                "SpellSlot": {
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{76072c7d}",
-                "SpellSlot": {
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{ffa1bb20}",
-                "SpellSlot": {
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{ad524f5b}",
-                "SpellSlot": {
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{cabf4768}",
-                "SpellSlot": {
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{f04ea6d4}",
-                "SpellSlot": {
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{0fcb8757}",
-                "SpellSlot": {
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{e8954535}",
-                "SpellSlot": {
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{7532fb92}",
-                "SpellSlot": {
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{4361325d}",
-                "SpellSlot": {
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{e3ff16a7}",
-                "SpellSlot": {
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{919d7431}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 7,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{542632e3}",
-                "SpellSlot": {
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{51f3b0ef}"
-            },
-            {
-                "{f248d989}": "{fc743b64}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 8,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{4900be51}",
-                "SpellSlot": {
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{ba96278b}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 8,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{560e30b0}",
-                "SpellSlot": {
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{9036b2e5}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 8,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{b76c7f19}",
-                "SpellSlot": {
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{0be7a7ac}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 8,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{0f1aa974}",
-                "SpellSlot": {
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{126aabba}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 8,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{4cef7083}",
-                "SpellSlot": {
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{d61cbf4b}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 8,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{7fa5dbc6}",
-                "SpellSlot": {
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{e19f786e}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 8,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{beedefe4}",
-                "SpellSlot": {
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{78f41ebe}",
-                "SpellSlot": {
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{51f3b0ef}"
-            },
-            {
-                "{f248d989}": "{c51ff4ee}",
-                "SpellSlot": {
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{337ab065}",
-                "SpellSlot": {
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{652dd43a}",
-                "SpellSlot": {
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{3e9e380b}",
-                "SpellSlot": {
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{87d4d82c}",
-                "SpellSlot": {
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{aa72eccb}",
-                "SpellSlot": {
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{b7476f47}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{92717e79}",
-                "SpellSlot": {
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{91de4432}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{f05a1cb5}",
-                "SpellSlot": {
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{51f3b0ef}"
-            },
-            {
-                "{f248d989}": "{f33616e5}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{88b09a23}",
-                "SpellSlot": {
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{e5cd1198}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{83c3ce86}",
-                "SpellSlot": {
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{0e027e7b}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{e094a617}",
-                "SpellSlot": {
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{bbb1f846}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{215f4fba}",
-                "SpellSlot": {
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{d35b1584}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{8096b6f9}",
-                "SpellSlot": {
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{66ff58e7}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{cdf15ec0}",
-                "SpellSlot": {
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{24864b3a}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{f789da7d}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{0c3cc540}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{17be77d0}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{48bdd547}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{a173c0b2}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{07da07d9}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{6c4eec74}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{446694fb}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{739954b9}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{6c48b0bc}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{1bb7e4bb}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{bc7db816}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{a22b7a55}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{583b59d8}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{a395dc14}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{c53eb685}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{5efbb0b6}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{f46c9a2f}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{5f2c7d88}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{187ad719}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{d78441f1}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{a2fb89e6}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{d723f981}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{63945e54}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{0be225d7}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{8696da32}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{b3035e1d}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{7dd77223}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{6a3ae486}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 1,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{955fb725}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 2,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{54827c70}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 3,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{4a0f2e77}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 4,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{3dee78aa}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 5,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{96b4fb96}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 6,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{080929fe}"
-            },
-            {
-                "{f248d989}": "{34e20270}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 6,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 3,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{5816c56b}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 6,
-                    "__type": "{5f011348}"
-                },
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{4ad8e928}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 6,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 4,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{315dc0c9}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 6,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 1,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{e16c61cd}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 6,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 5,
-                "__type": "{b5f38c13}"
-            },
-            {
-                "{f248d989}": "{1a7bd8da}",
-                "SpellSlot": {
-                    "SlotType": 1,
-                    "Index": 6,
-                    "__type": "{5f011348}"
-                },
-                "{3a3c1fee}": 6,
-                "__type": "{b5f38c13}"
-            },
-            {
                 "{f248d989}": "{4d9c6f1c}",
                 "__type": "{7dbb4a4d}"
-            },
-            {
-                "{f248d989}": "{49c52fe4}",
-                "__type": "{da5b233f}"
             },
             {
                 "{f248d989}": "{58a77a37}",
@@ -5981,34 +6018,9 @@
                 "__type": "{7dbb4a4d}"
             },
             {
-                "{f248d989}": "{4cc5349d}",
-                "{534b6cc4}": 1,
-                "__type": "{da5b233f}"
-            },
-            {
                 "{f248d989}": "{a2eb880c}",
                 "{fa27d217}": 3,
                 "__type": "{4146f732}"
-            },
-            {
-                "{f248d989}": "{4bc5330a}",
-                "{534b6cc4}": 2,
-                "__type": "{da5b233f}"
-            },
-            {
-                "{f248d989}": "{46c52b2b}",
-                "{534b6cc4}": 3,
-                "__type": "{da5b233f}"
-            },
-            {
-                "{f248d989}": "{45c52998}",
-                "{534b6cc4}": 4,
-                "__type": "{da5b233f}"
-            },
-            {
-                "{f248d989}": "{48c52e51}",
-                "{534b6cc4}": 5,
-                "__type": "{da5b233f}"
             },
             {
                 "{f248d989}": "{d806c9c0}",
@@ -6259,15 +6271,6 @@
                     }
                 ],
                 "__type": "{adfcc498}"
-            },
-            {
-                "{f248d989}": "{045a7695}",
-                "{5ff6cd50}": [
-                    {
-                        "__type": "{a8b35a0d}"
-                    }
-                ],
-                "__type": "{bb0904fc}"
             }
         ],
         "{5ff6cd50}": [
@@ -10016,11 +10019,8 @@
         "name": "{f2395a83}",
         "{8c61159d}": [
             {
-                "FloatSource": {
-                    "Axis": 4,
-                    "__type": "GamepadAxisInputSourceFloat"
-                },
-                "__type": "InputSourceFloatAsBool"
+                "Button": 8,
+                "__type": "GamepadButtonInputSourceBool"
             },
             {
                 "KeySequence": "[ ]",
@@ -10028,6 +10028,7 @@
                     "{6bfb316f}": "CycleAllies",
                     "{e8de69a5}": "Options_Hotkeys_AdditionalHotkeys_CameraControl_SelectAlly1",
                     "{5307f5e1}": "{e5539ecf}",
+                    "{7b12f519}": false,
                     "__type": "{f07517b3}"
                 },
                 "__type": "KeyInputSourceBool"
@@ -10154,6 +10155,7 @@
                         "{6bfb316f}": "MoveCursorLeft",
                         "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
                         "{5307f5e1}": "{e5539ecf}",
+                        "{7b12f519}": false,
                         "__type": "{c749aa30}"
                     },
                     "__type": "KeyInputSourceBool"
@@ -10168,6 +10170,7 @@
                         "{6bfb316f}": "MoveCursorRight",
                         "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
                         "{5307f5e1}": "{e5539ecf}",
+                        "{7b12f519}": false,
                         "__type": "{c749aa30}"
                     },
                     "__type": "KeyInputSourceBool"
@@ -10188,6 +10191,7 @@
                         "{6bfb316f}": "MoveCursorUp",
                         "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
                         "{5307f5e1}": "{e5539ecf}",
+                        "{7b12f519}": false,
                         "__type": "{c749aa30}"
                     },
                     "__type": "KeyInputSourceBool"
@@ -10202,6 +10206,7 @@
                         "{6bfb316f}": "MoveCursorDown",
                         "{e8de69a5}": "Options_Controls_MouseButtonDragScroll",
                         "{5307f5e1}": "{e5539ecf}",
+                        "{7b12f519}": false,
                         "__type": "{c749aa30}"
                     },
                     "__type": "KeyInputSourceBool"
@@ -10226,6 +10231,7 @@
                         "{b825b79c}": true,
                         "__type": "{f07517b3}"
                     },
+                    "{611f9b5f}": true,
                     "__type": "KeyInputSourceBool"
                 },
                 "OnValue": -1.0,
@@ -10242,6 +10248,7 @@
                         "{b825b79c}": true,
                         "__type": "{f07517b3}"
                     },
+                    "{611f9b5f}": true,
                     "__type": "KeyInputSourceBool"
                 },
                 "__type": "InputSourceBoolAsFloat"
@@ -10262,6 +10269,7 @@
                         "{b825b79c}": true,
                         "__type": "{f07517b3}"
                     },
+                    "{611f9b5f}": true,
                     "__type": "KeyInputSourceBool"
                 },
                 "__type": "InputSourceBoolAsFloat"
@@ -10277,6 +10285,7 @@
                         "{b825b79c}": true,
                         "__type": "{f07517b3}"
                     },
+                    "{611f9b5f}": true,
                     "__type": "KeyInputSourceBool"
                 },
                 "OnValue": -1.0,
@@ -12591,7 +12600,8 @@
             "{26ca7471}",
             "{23a7b495}",
             "{eec4113b}",
-            "{df0f3d08}"
+            "{df0f3d08}",
+            "{124720e3}"
         ],
         "__type": "{f2d18d28}"
     },
@@ -12599,12 +12609,12 @@
         "{6476eef4}": "{451b3022}",
         "{6cb6c4fd}": 10.0,
         "{c53c0790}": [
+            "{6238f853}",
             "{bc703f68}",
             "{699d2aa6}",
             "{bfb2cbdc}",
             "{2c79af94}",
             "{76fcd08b}",
-            "{6238f853}",
             "{692658d3}"
         ],
         "__type": "{f2d18d28}"
