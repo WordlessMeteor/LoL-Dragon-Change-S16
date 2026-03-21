@@ -988,13 +988,8 @@
                 JOIN_CUSTOM: "JoinCustom"
             };
             t.CATEGORY_NAMES = n;
-            const i = {
-                SR: "kSummonersRift",
-                ARAM: "kARAM",
-                AlternativeLeagueModes: "kAlternativeLeagueGameModes",
-                TFT: "kTeamfightTactics"
-            };
-            t.MODE_GROUP_NAMES = i;
+            const i = {};
+            t.MODE_GROUP_NAMES = i, i.SR = "kSummonersRift", i.ARAM = "kARAM", i.AlternativeLeagueModes = "kAlternativeLeagueGameModes", i.TFT = "kTeamfightTactics", i.ARAM = "kARAM";
             const o = {
                 primary: [n.PVP, n.VERSUSAI, n.TRAINING],
                 secondary: [n.CREATE_CUSTOM, n.JOIN_CUSTOM]
@@ -3416,11 +3411,11 @@
                     DisbandCountdownComponent: n(211),
                     OpenPartyToggleComponent: n(214),
                     ...i,
-                    GameSelectRootComponent: n(217),
+                    GameSelectRootComponent: n(217).default,
                     GameSelectFooterComponent: n(220),
                     GameTypeSelectComponent: n(223),
                     GameTypeCardComponent: n(226),
-                    GameTypeIconComponent: n(229),
+                    GameTypeIconComponent: n(229).default,
                     GameTypeCategorySelectComponent: n(232),
                     CategorySelectComponent: n(239),
                     PlayableCategoryComponent: n(241),
@@ -4824,7 +4819,7 @@
                     this._super(...arguments), i.db.observe("/lol-client-config/v3/client-config/lol.client_settings.champion_select.enable_asset_swap", this, this.handleClientConfig)
                 },
                 handleClientConfig(e) {
-                    this.set("isAssetSwapEnabled", e || false)
+                    null != e && "" !== e || (e = true), this.set("isAssetSwapEnabled", e)
                 },
                 shouldSubstituteAssets: i.Ember.computed("isAssetSwapEnabled", (function() {
                     return this.get("isAssetSwapEnabled")
@@ -11205,10 +11200,14 @@
             })
         }, (e, t, n) => {
             "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
             var i = n(1);
-            n(218), e.exports = i.Ember.Component.extend({
+            n(218);
+            var o = i.Ember.Component.extend({
                 classNames: ["parties-game-select-screen"],
-                classNameBindings: ["isShowing:game-select-show:game-select-hide"],
+                classNameBindings: ["isShowing:game-select-show:game-select-hide", "compact"],
                 customGamesService: i.Ember.inject.service("custom-games"),
                 layout: n(219),
                 isCreatingCustomGame: i.Ember.computed.alias("selected.isCreatingCustomGame"),
@@ -11219,15 +11218,16 @@
                 isShowingGameSelectObserver: i.Ember.observer("isShowing", (function() {
                     this.get("isShowing") && i.PartyAPI._showFlexRestrictionModalIfNeeded()
                 }))
-            })
+            });
+            t.default = o
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "nfs7puOL",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-select-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-select-root-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-select-root-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-game-select-wrapper"],["flush-element"],["text","\\n  "],["append",["helper",["category-select"],null,[["currentCategory","selected","queues"],[["get",["currentCategory"]],["get",["selected"]],["get",["queues"]]]]],false],["text","\\n"],["block",["if"],[["get",["needsAdditionalGameConfig"]]],null,3,2],["close-element"],["text","\\n"],["append",["helper",["game-select-footer"],null,[["showingState","selected"],[["get",["showingState"]],["get",["selected"]]]]],false],["text","\\n"],["open-element","div",[]],["static-attr","style","display: none"],["flush-element"],["text","\\n  "],["append",["unknown",["customGamesService","subcategoriesObserver"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["game-type-select"],null,[["showingState","currentCategory","selected","queues"],[["get",["showingState"]],["get",["currentCategory"]],["get",["selected"]],["get",["queues"]]]]],false],["text","\\n  "]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["custom-game-list"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isJoiningCustomGame"]]],null,1,0]],"locals":[]},{"statements":[["text","    "],["append",["helper",["custom-game-setup"],null,[["showingState","currentMode","selected","queues"],[["get",["showingState"]],["get",["currentMode"]],["get",["selected"]],["get",["queues"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Z/UYnCWp",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-select-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-select-root-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-select-root-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-game-select-wrapper"],["flush-element"],["text","\\n  "],["append",["helper",["category-select"],null,[["currentCategory","selected","queues"],[["get",["currentCategory"]],["get",["selected"]],["get",["queues"]]]]],false],["text","\\n  "],["append",["helper",["log"],["isaac selected: ",["get",["selected"]]],null],false],["text","\\n"],["block",["if"],[["get",["needsAdditionalGameConfig"]]],null,3,2],["close-element"],["text","\\n"],["append",["helper",["game-select-footer"],null,[["showingState","selected"],[["get",["showingState"]],["get",["selected"]]]]],false],["text","\\n"],["open-element","div",[]],["static-attr","style","display: none"],["flush-element"],["text","\\n  "],["append",["unknown",["customGamesService","subcategoriesObserver"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["game-type-select"],null,[["showingState","currentCategory","selected","queues","compact"],[["get",["showingState"]],["get",["currentCategory"]],["get",["selected"]],["get",["queues"]],["get",["compact"]]]]],false],["text","\\n  "]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["custom-game-list"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isJoiningCustomGame"]]],null,1,0]],"locals":[]},{"statements":[["text","    "],["append",["helper",["custom-game-setup"],null,[["showingState","currentMode","selected","queues"],[["get",["showingState"]],["get",["currentMode"]],["get",["selected"]],["get",["queues"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -11598,8 +11598,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "dhy8gh+j",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\index.js\\" "],["text","\\n"],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n"],["block",["each"],[["get",["gameTypes"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["game-type-card"],null,[["showingState","mapId","gameMode","gameSelectModeGroup","assetMutator","requiresCustomGameSubCategory","queues","animationLock","selectedCategory","selectedMapId","selectedGameMode","selectedGameModeGroup","selectedAssetMutator","selectedQueueId","selectedTrainingGameMode","selectQueue"],[["get",["showingState"]],["get",["gameType","mapId"]],["get",["gameType","gameMode"]],["get",["gameType","gameSelectModeGroup"]],["get",["gameType","assetMutator"]],["get",["gameType","requiresCustomGameSubCategory"]],["get",["queues"]],["get",["selected","animationLock"]],["get",["selected","category"]],["get",["selected","mapId"]],["get",["selected","gameMode"]],["get",["selected","gameSelectModeGroup"]],["get",["selected","assetMutator"]],["get",["selected","queueId"]],["get",["selected","trainingGameMode"]],"selectQueue"]]],false],["text","\\n"]],"locals":["gameType"]}],"hasPartials":false}',
+                id: "xKrS82c9",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\index.js\\" "],["text","\\n"],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n"],["block",["each"],[["get",["gameTypes"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["game-type-card"],null,[["showingState","mapId","gameMode","gameSelectModeGroup","assetMutator","requiresCustomGameSubCategory","queues","animationLock","compact","selectedCategory","selectedMapId","selectedGameMode","selectedGameModeGroup","selectedAssetMutator","selectedQueueId","selectedTrainingGameMode","selectQueue"],[["get",["showingState"]],["get",["gameType","mapId"]],["get",["gameType","gameMode"]],["get",["gameType","gameSelectModeGroup"]],["get",["gameType","assetMutator"]],["get",["gameType","requiresCustomGameSubCategory"]],["get",["queues"]],["get",["selected","animationLock"]],["get",["compact"]],["get",["selected","category"]],["get",["selected","mapId"]],["get",["selected","gameMode"]],["get",["selected","gameSelectModeGroup"]],["get",["selected","assetMutator"]],["get",["selected","queueId"]],["get",["selected","trainingGameMode"]],"selectQueue"]]],false],["text","\\n"]],"locals":["gameType"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -11619,7 +11619,7 @@
             }
             e.exports = i.Ember.Component.extend(o.default, s.default, {
                 classNames: ["game-type-card"],
-                classNameBindings: ["isDisabled:disabled", "isCurrentlySelected:selected", "animationLock:animation-lock"],
+                classNameBindings: ["isDisabled:disabled", "isCurrentlySelected:selected", "animationLock:animation-lock", "compact"],
                 attributeBindings: ["mapId:data-map-id", "gameMode:data-game-mode"],
                 layout: n(228),
                 summonerService: i.Ember.inject.service("summoner"),
@@ -12000,12 +12000,15 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "woy7qf93",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-game-type-upper-half"],["modifier",["action"],[["get",[null]],"selectGameType"]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isTFT"]]],null,14],["text","  "],["append",["helper",["game-type-icon"],null,[["mapId","currentlySelected","gameTypeName","mapSubtitle","isTraining","isDisabledFeaturedGameMode","gameMode","assetMutator","gameSelectModeGroup","isAlternativeLeagueMode","hasQueueWithPip"],[["get",["queueDataToDisplay","mapId"]],["get",["isCurrentlySelected"]],["get",["gameTypeName"]],["get",["mapVersus"]],["get",["isTraining"]],["get",["isDisabledFeaturedGameMode"]],["get",["queueDataToDisplay","gameMode"]],["get",["queueDataToDisplay","assetMutator"]],["get",["gameSelectModeGroup"]],["get",["isAlternativeLeagueMode"]],["get",["hasQueueWithPip"]]]]],false],["text","\\n"],["block",["if"],[["get",["shouldShowEligibilityWarning"]]],null,13],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-game-type-lower-half"],["flush-element"],["text","\\n  \\n"],["block",["if"],[["get",["showRedirectMessage"]]],null,10,9],["close-element"],["text","\\n"],["append",["unknown",["computeDisabledReasons"]],false],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["game-type-category-select"],null,[["queues","queueId","shouldShowPipQueueIds","selectedQueueId","selectCategory"],[["get",["queues"]],["get",["queueId"]],["get",["gameSelectQueuePipService","shouldShowPipQueueIds"]],["get",["selectedQueueId"]],"selectCategory"]]],false],["text","\\n"]],"locals":["queueId"]},{"statements":[["text","    "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","parties-game-type-card-categories"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gameTypeQueues"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"gameServerRegionChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["option","value"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"gameServerRegionChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["option","value"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,3,2]],"locals":["option"]},{"statements":[["text","      "],["open-element","label",[]],["static-attr","for","custom-game-region"],["flush-element"],["append",["unknown",["tra","custom_game_setup_region_label"]],false],["close-element"],["text","\\n      "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-region"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gameServerRegionOptions"]]],null,4],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","span",[]],["static-attr","class","secondary-description-icon"],["flush-element"],["text","\\n            "],["open-element","img",[]],["dynamic-attr","src",["unknown",["gameTypeSecondaryDescriptionIconUrl"]],null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowGameTypeSecondaryDescriptionIcon"]]],null,6],["text","        "],["open-element","span",[]],["flush-element"],["append",["unknown",["gameTypeSecondaryDescriptionText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-game-type-card-intro"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["gameTypeDescription"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGameTypeSecondaryDescription"]]],null,7],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowGameTypeDescription"]]],null,8],["block",["if"],[["get",["shouldDisplayGameServerRegionOptions"]]],null,5],["text","\\n"],["block",["if"],[["get",["shouldDisplayQueueSelect"]]],null,1]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","parties-game-type-card-intro"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["tra","tft_mode_select_redirection_game_description"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","li",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["reason"]]],null],false],["close-element"],["text","\\n"]],"locals":["reason"]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","class","game-type-category-disabled"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n          "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["disabledReasons"]]],null,11],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-eligibility-error"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],12],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","vertical-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "oLaeZIHz",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\game-select\\\\game-type-select-component\\\\game-type-card\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-game-type-upper-half"],["modifier",["action"],[["get",[null]],"selectGameType"]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isTFT"]]],null,14],["text","  "],["append",["helper",["game-type-icon"],null,[["mapId","currentlySelected","gameTypeName","mapSubtitle","isTraining","isDisabledFeaturedGameMode","gameMode","assetMutator","gameSelectModeGroup","isAlternativeLeagueMode","hasQueueWithPip","compact"],[["get",["queueDataToDisplay","mapId"]],["get",["isCurrentlySelected"]],["get",["gameTypeName"]],["get",["mapVersus"]],["get",["isTraining"]],["get",["isDisabledFeaturedGameMode"]],["get",["queueDataToDisplay","gameMode"]],["get",["queueDataToDisplay","assetMutator"]],["get",["gameSelectModeGroup"]],["get",["isAlternativeLeagueMode"]],["get",["hasQueueWithPip"]],["get",["compact"]]]]],false],["text","\\n"],["block",["if"],[["get",["shouldShowEligibilityWarning"]]],null,13],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-game-type-lower-half"],["flush-element"],["text","\\n  \\n"],["block",["if"],[["get",["showRedirectMessage"]]],null,10,9],["close-element"],["text","\\n"],["append",["unknown",["computeDisabledReasons"]],false],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["game-type-category-select"],null,[["queues","queueId","shouldShowPipQueueIds","selectedQueueId","compact","selectCategory"],[["get",["queues"]],["get",["queueId"]],["get",["gameSelectQueuePipService","shouldShowPipQueueIds"]],["get",["selectedQueueId"]],["get",["compact"]],"selectCategory"]]],false],["text","\\n"]],"locals":["queueId"]},{"statements":[["text","    "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","parties-game-type-card-categories"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gameTypeQueues"]]],null,0],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"gameServerRegionChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["option","value"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"gameServerRegionChange",["get",["option","value"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["option","value"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["option","isSelected"]]],null,3,2]],"locals":["option"]},{"statements":[["text","      "],["open-element","label",[]],["static-attr","for","custom-game-region"],["flush-element"],["append",["unknown",["tra","custom_game_setup_region_label"]],false],["close-element"],["text","\\n      "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","id","custom-game-region"],["flush-element"],["text","\\n"],["block",["each"],[["get",["gameServerRegionOptions"]]],null,4],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","span",[]],["static-attr","class","secondary-description-icon"],["flush-element"],["text","\\n            "],["open-element","img",[]],["dynamic-attr","src",["unknown",["gameTypeSecondaryDescriptionIconUrl"]],null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowGameTypeSecondaryDescriptionIcon"]]],null,6],["text","        "],["open-element","span",[]],["flush-element"],["append",["unknown",["gameTypeSecondaryDescriptionText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-game-type-card-intro"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["gameTypeDescription"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGameTypeSecondaryDescription"]]],null,7],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowGameTypeDescription"]]],null,8],["block",["if"],[["get",["shouldDisplayGameServerRegionOptions"]]],null,5],["text","\\n"],["block",["if"],[["get",["shouldDisplayQueueSelect"]]],null,1]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","parties-game-type-card-intro"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["tra","tft_mode_select_redirection_game_description"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","li",[]],["flush-element"],["append",["helper",["sanitize"],[["get",["reason"]]],null],false],["close-element"],["text","\\n"]],"locals":["reason"]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","class","game-type-category-disabled"],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n          "],["open-element","ul",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["disabledReasons"]]],null,11],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","parties-eligibility-error"],["flush-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],12],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","vertical-separator"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
             var i, o = n(1),
                 s = n(100),
                 a = (i = n(47)) && i.__esModule ? i : {
@@ -12016,14 +12019,14 @@
             const l = "hidden",
                 c = "clicked",
                 m = "active";
-            e.exports = o.Ember.Component.extend({
+            var u = o.Ember.Component.extend({
                 classNames: ["parties-game-type-icon"],
-                classNameBindings: ["mapIdClassName"],
+                classNameBindings: ["mapIdClassName", "compact"],
                 layout: n(231),
                 assets: o.Ember.inject.service("assets"),
                 partySettingsService: o.Ember.inject.service("party-settings"),
                 isTFT: o.Ember.computed.equal("gameMode", r.GAME_MODES.TFT),
-                animationsEnabled: o.Ember.computed("partySettingsService.animationsEnabled", "isTFT", (function() {
+                animationsEnabled: o.Ember.computed("partySettingsService.animationsEnabled", "gameMode", "isTFT", (function() {
                     const e = this.get("partySettingsService.animationsEnabled"),
                         t = this.get("isTFT");
                     return e && !t
@@ -12133,7 +12136,8 @@
                 willDestroyElement: function() {
                     this._super(...arguments), this._detachViewportListeners()
                 }
-            })
+            });
+            t.default = u
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -12737,16 +12741,7 @@
                 currentlySelected: o.Ember.computed("index", "selectedSubcategoryIndex", (function() {
                     return this.get("index") === this.get("selectedSubcategoryIndex")
                 })),
-                gameMode: o.Ember.computed("mapId", (function() {
-                    switch (this.get("mapId")) {
-                        case 11:
-                            return "CLASSIC";
-                        case 12:
-                            return "ARAM";
-                        default:
-                            return ""
-                    }
-                })),
+                gameMode: o.Ember.computed.alias("subcategory.gameMode"),
                 name: o.Ember.computed("tra.ready", "subcategory.mapId", "subcategory.modifiers", "subcategory.gameMode", "assets", (function() {
                     const e = this.get("mapId"),
                         t = this.get("gameMode"),
@@ -22806,7 +22801,7 @@
                 _disabledReasonMessage() {
                     const e = this._gameInvite;
                     if (e) {
-                        if ("ONHOLD" === e.state.toUpperCase() || this._gameSearch) return i.tra.get("parties_roster_invite_disabled_in_game_queue");
+                        if ("ONHOLD" === e.state.toUpperCase() || this._gameSearch) return i.tra.get("parties_queue_restriction_player_unknownrestriction");
                         if ("REVOKED" === e.state.toUpperCase()) return i.tra.get("parties_roster_invite_disabled_expired");
                         if (this._isPatcherCheckingForUpdates()) return i.tra.get("parties_roster_invite_disabled_checking_updates");
                         if (this._isPatching()) return i.tra.get("parties_roster_invite_disabled_patching");

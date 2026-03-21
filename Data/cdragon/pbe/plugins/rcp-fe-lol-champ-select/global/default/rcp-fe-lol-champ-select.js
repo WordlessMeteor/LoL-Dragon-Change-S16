@@ -4772,7 +4772,7 @@
                     this.set("isRanked", t), this.set("isClash", n)
                 },
                 handleEnableAssetSwap(e) {
-                    this.set("isAssetSwapEnabled", e || false)
+                    null != e && "" !== e || (e = true), this.set("isAssetSwapEnabled", e)
                 },
                 handleDisableRankedAssetSwap(e) {
                     this.set("isDisabledInRanked", e)

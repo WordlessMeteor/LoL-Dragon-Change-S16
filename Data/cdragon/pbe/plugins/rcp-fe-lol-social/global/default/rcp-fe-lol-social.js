@@ -17641,7 +17641,7 @@
                             icon: (0, c.createContextMenuIcon)(c.ICON_NAMES.INVITE)
                         }, {
                             action: () => this.inviteFriendRiot(e),
-                            label: r.tra.get("context_menu_invite_by_riot"),
+                            label: r.tra.get("context_menu_invite_to_game"),
                             disabled: !t.canInviteToGameViaRiot(e),
                             hidden: !this.get("isInvitableViaRiot"),
                             icon: (0, c.createContextMenuIcon)(c.ICON_NAMES.RIOT)

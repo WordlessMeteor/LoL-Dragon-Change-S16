@@ -4110,8 +4110,6 @@ lol-uikit-content-block.parties-first-experience-tooltip[type=tooltip-system] h6
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding-left: 34px;
-    padding-right: 35px;
     position: relative;
     width: 100%
 }
@@ -4125,6 +4123,11 @@ lol-uikit-content-block.parties-first-experience-tooltip[type=tooltip-system] h6
 
 .parties-game-select-screen.game-select-hide {
     display: none
+}
+
+.parties-game-select-screen.compact .parties-game-type-select-wrapper {
+    justify-content: space-between;
+    width: 97%
 }
 
 .parties-loading-spinner-wrapper {
@@ -4144,10 +4147,10 @@ lol-uikit-content-block.parties-first-experience-tooltip[type=tooltip-system] h6
 }
 
 .parties-game-select-wrapper {
+    align-items: center;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     padding-top: 10px;
     position: relative
 }
@@ -4155,8 +4158,7 @@ lol-uikit-content-block.parties-first-experience-tooltip[type=tooltip-system] h6
 .parties-game-navs {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    width: 100%
+    width: 97%
 }
 
 .parties-game-navs lol-uikit-navigation-bar {
@@ -4186,7 +4188,6 @@ lol-uikit-content-block.parties-first-experience-tooltip[type=tooltip-system] h6
     display: flex;
     flex-direction: row;
     justify-content: center;
-    min-width: min-content;
     position: relative
 }
 
@@ -4451,6 +4452,16 @@ lol-uikit-content-block.game-type-category-disabled ul {
     margin-right: 4px;
     vertical-align: middle;
     width: 24px
+}
+
+.game-type-card.compact {
+    width: 180px
+}
+
+.game-type-card.compact .parties-game-type-upper-half {
+    cursor: pointer;
+    position: relative;
+    width: 170px
 }
 
 .game-type-card .parties-game-type-card-break,
@@ -4781,6 +4792,63 @@ lol-uikit-content-block.game-type-category-disabled ul {
     position: absolute;
     transition: opacity .3s ease;
     width: 250px
+}
+
+.game-type-card.compact .parties-game-type-card-name,
+.parties-custom-game-subcategory-card.compact .parties-game-type-card-name {
+    font-size: 22px;
+    width: 100%
+}
+
+.game-type-card.compact .parties-game-type-card-selected-glow,
+.parties-custom-game-subcategory-card.compact .parties-game-type-card-selected-glow {
+    left: 0;
+    width: 100%
+}
+
+.game-type-card.compact .parties-game-type-icon .icon-frame,
+.parties-custom-game-subcategory-card.compact .parties-game-type-icon .icon-frame {
+    height: 81px;
+    margin-bottom: 15px;
+    position: relative;
+    width: 81px
+}
+
+.game-type-card.compact .parties-game-type-icon .icon-frame .icon-bg,
+.parties-custom-game-subcategory-card.compact .parties-game-type-icon .icon-frame .icon-bg {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 73px;
+    height: 81px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 81px
+}
+
+.game-type-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon video,
+.parties-custom-game-subcategory-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon video {
+    left: 2px;
+    max-width: 77px;
+    position: absolute;
+    top: 2px
+}
+
+.game-type-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.ARAM video,
+.game-type-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.CLASSIC video,
+.game-type-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.KIWI video,
+.game-type-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.SWIFTPLAY video,
+.parties-custom-game-subcategory-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.ARAM video,
+.parties-custom-game-subcategory-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.CLASSIC video,
+.parties-custom-game-subcategory-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.KIWI video,
+.parties-custom-game-subcategory-card.compact .parties-game-type-icon .icon-frame .icon-bg.video-icon.SWIFTPLAY video {
+    left: -1px;
+    top: -1px
+}
+
+.game-type-card.compact.map-22 .icon-frame .icon-bg,
+.parties-custom-game-subcategory-card.compact.map-22 .icon-frame .icon-bg {
+    background-size: 66px
 }
 
 body[data-locale=ja-JP] .game-type-card .parties-game-type-card-name {
