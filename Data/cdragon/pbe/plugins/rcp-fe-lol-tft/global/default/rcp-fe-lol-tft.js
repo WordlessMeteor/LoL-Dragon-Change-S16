@@ -12439,7 +12439,7 @@
                     let n, a = !1;
                     t && Array.isArray(t) && t.forEach((e => {
                         "Set17AGE" === e.eventId && (a = !0)
-                    })), n = a ? e.filter((e => "TFT17_Age_Played_Series" === e.seriesName || "TFT17_Age_Top4_Series" === e.seriesName || "TFT17_Age_Top1_Series" === e.seriesName)) : e.filter((e => "TFT16_Age_Champion_Used_Series" === e.seriesName)), this.set("unlockMissions", n)
+                    })), n = a ? e.filter((e => "TFT17_Age_Series" === e.seriesName)) : e.filter((e => "TFT16_Age_Champion_Used_Series" === e.seriesName)), this.set("unlockMissions", n)
                 },
                 getHomeHubConfig: () => s.db.get(d.TFT_HOME),
                 getStorePromoAssets: () => s.db.get(d.GENERIC_ASSETS).then((e => e ? e[m] : null)),

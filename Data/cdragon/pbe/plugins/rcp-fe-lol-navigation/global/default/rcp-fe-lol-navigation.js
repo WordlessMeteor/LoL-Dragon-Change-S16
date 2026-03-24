@@ -13006,7 +13006,7 @@
                         hide: () => a.default.requestPluginToHide(this.menuItemId)
                     }, {
                         id: this.menuItemId,
-                        priority: 5,
+                        priority: 10,
                         displayNameLocKey: "navbar_demacia",
                         active: !1,
                         disabled: !1,
@@ -14080,7 +14080,7 @@
                         id: this._menuItemId,
                         displayNameLocKey: "navbar_league",
                         active: !1,
-                        priority: 10,
+                        priority: 5,
                         alignment: "left"
                     })
                 }
@@ -23851,7 +23851,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(400)),
-                o = (i = n(496)) && i.__esModule ? i : {
+                o = (i = n(497)) && i.__esModule ? i : {
                     default: i
                 };
 
@@ -23883,37 +23883,37 @@
                         name: "HonorLateRecognitionComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        HonorLateRecognitionComponent: n(500).default,
-                        HonorLateRecognitionIconComponent: n(503).default
+                        HonorLateRecognitionComponent: n(501).default,
+                        HonorLateRecognitionIconComponent: n(504).default
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "HonorLevelupVignetteComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        HonorLevelupVignetteComponent: n(506).default
+                        HonorLevelupVignetteComponent: n(507).default
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "HonorSeasonRewardComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        HonorSeasonRewardComponent: n(510).default,
+                        HonorSeasonRewardComponent: n(511).default,
                         MissionCelebrationRewardComponent: n(131)
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "HonorLevelChangeTooltipComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        HonorLevelChangeTooltipComponent: n(513).default
+                        HonorLevelChangeTooltipComponent: n(514).default
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "ChallengesLevelUpVignetteComponent",
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory,
-                        ChallengesLevelUpVignetteComponent: n(519).default
+                        ChallengesLevelUpVignetteComponent: n(520).default
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "VanguardIsComingModalComponent",
-                        VanguardIsComingModalRootComponent: n(522).default,
+                        VanguardIsComingModalRootComponent: n(523).default,
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory
                     }), a.EmberApplicationFactory.setFactoryDefinition({
-                        name: "Dx9DeprecationModalComponent",
-                        Dx9DeprecationModalRootComponent: n(525).default,
+                        name: "DeprecationModalComponent",
+                        DeprecationModalRootComponent: n(526).default,
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory
                     }), a.EmberApplicationFactory.setFactoryDefinition({
@@ -23924,7 +23924,7 @@
                         ComponentFactory: a.ComponentFactory
                     }), a.EmberApplicationFactory.setFactoryDefinition({
                         name: "MacGraphicsUpgradeModalComponent",
-                        MacGraphicsUpgradeModalRootComponent: n(528).default,
+                        MacGraphicsUpgradeModalRootComponent: n(529).default,
                         tra: a.traService,
                         ComponentFactory: a.ComponentFactory
                     })
@@ -23998,29 +23998,30 @@
                         TftService: n(472).default,
                         VanguardIsComingModalService: n(473),
                         VanguardSessionService: n(474).default,
-                        IndexRoute: n(475),
+                        Win7DeprecationService: n(475).default,
+                        IndexRoute: n(476),
                         TEMPLATES: {
-                            application: n(476),
-                            index: n(477),
-                            loading: n(478),
-                            "components/blue-essence-currency": n(479),
-                            "components/currency-container": n(480),
-                            "components/deep-links-promo": n(481),
-                            "components/menu-item": n(482),
-                            "components/nav-bar": n(483),
-                            "components/navigation-root": n(484),
-                            "components/status-ticker": n(485),
+                            application: n(477),
+                            index: n(478),
+                            loading: n(479),
+                            "components/blue-essence-currency": n(480),
+                            "components/currency-container": n(481),
+                            "components/deep-links-promo": n(482),
+                            "components/menu-item": n(483),
+                            "components/nav-bar": n(484),
+                            "components/navigation-root": n(485),
+                            "components/status-ticker": n(486),
                             "components/status-ticker-incident": n(411),
-                            "components/ready-check-button-accept": n(486),
-                            "components/ready-check-button-decline": n(487),
-                            "components/ready-check-icon": n(488),
-                            "components/ready-check-map-background": n(489),
-                            "components/ready-check-root": n(490),
-                            "components/ready-check-status-text": n(491),
-                            "components/ready-check-timer": n(492),
-                            "components/loyalty-badge": n(493),
-                            "components/legal-rating-screen": n(494),
-                            "components/loading-tab": n(495),
+                            "components/ready-check-button-accept": n(487),
+                            "components/ready-check-button-decline": n(488),
+                            "components/ready-check-icon": n(489),
+                            "components/ready-check-map-background": n(490),
+                            "components/ready-check-root": n(491),
+                            "components/ready-check-status-text": n(492),
+                            "components/ready-check-timer": n(493),
+                            "components/loyalty-badge": n(494),
+                            "components/legal-rating-screen": n(495),
+                            "components/loading-tab": n(496),
                             "components/tft-announcement-modal": n(424),
                             "components/tft-loot-deprecation-pre-modal": n(427)
                         }
@@ -26986,7 +26987,7 @@
                     e && "NONE" !== e && (i.db.unobserve(a, this), this.showNotification(e))
                 },
                 showNotification(e) {
-                    const t = i.ComponentFactory.create("Dx9DeprecationModalComponent", {
+                    const t = i.ComponentFactory.create("DeprecationModalComponent", {
                             notificationType: e
                         }),
                         n = s.add({
@@ -28294,6 +28295,42 @@
             t.default = g
         }, (e, t, n) => {
             "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var i = n(1);
+            const a = i.lolUikit.getModalManager();
+            var s = i.Ember.Service.extend({
+                init() {
+                    this._super(...arguments)
+                },
+                showNotification() {
+                    if (this.get("notificationShown")) return;
+                    this.set("notificationShown", !0);
+                    const e = "WINDOWS_7_NOTIFICATION",
+                        t = i.ComponentFactory.create("DeprecationModalComponent", {
+                            notificationType: e
+                        }),
+                        n = a.add({
+                            type: "DialogAlert",
+                            data: {
+                                contents: t.domNode,
+                                okText: i.tra.get("lib_ui_dialog_alert_ok"),
+                                notificationType: e
+                            }
+                        });
+                    n.okPromise.then((() => this.hideNotification(n)))
+                },
+                hideNotification(e) {
+                    i.lolUikit.getModalManager().remove(e)
+                },
+                willDestroy() {
+                    this._super(...arguments), i.db.unobserve("/lol-client-config/v3/client-config/lol.client_settings.show_win7_notification_on_every_startup", this), i.db.unobserve("/riotclient/system-info/v1/basic-info", this)
+                }
+            });
+            t.default = s
+        }, (e, t, n) => {
+            "use strict";
             var i = n(1);
             e.exports = i.Ember.Route.extend({
                 session: i.Ember.inject.service(),
@@ -28445,8 +28482,8 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = o(n(497)),
-                s = o(n(499));
+                a = o(n(498)),
+                s = o(n(500));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -28497,7 +28534,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(498);
+            n(499);
             var a = class {
                 constructor() {}
                 showNotification(e, t, n) {
@@ -28558,8 +28595,8 @@
             }), t.default = void 0;
             var i = n(1),
                 a = n(448);
-            n(501);
-            var s, o = (s = n(502)) && s.__esModule ? s : {
+            n(502);
+            var s, o = (s = n(503)) && s.__esModule ? s : {
                 default: s
             };
             var r = i.Ember.Component.extend({
@@ -28599,8 +28636,8 @@
             }), t.default = void 0;
             var i = n(1),
                 a = n(448);
-            n(504);
-            var s, o = (s = n(505)) && s.__esModule ? s : {
+            n(505);
+            var s, o = (s = n(506)) && s.__esModule ? s : {
                 default: s
             };
             var r = i.Ember.Component.extend({
@@ -28642,9 +28679,9 @@
             var i = n(1),
                 a = n(448),
                 s = n(449),
-                o = l(n(507));
-            n(508);
-            var r = l(n(509));
+                o = l(n(508));
+            n(509);
+            var r = l(n(510));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -28981,8 +29018,8 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(511);
-            var a, s = (a = n(512)) && a.__esModule ? a : {
+            n(512);
+            var a, s = (a = n(513)) && a.__esModule ? a : {
                     default: a
                 },
                 o = n(449),
@@ -29046,11 +29083,11 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(514);
-            var a = l(n(515)),
-                s = l(n(516)),
-                o = l(n(517)),
-                r = l(n(518));
+            n(515);
+            var a = l(n(516)),
+                s = l(n(517)),
+                o = l(n(518)),
+                r = l(n(519));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -29108,9 +29145,9 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(520);
-            var a = o(n(521)),
-                s = o(n(507));
+            n(521);
+            var a = o(n(522)),
+                s = o(n(508));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -29299,10 +29336,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(523)) && i.__esModule ? i : {
+                s = (i = n(524)) && i.__esModule ? i : {
                     default: i
                 };
-            n(524);
+            n(525);
             var o = a.Ember.Component.extend({
                 classNames: ["vanguard-is-coming-modal-root-element"],
                 layout: s.default,
@@ -29328,10 +29365,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(526)) && i.__esModule ? i : {
+                s = (i = n(527)) && i.__esModule ? i : {
                     default: i
                 };
-            n(527);
+            n(528);
             var o = a.Ember.Component.extend({
                 classNames: ["dx9-deprecation-modal-root-element"],
                 layout: s.default,
@@ -29339,19 +29376,23 @@
                 notificationType: "",
                 showUpgradeHardwareNotification: !1,
                 showFutureUpgradeHardwareNotification: !1,
+                showWindows7Notification: !1,
                 init() {
                     this._super(...arguments), this.setNotification()
                 },
                 setNotification() {
-                    "HARDWARE_UPGRADE" === this.notificationType ? this.showUpgradeHardwareNotification = !0 : "FUTURE_HARDWARE_UPGRADE" === this.notificationType && (this.showFutureUpgradeHardwareNotification = !0)
-                }
+                    "HARDWARE_UPGRADE" === this.notificationType ? this.showUpgradeHardwareNotification = !0 : "FUTURE_HARDWARE_UPGRADE" === this.notificationType ? this.showFutureUpgradeHardwareNotification = !0 : "WINDOWS_7_NOTIFICATION" === this.notificationType && (this.showWindows7Notification = !0)
+                },
+                titleText: a.Ember.computed("showWindows7Notification", "tra.win7_deprecation_modal_title", "tra.mac_graphics_upgrade_modal_title", (function() {
+                    return this.showWindows7Notification ? this.get("tra.win7_deprecation_modal_title") : this.get("tra.mac_graphics_upgrade_modal_title")
+                }))
             });
             t.default = o
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "8W0gOi5G",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\templates\\\\components\\\\dx9-deprecation-modal-root.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\components\\\\dx9-deprecation-modal-root.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__main"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__metal left"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__header-title"],["flush-element"],["append",["unknown",["tra","mac_graphics_upgrade_modal_title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__metal right"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__body"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showUpgradeHardwareNotification"]]],null,1],["text","\\n"],["block",["if"],[["get",["showFutureUpgradeHardwareNotification"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["unknown",["tra","dx11_upgrade_hardware"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["tra","patcher_update_direct_x"]],true],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "2xFXtggw",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\templates\\\\components\\\\deprecation-modal-root.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\components\\\\deprecation-modal-root.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__main"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__header"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__metal left"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__header-title"],["flush-element"],["append",["unknown",["titleText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__metal right"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__content"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","dx9-deprecation-modal__body"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showUpgradeHardwareNotification"]]],null,2],["text","\\n"],["block",["if"],[["get",["showFutureUpgradeHardwareNotification"]]],null,1],["text","\\n"],["block",["if"],[["get",["showWindows7Notification"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["unknown",["tra","win7_deprecation_modal_body"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["tra","dx11_upgrade_hardware"]],true],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["tra","patcher_update_direct_x"]],true],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -29363,10 +29404,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(529)) && i.__esModule ? i : {
+                s = (i = n(530)) && i.__esModule ? i : {
                     default: i
                 };
-            n(530);
+            n(531);
             var o = a.Ember.Component.extend({
                 classNames: ["mac-graphics-upgrade-modal-root-element"],
                 layout: s.default,
@@ -29485,10 +29526,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = l(n(533)),
-                s = l(n(535)),
-                o = l(n(534)),
-                r = l(n(536));
+                a = l(n(534)),
+                s = l(n(536)),
+                o = l(n(535)),
+                r = l(n(537));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -29533,7 +29574,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(534)) && i.__esModule ? i : {
+                s = (i = n(535)) && i.__esModule ? i : {
                     default: i
                 };
             t.default = class {
@@ -29620,7 +29661,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(534)) && i.__esModule ? i : {
+                s = (i = n(535)) && i.__esModule ? i : {
                     default: i
                 };
             t.default = class {
@@ -29643,10 +29684,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(537);
-            const a = n(538),
-                s = n(539),
-                o = n(540),
+            n(538);
+            const a = n(539),
+                s = n(540),
+                o = n(541),
                 r = "dismiss-me-pls",
                 l = {
                     celebration: {
@@ -29936,8 +29977,8 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                a = o(n(542)),
-                s = o(n(543));
+                a = o(n(543)),
+                s = o(n(544));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -30076,10 +30117,10 @@
             t.default = o
         }, (e, t, n) => {
             "use strict";
-            var i, a = (i = n(545)) && i.__esModule ? i : {
+            var i, a = (i = n(546)) && i.__esModule ? i : {
                 default: i
             };
-            n(547), e.exports = function() {
+            n(548), e.exports = function() {
                 return new a.default
             }
         }, (e, t, n) => {
@@ -30088,7 +30129,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(546)) && i.__esModule ? i : {
+                s = (i = n(547)) && i.__esModule ? i : {
                     default: i
                 };
             const o = "lol-loading-screen-gameflow-state",
@@ -30296,7 +30337,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(549);
+            n(550);
             const a = "CHAMPION",
                 s = "CHAMPION_SKIN",
                 o = "WARD_SKIN",
@@ -30355,7 +30396,7 @@
                 }
                 _getCelebrationStaticContent(e, t) {
                     const i = document.createElement("img");
-                    return i.classList.add("lol-store-gift-celebration-image"), t.image ? (i.src = t.image, i.classList.add("lol-store-gift-celebration-image-item"), e.data.inventoryType && i.classList.add(`lol-store-gift-celebration-image-${e.data.inventoryType}`)) : (i.src = n(550), i.classList.add("lol-store-gift-celebration-image-generic")), i
+                    return i.classList.add("lol-store-gift-celebration-image"), t.image ? (i.src = t.image, i.classList.add("lol-store-gift-celebration-image-item"), e.data.inventoryType && i.classList.add(`lol-store-gift-celebration-image-${e.data.inventoryType}`)) : (i.src = n(551), i.classList.add("lol-store-gift-celebration-image-generic")), i
                 }
                 _getCelebrationContent(e, t) {
                     const n = e.type === p,
@@ -30494,7 +30535,7 @@
             var i = function() {
                 const {
                     routeToExperience: e
-                } = n(552);
+                } = n(553);
                 return e()
             };
             t.default = i
@@ -30543,11 +30584,11 @@
                 }
             };
             var i, a = n(1),
-                s = n(553),
-                o = (i = n(555)) && i.__esModule ? i : {
+                s = n(554),
+                o = (i = n(556)) && i.__esModule ? i : {
                     default: i
                 },
-                r = n(554);
+                r = n(555);
             const l = "rcp-fe-lol-npe-first-touch"
         }, (e, t, n) => {
             "use strict";
@@ -30582,7 +30623,7 @@
                 return a.SHOW_HOME
             }, t.getCommandLineInitialRouteParameter = T, t.getCurrentSummoner = m, t.getGameflowSession = p, t.getHasSeenTutorialPath = f, t.getHasSelectedGameMode = d, t.getHasSkippedTutorialPath = g, t.getIsGameSelectScreenEnabled = _, t.getIsNPEFlowEnabled = c, t.getIsUnderMaxNPELevel = h, t.getNPESettings = u, t.isInGameflow = v, t.isInTutorialModule = E, t.resolveTencentHubRedirect = b, t.updateSettings = y, t.waitForConfigReady = o, t.waitForLogin = s, t.waitForSettingsReady = r, t.waitForSummonerReady = l;
             var i = n(1),
-                a = n(554);
+                a = n(555);
 
             function s() {
                 return new Promise((e => {
@@ -30742,22 +30783,22 @@
                     name: "rcp-fe-lol-npe-first-touch",
                     tra: i.traService,
                     ComponentFactory: i.ComponentFactory,
-                    FirstTouchComponent: n(556).default,
-                    IntroVideoComponent: n(559).default,
-                    AliasCreateComponent: n(562).default,
-                    SummonerNameCreateComponent: n(568).default,
-                    PatchingExperienceComponent: n(571).default,
-                    ChampionCarouselComponent: n(574).default,
-                    ChampionCarouselItemComponent: n(577).default,
-                    ChampionInformationComponent: n(580).default,
-                    GameModeSelectComponent: n(583).default,
+                    FirstTouchComponent: n(557).default,
+                    IntroVideoComponent: n(560).default,
+                    AliasCreateComponent: n(563).default,
+                    SummonerNameCreateComponent: n(569).default,
+                    PatchingExperienceComponent: n(572).default,
+                    ChampionCarouselComponent: n(575).default,
+                    ChampionCarouselItemComponent: n(578).default,
+                    ChampionInformationComponent: n(581).default,
+                    GameModeSelectComponent: n(584).default,
                     ArrowFooterComponent: o,
                     PlayerNameComponent: r,
-                    FirstTouchService: n(586).default,
-                    LanguageFilterService: n(587).default,
-                    PlayerNameStateService: n(590).default,
-                    WaitForResolvedStringHelper: n(591).default,
-                    IsEqualHelper: n(592).default
+                    FirstTouchService: n(587).default,
+                    LanguageFilterService: n(588).default,
+                    PlayerNameStateService: n(591).default,
+                    WaitForResolvedStringHelper: n(592).default,
+                    IsEqualHelper: n(593).default
                 };
                 i.EmberApplicationFactory.setFactoryDefinition(l);
                 const c = i.ComponentFactory.create(l.name, {
@@ -30779,7 +30820,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(557);
+            n(558);
             const a = "patching-experience",
                 s = "summoner-name-create",
                 o = "game-mode-select",
@@ -30789,7 +30830,7 @@
                 d = [o, r];
             var u = i.Ember.Component.extend({
                 classNames: ["rcp-fe-lol-npe-first-touch"],
-                layout: n(558),
+                layout: n(559),
                 firstTouchService: i.Ember.inject.service("first-touch"),
                 currentScreen: null,
                 patchingExperienceShouldShow: i.Ember.computed.equal("currentScreen", a),
@@ -30844,13 +30885,13 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(560);
+            n(561);
             const {
                 RunMixin: a
             } = i.EmberAddons.EmberLifeline;
             var s = i.Ember.Component.extend(a, {
                 classNames: ["intro-video-component"],
-                layout: n(561),
+                layout: n(562),
                 isSkipDisabled: !0,
                 init() {
                     this._super(...arguments), i.Navigation.hide(), this.handleVideoEnded = this.handleVideoEnded.bind(this)
@@ -30892,10 +30933,10 @@
                 value: !0
             }), t.errorStrings = t.dom = t.default = t.classNames = t.TAG_LINE_MAX = t.NAME_MIN = t.GAME_NAME_MAX = void 0, t.isPossiblyValid = T;
             var i = n(1),
-                a = n(563);
-            n(564);
-            var s, o = n(554),
-                r = (s = n(565)) && s.__esModule ? s : {
+                a = n(564);
+            n(565);
+            var s, o = n(555),
+                r = (s = n(566)) && s.__esModule ? s : {
                     default: s
                 };
             const l = {
@@ -31059,8 +31100,8 @@
                 messageClass: i.Ember.computed("message", (function() {
                     return b.get(this.get("message"))?.message
                 })),
-                startButtonSoundHover: n(566),
-                startButtonSoundClick: n(567),
+                startButtonSoundHover: n(567),
+                startButtonSoundClick: n(568),
                 disableRegisterButton: i.Ember.computed("isLoading", "validityVerified", (function() {
                     return this.get("isLoading") || !this.get("isValidityVerified")
                 })),
@@ -31165,7 +31206,7 @@
                 i.Telemetry.sendCustomData(t, n)
             };
             var i = n(1),
-                a = n(554)
+                a = n(555)
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -31188,15 +31229,15 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(563);
-            n(569);
-            var s = n(554);
+                a = n(564);
+            n(570);
+            var s = n(555);
             const {
                 RunMixin: o
             } = i.EmberAddons.EmberLifeline;
             var r = i.Ember.Component.extend(o, {
                 classNames: ["summoner-name-create-component"],
-                layout: n(570),
+                layout: n(571),
                 firstTouchService: i.Ember.inject.service("first-touch"),
                 languageFilterService: i.Ember.inject.service("language-filter"),
                 username: i.Ember.computed.alias("firstTouchService.session.username"),
@@ -31210,8 +31251,8 @@
                 isNameAvailabilityRequestError: !1,
                 isFormSubmitRequestErrorMessage: !1,
                 startNowButtonSound: {
-                    onHover: n(566),
-                    onClick: n(567)
+                    onHover: n(567),
+                    onClick: n(568)
                 },
                 init() {
                     this._super(...arguments);
@@ -31361,12 +31402,12 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(572);
-            var a = n(563),
-                s = n(554),
+            n(573);
+            var a = n(564),
+                s = n(555),
                 o = i.Ember.Component.extend({
                     classNames: ["npe-first-touch-patching-experience-component"],
-                    layout: n(573),
+                    layout: n(574),
                     firstTouchService: i.Ember.inject.service("first-touch"),
                     champions: i.Ember.computed.alias("firstTouchService.champions"),
                     didSendEvent: !1,
@@ -31398,16 +31439,16 @@
                 value: !0
             }), t.default = t.SFX_PIP_FORWARD = t.SFX_PIP_BACKWARD = void 0;
             var i = n(1);
-            n(575);
-            var a = n(563),
-                s = n(554);
+            n(576);
+            var a = n(564),
+                s = n(555);
             const o = "/fe/lol-static-assets/sounds/npe-ft-sfx-pip-backward-click.ogg";
             t.SFX_PIP_BACKWARD = o;
             const r = "/fe/lol-static-assets/sounds/npe-ft-sfx-pip-forward-click.ogg";
             t.SFX_PIP_FORWARD = r;
             var l = i.Ember.Component.extend({
                 classNames: ["npe-first-touch-champion-carousel-component"],
-                layout: n(576),
+                layout: n(577),
                 champions: null,
                 currentChampionIdx: 0,
                 lastChampionIdx: i.Ember.computed("champions", (function() {
@@ -31460,10 +31501,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(578);
+            n(579);
             var a = i.Ember.Component.extend({
                 classNames: ["npe-first-touch-champion-carousel-item-component"],
-                layout: n(579),
+                layout: n(580),
                 champion: null,
                 uncenteredSplashPath: i.Ember.computed("champion", (function() {
                     const e = this.get("champion");
@@ -31487,12 +31528,12 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(581);
-            var a = n(554),
-                s = n(563),
+            n(582);
+            var a = n(555),
+                s = n(564),
                 o = i.Ember.Component.extend({
                     classNames: ["npe-first-touch-champion-information-component"],
-                    layout: n(582),
+                    layout: n(583),
                     firstTouchService: i.Ember.inject.service("first-touch"),
                     locale: i.Ember.computed.alias("firstTouchService.locale"),
                     primaryRole: i.Ember.computed("champion.roles", (function() {
@@ -31535,12 +31576,12 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(584);
-            var a = n(563),
-                s = n(554),
+            n(585);
+            var a = n(564),
+                s = n(555),
                 o = i.Ember.Component.extend({
                     classNames: ["npe-first-touch-game-mode-select-component"],
-                    layout: n(585),
+                    layout: n(586),
                     firstTouchService: i.Ember.inject.service("first-touch"),
                     tftMapAssets: i.Ember.computed.alias("firstTouchService.tftMapAssets"),
                     init() {
@@ -31586,7 +31627,7 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                a = n(554);
+                a = n(555);
             const s = {
                 tftMapAssets: "/lol-maps/v2/map/22/tft",
                 tutorialPathSettings: "/lol-npe-tutorial-path/v1/settings",
@@ -31647,10 +31688,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(588)) && i.__esModule ? i : {
+                s = (i = n(589)) && i.__esModule ? i : {
                     default: i
                 },
-                o = n(589);
+                o = n(590);
             var r = a.Ember.Service.extend({
                 ready: !1,
                 init() {
@@ -31680,7 +31721,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i = n(589);
+            var i = n(590);
             t.default = class {
                 build(e) {
                     this._allowedCharactersMap = {};
@@ -31786,7 +31827,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                s = (i = n(594)) && i.__esModule ? i : {
+                s = (i = n(595)) && i.__esModule ? i : {
                     default: i
                 };
 
@@ -31798,24 +31839,24 @@
                     return e ? n : t
                 })(e)
             }
-            n(599);
+            n(600);
             var r = async function() {
                 const e = a.default.getProvider().get("rcp-fe-lol-l10n").tra(),
-                    t = n(607).default,
+                    t = n(608).default,
                     i = function() {
-                        const e = n(600).default,
+                        const e = n(601).default,
                             t = "rcp-fe-lol-reconnect",
                             i = a.default.Viewport.main().getScreenRoot(t);
                         return i.getElement().className = t, new e(i)
                     }(),
                     o = function() {
-                        const e = n(602).default,
+                        const e = n(603).default,
                             t = "rcp-fe-lol-game-in-progress",
                             i = a.default.Viewport.main().getScreenRoot(t);
                         return i.getElement().className = t, new e(i)
                     }(),
                     r = function() {
-                        const e = n(604).default,
+                        const e = n(605).default,
                             t = "rcp-fe-lol-repair-while-in-game",
                             i = a.default.Viewport.main().getScreenRoot(t);
                         return i.getElement().className = t, new e(i)
@@ -31844,7 +31885,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = o(n(595)),
+                a = o(n(596)),
                 s = o(n(53));
 
             function o(e) {
@@ -31960,8 +32001,8 @@
                 t.innerHTML = n, !1 !== e.showSpinner ? t.querySelector(".spinner").setAttribute("src", a.default) : t.querySelector(".spinner").style.display = "none";
                 return d(t, e), o = window.setInterval(c, 1e3, t, e), t
             };
-            var i = s(n(596)),
-                a = s(n(597));
+            var i = s(n(597)),
+                a = s(n(598));
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -31993,7 +32034,7 @@
                 const s = t.lockoutText.replace(/\{\{lockoutTimeRemaining\}\}/, i);
                 r > 0 && (a += ` ${s}`), n.textContent = a
             }
-            n(598)
+            n(599)
         }, e => {
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-uikit-dialog-frame class="dialog-frame" data-type="reconnect-notification">\r\n  <div class="dialog-content">\r\n    <lol-uikit-content-block type="dialog-medium">\r\n      <h4>{{TITLE}}</h4>\r\n      <hr class="heading-spacer" />\r\n      <p>{{BODY}}</p>\r\n\r\n      <img class="spinner" />\r\n    </lol-uikit-content-block>\r\n\r\n    <lol-uikit-flat-button-group type="dialog-frame">\r\n      <lol-uikit-flat-button class="button-shutdown" disabled> </lol-uikit-flat-button>\r\n    </lol-uikit-flat-button-group>\r\n  </div>\r\n</lol-uikit-dialog-frame>\r\n'
@@ -32012,7 +32053,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(601)) && i.__esModule ? i : {
+                s = (i = n(602)) && i.__esModule ? i : {
                     default: i
                 };
             t.default = class {
@@ -32166,7 +32207,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i, a = (i = n(603)) && i.__esModule ? i : {
+            var i, a = (i = n(604)) && i.__esModule ? i : {
                 default: i
             };
             t.default = class {
@@ -32231,7 +32272,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i, a = (i = n(605)) && i.__esModule ? i : {
+            var i, a = (i = n(606)) && i.__esModule ? i : {
                 default: i
             };
             t.default = class {
@@ -32287,7 +32328,7 @@
                     this._element.querySelector(".repair-body .header").innerText = e.get("game_in_progress_client_repair"), this._element.querySelector(".repair-body .body").innerText = e.get("game_in_progress_client_repair_explanation"), this._element.querySelector(".repair-body .link").innerHTML = e.get("game_in_progress_client_repair_learn")
                 }
                 _buildElement() {
-                    const e = n(606);
+                    const e = n(607);
                     return this._element = document.createElement("DIV"), this._element.innerHTML = e, this._element
                 }
             }
@@ -32530,12 +32571,12 @@
                 });
                 const u = n(52).default,
                     m = n(399).default,
-                    p = n(531).default,
-                    h = n(532).default;
+                    p = n(532).default,
+                    h = n(533).default;
                 t.default.SimpleDialogMessages = new h;
-                n(541)();
-                n(544)();
-                new(0, n(548).default);
+                n(542)();
+                n(545)();
+                new(0, n(549).default);
                 const g = t.default.Viewport,
                     f = g.getApiKey("rcp-fe-lol-navigation key"),
                     _ = g.overlay().getScreenRoot(f, "rcp-fe-lol-navigation-screen");
@@ -32558,13 +32599,14 @@
                         statusTicker: y.__container__.lookup("service:status-ticker"),
                         lootOdds: y.__container__.lookup("service:loot-odds"),
                         tft: y.__container__.lookup("service:tft"),
-                        acPipManager: y.__container__.lookup("service:ac-pip-manager")
+                        acPipManager: y.__container__.lookup("service:ac-pip-manager"),
+                        win7Deprecation: y.__container__.lookup("service:win7Deprecation")
                     }, e.getSocket());
                 T.initLinks(), T._initMissionsAPI(), T._initRewardsAPI(), T._initAppControlsAPI(t.default), T._initEmailVerificationAPI(t.default), await t.default.add({
                     Navigation: T
                 });
-                (0, n(551).default)().then((() => (0, n(593).default)()));
-                const C = n(608);
+                (0, n(552).default)().then((() => (0, n(594).default)()));
+                const C = n(609);
                 return C.recordPotatoMode(), C.recordWebglSupport(), T
             }))
         }), {

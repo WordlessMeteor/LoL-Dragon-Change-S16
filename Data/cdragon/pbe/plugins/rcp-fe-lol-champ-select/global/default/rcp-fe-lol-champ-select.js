@@ -2562,7 +2562,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = void 0;
+            }), t.default = t.DEFAULT_FINALIZATION_DURATION_ARAM_SUBSET_SECONDS = void 0;
             var i = n(6);
             const s = n(1),
                 {
@@ -2574,17 +2574,24 @@
                     RunMixin: r
                 } = a.EmberLifeline,
                 c = s.getProvider().get("rcp-fe-audio").getChannel("music-champ-selection"),
-                m = s.getProvider().get("rcp-fe-audio").getChannel("sfx-ui"),
-                p = ["/fe/lol-champ-select/sounds/music-cs-draft-pick-base-layer-01.ogg", "/fe/lol-champ-select/sounds/music-cs-draft-pick-intensity-layer-01.ogg", "/fe/lol-champ-select/sounds/music-cs-draft-pick-intensity-layer-02.ogg", "/fe/lol-champ-select/sounds/music-cs-draft-pick-intensity-layer-03.ogg", "/fe/lol-champ-select/sounds/music-cs-draft-pick-intensity-layer-04.ogg"];
+                m = s.getProvider().get("rcp-fe-audio").getChannel("sfx-ui");
+            t.DEFAULT_FINALIZATION_DURATION_ARAM_SUBSET_SECONDS = 45;
+            const p = ["/fe/lol-champ-select/sounds/music-cs-draft-pick-base-layer-01.ogg", "/fe/lol-champ-select/sounds/music-cs-draft-pick-intensity-layer-01.ogg", "/fe/lol-champ-select/sounds/music-cs-draft-pick-intensity-layer-02.ogg", "/fe/lol-champ-select/sounds/music-cs-draft-pick-intensity-layer-03.ogg", "/fe/lol-champ-select/sounds/music-cs-draft-pick-intensity-layer-04.ogg"];
             var d = o.Mixin.create(r, {
                 champSelectMusicFile: o.computed.alias("map.assets.champ-select-background-sound"),
+                getAramFinalizationOverride: (e, t = []) => (t.find((t => t.queueIds.includes(e))) || {}).durationSeconds || 45,
+                calculateRemainingTimeInChampSelect(e) {
+                    const t = this.get("dynamicConfigService.AramFinalizationDurationOverrides"),
+                        n = this.getAramFinalizationOverride(e, t);
+                    return this.get("session.timer.inBanPickPhase") ? this.get("session.timer.timeRemaining") + n : this.get("session.timer.timeRemaining")
+                },
                 startMusicSyncedToEndOfChampSelect: function(e) {
                     const t = this.get("champSelectMusic"),
                         n = this.get("champSelectMusicFile"),
                         i = () => {
                             this.runTask((() => {
                                 if (this.get("champSelectMusicFile") !== n || t.isPlaying()) return void this.removeObserver("session.timer.timeRemaining", this, i);
-                                const s = this.get("session.timer.inBanPickPhase") ? this.get("session.timer.timeRemaining") + 45 : this.get("session.timer.timeRemaining");
+                                const s = this.calculateRemainingTimeInChampSelect(this.get("queue.id"));
                                 s && (this.removeObserver("session.timer.timeRemaining", this, i), t.play({
                                     offset: Math.max(e / 1e3 - s, 0),
                                     when: Math.max(s - e / 1e3, 0)
@@ -10254,6 +10261,13 @@
             t.CONFIG_PROVIDERS = [{
                 baseUrl: "/lol-client-config/v3/client-config/",
                 configs: [{
+                    key: "lol.client_settings.champion_select.aram_finalization_duration_overrides",
+                    propName: "AramFinalizationDurationOverrides",
+                    defaultValue: [{
+                        queueIds: [2400, 2401, 2403, 2405, 3240, 3270],
+                        durationSeconds: 30
+                    }]
+                }, {
                     key: "lol.client_settings.champion_select.min_pick_intent_duration_seconds",
                     propName: "MinPickIntentSeconds",
                     defaultValue: void 0

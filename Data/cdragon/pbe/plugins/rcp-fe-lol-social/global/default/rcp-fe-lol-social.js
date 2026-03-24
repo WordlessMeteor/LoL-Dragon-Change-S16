@@ -10127,7 +10127,7 @@
                         } = e || {}, {
                             nodeName: n
                         } = document.activeElement || {}, r = "Enter" === t, o = !s.includes(n);
-                        r && o && (this.chatWindowElement.classList.contains("open") || this.focus(), e.preventDefault())
+                        r && o && (this.chatWindowElement?.classList.contains("open") || this.focus(), e.preventDefault())
                     };
                     e ? document.addEventListener("keydown", t) : document.removeEventListener("keydown", t)
                 },
@@ -22316,15 +22316,6 @@
                     const e = this.get("remedies");
                     return e && e.length > 0
                 })),
-                remedyReceivedNotificationBodyTop: o.Ember.computed("didReportOffender", "sanitizedTransgressionType", "didReceiveRemedies", (function() {
-                    const e = this.get("sanitizedTransgressionType");
-                    if (this.get("didReceiveRemedies")) return this.get(`tra.remedy_received_notification_body_top_${e}_remedies_received`);
-                    const t = this.get("didReportOffender") ? "reporter" : "bystander";
-                    return this.get(`tra.remedy_received_notification_body_top_${this.get("transgressionType")}_${t}_no_remedies_received`)
-                })),
-                remedyReceivedNotificationBodyBottom: o.Ember.computed("didReportOffender", (function() {
-                    return this.get("didReportOffender") ? this.get("tra.remedy_received_notification_body_bottom_reporter") : this.get("tra.remedy_received_notification_body_bottom_bystander")
-                })),
                 remedyReceivedNotificationTitle: o.Ember.computed("didReportOffender", (function() {
                     return this.get("didReportOffender") ? this.get("tra.remedy_received_notification_title_reporter") : this.get("tra.remedy_received_notification_title_bystander")
                 })),
@@ -22332,12 +22323,14 @@
                     const e = this.get("playerNameData"),
                         t = this.get("sanitizedTransgressionType");
                     let n = "";
-                    return n = e ? this.get("isPlayerNameObfuscated") ? e.playerName : e.playerNameFull : this.get("tra.remedy_feedback_unknown_player_name"), this.get("tra").formatString(`remedy_feedback_offender_${t}$html`, {
+                    n = e ? this.get("isPlayerNameObfuscated") ? e.playerName : e.playerNameFull : this.get("tra.remedy_feedback_unknown_player_name");
+                    const r = this.get("didReportOffender") ? `remedy_feedback_offender_${t}_reporter$html` : `remedy_feedback_offender_${t}$html`;
+                    return this.get("tra").formatString(r, {
                         playerAlias: n
                     })
                 })),
                 remedyFeedbackBottomText: o.Ember.computed("didReportOffender", (function() {
-                    return this.get("didReportOffender") ? this.get("tra.remedy_received_notification_body_bottom_reporter") : this.get("tra.remedy_received_notification_body_bottom_bystander")
+                    return this.get("tra.remedy_received_notification_body_bottom")
                 }))
             });
             t.default = s
@@ -22355,7 +22348,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.XP_BOOST_ICON_PATH = t.XP_BOOSTED_GAMES_REWARD_TYPE = t.UNKNOWN_TRANSGRESSION_TYPE = t.REMEDY_ICON_MAP = t.RANK_MANIPULATION_HITCHHIKER = t.RANK_MANIPULATION_BOOSTEE = t.NEGATIVE_IN_GAME_BEHAVIOR_TRANSGRESSION_TYPE = t.LP_CONSOLATION_REWARD_TYPE = t.LP_CONSOLATION_REMEDY_ICON_PATH = t.KNOWN_TRANSGRESSION_TYPES = t.INAPPROPRIATE_TEXT_TRANSGRESSION_TYPE = t.GAMEPLAY_VIOLATION_TRANSGRESSION_TYPE = t.DISRUPTIVE_PINGING_TRANSGRESSION_TYPE = t.AWAY_FROM_KEYBOARD_TRANSGRESSION_TYPE = t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = t.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE = t.ARAM_REROLL_REFUND_REWARD_TYPE = t.ARAM_REROLL_ICON_PATH = void 0;
+            }), t.XP_BOOST_ICON_PATH = t.XP_BOOSTED_GAMES_REWARD_TYPE = t.UNKNOWN_TRANSGRESSION_TYPE = t.REMEDY_ICON_MAP = t.RANK_MANIPULATION_HITCHHIKER = t.RANK_MANIPULATION_BOOSTEE = t.NEGATIVE_IN_GAME_BEHAVIOR_TRANSGRESSION_TYPE = t.LP_CONSOLATION_REWARD_TYPE = t.LP_CONSOLATION_REMEDY_ICON_PATH = t.KNOWN_TRANSGRESSION_TYPES = t.INAPPROPRIATE_TEXT_TRANSGRESSION_TYPE = t.INAPPROPRIATE_DM_TRANSGRESSION_TYPE = t.GAMEPLAY_VIOLATION_TRANSGRESSION_TYPE = t.DISRUPTIVE_PINGING_TRANSGRESSION_TYPE = t.AWAY_FROM_KEYBOARD_TRANSGRESSION_TYPE = t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = t.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE = t.ARAM_REROLL_REFUND_REWARD_TYPE = t.ARAM_REROLL_ICON_PATH = void 0;
             const r = "GAMEPLAY_VIOLATION";
             t.GAMEPLAY_VIOLATION_TRANSGRESSION_TYPE = r;
             const o = "AWAY_FROM_KEYBOARD";
@@ -22368,29 +22361,31 @@
             t.RANK_MANIPULATION_BOOSTEE = s;
             const l = "INAPPROPRIATE_TEXT";
             t.INAPPROPRIATE_TEXT_TRANSGRESSION_TYPE = l;
-            const c = "DISRUPTIVE_PINGING";
-            t.DISRUPTIVE_PINGING_TRANSGRESSION_TYPE = c;
+            const c = "INAPPROPRIATE_DM";
+            t.INAPPROPRIATE_DM_TRANSGRESSION_TYPE = c;
+            const d = "DISRUPTIVE_PINGING";
+            t.DISRUPTIVE_PINGING_TRANSGRESSION_TYPE = d;
             t.UNKNOWN_TRANSGRESSION_TYPE = "UNKNOWN";
-            const d = new Set([r, o, i, a, s, l, c]);
-            t.KNOWN_TRANSGRESSION_TYPES = d;
-            const p = "XP_BOOSTED_GAMES";
-            t.XP_BOOSTED_GAMES_REWARD_TYPE = p;
-            const u = "AUTOFILL_PROTECTED_GAMES";
-            t.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE = u;
-            const m = "ARAM_REROLL_REFUND";
-            t.ARAM_REROLL_REFUND_REWARD_TYPE = m;
-            const g = "LP_CONSOLATION";
-            t.LP_CONSOLATION_REWARD_TYPE = g;
-            const h = n(523);
-            t.ARAM_REROLL_ICON_PATH = h;
-            const f = n(524);
-            t.XP_BOOST_ICON_PATH = f;
-            const _ = n(525);
-            t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = _;
-            const A = n(526);
-            t.LP_CONSOLATION_REMEDY_ICON_PATH = A;
-            const b = {};
-            t.REMEDY_ICON_MAP = b, b[p] = f, b[u] = _, b[m] = h, b[g] = A
+            const p = new Set([r, o, i, a, s, l, c, d]);
+            t.KNOWN_TRANSGRESSION_TYPES = p;
+            const u = "XP_BOOSTED_GAMES";
+            t.XP_BOOSTED_GAMES_REWARD_TYPE = u;
+            const m = "AUTOFILL_PROTECTED_GAMES";
+            t.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE = m;
+            const g = "ARAM_REROLL_REFUND";
+            t.ARAM_REROLL_REFUND_REWARD_TYPE = g;
+            const h = "LP_CONSOLATION";
+            t.LP_CONSOLATION_REWARD_TYPE = h;
+            const f = n(523);
+            t.ARAM_REROLL_ICON_PATH = f;
+            const _ = n(524);
+            t.XP_BOOST_ICON_PATH = _;
+            const A = n(525);
+            t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = A;
+            const b = n(526);
+            t.LP_CONSOLATION_REMEDY_ICON_PATH = b;
+            const y = {};
+            t.REMEDY_ICON_MAP = y, y[u] = _, y[m] = A, y[g] = f, y[h] = b
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "aram_blessing.svg"

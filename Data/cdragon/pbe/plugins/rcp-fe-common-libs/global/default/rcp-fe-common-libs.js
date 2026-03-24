@@ -48338,7 +48338,7 @@
                     f = h.getIdentifiedDataBinding(u),
                     p = f.bindTo(c),
                     d = __webpack_require__(366);
-                c.disableSocketUriFix ? d.recordNonTimingTracingEvent("socket-uri-fix-disabled") : d.recordNonTimingTracingEvent("socket-uri-fix-enabled"), window.RIOT = {}, await r.default.getLoadPromise(p);
+                window.RIOT = {}, await r.default.getLoadPromise(p);
                 const m = window.RIOT.CONSTANTS.regionLocale;
                 await a.default.getLoadPromise(p);
                 e.default.info(`Static cache enabled, region=${m?.region}`), o.default.setEnabled(true);

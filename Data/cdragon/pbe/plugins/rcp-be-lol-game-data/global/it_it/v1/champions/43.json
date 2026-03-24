@@ -1804,8 +1804,8 @@
             "abilityVideoImagePath": "champion-abilities/0043/ability_0043_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Karma crea un legame tra sé e il nemico bersaglio, rivelandolo e infliggendo danni. Se il legame non viene spezzato, il nemico verrà immobilizzato e danneggiato nuovamente.<br><br>Bonus Mantra: Karma rinforza il legame, curandosi e aumentando la durata dell'immobilizzazione.",
-            "dynamicDescription": "Karma si lega a un campione o a un mostro della giungla, infliggendo <magicDamage>@InitialDamage@ danni magici</magicDamage> e rivelandolo per @TetherDuration@ secondo/i. Se il legame non viene interrotto, il bersaglio subisce nuovamente <magicDamage>@InitialDamage@ danni magici</magicDamage> ed è <status>immobilizzato</status> per @RootDuration@ secondo/i.@SpellModifierDescriptionAppend@",
+            "description": "Karma crea un legame tra sé e il nemico bersaglio, rivelandolo e infliggendo danni. Se il legame non viene spezzato, il nemico verrà trattenuto e danneggiato nuovamente.<br><br>Bonus Mantra: Karma rinforza il legame, curandosi e aumentando la durata del trattenimento.",
+            "dynamicDescription": "Karma si lega a un campione o a un mostro della giungla, infliggendo <magicDamage>@InitialDamage@ danni magici</magicDamage> e rivelandolo per @TetherDuration@ secondo/i. Se il legame non viene interrotto, il bersaglio subisce nuovamente <magicDamage>@InitialDamage@ danni magici</magicDamage> ed è <status>trattenuto</status> per @RootDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -2105,7 +2105,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Karma potenzia la sua prossima abilità con un effetto bonus. Mantra è disponibile al livello 1 e non richiede punti abilità.",
-            "dynamicDescription": "Karma potenzia la sua abilità successiva entro 8 secondi.<br><li><spellName>Fuoco interiore</spellName>: infligge <magicDamage>@RQImpactDamage@ danni magici</magicDamage> aggiuntivi e lascia dietro di sé un cerchio di fiamme, che <status>rallenta</status> i nemici e infligge altri <magicDamage>@RQFieldDamage@ danni magici</magicDamage>.<li><spellName>Volontà di ferro</spellName>: Karma recupera <healing>@RWHealAmount@ salute mancante</healing> all'inizio e alla fine del legame, <status>immobilizzando</status> il nemico per @RWBonusRoot@ secondo/i in più quando si spezza.<li><spellName>Ispirazione</spellName>: Karma conferisce uno <shield>scudo da @REBonusShield@ aggiuntivi</shield> al suo bersaglio e agli alleati nelle sue vicinanze, che ottengono uno <shield>scudo da @REBonusShieldArea@</shield> e <speed>@REMoveSpeed*100@% velocità di movimento</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma potenzia la sua abilità successiva entro 8 secondi.<br><li><spellName>Fuoco interiore</spellName>: infligge <magicDamage>@RQImpactDamage@ danni magici</magicDamage> aggiuntivi e lascia dietro di sé un cerchio di fiamme, che <status>rallenta</status> i nemici e infligge altri <magicDamage>@RQFieldDamage@ danni magici</magicDamage>.<li><spellName>Volontà di ferro</spellName>: Karma recupera <healing>@RWHealAmount@ salute mancante</healing> all'inizio e alla fine del legame, <status>trattenendo</status> il nemico per @RWBonusRoot@ secondo/i in più quando si spezza.<li><spellName>Ispirazione</spellName>: Karma conferisce uno <shield>scudo da @REBonusShield@ aggiuntivi</shield> al suo bersaglio e agli alleati nelle sue vicinanze, che ottengono uno <shield>scudo da @REBonusShieldArea@</shield> e <speed>@REMoveSpeed*100@% velocità di movimento</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

@@ -17457,10 +17457,7 @@
                         api: "loot",
                         path: "/v1/mass-disenchant-recipes"
                     },
-                    storeCustomerEnabled: {
-                        api: "platformConfig",
-                        path: "/v1/namespaces/ClientSystemStates/storeCustomerEnabled"
-                    },
+                    storeCustomerEnabled: "/lol-client-config/v3/client-config/lol.client_settings.store.lcu.enabled",
                     massDisenchantConfig: {
                         api: "loot",
                         path: "/v1/mass-disenchant/configuration"

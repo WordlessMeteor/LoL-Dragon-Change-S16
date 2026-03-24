@@ -5323,10 +5323,10 @@
                     return e ? e.replace("_", "-") : null
                 })),
                 getDateString(e, t, n) {
-                    return Number.isNaN(t) ? (a.logger.error("time-locale -- getDateString called with invalid time:", t), "") : this._getDateTimeString(e, t, n, "date")
+                    return Number.isNaN(t) ? (a.logger.warning("time-locale -- getDateString called with invalid time:", t), "") : this._getDateTimeString(e, t, n, "date")
                 },
                 getTimeString(e, t, n) {
-                    return a.Util.isNumberOk(t) ? this._getDateTimeString(e, t, n, "time") : (a.logger.error("time-locale -- getTimeString called with invalid time:", t), "")
+                    return a.Util.isNumberOk(t) ? this._getDateTimeString(e, t, n, "time") : (a.logger.warning("time-locale -- getTimeString called with invalid time:", t), "")
                 },
                 _getDateTimeString(e, t, n, s) {
                     const i = this.serverToLocalTime(e, t);
