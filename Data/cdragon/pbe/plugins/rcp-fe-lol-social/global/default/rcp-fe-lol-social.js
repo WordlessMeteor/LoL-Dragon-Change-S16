@@ -16716,7 +16716,7 @@
                     const n = [];
                     return t.forEach(((t, r) => {
                         e.get(r) || n.push(r)
-                    })), n.length > 0 && r.logger.warning("Failed to find group info for groupIds", {
+                    })), n.length > 0 && r.logger.warning("THIS IS A BUG: Failed to find group info for groupIds", {
                         unknownGroupIds: n
                     }), n
                 },
@@ -17240,7 +17240,7 @@
                 })),
                 isFriendDiscordOnly: r.Ember.computed("friend", (function() {
                     const e = this.get("friend");
-                    return !e?.pid
+                    return e?.relationshipOnRiot === i.SOCIAL_RELATIONSHIP_TYPES.NONE
                 })),
                 isDiscordFriendOffline: r.Ember.computed("friend", "isFriendLinkedToDiscord", (function() {
                     const e = this.get("friend");
@@ -17249,9 +17249,11 @@
                 showDiscordOfflineIcon: r.Ember.computed("isDisordFriendOffline", "isFriendLinkedToDiscord", "isOffline", (function() {
                     return this.get("isFriendLinkedToDiscord") && this.get("isDisordFriendOffline") && this.get("isOffline")
                 })),
-                isDiscordOnline: r.Ember.computed("friend", "isFriendLinkedToDiscord", "isOffline", (function() {
-                    const e = this.get("friend");
-                    return this.get("isFriendLinkedToDiscord") && this.get("isOffline") && e?.discordInfo?.onlineStatus === i.DISCORD_ONLINE_STATUS_TYPES.ONLINE
+                isDiscordOnline: r.Ember.computed("friend", "isFriendLinkedToDiscord", "isFriendDiscordOnly", "isOffline", (function() {
+                    if (!this.get("isFriendLinkedToDiscord")) return !1;
+                    const e = this.get("friend"),
+                        t = e?.discordInfo?.onlineStatus === i.DISCORD_ONLINE_STATUS_TYPES.ONLINE;
+                    return (this.get("isFriendDiscordOnly") || this.get("isOffline")) && t
                 })),
                 canAddFriend: r.Ember.computed("friend", "friendRequestsService.friendRequestPuuidLookup", "isFriendDiscordOnly", (function() {
                     const e = this.get("friend");
@@ -19616,7 +19618,7 @@
                 settingsService: o.Ember.inject.service("social-settings"),
                 socialPlatformConfigService: o.Ember.inject.service("social-platform-config"),
                 socialSessionService: o.Ember.inject.service("social-session"),
-                sortedFriends: o.Ember.computed("friends.[]", "settingsService.chatSettings.sortBy", (function() {
+                sortedFriends: o.Ember.computed("friends.[]", (function() {
                     const e = this.get("friends");
                     return this._adjustFriends(e.slice())
                 })),

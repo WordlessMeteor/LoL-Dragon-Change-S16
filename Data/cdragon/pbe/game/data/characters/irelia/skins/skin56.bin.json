@@ -80998,6 +80998,46 @@
         ],
         "paramValues": [
             {
+                "name": "Dissolve_Bloom_Power",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Out_Alpha_Color",
+                "value": [
+                    0.027450980618596077,
+                    0.9254902005195618,
+                    0.32549020648002625,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Alpha_Bias",
+                "value": [
+                    1.2000000476837158,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Body_Height",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Dissolve_Texture_Intensity",
                 "value": [
                     1.0,
@@ -81250,6 +81290,12 @@
         ],
         "switches": [
             {
+                "name": "USE_DISSOLVE_TRANSITION",
+                "on": false,
+                "Group": "Dissolve/Transition",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_POST_LIGHT_ON_DISSOLVE",
                 "on": false,
                 "Group": "Dissolve/Transition",
@@ -81257,6 +81303,7 @@
             },
             {
                 "name": "DISSOLVE_OUT_ALPHA",
+                "on": false,
                 "Group": "Dissolve/Transition",
                 "__type": "StaticMaterialSwitchDef"
             },

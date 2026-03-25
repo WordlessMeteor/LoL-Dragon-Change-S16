@@ -49264,20 +49264,8 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "TextureName": "DeformMask",
-                "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Nautilus_Skin39_Black_TX_CM.SKINS_Nautilus_Skin39.tex",
-                "samplerName": "Clamp_No_Mip",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "DeformNoise",
                 "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Particles/Nautilus_Skin39_CaseTexture01_TX_CM.SKINS_Nautilus_Skin39.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "BloomColor",
-                "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Nautilus_Skin39_Black_TX_CM.SKINS_Nautilus_Skin39.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -49862,8 +49850,8 @@
             {
                 "name": "VertexDeformTilling",
                 "value": [
-                    2.0,
-                    2.0,
+                    1.0,
+                    1.0,
                     0.0,
                     0.0
                 ],
@@ -49872,7 +49860,7 @@
             {
                 "name": "VertexDeformSpeed",
                 "value": [
-                    0.20000000298023224,
+                    -0.20000000298023224,
                     0.0,
                     0.0,
                     0.0
@@ -49882,7 +49870,7 @@
             {
                 "name": "DeformIntensity",
                 "value": [
-                    3.0,
+                    6.0,
                     0.0,
                     0.0,
                     0.0
@@ -50112,6 +50100,7 @@
             },
             {
                 "name": "FEATURE_VERTEX_DEFORM",
+                "on": false,
                 "Group": "Vertex Deform Feature",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -50122,6 +50111,7 @@
             },
             {
                 "name": "FEATURE_BLOOM",
+                "on": false,
                 "Group": "Bloom Feature",
                 "__type": "StaticMaterialSwitchDef"
             },

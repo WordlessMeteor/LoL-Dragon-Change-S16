@@ -12614,6 +12614,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Body_Height",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Body_Height",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Dissolve_Texture_Intensity",
                 "data": [
                     1.0,
@@ -12903,7 +12920,24 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "Dissolve_Color",
+                "name": "Dissolve_Alpha_Bias",
+                "data": [
+                    1.2000000476837158,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Dissolve_Alpha_Bias",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Dissolve_Out_Alpha_Color",
                 "data": [
                     0.027450980618596077,
                     0.9254902005195618,
@@ -12912,7 +12946,7 @@
                 ],
                 "logicalParameters": [
                     {
-                        "name": "Dissolve_Color",
+                        "name": "Dissolve_Out_Alpha_Color",
                         "fields": 15,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -12931,6 +12965,23 @@
                     {
                         "name": "DissolveIntensity",
                         "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Dissolve_Color",
+                "data": [
+                    0.027450980618596077,
+                    0.9254902005195618,
+                    0.32549020648002625,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Dissolve_Color",
+                        "fields": 15,
                         "__type": "ShaderLogicalParameter"
                     }
                 ],
@@ -12986,6 +13037,23 @@
                     }
                 ],
                 "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Dissolve_Bloom_Power",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Dissolve_Bloom_Power",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
             }
         ],
         "staticSwitches": [
@@ -13005,8 +13073,7 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
-                "name": "DISSOLVE_OUT_ALPHA",
-                "onByDefault": true,
+                "name": "USE_DISSOLVE_TRANSITION",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -13026,6 +13093,10 @@
             {
                 "name": "HOLES_ON",
                 "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "DISSOLVE_OUT_ALPHA",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -13049,12 +13120,12 @@
                 "__type": "ShaderTexture"
             },
             {
-                "name": "Diffuse_Texture",
+                "name": "Alt_Diffuse_Texture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "ShaderTexture"
             },
             {
-                "name": "Alt_Diffuse_Texture",
+                "name": "Diffuse_Texture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "ShaderTexture"
             },
@@ -13083,11 +13154,10 @@
             "DEBUG_USES_LINEAR_SPACE": "1",
             "FEATURE_BLOOM": "1",
             "FEATURE_SCREENSPACE_UV": "1",
-            "FEATURE_VERTEX_COLOR": "1",
             "FEATURE_WORLD_NORMAL": "1",
             "FEATURE_WORLD_POSITION": "1"
         },
-        "featureMask": 33,
+        "featureMask": 1,
         "objectPath": "Shaders/SkinnedMesh/Crepe_Anomaly_Mask",
         "__type": "CustomShaderDef"
     },
@@ -28277,9 +28347,8 @@
                 "__type": "ShaderTexture"
             },
             {
-                "name": "DeformMask",
+                "name": "NoiseDisturb",
                 "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "ShaderTexture"
             },
             {
@@ -28309,11 +28378,6 @@
                 "__type": "ShaderTexture"
             },
             {
-                "name": "NoiseDisturb",
-                "defaultTexturePath": "ASSETS/Shared/Materials/OnsenTexture/Noise04.tex",
-                "__type": "ShaderTexture"
-            },
-            {
                 "name": "Mask",
                 "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "ShaderTexture"
@@ -28331,12 +28395,6 @@
             {
                 "name": "Transition_PatternTexture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/white.tex",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "BloomColor",
-                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "ShaderTexture"
             }
         ],

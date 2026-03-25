@@ -173972,6 +173972,46 @@
         ],
         "paramValues": [
             {
+                "name": "Dissolve_Bloom_Power",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Out_Alpha_Color",
+                "value": [
+                    0.027450980618596077,
+                    0.9254902005195618,
+                    0.32549020648002625,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Alpha_Bias",
+                "value": [
+                    1.2000000476837158,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Body_Height",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Dissolve_Texture_Intensity",
                 "value": [
                     1.0,
@@ -174254,6 +174294,12 @@
         ],
         "switches": [
             {
+                "name": "USE_DISSOLVE_TRANSITION",
+                "on": false,
+                "Group": "Dissolve/Transition",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_POST_LIGHT_ON_DISSOLVE",
                 "on": false,
                 "Group": "Dissolve/Transition",
@@ -174261,6 +174307,7 @@
             },
             {
                 "name": "DISSOLVE_OUT_ALPHA",
+                "on": false,
                 "Group": "Dissolve/Transition",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -175377,7 +175424,7 @@
             "Diana_Q_Moonlight_Self": "Characters/Diana/Skins/Skin65/Particles/Diana_Skin65_Q_Moonlight_Self",
             "Diana_Q_Tar": "Characters/Diana/Skins/Skin65/Particles/Diana_Skin65_Q_Tar",
             "{063a7720}": "Characters/Diana/Skins/Skin65/Particles/Diana_Skin65_Q_Trail",
-            "Diana_Q_Trail_Outer": "Characters/Diana/Skins/Skin64/Particles/Diana_Skin64_Q_Trail",
+            "Diana_Q_Trail_Outer": "Characters/Diana/Skins/Skin65/Particles/Diana_Skin65_Q_Trail",
             "Diana_Recall_beam_strt_sfx_01": "Characters/Diana/Skins/Skin64/Particles/Diana_Skin64_Recall_beam_strt_sfx_01",
             "Diana_R_Cas": "Characters/Diana/Skins/Skin65/Particles/Diana_Skin65_R_Cas",
             "Diana_R_End": "Characters/Diana/Skins/Skin65/Particles/Diana_Skin65_R_End",
