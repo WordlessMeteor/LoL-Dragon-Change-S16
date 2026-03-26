@@ -254,7 +254,7 @@
                     y[e.id] = e.iconPath
                 }))
             }));
-            class v extends a.webComponents.ShadowElement {
+            class E extends a.webComponents.ShadowElement {
                 static get observedAttributes() {
                     return [i, o, l, c, d, u, m, p]
                 }
@@ -384,9 +384,9 @@
                     n ? n.src = e : (n = this._buildImage(e), t.insertBefore(n, this._getRingElement()))
                 }
             }
-            v.tagName = "lol-social-avatar-icon";
-            var E = v;
-            t.default = E
+            E.tagName = "lol-social-avatar-icon";
+            var v = E;
+            t.default = v
         }, e => {
             "use strict";
             e.exports = '<template>\r\n  <div class="icon">\r\n    <div class="ring"></div>\r\n  </div>\r\n</template>\r\n'
@@ -482,18 +482,18 @@
                     a.getApi_AccountVerification = () => b;
                     const y = (0, n(288).default)(e);
                     a.getApi_Eternals = () => y, a.getSharedEmberComponents = () => n(303).default, i.startOperation(i.XP_CONFIG_EMBER_COLLECTION_SCROLLFIX);
-                    const v = performance.now(),
-                        E = s.get("/client-config/v2/config/lol.client_settings.ember_collection_noscrollfix").then((e => ({
+                    const E = performance.now(),
+                        v = s.get("/client-config/v2/config/lol.client_settings.ember_collection_noscrollfix").then((e => ({
                             scrollfix: !e,
                             reason: "config",
-                            elapsed: performance.now() - v
+                            elapsed: performance.now() - E
                         }))),
                         A = new Promise((e => setTimeout(e, 1500))).then((() => ({
                             scrollfix: !0,
                             reason: "timeout",
-                            elapsed: performance.now() - v
+                            elapsed: performance.now() - E
                         }))),
-                        x = await Promise.race([A, E]);
+                        x = await Promise.race([A, v]);
                     t.info("ember-collection config check", x), i.stopOperationWithOk(i.XP_CONFIG_EMBER_COLLECTION_SCROLLFIX, {
                         ember_collection: x
                     }), x?.scrollfix && a.getSharedEmberComponents().EmberCollectionApi.useScrollFix();
@@ -4341,24 +4341,24 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                r = v(n(102)),
-                s = v(n(115)),
-                i = v(n(118)),
-                o = v(n(121)),
-                l = v(n(128)),
-                c = v(n(132)),
-                d = v(n(136)),
-                u = v(n(141)),
-                m = v(n(144)),
-                p = v(n(158)),
-                h = v(n(165)),
-                g = v(n(170)),
-                f = v(n(175)),
-                _ = v(n(180)),
-                b = v(n(183)),
-                y = v(n(186));
+                r = E(n(102)),
+                s = E(n(115)),
+                i = E(n(118)),
+                o = E(n(121)),
+                l = E(n(128)),
+                c = E(n(132)),
+                d = E(n(136)),
+                u = E(n(141)),
+                m = E(n(144)),
+                p = E(n(158)),
+                h = E(n(165)),
+                g = E(n(170)),
+                f = E(n(175)),
+                _ = E(n(180)),
+                b = E(n(183)),
+                y = E(n(186));
 
-            function v(e) {
+            function E(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -5882,8 +5882,8 @@
                 _ = r(a),
                 b = s(i),
                 y = s(o),
-                v = s(l),
-                E = s(c),
+                E = s(l),
+                v = s(c),
                 A = s(d),
                 x = s(u),
                 C = s(m),
@@ -5891,7 +5891,7 @@
                 T = s(h),
                 w = s(g),
                 S = s(f);
-            _.push([e.id, ":host {\n  --regalia-emblem-unranked: url(" + b + ");\n  --regalia-emblem-iron: url(" + y + ");\n  --regalia-emblem-bronze: url(" + v + ");\n  --regalia-emblem-silver: url(" + E + ");\n  --regalia-emblem-gold: url(" + A + ");\n  --regalia-emblem-platinum: url(" + x + ");\n  --regalia-emblem-emerald: url(" + C + ");\n  --regalia-emblem-diamond: url(" + k + ");\n  --regalia-emblem-master: url(" + T + ");\n  --regalia-emblem-grandmaster: url(" + w + ");\n  --regalia-emblem-challenger: url(" + S + ');\n}\n:host .regalia-emblem-container {\n  display: flex;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  align-items: center;\n  justify-content: center;\n}\n:host .regalia-emblem-container .regalia-emblem {\n  width: 100%;\n  height: 100%;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="unranked"] {\n  background-image: var(--regalia-emblem-unranked);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="iron"] {\n  background-image: var(--regalia-emblem-iron);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="bronze"] {\n  background-image: var(--regalia-emblem-bronze);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="silver"] {\n  background-image: var(--regalia-emblem-silver);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="gold"] {\n  background-image: var(--regalia-emblem-gold);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="platinum"] {\n  background-image: var(--regalia-emblem-platinum);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="emerald"] {\n  background-image: var(--regalia-emblem-emerald);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="diamond"] {\n  background-image: var(--regalia-emblem-diamond);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="master"] {\n  background-image: var(--regalia-emblem-master);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="grandmaster"] {\n  background-image: var(--regalia-emblem-grandmaster);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="challenger"] {\n  background-image: var(--regalia-emblem-challenger);\n}\n', "", {
+            _.push([e.id, ":host {\n  --regalia-emblem-unranked: url(" + b + ");\n  --regalia-emblem-iron: url(" + y + ");\n  --regalia-emblem-bronze: url(" + E + ");\n  --regalia-emblem-silver: url(" + v + ");\n  --regalia-emblem-gold: url(" + A + ");\n  --regalia-emblem-platinum: url(" + x + ");\n  --regalia-emblem-emerald: url(" + C + ");\n  --regalia-emblem-diamond: url(" + k + ");\n  --regalia-emblem-master: url(" + T + ");\n  --regalia-emblem-grandmaster: url(" + w + ");\n  --regalia-emblem-challenger: url(" + S + ');\n}\n:host .regalia-emblem-container {\n  display: flex;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  align-items: center;\n  justify-content: center;\n}\n:host .regalia-emblem-container .regalia-emblem {\n  width: 100%;\n  height: 100%;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="unranked"] {\n  background-image: var(--regalia-emblem-unranked);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="iron"] {\n  background-image: var(--regalia-emblem-iron);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="bronze"] {\n  background-image: var(--regalia-emblem-bronze);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="silver"] {\n  background-image: var(--regalia-emblem-silver);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="gold"] {\n  background-image: var(--regalia-emblem-gold);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="platinum"] {\n  background-image: var(--regalia-emblem-platinum);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="emerald"] {\n  background-image: var(--regalia-emblem-emerald);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="diamond"] {\n  background-image: var(--regalia-emblem-diamond);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="master"] {\n  background-image: var(--regalia-emblem-master);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="grandmaster"] {\n  background-image: var(--regalia-emblem-grandmaster);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="challenger"] {\n  background-image: var(--regalia-emblem-challenger);\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-shared-components/src/lib/regalia/addon/elements/emblem-element/component-style.styl"],
                 names: [],
@@ -8764,8 +8764,8 @@
                 _ = n(245),
                 b = n(248),
                 y = n(206),
-                v = n(222),
-                E = n(249),
+                E = n(222),
+                v = n(249),
                 A = n(208),
                 x = n(209),
                 C = n(210);
@@ -8869,17 +8869,17 @@
 
             function Y() {
                 var e = Array.prototype.slice.call(arguments);
-                return e.push(a), v.parseRFC3966.apply(this, e)
+                return e.push(a), E.parseRFC3966.apply(this, e)
             }
 
             function z() {
                 var e = Array.prototype.slice.call(arguments);
-                return e.push(a), v.formatRFC3966.apply(this, e)
+                return e.push(a), E.formatRFC3966.apply(this, e)
             }
 
             function W() {
                 var e = Array.prototype.slice.call(arguments);
-                return e.push(a), E.default.apply(this, e)
+                return e.push(a), v.default.apply(this, e)
             }
 
             function q(e) {
@@ -9411,8 +9411,8 @@
                 default: () => b,
                 extractCountryCallingCode: () => A,
                 extract_formatted_phone_number: () => y,
-                find_country_code: () => E,
-                strip_national_prefix_and_carrier_code: () => v
+                find_country_code: () => v,
+                strip_national_prefix_and_carrier_code: () => E
             });
             var a = n(215),
                 r = n(219),
@@ -9469,7 +9469,7 @@
                         var u = function(e, t) {
                                 var n = (0, c.default)(e),
                                     a = void 0,
-                                    s = v(n, t),
+                                    s = E(n, t),
                                     i = s.number,
                                     o = s.carrierCode;
                                 if (t.possibleLengths()) switch ((0, d.checkNumberLengthForType)(i, void 0, t)) {
@@ -9486,7 +9486,7 @@
                             }(o, n),
                             m = u.national_number,
                             p = u.carrier_code,
-                            h = E(s, m, n);
+                            h = v(s, m, n);
                         h && (l = h, n.country(l));
                         return {
                             country: l,
@@ -9544,7 +9544,7 @@
                     }
             }
 
-            function v(e, t) {
+            function E(e, t) {
                 if (!e || !t.nationalPrefixForParsing()) return {
                     number: e
                 };
@@ -9563,7 +9563,7 @@
                 }
             }
 
-            function E(e, t, n) {
+            function v(e, t, n) {
                 var a = n.countryCallingCodes()[e];
                 return 1 === a.length ? a[0] : function(e, t, n) {
                     n = new i.default(n);
@@ -10687,10 +10687,10 @@
                 _ = (0, i.limit)(0, 2),
                 b = (0, i.limit)(0, 4),
                 y = r.MAX_LENGTH_FOR_NSN + r.MAX_LENGTH_COUNTRY_CODE,
-                v = (0, i.limit)(0, y),
-                E = "[" + r.VALID_PUNCTUATION + "]" + b,
+                E = (0, i.limit)(0, y),
+                v = "[" + r.VALID_PUNCTUATION + "]" + b,
                 A = o.pNd + (0, i.limit)(1, y),
-                x = "(?:" + u.LEAD_CLASS + E + ")" + _ + A + "(?:" + E + A + ")" + v + "(?:" + s.EXTN_PATTERNS_FOR_MATCHING + ")?",
+                x = "(?:" + u.LEAD_CLASS + v + ")" + _ + A + "(?:" + v + A + ")" + E + "(?:" + s.EXTN_PATTERNS_FOR_MATCHING + ")?",
                 C = new RegExp("[^" + o._pN + o._pL + "#]+$"),
                 k = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
             const T = function() {
@@ -10960,9 +10960,9 @@
                 close_dangling_braces: () => x,
                 count_occurences: () => C,
                 cut_stripping_dangling_braces: () => A,
-                default: () => v,
+                default: () => E,
                 repeat: () => k,
-                strip_dangling_braces: () => E
+                strip_dangling_braces: () => v
             });
             var a = n(206),
                 r = n(216),
@@ -10995,7 +10995,7 @@
                 _ = new RegExp("^[" + s.VALID_PUNCTUATION + "]*(\\$\\d[" + s.VALID_PUNCTUATION + "]*)+$"),
                 b = "[" + s.PLUS_CHARS + "]{0,1}[" + s.VALID_PUNCTUATION + s.VALID_DIGITS + "]*",
                 y = new RegExp("^" + b + "$", "i");
-            const v = function() {
+            const E = function() {
                 function e(t, n) {
                     ! function(e, t) {
                         if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
@@ -11258,7 +11258,7 @@
                 }]), e
             }();
 
-            function E(e) {
+            function v(e) {
                 for (var t = [], n = 0; n < e.length;) "(" === e[n] ? t.push(n) : ")" === e[n] && t.pop(), n++;
                 var a = 0,
                     r = "";
@@ -11282,7 +11282,7 @@
             }
 
             function A(e, t) {
-                return ")" === e[t] && t++, E(e.slice(0, t))
+                return ")" === e[t] && t++, v(e.slice(0, t))
             }
 
             function x(e, t) {
@@ -12676,8 +12676,8 @@
                 _ = Y(n(377)),
                 b = Y(n(380)),
                 y = Y(n(383)),
-                v = Y(n(387)),
-                E = Y(n(422)),
+                E = Y(n(387)),
+                v = Y(n(422)),
                 A = Y(n(426)),
                 x = Y(n(429)),
                 C = Y(n(432)),
@@ -12725,8 +12725,8 @@
                 FlatButtonCounterComponent: _.default,
                 GameIdClipboardCopyComponent: b.default,
                 HextechLoadingAnimationComponent: y.default,
-                ManagedIframeComponent: v.default,
-                ParticleGlowOverlayComponent: E.default,
+                ManagedIframeComponent: E.default,
+                ParticleGlowOverlayComponent: v.default,
                 PerkPageTooltipComponent: A.default,
                 PlayerRestrictionInfoComponent: x.default,
                 PlayerNameComponent: C.default,
@@ -14872,7 +14872,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = function(e, t, n, R, P) {
-                (0, a.addAudioListeners)(e.allRegions, t, R), (0, r.addClientDataListener)(e.allRegions, t, n), (0, s.addEventHubListeners)(e.allRegions, t, n), (0, i.addEventShopListeners)(e.allRegions, t, n), (0, o.addFoundationListeners)(e.allRegions, t, n), (0, l.addGameDataListeners)(e.allRegions, t, n), (0, c.addGameflowListener)(e.allRegions, t, n), (0, d.addHubRoutingListener)(e.allRegions, t, P), (0, u.addHubSettingsListeners)(e.allRegions, t, n), (0, m.addLolSettingsListeners)(e.allRegions, t, n), (0, p.addMarketingPreferencesListeners)(e.allRegions, t, n), (0, h.addMissionsListeners)(e.allRegions, t, n), (0, g.addProgressionListeners)(e.allRegions, t, n), (0, f.addRewardsListeners)(e.allRegions, t, n), (0, _.addOpenFullPageModalListener)(e.allRegions, t, n, R), (0, b.addOpenPAWListener)(e.allRegions, t, n), (0, y.addOpenStoreListener)(e.allRegions, t), (0, v.addOpenUiListeners)(e.allRegions, t), (0, E.addPubHubConfigListener)(e.allRegions, t, n), (0, A.addQueuesListeners)(e.allRegions, t, n), (0, x.addSessionDataListener)(e.allRegions, t, n), (0, C.addTastesListeners)(e.allRegions, t, n), (0, k.addTFTPassListeners)(e.allRegions, t, n), (0, T.addTFTTrovesListeners)(e.allRegions, t, n), (0, w.addTokenListeners)(e.allRegions, t, n), (0, S.addSeasonListeners)(e.allRegions, t, n), (0, I.addActivityCenterListeners)(e.allRegions, t, n), (0, L.addMetagamesListeners)(e.allRegions, t, n)
+                (0, a.addAudioListeners)(e.allRegions, t, R), (0, r.addClientDataListener)(e.allRegions, t, n), (0, s.addEventHubListeners)(e.allRegions, t, n), (0, i.addEventShopListeners)(e.allRegions, t, n), (0, o.addFoundationListeners)(e.allRegions, t, n), (0, l.addGameDataListeners)(e.allRegions, t, n), (0, c.addGameflowListener)(e.allRegions, t, n), (0, d.addHubRoutingListener)(e.allRegions, t, P), (0, u.addHubSettingsListeners)(e.allRegions, t, n), (0, m.addLolSettingsListeners)(e.allRegions, t, n), (0, p.addMarketingPreferencesListeners)(e.allRegions, t, n), (0, h.addMissionsListeners)(e.allRegions, t, n), (0, g.addProgressionListeners)(e.allRegions, t, n), (0, f.addRewardsListeners)(e.allRegions, t, n), (0, _.addOpenFullPageModalListener)(e.allRegions, t, n, R), (0, b.addOpenPAWListener)(e.allRegions, t, n), (0, y.addOpenStoreListener)(e.allRegions, t), (0, E.addOpenUiListeners)(e.allRegions, t), (0, v.addPubHubConfigListener)(e.allRegions, t, n), (0, A.addQueuesListeners)(e.allRegions, t, n), (0, x.addSessionDataListener)(e.allRegions, t, n), (0, C.addTastesListeners)(e.allRegions, t, n), (0, k.addTFTPassListeners)(e.allRegions, t, n), (0, T.addTFTTrovesListeners)(e.allRegions, t, n), (0, w.addTokenListeners)(e.allRegions, t, n), (0, S.addSeasonListeners)(e.allRegions, t, n), (0, I.addActivityCenterListeners)(e.allRegions, t, n), (0, L.addMetagamesListeners)(e.allRegions, t, n)
             };
             var a = n(389),
                 r = n(390),
@@ -14891,8 +14891,8 @@
                 _ = n(403),
                 b = n(407),
                 y = n(408),
-                v = n(409),
-                E = n(410),
+                E = n(409),
+                v = n(410),
                 A = n(411),
                 x = n(412),
                 C = n(413),
@@ -20780,29 +20780,29 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                r = v(n(554)),
-                s = v(n(558)),
-                i = v(n(561)),
-                o = v(n(564)),
-                l = v(n(567)),
-                c = v(n(571)),
-                d = v(n(574)),
-                u = v(n(577)),
-                m = v(n(580)),
-                p = v(n(583)),
-                h = v(n(584)),
-                g = v(n(587)),
-                f = v(n(588)),
-                _ = v(n(589)),
-                b = v(n(590)),
-                y = v(n(591));
+                r = E(n(554)),
+                s = E(n(558)),
+                i = E(n(561)),
+                o = E(n(564)),
+                l = E(n(567)),
+                c = E(n(571)),
+                d = E(n(574)),
+                u = E(n(577)),
+                m = E(n(580)),
+                p = E(n(583)),
+                h = E(n(584)),
+                g = E(n(587)),
+                f = E(n(588)),
+                _ = E(n(589)),
+                b = E(n(590)),
+                y = E(n(591));
 
-            function v(e) {
+            function E(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            const E = "ChallengesIdentityCustomizer",
+            const v = "ChallengesIdentityCustomizer",
                 A = "ChallengesCollection";
             var x = new class {
                 constructor() {
@@ -20846,7 +20846,7 @@
                         ClientConfigService: y.default,
                         ComponentFactory: a.ComponentFactory
                     };
-                    a.SharedComponentsApi.getSharedEmberComponents().EmberCollectionApi.registerToFactoryDefinition(u), a.EmberApplicationFactory.setFactoryDefinition(E, u)
+                    a.SharedComponentsApi.getSharedEmberComponents().EmberCollectionApi.registerToFactoryDefinition(u), a.EmberApplicationFactory.setFactoryDefinition(v, u)
                 }
                 _registerCollectionComponent() {
                     const {
@@ -20889,7 +20889,7 @@
                     return this._componentState = a.Ember.Object.create({
                         isVisible: !1
                     }), this._identityCustomizerInstance = a.ComponentFactory.create({
-                        type: E,
+                        type: v,
                         data: this._componentState
                     }), this._identityCustomizerInstance
                 }
@@ -23760,7 +23760,7 @@
                 if (e.percentile < t.percentile) return 1;
                 if (e.percentile > t.percentile) return -1;
                 return u(e, t)
-            }, t.compareByRarityAsc = h, t.compareBySource = c, t.compareByTimeAcquired = p, t.compareByTitleChallengeCompletion = v, t.compareByTitleChallengeId = E, t.compareByTitleName = f, t.compareByTitleOwned = A, t.compareByTitleRarityAsc = C, t.compareByTitleTimeAcquired = y, t.getCurrentTitleChallengeCompletionPercent = k, t.sortChallenges = function(e, t) {
+            }, t.compareByRarityAsc = h, t.compareBySource = c, t.compareByTimeAcquired = p, t.compareByTitleChallengeCompletion = E, t.compareByTitleChallengeId = v, t.compareByTitleName = f, t.compareByTitleOwned = A, t.compareByTitleRarityAsc = C, t.compareByTitleTimeAcquired = y, t.getCurrentTitleChallengeCompletionPercent = k, t.sortChallenges = function(e, t) {
                 if (!t || !e) return e;
                 switch (t) {
                     case a.CHALLENGE_SORT_TYPES.RARITY:
@@ -23798,7 +23798,7 @@
                         e.sort(x);
                         break;
                     default:
-                        e.sort(E)
+                        e.sort(v)
                 }
                 return e
             };
@@ -23868,20 +23868,20 @@
             }
 
             function b(e, t) {
-                return e.challengeTitleData && t.challengeTitleData ? a.CHALLENGE_LEVEL_TO_ORDINAL[e.challengeTitleData.level] < a.CHALLENGE_LEVEL_TO_ORDINAL[t.challengeTitleData.level] ? 1 : a.CHALLENGE_LEVEL_TO_ORDINAL[e.challengeTitleData.level] > a.CHALLENGE_LEVEL_TO_ORDINAL[t.challengeTitleData.level] ? -1 : v(e, t) : e.challengeTitleData && !t.challengeTitleData ? -1 : 1
+                return e.challengeTitleData && t.challengeTitleData ? a.CHALLENGE_LEVEL_TO_ORDINAL[e.challengeTitleData.level] < a.CHALLENGE_LEVEL_TO_ORDINAL[t.challengeTitleData.level] ? 1 : a.CHALLENGE_LEVEL_TO_ORDINAL[e.challengeTitleData.level] > a.CHALLENGE_LEVEL_TO_ORDINAL[t.challengeTitleData.level] ? -1 : E(e, t) : e.challengeTitleData && !t.challengeTitleData ? -1 : 1
             }
 
             function y(e, t) {
                 return e.purchaseDate && !e.challengeData ? -1 : t.purchaseDate && !t.challengeData ? 1 : e.purchaseDate ? t.purchaseDate ? e.challengeData.currentLevelAchievedTime < t.challengeData.currentLevelAchievedTime ? 1 : e.challengeData.currentLevelAchievedTime > t.challengeData.currentLevelAchievedTime ? -1 : b(e, t) : -1 : 1
             }
 
-            function v(e, t) {
+            function E(e, t) {
                 const n = k(e),
                     a = k(t);
-                return n < a ? 1 : n > a ? -1 : E(e, t)
+                return n < a ? 1 : n > a ? -1 : v(e, t)
             }
 
-            function E(e, t) {
+            function v(e, t) {
                 return e.challengeId - t.challengeId
             }
 
@@ -25420,30 +25420,30 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = v(n(554)),
-                r = v(n(558)),
-                s = v(n(561)),
-                i = v(n(564)),
-                o = v(n(567)),
-                l = v(n(571)),
-                c = v(n(574)),
-                d = v(n(580)),
-                u = v(n(577)),
-                m = v(n(668)),
-                p = v(n(671)),
-                h = v(n(583)),
-                g = v(n(584)),
-                f = v(n(587)),
-                _ = v(n(588)),
-                b = v(n(590)),
-                y = v(n(621));
+            var a = E(n(554)),
+                r = E(n(558)),
+                s = E(n(561)),
+                i = E(n(564)),
+                o = E(n(567)),
+                l = E(n(571)),
+                c = E(n(574)),
+                d = E(n(580)),
+                u = E(n(577)),
+                m = E(n(668)),
+                p = E(n(671)),
+                h = E(n(583)),
+                g = E(n(584)),
+                f = E(n(587)),
+                _ = E(n(588)),
+                b = E(n(590)),
+                y = E(n(621));
 
-            function v(e) {
+            function E(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            var E = {
+            var v = {
                 ChallengeBannerTitleComponent: a.default,
                 ChallengeBannerTokenComponent: r.default,
                 ChallengeBannerTokenContainerComponent: s.default,
@@ -25462,7 +25462,7 @@
                 SummonerService: _.default,
                 SharedNotificationsService: b.default
             };
-            t.default = E
+            t.default = v
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -26360,8 +26360,8 @@
                 _ = w(n(736)),
                 b = w(n(738)),
                 y = w(n(742)),
-                v = w(n(743)),
-                E = w(n(745)),
+                E = w(n(743)),
+                v = w(n(745)),
                 A = w(n(746)),
                 x = w(n(747)),
                 C = w(n(748)),
@@ -26392,8 +26392,8 @@
                 PurchaseModalPaymentOptionsComponent: g.default,
                 PurchaseModalPrerequisitesComponent: f.default,
                 ShoppefrontLootService: y.default,
-                ShoppefrontCatalogItemEnricherService: v.default,
-                GameDataMapperService: E.default,
+                ShoppefrontCatalogItemEnricherService: E.default,
+                GameDataMapperService: v.default,
                 ShoppefrontAudioService: b.default,
                 ShoppefrontLolInventoryService: A.default,
                 ShoppefrontService: x.default,
@@ -26579,6 +26579,7 @@
                 FAILURE: "Failure"
             };
             t.INVENTORY_TYPE_IDS = {
+                ACHIEVEMENT_TITLE: "f559e052-8ce5-4b09-baa8-dc36b296842b",
                 SUMMONER_ICON: "bb69c4a5-35a6-423c-a61a-a1eb4ca1aae7",
                 CHAMPION_SKIN: "d620ae7b-cf87-496c-96c5-893c99dc2791",
                 CHAMPION: "7fdbb3e4-c36f-4b3c-9088-b794ff127ff3",

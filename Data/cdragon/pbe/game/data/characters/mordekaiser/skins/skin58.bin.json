@@ -624,7 +624,7 @@
                 "disableBackfaceCull": true,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Mordekaiser_Skin55_TX_CM.SKINS_Mordekaiser_Skin55.tex",
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin58/Mordekaiser_Skin58_TX_CM.Chroma_Mordekaiser_PrestigeMoneyMiser.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -899,7 +899,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin58/Mordekaiser_Skin58_TX_CM.Chroma_Mordekaiser_PrestigeMoneyMiser.tex",
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Flare.SKINS_Mordekaiser_Skin55.tex",
                 "numFrames": 4,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -5264,13 +5264,14 @@
                 "disableBackfaceCull": true,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Mordekaiser_Skin55_TX_CM.SKINS_Mordekaiser_Skin55.tex",
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin58/Mordekaiser_Skin58_TX_CM.Chroma_Mordekaiser_PrestigeMoneyMiser.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
         "particleName": "Mordekaiser_Skin58_W_Shields",
         "particlePath": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_W_Shields",
         "overrideScaleCap": -1.0,
+        "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_Mace_Idle": {
@@ -39622,6 +39623,7 @@
         "particleName": "Mordekaiser_Skin58_W_ShieldConsume",
         "particlePath": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_W_ShieldConsume",
         "overrideScaleCap": 250.0,
+        "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_R_MordeAuraSelf": {
@@ -39762,6 +39764,7 @@
                     -2.0,
                     -7.0
                 ],
+                "{cb13aff1}": -5.0,
                 "particleIsLocalOrientation": 1,
                 "hasPostRotateOrientation": 1,
                 "isRotationEnabled": 1,
@@ -40358,19 +40361,26 @@
                     "__type": "VfxPrimitiveAttachedMesh"
                 },
                 "blendMode": 3,
-                "birthColor": {
-                    "constantValue": [
-                        0.7803921699523926,
-                        0.7803921699523926,
-                        0.7803921699523926,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
                 "pass": 10,
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
-                "{cb13aff1}": -1.0,
+                "reflectionDefinition": {
+                    "reflectionFresnelColor": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "fresnel": 0.00800000037997961,
+                    "fresnelColor": [
+                        0.40784314274787903,
+                        0.5568627715110779,
+                        0.6980392336845398,
+                        0.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "{cb13aff1}": -5.0,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthRotation0": {

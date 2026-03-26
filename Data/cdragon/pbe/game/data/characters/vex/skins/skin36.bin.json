@@ -154,7 +154,7 @@
             "initialSubmeshMouseOversToHide": "Shadow EyeCross EyeClose EyeOpen EyeWink Ult EyeDefault EyeLaugh",
             "InitialSubmeshAvatarToHide": "Body EyeCross EyeWink EyeClose EyeOpen EyeLaugh Ult",
             "EmitterSubmeshAvatarToHide": "Shadow, EyeDefault, EyeLaugh, EyeWink, EyeCross, EyeOpen",
-            "submeshRenderOrder": "Shadow Body EyeDefault EyeCross EyeWink EyeClose EyeOpen EyeLaugh Ult",
+            "submeshRenderOrder": "Shadow EyeDefault EyeCross EyeWink EyeClose EyeOpen EyeLaugh Body Ult Recall_Needle",
             "materialOverride": [
                 {
                     "Material": "Characters/Vex/Skins/Skin36/Materials/Vex_Skin36_Shadow_Mat",
@@ -535,7 +535,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{1ff78fe5}": {
+    "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_E_MisChildParticle_Death_MisChildParticle": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2716,7 +2716,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{24c42e4f}": {
+    "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_Q_Mis_Death_Mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -5135,7 +5135,7 @@
         "flags": 198,
         "__type": "VfxSystemDefinitionData"
     },
-    "{448df581}": {
+    "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_BATar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7541,7 +7541,7 @@
         "flags": 199,
         "__type": "VfxSystemDefinitionData"
     },
-    "{c81dc63e}": {
+    "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_W_ground": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -12627,7 +12627,7 @@
         "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
-    "{ea1278af}": {
+    "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_BACas": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -14209,7 +14209,7 @@
         "particlePath": "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_BACas",
         "__type": "VfxSystemDefinitionData"
     },
-    "{ee9c150d}": {
+    "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_BAMis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -16823,7 +16823,6 @@
                 "passes": [
                     {
                         "shader": "Shaders/SkinnedMesh/Flipbook_Frame_Select",
-                        "depthEnable": false,
                         "blendEnable": true,
                         "srcColorBlendFactor": 6,
                         "srcAlphaBlendFactor": 6,
@@ -17438,7 +17437,6 @@
                 "passes": [
                     {
                         "shader": "Shaders/SkinnedMesh/Cloth_Base",
-                        "depthEnable": false,
                         "blendEnable": true,
                         "cullEnable": false,
                         "srcColorBlendFactor": 6,
@@ -17477,7 +17475,7 @@
             "{2ccf3286}": "{dcaa5e5a}",
             "{ba3c5e5c}": "{dcaa5e5a}",
             "{1ec9a1af}": "{dcaa5e5a}",
-            "Vex_W_ground": "{c81dc63e}",
+            "Vex_W_ground": "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_W_ground",
             "{e26009e5}": "{dcaa5e5a}",
             "Vex_Q_Shadow_Override": "{19e68db3}",
             "{143a0a50}": "{dcaa5e5a}",
@@ -17485,7 +17483,7 @@
             "Vex_Q_Mis_Fear": "{53c44bb8}",
             "Vex_W_Ground_Fear": "{10e0789c}",
             "Vex_W_tar": "{4326b540}",
-            "Vex_Q_Mis_death": "{24c42e4f}",
+            "Vex_Q_Mis_death": "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_Q_Mis_Death_Mis",
             "Vex_P_Gloom_Debuff": "{472f0820}",
             "{2c4981b8}": "{dcaa5e5a}",
             "{5fcdaead}": "{dcaa5e5a}",
@@ -17504,13 +17502,13 @@
             "Vex_R_R1_tar": "{84b8b200}",
             "Vex_R_R2_tar": "{50a7d9bf}",
             "Vex_R_cas": "{0d4e510d}",
-            "Vex_BA_cas": "{ea1278af}",
+            "Vex_BA_cas": "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_BACas",
             "Vex_P_DashProc_Beam": "{d4dc08a1}",
             "Vex_P_DashProc": "{6bd2418e}",
             "Vex_R_cas_Trails": "{405b38b8}",
             "Vex_Q_Spawn": "{2afe875e}",
             "Vex_E_mis_ChildParticle": "{04400672}",
-            "Vex_E_mis_ChildParticle_Death": "{1ff78fe5}",
+            "Vex_E_mis_ChildParticle_Death": "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_E_MisChildParticle_Death_MisChildParticle",
             "Vex_E_cas": "{f275e10c}",
             "Vex_E_mis_Fear_ChildParticle": "{2d63be3c}",
             "Vex_E_mis_Fear_ChildParticle_Death": "{924ac5c9}",
@@ -17527,8 +17525,8 @@
             "Vex_P_Gloom_Minions_Debuff_Mis": "{38beac62}",
             "Vex_E_explosion": "{7089931e}",
             "Vex_Z_Death": "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_Z_Death",
-            "Vex_BA_mis": "{ee9c150d}",
-            "Vex_BA_tar": "{448df581}",
+            "Vex_BA_mis": "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_BAMis",
+            "Vex_BA_tar": "Characters/Vex/Skins/Skin36/Particles/Vex_Skin36_BATar",
             "{b119d840}": "{93b7abea}",
             "{f17d352f}": "{00000000}",
             "{8cd48680}": "{0d5d2b51}",

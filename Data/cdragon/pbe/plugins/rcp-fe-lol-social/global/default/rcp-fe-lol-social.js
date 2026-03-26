@@ -15898,17 +15898,17 @@
                 hasLongSummonerLevel: o.Ember.computed("summonerLevel", (function() {
                     return this.get("summonerLevel") > 999
                 })),
-                iconClassNames: o.Ember.computed("iconUrl", "remoteProduct", (function() {
+                iconClassNames: o.Ember.computed("iconUrl", "isRemote", "isDiscordOnline", (function() {
                     return (0, i.default)({
                         "has-icon": Boolean(this.get("iconUrl")),
-                        remote: this.get("remoteProduct")
+                        remote: this.get("isRemote") && !this.get("isDiscordOnline")
                     })
                 })),
-                remoteProduct: o.Ember.computed("me", "member", "meObj", (function() {
+                isRemote: o.Ember.computed("me", "member", "meObj", (function() {
                     const e = this.get("member"),
                         t = this.get("me"),
                         n = this.get("meObj");
-                    return !(!e || t) && (e.platformId && n.platformId !== e.platformId)
+                    return !(!e || t) && Boolean(n?.platformId !== e?.platformId || n.product !== e?.product)
                 })),
                 summonerIconUrl: o.Ember.computed("iconId", "profileIcons", (function() {
                     return this.get("profileIcons") && null != this.get("iconId") && -1 !== this.get("iconId") ? this.get("profileIcons").find((e => e.id === this.get("iconId")))?.imagePath : ""
@@ -15916,14 +15916,14 @@
                 championIconUrl: o.Ember.computed("championSummary", (function() {
                     return this.get("championId") && this.get("championSummary") && -1 !== this.get("championId") ? this.get("championSummary").find((e => e.id === this.get("championId"))).squarePortraitPath : ""
                 })),
-                productIconUrl: o.Ember.computed("member", "productsService", "remoteProduct", (function() {
+                productIconUrl: o.Ember.computed("member", "productsService", "isRemote", (function() {
                     const e = this.get("member"),
-                        t = this.get("remoteProduct"),
+                        t = this.get("isRemote"),
                         n = this.get("productsService");
                     return e && t ? n.getIconUrl(e.product, e.patchline) : ""
                 })),
-                iconUrl: o.Ember.computed("remoteProduct", "productIconUrl", "summonerIconUrl", "championIconUrl", "isDiscordOnline", (function() {
-                    return this.get("isDiscordOnline") ? "/fe/lol-social/discord-friend.png" : this.get("remoteProduct") ? this.get("productIconUrl") : this.get("summonerIconUrl") || this.get("championIconUrl")
+                iconUrl: o.Ember.computed("isRemote", "productIconUrl", "summonerIconUrl", "championIconUrl", "isDiscordOnline", (function() {
+                    return this.get("isDiscordOnline") ? "/fe/lol-social/discord-friend.png" : this.get("isRemote") ? this.get("productIconUrl") : this.get("summonerIconUrl") || this.get("championIconUrl")
                 })),
                 actions: {
                     changeIcon: function() {
@@ -17263,12 +17263,13 @@
                         r = n?.has(e.puuid);
                     return !r && t
                 })),
-                isInvitableViaDiscord: r.Ember.computed("isDiscordEnabled", "isDiscordFriendOffline", "isFriendLinkedToDiscord", "isOffline", (function() {
+                isInvitableViaDiscord: r.Ember.computed("isDiscordEnabled", "isDiscordFriendOffline", "isFriendLinkedToDiscord", "isFriendDiscordOnly", "isOffline", (function() {
                     const e = this.get("isDiscordEnabled"),
                         t = this.get("isDiscordFriendOffline"),
                         n = this.get("isFriendLinkedToDiscord"),
-                        r = this.get("isOffline");
-                    return !!e && (!!n && (!t && !!r))
+                        r = this.get("isFriendDiscordOnly"),
+                        o = this.get("isOffline");
+                    return !!e && (!!n && (!t && !(!r && !o)))
                 })),
                 isInvitableViaLeague: r.Ember.computed("isFriendDiscordOnly", "isFriendRemote", "isOffline", (function() {
                     const e = this.get("isFriendDiscordOnly"),
@@ -17663,7 +17664,7 @@
                             action: () => this.viewProfile(e),
                             label: r.tra.get("context_menu_view_profile"),
                             disabled: !n.profilesEnabled,
-                            hidden: !this.get("isFriendSummoner") || this.get("isFriendRemote"),
+                            hidden: !1,
                             icon: (0, c.createContextMenuIcon)(c.ICON_NAMES.PROFILE)
                         }, {
                             action: () => this.giveGift(e),

@@ -2620,7 +2620,7 @@
                 closeCrafter(e = !1) {
                     return this.get("recipe") && this.set("initialSelectedLootItem", ""), new Promise((t => {
                         e ? this.resetRecipeSlotStates().then((e => {
-                            const n = e === this.get("recipeSlotStates").length,
+                            const n = e === this.get("recipeSlotStates")?.length,
                                 o = l.default.getLootItemNameFromRecipe(this.get("recipe")),
                                 r = this.get("recipesConfiguration").alwaysShowLootIds.indexOf(o) > -1;
                             n || r || (this.set("recipe", null), this.set("lootMilestones", null), this.set("recipeSlotStates", null)), t()

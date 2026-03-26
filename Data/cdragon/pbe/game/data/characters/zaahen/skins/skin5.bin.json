@@ -410,7 +410,7 @@
             },
             {
                 "TextureName": "DeformNoise",
-                "texturePath": "ASSETS/Characters/Ahri/Skins/Skin88/Ahri_Skin88_Vertex_Deform_Noise_TX_CM.SKINS_Ahri_Skin88.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -1015,7 +1015,7 @@
             {
                 "name": "VertexDeformFeatureStrength",
                 "value": [
-                    0.7350000143051147,
+                    1.0,
                     0.0,
                     0.0,
                     0.0
@@ -1025,8 +1025,8 @@
             {
                 "name": "VertexDeformTilling",
                 "value": [
-                    2.0,
-                    2.0,
+                    1.0,
+                    1.0,
                     0.0,
                     0.0
                 ],
@@ -1035,7 +1035,7 @@
             {
                 "name": "VertexDeformSpeed",
                 "value": [
-                    0.5,
+                    -0.20000000298023224,
                     0.0,
                     0.0,
                     0.0
@@ -1045,7 +1045,7 @@
             {
                 "name": "DeformIntensity",
                 "value": [
-                    2.0,
+                    6.0,
                     0.0,
                     0.0,
                     0.0
@@ -1303,12 +1303,6 @@
             {
                 "name": "INSIDE_COLOR",
                 "Group": "Inside Face Feature",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "DEBUG_HIDE",
-                "on": false,
-                "Group": "Others",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],
@@ -2339,12 +2333,6 @@
                 "name": "INSIDE_COLOR",
                 "on": false,
                 "Group": "Inside Face Feature",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "DEBUG_HIDE",
-                "on": false,
-                "Group": "Others",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],
@@ -3735,12 +3723,6 @@
                 "on": false,
                 "Group": "Inside Face Feature",
                 "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "DEBUG_HIDE",
-                "on": false,
-                "Group": "Others",
-                "__type": "StaticMaterialSwitchDef"
             }
         ],
         "techniques": [
@@ -3763,7 +3745,7 @@
         ],
         "dynamicMaterial": {
             "staticSwitch": {
-                "name": "DEBUG_HIDE",
+                "name": "DISSOLVE",
                 "driver": {
                     "__type": "IsDeadDynamicMaterialBoolDriver"
                 },

@@ -15377,26 +15377,24 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.AudioManager = void 0, t.default = function() {
-                p || (p = new m);
-                return p
+                u || (u = new d);
+                return u
             };
             var i = n(1),
                 a = n(186);
-            const s = "music-ambience",
-                o = "music-client-ambience",
-                r = "primaryIntroSound",
-                l = "primaryAmbienceSound",
-                c = "secondaryIntroSound",
-                d = "secondaryAmbienceSound";
+            const s = "primaryIntroSound",
+                o = "primaryAmbienceSound",
+                r = "secondaryIntroSound",
+                l = "secondaryAmbienceSound";
 
-            function u(e) {
+            function c(e) {
                 if (e?.crossfadeTime && 0 !== e?.crossfadeTime) return {
                     crossfade: !0,
                     fadeTime: e.crossfadeTime,
                     isLoop: e.isLoop || !0
                 }
             }
-            class m {
+            class d {
                 constructor() {
                     this.playbackEnabled = !0, this.uiAudioChannel = i.Audio.getChannel("sfx-ui"), this.voAudioChannel = i.Audio.getChannel("voice"), this.ambienceAudioChannel = i.Audio.getChannel("sfx-ambience-perks"), this.primaryIntroSound = null, this.primaryAmbienceSound = null, this.secondaryIntroSound = null, this.secondaryAmbienceSound = null, this.uiSounds = new Map, this.voSounds = new Map
                 }
@@ -15418,23 +15416,23 @@
                     return a || i.logger.warning("Home Audio: failure to create ambience sound", e), a
                 }
                 playUiSound(e, t) {
-                    const n = u(t);
+                    const n = c(t);
                     this.getUiSound(e, n).play()
                 }
                 playVOSound(e, t) {
-                    const n = u(t);
+                    const n = c(t);
                     this.getVOSound(e, n).play()
                 }
                 playMusicAmbience(e, t) {
-                    const n = u(t) || {};
-                    this.musicAmbience || (this.musicAmbience = i.Audio.getChannel(s).createSound(e, n)), this.musicAmbience.play(s, e, n)
+                    const n = c(t) || {};
+                    this.musicAmbience = i.Audio.getChannel("music-ambience").createSound(e, n), this.musicAmbience.play()
                 }
                 playClientAmbienceMusic(e) {
-                    const t = u(e) || {};
-                    this.activityCenterMusicAmbience || (this.activityCenterMusicAmbience = i.Audio.getChannel(o).createSound(a.CLIENT_AMBIENCE.AC_MAIN.src, t)), this.activityCenterMusicAmbience.play(o, a.CLIENT_AMBIENCE.AC_MAIN.src, t)
+                    const t = c(e) || {};
+                    this.activityCenterMusicAmbience || (this.activityCenterMusicAmbience = i.Audio.getChannel("music-client-ambience").createSound(a.CLIENT_AMBIENCE.AC_MAIN.src, t)), this.activityCenterMusicAmbience.play()
                 }
                 _playAmbienceSound(e, t, n) {
-                    const i = u(t),
+                    const i = c(t),
                         a = this.getAmbienceSound(e, i);
                     return n && n.isPlaying() && n.fadeOut({
                         fadeTime: a.options.fadeTime
@@ -15446,7 +15444,7 @@
                         introSound: s
                     };
                     if (t) {
-                        const e = u(i);
+                        const e = c(i);
                         (s = this.getUiSound(t, e)).play()
                     } else s = null;
                     return {
@@ -15476,12 +15474,12 @@
                     }) : this.activityCenterMusicAmbience.stop())
                 }
                 stopPrimaryAmbienceSounds(e) {
-                    const t = u(e);
-                    this.primaryIntroSound?.isPlaying() && this.stopSound(r, t), this.primaryAmbienceSound?.isPlaying() && this.stopSound(l, t)
+                    const t = c(e);
+                    this.primaryIntroSound?.isPlaying() && this.stopSound(s, t), this.primaryAmbienceSound?.isPlaying() && this.stopSound(o, t)
                 }
                 stopSecondaryAmbienceSounds(e) {
-                    const t = u(e);
-                    this.secondaryIntroSound?.isPlaying() && this.stopSound(c, t), this.secondaryAmbienceSound?.isPlaying() && this.stopSound(d, t)
+                    const t = c(e);
+                    this.secondaryIntroSound?.isPlaying() && this.stopSound(r, t), this.secondaryAmbienceSound?.isPlaying() && this.stopSound(l, t)
                 }
                 stopAllAmbienceSounds(e = {
                     stopAllMusicAmbience: !1
@@ -15504,11 +15502,11 @@
                     this.playbackEnabled = !0
                 }
                 destroy(e) {
-                    this.stopAll(e), this.playbackEnabled = !1, this.primaryIntroSound = null, this.primaryAmbienceSound = null, this.secondaryIntroSound = null, this.secondaryAmbienceSound = null, this.uiSounds.clear(), this.voSounds.clear()
+                    this.stopAll(e), this.primaryIntroSound = null, this.primaryAmbienceSound = null, this.secondaryIntroSound = null, this.secondaryAmbienceSound = null, this.uiSounds.clear(), this.voSounds.clear()
                 }
             }
-            let p;
-            t.AudioManager = m
+            let u;
+            t.AudioManager = d
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
