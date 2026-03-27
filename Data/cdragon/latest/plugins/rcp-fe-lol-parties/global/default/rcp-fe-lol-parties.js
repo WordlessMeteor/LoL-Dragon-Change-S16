@@ -21202,8 +21202,8 @@
                 me: i.Ember.computed.alias("chatService.me"),
                 friends: i.Ember.computed.alias("chatService.friends"),
                 searchError: !1,
-                shouldShowDiscordButton: i.Ember.computed("isDiscordLinkAvailable", "isDiscordLinked", "lobbiesService.isTFT", (function() {
-                    return !this.get("lobbiesService.isTFT") && this.get("isDiscordLinkAvailable") && !this.get("isDiscordLinked")
+                shouldShowDiscordButton: i.Ember.computed("isDiscordEnabled", "isDiscordLinkAvailable", "isDiscordLinked", "lobbiesService.isTFT", (function() {
+                    return !this.get("lobbiesService.isTFT") && this.get("isDiscordEnabled") && this.get("isDiscordLinkAvailable") && !this.get("isDiscordLinked")
                 })),
                 shouldShowDiscordFriends: i.Ember.computed("isDiscordLinked", "lobbiesService.isTFT", (function() {
                     return !this.get("lobbiesService.isTFT") && this.get("isDiscordLinked")
