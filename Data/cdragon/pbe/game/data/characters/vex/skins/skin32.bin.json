@@ -150,39 +150,38 @@
             ],
             "Material": "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Body_Mat",
             "castShadows": false,
-            "initialSubmeshToHide": "EyeCross EyeClose EyeOpen EyeWink Ult EyeLaugh Recall_Needle",
+            "initialSubmeshToHide": "EyeCross EyeClose EyeOpen EyeWink Ult EyeLaugh Recall_Needle EyeDefault Shadow",
             "initialSubmeshMouseOversToHide": "Shadow EyeCross EyeClose EyeOpen EyeWink Ult EyeDefault EyeLaugh",
             "InitialSubmeshAvatarToHide": "Body EyeCross EyeWink EyeClose EyeOpen EyeLaugh Ult",
-            "EmitterSubmeshAvatarToHide": "Shadow, EyeDefault, EyeLaugh, EyeWink, EyeCross, EyeOpen",
             "submeshRenderOrder": "Shadow EyeDefault EyeCross EyeWink EyeClose EyeOpen EyeLaugh Body Ult Recall_Needle",
             "materialOverride": [
                 {
-                    "Material": "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Shadow_Mat",
+                    "texture": "ASSETS/Characters/Vex/Skins/Skin32/Vex_Skin32_Shadow_TX_CM.Chroma_Vex_SadClown.tex",
                     "submesh": "Shadow",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Eyes_inst",
+                    "texture": "ASSETS/Characters/Vex/Skins/Skin32/Vex_Skin32_ShadowEyes_TX_CM.Chroma_Vex_SadClown.tex",
                     "submesh": "EyeDefault",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Eyes_inst",
+                    "texture": "ASSETS/Characters/Vex/Skins/Skin32/Vex_Skin32_ShadowEyes_TX_CM.Chroma_Vex_SadClown.tex",
                     "submesh": "EyeOpen",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Eyes_inst",
+                    "texture": "ASSETS/Characters/Vex/Skins/Skin32/Vex_Skin32_ShadowEyes_TX_CM.Chroma_Vex_SadClown.tex",
                     "submesh": "EyeCross",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Eyes_inst",
+                    "texture": "ASSETS/Characters/Vex/Skins/Skin32/Vex_Skin32_ShadowEyes_TX_CM.Chroma_Vex_SadClown.tex",
                     "submesh": "EyeClose",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Eyes_inst",
+                    "texture": "ASSETS/Characters/Vex/Skins/Skin32/Vex_Skin32_ShadowEyes_TX_CM.Chroma_Vex_SadClown.tex",
                     "submesh": "EyeWink",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -192,7 +191,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Eyes_inst",
+                    "texture": "ASSETS/Characters/Vex/Skins/Skin32/Vex_Skin32_ShadowEyes_TX_CM.Chroma_Vex_SadClown.tex",
                     "submesh": "EyeLaugh",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -376,127 +375,6 @@
             }
         ],
         "__type": "SkinCharacterDataProperties"
-    },
-    "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Eyes_inst": {
-        "name": "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Eyes_inst",
-        "samplerValues": [
-            {
-                "TextureName": "FlipbookBlend_Tex",
-                "texturePath": "ASSETS/Characters/Vex/Skins/Skin32/Vex_Skin32_ShadowEyes_TX_CM.Chroma_Vex_SadClown.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "FinalAlpha",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "FlipbookAnimSpeed",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "BlendTexUV_Tile",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "FlipbookSize",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "FrameIndex",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ClipAlpha_Value",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "TINTCOLOR_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "FLIPBOOK_ANIMATION_ON",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "ALPHACLIP_ON",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/Flipbook_Frame_Select",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
     },
     "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Body_Mat": {
         "name": "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Body_Mat",
@@ -867,12 +745,14 @@
                 "passes": [
                     {
                         "shader": "Shaders/SkinnedMesh/Cloth_Base",
+                        "depthEnable": false,
                         "blendEnable": true,
                         "cullEnable": false,
                         "srcColorBlendFactor": 6,
                         "srcAlphaBlendFactor": 6,
                         "dstColorBlendFactor": 7,
                         "dstAlphaBlendFactor": 7,
+                        "writeMask": 15,
                         "__type": "StaticMaterialPassDef"
                     }
                 ],
@@ -17247,11 +17127,6 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "CustomMaterial": {
-                    "Material": "Characters/Vex/Skins/Skin32/Materials/Vex_Skin32_Shadow_Mat",
-                    "__type": "VfxMaterialDefinitionData"
-                },
-                "renderPhaseOverride": 5,
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
@@ -17263,7 +17138,7 @@
                     "UseAvatarSpecificSubmeshMask": true,
                     "__type": "VfxPrimitiveAttachedMesh"
                 },
-                "blendMode": 8,
+                "blendMode": 1,
                 "pass": -99,
                 "alphaRef": 0,
                 "disableBackfaceCull": true,
@@ -17271,6 +17146,7 @@
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "isGroundLayer": 1,
+                "texture": "ASSETS/Characters/Vex/Skins/Skin32/Vex_Skin32_Shadow_TX_CM.Chroma_Vex_SadClown.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],

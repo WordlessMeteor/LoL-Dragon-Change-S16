@@ -13653,7 +13653,7 @@
                     return this.get("isLinking") ? e.get("discord_linking_button") : this.get("isLinked") ? e.get("discord_congrats_popup_okay_button") : this.get("linkError") ? e.get("discord_link_error_button") : e.get("discord_linking_button")
                 })),
                 popupIconUrl: a.Ember.computed("isLinked", "isLinking", "linkError", (function() {
-                    return this.get("isLinking") ? "" : this.get("isLinked") ? "/fe/lol-static-assets/images/discord_checkmark.svg" : this.get("linkError") ? "/fe/lol-static-assets/images/discord_warning.svg" : ""
+                    return this.get("isLinking") ? "/fe/lol-static-assets/images/discord_progress.svg" : this.get("isLinked") ? "/fe/lol-static-assets/images/discord_checkmark.svg" : this.get("linkError") ? "/fe/lol-static-assets/images/discord_warning.svg" : "/fe/lol-static-assets/images/discord_progress.svg"
                 })),
                 popupTitle: a.Ember.computed("isLinked", "isLinking", "linkError", (function() {
                     const e = this.get("tra");
