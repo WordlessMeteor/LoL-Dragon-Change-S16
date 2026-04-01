@@ -1,0 +1,321 @@
+{
+    "{2217a3ae}": {
+        "mClipDataMap": {
+            "Attack1": {
+                "mTrackDataName": "Spells",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gragas/Skins/Base/Animations/gragas_attack1.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Attack2": {
+                "mTrackDataName": "Spells",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gragas/Skins/Base/Animations/gragas_attack2.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Crit": {
+                "mTrackDataName": "Spells",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gragas/Skins/Base/Animations/gragas_crit.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Death": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "SnapWeapon2World": {
+                        "mName": "SnapWeapon2World",
+                        "mJointNameToOverride": "Weapon1",
+                        "mJointNameToSnapTo": "Snap_Weapon2World",
+                        "__type": "JointSnapEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gragas/Skins/Base/Animations/Death_For_TFT.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Run": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gragas/Skins/Base/Animations/gragas_run.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Idle1": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mTickDuration": 0.10000000149011612,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gragas/Skins/Base/Animations/gragas_idle1.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Celebration": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gragas/Skins/Base/Animations/Dance_For_TFT.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell_Windup": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{285e143a}": {
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_GLB_Layout_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{ea39008c}": {
+                        "mSoundName": "Play_sfx_tft17_GragasSpell_drink",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gragas/Skins/Base/Animations/gragas_spell2_Windup.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell_Loop": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{ea39008c}": {
+                        "mSoundName": "Play_sfx_tft17_GragasSpell_drink_loop",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gragas/Skins/Base/Animations/gragas_spell2_Loop.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell": {
+                "mClipNameList": [
+                    "Spell_Windup",
+                    "Spell_Loop"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "Slam": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{0d2033c0}": {
+                        "mName": "{0d2033c0}",
+                        "mStartFrame": 10.0,
+                        "mJointNameToOverride": "Weapon1",
+                        "mJointNameToSnapTo": "Snap_Weapon2World",
+                        "__type": "JointSnapEventData"
+                    },
+                    "{3d1da8eb}": {
+                        "mStartFrame": 15.0,
+                        "mSoundName": "Play_sfx_tft17_GragasSpell_hit",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gragas/Skins/Base/Animations/gragas_attack_passive.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{df9c2ccd}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{8c091b00}": {
+                        "mStartFrame": 9.0,
+                        "mEndFrame": 250.0,
+                        "mShowSubmeshList": [
+                            "Recall"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{1458828c}": {
+                        "mStartFrame": 27.0,
+                        "mEffectKey": "{a6c066af}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Remote",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{3ead7e53}": {
+                        "mSoundName": "Play_sfx_tft17_GragasSpell_Hero_detonate",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gragas/Skins/Base/Animations/TFT17_Spell.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "EndFrame": 75.0,
+                "__type": "AtomicClipData"
+            },
+            "{be8b832d}": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gragas/Skins/Base/Animations/TFT17_Spellherodash.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            }
+        },
+        "mMaskDataMap": {
+            "UpperBody": {
+                "mWeightList": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "MaskData"
+            }
+        },
+        "mTrackDataMap": {
+            "Default": {
+                "mPriority": 2,
+                "__type": "TrackData"
+            },
+            "Spells": {
+                "__type": "TrackData"
+            },
+            "UpperBody": {
+                "mPriority": 1,
+                "__type": "TrackData"
+            },
+            "Buffbones_Additive": {
+                "mPriority": 3,
+                "mBlendMode": 1,
+                "__type": "TrackData"
+            }
+        },
+        "mBlendDataTable": {
+            "6247030502164497197": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "6463208476893741869": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "8779298393312428845": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "10832289110078227245": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "13630352413843751725": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "11374364255425626925": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "3084207952505832237": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "8332880544833176365": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "12209195684612244269": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "7385406412828672813": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "11556968084254982957": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "16112802829001524013": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            },
+            "13730212121462670125": {
+                "mTime": 0.029999999329447746,
+                "__type": "TimeBlendData"
+            }
+        },
+        "__type": "AnimationGraphData"
+    },
+    "__linked": []
+}

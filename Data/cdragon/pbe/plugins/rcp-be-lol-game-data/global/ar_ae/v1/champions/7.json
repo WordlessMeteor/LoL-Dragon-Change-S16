@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تندفع لوبلانك إلى موقع معين، فتلحق الضرر بالأعداء قرب وجهتها. طيلة الثواني الأربعة التالية، يمكنك تفعيل التشويه ثانية لإعادة لوبلانك إلى موقعها الأول.",
-            "dynamicDescription": "تندفع لوبلانك وتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء في الجوار. خلال @Effect3Amount@ث بعد الاندفاع، تستطيع لوبلانك <recast>إعادة الإلقاء</recast>.<br><br><recast>إعادة الإلقاء:</recast> تعود لوبلانك إلى موقعها الأول.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تندفع لوبلانك وتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء في الجوار. خلال @SnapbackTimeAllowed@ث بعد الاندفاع، تستطيع لوبلانك <recast>إعادة الإلقاء</recast>.<br><br><recast>إعادة الإلقاء:</recast> تعود لوبلانك إلى موقع البداية.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تطلق لوبلانك سلسلة تقيد أول عدو تصيبه. إذا بقي الهدف مقيدًا لمدة 1.5 ثانية، تثبته لوبلانك في مكانه، وتلحق ضررًا إضافيًا به.",
-            "dynamicDescription": "تطلق لوبلانك سلسلة تقيد أول عدو تصيبه، فتلحق <magicDamage>@InitialDamage@ ضرر سحر</magicDamage> وتمنح <keywordStealth>رؤية حقيقية</keywordStealth>.<br><br>إن بقي مقيدًا لمدة @Effect3Amount@ ثانية، <status>تثبته</status> لوبلانك في مكانه لمدة @Effect4Amount@ ثانية، وتلحق زيادة <magicDamage>@DelayedDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تطلق لوبلانك سلسلة تقيّد أول عدو تُصيبه، فتلحق <magicDamage>@InitialDamage@ ضرر سحر</magicDamage> وتمنح <keywordStealth>رؤية حقيقية</keywordStealth>.<br><br>إذا بقي الهدف مقيّدًا لمدة @TetherDuration@ث، تقوم لوبلانك <status>بتثبيته</status> لمدة @RootDuration@ث وتلحق <magicDamage>@DelayedDamage@ ضرر سحر</magicDamage> إضافي.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

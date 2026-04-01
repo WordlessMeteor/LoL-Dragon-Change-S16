@@ -1147,7 +1147,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Поппи бьет молотом по земле, нанося урон окружающим противникам и создавая нестабильную область, скорость передвижения врагов в которой уменьшается. После небольшой задержки эта область сотрясается, нанося урон.",
-            "dynamicDescription": "Поппи бьет по земле, нанося <physicalDamage>физический урон в размере @BaseDamage@ плюс @HealthDamagePercent@% от максимального запаса здоровья</physicalDamage> и создавая нестабильную область. <br><br>Нестабильная область <status>замедляет</status> врагов на @Effect3Amount@% и взрывается через @Effect4Amount@ сек., снова нанося <physicalDamage>физический урон в размере @BaseDamage@ плюс @HealthDamagePercent@% от максимального запаса здоровья</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Поппи бьет по земле, нанося <physicalDamage>физический урон</physicalDamage> в размере <physicalDamage>@BaseDamage@</physicalDamage> ед. плюс <physicalDamage>@HealthDamagePercent@% от макс. запаса здоровья</physicalDamage> и создавая нестабильную область. <br><br>Нестабильная область <status>замедляет</status> врагов на @Slow_@% и взрывается через @DelayBetweenTwoHits@ сек., снова нанося <physicalDamage>физический урон</physicalDamage> в размере <physicalDamage>@BaseDamage@</physicalDamage> ед. плюс <physicalDamage>@HealthDamagePercent@% от макс. запаса здоровья</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1223,13 +1223,13 @@
                     9.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    30.0,
+                    60.0,
+                    90.0,
+                    120.0,
+                    150.0,
+                    180.0
                 ],
                 "Effect7Amount": [
                     100.0,
@@ -1297,7 +1297,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Броня и сопротивление магии Поппи пассивно увеличиваются. Этот эффект усиливается, если у Поппи осталось мало здоровья. Поппи может активировать Неколебимую мощь, чтобы увеличить свою скорость передвижения и прервать рывки врагов вокруг себя. После этого на цель накладывается паралич, и она замедляется.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> <scaleArmor>броня</scaleArmor> Поппи увеличена на <scaleArmor>@BonusArmor@</scaleArmor>, а <scaleMR>сопротивление магии</scaleMR> - на <scaleMR>@BonusMR@</scaleMR>. Это увеличение удваивается, когда у Поппи остается менее @PassiveEmpoweredHealthPercent*100@% здоровья.<br><br><spellActive>Активно:</spellActive> Поппи на @Effect1Amount@ сек. увеличивает свою <speed>скорость передвижения на @Effect2Amount@%</speed> и создает вокруг себя поле, которое останавливает вражеские рывки. Враги, остановленные полем, <status>парализуются</status> и <status>замедляются</status> на @SlowAmount*-100@% на @GroundingDuration@ сек., а также получают <magicDamage>@InterruptDamage@ магического урона</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> Поппи получает <scaleArmor>@BonusArmor@ брони</scaleArmor> и <scaleMR>@BonusMR@ сопротивления магии</scaleMR>. Бонусы удвоены, когда у Поппи менее @PassiveEmpoweredHealthPercent*100@% здоровья.<br><br><spellActive>Активно:</spellActive> Поппи на @Duration@ сек. получает <speed>@Haste@% скорости передвижения</speed> и создает вокруг себя поле, останавливающее вражеские рывки. Враги, остановленные полем, <status>парализуются</status> и <status>замедляются</status> на @SlowAmount*-100@% на @GroundingDuration@ сек., а также получают <magicDamage>@InterruptDamage@ ед. магического урона</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Поппи совершает рывок к противнику и таранит его, отбрасывая назад и нанося физический урон. Если враг врезается в препятствие, он получает дополнительный физический урон и оглушается.",
-            "dynamicDescription": "Поппи хватает врага и переносит его вперед, нанося <physicalDamage>@TackleDamage@ физического урона</physicalDamage>. Если цель врезается в элемент ландшафта, она <status>оглушается</status> на @Effect3Amount@ сек. и дополнительно получает <physicalDamage>@TackleDamage@ физического урона</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Поппи хватает врага и переносит его вперед, нанося <physicalDamage>@TackleDamage@ ед. физического урона</physicalDamage>. Если цель врезается в элемент ландшафта, она <status>оглушается</status> на @StunDuration@ сек. и дополнительно получает <physicalDamage>@TackleDamage@ ед. физического урона</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

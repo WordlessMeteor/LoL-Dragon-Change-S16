@@ -1,0 +1,1289 @@
+{
+    "{0c3fa729}": {
+        "ObjectName": "TFT17_CorkiBasicAttack",
+        "mScriptName": "TFT17_CorkiBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "CorkiBasicAttack",
+            "{11704a2b}": 0.48500001430511475,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "bHaveHitEffect": true,
+            "castRange": [
+                475.0,
+                475.0,
+                475.0,
+                475.0,
+                475.0,
+                475.0,
+                475.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "gun",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 5.5,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "{7f53d3ca}",
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "selectionPriority": 1,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{305a0b05}": {
+        "ObjectName": "TFT17_CorkiSpell",
+        "mScriptName": "TFT17_CorkiSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 16143,
+            "mAffectsStatusFlags": 32,
+            "DataValues": [
+                {
+                    "name": "BaseMissiles",
+                    "values": [
+                        21.0,
+                        21.0,
+                        21.0,
+                        21.0,
+                        21.0,
+                        21.0,
+                        21.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissileAD",
+                    "values": [
+                        25.0,
+                        26.0,
+                        40.0,
+                        280.0,
+                        200.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissileAP",
+                    "values": [
+                        6.0,
+                        4.0,
+                        6.0,
+                        24.0,
+                        30.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ProcChance",
+                    "values": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ProcDamageMult",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissilesPerLaunchAttack",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseMeepCooldown",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CooldownReductionPerAstro",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MeepDamage",
+                    "values": [
+                        150.0,
+                        100.0,
+                        150.0,
+                        900.0,
+                        1200.0,
+                        1200.0,
+                        1200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CDRPerMeep",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "{f7f18006}",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 1.0,
+                                    "mStat": 3,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                },
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "{0bf19f82}",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedProcDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mSpellCalculationKey": "ModifiedDamage",
+                                "__type": "{f3cbe7b2}"
+                            },
+                            "mPart2": {
+                                "mDataValue": "{6859d4ca}",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{0431fbd0}": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "{e03e8bef}",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 1.0,
+                            "mStat": 3,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{2ecc3dd8}": {
+                    "mMultiplier": {
+                        "mDataValue": "{ab39c5d6}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mModifiedGameCalculation": "{7fce7e9a}",
+                    "__type": "GameCalculationModified"
+                },
+                "{7fce7e9a}": {
+                    "mFormulaParts": [
+                        {
+                            "part1": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mPart1": {
+                                            "mNumber": -1.0,
+                                            "__type": "NumberCalculationPart"
+                                        },
+                                        "mPart2": {
+                                            "mDataValue": "{4849ec24}",
+                                            "__type": "NamedDataValueCalculationPart"
+                                        },
+                                        "__type": "ProductOfSubPartsCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "part2": {
+                                "mBuffName": "{743a49ea}",
+                                "mCoefficient": 1.0,
+                                "__type": "BuffCounterByCoefficientCalculationPart"
+                            },
+                            "__type": "ExponentSubPartsCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "mCastTime": 0.33000001311302185,
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0,
+                2500.0
+            ],
+            "castConeDistance": 100.0,
+            "missileSpeed": 1400.0,
+            "mHitEffectOrientType": 2,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT17_CorkiSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT17_CorkiSpell_Name",
+                        "keyTooltip": "Spell_TFT17_CorkiSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "MissileAP",
+                                    "nameOverride": "Spell_TFT17_CorkiSpell_MissileAP",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MissileAD",
+                                    "nameOverride": "Spell_TFT17_CorkiSpell_MissileTotal",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ProcDamageMult",
+                                    "nameOverride": "Spell_TFT17_CorkiSpell_MegaDamage",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseMeepCooldown",
+                                    "nameOverride": "Spell_TFT17_CorkiSpell_MeepCooldown",
+                                    "Style": 2,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MeepDamage",
+                                    "nameOverride": "Spell_TFT17_CorkiSpell_BigOneDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{32ac1028}": {
+        "ObjectName": "TFT17_CorkiSpellMeepPassiveRunnerMis",
+        "mScriptName": "TFT17_CorkiSpellMeepPassiveRunnerMis",
+        "mSpell": {
+            "flags": 4194308,
+            "mAffectsTypeFlags": 11269,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "alwaysSnapFacing": true,
+            "mMinimapIconDisplayFlag": 0,
+            "castRange": [
+                5000.0,
+                5000.0,
+                5000.0,
+                5000.0,
+                5000.0,
+                5000.0,
+                5000.0
+            ],
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 1.0,
+                    "mOffsetInitialTargetHeight": 1.0,
+                    "mStartBoneName": "",
+                    "mUseGroundHeightAtTarget": false,
+                    "mTravelTime": 2.0,
+                    "__type": "FixedTimeMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "{91fd0920}"
+                    },
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 0.0,
+            "mMissileEffectKey": "{a2e8c6e0}",
+            "mLineWidth": 40.0,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{393f15b3}": {
+        "ObjectName": "TFT17_CorkiSpellMis1",
+        "mScriptName": "TFT17_CorkiSpellMis1",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 128,
+            "mAnimationName": "",
+            "mCastTime": 0.6000000238418579,
+            "{11704a2b}": 1.5,
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mIsDisabledWhileDead": false,
+            "castRange": [
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTargetHeightAugment": 200.0,
+                    "mStartBoneName": "R_Missile2",
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mSplineInfo": {
+                        "mControlPoint1": [
+                            0.0,
+                            0.0,
+                            1.75
+                        ],
+                        "mControlPoint2": [
+                            1.0,
+                            0.0,
+                            0.75
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mSpeed": 2400.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "mHeightOffset": 100.0,
+                    "__type": "FollowTerrainHeightSolver"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "{91fd0920}"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 14.800000190734863,
+            "missileSpeed": 4000.0,
+            "mMissileEffectKey": "{c8e43e2b}",
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_tft10_TwistedFateSpell_OnMissileLaunch"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{3a3f1746}": {
+        "ObjectName": "TFT17_CorkiSpellMis2",
+        "mScriptName": "TFT17_CorkiSpellMis2",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 128,
+            "mAnimationName": "",
+            "mCastTime": 0.6000000238418579,
+            "{11704a2b}": 1.5,
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mIsDisabledWhileDead": false,
+            "castRange": [
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTargetHeightAugment": 200.0,
+                    "mStartBoneName": "R_Missile2",
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mSplineInfo": {
+                        "mControlPoint1": [
+                            0.0,
+                            0.0,
+                            1.75
+                        ],
+                        "mControlPoint2": [
+                            -1.0,
+                            0.0,
+                            0.75
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mSpeed": 2400.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "mHeightOffset": 100.0,
+                    "__type": "FollowTerrainHeightSolver"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "{91fd0920}"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 14.800000190734863,
+            "missileSpeed": 4000.0,
+            "mMissileEffectKey": "{c8e43e2b}",
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_tft10_TwistedFateSpell_OnMissileLaunch"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{3b3f18d9}": {
+        "ObjectName": "TFT17_CorkiSpellMis3",
+        "mScriptName": "TFT17_CorkiSpellMis3",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 128,
+            "mAnimationName": "",
+            "mCastTime": 0.6000000238418579,
+            "{11704a2b}": 1.5,
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mIsDisabledWhileDead": false,
+            "castRange": [
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTargetHeightAugment": 200.0,
+                    "mStartBoneName": "L_Missile2",
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mSplineInfo": {
+                        "mControlPoint1": [
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "mControlPoint2": [
+                            0.75,
+                            0.0,
+                            1.75
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mSpeed": 2500.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "mHeightOffset": 100.0,
+                    "__type": "FollowTerrainHeightSolver"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "{91fd0920}"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 14.800000190734863,
+            "missileSpeed": 4000.0,
+            "mMissileEffectKey": "{c8e43e2b}",
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_tft10_TwistedFateSpell_OnMissileLaunch"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{3c3f1a6c}": {
+        "ObjectName": "TFT17_CorkiSpellMis4",
+        "mScriptName": "TFT17_CorkiSpellMis4",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 128,
+            "mAnimationName": "",
+            "mCastTime": 0.6000000238418579,
+            "{11704a2b}": 1.5,
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mIsDisabledWhileDead": false,
+            "castRange": [
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTargetHeightAugment": 200.0,
+                    "mStartBoneName": "L_Missile2",
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mSplineInfo": {
+                        "mControlPoint1": [
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "mControlPoint2": [
+                            -0.75,
+                            0.0,
+                            1.75
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mSpeed": 2500.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "mHeightOffset": 100.0,
+                    "__type": "FollowTerrainHeightSolver"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "{91fd0920}"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 14.800000190734863,
+            "missileSpeed": 4000.0,
+            "mMissileEffectKey": "{c8e43e2b}",
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_tft10_TwistedFateSpell_OnMissileLaunch"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{43b20de9}": {
+        "ObjectName": "TFT17_CorkiCritAttack",
+        "mScriptName": "TFT17_CorkiCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "CorkiCritAttack",
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.48500001430511475,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "bHaveHitEffect": true,
+            "castRange": [
+                475.0,
+                475.0,
+                475.0,
+                475.0,
+                475.0,
+                475.0,
+                475.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "gun",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 5.5,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "{7f53d3ca}",
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{63340f81}": {
+        "ObjectName": "TFT17_CorkiBasicAttack2",
+        "mScriptName": "TFT17_CorkiBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "CorkiBasicAttack2",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.48500001430511475,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "bHaveHitEffect": true,
+            "castRange": [
+                475.0,
+                475.0,
+                475.0,
+                475.0,
+                475.0,
+                475.0,
+                475.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "gun",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 5.5,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "{7f53d3ca}",
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "selectionPriority": 1,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{ce7292e2}": {
+        "ObjectName": "TFT17_CorkiSpellMeepPassiveMis",
+        "mScriptName": "TFT17_CorkiSpellMeepPassiveMis",
+        "mSpell": {
+            "flags": 4194308,
+            "mAffectsTypeFlags": 3087,
+            "mAffectsStatusFlags": 160,
+            "mAnimationName": "",
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mIsDisabledWhileDead": false,
+            "mSpellRevealsChampion": false,
+            "alwaysSnapFacing": true,
+            "mMinimapIconDisplayFlag": 0,
+            "castRange": [
+                5000.0,
+                5000.0,
+                5000.0,
+                5000.0,
+                5000.0,
+                5000.0,
+                5000.0
+            ],
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTravelTime": 0.75,
+                    "__type": "FixedTimeMovement"
+                },
+                "heightSolver": {
+                    "mGravity": 6000.0,
+                    "__type": "GravityHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 0.0,
+            "mMissileEffectKey": "{faa5fc17}",
+            "mLineWidth": 40.0,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{f0e617d6}": {
+        "ObjectName": "TFT17_CorkiSpellMisMega",
+        "mScriptName": "TFT17_CorkiSpellMisMega",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAffectsStatusFlags": 128,
+            "mAnimationName": "",
+            "mCastTime": 0.6000000238418579,
+            "{11704a2b}": 1.5,
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mIsDisabledWhileDead": false,
+            "castRange": [
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0,
+                2300.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 100.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTargetHeightAugment": 100.0,
+                    "mStartBoneName": "Cstm_Buffbone_Gatling_Gun_Origin",
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mProjectTargetToCastRange": true,
+                    "mAcceleration": 4000.0,
+                    "mMinSpeed": 400.0,
+                    "mMaxSpeed": 4000.0,
+                    "mInitialSpeed": 400.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "heightSolver": {
+                    "mHeightOffset": 100.0,
+                    "__type": "FollowTerrainHeightSolver"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "{91fd0920}"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 14.800000190734863,
+            "missileSpeed": 4000.0,
+            "mMissileEffectKey": "{1dd5aa2a}",
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "selectionPriority": 1,
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{973ced04}": {
+        "mCharacterName": "TFT17_Corki",
+        "{8662cf12}": {
+            "{b35aa769}": 850.0,
+            "__type": "{ce9b917b}"
+        },
+        "{9eedebad}": {
+            "{b35aa769}": 0.0,
+            "__type": "{ce9b917b}"
+        },
+        "healthBarHeight": 170.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "{b35aa769}": 60.0,
+                "__type": "{ce9b917b}"
+            },
+            "{c4ab3550}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "{4af40dc3}": {
+            "{b35aa769}": 45.0,
+            "__type": "{ce9b917b}"
+        },
+        "{ea6100d5}": {
+            "{b35aa769}": 30.0,
+            "__type": "{ce9b917b}"
+        },
+        "{33c0bf27}": {
+            "{b35aa769}": 30.0,
+            "__type": "{ce9b917b}"
+        },
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "{e62d9d92}": {
+            "{b35aa769}": 500.0,
+            "__type": "{ce9b917b}"
+        },
+        "{7bd4b298}": {
+            "{b35aa769}": 890.0,
+            "__type": "{ce9b917b}"
+        },
+        "{836cc82a}": {
+            "{b35aa769}": 0.800000011920929,
+            "__type": "{ce9b917b}"
+        },
+        "{4f89c991}": {
+            "{b35aa769}": 0.800000011920929,
+            "__type": "{ce9b917b}"
+        },
+        "basicAttack": {
+            "mAttackName": "TFT17_CorkiBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT17_CorkiBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT17_CorkiCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT17_CorkiSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "{305a0b05}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 4,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{e85ac758}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{6b15c6a3}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ae695df}",
+        "mMoveInterval": -0.25,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{2f2f6b52}",
+        "mManaPerAttack": 5.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "{d0dba4e2}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

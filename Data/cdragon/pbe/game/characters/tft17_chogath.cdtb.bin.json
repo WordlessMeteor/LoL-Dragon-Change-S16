@@ -1,0 +1,372 @@
+{
+    "{1fc7f819}": {
+        "ObjectName": "TFT17_ChogathSpell",
+        "mScriptName": "TFT17_ChogathSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 11269,
+            "DataValues": [
+                {
+                    "name": "PercentMaximumHealthDamage",
+                    "values": [
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusDamage",
+                    "values": [
+                        140.0,
+                        210.0,
+                        290.0,
+                        420.0,
+                        715.0,
+                        450.0,
+                        450.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusHealthOnKill",
+                    "values": [
+                        35.0,
+                        25.0,
+                        35.0,
+                        65.0,
+                        110.0,
+                        35.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HPToTier2",
+                    "values": [
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HPToTier3",
+                    "values": [
+                        2000.0,
+                        2000.0,
+                        2000.0,
+                        2000.0,
+                        2000.0,
+                        2000.0,
+                        2000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusHealthPerCast",
+                    "values": [
+                        0.0,
+                        12.0,
+                        18.0,
+                        33.0,
+                        50.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedBonusDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "BonusDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mSubpart": {
+                                        "mDataValue": "BonusDamage",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mRatio": 0.009999999776482582,
+                                    "__type": "SubPartScaledProportionalToStat"
+                                },
+                                {
+                                    "mStat": 12,
+                                    "mDataValue": "PercentMaximumHealthDamage",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "mCastTime": 0.10000000149011612,
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "bIsToggleSpell": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 2.0,
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT17_ChogathSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT17_ChogathSpell_Name",
+                        "keyTooltip": "Spell_TFT17_ChogathSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BonusHealthPerCast",
+                                    "nameOverride": "Spell_TFT17_ChogathSpell_HealthPerCast",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BonusHealthOnKill",
+                                    "nameOverride": "Spell_TFT17_ChogathSpell_HealthOnKill",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BonusDamage",
+                                    "nameOverride": "Spell_TFT17_ChogathSpell_TotalDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{bfbc9025}": {
+        "ObjectName": "TFT17_ChogathCritAttack",
+        "mScriptName": "TFT17_ChogathCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.3461499810218811,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 14.125,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{c692d725}": {
+        "ObjectName": "TFT17_ChogathBasicAttack2",
+        "mScriptName": "TFT17_ChogathBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "ChogathBasicAttack2",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.3461499810218811,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 14.25,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{ff9a1755}": {
+        "ObjectName": "TFT17_ChogathBasicAttack",
+        "mScriptName": "TFT17_ChogathBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "ChogathBasicAttack",
+            "{11704a2b}": 0.3461499810218811,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 14.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{4eb37bbe}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{d65a8eb8}": {
+        "mCharacterName": "TFT17_Chogath",
+        "{8662cf12}": {
+            "{b35aa769}": 650.0,
+            "__type": "{ce9b917b}"
+        },
+        "{9eedebad}": {
+            "{b35aa769}": 0.0,
+            "__type": "{ce9b917b}"
+        },
+        "healthBarHeight": 165.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "{b35aa769}": 70.0,
+                "__type": "{ce9b917b}"
+            },
+            "{c4ab3550}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "{4af40dc3}": {
+            "{b35aa769}": 45.0,
+            "__type": "{ce9b917b}"
+        },
+        "{ea6100d5}": {
+            "{b35aa769}": 35.0,
+            "__type": "{ce9b917b}"
+        },
+        "{33c0bf27}": {
+            "{b35aa769}": 35.0,
+            "__type": "{ce9b917b}"
+        },
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "{e62d9d92}": {
+            "{b35aa769}": 500.0,
+            "__type": "{ce9b917b}"
+        },
+        "{7bd4b298}": {
+            "{b35aa769}": 180.0,
+            "__type": "{ce9b917b}"
+        },
+        "{836cc82a}": {
+            "{b35aa769}": 0.6000000238418579,
+            "__type": "{ce9b917b}"
+        },
+        "{4f89c991}": {
+            "{b35aa769}": 0.5,
+            "__type": "{ce9b917b}"
+        },
+        "basicAttack": {
+            "mAttackName": "TFT17_ChogathBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT17_ChogathBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT17_ChogathCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT17_ChogathSpell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "{1fc7f819}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "passiveRange": 4.0,
+        "selectionHeight": 185.0,
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446664,
+        "tier": 1,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{608fd44d}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{95466e55}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "CharacterRole": "{2ccf900f}",
+        "mMoveInterval": -0.25,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 30.0,
+        "mShopData": "{063f0c9a}",
+        "MobileHealthBarHeightOverride": 120.0,
+        "mManaPerAttack": 5.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

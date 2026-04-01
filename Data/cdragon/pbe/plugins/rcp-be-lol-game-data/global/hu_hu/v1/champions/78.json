@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Poppy meglendíti a pörölyét, amivel sebzést okoz, és az ellenfeleket lelassító zónát hoz létre, amely némi késleltetés után felrobban.",
-            "dynamicDescription": "Poppy a földre csap, így <physicalDamage>@BaseDamage@</physicalDamage> plusz <physicalDamage>@HealthDamagePercent@% maximális életerővel arányos fizikai sebzést</physicalDamage> okoz, és ingataggá teszi a talajt. <br><br>Az ingatag terület @Effect3Amount@%-kal <status>lassítja</status> az ellenfeleket, és @Effect4Amount@ másodperc elteltével kitör, amivel újra <physicalDamage>@BaseDamage@</physicalDamage> plusz <physicalDamage>@HealthDamagePercent@% maximális életerővel arányos fizikai sebzést</physicalDamage> okoz.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy a földre csap, így <physicalDamage>@BaseDamage@</physicalDamage> plusz <physicalDamage>@HealthDamagePercent@% maximális életerővel arányos fizikai sebzést</physicalDamage> okoz, és ingataggá teszi a talajt. <br><br>Az ingatag terület @Slow_@%-kal <status>lassítja</status> az ellenfeleket, és @DelayBetweenTwoHits@ másodperc elteltével kitör, amivel újra <physicalDamage>@BaseDamage@</physicalDamage> plusz <physicalDamage>@HealthDamagePercent@% maximális életerővel arányos fizikai sebzést</physicalDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1223,13 +1223,13 @@
                     9.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    30.0,
+                    60.0,
+                    90.0,
+                    120.0,
+                    150.0,
+                    180.0
                 ],
                 "Effect7Amount": [
                     100.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Poppy páncélja és a varázsellenállása passzívan nő. A bónusz tovább nő, ha az életereje alacsony. Poppy az Állhatatos jelenlét aktiválásával mozgási sebességet nyer, és megállíthatja az ellenfél rohamait a közelében. Ha megállít egy rohamot, az adott ellenfél lelassul és röghöz lesz kötve.",
-            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> Poppy <scaleArmor>@BonusArmor@ páncélt</scaleArmor> és <scaleMR>@BonusMR@ varázsellenállást</scaleMR> szerez. Ez a bónusz megduplázódik, ha Poppy életereje @PassiveEmpoweredHealthPercent*100@% alatt van.<br><br><spellActive>Aktív:</spellActive> Poppy <speed>@Effect2Amount@% mozgási sebességet</speed> nyer, és @Effect1Amount@ másodpercre egy mezőt hoz létre maga körül, amely megállítja az ellenfelek rohamát. A mező által megállított ellenfelek <status>mozgásképtelenné válnak</status> és @GroundingDuration@ másodpercre @SlowAmount*-100@%-kal <status>lelassulnak</status>, továbbá <magicDamage>@InterruptDamage@ varázssebzést</magicDamage> is elszenvednek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> Poppy <scaleArmor>@BonusArmor@ páncélt</scaleArmor> és <scaleMR>@BonusMR@ varázsellenállást</scaleMR> szerez. Ez a bónusz megduplázódik, ha Poppy életereje @PassiveEmpoweredHealthPercent*100@% alatt van.<br><br><spellActive>Aktív:</spellActive> Poppy <speed>@Haste@% mozgási sebességet</speed> nyer, és @Duration@ másodpercre egy mezőt hoz létre maga körül, amely megállítja az ellenfelek rohamát. A mező által megállított ellenfelek @GroundingDuration@ másodpercre <status>röghöz lesznek kötve</status>, és @SlowAmount*-100@%-kal <status>lelassulnak</status>, továbbá <magicDamage>@InterruptDamage@ varázssebzést</magicDamage> is elszenvednek.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Poppy lerohanja és hátralöki a célpontot. Ha az áldozat falnak ütközik, elkábul.",
-            "dynamicDescription": "Poppy ráront egy ellenfélre, <physicalDamage>@TackleDamage@ fizikai sebzést</physicalDamage> okoz neki, és magával vonszolja. Ha Poppy egy tereptárgynak löki az áldozatát, az ellenfél @Effect3Amount@ másodpercre <status>elkábul</status>, és további <physicalDamage>@TackleDamage@ fizikai sebzést</physicalDamage> szenved el.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy ráront egy ellenfélre, <physicalDamage>@TackleDamage@ fizikai sebzést</physicalDamage> okoz neki, és magával vonszolja. Ha Poppy egy tereptárgynak löki az áldozatát, az ellenfél @StunDuration@ másodpercre <status>elkábul</status>, és további <physicalDamage>@TackleDamage@ fizikai sebzést</physicalDamage> szenved el.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

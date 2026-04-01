@@ -255,6 +255,32 @@
                         45.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusDashSpeed",
+                    "values": [
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -513,114 +539,6 @@
         },
         "__type": "SpellObject"
     },
-    "Characters/Braum/Spells/BraumPulseLinePopup": {
-        "ObjectName": "BraumPulseLinePopup",
-        "mScriptName": "BraumPulseLinePopup",
-        "mSpell": {
-            "flags": 4,
-            "mAffectsTypeFlags": 6154,
-            "mAlternateName": "BraumPulseKnockup",
-            "mEffectAmount": [
-                {
-                    "value": [
-                        75.0,
-                        250.0,
-                        425.0,
-                        600.0,
-                        0.0,
-                        0.0,
-                        175.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
-            "mCoefficient": 1.0,
-            "mAnimationName": "Idle1",
-            "mImgIconName": [
-                "Bowmaster_EnchantedArrow.dds"
-            ],
-            "mCastTime": 0.625,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
-            "cooldownTime": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "mCantCancelWhileWindingUp": true,
-            "mIsDisabledWhileDead": false,
-            "mSpellRevealsChampion": false,
-            "castRange": [
-                25000.0,
-                25000.0,
-                25000.0,
-                25000.0,
-                25000.0,
-                25000.0,
-                25000.0
-            ],
-            "castRadius": [
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0,
-                120.0
-            ],
-            "castConeDistance": 100.0,
-            "castFrame": 18.0,
-            "missileSpeed": 1600.0,
-            "bHaveHitBone": true,
-            "mHitBoneName": "root",
-            "selectionPriority": 1,
-            "mTargetingTypeData": {
-                "__type": "Location"
-            },
-            "mClientData": {
-                "mTargeterDefinitions": [
-                    {
-                        "useCasterBoundingBox": false,
-                        "__type": "TargeterDefinitionRange"
-                    }
-                ],
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
     "Characters/Braum/Spells/BraumEAbility": {
         "mRootSpell": "Characters/Braum/Spells/BraumEAbility/BraumE",
         "mChildSpells": [
@@ -713,6 +631,45 @@
                         0.15000000596046448,
                         0.15000000596046448,
                         0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldHoldDuration",
+                    "values": [
+                        2.75,
+                        3.0,
+                        3.25,
+                        3.5,
+                        3.75,
+                        4.0,
+                        4.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldFacingDRAmount",
+                    "values": [
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveSpeedPercent",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -853,8 +810,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 4,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "MoveSpeedPercent",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -919,13 +876,13 @@
             "mEffectAmount": [
                 {
                     "value": [
-                        30.0,
+                        15.0,
                         75.0,
-                        120.0,
-                        165.0,
-                        210.0,
-                        255.0,
-                        300.0
+                        125.0,
+                        175.0,
+                        225.0,
+                        275.0,
+                        325.0
                     ],
                     "__type": "SpellEffectAmount"
                 },
@@ -1015,13 +972,13 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        30.0,
+                        25.0,
                         75.0,
-                        120.0,
-                        165.0,
-                        210.0,
-                        255.0,
-                        300.0
+                        125.0,
+                        175.0,
+                        225.0,
+                        275.0,
+                        325.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1037,25 +994,75 @@
                         0.02500000037252903
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "InitialSlow",
+                    "values": [
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinSlow",
+                    "values": [
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissileRange",
+                    "values": [
+                        1050.0,
+                        1050.0,
+                        1050.0,
+                        1050.0,
+                        1050.0,
+                        1050.0,
+                        1050.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
                 "cherry": {
-                    "SpellDataValues": [
-                        {
-                            "name": "MaxHPDamageValue",
-                            "values": [
-                                0.05000000074505806,
-                                0.05000000074505806,
-                                0.05000000074505806,
-                                0.05000000074505806,
-                                0.05000000074505806,
-                                0.05000000074505806,
-                                0.05000000074505806
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
                     "__type": "SpellDataValueVector"
                 }
             },
@@ -1171,7 +1178,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "BaseDamage",
+                                    "type": "Effect%dAmount",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
@@ -1238,8 +1245,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "InitialSlow",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

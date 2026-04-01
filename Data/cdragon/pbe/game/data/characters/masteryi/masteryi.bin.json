@@ -2361,6 +2361,11 @@
         "mScriptName": "Immortal_MasterYi_Trail_FX",
         "__type": "SpellObject"
     },
+    "{c87cb163}": {
+        "ObjectName": "MasterYiSkin116Manager",
+        "mScriptName": "MasterYiSkin116Manager",
+        "__type": "SpellObject"
+    },
     "Characters/MasterYi/Spells/MasterYiCritAttack": {
         "ObjectName": "MasterYiCritAttack",
         "mScriptName": "MasterYiCritAttack",
@@ -3188,6 +3193,14 @@
             },
             {
                 "mParentPassiveBuff": "Characters/MasterYi/Spells/MasterYiRunCycleManager",
+                "SkinFilter": {
+                    "FilterType": 1,
+                    "skinIds": [
+                        9,
+                        116
+                    ],
+                    "__type": "SkinFilterData"
+                },
                 "__type": "CharacterPassiveData"
             },
             {
@@ -3209,6 +3222,16 @@
                 "SkinFilter": {
                     "skinIds": [
                         89
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{c87cb163}",
+                "SkinFilter": {
+                    "skinIds": [
+                        116
                     ],
                     "__type": "SkinFilterData"
                 },

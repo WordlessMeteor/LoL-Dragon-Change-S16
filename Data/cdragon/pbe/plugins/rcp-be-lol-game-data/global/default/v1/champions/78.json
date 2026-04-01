@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Poppy swings her hammer, dealing damage and creating a zone that will slow enemies and explode after a delay.",
-            "dynamicDescription": "Poppy smashes the ground, dealing <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@% max Health physical damage</physicalDamage> and making the ground unstable. <br><br>The unstable area <status>Slows</status> enemies by @Effect3Amount@% and erupts after @Effect4Amount@ second, dealing <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@% max Health physical damage</physicalDamage> again.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy smashes the ground, dealing <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@% max Health physical damage</physicalDamage> and making the ground unstable. <br><br>The unstable area <status>Slows</status> enemies by @Slow_@% and erupts after @DelayBetweenTwoHits@ second, dealing <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@% max Health physical damage</physicalDamage> again.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1223,13 +1223,13 @@
                     9.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    30.0,
+                    60.0,
+                    90.0,
+                    120.0,
+                    150.0,
+                    180.0
                 ],
                 "Effect7Amount": [
                     100.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Poppy passively gains Armor and Magic Resist. This bonus increases when she is low on Health. Poppy can activate Steadfast Presence to gain Move Speed and stop enemy dashes around her. If a dash is stopped, the enemy is slowed and grounded.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Poppy gains <scaleArmor>@BonusArmor@ Armor</scaleArmor> and <scaleMR>@BonusMR@ Magic Resist</scaleMR>. This bonus is doubled if Poppy is below @PassiveEmpoweredHealthPercent*100@% Health.<br><br><spellActive>Active:</spellActive> Poppy gains <speed>@Effect2Amount@% Move Speed</speed> and projects a field around her for @Effect1Amount@ seconds that stops enemy dashes. Enemies who are stopped by the field are <status>Grounded</status> and <status>Slowed</status> by @SlowAmount*-100@% for @GroundingDuration@ seconds and take <magicDamage>@InterruptDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Poppy gains <scaleArmor>@BonusArmor@ Armor</scaleArmor> and <scaleMR>@BonusMR@ Magic Resist</scaleMR>. This bonus is doubled if Poppy is below @PassiveEmpoweredHealthPercent*100@% Health.<br><br><spellActive>Active:</spellActive> Poppy gains <speed>@Haste@% Move Speed</speed> and projects a field around her for @Duration@ seconds that stops enemy dashes. Enemies who are stopped by the field are <status>Grounded</status> and <status>Slowed</status> by @SlowAmount*-100@% for @GroundingDuration@ seconds and take <magicDamage>@InterruptDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Poppy dashes to the target and pushes it back. If the target is pushed into a wall, it is stunned.",
-            "dynamicDescription": "Poppy tackles an enemy, dealing <physicalDamage>@TackleDamage@ physical damage</physicalDamage> and carrying them forward. If Poppy tackles them into terrain, the enemy is <status>Stunned</status> for @Effect3Amount@ seconds and take an additional <physicalDamage>@TackleDamage@ physical damage</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy tackles an enemy, dealing <physicalDamage>@TackleDamage@ physical damage</physicalDamage> and carrying them forward. If Poppy tackles them into terrain, the enemy is <status>Stunned</status> for @StunDuration@ seconds and take an additional <physicalDamage>@TackleDamage@ physical damage</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

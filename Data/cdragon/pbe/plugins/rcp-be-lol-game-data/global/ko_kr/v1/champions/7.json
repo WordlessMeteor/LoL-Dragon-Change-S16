@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "르블랑이 지정 위치로 돌진하여 해당 지점 주변 적에게 피해를 줍니다. 4초 안에 왜곡을 다시 사용하면 처음 위치로 돌아옵니다.",
-            "dynamicDescription": "르블랑이 돌진한 후 주변 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다. 돌진 후 @Effect3Amount@초 동안 <recast>재사용</recast>할 수 있습니다.<br><br><recast>재사용 시:</recast> 르블랑이 처음 위치로 돌아갑니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "르블랑이 돌진한 후 주변 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다. 돌진 후 @SnapbackTimeAllowed@초 동안 <recast>재사용</recast>할 수 있습니다.<br><br><recast>재사용 시:</recast> 르블랑이 처음 위치로 돌아갑니다.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "르블랑이 사슬을 던져 처음 명중한 적을 옭아맵니다. 대상이 1.5초 동안 사슬에 묶일 경우 대상을 속박하고 추가 피해를 입힙니다.",
-            "dynamicDescription": "르블랑이 처음 명중한 적을 옭아매는 사슬을 던져 <magicDamage>@InitialDamage@의 마법 피해</magicDamage>를 주고 <keywordStealth>절대 시야</keywordStealth>를 얻습니다.<br><br>대상이 @Effect3Amount@초간 사슬에 묶여 있으면 대상을 @Effect4Amount@초 동안 <status>속박</status>하고 추가로 <magicDamage>@DelayedDamage@의 마법 피해</magicDamage>를 줍니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "르블랑이 처음 적중한 적을 옭아매는 사슬을 던져 <magicDamage>@InitialDamage@의 마법 피해</magicDamage>를 주고 <keywordStealth>절대 시야</keywordStealth>를 얻습니다.<br><br>대상이 @TetherDuration@초간 사슬에 묶여 있으면 대상을 @RootDuration@초 동안 <status>속박</status>하고 추가로 <magicDamage>@DelayedDamage@의 마법 피해</magicDamage>를 줍니다.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

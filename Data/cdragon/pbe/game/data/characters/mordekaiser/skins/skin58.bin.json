@@ -236,12 +236,12 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{cd850122}",
+                    "Material": "Characters/Mordekaiser/Skins/Skin55/Materials/Mordekaiser_Skin55_Sheen_Mat",
                     "submesh": "Sheenbig",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{cd850122}",
+                    "Material": "Characters/Mordekaiser/Skins/Skin55/Materials/Mordekaiser_Skin55_Sheen_Mat",
                     "submesh": "Sheensmall",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -287,11 +287,6 @@
             {
                 "effectKey": "Mordekaiser_Mace_Idle",
                 "boneName": "Mace_Head_Stretch1",
-                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
-            },
-            {
-                "effectKey": "{65cf9fa7}",
-                "boneName": "Buffbone_Glb_Mace_Loc",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
         ],
@@ -379,6 +374,56 @@
                     {
                         "effectKey": "{e36dee08}",
                         "scale": 0.800000011920929,
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDriver": {
+                        "mDrivers": [
+                            {
+                                "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            {
+                                "mAnimationNames": [
+                                    "Dance"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            }
+                        ],
+                        "__type": "OneTrueMaterialDriver"
+                    },
+                    "__type": "NotMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Buffbone_Glb_Mace_Loc",
+                        "effectKey": "{65cf9fa7}",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "championName": "Characters/Mordekaiser",
+                            "__type": "{635d04b7}"
+                        },
+                        {
+                            "Spell": "{f537e1bf}",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "effectKey": "{ea1fdbac}",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -39634,161 +39679,6 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 10.5,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "Body_Fresnel",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "Crown",
-                            "HEAD",
-                            "Statue"
-                        ],
-                        "mSubmeshesToDrawAlways": [
-                            "Crown",
-                            "HEAD",
-                            "Statue"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "constantValue": [
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        1.0
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.004966887645423412,
-                            0.024225592613220215,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.0
-                            ],
-                            [
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                1.0
-                            ],
-                            [
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 200,
-                "alphaErosionDefinition": {
-                    "erosionDriveCurve": {
-                        "constantValue": 1.2999999523162842,
-                        "dynamics": {
-                            "times": [
-                                0.0,
-                                0.019999999552965164,
-                                0.1531541645526886,
-                                1.0
-                            ],
-                            "values": [
-                                1.2999999523162842,
-                                1.0464999675750732,
-                                1.0464999675750732,
-                                1.0464999675750732
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "erosionMapName": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Mordikaiser_Skin23_Recall_Body01.SKINS_Mordekaiser_Skin55.tex",
-                    "erosionMapChannelMixer": {
-                        "constantValue": [
-                            1.0,
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "__type": "ValueColor"
-                    },
-                    "__type": "VfxAlphaErosionDefinitionData"
-                },
-                "reflectionDefinition": {
-                    "reflectionOpacityDirect": -1.0,
-                    "reflectionOpacityGlancing": 0.10000000149011612,
-                    "reflectionFresnel": 0.10000000149011612,
-                    "reflectionFresnelColor": [
-                        0.05098039284348488,
-                        0.04313725605607033,
-                        0.0784313753247261,
-                        1.0
-                    ],
-                    "fresnel": 0.019999999552965164,
-                    "fresnelColor": [
-                        1.0,
-                        0.7905088663101196,
-                        0.29105058312416077,
-                        0.0
-                    ],
-                    "__type": "VfxReflectionDefinitionData"
-                },
-                "depthBiasFactors": [
-                    -2.0,
-                    -7.0
-                ],
-                "{cb13aff1}": -5.0,
-                "particleIsLocalOrientation": 1,
-                "hasPostRotateOrientation": 1,
-                "isRotationEnabled": 1,
-                "birthScale0": {
-                    "constantValue": [
-                        1.0010000467300415,
-                        1.0010000467300415,
-                        1.0010000467300415
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Shared/Particles/DefaultColorOverlifetime.tex",
-                "emitterUvScrollRate": [
-                    0.0,
-                    -1.0
-                ],
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
                     "constantValue": 9.5,
                     "__type": "ValueFloat"
                 },
@@ -40391,7 +40281,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_RRetexture_2.Chroma_Mordekaiser_PrestigeMoneyMiser.tex",
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_RRetexture_2.SKINS_Mordekaiser_Skin55.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -40740,7 +40630,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_GlassPieces2.SKINS_Mordekaiser_Skin55.tex",
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_RRetexture_2.Chroma_Mordekaiser_PrestigeMoneyMiser.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -41933,215 +41823,6 @@
                         "constantValue": [
                             0.0,
                             0.10000000149011612
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "__type": "VfxTextureMultDefinitionData"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "Wings3",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        -99.0,
-                        -97.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "HEAD",
-                            "Statue"
-                        ],
-                        "mSubmeshesToDrawAlways": [
-                            "HEAD",
-                            "Statue"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        0.6800030469894409,
-                        0.4000000059604645,
-                        0.22000457346439362,
-                        0.7000076174736023
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": 11,
-                "meshRenderFlags": 0,
-                "alphaRef": 0,
-                "{cb13aff1}": -5.0,
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        180.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Swain_Skin33_R_Ring230.SKINS_Mordekaiser_Skin55.tex",
-                "particleUVScrollRate": {
-                    "dynamics": {
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector2fVariableData"
-                    },
-                    "__type": "IntegratedValueVector2"
-                },
-                "uvScale": {
-                    "constantValue": [
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Sona_Skin46_colorGold_01.SKINS_Mordekaiser_Skin55.tex",
-                    "uvScaleMult": {
-                        "constantValue": [
-                            2.0,
-                            2.0
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "birthUvScrollRateMult": {
-                        "constantValue": [
-                            0.0,
-                            0.15000000596046448
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "__type": "VfxTextureMultDefinitionData"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "Wings4",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        -99.0,
-                        -97.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "HEAD",
-                            "Statue"
-                        ],
-                        "mSubmeshesToDrawAlways": [
-                            "HEAD",
-                            "Statue"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.7755550742149353,
-                        0.2669413387775421,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": 12,
-                "meshRenderFlags": 0,
-                "alphaRef": 0,
-                "{cb13aff1}": -5.0,
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        180.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Swain_Skin33_R_Ring230.SKINS_Mordekaiser_Skin55.tex",
-                "particleUVScrollRate": {
-                    "constantValue": [
-                        -0.05000000074505806,
-                        0.014999999664723873
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                -0.05000000074505806,
-                                0.014999999664723873
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector2fVariableData"
-                    },
-                    "__type": "IntegratedValueVector2"
-                },
-                "uvScale": {
-                    "constantValue": [
-                        5.0,
-                        5.0
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Dragonmancer_Rakan_Decal_Ramp_02.SKINS_Mordekaiser_Skin55.tex",
-                    "birthUvScrollRateMult": {
-                        "constantValue": [
-                            0.0,
-                            0.15000000596046448
                         ],
                         "__type": "ValueVector2"
                     },
@@ -44881,124 +44562,125 @@
     },
     "Characters/Mordekaiser/Skins/Skin58/Resources": {
         "resourceMap": {
-            "Mordekaiser_BA_tar": "{5d4431c7}",
-            "{46490443}": "{780be2a2}",
-            "Mordekaiser_Q_tar_Q1": "{d1aaacaa}",
-            "{c6919458}": "{cb3eccfc}",
-            "{e36dee08}": "{878cfc14}",
-            "{de445dd7}": "{64eebc36}",
-            "Mordekaiser_E_mis": "{20d52a0e}",
-            "Mordekaiser_Q_Impact": "{8d66f965}",
-            "Mordekaiser_E_Spirit": "{9461a076}",
-            "{5abd9b37}": "{780be2a2}",
+            "Mordekaiser_BA_tar": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_BATarL2R",
+            "{46490443}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_ZzDELETEME",
+            "Mordekaiser_Q_tar_Q1": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Q_TarQ01",
+            "{c6919458}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_PassiveBufAOE",
+            "{e36dee08}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_PassiveBuffAOEEnemy",
+            "{de445dd7}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_PassiveBuffEnd",
+            "Mordekaiser_E_mis": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_E_mis",
+            "Mordekaiser_Q_Impact": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Q_Impact",
+            "Mordekaiser_E_Spirit": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_E_Spirit",
+            "{5abd9b37}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_ZzDELETEME",
             "{6022d6c5}": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_R_Arena03",
-            "{d2b6448d}": "{058b5ef7}",
-            "Mordekaiser_Q_IndicatorTrap": "{59859917}",
-            "Mordekaiser_E_HandMissile": "{780be2a2}",
-            "Mordekaiser_E_aoe": "{1b7eda5a}",
+            "{d2b6448d}": "Characters/Mordekaiser/Skins/Skin55/Materials/Distortion_inst",
+            "Mordekaiser_Q_IndicatorTrap": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Q_IndicatorTrap",
+            "Mordekaiser_E_HandMissile": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_ZzDELETEME",
+            "Mordekaiser_E_aoe": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_E_aoe",
             "Mordekaiser_W_Shields": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_W_Shields",
-            "{0aaa51f2}": "{780be2a2}",
-            "Mordekaiser_Q_Mace": "{c9e4c285}",
-            "Mordekaiser_E_HandGlow": "{6a79b247}",
-            "Mordekaiser_E_Cast_Ground": "{dd8c1b3f}",
-            "Mordekaiser_R_Wraith": "{546d4663}",
-            "Mordekaiser_E_aoe_Enemy": "{49388d26}",
-            "Mordekaiser_R_SoulTeather": "{1e74f00c}",
+            "{0aaa51f2}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_ZzDELETEME",
+            "Mordekaiser_Q_Mace": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Q_Mace",
+            "Mordekaiser_E_HandGlow": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_E_HandGlow",
+            "Mordekaiser_E_Cast_Ground": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_E_CastGround",
+            "Mordekaiser_R_Wraith": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_Wraith",
+            "Mordekaiser_E_aoe_Enemy": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_E_AoeEnemy",
+            "Mordekaiser_R_SoulTeather": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_SoulTeather",
             "Mordekaiser_R_Morde_Aura_Self": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_R_MordeAuraSelf",
             "Mordekaiser_R_Morde_Aura_Enemy": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_R_MordeAuraEnemy",
-            "{9379a164}": "{ef83890c}",
-            "Mordekaiser_R_Victim_Aura_Enemy": "{314f5be1}",
-            "Mordekaiser_R_Wraith_Impact": "{38bbe959}",
-            "Mordekaiser_R_Cast": "{aa372f77}",
-            "Mordekaiser_W_Shield_ignition": "{6d9f0a67}",
-            "Mordekaiser_W_Shield_helmFlame": "{31ddf36f}",
-            "Mordekaiser_Q_Impact_Miss": "{a6e64479}",
-            "Mordekaiser_Q_Impact_Mega": "{b0230293}",
+            "{9379a164}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_VictimAuraMorde",
+            "Mordekaiser_R_Victim_Aura_Enemy": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_VictimAuraEnemy",
+            "Mordekaiser_R_Wraith_Impact": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_WraithImpact",
+            "Mordekaiser_R_Cast": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_Cast",
+            "Mordekaiser_W_Shield_ignition": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_W_ShieldIgnition",
+            "Mordekaiser_W_Shield_helmFlame": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_W_ShieldHelmFlame",
+            "Mordekaiser_Q_Impact_Miss": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Q_ImpactMiss",
+            "Mordekaiser_Q_Impact_Mega": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Q_ImpactMega",
             "Mordekaiser_Mace_Idle": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_Mace_Idle",
             "{aa3cc2b1}": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_R_MordeExit",
-            "Mordekaiser_R_Victim_Exit": "{3cdde038}",
-            "Mordekaiser_E_aoe_Ally": "{27aeebe8}",
+            "Mordekaiser_R_Victim_Exit": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_VictimExit",
+            "Mordekaiser_E_aoe_Ally": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_E_AoeAlly",
             "Mordekaiser_AutoAttack_L2R_A": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_AutoAttackL2RA",
             "Mordekaiser_AutoAttack_R2L_A": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_AutoAttackR2LA",
-            "Mordekaiser_BA_tar_L2R": "{5d4431c7}",
-            "Mordekaiser_BA_tar_R2L": "{4f8fcc07}",
-            "Mordekaiser_Passive_buf_AOE_Ally": "{06ff061a}",
-            "{23935aea}": "{7fe2cc08}",
-            "{2a571b16}": "{1cb1e51e}",
-            "Mordekaiser_R_Spirit": "{e0de5219}",
-            "{2003e557}": "{6d47a292}",
-            "Mordekaiser_Passive_Buff_End_Enemy": "{36429d0a}",
-            "Mordekaiser_Passive_Hit_Streak": "{d64449d3}",
-            "Mordekaiser_Passive_Hit_Enemy": "{48674b0b}",
-            "Mordekaiser_Passive_Hit_Streak_Enemy": "{f7bab339}",
-            "Mordekaiser_R_Spirit_Morde": "{6902068e}",
+            "Mordekaiser_BA_tar_L2R": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_BATarL2R",
+            "Mordekaiser_BA_tar_R2L": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_BATarR2L",
+            "Mordekaiser_Passive_buf_AOE_Ally": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_PassiveBufAOEAlly",
+            "{23935aea}": "Characters/Mordekaiser/Skins/Skin55/Materials/Distortion_Inst_inst",
+            "{2a571b16}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_PassiveHitLinger",
+            "Mordekaiser_R_Spirit": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_Spirit",
+            "{2003e557}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_PassiveHitLingerEnemy",
+            "Mordekaiser_Passive_Buff_End_Enemy": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_PassiveBuffEndEnemy",
+            "Mordekaiser_Passive_Hit_Streak": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_PassiveHitStreak",
+            "Mordekaiser_Passive_Hit_Enemy": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_PassiveHitEnemy",
+            "Mordekaiser_Passive_Hit_Streak_Enemy": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_PassiveHitStreakEnemy",
+            "Mordekaiser_R_Spirit_Morde": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_SpiritMorde",
             "Mordekaiser_W_Shield_Consume": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_W_ShieldConsume",
-            "Mordekaiser_Passive_Hit": "{f122fba5}",
-            "Mordekaiser_Q_Mace_Charge": "{61863031}",
-            "Mordekaiser_Q_Hit": "{1d672980}",
-            "Mordekaiser_Q_Hit_Empowered": "{4e8ae2a6}",
-            "Mordekaiser_Q_Impact_Dust": "{0ad9cf45}",
-            "Mordekaiser_Recall_Stairs": "{b23629a5}",
-            "Mordekaiser_Q_Impact_Dust_Glow": "{a0f6f13c}",
-            "Mordekaiser_R_Morde_Enter": "{dbef14b9}",
-            "Mordekaiser_R_Victim_Enter": "{a53df6ce}",
-            "Mordekaiser_R_Cast_Beam": "{5e915240}",
+            "Mordekaiser_Passive_Hit": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_PassiveHit",
+            "Mordekaiser_Q_Mace_Charge": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Q_MaceCharge",
+            "Mordekaiser_Q_Hit": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Q_Hit",
+            "Mordekaiser_Q_Hit_Empowered": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Q_HitEmpowered",
+            "Mordekaiser_Q_Impact_Dust": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Q_ImpactDust",
+            "Mordekaiser_Recall_Stairs": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Recall_Stairs",
+            "Mordekaiser_Q_Impact_Dust_Glow": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Q_ImpactDustGlow",
+            "Mordekaiser_R_Morde_Enter": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_MordeEnter",
+            "Mordekaiser_R_Victim_Enter": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_VictimEnter",
+            "Mordekaiser_R_Cast_Beam": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_CastBeam",
             "Mordekaiser_I_Glow": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_IGlow",
-            "Mordekaiser_R_Spirit_HeartBeat": "{f5a74473}",
-            "Mordekaiser_R_Mace": "{604cb7da}",
-            "Mordekaiser_R_Spirit_bright_inDreathRealm": "{bd43c9c9}",
-            "Mordekaiser_R_Spirit_dark_inDreathRealm": "{2a447561}",
-            "Mordekaiser_R_Crown": "{baf0d933}",
-            "Mordekaiser_R_Crown_Flame": "{ee3b3fce}",
-            "Mordekaiser_R_Spirit_HeartBeat_inDeathRealm": "{6229b44d}",
+            "Mordekaiser_R_Spirit_HeartBeat": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_SpiritHeartBeat",
+            "Mordekaiser_R_Mace": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_Mace",
+            "Mordekaiser_R_Spirit_bright_inDreathRealm": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_SpiritBrightInDreathRealm",
+            "Mordekaiser_R_Spirit_dark_inDreathRealm": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_SpiritDarkInDreathRealm",
+            "Mordekaiser_R_Crown": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_Crown",
+            "Mordekaiser_R_Crown_Flame": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_CrownFlame",
+            "Mordekaiser_R_Spirit_HeartBeat_inDeathRealm": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_SpiritHeartBeatInDeathRealm",
             "Mordekaiser_Death": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_Skin58_Death",
-            "Mordekaiser_R_Spirit_Morde_Enemy": "{404aa042}",
-            "Mordekaiser_R_Spirit_Enemy": "{abda35b7}",
-            "Mordekaiser_R_Spirit_HeartBeat_Enemy": "{62d60759}",
-            "Mordekaiser_R_Mace_Head": "{1753f6f4}",
-            "Mordekaiser_E_aoe_Splash": "{1e6dd231}",
-            "{748035a4}": "{b2e48bcc}",
-            "Mordekaiser_E_mis_Enemy": "{fd772ac2}",
-            "Mordekaiser_W_footstep": "{e2215d93}",
-            "Mordekaiser_R_Morde_Specter": "{afae201d}",
-            "Mordekaiser_R_Victim_Specter": "{46d7e806}",
-            "Mordekaiser_R_Victim_Specter_ChestGlow": "{e92d6ee2}",
-            "Mordekaiser_R_Morde_Specter_ChestGlow": "{3047648b}",
-            "Mordekaiser_Spawn": "{7dbdf3d9}",
-            "Mordekaiser_Passive_Dance_Fireworks": "{88f6f279}",
-            "{1038f679}": "{18772473}",
-            "{4b0e0348}": "{18772473}",
-            "{0cc20b7f}": "{f176f699}",
-            "{c0ed5078}": "{9a161739}",
+            "Mordekaiser_R_Spirit_Morde_Enemy": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_SpiritMordeEnemy",
+            "Mordekaiser_R_Spirit_Enemy": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_SpiritEnemy",
+            "Mordekaiser_R_Spirit_HeartBeat_Enemy": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_SpiritHeartBeatEnemy",
+            "Mordekaiser_R_Mace_Head": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_MaceHead",
+            "Mordekaiser_E_aoe_Splash": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_E_AoeSplash",
+            "{748035a4}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_SREnvFire",
+            "Mordekaiser_E_mis_Enemy": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_E_MisEnemy",
+            "Mordekaiser_W_footstep": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_W_footstep",
+            "Mordekaiser_R_Morde_Specter": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_MordeSpecter",
+            "Mordekaiser_R_Victim_Specter": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_VictimSpecter",
+            "Mordekaiser_R_Victim_Specter_ChestGlow": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_VictimSpecterChestGlow",
+            "Mordekaiser_R_Morde_Specter_ChestGlow": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_MordeSpecterChestGlow",
+            "Mordekaiser_Spawn": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_BaseSpawn",
+            "Mordekaiser_Passive_Dance_Fireworks": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Passive_Dance_Fireworks",
+            "{1038f679}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_TowerOverlay",
+            "{4b0e0348}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_TowerOverlay",
+            "{0cc20b7f}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_W_ShieldsChild",
+            "{c0ed5078}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_E_ArrowGlowChild",
             "{af91a8cf}": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_Z_Ground08",
-            "{529f66d6}": "{187371b0}",
-            "{ed151740}": "{6a7f5232}",
-            "{9ab9c2c9}": "{24251d6b}",
-            "{569f150f}": "{d24a2ad6}",
-            "{1643326b}": "{bb565f32}",
-            "{6ea6cfb0}": "{c4a307ba}",
-            "{0376d431}": "{084357ff}",
-            "{16ad22e9}": "{4d6a0e3c}",
-            "{c66b4274}": "{f7e2feff}",
-            "{78d76067}": "{51d317b8}",
-            "{586c33bd}": "{785017f4}",
+            "{529f66d6}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_TarGround",
+            "{ed151740}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_TarDesk",
+            "{9ab9c2c9}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_TarBooks",
+            "{569f150f}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_Poro",
+            "{1643326b}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_Mace",
+            "{6ea6cfb0}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_ScreenPoro",
+            "{0376d431}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_MaceEnd",
+            "{16ad22e9}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_Body",
+            "{c66b4274}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_Spawn",
+            "{78d76067}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_Emote",
+            "{586c33bd}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_Screen",
             "{b22b517e}": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_R_Arena03",
             "{b52b5637}": "{00000000}",
             "{4740632c}": "{00000000}",
-            "{71b7ed03}": "{239bb704}",
-            "{f25ecbb5}": "{9f5519f4}",
+            "{71b7ed03}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_GoldShardTrailChild",
+            "{f25ecbb5}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_W_ShieldConsumeChild",
             "{a3f2e2e3}": "{00000000}",
-            "{be88a8ef}": "{ff692901}",
-            "{edbd0f36}": "{81e0addc}",
+            "{be88a8ef}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_BodyAngry",
+            "{edbd0f36}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_R_ArenaCameraLight",
             "{a9f2ec55}": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_R_Arena03",
-            "{6caa12f5}": "{84e50b86}",
-            "{0dfac1c4}": "{f2f2d210}",
-            "{0efac357}": "{f3f2d3a3}",
-            "{0bfabe9e}": "{f8f2db82}",
-            "{0791c77e}": "{c33bff21}",
-            "{92c4e70d}": "{0d976d08}",
+            "{6caa12f5}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_Props",
+            "{0dfac1c4}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_Props02",
+            "{0efac357}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_Props03",
+            "{0bfabe9e}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Z_Props04",
+            "{0791c77e}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Emote_Dance",
+            "{92c4e70d}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Emote_Poro",
             "{4af8082d}": "{00000000}",
-            "{65cf9fa7}": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_Idle_Mace_Idle_Mace02"
+            "{65cf9fa7}": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_Idle_Mace_Idle_Mace02",
+            "{ea1fdbac}": "{6241b137}"
         },
         "__type": "ResourceResolver"
     },

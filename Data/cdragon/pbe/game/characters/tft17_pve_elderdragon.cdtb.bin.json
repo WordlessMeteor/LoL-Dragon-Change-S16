@@ -1,0 +1,242 @@
+{
+    "{25ad906f}": {
+        "ObjectName": "TFT17_PVE_ElderDragonBasicAttack",
+        "mScriptName": "TFT17_PVE_ElderDragonBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAffectsStatusFlags": 8,
+            "mAnimationName": "Spell1",
+            "{11704a2b}": 0.25599998235702515,
+            "{f26881a0}": 0.8300000429153442,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 20.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Jaw",
+                    "mSpeed": 1000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 25.0,
+            "missileSpeed": 700.0,
+            "mMissileEffectKey": "{5c8e6c4d}",
+            "mLineWidth": 20.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "spine",
+            "selectionPriority": 1,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{e896168b}": {
+        "ObjectName": "TFT17_PVE_ElderDragonSpell",
+        "mScriptName": "TFT17_PVE_ElderDragonSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "",
+            "{11704a2b}": 2.5,
+            "{f26881a0}": 3.5,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "castRange": [
+                2000.0,
+                2000.0,
+                2000.0,
+                2000.0,
+                2000.0,
+                2000.0,
+                2000.0
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT17_PVE_ElderDragonSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT_ElderDragonSpell_Name",
+                        "keyTooltip": "Spell_TFT_ElderDragonSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{47e8c8a9}": {
+        "mCharacterName": "TFT17_PVE_ElderDragon",
+        "{8662cf12}": {
+            "{b35aa769}": 10000.0,
+            "__type": "{ce9b917b}"
+        },
+        "{9eedebad}": {
+            "{b35aa769}": 0.0,
+            "__type": "{ce9b917b}"
+        },
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
+            "{c4ab3550}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "secondaryAbilityResource": {
+            "{726ee5cd}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "{4af40dc3}": {
+            "{b35aa769}": 900.0,
+            "__type": "{ce9b917b}"
+        },
+        "{ea6100d5}": {
+            "{b35aa769}": 50.0,
+            "__type": "{ce9b917b}"
+        },
+        "{33c0bf27}": {
+            "{b35aa769}": 50.0,
+            "__type": "{ce9b917b}"
+        },
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "{e62d9d92}": {
+            "{b35aa769}": 550.0,
+            "__type": "{ce9b917b}"
+        },
+        "{7bd4b298}": {
+            "{b35aa769}": 420.0,
+            "__type": "{ce9b917b}"
+        },
+        "{836cc82a}": {
+            "{b35aa769}": 0.800000011920929,
+            "__type": "{ce9b917b}"
+        },
+        "{4f89c991}": {
+            "{b35aa769}": 0.800000011920929,
+            "__type": "{ce9b917b}"
+        },
+        "basicAttack": {
+            "mAttackTotalTime": 2.0,
+            "mAttackCastTime": 0.800000011920929,
+            "mAttackName": "TFT17_PVE_ElderDragonBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT17_PVE_ElderDragonBasicAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT17_PVE_ElderDragonBasicAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT17_PVE_ElderDragonSpell",
+            "TFT17_PVE_ElderDragonBasicAttack",
+            "TFT17_PVE_ElderDragonBasicAttack",
+            "TFT17_PVE_ElderDragonBasicAttack"
+        ],
+        "spells": [
+            "{e896168b}",
+            "{25ad906f}",
+            "{25ad906f}",
+            "{25ad906f}"
+        ],
+        "selectionHeight": 200.0,
+        "selectionRadius": 200.0,
+        "unitTagsString": "Champion | Monster",
+        "CharacterRole": "{d5823aeb}",
+        "mMoveInterval": -0.25,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{3f232f63}",
+        "__type": "TFTCharacterRecord"
+    },
+    "{77a56fc9}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

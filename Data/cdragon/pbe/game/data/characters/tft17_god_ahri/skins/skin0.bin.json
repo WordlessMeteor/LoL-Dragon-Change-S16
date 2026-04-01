@@ -1,0 +1,360 @@
+{
+    "{18c9417f}": {
+        "skinAnimationProperties": {
+            "animationGraphData": "{16b66418}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TFT17_God_Ahri/Skins/Base/TFT17_God_Ahri_17.TFT_Set17.skl",
+            "simpleSkin": "ASSETS/Characters/TFT17_God_Ahri/Skins/Base/TFT17_God_Ahri_17.TFT_Set17.skn",
+            "texture": "ASSETS/Characters/TFT17_God_Ahri/TFT17_God_Ahri_Skin01_TX_CM.TFT_Set17.tex",
+            "skinScale": 2.75,
+            "selfIllumination": 0.699999988079071,
+            "Material": "{140c4ab1}",
+            "castShadows": false,
+            "submeshRenderOrder": "Body Steam Tails Fishbody",
+            "materialOverride": [
+                {
+                    "Material": "{d23317d0}",
+                    "submesh": "Tails",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "idleParticlesEffects": [
+            {
+                "effectKey": "{a76056c4}",
+                "boneName": "Buffbone_Ctsm_Boonorb1_Loc",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectKey": "{7424328f}",
+                "boneName": "C_Buffbone_Glb_Chest_Loc",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "iconSquare": "ASSETS/Characters/TFT_ItemUnknown/Skins/Skin0/TFT_Item_Unknown.tex",
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
+        "healthBarData": {
+            "hpPerTick": 300.0,
+            "unitHealthBarStyle": 15,
+            "showWhileUntargetable": true,
+            "AlphaOutWhileUntargetable": false,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "{76b677d5}",
+        "mAdditionalResourceResolvers": [
+            "Maps/Shipping/Map22/MapSkins/Default/Resources"
+        ],
+        "__type": "TftSkinCharacterDataProperties"
+    },
+    "{140c4ab1}": {
+        "name": "Characters/TFT17_God_Ahri/Skins/Skin0/Materials/FresnelMasked_Body_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Masks",
+                "texturePath": "ASSETS/Characters/TFT17_God_Ahri/Skins/Base/TFT17_God_Ahri_Base_Mask_TX_CM.TFT_Set17.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "ASSETS/Characters/TFT17_God_Ahri/Skins/Base/TFT17_God_Ahri_Base_TX_CM.TFT_Set17.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FresnelRamp",
+                "texturePath": "ASSETS/Characters/TFT17_God_Ahri/TFT17_God_Ahri_Cloth_Ramp.TFT_Set17.tex",
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "miniMasks",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Set17/Varus_Skin69_R_Black_01.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "color1",
+                "value": [
+                    0.8293125629425049,
+                    0.14816510677337646,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "POW",
+                "value": [
+                    1.531000018119812,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MIN",
+                "value": [
+                    0.2800000011920929,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MAX",
+                "value": [
+                    0.7850000262260437,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ramp",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "COLOR_OR_DIFFUSE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/FresnelMasked_new",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "{d23317d0}": {
+        "name": "Characters/TFT17_God_Ahri/Skins/Skin0/Materials/TFT17_GodAhri_FresnelColor_PanningNoise_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT17_God_Ahri/Skins/Base/TFT17_God_Ahri_Base_Tails_TX_CM.TFT_Set17.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "PanningTexture",
+                "texturePath": "ASSETS/Characters/TFT17_God_Ahri/Skins/Base/TFT17_God_Ahri_Base_Water_Shape_TX_CM.TFT_Set17.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "ColorFresnelSize",
+                "value": [
+                    1.131250023841858,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PanningNoiseScale",
+                "value": [
+                    3.0,
+                    1.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Panning_FresnelSize",
+                "value": [
+                    1.25,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Color_Fresnel_color",
+                "value": [
+                    0.0,
+                    0.8823529481887817,
+                    0.48529791831970215,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "PanningNoise_ScrollSpeed",
+                "value": [
+                    0.02500000037252903,
+                    -0.15000000596046448,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Master_Blend",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomColorFresnelSize",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color_Fresnel_color",
+                "value": [
+                    0.5647059082984924,
+                    0.9607843160629272,
+                    0.8274509906768799,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomIntensity",
+                "value": [
+                    0.4124999940395355,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Diffuse_Mult",
+                "value": [
+                    1.5399999618530273,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "INVERT_BLOOM_FRESNEL",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "INVERT_COLOR_FRESNEL",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "INVERT_NOISE_FRESNEL",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/FresnelColor_PanningNoise",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{76b677d5}": {
+        "resourceMap": {
+            "{a76056c4}": "{7f895c1e}",
+            "{7424328f}": "{00b0b925}"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/TFT17_God_Ahri/Animations/Skin0.bin",
+        "Characters/TFT17_God_Ahri"
+    ]
+}

@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "LeBlanc melakukan dash ke satu lokasi, menghasilkan damage ke musuh di sekitar tujuannya. Dalam 4 detik berikutnya, mengaktifkan Distortion lagi untuk mengembalikan LeBlanc ke lokasi awal.",
-            "dynamicDescription": "LeBlanc melakukan dash lalu menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke musuh di sekitar. Dalam @Effect3Amount@ detik setelah dash, LeBlanc bisa <recast>Recast</recast>.<br><br><recast>Recast:</recast> LeBlanc kembali ke lokasi awalnya.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc melakukan dash lalu menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke musuh di sekitar. Dalam @SnapbackTimeAllowed@ detik setelah dash, LeBlanc bisa <recast>Recast</recast>.<br><br><recast>Recast:</recast> LeBlanc kembali ke lokasi awalnya.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "LeBlanc melontarkan rantai yang membelenggu musuh pertama yang terkena hit. Jika target tetap terbelenggu selama 1,5 detik, LeBlanc menerapkan root dan menghasilkan damage tambahan.",
-            "dynamicDescription": "LeBlanc melontarkan rantai dan membelenggu musuh pertama yang terkena hit, menghasilkan <magicDamage>@InitialDamage@ magic damage</magicDamage> dan memperoleh <keywordStealth>True Sight</keywordStealth>.<br><br>Jika mereka tetap terbelenggu selama @Effect3Amount@ detik, LeBlanc menerapkan <status>Root</status> selama @Effect4Amount@ detik dan menghasilkan tambahan <magicDamage>@DelayedDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc meluncurkan rantai yang membelenggu musuh pertama yang kena, menghasilkan <magicDamage>@InitialDamage@ magic damage</magicDamage> dan memberikan <keywordStealth>True Sight</keywordStealth>.<br><br>Jika mereka tetap terbelenggu selama @TetherDuration@ detik, LeBlanc menerapkan <status>Root</status> selama @RootDuration@ detik dan menghasilkan <magicDamage>@DelayedDamage@ magic damage</magicDamage> tambahan.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

@@ -1,0 +1,932 @@
+{
+    "{19e5feaa}": {
+        "mClipDataMap": {
+            "Attack1": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{7eae23cc}": {
+                        "mEffectKey": "{cd333402}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Scissors_A",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{c9bdc015}": {
+                        "mEffectKey": "{a6a9b669}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Doll_Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mScalePlaySpeedWithAnimation": true,
+                        "__type": "ParticleEventData"
+                    },
+                    "{7827bd99}": {
+                        "mStopAnimationName": "TURN",
+                        "__type": "StopAnimationEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Attack1.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Attack2": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{7827bd99}": {
+                        "mStopAnimationName": "TURN",
+                        "__type": "StopAnimationEventData"
+                    },
+                    "{7eae23cc}": {
+                        "mEffectKey": "{cd333402}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Scissors_A",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{c9bdc015}": {
+                        "mEffectKey": "{a6a9b669}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Doll_Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mScalePlaySpeedWithAnimation": true,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Attack2.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Crit": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{7827bd99}": {
+                        "mStopAnimationName": "TURN",
+                        "__type": "StopAnimationEventData"
+                    },
+                    "{5b21f465}": {
+                        "mEffectKey": "{1d816f8f}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Scissors_A",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Crit.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Death": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{426ba0c5}": {
+                        "mStartFrame": 40.0,
+                        "mShowSubmeshList": [
+                            "doll"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{7827bd99}": {
+                        "mStopAnimationName": "TURN",
+                        "__type": "StopAnimationEventData"
+                    },
+                    "{f2cdb9c2}": {
+                        "mStartFrame": 40.0,
+                        "mHideSubmeshList": [
+                            "BODY"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "Audio_Death": {
+                        "mSoundName": "Play_sfx_Gwen_Death3D_buffactivate",
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Death.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Run": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Run.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Idle1": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mTickDuration": 0.0833333358168602,
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Idle1.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Celebration": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Face": {
+                        "__type": "FaceTargetEventData"
+                    },
+                    "{7827bd99}": {
+                        "mStopAnimationName": "TURN",
+                        "__type": "StopAnimationEventData"
+                    },
+                    "{bc45bbc5}": {
+                        "mSoundName": "Play_sfx_Gwen_Dance3D_loop",
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Celebration.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Attack3": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{7eae23cc}": {
+                        "mEffectKey": "{cd333402}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Scissors_A",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{c9bdc015}": {
+                        "mEffectKey": "{a5a9b4d6}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Doll_Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mScalePlaySpeedWithAnimation": true,
+                        "__type": "ParticleEventData"
+                    },
+                    "{010c7b44}": {
+                        "mSoundName": "Play_sfx_Gwen_GwenBasicAttack_Swipe_cast",
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{7827bd99}": {
+                        "mStopAnimationName": "TURN",
+                        "__type": "StopAnimationEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Attack3.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell_Dash": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "Dash": {
+                        "mEffectKey": "{3473d184}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mScalePlaySpeedWithAnimation": true,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Spell_Dash.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell_Strike": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{7827bd99}": {
+                        "mStopAnimationName": "TURN",
+                        "__type": "StopAnimationEventData"
+                    },
+                    "{d4646169}": {
+                        "mEffectKey": "{f80c511a}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Scissors_B",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mScalePlaySpeedWithAnimation": true,
+                        "__type": "ParticleEventData"
+                    },
+                    "{8b693c1e}": {
+                        "mSoundName": "Play_sfx_tft17_GwenSpellAttack_cast",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    },
+                    "{34542cba}": {
+                        "mStartFrame": 9.0,
+                        "mSoundName": "Play_sfx_tft17_GwenSpellAttack_hit",
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Spell_Strike.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{cab2da1e}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{9d9e8bd3}": {
+                        "mEffectKey": "{6785e12a}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Buffbone_Scissors_A_Tip",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mScalePlaySpeedWithAnimation": true,
+                        "__type": "ParticleEventData"
+                    },
+                    "{7d54e075}": {
+                        "mEffectKey": "{6785e12a}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Buffbone_Scissors_B_Tip",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mScalePlaySpeedWithAnimation": true,
+                        "__type": "ParticleEventData"
+                    },
+                    "{c9bdc015}": {
+                        "mEffectKey": "{11e3ca48}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Doll_Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsKillEvent": false,
+                        "mScalePlaySpeedWithAnimation": true,
+                        "__type": "ParticleEventData"
+                    },
+                    "{7827bd99}": {
+                        "mStopAnimationName": "TURN",
+                        "__type": "StopAnimationEventData"
+                    },
+                    "{8b693c1e}": {
+                        "mSoundName": "Play_sfx_tft17_GwenSpellAttack_cast",
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Groove_Attack_In.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{fdc3268e}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{7827bd99}": {
+                        "mStopAnimationName": "TURN",
+                        "__type": "StopAnimationEventData"
+                    },
+                    "{4f3fa0eb}": {
+                        "mSoundName": "Play_sfx_tft17_GwenSpellAttack_hit",
+                        "__type": "SoundEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Groove_Attack_toIdle.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{e9f991d9}": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{7827bd99}": {
+                        "mStopAnimationName": "TURN",
+                        "__type": "StopAnimationEventData"
+                    },
+                    "{afb02078}": {
+                        "mJointNameToOverride": "R_Hand",
+                        "mJointNameToSnapTo": "SnapJoint2",
+                        "__type": "JointSnapEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Groove_Run.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{58c51a86}": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_Groove_Idle.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{e193b693}": {
+                "mClipNameList": [
+                    "{cab2da1e}",
+                    "{fdc3268e}"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "Challengerdash": {
+                "mTrackDataName": "Default",
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/TFT17_Gwen/Skins/Base/Animations/TFT17_Gwen_ChallengerDash.TFT_Set17.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            }
+        },
+        "mTrackDataMap": {
+            "Default": {
+                "__type": "TrackData"
+            },
+            "TURN": {
+                "mPriority": 1,
+                "mBlendMode": 2,
+                "__type": "TrackData"
+            }
+        },
+        "mBlendDataTable": {
+            "6247030500422183204": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6247030500472516061": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6247030500455738442": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6463208475151427876": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6463208475201760733": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6463208475184983114": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6391149150241679652": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6391149150292012509": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6391149150275234890": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8779298391570114852": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8779298391620447709": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8779298391603670090": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "10832289108335913252": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "10832289108386246109": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "10832289108369468490": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352412101437732": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352412151770589": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352412134992970": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14605976365354314020": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14605976365404646877": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14605976365387869258": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18285501304836057380": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18285501304886390237": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18285501304869612618": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6396548010032097572": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6396548010082430429": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6396548010065652810": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16859667042686593316": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16859667042736926173": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16859667042720148554": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253683312932": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253733645789": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253716868170": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207950763518244": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207950813851101": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207950797073482": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6953959362607048996": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6953959362657381853": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6953959362640604234": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9322143813532248356": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9322143813582581213": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9322143813565803594": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6247030501489771917": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6463208476219016589": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6391149151309268365": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8779298392637703565": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "10832289109403501965": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352413169026445": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14605976366421902733": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18285501305903646093": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6396548011099686285": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16859667043754182029": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364254750901645": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207951831106957": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6953959363674637709": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9322143814599837069": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6247030502368401950": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6463208477097646622": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6391149152187898398": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "8779298393516333598": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "10832289110282131998": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "13630352414047656478": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "14605976367300532766": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "18285501306782276126": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6396548011978316318": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "16859667044632812062": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11374364255629531678": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "3084207952709736990": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6953959364553267742": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "9322143815478467102": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6247030503225108110": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6463208477954352782": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6391149153044604558": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "8779298394373039758": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "10832289111138838158": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "13630352414904362638": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "14605976368157238926": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "18285501307638982286": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6396548012835022478": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "16859667045489518222": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11374364256486237838": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "3084207953566443150": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6953959365409973902": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "9322143816335173262": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6247030500586777906": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6463208475316022578": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6391149150406274354": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8779298391734709554": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "10832289108500507954": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352412266032434": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14605976365518908722": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18285501305000652082": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6396548010196692274": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16859667042851188018": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364253847907634": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207950928112946": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6953959362771643698": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9322143813696843058": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6247030501138163816": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6463208475867408488": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6391149150957660264": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "8779298392286095464": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "10832289109051893864": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "13630352412817418344": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "14605976366070294632": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "18285501305552037992": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6396548010748078184": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16859667043402573928": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "11374364254399293544": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "3084207951479498856": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "6953959363323029608": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "9322143814248228968": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16254536225987418654": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6247030502752237203": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6463208477481481875": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6391149152571733651": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "8779298393900168851": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "10832289110665967251": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "13630352414431491731": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "14605976367684368019": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "18285501307166111379": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6396548012362151571": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "16859667045016647315": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "16254536226371253907": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "11374364256013366931": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "3084207953093572243": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "6953959364937102995": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "9322143815862302355": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "16254536226844124814": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "16254536224041199908": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16254536224091532765": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16254536224074755146": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "16254536225108788621": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            }
+        },
+        "__type": "AnimationGraphData"
+    },
+    "__linked": []
+}

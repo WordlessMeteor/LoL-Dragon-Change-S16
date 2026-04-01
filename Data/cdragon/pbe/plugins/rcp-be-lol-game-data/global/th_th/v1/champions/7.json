@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "LeBlanc พุ่งไปยังพื้นที่เป้าหมายอย่างรวดเร็ว สร้างความเสียหายให้กับศัตรูในบริเวณใกล้เป้าหมาย ภายในเวลา 4 วินาทีหลังจากนั้น เธอสามารถที่จะกดใช้ Distortion อีกครั้ง เพื่อที่จะกลับไปยังจุดที่เธอเริ่มพุ่งออกมาได้",
-            "dynamicDescription": "LeBlanc พุ่งออกไปสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ให้กับศัตรูรอบข้าง เป็นเวลา @Effect3Amount@ วินาทีหลังจากการพุ่ง LeBlanc สามารถ<recast>กดใช้ซ้ำ</recast>ได้<br><br><recast>กดใช้ซ้ำ:</recast> LeBlanc กลับสู่ตำแหน่งเดิมที่เธอพุ่งออกไป@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc พุ่งออกไปสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ให้กับศัตรูใกล้เคียง โดย LeBlanc สามารถ<recast>ร่ายซ้ำ</recast>ได้อีกครั้งภายใน @SnapbackTimeAllowed@ วินาที หลังจากที่พุ่งตัว<br><br><recast>ร่ายซ้ำ:</recast> LeBlanc ย้อนกลับไปยังตำแหน่งที่เธอเริ่มพุ่งตัว@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "LeBlanc ยิงโซ่ที่จะเกี่ยวศัตรูตัวแรกที่โดน ถ้าหากเป้าหมายติดโซ่เป็นเวลา 1.5 วินาที Leblanc จะตรึงพวกเขาและสร้างความเสียหายเพิ่มเติม",
-            "dynamicDescription": "LeBlanc ยิงโซ่ออกไปซึ่งมันจะเกี่ยวศัตรูตัวแรกที่โดน สร้าง<magicDamage>ความเสียหายเวท @InitialDamage@ หน่วย</magicDamage> และทำให้ได้รับ <keywordStealth>True Sight</keywordStealth><br><br>ถ้าหากพวกเขาติดโซ่เป็นเวลา @Effect3Amount@ วินาที LeBlanc จะ<status>ตรึง</status>พวกเขาเป็นเวลา @Effect4Amount@ วินาที และจะสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @DelayedDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc ยิงโซ่ออกไปซึ่งมันจะเกี่ยวศัตรูตัวแรกที่โดน สร้าง<magicDamage>ความเสียหายเวท @InitialDamage@ หน่วย</magicDamage> และมอบ <keywordStealth>True Sight</keywordStealth><br><br>หากพวกเขายังคงถูกล่ามโซ่เป็นเวลา @TetherDuration@ วินาที LeBlanc จะ<status>ตรึง</status>พวกเขาเป็นเวลา @RootDuration@ วินาที และสร้าง<magicDamage>ความเสียหายเวทเพิ่มเติม @DelayedDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

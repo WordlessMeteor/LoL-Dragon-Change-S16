@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Poppy vung búa, gây sát thương và tạo ra một vùng làm chậm kẻ địch đồng thời phát nổ sau một thời gian.",
-            "dynamicDescription": "Poppy đập xuống đất, gây <physicalDamage>sát thương vật lý tương đương @BaseDamage@</physicalDamage> + <physicalDamage>@HealthDamagePercent@% Máu tối đa</physicalDamage> và khiến mặt đất trở nên bất ổn. <br><br>Vùng đó <status>Làm Chậm</status> kẻ địch bên trong đi @Effect3Amount@% và nổ tung sau @Effect4Amount@ giây, gây <physicalDamage>sát thương vật lý tương đương @BaseDamage@</physicalDamage> + <physicalDamage>@HealthDamagePercent@& Máu tối đa</physicalDamage> một lần nữa.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy đập xuống đất, gây <physicalDamage>@BaseDamage@</physicalDamage> sát thương vật lý tương đương cộng thêm <physicalDamage>@HealthDamagePercent@% Máu tối đa</physicalDamage> và khiến mặt đất trở nên bất ổn. <br><br>Vùng đó <status>Làm Chậm</status> kẻ địch bên trong đi @Slow_@% và nổ tung sau @DelayBetweenTwoHits@ giây, gây <physicalDamage>@BaseDamage@</physicalDamage> sát thương vật lý cộng thêm <physicalDamage>@HealthDamagePercent@% Máu tối đa</physicalDamage> một lần nữa.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1223,13 +1223,13 @@
                     9.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    30.0,
+                    60.0,
+                    90.0,
+                    120.0,
+                    150.0,
+                    180.0
                 ],
                 "Effect7Amount": [
                     100.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Poppy nhận thêm Giáp và Kháng Phép nội tại. Điểm thưởng tăng khi cô thấp Máu. Poppy có thể kích hoạt Không Thể Lay Chuyển để ngăn kẻ địch lướt xung quanh và nhận thêm Tốc độ Di chuyển.",
-            "dynamicDescription": "<spellPassive>Nội tại:</spellPassive> Poppy nhận thêm <scaleArmor>@BonusArmor@ Giáp</scaleArmor> và <scaleMR>@BonusMR@ Kháng Phép</scaleMR>. Chỉ số này nhân đôi khi Poppy còn dưới @PassiveEmpoweredHealthPercent*100@% Máu.<br><br><spellPassive>Kích hoạt:</spellPassive> Poppy nhận thêm <speed>@Effect2Amount@% Tốc độ Di chuyển</speed> và dựng lên một vùng không thể lay chuyển xung quanh bản thân trong @Effect1Amount@ giây, ngăn chặn mọi khả năng lướt của kẻ địch. Kẻ địch bị chặn lại sẽ bị <status>Sa Lầy</status> và <status>Làm Chậm</status> @SlowAmount*-100@% trong @GroundingDuration@ giây, đồng thời chịu <magicDamage>@InterruptDamage@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Poppy nhận thêm <scaleArmor>@BonusArmor@ Giáp</scaleArmor> và <scaleMR>@BonusMR@ Kháng Phép</scaleMR>. Nhận gấp đôi nếu Poppy còn dưới @PassiveEmpoweredHealthPercent*100@% Máu.<br><br><spellActive>Kích Hoạt:</spellActive> Poppy nhận <speed>@Haste@% Tốc Độ Di Chuyển</speed> và tạo ra một vùng trường lực xung quanh cô trong @Duration@ giây. Vùng này có thể chặn cú lướt của địch. Kẻ địch bị chặn bởi trường lực sẽ bị <status>Sa Lầy</status> và <status>Làm Chậm</status> đi @SlowAmount*-100@% trong @GroundingDuration@ giây, đồng thời chịu <magicDamage>@InterruptDamage@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Poppy lao tới mục tiêu và đẩy hắn về phía sau. Nếu mục tiêu bị đẩy vào tường, hắn sẽ bị choáng.",
-            "dynamicDescription": "Poppy lao vào kẻ địch, gây <physicalDamage>@TackleDamage@ sát thương vật lý</physicalDamage> và đẩy chúng theo. Nếu Poppy đẩy mục tiêu vào địa hình, chúng sẽ bị <status>Làm Choáng</status> trong @Effect3Amount@ giây và chịu thêm <physicalDamage>@TackleDamage@ sát thương vật lý</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy lao vào một kẻ địch, gây <physicalDamage>@TackleDamage@ sát thương vật lý</physicalDamage> và đẩy chúng đi theo. Nếu Poppy đẩy chúng lao vào địa hình, mục tiêu sẽ bị <status>Làm Choáng</status> trong @StunDuration@ giây và nhận thêm <physicalDamage>@TackleDamage@ sát thương vật lý</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

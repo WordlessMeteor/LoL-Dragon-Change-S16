@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "LeBlanc scatta verso una posizione, infliggendo danni ai nemici vicini alla sua destinazione. Nei prossimi 4 secondi può attivare Distorsione spaziale di nuovo per ritornare al punto di partenza.",
-            "dynamicDescription": "LeBlanc scatta e infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> ai nemici vicini. Per @Effect3Amount@ secondi dopo lo scatto, LeBlanc può <recast>rilanciare</recast>.<br><br><recast>Rilancio:</recast> LeBlanc torna al punto di partenza.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc scatta e infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> ai nemici vicini. Per @SnapbackTimeAllowed@ secondo/i dopo lo scatto, LeBlanc può <recast>Rilanciare</recast>.<br><br><recast>Rilancio:</recast> LeBlanc torna alla posizione iniziale.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "LeBlanc lancia una catena che lega il primo nemico colpito. Se il bersaglio rimane incatenato per 1,5 secondi, LeBlanc lo trattiene e infligge danni bonus.",
-            "dynamicDescription": "LeBlanc lancia una catena che lega il primo nemico colpito, infliggendo <magicDamage> @InitialDamage@ danni magici</magicDamage> e conferendo <keywordStealth>Visione magica</keywordStealth>.<br><br>Se il bersaglio resta incatenato per @Effect3Amount@ secondi, LeBlanc lo <status>trattiene</status> per @Effect4Amount@ secondi e infligge <magicDamage> @DelayedDamage@ danni magici</magicDamage> in più.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc lancia una catena che lega il primo nemico colpito, infliggendo <magicDamage>@InitialDamage@ danni magici</magicDamage> e conferendo <keywordStealth>Visione magica</keywordStealth>.<br><br>Se il bersaglio resta incatenato per @TetherDuration@ secondo/i, LeBlanc lo <status>trattiene</status> per @RootDuration@ secondo/i e infligge <magicDamage>@DelayedDamage@ danni magici</magicDamage> in più.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

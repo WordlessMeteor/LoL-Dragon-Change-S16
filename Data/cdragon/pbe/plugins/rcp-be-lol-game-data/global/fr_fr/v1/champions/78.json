@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Poppy balance son marteau, infligeant des dégâts et créant une zone qui ralentira les ennemis et explosera après un délai.",
-            "dynamicDescription": "Poppy frappe le sol, infligeant <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@% des PV max en dégâts physiques</physicalDamage> et créant une zone instable. <br><br>La zone instable <status>ralentit</status> les ennemis de @Effect3Amount@% et explose au bout de @Effect4Amount@ sec, infligeant à nouveau <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@% des PV max en dégâts physiques</physicalDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy frappe le sol, infligeant <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@% des PV max en dégâts physiques</physicalDamage> et créant une zone instable. <br><br>La zone instable <status>ralentit</status> les ennemis de @Slow_@% et explose au bout de @DelayBetweenTwoHits@ sec, infligeant à nouveau <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@% des PV max en dégâts physiques</physicalDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1223,13 +1223,13 @@
                     9.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    30.0,
+                    60.0,
+                    90.0,
+                    120.0,
+                    150.0,
+                    180.0
                 ],
                 "Effect7Amount": [
                     100.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Poppy obtient passivement de l'armure et de la résistance magique. Ce bonus augmente quand il lui reste peu de PV. Poppy peut activer Présence immuable pour augmenter sa vitesse de déplacement et arrêter les ruées ennemies autour d'elle. Si elle arrête une ruée, l'ennemi est ralenti et inerte.",
-            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Poppy gagne <scaleArmor>+@BonusArmor@ armure</scaleArmor> et <scaleMR>+@BonusMR@ résistance magique</scaleMR>. Ce bonus est doublé si Poppy a moins de @PassiveEmpoweredHealthPercent*100@% de ses PV.<br><br><spellActive>Active :</spellActive> Poppy gagne <speed>+@Effect2Amount@% de vitesse de déplacement</speed> et crée un champ autour d'elle pendant @Effect1Amount@ sec qui arrête les ruées ennemies. Les ennemis qui sont arrêtés par le champ sont rendus <status>inertes</status> et sont <status>ralentis</status> de @SlowAmount*-100@% pendant @GroundingDuration@ sec, et ils subissent <magicDamage>@InterruptDamage@ pts de dégâts magiques</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Poppy gagne <scaleArmor>@BonusArmor@ armure</scaleArmor> et <scaleMR>@BonusMR@ résistance magique</scaleMR>. Ce bonus est doublé si Poppy possède moins de @PassiveEmpoweredHealthPercent*100@% de ses PV.<br><br><spellActive>Active :</spellActive> Poppy gagne <speed>@Haste@% de vitesse de déplacement</speed> et crée autour d'elle un champ qui arrête les ruées ennemies pendant @Duration@ sec. Les ennemis qui sont arrêtés par le champ sont rendus <status>inertes</status> et sont <status>ralentis</status> de @SlowAmount*-100@% pendant @GroundingDuration@ sec, et ils subissent <magicDamage>@InterruptDamage@ pts de dégâts magiques</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Poppy charge la cible et la repousse. Si la cible est repoussée contre un mur, elle est étourdie.",
-            "dynamicDescription": "Poppy se précipite sur un ennemi, lui infligeant <physicalDamage>@TackleDamage@ pts de dégâts physiques</physicalDamage> et le traînant sur une courte distance. Si Poppy le plaque contre un obstacle, l'ennemi est <status>étourdi</status> pendant @Effect3Amount@ sec et subit <physicalDamage>@TackleDamage@ pts de dégâts physiques</physicalDamage> supplémentaires.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy se précipite sur un ennemi, lui infligeant <physicalDamage>@TackleDamage@ pts de dégâts physiques</physicalDamage> et le traînant sur une courte distance. Si Poppy le plaque contre un obstacle, l'ennemi est <status>étourdi</status> pendant @StunDuration@ sec et subit <physicalDamage>@TackleDamage@ pts de dégâts physiques</physicalDamage> bonus.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

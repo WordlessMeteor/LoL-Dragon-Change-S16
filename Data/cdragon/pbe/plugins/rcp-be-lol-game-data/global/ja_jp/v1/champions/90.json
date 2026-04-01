@@ -1240,7 +1240,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ヴォイドへ繋がるゲートを2カ所に発生させる。発動から一瞬遅れてゲートからエネルギーが発射され、命中した敵ユニットに魔法ダメージを与える。敵チャンピオンに対しては、さらにサイレンス効果を与える。",
-            "dynamicDescription": "指定地点にヴォイドへ通じるゲートを2カ所発生させ、ゲートからエネルギーが内向きに放たれる。命中した敵に<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与え、@Effect2Amount@秒間<status>サイレンス効果</status>を付与する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "指定地点にヴォイドへ通じるゲートを2カ所発生させ、ゲートからエネルギーが内向きに放たれる。命中した敵に<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与え、@SilenceDuration@秒間<status>サイレンス効果</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 900.0,
                 900.0,
@@ -1690,7 +1690,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ダメージを与える負のエネルギーに満ちた領域上で敵チャンピオンにヴォイドのエネルギーを注ぎ込み、サプレッション効果を付与する。",
-            "dynamicDescription": "敵チャンピオンに<status>サプレッション効果</status>を与えて、@Effect4Amount@秒かけて<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与える。対象の周囲に負のエネルギーに満ちた領域を召喚して、@Effect3Amount@秒かけて<magicDamage>最大体力の@ZoneDamageTooltip@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "敵チャンピオンに<status>サプレッション効果</status>を与えて、@CCDuration@秒かけて<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与える。対象の周囲に負のエネルギーに満ちた領域を召喚して、@PoolDuration@秒かけて<magicDamage>@ZoneDamageTooltip@最大体力のの魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

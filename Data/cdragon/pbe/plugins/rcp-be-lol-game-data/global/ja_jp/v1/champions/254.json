@@ -1208,7 +1208,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ガントレットにエネルギーをチャージした後、指定方向に猛ダッシュしながらパンチを繰り出す。敵ユニットに命中するとダメージとノックバックを与える。これは「メッタ打ち」の連続攻撃回数にもカウントされる。",
-            "dynamicDescription": "<charge>チャージ開始:</charge> 強烈なパンチのチャージを開始して、自身は@Effect4Amount@%の<status>スロウ効果</status>を受ける。<br><br><release>解放:</release> 前方にダッシュして、当たったすべての敵にチャージ時間に応じて<physicalDamage>@TotalDamage@-@MaxDamageTooltip@の物理ダメージ</physicalDamage>を与え、<spellName>「メッタ打ち」</spellName>を付与する。敵チャンピオンに当たるとその場で停止し、対象を<status>ノック</status><status>バック</status>する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<charge>チャージ開始:</charge> 強烈なパンチのチャージを開始して、自身は@SelfSlow@%の<status>スロウ効果</status>を受ける。<br><br><release>解放:</release> 前方にダッシュして、命中したすべての敵にチャージ時間に応じて<physicalDamage>@TotalDamage@ - @MaxDamageTooltip@の物理ダメージ</physicalDamage>を与える。また、命中した攻撃すべてが<spellName>メッタ打ち</spellName>の連続攻撃にカウントされる。敵チャンピオンに衝突するとその場で停止し、対象を<status>ノック</status><status>バック</status>させる。@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,

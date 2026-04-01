@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "LeBlanc avança até um local, causando dano aos inimigos próximos de seu destino. Pelos próximos 4s, ativar Distorção novamente faz com que LeBlanc retorne até sua posição inicial.",
-            "dynamicDescription": "LeBlanc avança e causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> aos inimigos próximos. Por @Effect3Amount@s depois de avançar, LeBlanc pode <recast>Reconjurar</recast>.<br><br><recast>Reconjuração:</recast> LeBlanc retorna ao local inicial.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc avança e causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> aos inimigos próximos. Por @SnapbackTimeAllowed@s depois de avançar, LeBlanc pode <recast>Reconjurar</recast>.<br><br><recast>Reconjuração:</recast> LeBlanc retorna ao local inicial.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "LeBlanc lança uma corrente que prende a primeira unidade atingida. Se o alvo permanecer preso por 1,5s, ele é enraizado e sofre dano adicional.",
-            "dynamicDescription": "LeBlanc lança uma corrente que se prende ao primeiro inimigo atingido, causando <magicDamage>@InitialDamage@ de Dano Mágico</magicDamage> e concedendo <keywordStealth>Visão Mágica</keywordStealth> dele.<br><br>Se permanecer preso por @Effect3Amount@s, o inimigo é <status>Enraizado</status> por @Effect4Amount@s e sofre <magicDamage>@DelayedDamage@ de Dano Mágico</magicDamage> adicional.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc lança uma corrente que se prende ao primeiro inimigo atingido, causando <magicDamage>@InitialDamage@ de Dano Mágico</magicDamage> e concedendo <keywordStealth>Visão Mágica</keywordStealth>.<br><br>Caso permaneça preso por @TetherDuration@s, o inimigo é <status>Enraizado</status> por @RootDuration@s e sofre <magicDamage>@DelayedDamage@ de Dano Mágico</magicDamage> adicional.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

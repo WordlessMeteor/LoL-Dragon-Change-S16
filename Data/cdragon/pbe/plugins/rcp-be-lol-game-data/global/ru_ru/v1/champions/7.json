@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Ле Блан совершает рывок в выбранную точку, после чего наносит урон врагам вокруг себя. При повторной активации умения в течение следующих 4 секунд она возвращается в исходную точку.",
-            "dynamicDescription": "Ле Блан совершает рывок, после чего наносит <magicDamage>@TotalDamage@ магического урона</magicDamage> врагам поблизости. Ле Блан может <recast>повторно применить</recast> это умение в течение @Effect3Amount@ сек.<br><br><recast>Повторное применение:</recast> Ле Блан возвращается в то место, из которого совершила рывок.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ле Блан совершает рывок, после чего наносит <magicDamage>@TotalDamage@ ед. магического урона</magicDamage> врагам поблизости. Ле Блан может <recast>повторно применить</recast> это умение в течение @SnapbackTimeAllowed@ сек.<br><br><recast>Повторное применение:</recast> Ле Блан возвращается в место, из которого совершила рывок.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Ле Блан бросает цепь, которая сковывает первого пораженного врага. Если цель остается скованной в течение 1.5 секунды, Ле Блан обездвиживает ее и наносит дополнительный урон.",
-            "dynamicDescription": "Ле Блан бросает цепь, которая сковывает первого пораженного врага, нанося <magicDamage>@InitialDamage@ магического урона</magicDamage>. Кроме того, Ле Блан получает <keywordStealth>истинное видение</keywordStealth> цели.<br><br>Если цель остается скованной в течение @Effect3Amount@ сек., Ле Блан <status>обездвиживает</status> ее на @Effect4Amount@ сек. и дополнительно наносит <magicDamage>@DelayedDamage@ магического урона</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ле Блан бросает цепь, которая сковывает первого пораженного врага, нанося <magicDamage>@InitialDamage@ ед. магического урона</magicDamage>. Ле Блан получает <keywordStealth>истинное видение</keywordStealth> цели.<br><br>Если цель скована в течение @TetherDuration@ сек., Ле Блан <status>обездвиживает</status> ее на @RootDuration@ сек. и дополнительно наносит <magicDamage>@DelayedDamage@ ед. магического урона</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

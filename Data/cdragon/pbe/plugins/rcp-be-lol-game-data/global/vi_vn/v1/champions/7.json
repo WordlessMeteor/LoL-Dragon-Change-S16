@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "LeBlanc lướt tới vị trí chỉ định, gây sát thương lên các đơn vị gần đó. Trong 4 giây tiếp theo, cô có thể kích hoạt Biến Ảnh lần nữa để trở về điểm bắt đầu.",
-            "dynamicDescription": "LeBlanc bay tới và gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên những kẻ địch ở gần. Trong @Effect3Amount@ giây sau khi bay tới, LeBlanc có thể <recast>Tái kích hoạt</recast>.<br><br><recast>Tái kích hoạt:</recast> LeBlanc dịch chuyển về vị trí khi bắt đầu thi triển.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc lướt tới, sau đó gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên các kẻ địch ở gần. Trong @SnapbackTimeAllowed@ giây sau khi lướt, LeBlanc có thể <recast>Tái Kích Hoạt</recast>.<br><br><recast>Tái Kích Hoạt:</recast> LeBlanc quay lại vị trí ban đầu.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "LeBlanc tung sợi xích ảo thuật vào vị trí chỉ định. Nếu trúng một đơn vị địch, nó sẽ xích lấy chúng. Nếu mục tiêu vẫn bị xích trong 1.5 giây, LeBlanc trói chân kẻ đó và gây thêm sát thương.",
-            "dynamicDescription": "LeBlanc tung ra sợi xích và tạo kết nối với kẻ địch đầu tiên trúng phải, gây <magicDamage>@InitialDamage@ sát thương phép</magicDamage> và cho <keywordStealth>Tầm Nhìn Chuẩn</keywordStealth> của chúng.<br><br>Nếu mục tiêu vẫn kết nối qua sợi xích trong @Effect3Amount@ giây, LeBlanc sẽ <status>Trói Chân</status> chúng trong @Effect4Amount@ giây và gây thêm <magicDamage>@DelayedDamage@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tung sợi xích nối đơn vị đầu tiên trúng phải với LeBlanc, gây <magicDamage>@InitialDamage@ sát thương phép</magicDamage> và cho <keywordStealth>Tầm Nhìn Chuẩn</keywordStealth>.<br><br>Nếu mục tiêu bị xích trong @TetherDuration@ giây, LeBlanc sẽ <status>Trói Chân</status> chúng trong @RootDuration@ giây và gây thêm <magicDamage>@DelayedDamage@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

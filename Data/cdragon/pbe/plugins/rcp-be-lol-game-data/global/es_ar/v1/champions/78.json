@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Poppy agita su martillo, lo que inflige daño y crea un área que ralentiza a los enemigos y estalla luego de un rato.",
-            "dynamicDescription": "Poppy aplasta el suelo, lo que inflige <physicalDamage>@BaseDamage@</physicalDamage> más un <physicalDamage>@HealthDamagePercent@% de la Vida Máxima como daño físico</physicalDamage>, además de hacer el terreno inestable. <br><br>El terreno inestable <status>ralentiza</status> a los enemigos en un @Effect3Amount@%. El terreno hace erupción tras @Effect4Amount@ seg, lo que inflige <physicalDamage>@BaseDamage@</physicalDamage> más un <physicalDamage>@HealthDamagePercent@% de la Vida Máxima como daño físico</physicalDamage> de nuevo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy golpea el suelo, lo que inflige <physicalDamage>@BaseDamage@</physicalDamage> más un <physicalDamage>@HealthDamagePercent@% de su Vida Máxima como daño físico</physicalDamage>, además de hacer el terreno inestable.<br><br>El terreno inestable <status>ralentiza</status> a los enemigos en un @Slow_@%. El terreno hace erupción tras @DelayBetweenTwoHits@ seg, lo que inflige <physicalDamage>@BaseDamage@</physicalDamage> más un <physicalDamage>@HealthDamagePercent@% de la Vida Máxima como daño físico</physicalDamage> de nuevo.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1223,13 +1223,13 @@
                     9.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    30.0,
+                    60.0,
+                    90.0,
+                    120.0,
+                    150.0,
+                    180.0
                 ],
                 "Effect7Amount": [
                     100.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Poppy obtiene resistencia mágica y armadura de forma pasiva. Este efecto aumenta cuando tiene poca vida. Poppy puede activar Presencia Inalterable para obtener velocidad de movimiento y detener los desplazamientos de enemigos alrededor de ella. Si detiene un desplazamiento, el enemigo quedará ralentizado y anclado.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Poppy obtiene <scaleArmor>@BonusArmor@ de Armadura</scaleArmor> y <scaleMR>@BonusMR@ de Resistencia Mágica</scaleMR>. Este efecto adicional se duplica si Poppy se encuentra por debajo del @PassiveEmpoweredHealthPercent*100@% de Vida.<br><br><spellActive>Activa:</spellActive> Poppy obtiene un <speed>@Effect2Amount@% de Velocidad de Movimiento</speed> y proyecta un campo a su alrededor durante @Effect1Amount@ seg que detiene el desplazamiento de los enemigos. Los enemigos que el campo detenga quedarán <status>anclados</status> y <status>ralentizados</status> un @SlowAmount*-100@% durante @GroundingDuration@ seg y recibirán <magicDamage>@InterruptDamage@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Poppy obtiene <scaleArmor>@BonusArmor@ de armadura</scaleArmor> y <scaleMR>@BonusMR@ de Resistencia Mágica</scaleMR>. Esta bonificación se duplica si Poppy tiene menos del @PassiveEmpoweredHealthPercent*100@% de Vida.<br><br><spellActive>Activa:</spellActive> Poppy obtiene un <speed>@Haste@% de Velocidad de Movimiento</speed> y proyecta un campo que detiene los desplazamientos de los enemigos a su alrededor durante @Duration@ seg. Los enemigos que son detenidos por el campo quedan <status>anclados</status> y <status>ralentizados</status> en un @SlowAmount*-100@% durante @GroundingDuration@ seg y recibe <magicDamage>@InterruptDamage@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Poppy se desplaza hacia el objetivo y lo empuja. Si el objetivo choca con un muro, queda aturdido.",
-            "dynamicDescription": "Poppy se abalanza sobre un enemigo, le inflige <physicalDamage>@TackleDamage@ de daño físico</physicalDamage> y lo empuja hacia delante. Si Poppy lo empuja hacia un área de terreno, el enemigo queda <status>aturdido</status> durante @Effect3Amount@ seg y recibirá <physicalDamage>@TackleDamage@ de daño físico</physicalDamage> adicional.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy carga contra un enemigo, lo que le inflige <physicalDamage>@TackleDamage@ de daño físico</physicalDamage> y lo arrastra con ella. Si Poppy lo estrella contra el terreno, el enemigo quedará <status>aturdido</status> durante @StunDuration@ seg y recibirá <physicalDamage>@TackleDamage@ de daño físico</physicalDamage> adicional.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

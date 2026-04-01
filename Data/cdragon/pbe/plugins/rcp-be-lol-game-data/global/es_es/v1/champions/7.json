@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "LeBlanc se desliza hacia una ubicación e inflige daño a los enemigos cercanos a su destino. Durante los siguientes 4 s, LeBlanc puede activar Distorsión de nuevo para volver al lugar de origen.",
-            "dynamicDescription": "LeBlanc se desliza e inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos cercanos. Durante @Effect3Amount@ s después de deslizarse, LeBlanc puede <recast>reactivar</recast> la habilidad.<br><br><recast>Reactivar la habilidad:</recast> LeBlanc vuelve a la ubicación original.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc se desliza e inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos cercanos. Durante @SnapbackTimeAllowed@ s después de deslizarse, LeBlanc puede <recast>reactivar</recast> la habilidad.<br><br><recast>Reactivación:</recast> LeBlanc vuelve a la ubicación original.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "LeBlanc lanza una cadena que ata al primer enemigo alcanzado. Si el objetivo permanece encadenado durante 1,5 s, LeBlanc lo enraiza y le inflige daño adicional.",
-            "dynamicDescription": "LeBlanc lanza una cadena que ata al primer enemigo alcanzado. Inflige <magicDamage>@InitialDamage@ de daño mágico</magicDamage> y otorga <keywordStealth>visión verdadera</keywordStealth>.<br><br>Si el enemigo permanece encadenado durante @Effect3Amount@ s, LeBlanc lo <status>enraiza</status> durante @Effect4Amount@ s y le inflige <magicDamage>@DelayedDamage@ de daño mágico</magicDamage> adicional.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc lanza una cadena que ata al primer enemigo alcanzado, lo que inflige <magicDamage>@InitialDamage@ de daño mágico</magicDamage> y otorga <keywordStealth>visión verdadera</keywordStealth>.<br><br>Si el enemigo permanece encadenado durante @TetherDuration@ s, LeBlanc lo <status>enraíza</status> durante @RootDuration@ s y le inflige <magicDamage>@DelayedDamage@ de daño mágico</magicDamage> adicional.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

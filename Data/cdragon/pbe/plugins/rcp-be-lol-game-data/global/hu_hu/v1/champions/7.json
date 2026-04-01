@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "LeBlanc a kijelölt helyre siet, és megsebzi az annak közelében lévő ellenfeleket. A következő 4 másodpercben az Elfedés újraaktiválásával LeBlanc visszatérhet a kiindulópontra.",
-            "dynamicDescription": "LeBlanc rohamot indít, és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a közelben lévő ellenfeleknek. A roham után @Effect3Amount@ másodpercig <recast>újraaktiválhatja</recast> a képességet.<br><br><recast>Újraaktiválás:</recast> LeBlanc visszatér a kiindulási helyére.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc rohamot indít, és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a közelben lévő ellenfeleknek. A roham után @SnapbackTimeAllowed@ másodpercig <recast>újraaktiválhatja</recast> a képességet.<br><br><recast>Újraaktiválás:</recast> LeBlanc visszatér a kiindulási helyére.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "LeBlanc kilő egy láncot, amely megbéklyózza az első eltalált ellenfelet. Ha a célpont 1,5 másodpercig láncra verve marad, LeBlanc mozgásképtelenné teszi, és további sebzést okoz neki.",
-            "dynamicDescription": "LeBlanc kilő egy láncot, amely megbéklyózza az első eltalált ellenfelet, <magicDamage>@InitialDamage@ varázssebzést</magicDamage> okoz neki, és <keywordStealth>Igazlátással</keywordStealth> felfedi.<br><br>Ha az áldozat @Effect3Amount@ másodpercig megbéklyózva marad, LeBlanc @Effect4Amount@ másodpercre <status>mozgásképtelenné</status> teszi, és további <magicDamage>@DelayedDamage@ varázssebzést</magicDamage> okoz neki.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc kilő egy láncot, amely megbéklyózza az első eltalált ellenfelet, <magicDamage>@InitialDamage@ varázssebzést</magicDamage> okoz neki, és <keywordStealth>Igazlátással</keywordStealth> felfedi.<br><br>Ha az áldozat @TetherDuration@ másodpercig megbéklyózva marad, LeBlanc @RootDuration@ másodpercre <status>földbe gyökerezteti</status>, és további <magicDamage>@DelayedDamage@ varázssebzést</magicDamage> okoz neki.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

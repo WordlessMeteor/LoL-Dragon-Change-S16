@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "LeBlanc springt zu einem Zielort und verursacht Schaden an Gegnern, die sich in der Nähe aufhalten. Danach kann sie „Verzerrung“ 4&nbsp;Sekunden lang erneut einsetzen, um an ihre Ausgangsposition zurückzukehren.",
-            "dynamicDescription": "LeBlanc springt los und fügt Gegnern in der Nähe <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu. LeBlanc kann die Fähigkeit innerhalb von @Effect3Amount@&nbsp;Sekunden nach dem Sprung <recast>reaktivieren</recast>.<br><br><recast>Reaktivierung:</recast> LeBlanc kehrt wieder an ihre ursprüngliche Position zurück.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc springt los und fügt Gegnern in der Nähe <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zu. LeBlanc kann die Fähigkeit innerhalb von @SnapbackTimeAllowed@&nbsp;Sekunden nach dem Sprung <recast>reaktivieren</recast>.<br><br><recast>Reaktivierung:</recast> LeBlanc kehrt an ihre ursprüngliche Position zurück.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "LeBlanc wirft eine Kette, die die erste getroffene Einheit an sie bindet. Bleibt das Ziel 1,5&nbsp;Sekunden lang angekettet, erleidet es zusätzlichen Schaden und wird festgehalten.",
-            "dynamicDescription": "LeBlanc wirft eine Kette, die die erste getroffene Einheit an sie bindet, <magicDamage>@InitialDamage@ magischen Schaden</magicDamage> verursacht und <keywordStealth>absolute Sicht</keywordStealth> auf die Einheit gewährt.<br><br>Bleibt das Ziel @Effect3Amount@&nbsp;Sekunden lang angekettet, wird es @Effect4Amount@&nbsp;Sekunden lang <status>festgehalten</status> und erleidet zusätzlich <magicDamage>@DelayedDamage@ magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc wirft eine Kette, die die erste getroffene Einheit an sie bindet, <magicDamage>@InitialDamage@&nbsp;magischen Schaden</magicDamage> verursacht und <keywordStealth>absolute Sicht</keywordStealth> gewährt.<br><br>Bleibt das Ziel @TetherDuration@&nbsp;Sekunden lang angekettet, wird es @RootDuration@&nbsp;Sekunden lang <status>festgehalten</status> und erleidet zusätzlich <magicDamage>@DelayedDamage@&nbsp;magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

@@ -1,0 +1,99 @@
+{
+    "{8d461d79}": {
+        "skinAudioProperties": {
+            "tagEventList": [
+                "TFT_Template_AnimProp",
+                "TFT_Template_AnimPropSkin0",
+                "TFT17_AnimaSquadProp"
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "{d5705656}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TFT17_FizzUltMeep/Skins/Base/TFT17_FizzUltMeep_17.TFT_Set17.skl",
+            "simpleSkin": "ASSETS/Characters/TFT17_FizzUltMeep/Skins/Base/TFT17_FizzUltMeep_17.TFT_Set17.skn",
+            "selfIllumination": 0.699999988079071,
+            "Material": "{e431ae5d}",
+            "__type": "SkinMeshDataProperties"
+        },
+        "iconSquare": "ASSETS/Characters/TFT13_Lieutenant/HUD/TFT13_Lieutenant_Square.TFT_Set13.tex",
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
+        "healthBarData": {
+            "hpPerTick": 300.0,
+            "unitHealthBarStyle": 15,
+            "showWhileUntargetable": true,
+            "AlphaOutWhileUntargetable": false,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "{8f8cb97b}",
+        "mAdditionalResourceResolvers": [
+            "Maps/Shipping/Map22/MapSkins/Default/Resources"
+        ],
+        "__type": "TftSkinCharacterDataProperties"
+    },
+    "{8f8cb97b}": {
+        "__type": "ResourceResolver"
+    },
+    "{e431ae5d}": {
+        "name": "Characters/TFT17_FizzUltMeep/Skins/Skin0/Materials/Diffuse_Only_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT17_FizzUltMeep/Skins/Base/TFT17_FizzUltMeep_Base_TX_CM.TFT_Set17.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "ShadowClip",
+                "value": [
+                    0.33000001311302185,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Only",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": [
+        "Characters/TFT17_FizzUltMeep",
+        "DATA/Characters/TFT17_FizzUltMeep/Animations/Skin0.bin"
+    ]
+}

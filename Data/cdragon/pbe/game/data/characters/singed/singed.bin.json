@@ -307,6 +307,10 @@
                         8.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamagePerTick",
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -658,13 +662,80 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseDamageValue",
+                    "values": [
+                        50.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RootDuration",
+                    "values": [
+                        0.75,
+                        1.0,
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxHPDamage",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.5,
+                        7.0,
+                        7.5,
+                        8.0,
+                        8.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FlingDistance",
+                    "values": [
+                        420.0,
+                        420.0,
+                        420.0,
+                        420.0,
+                        420.0,
+                        420.0,
+                        420.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "NonChampionDamageCap",
+                    "values": [
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "BaseDamage": {
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "{af7d6b86}",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.550000011920929,
@@ -1240,6 +1311,10 @@
                         0.375,
                         0.375
                     ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Radius",
                     "__type": "SpellDataValue"
                 }
             ],

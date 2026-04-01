@@ -8832,6 +8832,16 @@
         "name": "TFTOnBenchFullError",
         "__type": "DesignerEvent"
     },
+    "{6874a201}": {
+        "name": "TFT17MechaTransform",
+        "EventParameters": {
+            "isUltimateForm": {
+                "Var": "{cac0be40}",
+                "__type": "ScriptTableGet"
+            }
+        },
+        "__type": "DesignerEvent"
+    },
     "{69ceb902}": {
         "name": "TeleportPadActivate",
         "__type": "DesignerEvent"
@@ -9172,6 +9182,10 @@
         "name": "OnSimulatedLaunchAttack",
         "__type": "DesignerEvent"
     },
+    "{a3963f7a}": {
+        "name": "TFT17CarouselMarketMajorPurchasesFinished",
+        "__type": "DesignerEvent"
+    },
     "{a45753f5}": {
         "name": "TFTPlayerOwnedItemMoved",
         "EventParameters": {
@@ -9400,6 +9414,10 @@
     },
     "{cb0d542b}": {
         "name": "TFTOnDropUnit",
+        "__type": "DesignerEvent"
+    },
+    "{ce0ee868}": {
+        "name": "TFTItemEffectivenessChanged",
         "__type": "DesignerEvent"
     },
     "{ce656844}": {
@@ -18679,7 +18697,7 @@
             "DisableSpectator",
             "EarlySurrenderTimeout(600)",
             "MaxGameLength(5400)",
-            "TFT_Set16(1)",
+            "TFT_Set17(1)",
             "Pride_Trail(1)",
             "TFT_ShopV2(1)",
             "TFTRespawnOnDeployRefactor(1)",
@@ -19197,8 +19215,8 @@
     "{3afe8d29}": {
         "mExpandedMutator": "TFT_PAIRS",
         "mMutators": [
-            "TFT_Set16(1)",
-            "TFTSetOverride(TFTSet16_PAIRS)"
+            "TFT_Set17(1)",
+            "TFTSetOverride(TFTSet17_PAIRS)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -19938,6 +19956,16 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{7bb460c8}": {
+        "mExpandedMutator": "TFT_Set17",
+        "mMutators": [
+            "TFTSetOverride(TFTSet17)",
+            "AudioFeature(TFTSet17)",
+            "TFT_RolesRevamped(1)",
+            "TFTGoopBuffEnabled(1)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
     "{7cb4625b}": {
         "mExpandedMutator": "TFT_Set16",
         "mMutators": [
@@ -20382,6 +20410,13 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{abeb978a}": {
+        "mExpandedMutator": "MapSkin_TFT_CarouselSet17",
+        "mMutators": [
+            "MapID(22)?MapSkinName(CarouselSet17)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
     "{aceb991d}": {
         "mExpandedMutator": "MapSkin_TFT_CarouselSet16",
         "mMutators": [
@@ -20527,6 +20562,17 @@
             "MapID(11)?NeutralMinionSpawnScript(NeutralMinionSpawn_QUICKPLAY.lua)",
             "MapID(11)?LevelScriptFile(LevelScript_SWIFTPLAY.lua)",
             "MapSkin_Map11_SocialSR"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
+    "{ba5f7005}": {
+        "mExpandedMutator": "TFT_PVE_PUZZLE_SET17",
+        "mMutators": [
+            "TFTSetOverride(TFTSet17_PVEMODE)",
+            "AudioFeature(TFTSet17)",
+            "TFT_PVE(1)",
+            "TFTGoopBuffEnabled(1)",
+            "TFT_RolesRevamped(1)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -23310,13 +23356,18 @@
             "{8d1b31e9}": true,
             "{fb9572d0}": true,
             "{96eee674}": true,
+            "{51601c15}": true,
             "{e2213221}": false,
             "{2094dd6e}": true,
             "{724bed8c}": true,
             "{46a63d99}": true,
             "{7aacbbbc}": true,
+            "{90ede9a7}": true,
             "{4ed93bd7}": true,
             "{01947bf4}": true,
+            "{2da5d839}": true,
+            "{067b280d}": true,
+            "{1f7a2991}": true,
             "__type": "LoLFeatureToggles"
         },
         "mGameplayToggles": {

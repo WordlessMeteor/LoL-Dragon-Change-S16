@@ -1430,7 +1430,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1700,7 +1700,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "乐芙兰位移至目标位置，并对目标位置附近的敌人造成伤害。在接下来的4秒里，她可以激活此技能来回到她的初始位置。",
-            "dynamicDescription": "乐芙兰冲刺然后对附近的敌人们造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。在冲刺后的@Effect3Amount@秒里，乐芙兰可以<recast>再次施放</recast>。<br><br><recast>再次施放：</recast>乐芙兰回到她的初始位置。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "乐芙兰冲刺然后对附近的敌人们造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。在冲刺后的@SnapbackTimeAllowed@秒里，乐芙兰可以<recast>再次施放</recast>。<br><br><recast>再次施放：</recast>乐芙兰回到她的初始位置。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1850,7 +1850,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "乐芙兰抛出一条锁链来束缚命中的第一个敌人。如果目标持续被束缚1.5秒，那么目标就会受到额外的魔法伤害并且被禁锢。",
-            "dynamicDescription": "乐芙兰抛出一个锁链来束缚命中的第一个敌人，造成<magicDamage>@InitialDamage@魔法伤害</magicDamage>并提供目标的<keywordStealth>真实视野</keywordStealth>。<br><br>如果目标持续被束缚@Effect3Amount@秒，则乐芙兰会将其<status>禁锢</status>@Effect4Amount@秒，并造成额外的<magicDamage>@DelayedDamage@魔法伤害</magicDamage>。 @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "乐芙兰抛出一个锁链来束缚命中的第一个敌人，造成<magicDamage>@InitialDamage@魔法伤害</magicDamage>并提供目标的<keywordStealth>真实视野</keywordStealth>。<br><br>如果目标持续被束缚@TetherDuration@秒，则乐芙兰会将其<status>禁锢</status>@RootDuration@秒，并造成额外的<magicDamage>@DelayedDamage@魔法伤害</magicDamage>。 @SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

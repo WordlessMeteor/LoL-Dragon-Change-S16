@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Poppy ควงค้อนของเธอ ที่สร้างความเสียหาย และสร้างพื้นที่ที่จะสโลว์ศัตรูด้านใน แล้วหลังจากนั้นมันจะระเบิดออก",
-            "dynamicDescription": "Poppy ทุบพื้นดิน สร้าง<physicalDamage>ความเสียหายกายภาพ @BaseDamage@ หน่วย</physicalDamage> บวกด้วย <physicalDamage>@HealthDamagePercent@% ของพลังชีวิตสูงสุด</physicalDamage> และทำให้เกิดพื้นที่ที่ไม่มั่นคงขึ้นมา <br><br>พื้นที่นั้นจะ<status>สโลว์</status>ศัตรู @Effect3Amount@% และจะปะทุขึ้นหลังจากผ่านไป @Effect4Amount@ วินาที สร้าง<physicalDamage>ความเสียหายกายภาพ @BaseDamage@ หน่วย</physicalDamage> บวกด้วย <physicalDamage>@HealthDamagePercent@% ของพลังชีวิตสูงสุด</physicalDamage>อีกครั้ง@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy ทุบพื้นดิน สร้าง<physicalDamage>ความเสียหายกายภาพ @BaseDamage@ หน่วย</physicalDamage> บวกด้วย <physicalDamage>@HealthDamagePercent@% ของพลังชีวิตสูงสุด</physicalDamage> และทำให้เกิดพื้นที่ที่ไม่มั่นคงขึ้นมา<br><br>โดยพื้นที่ดังกล่าวจะ<status>สโลว์</status>ศัตรู @Slow_@% และจะปะทุขึ้นหลังจากผ่านไป @DelayBetweenTwoHits@ วินาที สร้าง<physicalDamage>ความเสียหายกายภาพ @BaseDamage@ หน่วย</physicalDamage> บวกด้วย <physicalDamage>@HealthDamagePercent@% ของพลังชีวิตสูงสุด</physicalDamage>อีกครั้ง@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1223,13 +1223,13 @@
                     9.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    30.0,
+                    60.0,
+                    90.0,
+                    120.0,
+                    150.0,
+                    180.0
                 ],
                 "Effect7Amount": [
                     100.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Poppy ได้รับเกราะและต้านทานเวท โบนัสนี้จะเพิ่มขึ้นเมื่อเธอมีพลังชีวิตเหลือน้อย Poppy สามารถกดใช้งาน Steadfast Presence เพื่อรับความเร็วเคลื่อนที่เพิ่มและหยุดการพึ่งของศัตรูที่อยู่รอบตัวเธอ หากการพุ่งถูกหยุดลง ศัตรูจะถูกสโลว์และยึดติดกับพื้น",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> Poppy ได้รับค่า<scaleArmor>เกราะ @BonusArmor@ หน่วย</scaleArmor> และ<scaleMR>ค่าต้านทานเวท @BonusMR@ หน่วย</scaleMR> โบนัสนี้จะเพิ่มขึ้นสองเท่าหาก Poppy มีพลังชีวิตต่ำกว่า @PassiveEmpoweredHealthPercent*100@%<br><br><spellActive>กดใช้:</spellActive> Poppy จะเพิ่ม<speed>ความเร็วเคลื่อนที่ @Effect2Amount@%</speed> และปล่อยพื้นที่ออกมารอบตัวเธอเป็นเวลา @Effect1Amount@ วินาทีที่จะหยุดการพุ่งของศัตรู ศัตรูที่ถูกหยุดการเคลื่อนที่จากพื้นที่นี้จะถูก<status>ตรึง</status> และ<status>สโลว์</status> @SlowAmount*-100@% เป็นเวลา @GroundingDuration@ วินาทีและรับ<magicDamage>ความเสียหายเวท @InterruptDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> Poppy ได้รับ<scaleArmor>เกราะ @BonusArmor@ หน่วย</scaleArmor> และ<scaleMR>ต้านทานเวท @BonusMR@ หน่วย</scaleMR> โบนัสนี้จะเพิ่มเป็นสองเท่าหาก Poppy มีพลังชีวิตต่ำกว่า @PassiveEmpoweredHealthPercent*100@%<br><br><spellActive>กดใช้:</spellActive> Poppy ได้รับ<speed>ความเร็วเคลื่อนที่ @Haste@%</speed> และสร้างพื้นที่ที่จะหยุดการพุ่งของศัตรูรอบตัวเธอเป็นเวลา @Duration@ วินาที ศัตรูที่ถูกหยุดจะได้รับ<magicDamage>ความเสียหายเวท @InterruptDamage@ หน่วย</magicDamage> และถูก<status>ยึดติดกับพื้น</status>พร้อมกับถูก<status>สโลว์</status> @SlowAmount*-100@% เป็นเวลา @GroundingDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Poppy พุ่งตัวเข้าชนเป้าหมาย แล้วกระแทกมันให้กระเด็นถอยไป ถ้าหากเป้าหมายถูกดันเข้ากำแพง จะทำให้เป้าหมายติดสตันอีกด้วย",
-            "dynamicDescription": "Poppy พุ่งตัวเข้าชนศัตรู สร้าง<physicalDamage>ความเสียหายกายภาพ @TackleDamage@ หน่วย</physicalDamage> และดันพวกเขาไปทิศทางนั้น หาก Poppy กระแทกพวกเขาชนสิ่งกีดขวาง ศัตรูจะถูก<status>สตัน</status>เป็นเวลา @Effect3Amount@ วินาทีและได้รับ<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @TackleDamage@ หน่วย</physicalDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy พุ่งชนศัตรู สร้าง<physicalDamage>ความเสียหายกายภาพ @TackleDamage@ หน่วย</physicalDamage>และคว้าตัวศัตรูไปด้วย หาก Poppy พาพวกเขาพุ่งชนกำแพง เป้าหมายจะถูก<status>สตัน</status>เป็นเวลา @StunDuration@ วินาที และได้รับ<physicalDamage>ความเสียหายกายภาพเพิ่มเติม @TackleDamage@ หน่วย</physicalDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

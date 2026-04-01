@@ -1358,7 +1358,7 @@
                     "rarities": [
                         {
                             "region": "riot",
-                            "rarity": 6
+                            "rarity": 5
                         }
                     ],
                     "skinAugments": {
@@ -1619,7 +1619,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "LeBlanc doskakuje w dane miejsce i zadaje obrażenia pobliskim wrogom. W ciągu następnych 4 sekund możesz ponownie użyć Zniekształcenia, aby LeBlanc powróciła do pierwotnego położenia.",
-            "dynamicDescription": "LeBlanc doskakuje i zadaje pobliskim wrogom <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>. Przez @Effect3Amount@ sek. po doskoku LeBlanc może <recast>ponownie użyć</recast> tej umiejętności.<br><br><recast>Ponowne użycie:</recast> LeBlanc powraca do miejsca, z którego doskoczyła.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc doskakuje i zadaje pobliskim wrogom <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>. Przez @SnapbackTimeAllowed@ sek. po doskoku LeBlanc może <recast>ponownie użyć</recast> tej umiejętności.<br><br><recast>Ponowne użycie:</recast> LeBlanc powraca do miejsca, z którego doskoczyła.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1769,7 +1769,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "LeBlanc wystrzeliwuje łańcuch, który spęta pierwszego trafionego wroga. Jeśli cel pozostanie spętany przez 1,5 sek., LeBlanc go unieruchomi i zada mu dodatkowe obrażenia.",
-            "dynamicDescription": "LeBlanc wystrzeliwuje łańcuch, który spęta pierwszego trafionego wroga, zadając mu <magicDamage>@InitialDamage@ pkt. obrażeń magicznych</magicDamage> i nakładając na niego <keywordStealth>prawdziwe widzenie</keywordStealth>.<br><br>Jeżeli cel pozostanie spętany przez @Effect3Amount@ sek., LeBlanc <status>unieruchomi</status> go na @Effect4Amount@ sek. i zada mu dodatkowo <magicDamage>@DelayedDamage@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "LeBlanc wystrzeliwuje łańcuch, który spęta pierwszego trafionego wroga, zadając mu <magicDamage>@InitialDamage@ pkt. obrażeń magicznych</magicDamage> i nakładając na niego <keywordStealth>prawdziwe widzenie</keywordStealth>.<br><br>Jeżeli cel pozostanie spętany przez @TetherDuration@ sek., LeBlanc <status>unieruchomi</status> go na @RootDuration@ sek. i zada mu dodatkowo <magicDamage>@DelayedDamage@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
