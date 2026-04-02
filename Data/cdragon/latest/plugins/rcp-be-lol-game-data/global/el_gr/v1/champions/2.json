@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Όλαφ πετάει ένα τσεκούρι στο έδαφος σε μια στοχευμένη περιοχή, το οποίο προκαλεί ζημιά στους εχθρούς που διαπερνά και μειώνει τη Θωράκιση και την Ταχύτητα Κίνησής τους. Αν ο Όλαφ σηκώσει το τσεκούρι, ο Χρόνος Επαναφόρτισης της ικανότητας μηδενίζεται.",
-            "dynamicDescription": "Ο Όλαφ ρίχνει ένα τσεκούρι, προκαλώντας <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage> και <status>Επιβραδύνοντας</status> κατά @SlowAmount*100@% για έως και @Effect3Amount@ δευτ. (ανάλογα με την απόσταση που διανύθηκε). Οι Ήρωες που χτυπήθηκαν χάνουν <scaleArmor>@ShredAmount*100@% Θωράκιση</scaleArmor> για @DebuffDuration@ δευτ.<br><br>Αν ο Όλαφ σηκώσει το τσεκούρι, ο Χρόνος Επαναφόρτισης της Ικανότητας μειώνεται στα @TooltipCDRefund@ δευτερόλεπτα ή επαναφέρεται πλήρως εάν έχουν περάσει @TooltipCDRefund@ δευτερόλεπτα.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Όλαφ ρίχνει ένα τσεκούρι, προκαλώντας <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage> και <status>Επιβραδύνοντας</status> κατά @SlowAmount*100@% για έως και @MaxSlowDuration@ δευτ. (ανάλογα με την απόσταση που διανύθηκε). Οι Ήρωες που χτυπά χάνουν <scaleArmor>@ShredAmount*100@% Θωράκιση</scaleArmor> για @DebuffDuration@ δευτ.<br><br>Αν ο Όλαφ σηκώσει το τσεκούρι, ο Χρόνος Επαναφόρτισης της Ικανότητας μειώνεται στα @TooltipCDRefund@ δευτ. ή επαναφέρεται πλήρως εάν έχουν περάσει @TooltipCDRefund@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

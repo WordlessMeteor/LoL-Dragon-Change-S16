@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Olaf ปาขวานไปยังพื้นที่เป้าหมาย สร้างความเสียหายให้กับศัตรูที่โดนขวานลอยผ่าน พร้อมทั้งลดเกราะและความเร็วเคลื่อนที่พวกเขา หาก Olaf ไปหยิบขวาน คูลดาวน์สกิลนี้จะถูกรีเซ็ต",
-            "dynamicDescription": "Olaf ปาขวานออกไป สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage>และ<status>สโลว์</status>ศัตรู @SlowAmount*100@% เป็นเวลาสูงสุด @Effect3Amount@ วินาที (ตามระยะทางของขวาน) แชมเปี้ยนที่ถูกโจมตีจะสูญเสีย<scaleArmor>เกราะ @ShredAmount*100@%</scaleArmor> เป็นเวลา @DebuffDuration@ วินาที<br><br>หาก Olaf หยิบขวานได้ คูลดาวน์สกิลนี้จะลดลงเหลือ @TooltipCDRefund@ วินาที หรือรีเฟรชคูลดาวน์หากเวลาผ่านไป @TooltipCDRefund@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf ปาขวานออกไป สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> และ<status>สโลว์</status>ศัตรู @SlowAmount*100@% เป็นเวลาสูงสุด @MaxSlowDuration@ วินาที (ตามระยะทางของขวาน) แชมเปี้ยนที่โดนขวานจะสูญเสีย<scaleArmor>เกราะ @ShredAmount*100@%</scaleArmor> เป็นเวลา @DebuffDuration@ วินาที<br><br>หาก Olaf หยิบขวานได้ คูลดาวน์สกิลนี้จะลดลงเหลือ @TooltipCDRefund@ วินาที หรือรีเฟรชคูลดาวน์เต็มจำนวนหากเวลาผ่านไป @TooltipCDRefund@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

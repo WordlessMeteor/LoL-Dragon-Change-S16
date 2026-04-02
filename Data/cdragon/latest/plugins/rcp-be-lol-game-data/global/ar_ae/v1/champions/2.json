@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يرمي أولاف فأسًا في الأرض نحو موقع معين، فيلحق الضرر بالأعداء الذين يمر الفأس عبرهم، ويقلص من دروعهم ويبطئ سرعة حركتهم. إن التقط أولاف الفأس، يتم إعادة ضبط فترة تبريد القدرة.",
-            "dynamicDescription": "يرمي أولاف فأسًا، فيلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> و <status>يبطئ</status> بنسبة @SlowAmount*100@% لمدة @Effect3Amount@ ثوان (اعتمادًا على المسافة المقطوعة) يفقد الأبطال المصابون <scaleArmor>@ShredAmount*100@% دروع</scaleArmor> لمدة @DebuffDuration@ ثوان.<br><br>وإن التقط أولاف الفأس، يتم تقليص فترة تبريد القدرة إلى @TooltipCDRefund@ ثوان، أو يتم تعويضها بالكامل إذا مر عليها @TooltipCDRefund@ ثوان.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يرمي أولاف فأسًا، فيلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> و<status>يبطئ</status> بنسبة @SlowAmount*100@% لمدة @MaxSlowDuration@ث (اعتمادًا على المسافة المقطوعة). يفقد الأبطال المصابون <scaleArmor>@ShredAmount*100@% من الدروع</scaleArmor> لمدة @DebuffDuration@ث.<br><br>إن التقط أولاف الفأس، يتم تقليص فترة تبريد هذه القدرة إلى @TooltipCDRefund@ث، أو يتم تعويضها بالكامل إذا مر عليها @TooltipCDRefund@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

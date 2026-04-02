@@ -3,7 +3,7 @@
     "name": "Shyvana",
     "alias": "Shyvana",
     "title": "a Meio-Dragão",
-    "shortBio": "Shyvana é uma criatura que carrega a magia de um fragmento de runa ardente no peito. Embora mantenha sua forma humanoide na maior parte do tempo, ela também pode assumir sua verdadeira forma: a de um temível dragão capaz de incinerar os inimigos com sopros de fogo. Após salvar a vida do príncipe herdeiro Jarvan IV, Shyvana passou a integrar sua guarda real e se esforça continuamente para ser aceita pelo receoso povo de Demacia.",
+    "shortBio": "Shyvana é uma temível guerreira meio-dragão. Embora muitas vezes pareça humanoide, ela também domina os céus como um dragão, incinerando seus inimigos com um sopro de fogo. Após salvar a vida do príncipe herdeiro Jarvan IV, Shyvana passou a integrar sua guarda real e se esforça continuamente para ser aceita pelo receoso povo de Demacia.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 6,
@@ -84,7 +84,7 @@
                     "id": 38
                 }
             ],
-            "description": null
+            "description": "Fazia sentido que Shyvana quisesse jogar com um dragão poderoso em Riftquest, mas o que mais surpreendeu o grupo foi a alegre propensão à destruição que o jogo despertou em sua amiga tão rigorosamente disciplinada. Ao se lançar alegremente no campo de batalha, o mero rugido de Shyvana de Armadura de Ferro manda os inimigos e miniaturas pelos ares (e, às vezes, até os aliados)."
         },
         {
             "id": 102002,
@@ -607,8 +607,8 @@
     "passive": {
         "name": "Armadura de Escamas",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/Shyvana_Passive.Shyvana_Rework.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/0102/ability_0102_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/0102/ability_0102_P1.jpg",
         "description": "Eliminar Campeões inimigos, tropas grandes e monstros grandes concede a Shyvana acúmulos de Armadura de Escamas, melhorando suas defesas."
     },
     "spells": [
@@ -771,7 +771,7 @@
             "cost": "Sem custo",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Shyvana recebe Escudo e Velocidade de Movimento. Depois de um curto intervalo, a área ao redor dela detona.  Durante a Forma de Dragão, a explosão a curará se atingir um Campeão inimigo.",
-            "dynamicDescription": "Shyvana se envolve em chamas por @Duration@s, recebendo <shield>@Calc_Shield@ de Escudo</shield>, que aumenta em <shield>@Calc_Shield_Per_Nearby_Champion@</shield> por Campeão inimigo próximo, e <speed>@MoveSpeed@ de Velocidade de Movimento</speed>, que aumenta para <speed>@MoveSpeedTowardsEnemies@</speed> ao se mover em direção a Campeões inimigos.<br><br>Quando o efeito termina, o <shield>Escudo</shield> é quebrado ou, ao <recast>reconjurar</recast>, a área ao redor dela explode, causando <magicDamage>@Damage@ de Dano Mágico</magicDamage>.<br><br><keywordMajor>Forma de Dragão:</keywordMajor> caso a detonação atinja um Campeão inimigo, Shyvana <healing>restaura @Calc_Heal_Min@ - @Calc_Heal_Max@</healing> de Vida com base na Vida perdida.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana se envolve em chamas por @Duration@s, recebendo <shield>@Calc_Shield@ de Escudo</shield>, que aumenta em <shield>@Calc_Shield_Per_Nearby_Champion@</shield> por Campeão inimigo próximo, e <speed>@MoveSpeed@ de Velocidade de Movimento</speed>, que aumenta para <speed>@MoveSpeedTowardsEnemies@</speed> ao se mover em direção a Campeões inimigos.<br><br>Quando o efeito termina, o <shield>Escudo</shield> é quebrado ou, ao <recast>reconjurar</recast>, a área ao redor dela explode, causando <magicDamage>@Damage@ de Dano Mágico</magicDamage>.<br><br><keywordMajor>Forma de Dragão:</keywordMajor> caso a detonação atinja um Campeão inimigo, Shyvana <healing>restaura @Calc_Heal_Min@ - @Calc_Heal_Max@ de Vida</healing> com base na Vida perdida.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1071,7 +1071,7 @@
             "cost": "Requer 100 de <keywordMajor>Fúria do Dragão</keywordMajor>",
             "cooldown": "Sem Tempo de Recarga",
             "description": "Shyvana se transforma em um Dragão e avança, fazendo os inimigos no caminho fugirem. Durante a Forma de Dragão, ela fica maior e suas habilidades básicas são fortalecidas.",
-            "dynamicDescription": "<spellPassive>Passivo</spellPassive>: Shyvana gera <keywordMajor>@Fury_Generation@ de Fúria do Dragão</keywordMajor> ao atingir inimigos com Ataques e Habilidades. O efeito aumenta em @TT_Fury_Mult@ na <keywordMajor>Forma de Dragão</keywordMajor> e é reduzido em @TT_Fury_AoE_Penalty@ ao atingir não Campeões em uma área.<br><br><spellActive>Ativo:</spellActive> Shyvana se transforma em sua <keywordMajor>Forma de Dragão</keywordMajor>, tornando-se <attention>Implacável</attention>, e voa até o local-alvo, cuspindo fogo nos inimigos, causando <magicDamage>@Damage@ de Dano Mágico</magicDamage> e fazendo com que eles <status>Fujam por @FearDuration@s</status>.<br><br>Enquanto está transformada, Shyvana tem suas Habilidades básicas aprimoradas e ganha <scaleHealth>@Calc_Bonus_Health@ de Vida</scaleHealth>, tamanho e Alcance de Ataque adicionais. Shyvana perde <keywordMajor>Fúria do Dragão</keywordMajor> ao longo do tempo, e sua transformação termina quando ela não tem mais <keywordMajor>Fúria do Dragão</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo</spellPassive>: Shyvana gera <keywordMajor>@Fury_Generation@ de Fúria do Dragão</keywordMajor> ao atingir inimigos com Ataques e Habilidades. O efeito aumenta em @TT_Fury_Mult@ na <keywordMajor>Forma de Dragão</keywordMajor> e é reduzido em @TT_Fury_AoE_Penalty@ ao atingir não Campeões em uma área.<br><br><spellActive>Ativo</spellActive>: Shyvana se transforma em sua <keywordMajor>Forma de Dragão</keywordMajor>, tornando-se <attention>Implacável</attention>, e voa até o local-alvo cuspindo fogo nos inimigos, causando <magicDamage>@Damage@ de Dano Mágico</magicDamage> e fazendo com que eles <status>Fujam por @FearDuration@s</status>.<br><br>Enquanto está transformada, Shyvana tem suas Habilidades básicas aprimoradas e ganha <scaleHealth>@Calc_Bonus_Health@ de Vida</scaleHealth>, tamanho e Alcance de Ataque adicionais. Shyvana perde <keywordMajor>Fúria do Dragão</keywordMajor> ao longo do tempo, e sua transformação termina quando ela não tem mais <keywordMajor>Fúria do Dragão</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,

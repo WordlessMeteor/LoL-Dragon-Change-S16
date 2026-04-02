@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Olaf ném rìu đến điểm chỉ định, gây sát thương lên kẻ địch chúng đi qua, Làm Chậm và giảm Giáp của chúng. Nếu Olaf nhặt được rìu đã ném, hồi chiêu của kỹ năng này sẽ được tái tạo.",
-            "dynamicDescription": "Olaf ném rìu, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage> và <status>Làm Chậm</status> đi @SlowAmount*100@% lên đến tối đa @Effect3Amount@ giây (dựa trên khoảng cách ném). Kẻ địch trúng chiêu bị giảm <scaleArmor>@ShredAmount*100@% Giáp</scaleArmor> trong @DebuffDuration@ giây.<br><br>Nếu Olaf nhặt được rìu, Hồi Chiêu của Kỹ Năng này sẽ được trả về @TooltipCDRefund@ giây, và trả lại toàn bộ nếu @TooltipCDRefund@ gây đã trôi qua.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf ném một chiếc rìu, gây <physicalDamage>@TotalDamage@ sát thương vật lý</physicalDamage> và <status>Làm Chậm</status> @SlowAmount*100@% trong tối đa @MaxSlowDuration@ giây (dựa trên khoảng cách bay). Tướng trúng đòn bị giảm <scaleArmor>@ShredAmount*100@% Giáp</scaleArmor> trong @DebuffDuration@ giây.<br><br>Nếu Olaf nhặt lại rìu, Hồi Chiêu của Kỹ Năng này sẽ giảm còn @TooltipCDRefund@ giây, hoặc được hoàn lại hoàn toàn nếu @TooltipCDRefund@ giây đã trôi qua.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

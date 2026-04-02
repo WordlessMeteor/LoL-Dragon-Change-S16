@@ -1168,7 +1168,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Olaf hodí na označenou pozici sekeru. Všem nepřátelům, které přitom zasáhne, způsobí poškození a sníží jim hodnoty brnění a rychlosti pohybu. Když Olaf sekeru opět zvedne, přebíjecí doba této schopnosti se resetuje.",
-            "dynamicDescription": "Olaf hodí sekeru, která zasaženému nepříteli způsobí <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage> a <status>zpomalí</status> ho o @SlowAmount*100@&nbsp;% až na @Effect3Amount@&nbsp;sek. (v závislosti na uražené vzdálenosti). Zasažení šampioni přijdou na @DebuffDuration@&nbsp;sek. o <scaleArmor>@ShredAmount*100@&nbsp;% brnění</scaleArmor>.<br><br>Pokud Olaf sekeru zvedne, zkrátí se přebíjecí doba této schopnosti na @TooltipCDRefund@&nbsp;sek., nebo se zcela navrátí, pokud už uběhlo @TooltipCDRefund@&nbsp;sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf hodí sekeru, která zasaženému nepříteli způsobí <physicalDamage>@TotalDamage@ bodů fyzického poškození</physicalDamage> a <status>zpomalí</status> ho o @SlowAmount*100@&nbsp;% až na @MaxSlowDuration@&nbsp;sek. (v závislosti na uražené vzdálenosti). Zasažení šampioni přijdou na @DebuffDuration@&nbsp;sek. o <scaleArmor>@ShredAmount*100@&nbsp;% brnění</scaleArmor>.<br><br>Pokud Olaf sekeru zvedne, zkrátí se přebíjecí doba této schopnosti na @TooltipCDRefund@&nbsp;sek., nebo se zcela navrátí, pokud už uběhlo @TooltipCDRefund@&nbsp;sek.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

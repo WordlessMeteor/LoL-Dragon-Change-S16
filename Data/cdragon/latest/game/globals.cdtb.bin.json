@@ -9036,6 +9036,10 @@
         "name": "ShyvanaAllyKillsTower",
         "__type": "DesignerEvent"
     },
+    "{8b9505dc}": {
+        "name": "NotifyTargetableTurretInitialCreation",
+        "__type": "DesignerEvent"
+    },
     "{8c191f8d}": {
         "name": "PerkDashLeashDashOccurred",
         "__type": "DesignerEvent"
@@ -19074,6 +19078,14 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{314fa70e}": {
+        "mExpandedMutator": "Kiwi_Apricot",
+        "mMutators": [
+            "Kiwi_Apricot",
+            "MapID(12)?AudioFeature(KiwiApricot2026)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
     "{327b8c0b}": {
         "mExpandedMutator": "6v6",
         "mMutators": [
@@ -19532,6 +19544,13 @@
             "MapID(11)?MapSkinOptionDisableTrials(1)",
             "MapID(11)?MapSkinName(Trials)",
             "MapID(11)?FOWTexture(Trials)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
+    "{5c603835}": {
+        "mExpandedMutator": "MapSkin_Map11_AprilFools2026",
+        "mMutators": [
+            "MapID(11)?MapSkinName(AprilFools2026)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -20685,6 +20704,13 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{c9af2a92}": {
+        "mExpandedMutator": "TrueSkill2Percentiles",
+        "mMutators": [
+            "TrueSkill2WritePercentile(1)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
     "{ca80861d}": {
         "mExpandedMutator": "Event_SKE_2023",
         "__type": "GameMutatorExpansions"
@@ -20718,6 +20744,14 @@
         "mMutators": [
             "CLASSIC",
             "RecommendedItemProvider(CLASSIC)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
+    "{cee8f68f}": {
+        "mExpandedMutator": "Apricot",
+        "mMutators": [
+            "MapSkin_Map11_AprilFools2026",
+            "MapID(11)?AudioFeature(Apricot2026)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -23219,6 +23253,9 @@
         "mElasticLockAcceleration": 4.0,
         "__type": "CameraConfig"
     },
+    "{7f1c7392}": {
+        "__type": "{665c9fe7}"
+    },
     "{8126f5ba}": {
         "{32cd2d78}": [
             "{18999027}",
@@ -23279,6 +23316,7 @@
             "{46a63d99}": true,
             "{7aacbbbc}": true,
             "{4ed93bd7}": true,
+            "{01947bf4}": true,
             "__type": "LoLFeatureToggles"
         },
         "mGameplayToggles": {
@@ -24011,7 +24049,8 @@
             "DoesNotAggroJungle",
             "OnHit",
             "Augment",
-            "Burn"
+            "Burn",
+            "NonAmpable"
         ],
         "__type": "DamageSourceSettings"
     },
@@ -24233,7 +24272,6 @@
             "GDSEnum::TFTBotType",
             "MinionType",
             "GDSEnum::NeutralTimerTypes",
-            "GDSEnum::FeatType",
             "GDSEnum::LootItemRarity",
             "GDSEnum::ScriptTelemetryGameDataType",
             "GDSEnum::TFTZoomPortalVisibility",

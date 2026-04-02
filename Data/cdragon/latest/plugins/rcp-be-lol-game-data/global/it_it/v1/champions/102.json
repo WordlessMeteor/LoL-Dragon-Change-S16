@@ -3,7 +3,7 @@
     "name": "Shyvana",
     "alias": "Shyvana",
     "title": "il mezzo-drago",
-    "shortBio": "Shyvana è una creatura il cui cuore brucia grazie alla magia di un frammento runico al suo interno. Per quanto spesso appaia in forma umanoide, può assumere il suo vero aspetto di terrificante drago e incenerire i nemici con il suo alito infuocato. Dopo aver salvato la vita del principe ereditario Jarvan IV, ora Shyvana serve nella sua guardia reale, anche se è difficile farsi accettare dal sospettoso popolo di Demacia.",
+    "shortBio": "Shyvana è una temibile guerriera mezzo-drago. Per quanto spesso appaia in forma umanoide, può dominare i cieli con il suo aspetto di drago e incenerire i nemici con il suo alito infuocato. Dopo aver salvato la vita del principe ereditario Jarvan IV, ora Shyvana serve nella sua guardia reale, anche se è difficile farsi accettare dal sospettoso popolo di Demacia.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 6,
@@ -84,7 +84,7 @@
                     "id": 38
                 }
             ],
-            "description": null
+            "description": "Aveva senso che Shyvana volesse interpretare un potente drago in Riftquest, ma ciò che sorprese di più il suo gruppo fu la gioiosa inclinazione alla distruzione che il gioco instillò nella loro amica così rigorosamente disciplinata. Scendendo sul campo di battaglia con gioia, il ruggito di Shyvana Scaglie di Ferro fa volare nemici e miniature (e a volte anche i suoi alleati)."
         },
         {
             "id": 102002,
@@ -607,8 +607,8 @@
     "passive": {
         "name": "Cotta di scaglie",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/Shyvana_Passive.Shyvana_Rework.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/0102/ability_0102_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/0102/ability_0102_P1.jpg",
         "description": "Le eliminazioni di campioni nemici, minion grandi e mostri grandi conferiscono a Shyvana cariche di Cotta di scaglie, migliorando le sue difese."
     },
     "spells": [
@@ -771,7 +771,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Shyvana ottiene uno scudo, velocità di movimento e, dopo un breve ritardo, l'area intorno a lei esplode.  Quando è in forma draconica, l'esplosione le fornisce guarigione se colpisce un campione nemico.",
-            "dynamicDescription": "Shyvana si avvolge nelle fiamme per @Duration@ secondo/i, ottenendo uno <shield>scudo da @Calc_Shield@</shield>, aumentato di <shield>@Calc_Shield_Per_Nearby_Champion@</shield> per ogni campione nemico vicino, e <speed>@MoveSpeed@ velocità di movimento</speed> che aumenta fino a <speed>@MoveSpeedTowardsEnemies@</speed> quando si muove verso i campioni nemici.<br><br>Quando l'effetto termina, lo <shield>scudo</shield> si rompe, oppure al <recast>rilancio</recast>, l'area intorno a lei esplode, infliggendo <magicDamage>@Damage@ danni magici</magicDamage>.<br><br><keywordMajor>Forma del drago:</keywordMajor> se la detonazione colpisce un campione nemico, Shyvana <healing>rigenera da @Calc_Heal_Min@ a @Calc_Heal_Max@</healing> salute in base alla sua salute mancante.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana si avvolge nelle fiamme per @Duration@ secondo/i, ottenendo uno <shield>scudo da @Calc_Shield@</shield>, aumentato di <shield>@Calc_Shield_Per_Nearby_Champion@</shield> per ogni campione nemico vicino, e <speed>@MoveSpeed@ velocità di movimento</speed> che aumenta fino a <speed>@MoveSpeedTowardsEnemies@</speed> quando si muove verso i campioni nemici.<br><br>Quando l'effetto termina, lo <shield>scudo</shield> si rompe, oppure al <recast>rilancio</recast>, l'area intorno a lei esplode, infliggendo <magicDamage>@Damage@ danni magici</magicDamage>.<br><br><keywordMajor>Forma del drago:</keywordMajor> se la detonazione colpisce un campione nemico, Shyvana <healing>rigenera da @Calc_Heal_Min@ a @Calc_Heal_Max@ salute</healing> in base alla sua salute mancante.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1071,7 +1071,7 @@
             "cost": "Richiede 100 <keywordMajor>Furia del drago</keywordMajor>",
             "cooldown": "Nessuna ricarica",
             "description": "Shyvana si trasforma in drago e balza in avanti, facendo scappare i nemici sul suo cammino. Quando è in forma draconica, diventa più grande e le sue abilità di base sono potenziate.",
-            "dynamicDescription": "<spellPassive>Passiva</spellPassive>: Shyvana genera <keywordMajor>@Fury_Generation@ Furia draconica</keywordMajor> colpendo i nemici con attacchi e abilità. La Furia aumenta di @TT_Fury_Mult@ in <keywordMajor>Forma del drago</keywordMajor> e diminuisce di @TT_Fury_AoE_Penalty@ quando attacca in un'area contro non campioni.<br><br><spellActive>Attiva</spellActive>: Shyvana si trasforma nella sua <keywordMajor>Forma del drago</keywordMajor>, diventando <attention>inarrestabile</attention>, e vola verso la posizione bersaglio sputando fuoco sui nemici sottostanti, infliggendo <magicDamage>@Damage@ danni magici</magicDamage> e facendoli <status>fuggire per @FearDuration@ secondo</status>.<br><br>Quando è trasformata, le abilità base di Shyvana vengono potenziate, e lei ottiene <scaleHealth>@Calc_Bonus_Health@ salute bonus</scaleHealth>, aumenta di dimensioni e guadagna gittata d'attacco. Shyvana perde <keywordMajor>Furia draconica</keywordMajor> nel tempo, e la sua trasformazione termina quando non le resta più <keywordMajor>Furia draconica</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva</spellPassive>: Shyvana genera <keywordMajor>@Fury_Generation@ Furia draconica</keywordMajor> colpendo i nemici con attacchi e abilità. La Furia aumenta di @TT_Fury_Mult@ in <keywordMajor>Forma del drago</keywordMajor> e diminuisce di @TT_Fury_AoE_Penalty@ quando attacca in un'area contro non campioni.<br><br><spellActive>Attiva</spellActive>: Shyvana si trasforma nella sua <keywordMajor>Forma del drago</keywordMajor>, diventando <attention>inarrestabile</attention>, e vola verso la posizione bersaglio sputando fuoco sui nemici sottostanti, infliggendo <magicDamage>@Damage@ danni magici</magicDamage> e facendoli <status>fuggire per @FearDuration@ secondo/i</status>.<br><br>Quando è trasformata, le abilità base di Shyvana vengono potenziate, e lei ottiene <scaleHealth>@Calc_Bonus_Health@ salute bonus</scaleHealth>, aumenta di dimensioni e guadagna gittata d'attacco. Shyvana perde <keywordMajor>Furia draconica</keywordMajor> nel tempo, e la sua trasformazione termina quando non le resta più <keywordMajor>Furia draconica</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,

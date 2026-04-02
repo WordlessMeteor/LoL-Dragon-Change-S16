@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Olaf lancia un'ascia nel suolo in un punto bersaglio, infliggendo danni ai nemici colpiti lungo il suo percorso e riducendone armatura e velocità di movimento. Se Olaf raccoglie l'ascia, la ricarica dell'abilità viene azzerata.",
-            "dynamicDescription": "Olaf lancia un'ascia, infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> e <status>rallentando</status> i nemici di un @SlowAmount*100@% fino a @Effect3Amount@ secondi (in base alla distanza percorsa). I campioni colpiti perdono <scaleArmor>@ShredAmount*100@% di armatura</scaleArmor> per @DebuffDuration@ secondi.<br><br>Se Olaf raccoglie l'ascia, la ricarica di questa abilità si riduce a @TooltipCDRefund@ secondi o viene del tutto rimborsata se sono passati @TooltipCDRefund@ secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf lancia un'ascia, infliggendo <physicalDamage>@TotalDamage@ danni fisici</physicalDamage> e <status>rallentando</status> i nemici di un @SlowAmount*100@% fino a @MaxSlowDuration@ secondi (in base alla distanza percorsa). I campioni colpiti perdono un <scaleArmor>@ShredAmount*100@% di armatura</scaleArmor> per @DebuffDuration@ secondo/i.<br><br>Se Olaf raccoglie l'ascia, la ricarica di questa abilità si riduce a @TooltipCDRefund@ secondi o viene del tutto rimborsata se sono passati @TooltipCDRefund@ secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

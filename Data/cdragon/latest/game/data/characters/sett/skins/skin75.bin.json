@@ -292,25 +292,8 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "TextureName": "DeformMask",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/black.SKINS_Sett_Skin67.tex",
-                "samplerName": "Clamp_No_Mip",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "DeformNoise",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/CaseTexture03.SKINS_Sett_Skin67.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "BloomColor",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/black.SKINS_Sett_Skin67.tex",
-                "samplerName": "Clamp_No_Mip",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask_Swirls",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/black.SKINS_Sett_Skin67.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -321,18 +304,11 @@
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_PatternTexture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Dissolve_Tex",
-                "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
@@ -378,6 +354,20 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "Transition_Value",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Transition_Pattern_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
                     0.019999999552965164,
@@ -398,9 +388,13 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Transition_Pattern_Intensity",
+                "name": "TransitionEdgeBias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TransitionBloomEdgeWidth",
                 "value": [
-                    1.0,
+                    0.30000001192092896,
                     0.0,
                     0.0,
                     0.0
@@ -408,7 +402,23 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Transition_Value",
+                "name": "TransitionBloomEdgeColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TransitionBloomEdgeIntensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
@@ -1121,12 +1131,6 @@
                 "on": false,
                 "Group": "Inside Face Feature",
                 "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "DEBUG_HIDE",
-                "on": false,
-                "Group": "Others",
-                "__type": "StaticMaterialSwitchDef"
             }
         ],
         "techniques": [
@@ -1179,7 +1183,7 @@
             },
             {
                 "TextureName": "NoiseDisturb",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/Noise04.SKINS_Sett_Skin67.tex",
+                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/Sett_Skin67_TurbulDeform_TX_CM.SKINS_Sett_Skin67.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -1196,7 +1200,7 @@
             },
             {
                 "TextureName": "FlowmapTex",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/Sett_Skin67_FlowMap_TX_CM.SKINS_Sett_Skin67.tex",
+                "texturePath": "ASSETS/Shared/Materials/flowmap.tex",
                 "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
@@ -1211,25 +1215,8 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "TextureName": "DeformMask",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/Sett_Skin67_VertexDeformMask_TX_CM.SKINS_Sett_Skin67.tex",
-                "samplerName": "Clamp_No_Mip",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "DeformNoise",
                 "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/CaseTexture03.SKINS_Sett_Skin67.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "BloomColor",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin75/Sett_Skin75_TX_CM.Chroma_Sett_Onsen.tex",
-                "samplerName": "Clamp_No_Mip",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask_Swirls",
-                "texturePath": "ASSETS/Characters/Sett/Skins/Skin67/black.SKINS_Sett_Skin67.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -1240,18 +1227,11 @@
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_PatternTexture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Dissolve_Tex",
-                "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
@@ -1297,6 +1277,20 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "Transition_Value",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Transition_Pattern_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
                     0.019999999552965164,
@@ -1317,9 +1311,13 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Transition_Pattern_Intensity",
+                "name": "TransitionEdgeBias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TransitionBloomEdgeWidth",
                 "value": [
-                    1.0,
+                    0.30000001192092896,
                     0.0,
                     0.0,
                     0.0
@@ -1327,7 +1325,23 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Transition_Value",
+                "name": "TransitionBloomEdgeColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TransitionBloomEdgeIntensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
@@ -2049,12 +2063,6 @@
                 "name": "INSIDE_COLOR",
                 "on": false,
                 "Group": "Inside Face Feature",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "DEBUG_HIDE",
-                "on": false,
-                "Group": "Others",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],

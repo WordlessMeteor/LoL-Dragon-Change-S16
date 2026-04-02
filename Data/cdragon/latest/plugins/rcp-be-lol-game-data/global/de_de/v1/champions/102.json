@@ -3,7 +3,7 @@
     "name": "Shyvana",
     "alias": "Shyvana",
     "title": "der Halbdrache",
-    "shortBio": "Shyvana ist eine Kreatur, deren Magie von einem in ihrem Herzen lodernden Runensplitter herrührt. Obwohl sie häufig ihre menschliche Gestalt annimmt, kann sie sich jederzeit in einen furchterregenden Drachen verwandeln und ihre Gegner mit ihrem Flammenodem einäschern. Seitdem sie das Leben des Kronprinzen Jarvan IV. gerettet hat, dient sie mit einem gewissen Unbehagen in dessen Königsgarde und ringt bei den argwöhnischen Einwohnern Demacias um Akzeptanz.",
+    "shortBio": "Shyvana ist eine furchterregende Halbdrachen-Kriegerin. Obwohl sie häufig Menschengestalt annimmt, kann sie auch als Drache die Lüfte beherrschen und ihre Gegner mit ihrem Flammenodem einäschern. Seitdem sie das Leben des Kronprinzen Jarvan IV. gerettet hat, dient sie mit einem gewissen Unbehagen in dessen Königsgarde und ringt bei den argwöhnischen Einwohnern Demacias um Akzeptanz.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 6,
@@ -84,7 +84,7 @@
                     "id": 38
                 }
             ],
-            "description": null
+            "description": "Es war verständlich, dass Shyvana in „Das Schwarze Kontrollauge“ einen mächtigen Drachen spielen wollte, aber was ihre Gruppe überraschte, war die Zerstörungsfreude, die das Spiel in ihrer streng disziplinierten Freundin hervorrief. Shyvana Eisenschuppe stürzt sich mit Begeisterung ins Schlachtfeld und allein ihr Brüllen lässt Gegner und Spielfiguren durch die Luft fliegen (und manchmal auch ihre Verbündeten)."
         },
         {
             "id": 102002,
@@ -607,8 +607,8 @@
     "passive": {
         "name": "Schuppenpanzer",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/Shyvana_Passive.Shyvana_Rework.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/0102/ability_0102_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/0102/ability_0102_P1.jpg",
         "description": "Kill-Beteiligungen bei gegnerischen Champions, großen Vasallen und großen Monstern gewähren Shyvana „Schuppenpanzer“-Steigerungen, die ihre Verteidigung verbessern."
     },
     "spells": [
@@ -771,7 +771,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Shyvana erhält einen Schild sowie Lauftempo und nach einer kurzen Verzögerung detoniert der Bereich um sie herum.  In Drachengestalt heilt die Explosion sie, wenn sie einen gegnerischen Champion trifft.",
-            "dynamicDescription": "Shyvana hüllt sich @Duration@&nbsp;Sekunden lang in Flammen und erhält einen <shield>Schild in Höhe von @Calc_Shield@</shield>, der pro gegnerischem Champion in der Nähe um <shield>@Calc_Shield_Per_Nearby_Champion@</shield> erhöht wird, sowie <speed>@MoveSpeed@&nbsp;Lauftempo</speed>, das auf <speed>@MoveSpeedTowardsEnemies@</speed> erhöht wird, wenn sie sich auf gegnerische Champions zubewegt.<br><br>Wenn der Effekt endet, der <shield>Schild</shield> zerstört oder die Fähigkeit <recast>reaktiviert</recast> wird, explodiert der Bereich um sie herum und verursacht <magicDamage>@Damage@&nbsp;magischen Schaden</magicDamage>.<br><br><keywordMajor>Drachengestalt:</keywordMajor> Trifft die Detonation einen gegnerischen Champion, stellt Shyvana abhängig von ihrem fehlenden Leben <healing>@Calc_Heal_Min@ bis @Calc_Heal_Max@</healing>&nbsp;Leben wieder her.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana hüllt sich @Duration@&nbsp;Sekunden lang in Flammen und erhält einen <shield>Schild in Höhe von @Calc_Shield@</shield>, der pro gegnerischem Champion in der Nähe um <shield>@Calc_Shield_Per_Nearby_Champion@</shield> erhöht wird, sowie <speed>@MoveSpeed@&nbsp;Lauftempo</speed>, das auf <speed>@MoveSpeedTowardsEnemies@</speed> erhöht wird, wenn sie sich auf gegnerische Champions zubewegt.<br><br>Wenn der Effekt endet, der <shield>Schild</shield> zerstört oder die Fähigkeit <recast>reaktiviert</recast> wird, explodiert der Bereich um sie herum und verursacht <magicDamage>@Damage@&nbsp;magischen Schaden</magicDamage>.<br><br><keywordMajor>Drachengestalt:</keywordMajor> Trifft die Detonation einen gegnerischen Champion, stellt Shyvana abhängig von ihrem fehlenden Leben <healing>@Calc_Heal_Min@ bis @Calc_Heal_Max@&nbsp;Leben</healing> wieder her.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1071,7 +1071,7 @@
             "cost": "Benötigt 100 <keywordMajor>Drachenzorn</keywordMajor>",
             "cooldown": "Keine Abklingzeit",
             "description": "Shyvana verwandelt sich in einen Drachen, springt nach vorn und lässt dabei Gegner auf ihrem Weg die Flucht ergreifen. In Drachengestalt wird sie größer und ihre Grundfähigkeiten werden verstärkt.",
-            "dynamicDescription": "<spellPassive>Passiv</spellPassive>: Shyvana erzeugt <keywordMajor>@Fury_Generation@&nbsp;Drachenzorn</keywordMajor>, indem sie Gegner mit Angriffen und Fähigkeiten trifft. In <keywordMajor>Drachengestalt</keywordMajor> wird die Erzeugung um @TT_Fury_Mult@ erhöht und bei Flächeneffekten gegen Nicht-Champions um @TT_Fury_AoE_Penalty@ verringert.<br><br><spellActive>Aktiv</spellActive>: Shyvana verwandelt sich in ihre <keywordMajor>Drachengestalt</keywordMajor>, wird <attention>unaufhaltsam</attention> und fliegt zum Zielort. Dabei speit sie Feuer auf Gegner unter sich, fügt ihnen <magicDamage>@Damage@&nbsp;magischen Schaden</magicDamage> zu und lässt sie <status>für @FearDuration@&nbsp;Sekunde fliehen</status>.<br><br>In Drachengestalt werden Shyvanas Grundfähigkeiten verstärkt, sie erhält <scaleHealth>@Calc_Bonus_Health@&nbsp;zusätzliches Leben</scaleHealth>, Größe und Angriffsreichweite. Shyvana verliert mit der Zeit <keywordMajor>Drachenzorn</keywordMajor> und ihre Verwandlung endet, wenn sie keinen <keywordMajor>Drachenzorn</keywordMajor> mehr hat.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv</spellPassive>: Shyvana erzeugt <keywordMajor>@Fury_Generation@&nbsp;Drachenzorn</keywordMajor>, indem sie Gegner mit Angriffen und Fähigkeiten trifft. In <keywordMajor>Drachengestalt</keywordMajor> wird die Erzeugung um @TT_Fury_Mult@ erhöht und bei Flächeneffekten gegen Nicht-Champions um @TT_Fury_AoE_Penalty@ verringert.<br><br><spellActive>Aktiv</spellActive>: Shyvana verwandelt sich in ihre <keywordMajor>Drachengestalt</keywordMajor>, wird <attention>unaufhaltsam</attention> und fliegt zum Zielort. Dabei speit sie Feuer auf Gegner unter sich, fügt ihnen <magicDamage>@Damage@&nbsp;magischen Schaden</magicDamage> zu und lässt sie <status>für @FearDuration@&nbsp;Sekunden fliehen</status>.<br><br>In Drachengestalt werden Shyvanas Grundfähigkeiten verstärkt, sie erhält <scaleHealth>@Calc_Bonus_Health@&nbsp;zusätzliches Leben</scaleHealth>, Größe und Angriffsreichweite. Shyvana verliert mit der Zeit <keywordMajor>Drachenzorn</keywordMajor> und ihre Verwandlung endet, wenn sie keinen <keywordMajor>Drachenzorn</keywordMajor> mehr hat.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,

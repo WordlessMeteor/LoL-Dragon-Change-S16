@@ -731,7 +731,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "阿兹尔把所有黄沙士兵派往一个地点。黄沙士兵会对沿途的所有敌人造成魔法伤害，并施加持续1秒的减速效果。",
-            "dynamicDescription": "阿兹尔命令所有<keywordMajor>黄沙士兵</keywordMajor>前往一个区域，对他们途经的敌人们造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>和持续1秒的@Effect2Amount*-100@%<status>减速</status>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿兹尔把所有<keywordMajor>黄沙士兵</keywordMajor>派往一个区域，从而对它们途经的所有敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，并施加持续1秒的@SlowAmount*-100@%<status>减速</status>。@SpellModifierDescriptionAppend@",
             "range": [
                 740.0,
                 740.0,
@@ -771,13 +771,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

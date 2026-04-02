@@ -1168,7 +1168,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Олаф бросает топор в указанную точку, нанося пораженным врагам урон, уменьшая их броню и замедляя. Олаф может подобрать топор после броска, сбросив перезарядку умения.",
-            "dynamicDescription": "Олаф бросает топор, нанося целям <physicalDamage>@TotalDamage@ физического урона</physicalDamage>, а также <status>замедляя</status> их на @SlowAmount*100@% на время до @Effect3Amount@ сек. (в зависимости от расстояния полета). <scaleArmor>Броня</scaleArmor> пораженных чемпионов уменьшается на @ShredAmount*100@% на @DebuffDuration@ сек.<br><br>Если Олаф подбирает топор, перезарядка этого умения сокращается до @TooltipCDRefund@ сек. Если прошло @TooltipCDRefund@ сек., перезарядка сбрасывается полностью.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Олаф бросает топор, нанося целям <physicalDamage>@TotalDamage@ ед. физического урона</physicalDamage>, а также <status>замедляя</status> их на @SlowAmount*100@% на время до @MaxSlowDuration@ сек. (в зависимости от расстояния полета). <scaleArmor>Броня</scaleArmor> пораженных чемпионов уменьшается на @ShredAmount*100@% на @DebuffDuration@ сек.<br><br>Если Олаф подбирает топор, перезарядка умения сокращается до @TooltipCDRefund@ сек. Если прошло @TooltipCDRefund@ сек., перезарядка сбрасывается полностью.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

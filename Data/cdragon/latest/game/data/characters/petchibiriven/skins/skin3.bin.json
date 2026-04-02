@@ -224,7 +224,7 @@
         "iconCircle": "ASSETS/Characters/PetChibiRiven/HUD/Icon_ChibiRiven_PrestigeValiantSword_PrestigeValiantSword_Tier1.CHIBI_Riven_PrestigeValiantSword.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_HealthBar",
-            "unitHealthBarStyle": 21,
+            "unitHealthBarStyle": 22,
             "AlphaOutWhileUntargetable": false,
             "__type": "CharacterHealthBarDataRecord"
         },
@@ -33188,6 +33188,64 @@
         ],
         "particleName": "PetChibiRiven_Skin3_Emote_Joke_Weapon_Glow",
         "particlePath": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Emote_Joke_Weapon_Glow",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Emote_DeathAvatar": {
+        "complexEmitterDefinitionData": [
+            {
+                "particleLifetime": {
+                    "constantValue": 4.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Body",
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "BODY"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "BODY"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "alphaRef": 0,
+                "{cb13aff1}": 2.0,
+                "texture": "ASSETS/Characters/PetChibiRiven/Themes/PrestigeValiantSword/PetChibiRiven_PrestigeValiantSword_Body_TX_CM.CHIBI_Riven_PrestigeValiantSword.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "PetChibiRiven_Skin3_Emote_DeathAvatar",
+        "particlePath": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Emote_DeathAvatar",
+        "flags": 214,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Emote_Laugh_Sword_Child": {
@@ -141970,7 +142028,8 @@
             "PetChibiRiven_Skin3_Finisher_Weapon_Trail1": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Finisher_Weapon_Trail1",
             "PetChibiRiven_Skin3_Finisher_DragonGlow1": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Finisher_DragonGlow1",
             "PetChibiRiven_Skin3_Finisher_CamVfx3": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Finisher_CamVfx3",
-            "PetChibiRiven_Skin3_Finisher_Env03_Child": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Finisher_Env03_Child"
+            "PetChibiRiven_Skin3_Finisher_Env03_Child": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Finisher_Env03_Child",
+            "PetChibiRiven_Skin3_Emote_DeathAvatar": "Characters/PetChibiRiven/Skins/Skin3/Particles/PetChibiRiven_Skin3_Emote_DeathAvatar"
         },
         "__type": "ResourceResolver"
     },

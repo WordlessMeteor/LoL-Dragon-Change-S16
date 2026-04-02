@@ -3,7 +3,7 @@
     "name": "シヴァーナ",
     "alias": "Shyvana",
     "title": "半龍人",
-    "shortBio": "シヴァーナは燃えるルーンの魔法のかけらを胸に宿した生き物であり、普段は人間の姿をしているが、戦いになれば真の姿である恐ろしいドラゴンに変身して、炎を吐いて敵を焼き殺すことができる。王子ジャーヴァンⅣの命を救ったことから彼の近衛兵を務めるようになったものの、デマーシアの人々からは疑いの目を向けられ、なかなか受け入れられずにいる。",
+    "shortBio": "シヴァーナは恐るべき半龍の戦士だ。普段は人間の姿をしているが、ドラゴンに変身して空を飛び、炎を吐いて敵を焼き殺すこともできる。王子ジャーヴァンⅣの命を救ったことから、シヴァーナは不安を抱えながらも今や王国の近衛隊として仕え、疑念を向けるデマーシアの人々の中で受け入れられようともがいている。",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 6,
@@ -84,7 +84,7 @@
                     "id": 38
                 }
             ],
-            "description": null
+            "description": "シヴァーナが「リフトクエスト」で強力なドラゴンを演じたがったのは当然のことだった。だがパーティーの仲間たちを驚かせたのは、あの厳格で規律正しい友人が、嬉々として破壊の限りを尽くしていたことだった。歓喜とともに戦場に舞い降りる鋼の鱗シヴァーナ。彼女は咆哮ひとつで、敵や卓上のフィギュアを（そして時には味方すらも）逃亡させる。"
         },
         {
             "id": 102002,
@@ -607,8 +607,8 @@
     "passive": {
         "name": "スケールメイル",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/Shyvana_Passive.Shyvana_Rework.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/0102/ability_0102_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/0102/ability_0102_P1.jpg",
         "description": "敵チャンピオン、大型ミニオン、大型モンスターのキルかアシストで「スケールメイル」のスタックを獲得し、シヴァーナの防御力が向上する。"
     },
     "spells": [
@@ -621,7 +621,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "次の通常攻撃で、対象とその周囲の両方を攻撃する。このスキルは再発動が可能。ドラゴンフォーム中は再発動が1回追加され、単体の敵に大ダメージを与える。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 通常攻撃が、<OnHit>%i:OnHit%通常攻撃時</OnHit>に<magicDamage>最大体力の@Calc_Max_Health_Damage@にあたる魔法ダメージ</magicDamage>を与える。さらにこのスキルのクールダウンが@Cooldown_Reduction@秒短縮される。<br><br><spellActive>発動効果:</spellActive> 次の通常攻撃が対象とその周囲に命中し、<physicalDamage>@Calc_Damage@の物理ダメージ</physicalDamage>を与える。このスキルは、通常攻撃後または少ししてから、@RecastDuration@秒以内であれば<recast>再発動</recast>できる。<br><br><keywordMajor>ドラゴンフォーム:</keywordMajor> 追加で<recast>再発動</recast>が可能になり、次の通常攻撃で対象に噛みついて<trueDamage>@Calc_Dragon_Form_Damage@の確定ダメージ</trueDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 通常攻撃が、<OnHit>%i:OnHit%通常攻撃時</OnHit>に<magicDamage>最大体力の@Calc_Max_Health_Damage@にあたる魔法ダメージ</magicDamage>を与え、さらにこのスキルのクールダウンを@Cooldown_Reduction@秒短縮する。<br><br><spellActive>発動効果:</spellActive> 次の通常攻撃が対象とその周囲に命中し、<physicalDamage>@Calc_Damage@の物理ダメージ</physicalDamage>を与える。このスキルは、通常攻撃後または少ししてから、@RecastDuration@秒以内であれば<recast>再発動</recast>できる。<br><br><keywordMajor>ドラゴンフォーム:</keywordMajor> 追加で<recast>再発動</recast>が可能になり、次の通常攻撃で対象に噛みついて<trueDamage>@Calc_Dragon_Form_Damage@の確定ダメージ</trueDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,
@@ -771,7 +771,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "シールドと移動速度を獲得し、少ししてから周囲を爆発させる。ドラゴンフォーム中は、爆発が敵チャンピオンに命中すると自身の体力が回復する。",
-            "dynamicDescription": "@Duration@秒間、炎をその身にまとい、<shield>@Calc_Shield@のシールド</shield>を獲得する。このシールドは近くにいる敵チャンピオン1体につき<shield>@Calc_Shield_Per_Nearby_Champion@</shield>増加する。さらに<speed>@MoveSpeed@の移動速度</speed>を獲得し、敵チャンピオンに向かって移動する際の移動速度は<speed>@MoveSpeedTowardsEnemies@</speed>に増加する。<br><br>効果終了時、<shield>シールド</shield>が破壊された時、または<recast>再発動</recast>時に周囲を爆発させ、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与える。<br><br><keywordMajor>ドラゴンフォーム:</keywordMajor> 爆発が敵チャンピオンに命中すると、シヴァーナは自身の減少体力に応じて<healing>@Calc_Heal_Min@ - @Calc_Heal_Max@</healing>の体力を回復する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@Duration@秒間、炎をその身にまとい、<shield>@Calc_Shield@のシールド</shield>を獲得する。このシールドは近くにいる敵チャンピオン1体につき<shield>@Calc_Shield_Per_Nearby_Champion@</shield>増加する。さらに<speed>移動速度が@MoveSpeed@</speed>増加する。敵チャンピオンに向かって移動する際は、この増加移動速度が<speed>@MoveSpeedTowardsEnemies@</speed>に増加する。<br><br>効果終了時か<shield>シールド</shield>が破壊された時、または<recast>再発動</recast>時に周囲を爆発させ、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与える。<br><br><keywordMajor>ドラゴンフォーム:</keywordMajor> 爆発が敵チャンピオンに命中すると、シヴァーナは自身の減少体力に応じて<healing>@Calc_Heal_Min@ - @Calc_Heal_Max@の体力を回復</healing>する。@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1071,7 +1071,7 @@
             "cost": "<keywordMajor>ドラゴンフューリー</keywordMajor>100が必要",
             "cooldown": "クールダウン無し",
             "description": "ドラゴンに変身して前方にジャンプし、進路上の敵を逃走させる。ドラゴンフォーム中は巨大化し、通常スキルが強化される。",
-            "dynamicDescription": "<spellPassive>自動効果</spellPassive>: 通常攻撃とスキルを敵に命中させると<keywordMajor>ドラゴンフューリーを@Fury_Generation@</keywordMajor>獲得する。この効果は<keywordMajor>ドラゴンフォーム</keywordMajor>中は@TT_Fury_Mult@増加し、チャンピオン以外に範囲攻撃を命中させた場合は@TT_Fury_AoE_Penalty@減少する。<br><br><spellActive>発動効果</spellActive>: <keywordMajor>ドラゴンフォーム</keywordMajor>に変身し、<attention>アンストッパブル状態</attention>になって指定した地点まで飛翔する。飛翔中に眼下の敵に炎を浴びせ、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与えて<status>@FearDuration@秒間逃走</status>させる。<br><br>変身中、シヴァーナの通常スキルが強化され、<scaleHealth>@Calc_Bonus_Health@の追加体力</scaleHealth>、スキル範囲、および射程距離の増加を獲得する。時間経過と共に<keywordMajor>ドラゴンフューリー</keywordMajor>は失われ、<keywordMajor>ドラゴンフューリー</keywordMajor>が尽きると変身状態が終了する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果</spellPassive>: 通常攻撃とスキルを敵に命中させると<keywordMajor>ドラゴンフューリーを@Fury_Generation@</keywordMajor>獲得する。この効果は<keywordMajor>ドラゴンフォーム</keywordMajor>中は@TT_Fury_Mult@増加し、チャンピオン以外に範囲攻撃を命中させた場合は@TT_Fury_AoE_Penalty@減少する。<br><br><spellActive>発動効果</spellActive>: <keywordMajor>ドラゴンフォーム</keywordMajor>に変身し、<attention>アンストッパブル状態</attention>になって指定した地点まで飛翔する。飛翔中に眼下の敵に炎を浴びせ、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与えて<status>@FearDuration@秒間逃走</status>させる。<br><br>変身中、シヴァーナの通常スキルが強化され、<scaleHealth>@Calc_Bonus_Health@の追加体力</scaleHealth>、サイズの増加、および射程距離の増加を獲得する。時間経過と共に<keywordMajor>ドラゴンフューリー</keywordMajor>は失われ、<keywordMajor>ドラゴンフューリー</keywordMajor>が尽きると変身状態が終了する。@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,

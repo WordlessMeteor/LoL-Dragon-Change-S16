@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Olaf aruncă o secure în locația-țintă, care le provoacă daune inamicilor prin care trece și le reduce armura și viteza de mișcare. Dacă Olaf ridică securea, timpul de reactivare al abilității este resetat.",
-            "dynamicDescription": "Olaf aruncă o secure, provocându-le inamicilor <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> și <status>încetinindu-i</status> cu @SlowAmount*100@% timp de @Effect3Amount@ secunde (în funcție de distanța parcursă). Campionii loviți pierd <scaleArmor>@ShredAmount*100@% armură</scaleArmor> timp de @DebuffDuration@ secunde.<br><br>Dacă Olaf ridică securea, timpul de reactivare al acestei abilități este redus la @TooltipCDRefund@ secunde sau resetat complet dacă au trecut @TooltipCDRefund@ secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf aruncă o secure, provocându-le inamicilor <physicalDamage>@TotalDamage@ daune fizice</physicalDamage> și <status>încetinindu-i</status> cu @SlowAmount*100@% timp de @MaxSlowDuration@ secunde (în funcție de distanța parcursă). Campionii loviți pierd <scaleArmor>@ShredAmount*100@% din armură</scaleArmor> timp de @DebuffDuration@ secunde.<br><br>Dacă Olaf ridică securea, timpul de reactivare al acestei abilități este redus la @TooltipCDRefund@ secunde sau resetat complet dacă au trecut @TooltipCDRefund@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

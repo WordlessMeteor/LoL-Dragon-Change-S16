@@ -686,7 +686,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Azir wysyła wszystkich Piaskowych Żołnierzy w wybrane miejsce. Piaskowi żołnierze zadają obrażenia magiczne trafionym wrogom i spowalniają ich na 1 sekundę.",
-            "dynamicDescription": "Azir wysyła wszystkich <keywordMajor>Piaskowych Żołnierzy</keywordMajor> na wskazany obszar. Zadają oni <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wrogom, przez których przenikają i <status>spowalniają</status> ich o @Effect2Amount*-100@% na 1 sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Azir wysyła wszystkich <keywordMajor>Piaskowych Żołnierzy</keywordMajor> na wskazany obszar. Zadają oni <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> wrogom, przez których przenikają, i <status>spowalniają</status> ich o @SlowAmount*-100@% na 1 sek.@SpellModifierDescriptionAppend@",
             "range": [
                 740.0,
                 740.0,
@@ -726,13 +726,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,

@@ -1168,7 +1168,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点の地面をめがけて斧を投げ、命中した敵にダメージを与えて、物理防御と移動速度を低下させる。斧を拾うと、このスキルのクールダウンがリセットされる。",
-            "dynamicDescription": "斧を投げて<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、最大@Effect3Amount@秒間(斧の飛距離に応じて)、@SlowAmount*100@%の<status>スロウ効果</status>を与える。命中したチャンピオンは@DebuffDuration@秒間、<scaleArmor>物理防御が@ShredAmount*100@%</scaleArmor>低下する。<br><br>斧を拾うと、このスキルのクールダウンが@TooltipCDRefund@秒に短縮される。@TooltipCDRefund@秒経過していた場合は、クールダウンが完全に解消される。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "オラフが斧を投げ、<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与えて、斧の飛距離に応じて最大@MaxSlowDuration@秒間、@SlowAmount*100@%の<status>スロウ効果</status>を付与する。攻撃を受けたチャンピオンは@DebuffDuration@秒間、<scaleArmor>物理防御が@ShredAmount*100@%</scaleArmor>低下する。<br><br>オラフが斧を拾うと、このスキルのクールダウンが@TooltipCDRefund@秒に短縮される。すでに@TooltipCDRefund@秒経過していた場合は、クールダウンが解消される。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

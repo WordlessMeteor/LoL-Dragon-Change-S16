@@ -1804,8 +1804,8 @@
             "abilityVideoImagePath": "champion-abilities/0043/ability_0043_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Karma crea un vínculo entre el objetivo enemigo y ella que inflige daño y lo revela. Si no se rompe el vínculo, el objetivo queda inmovilizado y vuelve a recibir daño.<br><br>Bonificación de Mantra: Karma fortalece el vínculo, lo que, además de curarla, amplía la duración de la inmovilización.",
-            "dynamicDescription": "Karma se vincula a un campeón o monstruo de la jungla, le inflige <magicDamage>@InitialDamage@ de daño mágico</magicDamage> y lo revela durante @TetherDuration@ s. Si el vínculo permanece sin romperse, el objetivo recibe <magicDamage>@InitialDamage@ de daño mágico</magicDamage> de nuevo y queda <status>inmovilizado</status> durante @RootDuration@ s.@SpellModifierDescriptionAppend@",
+            "description": "Karma crea un vínculo entre el objetivo enemigo y ella que inflige daño y lo revela. Si no se rompe el vínculo, el objetivo queda enraizado y vuelve a recibir daño.<br><br>Bonificación de Mantra: Karma fortalece el vínculo, lo que, además de curarla, amplía la duración del enraizamiento.",
+            "dynamicDescription": "Karma se vincula a un campeón o monstruo de la jungla, le inflige <magicDamage>@InitialDamage@ de daño mágico</magicDamage> y lo revela durante @TetherDuration@ s. Si el vínculo permanece sin romperse, el objetivo recibe <magicDamage>@InitialDamage@ de daño mágico</magicDamage> de nuevo y queda <status>enraizado</status> durante @RootDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -2105,7 +2105,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Karma potencia su siguiente habilidad para conseguir un efecto adicional. Mantra está disponible al nivel 1 y no necesita puntos de habilidad.",
-            "dynamicDescription": "Karma potencia la siguiente habilidad que use en un margen de 8 s.<br><li><spellName>Llama interior</spellName>: Inflige <magicDamage>@RQImpactDamage@ de daño mágico</magicDamage> adicional y deja un círculo de fuego que <status>ralentiza</status> a los enemigos e inflige <magicDamage>@RQFieldDamage@ de daño mágico adicional</magicDamage>.<li><spellName>Resolución concentrada</spellName>: Karma restaura <healing>@RWHealAmount@ de la vida que le falte</healing> al comienzo y al final del vínculo, e <status>inmoviliza</status> durante @RWBonusRoot@ s más.<li><spellName>Inspiración</spellName>: Karma otorga <shield>@REBonusShield@ más de escudo</shield> a su objetivo, además de <shield>@REBonusShieldArea@ más de escudo</shield> y un <speed>@REMoveSpeed*100@% de velocidad de movimiento</speed> a los aliados cercanos al objetivo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karma potencia la siguiente habilidad que use en un margen de 8 s.<br><li><spellName>Llama interior</spellName>: Inflige <magicDamage>@RQImpactDamage@ de daño mágico</magicDamage> adicional y deja un círculo de fuego que <status>ralentiza</status> a los enemigos e inflige <magicDamage>@RQFieldDamage@ de daño mágico adicional</magicDamage>.<li><spellName>Resolución concentrada</spellName>: Karma restaura <healing>@RWHealAmount@ de la vida que le falte</healing> al comienzo y al final del vínculo, y <status>enraiza</status> durante @RWBonusRoot@ s más.<li><spellName>Inspiración</spellName>: Karma otorga <shield>@REBonusShield@ más de escudo</shield> a su objetivo, además de <shield>@REBonusShieldArea@ más de escudo</shield> y un <speed>@REMoveSpeed*100@% de velocidad de movimiento</speed> a los aliados cercanos al objetivo.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

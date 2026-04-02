@@ -190,6 +190,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Chogath/HUD/Icons2D/GreenTerror_ChitinousExoplates.dds"
             ],
+            "{11704a2b}": 0.3888999819755554,
+            "{f26881a0}": 1.333400011062622,
             "cooldownTime": [
                 14.0,
                 14.0,
@@ -199,8 +201,6 @@
                 14.0,
                 14.0
             ],
-            "delayCastOffsetPercent": -0.22220000624656677,
-            "delayTotalTimePercent": -0.33329999446868896,
             "mCantCancelWhileWindingUp": true,
             "castRange": [
                 650.0,
@@ -297,7 +297,7 @@
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "ChogathBasicAttack2",
             "mAnimationName": "Attack2",
-            "delayCastOffsetPercent": -0.3077000081539154,
+            "{11704a2b}": 0.3461499810218811,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
             "castFrame": 15.649999618530273,
@@ -324,7 +324,7 @@
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Attack2",
-            "delayCastOffsetPercent": -0.3077000081539154,
+            "{11704a2b}": 0.3461499810218811,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
             "castFrame": 14.125,
@@ -349,7 +349,7 @@
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "ChogathBasicAttack",
-            "delayCastOffsetPercent": -0.3077000081539154,
+            "{11704a2b}": 0.3461499810218811,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
             "castFrame": 15.5,
@@ -437,6 +437,19 @@
                         225.0,
                         400.0,
                         575.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusHPPerCast",
+                    "values": [
+                        0.0,
+                        10.0,
+                        15.0,
+                        25.0,
+                        40.0,
                         0.0,
                         0.0
                     ],
@@ -564,6 +577,11 @@
                                 {
                                     "type": "APDamage",
                                     "nameOverride": "TFT_APHP_MagicDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BonusHPPerCast",
+                                    "nameOverride": "Spell_TFT16_SionSpell_HealthOnTakeDowns",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

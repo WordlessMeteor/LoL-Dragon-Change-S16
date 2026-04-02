@@ -1147,7 +1147,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Poppy çekicini sallayıp, hasar verir ve rakipleri yavaşlatarak kısa bir süre sonra patlayan bir alan oluşturur.",
-            "dynamicDescription": "Poppy çekicini yere savurarak <physicalDamage>@BaseDamage@</physicalDamage> artı <physicalDamage>hedefin azami canının %@HealthDamagePercent@ kadarına eşdeğer miktarda fiziksel hasar</physicalDamage> verir ve zeminde yarıklar oluşturur. <br><br>Yarıklar rakipleri %@Effect3Amount@ <status>yavaşlatır</status> ve @Effect4Amount@ saniyenin ardından patlayarak <physicalDamage>@BaseDamage@</physicalDamage> artı <physicalDamage>hedefin azami canının %@HealthDamagePercent@ kadarına eşdeğer miktarda fiziksel hasar</physicalDamage> verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy çekicini yere savurarak <physicalDamage>@BaseDamage@</physicalDamage> artı <physicalDamage>hedefin azami canının %@HealthDamagePercent@ kadarına eşdeğer miktarda fiziksel hasar</physicalDamage> verir ve zeminde yarıklar oluşturur. <br><br>Yarıklar rakipleri %@Slow_@ <status>yavaşlatır</status> ve @DelayBetweenTwoHits@ saniyenin ardından patlayarak <physicalDamage>@BaseDamage@</physicalDamage> artı <physicalDamage>hedefin azami canının %@HealthDamagePercent@ kadarına eşdeğer miktarda fiziksel hasar</physicalDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1297,7 +1297,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Poppy pasif olarak zırh ve büyü direnci kazanır. Bu ilaveler şampiyonun canı azaldığında artar. Poppy, Sağlam Duruş yeteneğini etkinleştirdiğinde hareket hızı kazanır ve çevresindeki rakiplerin atılma hamlelerini engeller. Atılması engellenen rakipler yavaşlar ve yere saplanır.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Poppy <scaleArmor>@BonusArmor@ Zırh</scaleArmor> ve <scaleMR>@BonusMR@ Büyü Direnci</scaleMR> kazanır. Poppy'nin canı %@PassiveEmpoweredHealthPercent*100@ değerinin altındaysa bu ilave ikiye katlanır.<br><br><spellActive>Aktif:</spellActive> Poppy @Effect1Amount@ saniyeliğine <speed>%@Effect2Amount@ Hareket Hızı</speed> kazanır ve etrafında rakip atılmalarını durduran bir alan oluşturur. Alanın durdurduğu rakipler @GroundingDuration@ saniyeliğine <status>yere saplanır</status>, %@SlowAmount*-100@ <status>yavaşlar</status> ve <magicDamage>@InterruptDamage@ Büyü Hasarı</magicDamage> alır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Poppy <scaleArmor>@BonusArmor@ Zırh</scaleArmor> ve <scaleMR>@BonusMR@ Büyü Direnci</scaleMR> kazanır. Poppy'nin canı %@PassiveEmpoweredHealthPercent*100@ değerinin altındaysa bu ilave ikiye katlanır.<br><br><spellActive>Aktif:</spellActive> Poppy @Duration@ saniyeliğine <speed>%@Haste@ Hareket Hızı</speed> kazanır ve etrafında rakip atılmalarını durduran bir alan oluşturur. Alanın durdurduğu rakipler @GroundingDuration@ saniyeliğine <status>yere saplanır</status>, %@SlowAmount*-100@ <status>yavaşlar</status> ve <magicDamage>@InterruptDamage@ Büyü Hasarı</magicDamage> alır.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -1447,7 +1447,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Poppy üstüne atıldığı hedefi sürükler. Eğer hedef bir duvara çarptırılırsa sersemler.",
-            "dynamicDescription": "Poppy bir rakibe hücum ederek <physicalDamage>@TackleDamage@ Fiziksel Hasar</physicalDamage> verir ve onu ileri taşır. Poppy rakiple birlikte bir yüzey şekline çarparsa, hedef @Effect3Amount@ saniyeliğine <status>sersemler</status> ve fazladan <physicalDamage>@TackleDamage@ Fiziksel Hasar</physicalDamage> alır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy bir rakibe hücum ederek <physicalDamage>@TackleDamage@ Fiziksel Hasar</physicalDamage> verir ve onu ileri taşır. Poppy rakiple birlikte bir yüzey şekline çarparsa hedef @StunDuration@ saniyeliğine <status>sersemler</status> ve fazladan <physicalDamage>@TackleDamage@ Fiziksel Hasar</physicalDamage> alır.@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
                 475.0,

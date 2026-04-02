@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Olaf arremessa um machado no local-alvo, causando dano e reduzindo a Armadura e a Velocidade de Movimento dos inimigos que atravessar. Se Olaf apanhar o machado, o Tempo de Recarga da habilidade é redefinido.",
-            "dynamicDescription": "Olaf arremessa um machado, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage> e aplicando @SlowAmount*100@% de <status>Lentidão</status> por até @Effect3Amount@s (com base na distância percorrida). Campeões atingidos perdem <scaleArmor>@ShredAmount*100@% de Armadura</scaleArmor> por @DebuffDuration@s.<br><br>Se Olaf apanhar o machado, o Tempo de Recarga da Habilidade é reduzido para @TooltipCDRefund@s, ou completamente restituído se @TooltipCDRefund@s tiverem decorrido.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf arremessa um machado, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage> e aplicando @SlowAmount*100@% de <status>Lentidão</status> por até @MaxSlowDuration@s (com base na distância percorrida). Campeões atingidos perdem <scaleArmor>@ShredAmount*100@% de Armadura</scaleArmor> por @DebuffDuration@s.<br><br>Se Olaf apanhar o machado, o Tempo de Recarga desta habilidade é reduzido para @TooltipCDRefund@s, ou completamente restituído se @TooltipCDRefund@s tiverem decorrido.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

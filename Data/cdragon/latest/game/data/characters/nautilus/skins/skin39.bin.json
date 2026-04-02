@@ -47757,25 +47757,8 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "TextureName": "DeformMask",
-                "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Nautilus_Skin39_Black_TX_CM.SKINS_Nautilus_Skin39.tex",
-                "samplerName": "Clamp_No_Mip",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "DeformNoise",
-                "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Particles/Nautilus_Skin39_CaseTexture01_TX_CM.SKINS_Nautilus_Skin39.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "BloomColor",
-                "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Nautilus_Skin39_Black_TX_CM.SKINS_Nautilus_Skin39.tex",
-                "samplerName": "Clamp_No_Mip",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask_Swirls",
-                "texturePath": "ASSETS/Characters/Nautilus/Skins/Skin39/Nautilus_Skin39_Black_TX_CM.SKINS_Nautilus_Skin39.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -47786,18 +47769,11 @@
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Transition_PatternTexture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Dissolve_Tex",
-                "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
-                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
@@ -47843,6 +47819,20 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "Transition_Value",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Transition_Pattern_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
                     0.019999999552965164,
@@ -47863,9 +47853,13 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Transition_Pattern_Intensity",
+                "name": "TransitionEdgeBias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TransitionBloomEdgeWidth",
                 "value": [
-                    1.0,
+                    0.30000001192092896,
                     0.0,
                     0.0,
                     0.0
@@ -47873,7 +47867,23 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Transition_Value",
+                "name": "TransitionBloomEdgeColor",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TransitionBloomEdgeIntensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
@@ -48333,8 +48343,8 @@
             {
                 "name": "VertexDeformTilling",
                 "value": [
-                    2.0,
-                    2.0,
+                    1.0,
+                    1.0,
                     0.0,
                     0.0
                 ],
@@ -48343,7 +48353,7 @@
             {
                 "name": "VertexDeformSpeed",
                 "value": [
-                    0.20000000298023224,
+                    -0.20000000298023224,
                     0.0,
                     0.0,
                     0.0
@@ -48353,7 +48363,7 @@
             {
                 "name": "DeformIntensity",
                 "value": [
-                    3.0,
+                    6.0,
                     0.0,
                     0.0,
                     0.0
@@ -48583,6 +48593,7 @@
             },
             {
                 "name": "FEATURE_VERTEX_DEFORM",
+                "on": false,
                 "Group": "Vertex Deform Feature",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -48593,6 +48604,7 @@
             },
             {
                 "name": "FEATURE_BLOOM",
+                "on": false,
                 "Group": "Bloom Feature",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -48606,12 +48618,6 @@
                 "name": "INSIDE_COLOR",
                 "on": false,
                 "Group": "Inside Face Feature",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "DEBUG_HIDE",
-                "on": false,
-                "Group": "Others",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],

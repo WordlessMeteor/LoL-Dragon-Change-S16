@@ -3,7 +3,7 @@
     "name": "Shyvana",
     "alias": "Shyvana",
     "title": "fiica dragonului",
-    "shortBio": "Shyvana este o ființă în inima căreia mocnește magia unui fragment de rună. Deși deseori ia formă omenească, se poate transforma oricând într-un dragon terifiant pentru a-și incinera inamicii cu suflarea dogoritoare. După ce i-a salvat viața lui Jarvan IV, prințul moștenitor al Demaciei, Shyvana s-a alăturat gărzii sale regale; cu toate acestea, demacienii suspicioși încă nu o acceptă cu adevărat.",
+    "shortBio": "Shyvana este un războinic pe jumătate dragon de temut. Deși deseori ia formă omenească, ea stăpânește și cerurile ca un dragon, incinerându-și inamicii cu suflarea de foc. După ce i-a salvat viața lui Jarvan IV, prințul moștenitor al Demaciei, Shyvana s-a alăturat gărzii sale regale; cu toate acestea, demacienii suspicioși încă nu o acceptă cu adevărat.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 6,
@@ -84,7 +84,7 @@
                     "id": 38
                 }
             ],
-            "description": null
+            "description": "Era logic ca Shyvana să vrea să joace un dragon puternic în Riftquest, dar ceea ce i-a surprins și mai mult pe membrii grupului ei a fost înclinația ei plină de bucurie spre distrugere pe care jocul a scos-o la iveală din prietena lor atât de strict disciplinată. Năpustindu-se pe câmpul de luptă cu o bucurie feroce, simplul răget al Shyvanei solzi de fier trimite inamicii și figurinele zburând prin aer (și uneori chiar și pe aliații ei)."
         },
         {
             "id": 102002,
@@ -607,8 +607,8 @@
     "passive": {
         "name": "Solzi de oțel",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Shyvana/HUD/Icons2D/Shyvana_Passive.Shyvana_Rework.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/0102/ability_0102_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/0102/ability_0102_P1.jpg",
         "description": "Doborârile de campioni inamici, minioni mari și monștri mari îi oferă Shyvanei cumuluri de ''Solzi de oțel'', îmbunătățindu-i atributele defensive."
     },
     "spells": [
@@ -771,7 +771,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Shyvana primește un scut, viteză de mișcare, iar după o scurtă întârziere, zona din jurul ei detonează.  Cât timp este în forma de dragon, explozia îi oferă vindecare dacă lovește un campion inamic.",
-            "dynamicDescription": "Shyvana se învăluie în flăcări timp de @Duration@ secunde, primind un <shield>@Calc_Shield@scut în valoare de </shield>, crescut cu <shield>@Calc_Shield_Per_Nearby_Champion@</shield> pentru fiecare campion inamic din apropiere și <speed>@MoveSpeed@ viteză de mișcare</speed>, valoare ce crește la <speed>@MoveSpeedTowardsEnemies@</speed> când te deplasezi către campionii inamici.<br><br>Când efectul se termină, <shield>scutul</shield> este distrus. La <recast>refolosire</recast>, zona din jurul ei se detonează, provocând <magicDamage>@Damage@ daune magice</magicDamage>.<br><br><keywordMajor>Formă de dragon:</keywordMajor> dacă detonarea lovește un campion inamic, Shyvana <healing>își regenerează de la @Calc_Heal_Min@ până la @Calc_Heal_Max@</healing> viață în funcție de viața lipsă.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Shyvana se învăluie în flăcări timp de @Duration@ secunde, primind un <shield>scut în valoare de @Calc_Shield@</shield>, crescut cu <shield>@Calc_Shield_Per_Nearby_Champion@</shield> pentru fiecare campion inamic din apropiere și <speed>@MoveSpeed@ viteză de mișcare</speed>, valoare ce crește la <speed>@MoveSpeedTowardsEnemies@</speed> când te deplasezi către campionii inamici.<br><br>Când efectul se termină, <shield>scutul</shield> este distrus. La <recast>refolosire</recast>, zona din jurul ei se detonează, provocând <magicDamage>@Damage@ daune magice</magicDamage>.<br><br><keywordMajor>Formă de dragon:</keywordMajor> dacă detonarea lovește un campion inamic, Shyvana <healing>își regenerează de la @Calc_Heal_Min@ până la @Calc_Heal_Max@ viață</healing> în funcție de viața lipsă.@SpellModifierDescriptionAppend@",
             "range": [
                 350.0,
                 350.0,
@@ -1071,7 +1071,7 @@
             "cost": "Necesită 100 <keywordMajor>furie a dragonului</keywordMajor>",
             "cooldown": "Fără timp de reactivare",
             "description": "Shyvana se transformă în dragon și sare înainte, făcând inamicii de pe traseul ei să fugă. Cât timp este în forma de dragon, devine mai mare și abilitățile ei de bază sunt îmbunătățite.",
-            "dynamicDescription": "<spellPassive>Pasivă</spellPassive>: Shyvana generează <keywordMajor>@Fury_Generation@ furie a dragonului</keywordMajor> atunci când lovește inamicii cu atacuri și abilități, generarea fiind crescută cu @TT_Fury_Mult@ când este în <keywordMajor>forma de dragon</keywordMajor> și redusă cu @TT_Fury_AoE_Penalty@ când lovește într-o zonă împotriva non-campionilor.<br><br><spellActive>Activă</spellActive>: Shyvana se transformă în <keywordMajor>forma de dragon</keywordMajor>, devenind <attention>de neoprit</attention>, zburând către locația-țintă, scuipând foc asupra inamicilor de dedesubt, provocând <magicDamage>@Damage@ daune magice</magicDamage> și făcându-i să <status>fugă timp de @FearDuration@ secundă</status>.<br><br>Cât timp e transformată, abilitățile de bază ale Shyvanei sunt îmbunătățite, iar ea primește <scaleHealth>@Calc_Bonus_Health@ viață bonus</scaleHealth>, dimensiune și rază de atac. Shyvana pierde <keywordMajor>furie a dragonului</keywordMajor> în timp, iar transformarea ei se încheie când nu mai are <keywordMajor>furie a dragonului</keywordMajor> rămasă.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă</spellPassive>: Shyvana generează <keywordMajor>@Fury_Generation@ furie a dragonului</keywordMajor> atunci când lovește inamicii cu atacuri și abilități, generarea fiind crescută cu @TT_Fury_Mult@ când este în <keywordMajor>forma de dragon</keywordMajor> și redusă cu @TT_Fury_AoE_Penalty@ când lovește într-o zonă împotriva non-campionilor.<br><br><spellActive>Activă</spellActive>: Shyvana se transformă în <keywordMajor>forma de dragon</keywordMajor>, devenind <attention>de neoprit</attention>, zburând către locația-țintă, scuipând foc asupra inamicilor de dedesubt, provocând <magicDamage>@Damage@ daune magice</magicDamage> și făcându-i să <status>fugă timp de @FearDuration@ secunde</status>.<br><br>Cât timp e transformată, abilitățile de bază ale Shyvanei sunt îmbunătățite, iar ea primește <scaleHealth>@Calc_Bonus_Health@ viață bonus</scaleHealth>, dimensiune și rază de atac. Shyvana pierde <keywordMajor>furie a dragonului</keywordMajor> în timp, iar transformarea ei se încheie când nu mai are <keywordMajor>furie a dragonului</keywordMajor> rămasă.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,

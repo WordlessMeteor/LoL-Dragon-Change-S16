@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Olaf schleudert eine Axt in den Boden eines Zielbereichs, die getroffenen Gegnern Schaden zufügt und ihre Rüstung und ihr Lauftempo verringert. Wenn Olaf die Axt aufhebt, wird die Abklingzeit der Fähigkeit zurückgesetzt.",
-            "dynamicDescription": "Olaf wirft eine Axt, die <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage> verursacht und das Ziel bis zu @Effect3Amount@&nbsp;Sekunden lang (abhängig von der zurückgelegten Entfernung) um @SlowAmount*100@&nbsp;% <status>verlangsamt</status>. Getroffene Champions verlieren @DebuffDuration@&nbsp;Sekunden lang <scaleArmor>@ShredAmount*100@&nbsp;% Rüstung</scaleArmor>.<br><br>Wenn Olaf die Axt aufhebt, wird die Abklingzeit der Fähigkeit auf @TooltipCDRefund@&nbsp;Sekunden verringert oder vollständig zurückerstattet, wenn @TooltipCDRefund@&nbsp;Sekunden verstrichen sind.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf wirft eine Axt, die <physicalDamage>@TotalDamage@&nbsp;normalen Schaden</physicalDamage> verursacht und das Ziel bis zu @MaxSlowDuration@&nbsp;Sekunden lang (abhängig von der zurückgelegten Entfernung) um @SlowAmount*100@&nbsp;% <status>verlangsamt</status>. Getroffene Champions verlieren @DebuffDuration@&nbsp;Sekunden lang <scaleArmor>@ShredAmount*100@&nbsp;% Rüstung</scaleArmor>.<br><br>Wenn Olaf die Axt aufhebt, wird die Abklingzeit der Fähigkeit auf @TooltipCDRefund@&nbsp;Sekunden verringert oder vollständig zurückerstattet, wenn @TooltipCDRefund@&nbsp;Sekunden verstrichen sind.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

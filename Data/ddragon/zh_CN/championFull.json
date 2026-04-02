@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "16.6.1",
+    "version": "16.7.1",
     "data": {
         "Aatrox": {
             "id": "Aatrox",
@@ -12902,7 +12902,7 @@
                     "id": "AzirQWrapper",
                     "name": "狂沙猛攻",
                     "description": "阿兹尔把所有黄沙士兵派往一个地点。黄沙士兵会对沿途的所有敌人造成魔法伤害，并施加持续1秒的减速效果。",
-                    "tooltip": "阿兹尔命令所有<keywordMajor>黄沙士兵</keywordMajor>前往一个区域，对他们途经的敌人们造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和持续1秒的{{ e2 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "阿兹尔把所有<keywordMajor>黄沙士兵</keywordMajor>派往一个区域，从而对它们途经的所有敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，并施加持续1秒的{{ slowamount*-100 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -12945,11 +12945,11 @@
                             0
                         ],
                         [
-                            25,
-                            25,
-                            25,
-                            25,
-                            25
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -13011,7 +13011,7 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "25",
+                        "0",
                         "0",
                         "70",
                         "1600",
@@ -15670,6 +15670,68 @@
                     "name": "五彩缤纷小可爱 布里茨",
                     "chromas": false,
                     "parentSkin": 56
+                },
+                {
+                    "id": "53066",
+                    "num": 66,
+                    "name": "泡泡飘飘拳 布里茨",
+                    "chromas": false
+                },
+                {
+                    "id": "53067",
+                    "num": 67,
+                    "name": "泡泡飘飘拳 布里茨 吃我一记“火冒三丈”！",
+                    "chromas": true,
+                    "parentSkin": 66
+                },
+                {
+                    "id": "53068",
+                    "num": 68,
+                    "name": "泡泡飘飘拳 布里茨 吃我一记“眼冒金星”！",
+                    "chromas": false,
+                    "parentSkin": 66
+                },
+                {
+                    "id": "53069",
+                    "num": 69,
+                    "name": "泡泡飘飘拳 布里茨 吃我一记“斗转星移”！",
+                    "chromas": false,
+                    "parentSkin": 66
+                },
+                {
+                    "id": "53070",
+                    "num": 70,
+                    "name": "泡泡飘飘拳 布里茨 吃我一记“大发雷霆”！",
+                    "chromas": false,
+                    "parentSkin": 66
+                },
+                {
+                    "id": "53071",
+                    "num": 71,
+                    "name": "泡泡飘飘拳 布里茨 吃我一记“万念俱灰”！",
+                    "chromas": false,
+                    "parentSkin": 66
+                },
+                {
+                    "id": "53072",
+                    "num": 72,
+                    "name": "泡泡飘飘拳 布里茨 吃我一记“天昏地暗”！",
+                    "chromas": false,
+                    "parentSkin": 66
+                },
+                {
+                    "id": "53073",
+                    "num": 73,
+                    "name": "泡泡飘飘拳 布里茨 吃我一记“翻江倒海”！",
+                    "chromas": false,
+                    "parentSkin": 66
+                },
+                {
+                    "id": "53074",
+                    "num": 74,
+                    "name": "泡泡飘飘拳 布里茨 吃我一记“眼花缭乱”！",
+                    "chromas": false,
+                    "parentSkin": 66
                 }
             ],
             "lore": "布里茨是来自祖安的一个巨大的、几乎坚不可摧的机械体，最初被制造出来的目的是为了处理有毒废料。然而他觉得自己存在的意义太过狭隘，于是就改装了自己的形态，以便更好地效力于地沟区的孱弱人群。布里茨无私地使用自己的力量和钢铁之躯保护其他人，伸出长长的机械援手，或者发出能量脉冲，制服任何带来麻烦的人。",
@@ -21370,7 +21432,7 @@
             "stats": {
                 "hp": 630,
                 "hpperlevel": 104,
-                "mp": 450,
+                "mp": 480,
                 "mpperlevel": 40,
                 "movespeed": 335,
                 "armor": 18,
@@ -37480,6 +37542,12 @@
                     "parentSkin": 33
                 },
                 {
+                    "id": "86043",
+                    "num": 43,
+                    "name": "企鹅 盖伦",
+                    "chromas": false
+                },
+                {
                     "id": "86044",
                     "num": 44,
                     "name": "堕落神王 盖伦",
@@ -37496,13 +37564,13 @@
                     "id": "86046",
                     "num": 46,
                     "name": "暗裔英雄 盖伦",
-                    "chromas": false
+                    "chromas": true
                 },
                 {
                     "id": "86047",
                     "num": 47,
                     "name": "暗裔英雄 盖伦 帝国幻想",
-                    "chromas": true,
+                    "chromas": false,
                     "parentSkin": 46
                 },
                 {
@@ -40446,7 +40514,7 @@
                 "mpregenperlevel": 0.7,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 68,
+                "attackdamage": 66,
                 "attackdamageperlevel": 0,
                 "attackspeedperlevel": 3,
                 "attackspeed": 0.475
@@ -83175,6 +83243,19 @@
                     "num": 54,
                     "name": "萨恩 · 乌祖尔 莫德凯撒",
                     "chromas": false
+                },
+                {
+                    "id": "82055",
+                    "num": 55,
+                    "name": "至臻 小气大亨 莫德凯撒",
+                    "chromas": true
+                },
+                {
+                    "id": "82058",
+                    "num": 58,
+                    "name": "至臻 小气大亨 莫德凯撒 至强",
+                    "chromas": false,
+                    "parentSkin": 55
                 }
             ],
             "lore": "两度被杀，三度重生。莫德凯撒是一位来自远古纪元的残酷军阀，他使用死灵巫术将无数灵魂禁锢在永恒的奴役中。现在几乎无人记得他早期的那些征服战争，也无人知道他有多强大的力量，但也有一些古老的灵魂认得他，而他们一直都在担心有一天他会回来，同时统治生者和死者。",
@@ -94068,7 +94149,7 @@
                     "id": "OlafAxeThrowCast",
                     "name": "逆流投掷",
                     "description": "奥拉夫将战斧投至目标区域，对所有被战斧穿过的敌人造成伤害并削减他们的护甲和移动速度。如果奥拉夫捡起斧头，那么该技能冷却时间就会重置。",
-                    "tooltip": "奥拉夫扔出一把斧头，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>和至多持续{{ e3 }}秒(基于斧头移动距离)的{{ slowamount*100 }}%<status>减速</status>。被斧头命中的英雄还会损失<scaleArmor>{{ shredamount*100 }}%护甲</scaleArmor>，持续{{ debuffduration }}秒。<br /><br />如果奥拉夫拾起了斧头，那么这个技能的冷却时间会缩短至{{ tooltipcdrefund }}秒，如果在斧头被扔出{{ tooltipcdrefund }}秒后拾起斧头，则完全返还冷却时间。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "奥拉夫扔出一把斧头，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>和至多持续{{ maxslowduration }}秒(基于斧头移动距离)的{{ slowamount*100 }}%<status>减速</status>。被斧头命中的英雄还会损失<scaleArmor>{{ shredamount*100 }}%护甲</scaleArmor>，持续{{ debuffduration }}秒。<br /><br />如果奥拉夫拾起了斧头，那么这个技能的冷却时间会缩短至{{ tooltipcdrefund }}秒，或在度过{{ tooltipcdrefund }}秒之后完全返还。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -94118,11 +94199,11 @@
                             0
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -94178,7 +94259,7 @@
                         null,
                         "0",
                         "0",
-                        "3",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -111666,6 +111747,68 @@
                     "name": "无畏骑士 瑟庄妮 赤子初心",
                     "chromas": false,
                     "parentSkin": 5
+                },
+                {
+                    "id": "113048",
+                    "num": 48,
+                    "name": "哈巴狗训练师 瑟庄妮",
+                    "chromas": true
+                },
+                {
+                    "id": "113049",
+                    "num": 49,
+                    "name": "哈巴狗训练师 瑟庄妮 曾经叠钢现在训狗",
+                    "chromas": false,
+                    "parentSkin": 48
+                },
+                {
+                    "id": "113050",
+                    "num": 50,
+                    "name": "哈巴狗训练师 瑟庄妮 曾经空大现在训狗",
+                    "chromas": false,
+                    "parentSkin": 48
+                },
+                {
+                    "id": "113051",
+                    "num": 51,
+                    "name": "哈巴狗训练师 瑟庄妮 曾经抓边现在训狗",
+                    "chromas": false,
+                    "parentSkin": 48
+                },
+                {
+                    "id": "113052",
+                    "num": 52,
+                    "name": "哈巴狗训练师 瑟庄妮 曾经骑箭现在训狗",
+                    "chromas": false,
+                    "parentSkin": 48
+                },
+                {
+                    "id": "113053",
+                    "num": 53,
+                    "name": "哈巴狗训练师 瑟庄妮 曾经骑猪现在训狗",
+                    "chromas": false,
+                    "parentSkin": 48
+                },
+                {
+                    "id": "113054",
+                    "num": 54,
+                    "name": "哈巴狗训练师 瑟庄妮 曾经反野现在训狗",
+                    "chromas": false,
+                    "parentSkin": 48
+                },
+                {
+                    "id": "113055",
+                    "num": 55,
+                    "name": "哈巴狗训练师 瑟庄妮 曾经抢龙现在训狗",
+                    "chromas": false,
+                    "parentSkin": 48
+                },
+                {
+                    "id": "113056",
+                    "num": 56,
+                    "name": "哈巴狗训练师 瑟庄妮 曾经打野现在训狗",
+                    "chromas": false,
+                    "parentSkin": 48
                 }
             ],
             "lore": "瑟庄妮是凛冬之爪部族的战母。继承了寒冰血脉的她残忍无情，带领的部族也是弗雷尔卓德土地上最令人闻风丧胆的。她的部族的生存，是一场旷日持久的、毫无希望的对抗元素之力的战斗，迫使他们劫掠诺克萨斯人、德玛西亚人，还有阿瓦罗萨部族等等，以便渡过残酷的凛冬。瑟庄妮在最危险的战斗中身先士卒，骑着居瓦斯克野猪“钢鬃”冲在最前方，用她臻冰打造的链枷让敌人粉身碎骨。",
@@ -117919,8 +118062,8 @@
                     "parentSkin": 17
                 }
             ],
-            "lore": "希瓦娜是一位迅猛的半龙人战士。 她平时以人的形象出现，但也能以巨龙的身姿统治天空，用龙息烈焰焚尽敌人。 作为皇子嘉文四世曾经的救命恩人，希瓦娜如今在皇子的卫队中效力。她兢兢业业，试图在多疑的德玛西亚人中求得接纳。",
-            "blurb": "希瓦娜是一位迅猛的半龙人战士。 她平时以人的形象出现，但也能以巨龙的身姿统治天空，用龙息烈焰焚尽敌人。 作为皇子嘉文四世曾经的救命恩人，希瓦娜如今在皇子的卫队中效力。她兢兢业业，试图在多疑的德玛西亚人中求得接纳。",
+            "lore": "希瓦娜是一位迅猛的半龙人战士。她平时以人的形象出现，但也能以巨龙的身姿统治天空，用龙息烈焰焚尽敌人。作为皇子嘉文四世曾经的救命恩人，希瓦娜如今在皇子的卫队中效力。她兢兢业业，试图在多疑的德玛西亚人中求得接纳。",
+            "blurb": "希瓦娜是一位迅猛的半龙人战士。她平时以人的形象出现，但也能以巨龙的身姿统治天空，用龙息烈焰焚尽敌人。作为皇子嘉文四世曾经的救命恩人，希瓦娜如今在皇子的卫队中效力。她兢兢业业，试图在多疑的德玛西亚人中求得接纳。",
             "allytips": [
                 "- 希瓦娜的技能都可在攻击单位时获益。提供攻击速度的装备对于她而言比其他英雄更有价值。",
                 "- 在与不同的对手进行对线时，【E爆炎吐息】非常值得投入点数。",
@@ -125390,6 +125533,68 @@
                     "name": "狼神英灵 斯维因 魅影追猎",
                     "chromas": false,
                     "parentSkin": 32
+                },
+                {
+                    "id": "50042",
+                    "num": 42,
+                    "name": "炸鸡之王 斯维因",
+                    "chromas": true
+                },
+                {
+                    "id": "50043",
+                    "num": 43,
+                    "name": "炸鸡之王 斯维因 与番茄酱更配噢！",
+                    "chromas": false,
+                    "parentSkin": 42
+                },
+                {
+                    "id": "50044",
+                    "num": 44,
+                    "name": "炸鸡之王 斯维因 与灯笼椒酱更配噢！",
+                    "chromas": false,
+                    "parentSkin": 42
+                },
+                {
+                    "id": "50045",
+                    "num": 45,
+                    "name": "炸鸡之王 斯维因 与紫苏梅酱更配噢！",
+                    "chromas": false,
+                    "parentSkin": 42
+                },
+                {
+                    "id": "50046",
+                    "num": 46,
+                    "name": "炸鸡之王 斯维因 与薄荷酱更配噢！",
+                    "chromas": false,
+                    "parentSkin": 42
+                },
+                {
+                    "id": "50047",
+                    "num": 47,
+                    "name": "炸鸡之王 斯维因 与甜辣酱更配噢！",
+                    "chromas": false,
+                    "parentSkin": 42
+                },
+                {
+                    "id": "50048",
+                    "num": 48,
+                    "name": "炸鸡之王 斯维因 与蓝鱼子酱更配噢！",
+                    "chromas": false,
+                    "parentSkin": 42
+                },
+                {
+                    "id": "50049",
+                    "num": 49,
+                    "name": "炸鸡之王 斯维因 与蛋黄酱更配噢！",
+                    "chromas": false,
+                    "parentSkin": 42
+                },
+                {
+                    "id": "50050",
+                    "num": 50,
+                    "name": "炸鸡之王 斯维因 与青芥末酱更配噢！",
+                    "chromas": false,
+                    "parentSkin": 42
                 }
             ],
             "lore": "杰里柯·斯维因是诺克萨斯高瞻远瞩的统治者，执掌一个独尊力量的扩张主义国度。虽然他曾在艾欧尼亚战争中被击倒并留下残疾，失去了左臂，但他却成功用无情的决心掌控了整个帝国……也获得了一只新的恶魔之手。现在，斯维因在前线亲自指挥，对抗着只有他才能看到的压境黑暗——只有他才能通过黑影般的渡鸦窥见周围死尸的秘密。在献祭与秘密的漩涡中，最惊天的秘密是，真正的敌人来自内部。",
@@ -128386,6 +128591,68 @@
                     "name": "山海绘卷 塔姆 茶白",
                     "chromas": false,
                     "parentSkin": 30
+                },
+                {
+                    "id": "223039",
+                    "num": 39,
+                    "name": "胖胖龙 塔姆",
+                    "chromas": false
+                },
+                {
+                    "id": "223040",
+                    "num": 40,
+                    "name": "胖胖龙 塔姆 并非胖红龙",
+                    "chromas": true,
+                    "parentSkin": 39
+                },
+                {
+                    "id": "223041",
+                    "num": 41,
+                    "name": "胖胖龙 塔姆 并非胖金龙",
+                    "chromas": false,
+                    "parentSkin": 39
+                },
+                {
+                    "id": "223042",
+                    "num": 42,
+                    "name": "胖胖龙 塔姆 并非胖绿龙",
+                    "chromas": false,
+                    "parentSkin": 39
+                },
+                {
+                    "id": "223043",
+                    "num": 43,
+                    "name": "胖胖龙 塔姆 并非胖蓝龙",
+                    "chromas": false,
+                    "parentSkin": 39
+                },
+                {
+                    "id": "223044",
+                    "num": 44,
+                    "name": "胖胖龙 塔姆 并非胖紫龙",
+                    "chromas": false,
+                    "parentSkin": 39
+                },
+                {
+                    "id": "223045",
+                    "num": 45,
+                    "name": "胖胖龙 塔姆 并非胖青龙",
+                    "chromas": false,
+                    "parentSkin": 39
+                },
+                {
+                    "id": "223046",
+                    "num": 46,
+                    "name": "胖胖龙 塔姆 并非胖岩龙",
+                    "chromas": false,
+                    "parentSkin": 39
+                },
+                {
+                    "id": "223047",
+                    "num": 47,
+                    "name": "胖胖龙 塔姆 并非胖黑龙",
+                    "chromas": false,
+                    "parentSkin": 39
                 }
             ],
             "lore": "塔姆在历史上有许多不同的名字，他游历于符文之地的各条水道，用大意之人的悲惨喂养自己贪得无厌的食欲。虽然他的外表可能富有古怪的魅力和得意，但他在物质领域的漫游只是为了寻找毫无戒心的猎物。他的舌头像巨大的鞭子，即使是全副武装的重甲士兵也会被他从十几步以外的距离击晕，而如果跌入了他隆隆作响的肚子里，就相当于掉进了九死一生的绝命深渊。",
@@ -143540,11 +143807,11 @@
                     },
                     "maxrank": 3,
                     "cooldown": [
-                        100,
-                        80,
+                        120,
+                        90,
                         60
                     ],
-                    "cooldownBurn": "100/80/60",
+                    "cooldownBurn": "120/90/60",
                     "cost": [
                         100,
                         100,
@@ -144687,6 +144954,68 @@
                     "name": "观星者 薇古丝 夜神星映影",
                     "chromas": false,
                     "parentSkin": 20
+                },
+                {
+                    "id": "711029",
+                    "num": 29,
+                    "name": "惊悚派对 薇古丝",
+                    "chromas": true
+                },
+                {
+                    "id": "711030",
+                    "num": 30,
+                    "name": "惊悚派对 薇古丝 吓走你的愤怒！",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "711031",
+                    "num": 31,
+                    "name": "惊悚派对 薇古丝 吓走你的焦虑！",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "711032",
+                    "num": 32,
+                    "name": "惊悚派对 薇古丝 吓走你的紧张！",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "711033",
+                    "num": 33,
+                    "name": "惊悚派对 薇古丝 吓走你的痛苦！",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "711034",
+                    "num": 34,
+                    "name": "惊悚派对 薇古丝 吓走你的悲伤！",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "711035",
+                    "num": 35,
+                    "name": "惊悚派对 薇古丝 吓走你的失望！",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "711036",
+                    "num": 36,
+                    "name": "惊悚派对 薇古丝 吓走你的沮丧！",
+                    "chromas": false,
+                    "parentSkin": 29
+                },
+                {
+                    "id": "711037",
+                    "num": 37,
+                    "name": "惊悚派对 薇古丝 吓走你的恐惧！",
+                    "chromas": false,
+                    "parentSkin": 29
                 }
             ],
             "lore": "在暗影岛的黑色中心，一个约德尔人孤独地踯躅在鬼魅的浓雾中，在那片阴郁的惨象中安然自得。薇古丝有着取之不尽的少年烦恼，身后还跟着一个强大的黑影，她为自己打造了一片阴郁的小天地，沉浸其中，远离 “正常人”世界里恶心的欢快气氛。虽然她没什么远大志向，但她会毫不犹豫地抹杀任何色彩和欢笑，用她的颓废魔法阻止所有试图闯入的人。",

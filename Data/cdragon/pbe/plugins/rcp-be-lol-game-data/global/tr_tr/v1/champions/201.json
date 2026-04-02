@@ -1329,7 +1329,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Braum kalkanından buz parçaları fırlatarak, rakiplerini yavaşlatıp onlara büyü hasarı verir.<br><br>Bir adet <font color='#FFF673'>Meydan Dayağı</font> yükü uygular.",
-            "dynamicDescription": "Braum'un kalkanından fırlattığı buz parçaları isabet alan ilk rakibe <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve onu @Effect5Amount@ saniye içinde azalarak kaybolacak şekilde %@Effect2Amount@ <status>yavaşlatır</status>.<br><br>Bir adet <keywordMajor>Meydan Dayağı</keywordMajor> yükü uygular. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Braum'un kalkanından fırlattığı buz parçaları isabet alan ilk rakibe <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir ve onu @SlowDuration@ saniye içinde azalarak kaybolacak şekilde %@InitialSlow@ <status>yavaşlatır</status>.<br><br>Bir adet <keywordMajor>Meydan Dayağı</keywordMajor> yükü uygular. @SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1479,7 +1479,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Braum dost bir şampiyona ya da minyona doğru atılır. Hedefine ulaştığında, hem Braum hem de dost birim birkaç saniyeliğine zırh ve büyü direnci kazanır.",
-            "dynamicDescription": "Braum bir takım arkadaşına veya dost minyona doğru atılır. Hedefin yanına vardığında ona @Effect1Amount@ saniyeliğine <scaleArmor>@GrantedAllyArmor@ Zırh</scaleArmor> ve <scaleMR>@GrantedAllyMR@ Büyü Direnci</scaleMR> kazandırır. Kendisi de aynı süre boyunca <scaleArmor>@GrantedBraumArmor@ Zırh</scaleArmor> ve <scaleMR>@GrantedBraumMR@ Büyü Direnci</scaleMR> kazanır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Braum bir takım arkadaşına veya dost minyona doğru atılır. Hedefin yanına vardığında ona @Duration@ saniyeliğine <scaleArmor>@GrantedAllyArmor@ Zırh</scaleArmor> ve <scaleMR>@GrantedAllyMR@ Büyü Direnci</scaleMR> kazandırır. Kendisi de aynı süre boyunca <scaleArmor>@GrantedBraumArmor@ Zırh</scaleArmor> ve <scaleMR>@GrantedBraumMR@ Büyü Direnci</scaleMR> kazanır.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1629,7 +1629,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Braum birkaç saniye boyunca kalkanını belli bir yöne doğru tutarak ona yönelen tüm atışların yolunu keser. Bu atışlar Braum'a isabet ederek yok olur. Braum bu yönden gelen ilk saldırının tüm hasarını ortadan kaldırır, sonrakilerin de hasarını azaltır.",
-            "dynamicDescription": "Braum @Effect2Amount@ saniyeliğine kalkanını kaldırıp seçili yönden gelen rakip atışlarının önünü keserek onların Braum'a çarpıp yok olmasını sağlar. Braum'un engellediği ilk atış hasar vermez ve sonraki atışlar %@Effect3Amount@ daha az hasar verir.<br><br>Braum kalkanını kaldırmışken <speed>%@Effect4Amount@ Hareket Hızı</speed> kazanır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Braum @ShieldHoldDuration@ saniyeliğine kalkanını kaldırıp seçili yönden gelen rakip atışlarının önünü keserek onların Braum'a çarpıp yok olmasını sağlar. Braum'un engellediği ilk atış hasar vermez ve sonraki atışlar %@ShieldFacingDRAmount@ daha az hasar verir.<br><br>Braum kalkanını kaldırmışken <speed>%@MoveSpeedPercent@ Hareket Hızı</speed> kazanır.@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,
                 25000.0,

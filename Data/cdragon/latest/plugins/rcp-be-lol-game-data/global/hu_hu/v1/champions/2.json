@@ -1168,7 +1168,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Olaf a kijelölt helyre hajít egy fejszét, amely sebzi az útjába eső ellenfeleket, és csökkenti a páncéljukat és a mozgási sebességüket. Ha Olaf felveszi a fejszét, a képesség töltési ideje nullázódik.",
-            "dynamicDescription": "Olaf elhajít egy fejszét, amellyel <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoz, és (a megtett távolságtól függően) legfeljebb @Effect3Amount@ másodpercre @SlowAmount*100@%-kal <status>lelassítja</status> a célpontját. Az eltalált hősök @DebuffDuration@ másodpercre elveszítik <scaleArmor>páncéljuk @ShredAmount*100@%-át</scaleArmor>.<br><br>Ha Olaf felveszi a fejszét, a képesség töltési ideje @TooltipCDRefund@ másodpercre csökken, vagy nullázódik, ha @TooltipCDRefund@ másodpercnél kevesebb van hátra.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf elhajít egy fejszét, amellyel <physicalDamage>@TotalDamage@ fizikai sebzést</physicalDamage> okoz, és (a megtett távolságtól függően) legfeljebb @MaxSlowDuration@ másodpercre @SlowAmount*100@%-kal <status>lelassítja</status> a célpontját. Az eltalált hősök @DebuffDuration@ másodpercre elveszítik <scaleArmor>páncéljuk @ShredAmount*100@%-át</scaleArmor>.<br><br>Ha Olaf felveszi a fejszét, a képesség töltési ideje @TooltipCDRefund@ másodpercre csökken, vagy nullázódik, ha @TooltipCDRefund@ másodpercnél kevesebb van hátra.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1217,13 +1217,13 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
                     0.0,

@@ -428,6 +428,21 @@
                     }
                 ],
                 "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
+                    "mAnimationNames": [
+                        "Dance"
+                    ],
+                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "effectKey": "{3ad7a71d}",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
             }
         ],
         "__type": "SkinCharacterDataProperties"
@@ -7099,11 +7114,171 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Wings2",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -99.0,
+                        -97.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "BODY",
+                            "HEAD",
+                            "{d47a4bbe}",
+                            "Gold"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "BODY",
+                            "HEAD",
+                            "{d47a4bbe}",
+                            "Gold"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 3,
+                "pass": 10,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "reflectionDefinition": {
+                    "reflectionFresnelColor": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "fresnel": 0.00800000037997961,
+                    "fresnelColor": [
+                        0.40784314274787903,
+                        0.5568627715110779,
+                        0.6980392336845398,
+                        0.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "{cb13aff1}": -2.0,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        180.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_RRetexture_2.SKINS_Mordekaiser_Skin55.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Wings3",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -99.0,
+                        -97.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "{d47a4bbe}"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "{d47a4bbe}"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.6199893355369568,
+                        0.239215686917305,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 12,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "{cb13aff1}": -2.0,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        180.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/color-hold.SKINS_Mordekaiser_Skin55.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Swain_Skin33_R_Ring230.SKINS_Mordekaiser_Skin55.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            10.0,
+                            10.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.0,
+                            -0.15000000596046448
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
                     "constantValue": 10.5,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
                 "emitterName": "Body_Fresnel",
+                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -7111,7 +7286,14 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "Crown"
+                            "Crown",
+                            "HEAD",
+                            "Statue"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "Crown",
+                            "HEAD",
+                            "Statue"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -7221,6 +7403,7 @@
                     -2.0,
                     -7.0
                 ],
+                "{cb13aff1}": -5.0,
                 "particleIsLocalOrientation": 1,
                 "hasPostRotateOrientation": 1,
                 "isRotationEnabled": 1,
@@ -7251,7 +7434,7 @@
                 "lifetime": 0.5,
                 "isSingleParticle": 1,
                 "emitterName": "Searchlightglow",
-                "importance": 1,
+                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -7302,13 +7485,465 @@
                 "birthColor": {
                     "constantValue": [
                         1.0,
-                        0.7848477959632874,
+                        0.809994637966156,
+                        0.3499961793422699,
+                        0.14999619126319885
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 151,
+                "alphaRef": 0,
+                "softParticleParams": {
+                    "deltaIn": 30.0,
+                    "__type": "VfxSoftParticleDefinitionData"
+                },
+                "miscRenderFlags": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        -90.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "rotation0": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        150.0,
+                        1200.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.5,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.399999976158142,
+                                1.2000000476837158,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_light_rays_10.SKINS_Mordekaiser_Skin55.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Swain_Skin33_R_Ring230.SKINS_Mordekaiser_Skin55.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            1.0,
+                            3.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.0,
+                            0.10000000149011612
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 9.5,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 0.5,
+                "isSingleParticle": 1,
+                "emitterName": "Searchlightglow1",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        1000.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveRay"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.809994637966156,
+                        0.3499961793422699,
+                        0.14999619126319885
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 151,
+                "alphaRef": 0,
+                "softParticleParams": {
+                    "deltaIn": 30.0,
+                    "__type": "VfxSoftParticleDefinitionData"
+                },
+                "miscRenderFlags": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        -90.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "rotation0": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        150.0,
+                        1200.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.5,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.399999976158142,
+                                1.2000000476837158,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_light_rays_10.SKINS_Mordekaiser_Skin55.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Swain_Skin33_R_Ring230.SKINS_Mordekaiser_Skin55.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            1.0,
+                            5.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.0,
+                            0.10000000149011612
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 9.5,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 0.5,
+                "isSingleParticle": 1,
+                "emitterName": "Searchlightglow2",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        1000.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveRay"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.7600061297416687,
                         0.22000457346439362,
-                        0.20000000298023224
+                        0.2500038146972656
                     ],
                     "__type": "ValueColor"
                 },
                 "pass": 150,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        -90.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "rotation0": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        300.0,
+                        1200.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.5,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.399999976158142,
+                                1.2000000476837158,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_RRetexture_2.Chroma_Mordekaiser_PrestigeMoneyMiser.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 9.5,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 0.5,
+                "isSingleParticle": 1,
+                "emitterName": "Searchlightglow3",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        1000.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveRay"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.6699931621551514,
+                        0.22000457346439362,
+                        0.14999619126319885
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 140,
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "birthRotation0": {
@@ -7386,145 +8021,8 @@
                 },
                 "lifetime": 0.5,
                 "isSingleParticle": 1,
-                "emitterName": "Searchlightglow1",
-                "importance": 1,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        1000.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "EmitterPosition": {
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "FlexShapeDefinition": {
-                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
-                    "__type": "VfxFlexShapeDefinitionData"
-                },
-                "primitive": {
-                    "__type": "VfxPrimitiveRay"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.6699931621551514,
-                        0.0,
-                        0.7000076174736023
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": 150,
-                "alphaRef": 0,
-                "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        90.0,
-                        -90.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "isLocalOrientation": 0,
-                "rotation0": {
-                    "dynamics": {
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "IntegratedValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        200.0,
-                        1200.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.05000000074505806,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                0.5,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.399999976158142,
-                                1.2000000476837158,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_light_rays_10.SKINS_Mordekaiser_Skin55.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 9.5,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 0.5,
-                "isSingleParticle": 1,
-                "emitterName": "Searchlightglow2",
-                "importance": 1,
+                "emitterName": "Searchlightglow4",
+                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -7574,9 +8072,9 @@
                 "blendMode": 1,
                 "birthColor": {
                     "constantValue": [
-                        0.14000152051448822,
-                        0.08999770879745483,
                         0.5000076293945312,
+                        0.27914854884147644,
+                        0.08999770879745483,
                         0.20000000298023224
                     ],
                     "__type": "ValueColor"
@@ -7611,7 +8109,7 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        500.0,
+                        800.0,
                         1200.0,
                         0.0
                     ],
@@ -7646,129 +8144,6 @@
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_light_rays_10.SKINS_Mordekaiser_Skin55.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "Wings",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        -99.0,
-                        -97.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "BODY"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        0.0800030529499054,
-                        0.06999313086271286,
-                        0.11000228673219681,
-                        0.6500037908554077
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": 15,
-                "meshRenderFlags": 0,
-                "alphaRef": 0,
-                "reflectionDefinition": {
-                    "fresnel": 0.05000000074505806,
-                    "fresnelColor": [
-                        0.9803921580314636,
-                        0.7709162831306458,
-                        0.21960784494876862,
-                        1.0
-                    ],
-                    "__type": "VfxReflectionDefinitionData"
-                },
-                "{cb13aff1}": -1.0,
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        180.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/color-hold.SKINS_Mordekaiser_Skin55.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "Wings1",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        -99.0,
-                        -97.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "BODY"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 1,
-                "pass": 10,
-                "meshRenderFlags": 0,
-                "alphaRef": 0,
-                "{cb13aff1}": -1.0,
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        180.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_RRetexture_2.Chroma_Mordekaiser_PrestigeMoneyMiser.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -7826,7 +8201,6 @@
                 },
                 "particleLinger": 0.25,
                 "emitterName": "SparklesBody",
-                "importance": 3,
                 "worldAcceleration": {
                     "constantValue": [
                         0.0,
@@ -7926,15 +8300,15 @@
                                 0.250980406999588
                             ],
                             [
-                                0.3333333432674408,
-                                0.3333333432674408,
                                 1.0,
+                                0.5302205085754395,
+                                0.3333333432674408,
                                 1.0
                             ],
                             [
-                                0.3333333432674408,
-                                0.6666666865348816,
                                 1.0,
+                                0.6355535387992859,
+                                0.3333333432674408,
                                 1.0
                             ],
                             [
@@ -8394,10 +8768,10 @@
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.5199969410896301,
-                        0.4599984884262085,
                         1.0,
-                        0.7700007557868958
+                        0.6851910948753357,
+                        0.33725491166114807,
+                        0.7686274647712708
                     ],
                     "__type": "ValueColor"
                 },
@@ -8635,12 +9009,12 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "blendMode": 1,
+                "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.24313725531101227,
-                        0.2666666805744171,
-                        0.8117647171020508,
+                        0.7372549176216125,
+                        0.3842374384403229,
+                        0.0954146608710289,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -8682,7 +9056,7 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": -99,
+                "pass": -98,
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "hasPostRotateOrientation": 1,
@@ -8698,8 +9072,8 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        300.0,
-                        300.0,
+                        270.0,
+                        270.0,
                         0.0
                     ],
                     "__type": "ValueVector3"
@@ -8709,356 +9083,217 @@
             },
             {
                 "rate": {
-                    "constantValue": 400.0,
+                    "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.800000011920929,
+                    "constantValue": 9.5,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 2.0,
-                "emitterName": "DarkTrailFlat",
-                "birthVelocity": {
-                    "constantValue": [
-                        0.0,
-                        0.0,
-                        -200.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthDrag": {
-                    "constantValue": [
-                        0.0,
-                        0.0,
-                        0.5
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "Linger": {
-                    "SeparateLingerColor": {
-                        "dynamics": {
-                            "times": [
-                                0.010785824619233608,
-                                0.990755021572113
-                            ],
-                            "values": [
-                                [
-                                    1.0,
-                                    1.0,
-                                    1.0,
-                                    1.0
-                                ],
-                                [
-                                    1.0,
-                                    1.0,
-                                    1.0,
-                                    1.0
-                                ]
-                            ],
-                            "__type": "VfxAnimatedColorVariableData"
-                        },
-                        "__type": "ValueColor"
-                    },
-                    "__type": "VfxLingerDefinitionData"
+                "lifetime": 0.5,
+                "isSingleParticle": 1,
+                "emitterName": "Underlit1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "SpawnShape": {
                     "emitOffset": [
                         0.0,
-                        200.0,
+                        10.0,
                         0.0
                     ],
                     "__type": "{ee39916f}"
                 },
-                "primitive": {
-                    "mTrail": {
-                        "mMode": 1,
-                        "mBirthTilingSize": {
-                            "constantValue": [
-                                800.0,
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
                                 0.0,
                                 0.0
-                            ],
-                            "__type": "ValueVector3"
-                        },
-                        "mSmoothingMode": 2,
-                        "__type": "VfxTrailDefinitionData"
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
                     },
-                    "__type": "VfxPrimitiveArbitraryTrail"
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
                 },
                 "blendMode": 1,
                 "birthColor": {
                     "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.4299992322921753
+                        0.8117647171020508,
+                        0.4768444299697876,
+                        0.24313725531101227,
+                        1.0
                     ],
-                    "dynamics": {
-                        "times": [
-                            0.012612612918019295,
-                            0.5027027130126953,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.4299992322921753
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.4299992322921753
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
                     "__type": "ValueColor"
                 },
                 "Color": {
                     "constantValue": [
-                        0.05548180267214775,
-                        0.11497672647237778,
-                        0.20894178748130798,
-                        1.0
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.7499961853027344
                     ],
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.04780876636505127,
-                            0.3346613645553589,
+                            0.10862866044044495,
                             1.0
                         ],
                         "values": [
                             [
-                                0.05548180267214775,
-                                0.11497672647237778,
-                                0.20894178748130798,
+                                1.0,
+                                1.0,
+                                1.0,
                                 0.0
                             ],
                             [
-                                0.05548180267214775,
-                                0.11497672647237778,
-                                0.20894178748130798,
-                                1.0
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.7499961853027344
                             ],
                             [
-                                0.05548180267214775,
-                                0.11497672647237778,
-                                0.20894178748130798,
-                                1.0
-                            ],
-                            [
-                                0.05548180267214775,
-                                0.11497672647237778,
-                                0.20894178748130798,
-                                0.0
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.7499961853027344
                             ]
                         ],
                         "__type": "VfxAnimatedColorVariableData"
                     },
                     "__type": "ValueColor"
                 },
+                "pass": -99,
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
                 "hasPostRotateOrientation": 1,
-                "birthScale0": {
+                "isRotationEnabled": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
                     "constantValue": [
-                        80.0,
-                        2.0,
-                        2.0
+                        90.0,
+                        0.0,
+                        0.0
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Azir_Skin19_generalTrail.SKINS_Mordekaiser_Skin55.tex",
-                "birthUvScrollRate": {
+                "birthScale0": {
                     "constantValue": [
-                        1.0,
+                        200.0,
+                        200.0,
                         0.0
                     ],
-                    "__type": "ValueVector2"
+                    "__type": "ValueVector3"
                 },
-                "emitterUvScrollRate": [
-                    -0.800000011920929,
-                    0.0
-                ],
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Ring_Soft_02.SKINS_Mordekaiser_Skin55.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Swain_Skin33_R_Ring230.SKINS_Mordekaiser_Skin55.tex",
+                    "textureMult": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Ring_Soft_02.SKINS_Mordekaiser_Skin55.tex",
+                    "texAddressModeMult": 2,
                     "uvScaleMult": {
                         "constantValue": [
-                            3.0,
-                            2.0
+                            0.550000011920929,
+                            0.6499999761581421
                         ],
                         "__type": "ValueVector2"
                     },
-                    "birthUvScrollRateMult": {
-                        "constantValue": [
-                            0.4000000059604645,
-                            0.0
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "TextureMultFilpV": 1,
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
             },
             {
                 "rate": {
-                    "constantValue": 400.0,
+                    "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.4000000059604645,
+                    "constantValue": 12.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 2.0,
-                "emitterName": "brightTrailFlat",
-                "birthVelocity": {
-                    "constantValue": [
-                        0.0,
-                        0.0,
-                        -200.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthDrag": {
-                    "constantValue": [
-                        0.0,
-                        0.0,
-                        0.5
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "Linger": {
-                    "SeparateLingerColor": {
-                        "dynamics": {
-                            "times": [
-                                0.010785824619233608,
-                                0.990755021572113
-                            ],
-                            "values": [
-                                [
-                                    1.0,
-                                    1.0,
-                                    1.0,
-                                    1.0
-                                ],
-                                [
-                                    1.0,
-                                    1.0,
-                                    1.0,
-                                    1.0
-                                ]
-                            ],
-                            "__type": "VfxAnimatedColorVariableData"
-                        },
-                        "__type": "ValueColor"
-                    },
-                    "__type": "VfxLingerDefinitionData"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        200.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                "particleLingerType": 1,
+                "particleLinger": 0.4000000059604645,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "SharpReflections_LARGE1",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "primitive": {
-                    "mTrail": {
-                        "mMode": 1,
-                        "mBirthTilingSize": {
-                            "constantValue": [
-                                800.0,
-                                0.0,
-                                0.0
-                            ],
-                            "__type": "ValueVector3"
-                        },
-                        "mSmoothingMode": 2,
-                        "__type": "VfxTrailDefinitionData"
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Katarina_Skin60_SharpReflections_1.SKINS_Mordekaiser_Skin55.scb",
+                        "__type": "VfxMeshDefinitionData"
                     },
-                    "__type": "VfxPrimitiveArbitraryTrail"
+                    "__type": "VfxPrimitiveMesh"
                 },
                 "blendMode": 4,
                 "birthColor": {
-                    "dynamics": {
-                        "times": [
-                            0.012612612918019295,
-                            0.5027027130126953,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
+                    "constantValue": [
+                        1.0,
+                        0.69483482837677,
+                        0.20392157137393951,
+                        0.7686274647712708
+                    ],
                     "__type": "ValueColor"
                 },
                 "Color": {
-                    "constantValue": [
-                        0.6410772800445557,
-                        0.7284504175186157,
-                        0.7930418848991394,
-                        1.0
-                    ],
                     "dynamics": {
                         "times": [
-                            0.0,
-                            0.04780876636505127,
-                            0.3346613645553589,
+                            0.05000000074505806,
+                            0.20000000298023224,
+                            0.4000000059604645,
+                            0.800000011920929,
                             1.0
                         ],
                         "values": [
                             [
-                                0.6410772800445557,
-                                0.7284504175186157,
-                                0.7930418848991394,
-                                0.0
-                            ],
-                            [
-                                0.6410772800445557,
-                                0.7284504175186157,
-                                0.7930418848991394,
+                                1.0,
+                                1.0,
+                                1.0,
                                 1.0
                             ],
                             [
-                                0.6410772800445557,
-                                0.7284504175186157,
-                                0.7930418848991394,
+                                1.0,
+                                1.0,
+                                1.0,
                                 1.0
                             ],
                             [
-                                0.6410772800445557,
-                                0.7284504175186157,
-                                0.7930418848991394,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
                                 0.0
                             ]
                         ],
@@ -9066,46 +9301,136 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": 9,
+                "pass": 2,
                 "alphaRef": 0,
-                "miscRenderFlags": 1,
+                "{cb13aff1}": -80.0,
                 "isUniformScale": 1,
-                "hasPostRotateOrientation": 1,
-                "birthScale0": {
+                "birthRotation0": {
                     "constantValue": [
-                        80.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Azir_Skin19_generalTrail.SKINS_Mordekaiser_Skin55.tex",
-                "birthUvScrollRate": {
-                    "constantValue": [
-                        1.0,
+                        0.0,
+                        360.0,
                         0.0
                     ],
-                    "__type": "ValueVector2"
-                },
-                "emitterUvScrollRate": [
-                    -0.800000011920929,
-                    0.0
-                ],
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Swain_Skin33_R_Ring230.SKINS_Mordekaiser_Skin55.tex",
-                    "uvScaleMult": {
-                        "constantValue": [
-                            0.5,
-                            1.0
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
                         ],
-                        "__type": "ValueVector2"
-                    },
-                    "birthUvScrollRateMult": {
-                        "constantValue": [
-                            0.4000000059604645,
+                        "times": [
                             0.0
                         ],
+                        "values": [
+                            [
+                                0.0,
+                                360.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        20.0,
+                        80.0,
+                        80.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.800000011920929,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                20.0,
+                                80.0,
+                                80.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Katarina_Skin60_glitch_color_01.SKINS_Mordekaiser_Skin55.tex",
+                "uvRotation": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Morg_Skin44_Passive_MeshMult.SKINS_Mordekaiser_Skin55.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.10000000149011612,
+                            1.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.5,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    0.10000000149011612,
+                                    1.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector2fVariableData"
+                        },
                         "__type": "ValueVector2"
+                    },
+                    "birthUvRotateRateMult": {
+                        "constantValue": 50.0,
+                        "__type": "ValueFloat"
                     },
                     "__type": "VfxTextureMultDefinitionData"
                 },
@@ -9115,7 +9440,7 @@
         "particleName": "Mordekaiser_Skin58_R_MordeAuraEnemy",
         "particlePath": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_R_MordeAuraEnemy",
         "soundOnCreateDefault": "Play_sfx_Mordekaiser_MordekaiserR_InsideSpiritRealm_OnBuffActivate_target_vfx",
-        "flags": 132,
+        "flags": 196,
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_AutoAttackR2LA": {
@@ -19128,103 +19453,6 @@
                 "__type": "VfxEmitterDefinitionData"
             },
             {
-                "timeBeforeFirstEmission": 0.699999988079071,
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 9.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLingerType": 1,
-                "lifetime": 3.0,
-                "isSingleParticle": 1,
-                "emitterName": "Reflection_main",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "BODY",
-                            "HEAD",
-                            "{d47a4bbe}",
-                            "Gold"
-                        ],
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        0.2500038146972656,
-                        0.5499961972236633,
-                        0.9799954295158386,
-                        0.330006867647171
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.10000000149011612,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": -9998,
-                "alphaRef": 0,
-                "censorModulateValue": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.08999770879745483
-                ],
-                "disableBackfaceCull": true,
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "isRotationEnabled": 1,
-                "isFollowingTerrain": 1,
-                "isGroundLayer": 1,
-                "isLocalOrientation": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        -1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin58/Mordekaiser_Skin58_TX_CM.Chroma_Mordekaiser_PrestigeMoneyMiser.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
                 "rate": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -19314,7 +19542,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Foundation_Glow01.SKINS_Mordekaiser_Skin55.tex",
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin58/Mordekaiser_Skin58_TX_CM.Chroma_Mordekaiser_PrestigeMoneyMiser.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -39685,6 +39913,7 @@
                 "lifetime": 0.5,
                 "isSingleParticle": 1,
                 "emitterName": "Searchlightglow",
+                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -40015,6 +40244,7 @@
                 "lifetime": 0.5,
                 "isSingleParticle": 1,
                 "emitterName": "Searchlightglow2",
+                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -40237,13 +40467,15 @@
                     "mMesh": {
                         "mSubmeshesToDraw": [
                             "BODY",
+                            "HEAD",
                             "{d47a4bbe}",
-                            "HEAD"
+                            "Gold"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "BODY",
+                            "HEAD",
                             "{d47a4bbe}",
-                            "HEAD"
+                            "Gold"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -40270,7 +40502,7 @@
                     ],
                     "__type": "VfxReflectionDefinitionData"
                 },
-                "{cb13aff1}": -5.0,
+                "{cb13aff1}": -2.0,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
                 "birthRotation0": {
@@ -41126,6 +41358,7 @@
                 "lifetime": 0.5,
                 "isSingleParticle": 1,
                 "emitterName": "Searchlightglow4",
+                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -41176,9 +41409,9 @@
                 "birthColor": {
                     "constantValue": [
                         1.0,
-                        0.809933602809906,
-                        0.3527733385562897,
-                        0.14901961386203766
+                        0.809994637966156,
+                        0.3499961793422699,
+                        0.14999619126319885
                     ],
                     "__type": "ValueColor"
                 },
@@ -41188,8 +41421,7 @@
                     "deltaIn": 30.0,
                     "__type": "VfxSoftParticleDefinitionData"
                 },
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "miscRenderFlags": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -41284,6 +41516,7 @@
                 "lifetime": 0.5,
                 "isSingleParticle": 1,
                 "emitterName": "Searchlightglow6",
+                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -41404,7 +41637,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_light_rays_11.SKINS_Mordekaiser_Skin55.tex",
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_light_rays_10.SKINS_Mordekaiser_Skin55.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -41684,6 +41917,7 @@
                 "lifetime": 0.5,
                 "isSingleParticle": 1,
                 "emitterName": "Searchlightglow7",
+                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -41736,7 +41970,7 @@
                         1.0,
                         0.809994637966156,
                         0.3499961793422699,
-                        0.2500038146972656
+                        0.14999619126319885
                     ],
                     "__type": "ValueColor"
                 },
@@ -41746,8 +41980,7 @@
                     "deltaIn": 30.0,
                     "__type": "VfxSoftParticleDefinitionData"
                 },
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "miscRenderFlags": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -41823,6 +42056,88 @@
                         "constantValue": [
                             0.0,
                             0.10000000149011612
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Wings3",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -99.0,
+                        -97.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "{d47a4bbe}"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "{d47a4bbe}"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.6199893355369568,
+                        0.239215686917305,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 12,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "{cb13aff1}": -2.0,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        180.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/color-hold.SKINS_Mordekaiser_Skin55.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Mordekaiser/Skins/Skin55/Particles/Swain_Skin33_R_Ring230.SKINS_Mordekaiser_Skin55.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            10.0,
+                            10.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.0,
+                            -0.15000000596046448
                         ],
                         "__type": "ValueVector2"
                     },
@@ -44680,7 +44995,8 @@
             "{92c4e70d}": "Characters/Mordekaiser/Skins/Skin55/Particles/Mordekaiser_Skin55_Emote_Poro",
             "{4af8082d}": "{00000000}",
             "{65cf9fa7}": "Characters/Mordekaiser/Skins/Skin58/Particles/Mordekaiser_Skin58_Idle_Mace_Idle_Mace02",
-            "{ea1fdbac}": "{6241b137}"
+            "{ea1fdbac}": "{6241b137}",
+            "{3ad7a71d}": "{b8b4883e}"
         },
         "__type": "ResourceResolver"
     },

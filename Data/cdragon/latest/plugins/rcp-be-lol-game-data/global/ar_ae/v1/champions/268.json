@@ -686,7 +686,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يرسل أزير كل جنود الرمال نحو موقع معين. ويلحق جنود الرمال ضرر سحر بالأعداء الذين يمرون عبرهم، ويطبقون تأثير إبطاء لمدة ثانية واحدة.",
-            "dynamicDescription": "يرسل أزير كل <keywordMajor>جنود الرمال</keywordMajor> نحو موقع معين. ويلحق <magicDamage>جنود الرمال @TotalDamage@</magicDamage> ضرر سحر بالأعداء الذين يمرون عبرهم، ويطبقون تأثير <status>إبطاء</status> بنسبة @Effect2Amount*-100@% لمدة ثانية واحدة.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يأمر أزير جميع <keywordMajor>جنود الرمال</keywordMajor>بالتوجه إلى منطقة محددة، فيلحقون <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بالأعداء الذين يمرون عبرهم، ويسببون لهم <status>الإبطاء</status> بنسبة @SlowAmount*-100@% لمدة 1ث.@SpellModifierDescriptionAppend@",
             "range": [
                 740.0,
                 740.0,
@@ -726,13 +726,13 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25,
-                    -0.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
                     0.0,
