@@ -1,8 +1,8 @@
 {
-    "{26cdeb27}": {
+    "Characters/TFT17_PVE_Pix/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{577f725b}": {
+    "Characters/TFT17_PVE_Pix/CharacterRecords/Root": {
         "mCharacterName": "TFT17_PVE_Pix",
         "{9eedebad}": {
             "{b35aa769}": 0.0,
@@ -62,9 +62,16 @@
         ],
         "expGivenOnDeath": 0.0,
         "goldGivenOnDeath": 0.0,
+        "spells": [
+            "{a9f427bf}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
         "selectionRadius": 150.0,
         "unitTagsString": "Champion",
         "flags": 9446656,
+        "CharacterRole": "{53d104ac}",
         "mMoveInterval": -0.25,
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
@@ -72,7 +79,7 @@
         "mShopData": "{db132185}",
         "__type": "TFTCharacterRecord"
     },
-    "{9b769a0b}": {
+    "Characters/TFT17_PVE_Pix/Spells/TFT17_PVE_PixBasicAttack": {
         "ObjectName": "TFT17_PVE_PixBasicAttack",
         "mScriptName": "TFT17_PVE_PixBasicAttack",
         "mSpell": {
@@ -124,7 +131,87 @@
         },
         "__type": "SpellObject"
     },
-    "{f4b4c7bb}": {
+    "{a9f427bf}": {
+        "ObjectName": "TFT17_PVE_PixSpell",
+        "mScriptName": "TFT17_PVE_PixSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 7183,
+            "mAffectsStatusFlags": 32,
+            "mAnimationName": "",
+            "mCastTime": 0.25,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRadius": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castConeDistance": 100.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "selectionPriority": 1,
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT17_PVE_PixSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT17_PVE_MinionSpell_Name",
+                        "keyTooltip": "Spell_TFT17_PVE_PixSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFT17_PVE_Pix/Spells/TFT17_PVE_PixBasicAttack2": {
         "ObjectName": "TFT17_PVE_PixBasicAttack2",
         "mScriptName": "TFT17_PVE_PixBasicAttack2",
         "mSpell": {

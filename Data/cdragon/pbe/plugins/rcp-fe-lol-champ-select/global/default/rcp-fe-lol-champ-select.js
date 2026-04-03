@@ -1218,7 +1218,7 @@
                     this._super(...arguments), this._puuidToOriginalSlotId = {}, this._playerNames = i.playerNames, this.uxSettingsInit(), this.recordDidRequestSucceed = this._recordDidRequestSucceed.bind(this);
                     this.set("sessionActions", n(35).create({
                         root: this
-                    })), this.get("dynamicConfigService").initDynamicConfigs(), i.Telemetry.startTracingEvent("champ-select-init-ember-app-settle"), this.get("chatPublisherService").registerSessionChangeCallback("game-starting", this.gameStartDelayedSysMessage.bind(this)), this.get("champSelectSfxService").initDataBindings(), this.initChatBindings(), this.initChampSelectBindings(), this.initBugReportBindings(), this.championPreviewKeyUpHandler = this.championPreviewKeyUpHandler.bind(this)
+                    })), this.get("dynamicConfigService").initDynamicConfigs(), i.Telemetry.startTracingEvent("champ-select-init-ember-app-settle"), this.get("chatPublisherService").registerSessionChangeCallback("game-starting", this.gameStartDelayedSysMessage.bind(this)), this.get("champSelectSfxService").initDataBindings(), this.initChatBindings(), this.initChampSelectBindings(), this.initBugReportBindings(), this.championPreviewKeyUpHandler = this.championPreviewKeyUpHandler.bind(this), i.Ember.run.scheduleOnce("afterRender", this, this._syncVoiceNameOverrides)
                 },
                 didReceiveAttrs() {
                     this._super(...arguments)
@@ -1328,10 +1328,10 @@
                 myTeamPuuidsToNamesJson: i.Ember.computed("myTeamPuuidsToNames", (function() {
                     return JSON.stringify(this.get("myTeamPuuidsToNames") || {})
                 })),
-                myTeamPuuidsToNames: i.Ember.computed("myTeamSummoners.@each.chatDisplayName", "myTeamSummoners.@each.puuid", "myTeamSummoners.@each.obfuscatedPuuid", "myTeamSummoners.@each.isPlaceholder", (function() {
+                myTeamPuuidsToNames: i.Ember.computed("myTeamSummoners.@each.summonerObjectDisplayName", "myTeamSummoners.@each.puuid", "myTeamSummoners.@each.obfuscatedPuuid", "myTeamSummoners.@each.isPlaceholder", (function() {
                     const e = {};
                     return (this.get("myTeamSummoners") || []).filter((e => !e.isPlaceholder && !e.isHumanoid)).forEach((t => {
-                        t.puuid && (e[t.puuid] = t.chatDisplayName), t.obfuscatedPuuid && t.obfuscatedPuuid !== t.puuid && (e[t.obfuscatedPuuid] = t.chatDisplayName)
+                        t.puuid && (e[t.puuid] = t.summonerObjectDisplayName), t.obfuscatedPuuid && t.obfuscatedPuuid !== t.puuid && (e[t.obfuscatedPuuid] = t.summonerObjectDisplayName)
                     })), e
                 })),
                 humanoidNamesJoinedLobbyStringsJson: i.Ember.computed("humanoidNamesJoinedLobbyStrings.[]", (function() {
@@ -1348,6 +1348,13 @@
                             actor: t
                         })
                     }))
+                })),
+                _syncVoiceNameOverrides() {
+                    const e = this.get("myTeamPuuidsToNamesJson");
+                    e && i.PremadeVoice.setPuuidsToNameOverrides && i.PremadeVoice.setPuuidsToNameOverrides(e)
+                },
+                voiceNameOverridesObserver: i.Ember.observer("myTeamPuuidsToNamesJson", (function() {
+                    this._syncVoiceNameOverrides()
                 })),
                 getOriginalSlotId(e) {
                     const t = e.obfuscatedPuuid || e.puuid;

@@ -15034,7 +15034,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 0.3
+                        "value": 0.36
                     },
                     {
                         "name": "DamageReduction",
@@ -15050,7 +15050,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 0.4
+                        "value": 0.48
                     },
                     {
                         "name": "DamageReduction",
@@ -15386,11 +15386,11 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 33.0
+                        "value": 40.0
                     },
                     {
                         "name": "ExecuteHPPercent",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "PercentHealth",
@@ -15398,7 +15398,7 @@
                     },
                     {
                         "name": "SupermassivePercentBonus",
-                        "value": 1.0
+                        "value": 0.85
                     }
                 ]
             }
@@ -15479,7 +15479,7 @@
         "trait_id": "TFT17_FioraUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DivineDuelist.TFT_Set17.png",
-        "tooltip_text": "tft_trait_description_TFT17_FioraUniqueTrait",
+        "tooltip_text": "전투 승리 시 입힌 플레이어 피해량의 @PlayerOmnivamp*100@%만큼 전략가 체력을 회복합니다.<br><br>피오라는 1대1 대결에서 항상 승리합니다.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15711,7 +15711,7 @@
                 "constants": [
                     {
                         "name": "PctResists",
-                        "value": 0.14
+                        "value": 0.1
                     }
                 ]
             }
@@ -15813,7 +15813,7 @@
         "trait_id": "TFT17_Mecha",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Mecha.TFT_Set17.png",
-        "tooltip_text": "tft_trait_description_TFT17_Mecha",
+        "tooltip_text": "고유: 메카 유닛은 궁극의 형태로 변신할 수 있으며, 변신 시 스킬이 업그레이드되고 체력을 @TransformedPercentHealth*100@% 얻습니다. 변신한 메카는 2개의 팀 슬롯을 차지하며 메카 특성 중첩 2개로 간주됩니다.<br><br><row>(@MinUnits@) 에너지 전지: 메카가 %i:scaleAD%%i:scaleAP% @AP@% 획득</row><br><row>(@MinUnits@) 과출력 전지: %i:scaleAD%%i:scaleAP% @AP@%로 증가</row><br><row>(@MinUnits@) 정밀 엔지니어링: 최대 팀 규모 +@TeamSize@</row><br><br><rules>메카 변신기를 사용해 메카 유닛의 형태를 전환하세요.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16050,6 +16050,10 @@
                         "value": 0.08
                     },
                     {
+                        "name": "PercentMoreSwarmlings",
+                        "value": 45.0
+                    },
+                    {
                         "name": "SwarmlingAttacks",
                         "value": 6.0
                     }
@@ -16073,7 +16077,7 @@
                 "constants": [
                     {
                         "name": "DamageMultiplier",
-                        "value": 1.25
+                        "value": 1.45
                     }
                 ],
                 "min_units": 3,
@@ -16331,7 +16335,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.2
+                        "value": 0.15
                     },
                     {
                         "name": "AttackSpeedDuration",
@@ -16339,7 +16343,7 @@
                     },
                     {
                         "name": "PercentHealthShield",
-                        "value": 0.18
+                        "value": 0.12
                     },
                     {
                         "name": "ShieldDuration",
@@ -16431,7 +16435,7 @@
         "trait_id": "TFT17_SonaUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Commander.TFT_Set17.png",
-        "tooltip_text": "tft_trait_description_TFT17_SonaUniqueTrait_TeamPlanner",
+        "tooltip_text": "(@MinUnits@) 소나가 @RoundsPerMod@라운드마다 아군의 전투 시 행동 방식을 변경할 수 있는 무작위 지휘 모드를 제공합니다. 지휘 모드는 장착하지 않았더라도 플레이어 대상 전투 @RoundsPerMod@회 동안 지속됩니다.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -16511,7 +16515,7 @@
                 "constants": [
                     {
                         "name": "ADAPPerSecond",
-                        "value": 3.0
+                        "value": 4.0
                     },
                     {
                         "name": "EffectBonus",
@@ -16531,7 +16535,7 @@
                 "constants": [
                     {
                         "name": "ADAPPerSecond",
-                        "value": 3.0
+                        "value": 4.0
                     },
                     {
                         "name": "EffectBonus",
@@ -16883,7 +16887,7 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "별돌보미는 게임마다 다른 별자리를 그립니다. 이번 게임: <TFTStargazer>우물</TFTStargazer><br><br>강화된 칸에 있는 아군이 마나 재생을 @Fountain_ManaRegen_Teamwide@ 얻습니다. 강화된 칸에 있는 별돌보미는 능력치를 더 얻고 스킬로 체력이 가장 낮은 아군의 체력을 회복시킵니다.<br><br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, 스킬 피해량의 @Fountain_HealPercent*100@%만큼 체력 회복</expandRow><br><br><rules>플레이어 레벨이 오를 때마다 더 많은 칸이 드러납니다.</rules>",
+        "tooltip_text": "별돌보미는 게임마다 다른 별자리를 그립니다. 이번 게임: <TFTStargazer>우물</TFTStargazer><br>강화된 칸에 있는 아군이 마나 재생을 @Fountain_ManaRegen_Teamwide@ 얻습니다. 강화된 칸에 있는 별돌보미는 능력치를 더 얻고 스킬로 체력이 가장 낮은 아군의 체력을 회복시킵니다.<br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, 스킬 피해량의 @Fountain_HealPercent*100@%만큼 체력 회복</expandRow><br><rules>플레이어 레벨이 오를 때마다 더 많은 칸이 드러납니다.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16915,11 +16919,11 @@
                 "constants": [
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.22
+                        "value": 0.25
                     },
                     {
                         "name": "Fountain_ManaRegen",
-                        "value": 3.0
+                        "value": 4.0
                     }
                 ],
                 "min_units": 5,
@@ -16953,7 +16957,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.15
+                        "value": 0.1
                     },
                     {
                         "name": "NumMarks",
@@ -16969,7 +16973,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.3
+                        "value": 0.25
                     },
                     {
                         "name": "NumMarks",
@@ -16985,7 +16989,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.45
+                        "value": 0.4
                     },
                     {
                         "name": "NumMarks",
@@ -17003,7 +17007,7 @@
         "trait_id": "TFT17_Stargazer_Medallion",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "tft_trait_description_TFT17_Stargazer_Medallion",
+        "tooltip_text": "별돌보미는 게임마다 다른 별자리를 그립니다. 이번 게임: <TFTStargazer>메달</TFTStargazer><br><br><row>(@MinUnits@) 강화된 칸에 있는 아군이 피해 증폭을 @Medallion_DA@% 얻습니다. 이 효과는 아군 3성 유닛 하나당 @Medallion_IncreasePer3Star@% 증가합니다.</row><br><br>(현재 추가 효과: @TFTUnitProperty.trait:TFT17_Stargazer_Medallion_Increase@% %i:scaleDA%)<br><br><rules>플레이어 레벨이 오를 때마다 더 많은 칸이 드러납니다.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17013,7 +17017,7 @@
                     },
                     {
                         "name": "Medallion_IncreasePer3Star",
-                        "value": 9.0
+                        "value": 8.0
                     },
                     {
                         "name": "Medallion_Resists_Teamwide",
@@ -17045,7 +17049,7 @@
         "trait_id": "TFT17_Stargazer_Mountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "tft_trait_description_TFT17_Stargazer_Mountain",
+        "tooltip_text": "별돌보미는 게임마다 다른 별자리를 그립니다. 이번 게임: <TFTStargazer>산</TFTStargazer><br><br>플레이어 대상 전투 @Mountain_RoundsPerEmblem@회마다 별돌보미 상징을 획득합니다. 강화된 칸에 있는 별돌보미는 다양한 추가 효과를 얻습니다.<br><br>(남은 전투: @TFTUnitProperty.trait:TFT17_Stargazer_Mountain_CombatsRemaining@)<br><br><row>(@MinUnits@) 체력 @Mountain_Health*100@% 획득</row><br><row>(@MinUnits@) 또한 공격력 및 주문력 @Mountain_ADAP*100@% 획득</row><br><row>(@MinUnits@) 또한 방어력 및 마법 저항력 @Mountain_Resists@ 획득</row><br><row>(@MinUnits@) 또한 공격 속도 @Mountain_AS*100@% 획득</row><br><row>(@MinUnits@) 또한 내구력 @Mountain_DR*100@% 획득</row><br><row>(@MinUnits@) 또한 그 외 모든 추가 효과 @Mountain_StatIncrease*100@% 증가</row><br><br><rules>플레이어 레벨이 오를 때마다 더 많은 칸이 드러납니다.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17081,7 +17085,7 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_Resists",
@@ -17101,7 +17105,7 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_AS",
@@ -17117,7 +17121,7 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_Resists",
@@ -17137,7 +17141,7 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_AS",
@@ -17153,11 +17157,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 15.0
+                        "value": 12.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17173,11 +17177,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_DA",
@@ -17189,11 +17193,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 15.0
+                        "value": 12.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17209,11 +17213,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_DA",
@@ -17221,15 +17225,15 @@
                     },
                     {
                         "name": "Mountain_DR",
-                        "value": 0.12
+                        "value": 0.08
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 15.0
+                        "value": 12.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17245,11 +17249,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_DA",
@@ -17257,15 +17261,15 @@
                     },
                     {
                         "name": "Mountain_DR",
-                        "value": 0.12
+                        "value": 0.08
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 15.0
+                        "value": 12.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17284,13 +17288,13 @@
         "trait_id": "TFT17_Stargazer_Serpent",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "별돌보미는 게임마다 다른 별자리를 그립니다. 이번 게임: <TFTStargazer>뱀</TFTStargazer><br><br>강화된 칸에 있는 아군이 내구력을 @Serpent_DR_Teamwide*100@% 얻습니다. 강화된 칸에 있는 별돌보미는 능력치를 더 얻고, 적을 중독시켜 적에게 입힌 피해량의 일부를 @Serpent_Duration@초에 걸쳐 마법 피해로 다시 입힙니다.<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%, 중독 피해량 @Serpent_Poison*100@%</expandRow><br><br><rules>플레이어 레벨이 오를 때마다 더 많은 칸이 드러납니다.</rules>",
+        "tooltip_text": "별돌보미는 게임마다 다른 별자리를 그립니다. 이번 게임: <TFTStargazer>뱀</TFTStargazer><br>강화된 칸에 있는 아군이 내구력을 @Serpent_DR_Teamwide*100@% 얻습니다. 강화된 칸에 있는 별돌보미는 능력치를 더 얻고, 적을 중독시켜 적에게 입힌 피해량의 일부를 @Serpent_Duration@초에 걸쳐 마법 피해로 다시 입힙니다.<br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%, 중독 피해량 @Serpent_Poison*100@%</expandRow><br><rules>플레이어 레벨이 오를 때마다 더 많은 칸이 드러납니다.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Serpent_DR_Teamwide",
-                        "value": 0.08
+                        "value": 0.06
                     },
                     {
                         "name": "Serpent_Duration",
@@ -17324,7 +17328,7 @@
                     },
                     {
                         "name": "Serpent_Poison",
-                        "value": 0.45
+                        "value": 0.5
                     }
                 ],
                 "min_units": 5,
@@ -17340,7 +17344,7 @@
                     },
                     {
                         "name": "Serpent_Poison",
-                        "value": 0.6
+                        "value": 0.7
                     }
                 ],
                 "min_units": 7,
@@ -17354,13 +17358,13 @@
         "trait_id": "TFT17_Stargazer_Shield",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "tft_trait_description_TFT17_Stargazer_Shield",
+        "tooltip_text": "별돌보미는 게임마다 다른 별자리를 그립니다. 이번 게임: <TFTStargazer>제단</TFTStargazer><br><br><row>(@MinUnits@) 챔피언이 사망하면 제단의 제물이 됩니다. 강화된 칸에 있는 아군이 체력을 @Shield_Health_Teamwide@%, 공격 속도를 @Shield_AS_Teamwide@% 얻습니다.<br><br>제물을 @Shield_NumDeaths@회 바치면 강화된 칸에 있는 별돌보미가 추가로 %i:scaleHealth%을 @Shield_CashoutHP@%, %i:scaleAS%를 @Shield_CashoutAS@% 얻습니다.<br><br>제물: (@TFTUnitProperty.trait:TFT17_Stargazer_Shield_Deaths@ / @Shield_NumDeaths@)</row><br><br><rules>플레이어 레벨이 오를 때마다 더 많은 칸이 드러납니다.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Shield_AS_Teamwide",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Shield_Health_Teamwide",
@@ -17378,7 +17382,7 @@
                 "constants": [
                     {
                         "name": "Shield_CashoutAS",
-                        "value": 30.0
+                        "value": 25.0
                     },
                     {
                         "name": "Shield_CashoutHP",
@@ -17396,7 +17400,7 @@
         "trait_id": "TFT17_Stargazer_Wolf",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "tft_trait_description_TFT17_Stargazer_Wolf",
+        "tooltip_text": "별돌보미는 게임마다 다른 별자리를 그립니다. 이번 게임: <TFTStargazer>멧돼지</TFTStargazer><br><br>플레이어 대상 전투 승리 후 골드를 획득합니다. 강화된 칸에 있는 아군이 체력, 공격력, 주문력을 @Wolf_Health_Teamwide*100@% 얻습니다. 별돌보미는 능력치를 더 얻습니다.<br><br>(획득한 골드: @TFTUnitProperty.trait:TFT17_Stargazer_Wolf_TotalGold@)<br><br><expandRow>(@MinUnits@) @Wolf_Gold@골드, @Wolf_Health*100@% %i:scaleHealth%, @Wolf_ADAP@% %i:scaleAD%%i:scaleAP%</expandRow><br><br><rules>플레이어 레벨이 오를 때마다 더 많은 칸이 드러납니다.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17416,7 +17420,7 @@
                 "constants": [
                     {
                         "name": "Wolf_ADAP",
-                        "value": 16.0
+                        "value": 10.0
                     },
                     {
                         "name": "Wolf_Gold",
@@ -17436,7 +17440,7 @@
                 "constants": [
                     {
                         "name": "Wolf_ADAP",
-                        "value": 24.0
+                        "value": 15.0
                     },
                     {
                         "name": "Wolf_Gold",
@@ -17444,7 +17448,7 @@
                     },
                     {
                         "name": "Wolf_Health",
-                        "value": 0.07
+                        "value": 0.05
                     }
                 ],
                 "min_units": 4,
@@ -17456,15 +17460,15 @@
                 "constants": [
                     {
                         "name": "Wolf_ADAP",
-                        "value": 32.0
+                        "value": 25.0
                     },
                     {
                         "name": "Wolf_Gold",
-                        "value": 3.0
+                        "value": 4.0
                     },
                     {
                         "name": "Wolf_Health",
-                        "value": 0.12
+                        "value": 0.1
                     }
                 ],
                 "min_units": 5,
@@ -17476,15 +17480,15 @@
                 "constants": [
                     {
                         "name": "Wolf_ADAP",
-                        "value": 37.0
+                        "value": 30.0
                     },
                     {
                         "name": "Wolf_Gold",
-                        "value": 5.0
+                        "value": 6.0
                     },
                     {
                         "name": "Wolf_Health",
-                        "value": 0.17
+                        "value": 0.15
                     }
                 ],
                 "min_units": 6,
@@ -17498,7 +17502,7 @@
         "trait_id": "TFT17_SummonTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Shepherd.TFT_Set17.png",
-        "tooltip_text": "tft_trait_description_TFT17_SummonTrait",
+        "tooltip_text": "길잡이는 전투를 돕는 별의 결속을 소환합니다.<br><br><row>(@MinUnits@) 비아 소환</row><br><row>(@MinUnits@) 바이엔 소환</row><br><row>(@MinUnits@) 비아와 바이엔의 결속 강화</row><br><br><rules>비아와 바이엔의 위력은 모든 길잡이 별 레벨 총합에 따라 증가합니다.</rules>",
         "innate_trait_sets": [
             {
                 "constants": []

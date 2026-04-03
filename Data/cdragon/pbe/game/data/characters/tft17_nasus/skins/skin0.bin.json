@@ -17,7 +17,7 @@
             "simpleSkin": "ASSETS/Characters/TFT17_Nasus/Skins/Base/TFT17_Nasus_17.TFT_Set17.skn",
             "texture": "ASSETS/Characters/TFT17_Nasus/Skins/Base/TFT17_Nasus_Base_TX_CM.TFT_Set17.tex",
             "selfIllumination": 0.699999988079071,
-            "Material": "{1d46a8a0}",
+            "Material": "Characters/TFT17_Nasus/Skins/Skin0/Materials/TFT17_Nasus_Jelly_ChampTiers_inst",
             "submeshRenderOrder": "Puppy Glass",
             "materialController": {
                 "__type": "{eaf8e31e}"
@@ -43,7 +43,7 @@
         ],
         "__type": "TftSkinCharacterDataProperties"
     },
-    "{1d46a8a0}": {
+    "Characters/TFT17_Nasus/Skins/Skin0/Materials/TFT17_Nasus_Jelly_ChampTiers_inst": {
         "name": "Characters/TFT17_Nasus/Skins/Skin0/Materials/TFT17_Nasus_Jelly_ChampTiers_inst",
         "samplerValues": [
             {
@@ -663,7 +663,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{2220fc8d}": {
+    "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_SpellHero_Weapon_Trail": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -757,10 +757,11 @@
         ],
         "particleName": "TFT17_Nasus_Base_SpellHero_Weapon_Trail",
         "particlePath": "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_SpellHero_Weapon_Trail",
+        "flags": 2260,
         "scaleDynamicallyWithAttachedBone": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{390a7059}": {
+    "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_SpellHero_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2887,10 +2888,10 @@
         "particleName": "TFT17_Nasus_Base_SpellHero_Tar",
         "particlePath": "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_SpellHero_Tar",
         "soundOnCreateDefault": "Play_sfx_tft17_NasusSpell_Hero_hit",
-        "flags": 198,
+        "flags": 2246,
         "__type": "VfxSystemDefinitionData"
     },
-    "{7e7cf3d1}": {
+    "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_R_Aura": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.15000000596046448,
@@ -6110,9 +6111,10 @@
         ],
         "particleName": "TFT17_Nasus_Base_R_Aura",
         "particlePath": "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_R_Aura",
+        "flags": 2260,
         "__type": "VfxSystemDefinitionData"
     },
-    "{9948d217}": {
+    "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_SpellHero_Cast_Slash": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -6632,9 +6634,10 @@
         "particleName": "TFT17_Nasus_Base_SpellHero_Cast_Slash",
         "particlePath": "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_SpellHero_Cast_Slash",
         "soundOnCreateDefault": "Play_sfx_tft17_NasusSpell_Hero_cast",
+        "flags": 2260,
         "__type": "VfxSystemDefinitionData"
     },
-    "{f96029e2}": {
+    "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_R_Transform": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7874,15 +7877,16 @@
         ],
         "particleName": "TFT17_Nasus_Base_R_Transform",
         "particlePath": "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_R_Transform",
+        "flags": 2260,
         "__type": "VfxSystemDefinitionData"
     },
     "{69c5e74e}": {
         "resourceMap": {
-            "{24eaa9d9}": "{7e7cf3d1}",
-            "{b79f256a}": "{f96029e2}",
-            "{4f5f95af}": "{9948d217}",
-            "{833301e5}": "{2220fc8d}",
-            "{20061031}": "{390a7059}"
+            "TFT17_Nasus_R_Aura": "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_R_Aura",
+            "TFT17_Nasus_R_Transform": "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_R_Transform",
+            "TFT17_Nasus_SpellHero_Cast_Slash": "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_SpellHero_Cast_Slash",
+            "TFT17_Nasus_SpellHero_Weapon_Trail": "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_SpellHero_Weapon_Trail",
+            "TFT17_Nasus_SpellHero_Tar": "Characters/TFT17_Nasus/Skins/Skin0/Particles/TFT17_Nasus_Base_SpellHero_Tar"
         },
         "__type": "ResourceResolver"
     },

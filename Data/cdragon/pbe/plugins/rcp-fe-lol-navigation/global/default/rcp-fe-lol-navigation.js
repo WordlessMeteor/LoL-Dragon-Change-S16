@@ -28278,10 +28278,17 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            const a = i.lolUikit.getModalManager();
-            var s = i.Ember.Service.extend({
+            const a = "/lol-client-config/v3/client-config/lol.client_settings.show_win7_notification_on_every_startup",
+                s = "/riotclient/system-info/v1/basic-info",
+                o = i.lolUikit.getModalManager();
+            var r = i.Ember.Service.extend({
                 init() {
-                    this._super(...arguments)
+                    this._super(...arguments), this.set("notificationShown", !1), this.set("notificationEnabled", !1), this.set("shouldShowNotification", !1), i.db.observe(a, this, (e => {
+                        this.set("notificationEnabled", e), this.get("notificationEnabled") && this.get("shouldShowNotification") && this.showNotification()
+                    })), i.db.get(s).then((e => {
+                        const t = "Windows" === e.operatingSystem.platform && "7" === e.operatingSystem.versionMajor;
+                        this.set("shouldShowNotification", t), this.get("notificationEnabled") && this.get("shouldShowNotification") && this.showNotification()
+                    }))
                 },
                 showNotification() {
                     if (this.get("notificationShown")) return;
@@ -28290,7 +28297,7 @@
                         t = i.ComponentFactory.create("DeprecationModalComponent", {
                             notificationType: e
                         }),
-                        n = a.add({
+                        n = o.add({
                             type: "DialogAlert",
                             data: {
                                 contents: t.domNode,
@@ -28304,10 +28311,10 @@
                     i.lolUikit.getModalManager().remove(e)
                 },
                 willDestroy() {
-                    this._super(...arguments), i.db.unobserve("/lol-client-config/v3/client-config/lol.client_settings.show_win7_notification_on_every_startup", this), i.db.unobserve("/riotclient/system-info/v1/basic-info", this)
+                    this._super(...arguments), i.db.unobserve(a, this), i.db.unobserve(s, this)
                 }
             });
-            t.default = s
+            t.default = r
         }, (e, t, n) => {
             "use strict";
             var i = n(1);

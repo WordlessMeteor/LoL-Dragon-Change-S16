@@ -18,12 +18,12 @@
             "texture": "ASSETS/Characters/TFT17_Leona/Skins/Base/TFT17_Leona_Base_TX_CM.TFT_Set17.tex",
             "skinScale": 1.0750000476837158,
             "selfIllumination": 0.699999988079071,
-            "Material": "{8593f725}",
+            "Material": "Characters/TFT17_Leona/Skins/Skin0/Materials/TierUpgrade",
             "InitialSubmeshAvatarToHide": "HairFlow",
             "submeshRenderOrder": "BodyBase Body Chest TubeTop Bandage FrontSkirt Skirt SkirtBack Sword SwordBlackHole SwordHorizon Shield ShieldRing HairBase Hair HairFlow",
             "materialOverride": [
                 {
-                    "Material": "{3737eb6b}",
+                    "Material": "Characters/TFT17_Leona/Skins/Skin0/Materials/TFT_Leona_Hair_ScrollingDisrort_ScreenSpace_inst",
                     "submesh": "HairBase",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -54,7 +54,7 @@
         ],
         "__type": "TftSkinCharacterDataProperties"
     },
-    "{30711ebc}": {
+    "Characters/TFT17_Leona/Skins/Skin0/Particles/TFT17_Leona_Base_SpellShield": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2879,9 +2879,10 @@
         "particleName": "TFT17_Leona_Base_SpellShield",
         "particlePath": "Characters/TFT17_Leona/Skins/Skin0/Particles/TFT17_Leona_Base_SpellShield",
         "overrideScaleCap": -1.0,
+        "flags": 2260,
         "__type": "VfxSystemDefinitionData"
     },
-    "{d050a03a}": {
+    "Characters/TFT17_Leona/Skins/Skin0/Particles/TFT17_Leona_Base_SpellSlamMotion": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -3778,9 +3779,10 @@
         ],
         "particleName": "TFT17_Leona_Base_SpellSlamMotion",
         "particlePath": "Characters/TFT17_Leona/Skins/Skin0/Particles/TFT17_Leona_Base_SpellSlamMotion",
+        "flags": 2260,
         "__type": "VfxSystemDefinitionData"
     },
-    "{3737eb6b}": {
+    "Characters/TFT17_Leona/Skins/Skin0/Materials/TFT_Leona_Hair_ScrollingDisrort_ScreenSpace_inst": {
         "name": "Characters/TFT17_Leona/Skins/Skin0/Materials/TFT_Leona_Hair_ScrollingDisrort_ScreenSpace_inst",
         "samplerValues": [
             {
@@ -4193,7 +4195,7 @@
                 "name": "normal",
                 "passes": [
                     {
-                        "shader": "{85a0a25a}",
+                        "shader": "Shaders/SkinnedMesh/TFT_ScrollingDisrort_ScreenSpace",
                         "blendEnable": true,
                         "srcColorBlendFactor": 6,
                         "srcAlphaBlendFactor": 6,
@@ -4449,7 +4451,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{8593f725}": {
+    "Characters/TFT17_Leona/Skins/Skin0/Materials/TierUpgrade": {
         "name": "Characters/TFT17_Leona/Skins/Skin0/Materials/TierUpgrade",
         "samplerValues": [
             {
@@ -5020,8 +5022,8 @@
     },
     "{a567e479}": {
         "resourceMap": {
-            "{1f46f961}": "{d050a03a}",
-            "{b2c2e267}": "{30711ebc}",
+            "TFT17_Leona_SpellSlamMotion": "Characters/TFT17_Leona/Skins/Skin0/Particles/TFT17_Leona_Base_SpellSlamMotion",
+            "TFT17_Leona_SpellShield": "Characters/TFT17_Leona/Skins/Skin0/Particles/TFT17_Leona_Base_SpellShield",
             "{e898f5c2}": "{00000000}"
         },
         "__type": "ResourceResolver"

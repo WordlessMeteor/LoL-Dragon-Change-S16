@@ -791,10 +791,13 @@
                     claimAllPendingRewards() {
                         this.eventHubDataBinding.post(this.getEventSpecificPropertyPath(s.CLAIM_ALL_REWARDS_PATH))
                     },
-                    async purchaseOffer(e, t) {
+                    async purchaseOffer(e, t, n, a, l) {
                         return await this.eventHubDataBinding.post(this.getEventSpecificPropertyPath(s.PURCHASE_OFFER_PATH), {
                             offerId: e,
-                            purchaseQuantity: t
+                            purchaseQuantity: t,
+                            itemId: n,
+                            inventoryType: a,
+                            rpPrice: l
                         })
                     },
                     getEventSpecificPropertyPath(e) {
@@ -1635,6 +1638,8 @@
                     })
                 })),
                 progressionOfferId: "",
+                itemId: 0,
+                inventoryType: "",
                 showPurchaseModal: !1,
                 errorLoadingPurchaseData: !1,
                 isDataLoading: !0,
@@ -1747,6 +1752,8 @@
                             pricePerLevel: e.pricePerLevel,
                             currentBalance: e.rpBalance,
                             progressionOfferId: e.offerId,
+                            itemId: e.itemId,
+                            inventoryType: e.inventoryType,
                             levelsToBuy: Math.max(1, Math.min(this.get("levelsToBuy"), this.get("numberOfLevelsToBuy")))
                         })
                     })).catch((e => {
@@ -1822,7 +1829,7 @@
                             totalPrice: this.get("totalPrice"),
                             currentBalance: this.get("currentBalance"),
                             newBalance: this.get("newBalance")
-                        }), this.get("eventHubService").purchaseOffer(this.get("progressionOfferId"), this.get("levelsToBuy")).then((() => {
+                        }), this.get("eventHubService").purchaseOffer(this.get("progressionOfferId"), this.get("levelsToBuy"), this.get("itemId"), this.get("inventoryType"), this.get("totalPrice")).then((() => {
                             s.AudioPlugin.getChannel("sfx-ui").playSound("/fe/lol-static-assets/sounds/sfx-yourshop-stinger.ogg"), this.showPostPurchaseConfirmation(), this.closeModal(), s.datadogRum.stopOperationWithOk(s.datadogRum.XP_STORE_ITEM_PURCHASE)
                         })).catch((e => {
                             s.logger.error(`Failure purchasing offer id: ${this.get("progressionOfferId")}`, e), this.closeModal(), this.showGeneralErrorModal(), s.datadogRum.stopOperationWithError(s.datadogRum.XP_STORE_ITEM_PURCHASE, e)

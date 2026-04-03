@@ -15034,7 +15034,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 0.3
+                        "value": 0.36
                     },
                     {
                         "name": "DamageReduction",
@@ -15050,7 +15050,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 0.4
+                        "value": 0.48
                     },
                     {
                         "name": "DamageReduction",
@@ -15386,11 +15386,11 @@
                 "constants": [
                     {
                         "name": "ADAP",
-                        "value": 33.0
+                        "value": 40.0
                     },
                     {
                         "name": "ExecuteHPPercent",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "PercentHealth",
@@ -15398,7 +15398,7 @@
                     },
                     {
                         "name": "SupermassivePercentBonus",
-                        "value": 1.0
+                        "value": 0.85
                     }
                 ]
             }
@@ -15512,7 +15512,7 @@
         "trait_id": "TFT17_FlexTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Voyager.TFT_Set17.png",
-        "tooltip_text": "Combat Start: Your Tanks and Fighters gain a Shield for @ShieldDuration@ seconds. Your other allies gain Damage Amp. <br><br>Voyagers gain double.<br><br><expandRow>(@MinUnits@) @ShieldHP@ Shield; @BonusDA*100@% %i:scaleDA%</expandRow><br>",
+        "tooltip_text": "Combat Start: Your Tanks gain a Shield for @ShieldDuration@ seconds. Your other allies gain Damage Amp. <br><br>Voyagers gain double.<br><br><expandRow>(@MinUnits@) @ShieldHP@ Shield; @BonusDA*100@% %i:scaleDA%</expandRow><br>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15711,7 +15711,7 @@
                 "constants": [
                     {
                         "name": "PctResists",
-                        "value": 0.14
+                        "value": 0.1
                     }
                 ]
             }
@@ -15727,11 +15727,11 @@
         ]
     },
     {
-        "display_name": "Channeler",
+        "display_name": "Conduit",
         "trait_id": "TFT17_ManaTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Channeler.TFT_Set17.png",
-        "tooltip_text": "Innate: Channelers gain @InnateManaGain*100@% additional Mana from all sources.<br><br>Your team gains Mana Regen, increased for Channelers.<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ %i:TFTManaRegen% | @ChannelerManaRegen@ %i:TFTManaRegen%</expandRow><br><br>",
+        "tooltip_text": "Innate: Conduits gain @InnateManaGain*100@% additional Mana from all sources.<br><br>Your team gains Mana Regen, increased for Conduits.<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ %i:TFTManaRegen% | @ChannelerManaRegen@ %i:TFTManaRegen%</expandRow><br><br>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15965,7 +15965,7 @@
         "trait_id": "TFT17_MissFortuneUndeterminedTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_MissFortuneUndetermindedTrait.TFT_Set17.png",
-        "tooltip_text": "When you field Miss Fortune, choose between Channeler Mode, Challenger Mode, and Replicator Mode. Miss Fortune has a unique ability based on her mode and gains the associated trait.",
+        "tooltip_text": "When you field Miss Fortune, choose between Conduit Mode, Challenger Mode, and Replicator Mode. Miss Fortune has a unique ability based on her mode and gains the associated trait.",
         "innate_trait_sets": [],
         "conditional_trait_sets": []
     },
@@ -15974,7 +15974,7 @@
         "trait_id": "TFT17_MissFortuneUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GunGoddess.TFT_Set17.png",
-        "tooltip_text": "When you field Miss Fortune, choose between Channeler Mode, Challenger Mode, and Replicator Mode. Miss Fortune has a unique ability based on her mode and gains the associated trait.",
+        "tooltip_text": "When you field Miss Fortune, choose between Conduit Mode, Challenger Mode, and Replicator Mode. Miss Fortune has a unique ability based on her mode and gains the associated trait.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -16041,13 +16041,17 @@
         "trait_id": "TFT17_Primordian",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Primordian.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) Dealing damage spawns Swarmlings based on Primordian star level.</row><br><row>(@MinUnits@) Spawn even more Swarmlings! Each round, gain a random 1 or 2-cost champion. </row><br><br><rules>@DamageTakenPercentModifier*100@% of damage taken contributes to damage dealt.</rules>",
+        "tooltip_text": "<row>(@MinUnits@) Dealing damage spawns Swarmlings based on Primordian star level.</row><br><row>(@MinUnits@) Spawn @PercentMoreSwarmlings@% more Swarmlings! Each round, gain a random 1 or 2-cost champion. </row><br><br><rules>@DamageTakenPercentModifier*100@% of damage taken contributes to damage dealt.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "DamageTakenPercentModifier",
                         "value": 0.08
+                    },
+                    {
+                        "name": "PercentMoreSwarmlings",
+                        "value": 45.0
                     },
                     {
                         "name": "SwarmlingAttacks",
@@ -16073,7 +16077,7 @@
                 "constants": [
                     {
                         "name": "DamageMultiplier",
-                        "value": 1.25
+                        "value": 1.45
                     }
                 ],
                 "min_units": 3,
@@ -16331,7 +16335,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.2
+                        "value": 0.15
                     },
                     {
                         "name": "AttackSpeedDuration",
@@ -16339,7 +16343,7 @@
                     },
                     {
                         "name": "PercentHealthShield",
-                        "value": 0.18
+                        "value": 0.12
                     },
                     {
                         "name": "ShieldDuration",
@@ -16511,7 +16515,7 @@
                 "constants": [
                     {
                         "name": "ADAPPerSecond",
-                        "value": 3.0
+                        "value": 4.0
                     },
                     {
                         "name": "EffectBonus",
@@ -16531,7 +16535,7 @@
                 "constants": [
                     {
                         "name": "ADAPPerSecond",
-                        "value": 3.0
+                        "value": 4.0
                     },
                     {
                         "name": "EffectBonus",
@@ -16915,11 +16919,11 @@
                 "constants": [
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.22
+                        "value": 0.25
                     },
                     {
                         "name": "Fountain_ManaRegen",
-                        "value": 3.0
+                        "value": 4.0
                     }
                 ],
                 "min_units": 5,
@@ -16953,7 +16957,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.15
+                        "value": 0.1
                     },
                     {
                         "name": "NumMarks",
@@ -16969,7 +16973,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.3
+                        "value": 0.25
                     },
                     {
                         "name": "NumMarks",
@@ -16985,7 +16989,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.45
+                        "value": 0.4
                     },
                     {
                         "name": "NumMarks",
@@ -17013,7 +17017,7 @@
                     },
                     {
                         "name": "Medallion_IncreasePer3Star",
-                        "value": 9.0
+                        "value": 8.0
                     },
                     {
                         "name": "Medallion_Resists_Teamwide",
@@ -17081,7 +17085,7 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_Resists",
@@ -17101,7 +17105,7 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_AS",
@@ -17117,7 +17121,7 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_Resists",
@@ -17137,7 +17141,7 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_AS",
@@ -17153,11 +17157,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 15.0
+                        "value": 12.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17173,11 +17177,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_DA",
@@ -17189,11 +17193,11 @@
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 15.0
+                        "value": 12.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17209,11 +17213,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_DA",
@@ -17221,15 +17225,15 @@
                     },
                     {
                         "name": "Mountain_DR",
-                        "value": 0.12
+                        "value": 0.08
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 15.0
+                        "value": 12.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17245,11 +17249,11 @@
                 "constants": [
                     {
                         "name": "Mountain_ADAP",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_AS",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_DA",
@@ -17257,15 +17261,15 @@
                     },
                     {
                         "name": "Mountain_DR",
-                        "value": 0.12
+                        "value": 0.08
                     },
                     {
                         "name": "Mountain_Health",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "Mountain_Resists",
-                        "value": 15.0
+                        "value": 12.0
                     },
                     {
                         "name": "Mountain_StatIncrease",
@@ -17290,7 +17294,7 @@
                 "constants": [
                     {
                         "name": "Serpent_DR_Teamwide",
-                        "value": 0.08
+                        "value": 0.06
                     },
                     {
                         "name": "Serpent_Duration",
@@ -17324,7 +17328,7 @@
                     },
                     {
                         "name": "Serpent_Poison",
-                        "value": 0.45
+                        "value": 0.5
                     }
                 ],
                 "min_units": 5,
@@ -17340,7 +17344,7 @@
                     },
                     {
                         "name": "Serpent_Poison",
-                        "value": 0.6
+                        "value": 0.7
                     }
                 ],
                 "min_units": 7,
@@ -17360,7 +17364,7 @@
                 "constants": [
                     {
                         "name": "Shield_AS_Teamwide",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "Shield_Health_Teamwide",
@@ -17378,7 +17382,7 @@
                 "constants": [
                     {
                         "name": "Shield_CashoutAS",
-                        "value": 30.0
+                        "value": 25.0
                     },
                     {
                         "name": "Shield_CashoutHP",
@@ -17416,7 +17420,7 @@
                 "constants": [
                     {
                         "name": "Wolf_ADAP",
-                        "value": 16.0
+                        "value": 10.0
                     },
                     {
                         "name": "Wolf_Gold",
@@ -17436,7 +17440,7 @@
                 "constants": [
                     {
                         "name": "Wolf_ADAP",
-                        "value": 24.0
+                        "value": 15.0
                     },
                     {
                         "name": "Wolf_Gold",
@@ -17444,7 +17448,7 @@
                     },
                     {
                         "name": "Wolf_Health",
-                        "value": 0.07
+                        "value": 0.05
                     }
                 ],
                 "min_units": 4,
@@ -17456,15 +17460,15 @@
                 "constants": [
                     {
                         "name": "Wolf_ADAP",
-                        "value": 32.0
+                        "value": 25.0
                     },
                     {
                         "name": "Wolf_Gold",
-                        "value": 3.0
+                        "value": 4.0
                     },
                     {
                         "name": "Wolf_Health",
-                        "value": 0.12
+                        "value": 0.1
                     }
                 ],
                 "min_units": 5,
@@ -17476,15 +17480,15 @@
                 "constants": [
                     {
                         "name": "Wolf_ADAP",
-                        "value": 37.0
+                        "value": 30.0
                     },
                     {
                         "name": "Wolf_Gold",
-                        "value": 5.0
+                        "value": 6.0
                     },
                     {
                         "name": "Wolf_Health",
-                        "value": 0.17
+                        "value": 0.15
                     }
                 ],
                 "min_units": 6,

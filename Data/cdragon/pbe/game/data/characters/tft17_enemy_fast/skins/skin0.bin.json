@@ -17,7 +17,7 @@
             "simpleSkin": "ASSETS/Characters/TFT17_Enemy_Fast/Skins/Base/TFT17_Enemy_Fast_17.TFT_Set17.skn",
             "texture": "ASSETS/Characters/TFT17_Enemy_Fast/Skins/Base/TFT17_Enemy_Fast_TX_CM.TFT_Set17.tex",
             "selfIllumination": 0.699999988079071,
-            "Material": "{c39c472a}",
+            "Material": "Characters/TFT17_Enemy_Fast/Skins/Skin0/Materials/TFT17_Dissolve_Simple_Fast_inst",
             "materialController": {
                 "__type": "{eaf8e31e}"
             },
@@ -41,11 +41,11 @@
     },
     "{b13decf5}": {
         "resourceMap": {
-            "{932e744b}": "{d07c7384}"
+            "TFT17_Enemy_Fast_BA_Tar": "Characters/TFT17_Enemy_Fast/Skins/Skin0/Particles/TFT17_Enemy_Fast_Base_BA_Tar"
         },
         "__type": "ResourceResolver"
     },
-    "{c39c472a}": {
+    "Characters/TFT17_Enemy_Fast/Skins/Skin0/Materials/TFT17_Dissolve_Simple_Fast_inst": {
         "name": "Characters/TFT17_Enemy_Fast/Skins/Skin0/Materials/TFT17_Dissolve_Simple_Fast_inst",
         "samplerValues": [
             {
@@ -162,7 +162,7 @@
                 "name": "normal",
                 "passes": [
                     {
-                        "shader": "{90fe2753}",
+                        "shader": "Shaders/SkinnedMesh/TFT_Dissolve_Simple",
                         "blendEnable": true,
                         "srcColorBlendFactor": 6,
                         "srcAlphaBlendFactor": 6,
@@ -339,7 +339,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{d07c7384}": {
+    "Characters/TFT17_Enemy_Fast/Skins/Skin0/Particles/TFT17_Enemy_Fast_Base_BA_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1413,7 +1413,7 @@
         ],
         "particleName": "TFT17_Enemy_Fast_Base_BA_Tar",
         "particlePath": "Characters/TFT17_Enemy_Fast/Skins/Skin0/Particles/TFT17_Enemy_Fast_Base_BA_Tar",
-        "flags": 132,
+        "flags": 2180,
         "__type": "VfxSystemDefinitionData"
     },
     "__linked": [

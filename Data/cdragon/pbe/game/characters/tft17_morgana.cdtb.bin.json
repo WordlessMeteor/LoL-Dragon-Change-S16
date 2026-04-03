@@ -44,7 +44,7 @@
                 "__type": "MissileSpecification"
             },
             "mCastType": 1,
-            "mHitEffectKey": "{63bb1938}",
+            "mHitEffectKey": "TFT17_Morgana_R_Tar",
             "mClientData": {
                 "mTooltipData": {
                     "mObjectName": "TFT17_MorganaMis",
@@ -57,7 +57,7 @@
         },
         "__type": "SpellObject"
     },
-    "{2b12ff83}": {
+    "Characters/TFT17_Morgana/Spells/TFT17_MorganaSpell": {
         "ObjectName": "TFT17_MorganaSpell",
         "mScriptName": "TFT17_MorganaSpell",
         "mSpell": {
@@ -71,7 +71,7 @@
                     "values": [
                         300.0,
                         250.0,
-                        350.0,
+                        300.0,
                         4000.0,
                         4000.0,
                         4000.0,
@@ -83,8 +83,8 @@
                     "name": "TetherDamagePerSecond",
                     "values": [
                         0.0,
-                        70.0,
-                        105.0,
+                        55.0,
+                        85.0,
                         1500.0,
                         3000.0,
                         0.0,
@@ -292,7 +292,7 @@
         },
         "__type": "SpellObject"
     },
-    "{397c182f}": {
+    "Characters/TFT17_Morgana/Spells/TFT17_MorganaBasicAttack2": {
         "ObjectName": "TFT17_MorganaBasicAttack2",
         "mScriptName": "TFT17_MorganaBasicAttack2",
         "mSpell": {
@@ -352,7 +352,7 @@
             "mCastType": 1,
             "castFrame": 14.0,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{28b2ccac}",
+            "mMissileEffectKey": "TFT17_Morgana_BA_one_Mis",
             "mHitEffectOrientType": 2,
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
@@ -361,7 +361,7 @@
         },
         "__type": "SpellObject"
     },
-    "{3c332047}": {
+    "Characters/TFT17_Morgana/Spells/TFT17_MorganaBasicAttack": {
         "ObjectName": "TFT17_MorganaBasicAttack",
         "mScriptName": "TFT17_MorganaBasicAttack",
         "mSpell": {
@@ -422,7 +422,7 @@
             "mCastType": 1,
             "castFrame": 14.0,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{28b2ccac}",
+            "mMissileEffectKey": "TFT17_Morgana_BA_one_Mis",
             "mHitEffectOrientType": 2,
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
@@ -431,7 +431,7 @@
         },
         "__type": "SpellObject"
     },
-    "{401819ff}": {
+    "Characters/TFT17_Morgana/Spells/TFT17_MorganaCritAttack": {
         "ObjectName": "TFT17_MorganaCritAttack",
         "mScriptName": "TFT17_MorganaCritAttack",
         "mSpell": {
@@ -490,7 +490,7 @@
             "mCastType": 1,
             "castFrame": 7.0,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{28b2ccac}",
+            "mMissileEffectKey": "TFT17_Morgana_BA_one_Mis",
             "mHitEffectOrientType": 2,
             "mHitEffectKey": "TFT_Global_BA_Crit",
             "bHaveHitBone": true,
@@ -508,10 +508,10 @@
         },
         "__type": "SpellObject"
     },
-    "{5de88a77}": {
+    "Characters/TFT17_Morgana/CharacterRecords/Root": {
         "mCharacterName": "TFT17_Morgana",
         "{8662cf12}": {
-            "{b35aa769}": 900.0,
+            "{b35aa769}": 1000.0,
             "__type": "{ce9b917b}"
         },
         "{9eedebad}": {
@@ -538,11 +538,11 @@
             "__type": "{ce9b917b}"
         },
         "{ea6100d5}": {
-            "{b35aa769}": 40.0,
+            "{b35aa769}": 50.0,
             "__type": "{ce9b917b}"
         },
         "{33c0bf27}": {
-            "{b35aa769}": 40.0,
+            "{b35aa769}": 50.0,
             "__type": "{ce9b917b}"
         },
         "baseCritChance": 0.25,
@@ -591,8 +591,8 @@
             ""
         ],
         "spells": [
-            "{2b12ff83}",
-            "{3c332047}",
+            "Characters/TFT17_Morgana/Spells/TFT17_MorganaSpell",
+            "Characters/TFT17_Morgana/Spells/TFT17_MorganaBasicAttack",
             "{00000000}",
             "{00000000}"
         ],
@@ -617,7 +617,7 @@
         "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
-    "{abf74ebb}": {
+    "Characters/TFT17_Morgana/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "__linked": []

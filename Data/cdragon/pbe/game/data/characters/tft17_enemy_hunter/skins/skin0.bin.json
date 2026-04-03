@@ -17,7 +17,7 @@
             "simpleSkin": "ASSETS/Characters/TFT17_Enemy_Hunter/Skins/Base/TFT17_Enemy_Hunter_17.TFT_Set17.skn",
             "texture": "ASSETS/Characters/TFT17_Enemy_Hunter/Skins/Base/TFT17_Enemy_Hunter_Base_TX_CM.TFT_Set17.tex",
             "selfIllumination": 0.699999988079071,
-            "Material": "{de2f01fe}",
+            "Material": "Characters/TFT17_Enemy_Hunter/Skins/Skin0/Materials/TFT17_Dissolve_Simple_Hunter_inst",
             "materialController": {
                 "__type": "{eaf8e31e}"
             },
@@ -41,11 +41,11 @@
     },
     "{53e80ef5}": {
         "resourceMap": {
-            "{49bd9bcf}": "{b98fa634}"
+            "TFT17_Enemy_Hunter_BA_Tar": "Characters/TFT17_Enemy_Hunter/Skins/Skin0/Particles/TFT17_Enemy_Hunter_Base_BA_Tar"
         },
         "__type": "ResourceResolver"
     },
-    "{b98fa634}": {
+    "Characters/TFT17_Enemy_Hunter/Skins/Skin0/Particles/TFT17_Enemy_Hunter_Base_BA_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1119,10 +1119,10 @@
         ],
         "particleName": "TFT17_Enemy_Hunter_Base_BA_Tar",
         "particlePath": "Characters/TFT17_Enemy_Hunter/Skins/Skin0/Particles/TFT17_Enemy_Hunter_Base_BA_Tar",
-        "flags": 132,
+        "flags": 2180,
         "__type": "VfxSystemDefinitionData"
     },
-    "{de2f01fe}": {
+    "Characters/TFT17_Enemy_Hunter/Skins/Skin0/Materials/TFT17_Dissolve_Simple_Hunter_inst": {
         "name": "Characters/TFT17_Enemy_Hunter/Skins/Skin0/Materials/TFT17_Dissolve_Simple_Hunter_inst",
         "samplerValues": [
             {
@@ -1239,7 +1239,7 @@
                 "name": "normal",
                 "passes": [
                     {
-                        "shader": "{90fe2753}",
+                        "shader": "Shaders/SkinnedMesh/TFT_Dissolve_Simple",
                         "blendEnable": true,
                         "srcColorBlendFactor": 6,
                         "srcAlphaBlendFactor": 6,
