@@ -15226,7 +15226,7 @@
         "trait_id": "TFT17_Astronaut",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Astronaut.TFT_Set17.png",
-        "tooltip_text": "tft_trait_description_TFT17_Astronauts",
+        "tooltip_text": "米普星人會吸引米普，米普會用獨家方法強化米普星人的技能。他們還會獲得額外生命。<br><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%，@BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%，@BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%，@BonusHealth@ %i:scaleHealth%。在備戰區打造一格複製區。複製完成時，獲得金錢及置於該處之英雄的1星複製體。</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%，@BonusHealth@ %i:scaleHealth%。召喚米普四天王！</row><br><br><rules>複製所需時間等於英雄費用</rules>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15249,7 +15249,7 @@
                 "constants": [
                     {
                         "name": "BonusHealth",
-                        "value": 300.0
+                        "value": 400.0
                     },
                     {
                         "name": "Meeps",
@@ -15265,7 +15265,7 @@
                 "constants": [
                     {
                         "name": "BonusHealth",
-                        "value": 300.0
+                        "value": 400.0
                     },
                     {
                         "name": "Meeps",
@@ -15342,7 +15342,7 @@
                     },
                     {
                         "name": "Heal",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "ShieldValue",
@@ -15512,7 +15512,7 @@
         "trait_id": "TFT17_FlexTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Voyager.TFT_Set17.png",
-        "tooltip_text": "戰鬥開始：坦克和鬥士獲得持續@ShieldDuration@戰鬥開始秒的護盾。其他友軍獲得傷害增幅。<br><br>星際旅人獲得雙倍增益。<br><br><expandRow>(@MinUnits@)@ShieldHP@護盾，@BonusDA*100@%%i:scaleDA%</expandRow><br>",
+        "tooltip_text": "戰鬥開始：坦克和鬥士獲得持續@ShieldDuration@秒的護盾。其他友軍獲得傷害增幅。<br><br>星際旅人獲得雙倍增益。<br><br><expandRow>(@MinUnits@)@ShieldHP@護盾，@BonusDA*100@%%i:scaleDA%</expandRow><br>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15763,7 +15763,7 @@
                 "constants": [
                     {
                         "name": "ChannelerManaRegen",
-                        "value": 4.0
+                        "value": 5.0
                     },
                     {
                         "name": "TeamManaRegen",
@@ -15779,7 +15779,7 @@
                 "constants": [
                     {
                         "name": "ChannelerManaRegen",
-                        "value": 6.0
+                        "value": 7.0
                     },
                     {
                         "name": "TeamManaRegen",
@@ -15795,11 +15795,11 @@
                 "constants": [
                     {
                         "name": "ChannelerManaRegen",
-                        "value": 8.0
+                        "value": 9.0
                     },
                     {
                         "name": "TeamManaRegen",
-                        "value": 2.0
+                        "value": 3.0
                     }
                 ],
                 "min_units": 5,
@@ -15923,7 +15923,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "Omnivamp",
@@ -15943,7 +15943,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.5
+                        "value": 0.6
                     },
                     {
                         "name": "Omnivamp",
@@ -16298,7 +16298,7 @@
                     },
                     {
                         "name": "BonusDefensiveStat2",
-                        "value": 3.0
+                        "value": 2.5
                     },
                     {
                         "name": "BonusDefensiveStat3",
@@ -16310,7 +16310,7 @@
                     },
                     {
                         "name": "BonusOffensiveStat2",
-                        "value": 0.03
+                        "value": 0.025
                     },
                     {
                         "name": "BonusOffensiveStat3",
@@ -16335,7 +16335,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "AttackSpeedDuration",
@@ -16435,7 +16435,7 @@
         "trait_id": "TFT17_SonaUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Commander.TFT_Set17.png",
-        "tooltip_text": "(@MinUnits@)索娜每@RoundsPerMod@回合賦予一個隨機指令模組，讓你改變友軍的戰鬥模式。指令模組在未裝備的狀態下，可存在@RoundsPerMod@場玩家戰鬥。",
+        "tooltip_text": "(@MinUnits@)索娜每@RoundsPerMod@回合賦予一個隨機指令模組，讓你改變友軍的戰鬥模式。每個指令模組持續@RoundsPerMod@場玩家戰鬥，即使未被裝備。",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -17400,7 +17400,7 @@
         "trait_id": "TFT17_Stargazer_Wolf",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "占星師每局都會描繪不同的星圖。本局星圖：<TFTStargazer>野豬座</TFTStargazer>。<br><br>贏得玩家戰鬥後，獲得 金錢。強化棋格內的友軍獲得@Wolf_Health_Teamwide*100@%生命、物攻和魔攻。占星師能獲得更多。<br><br>(已獲得金錢：@TFTUnitProperty.trait:TFT17_Stargazer_Wolf_TotalGold@)<br><br><expandRow>(@MinUnits@) @Wolf_Gold@金錢、@Wolf_Health*100@% %i:scaleHealth%、@Wolf_ADAP@% %i:scaleAD%%i:scaleAP%</expandRow><br><br><rules>提升玩家等級會揭露更多棋格。</rules>",
+        "tooltip_text": "占星師每局都會描繪不同的星圖。本局星圖：<TFTStargazer>野豬座</TFTStargazer>。<br><br>贏得玩家戰鬥後，獲得金錢。強化棋格內的友軍獲得@Wolf_Health_Teamwide*100@%生命、物攻和魔攻。占星師能獲得更多。<br><br>(已獲得金錢：@TFTUnitProperty.trait:TFT17_Stargazer_Wolf_TotalGold@)<br><br><expandRow>(@MinUnits@) @Wolf_Gold@金錢、@Wolf_Health*100@% %i:scaleHealth%、@Wolf_ADAP@% %i:scaleAD%%i:scaleAP%</expandRow><br><br><rules>提升玩家等級會揭露更多棋格。</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17592,7 +17592,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.15
+                        "value": 0.18
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17612,7 +17612,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.15
+                        "value": 0.18
                     },
                     {
                         "name": "RerollXPMultiplier",

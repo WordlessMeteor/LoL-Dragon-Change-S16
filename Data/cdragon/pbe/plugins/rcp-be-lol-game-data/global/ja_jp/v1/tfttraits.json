@@ -15068,7 +15068,7 @@
         "trait_id": "TFT17_AnimaSquad",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_AnimaTech.TFT_Set17.png",
-        "tooltip_text": "対人戦に敗北すると@TechPerCombat@「テック」を獲得し、さらに連敗数x@TechPerLoss@の「テック」を追加で獲得する。さらに、「アニマ」がキルまたはアシストを獲得するたびに、「テック」を@TechPerKill@獲得する。<br><br>「アニマ」が「テック」を@TechBreakpoint@獲得するたびに、新たな「アニマ武器」が試作される。その武器を獲得してもいいし、「テック」を温存して次回により強力な武器を得ることも可能。<br><br><row>(@MinUnits@) 研究開始！</row><br><row>(@MinUnits@) 対人戦に勝利後、戦利品を獲得！</row>",
+        "tooltip_text": "対人戦に敗北すると@TechPerCombat@「テック」を獲得し、さらに連敗数x@TechPerLoss@の「テック」を追加で獲得する。さらに、「アニマ」がキルまたはアシストを獲得するたびに、「テック」を@TechPerKill@獲得する。<br><br>「アニマ」が「テック」を@TechBreakpoint@獲得するたびに、新たな「アニマ武器」が試作される。その武器を獲得するか、「テック」を温存して次回により強力な武器を得ることも可能。<br><br><row>(@MinUnits@) 研究開始！</row><br><row>(@MinUnits@) 対人戦に勝利後、戦利品を獲得！</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15226,7 +15226,7 @@
         "trait_id": "TFT17_Astronaut",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Astronaut.TFT_Set17.png",
-        "tooltip_text": "「宇宙飛行士」がミィプを引き寄せ、ミィプが「宇宙飛行士」のスキルをミィプ流のやり方で強化する。また、体力が増加する。<br><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%。ベンチに「クローンスロット」を1つ作成する。クローンが完了すると、配置したチャンピオンの★1コピーとゴールドを獲得する。</row><br><row>(@MinUnits@) @Meeps@%i:set14AmpIcon%、@BonusHealth@%i:scaleHealth%。4体のミィプロードを召喚！</row><br><br><rules>クローン時間＝チャンピオンのコスト</rules>",
+        "tooltip_text": "ミィプルはミィプを引き寄せ、ミィプらしくスキルを強化する。また、体力が増加する。<br><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%.ベンチに「クローンスロット」を1つ作成する。クローンが完了すると、配置したチャンピオンの★1コピーとゴールドを獲得する。</row><br><row>(@MinUnits@) @Meeps@%i:set14AmpIcon%、@BonusHealth@%i:scaleHealth%。4体のミィプロードを召喚！</row><br><br><rules>クローン時間＝チャンピオンのコスト</rules>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15249,7 +15249,7 @@
                 "constants": [
                     {
                         "name": "BonusHealth",
-                        "value": 300.0
+                        "value": 400.0
                     },
                     {
                         "name": "Meeps",
@@ -15265,7 +15265,7 @@
                 "constants": [
                     {
                         "name": "BonusHealth",
-                        "value": 300.0
+                        "value": 400.0
                     },
                     {
                         "name": "Meeps",
@@ -15328,7 +15328,7 @@
         "trait_id": "TFT17_DRX",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_NOVA.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) 戦闘開始から@TeamAttackDelay@秒後に、N.O.V.A.がチャンピオンに応じて味方にパワーサージを付与する。</row><br><row>(@MinUnits@) 「ストライカー」セレクターを1個獲得する。選ばれしN.O.V.A.は、パワーサージ中に「ストライク」を使用する。</row><br><br><ShowIf.TFT17_DRX_HasAatrox><status>エイトロックス:</status> 味方のダメージが、敵に@ShredAndSunder*100@%の<TFTKeyword>細断</TFTKeyword>と<TFTKeyword>分解</TFTKeyword>を付与する</ShowIf.TFT17_DRX_HasAatrox><ShowIfNot.TFT17_DRX_HasAatrox><TFTGuildInactive>エイトロックス: 敵に「細断」と「分解」を付与する</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAatrox><br><ShowIf.TFT17_DRX_HasCaitlyn><status>ケイトリン:</status> 味方の攻撃速度を@AS*100@%増加させる</ShowIf.TFT17_DRX_HasCaitlyn><ShowIfNot.TFT17_DRX_HasCaitlyn><TFTGuildInactive>ケイトリン: 攻撃速度を増加させる</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasCaitlyn><br><ShowIf.TFT17_DRX_HasAkali><status>アカリ:</status> 味方が<TFTKeyword>正確無比</TFTKeyword>を獲得する</ShowIf.TFT17_DRX_HasAkali><ShowIfNot.TFT17_DRX_HasAkali><TFTGuildInactive>アカリ: 味方が「正確無比」を獲得する</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAkali><br><ShowIf.TFT17_DRX_HasMaokai><status>マオカイ:</status> 味方が最大体力の@Heal*100@%を回復する</ShowIf.TFT17_DRX_HasMaokai><ShowIfNot.TFT17_DRX_HasMaokai><TFTGuildInactive>マオカイ: 味方の体力を回復させる</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasMaokai><br><ShowIf.TFT17_DRX_HasKindred><status>キンドレッド:</status> 最も強いタンクに耐久値<TFTBonus>@ShieldValue@</TFTBonus>のシールドを付与する</ShowIf.TFT17_DRX_HasKindred><ShowIfNot.TFT17_DRX_HasKindred><TFTGuildInactive>キンドレッド: 味方1体にシールドを付与する</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasKindred><br><ShowIf.TFT17_DRX_HasEmblem><status>紋章:</status> 味方が@BonusTrueDamage*100@%の追加確定ダメージを与えるスタックを獲得する</ShowIf.TFT17_DRX_HasEmblem><ShowIfNot.TFT17_DRX_HasEmblem><TFTGuildInactive>紋章: 追加確定ダメージを与える</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasEmblem>",
+        "tooltip_text": "<row>(@MinUnits@) 戦闘開始から@TeamAttackDelay@秒後に、「N.O.V.A.」がチャンピオンに応じて味方にパワーサージを付与する。</row><br><row>(@MinUnits@) 「ストライクセレクター」を1個獲得する。選ばれし「N.O.V.A.」は、パワーサージ中にストライク効果を発動する。</row><br><br><ShowIf.TFT17_DRX_HasAatrox><status>エイトロックス:</status> 味方のダメージが、敵に@ShredAndSunder*100@%の<TFTKeyword>細断</TFTKeyword>と<TFTKeyword>分解</TFTKeyword>を付与する</ShowIf.TFT17_DRX_HasAatrox><ShowIfNot.TFT17_DRX_HasAatrox><TFTGuildInactive>エイトロックス: 敵に「細断」と「分解」を付与する</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAatrox><br><ShowIf.TFT17_DRX_HasCaitlyn><status>ケイトリン:</status> 味方の攻撃速度を@AS*100@%増加させる</ShowIf.TFT17_DRX_HasCaitlyn><ShowIfNot.TFT17_DRX_HasCaitlyn><TFTGuildInactive>ケイトリン: 攻撃速度を増加させる</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasCaitlyn><br><ShowIf.TFT17_DRX_HasAkali><status>アカリ:</status> 味方が<TFTKeyword>正確無比</TFTKeyword>を獲得する</ShowIf.TFT17_DRX_HasAkali><ShowIfNot.TFT17_DRX_HasAkali><TFTGuildInactive>アカリ: 味方が「正確無比」を獲得する</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasAkali><br><ShowIf.TFT17_DRX_HasMaokai><status>マオカイ:</status> 味方が最大体力の@Heal*100@%を回復する</ShowIf.TFT17_DRX_HasMaokai><ShowIfNot.TFT17_DRX_HasMaokai><TFTGuildInactive>マオカイ: 味方の体力を回復させる</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasMaokai><br><ShowIf.TFT17_DRX_HasKindred><status>キンドレッド:</status> 最も強いタンクに耐久値<TFTBonus>@ShieldValue@</TFTBonus>のシールドを付与する</ShowIf.TFT17_DRX_HasKindred><ShowIfNot.TFT17_DRX_HasKindred><TFTGuildInactive>キンドレッド: 味方1体にシールドを付与する</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasKindred><br><ShowIf.TFT17_DRX_HasEmblem><status>紋章:</status> 味方が@BonusTrueDamage*100@%の追加確定ダメージを与えるスタックを獲得する</ShowIf.TFT17_DRX_HasEmblem><ShowIfNot.TFT17_DRX_HasEmblem><TFTGuildInactive>紋章: 追加確定ダメージを与える</TFTGuildInactive></ShowIfNot.TFT17_DRX_HasEmblem>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15342,7 +15342,7 @@
                     },
                     {
                         "name": "Heal",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "ShieldValue",
@@ -15508,11 +15508,11 @@
         ]
     },
     {
-        "display_name": "ボイジャー",
+        "display_name": "航海者",
         "trait_id": "TFT17_FlexTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Voyager.TFT_Set17.png",
-        "tooltip_text": "戦闘開始: 味方のタンクとファイターが@ShieldDuration@秒間持続するシールドを獲得する。その他の味方はダメージ増加効果を獲得する。<br><br>「ボイジャー」は2倍増加する。<br><br><expandRow>(@MinUnits@) @ShieldHP@シールド、@BonusDA*100@% %i:scaleDA%</expandRow><br>",
+        "tooltip_text": "戦闘開始: 味方のタンクとファイターが@ShieldDuration@秒間持続するシールドを獲得する。その他の味方はダメージ増加効果を獲得する。<br><br>「航海者」は2倍増加する。<br><br><expandRow>(@MinUnits@) @ShieldHP@シールド、@BonusDA*100@% %i:scaleDA%</expandRow><br>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15763,7 +15763,7 @@
                 "constants": [
                     {
                         "name": "ChannelerManaRegen",
-                        "value": 4.0
+                        "value": 5.0
                     },
                     {
                         "name": "TeamManaRegen",
@@ -15779,7 +15779,7 @@
                 "constants": [
                     {
                         "name": "ChannelerManaRegen",
-                        "value": 6.0
+                        "value": 7.0
                     },
                     {
                         "name": "TeamManaRegen",
@@ -15795,11 +15795,11 @@
                 "constants": [
                     {
                         "name": "ChannelerManaRegen",
-                        "value": 8.0
+                        "value": 9.0
                     },
                     {
                         "name": "TeamManaRegen",
-                        "value": 2.0
+                        "value": 3.0
                     }
                 ],
                 "min_units": 5,
@@ -15923,7 +15923,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "Omnivamp",
@@ -15943,7 +15943,7 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.5
+                        "value": 0.6
                     },
                     {
                         "name": "Omnivamp",
@@ -16298,7 +16298,7 @@
                     },
                     {
                         "name": "BonusDefensiveStat2",
-                        "value": 3.0
+                        "value": 2.5
                     },
                     {
                         "name": "BonusDefensiveStat3",
@@ -16310,7 +16310,7 @@
                     },
                     {
                         "name": "BonusOffensiveStat2",
-                        "value": 0.03
+                        "value": 0.025
                     },
                     {
                         "name": "BonusOffensiveStat3",
@@ -16324,7 +16324,7 @@
         ]
     },
     {
-        "display_name": "大黒柱",
+        "display_name": "ブルワーク",
         "trait_id": "TFT17_ShenUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Bulwark.TFT_Set17.png",
@@ -16335,7 +16335,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "AttackSpeedDuration",
@@ -17561,7 +17561,7 @@
         "trait_id": "TFT17_Timebreaker",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Timebreaker.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) 敗北時に無料リロールを獲得する。勝利時には時空の核にXPを蓄積する(ステージに応じて増加)。</row><br><row>(@MinUnits@) さらに、味方の攻撃速度が@AttackSpeed*100@%増加する。</row><br><row>(@MinUnits@) さらに、「タイムブレイカー」の攻撃速度が追加で@TimebreakerAdditionalAS*100@%増加する</row><br><br><rules>敗北時のリロール: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>勝利時のXP: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
+        "tooltip_text": "<row>(@MinUnits@) 敗北時に無料リロールを獲得する。勝利時には時空の核にXPを蓄積する(ステージに応じて増加)。</row><br><row>(@MinUnits@) さらに、味方の攻撃速度が@AttackSpeed*100@%増加する。</row><br><row>(@MinUnits@) さらに、「タイムブレーカー」の攻撃速度が追加で@TimebreakerAdditionalAS*100@%増加する</row><br><br><rules>敗北時のリロール: @TFTUnitProperty.:TFT17_Timebreaker_NumRerollsTooltip@<br>勝利時のXP: @TFTUnitProperty.:TFT17_Timebreaker_NumXPTooltip@</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -17592,7 +17592,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.15
+                        "value": 0.18
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17612,7 +17612,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.15
+                        "value": 0.18
                     },
                     {
                         "name": "RerollXPMultiplier",

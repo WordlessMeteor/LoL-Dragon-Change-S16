@@ -1,5 +1,5 @@
 {
-    "{188fd4e3}": {
+    "Characters/TFT17_Kindred/Spells/TFT17_KindredBasicAttack": {
         "ObjectName": "TFT17_KindredBasicAttack",
         "mScriptName": "TFT17_KindredBasicAttack",
         "mSpell": {
@@ -59,7 +59,7 @@
             "mCastType": 1,
             "castFrame": 8.0,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{ac7f2cf1}",
+            "mMissileEffectKey": "TFT17_Kindred_BA_Mis",
             "mHitEffectOrientType": 2,
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
@@ -130,7 +130,7 @@
             "mCastType": 1,
             "missileSpeed": 1400.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{5aa10485}",
+            "mHitEffectKey": "TFT17_Kindred_Passive_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "mFloatVarsDecimals": [
@@ -157,7 +157,7 @@
         },
         "__type": "SpellObject"
     },
-    "{7b6c0503}": {
+    "Characters/TFT17_Kindred/Spells/TFT17_KindredBasicAttack2": {
         "ObjectName": "TFT17_KindredBasicAttack2",
         "mScriptName": "TFT17_KindredBasicAttack2",
         "mSpell": {
@@ -218,7 +218,7 @@
             "mCastType": 1,
             "castFrame": 8.0,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{ac7f2cf1}",
+            "mMissileEffectKey": "TFT17_Kindred_BA_Mis",
             "mHitEffectOrientType": 2,
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
@@ -227,7 +227,7 @@
         },
         "__type": "SpellObject"
     },
-    "{837c5777}": {
+    "Characters/TFT17_Kindred/Spells/TFT17_KindredSpell": {
         "ObjectName": "TFT17_KindredSpell",
         "mScriptName": "TFT17_KindredSpell",
         "mSpell": {
@@ -328,13 +328,13 @@
                 {
                     "name": "NovaDamageAmp",
                     "values": [
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -536,9 +536,9 @@
             },
             "mCastType": 1,
             "missileSpeed": 1400.0,
-            "mMissileEffectKey": "{ce319b52}",
+            "mMissileEffectKey": "TFT17_Kindred_Spell_Mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{a81f2fbe}",
+            "mHitEffectKey": "TFT17_Kindred_Spell_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "mFloatVarsDecimals": [
@@ -565,7 +565,7 @@
         },
         "__type": "SpellObject"
     },
-    "{dcd9750b}": {
+    "Characters/TFT17_Kindred/Spells/TFT17_KindredCritAttack": {
         "ObjectName": "TFT17_KindredCritAttack",
         "mScriptName": "TFT17_KindredCritAttack",
         "mSpell": {
@@ -626,7 +626,7 @@
             "mCastType": 1,
             "castFrame": 8.0,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{ac7f2cf1}",
+            "mMissileEffectKey": "TFT17_Kindred_BA_Mis",
             "mHitEffectKey": "TFT_Global_BA_Crit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -639,10 +639,10 @@
         },
         "__type": "SpellObject"
     },
-    "{848d39e9}": {
+    "Characters/TFT17_Kindred/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{d63bb5c9}": {
+    "Characters/TFT17_Kindred/CharacterRecords/Root": {
         "mCharacterName": "TFT17_Kindred",
         "{8662cf12}": {
             "{b35aa769}": 850.0,
@@ -652,7 +652,7 @@
             "{b35aa769}": 0.0,
             "__type": "{ce9b917b}"
         },
-        "healthBarHeight": 215.0,
+        "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
@@ -722,7 +722,7 @@
             ""
         ],
         "spells": [
-            "{837c5777}",
+            "Characters/TFT17_Kindred/Spells/TFT17_KindredSpell",
             "{00000000}",
             "{00000000}",
             "{00000000}"
@@ -747,7 +747,7 @@
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
         "mShopData": "{71559847}",
-        "MobileHealthBarHeightOverride": 170.0,
+        "MobileHealthBarHeightOverride": 140.0,
         "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },

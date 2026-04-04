@@ -59,7 +59,7 @@
             "mCastType": 1,
             "castFrame": 14.0,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{6acf419a}",
+            "mMissileEffectKey": "TFT17_Poppy_SpellHero_BasicAttack_Mis",
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -68,7 +68,7 @@
         },
         "__type": "SpellObject"
     },
-    "{2c53c64d}": {
+    "Characters/TFT17_Poppy/Spells/TFT17_PoppyBasicAttack2": {
         "ObjectName": "TFT17_PoppyBasicAttack2",
         "mScriptName": "TFT17_PoppyBasicAttack2",
         "mSpell": {
@@ -83,7 +83,7 @@
         },
         "__type": "SpellObject"
     },
-    "{6581bfd1}": {
+    "Characters/TFT17_Poppy/Spells/TFT17_PoppySpell": {
         "ObjectName": "TFT17_PoppySpell",
         "mScriptName": "TFT17_PoppySpell",
         "mSpell": {
@@ -312,9 +312,9 @@
                     "name": "DamageAD",
                     "values": [
                         240.0,
-                        260.0,
-                        390.0,
-                        585.0,
+                        280.0,
+                        420.0,
+                        670.0,
                         1000.0,
                         720.0,
                         720.0
@@ -350,13 +350,13 @@
                 {
                     "name": "NewManaCost",
                     "values": [
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0
+                        65.0,
+                        65.0,
+                        65.0,
+                        65.0,
+                        65.0,
+                        65.0,
+                        65.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -583,7 +583,7 @@
                 "__type": "MissileSpecification"
             },
             "mCastType": 1,
-            "mMissileEffectKey": "{a40548fc}",
+            "mMissileEffectKey": "TFT17_Poppy_P_MeepShield_Mis",
             "__type": "SpellDataResource"
         },
         "__type": "SpellObject"
@@ -652,13 +652,13 @@
             },
             "mCastType": 1,
             "castFrame": 7.5,
-            "mMissileEffectKey": "{f73055e3}",
+            "mMissileEffectKey": "TFT17_Poppy_SpellHero_Mis",
             "mLineWidth": 80.0,
             "__type": "SpellDataResource"
         },
         "__type": "SpellObject"
     },
-    "{df5184ad}": {
+    "Characters/TFT17_Poppy/Spells/TFT17_PoppyBasicAttack": {
         "ObjectName": "TFT17_PoppyBasicAttack",
         "mScriptName": "TFT17_PoppyBasicAttack",
         "mSpell": {
@@ -734,16 +734,16 @@
             },
             "mCastType": 3,
             "castFrame": 7.5,
-            "mMissileEffectKey": "{c84e0d8c}",
+            "mMissileEffectKey": "TFT17_Poppy_SpellHero_Mis_Bounce",
             "mLineWidth": 80.0,
             "__type": "SpellDataResource"
         },
         "__type": "SpellObject"
     },
-    "{2d6f0916}": {
+    "Characters/TFT17_Poppy/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{ec07b640}": {
+    "Characters/TFT17_Poppy/CharacterRecords/Root": {
         "mCharacterName": "TFT17_Poppy",
         "{8662cf12}": {
             "{b35aa769}": 700.0,
@@ -753,7 +753,7 @@
             "{b35aa769}": 0.0,
             "__type": "{ce9b917b}"
         },
-        "healthBarHeight": 180.0,
+        "healthBarHeight": 160.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
@@ -819,7 +819,7 @@
             ""
         ],
         "spells": [
-            "{6581bfd1}",
+            "Characters/TFT17_Poppy/Spells/TFT17_PoppySpell",
             "{00000000}",
             "{00000000}",
             "{00000000}"
@@ -845,7 +845,7 @@
         "mMoveHeight": 0.0,
         "mInitialMana": 30.0,
         "mShopData": "{1a909e4a}",
-        "MobileHealthBarHeightOverride": 125.0,
+        "MobileHealthBarHeightOverride": 105.0,
         "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },

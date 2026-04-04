@@ -13537,13 +13537,16 @@
                 layout: n(343),
                 showDiscordPopup: !1,
                 showDiscordButton: !1,
+                isDiscordEnabled: !1,
                 actions: {
                     _handleClick(e) {
                         e && e.preventDefault(), this.openModal()
                     }
                 },
                 init() {
-                    this._super(...arguments), a.db.observe(r, this, (e => {
+                    this._super(...arguments), a.db.observe("/lol-chat/v1/is-discord-integration-enabled", this, (e => {
+                        this.set("isDiscordEnabled", e)
+                    })), a.db.observe(r, this, (e => {
                         this.set("showDiscordButton", !e)
                     }))
                 },
@@ -13561,8 +13564,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "V2kbM8Vy",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\templates\\\\components\\\\discord-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\components\\\\discord-button.js\\" "],["text","\\n"],["block",["if"],[["get",["showDiscordButton"]]],null,0],["append",["helper",["discord-popup"],null,[["showModal"],[["get",["showDiscordPopup"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","discord-button-wrapper"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","discord-button-wrapper__modal-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"_handleClick"],null],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-button-wrapper__text-container"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-static-assets/images/discord-logo.png"],["static-attr","class","discord-button-wrapper__icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","discord-button-wrapper__link-text"],["flush-element"],["append",["unknown",["tra","link_your_discord"]],false],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","style","margin-bottom:3px"],["flush-element"],["append",["unknown",["discord-beta"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "tI6NoTUH",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\templates\\\\components\\\\discord-button.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\discord-popup\\\\addon\\\\components\\\\discord-button.js\\" "],["text","\\n"],["block",["if"],[["get",["isDiscordEnabled"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","discord-button-wrapper"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","discord-button-wrapper__modal-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"_handleClick"],null],null],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","discord-button-wrapper__text-container"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","src","/fe/lol-static-assets/images/discord-logo.png"],["static-attr","class","discord-button-wrapper__icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","discord-button-wrapper__link-text"],["flush-element"],["append",["unknown",["tra","link_your_discord"]],false],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","style","margin-bottom:3px"],["flush-element"],["append",["unknown",["discord-beta"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showDiscordButton"]]],null,0],["text","  "],["append",["helper",["discord-popup"],null,[["showModal"],[["get",["showDiscordPopup"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
