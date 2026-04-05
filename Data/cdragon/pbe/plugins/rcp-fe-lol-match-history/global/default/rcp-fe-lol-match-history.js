@@ -4899,7 +4899,7 @@
                         e.each((function(e) {
                             const a = t[e];
                             a && a.id && s.TooltipManager.assign(this, "ScoreboardTooltip", {
-                                text: a.nameTRA
+                                text: a.simpleNameTRA ? a.simpleNameTRA : a.nameTRA
                             }, {
                                 ComponentFactory: s.ComponentFactory,
                                 type: "system",

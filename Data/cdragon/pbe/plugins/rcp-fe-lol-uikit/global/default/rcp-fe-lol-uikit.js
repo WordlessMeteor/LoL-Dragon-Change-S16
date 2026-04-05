@@ -67,8 +67,8 @@
                 o = _(n(5)),
                 i = _(n(6)),
                 a = _(n(7)),
-                l = _(n(8)),
-                s = _(n(9)),
+                s = _(n(8)),
+                l = _(n(9)),
                 d = _(n(10)),
                 c = _(n(11)),
                 p = _(n(12)),
@@ -85,7 +85,7 @@
                     default: e
                 }
             }
-            const y = [r.default, o.default, i.default, a.default, l.default, s.default, d.default, c.default, p.default, A.default, u.default, h.default, g.default, b.default, m.default, f.default]
+            const y = [r.default, o.default, i.default, a.default, s.default, l.default, d.default, c.default, p.default, A.default, u.default, h.default, g.default, b.default, m.default, f.default]
         }, e => {
             "use strict";
             e.exports = '<template>\r\n  <div class="ui-dropdown-option"><slot></slot></div>\r\n</template>\r\n'
@@ -145,8 +145,8 @@
             var r = n(1);
             const {
                 registerCustomElementV1: o
-            } = r.webComponents, i = ["shadow-element.js", "subdoc-proxy.js", "video-handler.js", "polygon-generator.js"], a = n(22), l = n(233);
-            let s = !1;
+            } = r.webComponents, i = ["shadow-element.js", "subdoc-proxy.js", "video-handler.js", "polygon-generator.js"], a = n(22), s = n(233);
+            let l = !1;
             var d = {
                 registerCustomElements: function(e = document) {
                     if (e.isElementsRegistered) return;
@@ -165,10 +165,10 @@
                     })), e.isElementsRegistered = !0
                 },
                 registerComponents: function() {
-                    s || (l.keys().forEach((e => {
+                    l || (s.keys().forEach((e => {
                         var t;
-                        t = l(e).default, r.componentFactory.setFactory(t.registerAs, t.create)
-                    })), s = !0)
+                        t = s(e).default, r.componentFactory.setFactory(t.registerAs, t.create)
+                    })), l = !0)
                 }
             };
             t.default = d
@@ -265,8 +265,8 @@
             const o = "single-carot",
                 i = "state",
                 a = "click",
-                l = "hover",
-                s = "init";
+                s = "hover",
+                l = "init";
             class d extends r.webComponents.ShadowElement {
                 static get observedAttributes() {
                     return []
@@ -300,8 +300,8 @@
                 }
                 _processStateChange() {
                     if (!this.hasAttribute("prevent-animation")) switch (clearTimeout(this._stateTimeout), this.getAttribute(i)) {
-                        case s:
-                            this._toggleAnimationClass(s), this._stateTimeout = setTimeout((() => {
+                        case l:
+                            this._toggleAnimationClass(l), this._stateTimeout = setTimeout((() => {
                                 this._setToStatic()
                             }), "750");
                             break;
@@ -310,8 +310,8 @@
                                 this._setToStatic()
                             }), "1500");
                             break;
-                        case l:
-                            this._toggleAnimationClass(l);
+                        case s:
+                            this._toggleAnimationClass(s);
                             break;
                         default:
                             this._setToStatic()
@@ -374,9 +374,9 @@
                     ]);
                     var a = {};
                     if (r)
-                        for (var l = 0; l < this.length; l++) {
-                            var s = this[l][0];
-                            null != s && (a[s] = !0)
+                        for (var s = 0; s < this.length; s++) {
+                            var l = this[s][0];
+                            null != l && (a[l] = !0)
                         }
                     for (var d = 0; d < e.length; d++) {
                         var c = [].concat(e[d]);
@@ -443,7 +443,7 @@
                     default: e
                 }
             }
-            class l extends r.default {
+            class s extends r.default {
                 templateMarkup() {
                     return n(40)
                 }
@@ -485,9 +485,9 @@
                     return null !== this.getAttribute("disabled")
                 }
             }
-            l.tagName = "lol-uikit-arrow-button";
-            var s = l;
-            t.default = s
+            s.tagName = "lol-uikit-arrow-button";
+            var l = s;
+            t.default = l
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -497,8 +497,8 @@
                 o = n(34),
                 i = n(35),
                 a = n(1),
-                l = d(n(36)),
-                s = d(n(37));
+                s = d(n(36)),
+                l = d(n(37));
 
             function d(e) {
                 return e && e.__esModule ? e : {
@@ -658,13 +658,13 @@
                             o = n.querySelector(".lol-uikit-flat-button-bg"),
                             i = n.querySelector(".lol-uikit-flat-button-border-transition"),
                             a = this.initAnimation(n, c, p),
-                            l = this.initAnimation(n, A, u),
-                            s = this.initAnimation(n, h, g),
+                            s = this.initAnimation(n, A, u),
+                            l = this.initAnimation(n, h, g),
                             d = this.initAnimation(n, b, m),
                             E = this.initAnimation(r, f, _),
                             w = this.initAnimation(o, y, x),
                             C = this.initAnimation(i, k, v);
-                        a().then(l), s(), d(), C(), E(), w().then((function() {
+                        a().then(s), l(), d(), C(), E(), w().then((function() {
                             t()
                         }))
                     }))
@@ -724,15 +724,15 @@
                 setCustomSounds() {
                     const e = this.getAttribute("hover-sfx-src"),
                         t = this.getAttribute("click-sfx-src"),
-                        n = e || s.default.flatButtonHover,
-                        r = t || s.default.flatButtonClick;
+                        n = e || l.default.flatButtonHover,
+                        r = t || l.default.flatButtonClick;
                     this._hoverSound = this._createSound(n), this._clickSound = this._createSound(r)
                 }
                 setDisabledDisplay() {
                     this.$button().toggleClass("disabled", this.disabled), this.$buttonWrapper().toggleClass("disabled", this.disabled)
                 }
                 $root() {
-                    return (0, l.default)(this.shadowRoot)
+                    return (0, s.default)(this.shadowRoot)
                 }
                 $button() {
                     return this.$root().find(".lol-uikit-flat-button")
@@ -810,8 +810,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.createSound = function(e, ...t) {
-                return l(e).registerSound(...t)
-            }, t.getChannel = l;
+                return s(e).registerSound(...t)
+            }, t.getChannel = s;
             var r = n(1);
             const o = (0, r.getProvider)().get("rcp-fe-audio"),
                 i = new Map;
@@ -843,7 +843,7 @@
                 }
             }
 
-            function l(e) {
+            function s(e) {
                 return i.has(e) || i.set(e, new a(e)), i.get(e)
             }
         }, (e, t) => {
@@ -858,8 +858,8 @@
             r = "undefined" != typeof window ? window : this, o = function(r, o) {
                 var i = [],
                     a = i.slice,
-                    l = i.concat,
-                    s = i.push,
+                    s = i.concat,
+                    l = i.push,
                     d = i.indexOf,
                     c = {},
                     p = c.toString,
@@ -922,16 +922,16 @@
                     end: function() {
                         return this.prevObject || this.constructor(null)
                     },
-                    push: s,
+                    push: l,
                     sort: i.sort,
                     splice: i.splice
                 }, b.extend = b.fn.extend = function() {
                     var e, t, n, r, o, i, a = arguments[0] || {},
-                        l = 1,
-                        s = arguments.length,
+                        s = 1,
+                        l = arguments.length,
                         d = !1;
-                    for ("boolean" == typeof a && (d = a, a = arguments[l] || {}, l++), "object" == typeof a || b.isFunction(a) || (a = {}), l === s && (a = this, l--); l < s; l++)
-                        if (null != (e = arguments[l]))
+                    for ("boolean" == typeof a && (d = a, a = arguments[s] || {}, s++), "object" == typeof a || b.isFunction(a) || (a = {}), s === l && (a = this, s--); s < l; s++)
+                        if (null != (e = arguments[s]))
                             for (t in e) n = a[t], a !== (r = e[t]) && (d && r && (b.isPlainObject(r) || (o = b.isArray(r))) ? (o ? (o = !1, i = n && b.isArray(n) ? n : []) : i = n && b.isPlainObject(n) ? n : {}, a[t] = b.extend(d, i, r)) : void 0 !== r && (a[t] = r));
                     return a
                 }, b.extend({
@@ -994,7 +994,7 @@
                     },
                     makeArray: function(e, t) {
                         var n = t || [];
-                        return null != e && (x(Object(e)) ? b.merge(n, "string" == typeof e ? [e] : e) : s.call(n, e)), n
+                        return null != e && (x(Object(e)) ? b.merge(n, "string" == typeof e ? [e] : e) : l.call(n, e)), n
                     },
                     inArray: function(e, t, n) {
                         return null == t ? -1 : d.call(t, e, n)
@@ -1015,7 +1015,7 @@
                             for (; o < i; o++) null != (r = t(e[o], o, n)) && a.push(r);
                         else
                             for (o in e) null != (r = t(e[o], o, n)) && a.push(r);
-                        return l.apply([], a)
+                        return s.apply([], a)
                     },
                     guid: 1,
                     proxy: function(e, t) {
@@ -1030,7 +1030,7 @@
                     c["[object " + t + "]"] = t.toLowerCase()
                 }));
                 var k = function(e) {
-                    var t, n, r, o, i, a, l, s, d, c, p, A, u, h, g, b, m, f, _, y = "sizzle" + 1 * new Date,
+                    var t, n, r, o, i, a, s, l, d, c, p, A, u, h, g, b, m, f, _, y = "sizzle" + 1 * new Date,
                         x = e.document,
                         k = 0,
                         v = 0,
@@ -1055,21 +1055,21 @@
                         I = "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",
                         P = "[\\x20\\t\\r\\n\\f]",
                         N = "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
-                        R = N.replace("w", "w#"),
-                        j = "\\[" + P + "*(" + N + ")(?:" + P + "*([*^$|!~]?=)" + P + "*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + R + "))|)" + P + "*\\]",
-                        W = ":(" + N + ")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|" + j + ")*)|.*)\\)|)",
+                        j = N.replace("w", "w#"),
+                        R = "\\[" + P + "*(" + N + ")(?:" + P + "*([*^$|!~]?=)" + P + "*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + j + "))|)" + P + "*\\]",
+                        W = ":(" + N + ")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|" + R + ")*)|.*)\\)|)",
                         F = new RegExp(P + "+", "g"),
                         Q = new RegExp("^" + P + "+|((?:^|[^\\\\])(?:\\\\.)*)" + P + "+$", "g"),
                         H = new RegExp("^" + P + "*," + P + "*"),
                         Y = new RegExp("^" + P + "*([>+~]|" + P + ")" + P + "*"),
                         q = new RegExp("=" + P + "*([^\\]'\"]*?)" + P + "*\\]", "g"),
                         U = new RegExp(W),
-                        V = new RegExp("^" + R + "$"),
+                        V = new RegExp("^" + j + "$"),
                         X = {
                             ID: new RegExp("^#(" + N + ")"),
                             CLASS: new RegExp("^\\.(" + N + ")"),
                             TAG: new RegExp("^(" + N.replace("w", "w*") + ")"),
-                            ATTR: new RegExp("^" + j),
+                            ATTR: new RegExp("^" + R),
                             PSEUDO: new RegExp("^" + W),
                             CHILD: new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\(" + P + "*(even|odd|(([+-]|)(\\d*)n|)" + P + "*(?:([+-]|)" + P + "*(\\d+)|))" + P + "*\\)|)", "i"),
                             bool: new RegExp("^(?:" + I + ")$", "i"),
@@ -1103,15 +1103,15 @@
                     }
 
                     function ie(e, t, r, o) {
-                        var i, l, d, c, p, h, m, f, k, v;
+                        var i, s, d, c, p, h, m, f, k, v;
                         if ((t ? t.ownerDocument || t : x) !== u && A(t), r = r || [], c = (t = t || u).nodeType, "string" != typeof e || !e || 1 !== c && 9 !== c && 11 !== c) return r;
                         if (!o && g) {
                             if (11 !== c && (i = J.exec(e)))
                                 if (d = i[1]) {
                                     if (9 === c) {
-                                        if (!(l = t.getElementById(d)) || !l.parentNode) return r;
-                                        if (l.id === d) return r.push(l), r
-                                    } else if (t.ownerDocument && (l = t.ownerDocument.getElementById(d)) && _(t, l) && l.id === d) return r.push(l), r
+                                        if (!(s = t.getElementById(d)) || !s.parentNode) return r;
+                                        if (s.id === d) return r.push(s), r
+                                    } else if (t.ownerDocument && (s = t.ownerDocument.getElementById(d)) && _(t, s) && s.id === d) return r.push(s), r
                                 } else {
                                     if (i[2]) return L.apply(r, t.getElementsByTagName(e)), r;
                                     if ((d = i[3]) && n.getElementsByClassName) return L.apply(r, t.getElementsByClassName(d)), r
@@ -1127,7 +1127,7 @@
                                 }
                             }
                         }
-                        return s(e.replace(Q, "$1"), t, r, o)
+                        return l(e.replace(Q, "$1"), t, r, o)
                     }
 
                     function ae() {
@@ -1137,11 +1137,11 @@
                         }
                     }
 
-                    function le(e) {
+                    function se(e) {
                         return e[y] = !0, e
                     }
 
-                    function se(e) {
+                    function le(e) {
                         var t = u.createElement("div");
                         try {
                             return !!e(t)
@@ -1180,8 +1180,8 @@
                     }
 
                     function ue(e) {
-                        return le((function(t) {
-                            return t = +t, le((function(n, r) {
+                        return se((function(t) {
+                            return t = +t, se((function(n, r) {
                                 for (var o, i = e([], n.length, t), a = i.length; a--;) n[o = i[a]] && (n[o] = !(r[o] = n[o]))
                             }))
                         }))
@@ -1195,11 +1195,11 @@
                             return !!t && "HTML" !== t.nodeName
                         }, A = ie.setDocument = function(e) {
                             var t, o, a = e ? e.ownerDocument || e : x;
-                            return a !== u && 9 === a.nodeType && a.documentElement ? (u = a, h = a.documentElement, (o = a.defaultView) && o !== o.top && (o.addEventListener ? o.addEventListener("unload", oe, !1) : o.attachEvent && o.attachEvent("onunload", oe)), g = !i(a), n.attributes = se((function(e) {
+                            return a !== u && 9 === a.nodeType && a.documentElement ? (u = a, h = a.documentElement, (o = a.defaultView) && o !== o.top && (o.addEventListener ? o.addEventListener("unload", oe, !1) : o.attachEvent && o.attachEvent("onunload", oe)), g = !i(a), n.attributes = le((function(e) {
                                 return e.className = "i", !e.getAttribute("className")
-                            })), n.getElementsByTagName = se((function(e) {
+                            })), n.getElementsByTagName = le((function(e) {
                                 return e.appendChild(a.createComment("")), !e.getElementsByTagName("*").length
-                            })), n.getElementsByClassName = K.test(a.getElementsByClassName), n.getById = se((function(e) {
+                            })), n.getElementsByClassName = K.test(a.getElementsByClassName), n.getById = le((function(e) {
                                 return h.appendChild(e).id = y, !a.getElementsByName || !a.getElementsByName(y).length
                             })), n.getById ? (r.find.ID = function(e, t) {
                                 if (void 0 !== t.getElementById && g) {
@@ -1230,12 +1230,12 @@
                                 return i
                             }, r.find.CLASS = n.getElementsByClassName && function(e, t) {
                                 if (g) return t.getElementsByClassName(e)
-                            }, m = [], b = [], (n.qsa = K.test(a.querySelectorAll)) && (se((function(e) {
+                            }, m = [], b = [], (n.qsa = K.test(a.querySelectorAll)) && (le((function(e) {
                                 h.appendChild(e).innerHTML = "<a id='" + y + "'></a><select id='" + y + "-\f]' msallowcapture=''><option selected=''></option></select>", e.querySelectorAll("[msallowcapture^='']").length && b.push("[*^$]=" + P + "*(?:''|\"\")"), e.querySelectorAll("[selected]").length || b.push("\\[" + P + "*(?:value|" + I + ")"), e.querySelectorAll("[id~=" + y + "-]").length || b.push("~="), e.querySelectorAll(":checked").length || b.push(":checked"), e.querySelectorAll("a#" + y + "+*").length || b.push(".#.+[+~]")
-                            })), se((function(e) {
+                            })), le((function(e) {
                                 var t = a.createElement("input");
                                 t.setAttribute("type", "hidden"), e.appendChild(t).setAttribute("name", "D"), e.querySelectorAll("[name=d]").length && b.push("name" + P + "*[*^$|!~]?="), e.querySelectorAll(":enabled").length || b.push(":enabled", ":disabled"), e.querySelectorAll("*,:x"), b.push(",.*:")
-                            }))), (n.matchesSelector = K.test(f = h.matches || h.webkitMatchesSelector || h.mozMatchesSelector || h.oMatchesSelector || h.msMatchesSelector)) && se((function(e) {
+                            }))), (n.matchesSelector = K.test(f = h.matches || h.webkitMatchesSelector || h.mozMatchesSelector || h.oMatchesSelector || h.msMatchesSelector)) && le((function(e) {
                                 n.disconnectedMatch = f.call(e, "div"), f.call(e, "[s!='']:x"), m.push("!=", W)
                             })), b = b.length && new RegExp(b.join("|")), m = m.length && new RegExp(m.join("|")), t = K.test(h.compareDocumentPosition), _ = t || K.test(h.contains) ? function(e, t) {
                                 var n = 9 === e.nodeType ? e.documentElement : e,
@@ -1255,14 +1255,14 @@
                                 var n, r = 0,
                                     o = e.parentNode,
                                     i = t.parentNode,
-                                    l = [e],
-                                    s = [t];
+                                    s = [e],
+                                    l = [t];
                                 if (!o || !i) return e === a ? -1 : t === a ? 1 : o ? -1 : i ? 1 : c ? D(c, e) - D(c, t) : 0;
                                 if (o === i) return ce(e, t);
-                                for (n = e; n = n.parentNode;) l.unshift(n);
-                                for (n = t; n = n.parentNode;) s.unshift(n);
-                                for (; l[r] === s[r];) r++;
-                                return r ? ce(l[r], s[r]) : l[r] === x ? -1 : s[r] === x ? 1 : 0
+                                for (n = e; n = n.parentNode;) s.unshift(n);
+                                for (n = t; n = n.parentNode;) l.unshift(n);
+                                for (; s[r] === l[r];) r++;
+                                return r ? ce(s[r], l[r]) : s[r] === x ? -1 : l[r] === x ? 1 : 0
                             }, a) : u
                         }, ie.matches = function(e, t) {
                             return ie(e, null, null, t)
@@ -1304,7 +1304,7 @@
                             return n
                         }, r = ie.selectors = {
                             cacheLength: 50,
-                            createPseudo: le,
+                            createPseudo: se,
                             match: X,
                             attrHandle: {},
                             find: {},
@@ -1360,19 +1360,19 @@
                                 CHILD: function(e, t, n, r, o) {
                                     var i = "nth" !== e.slice(0, 3),
                                         a = "last" !== e.slice(-4),
-                                        l = "of-type" === t;
+                                        s = "of-type" === t;
                                     return 1 === r && 0 === o ? function(e) {
                                         return !!e.parentNode
-                                    } : function(t, n, s) {
+                                    } : function(t, n, l) {
                                         var d, c, p, A, u, h, g = i !== a ? "nextSibling" : "previousSibling",
                                             b = t.parentNode,
-                                            m = l && t.nodeName.toLowerCase(),
-                                            f = !s && !l;
+                                            m = s && t.nodeName.toLowerCase(),
+                                            f = !l && !s;
                                         if (b) {
                                             if (i) {
                                                 for (; g;) {
                                                     for (p = t; p = p[g];)
-                                                        if (l ? p.nodeName.toLowerCase() === m : 1 === p.nodeType) return !1;
+                                                        if (s ? p.nodeName.toLowerCase() === m : 1 === p.nodeType) return !1;
                                                     h = g = "only" === e && !h && "nextSibling"
                                                 }
                                                 return !0
@@ -1386,14 +1386,14 @@
                                             } else if (f && (d = (t[y] || (t[y] = {}))[e]) && d[0] === k) A = d[1];
                                             else
                                                 for (;
-                                                    (p = ++u && p && p[g] || (A = u = 0) || h.pop()) && ((l ? p.nodeName.toLowerCase() !== m : 1 !== p.nodeType) || !++A || (f && ((p[y] || (p[y] = {}))[e] = [k, A]), p !== t)););
+                                                    (p = ++u && p && p[g] || (A = u = 0) || h.pop()) && ((s ? p.nodeName.toLowerCase() !== m : 1 !== p.nodeType) || !++A || (f && ((p[y] || (p[y] = {}))[e] = [k, A]), p !== t)););
                                             return (A -= o) === r || A % r == 0 && A / r >= 0
                                         }
                                     }
                                 },
                                 PSEUDO: function(e, t) {
                                     var n, o = r.pseudos[e] || r.setFilters[e.toLowerCase()] || ie.error("unsupported pseudo: " + e);
-                                    return o[y] ? o(t) : o.length > 1 ? (n = [e, e, "", t], r.setFilters.hasOwnProperty(e.toLowerCase()) ? le((function(e, n) {
+                                    return o[y] ? o(t) : o.length > 1 ? (n = [e, e, "", t], r.setFilters.hasOwnProperty(e.toLowerCase()) ? se((function(e, n) {
                                         for (var r, i = o(e, t), a = i.length; a--;) e[r = D(e, i[a])] = !(n[r] = i[a])
                                     })) : function(e) {
                                         return o(e, 0, n)
@@ -1401,28 +1401,28 @@
                                 }
                             },
                             pseudos: {
-                                not: le((function(e) {
+                                not: se((function(e) {
                                     var t = [],
                                         n = [],
-                                        r = l(e.replace(Q, "$1"));
-                                    return r[y] ? le((function(e, t, n, o) {
-                                        for (var i, a = r(e, null, o, []), l = e.length; l--;)(i = a[l]) && (e[l] = !(t[l] = i))
+                                        r = s(e.replace(Q, "$1"));
+                                    return r[y] ? se((function(e, t, n, o) {
+                                        for (var i, a = r(e, null, o, []), s = e.length; s--;)(i = a[s]) && (e[s] = !(t[s] = i))
                                     })) : function(e, o, i) {
                                         return t[0] = e, r(t, null, i, n), t[0] = null, !n.pop()
                                     }
                                 })),
-                                has: le((function(e) {
+                                has: se((function(e) {
                                     return function(t) {
                                         return ie(e, t).length > 0
                                     }
                                 })),
-                                contains: le((function(e) {
+                                contains: se((function(e) {
                                     return e = e.replace(ne, re),
                                         function(t) {
                                             return (t.textContent || t.innerText || o(t)).indexOf(e) > -1
                                         }
                                 })),
-                                lang: le((function(e) {
+                                lang: se((function(e) {
                                     return V.test(e || "") || ie.error("unsupported lang: " + e), e = e.replace(ne, re).toLowerCase(),
                                         function(t) {
                                             var n;
@@ -1530,15 +1530,15 @@
                             for (; t = t[r];)
                                 if (1 === t.nodeType || o) return e(t, n, i)
                         } : function(t, n, a) {
-                            var l, s, d = [k, i];
+                            var s, l, d = [k, i];
                             if (a) {
                                 for (; t = t[r];)
                                     if ((1 === t.nodeType || o) && e(t, n, a)) return !0
                             } else
                                 for (; t = t[r];)
                                     if (1 === t.nodeType || o) {
-                                        if ((l = (s = t[y] || (t[y] = {}))[r]) && l[0] === k && l[1] === i) return d[2] = l[2];
-                                        if (s[r] = d, d[2] = e(t, n, a)) return !0
+                                        if ((s = (l = t[y] || (t[y] = {}))[r]) && s[0] === k && s[1] === i) return d[2] = s[2];
+                                        if (l[r] = d, d[2] = e(t, n, a)) return !0
                                     }
                         }
                     }
@@ -1552,80 +1552,80 @@
                     }
 
                     function _e(e, t, n, r, o) {
-                        for (var i, a = [], l = 0, s = e.length, d = null != t; l < s; l++)(i = e[l]) && (n && !n(i, r, o) || (a.push(i), d && t.push(l)));
+                        for (var i, a = [], s = 0, l = e.length, d = null != t; s < l; s++)(i = e[s]) && (n && !n(i, r, o) || (a.push(i), d && t.push(s)));
                         return a
                     }
 
                     function ye(e, t, n, r, o, i) {
-                        return r && !r[y] && (r = ye(r)), o && !o[y] && (o = ye(o, i)), le((function(i, a, l, s) {
+                        return r && !r[y] && (r = ye(r)), o && !o[y] && (o = ye(o, i)), se((function(i, a, s, l) {
                             var d, c, p, A = [],
                                 u = [],
                                 h = a.length,
                                 g = i || function(e, t, n) {
                                     for (var r = 0, o = t.length; r < o; r++) ie(e, t[r], n);
                                     return n
-                                }(t || "*", l.nodeType ? [l] : l, []),
-                                b = !e || !i && t ? g : _e(g, A, e, l, s),
+                                }(t || "*", s.nodeType ? [s] : s, []),
+                                b = !e || !i && t ? g : _e(g, A, e, s, l),
                                 m = n ? o || (i ? e : h || r) ? [] : a : b;
-                            if (n && n(b, m, l, s), r)
-                                for (d = _e(m, u), r(d, [], l, s), c = d.length; c--;)(p = d[c]) && (m[u[c]] = !(b[u[c]] = p));
+                            if (n && n(b, m, s, l), r)
+                                for (d = _e(m, u), r(d, [], s, l), c = d.length; c--;)(p = d[c]) && (m[u[c]] = !(b[u[c]] = p));
                             if (i) {
                                 if (o || e) {
                                     if (o) {
                                         for (d = [], c = m.length; c--;)(p = m[c]) && d.push(b[c] = p);
-                                        o(null, m = [], d, s)
+                                        o(null, m = [], d, l)
                                     }
                                     for (c = m.length; c--;)(p = m[c]) && (d = o ? D(i, p) : A[c]) > -1 && (i[d] = !(a[d] = p))
                                 }
-                            } else m = _e(m === a ? m.splice(h, m.length) : m), o ? o(null, a, m, s) : L.apply(a, m)
+                            } else m = _e(m === a ? m.splice(h, m.length) : m), o ? o(null, a, m, l) : L.apply(a, m)
                         }))
                     }
 
                     function xe(e) {
-                        for (var t, n, o, i = e.length, a = r.relative[e[0].type], l = a || r.relative[" "], s = a ? 1 : 0, c = me((function(e) {
+                        for (var t, n, o, i = e.length, a = r.relative[e[0].type], s = a || r.relative[" "], l = a ? 1 : 0, c = me((function(e) {
                                 return e === t
-                            }), l, !0), p = me((function(e) {
+                            }), s, !0), p = me((function(e) {
                                 return D(t, e) > -1
-                            }), l, !0), A = [function(e, n, r) {
+                            }), s, !0), A = [function(e, n, r) {
                                 var o = !a && (r || n !== d) || ((t = n).nodeType ? c(e, n, r) : p(e, n, r));
                                 return t = null, o
-                            }]; s < i; s++)
-                            if (n = r.relative[e[s].type]) A = [me(fe(A), n)];
+                            }]; l < i; l++)
+                            if (n = r.relative[e[l].type]) A = [me(fe(A), n)];
                             else {
-                                if ((n = r.filter[e[s].type].apply(null, e[s].matches))[y]) {
-                                    for (o = ++s; o < i && !r.relative[e[o].type]; o++);
-                                    return ye(s > 1 && fe(A), s > 1 && be(e.slice(0, s - 1).concat({
-                                        value: " " === e[s - 2].type ? "*" : ""
-                                    })).replace(Q, "$1"), n, s < o && xe(e.slice(s, o)), o < i && xe(e = e.slice(o)), o < i && be(e))
+                                if ((n = r.filter[e[l].type].apply(null, e[l].matches))[y]) {
+                                    for (o = ++l; o < i && !r.relative[e[o].type]; o++);
+                                    return ye(l > 1 && fe(A), l > 1 && be(e.slice(0, l - 1).concat({
+                                        value: " " === e[l - 2].type ? "*" : ""
+                                    })).replace(Q, "$1"), n, l < o && xe(e.slice(l, o)), o < i && xe(e = e.slice(o)), o < i && be(e))
                                 }
                                 A.push(n)
                             } return fe(A)
                     }
                     return ge.prototype = r.filters = r.pseudos, r.setFilters = new ge, a = ie.tokenize = function(e, t) {
-                        var n, o, i, a, l, s, d, c = w[e + " "];
+                        var n, o, i, a, s, l, d, c = w[e + " "];
                         if (c) return t ? 0 : c.slice(0);
-                        for (l = e, s = [], d = r.preFilter; l;) {
-                            for (a in n && !(o = H.exec(l)) || (o && (l = l.slice(o[0].length) || l), s.push(i = [])), n = !1, (o = Y.exec(l)) && (n = o.shift(), i.push({
+                        for (s = e, l = [], d = r.preFilter; s;) {
+                            for (a in n && !(o = H.exec(s)) || (o && (s = s.slice(o[0].length) || s), l.push(i = [])), n = !1, (o = Y.exec(s)) && (n = o.shift(), i.push({
                                     value: n,
                                     type: o[0].replace(Q, " ")
-                                }), l = l.slice(n.length)), r.filter) !(o = X[a].exec(l)) || d[a] && !(o = d[a](o)) || (n = o.shift(), i.push({
+                                }), s = s.slice(n.length)), r.filter) !(o = X[a].exec(s)) || d[a] && !(o = d[a](o)) || (n = o.shift(), i.push({
                                 value: n,
                                 type: a,
                                 matches: o
-                            }), l = l.slice(n.length));
+                            }), s = s.slice(n.length));
                             if (!n) break
                         }
-                        return t ? l.length : l ? ie.error(e) : w(e, s).slice(0)
-                    }, l = ie.compile = function(e, t) {
+                        return t ? s.length : s ? ie.error(e) : w(e, l).slice(0)
+                    }, s = ie.compile = function(e, t) {
                         var n, o = [],
                             i = [],
-                            l = C[e + " "];
-                        if (!l) {
-                            for (t || (t = a(e)), n = t.length; n--;)(l = xe(t[n]))[y] ? o.push(l) : i.push(l);
-                            l = C(e, function(e, t) {
+                            s = C[e + " "];
+                        if (!s) {
+                            for (t || (t = a(e)), n = t.length; n--;)(s = xe(t[n]))[y] ? o.push(s) : i.push(s);
+                            s = C(e, function(e, t) {
                                 var n = t.length > 0,
                                     o = e.length > 0,
-                                    i = function(i, a, l, s, c) {
+                                    i = function(i, a, s, l, c) {
                                         var p, A, h, g = 0,
                                             b = "0",
                                             m = i && [],
@@ -1637,54 +1637,54 @@
                                         for (c && (d = a !== u && a); b !== v && null != (p = y[b]); b++) {
                                             if (o && p) {
                                                 for (A = 0; h = e[A++];)
-                                                    if (h(p, a, l)) {
-                                                        s.push(p);
+                                                    if (h(p, a, s)) {
+                                                        l.push(p);
                                                         break
                                                     } c && (k = x)
                                             }
                                             n && ((p = !h && p) && g--, i && m.push(p))
                                         }
                                         if (g += b, n && b !== g) {
-                                            for (A = 0; h = t[A++];) h(m, f, a, l);
+                                            for (A = 0; h = t[A++];) h(m, f, a, s);
                                             if (i) {
                                                 if (g > 0)
-                                                    for (; b--;) m[b] || f[b] || (f[b] = M.call(s));
+                                                    for (; b--;) m[b] || f[b] || (f[b] = M.call(l));
                                                 f = _e(f)
                                             }
-                                            L.apply(s, f), c && !i && f.length > 0 && g + t.length > 1 && ie.uniqueSort(s)
+                                            L.apply(l, f), c && !i && f.length > 0 && g + t.length > 1 && ie.uniqueSort(l)
                                         }
                                         return c && (k = x, d = _), m
                                     };
-                                return n ? le(i) : i
-                            }(i, o)), l.selector = e
+                                return n ? se(i) : i
+                            }(i, o)), s.selector = e
                         }
-                        return l
-                    }, s = ie.select = function(e, t, o, i) {
-                        var s, d, c, p, A, u = "function" == typeof e && e,
+                        return s
+                    }, l = ie.select = function(e, t, o, i) {
+                        var l, d, c, p, A, u = "function" == typeof e && e,
                             h = !i && a(e = u.selector || e);
                         if (o = o || [], 1 === h.length) {
                             if ((d = h[0] = h[0].slice(0)).length > 2 && "ID" === (c = d[0]).type && n.getById && 9 === t.nodeType && g && r.relative[d[1].type]) {
                                 if (!(t = (r.find.ID(c.matches[0].replace(ne, re), t) || [])[0])) return o;
                                 u && (t = t.parentNode), e = e.slice(d.shift().value.length)
                             }
-                            for (s = X.needsContext.test(e) ? 0 : d.length; s-- && (c = d[s], !r.relative[p = c.type]);)
+                            for (l = X.needsContext.test(e) ? 0 : d.length; l-- && (c = d[l], !r.relative[p = c.type]);)
                                 if ((A = r.find[p]) && (i = A(c.matches[0].replace(ne, re), ee.test(d[0].type) && he(t.parentNode) || t))) {
-                                    if (d.splice(s, 1), !(e = i.length && be(d))) return L.apply(o, i), o;
+                                    if (d.splice(l, 1), !(e = i.length && be(d))) return L.apply(o, i), o;
                                     break
                                 }
                         }
-                        return (u || l(e, h))(i, t, !g, o, ee.test(e) && he(t.parentNode) || t), o
-                    }, n.sortStable = y.split("").sort($).join("") === y, n.detectDuplicates = !!p, A(), n.sortDetached = se((function(e) {
+                        return (u || s(e, h))(i, t, !g, o, ee.test(e) && he(t.parentNode) || t), o
+                    }, n.sortStable = y.split("").sort($).join("") === y, n.detectDuplicates = !!p, A(), n.sortDetached = le((function(e) {
                         return 1 & e.compareDocumentPosition(u.createElement("div"))
-                    })), se((function(e) {
+                    })), le((function(e) {
                         return e.innerHTML = "<a href='#'></a>", "#" === e.firstChild.getAttribute("href")
                     })) || de("type|href|height|width", (function(e, t, n) {
                         if (!n) return e.getAttribute(t, "type" === t.toLowerCase() ? 1 : 2)
-                    })), n.attributes && se((function(e) {
+                    })), n.attributes && le((function(e) {
                         return e.innerHTML = "<input/>", e.firstChild.setAttribute("value", ""), "" === e.firstChild.getAttribute("value")
                     })) || de("value", (function(e, t, n) {
                         if (!n && "input" === e.nodeName.toLowerCase()) return e.defaultValue
-                    })), se((function(e) {
+                    })), le((function(e) {
                         return null == e.getAttribute("disabled")
                     })) || de(I, (function(e, t, n) {
                         var r;
@@ -1862,54 +1862,54 @@
                             t[n] = !0
                         })), t
                     }(e) : b.extend({}, e);
-                    var t, n, r, o, i, a, l = [],
-                        s = !e.once && [],
+                    var t, n, r, o, i, a, s = [],
+                        l = !e.once && [],
                         d = function(p) {
-                            for (t = e.memory && p, n = !0, a = o || 0, o = 0, i = l.length, r = !0; l && a < i; a++)
-                                if (!1 === l[a].apply(p[0], p[1]) && e.stopOnFalse) {
+                            for (t = e.memory && p, n = !0, a = o || 0, o = 0, i = s.length, r = !0; s && a < i; a++)
+                                if (!1 === s[a].apply(p[0], p[1]) && e.stopOnFalse) {
                                     t = !1;
                                     break
-                                } r = !1, l && (s ? s.length && d(s.shift()) : t ? l = [] : c.disable())
+                                } r = !1, s && (l ? l.length && d(l.shift()) : t ? s = [] : c.disable())
                         },
                         c = {
                             add: function() {
-                                if (l) {
-                                    var n = l.length;
+                                if (s) {
+                                    var n = s.length;
                                     ! function t(n) {
                                         b.each(n, (function(n, r) {
                                             var o = b.type(r);
-                                            "function" === o ? e.unique && c.has(r) || l.push(r) : r && r.length && "string" !== o && t(r)
+                                            "function" === o ? e.unique && c.has(r) || s.push(r) : r && r.length && "string" !== o && t(r)
                                         }))
-                                    }(arguments), r ? i = l.length : t && (o = n, d(t))
+                                    }(arguments), r ? i = s.length : t && (o = n, d(t))
                                 }
                                 return this
                             },
                             remove: function() {
-                                return l && b.each(arguments, (function(e, t) {
+                                return s && b.each(arguments, (function(e, t) {
                                     for (var n;
-                                        (n = b.inArray(t, l, n)) > -1;) l.splice(n, 1), r && (n <= i && i--, n <= a && a--)
+                                        (n = b.inArray(t, s, n)) > -1;) s.splice(n, 1), r && (n <= i && i--, n <= a && a--)
                                 })), this
                             },
                             has: function(e) {
-                                return e ? b.inArray(e, l) > -1 : !(!l || !l.length)
+                                return e ? b.inArray(e, s) > -1 : !(!s || !s.length)
                             },
                             empty: function() {
-                                return l = [], i = 0, this
+                                return s = [], i = 0, this
                             },
                             disable: function() {
-                                return l = s = t = void 0, this
+                                return s = l = t = void 0, this
                             },
                             disabled: function() {
-                                return !l
-                            },
-                            lock: function() {
-                                return s = void 0, t || c.disable(), this
-                            },
-                            locked: function() {
                                 return !s
                             },
+                            lock: function() {
+                                return l = void 0, t || c.disable(), this
+                            },
+                            locked: function() {
+                                return !l
+                            },
                             fireWith: function(e, t) {
-                                return !l || n && !s || (t = [e, (t = t || []).slice ? t.slice() : t], r ? s.push(t) : d(t)), this
+                                return !s || n && !l || (t = [e, (t = t || []).slice ? t.slice() : t], r ? l.push(t) : d(t)), this
                             },
                             fire: function() {
                                 return c.fireWith(this, arguments), this
@@ -1953,9 +1953,9 @@
                             o = {};
                         return r.pipe = r.then, b.each(t, (function(e, i) {
                             var a = i[2],
-                                l = i[3];
-                            r[i[1]] = a.add, l && a.add((function() {
-                                n = l
+                                s = i[3];
+                            r[i[1]] = a.add, s && a.add((function() {
+                                n = s
                             }), t[1 ^ e][2].disable, t[2][2].lock), o[i[0]] = function() {
                                 return o[i[0] + "With"](this === o ? r : this, arguments), this
                             }, o[i[0] + "With"] = a.fireWith
@@ -1964,17 +1964,17 @@
                     when: function(e) {
                         var t, n, r, o = 0,
                             i = a.call(arguments),
-                            l = i.length,
-                            s = 1 !== l || e && b.isFunction(e.promise) ? l : 0,
-                            d = 1 === s ? e : b.Deferred(),
+                            s = i.length,
+                            l = 1 !== s || e && b.isFunction(e.promise) ? s : 0,
+                            d = 1 === l ? e : b.Deferred(),
                             c = function(e, n, r) {
                                 return function(o) {
-                                    n[e] = this, r[e] = arguments.length > 1 ? a.call(arguments) : o, r === t ? d.notifyWith(n, r) : --s || d.resolveWith(n, r)
+                                    n[e] = this, r[e] = arguments.length > 1 ? a.call(arguments) : o, r === t ? d.notifyWith(n, r) : --l || d.resolveWith(n, r)
                                 }
                             };
-                        if (l > 1)
-                            for (t = new Array(l), n = new Array(l), r = new Array(l); o < l; o++) i[o] && b.isFunction(i[o].promise) ? i[o].promise().done(c(o, r, i)).fail(d.reject).progress(c(o, n, t)) : --s;
-                        return s || d.resolveWith(r, i), d.promise()
+                        if (s > 1)
+                            for (t = new Array(s), n = new Array(s), r = new Array(s); o < s; o++) i[o] && b.isFunction(i[o].promise) ? i[o].promise().done(c(o, r, i)).fail(d.reject).progress(c(o, n, t)) : --l;
+                        return l || d.resolveWith(r, i), d.promise()
                     }
                 }), b.fn.ready = function(e) {
                     return b.ready.promise().done(e), this
@@ -1991,16 +1991,16 @@
                     return O || (O = b.Deferred(), "complete" === h.readyState ? setTimeout(b.ready) : (h.addEventListener("DOMContentLoaded", D, !1), r.addEventListener("load", D, !1))), O.promise(e)
                 }, b.ready.promise();
                 var I = b.access = function(e, t, n, r, o, i, a) {
-                    var l = 0,
-                        s = e.length,
+                    var s = 0,
+                        l = e.length,
                         d = null == n;
                     if ("object" === b.type(n))
-                        for (l in o = !0, n) b.access(e, t, l, n[l], !0, i, a);
+                        for (s in o = !0, n) b.access(e, t, s, n[s], !0, i, a);
                     else if (void 0 !== r && (o = !0, b.isFunction(r) || (a = !0), d && (a ? (t.call(e, r), t = null) : (d = t, t = function(e, t, n) {
                             return d.call(b(e), n)
                         })), t))
-                        for (; l < s; l++) t(e[l], n, a ? r : r.call(e[l], l, t(e[l], n)));
-                    return o ? e : d ? t.call(e) : s ? t(e[0], n) : i
+                        for (; s < l; s++) t(e[s], n, a ? r : r.call(e[s], s, t(e[s], n)));
+                    return o ? e : d ? t.call(e) : l ? t(e[0], n) : i
                 };
 
                 function P() {
@@ -2063,8 +2063,8 @@
                     }
                 };
                 var N = new P,
-                    R = new P,
-                    j = /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,
+                    j = new P,
+                    R = /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,
                     W = /([A-Z])/g;
 
                 function F(e, t, n) {
@@ -2072,21 +2072,21 @@
                     if (void 0 === n && 1 === e.nodeType)
                         if (r = "data-" + t.replace(W, "-$1").toLowerCase(), "string" == typeof(n = e.getAttribute(r))) {
                             try {
-                                n = "true" === n || "false" !== n && ("null" === n ? null : +n + "" === n ? +n : j.test(n) ? b.parseJSON(n) : n)
+                                n = "true" === n || "false" !== n && ("null" === n ? null : +n + "" === n ? +n : R.test(n) ? b.parseJSON(n) : n)
                             } catch (e) {}
-                            R.set(e, t, n)
+                            j.set(e, t, n)
                         } else n = void 0;
                     return n
                 }
                 b.extend({
                     hasData: function(e) {
-                        return R.hasData(e) || N.hasData(e)
+                        return j.hasData(e) || N.hasData(e)
                     },
                     data: function(e, t, n) {
-                        return R.access(e, t, n)
+                        return j.access(e, t, n)
                     },
                     removeData: function(e, t) {
-                        R.remove(e, t)
+                        j.remove(e, t)
                     },
                     _data: function(e, t, n) {
                         return N.access(e, t, n)
@@ -2099,26 +2099,26 @@
                         var n, r, o, i = this[0],
                             a = i && i.attributes;
                         if (void 0 === e) {
-                            if (this.length && (o = R.get(i), 1 === i.nodeType && !N.get(i, "hasDataAttrs"))) {
+                            if (this.length && (o = j.get(i), 1 === i.nodeType && !N.get(i, "hasDataAttrs"))) {
                                 for (n = a.length; n--;) a[n] && 0 === (r = a[n].name).indexOf("data-") && (r = b.camelCase(r.slice(5)), F(i, r, o[r]));
                                 N.set(i, "hasDataAttrs", !0)
                             }
                             return o
                         }
                         return "object" == typeof e ? this.each((function() {
-                            R.set(this, e)
+                            j.set(this, e)
                         })) : I(this, (function(t) {
                             var n, r = b.camelCase(e);
-                            if (i && void 0 === t) return void 0 !== (n = R.get(i, e)) || void 0 !== (n = R.get(i, r)) || void 0 !== (n = F(i, r, void 0)) ? n : void 0;
+                            if (i && void 0 === t) return void 0 !== (n = j.get(i, e)) || void 0 !== (n = j.get(i, r)) || void 0 !== (n = F(i, r, void 0)) ? n : void 0;
                             this.each((function() {
-                                var n = R.get(this, r);
-                                R.set(this, r, t), -1 !== e.indexOf("-") && void 0 !== n && R.set(this, e, t)
+                                var n = j.get(this, r);
+                                j.set(this, r, t), -1 !== e.indexOf("-") && void 0 !== n && j.set(this, e, t)
                             }))
                         }), null, t, arguments.length > 1, null, !0)
                     },
                     removeData: function(e) {
                         return this.each((function() {
-                            R.remove(this, e)
+                            j.remove(this, e)
                         }))
                     }
                 }), b.extend({
@@ -2165,11 +2165,11 @@
                             o = b.Deferred(),
                             i = this,
                             a = this.length,
-                            l = function() {
+                            s = function() {
                                 --r || o.resolveWith(i, [i])
                             };
-                        for ("string" != typeof e && (t = e, e = void 0), e = e || "fx"; a--;)(n = N.get(i[a], e + "queueHooks")) && n.empty && (r++, n.empty.add(l));
-                        return l(), o.promise(t)
+                        for ("string" != typeof e && (t = e, e = void 0), e = e || "fx"; a--;)(n = N.get(i[a], e + "queueHooks")) && n.empty && (r++, n.empty.add(s));
+                        return s(), o.promise(t)
                     }
                 });
                 var Q, H, Y = /[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/.source,
@@ -2202,11 +2202,11 @@
                 b.event = {
                     global: {},
                     add: function(e, t, n, r, o) {
-                        var i, a, l, s, d, c, p, A, u, h, g, m = N.get(e);
+                        var i, a, s, l, d, c, p, A, u, h, g, m = N.get(e);
                         if (m)
-                            for (n.handler && (n = (i = n).handler, o = i.selector), n.guid || (n.guid = b.guid++), (s = m.events) || (s = m.events = {}), (a = m.handle) || (a = m.handle = function(t) {
+                            for (n.handler && (n = (i = n).handler, o = i.selector), n.guid || (n.guid = b.guid++), (l = m.events) || (l = m.events = {}), (a = m.handle) || (a = m.handle = function(t) {
                                     return typeof b !== X && b.event.triggered !== t.type ? b.event.dispatch.apply(e, arguments) : void 0
-                                }), d = (t = (t || "").match(L) || [""]).length; d--;) u = g = (l = J.exec(t[d]) || [])[1], h = (l[2] || "").split(".").sort(), u && (p = b.event.special[u] || {}, u = (o ? p.delegateType : p.bindType) || u, p = b.event.special[u] || {}, c = b.extend({
+                                }), d = (t = (t || "").match(L) || [""]).length; d--;) u = g = (s = J.exec(t[d]) || [])[1], h = (s[2] || "").split(".").sort(), u && (p = b.event.special[u] || {}, u = (o ? p.delegateType : p.bindType) || u, p = b.event.special[u] || {}, c = b.extend({
                                 type: u,
                                 origType: g,
                                 data: r,
@@ -2215,62 +2215,62 @@
                                 selector: o,
                                 needsContext: o && b.expr.match.needsContext.test(o),
                                 namespace: h.join(".")
-                            }, i), (A = s[u]) || ((A = s[u] = []).delegateCount = 0, p.setup && !1 !== p.setup.call(e, r, h, a) || e.addEventListener && e.addEventListener(u, a, !1)), p.add && (p.add.call(e, c), c.handler.guid || (c.handler.guid = n.guid)), o ? A.splice(A.delegateCount++, 0, c) : A.push(c), b.event.global[u] = !0)
+                            }, i), (A = l[u]) || ((A = l[u] = []).delegateCount = 0, p.setup && !1 !== p.setup.call(e, r, h, a) || e.addEventListener && e.addEventListener(u, a, !1)), p.add && (p.add.call(e, c), c.handler.guid || (c.handler.guid = n.guid)), o ? A.splice(A.delegateCount++, 0, c) : A.push(c), b.event.global[u] = !0)
                     },
                     remove: function(e, t, n, r, o) {
-                        var i, a, l, s, d, c, p, A, u, h, g, m = N.hasData(e) && N.get(e);
-                        if (m && (s = m.events)) {
+                        var i, a, s, l, d, c, p, A, u, h, g, m = N.hasData(e) && N.get(e);
+                        if (m && (l = m.events)) {
                             for (d = (t = (t || "").match(L) || [""]).length; d--;)
-                                if (u = g = (l = J.exec(t[d]) || [])[1], h = (l[2] || "").split(".").sort(), u) {
-                                    for (p = b.event.special[u] || {}, A = s[u = (r ? p.delegateType : p.bindType) || u] || [], l = l[2] && new RegExp("(^|\\.)" + h.join("\\.(?:.*\\.|)") + "(\\.|$)"), a = i = A.length; i--;) c = A[i], !o && g !== c.origType || n && n.guid !== c.guid || l && !l.test(c.namespace) || r && r !== c.selector && ("**" !== r || !c.selector) || (A.splice(i, 1), c.selector && A.delegateCount--, p.remove && p.remove.call(e, c));
-                                    a && !A.length && (p.teardown && !1 !== p.teardown.call(e, h, m.handle) || b.removeEvent(e, u, m.handle), delete s[u])
+                                if (u = g = (s = J.exec(t[d]) || [])[1], h = (s[2] || "").split(".").sort(), u) {
+                                    for (p = b.event.special[u] || {}, A = l[u = (r ? p.delegateType : p.bindType) || u] || [], s = s[2] && new RegExp("(^|\\.)" + h.join("\\.(?:.*\\.|)") + "(\\.|$)"), a = i = A.length; i--;) c = A[i], !o && g !== c.origType || n && n.guid !== c.guid || s && !s.test(c.namespace) || r && r !== c.selector && ("**" !== r || !c.selector) || (A.splice(i, 1), c.selector && A.delegateCount--, p.remove && p.remove.call(e, c));
+                                    a && !A.length && (p.teardown && !1 !== p.teardown.call(e, h, m.handle) || b.removeEvent(e, u, m.handle), delete l[u])
                                 } else
-                                    for (u in s) b.event.remove(e, u + t[d], n, r, !0);
-                            b.isEmptyObject(s) && (delete m.handle, N.remove(e, "events"))
+                                    for (u in l) b.event.remove(e, u + t[d], n, r, !0);
+                            b.isEmptyObject(l) && (delete m.handle, N.remove(e, "events"))
                         }
                     },
                     trigger: function(e, t, n, o) {
-                        var i, a, l, s, d, c, p, u = [n || h],
+                        var i, a, s, l, d, c, p, u = [n || h],
                             g = A.call(e, "type") ? e.type : e,
                             m = A.call(e, "namespace") ? e.namespace.split(".") : [];
-                        if (a = l = n = n || h, 3 !== n.nodeType && 8 !== n.nodeType && !K.test(g + b.event.triggered) && (g.indexOf(".") >= 0 && (m = g.split("."), g = m.shift(), m.sort()), d = g.indexOf(":") < 0 && "on" + g, (e = e[b.expando] ? e : new b.Event(g, "object" == typeof e && e)).isTrigger = o ? 2 : 3, e.namespace = m.join("."), e.namespace_re = e.namespace ? new RegExp("(^|\\.)" + m.join("\\.(?:.*\\.|)") + "(\\.|$)") : null, e.result = void 0, e.target || (e.target = n), t = null == t ? [e] : b.makeArray(t, [e]), p = b.event.special[g] || {}, o || !p.trigger || !1 !== p.trigger.apply(n, t))) {
+                        if (a = s = n = n || h, 3 !== n.nodeType && 8 !== n.nodeType && !K.test(g + b.event.triggered) && (g.indexOf(".") >= 0 && (m = g.split("."), g = m.shift(), m.sort()), d = g.indexOf(":") < 0 && "on" + g, (e = e[b.expando] ? e : new b.Event(g, "object" == typeof e && e)).isTrigger = o ? 2 : 3, e.namespace = m.join("."), e.namespace_re = e.namespace ? new RegExp("(^|\\.)" + m.join("\\.(?:.*\\.|)") + "(\\.|$)") : null, e.result = void 0, e.target || (e.target = n), t = null == t ? [e] : b.makeArray(t, [e]), p = b.event.special[g] || {}, o || !p.trigger || !1 !== p.trigger.apply(n, t))) {
                             if (!o && !p.noBubble && !b.isWindow(n)) {
-                                for (s = p.delegateType || g, K.test(s + g) || (a = a.parentNode); a; a = a.parentNode) u.push(a), l = a;
-                                l === (n.ownerDocument || h) && u.push(l.defaultView || l.parentWindow || r)
+                                for (l = p.delegateType || g, K.test(l + g) || (a = a.parentNode); a; a = a.parentNode) u.push(a), s = a;
+                                s === (n.ownerDocument || h) && u.push(s.defaultView || s.parentWindow || r)
                             }
                             for (i = 0;
-                                (a = u[i++]) && !e.isPropagationStopped();) e.type = i > 1 ? s : p.bindType || g, (c = (N.get(a, "events") || {})[e.type] && N.get(a, "handle")) && c.apply(a, t), (c = d && a[d]) && c.apply && b.acceptData(a) && (e.result = c.apply(a, t), !1 === e.result && e.preventDefault());
-                            return e.type = g, o || e.isDefaultPrevented() || p._default && !1 !== p._default.apply(u.pop(), t) || !b.acceptData(n) || d && b.isFunction(n[g]) && !b.isWindow(n) && ((l = n[d]) && (n[d] = null), b.event.triggered = g, n[g](), b.event.triggered = void 0, l && (n[d] = l)), e.result
+                                (a = u[i++]) && !e.isPropagationStopped();) e.type = i > 1 ? l : p.bindType || g, (c = (N.get(a, "events") || {})[e.type] && N.get(a, "handle")) && c.apply(a, t), (c = d && a[d]) && c.apply && b.acceptData(a) && (e.result = c.apply(a, t), !1 === e.result && e.preventDefault());
+                            return e.type = g, o || e.isDefaultPrevented() || p._default && !1 !== p._default.apply(u.pop(), t) || !b.acceptData(n) || d && b.isFunction(n[g]) && !b.isWindow(n) && ((s = n[d]) && (n[d] = null), b.event.triggered = g, n[g](), b.event.triggered = void 0, s && (n[d] = s)), e.result
                         }
                     },
                     dispatch: function(e) {
                         e = b.event.fix(e);
-                        var t, n, r, o, i, l, s = a.call(arguments),
+                        var t, n, r, o, i, s, l = a.call(arguments),
                             d = (N.get(this, "events") || {})[e.type] || [],
                             c = b.event.special[e.type] || {};
-                        if (s[0] = e, e.delegateTarget = this, !c.preDispatch || !1 !== c.preDispatch.call(this, e)) {
-                            for (l = b.event.handlers.call(this, e, d), t = 0;
-                                (o = l[t++]) && !e.isPropagationStopped();)
+                        if (l[0] = e, e.delegateTarget = this, !c.preDispatch || !1 !== c.preDispatch.call(this, e)) {
+                            for (s = b.event.handlers.call(this, e, d), t = 0;
+                                (o = s[t++]) && !e.isPropagationStopped();)
                                 for (e.currentTarget = o.elem, n = 0;
-                                    (i = o.handlers[n++]) && !e.isImmediatePropagationStopped();) e.namespace_re && !e.namespace_re.test(i.namespace) || (e.handleObj = i, e.data = i.data, void 0 !== (r = ((b.event.special[i.origType] || {}).handle || i.handler).apply(o.elem, s)) && !1 === (e.result = r) && (e.preventDefault(), e.stopPropagation()));
+                                    (i = o.handlers[n++]) && !e.isImmediatePropagationStopped();) e.namespace_re && !e.namespace_re.test(i.namespace) || (e.handleObj = i, e.data = i.data, void 0 !== (r = ((b.event.special[i.origType] || {}).handle || i.handler).apply(o.elem, l)) && !1 === (e.result = r) && (e.preventDefault(), e.stopPropagation()));
                             return c.postDispatch && c.postDispatch.call(this, e), e.result
                         }
                     },
                     handlers: function(e, t) {
                         var n, r, o, i, a = [],
-                            l = t.delegateCount,
-                            s = e.target;
-                        if (l && s.nodeType && (!e.button || "click" !== e.type))
-                            for (; s !== this; s = s.parentNode || this)
-                                if (!0 !== s.disabled || "click" !== e.type) {
-                                    for (r = [], n = 0; n < l; n++) void 0 === r[o = (i = t[n]).selector + " "] && (r[o] = i.needsContext ? b(o, this).index(s) >= 0 : b.find(o, this, null, [s]).length), r[o] && r.push(i);
+                            s = t.delegateCount,
+                            l = e.target;
+                        if (s && l.nodeType && (!e.button || "click" !== e.type))
+                            for (; l !== this; l = l.parentNode || this)
+                                if (!0 !== l.disabled || "click" !== e.type) {
+                                    for (r = [], n = 0; n < s; n++) void 0 === r[o = (i = t[n]).selector + " "] && (r[o] = i.needsContext ? b(o, this).index(l) >= 0 : b.find(o, this, null, [l]).length), r[o] && r.push(i);
                                     r.length && a.push({
-                                        elem: s,
+                                        elem: l,
                                         handlers: r
                                     })
-                                } return l < t.length && a.push({
+                                } return s < t.length && a.push({
                             elem: this,
-                            handlers: t.slice(l)
+                            handlers: t.slice(s)
                         }), a
                     },
                     props: "altKey bubbles cancelable ctrlKey currentTarget eventPhase metaKey relatedTarget shiftKey target timeStamp view which".split(" "),
@@ -2432,8 +2432,8 @@
                     oe = /<([\w:]+)/,
                     ie = /<|&#?\w+;/,
                     ae = /<(?:script|style|link)/i,
-                    le = /checked\s*(?:[^=]|=\s*.checked.)/i,
-                    se = /^$|\/(?:java|ecma)script/i,
+                    se = /checked\s*(?:[^=]|=\s*.checked.)/i,
+                    le = /^$|\/(?:java|ecma)script/i,
                     de = /^true\/(.*)/,
                     ce = /^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g,
                     pe = {
@@ -2463,12 +2463,12 @@
                 }
 
                 function be(e, t) {
-                    var n, r, o, i, a, l, s, d;
+                    var n, r, o, i, a, s, l, d;
                     if (1 === t.nodeType) {
                         if (N.hasData(e) && (i = N.access(e), a = N.set(t, i), d = i.events))
                             for (o in delete a.handle, a.events = {}, d)
                                 for (n = 0, r = d[o].length; n < r; n++) b.event.add(t, o, d[o][n]);
-                        R.hasData(e) && (l = R.access(e), s = b.extend({}, l), R.set(t, s))
+                        j.hasData(e) && (s = j.access(e), l = b.extend({}, s), j.set(t, l))
                     }
                 }
 
@@ -2478,10 +2478,10 @@
                 }
                 pe.optgroup = pe.option, pe.tbody = pe.tfoot = pe.colgroup = pe.caption = pe.thead, pe.th = pe.td, b.extend({
                     clone: function(e, t, n) {
-                        var r, o, i, a, l, s, d, c = e.cloneNode(!0),
+                        var r, o, i, a, s, l, d, c = e.cloneNode(!0),
                             p = b.contains(e.ownerDocument, e);
                         if (!(u.noCloneChecked || 1 !== e.nodeType && 11 !== e.nodeType || b.isXMLDoc(e)))
-                            for (a = me(c), r = 0, o = (i = me(e)).length; r < o; r++) l = i[r], s = a[r], d = void 0, "input" === (d = s.nodeName.toLowerCase()) && V.test(l.type) ? s.checked = l.checked : "input" !== d && "textarea" !== d || (s.defaultValue = l.defaultValue);
+                            for (a = me(c), r = 0, o = (i = me(e)).length; r < o; r++) s = i[r], l = a[r], d = void 0, "input" === (d = l.nodeName.toLowerCase()) && V.test(s.type) ? l.checked = s.checked : "input" !== d && "textarea" !== d || (l.defaultValue = s.defaultValue);
                         if (t)
                             if (n)
                                 for (i = i || me(e), a = a || me(c), r = 0, o = i.length; r < o; r++) be(i[r], a[r]);
@@ -2489,16 +2489,16 @@
                         return (a = me(c, "script")).length > 0 && ge(a, !p && me(e, "script")), c
                     },
                     buildFragment: function(e, t, n, r) {
-                        for (var o, i, a, l, s, d, c = t.createDocumentFragment(), p = [], A = 0, u = e.length; A < u; A++)
+                        for (var o, i, a, s, l, d, c = t.createDocumentFragment(), p = [], A = 0, u = e.length; A < u; A++)
                             if ((o = e[A]) || 0 === o)
                                 if ("object" === b.type(o)) b.merge(p, o.nodeType ? [o] : o);
                                 else if (ie.test(o)) {
-                            for (i = i || c.appendChild(t.createElement("div")), a = (oe.exec(o) || ["", ""])[1].toLowerCase(), l = pe[a] || pe._default, i.innerHTML = l[1] + o.replace(re, "<$1></$2>") + l[2], d = l[0]; d--;) i = i.lastChild;
+                            for (i = i || c.appendChild(t.createElement("div")), a = (oe.exec(o) || ["", ""])[1].toLowerCase(), s = pe[a] || pe._default, i.innerHTML = s[1] + o.replace(re, "<$1></$2>") + s[2], d = s[0]; d--;) i = i.lastChild;
                             b.merge(p, i.childNodes), (i = c.firstChild).textContent = ""
                         } else p.push(t.createTextNode(o));
                         for (c.textContent = "", A = 0; o = p[A++];)
-                            if ((!r || -1 === b.inArray(o, r)) && (s = b.contains(o.ownerDocument, o), i = me(c.appendChild(o), "script"), s && ge(i), n))
-                                for (d = 0; o = i[d++];) se.test(o.type || "") && n.push(o);
+                            if ((!r || -1 === b.inArray(o, r)) && (l = b.contains(o.ownerDocument, o), i = me(c.appendChild(o), "script"), l && ge(i), n))
+                                for (d = 0; o = i[d++];) le.test(o.type || "") && n.push(o);
                         return c
                     },
                     cleanData: function(e) {
@@ -2508,7 +2508,7 @@
                                     for (r in t.events) i[r] ? b.event.remove(n, r) : b.removeEvent(n, r, t.handle);
                                 N.cache[o] && delete N.cache[o]
                             }
-                            delete R.cache[n[R.expando]]
+                            delete j.cache[n[j.expando]]
                         }
                     }
                 }), b.fn.extend({
@@ -2581,21 +2581,21 @@
                         return this.remove(e, !0)
                     },
                     domManip: function(e, t) {
-                        e = l.apply([], e);
-                        var n, r, o, i, a, s, d = 0,
+                        e = s.apply([], e);
+                        var n, r, o, i, a, l, d = 0,
                             c = this.length,
                             p = this,
                             A = c - 1,
                             h = e[0],
                             g = b.isFunction(h);
-                        if (g || c > 1 && "string" == typeof h && !u.checkClone && le.test(h)) return this.each((function(n) {
+                        if (g || c > 1 && "string" == typeof h && !u.checkClone && se.test(h)) return this.each((function(n) {
                             var r = p.eq(n);
                             g && (e[0] = h.call(this, n, r.html())), r.domManip(e, t)
                         }));
                         if (c && (r = (n = b.buildFragment(e, this[0].ownerDocument, !1, this)).firstChild, 1 === n.childNodes.length && (n = r), r)) {
                             for (i = (o = b.map(me(n, "script"), ue)).length; d < c; d++) a = n, d !== A && (a = b.clone(a, !0, !0), i && b.merge(o, me(a, "script"))), t.call(this[d], a, d);
                             if (i)
-                                for (s = o[o.length - 1].ownerDocument, b.map(o, he), d = 0; d < i; d++) a = o[d], se.test(a.type || "") && !N.access(a, "globalEval") && b.contains(s, a) && (a.src ? b._evalUrl && b._evalUrl(a.src) : b.globalEval(a.textContent.replace(ce, "")))
+                                for (l = o[o.length - 1].ownerDocument, b.map(o, he), d = 0; d < i; d++) a = o[d], le.test(a.type || "") && !N.access(a, "globalEval") && b.contains(l, a) && (a.src ? b._evalUrl && b._evalUrl(a.src) : b.globalEval(a.textContent.replace(ce, "")))
                         }
                         return this
                     }
@@ -2607,7 +2607,7 @@
                     replaceAll: "replaceWith"
                 }, (function(e, t) {
                     b.fn[e] = function(e) {
-                        for (var n, r = [], o = b(e), i = o.length - 1, a = 0; a <= i; a++) n = a === i ? this : this.clone(!0), b(o[a])[t](n), s.apply(r, n.get());
+                        for (var n, r = [], o = b(e), i = o.length - 1, a = 0; a <= i; a++) n = a === i ? this : this.clone(!0), b(o[a])[t](n), l.apply(r, n.get());
                         return this.pushStack(r)
                     }
                 }));
@@ -2631,8 +2631,8 @@
                     };
 
                 function we(e, t, n) {
-                    var r, o, i, a, l = e.style;
-                    return (n = n || Ee(e)) && (a = n.getPropertyValue(t) || n[t]), n && ("" !== a || b.contains(e.ownerDocument, e) || (a = b.style(e, t)), ve.test(a) && ke.test(t) && (r = l.width, o = l.minWidth, i = l.maxWidth, l.minWidth = l.maxWidth = l.width = a, a = n.width, l.width = r, l.minWidth = o, l.maxWidth = i)), void 0 !== a ? a + "" : a
+                    var r, o, i, a, s = e.style;
+                    return (n = n || Ee(e)) && (a = n.getPropertyValue(t) || n[t]), n && ("" !== a || b.contains(e.ownerDocument, e) || (a = b.style(e, t)), ve.test(a) && ke.test(t) && (r = s.width, o = s.minWidth, i = s.maxWidth, s.minWidth = s.maxWidth = s.width = a, a = n.width, s.width = r, s.minWidth = o, s.maxWidth = i)), void 0 !== a ? a + "" : a
                 }
 
                 function Ce(e, t) {
@@ -2714,8 +2714,8 @@
                 }
 
                 function Pe(e, t) {
-                    for (var n, r, o, i = [], a = 0, l = e.length; a < l; a++)(r = e[a]).style && (i[a] = N.get(r, "olddisplay"), n = r.style.display, t ? (i[a] || "none" !== n || (r.style.display = ""), "" === r.style.display && U(r) && (i[a] = N.access(r, "olddisplay", xe(r.nodeName)))) : (o = U(r), "none" === n && o || N.set(r, "olddisplay", o ? n : b.css(r, "display"))));
-                    for (a = 0; a < l; a++)(r = e[a]).style && (t && "none" !== r.style.display && "" !== r.style.display || (r.style.display = t ? i[a] || "" : "none"));
+                    for (var n, r, o, i = [], a = 0, s = e.length; a < s; a++)(r = e[a]).style && (i[a] = N.get(r, "olddisplay"), n = r.style.display, t ? (i[a] || "none" !== n || (r.style.display = ""), "" === r.style.display && U(r) && (i[a] = N.access(r, "olddisplay", xe(r.nodeName)))) : (o = U(r), "none" === n && o || N.set(r, "olddisplay", o ? n : b.css(r, "display"))));
+                    for (a = 0; a < s; a++)(r = e[a]).style && (t && "none" !== r.style.display && "" !== r.style.display || (r.style.display = t ? i[a] || "" : "none"));
                     return e
                 }
 
@@ -2752,15 +2752,15 @@
                     },
                     style: function(e, t, n, r) {
                         if (e && 3 !== e.nodeType && 8 !== e.nodeType && e.style) {
-                            var o, i, a, l = b.camelCase(t),
-                                s = e.style;
-                            if (t = b.cssProps[l] || (b.cssProps[l] = Le(s, l)), a = b.cssHooks[t] || b.cssHooks[l], void 0 === n) return a && "get" in a && void 0 !== (o = a.get(e, !1, r)) ? o : s[t];
-                            "string" == (i = typeof n) && (o = Se.exec(n)) && (n = (o[1] + 1) * o[2] + parseFloat(b.css(e, t)), i = "number"), null != n && n == n && ("number" !== i || b.cssNumber[l] || (n += "px"), u.clearCloneStyle || "" !== n || 0 !== t.indexOf("background") || (s[t] = "inherit"), a && "set" in a && void 0 === (n = a.set(e, n, r)) || (s[t] = n))
+                            var o, i, a, s = b.camelCase(t),
+                                l = e.style;
+                            if (t = b.cssProps[s] || (b.cssProps[s] = Le(l, s)), a = b.cssHooks[t] || b.cssHooks[s], void 0 === n) return a && "get" in a && void 0 !== (o = a.get(e, !1, r)) ? o : l[t];
+                            "string" == (i = typeof n) && (o = Se.exec(n)) && (n = (o[1] + 1) * o[2] + parseFloat(b.css(e, t)), i = "number"), null != n && n == n && ("number" !== i || b.cssNumber[s] || (n += "px"), u.clearCloneStyle || "" !== n || 0 !== t.indexOf("background") || (l[t] = "inherit"), a && "set" in a && void 0 === (n = a.set(e, n, r)) || (l[t] = n))
                         }
                     },
                     css: function(e, t, n, r) {
-                        var o, i, a, l = b.camelCase(t);
-                        return t = b.cssProps[l] || (b.cssProps[l] = Le(e.style, l)), (a = b.cssHooks[t] || b.cssHooks[l]) && "get" in a && (o = a.get(e, !0, n)), void 0 === o && (o = we(e, t, r)), "normal" === o && t in Me && (o = Me[t]), "" === n || n ? (i = parseFloat(o), !0 === n || b.isNumeric(i) ? i || 0 : o) : o
+                        var o, i, a, s = b.camelCase(t);
+                        return t = b.cssProps[s] || (b.cssProps[s] = Le(e.style, s)), (a = b.cssHooks[t] || b.cssHooks[s]) && "get" in a && (o = a.get(e, !0, n)), void 0 === o && (o = we(e, t, r)), "normal" === o && t in Me && (o = Me[t]), "" === n || n ? (i = parseFloat(o), !0 === n || b.isNumeric(i) ? i || 0 : o) : o
                     }
                 }), b.each(["height", "width"], (function(e, t) {
                     b.cssHooks[t] = {
@@ -2847,20 +2847,20 @@
                         return .5 - Math.cos(e * Math.PI) / 2
                     }
                 }, b.fx = Ne.prototype.init, b.fx.step = {};
-                var Re, je, We = /^(?:toggle|show|hide)$/,
+                var je, Re, We = /^(?:toggle|show|hide)$/,
                     Fe = new RegExp("^(?:([+-])=|)(" + Y + ")([a-z%]*)$", "i"),
                     Qe = /queueHooks$/,
                     He = [function(e, t, n) {
-                        var r, o, i, a, l, s, d, c = this,
+                        var r, o, i, a, s, l, d, c = this,
                             p = {},
                             A = e.style,
                             u = e.nodeType && U(e),
                             h = N.get(e, "fxshow");
-                        for (r in n.queue || (null == (l = b._queueHooks(e, "fx")).unqueued && (l.unqueued = 0, s = l.empty.fire, l.empty.fire = function() {
-                                l.unqueued || s()
-                            }), l.unqueued++, c.always((function() {
+                        for (r in n.queue || (null == (s = b._queueHooks(e, "fx")).unqueued && (s.unqueued = 0, l = s.empty.fire, s.empty.fire = function() {
+                                s.unqueued || l()
+                            }), s.unqueued++, c.always((function() {
                                 c.always((function() {
-                                    l.unqueued--, b.queue(e, "fx").length || l.empty.fire()
+                                    s.unqueued--, b.queue(e, "fx").length || s.empty.fire()
                                 }))
                             }))), 1 === e.nodeType && ("height" in t || "width" in t) && (n.overflow = [A.overflow, A.overflowX, A.overflowY], "inline" === ("none" === (d = b.css(e, "display")) ? N.get(e, "olddisplay") || xe(e.nodeName) : d) && "none" === b.css(e, "float") && (A.display = "inline-block")), n.overflow && (A.overflow = "hidden", c.always((function() {
                                 A.overflow = n.overflow[0], A.overflowX = n.overflow[1], A.overflowY = n.overflow[2]
@@ -2888,13 +2888,13 @@
                                 o = Fe.exec(t),
                                 i = o && o[3] || (b.cssNumber[e] ? "" : "px"),
                                 a = (b.cssNumber[e] || "px" !== i && +r) && Fe.exec(b.css(n.elem, e)),
-                                l = 1,
-                                s = 20;
+                                s = 1,
+                                l = 20;
                             if (a && a[3] !== i) {
                                 i = i || a[3], o = o || [], a = +r || 1;
                                 do {
-                                    a /= l = l || ".5", b.style(n.elem, e, a + i)
-                                } while (l !== (l = n.cur() / r) && 1 !== l && --s)
+                                    a /= s = s || ".5", b.style(n.elem, e, a + i)
+                                } while (s !== (s = n.cur() / r) && 1 !== s && --l)
                             }
                             return o && (a = n.start = +a || +r || 0, n.unit = i, n.end = o[1] ? a + (o[1] + 1) * o[2] : +o[2]), n
                         }]
@@ -2902,8 +2902,8 @@
 
                 function qe() {
                     return setTimeout((function() {
-                        Re = void 0
-                    })), Re = b.now()
+                        je = void 0
+                    })), je = b.now()
                 }
 
                 function Ue(e, t) {
@@ -2923,15 +2923,15 @@
                 function Xe(e, t, n) {
                     var r, o, i = 0,
                         a = He.length,
-                        l = b.Deferred().always((function() {
-                            delete s.elem
+                        s = b.Deferred().always((function() {
+                            delete l.elem
                         })),
-                        s = function() {
+                        l = function() {
                             if (o) return !1;
-                            for (var t = Re || qe(), n = Math.max(0, d.startTime + d.duration - t), r = 1 - (n / d.duration || 0), i = 0, a = d.tweens.length; i < a; i++) d.tweens[i].run(r);
-                            return l.notifyWith(e, [d, r, n]), r < 1 && a ? n : (l.resolveWith(e, [d]), !1)
+                            for (var t = je || qe(), n = Math.max(0, d.startTime + d.duration - t), r = 1 - (n / d.duration || 0), i = 0, a = d.tweens.length; i < a; i++) d.tweens[i].run(r);
+                            return s.notifyWith(e, [d, r, n]), r < 1 && a ? n : (s.resolveWith(e, [d]), !1)
                         },
-                        d = l.promise({
+                        d = s.promise({
                             elem: e,
                             props: b.extend({}, t),
                             opts: b.extend(!0, {
@@ -2939,7 +2939,7 @@
                             }, n),
                             originalProperties: t,
                             originalOptions: n,
-                            startTime: Re || qe(),
+                            startTime: je || qe(),
                             duration: n.duration,
                             tweens: [],
                             createTween: function(t, n) {
@@ -2951,7 +2951,7 @@
                                     r = t ? d.tweens.length : 0;
                                 if (o) return this;
                                 for (o = !0; n < r; n++) d.tweens[n].run(1);
-                                return t ? l.resolveWith(e, [d, t]) : l.rejectWith(e, [d, t]), this
+                                return t ? s.resolveWith(e, [d, t]) : s.rejectWith(e, [d, t]), this
                             }
                         }),
                         c = d.props;
@@ -2963,7 +2963,7 @@
                                 else t[r] = o
                         }(c, d.opts.specialEasing); i < a; i++)
                         if (r = He[i].call(d, e, c, d.opts)) return r;
-                    return b.map(c, Ve, d), b.isFunction(d.opts.start) && d.opts.start.call(e, d), b.fx.timer(b.extend(s, {
+                    return b.map(c, Ve, d), b.isFunction(d.opts.start) && d.opts.start.call(e, d), b.fx.timer(b.extend(l, {
                         elem: e,
                         anim: d,
                         queue: d.opts.queue
@@ -3055,14 +3055,14 @@
                     })), b.timers = [], b.fx.tick = function() {
                         var e, t = 0,
                             n = b.timers;
-                        for (Re = b.now(); t < n.length; t++)(e = n[t])() || n[t] !== e || n.splice(t--, 1);
-                        n.length || b.fx.stop(), Re = void 0
+                        for (je = b.now(); t < n.length; t++)(e = n[t])() || n[t] !== e || n.splice(t--, 1);
+                        n.length || b.fx.stop(), je = void 0
                     }, b.fx.timer = function(e) {
                         b.timers.push(e), e() ? b.fx.start() : b.timers.pop()
                     }, b.fx.interval = 13, b.fx.start = function() {
-                        je || (je = setInterval(b.fx.tick, b.fx.interval))
+                        Re || (Re = setInterval(b.fx.tick, b.fx.interval))
                     }, b.fx.stop = function() {
-                        clearInterval(je), je = null
+                        clearInterval(Re), Re = null
                     }, b.fx.speeds = {
                         slow: 600,
                         fast: 200,
@@ -3160,29 +3160,29 @@
                 var Je = /[\t\r\n\f]/g;
                 b.fn.extend({
                     addClass: function(e) {
-                        var t, n, r, o, i, a, l = "string" == typeof e && e,
-                            s = 0,
+                        var t, n, r, o, i, a, s = "string" == typeof e && e,
+                            l = 0,
                             d = this.length;
                         if (b.isFunction(e)) return this.each((function(t) {
                             b(this).addClass(e.call(this, t, this.className))
                         }));
-                        if (l)
-                            for (t = (e || "").match(L) || []; s < d; s++)
-                                if (r = 1 === (n = this[s]).nodeType && (n.className ? (" " + n.className + " ").replace(Je, " ") : " ")) {
+                        if (s)
+                            for (t = (e || "").match(L) || []; l < d; l++)
+                                if (r = 1 === (n = this[l]).nodeType && (n.className ? (" " + n.className + " ").replace(Je, " ") : " ")) {
                                     for (i = 0; o = t[i++];) r.indexOf(" " + o + " ") < 0 && (r += o + " ");
                                     a = b.trim(r), n.className !== a && (n.className = a)
                                 } return this
                     },
                     removeClass: function(e) {
-                        var t, n, r, o, i, a, l = 0 === arguments.length || "string" == typeof e && e,
-                            s = 0,
+                        var t, n, r, o, i, a, s = 0 === arguments.length || "string" == typeof e && e,
+                            l = 0,
                             d = this.length;
                         if (b.isFunction(e)) return this.each((function(t) {
                             b(this).removeClass(e.call(this, t, this.className))
                         }));
-                        if (l)
-                            for (t = (e || "").match(L) || []; s < d; s++)
-                                if (r = 1 === (n = this[s]).nodeType && (n.className ? (" " + n.className + " ").replace(Je, " ") : "")) {
+                        if (s)
+                            for (t = (e || "").match(L) || []; l < d; l++)
+                                if (r = 1 === (n = this[l]).nodeType && (n.className ? (" " + n.className + " ").replace(Je, " ") : "")) {
                                     for (i = 0; o = t[i++];)
                                         for (; r.indexOf(" " + o + " ") >= 0;) r = r.replace(" " + o + " ", " ");
                                     a = e ? b.trim(r) : "", n.className !== a && (n.className = a)
@@ -3225,8 +3225,8 @@
                         },
                         select: {
                             get: function(e) {
-                                for (var t, n, r = e.options, o = e.selectedIndex, i = "select-one" === e.type || o < 0, a = i ? null : [], l = i ? o + 1 : r.length, s = o < 0 ? l : i ? o : 0; s < l; s++)
-                                    if (((n = r[s]).selected || s === o) && (u.optDisabled ? !n.disabled : null === n.getAttribute("disabled")) && (!n.parentNode.disabled || !b.nodeName(n.parentNode, "optgroup"))) {
+                                for (var t, n, r = e.options, o = e.selectedIndex, i = "select-one" === e.type || o < 0, a = i ? null : [], s = i ? o + 1 : r.length, l = o < 0 ? s : i ? o : 0; l < s; l++)
+                                    if (((n = r[l]).selected || l === o) && (u.optDisabled ? !n.disabled : null === n.getAttribute("disabled")) && (!n.parentNode.disabled || !b.nodeName(n.parentNode, "optgroup"))) {
                                         if (t = b(n).val(), i) return t;
                                         a.push(t)
                                     } return a
@@ -3284,13 +3284,13 @@
                     ot = /([?&])_=[^&]*/,
                     it = /^(.*?):[ \t]*([^\r\n]*)$/gm,
                     at = /^(?:GET|HEAD)$/,
-                    lt = /^\/\//,
-                    st = /^([\w.+-]+:)(?:\/\/(?:[^\/?#]*@|)([^\/?#:]*)(?::(\d+)|)|)/,
+                    st = /^\/\//,
+                    lt = /^([\w.+-]+:)(?:\/\/(?:[^\/?#]*@|)([^\/?#:]*)(?::(\d+)|)|)/,
                     dt = {},
                     ct = {},
                     pt = "*/".concat("*"),
                     At = r.location.href,
-                    ut = st.exec(At.toLowerCase()) || [];
+                    ut = lt.exec(At.toLowerCase()) || [];
 
                 function ht(e) {
                     return function(t, n) {
@@ -3306,12 +3306,12 @@
                     var o = {},
                         i = e === ct;
 
-                    function a(l) {
-                        var s;
-                        return o[l] = !0, b.each(e[l] || [], (function(e, l) {
-                            var d = l(t, n, r);
-                            return "string" != typeof d || i || o[d] ? i ? !(s = d) : void 0 : (t.dataTypes.unshift(d), a(d), !1)
-                        })), s
+                    function a(s) {
+                        var l;
+                        return o[s] = !0, b.each(e[s] || [], (function(e, s) {
+                            var d = s(t, n, r);
+                            return "string" != typeof d || i || o[d] ? i ? !(l = d) : void 0 : (t.dataTypes.unshift(d), a(d), !1)
+                        })), l
                     }
                     return a(t.dataTypes[0]) || !o["*"] && a("*")
                 }
@@ -3368,7 +3368,7 @@
                     ajaxTransport: ht(ct),
                     ajax: function(e, t) {
                         "object" == typeof e && (t = e, e = void 0), t = t || {};
-                        var n, r, o, i, a, l, s, d, c = b.ajaxSetup({}, t),
+                        var n, r, o, i, a, s, l, d, c = b.ajaxSetup({}, t),
                             p = c.context || c,
                             A = c.context && (p.nodeType || p.jquery) ? b(p) : b.event,
                             u = b.Deferred(),
@@ -3412,8 +3412,8 @@
                                     return n && n.abort(t), k(0, t), this
                                 }
                             };
-                        if (u.promise(x).complete = h.add, x.success = x.done, x.error = x.fail, c.url = ((e || c.url || At) + "").replace(rt, "").replace(lt, ut[1] + "//"), c.type = t.method || t.type || c.method || c.type, c.dataTypes = b.trim(c.dataType || "*").toLowerCase().match(L) || [""], null == c.crossDomain && (l = st.exec(c.url.toLowerCase()), c.crossDomain = !(!l || l[1] === ut[1] && l[2] === ut[2] && (l[3] || ("http:" === l[1] ? "80" : "443")) === (ut[3] || ("http:" === ut[1] ? "80" : "443")))), c.data && c.processData && "string" != typeof c.data && (c.data = b.param(c.data, c.traditional)), gt(dt, c, t, x), 2 === _) return x;
-                        for (d in (s = b.event && c.global) && 0 == b.active++ && b.event.trigger("ajaxStart"), c.type = c.type.toUpperCase(), c.hasContent = !at.test(c.type), r = c.url, c.hasContent || (c.data && (r = c.url += (nt.test(r) ? "&" : "?") + c.data, delete c.data), !1 === c.cache && (c.url = ot.test(r) ? r.replace(ot, "$1_=" + tt++) : r + (nt.test(r) ? "&" : "?") + "_=" + tt++)), c.ifModified && (b.lastModified[r] && x.setRequestHeader("If-Modified-Since", b.lastModified[r]), b.etag[r] && x.setRequestHeader("If-None-Match", b.etag[r])), (c.data && c.hasContent && !1 !== c.contentType || t.contentType) && x.setRequestHeader("Content-Type", c.contentType), x.setRequestHeader("Accept", c.dataTypes[0] && c.accepts[c.dataTypes[0]] ? c.accepts[c.dataTypes[0]] + ("*" !== c.dataTypes[0] ? ", " + pt + "; q=0.01" : "") : c.accepts["*"]), c.headers) x.setRequestHeader(d, c.headers[d]);
+                        if (u.promise(x).complete = h.add, x.success = x.done, x.error = x.fail, c.url = ((e || c.url || At) + "").replace(rt, "").replace(st, ut[1] + "//"), c.type = t.method || t.type || c.method || c.type, c.dataTypes = b.trim(c.dataType || "*").toLowerCase().match(L) || [""], null == c.crossDomain && (s = lt.exec(c.url.toLowerCase()), c.crossDomain = !(!s || s[1] === ut[1] && s[2] === ut[2] && (s[3] || ("http:" === s[1] ? "80" : "443")) === (ut[3] || ("http:" === ut[1] ? "80" : "443")))), c.data && c.processData && "string" != typeof c.data && (c.data = b.param(c.data, c.traditional)), gt(dt, c, t, x), 2 === _) return x;
+                        for (d in (l = b.event && c.global) && 0 == b.active++ && b.event.trigger("ajaxStart"), c.type = c.type.toUpperCase(), c.hasContent = !at.test(c.type), r = c.url, c.hasContent || (c.data && (r = c.url += (nt.test(r) ? "&" : "?") + c.data, delete c.data), !1 === c.cache && (c.url = ot.test(r) ? r.replace(ot, "$1_=" + tt++) : r + (nt.test(r) ? "&" : "?") + "_=" + tt++)), c.ifModified && (b.lastModified[r] && x.setRequestHeader("If-Modified-Since", b.lastModified[r]), b.etag[r] && x.setRequestHeader("If-None-Match", b.etag[r])), (c.data && c.hasContent && !1 !== c.contentType || t.contentType) && x.setRequestHeader("Content-Type", c.contentType), x.setRequestHeader("Accept", c.dataTypes[0] && c.accepts[c.dataTypes[0]] ? c.accepts[c.dataTypes[0]] + ("*" !== c.dataTypes[0] ? ", " + pt + "; q=0.01" : "") : c.accepts["*"]), c.headers) x.setRequestHeader(d, c.headers[d]);
                         if (c.beforeSend && (!1 === c.beforeSend.call(p, x, c) || 2 === _)) return x.abort();
                         for (d in y = "abort", {
                                 success: 1,
@@ -3421,7 +3421,7 @@
                                 complete: 1
                             }) x[d](c[d]);
                         if (n = gt(ct, c, t, x)) {
-                            x.readyState = 1, s && A.trigger("ajaxSend", [x, c]), c.async && c.timeout > 0 && (a = setTimeout((function() {
+                            x.readyState = 1, l && A.trigger("ajaxSend", [x, c]), c.async && c.timeout > 0 && (a = setTimeout((function() {
                                 x.abort("timeout")
                             }), c.timeout));
                             try {
@@ -3432,20 +3432,20 @@
                             }
                         } else k(-1, "No Transport");
 
-                        function k(e, t, i, l) {
+                        function k(e, t, i, s) {
                             var d, m, f, y, k, v = t;
-                            2 !== _ && (_ = 2, a && clearTimeout(a), n = void 0, o = l || "", x.readyState = e > 0 ? 4 : 0, d = e >= 200 && e < 300 || 304 === e, i && (y = function(e, t, n) {
-                                for (var r, o, i, a, l = e.contents, s = e.dataTypes;
-                                    "*" === s[0];) s.shift(), void 0 === r && (r = e.mimeType || t.getResponseHeader("Content-Type"));
+                            2 !== _ && (_ = 2, a && clearTimeout(a), n = void 0, o = s || "", x.readyState = e > 0 ? 4 : 0, d = e >= 200 && e < 300 || 304 === e, i && (y = function(e, t, n) {
+                                for (var r, o, i, a, s = e.contents, l = e.dataTypes;
+                                    "*" === l[0];) l.shift(), void 0 === r && (r = e.mimeType || t.getResponseHeader("Content-Type"));
                                 if (r)
-                                    for (o in l)
-                                        if (l[o] && l[o].test(r)) {
-                                            s.unshift(o);
+                                    for (o in s)
+                                        if (s[o] && s[o].test(r)) {
+                                            l.unshift(o);
                                             break
-                                        } if (s[0] in n) i = s[0];
+                                        } if (l[0] in n) i = l[0];
                                 else {
                                     for (o in n) {
-                                        if (!s[0] || e.converters[o + " " + s[0]]) {
+                                        if (!l[0] || e.converters[o + " " + l[0]]) {
                                             i = o;
                                             break
                                         }
@@ -3453,20 +3453,20 @@
                                     }
                                     i = i || a
                                 }
-                                if (i) return i !== s[0] && s.unshift(i), n[i]
+                                if (i) return i !== l[0] && l.unshift(i), n[i]
                             }(c, x, i)), y = function(e, t, n, r) {
-                                var o, i, a, l, s, d = {},
+                                var o, i, a, s, l, d = {},
                                     c = e.dataTypes.slice();
                                 if (c[1])
                                     for (a in e.converters) d[a.toLowerCase()] = e.converters[a];
                                 for (i = c.shift(); i;)
-                                    if (e.responseFields[i] && (n[e.responseFields[i]] = t), !s && r && e.dataFilter && (t = e.dataFilter(t, e.dataType)), s = i, i = c.shift())
-                                        if ("*" === i) i = s;
-                                        else if ("*" !== s && s !== i) {
-                                    if (!(a = d[s + " " + i] || d["* " + i]))
+                                    if (e.responseFields[i] && (n[e.responseFields[i]] = t), !l && r && e.dataFilter && (t = e.dataFilter(t, e.dataType)), l = i, i = c.shift())
+                                        if ("*" === i) i = l;
+                                        else if ("*" !== l && l !== i) {
+                                    if (!(a = d[l + " " + i] || d["* " + i]))
                                         for (o in d)
-                                            if ((l = o.split(" "))[1] === i && (a = d[s + " " + l[0]] || d["* " + l[0]])) {
-                                                !0 === a ? a = d[o] : !0 !== d[o] && (i = l[0], c.unshift(l[1]));
+                                            if ((s = o.split(" "))[1] === i && (a = d[l + " " + s[0]] || d["* " + s[0]])) {
+                                                !0 === a ? a = d[o] : !0 !== d[o] && (i = s[0], c.unshift(s[1]));
                                                 break
                                             } if (!0 !== a)
                                         if (a && e.throws) t = a(t);
@@ -3475,7 +3475,7 @@
                                         } catch (e) {
                                             return {
                                                 state: "parsererror",
-                                                error: a ? e : "No conversion from " + s + " to " + i
+                                                error: a ? e : "No conversion from " + l + " to " + i
                                             }
                                         }
                                 }
@@ -3483,7 +3483,7 @@
                                     state: "success",
                                     data: t
                                 }
-                            }(c, y, x, d), d ? (c.ifModified && ((k = x.getResponseHeader("Last-Modified")) && (b.lastModified[r] = k), (k = x.getResponseHeader("etag")) && (b.etag[r] = k)), 204 === e || "HEAD" === c.type ? v = "nocontent" : 304 === e ? v = "notmodified" : (v = y.state, m = y.data, d = !(f = y.error))) : (f = v, !e && v || (v = "error", e < 0 && (e = 0))), x.status = e, x.statusText = (t || v) + "", d ? u.resolveWith(p, [m, v, x]) : u.rejectWith(p, [x, v, f]), x.statusCode(g), g = void 0, s && A.trigger(d ? "ajaxSuccess" : "ajaxError", [x, c, d ? m : f]), h.fireWith(p, [x, v]), s && (A.trigger("ajaxComplete", [x, c]), --b.active || b.event.trigger("ajaxStop")))
+                            }(c, y, x, d), d ? (c.ifModified && ((k = x.getResponseHeader("Last-Modified")) && (b.lastModified[r] = k), (k = x.getResponseHeader("etag")) && (b.etag[r] = k)), 204 === e || "HEAD" === c.type ? v = "nocontent" : 304 === e ? v = "notmodified" : (v = y.state, m = y.data, d = !(f = y.error))) : (f = v, !e && v || (v = "error", e < 0 && (e = 0))), x.status = e, x.statusText = (t || v) + "", d ? u.resolveWith(p, [m, v, x]) : u.rejectWith(p, [x, v, f]), x.statusCode(g), g = void 0, l && A.trigger(d ? "ajaxSuccess" : "ajaxError", [x, c, d ? m : f]), h.fireWith(p, [x, v]), l && (A.trigger("ajaxComplete", [x, c]), --b.active || b.event.trigger("ajaxStop")))
                         }
                         return x
                     },
@@ -3677,8 +3677,8 @@
                         return this[e] = !0, e
                     }
                 }), b.ajaxPrefilter("json jsonp", (function(e, t, n) {
-                    var o, i, a, l = !1 !== e.jsonp && (Bt.test(e.url) ? "url" : "string" == typeof e.data && !(e.contentType || "").indexOf("application/x-www-form-urlencoded") && Bt.test(e.data) && "data");
-                    if (l || "jsonp" === e.dataTypes[0]) return o = e.jsonpCallback = b.isFunction(e.jsonpCallback) ? e.jsonpCallback() : e.jsonpCallback, l ? e[l] = e[l].replace(Bt, "$1" + o) : !1 !== e.jsonp && (e.url += (nt.test(e.url) ? "&" : "?") + e.jsonp + "=" + o), e.converters["script json"] = function() {
+                    var o, i, a, s = !1 !== e.jsonp && (Bt.test(e.url) ? "url" : "string" == typeof e.data && !(e.contentType || "").indexOf("application/x-www-form-urlencoded") && Bt.test(e.data) && "data");
+                    if (s || "jsonp" === e.dataTypes[0]) return o = e.jsonpCallback = b.isFunction(e.jsonpCallback) ? e.jsonpCallback() : e.jsonpCallback, s ? e[s] = e[s].replace(Bt, "$1" + o) : !1 !== e.jsonp && (e.url += (nt.test(e.url) ? "&" : "?") + e.jsonp + "=" + o), e.converters["script json"] = function() {
                         return a || b.error(o + " was not called"), a[0]
                     }, e.dataTypes[0] = "json", i = r[o], r[o] = function() {
                         a = arguments
@@ -3696,8 +3696,8 @@
                 b.fn.load = function(e, t, n) {
                     if ("string" != typeof e && St) return St.apply(this, arguments);
                     var r, o, i, a = this,
-                        l = e.indexOf(" ");
-                    return l >= 0 && (r = b.trim(e.slice(l)), e = e.slice(0, l)), b.isFunction(t) ? (n = t, t = void 0) : t && "object" == typeof t && (o = "POST"), a.length > 0 && b.ajax({
+                        s = e.indexOf(" ");
+                    return s >= 0 && (r = b.trim(e.slice(s)), e = e.slice(0, s)), b.isFunction(t) ? (n = t, t = void 0) : t && "object" == typeof t && (o = "POST"), a.length > 0 && b.ajax({
                         url: e,
                         type: o,
                         dataType: "html",
@@ -3723,10 +3723,10 @@
                 }
                 b.offset = {
                     setOffset: function(e, t, n) {
-                        var r, o, i, a, l, s, d = b.css(e, "position"),
+                        var r, o, i, a, s, l, d = b.css(e, "position"),
                             c = b(e),
                             p = {};
-                        "static" === d && (e.style.position = "relative"), l = c.offset(), i = b.css(e, "top"), s = b.css(e, "left"), ("absolute" === d || "fixed" === d) && (i + s).indexOf("auto") > -1 ? (a = (r = c.position()).top, o = r.left) : (a = parseFloat(i) || 0, o = parseFloat(s) || 0), b.isFunction(t) && (t = t.call(e, n, l)), null != t.top && (p.top = t.top - l.top + a), null != t.left && (p.left = t.left - l.left + o), "using" in t ? t.using.call(e, p) : c.css(p)
+                        "static" === d && (e.style.position = "relative"), s = c.offset(), i = b.css(e, "top"), l = b.css(e, "left"), ("absolute" === d || "fixed" === d) && (i + l).indexOf("auto") > -1 ? (a = (r = c.position()).top, o = r.left) : (a = parseFloat(i) || 0, o = parseFloat(l) || 0), b.isFunction(t) && (t = t.call(e, n, s)), null != t.top && (p.top = t.top - s.top + a), null != t.left && (p.left = t.left - s.left + o), "using" in t ? t.using.call(e, p) : c.css(p)
                     }
                 }, b.fn.extend({
                     offset: function(e) {
@@ -3920,7 +3920,7 @@
                     if (null === e || "object" != typeof e && "function" != typeof e) return {
                         default: e
                     };
-                    var n = l(t);
+                    var n = s(t);
                     if (n && n.has(e)) return n.get(e);
                     var r = {},
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
@@ -3933,17 +3933,17 @@
                 }(n(51)),
                 a = n(1);
 
-            function l(e) {
+            function s(e) {
                 if ("function" != typeof WeakMap) return null;
                 var t = new WeakMap,
                     n = new WeakMap;
-                return (l = function(e) {
+                return (s = function(e) {
                     return e ? n : t
                 })(e)
             }
-            const s = {};
+            const l = {};
             Object.keys(i.VideoTransitionMethods).forEach((function(e) {
-                s[e.toLowerCase()] = i.VideoTransitionMethods[e]
+                l[e.toLowerCase()] = i.VideoTransitionMethods[e]
             }));
             class d extends a.webComponents.ShadowElement {
                 templateMarkup() {
@@ -3963,7 +3963,7 @@
                         const r = t[n];
                         if (i.default.detect(r)) {
                             if (r.playbackState.toLowerCase() === e) continue;
-                            r[s[e]]()
+                            r[l[e]]()
                         }
                     }
                     this.attachSwitchChangeHandlers()
@@ -3971,7 +3971,7 @@
                 getRequestedState() {
                     for (let e = 0; e < this.attributes.length; e++) {
                         const t = this.attributes[e];
-                        if (t.name in s) return t.name
+                        if (t.name in l) return t.name
                     }
                 }
                 deactivate() {
@@ -4038,7 +4038,7 @@
                     default: e
                 }
             }
-            class l extends o.default {
+            class s extends o.default {
                 templateMarkup() {
                     return n(50)
                 }
@@ -4118,14 +4118,14 @@
                 }
                 static getStateMachine(e) {
                     for (; e;) {
-                        if (e instanceof l) return e;
+                        if (e instanceof s) return e;
                         e = e.parentNode
                     }
                 }
             }
-            l.tagName = "uikit-state-machine";
-            var s = l;
-            t.default = s
+            s.tagName = "uikit-state-machine";
+            var l = s;
+            t.default = l
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -4138,7 +4138,7 @@
                     this.matchGroups.forEach((function(t) {
                         e = e.concat(Array.from(t.childNodes))
                     }));
-                    const t = l.call(this, e);
+                    const t = s.call(this, e);
                     return e = e.concat(Array.from(t.values())), e.filter((function(e) {
                         return 1 === e.nodeType
                     }))
@@ -4147,7 +4147,7 @@
                     this.cachedValue !== e && (this.cachedValue = e, this.updateCase())
                 };
 
-            function l(e) {
+            function s(e) {
                 const t = new Map;
                 this.removedElements.forEach((e => {
                     const n = this.elementStates.get(e);
@@ -4160,7 +4160,7 @@
                 }
                 return t
             }
-            const s = function(e, t = this.isVisible(e), n) {
+            const l = function(e, t = this.isVisible(e), n) {
                 n = n || e.getAttribute("visibility") || this.defaultVisibility;
                 let r = this.elementStates.get(e);
                 if (!r || r.method !== n || r.visible !== t) {
@@ -4178,7 +4178,7 @@
                         case "removed":
                             p.call(this, e, t)
                     }
-                    return r.method === n || r.visible || s.call(this, e, !0, r.method), r.visible = t, t
+                    return r.method === n || r.visible || l.call(this, e, !0, r.method), r.visible = t, t
                 }
             };
 
@@ -4236,7 +4236,7 @@
                         for (let n = 0; n < e.childNodes.length; n++) {
                             const r = e.childNodes[n],
                                 o = this.elementStates.get(r);
-                            !o || o.visible || t || s.call(this, r, !0, o.method), this.elementStates.delete(r)
+                            !o || o.visible || t || l.call(this, r, !0, o.method), this.elementStates.delete(r)
                         }
                     }
                 }
@@ -4258,11 +4258,11 @@
                         t = this.getVisibleNodes(this.cachedValue, e),
                         n = r.Lodash.difference(e, t);
                     if (this.overlapped) {
-                        for (let e = 0; e < t.length; e++) s.call(this, t[e], !0);
-                        for (let e = 0; e < n.length; e++) s.call(this, n[e], !1)
+                        for (let e = 0; e < t.length; e++) l.call(this, t[e], !0);
+                        for (let e = 0; e < n.length; e++) l.call(this, n[e], !1)
                     } else {
-                        for (let e = 0; e < n.length; e++) s.call(this, n[e], !1);
-                        for (let e = 0; e < t.length; e++) s.call(this, t[e], !0)
+                        for (let e = 0; e < n.length; e++) l.call(this, n[e], !1);
+                        for (let e = 0; e < t.length; e++) l.call(this, t[e], !0)
                     }
                     this.onVisibleNodesChanged()
                 }
@@ -4372,14 +4372,14 @@
                     default: e
                 }
             }
-            const l = ["autoplay", "src", "loop"],
-                s = {
+            const s = ["autoplay", "src", "loop"],
+                l = {
                     Playing: "Playing",
                     Paused: "Paused",
                     Ended: "Ended",
                     Error: "Error"
                 };
-            t.VideoPlaybackStates = s;
+            t.VideoPlaybackStates = l;
             const d = {
                 HAVE_NOTHING: 0,
                 HAVE_METADATA: 1,
@@ -4404,23 +4404,23 @@
                     return ["src", "cache-name", "loop", "preload", "autoplay"]
                 }
                 constructor() {
-                    super(), this.stateChangedHandlers = [], this.playbackState = s.Paused, this.readyState = d.HAVE_NOTHING
+                    super(), this.stateChangedHandlers = [], this.playbackState = l.Paused, this.readyState = d.HAVE_NOTHING
                 }
                 connectedCallback() {
                     if (super.connectedCallback(), this.hasAttribute("preload") && this.createVideoElement(), this._videoEl)
                         for (let e = 0; e < this.stateChangedHandlers.length; e++) {
                             const t = c.get(this.stateChangedHandlers[e]);
                             if (this.isPlaybackState(t)) {
-                                if (t === s.Playing) return void this._safePlay();
+                                if (t === l.Playing) return void this._safePlay();
                                 break
                             }
                         }
                 }
                 disconnectedCallback() {
-                    super.disconnectedCallback(), this.unload(), this.playbackState !== s.Ended && this.playbackState !== s.Paused && this._changePlaybackState(s.Paused)
+                    super.disconnectedCallback(), this.unload(), this.playbackState !== l.Ended && this.playbackState !== l.Paused && this._changePlaybackState(l.Paused)
                 }
                 attributeChangedCallback(e, t, n) {
-                    super.attributeChangedCallback(e, t, n), ("preload" === e || "src" === e && this.srcResolved || this._videoEl && -1 !== l.indexOf(e)) && this.setVideoAttributes()
+                    super.attributeChangedCallback(e, t, n), ("preload" === e || "src" === e && this.srcResolved || this._videoEl && -1 !== s.indexOf(e)) && this.setVideoAttributes()
                 }
                 addStateChangedHandler(e, t = void 0) {
                     -1 === this.stateChangedHandlers.indexOf(e) ? (this.stateChangedHandlers.push(e), c.set(e, t)) : r.logger.warning("UIKITVIDEO: handler already added", t)
@@ -4434,7 +4434,7 @@
                             t = e, n = r
                         }))), this.matches(this.isPlaybackState(e) ? this.playbackState : this.readyState, e)) return t(), r.cancel = function() {}, r;
                     const o = (r, i, a) => {
-                        this.matches(r, e) ? (this.removeStateChangedHandler(o), t()) : r === s.Error && (this.removeStateChangedHandler(o), n && n(a))
+                        this.matches(r, e) ? (this.removeStateChangedHandler(o), t()) : r === l.Error && (this.removeStateChangedHandler(o), n && n(a))
                     };
                     return this.addStateChangedHandler(o, e), r.cancel = () => {
                         this.removeStateChangedHandler(o)
@@ -4453,7 +4453,7 @@
                 }
                 _changePlaybackState(e) {
                     let t;
-                    if (e === s.Error && (t = {
+                    if (e === l.Error && (t = {
                             type: arguments[1],
                             data: arguments[2]
                         }, t.data.target && t.data.target.error)) {
@@ -4462,7 +4462,7 @@
                             const {
                                 currentTime: e
                             } = this._videoEl;
-                            return this._videoEl.load(), this._videoEl.currentTime = e, void(this.playbackState === s.Playing && this._safePlay())
+                            return this._videoEl.load(), this._videoEl.currentTime = e, void(this.playbackState === l.Playing && this._safePlay())
                         }
                     }
                     this._changeState(e, t)
@@ -4484,7 +4484,7 @@
                     let n = !1;
                     return e || (n = new Promise((function(t, n) {
                         e = t, n
-                    }))), o.default.chain.call(this, new o.default((() => this.createVideoElement())).then((() => (this._videoEl.playbackState === s.Paused && 0 === this._videoEl.currentTime || (this._videoEl.currentTime = 0, this._videoEl.pause()), this.playbackState === s.Ended && this._changePlaybackState(s.Paused), this.whenEager(s.Paused)))).then((() => {
+                    }))), o.default.chain.call(this, new o.default((() => this.createVideoElement())).then((() => (this._videoEl.playbackState === l.Paused && 0 === this._videoEl.currentTime || (this._videoEl.currentTime = 0, this._videoEl.pause()), this.playbackState === l.Ended && this._changePlaybackState(l.Paused), this.whenEager(l.Paused)))).then((() => {
                         if (this.readyState !== d.HAVE_ENOUGH_DATA) return this.whenEager(d.HAVE_ENOUGH_DATA)
                     })).then((() => {
                         e()
@@ -4498,14 +4498,14 @@
                     return e || (r = new Promise((function(t, n) {
                         e = t, n
                     }))), o.default.chain.call(this, new o.default((() => this.createVideoElement())).then(((e, t) => {
-                        void 0 !== n && (this._videoEl.onended = n), this.playbackState !== s.Playing ? this._safePlay().then(e).catch(t) : e()
-                    })).then((() => this.whenEager(s.Playing))).then((() => {
+                        void 0 !== n && (this._videoEl.onended = n), this.playbackState !== l.Playing ? this._safePlay().then(e).catch(t) : e()
+                    })).then((() => this.whenEager(l.Playing))).then((() => {
                         e()
                     }))), r
                 }
                 playWithoutStopping(e = void 0) {
                     const t = e => {
-                        !this._videoEl || e === s.Ended && this._videoEl.hasAttribute("loop") ? this.removeStateChangedHandler(t) : e === s.Paused && this.play()
+                        !this._videoEl || e === l.Ended && this._videoEl.hasAttribute("loop") ? this.removeStateChangedHandler(t) : e === l.Paused && this.play()
                     };
                     this.addStateChangedHandler(t), this.play(e)
                 }
@@ -4514,7 +4514,7 @@
                     return e || (n = new Promise((function(t, n) {
                         e = t, n
                     }))), o.default.chain.call(this, new o.default((() => {
-                        if (this.playbackState !== s.Paused && this._videoEl) return this.playbackState !== s.Ended ? (this._videoEl.pause(), this.whenEager(s.Paused)) : void this._changePlaybackState(s.Paused)
+                        if (this.playbackState !== l.Paused && this._videoEl) return this.playbackState !== l.Ended ? (this._videoEl.pause(), this.whenEager(l.Paused)) : void this._changePlaybackState(l.Paused)
                     })).then((function() {
                         e()
                     }))), n
@@ -4524,7 +4524,7 @@
                         this._videoEl.setAttribute("src", "");
                         const e = this._videoEl;
                         delete this._videoEl, this.statePromise = void 0, this.srcResolved = void 0;
-                        this.getVideoCache().release(e), this._changeState(s.Paused)
+                        this.getVideoCache().release(e), this._changeState(l.Paused)
                     }
                     if (!e) return Promise.resolve();
                     e()
@@ -4545,7 +4545,7 @@
                     })) : Promise.resolve()
                 }
                 onPlaying() {
-                    this.hasAttribute("loop") && this.playbackState === s.Playing && this._changePlaybackState(s.Ended), this._changePlaybackState(s.Playing)
+                    this.hasAttribute("loop") && this.playbackState === l.Playing && this._changePlaybackState(l.Ended), this._changePlaybackState(l.Playing)
                 }
                 hasSrc() {
                     return this.hasAttribute("src") && "" !== this.getAttribute("src")
@@ -4558,18 +4558,18 @@
                         n = e.acquire(t, (e => {
                             e === this._videoEl && this.unload()
                         }));
-                    n.onerror = this._changePlaybackState.bind(this, s.Error, "onerror"), n.onplaying = this.onPlaying.bind(this), n.onpause = this._changePlaybackState.bind(this, s.Paused), n.onended = this._changePlaybackState.bind(this, s.Ended);
+                    n.onerror = this._changePlaybackState.bind(this, l.Error, "onerror"), n.onplaying = this.onPlaying.bind(this), n.onpause = this._changePlaybackState.bind(this, l.Paused), n.onended = this._changePlaybackState.bind(this, l.Ended);
                     const r = this._changeReadinessState.bind(this);
                     n.onloadedmetadata = r, n.oncanplay = r, n.oncanplaythrough = r, this._videoEl = n, this.setVideoAttributes();
                     for (let e = this.children.length - 1; e >= 0; e--) this.children[e] !== n && this.removeChild(this.children[e]);
                     let o;
-                    return 1 !== this.children.length && this.appendChild(n), this.updateSrcPromise(), n.error && n.load(), o = n.paused ? s.Paused : s.Playing, this._changePlaybackState(o), this._videoEl
+                    return 1 !== this.children.length && this.appendChild(n), this.updateSrcPromise(), n.error && n.load(), o = n.paused ? l.Paused : l.Playing, this._changePlaybackState(o), this._videoEl
                 }
                 setVideoAttributes() {
                     if (!this._videoEl) return void this.createVideoElement();
                     let e = !1;
-                    for (let t = 0; t < l.length; t++) {
-                        const n = l[t],
+                    for (let t = 0; t < s.length; t++) {
+                        const n = s[t],
                             r = this._videoEl.getAttribute(n),
                             o = this.getAttribute(n);
                         r !== o && ("src" === n ? e = !0 : this._videoEl.setAttribute(n, o))
@@ -4729,11 +4729,11 @@
             const o = "name",
                 i = "title",
                 a = "score",
-                l = "chest-status",
-                s = "chest-as-core";
+                s = "chest-status",
+                l = "chest-as-core";
             class d extends r.webComponents.ShadowElement {
                 static get observedAttributes() {
-                    return [o, i, a, l, s]
+                    return [o, i, a, s, l]
                 }
                 templateMarkup() {
                     return n(56)
@@ -4755,10 +4755,10 @@
                         case a:
                             this.processScore();
                             break;
-                        case l:
+                        case s:
                             this.processChestStatus();
                             break;
-                        case s:
+                        case l:
                             this.processChestAsCore()
                     }
                 }
@@ -4775,11 +4775,11 @@
                     this.shadowRoot.querySelector(".score").textContent = e || ""
                 }
                 processChestStatus() {
-                    const e = this.getAttribute(l);
+                    const e = this.getAttribute(s);
                     this.shadowRoot.querySelector(".chest > .status").textContent = e || ""
                 }
                 processChestAsCore() {
-                    const e = this.getAttribute(s),
+                    const e = this.getAttribute(l),
                         t = this.shadowRoot.querySelector(".chest");
                     null !== e ? t.classList.add("display-as-core") : t.classList.remove("display-as-core")
                 }
@@ -4849,7 +4849,7 @@
                     default: e
                 }
             }
-            class l extends r.webComponents.ShadowElement {
+            class s extends r.webComponents.ShadowElement {
                 static get observedAttributes() {
                     return ["arrow-left", "arrow-right", "refresh", "disabled", "click-sfx-src", "hover-sfx-src", "arrow", "bubbles"]
                 }
@@ -4911,9 +4911,9 @@
                     }))
                 }
             }
-            l.tagName = "lol-uikit-close-button";
-            var s = l;
-            t.default = s
+            s.tagName = "lol-uikit-close-button";
+            var l = s;
+            t.default = l
         }, e => {
             "use strict";
             e.exports = '<template>\r\n  <div class="lol-uikit-close-button">\r\n    <div class="contents">\r\n      <div class="close-icon x-icon"></div>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
@@ -5127,10 +5127,10 @@
                 },
                 i = n(51),
                 a = n(1);
-            const l = Object.keys(i.VideoPlaybackStates).map((function(e) {
+            const s = Object.keys(i.VideoPlaybackStates).map((function(e) {
                 return i.VideoPlaybackStates[e]
             }));
-            class s extends a.webComponents.ShadowElement {
+            class l extends a.webComponents.ShadowElement {
                 templateMarkup() {
                     return n(74)
                 }
@@ -5152,8 +5152,8 @@
                             }));
                             else if (this.hasAttribute("unloaded")) this.cancellations.push(r.when(i.VideoReadyStates.HAVE_NOTHING, n).cancel);
                     else
-                        for (let e = 0; e < l.length; e++) {
-                            const t = l[e];
+                        for (let e = 0; e < s.length; e++) {
+                            const t = s[e];
                             if (this.hasAttribute(t.toLowerCase())) return void this.cancellations.push(r.when(t, n).cancel)
                         } else if (this.hasAttribute("non-media-duration")) {
                             const e = setTimeout((function() {
@@ -5208,8 +5208,8 @@
                     return e.querySelector(":scope " + t)
                 }
             }
-            s.tagName = "uikit-condition-media";
-            var d = s;
+            l.tagName = "uikit-condition-media";
+            var d = l;
             t.default = d
         }, e => {
             "use strict";
@@ -5256,8 +5256,8 @@
                 }
             }
             a.tagName = "uikit-condition-parameter";
-            var l = a;
-            t.default = l
+            var s = a;
+            t.default = s
         }, e => {
             "use strict";
             e.exports = "<template>\r\n  <slot></slot>\r\n</template>\r\n"
@@ -5284,16 +5284,16 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = l(n(80)),
-                i = l(n(37)),
+                o = s(n(80)),
+                i = s(n(37)),
                 a = n(81);
 
-            function l(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            class s extends r.webComponents.ShadowElement {
+            class l extends r.webComponents.ShadowElement {
                 templateMarkup() {
                     return n(82)
                 }
@@ -5322,7 +5322,7 @@
                     this._setMenuItems(e, Object.assign({}, this.defaultOptions, t))
                 }
                 _setMenuItems(e, t) {
-                    e = s.filterVisible(e), this.itemCount = e.length, this.menuOptions = t, this._clearMenu(), this._setupMenu(e, t), this._setMenuCSS(t.css);
+                    e = l.filterVisible(e), this.itemCount = e.length, this.menuOptions = t, this._clearMenu(), this._setupMenu(e, t), this._setMenuCSS(t.css);
                     for (let t = 0; t < e.length; t++) {
                         const n = e[t],
                             r = this.contextMenuElement.children[t];
@@ -5402,7 +5402,7 @@
                 getContainer() {
                     const {
                         document: e
-                    } = s;
+                    } = l;
                     return window.testsSandbox || this.container || this.parentContextMenu && this.parentContextMenu.container || e.body
                 }
                 show() {
@@ -5484,7 +5484,7 @@
                     }))
                 }
             }
-            t.default = s, s.tagName = "lol-uikit-context-menu"
+            t.default = l, l.tagName = "lol-uikit-context-menu"
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -5563,7 +5563,7 @@
                     default: r
                 },
                 a = n(81);
-            class l extends o.webComponents.ShadowElement {
+            class s extends o.webComponents.ShadowElement {
                 static get observedAttributes() {
                     return ["orientation", "appearance", "frame", "caret", "layer-position", "dismissable", "dismissable-type", "close-button"]
                 }
@@ -5629,9 +5629,9 @@
                     }))
                 }
             }
-            l.tagName = "lol-uikit-dialog-frame";
-            var s = l;
-            t.default = s
+            s.tagName = "lol-uikit-dialog-frame";
+            var l = s;
+            t.default = l
         }, e => {
             "use strict";
             e.exports = '<template id="lol-uikit-template-dialog-frame">\r\n  <div class="lol-uikit-dialog-frame">\r\n    <div class="lol-uikit-dialog-frame-sub-border"></div>\r\n    <div class="content-wrapper">\r\n      <slot></slot>\r\n    </div>\r\n    <div class="lol-uikit-dialog-frame-toast-close-button"></div>\r\n    <div class="lol-uikit-dialog-frame-close-button">\r\n      <lol-uikit-close-button></lol-uikit-close-button>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
@@ -5680,16 +5680,16 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = l(n(36)),
-                i = l(n(37)),
+                o = s(n(36)),
+                i = s(n(37)),
                 a = n(35);
 
-            function l(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            class s extends r.webComponents.ShadowElement {
+            class l extends r.webComponents.ShadowElement {
                 templateMarkup() {
                     return n(4)
                 }
@@ -5768,24 +5768,24 @@
                     })
                 }
             }
-            s.tagName = "lol-uikit-dropdown-option";
-            var d = s;
+            l.tagName = "lol-uikit-dropdown-option";
+            var d = l;
             t.default = d
         }, (e, t, n) => {
             var r = n(26),
                 o = n(27),
                 i = n(91),
                 a = n(92),
-                l = o(r),
-                s = i(a);
-            l.push([e.id, ':host(.flat-dropdown-type) .ui-dropdown-option {\n  font-family: var(--font-display);\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  -webkit-user-select: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  text-transform: uppercase;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ko-kr),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ja-jp),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(tr-tr),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(el-gr),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(th-th),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(zh-tw) {\n  text-transform: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  text-transform: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  color: #f0e6d2;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 18px;\n  letter-spacing: 0.075em;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  letter-spacing: 0.0375em;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  --dropdown-option-flat-height: 40px;\n  --dropdown-option-flat-font-weight: 700;\n  --dropdown-option-flat-overflow: visible;\n  --dropdown-option-flat-text-overflow: clip;\n  --dropdown-option-flat-white-space: inherit;\n  --dropdown-option-direction-rtl: rtl;\n  --dropdown-option-framed-line-height: 30px;\n  --dropdown-option-framed-white-space: nowrap;\n  --dropdown-option-framed-overflow-wrap: unset;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  height: var(--dropdown-option-flat-height);\n  font-weight: var(--dropdown-option-flat-font-weight);\n  overflow: var(--dropdown-option-flat-overflow);\n  text-overflow: var(--dropdown-option-flat-text-overflow);\n  white-space: var(--dropdown-option-flat-white-space);\n  color: #cdbe91;\n  cursor: pointer;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  position: relative;\n  border-bottom: thin solid #1e2328;\n  padding: 0 10px;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  padding: 0 10px 0 30px;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled {\n  color: #888;\n  cursor: default;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled:hover {\n  color: #888;\n  background-color: rgba(30,35,40,0);\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-unselectable {\n  border-bottom: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected::after {\n  background: url(' + s + ") center no-repeat;\n  width: 14px;\n  height: 11px;\n  position: absolute;\n  right: 10px;\n  top: 50%;\n  transform: translate(0, -50%);\n  content: '';\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected:lang(ar-ae)::after {\n  right: auto;\n  left: 10px;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:hover {\n  color: #f0e6d2;\n  background-color: #1e2328;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:active {\n  color: #463714;\n  background-color: rgba(30,35,40,0.5);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option {\n  align-items: center;\n  border-top: thin solid #1f2123;\n  color: #cdbe91;\n  cursor: pointer;\n  display: block;\n  min-height: 30px;\n  line-height: var(--dropdown-option-framed-line-height);\n  margin: 0;\n  overflow: hidden;\n  padding: 2px 9px 2px 7px;\n  position: relative;\n  text-overflow: ellipsis;\n  white-space: var(--dropdown-option-framed-white-space);\n  overflow-wrap: var(--dropdown-option-framed-overflow-wrap);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  direction: var(--dropdown-option-direction-rtl);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled {\n  color: #888;\n  cursor: default;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled:hover {\n  color: #888;\n  background-color: rgba(30,35,40,0);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected {\n  padding-right: 31px;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected:lang(ar-ae) {\n  padding-right: 7px;\n  padding-left: 31px;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected::after {\n  background: url(" + s + ") center no-repeat;\n  width: 14px;\n  height: 11px;\n  position: absolute;\n  right: 13px;\n  top: 50%;\n  transform: translate(0, -50%);\n  content: '';\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected:lang(ar-ae)::after {\n  right: auto;\n  left: 13px;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option:hover {\n  color: #f0e6d2;\n  background-color: #1e2328;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option:active {\n  color: #463714;\n  background-color: rgba(30,35,40,0.5);\n}\n", "", {
+                s = o(r),
+                l = i(a);
+            s.push([e.id, ':host(.flat-dropdown-type) .ui-dropdown-option {\n  font-family: var(--font-display);\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  -webkit-user-select: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  text-transform: uppercase;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ko-kr),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ja-jp),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(tr-tr),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(el-gr),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(th-th),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(zh-tw) {\n  text-transform: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  text-transform: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  color: #f0e6d2;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 18px;\n  letter-spacing: 0.075em;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  letter-spacing: 0.0375em;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  --dropdown-option-flat-height: 40px;\n  --dropdown-option-flat-font-weight: 700;\n  --dropdown-option-flat-overflow: visible;\n  --dropdown-option-flat-text-overflow: clip;\n  --dropdown-option-flat-white-space: inherit;\n  --dropdown-option-direction-rtl: rtl;\n  --dropdown-option-framed-line-height: 30px;\n  --dropdown-option-framed-white-space: nowrap;\n  --dropdown-option-framed-overflow-wrap: unset;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  height: var(--dropdown-option-flat-height);\n  font-weight: var(--dropdown-option-flat-font-weight);\n  overflow: var(--dropdown-option-flat-overflow);\n  text-overflow: var(--dropdown-option-flat-text-overflow);\n  white-space: var(--dropdown-option-flat-white-space);\n  color: #cdbe91;\n  cursor: pointer;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  position: relative;\n  border-bottom: thin solid #1e2328;\n  padding: 0 10px;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  padding: 0 10px 0 30px;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled {\n  color: #888;\n  cursor: default;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled:hover {\n  color: #888;\n  background-color: rgba(30,35,40,0);\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-unselectable {\n  border-bottom: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected::after {\n  background: url(' + l + ") center no-repeat;\n  width: 14px;\n  height: 11px;\n  position: absolute;\n  right: 10px;\n  top: 50%;\n  transform: translate(0, -50%);\n  content: '';\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected:lang(ar-ae)::after {\n  right: auto;\n  left: 10px;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:hover {\n  color: #f0e6d2;\n  background-color: #1e2328;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:active {\n  color: #463714;\n  background-color: rgba(30,35,40,0.5);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option {\n  align-items: center;\n  border-top: thin solid #1f2123;\n  color: #cdbe91;\n  cursor: pointer;\n  display: block;\n  min-height: 30px;\n  line-height: var(--dropdown-option-framed-line-height);\n  margin: 0;\n  overflow: hidden;\n  padding: 2px 9px 2px 7px;\n  position: relative;\n  text-overflow: ellipsis;\n  white-space: var(--dropdown-option-framed-white-space);\n  overflow-wrap: var(--dropdown-option-framed-overflow-wrap);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  direction: var(--dropdown-option-direction-rtl);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled {\n  color: #888;\n  cursor: default;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled:hover {\n  color: #888;\n  background-color: rgba(30,35,40,0);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected {\n  padding-right: 31px;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected:lang(ar-ae) {\n  padding-right: 7px;\n  padding-left: 31px;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected::after {\n  background: url(" + l + ") center no-repeat;\n  width: 14px;\n  height: 11px;\n  position: absolute;\n  right: 13px;\n  top: 50%;\n  transform: translate(0, -50%);\n  content: '';\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected:lang(ar-ae)::after {\n  right: auto;\n  left: 13px;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option:hover {\n  color: #f0e6d2;\n  background-color: #1e2328;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option:active {\n  color: #463714;\n  background-color: rgba(30,35,40,0.5);\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/dropdown-option/component-style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
                 names: [],
                 mappings: "AAAA;EACE,gCAAa;ACCf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;ACyBA;EACE,yBAAgB;ADvBlB;ACwBE;;;;;;EAME,oBAAgB;ADtBpB;AC2CA;EACE,oBAAgB;ADzClB;ACuKA;EAIE,cAAO;EACP,eAAW;EACX,gBAAa;EACb,iBAAa;EACb,uBAAgB;ADxKlB;ACyKE;EACE,iBAAgB;ADvKpB;AC2KA;EAGE,wBAAgB;AD3KlB;AC4KE;EACE,iBAAgB;AD1KpB;AApCA;EACE,mCAA+B;EAC/B,uCAAoC;EACpC,wCAAiC;EACjC,0CAAsC;EACtC,2CAAoC;EACpC,oCAAiC;EACjC,0CAAsC;EACtC,4CAAsC;EACtC,6CAAwC;AAsC1C;AAjCE;EAEE,0CAAQ;EACR,oDAAa;EACb,8CAAU;EACV,wDAAe;EACf,oDAAa;EACb,cAAO;EACP,eAAQ;EACR,aAAS;EACT,mBAAgB;EAChB,mBAAa;EACb,kBAAU;EACV,iCAAe;EACf,eAAS;AAkCb;AAhCI;EAEE,sBAAS;AAiCf;AA9BI;EACE,WAAO;EACP,eAAQ;AAgCd;AA9BM;EACE,WAAO;EACP,kCAAkB;AAgC1B;AA5BI;EACE,mBAAe;AA8BrB;AA3BI;EACE,oEAAiD;EACjD,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,WAAO;EACP,QAAK;EACL,6BAAW;EACX,WAAS;AA6Bf;AA1BI;EACE,WAAO;EACP,UAAM;AA4BZ;AAzBI;EACE,cAAO;EACP,yBAAkB;AA2BxB;AAxBI;EACE,cAAO;EACP,oCAAkB;AA0BxB;AAnBE;EACE,mBAAa;EACb,8BAAY;EACZ,cAAO;EACP,eAAQ;EACR,cAAS;EACT,gBAAY;EACZ,sDAAa;EACb,SAAQ;EACR,gBAAU;EACV,wBAAS;EACT,kBAAU;EACV,uBAAe;EACf,sDAAa;EACb,0DAAe;AAqBnB;AAnBI;EACE,+CAAW;AAqBjB;AAlBI;EACE,WAAO;EACP,eAAQ;AAoBd;AAlBM;EACE,WAAO;EACP,kCAAkB;AAoB1B;AAhBI;EACE,mBAAe;AAkBrB;AAjBM;EACE,kBAAe;EACf,kBAAc;AAmBtB;AAfI;EACE,oEAAiD;EACjD,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,WAAO;EACP,QAAK;EACL,6BAAW;EACX,WAAS;AAiBf;AAfI;EACE,WAAO;EACP,UAAM;AAiBZ;AAdI;EACE,cAAO;EACP,yBAAkB;AAgBxB;AAbI;EACE,cAAO;EACP,oCAAkB;AAexB",
                 sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --dropdown-option-flat-height: 40px;\r\n  --dropdown-option-flat-font-weight: 700;\r\n  --dropdown-option-flat-overflow: visible;\r\n  --dropdown-option-flat-text-overflow: clip;\r\n  --dropdown-option-flat-white-space: inherit;\r\n  --dropdown-option-direction-rtl: rtl;\r\n  --dropdown-option-framed-line-height: 30px;\r\n  --dropdown-option-framed-white-space: nowrap;\r\n  --dropdown-option-framed-overflow-wrap: unset;\r\n}\r\n\r\n\r\n:host(.flat-dropdown-type) {\r\n  .ui-dropdown-option {\r\n    @extends $typekit_h5_preserve_case;\r\n    height: var(--dropdown-option-flat-height);\r\n    font-weight: var(--dropdown-option-flat-font-weight);\r\n    overflow: var(--dropdown-option-flat-overflow);\r\n    text-overflow: var(--dropdown-option-flat-text-overflow);\r\n    white-space: var(--dropdown-option-flat-white-space);\r\n    color: $color_palette_gold2;\r\n    cursor: pointer;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    position: relative;\r\n    border-bottom: thin solid $color_palette_grey3;\r\n    padding: 0 10px;\r\n\r\n    &:lang(ar-ae) {\r\n      // Preventing some longer arabic text from overlapping tick icon.\r\n      padding: 0 10px 0 30px;\r\n    }\r\n\r\n    &.ui-dropdown-option-disabled {\r\n      color: $colors_gray;\r\n      cursor: default;\r\n\r\n      &:hover {\r\n        color: $colors_gray;\r\n        background-color: rgba($color_palette_grey3, 0);\r\n      }\r\n    }\r\n\r\n    &.ui-dropdown-option-unselectable {\r\n      border-bottom: none;\r\n    }\r\n\r\n    &.ui-dropdown-option-selected::after {\r\n      background: url('../../images/dropdown-check.png') center no-repeat;\r\n      width: 14px;\r\n      height: 11px;\r\n      position: absolute;\r\n      right: 10px;\r\n      top: 50%;\r\n      transform: translate(0, -50%);\r\n      content: '';\r\n    }\r\n\r\n    &.ui-dropdown-option-selected:lang(ar-ae)::after {\r\n      right: auto;\r\n      left: 10px;\r\n    }\r\n\r\n    &:hover {\r\n      color: $color_palette_gold1;\r\n      background-color: $color_palette_grey3;\r\n    }\r\n\r\n    &:active {\r\n      color: $color_palette_gold6;\r\n      background-color: rgba($color_palette_grey3, 0.5);\r\n    }\r\n  }\r\n}\r\n\r\n\r\n:host(.framed-dropdown-type) {\r\n  .ui-dropdown-option {\r\n    align-items: center;\r\n    border-top: thin solid #1f2123;\r\n    color: $color_palette_gold2;\r\n    cursor: pointer;\r\n    display: block;\r\n    min-height: 30px;\r\n    line-height: var(--dropdown-option-framed-line-height);\r\n    margin: 0;\r\n    overflow: hidden;\r\n    padding: 2px 9px 2px 7px;\r\n    position: relative;\r\n    text-overflow: ellipsis;\r\n    white-space: var(--dropdown-option-framed-white-space);\r\n    overflow-wrap: var(--dropdown-option-framed-overflow-wrap);\r\n\r\n    &:lang(ar-ae) {\r\n      direction: var(--dropdown-option-direction-rtl);\r\n    }\r\n\r\n    &.ui-dropdown-option-disabled {\r\n      color: $colors_gray;\r\n      cursor: default;\r\n\r\n      &:hover {\r\n        color: $colors_gray;\r\n        background-color: rgba($color_palette_grey3, 0);\r\n      }\r\n    }\r\n\r\n    &.ui-dropdown-option-selected {\r\n      padding-right: 31px;\r\n      &:lang(ar-ae) {\r\n        padding-right: 7px;\r\n        padding-left: 31px;\r\n      }\r\n    }\r\n\r\n    &.ui-dropdown-option-selected::after {\r\n      background: url('../../images/dropdown-check.png') center no-repeat;\r\n      width: 14px;\r\n      height: 11px;\r\n      position: absolute;\r\n      right: 13px;\r\n      top: 50%;\r\n      transform: translate(0, -50%);\r\n      content: '';\r\n    }\r\n    &.ui-dropdown-option-selected:lang(ar-ae)::after {\r\n      right: auto;\r\n      left: 13px;\r\n    }\r\n\r\n    &:hover {\r\n      color: $color_palette_gold1;\r\n      background-color: $color_palette_grey3;\r\n    }\r\n\r\n    &:active {\r\n      color: $color_palette_gold6;\r\n      background-color: rgba($color_palette_grey3, 0.5);\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
                 sourceRoot: ""
-            }]), e.exports = l
+            }]), e.exports = s
         }, e => {
             "use strict";
             e.exports = function(e, t) {
@@ -5834,8 +5834,8 @@
                 o = n(1);
             const i = "default",
                 a = "over",
-                l = "down",
-                s = "click",
+                s = "down",
+                l = "click",
                 d = "disabled";
             class c extends o.webComponents.ShadowElement {
                 templateMarkup() {
@@ -5880,10 +5880,10 @@
                     this._setMouseClass(i)
                 }
                 _mousedown() {
-                    this._setMouseClass(l)
+                    this._setMouseClass(s)
                 }
                 _click() {
-                    return this._setMouseClass(s), this._mouseAnimationTimeout(c._clickAnimationDurationMs)
+                    return this._setMouseClass(l), this._mouseAnimationTimeout(c._clickAnimationDurationMs)
                 }
                 _mouseAnimationTimeout(e) {
                     return this._removeMouseEvents(), new Promise((t => {
@@ -5893,7 +5893,7 @@
                     }))
                 }
                 _setMouseClass(e) {
-                    const t = [i, a, l, s, d],
+                    const t = [i, a, s, l, d],
                         n = e || i,
                         r = this.shadowRoot,
                         o = r.querySelector(".lol-uikit-flat-button-secondary-wrapper"),
@@ -6017,8 +6017,8 @@
                 }
             }
             a.tagName = "lol-uikit-flat-checkbox";
-            var l = a;
-            t.default = l
+            var s = a;
+            t.default = s
         }, (e, t, n) => {
             var r = n(26),
                 o = n(27)(r);
@@ -6055,8 +6055,8 @@
                 }
             }
             a.tagName = "lol-uikit-flat-dropdown";
-            var l = a;
-            t.default = l
+            var s = a;
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -6066,8 +6066,8 @@
                 o = n(1),
                 i = c(n(36)),
                 a = c(n(103)),
-                l = c(n(37)),
-                s = c(n(89)),
+                s = c(n(37)),
+                l = c(n(89)),
                 d = n(35);
 
             function c(e) {
@@ -6081,7 +6081,7 @@
                     throw new Error("Must override this base class to get a dropdown element")
                 }
                 constructor() {
-                    super(), this.optionNodes = [], this.selected = !1, this.isDropdownOpen = !1, this.updateSelectedRequired = !0, this.currentElement = null, this.shadowContentElement = null, this.lightContentElement = null, this._dropdownSound = this._createSound(l.default.dropdownClick), this._handleClick = this._handleClick.bind(this), this._handleKeyUp = this._handleKeyUp.bind(this), this._handleDOMChange = this._handleDOMChange.bind(this), this._refreshSelected = () => {
+                    super(), this.optionNodes = [], this.selected = !1, this.isDropdownOpen = !1, this.updateSelectedRequired = !0, this.currentElement = null, this.shadowContentElement = null, this.lightContentElement = null, this._dropdownSound = this._createSound(s.default.dropdownClick), this._handleClick = this._handleClick.bind(this), this._handleKeyUp = this._handleKeyUp.bind(this), this._handleDOMChange = this._handleDOMChange.bind(this), this._refreshSelected = () => {
                         this.refreshSelected()
                     }, this._handleClosableEvent = this._handleClosableEvent.bind(this)
                 }
@@ -6203,7 +6203,7 @@
                         } = e;
                         if ("childList" === e.type) {
                             Array.from(e.addedNodes).forEach((e => {
-                                e instanceof s.default && e.getAttribute("selected") && (r = e)
+                                e instanceof l.default && e.getAttribute("selected") && (r = e)
                             })), this._checkOptionsRoom()
                         }
                         "disabled" === o ? (t = !(0, d.isAttrTruthy)("disabled", i), n = (0, d.isAttrTruthy)("disabled", a.getAttribute("disabled")), this.isDropdownOpen && t && n && this._close()) : "selected" === o && (0, d.isAttrTruthy)("selected", a.getAttribute("selected")) && this._descendantOptions().forEach((function(e) {
@@ -6326,18 +6326,18 @@
                 o = n(27),
                 i = n(91),
                 a = n(107),
-                l = n(108),
-                s = o(r),
+                s = n(108),
+                l = o(r),
                 d = i(a),
-                c = i(l);
-            s.push([e.id, ":host .ui-dropdown .ui-dropdown-current {\n  font-family: var(--font-display);\n}\n:host .ui-dropdown .ui-dropdown-current {\n  -webkit-user-select: none;\n}\n:host .ui-dropdown .ui-dropdown-current {\n  font-kerning: normal;\n  -webkit-font-feature-settings: \"kern\" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .ui-dropdown .ui-dropdown-current {\n  text-transform: uppercase;\n}\n:host .ui-dropdown .ui-dropdown-current:lang(ko-kr),\n:host .ui-dropdown .ui-dropdown-current:lang(ja-jp),\n:host .ui-dropdown .ui-dropdown-current:lang(tr-tr),\n:host .ui-dropdown .ui-dropdown-current:lang(el-gr),\n:host .ui-dropdown .ui-dropdown-current:lang(th-th),\n:host .ui-dropdown .ui-dropdown-current:lang(zh-tw) {\n  text-transform: none;\n}\n:host .ui-dropdown .ui-dropdown-current {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\n:host .ui-dropdown .ui-dropdown-current:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host(.active) .ui-dropdown .ui-dropdown-options-container {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #695625, #463714) 1;\n}\n:host {\n  --flat-dropdown-current-height: 40px;\n  --flat-dropdown-scrollable-max-height: none;\n  --flat-dropdownactive-z-index: auto;\n  --flat-dropdownactive-max-width: none;\n  --flat-dropdownactive-current-display: flex;\n  --flat-dropdownactive-opens-upward-container-padding: 0 0 40px 0;\n  --flat-dropdownactive-opens-upward-container-margin: 0;\n  --flat-dropdown-current-content-display: block;\n  --flat-dropdown-current-content-max-width: none;\n  --flat-dropdown-current-content-text-transform: none;\n  --flat-dropdown-current-content-white-space: normal;\n  --flat-dropdown-current-content-text-overflow: clip;\n  --flat-dropdown-current-content-overflow: visible;\n  --flat-dropdown-current-content-color: #cdbe91;\n  --flat-dropdown-current-content-font-size: 18px;\n  --flat-dropdown-current-content-line-height: 22px;\n  --flat-dropdown-current-content-letter-spacing: 0.025em;\n  --flat-dropdown-direction-rtl: rtl;\n  --flat-dropdown-current-after-margin-rtl: 0 7px 0 0;\n}\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\n  display: none;\n}\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\n  display: none;\n}\n:host .ui-dropdown-current-content,\n:host ::slotted(.ui-dropdown-current-content) {\n  display: var(--flat-dropdown-current-content-display);\n  max-width: var(--flat-dropdown-current-content-max-width);\n  text-transform: var(--flat-dropdown-current-content-text-transform);\n  white-space: var(--flat-dropdown-current-content-white-space);\n  text-overflow: var(--flat-dropdown-current-content-text-overflow);\n  overflow: var(--flat-dropdown-current-content-overflow);\n  color: var(--flat-dropdown-current-content-color);\n  font-size: var(--flat-dropdown-current-content-font-size);\n  line-height: var(--flat-dropdown-current-content-line-height);\n  letter-spacing: var(--flat-dropdown-current-letter-spacing);\n}\n:host {\n  display: inline-flex;\n  flex-direction: column;\n  width: 100%;\n  height: 40px;\n  outline: 0;\n}\n:host .ui-dropdown {\n  display: inline-flex;\n  flex-direction: column;\n  box-sizing: border-box;\n  position: relative;\n  user-select: none;\n  margin: 0;\n  width: 100%;\n  padding: 0;\n}\n:host .ui-dropdown:lang(ar-ae) {\n  direction: var(--flat-dropdown-direction-rtl);\n}\n:host .ui-dropdown .ui-dropdown-current {\n  display: flex;\n  flex-direction: row;\n  background: none;\n  position: absolute;\n  height: var(--flat-dropdown-current-height);\n  margin: 0;\n  align-items: center;\n  padding: 0 10px;\n  cursor: pointer;\n}\n:host .ui-dropdown .ui-dropdown-current:hover {\n  color: #f0e6d2;\n}\n:host .ui-dropdown .ui-dropdown-current:hover::after {\n  -webkit-filter: brightness(2.2);\n}\n:host .ui-dropdown .ui-dropdown-current::after {\n  content: '';\n  background: url(" + d + ") center no-repeat;\n  width: 13px;\n  height: 19px;\n  margin: 0 0 0 7px;\n}\n:host .ui-dropdown .ui-dropdown-current:lang(ar-ae)::after {\n  margin: var(--flat-dropdown-current-after-margin-rtl);\n}\n:host .ui-dropdown .ui-dropdown-options-container {\n  background-color: #010a13;\n  width: 100%;\n  opacity: 0;\n  position: absolute;\n  height: 0;\n  visibility: hidden;\n  transition: opacity 400ms;\n}\n:host .ui-dropdown .ui-dropdown-options-container lol-uikit-scrollable {\n  max-height: var(--flat-dropdown-scrollable-max-height);\n}\n:host .ui-dropdown.opens-upward .ui-dropdown-options-container {\n  bottom: 100%;\n  top: auto;\n  margin-bottom: -42px;\n}\n:host(.active) .ui-dropdown {\n  z-index: var(--flat-dropdownactive-z-index);\n  max-width: var(--flat-dropdownactive-max-width);\n}\n:host(.active) .ui-dropdown .ui-dropdown-current {\n  display: var(--flat-dropdownactive-current-display);\n  color: #785a28;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current:hover {\n  color: #785a28;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current:hover::after {\n  -webkit-filter: none;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current::after {\n  background-image: url(" + c + ");\n}\n:host(.active) .ui-dropdown .ui-dropdown-options-container {\n  border-width: 2px;\n  padding-top: 40px;\n  width: 100%;\n  opacity: 1;\n  height: auto;\n  transition: opacity 400ms;\n  visibility: visible;\n}\n:host(.active) .ui-dropdown.opens-upward .ui-dropdown-options-container {\n  padding: var(--flat-dropdownactive-opens-upward-container-padding);\n  margin: var(--flat-dropdownactive-opens-upward-container-margin);\n}\n:host(.disabled) {\n  cursor: default;\n  pointer-events: none;\n}\n:host(.disabled) .ui-dropdown .ui-dropdown-current {\n  color: #3c3c41;\n}\n:host(.disabled) .ui-dropdown .ui-dropdown-current::after {\n  -webkit-filter: grayscale(100%);\n  opacity: 0.35;\n}\n", "", {
+                c = i(s);
+            l.push([e.id, ":host .ui-dropdown .ui-dropdown-current {\n  font-family: var(--font-display);\n}\n:host .ui-dropdown .ui-dropdown-current {\n  -webkit-user-select: none;\n}\n:host .ui-dropdown .ui-dropdown-current {\n  font-kerning: normal;\n  -webkit-font-feature-settings: \"kern\" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .ui-dropdown .ui-dropdown-current {\n  text-transform: uppercase;\n}\n:host .ui-dropdown .ui-dropdown-current:lang(ko-kr),\n:host .ui-dropdown .ui-dropdown-current:lang(ja-jp),\n:host .ui-dropdown .ui-dropdown-current:lang(tr-tr),\n:host .ui-dropdown .ui-dropdown-current:lang(el-gr),\n:host .ui-dropdown .ui-dropdown-current:lang(th-th),\n:host .ui-dropdown .ui-dropdown-current:lang(zh-tw) {\n  text-transform: none;\n}\n:host .ui-dropdown .ui-dropdown-current {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\n:host .ui-dropdown .ui-dropdown-current:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host(.active) .ui-dropdown .ui-dropdown-options-container {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #695625, #463714) 1;\n}\n:host {\n  --flat-dropdown-current-height: 40px;\n  --flat-dropdown-scrollable-max-height: none;\n  --flat-dropdownactive-z-index: auto;\n  --flat-dropdownactive-max-width: none;\n  --flat-dropdownactive-current-display: flex;\n  --flat-dropdownactive-opens-upward-container-padding: 0 0 40px 0;\n  --flat-dropdownactive-opens-upward-container-margin: 0;\n  --flat-dropdown-current-content-display: block;\n  --flat-dropdown-current-content-max-width: none;\n  --flat-dropdown-current-content-text-transform: none;\n  --flat-dropdown-current-content-white-space: normal;\n  --flat-dropdown-current-content-text-overflow: clip;\n  --flat-dropdown-current-content-overflow: visible;\n  --flat-dropdown-current-content-color: #cdbe91;\n  --flat-dropdown-current-content-font-size: 18px;\n  --flat-dropdown-current-content-line-height: 22px;\n  --flat-dropdown-current-content-letter-spacing: 0.025em;\n  --flat-dropdown-direction-rtl: rtl;\n  --flat-dropdown-current-after-margin-rtl: 0 7px 0 0;\n}\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\n  display: none;\n}\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\n  display: none;\n}\n:host .ui-dropdown-current-content,\n:host ::slotted(.ui-dropdown-current-content) {\n  display: var(--flat-dropdown-current-content-display);\n  max-width: var(--flat-dropdown-current-content-max-width);\n  text-transform: var(--flat-dropdown-current-content-text-transform);\n  white-space: var(--flat-dropdown-current-content-white-space);\n  text-overflow: var(--flat-dropdown-current-content-text-overflow);\n  overflow: var(--flat-dropdown-current-content-overflow);\n  color: var(--flat-dropdown-current-content-color);\n  font-size: var(--flat-dropdown-current-content-font-size);\n  line-height: var(--flat-dropdown-current-content-line-height);\n  letter-spacing: var(--flat-dropdown-current-letter-spacing);\n}\n:host {\n  display: inline-flex;\n  flex-direction: column;\n  width: 100%;\n  height: 40px;\n  outline: 0;\n}\n:host .ui-dropdown {\n  display: inline-flex;\n  flex-direction: column;\n  box-sizing: border-box;\n  position: relative;\n  user-select: none;\n  margin: 0;\n  width: 100%;\n  padding: 0;\n}\n:host .ui-dropdown:lang(ar-ae) {\n  direction: var(--flat-dropdown-direction-rtl);\n}\n:host .ui-dropdown .ui-dropdown-current {\n  display: flex;\n  flex-direction: row;\n  background: none;\n  position: absolute;\n  height: var(--flat-dropdown-current-height);\n  margin: 0;\n  align-items: center;\n  padding: 0 10px;\n  cursor: pointer;\n}\n:host .ui-dropdown .ui-dropdown-current:hover {\n  color: #f0e6d2;\n}\n:host .ui-dropdown .ui-dropdown-current:hover::after {\n  -webkit-filter: brightness(2.2);\n}\n:host .ui-dropdown .ui-dropdown-current::after {\n  content: '';\n  background: url(" + d + ") center no-repeat;\n  width: 13px;\n  height: 19px;\n  margin: 0 0 0 7px;\n}\n:host .ui-dropdown .ui-dropdown-current:lang(ar-ae)::after {\n  margin: var(--flat-dropdown-current-after-margin-rtl);\n}\n:host .ui-dropdown .ui-dropdown-options-container {\n  background-color: #010a13;\n  width: 100%;\n  opacity: 0;\n  position: absolute;\n  height: 0;\n  visibility: hidden;\n  transition: opacity 400ms;\n}\n:host .ui-dropdown .ui-dropdown-options-container lol-uikit-scrollable {\n  max-height: var(--flat-dropdown-scrollable-max-height);\n}\n:host .ui-dropdown.opens-upward .ui-dropdown-options-container {\n  bottom: 100%;\n  top: auto;\n  margin-bottom: -42px;\n}\n:host(.active) .ui-dropdown {\n  z-index: var(--flat-dropdownactive-z-index);\n  max-width: var(--flat-dropdownactive-max-width);\n}\n:host(.active) .ui-dropdown .ui-dropdown-current {\n  display: var(--flat-dropdownactive-current-display);\n  color: #785a28;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current:hover {\n  color: #785a28;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current:hover::after {\n  -webkit-filter: none;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current::after {\n  background-image: url(" + c + ");\n}\n:host(.active) .ui-dropdown .ui-dropdown-options-container {\n  border-width: 2px;\n  padding-top: 40px;\n  width: 100%;\n  opacity: 1;\n  height: auto;\n  transition: opacity 400ms;\n  visibility: visible;\n}\n:host(.active) .ui-dropdown.opens-upward .ui-dropdown-options-container {\n  padding: var(--flat-dropdownactive-opens-upward-container-padding);\n  margin: var(--flat-dropdownactive-opens-upward-container-margin);\n}\n:host(.disabled) {\n  cursor: default;\n  pointer-events: none;\n}\n:host(.disabled) .ui-dropdown .ui-dropdown-current {\n  color: #3c3c41;\n}\n:host(.disabled) .ui-dropdown .ui-dropdown-current::after {\n  -webkit-filter: grayscale(100%);\n  opacity: 0.35;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/flat-dropdown/component-style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/gradient-palette.styl"],
                 names: [],
                 mappings: "AAAA;EACE,gCAAa;ACCf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;ACyBA;EACE,yBAAgB;ADvBlB;ACwBE;;;;;;EAME,oBAAgB;ADtBpB;ACwIA;EAIE,cAAO;EACP,eAAW;EACX,gBAAa;EACb,iBAAa;EACb,sBAAgB;ADzIlB;AC0IE;EACE,iBAAgB;ADxIpB;AEoHA;EACE,8BAAQ;EACR,yDAAc;AFlHhB;AA5BA;EACE,oCAAgC;EAChC,2CAAuC;EACvC,mCAA+B;EAC/B,qCAAiC;EACjC,2CAAuC;EACvC,gEAAsD;EACtD,sDAAqD;EAErD,8CAAyC;EACzC,+CAA2C;EAC3C,oDAAgD;EAChD,mDAA6C;EAC7C,mDAA+C;EAC/C,iDAA0C;EAC1C,8CAAuC;EACvC,+CAA2C;EAC3C,iDAA6C;EAC7C,uDAAgD;EAChD,kCAA+B;EAC/B,mDAA0C;AA6B5C;AA1BA;EACE,aAAS;AA4BX;AA1BA;EACE,aAAS;AA4BX;AAzBA;;EAEE,qDAAS;EACT,yDAAW;EACX,mEAAgB;EAChB,6DAAa;EACb,iEAAe;EACf,uDAAU;EACV,iDAAO;EACP,yDAAW;EACX,6DAAa;EACb,2DAAgB;AA2BlB;AAvBA;EACE,oBAAS;EACT,sBAAgB;EAChB,WAAO;EACP,YAAQ;EACR,UAAS;AAyBX;AAvBE;EACE,oBAAS;EACT,sBAAgB;EAChB,sBAAY;EACZ,kBAAU;EACV,iBAAa;EACb,SAAQ;EACR,WAAO;EACP,UAAS;AAyBb;AAvBI;EACE,6CAAW;AAyBjB;AAtBI;EAEE,aAAS;EACT,mBAAgB;EAChB,gBAAY;EACZ,kBAAU;EACV,2CAAQ;EACR,SAAQ;EACR,mBAAa;EACb,eAAS;EACT,eAAQ;AAuBd;AArBM;EACE,cAAO;AAuBf;AAtBQ;EACE,+BAAgB;AAwB1B;AApBM;EACE,WAAS;EACT,oEAAgD;EAChD,WAAO;EACP,YAAQ;EACR,iBAAQ;AAsBhB;AApBM;EACE,qDAAQ;AAsBhB;AAlBI;EACE,yBAAkB;EAClB,WAAO;EACP,UAAS;EACT,kBAAU;EACV,SAAQ;EACR,kBAAY;EACZ,yBAAY;AAoBlB;AAnBM;EACE,sDAAY;AAqBpB;AAhBM;EACE,YAAQ;EACR,SAAK;EACL,oBAAe;AAkBvB;AAXI;EAEE,2CAAS;EACT,+CAAW;AAYjB;AAVM;EACE,mDAAS;EACT,cAAO;AAYf;AAVQ;EACE,cAAO;AAYjB;AAXU;EACE,oBAAgB;AAa5B;AATQ;EACE,yDAA6D;AAWvE;AAPM;EAEE,iBAAc;EACd,iBAAa;EACb,WAAO;EACP,UAAS;EACT,YAAQ;EACR,yBAAY;EACZ,mBAAY;AAQpB;AAJQ;EACE,kEAAS;EACT,gEAAQ;AAMlB;AAAE;EACE,eAAQ;EACR,oBAAgB;AAEpB;AAAM;EACE,cAAO;AAEf;AADQ;EACE,+BAAgB;EAChB,aAAS;AAGnB",
                 sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/ui-colors.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette.styl';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --flat-dropdown-current-height: 40px;\r\n  --flat-dropdown-scrollable-max-height: none;\r\n  --flat-dropdownactive-z-index: auto;\r\n  --flat-dropdownactive-max-width: none;\r\n  --flat-dropdownactive-current-display: flex;\r\n  --flat-dropdownactive-opens-upward-container-padding: 0 0 40px 0;\r\n  --flat-dropdownactive-opens-upward-container-margin: 0;\r\n\r\n  --flat-dropdown-current-content-display: block;\r\n  --flat-dropdown-current-content-max-width: none;\r\n  --flat-dropdown-current-content-text-transform: none;\r\n  --flat-dropdown-current-content-white-space: normal;\r\n  --flat-dropdown-current-content-text-overflow: clip;\r\n  --flat-dropdown-current-content-overflow: visible;\r\n  --flat-dropdown-current-content-color: $color_palette_gold2;\r\n  --flat-dropdown-current-content-font-size: 18px;\r\n  --flat-dropdown-current-content-line-height: 22px;\r\n  --flat-dropdown-current-content-letter-spacing: .025em;\r\n  --flat-dropdown-direction-rtl: rtl;\r\n  --flat-dropdown-current-after-margin-rtl: 0 7px 0 0;\r\n}\r\n\r\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\r\n  display: none;\r\n}\r\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\r\n  display: none;\r\n}\r\n\r\n:host .ui-dropdown-current-content,\r\n:host ::slotted(.ui-dropdown-current-content) {\r\n  display: var(--flat-dropdown-current-content-display);\r\n  max-width: var(--flat-dropdown-current-content-max-width);\r\n  text-transform: var(--flat-dropdown-current-content-text-transform);\r\n  white-space: var(--flat-dropdown-current-content-white-space);\r\n  text-overflow: var(--flat-dropdown-current-content-text-overflow);\r\n  overflow: var(--flat-dropdown-current-content-overflow);\r\n  color: var(--flat-dropdown-current-content-color);\r\n  font-size: var(--flat-dropdown-current-content-font-size);\r\n  line-height: var(--flat-dropdown-current-content-line-height);\r\n  letter-spacing: var(--flat-dropdown-current-letter-spacing);\r\n}\r\n\r\n\r\n:host {\r\n  display: inline-flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  height: 40px;\r\n  outline: 0;\r\n\r\n  .ui-dropdown {\r\n    display: inline-flex;\r\n    flex-direction: column;\r\n    box-sizing: border-box;\r\n    position: relative;\r\n    user-select: none;\r\n    margin: 0;\r\n    width: 100%;\r\n    padding: 0;\r\n\r\n    &:lang(ar-ae) {\r\n      direction: var(--flat-dropdown-direction-rtl);\r\n    }\r\n\r\n    .ui-dropdown-current {\r\n      @extends $typekit_h4;\r\n      display: flex;\r\n      flex-direction: row;\r\n      background: none;\r\n      position: absolute;\r\n      height: var(--flat-dropdown-current-height);\r\n      margin: 0;\r\n      align-items: center;\r\n      padding: 0 10px;\r\n      cursor: pointer;\r\n\r\n      &:hover {\r\n        color: $color_palette_gold1;\r\n        &::after {\r\n          -webkit-filter: brightness(2.2);\r\n        }\r\n      }\r\n\r\n      &::after {\r\n        content: '';\r\n        background: url('../../images/up-down-arrow.png') center no-repeat;\r\n        width: 13px;\r\n        height: 19px;\r\n        margin: 0 0 0 7px;\r\n      }\r\n      &:lang(ar-ae)::after {\r\n        margin: var(--flat-dropdown-current-after-margin-rtl);\r\n      }\r\n    }\r\n\r\n    .ui-dropdown-options-container {\r\n      background-color: $color_palette_almostBlack;\r\n      width: 100%;\r\n      opacity: 0;\r\n      position: absolute;\r\n      height: 0;\r\n      visibility: hidden;\r\n      transition: opacity 400ms;\r\n      lol-uikit-scrollable {\r\n        max-height: var(--flat-dropdown-scrollable-max-height);\r\n      }\r\n    }\r\n\r\n    &.opens-upward {\r\n      .ui-dropdown-options-container {\r\n        bottom: 100%;\r\n        top: auto;\r\n        margin-bottom: -42px;\r\n      }\r\n    }\r\n  }\r\n\r\n\r\n  &(.active) {\r\n    .ui-dropdown {\r\n\r\n      z-index: var(--flat-dropdownactive-z-index);\r\n      max-width: var(--flat-dropdownactive-max-width);\r\n\r\n      .ui-dropdown-current {\r\n        display: var(--flat-dropdownactive-current-display);\r\n        color: $color_palette_gold5;\r\n\r\n        &:hover {\r\n          color: $color_palette_gold5;\r\n          &::after {\r\n            -webkit-filter: none;\r\n          }\r\n        }\r\n\r\n        &::after {\r\n          background-image: url('../../images/up-down-arrow-locked.png');\r\n        }\r\n      }\r\n\r\n      .ui-dropdown-options-container {\r\n        @extends $gradient-palette_button-click-border;\r\n        border-width: 2px;\r\n        padding-top: 40px;\r\n        width: 100%;\r\n        opacity: 1;\r\n        height: auto;\r\n        transition: opacity 400ms;\r\n        visibility: visible;\r\n      }\r\n\r\n      &.opens-upward {\r\n        .ui-dropdown-options-container {\r\n          padding: var(--flat-dropdownactive-opens-upward-container-padding);\r\n          margin: var(--flat-dropdownactive-opens-upward-container-margin);\r\n        }\r\n      }\r\n    }\r\n  }\r\n\r\n  &(.disabled) {\r\n    cursor: default;\r\n    pointer-events: none;\r\n    .ui-dropdown {\r\n      .ui-dropdown-current {\r\n        color: $color_palette_grey2;\r\n        &::after {\r\n          -webkit-filter: grayscale(100%);\r\n          opacity: 0.35;\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n", "// Base on https://drive.google.com/a/riotgames.com/file/d/0BxsY3wbUNTH1b2k0WmxTUXotbGM\r\n@import 'color-palette';\r\n\r\n$gradient_palette_button_frame = linear-gradient(to top,\r\n  $colors_dallas 0%,\r\n  $colors_luxorGold 23%,\r\n  $colors_alpine 93%,\r\n  $color_palette_gold3 100%);\r\n\r\n$gradient_palette_button_hover = linear-gradient(to top,\r\n  $color_palette_gold4,\r\n  $color_palette_gold1);\r\n\r\n$gradient_palette_button_click = linear-gradient(to top,\r\n  $colors_dallas,\r\n  $color_palette_gold6);\r\n\r\n$gradient_palette_button_blue = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $color_palette_blue3 44%,\r\n  $color_palette_blue3 93%,\r\n  $color_palette_blue2 100%);\r\n\r\n$gradient_palette_button_blue_hover = linear-gradient(to top,\r\n  $colors_bostonBlue 0%,\r\n  $color_palette_blue2 49%,\r\n  $color_palette_blue1 100%);\r\n\r\n$gradient_palette_button_blue_click = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $colors_orient 83%,\r\n  $colors_orient 100%);\r\n\r\n$gradient-palette_button-backing-hover = linear-gradient(to top,\r\n  rgba($colors_finch, 0.5),\r\n  rgba($colors_shark, 0.5));\r\n\r\n$gradient_palette_button_toggle = linear-gradient(to top,\r\n  $color_palette_gold3 0%,\r\n  $color_palette_gold4 44%,\r\n  rgb(160,123,50) 59%,\r\n  $color_palette_gold5 100%);\r\n\r\n$gradient_palette_button_toggle_hover = linear-gradient(to top,\r\n  $color_palette_gold1 0%,\r\n  $color_palette_gold4 100%);\r\n\r\n$gradient_palette_timer_bar = linear-gradient(to right,\r\n  $colors_tiber 0%,\r\n  $colors_bondiBlue 75%,\r\n  $colors_robinsEggBlue 90%,\r\n  $colors_scandal 99%,\r\n  $colors_scandal 100%);\r\n\r\n$gradient_palette_fade_out = linear-gradient(to top,\r\n  $color_palette_almostBlack 0%,\r\n  rgba($color_palette_almostBlack, 0) 92%);\r\n\r\n$gradient_palette_button_primary_purple_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.3) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.8) 0%,\r\n  rgba(232, 216, 227, 0.8) 0.01%,\r\n  rgba(237, 153, 239, 0.8) 100%);\r\n\r\n$gradient_palette_button_purple_hover_border = linear-gradient(to bottom,\r\n  rgb(245, 155, 247) 0%,\r\n  rgb(232, 216, 227) 0.01%,\r\n  rgb(237, 153, 239) 100%);\r\n\r\n$gradient_palette_button_purple_hover_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.5) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.2) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.4) 0%,\r\n  rgba(232, 216, 227, 0.4) 0.01%,\r\n  rgba(237, 153, 239, 0.4) 100%);\r\n\r\n$gradient-palette_button-primary-bg = linear-gradient(to bottom,\r\n  rgb(90,64,31) 0%,\r\n  rgb(51,39,23) 100%);\r\n\r\n$gradient-palette_button-primary-hover-bg = linear-gradient(to bottom,\r\n  rgb(96,69,34) 0%,\r\n  rgb(132,103,69) 100%);\r\n\r\n$gradient-palette_button-primary-down-bg = linear-gradient(to bottom,\r\n  rgb(54,39,21) 0%,\r\n  rgb(23,19,14) 100%);\r\n\r\n$gradient-palette_button-gold-bg = linear-gradient(to bottom,\r\n  rgba(30,35,42,1) 0%,\r\n  rgba(30,35,42,1) 40%,\r\n  rgba(118,97,51,.8) 140%);\r\n\r\n$gradient-palette_button-gold-border = linear-gradient(to top,\r\n  rgb(120,91,40) 0%,\r\n  rgb(200,156,60) 55%,\r\n  rgb(200,163,85) 71%,\r\n  rgb(200,170,110) 100%);\r\n\r\n$gradient-palette_button-gold-hover-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%,\r\n  rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-gold-down-border = linear-gradient(to bottom,\r\n  rgb(70,56,23) 0%,\r\n  rgb(105,79,39) 100%);\r\n\r\n$gradient-palette_button-gold-click-border-white = linear-gradient(to top,\r\n  rgb(255,255,255) 0%,\r\n  rgb(255,255,255) 33%,\r\n  rgb(255,255,255) 66%,\r\n  rgb(255,255,255) 100%);\r\n\r\n$gradient-palette_button-gold-click-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%, rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-sheen-effect = linear-gradient(to bottom,\r\n  rgba(255,255,255,0) 0%,\r\n  rgba(255,255,255,.15) 92%,\r\n  rgba(255,255,255,0) 100%);\r\n\r\n$gradient-palette_button-frame-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_frame 1;\r\n}\r\n\r\n$gradient-palette_button-hover-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_hover 1;\r\n}\r\n\r\n$gradient-palette_button-click-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_click 1;\r\n}\r\n\r\n$gradient-palette_button-toggle-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_toggle 1;\r\n}\r\n\r\n$gradient-dialog-border-right {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to right,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-left {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to left,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}"],
                 sourceRoot: ""
-            }]), e.exports = s
+            }]), e.exports = l
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "up-down-arrow.png"
@@ -6354,7 +6354,7 @@
                 a = (r = n(37)) && r.__esModule ? r : {
                     default: r
                 };
-            class l extends i.webComponents.ShadowElement {
+            class s extends i.webComponents.ShadowElement {
                 templateMarkup() {
                     return n(110)
                 }
@@ -6372,9 +6372,9 @@
                     })
                 }
             }
-            l.tagName = "lol-uikit-flat-input";
-            var s = l;
-            t.default = s
+            s.tagName = "lol-uikit-flat-input";
+            var l = s;
+            t.default = l
         }, e => {
             "use strict";
             e.exports = "<template>\r\n  <slot>\x3c!-- input --\x3e</slot>\r\n</template>"
@@ -6503,18 +6503,18 @@
                 o = n(27),
                 i = n(91),
                 a = n(117),
-                l = n(118),
-                s = o(r),
+                s = n(118),
+                l = o(r),
                 d = i(a),
-                c = i(l);
-            s.push([e.id, ":host .lol-uikit-flyout-frame-wrapper.right .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to right, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to left, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to top, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to bottom, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host {\n  pointer-events: all;\n}\n:host .lol-uikit-flyout-frame-wrapper {\n  position: relative;\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99);\n}\n:host .lol-uikit-flyout-frame-wrapper .border {\n  position: absolute;\n  box-sizing: border-box;\n  background-color: #010a13;\n  box-shadow: 0 0 0 1px rgba(1,10,19,0.48);\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99);\n}\n:host .lol-uikit-flyout-frame-wrapper .border::before {\n  content: '';\n  position: absolute;\n  width: calc(100% + 4px);\n  height: calc(100% + 4px);\n  top: -2px;\n  left: -2px;\n  box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);\n  pointer-events: none;\n}\n:host .lol-uikit-flyout-frame-wrapper .sub-border {\n  position: absolute;\n  display: flex;\n  box-sizing: border-box;\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99);\n}\n:host .lol-uikit-flyout-frame-wrapper .sub-border::before {\n  content: '';\n  position: absolute;\n}\n:host .lol-uikit-flyout-frame-wrapper .lol-uikit-dialog-frame-uikit-close-button {\n  display: none;\n}\n:host .lol-uikit-flyout-frame-wrapper.dismissable-icon .lol-uikit-dialog-frame-toast-close-button {\n  display: block;\n  height: 24px;\n  width: 24px;\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  background: url(\"/fe/lol-uikit/images/close.png\"), rgba(0,0,0,0.5);\n  cursor: pointer;\n  border-radius: 4px;\n  background-size: 75% 75%, 100% 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n/*\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\n        We might still do it later when we do a second pass.\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\n        &:lang(ar-ae) {\n          right: auto;\n          left: 8px;\n        }\n        */\n}\n:host .lol-uikit-flyout-frame-wrapper.dismissable-icon .lol-uikit-dialog-frame-toast-close-button:hover {\n  background: url(\"/fe/lol-uikit/images/close.png\"), rgba(10,20,40,0.5);\n  background-size: 75% 75%, 100% 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-flyout-frame-wrapper .close-button-container {\n  display: none;\n}\n:host .lol-uikit-flyout-frame-wrapper.close-button .close-button-container {\n  display: block;\n}\n:host .lol-uikit-flyout-frame-wrapper.close-button .close-button-container::before {\n  content: '';\n  position: absolute;\n  width: 38px;\n  height: 68px;\n  top: -20px;\n  right: -20px;\n  background-image: url(\"/fe/lol-uikit/images/frame-button-close-top-down.png\");\n  background-size: 38px 68px;\n}\n:host .lol-uikit-flyout-frame-wrapper.close-button .close-button-container lol-uikit-close-button {\n  display: block;\n  position: absolute;\n  top: -15px;\n  right: -15px;\n}\n:host .lol-uikit-flyout-frame-wrapper .caret {\n  position: absolute;\n  display: flex;\n  justify-content: center;\n  box-sizing: border-box;\n  transition: top 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease, left 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease, right 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease, bottom 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease;\n}\n:host .lol-uikit-flyout-frame-wrapper .caret::before {\n  content: '';\n  position: absolute;\n  width: 24px;\n  height: 16px;\n  background-image: url(" + d + ');\n  background-size: initial;\n  background-position: -312px;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-flyout-frame-wrapper .lol-uikit-flyout-frame {\n  position: relative;\n  display: flex;\n  -webkit-mask-image: linear-gradient(to left, #000, #000);\n  -webkit-mask-repeat: no-repeat;\n  -webkit-mask-position: center;\n  padding: 2px;\n  box-sizing: border-box;\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99), 300ms opacity linear;\n}\n:host .lol-uikit-flyout-frame-wrapper .lol-uikit-flyout-frame:lang(ar-ae) {\n  direction: rtl;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .border,\n:host .lol-uikit-flyout-frame-wrapper.bottom .border {\n  width: 100%;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.bottom .sub-border {\n  left: 8px;\n  width: calc(100% - 16px);\n  height: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .sub-border::before,\n:host .lol-uikit-flyout-frame-wrapper.bottom .sub-border::before {\n  width: calc(100% - 8px);\n  height: 0;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-horizontal.png");\n  border-width: 4px 4px 0 4px;\n  border-image-width: 4px 4px 0 4px;\n  border-image-slice: 4 4 0 4;\n  border-image-repeat: stretch;\n  border-style: solid;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .caret,\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret {\n  width: 100%;\n  height: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .caret::before,\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret::before {\n  left: calc(50% - 12px);\n  transform-origin: center center;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.bottom .lol-uikit-flyout-frame {\n  -webkit-mask-size: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .border,\n:host .lol-uikit-flyout-frame-wrapper.right .border {\n  width: 100%;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.right .sub-border {\n  width: 0;\n  height: calc(100% - 16px);\n  top: 8px;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .sub-border::before,\n:host .lol-uikit-flyout-frame-wrapper.right .sub-border::before {\n  height: calc(100% - 8px);\n  width: 0;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-vertical.png");\n  border-width: 4px 4px 4px 0;\n  border-image-width: 4px 4px 4px 0;\n  border-image-slice: 4 4 4 0;\n  border-image-repeat: stretch;\n  border-style: solid;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret,\n:host .lol-uikit-flyout-frame-wrapper.right .caret {\n  width: 0;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret::before,\n:host .lol-uikit-flyout-frame-wrapper.right .caret::before {\n  top: calc(50% + 12px);\n}\n:host .lol-uikit-flyout-frame-wrapper.left .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.right .lol-uikit-flyout-frame {\n  -webkit-mask-size: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .sub-border {\n  top: 0;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret {\n  top: 3px;\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret::before {\n  bottom: 0;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.top .sub-border {\n  bottom: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .caret {\n  bottom: 3px;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .sub-border {\n  right: -4px;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret {\n  right: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret::before {\n  left: -3px;\n  transform-origin: top left;\n  transform: rotate(270deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.right .sub-border {\n  left: -4px;\n}\n:host .lol-uikit-flyout-frame-wrapper.right .caret {\n  left: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.right .caret::before {\n  right: -3px;\n  transform-origin: top right;\n  transform: rotate(90deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation .caret::before {\n  background-position: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.top .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.bottom .border {\n  width: 50%;\n  left: 25%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.top .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.bottom .sub-border {\n  width: 30%;\n  left: calc(33% + 8px);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.top .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.animation.bottom .lol-uikit-flyout-frame {\n  -webkit-mask-size: 50% 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.left .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.right .border {\n  height: 50%;\n  top: 25%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.left .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.right .sub-border {\n  height: 30%;\n  top: calc(33% + 8px);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.left .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.animation.right .lol-uikit-flyout-frame {\n  opacity: 0;\n  -webkit-mask-size: 100% 50%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle .border {\n  width: 100%;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle .caret::before {\n  animation: caretIntro 433ms steps(13, end) forwards;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle .lol-uikit-flyout-frame {\n  opacity: 1;\n  -webkit-mask-size: 100% 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom {\n  top: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top border-glow,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom border-glow {\n  left: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom .sub-border {\n  width: calc(100% - 16px);\n  left: 8px;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right {\n  left: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left border-glow,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right border-glow {\n  top: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right .sub-border {\n  height: calc(100% - 16px);\n  top: 8px;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .lol-uikit-flyout-frame {\n  transition: 133ms all cubic-bezier(1, 0, 1, 1);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .caret::before {\n  background-image: url(' + c + ");\n  animation: caretOutro 133ms steps(4, end) forwards;\n  transition: background 0;\n}\n@-moz-keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@-webkit-keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@-o-keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@-moz-keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n@-webkit-keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n@-o-keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n@keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n", "", {
+                c = i(s);
+            l.push([e.id, ":host .lol-uikit-flyout-frame-wrapper.right .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to right, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to left, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to top, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to bottom, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host {\n  pointer-events: all;\n}\n:host .lol-uikit-flyout-frame-wrapper {\n  position: relative;\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99);\n}\n:host .lol-uikit-flyout-frame-wrapper .border {\n  position: absolute;\n  box-sizing: border-box;\n  background-color: #010a13;\n  box-shadow: 0 0 0 1px rgba(1,10,19,0.48);\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99);\n}\n:host .lol-uikit-flyout-frame-wrapper .border::before {\n  content: '';\n  position: absolute;\n  width: calc(100% + 4px);\n  height: calc(100% + 4px);\n  top: -2px;\n  left: -2px;\n  box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);\n  pointer-events: none;\n}\n:host .lol-uikit-flyout-frame-wrapper .sub-border {\n  position: absolute;\n  display: flex;\n  box-sizing: border-box;\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99);\n}\n:host .lol-uikit-flyout-frame-wrapper .sub-border::before {\n  content: '';\n  position: absolute;\n}\n:host .lol-uikit-flyout-frame-wrapper .lol-uikit-dialog-frame-uikit-close-button {\n  display: none;\n}\n:host .lol-uikit-flyout-frame-wrapper.dismissable-icon .lol-uikit-dialog-frame-toast-close-button {\n  display: block;\n  height: 24px;\n  width: 24px;\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  background: url(\"/fe/lol-uikit/images/close.png\"), rgba(0,0,0,0.5);\n  cursor: pointer;\n  border-radius: 4px;\n  background-size: 75% 75%, 100% 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n/*\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\n        We might still do it later when we do a second pass.\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\n        &:lang(ar-ae) {\n          right: auto;\n          left: 8px;\n        }\n        */\n}\n:host .lol-uikit-flyout-frame-wrapper.dismissable-icon .lol-uikit-dialog-frame-toast-close-button:hover {\n  background: url(\"/fe/lol-uikit/images/close.png\"), rgba(10,20,40,0.5);\n  background-size: 75% 75%, 100% 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-flyout-frame-wrapper .close-button-container {\n  display: none;\n}\n:host .lol-uikit-flyout-frame-wrapper.close-button .close-button-container {\n  display: block;\n}\n:host .lol-uikit-flyout-frame-wrapper.close-button .close-button-container::before {\n  content: '';\n  position: absolute;\n  width: 38px;\n  height: 68px;\n  top: -20px;\n  right: -20px;\n  background-image: url(\"/fe/lol-uikit/images/frame-button-close-top-down.png\");\n  background-size: 38px 68px;\n}\n:host .lol-uikit-flyout-frame-wrapper.close-button .close-button-container lol-uikit-close-button {\n  display: block;\n  position: absolute;\n  top: -15px;\n  right: -15px;\n}\n:host .lol-uikit-flyout-frame-wrapper .caret {\n  position: absolute;\n  display: flex;\n  justify-content: center;\n  box-sizing: border-box;\n  transition: top 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease, left 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease, right 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease, bottom 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease;\n}\n:host .lol-uikit-flyout-frame-wrapper .caret::before {\n  content: '';\n  position: absolute;\n  width: 24px;\n  height: 16px;\n  background-image: url(" + d + ');\n  background-size: initial;\n  background-position: -312px;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-flyout-frame-wrapper .lol-uikit-flyout-frame {\n  position: relative;\n  display: flex;\n  -webkit-mask-image: linear-gradient(to left, #000, #000);\n  -webkit-mask-repeat: no-repeat;\n  -webkit-mask-position: center;\n  padding: 2px;\n  box-sizing: border-box;\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99), 300ms opacity linear;\n}\n:host .lol-uikit-flyout-frame-wrapper .lol-uikit-flyout-frame:lang(ar-ae) {\n  direction: rtl;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .border,\n:host .lol-uikit-flyout-frame-wrapper.bottom .border {\n  width: 100%;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.bottom .sub-border {\n  left: 8px;\n  width: calc(100% - 16px);\n  height: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .sub-border::before,\n:host .lol-uikit-flyout-frame-wrapper.bottom .sub-border::before {\n  width: calc(100% - 8px);\n  height: 0;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-horizontal.png");\n  border-width: 4px 4px 0 4px;\n  border-image-width: 4px 4px 0 4px;\n  border-image-slice: 4 4 0 4;\n  border-image-repeat: stretch;\n  border-style: solid;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .caret,\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret {\n  width: 100%;\n  height: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .caret::before,\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret::before {\n  left: calc(50% - 12px);\n  transform-origin: center center;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.bottom .lol-uikit-flyout-frame {\n  -webkit-mask-size: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .border,\n:host .lol-uikit-flyout-frame-wrapper.right .border {\n  width: 100%;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.right .sub-border {\n  width: 0;\n  height: calc(100% - 16px);\n  top: 8px;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .sub-border::before,\n:host .lol-uikit-flyout-frame-wrapper.right .sub-border::before {\n  height: calc(100% - 8px);\n  width: 0;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-vertical.png");\n  border-width: 4px 4px 4px 0;\n  border-image-width: 4px 4px 4px 0;\n  border-image-slice: 4 4 4 0;\n  border-image-repeat: stretch;\n  border-style: solid;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret,\n:host .lol-uikit-flyout-frame-wrapper.right .caret {\n  width: 0;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret::before,\n:host .lol-uikit-flyout-frame-wrapper.right .caret::before {\n  top: calc(50% + 12px);\n}\n:host .lol-uikit-flyout-frame-wrapper.left .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.right .lol-uikit-flyout-frame {\n  -webkit-mask-size: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .sub-border {\n  top: 0;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret {\n  top: 3px;\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret::before {\n  bottom: 0;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.top .sub-border {\n  bottom: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .caret {\n  bottom: 3px;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .sub-border {\n  right: -4px;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret {\n  right: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret::before {\n  left: -3px;\n  transform-origin: top left;\n  transform: rotate(270deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.right .sub-border {\n  left: -4px;\n}\n:host .lol-uikit-flyout-frame-wrapper.right .caret {\n  left: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.right .caret::before {\n  right: -3px;\n  transform-origin: top right;\n  transform: rotate(90deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation .caret::before {\n  background-position: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.top .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.bottom .border {\n  width: 50%;\n  left: 25%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.top .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.bottom .sub-border {\n  width: 30%;\n  left: calc(33% + 8px);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.top .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.animation.bottom .lol-uikit-flyout-frame {\n  -webkit-mask-size: 50% 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.left .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.right .border {\n  height: 50%;\n  top: 25%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.left .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.right .sub-border {\n  height: 30%;\n  top: calc(33% + 8px);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.left .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.animation.right .lol-uikit-flyout-frame {\n  opacity: 0;\n  -webkit-mask-size: 100% 50%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle .border {\n  width: 100%;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle .caret::before {\n  animation: caretIntro 433ms steps(13, end) forwards;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle .lol-uikit-flyout-frame {\n  opacity: 1;\n  -webkit-mask-size: 100% 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom {\n  top: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top border-glow,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom border-glow {\n  left: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom .sub-border {\n  width: calc(100% - 16px);\n  left: 8px;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right {\n  left: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left border-glow,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right border-glow {\n  top: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right .sub-border {\n  height: calc(100% - 16px);\n  top: 8px;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .lol-uikit-flyout-frame {\n  transition: 133ms all cubic-bezier(1, 0, 1, 1);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .caret::before {\n  background-image: url(' + c + ");\n  animation: caretOutro 133ms steps(4, end) forwards;\n  transition: background 0;\n}\n@-moz-keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@-webkit-keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@-o-keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@-moz-keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n@-webkit-keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n@-o-keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n@keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/gradient-palette.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/flyout-frame/component-style.styl"],
                 names: [],
                 mappings: "AA6JA;EACE,6BAAQ;EACR,uFAAc;AC5JhB;ADmKA;EACE,6BAAQ;EACR,sFAAc;ACjKhB;ADwKA;EACE,6BAAQ;EACR,qFAAc;ACtKhB;AD6KA;EACE,6BAAQ;EACR,wFAAc;AC3KhB;AAIA;EACE,mBAAgB;AAFlB;AAIE;EACE,kBAAU;EACV,0DAAY;AAFhB;AAII;EACE,kBAAU;EACV,sBAAY;EACZ,yBAAkB;EAClB,wCAAY;EACZ,0DAAY;AAFlB;AAIM;EACE,WAAS;EACT,kBAAU;EACV,uBAAO;EACP,wBAAQ;EACR,SAAK;EACL,UAAM;EACN,wCAAY;EACZ,oBAAgB;AAFxB;AAMI;EACE,kBAAU;EACV,aAAS;EACT,sBAAY;EACZ,0DAAY;AAJlB;AAMM;EACE,WAAS;EACT,kBAAU;AAJlB;AAQI;EACE,aAAS;AANf;AAWM;EACE,cAAS;EACT,YAAQ;EACR,WAAO;EACP,kBAAU;EACV,QAAK;EACL,UAAO;EACP,kEAA+C;EAC/C,eAAQ;EACR,kBAAe;EACf,mCAAwB;EACxB,2BAAqB;EACrB,4BAAmB;AACnB;;;;;;;;SAFC;AACT;AAWQ;EACE,qEAA+C;EACvC,mCAAwB;EAClC,2BAAqB;EACrB,4BAAmB;AAT3B;AAcI;EACE,aAAS;AAZf;AAgBI;EACE,cAAS;AAdf;AAgBM;EACE,WAAS;EACT,kBAAU;EACV,WAAO;EACP,YAAQ;EACR,UAAK;EACL,YAAO;EACP,6EAA0E;EAC1E,0BAAiB;AAdzB;AAiBM;EACE,cAAS;EACT,kBAAU;EACV,UAAK;EACL,YAAO;AAff;AAmBI;EACE,kBAAU;EACV,aAAS;EACT,uBAAiB;EACjB,sBAAY;EACZ,oPAAoC;AAjB1C;AAsBM;EACE,WAAS;EACT,kBAAU;EACV,WAAO;EACP,YAAQ;EACR,yDAAqD;EACrD,wBAAiB;EACjB,2BAAqB;EACrB,4BAAmB;AApB3B;AAwBI;EACE,kBAAU;EACV,aAAS;EACT,wDAAoB;EACpB,8BAAqB;EACrB,6BAAuB;EACvB,YAAS;EACT,sBAAY;EACZ,gFAA2B;AAtBjC;AAuBM;EACE,cAAW;AArBnB;AA0BM;;EACE,WAAO;EACP,YAAQ;AAvBhB;AA0BM;;EACE,SAAM;EACN,wBAAO;EACP,SAAQ;AAvBhB;AAyBQ;;EACE,uBAAO;EACP,SAAQ;EACR,kFAA+E;EAC/E,2BAAc;EACd,iCAAoB;EACpB,2BAAoB;EACpB,4BAAqB;EACrB,mBAAc;AAtBxB;AA0BM;;EACE,WAAO;EACP,SAAQ;AAvBhB;AAyBQ;;EACE,sBAAM;EACN,+BAAkB;AAtB5B;AA0BM;;EACE,uBAAmB;AAvB3B;AA4BM;;EACE,WAAO;EACP,YAAQ;AAzBhB;AA4BM;;EACE,QAAO;EACP,yBAAQ;EACR,QAAK;AAzBb;AA2BQ;;EACE,wBAAQ;EACR,QAAO;EACP,gFAA6E;EAC7E,2BAAc;EACd,iCAAoB;EACpB,2BAAoB;EACpB,4BAAqB;EACrB,mBAAc;AAxBxB;AA4BM;;EACE,QAAO;EACP,YAAQ;AAzBhB;AA2BQ;;EACE,qBAAK;AAxBf;AA4BM;;EACE,uBAAmB;AAzB3B;AAkCM;EACE,MAAK;EACL,yBAAW;AAhCnB;AAmCM;EACE,QAAK;AAjCb;AAmCQ;EACE,SAAQ;EACR,yBAAW;AAjCrB;AA2CM;EACE,SAAQ;AAzChB;AA4CM;EACE,WAAQ;AA1ChB;AAmDM;EACE,WAAO;EACP,yBAAW;AAjDnB;AAoDM;EACE,QAAO;AAlDf;AAoDQ;EACE,UAAM;EACN,0BAAkB;EAClB,yBAAW;AAlDrB;AA4DM;EACE,UAAM;AA1Dd;AA6DM;EACE,OAAM;AA3Dd;AA6DQ;EACE,WAAO;EACP,2BAAkB;EAClB,wBAAW;AA3DrB;AAkEQ;EACE,sBAAqB;AAhE/B;AAqEQ;;EACE,UAAO;EACP,SAAM;AAlEhB;AAqEQ;;EACE,UAAO;EACP,qBAAM;AAlEhB;AAqEQ;;EACE,2BAAmB;AAlE7B;AAuEQ;;EACE,WAAQ;EACR,QAAK;AApEf;AAuEQ;;EACE,WAAQ;EACR,oBAAK;AApEf;AAuEQ;;EACE,UAAS;EACT,2BAAmB;AApE7B;AAyEQ;EACE,WAAO;EACP,YAAQ;AAvElB;AA2EU;EACE,mDAAW;AAzEvB;AA6EQ;EACE,UAAS;EACT,4BAAmB;AA3E7B;AA8EQ;;EACE,MAAK;AA3Ef;AA6EU;;;;EACE,OAAM;AAxElB;AA2EU;;EACE,wBAAO;EACP,SAAM;AAxElB;AA4EQ;;EACE,OAAM;AAzEhB;AA2EU;;;;EACE,MAAK;AAtEjB;AAyEU;;EACE,yBAAQ;EACR,QAAK;AAtEjB;AA4EQ;;;EACE,8CAAY;AAxEtB;AA4EU;EACE,yDAAqD;EACrD,kDAAW;EACX,wBAAY;AA1ExB;AA/TA;EACE;IAAM,sBAAqB;EAkU3B;EAjUA;IAAI,2BAAqB;EAoUzB;AACF;AAvUA;EACE;IAAM,sBAAqB;EA0U3B;EAzUA;IAAI,2BAAqB;EA4UzB;AACF;AA/UA;EACE;IAAM,sBAAqB;EAkV3B;EAjVA;IAAI,2BAAqB;EAoVzB;AACF;AAvVA;EACE;IAAM,sBAAqB;EA0V3B;EAzVA;IAAI,2BAAqB;EA4VzB;AACF;AA1VA;EACE;IAAM,sBAAqB;EA6V3B;EA5VA;IAAI,0BAAqB;EA+VzB;AACF;AAlWA;EACE;IAAM,sBAAqB;EAqW3B;EApWA;IAAI,0BAAqB;EAuWzB;AACF;AA1WA;EACE;IAAM,sBAAqB;EA6W3B;EA5WA;IAAI,0BAAqB;EA+WzB;AACF;AAlXA;EACE;IAAM,sBAAqB;EAqX3B;EApXA;IAAI,0BAAqB;EAuXzB;AACF",
                 sourcesContent: ["// Base on https://drive.google.com/a/riotgames.com/file/d/0BxsY3wbUNTH1b2k0WmxTUXotbGM\r\n@import 'color-palette';\r\n\r\n$gradient_palette_button_frame = linear-gradient(to top,\r\n  $colors_dallas 0%,\r\n  $colors_luxorGold 23%,\r\n  $colors_alpine 93%,\r\n  $color_palette_gold3 100%);\r\n\r\n$gradient_palette_button_hover = linear-gradient(to top,\r\n  $color_palette_gold4,\r\n  $color_palette_gold1);\r\n\r\n$gradient_palette_button_click = linear-gradient(to top,\r\n  $colors_dallas,\r\n  $color_palette_gold6);\r\n\r\n$gradient_palette_button_blue = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $color_palette_blue3 44%,\r\n  $color_palette_blue3 93%,\r\n  $color_palette_blue2 100%);\r\n\r\n$gradient_palette_button_blue_hover = linear-gradient(to top,\r\n  $colors_bostonBlue 0%,\r\n  $color_palette_blue2 49%,\r\n  $color_palette_blue1 100%);\r\n\r\n$gradient_palette_button_blue_click = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $colors_orient 83%,\r\n  $colors_orient 100%);\r\n\r\n$gradient-palette_button-backing-hover = linear-gradient(to top,\r\n  rgba($colors_finch, 0.5),\r\n  rgba($colors_shark, 0.5));\r\n\r\n$gradient_palette_button_toggle = linear-gradient(to top,\r\n  $color_palette_gold3 0%,\r\n  $color_palette_gold4 44%,\r\n  rgb(160,123,50) 59%,\r\n  $color_palette_gold5 100%);\r\n\r\n$gradient_palette_button_toggle_hover = linear-gradient(to top,\r\n  $color_palette_gold1 0%,\r\n  $color_palette_gold4 100%);\r\n\r\n$gradient_palette_timer_bar = linear-gradient(to right,\r\n  $colors_tiber 0%,\r\n  $colors_bondiBlue 75%,\r\n  $colors_robinsEggBlue 90%,\r\n  $colors_scandal 99%,\r\n  $colors_scandal 100%);\r\n\r\n$gradient_palette_fade_out = linear-gradient(to top,\r\n  $color_palette_almostBlack 0%,\r\n  rgba($color_palette_almostBlack, 0) 92%);\r\n\r\n$gradient_palette_button_primary_purple_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.3) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.8) 0%,\r\n  rgba(232, 216, 227, 0.8) 0.01%,\r\n  rgba(237, 153, 239, 0.8) 100%);\r\n\r\n$gradient_palette_button_purple_hover_border = linear-gradient(to bottom,\r\n  rgb(245, 155, 247) 0%,\r\n  rgb(232, 216, 227) 0.01%,\r\n  rgb(237, 153, 239) 100%);\r\n\r\n$gradient_palette_button_purple_hover_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.5) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.2) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.4) 0%,\r\n  rgba(232, 216, 227, 0.4) 0.01%,\r\n  rgba(237, 153, 239, 0.4) 100%);\r\n\r\n$gradient-palette_button-primary-bg = linear-gradient(to bottom,\r\n  rgb(90,64,31) 0%,\r\n  rgb(51,39,23) 100%);\r\n\r\n$gradient-palette_button-primary-hover-bg = linear-gradient(to bottom,\r\n  rgb(96,69,34) 0%,\r\n  rgb(132,103,69) 100%);\r\n\r\n$gradient-palette_button-primary-down-bg = linear-gradient(to bottom,\r\n  rgb(54,39,21) 0%,\r\n  rgb(23,19,14) 100%);\r\n\r\n$gradient-palette_button-gold-bg = linear-gradient(to bottom,\r\n  rgba(30,35,42,1) 0%,\r\n  rgba(30,35,42,1) 40%,\r\n  rgba(118,97,51,.8) 140%);\r\n\r\n$gradient-palette_button-gold-border = linear-gradient(to top,\r\n  rgb(120,91,40) 0%,\r\n  rgb(200,156,60) 55%,\r\n  rgb(200,163,85) 71%,\r\n  rgb(200,170,110) 100%);\r\n\r\n$gradient-palette_button-gold-hover-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%,\r\n  rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-gold-down-border = linear-gradient(to bottom,\r\n  rgb(70,56,23) 0%,\r\n  rgb(105,79,39) 100%);\r\n\r\n$gradient-palette_button-gold-click-border-white = linear-gradient(to top,\r\n  rgb(255,255,255) 0%,\r\n  rgb(255,255,255) 33%,\r\n  rgb(255,255,255) 66%,\r\n  rgb(255,255,255) 100%);\r\n\r\n$gradient-palette_button-gold-click-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%, rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-sheen-effect = linear-gradient(to bottom,\r\n  rgba(255,255,255,0) 0%,\r\n  rgba(255,255,255,.15) 92%,\r\n  rgba(255,255,255,0) 100%);\r\n\r\n$gradient-palette_button-frame-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_frame 1;\r\n}\r\n\r\n$gradient-palette_button-hover-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_hover 1;\r\n}\r\n\r\n$gradient-palette_button-click-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_click 1;\r\n}\r\n\r\n$gradient-palette_button-toggle-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_toggle 1;\r\n}\r\n\r\n$gradient-dialog-border-right {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to right,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-left {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to left,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}", "@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette.styl';\r\n@require '../../css/shared.styl';\r\n\r\n$transitionRate = 250ms all cubic-bezier(.02,.85,.08,.99);\r\n\r\n\r\n@keyframes caretIntro {\r\n  from {background-position: 0;}\r\n  to {background-position: -312px;}\r\n}\r\n\r\n@keyframes caretOutro {\r\n  from {background-position: 0;}\r\n  to {background-position: -96px;}\r\n}\r\n\r\n\r\n:host {\r\n  pointer-events: all;\r\n\r\n  .lol-uikit-flyout-frame-wrapper {\r\n    position: relative;\r\n    transition: $transitionRate;\r\n\r\n    .border {\r\n      position: absolute;\r\n      box-sizing: border-box;\r\n      background-color: $color_palette_almostBlack;\r\n      box-shadow: 0 0 0 1px rgba(1,10,19,0.48);\r\n      transition: $transitionRate;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n        width: calc(100% + 4px);\r\n        height: calc(100% + 4px);\r\n        top: -2px;\r\n        left: -2px;\r\n        box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);\r\n        pointer-events: none;\r\n      }\r\n    }\r\n\r\n    .sub-border {\r\n      position: absolute;\r\n      display: flex;\r\n      box-sizing: border-box;\r\n      transition: $transitionRate;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n      }\r\n    }\r\n\r\n    .lol-uikit-dialog-frame-uikit-close-button {\r\n      display: none;\r\n    }\r\n\r\n     // Show the x-icon close button if we have the class dismissable-icon for toasts\r\n    &.dismissable-icon {\r\n      .lol-uikit-dialog-frame-toast-close-button {\r\n        display: block;\r\n        height: 24px;\r\n        width: 24px;\r\n        position: absolute;\r\n        top: 8px;\r\n        right: 8px;\r\n        background: url($base-image-path + 'close.png'), rgba(0, 0, 0, .5);\r\n        cursor: pointer;\r\n        border-radius: 4px;\r\n        background-size: 75% 75%, 100% 100%;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        /*\r\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\r\n        We might still do it later when we do a second pass.\r\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\r\n        &:lang(ar-ae) {\r\n          right: auto;\r\n          left: 8px;\r\n        }\r\n        */\r\n\r\n        &:hover {\r\n          background: url($base-image-path + 'close.png'), rgba($color_palette_blue6, .5);\r\n                  background-size: 75% 75%, 100% 100%;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        }\r\n      }\r\n    }\r\n\r\n    .close-button-container {\r\n      display: none;\r\n    }\r\n\r\n    // Show the close button if we have the class close-button.\r\n    &.close-button .close-button-container {\r\n      display: block;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n        width: 38px;\r\n        height: 68px;\r\n        top: -20px;\r\n        right: -20px;\r\n        background-image: url($base-image-path + 'frame-button-close-top-down.png');\r\n        background-size: 38px 68px;\r\n      }\r\n\r\n      lol-uikit-close-button {\r\n        display: block;\r\n        position: absolute;\r\n        top: -15px;\r\n        right: -15px;\r\n      }\r\n    }\r\n\r\n    .caret {\r\n      position: absolute;\r\n      display: flex;\r\n      justify-content: center;\r\n      box-sizing: border-box;\r\n      transition: top $transitionRate ease,\r\n                  left $transitionRate ease,\r\n                  right $transitionRate ease,\r\n                  bottom $transitionRate ease;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n        width: 24px;\r\n        height: 16px;\r\n        background-image: url('./images/pointer-intro-01.png');\r\n        background-size: initial;\r\n        background-position: -312px;\r\n        background-repeat: no-repeat;\r\n      }\r\n    }\r\n\r\n    .lol-uikit-flyout-frame {\r\n      position: relative;\r\n      display: flex;\r\n      -webkit-mask-image: linear-gradient(to left, #000, #000);\r\n      -webkit-mask-repeat: no-repeat;\r\n      -webkit-mask-position: center;\r\n      padding: 2px;\r\n      box-sizing: border-box;\r\n      transition: $transitionRate, 300ms opacity linear;\r\n      &:lang(ar-ae) {\r\n        direction: rtl;\r\n      }\r\n    }\r\n\r\n    &.top, &.bottom {\r\n      .border {\r\n        width: 100%;\r\n        height: 100%;\r\n      }\r\n\r\n      .sub-border {\r\n        left: 8px;\r\n        width: calc(100% - 16px);\r\n        height: 0;\r\n\r\n        &::before {\r\n          width: calc(100% - 8px);\r\n          height: 0;\r\n          border-image-source: url($base-image-path + 'sub-border-primary-horizontal.png');\r\n          border-width: 4px 4px 0 4px;\r\n          border-image-width: 4px 4px 0 4px;\r\n          border-image-slice: 4 4 0 4;\r\n          border-image-repeat: stretch;\r\n          border-style: solid;\r\n        }\r\n      }\r\n\r\n      .caret {\r\n        width: 100%;\r\n        height: 0;\r\n\r\n        &::before {\r\n          left: calc(50% - 12px);\r\n          transform-origin: center center;\r\n        }\r\n      }\r\n\r\n      .lol-uikit-flyout-frame {\r\n        -webkit-mask-size: 100%;\r\n      }\r\n    }\r\n\r\n    &.left, &.right {\r\n      .border {\r\n        width: 100%;\r\n        height: 100%;\r\n      }\r\n\r\n      .sub-border {\r\n        width: 0;\r\n        height: calc(100% - 16px);\r\n        top: 8px;\r\n\r\n        &::before {\r\n          height: calc(100% - 8px);\r\n          width: 0;\r\n          border-image-source: url($base-image-path + 'sub-border-primary-vertical.png');\r\n          border-width: 4px 4px 4px 0;\r\n          border-image-width: 4px 4px 4px 0;\r\n          border-image-slice: 4 4 4 0;\r\n          border-image-repeat: stretch;\r\n          border-style: solid;\r\n        }\r\n      }\r\n\r\n      .caret {\r\n        width: 0;\r\n        height: 100%;\r\n\r\n        &::before {\r\n          top: calc(50% + 12px);\r\n        }\r\n      }\r\n\r\n      .lol-uikit-flyout-frame {\r\n        -webkit-mask-size: 100%;\r\n      }\r\n    }\r\n\r\n    &.bottom {\r\n      .border {\r\n        @extends $gradient-dialog-border-bottom;\r\n      }\r\n\r\n      .sub-border {\r\n        top: 0;\r\n        transform: rotate(180deg);\r\n      }\r\n\r\n      .caret {\r\n        top: 3px;\r\n\r\n        &::before {\r\n          bottom: 0;\r\n          transform: rotate(180deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.top {\r\n      .border {\r\n        @extends $gradient-dialog-border-top;\r\n      }\r\n\r\n      .sub-border {\r\n        bottom: 0;\r\n      }\r\n\r\n      .caret {\r\n        bottom: 3px;\r\n      }\r\n    }\r\n\r\n    &.left {\r\n      .border {\r\n        @extends $gradient-dialog-border-left;\r\n      }\r\n\r\n      .sub-border {\r\n        right: -4px;\r\n        transform: rotate(180deg);\r\n      }\r\n\r\n      .caret {\r\n        right: 0;\r\n\r\n        &::before {\r\n          left: -3px;\r\n          transform-origin: top left;\r\n          transform: rotate(270deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.right {\r\n      .border {\r\n        @extends $gradient-dialog-border-right;\r\n      }\r\n\r\n      .sub-border {\r\n        left: -4px;\r\n      }\r\n\r\n      .caret {\r\n        left: 0;\r\n\r\n        &::before {\r\n          right: -3px;\r\n          transform-origin: top right;\r\n          transform: rotate(90deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.animation {\r\n      .caret {\r\n        &::before {\r\n          background-position: 0;\r\n        }\r\n      }\r\n\r\n      &.top, &.bottom {\r\n        .border {\r\n          width: 50%;\r\n          left: 25%;\r\n        }\r\n\r\n        .sub-border {\r\n          width: 30%;\r\n          left: calc(33% + 8px);\r\n        }\r\n\r\n        .lol-uikit-flyout-frame {\r\n          -webkit-mask-size: 50% 100%;\r\n        }\r\n      }\r\n\r\n      &.left, &.right {\r\n        .border {\r\n          height: 50%;\r\n          top: 25%;\r\n        }\r\n\r\n        .sub-border {\r\n          height: 30%;\r\n          top: calc(33% + 8px);\r\n        }\r\n\r\n        .lol-uikit-flyout-frame {\r\n          opacity: 0;\r\n          -webkit-mask-size: 100% 50%;\r\n        }\r\n      }\r\n\r\n      &.idle {\r\n        .border {\r\n          width: 100%;\r\n          height: 100%;\r\n        }\r\n\r\n        .caret {\r\n          &::before {\r\n            animation: caretIntro 433ms steps(13, end) forwards;\r\n          }\r\n        }\r\n\r\n        .lol-uikit-flyout-frame {\r\n          opacity: 1;\r\n          -webkit-mask-size: 100% 100%;\r\n        }\r\n\r\n        &.top, &.bottom {\r\n          top: 0;\r\n\r\n          .border, border-glow {\r\n            left: 0;\r\n          }\r\n\r\n          .sub-border {\r\n            width: calc(100% - 16px);\r\n            left: 8px;\r\n          }\r\n        }\r\n\r\n        &.left, &.right {\r\n          left: 0;\r\n\r\n          .border, border-glow {\r\n            top: 0;\r\n          }\r\n\r\n          .sub-border {\r\n            height: calc(100% - 16px);\r\n            top: 8px;\r\n          }\r\n        }\r\n      }\r\n\r\n      &.closing {\r\n        .border, .sub-border, .lol-uikit-flyout-frame {\r\n          transition: 133ms all cubic-bezier(1, 0, 1, 1);\r\n        }\r\n\r\n        .caret {\r\n          &::before {\r\n            background-image: url('./images/pointer-outro-01.png');\r\n            animation: caretOutro 133ms steps(4, end) forwards;\r\n            transition: background 0;\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n"],
                 sourceRoot: ""
-            }]), e.exports = s
+            }]), e.exports = l
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "pointer-intro-01.png"
@@ -6546,25 +6546,25 @@
                 }
             }
             a.tagName = "lol-uikit-framed-dropdown";
-            var l = a;
-            t.default = l
+            var s = a;
+            t.default = s
         }, (e, t, n) => {
             var r = n(26),
                 o = n(27),
                 i = n(91),
                 a = n(107),
-                l = n(108),
-                s = o(r),
+                s = n(108),
+                l = o(r),
                 d = i(a),
-                c = i(l);
-            s.push([e.id, ':host .ui-dropdown {\n  font-family: var(--font-body);\n}\n:host .ui-dropdown {\n  -webkit-user-select: none;\n}\n:host .ui-dropdown {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .ui-dropdown {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host .ui-dropdown:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .ui-dropdown:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .ui-dropdown dt.ui-dropdown-current {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #695625 0%, #a9852d 23%, #b88d35 93%, #c8aa6e 100%) 1;\n}\n:host(:not(.active):hover) dt.ui-dropdown-current,\n:host(:not(.active):focus) dt.ui-dropdown-current {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #c89b3c, #f0e6d2) 1;\n}\n:host .ui-dropdown dd.ui-dropdown-options-container {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #695625, #463714) 1;\n}\n:host {\n  --framed-dropdown-scrollable-max-height: 150px;\n  --framed-dropdown-current-content-padding: 0 20px 0 7px;\n  --framed-dropdown-current-content-padding-rtl: 0 7px 0 20px;\n  --framed-dropdown-opens-upward-height: auto;\n  --framed-dropdown-options-container-width: 100%;\n  --framed-dropdown-direction-rtl: rtl;\n}\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\n  display: none;\n}\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\n  display: none;\n}\n:host .ui-dropdown-current-content,\n:host .ui-dropdown-current-content.shadow {\n  width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  padding: var(--framed-dropdown-current-content-padding);\n}\n:host .ui-dropdown-current-content .ui-dropdown-option-only,\n:host .ui-dropdown-current-content.shadow .ui-dropdown-option-only {\n  display: none;\n}\n:host .ui-dropdown-current-content:lang(ar-ae),\n:host .ui-dropdown-current-content.shadow:lang(ar-ae) {\n  padding: var(--framed-dropdown-current-content-padding-rtl);\n}\n:host {\n  display: inline-flex;\n  flex-direction: column;\n  width: 100%;\n  outline: 0;\n}\n:host .ui-dropdown {\n  display: inline-flex;\n  flex-direction: column;\n  position: relative;\n  user-select: none;\n  margin: 0;\n  cursor: pointer;\n  width: 100%;\n  height: 100%;\n}\n:host .ui-dropdown:lang(ar-ae) {\n  direction: var(--framed-dropdown-direction-rtl);\n  text-align: right;\n}\n:host .ui-dropdown dt.ui-dropdown-current {\n  display: flex;\n  box-sizing: border-box;\n  padding-bottom: 10px;\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 7px 5px;\n  align-items: center;\n  background-color: rgba(30,35,40,0.5);\n}\n:host .ui-dropdown dt.ui-dropdown-current::after {\n  background: url(' + d + ") center no-repeat;\n  width: 13px;\n  height: 18px;\n  position: absolute;\n  right: 8px;\n  top: 50%;\n  transform: translate(0, -50%);\n  content: '';\n}\n:host .ui-dropdown dt.ui-dropdown-current:lang(ar-ae)::after {\n  right: auto;\n  left: 8px;\n}\n:host .ui-dropdown dd.ui-dropdown-options-container {\n  margin: 0;\n  opacity: 0;\n  display: flex;\n  padding: 0;\n  box-sizing: border-box;\n  width: var(--framed-dropdown-options-container-width);\n  position: absolute;\n  top: 100%;\n  max-height: 0;\n  transition: max-height 400ms;\n  z-index: 2;\n  overflow: hidden;\n  visibility: hidden;\n  background-color: rgba(30,35,40,0.5);\n}\n:host .ui-dropdown dd.ui-dropdown-options-container ul.ui-dropdown-options {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  min-width: 100%;\n  background: #010a13;\n  height: 100%;\n}\n:host .ui-dropdown dd.ui-dropdown-options-container ul.ui-dropdown-options lol-uikit-scrollable {\n  max-height: var(--framed-dropdown-scrollable-max-height);\n}\n:host .ui-dropdown.opens-upward {\n  height: var(--framed-dropdown-opens-upward-height);\n}\n:host .ui-dropdown.opens-upward dd.ui-dropdown-options-container {\n  bottom: 100%;\n  top: auto;\n  margin-top: 1px;\n}\n:host(.disabled) {\n  cursor: default;\n  pointer-events: none;\n}\n:host(.disabled) .ui-dropdown dt.ui-dropdown-current {\n  border: thin solid #3c3c41;\n  color: #3c3c41;\n}\n:host(.disabled) .ui-dropdown dt.ui-dropdown-current::after {\n  -webkit-filter: grayscale(100%);\n  opacity: 0.35;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current {\n  border: thin solid #463714;\n  color: #463714;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current::after {\n  background-image: url(" + c + ");\n}\n:host(.active) .ui-dropdown dd.ui-dropdown-options-container {\n  opacity: 1;\n  max-height: 400px;\n  transition: max-height 400ms;\n  visibility: visible;\n}\n:host(:not(.active):hover) dt.ui-dropdown-current,\n:host(:not(.active):focus) dt.ui-dropdown-current {\n  background: linear-gradient(to top, rgba(88,83,66,0.5), rgba(30,35,40,0.5));\n}\n", "", {
+                c = i(s);
+            l.push([e.id, ':host .ui-dropdown {\n  font-family: var(--font-body);\n}\n:host .ui-dropdown {\n  -webkit-user-select: none;\n}\n:host .ui-dropdown {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .ui-dropdown {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host .ui-dropdown:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .ui-dropdown:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .ui-dropdown dt.ui-dropdown-current {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #695625 0%, #a9852d 23%, #b88d35 93%, #c8aa6e 100%) 1;\n}\n:host(:not(.active):hover) dt.ui-dropdown-current,\n:host(:not(.active):focus) dt.ui-dropdown-current {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #c89b3c, #f0e6d2) 1;\n}\n:host .ui-dropdown dd.ui-dropdown-options-container {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #695625, #463714) 1;\n}\n:host {\n  --framed-dropdown-scrollable-max-height: 150px;\n  --framed-dropdown-current-content-padding: 0 20px 0 7px;\n  --framed-dropdown-current-content-padding-rtl: 0 7px 0 20px;\n  --framed-dropdown-opens-upward-height: auto;\n  --framed-dropdown-options-container-width: 100%;\n  --framed-dropdown-direction-rtl: rtl;\n}\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\n  display: none;\n}\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\n  display: none;\n}\n:host .ui-dropdown-current-content,\n:host .ui-dropdown-current-content.shadow {\n  width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  padding: var(--framed-dropdown-current-content-padding);\n}\n:host .ui-dropdown-current-content .ui-dropdown-option-only,\n:host .ui-dropdown-current-content.shadow .ui-dropdown-option-only {\n  display: none;\n}\n:host .ui-dropdown-current-content:lang(ar-ae),\n:host .ui-dropdown-current-content.shadow:lang(ar-ae) {\n  padding: var(--framed-dropdown-current-content-padding-rtl);\n}\n:host {\n  display: inline-flex;\n  flex-direction: column;\n  width: 100%;\n  outline: 0;\n}\n:host .ui-dropdown {\n  display: inline-flex;\n  flex-direction: column;\n  position: relative;\n  user-select: none;\n  margin: 0;\n  cursor: pointer;\n  width: 100%;\n  height: 100%;\n}\n:host .ui-dropdown:lang(ar-ae) {\n  direction: var(--framed-dropdown-direction-rtl);\n  text-align: right;\n}\n:host .ui-dropdown dt.ui-dropdown-current {\n  display: flex;\n  box-sizing: border-box;\n  padding-bottom: 10px;\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 7px 5px;\n  align-items: center;\n  background-color: rgba(30,35,40,0.5);\n}\n:host .ui-dropdown dt.ui-dropdown-current::after {\n  background: url(' + d + ") center no-repeat;\n  width: 13px;\n  height: 18px;\n  position: absolute;\n  right: 8px;\n  top: 50%;\n  transform: translate(0, -50%);\n  content: '';\n}\n:host .ui-dropdown dt.ui-dropdown-current:lang(ar-ae)::after {\n  right: auto;\n  left: 8px;\n}\n:host .ui-dropdown dd.ui-dropdown-options-container {\n  margin: 0;\n  opacity: 0;\n  display: flex;\n  padding: 0;\n  box-sizing: border-box;\n  width: var(--framed-dropdown-options-container-width);\n  position: absolute;\n  top: 100%;\n  max-height: 0;\n  transition: max-height 400ms;\n  z-index: 2;\n  overflow: hidden;\n  visibility: hidden;\n  background-color: rgba(30,35,40,0.5);\n}\n:host .ui-dropdown dd.ui-dropdown-options-container ul.ui-dropdown-options {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  min-width: 100%;\n  background: #010a13;\n  height: 100%;\n}\n:host .ui-dropdown dd.ui-dropdown-options-container ul.ui-dropdown-options lol-uikit-scrollable {\n  max-height: var(--framed-dropdown-scrollable-max-height);\n}\n:host .ui-dropdown.opens-upward {\n  height: var(--framed-dropdown-opens-upward-height);\n}\n:host .ui-dropdown.opens-upward dd.ui-dropdown-options-container {\n  bottom: 100%;\n  top: auto;\n  margin-top: 1px;\n}\n:host(.disabled) {\n  cursor: default;\n  pointer-events: none;\n}\n:host(.disabled) .ui-dropdown dt.ui-dropdown-current {\n  border: thin solid #3c3c41;\n  color: #3c3c41;\n}\n:host(.disabled) .ui-dropdown dt.ui-dropdown-current::after {\n  -webkit-filter: grayscale(100%);\n  opacity: 0.35;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current {\n  border: thin solid #463714;\n  color: #463714;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current::after {\n  background-image: url(" + c + ");\n}\n:host(.active) .ui-dropdown dd.ui-dropdown-options-container {\n  opacity: 1;\n  max-height: 400px;\n  transition: max-height 400ms;\n  visibility: visible;\n}\n:host(:not(.active):hover) dt.ui-dropdown-current,\n:host(:not(.active):focus) dt.ui-dropdown-current {\n  background: linear-gradient(to top, rgba(88,83,66,0.5), rgba(30,35,40,0.5));\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/framed-dropdown/component-style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/gradient-palette.styl"],
                 names: [],
                 mappings: "AAIA;EACE,6BAAa;ACHf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;AC8RA;EAGE,cAAO;EACP,eAAW;EAIX,mBAAa;EACb,iBAAa;EACb,uBAAgB;EAIhB,4CAAwB;ADpS1B;AC2RE;EACE,eAAW;ADzRf;AC8RE;EACE,iBAAgB;AD5RpB;AEiHA;EACE,8BAAQ;EACR,2FAAc;AF/GhB;AEkHA;;EACE,8BAAQ;EACR,yDAAc;AF/GhB;AEkHA;EACE,8BAAQ;EACR,yDAAc;AFhHhB;AA7BA;EACE,8CAAyC;EACzC,uDAA2C;EAC3C,2DAA+C;EAC/C,2CAAuC;EACvC,+CAA2C;EAC3C,oCAAiC;AA+BnC;AA5BA;EACE,aAAS;AA8BX;AA5BA;EACE,aAAS;AA8BX;AA3BA;;EAEE,WAAO;EACP,gBAAU;EACV,uBAAe;EACf,mBAAa;EAMb,uDAAS;AAwBX;AA5BE;;EACE,aAAS;AA+Bb;AA3BE;;EACE,2DAAS;AA8Bb;AAzBA;EACE,oBAAS;EACT,sBAAgB;EAChB,WAAO;EACP,UAAS;AA2BX;AAzBE;EAEE,oBAAS;EACT,sBAAgB;EAChB,kBAAU;EACV,iBAAa;EACb,SAAQ;EACR,eAAQ;EACR,WAAO;EACP,YAAQ;AA0BZ;AAxBI;EACE,+CAAW;EAGX,iBAAY;AAwBlB;AArBI;EAEE,aAAS;EACT,sBAAY;EACZ,oBAAgB;EAChB,WAAO;EACP,YAAQ;EACR,SAAQ;EACR,gBAAS;EACT,mBAAa;EACb,oCAAkB;AAsBxB;AApBM;EACE,oEAAgD;EAChD,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,UAAO;EACP,QAAK;EACL,6BAAW;EACX,WAAS;AAsBjB;AAnBI;EACE,WAAO;EACP,SAAM;AAqBZ;AAlBI;EAEE,SAAQ;EACR,UAAS;EACT,aAAS;EACT,UAAS;EACT,sBAAY;EACZ,qDAAO;EACP,kBAAU;EACV,SAAK;EACL,aAAY;EACZ,4BAAY;EACZ,UAAS;EACT,gBAAU;EACV,kBAAY;EACZ,oCAAkB;AAmBxB;AAjBM;EACE,gBAAY;EACZ,SAAQ;EACR,UAAS;EACT,sBAAY;EACZ,eAAW;EACX,mBAAY;EACZ,YAAQ;AAmBhB;AAlBQ;EACE,wDAAY;AAoBtB;AAfI;EACE,kDAAQ;AAiBd;AAhBM;EACE,YAAQ;EACR,SAAK;EACL,eAAY;AAkBpB;AAbE;EACE,eAAQ;EACR,oBAAgB;AAepB;AAbM;EACE,0BAAQ;EACR,cAAO;AAef;AAdQ;EACE,+BAAgB;EAChB,aAAS;AAgBnB;AARM;EACE,0BAAQ;EACR,cAAO;AAUf;AATQ;EACE,yDAA6D;AAWvE;AAPM;EACE,UAAS;EACT,iBAAY;EACZ,4BAAY;EACZ,mBAAY;AASpB;AAHI;;EAEE,2EAAY;AAKlB",
                 sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/colors.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/ui-colors.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette.styl';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --framed-dropdown-scrollable-max-height: 150px;\r\n  --framed-dropdown-current-content-padding: 0 20px 0 7px;\r\n  --framed-dropdown-current-content-padding-rtl: 0 7px 0 20px;\r\n  --framed-dropdown-opens-upward-height: auto;\r\n  --framed-dropdown-options-container-width: 100%;\r\n  --framed-dropdown-direction-rtl: rtl;\r\n}\r\n\r\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\r\n  display: none;\r\n}\r\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\r\n  display: none;\r\n}\r\n\r\n:host .ui-dropdown-current-content,\r\n:host .ui-dropdown-current-content.shadow {\r\n  width: 100%;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n  white-space: nowrap;\r\n\r\n  .ui-dropdown-option-only {\r\n    display: none;\r\n  }\r\n  \r\n  padding: var(--framed-dropdown-current-content-padding);\r\n  &:lang(ar-ae) {\r\n    padding: var(--framed-dropdown-current-content-padding-rtl);\r\n  }\r\n}\r\n\r\n\r\n:host {\r\n  display: inline-flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  outline: 0;\r\n\r\n  .ui-dropdown {\r\n    @extends $typekit_text_s;\r\n    display: inline-flex;\r\n    flex-direction: column;\r\n    position: relative;\r\n    user-select: none;\r\n    margin: 0;\r\n    cursor: pointer;\r\n    width: 100%;\r\n    height: 100%;\r\n\r\n    &:lang(ar-ae) {\r\n      direction: var(--framed-dropdown-direction-rtl);\r\n      // Only added for drop downs which has LTR content/text in RTL view\r\n      // UI/UX Design must be consistent in all drop downs\r\n      text-align: right;\r\n    }\r\n\r\n    dt.ui-dropdown-current {\r\n      @extends $gradient-palette_button-frame-border;\r\n      display: flex;\r\n      box-sizing: border-box;\r\n      padding-bottom: 10px;\r\n      width: 100%;\r\n      height: 100%;\r\n      margin: 0;\r\n      padding: 7px 5px;\r\n      align-items: center;\r\n      background-color: rgba($color_palette_grey3, 0.5);\r\n\r\n      &::after {\r\n        background: url('../../images/up-down-arrow.png') center no-repeat;\r\n        width: 13px;\r\n        height: 18px;\r\n        position: absolute;\r\n        right: 8px;\r\n        top: 50%;\r\n        transform: translate(0, -50%);\r\n        content: '';\r\n      }\r\n    }\r\n    dt.ui-dropdown-current:lang(ar-ae)::after {\r\n      right: auto;\r\n      left: 8px;\r\n    }\r\n\r\n    dd.ui-dropdown-options-container {\r\n      @extends $gradient-palette_button-click-border;\r\n      margin: 0;\r\n      opacity: 0;\r\n      display: flex;\r\n      padding: 0;\r\n      box-sizing: border-box;\r\n      width: var(--framed-dropdown-options-container-width);\r\n      position: absolute;\r\n      top: 100%;\r\n      max-height: 0;\r\n      transition: max-height 400ms;\r\n      z-index: 2;\r\n      overflow: hidden;\r\n      visibility: hidden;\r\n      background-color: rgba($color_palette_grey3, 0.5);\r\n\r\n      ul.ui-dropdown-options {\r\n        list-style: none;\r\n        margin: 0;\r\n        padding: 0;\r\n        box-sizing: border-box;\r\n        min-width: 100%;\r\n        background: $color_palette_almostBlack;\r\n        height: 100%;\r\n        lol-uikit-scrollable {\r\n          max-height: var(--framed-dropdown-scrollable-max-height);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.opens-upward {\r\n      height: var(--framed-dropdown-opens-upward-height);\r\n      dd.ui-dropdown-options-container {\r\n        bottom: 100%;\r\n        top: auto;\r\n        margin-top: 1px;\r\n      }\r\n    }\r\n  }\r\n\r\n  &(.disabled) {\r\n    cursor: default;\r\n    pointer-events: none;\r\n    .ui-dropdown {\r\n      dt.ui-dropdown-current {\r\n        border: thin solid $color_palette_grey2;\r\n        color: $color_palette_grey2;\r\n        &::after {\r\n          -webkit-filter: grayscale(100%);\r\n          opacity: 0.35;\r\n        }\r\n      }\r\n    }\r\n  }\r\n\r\n  &(.active) {\r\n    .ui-dropdown {\r\n      .ui-dropdown-current {\r\n        border: thin solid $color_palette_gold6;\r\n        color: $color_palette_gold6;\r\n        &::after {\r\n          background-image: url('../../images/up-down-arrow-locked.png');\r\n        }\r\n      }\r\n\r\n      dd.ui-dropdown-options-container {\r\n        opacity: 1;\r\n        max-height: 400px;\r\n        transition: max-height 400ms;\r\n        visibility: visible;\r\n      }\r\n    }\r\n  }\r\n\r\n  &(:not(.active):hover), &(:not(.active):focus) {\r\n    dt.ui-dropdown-current {\r\n      @extends $gradient-palette_button-hover-border;\r\n      background: $gradient-palette_button-backing-hover;\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n", "// Base on https://drive.google.com/a/riotgames.com/file/d/0BxsY3wbUNTH1b2k0WmxTUXotbGM\r\n@import 'color-palette';\r\n\r\n$gradient_palette_button_frame = linear-gradient(to top,\r\n  $colors_dallas 0%,\r\n  $colors_luxorGold 23%,\r\n  $colors_alpine 93%,\r\n  $color_palette_gold3 100%);\r\n\r\n$gradient_palette_button_hover = linear-gradient(to top,\r\n  $color_palette_gold4,\r\n  $color_palette_gold1);\r\n\r\n$gradient_palette_button_click = linear-gradient(to top,\r\n  $colors_dallas,\r\n  $color_palette_gold6);\r\n\r\n$gradient_palette_button_blue = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $color_palette_blue3 44%,\r\n  $color_palette_blue3 93%,\r\n  $color_palette_blue2 100%);\r\n\r\n$gradient_palette_button_blue_hover = linear-gradient(to top,\r\n  $colors_bostonBlue 0%,\r\n  $color_palette_blue2 49%,\r\n  $color_palette_blue1 100%);\r\n\r\n$gradient_palette_button_blue_click = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $colors_orient 83%,\r\n  $colors_orient 100%);\r\n\r\n$gradient-palette_button-backing-hover = linear-gradient(to top,\r\n  rgba($colors_finch, 0.5),\r\n  rgba($colors_shark, 0.5));\r\n\r\n$gradient_palette_button_toggle = linear-gradient(to top,\r\n  $color_palette_gold3 0%,\r\n  $color_palette_gold4 44%,\r\n  rgb(160,123,50) 59%,\r\n  $color_palette_gold5 100%);\r\n\r\n$gradient_palette_button_toggle_hover = linear-gradient(to top,\r\n  $color_palette_gold1 0%,\r\n  $color_palette_gold4 100%);\r\n\r\n$gradient_palette_timer_bar = linear-gradient(to right,\r\n  $colors_tiber 0%,\r\n  $colors_bondiBlue 75%,\r\n  $colors_robinsEggBlue 90%,\r\n  $colors_scandal 99%,\r\n  $colors_scandal 100%);\r\n\r\n$gradient_palette_fade_out = linear-gradient(to top,\r\n  $color_palette_almostBlack 0%,\r\n  rgba($color_palette_almostBlack, 0) 92%);\r\n\r\n$gradient_palette_button_primary_purple_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.3) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.8) 0%,\r\n  rgba(232, 216, 227, 0.8) 0.01%,\r\n  rgba(237, 153, 239, 0.8) 100%);\r\n\r\n$gradient_palette_button_purple_hover_border = linear-gradient(to bottom,\r\n  rgb(245, 155, 247) 0%,\r\n  rgb(232, 216, 227) 0.01%,\r\n  rgb(237, 153, 239) 100%);\r\n\r\n$gradient_palette_button_purple_hover_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.5) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.2) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.4) 0%,\r\n  rgba(232, 216, 227, 0.4) 0.01%,\r\n  rgba(237, 153, 239, 0.4) 100%);\r\n\r\n$gradient-palette_button-primary-bg = linear-gradient(to bottom,\r\n  rgb(90,64,31) 0%,\r\n  rgb(51,39,23) 100%);\r\n\r\n$gradient-palette_button-primary-hover-bg = linear-gradient(to bottom,\r\n  rgb(96,69,34) 0%,\r\n  rgb(132,103,69) 100%);\r\n\r\n$gradient-palette_button-primary-down-bg = linear-gradient(to bottom,\r\n  rgb(54,39,21) 0%,\r\n  rgb(23,19,14) 100%);\r\n\r\n$gradient-palette_button-gold-bg = linear-gradient(to bottom,\r\n  rgba(30,35,42,1) 0%,\r\n  rgba(30,35,42,1) 40%,\r\n  rgba(118,97,51,.8) 140%);\r\n\r\n$gradient-palette_button-gold-border = linear-gradient(to top,\r\n  rgb(120,91,40) 0%,\r\n  rgb(200,156,60) 55%,\r\n  rgb(200,163,85) 71%,\r\n  rgb(200,170,110) 100%);\r\n\r\n$gradient-palette_button-gold-hover-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%,\r\n  rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-gold-down-border = linear-gradient(to bottom,\r\n  rgb(70,56,23) 0%,\r\n  rgb(105,79,39) 100%);\r\n\r\n$gradient-palette_button-gold-click-border-white = linear-gradient(to top,\r\n  rgb(255,255,255) 0%,\r\n  rgb(255,255,255) 33%,\r\n  rgb(255,255,255) 66%,\r\n  rgb(255,255,255) 100%);\r\n\r\n$gradient-palette_button-gold-click-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%, rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-sheen-effect = linear-gradient(to bottom,\r\n  rgba(255,255,255,0) 0%,\r\n  rgba(255,255,255,.15) 92%,\r\n  rgba(255,255,255,0) 100%);\r\n\r\n$gradient-palette_button-frame-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_frame 1;\r\n}\r\n\r\n$gradient-palette_button-hover-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_hover 1;\r\n}\r\n\r\n$gradient-palette_button-click-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_click 1;\r\n}\r\n\r\n$gradient-palette_button-toggle-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_toggle 1;\r\n}\r\n\r\n$gradient-dialog-border-right {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to right,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-left {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to left,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}"],
                 sourceRoot: ""
-            }]), e.exports = s
+            }]), e.exports = l
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -6718,8 +6718,8 @@
                 }
             }
             a.tagName = "hextech-ui-badge";
-            var l = a;
-            t.default = l
+            var s = a;
+            t.default = s
         }, e => {
             "use strict";
             e.exports = '<template>\r\n    <div class="hextech-ui-badge">\r\n        <slot></slot>\r\n    </div>\r\n</template>'
@@ -6748,7 +6748,7 @@
                     default: e
                 }
             }
-            class l extends r.webComponents.ShadowElement {
+            class s extends r.webComponents.ShadowElement {
                 static get observedAttributes() {
                     return ["disabled", "click-sfx-src", "hover-sfx-src"]
                 }
@@ -6793,9 +6793,9 @@
                     "MouseEvent" !== e.constructor.name && "PointerEvent" !== e.constructor.name || this.isDisabled() || ("mouseenter" === e.type && this._hoverSound ? this._hoverSound.play() : "click" === e.type && this._clickSound && this._clickSound.play())
                 }
             }
-            l.tagName = "lol-uikit-info-icon";
-            var s = l;
-            t.default = s
+            s.tagName = "lol-uikit-info-icon";
+            var l = s;
+            t.default = l
         }, e => {
             "use strict";
             e.exports = '<template>\r\n  <div class="lol-uikit-info-icon"></div>\r\n</template>\r\n'
@@ -6804,12 +6804,12 @@
                 o = n(27),
                 i = n(91),
                 a = n(131),
-                l = n(132),
-                s = n(133),
+                s = n(132),
+                l = n(133),
                 d = o(r),
                 c = i(a),
-                p = i(l),
-                A = i(s);
+                p = i(s),
+                A = i(l);
             d.push([e.id, ":host .lol-uikit-info-icon {\n  position: relative;\n  width: var(--uikit-info-icon-width, 18px);\n  height: var(--uikit-info-icon-height, 18px);\n  background-image: url(" + c + ");\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-info-icon:not(.disabled):hover {\n  background-image: url(" + p + ");\n}\n:host .lol-uikit-info-icon:not(.disabled):active {\n  background-image: url(" + A + ");\n}\n:host .lol-uikit-info-icon.disabled {\n  pointer: none;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/info-icon/component-style.styl"],
@@ -6838,10 +6838,10 @@
                 i = n(1);
             const a = ["src", "image-path", "resize-to-fit", "fixed-width", "loop", "autoplay", "gds-object-id", "errortext", "param-current-exp", "param-new-exp", "param-level-up", "param-twitch", "param-green", "param-blue", "param-purple", "text-tierlabel", "param-display-division-1", "param-display-division-2", "param-display-division-3", "param-display-division-4", "param-display-split-reward-1", "param-display-split-reward-2", "param-display-split-reward-3", "param-display-previous-division-1", "param-display-next-division-4", "param-display-next-division-1", "param-display-split-reward-1", "param-display-split-reward-2", "param-display-split-reward-3", "param-display-division-2-to-1", "param-display-division-3-to-2", "param-display-division-4-to-3", "param-display-split-reward-1", "param-display-split-reward-2", "param-display-split-reward-3", "param-checkbox-control-1", "param-current-level-progress", "param-previous-level-progress", "param-bar-filler", "asset-segments", "asset-tier", "text-winstreak", "param-effect-control-1", "param-effect-control-2"];
 
-            function l(e) {
+            function s(e) {
                 return e.split("{{")[0].trim().toLowerCase().replace(/ /g, "-")
             }
-            let s = null,
+            let l = null,
                 d = null;
             class c extends i.webComponents.ShadowElement {
                 static get observedAttributes() {
@@ -6890,7 +6890,7 @@
                 _setAnimationParameter(e, t) {
                     const n = this.data.layers.find((e => "animation control layer" === e.nm.toLowerCase()));
                     if (!n) throw new Error("Lottie animation has no animation control layer, but had parameters passed to it: " + this.getAttribute("src") + ", parameter is: " + e + "=" + t);
-                    const r = n.ef.filter((t => l(t.nm) === e));
+                    const r = n.ef.filter((t => s(t.nm) === e));
                     r.length && (t.match(/[0-9.]+/) && (t = parseFloat(t)), r.forEach((n => {
                         const r = n.nm.match(/{{keyframe=([0-9]+)}}/);
                         if (n.mn.match("Slider")) {
@@ -6918,7 +6918,7 @@
                 }
                 _loadGenericAssetsData() {
                     d || (d = i.db.get("/lol-game-data/assets/v1/generic-assets.json").then((e => {
-                        s = e
+                        l = e
                     })).catch((e => {
                         throw d = null, new Error(e)
                     })))
@@ -6929,7 +6929,7 @@
                         n = (this.getAttribute("src").match(/^(\/fe\/lol-[^/]+\/(assets\/)?)/) || [])[1],
                         r = () => {
                             this.data.layers.forEach((e => {
-                                const t = l(e.nm);
+                                const t = s(e.nm);
                                 if (this.animationReplacementImages[t]) {
                                     const n = this.data.assets.find((t => t.id === e.refId)),
                                         r = this.animationReplacementImages[t] + "_" + Math.random();
@@ -6942,8 +6942,8 @@
                                     }), e.refId = r
                                 }
                             })), this.data.assets.forEach((r => {
-                                if (r.p && (r.p = r.p.split("?")[0]), e && s && s[e] && s[e][r.p]) {
-                                    const t = s[e][r.p].match(/^(.*\/)(.*)$/);
+                                if (r.p && (r.p = r.p.split("?")[0]), e && l && l[e] && l[e][r.p]) {
+                                    const t = l[e][r.p].match(/^(.*\/)(.*)$/);
                                     r.u = t[1], r.p = t[2]
                                 } else t ? r.u = t : "images/" === r.u && (r.u = n + "lottie/images/");
                                 this.noCache && (r.p = r.p + "?" + Math.random())
@@ -7072,13 +7072,13 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = s(n(36)),
+            var r = l(n(36)),
                 o = n(1),
                 i = n(35),
                 a = n(34),
-                l = s(n(37));
+                s = l(n(37));
 
-            function s(e) {
+            function l(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -7099,7 +7099,7 @@
                     return n(141)
                 }
                 constructor() {
-                    super(), this._item, this._mainElement = (0, r.default)(this.shadowRoot.querySelector(".section")), this._navClickSound = this._createSound(l.default.navClick), this._navHoverSound = this._createSound(l.default.flatButtonHover), this._subNavClickSound = this._createSound(l.default.subnavClick), this.addEventListener("click", this._userClickedEvent.bind(this))
+                    super(), this._item, this._mainElement = (0, r.default)(this.shadowRoot.querySelector(".section")), this._navClickSound = this._createSound(s.default.navClick), this._navHoverSound = this._createSound(s.default.flatButtonHover), this._subNavClickSound = this._createSound(s.default.subnavClick), this.addEventListener("click", this._userClickedEvent.bind(this))
                 }
                 _handleMouseEnter() {
                     this.isDisabled() || this._navHoverSound.play()
@@ -7299,8 +7299,8 @@
                     }))
                 }
             }
-            var l = a;
-            t.default = l
+            var s = a;
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -7311,8 +7311,8 @@
                 },
                 i = n(1);
             const a = ["/fe/lol-uikit/images/parallax-smoke1.png", "/fe/lol-uikit/images/parallax-smoke2.png", "/fe/lol-uikit/images/parallax-smoke3.png", "/fe/lol-uikit/images/parallax-smoke4.png"],
-                l = "parallax-layer";
-            class s extends i.webComponents.ShadowElement {
+                s = "parallax-layer";
+            class l extends i.webComponents.ShadowElement {
                 static get observedAttributes() {
                     return ["animated", "parallax-config", "layer-image-paths", "background-path", "foreground-path"]
                 }
@@ -7331,9 +7331,9 @@
                     const n = JSON.parse(this.getAttribute("layer-image-paths")) || a,
                         r = this.getAttribute("background-path") || "/fe/lol-uikit/images/parallax-smoke-background.png",
                         i = this.getAttribute("foreground-path") || "/fe/lol-uikit/images/parallax-smoke-foreground.png",
-                        l = this.shadowRoot.querySelector(".parallax-layer-container"),
-                        s = n.map((t => this.addParallaxLayer(l, t, "parallax-background-layer", e)));
-                    this.setBackgroundPaths(l, i, r), this._parallaxConfigObserver = new MutationObserver((() => {
+                        s = this.shadowRoot.querySelector(".parallax-layer-container"),
+                        l = n.map((t => this.addParallaxLayer(s, t, "parallax-background-layer", e)));
+                    this.setBackgroundPaths(s, i, r), this._parallaxConfigObserver = new MutationObserver((() => {
                         this.onParallaxConfigChanged()
                     })), this._parallaxConfigObserver.observe(this, {
                         attributeFilter: ["parallax-config"]
@@ -7341,18 +7341,18 @@
                         this.onAnimatedChanged()
                     })), this._animatedObserver.observe(this, {
                         attributeFilter: ["animated"]
-                    }), this._parallax = new o.default(s, t, e)
+                    }), this._parallax = new o.default(l, t, e)
                 }
                 disconnectedCallback() {
                     super.disconnectedCallback(), this._parallaxConfigObserver.disconnect(), this._animatedObserver.disconnect(), this._parallax.destroy(), this.removeAllParallaxLayers()
                 }
                 addParallaxLayer(e, t, n, r) {
                     const o = document.createElement("div");
-                    return o.classList.add(l), o.classList.add(n), o.style.backgroundImage = `url(${t})`, o.setAttribute("animated", Boolean(r)), e.appendChild(o), o
+                    return o.classList.add(s), o.classList.add(n), o.style.backgroundImage = `url(${t})`, o.setAttribute("animated", Boolean(r)), e.appendChild(o), o
                 }
                 removeAllParallaxLayers() {
                     const e = this.shadowRoot.querySelector(".parallax-layer-container"),
-                        t = this.shadowRoot.querySelectorAll("." + l);
+                        t = this.shadowRoot.querySelectorAll("." + s);
                     for (let n = 0; n < t.length; n++) e.removeChild(t[n])
                 }
                 setBackgroundPaths(e, t, n) {
@@ -7367,8 +7367,8 @@
                     this._animated !== e && (e ? this._parallax.play() : this._parallax.pause(), this._animated = e)
                 }
             }
-            s.tagName = "lol-uikit-parallax-background";
-            var d = s;
+            l.tagName = "lol-uikit-parallax-background";
+            var d = l;
             t.default = d
         }, e => {
             "use strict";
@@ -7390,16 +7390,16 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = l(n(149)),
-                i = l(n(170)),
-                a = l(n(171));
+                o = s(n(149)),
+                i = s(n(170)),
+                a = s(n(171));
 
-            function l(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            class s extends r.webComponents.ShadowElement {
+            class l extends r.webComponents.ShadowElement {
                 static get observedAttributes() {
                     return []
                 }
@@ -7430,8 +7430,8 @@
                     a.default.unbind(t, this.onElementResizeEvent), o.default.destroy(e), this._initialized = !1
                 }
             }
-            s.tagName = "lol-uikit-perfect-scrollable";
-            var d = s;
+            l.tagName = "lol-uikit-perfect-scrollable";
+            var d = l;
             t.default = d
         }, (e, t, n) => {
             "use strict";
@@ -7547,12 +7547,12 @@
                 o = n(153),
                 i = n(156),
                 a = n(154),
-                l = n(157),
-                s = n(158),
+                s = n(157),
+                l = n(158),
                 d = {};
 
             function c(e) {
-                var t, n, s = this;
+                var t, n, l = this;
 
                 function d() {
                     o.add(e, "ps-focus")
@@ -7561,14 +7561,14 @@
                 function c() {
                     o.remove(e, "ps-focus")
                 }
-                s.settings = r.clone(i), s.containerWidth = null, s.containerHeight = null, s.contentWidth = null, s.contentHeight = null, s.isRtl = "rtl" === a.css(e, "direction"), s.isNegativeScroll = (n = e.scrollLeft, e.scrollLeft = -1, t = e.scrollLeft < 0, e.scrollLeft = n, t), s.negativeScrollAdjustment = s.isNegativeScroll ? e.scrollWidth - e.clientWidth : 0, s.event = new l, s.ownerDocument = e.ownerDocument || document, s.scrollbarXRail = a.appendTo(a.e("div", "ps-scrollbar-x-rail"), e), s.scrollbarX = a.appendTo(a.e("div", "ps-scrollbar-x"), s.scrollbarXRail), s.scrollbarX.setAttribute("tabindex", 0), s.event.bind(s.scrollbarX, "focus", d), s.event.bind(s.scrollbarX, "blur", c), s.scrollbarXActive = null, s.scrollbarXWidth = null, s.scrollbarXLeft = null, s.scrollbarXBottom = r.toInt(a.css(s.scrollbarXRail, "bottom")), s.isScrollbarXUsingBottom = s.scrollbarXBottom == s.scrollbarXBottom, s.scrollbarXTop = s.isScrollbarXUsingBottom ? null : r.toInt(a.css(s.scrollbarXRail, "top")), s.railBorderXWidth = r.toInt(a.css(s.scrollbarXRail, "borderLeftWidth")) + r.toInt(a.css(s.scrollbarXRail, "borderRightWidth")), a.css(s.scrollbarXRail, "display", "block"), s.railXMarginWidth = r.toInt(a.css(s.scrollbarXRail, "marginLeft")) + r.toInt(a.css(s.scrollbarXRail, "marginRight")), a.css(s.scrollbarXRail, "display", ""), s.railXWidth = null, s.railXRatio = null, s.scrollbarYRail = a.appendTo(a.e("div", "ps-scrollbar-y-rail"), e), s.scrollbarY = a.appendTo(a.e("div", "ps-scrollbar-y"), s.scrollbarYRail), s.scrollbarY.setAttribute("tabindex", 0), s.event.bind(s.scrollbarY, "focus", d), s.event.bind(s.scrollbarY, "blur", c), s.scrollbarYActive = null, s.scrollbarYHeight = null, s.scrollbarYTop = null, s.scrollbarYRight = r.toInt(a.css(s.scrollbarYRail, "right")), s.isScrollbarYUsingRight = s.scrollbarYRight == s.scrollbarYRight, s.scrollbarYLeft = s.isScrollbarYUsingRight ? null : r.toInt(a.css(s.scrollbarYRail, "left")), s.scrollbarYOuterWidth = s.isRtl ? r.outerWidth(s.scrollbarY) : null, s.railBorderYWidth = r.toInt(a.css(s.scrollbarYRail, "borderTopWidth")) + r.toInt(a.css(s.scrollbarYRail, "borderBottomWidth")), a.css(s.scrollbarYRail, "display", "block"), s.railYMarginHeight = r.toInt(a.css(s.scrollbarYRail, "marginTop")) + r.toInt(a.css(s.scrollbarYRail, "marginBottom")), a.css(s.scrollbarYRail, "display", ""), s.railYHeight = null, s.railYRatio = null
+                l.settings = r.clone(i), l.containerWidth = null, l.containerHeight = null, l.contentWidth = null, l.contentHeight = null, l.isRtl = "rtl" === a.css(e, "direction"), l.isNegativeScroll = (n = e.scrollLeft, e.scrollLeft = -1, t = e.scrollLeft < 0, e.scrollLeft = n, t), l.negativeScrollAdjustment = l.isNegativeScroll ? e.scrollWidth - e.clientWidth : 0, l.event = new s, l.ownerDocument = e.ownerDocument || document, l.scrollbarXRail = a.appendTo(a.e("div", "ps-scrollbar-x-rail"), e), l.scrollbarX = a.appendTo(a.e("div", "ps-scrollbar-x"), l.scrollbarXRail), l.scrollbarX.setAttribute("tabindex", 0), l.event.bind(l.scrollbarX, "focus", d), l.event.bind(l.scrollbarX, "blur", c), l.scrollbarXActive = null, l.scrollbarXWidth = null, l.scrollbarXLeft = null, l.scrollbarXBottom = r.toInt(a.css(l.scrollbarXRail, "bottom")), l.isScrollbarXUsingBottom = l.scrollbarXBottom == l.scrollbarXBottom, l.scrollbarXTop = l.isScrollbarXUsingBottom ? null : r.toInt(a.css(l.scrollbarXRail, "top")), l.railBorderXWidth = r.toInt(a.css(l.scrollbarXRail, "borderLeftWidth")) + r.toInt(a.css(l.scrollbarXRail, "borderRightWidth")), a.css(l.scrollbarXRail, "display", "block"), l.railXMarginWidth = r.toInt(a.css(l.scrollbarXRail, "marginLeft")) + r.toInt(a.css(l.scrollbarXRail, "marginRight")), a.css(l.scrollbarXRail, "display", ""), l.railXWidth = null, l.railXRatio = null, l.scrollbarYRail = a.appendTo(a.e("div", "ps-scrollbar-y-rail"), e), l.scrollbarY = a.appendTo(a.e("div", "ps-scrollbar-y"), l.scrollbarYRail), l.scrollbarY.setAttribute("tabindex", 0), l.event.bind(l.scrollbarY, "focus", d), l.event.bind(l.scrollbarY, "blur", c), l.scrollbarYActive = null, l.scrollbarYHeight = null, l.scrollbarYTop = null, l.scrollbarYRight = r.toInt(a.css(l.scrollbarYRail, "right")), l.isScrollbarYUsingRight = l.scrollbarYRight == l.scrollbarYRight, l.scrollbarYLeft = l.isScrollbarYUsingRight ? null : r.toInt(a.css(l.scrollbarYRail, "left")), l.scrollbarYOuterWidth = l.isRtl ? r.outerWidth(l.scrollbarY) : null, l.railBorderYWidth = r.toInt(a.css(l.scrollbarYRail, "borderTopWidth")) + r.toInt(a.css(l.scrollbarYRail, "borderBottomWidth")), a.css(l.scrollbarYRail, "display", "block"), l.railYMarginHeight = r.toInt(a.css(l.scrollbarYRail, "marginTop")) + r.toInt(a.css(l.scrollbarYRail, "marginBottom")), a.css(l.scrollbarYRail, "display", ""), l.railYHeight = null, l.railYRatio = null
             }
 
             function p(e) {
                 return e.getAttribute("data-ps-id")
             }
             t.add = function(e) {
-                var t = s();
+                var t = l();
                 return function(e, t) {
                     e.setAttribute("data-ps-id", t)
                 }(e, t), d[t] = new c(e), d[t]
@@ -7648,7 +7648,7 @@
                 o = n(153),
                 i = n(155),
                 a = n(160),
-                l = {
+                s = {
                     "click-rail": n(162),
                     "drag-scrollbar": n(163),
                     keyboard: n(164),
@@ -7656,13 +7656,13 @@
                     touch: n(166),
                     selection: n(167)
                 },
-                s = n(168);
+                l = n(168);
             e.exports = function(e, t) {
                 t = "object" == typeof t ? t : {}, o.add(e, "ps-container");
                 var n = i.add(e);
                 n.settings = r.extend(n.settings, t), o.add(e, "ps-theme-" + n.settings.theme), n.settings.handlers.forEach((function(t) {
-                    l[t](e)
-                })), s(e), a(e)
+                    s[t](e)
+                })), l(e), a(e)
             }
         }, (e, t, n) => {
             "use strict";
@@ -7670,9 +7670,9 @@
                 o = n(153),
                 i = n(154),
                 a = n(155),
-                l = n(161);
+                s = n(161);
 
-            function s(e, t) {
+            function l(e, t) {
                 return e.settings.minScrollbarLength && (t = Math.max(t, e.settings.minScrollbarLength)), e.settings.maxScrollbarLength && (t = Math.min(t, e.settings.maxScrollbarLength)), t
             }
             e.exports = function(e) {
@@ -7681,7 +7681,7 @@
                         i.remove(e)
                     })), i.appendTo(n.scrollbarXRail, e)), e.contains(n.scrollbarYRail) || ((t = i.queryChildren(e, ".ps-scrollbar-y-rail")).length > 0 && t.forEach((function(e) {
                         i.remove(e)
-                    })), i.appendTo(n.scrollbarYRail, e)), !n.settings.suppressScrollX && n.containerWidth + n.settings.scrollXMarginOffset < n.contentWidth ? (n.scrollbarXActive = !0, n.railXWidth = n.containerWidth - n.railXMarginWidth, n.railXRatio = n.containerWidth / n.railXWidth, n.scrollbarXWidth = s(n, r.toInt(n.railXWidth * n.containerWidth / n.contentWidth)), n.scrollbarXLeft = r.toInt((n.negativeScrollAdjustment + e.scrollLeft) * (n.railXWidth - n.scrollbarXWidth) / (n.contentWidth - n.containerWidth))) : n.scrollbarXActive = !1, !n.settings.suppressScrollY && n.containerHeight + n.settings.scrollYMarginOffset < n.contentHeight ? (n.scrollbarYActive = !0, n.railYHeight = n.containerHeight - n.railYMarginHeight, n.railYRatio = n.containerHeight / n.railYHeight, n.scrollbarYHeight = s(n, r.toInt(n.railYHeight * n.containerHeight / n.contentHeight)), n.scrollbarYTop = r.toInt(e.scrollTop * (n.railYHeight - n.scrollbarYHeight) / (n.contentHeight - n.containerHeight))) : n.scrollbarYActive = !1, n.scrollbarXLeft >= n.railXWidth - n.scrollbarXWidth && (n.scrollbarXLeft = n.railXWidth - n.scrollbarXWidth), n.scrollbarYTop >= n.railYHeight - n.scrollbarYHeight && (n.scrollbarYTop = n.railYHeight - n.scrollbarYHeight),
+                    })), i.appendTo(n.scrollbarYRail, e)), !n.settings.suppressScrollX && n.containerWidth + n.settings.scrollXMarginOffset < n.contentWidth ? (n.scrollbarXActive = !0, n.railXWidth = n.containerWidth - n.railXMarginWidth, n.railXRatio = n.containerWidth / n.railXWidth, n.scrollbarXWidth = l(n, r.toInt(n.railXWidth * n.containerWidth / n.contentWidth)), n.scrollbarXLeft = r.toInt((n.negativeScrollAdjustment + e.scrollLeft) * (n.railXWidth - n.scrollbarXWidth) / (n.contentWidth - n.containerWidth))) : n.scrollbarXActive = !1, !n.settings.suppressScrollY && n.containerHeight + n.settings.scrollYMarginOffset < n.contentHeight ? (n.scrollbarYActive = !0, n.railYHeight = n.containerHeight - n.railYMarginHeight, n.railYRatio = n.containerHeight / n.railYHeight, n.scrollbarYHeight = l(n, r.toInt(n.railYHeight * n.containerHeight / n.contentHeight)), n.scrollbarYTop = r.toInt(e.scrollTop * (n.railYHeight - n.scrollbarYHeight) / (n.contentHeight - n.containerHeight))) : n.scrollbarYActive = !1, n.scrollbarXLeft >= n.railXWidth - n.scrollbarXWidth && (n.scrollbarXLeft = n.railXWidth - n.scrollbarXWidth), n.scrollbarYTop >= n.railYHeight - n.scrollbarYHeight && (n.scrollbarYTop = n.railYHeight - n.scrollbarYHeight),
                     function(e, t) {
                         var n = {
                             width: t.railXWidth
@@ -7698,7 +7698,7 @@
                             top: t.scrollbarYTop,
                             height: t.scrollbarYHeight - t.railBorderYWidth
                         })
-                    }(e, n), n.scrollbarXActive ? o.add(e, "ps-active-x") : (o.remove(e, "ps-active-x"), n.scrollbarXWidth = 0, n.scrollbarXLeft = 0, l(e, "left", 0)), n.scrollbarYActive ? o.add(e, "ps-active-y") : (o.remove(e, "ps-active-y"), n.scrollbarYHeight = 0, n.scrollbarYTop = 0, l(e, "top", 0))
+                    }(e, n), n.scrollbarXActive ? o.add(e, "ps-active-x") : (o.remove(e, "ps-active-x"), n.scrollbarXWidth = 0, n.scrollbarXLeft = 0, s(e, "left", 0)), n.scrollbarYActive ? o.add(e, "ps-active-y") : (o.remove(e, "ps-active-y"), n.scrollbarYHeight = 0, n.scrollbarYTop = 0, s(e, "top", 0))
             }
         }, (e, t, n) => {
             "use strict";
@@ -7712,8 +7712,8 @@
                 if (void 0 === t) throw "You must provide an axis to the update-scroll function";
                 if (void 0 === n) throw "You must provide a value to the update-scroll function";
                 "top" === t && n <= 0 && (e.scrollTop = n = 0, e.dispatchEvent(a("ps-y-reach-start"))), "left" === t && n <= 0 && (e.scrollLeft = n = 0, e.dispatchEvent(a("ps-x-reach-start")));
-                var l = i.get(e);
-                "top" === t && n >= l.contentHeight - l.containerHeight && ((n = l.contentHeight - l.containerHeight) - e.scrollTop <= 1 ? n = e.scrollTop : e.scrollTop = n, e.dispatchEvent(a("ps-y-reach-end"))), "left" === t && n >= l.contentWidth - l.containerWidth && ((n = l.contentWidth - l.containerWidth) - e.scrollLeft <= 1 ? n = e.scrollLeft : e.scrollLeft = n, e.dispatchEvent(a("ps-x-reach-end"))), r || (r = e.scrollTop), o || (o = e.scrollLeft), "top" === t && n < r && e.dispatchEvent(a("ps-scroll-up")), "top" === t && n > r && e.dispatchEvent(a("ps-scroll-down")), "left" === t && n < o && e.dispatchEvent(a("ps-scroll-left")), "left" === t && n > o && e.dispatchEvent(a("ps-scroll-right")), "top" === t && (e.scrollTop = r = n, e.dispatchEvent(a("ps-scroll-y"))), "left" === t && (e.scrollLeft = o = n, e.dispatchEvent(a("ps-scroll-x")))
+                var s = i.get(e);
+                "top" === t && n >= s.contentHeight - s.containerHeight && ((n = s.contentHeight - s.containerHeight) - e.scrollTop <= 1 ? n = e.scrollTop : e.scrollTop = n, e.dispatchEvent(a("ps-y-reach-end"))), "left" === t && n >= s.contentWidth - s.containerWidth && ((n = s.contentWidth - s.containerWidth) - e.scrollLeft <= 1 ? n = e.scrollLeft : e.scrollLeft = n, e.dispatchEvent(a("ps-x-reach-end"))), r || (r = e.scrollTop), o || (o = e.scrollLeft), "top" === t && n < r && e.dispatchEvent(a("ps-scroll-up")), "top" === t && n > r && e.dispatchEvent(a("ps-scroll-down")), "left" === t && n < o && e.dispatchEvent(a("ps-scroll-left")), "left" === t && n > o && e.dispatchEvent(a("ps-scroll-right")), "top" === t && (e.scrollTop = r = n, e.dispatchEvent(a("ps-scroll-y"))), "left" === t && (e.scrollLeft = o = n, e.dispatchEvent(a("ps-scroll-x")))
             }
         }, (e, t, n) => {
             "use strict";
@@ -7743,50 +7743,50 @@
                 o = n(154),
                 i = n(155),
                 a = n(160),
-                l = n(161);
+                s = n(161);
 
-            function s(e, t) {
+            function l(e, t) {
                 var n = null,
                     i = null;
-                var s = function(o) {
+                var l = function(o) {
                         ! function(o) {
                             var i = n + o * t.railXRatio,
                                 a = Math.max(0, t.scrollbarXRail.getBoundingClientRect().left) + t.railXRatio * (t.railXWidth - t.scrollbarXWidth);
                             t.scrollbarXLeft = i < 0 ? 0 : i > a ? a : i;
-                            var s = r.toInt(t.scrollbarXLeft * (t.contentWidth - t.containerWidth) / (t.containerWidth - t.railXRatio * t.scrollbarXWidth)) - t.negativeScrollAdjustment;
-                            l(e, "left", s)
+                            var l = r.toInt(t.scrollbarXLeft * (t.contentWidth - t.containerWidth) / (t.containerWidth - t.railXRatio * t.scrollbarXWidth)) - t.negativeScrollAdjustment;
+                            s(e, "left", l)
                         }(o.pageX - i), a(e), o.stopPropagation(), o.preventDefault()
                     },
                     d = function() {
-                        r.stopScrolling(e, "x"), t.event.unbind(t.ownerDocument, "mousemove", s)
+                        r.stopScrolling(e, "x"), t.event.unbind(t.ownerDocument, "mousemove", l)
                     };
                 t.event.bind(t.scrollbarX, "mousedown", (function(a) {
-                    i = a.pageX, n = r.toInt(o.css(t.scrollbarX, "left")) * t.railXRatio, r.startScrolling(e, "x"), t.event.bind(t.ownerDocument, "mousemove", s), t.event.once(t.ownerDocument, "mouseup", d), a.stopPropagation(), a.preventDefault()
+                    i = a.pageX, n = r.toInt(o.css(t.scrollbarX, "left")) * t.railXRatio, r.startScrolling(e, "x"), t.event.bind(t.ownerDocument, "mousemove", l), t.event.once(t.ownerDocument, "mouseup", d), a.stopPropagation(), a.preventDefault()
                 }))
             }
 
             function d(e, t) {
                 var n = null,
                     i = null;
-                var s = function(o) {
+                var l = function(o) {
                         ! function(o) {
                             var i = n + o * t.railYRatio,
                                 a = Math.max(0, t.scrollbarYRail.getBoundingClientRect().top) + t.railYRatio * (t.railYHeight - t.scrollbarYHeight);
                             t.scrollbarYTop = i < 0 ? 0 : i > a ? a : i;
-                            var s = r.toInt(t.scrollbarYTop * (t.contentHeight - t.containerHeight) / (t.containerHeight - t.railYRatio * t.scrollbarYHeight));
-                            l(e, "top", s)
+                            var l = r.toInt(t.scrollbarYTop * (t.contentHeight - t.containerHeight) / (t.containerHeight - t.railYRatio * t.scrollbarYHeight));
+                            s(e, "top", l)
                         }(o.pageY - i), a(e), o.stopPropagation(), o.preventDefault()
                     },
                     d = function() {
-                        r.stopScrolling(e, "y"), t.event.unbind(t.ownerDocument, "mousemove", s)
+                        r.stopScrolling(e, "y"), t.event.unbind(t.ownerDocument, "mousemove", l)
                     };
                 t.event.bind(t.scrollbarY, "mousedown", (function(a) {
-                    i = a.pageY, n = r.toInt(o.css(t.scrollbarY, "top")) * t.railYRatio, r.startScrolling(e, "y"), t.event.bind(t.ownerDocument, "mousemove", s), t.event.once(t.ownerDocument, "mouseup", d), a.stopPropagation(), a.preventDefault()
+                    i = a.pageY, n = r.toInt(o.css(t.scrollbarY, "top")) * t.railYRatio, r.startScrolling(e, "y"), t.event.bind(t.ownerDocument, "mousemove", l), t.event.once(t.ownerDocument, "mouseup", d), a.stopPropagation(), a.preventDefault()
                 }))
             }
             e.exports = function(e) {
                 var t = i.get(e);
-                s(e, t), d(e, t)
+                l(e, t), d(e, t)
             }
         }, (e, t, n) => {
             "use strict";
@@ -7794,9 +7794,9 @@
                 o = n(154),
                 i = n(155),
                 a = n(160),
-                l = n(161);
+                s = n(161);
 
-            function s(e, t) {
+            function l(e, t) {
                 var n = !1;
                 t.event.bind(e, "mouseenter", (function() {
                     n = !0
@@ -7804,8 +7804,8 @@
                     n = !1
                 }));
                 var i = !1;
-                t.event.bind(t.ownerDocument, "keydown", (function(s) {
-                    if (!(s.isDefaultPrevented && s.isDefaultPrevented() || s.defaultPrevented)) {
+                t.event.bind(t.ownerDocument, "keydown", (function(l) {
+                    if (!(l.isDefaultPrevented && l.isDefaultPrevented() || l.defaultPrevented)) {
                         var d = o.matches(t.scrollbarX, ":focus") || o.matches(t.scrollbarY, ":focus");
                         if (n || d) {
                             var c = document.activeElement ? document.activeElement : t.ownerDocument.activeElement;
@@ -7817,38 +7817,38 @@
                             }
                             var p = 0,
                                 A = 0;
-                            switch (s.which) {
+                            switch (l.which) {
                                 case 37:
-                                    p = s.metaKey ? -t.contentWidth : s.altKey ? -t.containerWidth : -30;
+                                    p = l.metaKey ? -t.contentWidth : l.altKey ? -t.containerWidth : -30;
                                     break;
                                 case 38:
-                                    A = s.metaKey ? t.contentHeight : s.altKey ? t.containerHeight : 30;
+                                    A = l.metaKey ? t.contentHeight : l.altKey ? t.containerHeight : 30;
                                     break;
                                 case 39:
-                                    p = s.metaKey ? t.contentWidth : s.altKey ? t.containerWidth : 30;
+                                    p = l.metaKey ? t.contentWidth : l.altKey ? t.containerWidth : 30;
                                     break;
                                 case 40:
-                                    A = s.metaKey ? -t.contentHeight : s.altKey ? -t.containerHeight : -30;
+                                    A = l.metaKey ? -t.contentHeight : l.altKey ? -t.containerHeight : -30;
                                     break;
                                 case 33:
                                     A = 90;
                                     break;
                                 case 32:
-                                    A = s.shiftKey ? 90 : -90;
+                                    A = l.shiftKey ? 90 : -90;
                                     break;
                                 case 34:
                                     A = -90;
                                     break;
                                 case 35:
-                                    A = s.ctrlKey ? -t.contentHeight : -t.containerHeight;
+                                    A = l.ctrlKey ? -t.contentHeight : -t.containerHeight;
                                     break;
                                 case 36:
-                                    A = s.ctrlKey ? e.scrollTop : t.containerHeight;
+                                    A = l.ctrlKey ? e.scrollTop : t.containerHeight;
                                     break;
                                 default:
                                     return
                             }
-                            l(e, "top", e.scrollTop - A), l(e, "left", e.scrollLeft + p), a(e), i = function(n, r) {
+                            s(e, "top", e.scrollTop - A), s(e, "left", e.scrollLeft + p), a(e), i = function(n, r) {
                                 var o = e.scrollTop;
                                 if (0 === n) {
                                     if (!t.scrollbarYActive) return !1;
@@ -7860,13 +7860,13 @@
                                     if (0 === i && n < 0 || i >= t.contentWidth - t.containerWidth && n > 0) return !t.settings.wheelPropagation
                                 }
                                 return !0
-                            }(p, A), i && s.preventDefault()
+                            }(p, A), i && l.preventDefault()
                         }
                     }
                 }))
             }
             e.exports = function(e) {
-                s(e, i.get(e))
+                l(e, i.get(e))
             }
         }, (e, t, n) => {
             "use strict";
@@ -7883,8 +7883,8 @@
                                 n = -1 * e.deltaY;
                             return void 0 !== t && void 0 !== n || (t = -1 * e.wheelDeltaX / 6, n = e.wheelDeltaY / 6), e.deltaMode && 1 === e.deltaMode && (t *= 10, n *= 10), t != t && n != n && (t = 0, n = e.wheelDelta), e.shiftKey ? [-n, -t] : [t, n]
                         }(r),
-                        l = a[0],
-                        s = a[1];
+                        s = a[0],
+                        l = a[1];
                     (function(t, n) {
                         var r = e.querySelector("textarea:hover, select[multiple]:hover, .ps-child:hover");
                         if (r) {
@@ -7895,7 +7895,7 @@
                             if (i > 0 && !(0 === r.scrollLeft && t < 0 || r.scrollLeft === i && t > 0)) return !0
                         }
                         return !1
-                    })(l, s) || (n = !1, t.settings.useBothWheelAxes ? t.scrollbarYActive && !t.scrollbarXActive ? (i(e, "top", s ? e.scrollTop - s * t.settings.wheelSpeed : e.scrollTop + l * t.settings.wheelSpeed), n = !0) : t.scrollbarXActive && !t.scrollbarYActive && (i(e, "left", l ? e.scrollLeft + l * t.settings.wheelSpeed : e.scrollLeft - s * t.settings.wheelSpeed), n = !0) : (i(e, "top", e.scrollTop - s * t.settings.wheelSpeed), i(e, "left", e.scrollLeft + l * t.settings.wheelSpeed)), o(e), n = n || function(n, r) {
+                    })(s, l) || (n = !1, t.settings.useBothWheelAxes ? t.scrollbarYActive && !t.scrollbarXActive ? (i(e, "top", l ? e.scrollTop - l * t.settings.wheelSpeed : e.scrollTop + s * t.settings.wheelSpeed), n = !0) : t.scrollbarXActive && !t.scrollbarYActive && (i(e, "left", s ? e.scrollLeft + s * t.settings.wheelSpeed : e.scrollLeft - l * t.settings.wheelSpeed), n = !0) : (i(e, "top", e.scrollTop - l * t.settings.wheelSpeed), i(e, "left", e.scrollLeft + s * t.settings.wheelSpeed)), o(e), n = n || function(n, r) {
                         var o = e.scrollTop;
                         if (0 === n) {
                             if (!t.scrollbarYActive) return !1;
@@ -7907,7 +7907,7 @@
                             if (0 === i && n < 0 || i >= t.contentWidth - t.containerWidth && n > 0) return !t.settings.wheelPropagation
                         }
                         return !0
-                    }(l, s), n && (r.stopPropagation(), r.preventDefault()))
+                    }(s, l), n && (r.stopPropagation(), r.preventDefault()))
                 }
                 void 0 !== window.onwheel ? t.event.bind(e, "wheel", r) : void 0 !== window.onmousewheel && t.event.bind(e, "mousewheel", r)
             }
@@ -7921,11 +7921,11 @@
                 i = n(160),
                 a = n(161);
 
-            function l(e, t, n, r) {
-                function l(t, n) {
+            function s(e, t, n, r) {
+                function s(t, n) {
                     a(e, "top", e.scrollTop - n), a(e, "left", e.scrollLeft - t), i(e)
                 }
-                var s = {},
+                var l = {},
                     d = 0,
                     c = {},
                     p = null,
@@ -7952,7 +7952,7 @@
                     if (m(e)) {
                         u = !0;
                         var t = b(e);
-                        s.pageX = t.pageX, s.pageY = t.pageY, d = (new Date).getTime(), null !== p && clearInterval(p), e.stopPropagation()
+                        l.pageX = t.pageX, l.pageY = t.pageY, d = (new Date).getTime(), null !== p && clearInterval(p), e.stopPropagation()
                     }
                 }
 
@@ -7963,9 +7963,9 @@
                                 pageX: r.pageX,
                                 pageY: r.pageY
                             },
-                            i = o.pageX - s.pageX,
-                            a = o.pageY - s.pageY;
-                        l(i, a), s = o;
+                            i = o.pageX - l.pageX,
+                            a = o.pageY - l.pageY;
+                        s(i, a), l = o;
                         var p = (new Date).getTime(),
                             h = p - d;
                         h > 0 && (c.x = i / h, c.y = a / h, d = p),
@@ -7973,10 +7973,10 @@
                                 var o = e.scrollTop,
                                     i = e.scrollLeft,
                                     a = Math.abs(n),
-                                    l = Math.abs(r);
-                                if (l > a) {
+                                    s = Math.abs(r);
+                                if (s > a) {
                                     if (r < 0 && o === t.contentHeight - t.containerHeight || r > 0 && 0 === o) return !t.settings.swipePropagation
-                                } else if (a > l && (n < 0 && i === t.contentWidth - t.containerWidth || n > 0 && 0 === i)) return !t.settings.swipePropagation;
+                                } else if (a > s && (n < 0 && i === t.contentWidth - t.containerWidth || n > 0 && 0 === i)) return !t.settings.swipePropagation;
                                 return !0
                             }(i, a) && (n.stopPropagation(), n.preventDefault())
                     }
@@ -7984,13 +7984,13 @@
 
                 function y() {
                     !A && u && (u = !1, clearInterval(p), p = setInterval((function() {
-                        o.get(e) && (c.x || c.y) ? Math.abs(c.x) < .01 && Math.abs(c.y) < .01 ? clearInterval(p) : (l(30 * c.x, 30 * c.y), c.x *= .8, c.y *= .8) : clearInterval(p)
+                        o.get(e) && (c.x || c.y) ? Math.abs(c.x) < .01 && Math.abs(c.y) < .01 ? clearInterval(p) : (s(30 * c.x, 30 * c.y), c.x *= .8, c.y *= .8) : clearInterval(p)
                     }), 10))
                 }
                 n ? (t.event.bind(window, "touchstart", h), t.event.bind(window, "touchend", g), t.event.bind(e, "touchstart", f), t.event.bind(e, "touchmove", _), t.event.bind(e, "touchend", y)) : r && (window.PointerEvent ? (t.event.bind(window, "pointerdown", h), t.event.bind(window, "pointerup", g), t.event.bind(e, "pointerdown", f), t.event.bind(e, "pointermove", _), t.event.bind(e, "pointerup", y)) : window.MSPointerEvent && (t.event.bind(window, "MSPointerDown", h), t.event.bind(window, "MSPointerUp", g), t.event.bind(e, "MSPointerDown", f), t.event.bind(e, "MSPointerMove", _), t.event.bind(e, "MSPointerUp", y)))
             }
             e.exports = function(e) {
-                (r.env.supportsTouch || r.env.supportsIePointer) && l(e, o.get(e), r.env.supportsTouch, r.env.supportsIePointer)
+                (r.env.supportsTouch || r.env.supportsIePointer) && s(e, o.get(e), r.env.supportsTouch, r.env.supportsIePointer)
             }
         }, (e, t, n) => {
             "use strict";
@@ -7999,24 +7999,24 @@
                 i = n(160),
                 a = n(161);
 
-            function l(e, t) {
+            function s(e, t) {
                 var n = null,
-                    l = {
+                    s = {
                         top: 0,
                         left: 0
                     };
 
-                function s() {
+                function l() {
                     n && (clearInterval(n), n = null), r.stopScrolling(e)
                 }
                 var d = !1;
                 t.event.bind(t.ownerDocument, "selectionchange", (function() {
                     var t;
-                    e.contains(0 === (t = window.getSelection ? window.getSelection() : document.getSelection ? document.getSelection() : "").toString().length ? null : t.getRangeAt(0).commonAncestorContainer) ? d = !0 : (d = !1, s())
+                    e.contains(0 === (t = window.getSelection ? window.getSelection() : document.getSelection ? document.getSelection() : "").toString().length ? null : t.getRangeAt(0).commonAncestorContainer) ? d = !0 : (d = !1, l())
                 })), t.event.bind(window, "mouseup", (function() {
-                    d && (d = !1, s())
+                    d && (d = !1, l())
                 })), t.event.bind(window, "keyup", (function() {
-                    d && (d = !1, s())
+                    d && (d = !1, l())
                 })), t.event.bind(window, "mousemove", (function(t) {
                     if (d) {
                         var c = {
@@ -8029,14 +8029,14 @@
                                 top: e.offsetTop,
                                 bottom: e.offsetTop + e.offsetHeight
                             };
-                        c.x < p.left + 3 ? (l.left = -5, r.startScrolling(e, "x")) : c.x > p.right - 3 ? (l.left = 5, r.startScrolling(e, "x")) : l.left = 0, c.y < p.top + 3 ? (l.top = p.top + 3 - c.y < 5 ? -5 : -20, r.startScrolling(e, "y")) : c.y > p.bottom - 3 ? (l.top = c.y - p.bottom + 3 < 5 ? 5 : 20, r.startScrolling(e, "y")) : l.top = 0, 0 === l.top && 0 === l.left ? s() : n || (n = setInterval((function() {
-                            o.get(e) ? (a(e, "top", e.scrollTop + l.top), a(e, "left", e.scrollLeft + l.left), i(e)) : clearInterval(n)
+                        c.x < p.left + 3 ? (s.left = -5, r.startScrolling(e, "x")) : c.x > p.right - 3 ? (s.left = 5, r.startScrolling(e, "x")) : s.left = 0, c.y < p.top + 3 ? (s.top = p.top + 3 - c.y < 5 ? -5 : -20, r.startScrolling(e, "y")) : c.y > p.bottom - 3 ? (s.top = c.y - p.bottom + 3 < 5 ? 5 : 20, r.startScrolling(e, "y")) : s.top = 0, 0 === s.top && 0 === s.left ? l() : n || (n = setInterval((function() {
+                            o.get(e) ? (a(e, "top", e.scrollTop + s.top), a(e, "left", e.scrollLeft + s.left), i(e)) : clearInterval(n)
                         }), 50))
                     }
                 }))
             }
             e.exports = function(e) {
-                l(e, o.get(e))
+                s(e, o.get(e))
             }
         }, (e, t, n) => {
             "use strict";
@@ -8055,10 +8055,10 @@
                 o = n(154),
                 i = n(155),
                 a = n(160),
-                l = n(161);
+                s = n(161);
             e.exports = function(e) {
                 var t = i.get(e);
-                t && (t.negativeScrollAdjustment = t.isNegativeScroll ? e.scrollWidth - e.clientWidth : 0, o.css(t.scrollbarXRail, "display", "block"), o.css(t.scrollbarYRail, "display", "block"), t.railXMarginWidth = r.toInt(o.css(t.scrollbarXRail, "marginLeft")) + r.toInt(o.css(t.scrollbarXRail, "marginRight")), t.railYMarginHeight = r.toInt(o.css(t.scrollbarYRail, "marginTop")) + r.toInt(o.css(t.scrollbarYRail, "marginBottom")), o.css(t.scrollbarXRail, "display", "none"), o.css(t.scrollbarYRail, "display", "none"), a(e), l(e, "top", e.scrollTop), l(e, "left", e.scrollLeft), o.css(t.scrollbarXRail, "display", ""), o.css(t.scrollbarYRail, "display", ""))
+                t && (t.negativeScrollAdjustment = t.isNegativeScroll ? e.scrollWidth - e.clientWidth : 0, o.css(t.scrollbarXRail, "display", "block"), o.css(t.scrollbarYRail, "display", "block"), t.railXMarginWidth = r.toInt(o.css(t.scrollbarXRail, "marginLeft")) + r.toInt(o.css(t.scrollbarXRail, "marginRight")), t.railYMarginHeight = r.toInt(o.css(t.scrollbarYRail, "marginTop")) + r.toInt(o.css(t.scrollbarYRail, "marginBottom")), o.css(t.scrollbarXRail, "display", "none"), o.css(t.scrollbarYRail, "display", "none"), a(e), s(e, "top", e.scrollTop), s(e, "left", e.scrollLeft), o.css(t.scrollbarXRail, "display", ""), o.css(t.scrollbarYRail, "display", ""))
             }
         }, (e, t, n) => {
             "use strict";
@@ -8100,8 +8100,8 @@
                     if (r) e.detachEvent("onresize", t);
                     else if (e.__resizeTrigger__) {
                         var a = e.__resizeTrigger__.contentDocument,
-                            l = a && a.defaultView;
-                        l && (l.removeEventListener("resize", t), delete l.__resizeTrigger__), e.__resizeTrigger__ = !e.removeChild(e.__resizeTrigger__)
+                            s = a && a.defaultView;
+                        s && (s.removeEventListener("resize", t), delete s.__resizeTrigger__), e.__resizeTrigger__ = !e.removeChild(e.__resizeTrigger__)
                     }
                     delete e.__resizeListeners__
                 }
@@ -8131,8 +8131,8 @@
                 };
             const {
                 RenderMode: a,
-                PlayerNameComputer: l
-            } = o.playerNameComponentLogic, s = {
+                PlayerNameComputer: s
+            } = o.playerNameComponentLogic, l = {
                 BATCH: "batch",
                 FORMAT: "format",
                 PUUID: "puuid",
@@ -8141,7 +8141,7 @@
                 TAG_LINE: "tag-line",
                 RENDER_MODE_OVERRIDE: "render-mode",
                 RENDER_ALIAS_OVERRIDE: "render-alias"
-            }, d = Object.values(s), c = "player-name__game-name", p = "player-name__tag-line", A = "player-name__tooltip__game-name", u = "player-name__tooltip__tag-line", h = "player-name__error", g = "alias";
+            }, d = Object.values(l), c = "player-name__game-name", p = "player-name__tag-line", A = "player-name__tooltip__game-name", u = "player-name__tooltip__tag-line", h = "player-name__error", g = "alias";
             class b extends o.webComponents.ShadowElement {
                 static get observedAttributes() {
                     return d
@@ -8153,7 +8153,7 @@
                     return n(185)
                 }
                 constructor() {
-                    super(), this._tooltipTarget = null, this._tooltipElement = null, this._destroyCurrentPlayerObserver = null, this._computer = new l(o.playerNames), this._directionCharacter = o.localeDirectionOverrides.localeDirectionMark
+                    super(), this._tooltipTarget = null, this._tooltipElement = null, this._destroyCurrentPlayerObserver = null, this._computer = new s(o.playerNames), this._directionCharacter = o.localeDirectionOverrides.localeDirectionMark
                 }
                 connectedCallback() {
                     this._destroyCurrentPlayerObserver || (this._destroyCurrentPlayerObserver = o.playerNames.observeCurrentPlayerName(this._updatePlayerNameFromCurrentSummonerUpdate.bind(this)).destroy), this._compute()
@@ -8172,21 +8172,21 @@
                 }
                 _compute() {
                     this._computer.compute({
-                        batch: this.getAttribute(s.BATCH),
-                        puuid: this.getAttribute(s.PUUID),
-                        summonerId: this.getAttribute(s.SUMMONER_ID),
-                        gameName: this.getAttribute(s.GAME_NAME),
-                        tagLine: this.getAttribute(s.TAG_LINE),
-                        format: this.getAttribute(s.FORMAT),
-                        renderModeOverride: this.getAttribute(s.RENDER_MODE_OVERRIDE),
-                        renderAliasOverride: this._booleanAttribute(s.RENDER_ALIAS_OVERRIDE)
+                        batch: this.getAttribute(l.BATCH),
+                        puuid: this.getAttribute(l.PUUID),
+                        summonerId: this.getAttribute(l.SUMMONER_ID),
+                        gameName: this.getAttribute(l.GAME_NAME),
+                        tagLine: this.getAttribute(l.TAG_LINE),
+                        format: this.getAttribute(l.FORMAT),
+                        renderModeOverride: this.getAttribute(l.RENDER_MODE_OVERRIDE),
+                        renderAliasOverride: this._booleanAttribute(l.RENDER_ALIAS_OVERRIDE)
                     }).then((e => this._updatePlayerName(e)))
                 }
                 _shouldUseCurrentSummonerObserver() {
-                    const e = this.getAttribute(s.PUUID),
-                        t = this.getAttribute(s.SUMMONER_ID),
-                        n = this.getAttribute(s.GAME_NAME),
-                        r = this.getAttribute(s.TAG_LINE),
+                    const e = this.getAttribute(l.PUUID),
+                        t = this.getAttribute(l.SUMMONER_ID),
+                        n = this.getAttribute(l.GAME_NAME),
+                        r = this.getAttribute(l.TAG_LINE),
                         i = o.playerNames.currentSummonerPuuid;
                     return !(n || r || e || t) || e === i
                 }
@@ -8262,7 +8262,7 @@
                         const t = g;
                         this._updateEnabled(e, "slot", (e => e.getAttribute("name") === t));
                         const n = this._getComponentForActiveSlot(t);
-                        n && (n.playerName = this._playerName, n.setAttribute(s.GAME_NAME, this._playerName.gameName), n.setAttribute(s.TAG_LINE, this._playerName.tagLine))
+                        n && (n.playerName = this._playerName, n.setAttribute(l.GAME_NAME, this._playerName.gameName), n.setAttribute(l.TAG_LINE, this._playerName.tagLine))
                     }
                 }
                 _getComponentForActiveSlot(e) {
@@ -8312,17 +8312,17 @@
             t.default = a
         }, (e, t, n) => {
             "use strict";
-            var r = l(n(177)),
+            var r = s(n(177)),
                 o = n(1),
-                i = l(n(178)),
-                a = l(n(182));
+                i = s(n(178)),
+                a = s(n(182));
 
-            function l(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            const s = "linear",
+            const l = "linear",
                 d = {
                     short: 250,
                     system: 450,
@@ -8460,23 +8460,23 @@
                 if (!n || !Object.prototype.hasOwnProperty.call(n, "options")) return void o.logger.error("Attempted to position tooltip with invalid target:", n);
                 const {
                     options: r
-                } = n, a = i.default.getPositioningStrategy(r.positioningStrategy), l = {
+                } = n, a = i.default.getPositioningStrategy(r.positioningStrategy), s = {
                     element: t,
                     target: e,
                     targetAnchor: r.targetAnchor,
                     elementAnchor: r.tooltipAnchor,
                     offset: r.offset,
                     areaRestriction: r.restrictArea
-                }, s = t;
-                let d = a(l);
+                }, l = t;
+                let d = a(s);
                 if (!d) return;
-                this.positionElement(s, d);
+                this.positionElement(l, d);
                 let c = t.querySelector("lol-uikit-tooltip");
                 if (c || (c = t.classList.contains("lol-uikit-tooltip-target") ? t : t.querySelector(".lol-uikit-tooltip-target")), !(t = c || t.firstChild)) return;
                 const p = i.default.elementRect(t),
                     A = i.default.elementRect(e),
                     u = i.default.relativePosition(e, this.layer);
-                t.dispatchEvent(y(u, A, p)), d = a(l), d && (this.positionElement(s, d), t.dispatchEvent(y(u, A, p)), this.lastPositioned = {
+                t.dispatchEvent(y(u, A, p)), d = a(s), d && (this.positionElement(l, d), t.dispatchEvent(y(u, A, p)), this.lastPositioned = {
                     target: e,
                     element: t
                 })
@@ -8511,7 +8511,7 @@
                 let n = t.options.transitionSpeed;
                 this.recentlyShowedTooltip && (n = 0), this.recentlyShowedTooltip = !0, (0, o.jQuery)(t.domNode).animate({
                     opacity: 1
-                }, n, s).promise().done((() => {
+                }, n, l).promise().done((() => {
                     this.dispatchTargetEvent(e, "tooltip:afterDisplay")
                 }));
                 const r = t.options && t.options.willHideOnChange;
@@ -8542,7 +8542,7 @@
                         this.recentlyShowedTooltip = !1
                     }), 500), (0, o.jQuery)(t.domNode).stop().animate({
                         opacity: 0
-                    }, t.options.transitionSpeed, s).promise().done((() => {
+                    }, t.options.transitionSpeed, l).promise().done((() => {
                         this.mutationObserver.disconnect(), t.domNode.parentNode && t.domNode.parentNode.removeChild(t.domNode), this.lastTarget || this.layer.childNodes.length || this.hideLayer(), this.dispatchTargetEvent(e, "tooltip:afterHide")
                     })))
                 }
@@ -8647,24 +8647,24 @@
             var r, o = (r = n(179)) && r.__esModule ? r : {
                     default: r
                 },
-                i = s(n(180)),
-                a = s(n(181));
+                i = l(n(180)),
+                a = l(n(181));
 
-            function l(e) {
+            function s(e) {
                 if ("function" != typeof WeakMap) return null;
                 var t = new WeakMap,
                     n = new WeakMap;
-                return (l = function(e) {
+                return (s = function(e) {
                     return e ? n : t
                 })(e)
             }
 
-            function s(e, t) {
+            function l(e, t) {
                 if (!t && e && e.__esModule) return e;
                 if (null === e || "object" != typeof e && "function" != typeof e) return {
                     default: e
                 };
-                var n = l(t);
+                var n = s(t);
                 if (n && n.has(e)) return n.get(e);
                 var r = {},
                     o = Object.defineProperty && Object.getOwnPropertyDescriptor;
@@ -8687,8 +8687,8 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = l(n(180)),
-                i = l(n(181));
+                o = s(n(180)),
+                i = s(n(181));
 
             function a(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -8699,7 +8699,7 @@
                 })(e)
             }
 
-            function l(e, t) {
+            function s(e, t) {
                 if (!t && e && e.__esModule) return e;
                 if (null === e || "object" != typeof e && "function" != typeof e) return {
                     default: e
@@ -8710,37 +8710,37 @@
                     o = Object.defineProperty && Object.getOwnPropertyDescriptor;
                 for (var i in e)
                     if ("default" !== i && Object.prototype.hasOwnProperty.call(e, i)) {
-                        var l = o ? Object.getOwnPropertyDescriptor(e, i) : null;
-                        l && (l.get || l.set) ? Object.defineProperty(r, i, l) : r[i] = e[i]
+                        var s = o ? Object.getOwnPropertyDescriptor(e, i) : null;
+                        s && (s.get || s.set) ? Object.defineProperty(r, i, s) : r[i] = e[i]
                     } return r.default = e, n && n.set(e, r), r
             }
 
-            function s(e) {
+            function l(e) {
                 const {
                     element: t,
                     target: n,
                     targetAnchor: r,
                     elementAnchor: a,
-                    offset: l,
-                    areaRestriction: s
+                    offset: s,
+                    areaRestriction: l
                 } = e, d = i.elementRect(t);
                 if (!d) return;
                 if (!i.elementRect(n)) return;
-                const c = i.areaNameToCoords(s),
-                    p = i.getAnchorPosition(n, r, l),
+                const c = i.areaNameToCoords(l),
+                    p = i.getAnchorPosition(n, r, s),
                     A = i.getAnchorPosition(t, a || i.mirrorAnchor("xy", r)),
                     u = i.constrain(c.right - d.w, c.left, d.left + (p.x - A.x)),
                     h = i.constrain(c.bottom - d.h, c.top, d.top + (p.y - A.y));
                 return o.point(u, h)
             }
             var d = {
-                preserve: s,
+                preserve: l,
                 flip: function(e) {
                     const {
                         element: t,
                         target: n,
                         offset: a,
-                        areaRestriction: l
+                        areaRestriction: s
                     } = e;
                     let d = e.elementAnchor,
                         c = e.targetAnchor;
@@ -8751,14 +8751,14 @@
                         u = i.getAnchorPosition(t, d || i.mirrorAnchor("xy", c)),
                         h = A.x - u.x,
                         g = A.y - u.y,
-                        b = i.areaNameToCoords(l),
+                        b = i.areaNameToCoords(s),
                         m = {
                             x: !!(p.left + h < b.left && c.x === o.left || p.right + h > b.right && c.x === o.right),
                             y: !!(p.top + g < b.top && c.y === o.top || p.bottom + g > b.bottom && c.y === o.bottom)
                         };
                     return r.Lodash.forEach(m, ((e, t) => {
                         !0 === e && (r.logger.trace(`Tooltip does not fit on screen. Mirroring in the ${t} axis`), c = i.mirrorAnchor(t, c), d = i.mirrorAnchor(t, d))
-                    })), s(r.Lodash.assign({}, e, {
+                    })), l(r.Lodash.assign({}, e, {
                         targetAnchor: c,
                         elementAnchor: d,
                         areaRestriction: b
@@ -8826,19 +8826,19 @@
                 return Math.max(Math.min(e, n), t)
             }, t.constrain = function(e, t, n) {
                 return Math.min(e, Math.max(t, n))
-            }, t.elementRect = s, t.getAnchorPosition = function(e, t, n) {
-                const r = s(e),
+            }, t.elementRect = l, t.getAnchorPosition = function(e, t, n) {
+                const r = l(e),
                     {
                         x: i
                     } = t,
                     {
                         y: a
                     } = t,
-                    l = n && n.x || 0,
+                    s = n && n.x || 0,
                     p = n && n.y || 0,
                     A = d(i, r),
                     u = c(a, r);
-                return o.point(A + l, u + p)
+                return o.point(A + s, u + p)
             }, t.getScreenRect = a, t.mirrorAnchor = function(e, t) {
                 if (!t) return;
                 const {
@@ -8850,10 +8850,10 @@
                     y: -1 !== e.indexOf("y") && o.opposites[r] || r
                 }
             }, t.paddedRect = p, t.relativePosition = function(e, t) {
-                const n = s(e),
-                    r = s(t);
+                const n = l(e),
+                    r = l(t);
                 return o.point(r.x - n.x, r.y - n.y)
-            }, t.unwrapped = l;
+            }, t.unwrapped = s;
             var r = n(1),
                 o = function(e, t) {
                     if (!t && e && e.__esModule) return e;
@@ -8866,8 +8866,8 @@
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
                     for (var a in e)
                         if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
-                            var l = o ? Object.getOwnPropertyDescriptor(e, a) : null;
-                            l && (l.get || l.set) ? Object.defineProperty(r, a, l) : r[a] = e[a]
+                            var s = o ? Object.getOwnPropertyDescriptor(e, a) : null;
+                            s && (s.get || s.set) ? Object.defineProperty(r, a, s) : r[a] = e[a]
                         } r.default = e, n && n.set(e, r);
                     return r
                 }(n(180));
@@ -8885,14 +8885,14 @@
                 return o.rect(window.pageXOffset, window.pageYOffset, window.innerWidth, window.innerHeight)
             }
 
-            function l(e) {
+            function s(e) {
                 return e ? e.jquery ? e[0] : e : null
             }
 
-            function s(e) {
-                const t = l(e);
+            function l(e) {
+                const t = s(e);
                 if (!t || !t.getBoundingClientRect) return;
-                const n = l(e).getBoundingClientRect();
+                const n = s(e).getBoundingClientRect();
                 return o.rect(n.left + window.pageXOffset, n.top + window.pageYOffset, n.width, n.height)
             }
 
@@ -8922,7 +8922,7 @@
                     default: e
                 }
             }
-            var l = new class {
+            var s = new class {
                 constructor() {
                     this._targets = new Map
                 }
@@ -8947,7 +8947,7 @@
                     this._targets.delete(e)
                 }
             };
-            t.default = l
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -9048,8 +9048,8 @@
                 a = (r = n(37)) && r.__esModule ? r : {
                     default: r
                 },
-                l = n(1);
-            class s extends l.webComponents.ShadowElement {
+                s = n(1);
+            class l extends s.webComponents.ShadowElement {
                 static initAnimationDelay = 100;
                 templateMarkup() {
                     return n(187)
@@ -9061,7 +9061,7 @@
                     super(), this._wasDisabled = !1, this._hasPlayedIntro = !1, this.mouseover = this.sendMouseEvent.bind(this, "hover", "hover"), this.mouseout = this.sendMouseEvent.bind(this, "out", "idle"), this.mouseup = this.sendMouseEvent.bind(this, "up"), this.mousedown = (0, i.leftClickHandler)(this.sendMouseEvent.bind(this, "down", "down")), this.click = (0, i.leftClickHandler)(this.sendMouseEvent.bind(this, "click", "click"))
                 }
                 connectedCallback() {
-                    this.setMouseEvents(), s.initAnimationDelay ? setTimeout(this.initAnimation.bind(this), s.initAnimationDelay) : this.initAnimation()
+                    this.setMouseEvents(), l.initAnimationDelay ? setTimeout(this.initAnimation.bind(this), l.initAnimationDelay) : this.initAnimation()
                 }
                 disconnectedCallback() {
                     this.removeMouseEvents()
@@ -9124,7 +9124,7 @@
                     })), e && (t.classList.add(e), n.classList.add(e))
                 }
             }
-            Object.defineProperty(s.prototype, "disabled", {
+            Object.defineProperty(l.prototype, "disabled", {
                 enumerable: !0,
                 get: function() {
                     return this.hasAttribute("disabled")
@@ -9132,8 +9132,8 @@
                 set: function(e) {
                     e ? this.setAttribute("disabled", "disabled") : this.removeAttribute("disabled")
                 }
-            }), s.tagName = "lol-uikit-primary-magic-button";
-            var d = s;
+            }), l.tagName = "lol-uikit-primary-magic-button";
+            var d = l;
             t.default = d
         }, e => {
             "use strict";
@@ -9158,8 +9158,8 @@
                 o = n(34),
                 i = n(35),
                 a = n(1),
-                l = d(n(36)),
-                s = d(n(37));
+                s = d(n(36)),
+                l = d(n(37));
 
             function d(e) {
                 return e && e.__esModule ? e : {
@@ -9222,8 +9222,8 @@
                 setCustomSounds() {
                     const e = this.getAttribute("hover-sfx-src"),
                         t = this.getAttribute("click-sfx-src"),
-                        n = e || s.default.purchaseButtonHover,
-                        r = t || s.default.purchaseButtonClick;
+                        n = e || l.default.purchaseButtonHover,
+                        r = t || l.default.purchaseButtonClick;
                     this._hoverSound = this._createSound(n), this._clickSound = this._createSound(r)
                 }
                 setDisabledDisplay() {
@@ -9233,7 +9233,7 @@
                     this.$currencyValue("rp").text(this.getAttribute("rp-value")), this.$currencyValue("be").text(this.getAttribute("be-value"))
                 }
                 $root() {
-                    return (0, l.default)(this.shadowRoot)
+                    return (0, s.default)(this.shadowRoot)
                 }
                 $currencyValue(e) {
                     return this.$root().find(`.lol-uikit-purchase-button-content-value.${e}`)
@@ -9295,12 +9295,12 @@
                 },
                 i = n(1);
             const a = "summoner",
-                l = "champion",
-                s = "type",
+                s = "champion",
+                l = "type",
                 d = "percent",
                 c = "start-angle",
                 p = "end-angle",
-                A = [a, l, "blue", "pink", "white", "custom"],
+                A = [a, s, "blue", "pink", "white", "custom"],
                 u = {
                     percent: 0,
                     animateFillDuration: 1,
@@ -9327,11 +9327,11 @@
                     })
                 }
                 static get observedAttributes() {
-                    return [s, d, c, p]
+                    return [l, d, c, p]
                 }
                 attributeChangedCallback(e, t, n) {
                     switch (e) {
-                        case s:
+                        case l:
                             this._setType(n);
                             break;
                         case d:
@@ -9346,7 +9346,7 @@
                     this._triggerMaskGeneration()
                 }
                 render() {
-                    super.render(), this._polygonGen = new o.default, this._percent = this._sanitizePercent(this.getAttribute(d)), this._setType(this.getAttribute(s)), this._polygonGen.setStartAngle(this.getAttribute(c)), this._polygonGen.setEndAngle(this.getAttribute(p)), this._triggerMaskGeneration()
+                    super.render(), this._polygonGen = new o.default, this._percent = this._sanitizePercent(this.getAttribute(d)), this._setType(this.getAttribute(l)), this._polygonGen.setStartAngle(this.getAttribute(c)), this._polygonGen.setEndAngle(this.getAttribute(p)), this._triggerMaskGeneration()
                 }
                 animateFill(e) {
                     const t = Array.from(this.querySelectorAll("div.middle")),
@@ -9360,7 +9360,7 @@
                     e && -1 !== A.indexOf(e) ? (this._type = e, this._setDefaultAngles()) : this._type = a
                 }
                 _setDefaultAngles() {
-                    this._type === l && (this.getAttribute(c) || this._polygonGen.setStartAngle("80deg"), this.getAttribute(p) || this._polygonGen.setEndAngle("-260deg"))
+                    this._type === s && (this.getAttribute(c) || this._polygonGen.setStartAngle("80deg"), this.getAttribute(p) || this._polygonGen.setEndAngle("-260deg"))
                 }
                 _sanitizePercent(e) {
                     return e ? (e = Number.parseFloat(e), isNaN(e) ? 0 : Math.min(Math.max(e, 0), 100)) : 0
@@ -9371,8 +9371,8 @@
                     if (n.length > 1) {
                         let r = 0,
                             a = this._polygonGen.startAngle;
-                        const l = 3 * Math.PI / 2 - this._polygonGen.startAngle,
-                            s = this._polygonGen.endAngle - this._polygonGen.startAngle;
+                        const s = 3 * Math.PI / 2 - this._polygonGen.startAngle,
+                            l = this._polygonGen.endAngle - this._polygonGen.startAngle;
                         return new Promise((c => {
                             const p = new i.gsap.TimelineLite({
                                 paused: !0,
@@ -9381,7 +9381,7 @@
                             n.forEach(((t, n) => {
                                 const i = Number(t.getAttribute(d)),
                                     c = new o.default;
-                                c.startAngle = a, c.endAngle = a + s;
+                                c.startAngle = a, c.endAngle = a + l;
                                 const A = c.generatePolygon(i);
                                 if (t.style.position = "absolute", t.style.webkitClipPath = A, e[n] && i > 0) {
                                     const o = t.querySelector(".mask-container.left-half img"),
@@ -9392,7 +9392,7 @@
                                         {
                                             animateStartDelay: c
                                         } = e[n];
-                                    this._animateFillPercent(p, o, a, r, i, s, l, d, c)
+                                    this._animateFillPercent(p, o, a, r, i, l, s, d, c)
                                 }
                                 a = c.getAngleFromPercent({
                                     percent: i
@@ -9402,36 +9402,36 @@
                     }
                     return t.style.webkitClipPath = this._polygonGen.generatePolygon(this._percent), Promise.resolve()
                 }
-                _animateFillPercent(e, t, n, r, o, i, a, l, s) {
+                _animateFillPercent(e, t, n, r, o, i, a, s, l) {
                     if (r + o <= 50) {
                         const n = r / 100 * Math.abs(i) + a,
                             d = (r + o) / 100 * Math.abs(i) + a;
-                        e.fromTo(t, l, {
+                        e.fromTo(t, s, {
                             rotation: `${n}rad`
                         }, {
                             rotation: `${d}rad`,
                             ease: "Linear.easeNone"
-                        }, `+=${s}`)
+                        }, `+=${l}`)
                     } else if (r >= 50) {
                         const t = (r - 50) / 100 * Math.abs(i),
                             a = (r + o - 50) / 100 * Math.abs(i);
-                        e.fromTo(n, l, {
+                        e.fromTo(n, s, {
                             rotation: `${t}rad`
                         }, {
                             rotation: `${a}rad`,
                             ease: "Linear.easeNone"
-                        }, `+=${s}`)
+                        }, `+=${l}`)
                     } else {
                         const d = r / 100 * Math.abs(i) + a,
-                            c = l * (50 - r) / o;
+                            c = s * (50 - r) / o;
                         e.fromTo(t, c, {
                             rotation: `${d}rad`
                         }, {
                             rotation: 180,
                             ease: "Linear.easeNone"
-                        }, `+=${s}`);
+                        }, `+=${l}`);
                         const p = (r + o - 50) / 100 * Math.abs(i),
-                            A = l * (r + o - 50) / o;
+                            A = s * (r + o - 50) / o;
                         e.fromTo(n, A, {
                             rotation: 0
                         }, {
@@ -9510,18 +9510,18 @@
                         endAngle: o,
                         percent: e
                     });
-                    let a, l;
+                    let a, s;
                     if (t.push(this.getPointOnSquare(r)), i > r) {
-                        a = Math.ceil(2 / n * r - .5), l = n / 4 * (2 * a + 1);
+                        a = Math.ceil(2 / n * r - .5), s = n / 4 * (2 * a + 1);
                         for (let e = 0; e < 4; e++) {
-                            const r = l + e * n / 2;
+                            const r = s + e * n / 2;
                             if (!(r < i)) break;
                             t.push(this.getPointOnSquare(r))
                         }
                     } else {
-                        a = Math.floor(2 * r / n - .5), l = n / 4 * (2 * a + 1);
+                        a = Math.floor(2 * r / n - .5), s = n / 4 * (2 * a + 1);
                         for (let e = 0; e < 4; e++) {
-                            const r = l - e * n / 2;
+                            const r = s - e * n / 2;
                             if (!(r > i)) break;
                             t.push(this.getPointOnSquare(r))
                         }
@@ -9594,16 +9594,16 @@
                 o = n(27),
                 i = n(91),
                 a = n(198),
-                l = o(r),
-                s = i(a);
-            l.push([e.id, ":host {\n  --radio-input-option-hover-background-color: transparent;\n  --radio-input-option-padding: 0;\n}\n:host li.ui-radio-input-option {\n  padding: var(--radio-input-option-padding);\n  margin: 0;\n  height: 36px;\n  display: flex;\n  align-items: center;\n  white-space: nowrap;\n  position: relative;\n  cursor: pointer;\n  color: #cdbe91;\n}\n:host li.ui-radio-input-option::before {\n  content: '';\n  width: 18px;\n  height: 18px;\n  margin-right: 7px;\n  background: url(" + s + ") center no-repeat;\n  background-position: 0px 0px;\n  background-size: 100%;\n}\n:host li.ui-radio-input-option:lang(ar-ae)::before {\n  margin: 0 0 0 7px;\n}\n:host li.ui-radio-input-option:hover {\n  color: #f0e6d2;\n  background-color: var(--radio-input-option-hover-background-color);\n}\n:host li.ui-radio-input-option.disabled {\n  color: #5c5b57;\n  cursor: default;\n}\n:host li.ui-radio-input-option:hover::before {\n  background-position: 0 -18px;\n}\n:host li.ui-radio-input-option:active::before {\n  background-position: 0 -36px;\n}\n:host li.ui-radio-input-option.disabled::before {\n  background-position: 0 -54px;\n}\n:host li.ui-radio-input-option.ui-radio-input-option-selected {\n  color: #f0e6d2;\n}\n:host li.ui-radio-input-option.ui-radio-input-option-selected::before {\n  background-position: 0 -72px;\n}\n:host li.ui-radio-input-option.ui-radio-input-option-selected:hover::before {\n  background-position: 0 -90px;\n}\n:host li.ui-radio-input-option.ui-radio-input-option-selected:active::before {\n  background-position: 0 -108px;\n}\n", "", {
+                s = o(r),
+                l = i(a);
+            s.push([e.id, ":host {\n  --radio-input-option-hover-background-color: transparent;\n  --radio-input-option-padding: 0;\n}\n:host li.ui-radio-input-option {\n  padding: var(--radio-input-option-padding);\n  margin: 0;\n  height: 36px;\n  display: flex;\n  align-items: center;\n  white-space: nowrap;\n  position: relative;\n  cursor: pointer;\n  color: #cdbe91;\n}\n:host li.ui-radio-input-option::before {\n  content: '';\n  width: 18px;\n  height: 18px;\n  margin-right: 7px;\n  background: url(" + l + ") center no-repeat;\n  background-position: 0px 0px;\n  background-size: 100%;\n}\n:host li.ui-radio-input-option:lang(ar-ae)::before {\n  margin: 0 0 0 7px;\n}\n:host li.ui-radio-input-option:hover {\n  color: #f0e6d2;\n  background-color: var(--radio-input-option-hover-background-color);\n}\n:host li.ui-radio-input-option.disabled {\n  color: #5c5b57;\n  cursor: default;\n}\n:host li.ui-radio-input-option:hover::before {\n  background-position: 0 -18px;\n}\n:host li.ui-radio-input-option:active::before {\n  background-position: 0 -36px;\n}\n:host li.ui-radio-input-option.disabled::before {\n  background-position: 0 -54px;\n}\n:host li.ui-radio-input-option.ui-radio-input-option-selected {\n  color: #f0e6d2;\n}\n:host li.ui-radio-input-option.ui-radio-input-option-selected::before {\n  background-position: 0 -72px;\n}\n:host li.ui-radio-input-option.ui-radio-input-option-selected:hover::before {\n  background-position: 0 -90px;\n}\n:host li.ui-radio-input-option.ui-radio-input-option-selected:active::before {\n  background-position: 0 -108px;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/radio-input-option/component-style.styl"],
                 names: [],
                 mappings: "AASA;EACE,wDAA6C;EAC7C,+BAA8B;AARhC;AAcE;EACE,0CAAS;EACT,SAAQ;EACR,YAAiC;EACjC,aAAS;EACT,mBAAa;EACb,mBAAa;EACb,kBAAU;EACV,eAAQ;EACR,cAAO;AAZX;AAcI;EACE,WAAS;EACT,WAAO;EACP,YAAQ;EACR,iBAAc;EACd,oEAAuC;EACvC,4BAAqB;EACrB,qBAAiB;AAZvB;AAeI;EACE,iBAAQ;AAbd;AAgBI;EACE,cAAO;EACP,kEAAkB;AAdxB;AAiBI;EACE,cAAO;EACP,eAAQ;AAfd;AAkBI;EACE,4BAAqB;AAhB3B;AAmBI;EACE,4BAAqB;AAjB3B;AAoBI;EACE,4BAAqB;AAlB3B;AAqBI;EACE,cAAO;AAnBb;AAqBM;EACE,4BAAqB;AAnB7B;AAsBM;EACE,4BAAqB;AApB7B;AAuBM;EACE,6BAAqB;AArB7B",
                 sourcesContent: ["@require 'riotclient-lol-asset-csslib/styles/ui-colors.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n\r\n$radio-input-icon-size = 18px;\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --radio-input-option-hover-background-color: transparent;\r\n  --radio-input-option-padding: 0;\r\n}\r\n\r\n\r\n:host {\r\n\r\n  li.ui-radio-input-option {\r\n    padding: var(--radio-input-option-padding);\r\n    margin: 0;\r\n    height: $radio-input-icon-size * 2;\r\n    display: flex;\r\n    align-items: center;\r\n    white-space: nowrap;\r\n    position: relative;\r\n    cursor: pointer;\r\n    color: $color_palette_gold2;\r\n\r\n    &::before {\r\n      content: '';\r\n      width: $radio-input-icon-size;\r\n      height: $radio-input-icon-size;\r\n      margin-right: 7px;\r\n      background: url('./images/btn_icon.png') center no-repeat;\r\n      background-position: 0px 0px;\r\n      background-size: 100%;\r\n    }\r\n\r\n    &:lang(ar-ae)::before {\r\n      margin: 0 0 0 7px;\r\n    }\r\n\r\n    &:hover {\r\n      color: $color_palette_gold1;\r\n      background-color: var(--radio-input-option-hover-background-color);\r\n    }\r\n\r\n    &.disabled {\r\n      color: $color_palette_grey_disabled;\r\n      cursor: default;\r\n    }\r\n\r\n    &:hover::before {\r\n      background-position: 0 ($radio-input-icon-size * -1px);\r\n    }\r\n\r\n    &:active::before {\r\n      background-position: 0 ($radio-input-icon-size * -2px);\r\n    }\r\n\r\n    &.disabled::before {\r\n      background-position: 0 ($radio-input-icon-size * -3px);\r\n    }\r\n\r\n    &.ui-radio-input-option-selected {\r\n      color: $color_palette_gold1;\r\n\r\n      &::before {\r\n        background-position: 0 ($radio-input-icon-size * -4px);\r\n      }\r\n\r\n      &:hover::before {\r\n        background-position: 0 ($radio-input-icon-size * -5px);\r\n      }\r\n\r\n      &:active::before {\r\n        background-position: 0 ($radio-input-icon-size * -6px);\r\n      }\r\n    }\r\n  }\r\n}\r\n"],
                 sourceRoot: ""
-            }]), e.exports = l
+            }]), e.exports = s
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "btn_icon.png"
@@ -9652,8 +9652,8 @@
                 }
             }
             a.tagName = "lol-uikit-radio-input";
-            var l = a;
-            t.default = l
+            var s = a;
+            t.default = s
         }, e => {
             "use strict";
             e.exports = '<template>\r\n  <div class="ui-radio-input">\r\n    <ul class="ui-radio-input-options">\r\n      <slot></slot>\r\n    </ul>\r\n  </div>\r\n</template>\r\n'
@@ -9687,18 +9687,18 @@
                     default: r
                 };
             const a = "data-max-width",
-                l = "data-max-height",
-                s = "data-multiline",
+                s = "data-max-height",
+                l = "data-multiline",
                 d = "multiline";
             class c extends o.webComponents.ShadowElement {
                 static get observedAttributes() {
-                    return [a, l, s]
+                    return [a, s, l]
                 }
                 templateMarkup() {
                     return n(204)
                 }
                 connectedCallback() {
-                    super.connectedCallback(), this._maxWidth = Number.parseInt(this.getAttribute(a), 10), this._maxHeight = Number.parseInt(this.getAttribute(l), 10), this._multiline = this.getAttribute(s), this._multiline && this.classList.add(d), this._computedStyle = window.getComputedStyle(this, null), this._preferredFontSize = Number.parseInt(this._computedStyle.getPropertyValue("font-size")), this._currentFontSize = this._preferredFontSize, this._fontFamily = this._computedStyle.getPropertyValue("font-family"), this._canvasContext = (0, i.default)(), this._textContentObserver = new MutationObserver((() => {
+                    super.connectedCallback(), this._maxWidth = Number.parseInt(this.getAttribute(a), 10), this._maxHeight = Number.parseInt(this.getAttribute(s), 10), this._multiline = this.getAttribute(l), this._multiline && this.classList.add(d), this._computedStyle = window.getComputedStyle(this, null), this._preferredFontSize = Number.parseInt(this._computedStyle.getPropertyValue("font-size")), this._currentFontSize = this._preferredFontSize, this._fontFamily = this._computedStyle.getPropertyValue("font-family"), this._canvasContext = (0, i.default)(), this._textContentObserver = new MutationObserver((() => {
                         this.updateTextSize(this._multiline)
                     })), this._textContentObserver.observe(this, {
                         subtree: !0,
@@ -9707,7 +9707,7 @@
                     }), this._textFieldDimensionsObserver = new MutationObserver((() => {
                         this.onTextFieldDimensionsChanged()
                     })), this._textFieldDimensionsObserver.observe(this, {
-                        attributeFilter: [a, l, s]
+                        attributeFilter: [a, s, l]
                     }), this.updateTextSize(this._multiline)
                 }
                 disconnectedCallback() {
@@ -9715,8 +9715,8 @@
                 }
                 onTextFieldDimensionsChanged() {
                     this._maxWidth = Number.parseInt(this.getAttribute(a), 10);
-                    const e = this.getAttribute(s);
-                    e ? (this._maxHeight = Number.parseInt(this.getAttribute(l), 10), this.classList.add(d)) : this.classList.remove(d), this.updateTextSize(e)
+                    const e = this.getAttribute(l);
+                    e ? (this._maxHeight = Number.parseInt(this.getAttribute(s), 10), this.classList.add(d)) : this.classList.remove(d), this.updateTextSize(e)
                 }
                 textFitsAllowedSpaceMultiLine(e) {
                     let t = 1,
@@ -9805,11 +9805,11 @@
                             scrollTop: o,
                             scrollLeft: i
                         } = this;
-                    let a, l;
-                    "horizontal" === e ? (a = i - r <= 0, l = i + this.offsetWidth + r >= this.scrollWidth) : (a = o - r <= 0, l = o + this.offsetHeight + r >= this.scrollHeight), t === a && n === l || (this.setAttribute("scrolled-top", a), this.setAttribute("scrolled-bottom", l), this.dispatchEvent(new CustomEvent("scroll-change", {
+                    let a, s;
+                    "horizontal" === e ? (a = i - r <= 0, s = i + this.offsetWidth + r >= this.scrollWidth) : (a = o - r <= 0, s = o + this.offsetHeight + r >= this.scrollHeight), t === a && n === s || (this.setAttribute("scrolled-top", a), this.setAttribute("scrolled-bottom", s), this.dispatchEvent(new CustomEvent("scroll-change", {
                         detail: {
                             scrolledTop: a,
-                            scrolledBottom: l
+                            scrolledBottom: s
                         }
                     })))
                 }
@@ -9866,8 +9866,8 @@
                 }
             }
             a.tagName = "lol-uikit-scrollable";
-            var l = a;
-            t.default = l
+            var s = a;
+            t.default = s
         }, e => {
             "use strict";
             e.exports = "<template>\r\n  <slot></slot>\r\n</template>\r\n"
@@ -9896,11 +9896,11 @@
                     opacity: 0,
                     visbility: "hidden"
                 },
-                l = {
+                s = {
                     opacity: 0,
                     visbility: "visible"
                 },
-                s = {
+                l = {
                     opacity: .75,
                     visbility: "visible"
                 },
@@ -9912,22 +9912,22 @@
                     fade: {
                         show: {
                             duration: 500,
-                            frames: [a, l, d]
+                            frames: [a, s, d]
                         },
                         hide: {
                             duration: 500,
-                            frames: [d, l, a]
+                            frames: [d, s, a]
                         }
                     },
                     crossfade: {
                         show: {
                             duration: 500,
-                            frames: [a, s, d],
+                            frames: [a, l, d],
                             easing: "cubic-bezier(0, 0, 0, 1)"
                         },
                         hide: {
                             duration: 500,
-                            frames: [d, s, a],
+                            frames: [d, l, a],
                             easing: "cubic-bezier(0, 0, 0, 1)"
                         }
                     }
@@ -10048,8 +10048,8 @@
                 },
                 i = n(1);
             const a = "horizontal",
-                l = a,
-                s = {
+                s = a,
+                l = {
                     mouseOffsetAttribute: "clientX",
                     baseElementMoveRangeAttribute: "width",
                     baseElementOffsetAttribute: "left",
@@ -10068,7 +10068,7 @@
                     calcOffset: (e, t) => t - e
                 },
                 c = new Map;
-            c.set(a, s), c.set("vertical", d);
+            c.set(a, l), c.set("vertical", d);
             const p = "min",
                 A = "max",
                 u = "disabled",
@@ -10151,7 +10151,7 @@
                 }
                 _normalizeOrientation() {
                     let e = this.getAttribute("orientation");
-                    e = e && c.has(e.toLowerCase()) ? e.toLowerCase() : l, this._options = c.get(e), this._wrapperElement.classList.add(e)
+                    e = e && c.has(e.toLowerCase()) ? e.toLowerCase() : s, this._options = c.get(e), this._wrapperElement.classList.add(e)
                 }
                 _bindEventListeners() {
                     this._clickBaseElementListener = this._onClickBaseElement.bind(this), this._baseElement.addEventListener("click", this._clickBaseElementListener), this._buttonElement.addEventListener("mousedown", function() {
@@ -10257,8 +10257,8 @@
             const o = "level",
                 i = "size",
                 a = "prestige-crest-id",
-                l = "is-identity-modal";
-            class s extends r.webComponents.ShadowElement {
+                s = "is-identity-modal";
+            class l extends r.webComponents.ShadowElement {
                 templateMarkup() {
                     return n(214)
                 }
@@ -10266,7 +10266,7 @@
                     return n(215)
                 }
                 static get observedAttributes() {
-                    return [o, a, i, l]
+                    return [o, a, i, s]
                 }
                 attributeChangedCallback(e, t, n) {
                     const r = this.shadowRoot.querySelector(".theme-ring-border");
@@ -10275,7 +10275,7 @@
                         else if (e === o) {
                         const e = this._getThemeFromLevel(n);
                         r.setAttribute("theme", e)
-                    } else e === i ? r.classList.add(n) : e === l && "true" === n && r.classList.add("identity-modal")
+                    } else e === i ? r.classList.add(n) : e === s && "true" === n && r.classList.add("identity-modal")
                 }
                 _getThemeFromLevel(e) {
                     if (e >= 1 && e <= 29) return 1;
@@ -10286,8 +10286,8 @@
                     }
                 }
             }
-            s.tagName = "lol-uikit-themed-level-ring-v2";
-            var d = s;
+            l.tagName = "lol-uikit-themed-level-ring-v2";
+            var d = l;
             t.default = d
         }, e => {
             "use strict";
@@ -10312,8 +10312,8 @@
             const o = "level",
                 i = "percent",
                 a = "fresh-percent",
-                l = "prestige-crest-id",
-                s = "crest-by-level",
+                s = "prestige-crest-id",
+                l = "crest-by-level",
                 d = ".xp-meter-progress",
                 c = "has-fresh-xp";
             class p extends r.webComponents.ShadowElement {
@@ -10324,7 +10324,7 @@
                     return n(218)
                 }
                 static get observedAttributes() {
-                    return [o, i, a, "simplified", "social", "solid", l, s]
+                    return [o, i, a, "simplified", "social", "solid", s, l]
                 }
                 constructor() {
                     super(), this._theme = 1, this._percent = 0, this._freshPercent = 0
@@ -10334,7 +10334,7 @@
                     if (e === o) {
                         null === r.getAttribute("theme") && (this._theme = this._getThemeFromLevel(n), r.setAttribute("theme", this._theme));
                         this.shadowRoot.querySelector(".level-text").textContent = n
-                    } else e === i ? (this._percent = Number(n), this.shadowRoot.querySelector(".middle.regular").setAttribute("percent", this._percent)) : e === a ? (this._freshPercent = Number(n), this.shadowRoot.querySelector(".middle.fresh").setAttribute("percent", this._freshPercent), null !== n ? r.classList.add(c) : r.classList.remove(c)) : e === l ? (this._theme = n, r.setAttribute("theme", this._theme)) : e === s && (this._theme = this._getThemeFromLevel(n), r.setAttribute("theme", this._theme))
+                    } else e === i ? (this._percent = Number(n), this.shadowRoot.querySelector(".middle.regular").setAttribute("percent", this._percent)) : e === a ? (this._freshPercent = Number(n), this.shadowRoot.querySelector(".middle.fresh").setAttribute("percent", this._freshPercent), null !== n ? r.classList.add(c) : r.classList.remove(c)) : e === s ? (this._theme = n, r.setAttribute("theme", this._theme)) : e === l && (this._theme = this._getThemeFromLevel(n), r.setAttribute("theme", this._theme))
                 }
                 animateFill(e) {
                     const t = this.shadowRoot.querySelector(d),
@@ -10385,8 +10385,8 @@
             const o = function(e, t, n, r) {
                 const o = n + r / 2 - (e + t / 2),
                     i = Math.max(0, (t - 48) / 2);
-                return a = o, l = -i, s = i, Math.max(l, Math.min(s, a));
-                var a, l, s
+                return a = o, s = -i, l = i, Math.max(s, Math.min(l, a));
+                var a, s, l
             };
             class i extends r.webComponents.ShadowElement {
                 static get observedAttributes() {
@@ -10438,8 +10438,8 @@
                     let i = 0,
                         a = 0;
                     "left" === e || "right" === e ? i = o(t.top, t.height, n.top, n.h) : a = o(t.left, t.width, n.left, n.w);
-                    const l = r.querySelector(".lol-uikit-tooltip-caret");
-                    l.style.top = i ? "calc(50% + " + i + "px)" : "", l.style.left = a ? "calc(50% + " + a + "px)" : ""
+                    const s = r.querySelector(".lol-uikit-tooltip-caret");
+                    s.style.top = i ? "calc(50% + " + i + "px)" : "", s.style.left = a ? "calc(50% + " + a + "px)" : ""
                 }
                 _hasPartAttribute() {
                     return !!this.getAttribute("add-part-selector")
@@ -10524,8 +10524,8 @@
                 }
             }
             a.tagName = "lol-uikit-tooltipped-keyword";
-            var l = a;
-            t.default = l
+            var s = a;
+            t.default = s
         }, e => {
             "use strict";
             e.exports = '<template>\r\n  <slot></slot>\r\n\r\n  <template id="lol-uikit-template-keyword-tooltip"">\r\n    <lol-uikit-tooltip>\r\n      <lol-uikit-content-block type="tooltip-system">\r\n        <p class="keyword-tooltip-content"></p>\r\n      </lol-uikit-content-block>\r\n    </lol-uikit-tooltip>\r\n  </template>\r\n</template>'
@@ -10592,8 +10592,8 @@
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
                     for (var a in e)
                         if ("default" !== a && Object.prototype.hasOwnProperty.call(e, a)) {
-                            var l = o ? Object.getOwnPropertyDescriptor(e, a) : null;
-                            l && (l.get || l.set) ? Object.defineProperty(r, a, l) : r[a] = e[a]
+                            var s = o ? Object.getOwnPropertyDescriptor(e, a) : null;
+                            s && (s.get || s.set) ? Object.defineProperty(r, a, s) : r[a] = e[a]
                         } r.default = e, n && n.set(e, r);
                     return r
                 }(n(1)),
@@ -10609,7 +10609,7 @@
             }
             const {
                 webComponents: a
-            } = r.default, l = "no-preserve-state", s = "wait-for-end", d = "start", c = "done", p = "signal", A = "interupt", u = ["mousemove", "scroll", "keypress"];
+            } = r.default, s = "no-preserve-state", l = "wait-for-end", d = "start", c = "done", p = "signal", A = "interupt", u = ["mousemove", "scroll", "keypress"];
             class h extends a.ShadowElement {
                 templateMarkup() {
                     return n(228)
@@ -10618,7 +10618,7 @@
                     super(), this.isAttached = !1, (0, o.elementDeprecated)(this, "This element is to be obsoleted in favor of uikit-state-machine and uikit-video, please see documentation for more info"), this._dispatchVideoEventStart = e => this.dispatchVideoEvent("videoStateStart", e), this._dispatchVideoEventDone = e => this.dispatchVideoEvent("videoStateDone", e), this._dispatchVideoEventSignal = e => this.dispatchVideoEvent("videoStateSignal", e), this._setInactiveStateHandler = r.Lodash.debounce((() => this._setInactiveState()), "120000"), this._resumeVideosEvent = this._resumeVideos.bind(this)
                 }
                 static get observedAttributes() {
-                    return [l, s]
+                    return [s, l]
                 }
                 connectedCallback() {
                     super.connectedCallback(), this.isAttached = !0, this.dispatchEvent(new Event("attached")), this._setInactiveStateHandler(), this._addInactiveListeners()
@@ -10634,15 +10634,15 @@
                 playGroupState(e, t) {
                     const n = e.querySelector("lol-uikit-video-state[state=" + t.type + "]");
                     if (!n) return;
-                    const r = n.hasAttribute(l) ? e.querySelectorAll("lol-uikit-video-state") : e.querySelectorAll("lol-uikit-video-state:not([state=" + t.type + "])");
-                    if (t.type !== e.currentState || n.hasAttribute(l)) {
+                    const r = n.hasAttribute(s) ? e.querySelectorAll("lol-uikit-video-state") : e.querySelectorAll("lol-uikit-video-state:not([state=" + t.type + "])");
+                    if (t.type !== e.currentState || n.hasAttribute(s)) {
                         e.currentState = t.type;
                         for (let e = 0; e < r.length; e++) this.interuptAllVideos(r[e]);
                         e.playPromise ? e.playPromise.then((() => (e.playPromise = this.playState(n), null))) : e.playPromise = this.playState(n)
                     }
                 }
                 playState(e) {
-                    const t = e.hasAttribute(s),
+                    const t = e.hasAttribute(l),
                         n = e.querySelector('lol-uikit-video[type="intro"]'),
                         r = e.querySelector('lol-uikit-video[type="idle"]'),
                         o = e.querySelector('lol-uikit-video[type="outro"]');
@@ -10753,14 +10753,14 @@
                 }
             }
             const {
-                webComponents: l
-            } = r.default, s = "type", d = "preload", c = "signal-before-end", p = "state", A = "interupt", u = "signalEnd", h = "idle";
-            class g extends l.ShadowElement {
+                webComponents: s
+            } = r.default, l = "type", d = "preload", c = "signal-before-end", p = "state", A = "interupt", u = "signalEnd", h = "idle";
+            class g extends s.ShadowElement {
                 templateMarkup() {
                     return n(232)
                 }
                 static get observedAttributes() {
-                    return ["fade-in", "fade-out", "src", s, d, c, "alignment", p]
+                    return ["fade-in", "fade-out", "src", l, d, c, "alignment", p]
                 }
                 constructor() {
                     super(), (0, i.elementDeprecated)(this, "This element is to be obsoleted in favor of uikit-state-machine and uikit-video, please see documentation for more info"), this._video, this._start = this._startHandler.bind(this), this._ended = this._endedHandler.bind(this), this._signalEnd = this._signalEndHandler.bind(this), this._dispose = this.dispose.bind(this), this._pause = this.pause.bind(this), this._resume = this.resume.bind(this), this.addEventListener(A, this._dispose), this.addEventListener("pause", this._pause), this.addEventListener("resume", this._resume)
@@ -10779,7 +10779,7 @@
                 play() {
                     return new Promise((e => {
                         const t = this._video || this._createVideoElement();
-                        this._message = this.getAttribute(s);
+                        this._message = this.getAttribute(l);
                         let n = new o.default(t);
                         const r = () => {
                             this._removeEventHandlers(t), this._endedHandler(), this._video = null, e(this._message)
@@ -10788,12 +10788,12 @@
                         const a = () => {
                                 i(), n = null
                             },
-                            l = () => {
+                            s = () => {
                                 i(), this._removeEventHandlers(t), n = null, this._video = null
                             };
                         i = () => {
-                            t.removeEventListener("resolve", r), t.removeEventListener("remove", a), t.removeEventListener("destroy", l)
-                        }, t.addEventListener("resolve", r), t.addEventListener("remove", a), t.addEventListener("destroy", l), this._addEventHandlers(t), this.hasAttribute(d) || this.appendChild(t), n.setSignalEnd(this.getAttribute(c)), n.play()
+                            t.removeEventListener("resolve", r), t.removeEventListener("remove", a), t.removeEventListener("destroy", s)
+                        }, t.addEventListener("resolve", r), t.addEventListener("remove", a), t.addEventListener("destroy", s), this._addEventHandlers(t), this.hasAttribute(d) || this.appendChild(t), n.setSignalEnd(this.getAttribute(c)), n.play()
                     }))
                 }
                 pause() {
@@ -10861,8 +10861,8 @@
                     default: r
                 };
             const a = "fade-in",
-                l = "fade-out",
-                s = "interupt",
+                s = "fade-out",
+                l = "interupt",
                 d = new i.default,
                 c = new i.default,
                 p = new i.default;
@@ -10897,11 +10897,11 @@
                 }
                 _addEventHandlers() {
                     const e = this._video;
-                    e.addEventListener("ended", this._boundHandleEnded), e.addEventListener("error", this._boundHandleEnded), e.addEventListener("stalled", this._boundHandleEnded), e.addEventListener(s, this._boundHandleEnded)
+                    e.addEventListener("ended", this._boundHandleEnded), e.addEventListener("error", this._boundHandleEnded), e.addEventListener("stalled", this._boundHandleEnded), e.addEventListener(l, this._boundHandleEnded)
                 }
                 _removeEventHandlers() {
                     const e = this._video;
-                    e.removeEventListener("ended", this._boundHandleEnded), e.removeEventListener("error", this._boundHandleEnded), e.removeEventListener("stalled", this._boundHandleEnded), e.removeEventListener(s, this._boundHandleEnded)
+                    e.removeEventListener("ended", this._boundHandleEnded), e.removeEventListener("error", this._boundHandleEnded), e.removeEventListener("stalled", this._boundHandleEnded), e.removeEventListener(l, this._boundHandleEnded)
                 }
                 _isEnding() {
                     const e = this._video;
@@ -10924,7 +10924,7 @@
                     if (!this._animate) return void this._removeVideo();
                     e.dispatchEvent(new Event("resolve"));
                     const t = e.parentElement,
-                        n = t && t.hasAttribute(l) ? t.getAttribute(l) : 300;
+                        n = t && t.hasAttribute(s) ? t.getAttribute(s) : 300;
                     "finished" !== this._animate.playState ? this._animate.reverse() : (this._animate = e.animate([{
                         opacity: 1
                     }, {
@@ -11024,13 +11024,13 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = s(n(2)),
-                o = s(n(36)),
-                i = s(n(235)),
-                a = s(n(236)),
-                l = n(33);
+            var r = l(n(2)),
+                o = l(n(36)),
+                i = l(n(235)),
+                a = l(n(236)),
+                s = n(33);
 
-            function s(e) {
+            function l(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -11048,8 +11048,8 @@
                     let n = null;
                     const r = e && "string" == typeof e.okText && e.okText.length > 0,
                         i = e && e.dismissible,
-                        l = e && e.dismissibleType,
-                        s = e && e.onClose,
+                        s = e && e.dismissibleType,
+                        l = e && e.onClose,
                         d = function(e, t) {
                             let n = !0;
                             e && !1 === e[t] && (n = !1);
@@ -11064,30 +11064,30 @@
                             primary: !0
                         })
                     }
-                    i && (0, o.default)(c).attr("close-button", ""), l && (0, o.default)(c).attr("dismissable-type", l), p._appendContents(t, e);
-                    return p._createModalObj(t, c, i, r, n, d, l, s)
+                    i && (0, o.default)(c).attr("close-button", ""), s && (0, o.default)(c).attr("dismissable-type", s), p._appendContents(t, e);
+                    return p._createModalObj(t, c, i, r, n, d, s, l)
                 }
                 static _appendContents(e, t) {
                     let n = t.contents ? t.contents : "";
                     const r = e.find(".dialog-content");
                     "string" == typeof n && (n = a.default.contentBlockDialogSimple(n)), r.append((0, o.default)(n))
                 }
-                static _createModalObj(e, t, n, r, o, i, a, s) {
+                static _createModalObj(e, t, n, r, o, i, a, l) {
                     const A = {
                             domNode: e[0]
                         },
                         u = r ? o.get(0) : null;
                     return A.okPromise = new Promise((a => {
-                        function s(e) {
+                        function l(e) {
                             a(e), p._close(A)
                         }
                         if (r && (e.on("keydown", (e => {
-                                13 === e.which && !u.disabled && i && s(d)
-                            })), o.on("click", (0, l.leftClickHandler)((() => {
-                                u.disabled || s(d)
+                                13 === e.which && !u.disabled && i && l(d)
+                            })), o.on("click", (0, s.leftClickHandler)((() => {
+                                u.disabled || l(d)
                             })))), n) {
                             t.on("dialogFrameDismissed", (() => {
-                                s(c)
+                                l(c)
                             })), t.on("mousedown", (e => !1));
                             let n = !1;
                             e.on("mousedown", (() => {
@@ -11095,11 +11095,11 @@
                             })), e.on("mousemove", (() => {
                                 n = !0
                             })), e.on("mouseup", (() => {
-                                n || s(c)
+                                n || l(c)
                             }))
                         }
                     })), A.okPromise.then((e => {
-                        s && "function" == typeof s && s(e)
+                        l && "function" == typeof l && l(e)
                     })), r && (A.focusOkButton = function() {
                         o.focus()
                     }, A.disableOkButton = function() {
@@ -11138,8 +11138,8 @@
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
                     for (var i in e)
                         if ("default" !== i && Object.prototype.hasOwnProperty.call(e, i)) {
-                            var l = o ? Object.getOwnPropertyDescriptor(e, i) : null;
-                            l && (l.get || l.set) ? Object.defineProperty(r, i, l) : r[i] = e[i]
+                            var s = o ? Object.getOwnPropertyDescriptor(e, i) : null;
+                            s && (s.get || s.set) ? Object.defineProperty(r, i, s) : r[i] = e[i]
                         } r.default = e, n && n.set(e, r);
                     return r
                 }(n(1));
@@ -11152,7 +11152,7 @@
                     return e ? n : t
                 })(e)
             }
-            var l = new class {
+            var s = new class {
                 constructor() {
                     this.gameflowModalLock = !1, this.lockAndLoadLock = !1, this.type = "Modal", this.eligibleModalQueue = [], this.modalQueueObservers = [], this.layer = this.createLayer(), this.addGameDataBinding(), this.addLockAndLoadListeners()
                 }
@@ -11327,7 +11327,7 @@
                     return "string" == typeof e ? this.type === e : this.type === e.type
                 }
             };
-            t.default = l
+            t.default = s
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -11356,7 +11356,7 @@
                 const i = n.createElement("lol-uikit-content-block");
                 return i.className = r, i.setAttribute("type", t), i.appendChild(o(e)), i
             }
-            var l = {
+            var s = {
                 contentBlockNotification: function(e, t = "") {
                     return a(e, "notification", t)
                 },
@@ -11367,17 +11367,17 @@
                     return a(e, "attention", t)
                 },
                 contentBlockTooltip: function(e, t, i = "tooltip-small", a = "") {
-                    const l = r(e, "h6"),
-                        s = o(t),
+                    const s = r(e, "h6"),
+                        l = o(t),
                         d = n.createElement("lol-uikit-content-block");
-                    return d.className = a, d.setAttribute("type", i), d.appendChild(l), d.appendChild(s), d
+                    return d.className = a, d.setAttribute("type", i), d.appendChild(s), d.appendChild(l), d
                 },
-                contentBlockDialog: function(e, t, a = "dialog-small", l = "") {
-                    const s = r(e, "h4"),
+                contentBlockDialog: function(e, t, a = "dialog-small", s = "") {
+                    const l = r(e, "h4"),
                         d = i("heading-spacer"),
                         c = o(t),
                         p = n.createElement("lol-uikit-content-block");
-                    return p.className = l, p.setAttribute("type", a), p.appendChild(s), p.appendChild(d), p.appendChild(c), p
+                    return p.className = s, p.setAttribute("type", a), p.appendChild(l), p.appendChild(d), p.appendChild(c), p
                 },
                 contentBlockDialogSimple: a,
                 dialogButtonGroupSingleButton: function(e, t = "button-ok") {
@@ -11387,7 +11387,7 @@
                     return o.className = t, o.setAttribute("tabindex", "0"), o.innerText = e, r.appendChild(o), r
                 }
             };
-            t.default = l
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -11397,7 +11397,7 @@
                 o = n(239),
                 i = n(240),
                 a = n(241),
-                l = n(242);
+                s = n(242);
             t.default = class {
                 static registerAs = "DialogAprilFools";
                 static create(e) {
@@ -11405,9 +11405,9 @@
                     const t = document.createElement("div");
                     t.classList.add("dialog-toast", "dialog-april-fools"), t.innerHTML += r;
                     const n = e.contents.character.toUpperCase(),
-                        s = t.getElementsByClassName("toast-title")[0],
+                        l = t.getElementsByClassName("toast-title")[0],
                         d = t.getElementsByClassName("character-portrait")[0];
-                    "PENGU_GAREN" === n ? (t.style.background = `url("${i}") no-repeat center / contain`, d.src = o) : "CAT_SHACO" === n && (t.style.background = `url("${l}") no-repeat center / contain`, d.src = a), s.innerHTML = e.contents.localizedCharacter;
+                    "PENGU_GAREN" === n ? (t.style.background = `url("${i}") no-repeat center / contain`, d.src = o) : "CAT_SHACO" === n && (t.style.background = `url("${s}") no-repeat center / contain`, d.src = a), l.innerHTML = e.contents.localizedCharacter;
                     return t.getElementsByClassName("toast-message")[0].innerHTML = e?.contents?.message ?? "", {
                         domNode: t
                     }
@@ -11437,8 +11437,8 @@
                 o = n(1),
                 i = d(n(2)),
                 a = d(n(235)),
-                l = n(33),
-                s = d(n(37));
+                s = n(33),
+                l = d(n(37));
 
             function d(e) {
                 return e && e.__esModule ? e : {
@@ -11510,10 +11510,10 @@
                 static _appendButtonContent(e, t, n, o) {
                     const i = (0, r.default)(e).find(".dialog-celebration-ok-button");
                     i.text(n), t.okPromise = new Promise((e => {
-                        i.on("click", (0, l.leftClickHandler)((() => {
-                            A.playUISound(s.default.dialogCelebrationClick), e(), A._close(t)
+                        i.on("click", (0, s.leftClickHandler)((() => {
+                            A.playUISound(l.default.dialogCelebrationClick), e(), A._close(t)
                         }))), i.on("mouseenter", (() => {
-                            A.playUISound(s.default.dialogCelebrationHover, {
+                            A.playUISound(l.default.dialogCelebrationHover, {
                                 allowConcurrency: !1
                             })
                         }))
@@ -11533,8 +11533,8 @@
                         i[e].onload = t, i[e].onloadeddata = t, i[e].onerror = t, setTimeout(t, 5e3)
                     })));
                     Promise.all(a).then((function() {
-                        (0, r.default)(t).find(".dialog-celebration-container").addClass("animate-dialog-celebration"), A.playNotificationSound(s.default.dialogCelebrationIntro), setTimeout((() => {
-                            o && A.playNotificationSound(s.default.dialogCelebrationReceive), t.dispatchEvent(new Event("rewardContentShowing")), setTimeout((() => {
+                        (0, r.default)(t).find(".dialog-celebration-container").addClass("animate-dialog-celebration"), A.playNotificationSound(l.default.dialogCelebrationIntro), setTimeout((() => {
+                            o && A.playNotificationSound(l.default.dialogCelebrationReceive), t.dispatchEvent(new Event("rewardContentShowing")), setTimeout((() => {
                                 A._revealRewardContent(t)
                             }), n)
                         }), 420)
@@ -11553,29 +11553,29 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = l(n(2)),
-                o = l(n(235)),
+            var r = s(n(2)),
+                o = s(n(235)),
                 i = n(236),
                 a = n(33);
 
-            function l(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            const s = r.default.get();
+            const l = r.default.get();
             class d {
                 static registerAs = "DialogConfirm";
                 static template() {
-                    return s.getElementById("lol-uikit-template-dialog-confirm")
+                    return l.getElementById("lol-uikit-template-dialog-confirm")
                 }
                 static create(e) {
-                    const t = s.createElement("div");
+                    const t = l.createElement("div");
                     t.classList.add("dialog-confirm"), e && e.noDefaultPadding && t.setAttribute("no-default-padding", "");
                     const n = d.template(),
-                        r = s.importNode(n.content, !0);
+                        r = l.importNode(n.content, !0);
                     t.appendChild(r), d._appendContents(t, e);
-                    const [o, i, l] = d._retrieveButtons(t, e), c = t.querySelector("lol-uikit-dialog-frame.dialog-frame"), p = {
+                    const [o, i, s] = d._retrieveButtons(t, e), c = t.querySelector("lol-uikit-dialog-frame.dialog-frame"), p = {
                         domNode: t
                     }, A = function(e) {
                         let t = 0;
@@ -11587,9 +11587,9 @@
                         }
                     }([o, i]);
                     return t.addEventListener("modalShow", (() => {
-                        l.focus()
+                        s.focus()
                     })), e && e.closeButton && (c.setAttribute("close-button", ""), e.shouldKeepCancelButton || i.remove(), e.dismissibleType && c.setAttribute("dismissable-type", e.dismissibleType)), p.focusDefault = function() {
-                        l.focus()
+                        s.focus()
                     }, p.enableAcceptButton = function() {
                         o.disabled = void 0
                     }, p.disableAcceptButton = function() {
@@ -11600,11 +11600,11 @@
                         function r(e) {
                             n(e), A(), d._close(p)
                         }
-                        let l = null;
+                        let s = null;
 
-                        function s() {
-                            if (l && "function" == typeof l) {
-                                const e = l();
+                        function l() {
+                            if (s && "function" == typeof s) {
+                                const e = s();
                                 return "boolean" == typeof e ? Promise.resolve(e) : "object" == typeof e && "function" == typeof e.then ? e : Promise.resolve(!0)
                             }
                             return Promise.resolve(!0)
@@ -11613,12 +11613,12 @@
                         function u() {
                             t(), A(), d._close(p)
                         }
-                        e && e.acceptHandler && (l = e.acceptHandler), o.addEventListener("keydown", (e => {
-                            13 !== e.which || p._resolvePromiseHalted() || s().then((e => {
+                        e && e.acceptHandler && (s = e.acceptHandler), o.addEventListener("keydown", (e => {
+                            13 !== e.which || p._resolvePromiseHalted() || l().then((e => {
                                 e && u()
                             }))
                         })), o.addEventListener("click", (0, a.leftClickHandler)((() => {
-                            p._resolvePromiseHalted() || s().then((e => {
+                            p._resolvePromiseHalted() || l().then((e => {
                                 e && u()
                             }))
                         }))), c.addEventListener("closeButtonClick", (() => {
@@ -11673,24 +11673,24 @@
                     default: e
                 }
             }
-            const l = r.default.get();
-            class s {
+            const s = r.default.get();
+            class l {
                 static registerAs = "DialogDismiss";
                 static template() {
-                    return l.getElementById("lol-uikit-template-dialog-dismiss")
+                    return s.getElementById("lol-uikit-template-dialog-dismiss")
                 }
                 static create(e) {
-                    const t = l.createElement("div");
+                    const t = s.createElement("div");
                     t.classList.add("dialog-dismiss"), e && e.noDefaultPadding && t.setAttribute("no-default-padding", "");
-                    const n = s.template(),
-                        r = l.importNode(n.content, !0);
-                    t.appendChild(r), s._appendContents(t, e);
+                    const n = l.template(),
+                        r = s.importNode(n.content, !0);
+                    t.appendChild(r), l._appendContents(t, e);
                     const o = t.querySelector("lol-uikit-dialog-frame.dialog-frame"),
                         i = {
                             domNode: t
                         };
                     return e && e.dismissibleType && o.setAttribute("dismissable-type", e.dismissibleType), o.addEventListener("dialogFrameDismissed", (() => {
-                        e && "function" == typeof e.onClose && e.onClose(), s._close(i)
+                        e && "function" == typeof e.onClose && e.onClose(), l._close(i)
                     })), i
                 }
                 static _appendContents(e, t) {
@@ -11702,7 +11702,7 @@
                     o.default.remove(e)
                 }
             }
-            var d = s;
+            var d = l;
             t.default = d
         }, (e, t, n) => {
             "use strict";
@@ -11713,8 +11713,8 @@
                 o = d(n(235)),
                 i = n(236),
                 a = n(33),
-                l = d(n(37)),
-                s = n(1);
+                s = d(n(37)),
+                l = n(1);
 
             function d(e) {
                 return e && e.__esModule ? e : {
@@ -11733,7 +11733,7 @@
                     const n = p.template(),
                         r = c.importNode(n.content, !0);
                     t.appendChild(r), p._appendContents(t, e);
-                    const [o, i, l] = p._retrieveButtons(t, e), s = t.querySelector("lol-uikit-dialog-frame.dialog-frame"), d = s.querySelector("lol-uikit-flat-button-group"), A = {
+                    const [o, i, s] = p._retrieveButtons(t, e), l = t.querySelector("lol-uikit-dialog-frame.dialog-frame"), d = l.querySelector("lol-uikit-flat-button-group"), A = {
                         domNode: t
                     }, u = function(e) {
                         let t = 0;
@@ -11745,9 +11745,9 @@
                         }
                     }([o, i]);
                     return t.addEventListener("modalShow", (() => {
-                        l.focus()
-                    })), e && e.closeButton && (e.hideDismissibleButtons ? s.removeAttribute("close-button") : s.setAttribute("close-button", ""), e.shouldKeepCancelButton || i.remove(), e.dismissibleType && s.setAttribute("dismissable-type", e.dismissibleType)), e.hideDismissibleButtons ? d.setAttribute("style", "display:none") : d.removeAttribute("style", "display:none"), A.focusDefault = function() {
-                        l.focus()
+                        s.focus()
+                    })), e && e.closeButton && (e.hideDismissibleButtons ? l.removeAttribute("close-button") : l.setAttribute("close-button", ""), e.shouldKeepCancelButton || i.remove(), e.dismissibleType && l.setAttribute("dismissable-type", e.dismissibleType)), e.hideDismissibleButtons ? d.setAttribute("style", "display:none") : d.removeAttribute("style", "display:none"), A.focusDefault = function() {
+                        s.focus()
                     }, A.enableAcceptButton = function() {
                         o.disabled = void 0
                     }, A.disableAcceptButton = function() {
@@ -11758,11 +11758,11 @@
                         function r(e) {
                             n(e), u(), p._close(A)
                         }
-                        let l = null;
+                        let s = null;
 
                         function d() {
-                            if (l && "function" == typeof l) {
-                                const e = l();
+                            if (s && "function" == typeof s) {
+                                const e = s();
                                 return "boolean" == typeof e ? Promise.resolve(e) : "object" == typeof e && "function" == typeof e.then ? e : Promise.resolve(!0)
                             }
                             return Promise.resolve(!0)
@@ -11771,7 +11771,7 @@
                         function c() {
                             t(), u(), p._close(A)
                         }
-                        e && e.acceptHandler && (l = e.acceptHandler), o.addEventListener("keydown", (e => {
+                        e && e.acceptHandler && (s = e.acceptHandler), o.addEventListener("keydown", (e => {
                             13 !== e.which || A._resolvePromiseHalted() || d().then((e => {
                                 e && c()
                             }))
@@ -11779,13 +11779,13 @@
                             A._resolvePromiseHalted() || d().then((e => {
                                 e && c()
                             }))
-                        }))), s.addEventListener("closeButtonClick", (() => {
+                        }))), l.addEventListener("closeButtonClick", (() => {
                             r("closeButtonClicked"), p._close(A)
                         })), i.addEventListener("keydown", (e => {
                             13 === e.which && r()
                         })), i.addEventListener("click", (0, a.leftClickHandler)((() => {
                             r()
-                        }))), e && e.closeButton && s.addEventListener("dialogFrameDismissed", (() => {
+                        }))), e && e.closeButton && l.addEventListener("dialogFrameDismissed", (() => {
                             r()
                         }))
                     })), A.acceptPromise.then((() => {
@@ -11812,7 +11812,7 @@
                     return t.acceptButtonType && o.setAttribute("type", t.acceptButtonType), t.clickSfxSrc && o.setAttribute("click-sfx-src", t.clickSfxSrc), t.currency && o.setAttribute("currency", t.currency), t.isAcceptButtonDisabled && o.setAttribute("disabled", t.isAcceptButtonDisabled), o.innerText = n, i.innerText = r, t && t.primaryButton && "decline" === t.primaryButton.toLowerCase() ? i.setAttribute("primary", !0) : t && null === t.primaryButton || (t && (t.primaryButton && "accept" === t.primaryButton.toLowerCase() || t.closeButton && !t.shouldKeepCancelButton) || !t.declineText) && o.setAttribute("primary", !0), [o, i, a]
                 }
                 static _close(e) {
-                    (0, s.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui").createSound(l.default.subnavClick, {
+                    (0, l.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui").createSound(s.default.subnavClick, {
                         allowConcurrency: !1
                     }).play(), o.default.remove(e)
                 }
@@ -11833,14 +11833,14 @@
                     default: e
                 }
             }
-            class l {
+            class s {
                 static registerAs = "DialogToastCelebration";
                 static template() {
                     return r.default.get().getElementById("lol-uikit-template-dialog-toast-celebration")
                 }
                 static create(e) {
                     const t = document.createElement("div");
-                    return t.classList.add("dialog-toast-celebration"), t.innerHTML = l.template().innerHTML, l._appendTitleContent(t, e.title, e.groupedToastCount), l._appendDetailsContent(t, e.details), l._appendImageAndIconContent(t, e.backgroundImageUrl, e.iconUrl, e.iconElement, e.scaleIcon, e.customBgImageStyle), l._applyAnimationClass(t, e.animationsEnabled, e.isMuted), e.groupedToastCount > 1 && l._appendGroupedToastTagContent(t, e.groupedToastCount), {
+                    return t.classList.add("dialog-toast-celebration"), t.innerHTML = s.template().innerHTML, s._appendTitleContent(t, e.title, e.groupedToastCount), s._appendDetailsContent(t, e.details), s._appendImageAndIconContent(t, e.backgroundImageUrl, e.iconUrl, e.iconElement, e.scaleIcon, e.customBgImageStyle), s._applyAnimationClass(t, e.animationsEnabled, e.isMuted), e.groupedToastCount > 1 && s._appendGroupedToastTagContent(t, e.groupedToastCount), {
                         domNode: t
                     }
                 }
@@ -11880,20 +11880,20 @@
                     o.default.remove(e)
                 }
             }
-            var s = l;
-            t.default = s
+            var l = s;
+            t.default = l
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.MAX_PIPS_PER_PAGE = void 0;
-            var r = s(n(177)),
-                o = s(n(249)),
+            var r = l(n(177)),
+                o = l(n(249)),
                 i = n(1),
-                a = s(n(37)),
-                l = n(81);
+                a = l(n(37)),
+                s = n(81);
 
-            function s(e) {
+            function l(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -11940,7 +11940,7 @@
                 }
                 _createLayer(e) {
                     const t = document.createElement("div");
-                    return t.classList.add(e), t.style["z-index"] = l.Z_INDEX_CONSTANTS.CELEBRATIONS_TOAST, t
+                    return t.classList.add(e), t.style["z-index"] = s.Z_INDEX_CONSTANTS.CELEBRATIONS_TOAST, t
                 }
                 _showLayer() {
                     this.layer.classList.remove("hidden"), r.default.addLayer(this.layer)
@@ -12087,14 +12087,14 @@
                     default: e
                 }
             }
-            class l {
+            class s {
                 static registerAs = "DialogToast";
                 static template() {
                     return r.default.get().getElementById("lol-uikit-template-dialog-toast")
                 }
                 static create(e) {
                     const t = (0, o.default)("<div></div>");
-                    t.addClass("dialog-toast"), t.append(l.template().innerHTML);
+                    t.addClass("dialog-toast"), t.append(s.template().innerHTML);
                     const n = e.contents ? e.contents : "";
                     return t.find(".toast-content").append(n), e.dismissable && !e.hideCloseButton || t.find("lol-uikit-dialog-frame").removeAttr("dismissable"), {
                         domNode: t[0]
@@ -12104,8 +12104,8 @@
                     i.default.remove(e)
                 }
             }
-            var s = l;
-            t.default = s
+            var l = s;
+            t.default = l
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -12120,7 +12120,7 @@
                     default: e
                 }
             }
-            var l = new class {
+            var s = new class {
                 constructor() {
                     this.TOAST_SPEED = {
                         A_VERY_LONG_TIME: 3e5,
@@ -12191,7 +12191,7 @@
                     }
                 }
             };
-            t.default = l
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             var r;
@@ -12216,10 +12216,10 @@
                     t.appendChild(r);
                     const a = t.querySelector("div.first-touch-title");
                     i._appendTitleContent(a, e.titleImage, e.titleText, e.subtitleText);
-                    const l = t.querySelector("div.first-touch-features");
-                    i._populateFeatures(l, e.features);
-                    const s = t.querySelector("lol-uikit-flat-button.button-accept");
-                    return i._applyButtonLabel(s, e.buttonLabel), i._addListeners(t, s), {
+                    const s = t.querySelector("div.first-touch-features");
+                    i._populateFeatures(s, e.features);
+                    const l = t.querySelector("lol-uikit-flat-button.button-accept");
+                    return i._applyButtonLabel(l, e.buttonLabel), i._addListeners(t, l), {
                         domNode: t
                     }
                 }
@@ -12297,41 +12297,45 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = x(n(175)),
-                i = x(n(255)),
-                a = x(n(256)),
-                l = x(n(257)),
-                s = x(n(259)),
-                d = x(n(260)),
-                c = x(n(262)),
-                p = x(n(263)),
-                A = x(n(265)),
-                u = x(n(267)),
-                h = x(n(177)),
-                g = x(n(271)),
-                b = x(n(236)),
-                m = x(n(47)),
-                f = x(n(52)),
-                _ = x(n(273)),
-                y = x(n(275));
+                o = k(n(175)),
+                i = k(n(255)),
+                a = k(n(256)),
+                s = k(n(257)),
+                l = k(n(259)),
+                d = k(n(260)),
+                c = k(n(262)),
+                p = k(n(263)),
+                A = k(n(265)),
+                u = k(n(267)),
+                h = k(n(269)),
+                g = k(n(177)),
+                b = k(n(273)),
+                m = k(n(236)),
+                f = k(n(47)),
+                _ = k(n(52)),
+                y = k(n(275)),
+                x = k(n(277));
 
-            function x(e) {
+            function k(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            var k = new class {
+            var v = new class {
                 constructor() {
                     this._summonerIconManager = null
                 }
                 getContextMenuManager() {
-                    return s.default
+                    return l.default
                 }
                 getContextualNotificationManager() {
                     return d.default
                 }
                 getModalManager() {
                     return c.default
+                }
+                getDrawerManager() {
+                    return p.default
                 }
                 getToastManager() {
                     return i.default
@@ -12340,46 +12344,46 @@
                     return a.default
                 }
                 getVignetteCelebrationManager() {
-                    return l.default
+                    return s.default
                 }
                 getPopoutManager() {
-                    return p.default
+                    return A.default
                 }
                 getFlyoutManager() {
-                    return A.default
+                    return u.default
                 }
                 getTooltipManager() {
                     return o.default
                 }
                 getWindowManager() {
-                    return u.default
-                }
-                getLayerManager() {
                     return h.default
                 }
-                getLayerWindowManager() {
+                getLayerManager() {
                     return g.default
+                }
+                getLayerWindowManager() {
+                    return b.default
                 }
                 getComponentFactory() {
                     return r.componentFactory.exportable()
                 }
                 getTemplateHelper() {
-                    return b.default
-                }
-                getVideoCache() {
-                    return f.default
-                }
-                getSwitch() {
                     return m.default
                 }
+                getVideoCache() {
+                    return _.default
+                }
+                getSwitch() {
+                    return f.default
+                }
                 getSummonerIconManager() {
-                    return this._summonerIconManager || (this._summonerIconManager = (0, _.default)()), this._summonerIconManager
+                    return this._summonerIconManager || (this._summonerIconManager = (0, y.default)()), this._summonerIconManager
                 }
                 getScrollableUtils() {
-                    return y.default
+                    return x.default
                 }
             };
-            t.default = k
+            t.default = v
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -12430,7 +12434,7 @@
                     y: 520
                 }
             };
-            var l = new class {
+            var s = new class {
                 constructor() {
                     this.type = "DialogToastCelebration"
                 }
@@ -12444,7 +12448,7 @@
                     i.default.dismissAll()
                 }
             };
-            t.default = l
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -12483,7 +12487,7 @@
                 behindVignette: !1,
                 customClassName: null
             };
-            var l = new class {
+            var s = new class {
                 constructor() {
                     this.type = "VignetteCelebration"
                 }
@@ -12497,7 +12501,7 @@
                     e.id && i.default.update(e)
                 }
             };
-            t.default = l
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -12507,8 +12511,8 @@
                 o = d(n(177)),
                 i = d(n(249)),
                 a = n(33),
-                l = n(81),
-                s = d(n(37));
+                s = n(81),
+                l = d(n(37));
 
             function d(e) {
                 return e && e.__esModule ? e : {
@@ -12567,7 +12571,7 @@
                 }
                 _createLayer(e) {
                     const t = document.createElement("div");
-                    return t.classList.add(e), t.style["z-index"] = l.Z_INDEX_CONSTANTS.CELEBRATIONS_VIGNETTE, t.addEventListener("keyup", this._keypressEventHandler.bind(this)), t
+                    return t.classList.add(e), t.style["z-index"] = s.Z_INDEX_CONSTANTS.CELEBRATIONS_VIGNETTE, t.addEventListener("keyup", this._keypressEventHandler.bind(this)), t
                 }
                 _keypressEventHandler(e) {
                     32 === e.which ? this._handleClickEvent(e) : 27 === e.which && this._removeAllCelebrations()
@@ -12606,7 +12610,7 @@
                         o = this.layer.querySelector(".celebration-banners"),
                         i = this.layer.querySelector(".celebration-intro-video");
                     this._waitForVideoStart(i).then((() => {
-                        this._fadeIn(n, .4), this._playUISound(s.default.vignetteIntro), this._fadeIn(o, .2).then((() => {
+                        this._fadeIn(n, .4), this._playUISound(l.default.vignetteIntro), this._fadeIn(o, .2).then((() => {
                             this._openBanners().then((() => {
                                 this._displayNextCelebration()
                             }))
@@ -12619,7 +12623,7 @@
                         t = this.layer.querySelectorAll(".inner-contents");
                     for (let n = 0; n < t.length; n++) e.push(this._fadeOut(t[n]));
                     Promise.all(e).then((() => {
-                        this._playUISound(s.default.vignetteOutro), this._closeBanners().then((() => {
+                        this._playUISound(l.default.vignetteOutro), this._closeBanners().then((() => {
                             const e = this.layer.querySelector(".vignette-celebration"),
                                 t = this.animationsEnabled ? .4 : 0;
                             this._fadeOut(e, t).then((() => {
@@ -12868,7 +12872,7 @@
             }
             const a = new i;
             a.createMenus();
-            var l = {
+            var s = {
                 setMenuItems: a.setMenuItems.bind(a),
                 setCustomMenuItems: a.setCustomMenuItems.bind(a),
                 filterVisible: a.filterVisible.bind(a),
@@ -12881,7 +12885,7 @@
                 isTargetContainedBy: a.isTargetContainedBy.bind(a),
                 isTargetConnected: a.isTargetConnected.bind(a)
             };
-            t.default = l
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -12908,8 +12912,8 @@
                 o = d(n(177)),
                 i = d(n(236)),
                 a = d(n(182)),
-                l = d(n(178)),
-                s = d(n(249));
+                s = d(n(178)),
+                l = d(n(249));
 
             function d(e) {
                 return e && e.__esModule ? e : {
@@ -12919,7 +12923,7 @@
             const c = "DEFAULT";
             var p = new class {
                 constructor() {
-                    this.contextMap = new Map, this.infoHubObserver = new s.default, this.infoHubObserver.addObserver(this._handleInfoHubVisibility.bind(this)), this._activeNotification = null
+                    this.contextMap = new Map, this.infoHubObserver = new l.default, this.infoHubObserver.addObserver(this._handleInfoHubVisibility.bind(this)), this._activeNotification = null
                 }
                 add(e, t) {
                     const n = this._computeDefaultOptions(t),
@@ -12978,21 +12982,21 @@
                         n = e
                     }));
                     let a;
-                    const l = new Promise((e => {
+                    const s = new Promise((e => {
                             a = e
                         })),
-                        s = {
+                        l = {
                             id: Symbol(),
                             target: t.target ? t.target.domNode : c,
                             displayed: !1,
                             content: r,
                             options: t,
-                            onRemove: l,
+                            onRemove: s,
                             resolveOnRemovePromise: a,
                             onCloseButtonClick: o,
                             resolveOnCloseButtonClickPromise: n
                         };
-                    return t.target && delete s.options.target.domNode, s
+                    return t.target && delete l.options.target.domNode, l
                 }
                 _addNotificatonToQueue(e) {
                     let t = this.contextMap.get(e.target);
@@ -13056,7 +13060,7 @@
                     })
                 }
                 _setTargetedNotificationPosition(e, t) {
-                    const n = l.default.getPositioningStrategy("flip")(t);
+                    const n = s.default.getPositioningStrategy("flip")(t);
                     n && (e.style.position = "absolute", e.style.top = n.top + "px", e.style.left = n.left + "px")
                 }
                 _handleInfoHubVisibility(e) {
@@ -13121,6 +13125,139 @@
                     default: r
                 };
             var a = new class {
+                constructor() {
+                    this.type = "Drawer"
+                }
+                show(e) {
+                    const t = {
+                        type: "Drawer",
+                        content: e,
+                        ComponentFactory: e.ComponentFactory || o.componentFactory
+                    };
+                    return i.default.show(t), t.content
+                }
+                remove(e, t) {
+                    return i.default.remove(e, t)
+                }
+                getActiveDrawer() {
+                    return i.default.getActiveDrawer()
+                }
+                getDOMNode(e) {
+                    const t = i.default.getDOMNode(e);
+                    return t || (i.default.initializeDomNodes(e), i.default.getDOMNode(e))
+                }
+            };
+            t.default = a
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r, o = (r = n(177)) && r.__esModule ? r : {
+                    default: r
+                },
+                i = function(e, t) {
+                    if (!t && e && e.__esModule) return e;
+                    if (null === e || "object" != typeof e && "function" != typeof e) return {
+                        default: e
+                    };
+                    var n = a(t);
+                    if (n && n.has(e)) return n.get(e);
+                    var r = {},
+                        o = Object.defineProperty && Object.getOwnPropertyDescriptor;
+                    for (var i in e)
+                        if ("default" !== i && Object.prototype.hasOwnProperty.call(e, i)) {
+                            var s = o ? Object.getOwnPropertyDescriptor(e, i) : null;
+                            s && (s.get || s.set) ? Object.defineProperty(r, i, s) : r[i] = e[i]
+                        } r.default = e, n && n.set(e, r);
+                    return r
+                }(n(1));
+
+            function a(e) {
+                if ("function" != typeof WeakMap) return null;
+                var t = new WeakMap,
+                    n = new WeakMap;
+                return (a = function(e) {
+                    return e ? n : t
+                })(e)
+            }
+            var s = new class {
+                constructor() {
+                    this.type = "Drawer", this._activeDrawer = null, this.layer = this.createLayer(), this._onLayerClick = this._onLayerClick.bind(this), this.layer.addEventListener("click", this._onLayerClick), this.addGameDataBinding(), this.addLockAndLoadListeners()
+                }
+                createLayer() {
+                    const e = document.createElement("lol-uikit-full-page-backdrop");
+                    return e.classList.add("drawer-layer"), e.style.pointerEvents = "auto", e
+                }
+                showLayer() {
+                    o.default.addLayer(this.layer)
+                }
+                hideLayer() {
+                    o.default.removeLayer(this.layer)
+                }
+                getDOMNode(e) {
+                    if (e) return e.domNode
+                }
+                initializeDomNodes(e) {
+                    if (!e.domNode) {
+                        const t = document.createElement("div");
+                        t.classList.add("drawer-wrapper"), e.domNode = t
+                    }
+                    if (e.content && !e.content.domNode) {
+                        const t = (e.content.ComponentFactory || e.ComponentFactory || i.componentFactory).create(e.content);
+                        t && "object" == typeof t && Object.assign(e.content, t)
+                    }
+                }
+                styleDOMNode(e) {
+                    e.style.position = "absolute", e.style.top = "0", e.style.bottom = "0", e.style.right = "0", e.style.display = "flex", e.style.flexDirection = "column", e.style.pointerEvents = "auto", e.style.transform = "translateX(100%)", e.style.transition = "transform 200ms ease"
+                }
+                _onLayerClick(e) {
+                    e.target === this.layer && this._activeDrawer && this.remove(this._activeDrawer)
+                }
+                addGameDataBinding() {
+                    i.default.gameFlowBinding.addObserver("v1/session", this, this._gameflowSessionHandler.bind(this))
+                }
+                _gameflowSessionHandler(e) {
+                    e && e.gameClient.running && this._activeDrawer && this._removeImmediate(this._activeDrawer)
+                }
+                addLockAndLoadListeners() {
+                    (0, i.getProvider)().get("rcp-fe-lol-lock-and-load").addEventListener("lock", (() => {
+                        this._activeDrawer && this._removeImmediate(this._activeDrawer)
+                    }))
+                }
+                getActiveDrawer() {
+                    return this._activeDrawer
+                }
+                show(e) {
+                    return e ? (this._activeDrawer === e || (this._activeDrawer && this._removeImmediate(this._activeDrawer), this.initializeDomNodes(e), this.showLayer(), this.styleDOMNode(e.domNode), e.content && e.content.domNode && !e.domNode.contains(e.content.domNode) && e.domNode.appendChild(e.content.domNode), this.layer.appendChild(e.domNode), this._activeDrawer = e, requestAnimationFrame((() => {
+                        e.domNode.style.transform = "translateX(0)"
+                    })), e.domNode.dispatchEvent(new Event("drawerShow"))), e) : null
+                }
+                remove(e, t) {
+                    if (!e || this._activeDrawer !== e) return !1;
+                    const n = e.domNode;
+                    return !!n && (n.style.transform = "translateX(100%)", setTimeout((() => {
+                        this._cleanup(e, t)
+                    }), 200), !0)
+                }
+                _removeImmediate(e) {
+                    e && e.domNode && (e.domNode.style.transition = "none", this._cleanup(e))
+                }
+                _cleanup(e, t) {
+                    e.domNode && e.domNode.parentNode === this.layer && this.layer.removeChild(e.domNode), this._activeDrawer === e && (this._activeDrawer = null), 0 === this.layer.children.length && this.hideLayer(), t && t(e), e.onRemove && e.onRemove(), e.domNode.dispatchEvent(new Event("drawerHide"))
+                }
+            };
+            t.default = s
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r, o = n(1),
+                i = (r = n(266)) && r.__esModule ? r : {
+                    default: r
+                };
+            var a = new class {
                 assign(e, t, n, r) {
                     r.ComponentFactory = r.ComponentFactory || o.componentFactory, this.unassign(e), i.default.registerTarget(e, t, n, r)
                 }
@@ -13135,12 +13272,12 @@
             t.default = a
         }, (e, t, n) => {
             "use strict";
-            var r = l(n(177)),
-                o = l(n(103)),
+            var r = s(n(177)),
+                o = s(n(103)),
                 i = n(1),
-                a = l(n(178));
+                a = s(n(178));
 
-            function l(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -13214,12 +13351,12 @@
                         });
                     if (!o) return;
                     this.popout.style.top = o.top + "px", this.popout.style.left = o.left + "px";
-                    const l = a.default.elementRect(t),
-                        s = a.default.elementRect(e),
+                    const s = a.default.elementRect(t),
+                        l = a.default.elementRect(e),
                         d = a.default.relativePosition(e, this.popout),
                         c = this;
                     if ((0, i.jQuery)(t).each((function() {
-                            this.dispatchEvent(c.getPositioningEvent(d, s, l))
+                            this.dispatchEvent(c.getPositioningEvent(d, l, s))
                         })), !1 !== r.backdropCutout) {
                         const t = r.backdropCutout || e;
                         this.layer.dispatchEvent(c.getCutoutEvent(a.default.elementRect(t)))
@@ -13266,7 +13403,7 @@
         }, (e, t, n) => {
             "use strict";
             var r, o = n(1),
-                i = (r = n(266)) && r.__esModule ? r : {
+                i = (r = n(268)) && r.__esModule ? r : {
                     default: r
                 };
             e.exports = {
@@ -13293,7 +13430,7 @@
                     if (null === e || "object" != typeof e && "function" != typeof e) return {
                         default: e
                     };
-                    var n = s(t);
+                    var n = l(t);
                     if (n && n.has(e)) return n.get(e);
                     var r = {},
                         o = Object.defineProperty && Object.getOwnPropertyDescriptor;
@@ -13304,21 +13441,21 @@
                         } r.default = e, n && n.set(e, r);
                     return r
                 }(n(1)),
-                o = l(n(177)),
-                i = l(n(178)),
-                a = l(n(182));
+                o = s(n(177)),
+                i = s(n(178)),
+                a = s(n(182));
 
-            function l(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
 
-            function s(e) {
+            function l(e) {
                 if ("function" != typeof WeakMap) return null;
                 var t = new WeakMap,
                     n = new WeakMap;
-                return (s = function(e) {
+                return (l = function(e) {
                     return e ? n : t
                 })(e)
             }
@@ -13417,17 +13554,17 @@
                         offset: o.offset,
                         areaRestriction: "whole-window"
                     },
-                    l = i.default.getPositioningStrategy("flip")(a);
-                if (!l) return;
-                n.options.borderless || (l.top = l.top - 10), this.flyout.style.top = l.top + "px", this.flyout.style.left = l.left + "px";
-                const s = i.default.elementRect(t),
+                    s = i.default.getPositioningStrategy("flip")(a);
+                if (!s) return;
+                n.options.borderless || (s.top = s.top - 10), this.flyout.style.top = s.top + "px", this.flyout.style.left = s.left + "px";
+                const l = i.default.elementRect(t),
                     d = i.default.elementRect(e),
                     p = i.default.relativePosition(e, this.flyout);
                 if ((0, r.jQuery)(t).each((function() {
                         this.dispatchEvent(function(e, t, n) {
                             const r = new Event("positioned");
                             return r.offset = e, r.targetRect = t, r.rect = n, r
-                        }(p, d, s))
+                        }(p, d, l))
                     })), this.layer.style.background = o.dimBackdrop ? null : "none", !1 !== o.backdropCutout) {
                     const t = o.backdropCutout || e;
                     this.overlay.dispatchEvent(c(i.default.elementRect(t)))
@@ -13473,8 +13610,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = a(n(268)),
-                o = a(n(270)),
+            var r = a(n(270)),
+                o = a(n(272)),
                 i = a(n(183));
 
             function a(e) {
@@ -13482,7 +13619,7 @@
                     default: e
                 }
             }
-            var l = new class {
+            var s = new class {
                 constructor() {
                     const e = void 0 === window.riotInvoke;
                     this.WindowClass = e ? o.default : r.default
@@ -13511,23 +13648,23 @@
                     return i.default.getValidWindowSizes()
                 }
             };
-            t.default = l
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.inChrome = t.default = t.MockedWindow = void 0;
             var r = n(1),
-                o = l(n(80)),
-                i = l(n(183)),
-                a = n(269);
+                o = s(n(80)),
+                i = s(n(183)),
+                a = n(271);
 
-            function l(e) {
+            function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            const s = window.testsSandboxDoc || window.document,
+            const l = window.testsSandboxDoc || window.document,
                 d = void 0 === window.riotInvoke;
             t.inChrome = d;
             const c = d ? {
@@ -13586,7 +13723,7 @@
                     const e = this._window.document,
                         t = e.querySelector("head"),
                         n = e.createElement("base");
-                    n.setAttribute("href", s.baseURI), t.appendChild(n);
+                    n.setAttribute("href", l.baseURI), t.appendChild(n);
                     const o = e.createElement("style");
                     o.type = "text/css", o.innerHTML = "html,body{height:100%; margin: 0; overflow: hidden;}", t.appendChild(o);
                     (0, r.getProvider)().get("rcp-fe-lol-typekit").registerDocument(e)
@@ -13714,8 +13851,8 @@
                         screenAvailTop: window.screen.availTop,
                         windowWidth: window.outerWidth,
                         windowHeight: window.outerHeight,
-                        windowActivated: !s.hidden,
-                        windowMinimized: s.hidden,
+                        windowActivated: !l.hidden,
+                        windowMinimized: l.hidden,
                         zoomScale: window.devicePixelRatio
                     })
                 }
@@ -13760,15 +13897,15 @@
                         r = t.screenY - t.clientY,
                         i = e.ownerDocument.defaultView,
                         a = e.getBoundingClientRect(),
-                        l = d ? i.scrollX : n,
-                        s = d ? i.scrollY : r;
-                    return new o.default(a.left + l, a.top + s, a.width, a.height)
+                        s = d ? i.scrollX : n,
+                        l = d ? i.scrollY : r;
+                    return new o.default(a.left + s, a.top + l, a.width, a.height)
                 }
             }
             t.default = A;
             t.MockedWindow = class extends A {
                 init(e) {
-                    this._element = s.createElement("div"), e && this.setContent(e);
+                    this._element = l.createElement("div"), e && this.setContent(e);
                     const {
                         style: t
                     } = this._element;
@@ -13784,7 +13921,7 @@
                     return this._element.offsetHeight
                 }
                 show() {
-                    return super.show().then((e => e ? s.body.appendChild(this._element) : null))
+                    return super.show().then((e => e ? l.body.appendChild(this._element) : null))
                 }
                 hide() {
                     return super.hide().then((e => e ? this._element.remove() : null))
@@ -13808,7 +13945,7 @@
                     0 === e.button && e.offsetY <= this._dragBarHeight && (e.preventDefault(), this._mouseOffset = {
                         x: -e.offsetX,
                         y: -e.offsetY
-                    }, s.addEventListener("mousemove", this.onMouseMove), s.addEventListener("mouseup", this.onMouseUp))
+                    }, l.addEventListener("mousemove", this.onMouseMove), l.addEventListener("mouseup", this.onMouseUp))
                 }
                 onMouseMove(e) {
                     if (0 !== e.button) this.onMouseUp();
@@ -13818,7 +13955,7 @@
                     }
                 }
                 onMouseUp() {
-                    s.removeEventListener("mouseup", this.onMouseUp), s.removeEventListener("mousemove", this.onMouseMove)
+                    l.removeEventListener("mouseup", this.onMouseUp), l.removeEventListener("mousemove", this.onMouseMove)
                 }
                 invoke() {
                     return Promise.resolve()
@@ -14105,7 +14242,7 @@
             t.default = a
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(272)) && r.__esModule ? r : {
+            var r, o = (r = n(274)) && r.__esModule ? r : {
                 default: r
             };
             e.exports = {
@@ -14156,15 +14293,15 @@
             }), t.default = void 0;
             var r = a(n(1)),
                 o = a(n(177)),
-                i = a(n(267));
+                i = a(n(269));
 
             function a(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            const l = -10,
-                s = -10;
+            const s = -10,
+                l = -10;
             var d = new class {
                 constructor() {
                     this._layerManager = o.default, this._windowManager = i.default, this._layerWindowMap = new Map, this._zoomScale = 1, this._setupDatabindingObservers()
@@ -14304,8 +14441,8 @@
                         windowHeight: e.options.defaultHeight,
                         windowMinWidth: 0,
                         windowMinHeight: 0,
-                        windowLeft: window.screenLeft + l,
-                        windowTop: window.screenTop + s,
+                        windowLeft: window.screenLeft + s,
+                        windowTop: window.screenTop + l,
                         resizable: !0,
                         title: "",
                         stylesheets: []
@@ -14367,15 +14504,15 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.SummonerIconManager = t.DEFAULT_ICON_URL = void 0, t.default = function() {
-                return o.gameDataBinding.get("/assets/v1/summoner-icons.json").then((e => new l(e)))
+                return o.gameDataBinding.get("/assets/v1/summoner-icons.json").then((e => new s(e)))
             };
             var r, o = n(1),
-                i = (r = n(274)) && r.__esModule ? r : {
+                i = (r = n(276)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QQYaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0NSA3OS4xNjM0OTksIDIwMTgvMDgvMTMtMTY6NDA6MjIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcFJpZ2h0cz0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3JpZ2h0cy8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6NDA4MTQzMDktMGVhYS1lMTRiLTg3ZWItNzliZDViOGMwZDY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjg3MzAzMTk0QkQ4QjExRUI5MDAzREE5MzQ4RUFERDlCIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjg3MzAzMTkzQkQ4QjExRUI5MDAzREE5MzQ4RUFERDlCIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSI+IDx4bXBSaWdodHM6VXNhZ2VUZXJtcz4gPHJkZjpBbHQ+IDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCIvPiA8L3JkZjpBbHQ+IDwveG1wUmlnaHRzOlVzYWdlVGVybXM+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE5YmJkNDlkLWJkYmYtZDU0YS04MWIyLWNhYzkwYjk2MzVlOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MDgxNDMwOS0wZWFhLWUxNGItODdlYi03OWJkNWI4YzBkNjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7QBIUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAA8cAVoAAxslRxwCAAACAAIAOEJJTQQlAAAAAAAQ/OEfici3yXgvNGI0B1h36//iDFhJQ0NfUFJPRklMRQABAQAADEhMaW5vAhAAAG1udHJSR0IgWFlaIAfOAAIACQAGADEAAGFjc3BNU0ZUAAAAAElFQyBzUkdCAAAAAAAAAAAAAAAAAAD21gABAAAAANMtSFAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEWNwcnQAAAFQAAAAM2Rlc2MAAAGEAAAAbHd0cHQAAAHwAAAAFGJrcHQAAAIEAAAAFHJYWVoAAAIYAAAAFGdYWVoAAAIsAAAAFGJYWVoAAAJAAAAAFGRtbmQAAAJUAAAAcGRtZGQAAALEAAAAiHZ1ZWQAAANMAAAAhnZpZXcAAAPUAAAAJGx1bWkAAAP4AAAAFG1lYXMAAAQMAAAAJHRlY2gAAAQwAAAADHJUUkMAAAQ8AAAIDGdUUkMAAAQ8AAAIDGJUUkMAAAQ8AAAIDHRleHQAAAAAQ29weXJpZ2h0IChjKSAxOTk4IEhld2xldHQtUGFja2FyZCBDb21wYW55AABkZXNjAAAAAAAAABJzUkdCIElFQzYxOTY2LTIuMQAAAAAAAAAAAAAAEnNSR0IgSUVDNjE5NjYtMi4xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYWVogAAAAAAAA81EAAQAAAAEWzFhZWiAAAAAAAAAAAAAAAAAAAAAAWFlaIAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QAALbPZGVzYwAAAAAAAAAWSUVDIGh0dHA6Ly93d3cuaWVjLmNoAAAAAAAAAAAAAAAWSUVDIGh0dHA6Ly93d3cuaWVjLmNoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGRlc2MAAAAAAAAALklFQyA2MTk2Ni0yLjEgRGVmYXVsdCBSR0IgY29sb3VyIHNwYWNlIC0gc1JHQgAAAAAAAAAAAAAALklFQyA2MTk2Ni0yLjEgRGVmYXVsdCBSR0IgY29sb3VyIHNwYWNlIC0gc1JHQgAAAAAAAAAAAAAAAAAAAAAAAAAAAABkZXNjAAAAAAAAACxSZWZlcmVuY2UgVmlld2luZyBDb25kaXRpb24gaW4gSUVDNjE5NjYtMi4xAAAAAAAAAAAAAAAsUmVmZXJlbmNlIFZpZXdpbmcgQ29uZGl0aW9uIGluIElFQzYxOTY2LTIuMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdmlldwAAAAAAE6T+ABRfLgAQzxQAA+3MAAQTCwADXJ4AAAABWFlaIAAAAAAATAlWAFAAAABXH+dtZWFzAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAACjwAAAAJzaWcgAAAAAENSVCBjdXJ2AAAAAAAABAAAAAAFAAoADwAUABkAHgAjACgALQAyADcAOwBAAEUASgBPAFQAWQBeAGMAaABtAHIAdwB8AIEAhgCLAJAAlQCaAJ8ApACpAK4AsgC3ALwAwQDGAMsA0ADVANsA4ADlAOsA8AD2APsBAQEHAQ0BEwEZAR8BJQErATIBOAE+AUUBTAFSAVkBYAFnAW4BdQF8AYMBiwGSAZoBoQGpAbEBuQHBAckB0QHZAeEB6QHyAfoCAwIMAhQCHQImAi8COAJBAksCVAJdAmcCcQJ6AoQCjgKYAqICrAK2AsECywLVAuAC6wL1AwADCwMWAyEDLQM4A0MDTwNaA2YDcgN+A4oDlgOiA64DugPHA9MD4APsA/kEBgQTBCAELQQ7BEgEVQRjBHEEfgSMBJoEqAS2BMQE0wThBPAE/gUNBRwFKwU6BUkFWAVnBXcFhgWWBaYFtQXFBdUF5QX2BgYGFgYnBjcGSAZZBmoGewaMBp0GrwbABtEG4wb1BwcHGQcrBz0HTwdhB3QHhgeZB6wHvwfSB+UH+AgLCB8IMghGCFoIbgiCCJYIqgi+CNII5wj7CRAJJQk6CU8JZAl5CY8JpAm6Cc8J5Qn7ChEKJwo9ClQKagqBCpgKrgrFCtwK8wsLCyILOQtRC2kLgAuYC7ALyAvhC/kMEgwqDEMMXAx1DI4MpwzADNkM8w0NDSYNQA1aDXQNjg2pDcMN3g34DhMOLg5JDmQOfw6bDrYO0g7uDwkPJQ9BD14Peg+WD7MPzw/sEAkQJhBDEGEQfhCbELkQ1xD1ERMRMRFPEW0RjBGqEckR6BIHEiYSRRJkEoQSoxLDEuMTAxMjE0MTYxODE6QTxRPlFAYUJxRJFGoUixStFM4U8BUSFTQVVhV4FZsVvRXgFgMWJhZJFmwWjxayFtYW+hcdF0EXZReJF64X0hf3GBsYQBhlGIoYrxjVGPoZIBlFGWsZkRm3Gd0aBBoqGlEadxqeGsUa7BsUGzsbYxuKG7Ib2hwCHCocUhx7HKMczBz1HR4dRx1wHZkdwx3sHhYeQB5qHpQevh7pHxMfPh9pH5Qfvx/qIBUgQSBsIJggxCDwIRwhSCF1IaEhziH7IiciVSKCIq8i3SMKIzgjZiOUI8Ij8CQfJE0kfCSrJNolCSU4JWgllyXHJfcmJyZXJocmtyboJxgnSSd6J6sn3CgNKD8ocSiiKNQpBik4KWspnSnQKgIqNSpoKpsqzysCKzYraSudK9EsBSw5LG4soizXLQwtQS12Last4S4WLkwugi63Lu4vJC9aL5Evxy/+MDUwbDCkMNsxEjFKMYIxujHyMioyYzKbMtQzDTNGM38zuDPxNCs0ZTSeNNg1EzVNNYc1wjX9Njc2cjauNuk3JDdgN5w31zgUOFA4jDjIOQU5Qjl/Obw5+To2OnQ6sjrvOy07azuqO+g8JzxlPKQ84z0iPWE9oT3gPiA+YD6gPuA/IT9hP6I/4kAjQGRApkDnQSlBakGsQe5CMEJyQrVC90M6Q31DwEQDREdEikTORRJFVUWaRd5GIkZnRqtG8Ec1R3tHwEgFSEtIkUjXSR1JY0mpSfBKN0p9SsRLDEtTS5pL4kwqTHJMuk0CTUpNk03cTiVObk63TwBPSU+TT91QJ1BxULtRBlFQUZtR5lIxUnxSx1MTU19TqlP2VEJUj1TbVShVdVXCVg9WXFapVvdXRFeSV+BYL1h9WMtZGllpWbhaB1pWWqZa9VtFW5Vb5Vw1XIZc1l0nXXhdyV4aXmxevV8PX2Ffs2AFYFdgqmD8YU9homH1YklinGLwY0Njl2PrZEBklGTpZT1lkmXnZj1mkmboZz1nk2fpaD9olmjsaUNpmmnxakhqn2r3a09rp2v/bFdsr20IbWBtuW4SbmtuxG8eb3hv0XArcIZw4HE6cZVx8HJLcqZzAXNdc7h0FHRwdMx1KHWFdeF2Pnabdvh3VnezeBF4bnjMeSp5iXnnekZ6pXsEe2N7wnwhfIF84X1BfaF+AX5ifsJ/I3+Ef+WAR4CogQqBa4HNgjCCkoL0g1eDuoQdhICE44VHhauGDoZyhteHO4efiASIaYjOiTOJmYn+imSKyoswi5aL/IxjjMqNMY2Yjf+OZo7OjzaPnpAGkG6Q1pE/kaiSEZJ6kuOTTZO2lCCUipT0lV+VyZY0lp+XCpd1l+CYTJi4mSSZkJn8mmia1ZtCm6+cHJyJnPedZJ3SnkCerp8dn4uf+qBpoNihR6G2oiailqMGo3aj5qRWpMelOKWpphqmi6b9p26n4KhSqMSpN6mpqhyqj6sCq3Wr6axcrNCtRK24ri2uoa8Wr4uwALB1sOqxYLHWskuywrM4s660JbSctRO1irYBtnm28Ldot+C4WbjRuUq5wro7urW7LrunvCG8m70VvY++Cr6Evv+/er/1wHDA7MFnwePCX8Lbw1jD1MRRxM7FS8XIxkbGw8dBx7/IPci8yTrJuco4yrfLNsu2zDXMtc01zbXONs62zzfPuNA50LrRPNG+0j/SwdNE08bUSdTL1U7V0dZV1tjXXNfg2GTY6Nls2fHadtr724DcBdyK3RDdlt4c3qLfKd+v4DbgveFE4cziU+Lb42Pj6+Rz5PzlhOYN5pbnH+ep6DLovOlG6dDqW+rl63Dr++yG7RHtnO4o7rTvQO/M8Fjw5fFy8f/yjPMZ86f0NPTC9VD13vZt9vv3ivgZ+Kj5OPnH+lf65/t3/Af8mP0p/br+S/7c/23////uAA5BZG9iZQBkwAAAAAH/2wCEAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHB8fHx8fHx8fHx8BBwcHDQwNGBAQGBoVERUaHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fH//AABEIASwBLAMBEQACEQEDEQH/xACFAAEAAgMBAQEAAAAAAAAAAAAABgcBBAUDAggBAQEBAQAAAAAAAAAAAAAAAAACAwEQAAICAQIDBAYGCQUAAAAAAAABAgMEEQUhEgYxQVFhcYEiQhMUkaGxMlIH0WJygrLCI0MVwZIzYyQRAQEBAQEAAwEBAAAAAAAAAAABAhExIUFREgP/2gAMAwEAAhEDEQA/APyoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD3w8LMzcmGLh0WZGTa9K6aouc5PyjHVg6n+z/lHZWo3dS5iwk+P+OxuW7KflN/8dXrbfkaTH6zv+n4mm3YuxbRTKjadpxqaprltsyIRyrrYvtVk7U+D8IpIufCL2+uPu/QPSG7808eMtizZe/SnbiSf61TfPD9x6eRNzK7NWIB1J0F1HsEfj5NCyNvb0huOK/i479Mlxg/KaTIubGk1KjhKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACbdMfllm59VefvVr2va5rmrTjrlXx/6qnppF/jnovDUuY/Ua3+LF2+vbtoxpYmxYq2+iS5bbU+bJtX/bd95/sx0j5Gk+PGV+fXyA1AAe2NmZOLJyoscOZaTj2xkn3Si9YyXkx0R/f+genN7UrsHk2XdXx5Un8la/OK1lS/2dY+SJuZVTdisN72HdtkzXh7njyx7ktYa8YTj3TrmtYzi/FMzs41l655x0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANrbNr3DdM2rB2+ieTlXPSuqC1b8/JLvbOydct4tbpvonaOneW/LjXue+R0fM9J4uPL9SL4WzX4n7K7l3mkzxldWu1dfdfbK66bstm9ZTk9W2U4+NTganQ1AagNQBwfV6w83Be3bpjRztvbbVU+E65P36bF7VcvRwfejriturvy9y9oqluW2zln7K37V2i+NQ32RvguzymvZfl2Ges8a531DyFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAHR2HYs/fNyr2/CinZPWVlkuEK64/essl3RijsnXLeLe2nbNs2HBlgbSm3YtMzcJLS7Ifh+pX4QXr1ZrPhjb17ANQGoDUBqA1AagNQGoHpj5NuPZz1PRtOMotJxlF8HGUXwlF96Y6IP1v0NjfL273sVXw6q/a3DbY6v4Kf8Adp73V4r3fR2TrP3F519VXxm0AAAAAAAAAAAAAAAAAAAAAAAAAAAAT78sc+UMfcsGKjH4jqtnJJc8ox1XK5dvKm09PEvFZ7TTUtDOoDUBqA1AagNQGoDUBqBjUD6rzJ4knkwlyupSk9eKcUnzJp9qa4NAUffYrbrLFFQU5OXJFaRWr10S8EYt3mAAAAAAAAAAAAAAAAAAAAAAAAAAACUfl5fyb9KvXhdRZHTzjpP+UrPqd+LH1NGTPMA1AzqA1AagNQGoDUDHMBhsDn9QX/B2HcLNdGqJxT85+x/Mcvjs9VAZNgAAAAAAAAAAAAAAAAAAAAAAAAAAAHd6Iko9T4evf8RfTVI7n1OvFkZ+WsTByMtx51RW7HDXTXl7teJozjg4PX+z5ElDIjPFk/el7cPpjx+o5/SripHRkU31K2iyNtcuycGpJ+tHUvTmOhzANQHMA5gGoHM3PqPaNt1WTkJ2r+zX7c/oXZ6zlvHZLWlsnV+Pu+4SxKcedaUJWKyclxUdOHKl5+Jya6XPHr1nNLpjN8/hJeu2P6Brwz6qwzagAAAAAAAAAAAAAAAAAAAAAAAAAAAO30ZBz6mwku6U5P0Rrk39h3PqdeLG3SmV+0Z9MeM541vKvOMHL+U0rOKeMmzb2/dM/b7vi4l0qpe8l92XlKL4M7K5YsPp3qvG3WKpt0pzkuNfuz074a/YXNdZ3PHd1KcNTganR5ZOVRjUTvyLFXTWtZzl2I4IBv8A1rmZk5UYEpY+J2cy4WT9LXYvJEXTSZRltt6vi32slSV/lxTKW75V2ns040tX5znGK+0rKNpJ1nCU+mctr3HVJ+j4iX+pWvE59VeZtQAAAAAAAAAAAAAAAAAAAAAAAAAAAEn/AC9x/ib5Zc1wxseyevnLStfxlZ9TvxYdFkYWwlNawT9teMXwa+gtmqHd8Ce37plYU09ce2UFr3xT9l+tcTOxrK0zjr6rssqsjZXJwsg1KMlwaa7GgLQ6Y3z/AC2389miyqXyXpd77pfvGkvWWpx19TrgBWvVvUFm5ZkqKpaYWPJqtL35Lg5v/Qi1pmccAlQBYX5fYjo2bJy5JqWZdGEH4wpTb09Mp/UXlnr12d7x/mdj3GnTVvHnOK86tLP5Cr45PVSGTUAAAAAAAAAAAAAAAAAAAAAAAAAAABYnQu2yxNlnmWLlt3GXsa9vwam0n+9PX6C8xnr1IdSkuX1J0rT1BTG/GlGneqYqEIyekMmEfuxcnwjZFcIt8GuByzrs1xWeVi5OJkTx8mqVN9b5bKrE4yi13NMzavICT/l/fKG721a+zbTJtecGmn9pWU6WBzFs2nvORKnaM22HCcKZuLXc2tE/rFdipDJqASPpbo3L3mSyciTw9orel2ZJauT/AAUx9+f1LvKmep1riw+XHrrrx8Wv4OJjwVePVrrywXi++TfGT8S2bNdihNOS5o9k4+MXwkvWgKo37ap7Vu2ThS4xrlrTP8VcvahL1xaM7GsvXPOOgAAAAAAAAAAAAAAAAAAAAAAAAA6vTeyWbxuleNq4Y8F8TLtXuVR+8/S+xeZ2TrlvFnznW2lVBVUwioU1LshXBaRivQjRk+dQ6zqByut9yxpbBOvPpryr3pXhXT4W1y73Ga9pxUfdfA5qu5nyrEzaJX+XuPCW4ZeRKWkqaNIQ727JJa+pJlZTtOdS2bwz8eGTt+XjzlyRtosjzvsT5W0360HYqIyauv0pkbfj77jTz8avKobcVXbryKbXsSkl95KXc+B2Oa8WlkZd98k7Za8i5YQSUYxXhGK0UV6DRlx46h1jUOOJ1ls/+T2pZdMdc7bottLtsxtdZL01t83o18CdRWbxXBDQAAAAAAAAAAAAAAAAAAAAAAAANrbduydxzqcLGUXffLlhzyUI9mrbk+CSSELVn7ZtmFs23/IYclbObU83L00+LNdijrxVcO7x7TSTjK3r21OjOpwNTogPXGZO7d/l9f6eNCMUv1prmk/rRGl5R0lTsdKbjHB3mqU3pVdrTY+5KXY/VLQ7HNRZWpozcbqzcVh7NbFPS3J/o1ryl95/7Sa7mK2IaAFpbFmyy9nxcib1nKHLN+MoNxb+o0jKt7U6GoH1VdZTbG2t6Ti9V3r1rwAhvWXSuPjwnvG2csMKUl8zhtpSonN6ewn96uT7NOzsI1FZv0h5KwAAAAAAAAAAAAAAAAAAAAAAB91W2VWwtrfLZBqUZLua4oCzNn3SrcsGGRDRT+7dD8M12r9BpKzsb2ocZ1AyuLS8Toq3esl5O7Zd/dO2fL6E9F9RnWkaRx0AsTpjfYZ2ByXzSycWOlrb01glwn+kuVnYiPUm8vc9wc4N/LVawoXl3y/eJtXJxyTjoBPehshz2iylv/huenomk/tTLyjSQ6lJNTgxqBBusd5WVkrCplrRjv22uyVnY/8Ab2E6q8xGyVAAAAAAAAAAAAAAAAAAAAAAAAB09h3mza8xWcZY9mkb6/FeK80dlcs6sam6q6qFtUlOuaUoSXY0y2b7Ayno9V3cQKknJynKT7W236zNq+QAH1Gc468snHmWktHpqn3MD5AAAJh0BJ8mdH3U6n6/aRWUaS0pLGoHB6p39YOP8tRL/wBly7V7kH3+l9xy1UiBELYAAAAAAAAAAAAAAAAAAAAAAAAAACQ9LdQ/JWLEyZf+Sx+zJ/25Pv8A2X3nZU2Jyn3riu5lpfdfGyKfY2k/WHFTZFTpyLanwdc5QafjF6GbV5gAAAAAAmfQVTjiZt/4rK4Lw9lSb/iRWUaSjUpxzt73mna8V2S0lfPVU1eL8X5I5aSdV1kZF2TfO+6TnbY+aUn4kNHkAAAAAAAAAAAAAAAAAAAAAAAAAAAABKOmOpVSo4ObP+l2U3P3f1ZeX2FSpsTHm716ikK96rxfl9/y0lpC2Suh6LUp/ayL60njkHHQAAAAALE6Uxvl9gx21pLIlO9+hvkj9UC4i+tjdt3xttxnbc9ZvhVUu2T/AEeLFrkV5uGfk5+VLIyJazl2Luiu5LyIaNYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkXT/VM8RRxc1ueN2Qs7ZQ/TE7Km5b3WuLDJwsPdcdqyuC+XtnF6pxbc63/ABI7pzKHkrAAAAB7YeJdmZdOLSua2+cYQXnJ6AT7ed8wNnpjjVaW2UwjVRSn7sI8qlLw101Lt4zk6gednZObkSvyJ89kvoS8Eu5ENONcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANzD3XLxaL8aLU8XJjyXUT4xfepLwlFrVNDrnGmHQAAAAbe3blkbfbO7G5Y5EoOELWtZQUlpJw8JacNQ5Y1pznOTnOTlKT1lJvVth18gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/9k=";
             t.DEFAULT_ICON_URL = a;
-            class l {
+            class s {
                 constructor(e) {
                     this._iconCache = e.reduce(((e, t) => ((0, i.default)(t), e.set(t.id, t), e)), new Map)
                 }
@@ -14394,7 +14531,7 @@
                     return a
                 }
             }
-            t.SummonerIconManager = l
+            t.SummonerIconManager = s
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -14446,10 +14583,10 @@
                             const e = t.getBoundingClientRect().left,
                                 n = i.getBoundingClientRect().left,
                                 a = Math.floor(t.clientWidth / 2),
-                                l = t.scrollLeft + n - (e + a);
+                                s = t.scrollLeft + n - (e + a);
                             if (t.scrollTo({
                                     behavior: r,
-                                    left: l
+                                    left: s
                                 }), o) {
                                 let e;
                                 t.addEventListener("scroll", (() => {
@@ -14501,10 +14638,10 @@
         const i = "rcp-fe-lol-uikit",
             a = document.currentScript.ownerDocument;
         (0, r.default)();
-        const l = document.createElement("link");
-        l.rel = "stylesheet", l.href = "/fe/lol-uikit/main.css", document.head.appendChild(l);
-        const s = window.getPluginAnnounceEventName(i);
-        a.addEventListener(s, (function(r) {
+        const s = document.createElement("link");
+        s.rel = "stylesheet", s.href = "/fe/lol-uikit/main.css", document.head.appendChild(s);
+        const l = window.getPluginAnnounceEventName(i);
+        a.addEventListener(l, (function(r) {
             const o = r.registrationHandler;
             t.default.set(a), o((function(t) {
                 return e.default.init(t).then((() => e.default.add({
