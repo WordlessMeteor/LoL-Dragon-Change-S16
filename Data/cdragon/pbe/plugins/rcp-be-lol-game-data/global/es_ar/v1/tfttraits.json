@@ -14910,6 +14910,10 @@
                     {
                         "name": "NumSeconds",
                         "value": 4.0
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 4.0
                     }
                 ]
             }
@@ -15144,11 +15148,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "AP",
-                        "value": 15.0
+                        "value": 12.0
                     },
                     {
                         "name": "Duration",
@@ -15164,11 +15168,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.3
+                        "value": 0.25
                     },
                     {
                         "name": "AP",
-                        "value": 30.0
+                        "value": 25.0
                     },
                     {
                         "name": "Duration",
@@ -15184,11 +15188,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.45
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 45.0
+                        "value": 40.0
                     },
                     {
                         "name": "Duration",
@@ -15204,11 +15208,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.6
+                        "value": 0.55
                     },
                     {
                         "name": "AP",
-                        "value": 60.0
+                        "value": 55.0
                     },
                     {
                         "name": "Duration",
@@ -15438,7 +15442,7 @@
         "trait_id": "TFT17_Fateweaver",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Fateweaver.TFT_Set17.png",
-        "tooltip_text": "Habilidad innata: Los Tejedestinos tienen <TFTKeyword>Precisión</TFTKeyword>.<br><br><row>(@MinUnits@) Los efectos de probabilidad de las habilidades tienen <TFTKeyword>Suerte</TFTKeyword>.</row><br><row>(@MinUnits@) Obtienes un @CritChance*100@% de Probabilidad de Golpe Crítico y un @CritDamage@%&nbsp;de daño de Golpe Crítico. Los golpes críticos también tienen <TFTKeyword>Suerte</TFTKeyword>.</row><br><br><rules>Precisión: El daño de habilidad puede asestar golpes críticos. La Precisión adicional otorga un 10% de daño de Golpe Crítico.</rules><br><rules>Suerte: Revisa dos resultados y acepta el mejor.</rules>",
+        "tooltip_text": "Habilidad innata: Los Tejedestinos tienen <TFTKeyword>Precisión</TFTKeyword>.<br><br><row>(@MinUnits@) Los efectos de probabilidad de las habilidades tienen <TFTKeyword>Suerte</TFTKeyword>.</row><br><row>(@MinUnits@) Obtienes un @CritChance*100@% de Probabilidad de Golpe Crítico y un @CritDamage@%&nbsp;de daño de Golpe Crítico. Los golpes críticos también tienen <TFTKeyword>Suerte</TFTKeyword>.</row><br><br><rules>Precisión: El daño de habilidad puede asestar golpes críticos. La Precisión adicional otorga un 10% de daño de Golpe Crítico.</rules><br><rules>Suerte: De dos resultados, se obtiene el mejor.</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -15512,7 +15516,7 @@
         "trait_id": "TFT17_FlexTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Voyager.TFT_Set17.png",
-        "tooltip_text": "Inicio del combate: Los tanques y los peleadores obtienen un escudo durante @ShieldDuration@ seg. Las demás unidades obtienen amplificación de daño.<br><br>Las unidades Viajero obtienen el doble.<br><br><expandRow>(@MinUnits@) @ShieldHP@ de escudo; @BonusDA*100@% de %i:scaleDA%</expandRow><br>",
+        "tooltip_text": "Inicio del combate: Los tanques obtienen un escudo durante @ShieldDuration@ seg. Las demás unidades obtienen amplificación de daño.<br><br>Las unidades Viajero obtienen el doble.<br><br><expandRow>(@MinUnits@) @ShieldHP@ de Escudo; @BonusDA*100@% de %i:scaleDA%</expandRow><br>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15731,7 +15735,7 @@
         "trait_id": "TFT17_ManaTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Channeler.TFT_Set17.png",
-        "tooltip_text": "Habilidad innata: Los Canalizadores obtienen un @InnateManaGain*100@% de Maná adicional de todas las fuentes.<br><br>Tu equipo obtiene regen. de maná, que aumenta para los Canalizadores.<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ %i:TFTManaRegen% | @ChannelerManaRegen@ %i:TFTManaRegen%</expandRow><br><br>",
+        "tooltip_text": "Habilidad innata: Los Canalizadores obtienen un @InnateManaGain*100@% de Maná adicional de todas las fuentes.<br><br>Tu equipo obtiene regen. de maná, que aumenta para los Canalizadores.<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ de %i:TFTManaRegen% | @ChannelerManaRegen@ de %i:TFTManaRegen%</expandRow><br><br>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15823,7 +15827,7 @@
                     },
                     {
                         "name": "TransformedPercentHealth",
-                        "value": 0.6
+                        "value": 0.5
                     }
                 ]
             }
@@ -15965,7 +15969,7 @@
         "trait_id": "TFT17_MissFortuneUndeterminedTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_MissFortuneUndetermindedTrait.TFT_Set17.png",
-        "tooltip_text": "Al colocar a Miss Fortune en el tablero, elige entre el Modo Canalizador, el Modo Retador y el Modo Replicador. Miss Fortune tiene una habilidad única según el modo elegido y obtiene el rasgo asociado.",
+        "tooltip_text": "Al colocar a Miss Fortune en el tablero, elige entre el modo Canalizador, Retador o Replicador. Miss Fortune tiene una habilidad única según el modo elegido y obtiene el rasgo asociado.",
         "innate_trait_sets": [],
         "conditional_trait_sets": []
     },
@@ -15974,7 +15978,7 @@
         "trait_id": "TFT17_MissFortuneUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GunGoddess.TFT_Set17.png",
-        "tooltip_text": "Al colocar a Miss Fortune en el tablero, elige entre el Modo Canalizador, el Modo Retador y el Modo Replicador. Miss Fortune tiene una habilidad única según el modo elegido y obtiene el rasgo asociado.",
+        "tooltip_text": "Al colocar a Miss Fortune en el tablero, elige entre el modo Canalizador, Retador o Replicador. Miss Fortune tiene una habilidad única según el modo elegido y obtiene el rasgo asociado.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -16302,7 +16306,7 @@
                     },
                     {
                         "name": "BonusDefensiveStat3",
-                        "value": 4.0
+                        "value": 3.0
                     },
                     {
                         "name": "BonusOffensiveStat1",
@@ -16314,7 +16318,7 @@
                     },
                     {
                         "name": "BonusOffensiveStat3",
-                        "value": 0.04
+                        "value": 0.03
                     }
                 ],
                 "min_units": 1,
@@ -16335,7 +16339,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "AttackSpeedDuration",
@@ -16343,7 +16347,7 @@
                     },
                     {
                         "name": "PercentHealthShield",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "ShieldDuration",
@@ -16385,7 +16389,7 @@
                 "constants": [
                     {
                         "name": "EnhancedDurability",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "ShieldPercentAmount",
@@ -16401,7 +16405,7 @@
                 "constants": [
                     {
                         "name": "EnhancedDurability",
-                        "value": 0.16
+                        "value": 0.08
                     },
                     {
                         "name": "ShieldPercentAmount",
@@ -16417,7 +16421,7 @@
                 "constants": [
                     {
                         "name": "EnhancedDurability",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "ShieldPercentAmount",
@@ -16515,7 +16519,7 @@
                 "constants": [
                     {
                         "name": "ADAPPerSecond",
-                        "value": 4.0
+                        "value": 5.0
                     },
                     {
                         "name": "EffectBonus",
@@ -16535,7 +16539,7 @@
                 "constants": [
                     {
                         "name": "ADAPPerSecond",
-                        "value": 4.0
+                        "value": 5.0
                     },
                     {
                         "name": "EffectBonus",
@@ -16887,7 +16891,7 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>La Fuente</TFTStargazer>.<br><br>Los aliados dentro de los hexágonos potenciados obtienen @Fountain_ManaRegen_Teamwide@ de Regen. de Maná. Los Astromantes dentro de los hexágonos potenciados obtienen más y con sus habilidades curan al aliado con menos vida.<br><br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@% de daño de habilidad como curación.</expandRow><br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
+        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>La Fuente</TFTStargazer>.<br><br>Los aliados en hexágonos potenciados obtienen @Fountain_ManaRegen_Teamwide@ de Regen. de Maná. Si son Astromantes, obtienen más y con sus habilidades curan al aliado con menos vida.<br><br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%, @Fountain_HealPercent*100@% de daño de habilidad como curación.</expandRow><br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16903,7 +16907,7 @@
                 "constants": [
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16937,7 +16941,7 @@
         "trait_id": "TFT17_Stargazer_Huntress",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>La Cazadora</TFTStargazer>.<br><br>Al inicio del combate: Marca a los enemigos con más vida. <br><br>Los aliados dentro de los hexágonos potenciados obtienen un @Huntress_AS_Teamwide*100@% de Velocidad de Ataque. Los Astromantes dentro de los hexágonos potenciados obtienen más. Cuando muere un enemigo marcado, se curan un @Huntress_Heal*100@% de su Vida Máxima.<br><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marcas</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marcas</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marcas</row><br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
+        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>La Cazadora</TFTStargazer>.<br><br>Al inicio del combate: Marca a los enemigos con más vida. <br><br>Los aliados en hexágonos potenciados obtienen un @Huntress_AS_Teamwide*100@% de Velocidad de Ataque. De ellos, los Astromantes obtienen más velocidad de ataque y se curan un @Huntress_Heal*100@% de su Vida Máxima al morir un enemigo marcado.<br><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marcas</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marcas</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%, @NumMarks@ marcas</row><br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16973,7 +16977,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.25
+                        "value": 0.3
                     },
                     {
                         "name": "NumMarks",
@@ -16989,7 +16993,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.4
+                        "value": 0.45
                     },
                     {
                         "name": "NumMarks",
@@ -17007,7 +17011,7 @@
         "trait_id": "TFT17_Stargazer_Medallion",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>El Medallón</TFTStargazer>.<br><br><row>(@MinUnits@) Los aliados dentro de los hexágonos potenciados obtienen un @Medallion_DA@% de Amplificación de daño, que aumenta en un @Medallion_IncreasePer3Star@% por cada unidad aliada de 3 estrellas.</row><br><br>(Bonificación&nbsp;actual:&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Medallion_Increase@% %i:scaleDA%)<br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
+        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>El Medallón</TFTStargazer>.<br><br><row>(@MinUnits@) Los aliados en hexágonos potenciados obtienen un @Medallion_DA@% de Amplificación de daño, que aumenta en un @Medallion_IncreasePer3Star@% por cada unidad aliada de 3 estrellas.</row><br><br>(Bonificación&nbsp;actual:&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Medallion_Increase@% %i:scaleDA%)<br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17017,7 +17021,7 @@
                     },
                     {
                         "name": "Medallion_IncreasePer3Star",
-                        "value": 8.0
+                        "value": 6.5
                     },
                     {
                         "name": "Medallion_Resists_Teamwide",
@@ -17049,7 +17053,7 @@
         "trait_id": "TFT17_Stargazer_Mountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>La Montaña</TFTStargazer>.<br><br>Cada @Mountain_RoundsPerEmblem@ combates contra jugadores, obtienes un Emblema de Astromante. Los Astromantes dentro de los hexágonos potenciados obtienen varias bonificaciones.<br><br>(Combates restantes:&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Mountain_CombatsRemaining@)<br><br><row>(@MinUnits@) Obtiene un @Mountain_Health*100@% de Vida</row><br><row>(@MinUnits@) Y un @Mountain_ADAP*100@% de Daño de Ataque y Poder de Habilidad</row><br><row>(@MinUnits@) Y @Mountain_Resists@ de Armadura y Resistencia Mágica</row><br><row>(@MinUnits@) Y un @Mountain_AS*100@% de Velocidad de Ataque</row><br><row>(@MinUnits@) Y un @Mountain_DR*100@% de Durabilidad</row><br><row>(@MinUnits@) Y aumenta las demás bonificaciones en un @Mountain_StatIncrease*100@%</row>.<br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
+        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>La Montaña</TFTStargazer>.<br><br>Cada @Mountain_RoundsPerEmblem@ combates contra jugadores, obtienes un Emblema de Astromante. Los Astromantes en hexágonos potenciados obtienen bonificaciones.<br><br>(Combates restantes:&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Mountain_CombatsRemaining@)<br><br><row>(@MinUnits@) Obtienen un @Mountain_Health*100@% de Vida</row><br><row>(@MinUnits@) Y un @Mountain_ADAP*100@% de Daño de Ataque y Poder de Habilidad</row><br><row>(@MinUnits@) Y @Mountain_Resists@ de Armadura y Resistencia Mágica</row><br><row>(@MinUnits@) Y un @Mountain_AS*100@% de Velocidad de Ataque</row><br><row>(@MinUnits@) Y un @Mountain_DR*100@% de Durabilidad</row><br><row>(@MinUnits@) Y las demás bonificaciones aumentan en un @Mountain_StatIncrease*100@%</row>.<br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17225,7 +17229,7 @@
                     },
                     {
                         "name": "Mountain_DR",
-                        "value": 0.08
+                        "value": 0.06
                     },
                     {
                         "name": "Mountain_Health",
@@ -17261,7 +17265,7 @@
                     },
                     {
                         "name": "Mountain_DR",
-                        "value": 0.08
+                        "value": 0.06
                     },
                     {
                         "name": "Mountain_Health",
@@ -17273,7 +17277,7 @@
                     },
                     {
                         "name": "Mountain_StatIncrease",
-                        "value": 0.2
+                        "value": 0.1
                     }
                 ],
                 "min_units": 8,
@@ -17288,7 +17292,7 @@
         "trait_id": "TFT17_Stargazer_Serpent",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>La Serpiente</TFTStargazer>.<br><br>Los aliados dentro de los hexágonos potenciados obtienen un @Serpent_DR_Teamwide*100@% de Durabilidad. Los Astromantes dentro de los hexágonos potenciados obtienen más y envenenan a los enemigos, lo que hace que se repita un porcentaje del daño infligido como daño mágico durante @Serpent_Duration@ seg.<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%, @Serpent_Poison*100@% de daño de veneno</expandRow><br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
+        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>La Serpiente</TFTStargazer>.<br><br>Los aliados en hexágonos potenciados obtienen un @Serpent_DR_Teamwide*100@% de Durabilidad. Si son Astromantes,  obtienen más y envenenan a los enemigos, lo que hace que se repita un porcentaje del daño infligido como daño mágico durante @Serpent_Duration@ seg.<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%, @Serpent_Poison*100@% de daño de veneno</expandRow><br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17312,7 +17316,7 @@
                     },
                     {
                         "name": "Serpent_Poison",
-                        "value": 0.3
+                        "value": 0.25
                     }
                 ],
                 "min_units": 3,
@@ -17328,7 +17332,7 @@
                     },
                     {
                         "name": "Serpent_Poison",
-                        "value": 0.5
+                        "value": 0.4
                     }
                 ],
                 "min_units": 5,
@@ -17344,7 +17348,7 @@
                     },
                     {
                         "name": "Serpent_Poison",
-                        "value": 0.7
+                        "value": 0.6
                     }
                 ],
                 "min_units": 7,
@@ -17358,7 +17362,7 @@
         "trait_id": "TFT17_Stargazer_Shield",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>El Altar</TFTStargazer>.<br><br><row>(@MinUnits@) Cuando muere CUALQUIER campeón, se sacrifica en el Altar. Los aliados dentro de los hexágonos potenciados obtienen un @Shield_Health_Teamwide@% de Vida y un @Shield_AS_Teamwide@% de Velocidad de Ataque.<br><br>Después de @Shield_NumDeaths@ sacrificios, los Astromantes dentro de los hexágonos potenciados obtienen un @Shield_CashoutHP@% %i:scaleHealth% y un @Shield_CashoutAS@% de %i:scaleAS% adicionales.<br><br>Sacrificios: (@TFTUnitProperty.trait:TFT17_Stargazer_Shield_Deaths@ / @Shield_NumDeaths@)</row><br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
+        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>El Altar</TFTStargazer>.<br><br><row>(@MinUnits@) CUALQUIER campeón que muera, se sacrifica en el Altar. Los aliados en hexágonos potenciados obtienen un @Shield_Health_Teamwide@% de Vida y un @Shield_AS_Teamwide@% de Velocidad de Ataque.<br><br>Después de @Shield_NumDeaths@ sacrificios, los Astromantes en hexágonos potenciados obtienen un @Shield_CashoutHP@% %i:scaleHealth% y un @Shield_CashoutAS@% de %i:scaleAS% adicionales.<br><br>Sacrificios: (@TFTUnitProperty.trait:TFT17_Stargazer_Shield_Deaths@ / @Shield_NumDeaths@)</row><br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17400,7 +17404,7 @@
         "trait_id": "TFT17_Stargazer_Wolf",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>El Jabalí</TFTStargazer>.<br><br>Obtienes oro tras ganar un combate contra jugadores. Los aliados dentro de los hexágonos potenciados obtienen un @Wolf_Health_Teamwide*100@% de Vida, Daño de Ataque y Poder de Habilidad. Los Astromantes obtienen más.<br><br>(Oro obtenido: @TFTUnitProperty.trait:TFT17_Stargazer_Wolf_TotalGold@)<br><br><expandRow>(@MinUnits@) @Wolf_Gold@ de oro, @Wolf_Health*100@% %i:scaleHealth%, @Wolf_ADAP@% %i:scaleAD%%i:scaleAP%</expandRow><br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
+        "tooltip_text": "Los Astromantes trazan una constelación diferente en cada partida. Esta partida: <TFTStargazer>El Jabalí</TFTStargazer>.<br><br>Obtienes oro tras ganar un combate contra jugadores. Los aliados en hexágonos potenciados obtienen un @Wolf_Health_Teamwide*100@% de Vida, Daño de Ataque y Poder de Habilidad. Los Astromantes obtienen más.<br><br>(Oro obtenido: @TFTUnitProperty.trait:TFT17_Stargazer_Wolf_TotalGold@)<br><br><expandRow>(@MinUnits@) @Wolf_Gold@ de oro, @Wolf_Health*100@% %i:scaleHealth%, @Wolf_ADAP@% %i:scaleAD% y %i:scaleAP%</expandRow><br><br><rules>Se revelan más hexágonos por cada nivel de jugador.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17448,7 +17452,7 @@
                     },
                     {
                         "name": "Wolf_Health",
-                        "value": 0.05
+                        "value": 0.08
                     }
                 ],
                 "min_units": 4,
@@ -17468,7 +17472,7 @@
                     },
                     {
                         "name": "Wolf_Health",
-                        "value": 0.1
+                        "value": 0.15
                     }
                 ],
                 "min_units": 5,
@@ -17488,7 +17492,7 @@
                     },
                     {
                         "name": "Wolf_Health",
-                        "value": 0.15
+                        "value": 0.22
                     }
                 ],
                 "min_units": 6,
@@ -17592,7 +17596,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.18
+                        "value": 0.25
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17612,7 +17616,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.18
+                        "value": 0.25
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17641,7 +17645,7 @@
                 "constants": [
                     {
                         "name": "ADAP1",
-                        "value": 8.0
+                        "value": 12.0
                     }
                 ],
                 "min_units": 1,

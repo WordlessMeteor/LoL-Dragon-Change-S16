@@ -5583,7 +5583,7 @@
         "DeactivationDateTime": "2026-05-14T00:00:00",
         "pityCounterId": "d4bb3974-963d-4cd9-85f7-650780e44d00",
         "ThumbnailTexturePath": "ASSETS/UX/TFT/Troves_BannerContent/ArenaStarNemesis/TR-Thumb-Arena_ArenaStarNemesis.TFT_ROTASHOP_16_8.tex",
-        "BackgroundTexturePath": "ASSETS/Loadouts/TFTMapSkins/Arena_StarNemesis-2x-PC.TFT_ROTASHOP_16_8.tex",
+        "BackgroundTexturePath": "ASSETS/UX/TFT/RotationalShop/Content/ArenaStarNemesis/Arena_StarNemesis-2x-PC.TFT_ROTASHOP_16_8.tex",
         "CelebrationTheme": "{c7d0339a}",
         "NameTraKey": "tft_mapskin_StarNemesis",
         "__type": "TftTrovesBannerData"
@@ -92203,6 +92203,360 @@
         "hudAnchorPositionFromWorldProjection": false,
         "__type": "VfxSystemDefinitionData"
     },
+    "ClientStates/TFTPreGame/Particles/TFTM_EventPass_BG_VFX": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.350000023841858,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "emitterName": "Purple motes right",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        15.0,
+                        15.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "radius": 250.0,
+                    "__type": "VfxShapeSphere"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        500.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "falloffTexture": "ASSETS/UX/TFTMobile/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/UX/TFTMobile/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.6536049246788025,
+                        0.9960784316062927,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 2,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        200.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                200.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        24.0,
+                        24.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/UX/TFTMobile/Particles/copy_Braum_Base_E_End_spark_mis.tex",
+                "paletteDefinition": {
+                    "paletteTexture": "ASSETS/UX/TFTMobile/Particles/TFT_Glb_Gradient.tex",
+                    "paletteSelector": {
+                        "constantValue": [
+                            7.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "paletteCount": 16,
+                    "__type": "VfxPaletteDefinitionData"
+                },
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.350000023841858,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "emitterName": "Purple motes left",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        15.0,
+                        15.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "radius": 250.0,
+                    "__type": "VfxShapeSphere"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        -500.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "falloffTexture": "ASSETS/UX/TFTMobile/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/UX/TFTMobile/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.6536049246788025,
+                        0.9960784316062927,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 2,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        200.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                200.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        24.0,
+                        24.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/UX/TFTMobile/Particles/copy_Braum_Base_E_End_spark_mis.tex",
+                "paletteDefinition": {
+                    "paletteTexture": "ASSETS/UX/TFTMobile/Particles/TFT_Glb_Gradient.tex",
+                    "paletteSelector": {
+                        "constantValue": [
+                            7.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "paletteCount": 16,
+                    "__type": "VfxPaletteDefinitionData"
+                },
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "TFTM_EventPass_BG_VFX",
+        "particlePath": "ClientStates/TFTPreGame/Particles/TFTM_EventPass_BG_VFX",
+        "{9836cd87}": 7,
+        "drawingLayer": 1,
+        "hudAnchorPositionFromWorldProjection": false,
+        "__type": "VfxSystemDefinitionData"
+    },
     "ClientStates/TFTPreGame/Particles/TFTM_SpecialOfferToast/TFTM_SpecialOffer_ChibiAatrox_Scene": {
         "complexEmitterDefinitionData": [
             {
@@ -145970,134 +146324,6 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 11.0,
-                "emitterName": "Highlights Hold",
-                "SpawnShape": {
-                    "emitRotationAngles": [
-                        {
-                            "constantValue": 1.0,
-                            "dynamics": {
-                                "probabilityTables": [
-                                    {
-                                        "keyTimes": [
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "keyValues": [
-                                            0.0,
-                                            360.0
-                                        ],
-                                        "__type": "VfxProbabilityTableData"
-                                    }
-                                ],
-                                "times": [
-                                    0.0
-                                ],
-                                "values": [
-                                    1.0
-                                ],
-                                "__type": "VfxAnimatedFloatVariableData"
-                            },
-                            "__type": "ValueFloat"
-                        },
-                        {
-                            "constantValue": 1.0,
-                            "dynamics": {
-                                "probabilityTables": [
-                                    {
-                                        "keyTimes": [
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "keyValues": [
-                                            0.0,
-                                            360.0
-                                        ],
-                                        "__type": "VfxProbabilityTableData"
-                                    }
-                                ],
-                                "times": [
-                                    0.0
-                                ],
-                                "values": [
-                                    1.0
-                                ],
-                                "__type": "VfxAnimatedFloatVariableData"
-                            },
-                            "__type": "ValueFloat"
-                        }
-                    ],
-                    "emitRotationAxes": [
-                        [
-                            1.0000001192092896,
-                            0.0,
-                            0.0
-                        ],
-                        [
-                            0.0,
-                            1.0000001192092896,
-                            0.0
-                        ]
-                    ],
-                    "__type": "VfxShapeLegacy"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        223.0,
-                        -197.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        0.850385308265686,
-                        0.5504844784736633,
-                        1.0,
-                        0.8392156958580017
-                    ],
-                    "__type": "ValueColor"
-                },
-                "alphaRef": 0,
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        -300.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthRotationalVelocity0": {
-                    "constantValue": [
-                        -100.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        40.0,
-                        10.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/UX/TFTMobile/Particles/Mograph/TrovesCelebration/TFTM-TrovesCelebration-Portals-WhiteHighlights.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 11.0,
                 "emitterName": "Main Ring - Hold",
                 "SpawnShape": {
                     "emitRotationAngles": [
@@ -146353,144 +146579,6 @@
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/UX/TFTMobile/Particles/Mograph/HomePage/TFT-Portals-InnerRings1_Grayscale.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 11.0,
-                "emitterName": "Outer Ring Hold",
-                "SpawnShape": {
-                    "emitRotationAngles": [
-                        {
-                            "constantValue": 1.0,
-                            "dynamics": {
-                                "probabilityTables": [
-                                    {
-                                        "keyTimes": [
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "keyValues": [
-                                            0.0,
-                                            360.0
-                                        ],
-                                        "__type": "VfxProbabilityTableData"
-                                    }
-                                ],
-                                "times": [
-                                    0.0
-                                ],
-                                "values": [
-                                    1.0
-                                ],
-                                "__type": "VfxAnimatedFloatVariableData"
-                            },
-                            "__type": "ValueFloat"
-                        },
-                        {
-                            "constantValue": 1.0,
-                            "dynamics": {
-                                "probabilityTables": [
-                                    {
-                                        "keyTimes": [
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "keyValues": [
-                                            0.0,
-                                            360.0
-                                        ],
-                                        "__type": "VfxProbabilityTableData"
-                                    }
-                                ],
-                                "times": [
-                                    0.0
-                                ],
-                                "values": [
-                                    1.0
-                                ],
-                                "__type": "VfxAnimatedFloatVariableData"
-                            },
-                            "__type": "ValueFloat"
-                        }
-                    ],
-                    "emitRotationAxes": [
-                        [
-                            1.0000001192092896,
-                            0.0,
-                            0.0
-                        ],
-                        [
-                            0.0,
-                            1.0000001192092896,
-                            0.0
-                        ]
-                    ],
-                    "__type": "VfxShapeLegacy"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        223.0,
-                        -196.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.22999924421310425
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "constantValue": [
-                        0.8989852666854858,
-                        0.8989852666854858,
-                        0.8989852666854858,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
-                "alphaRef": 0,
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        -225.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthRotationalVelocity0": {
-                    "constantValue": [
-                        50.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        30.0,
-                        10.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/UX/TFTMobile/Particles/Mograph/TrovesCelebration/TFTM-TrovesCelebration-Portals-OuterRing.tex",
-                "texAddressModeBase": 3,
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -146911,133 +146999,6 @@
                 "birthScale0": {
                     "constantValue": [
                         30.0,
-                        10.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/UX/TFTMobile/Particles/Mograph/TrovesCelebration/TFTM-TrovesCelebration-Portals-OuterRings2.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": -1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 11.0,
-                "emitterName": "Outer Ring 2",
-                "SpawnShape": {
-                    "emitRotationAngles": [
-                        {
-                            "constantValue": 1.0,
-                            "dynamics": {
-                                "probabilityTables": [
-                                    {
-                                        "keyTimes": [
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "keyValues": [
-                                            0.0,
-                                            360.0
-                                        ],
-                                        "__type": "VfxProbabilityTableData"
-                                    }
-                                ],
-                                "times": [
-                                    0.0
-                                ],
-                                "values": [
-                                    1.0
-                                ],
-                                "__type": "VfxAnimatedFloatVariableData"
-                            },
-                            "__type": "ValueFloat"
-                        },
-                        {
-                            "constantValue": 1.0,
-                            "dynamics": {
-                                "probabilityTables": [
-                                    {
-                                        "keyTimes": [
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "keyValues": [
-                                            0.0,
-                                            360.0
-                                        ],
-                                        "__type": "VfxProbabilityTableData"
-                                    }
-                                ],
-                                "times": [
-                                    0.0
-                                ],
-                                "values": [
-                                    1.0
-                                ],
-                                "__type": "VfxAnimatedFloatVariableData"
-                            },
-                            "__type": "ValueFloat"
-                        }
-                    ],
-                    "emitRotationAxes": [
-                        [
-                            1.0000001192092896,
-                            0.0,
-                            0.0
-                        ],
-                        [
-                            0.0,
-                            1.0000001192092896,
-                            0.0
-                        ]
-                    ],
-                    "__type": "VfxShapeLegacy"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        223.0,
-                        -196.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.4299992322921753,
-                        0.9400015473365784,
-                        0.2899976968765259
-                    ],
-                    "__type": "ValueColor"
-                },
-                "alphaRef": 0,
-                "modulationFactor": [
-                    0.7464866042137146,
-                    0.15323109924793243,
-                    0.6772716641426086,
-                    1.0
-                ],
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "TextureFlipU": 1,
-                "birthRotationalVelocity0": {
-                    "constantValue": [
-                        -100.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        40.0,
                         10.0,
                         0.0
                     ],
@@ -243189,7 +243150,11 @@
             },
             {
                 "rate": {
-                    "constantValue": 15.0,
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 13.0,
@@ -291249,6 +291214,34 @@
         },
         "ThemeDataMap": {
             "lcu-assets-tft-event-pass": {
+                "BackgroundTexturePath": "ASSETS/UX/TFTMobile/BattlePass/LNY26/TFTm_Event_Pass_Background_LNY26.tex",
+                "{765c4429}": "ASSETS/UX/TFTMobile/BattlePass/pass-completion-LNY26_Mobile.tex",
+                "{fbf4286e}": "ASSETS/UX/TFTMobile/BattlePass/LevelPurchase/Evergreen-levelpurchase.tex",
+                "{f1cfe676}": "ASSETS/UX/TFTMobile/BattlePass/TFTM_BattlePass_Texture_Atlas.tex",
+                "{96349f57}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/free-available.tex",
+                "{7e458980}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/free-available-hover.tex",
+                "{02ee329e}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/free-claimable.tex",
+                "{36b9f511}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/free-claimable-hover.tex",
+                "{314a63bb}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/free-claimed.tex",
+                "{02e09a7c}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/free-claimed-hover.tex",
+                "{3392c041}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/keystone-available.tex",
+                "{9a0caad2}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/keystone-available-hover.tex",
+                "{e98a6e08}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/keystone-claimable.tex",
+                "{df83f0d3}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/keystone-claimable-hover.tex",
+                "{16e21209}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/keystone-claimed.tex",
+                "{4cbd596a}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/keystone-claimed-hover.tex",
+                "{a807a4b2}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/keystone-locked.tex",
+                "{de84022d}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/keystone-locked-hover.tex",
+                "{d0666cc4}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/premium-available.tex",
+                "{414d5717}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/premium-available-hover.tex",
+                "{20b77151}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/premium-claimable.tex",
+                "{fa3657e2}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/premium-claimable-hover.tex",
+                "{c1d8474a}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/premium-claimed.tex",
+                "{4026cb15}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/premium-claimed-hover.tex",
+                "{58766309}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/premium-locked.tex",
+                "{2abb026a}": "ASSETS/UX/TFTMobile/BattlePass/LNY25/premium-locked-hover.tex",
+                "{63d105a5}": "ASSETS/UX/TFTMobile/BattlePass/LNY26/LNY26_Mobile_Passreward_Background.tex",
+                "BackgroundVFX": "ClientStates/TFTPreGame/UX/RiotUI/TFTBattlepass/UIBase/Scene/EventPassBackgroundVFX",
                 "__type": "{5cb6b755}"
             }
         },

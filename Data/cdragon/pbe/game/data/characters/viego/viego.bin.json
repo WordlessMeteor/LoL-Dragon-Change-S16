@@ -771,8 +771,41 @@
                         1.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSAPRatio",
+                    "values": [
+                        0.00039999998989515007,
+                        0.00039999998989515007,
+                        0.00039999998989515007,
+                        0.00039999998989515007,
+                        0.00039999998989515007,
+                        0.00039999998989515007,
+                        0.00039999998989515007
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "MSAPRatio",
+                            "values": [
+                                0.0005000000237487257,
+                                0.0005000000237487257,
+                                0.0005000000237487257,
+                                0.0005000000237487257,
+                                0.0005000000237487257,
+                                0.0005000000237487257,
+                                0.0005000000237487257
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "TotalMovespeed": {
                     "mFormulaParts": [
@@ -781,8 +814,8 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.00039999998989515007,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "MSAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -2376,8 +2409,41 @@
                         3.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "APRatio",
+                            "values": [
+                                1.5,
+                                1.5,
+                                1.5,
+                                1.5,
+                                1.5,
+                                1.5,
+                                1.5
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mFormulaParts": [
@@ -2386,8 +2452,8 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 1.0,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -3004,8 +3070,41 @@
                         0.699999988079071
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SecondAttackAPRatio",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "SecondAttackAPRatio",
+                            "values": [
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mMultiplier": {
@@ -3060,8 +3159,8 @@
                             "__type": "StatByCoefficientCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.15000000596046448,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "{415ae39f}",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"

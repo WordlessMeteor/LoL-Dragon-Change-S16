@@ -14910,6 +14910,10 @@
                     {
                         "name": "NumSeconds",
                         "value": 4.0
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 4.0
                     }
                 ]
             }
@@ -15144,11 +15148,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.15
+                        "value": 0.12
                     },
                     {
                         "name": "AP",
-                        "value": 15.0
+                        "value": 12.0
                     },
                     {
                         "name": "Duration",
@@ -15164,11 +15168,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.3
+                        "value": 0.25
                     },
                     {
                         "name": "AP",
-                        "value": 30.0
+                        "value": 25.0
                     },
                     {
                         "name": "Duration",
@@ -15184,11 +15188,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.45
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 45.0
+                        "value": 40.0
                     },
                     {
                         "name": "Duration",
@@ -15204,11 +15208,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.6
+                        "value": 0.55
                     },
                     {
                         "name": "AP",
-                        "value": 60.0
+                        "value": 55.0
                     },
                     {
                         "name": "Duration",
@@ -15475,7 +15479,7 @@
         ]
     },
     {
-        "display_name": "ディヴァイン デュエリスト",
+        "display_name": "聖なる決闘者",
         "trait_id": "TFT17_FioraUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_DivineDuelist.TFT_Set17.png",
@@ -15508,11 +15512,11 @@
         ]
     },
     {
-        "display_name": "航海者",
+        "display_name": "ボイジャー",
         "trait_id": "TFT17_FlexTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Voyager.TFT_Set17.png",
-        "tooltip_text": "戦闘開始: 味方のタンクとファイターが@ShieldDuration@秒間持続するシールドを獲得する。その他の味方はダメージ増加効果を獲得する。<br><br>「航海者」は2倍増加する。<br><br><expandRow>(@MinUnits@) @ShieldHP@シールド、@BonusDA*100@% %i:scaleDA%</expandRow><br>",
+        "tooltip_text": "戦闘開始: 味方のタンクが@ShieldDuration@秒間持続するシールドを獲得する。その他の味方はダメージ増加効果を獲得する。<br><br>「ボイジャー」は効果が2倍になる。<br><br><expandRow>(@MinUnits@) @ShieldHP@シールド、@BonusDA*100@% %i:scaleDA%</expandRow><br>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15727,11 +15731,11 @@
         ]
     },
     {
-        "display_name": "チャネラー",
+        "display_name": "コンジット",
         "trait_id": "TFT17_ManaTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Channeler.TFT_Set17.png",
-        "tooltip_text": "インネイト: 「チャネラー」は、あらゆるソースから獲得するマナが@InnateManaGain*100@%増加する。<br><br>味方チームのマナ自動回復が増加する。「チャネラー」はより多く増加する。<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ %i:TFTManaRegen% | @ChannelerManaRegen@ %i:TFTManaRegen%</expandRow><br><br>",
+        "tooltip_text": "インネイト: 「コンジット」は、あらゆるソースから獲得するマナが@InnateManaGain*100@%増加する。<br><br>味方チームがマナ自動回復を獲得する。「コンジット」は回復量が増加する。<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ %i:TFTManaRegen% | @ChannelerManaRegen@ %i:TFTManaRegen%</expandRow><br><br>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15823,7 +15827,7 @@
                     },
                     {
                         "name": "TransformedPercentHealth",
-                        "value": 0.6
+                        "value": 0.5
                     }
                 ]
             }
@@ -15965,7 +15969,7 @@
         "trait_id": "TFT17_MissFortuneUndeterminedTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_MissFortuneUndetermindedTrait.TFT_Set17.png",
-        "tooltip_text": "ミス・フォーチュンを配置する際には、「チャネラーモード」、「チャレンジャーモード」、「レプリケーターモード」の中から選択する。ミス・フォーチュンはモードの特性を獲得し、それに応じた固有のスキルを持つ。",
+        "tooltip_text": "ミス・フォーチュンを配置する際には、「コンジットモード」、「チャレンジャーモード」、「レプリケーターモード」の中から選択する。ミス・フォーチュンは選択したモードの特性を獲得し、それに応じた固有のスキルを持つ。",
         "innate_trait_sets": [],
         "conditional_trait_sets": []
     },
@@ -15974,7 +15978,7 @@
         "trait_id": "TFT17_MissFortuneUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GunGoddess.TFT_Set17.png",
-        "tooltip_text": "ミス・フォーチュンを配置する際には、「チャネラーモード」、「チャレンジャーモード」、「レプリケーターモード」の中から選択する。ミス・フォーチュンはモードの特性を獲得し、それに応じた固有のスキルを持つ。",
+        "tooltip_text": "ミス・フォーチュンを配置する際には、「コンジットモード」、「チャレンジャーモード」、「レプリケーターモード」の中から選択する。ミス・フォーチュンは選択したモードの特性を獲得し、それに応じた固有のスキルを持つ。",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -16302,7 +16306,7 @@
                     },
                     {
                         "name": "BonusDefensiveStat3",
-                        "value": 4.0
+                        "value": 3.0
                     },
                     {
                         "name": "BonusOffensiveStat1",
@@ -16314,7 +16318,7 @@
                     },
                     {
                         "name": "BonusOffensiveStat3",
-                        "value": 0.04
+                        "value": 0.03
                     }
                 ],
                 "min_units": 1,
@@ -16335,7 +16339,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "AttackSpeedDuration",
@@ -16343,7 +16347,7 @@
                     },
                     {
                         "name": "PercentHealthShield",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "ShieldDuration",
@@ -16385,7 +16389,7 @@
                 "constants": [
                     {
                         "name": "EnhancedDurability",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "ShieldPercentAmount",
@@ -16401,7 +16405,7 @@
                 "constants": [
                     {
                         "name": "EnhancedDurability",
-                        "value": 0.16
+                        "value": 0.08
                     },
                     {
                         "name": "ShieldPercentAmount",
@@ -16417,7 +16421,7 @@
                 "constants": [
                     {
                         "name": "EnhancedDurability",
-                        "value": 0.1
+                        "value": 0.08
                     },
                     {
                         "name": "ShieldPercentAmount",
@@ -16435,7 +16439,7 @@
         "trait_id": "TFT17_SonaUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Commander.TFT_Set17.png",
-        "tooltip_text": "(@MinUnits@) @RoundsPerMod@ラウンドごとに、ソナからランダムな「コマンドーモッド」をもらえる。この「コマンドーモッド」は、味方1体の戦闘中の挙動を変化させられる。「コマンドーモッド」の効果は対人ラウンド@RoundsPerMod@回分持続する(このカウントは装備しなくても進行する)。",
+        "tooltip_text": "(@MinUnits@) @RoundsPerMod@ラウンドごとに、ソナからランダムな「コマンドMOD」をもらえる。この「コマンドMOD」は、味方1体の戦闘中の挙動を変化させられる。「コマンドMOD」の効果は対人ラウンド@RoundsPerMod@回分持続する(このカウントは装備しなくても進行する)。",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -16515,7 +16519,7 @@
                 "constants": [
                     {
                         "name": "ADAPPerSecond",
-                        "value": 4.0
+                        "value": 5.0
                     },
                     {
                         "name": "EffectBonus",
@@ -16535,7 +16539,7 @@
                 "constants": [
                     {
                         "name": "ADAPPerSecond",
-                        "value": 4.0
+                        "value": 5.0
                     },
                     {
                         "name": "EffectBonus",
@@ -16585,7 +16589,7 @@
         "trait_id": "TFT17_Stargazer",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "星の観測者たちは、試合ごとに異なる星座を描き出す。<br><br>強化マスにいる星の観測者は、さまざまなボーナスを獲得する。この効果は（@MinUnits@）体のユニットから発動する。<br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される。</rules>",
+        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。<br><br>強化マスにいる星の観測者は、さまざまなボーナスを獲得する。この効果は（@MinUnits@）体のユニットから発動する。<br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される。</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16887,7 +16891,7 @@
         "trait_id": "TFT17_Stargazer_Fountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "星の観測者たちは、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>泉</TFTStargazer><br><br>強化マスにいる味方はマナ自動回復が@Fountain_ManaRegen_Teamwide@増加する。強化マスにいる「星の観測者」はさらに増加量が多くなり、スキルで体力が最も低い味方を回復できる。<br><br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%、@Fountain_HealPercent*100@%のスキルによるダメージ回復</expandRow><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
+        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>泉</TFTStargazer><br><br>強化マスにいる味方はマナ自動回復が@Fountain_ManaRegen_Teamwide@増加する。強化マスにいる「星の観測者」はさらに増加量が多くなり、スキルで体力が最も低い味方を回復できる。<br><br><expandRow>(@MinUnits@) @Fountain_ManaRegen@ %i:TFTManaRegen%、@Fountain_HealPercent*100@%のスキルによるダメージ回復</expandRow><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16903,7 +16907,7 @@
                 "constants": [
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.12
+                        "value": 0.15
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16937,7 +16941,7 @@
         "trait_id": "TFT17_Stargazer_Huntress",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "星の観測者たちは、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>女狩人</TFTStargazer><br><br>戦闘開始時: 最も体力が高い敵にマークを付与する。<br><br>強化マスにいる味方は攻撃速度が@Huntress_AS_Teamwide*100@%増加する。強化マスにいる「星の観測者」はさらに増加量が増え、マークした敵が倒されると自身の最大体力の@Huntress_Heal*100@%にあたる体力を回復する。<br><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%、 @NumMarks@ マーク</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%、 @NumMarks@ マーク</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%、 @NumMarks@ マーク</row><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
+        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>女狩人</TFTStargazer><br><br>戦闘開始時: 最も体力が高い敵にマークを付与する。<br><br>強化マスにいる味方は攻撃速度が@Huntress_AS_Teamwide*100@%増加する。強化マスにいる「星の観測者」はさらに増加量が増え、マークした敵が倒されると自身の最大体力の@Huntress_Heal*100@%にあたる体力を回復する。<br><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%、 @NumMarks@ マーク</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%、 @NumMarks@ マーク</row><br><row>(@MinUnits@) @Huntress_AS*100@% %i:scaleAS%、 @NumMarks@ マーク</row><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16973,7 +16977,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.25
+                        "value": 0.3
                     },
                     {
                         "name": "NumMarks",
@@ -16989,7 +16993,7 @@
                 "constants": [
                     {
                         "name": "Huntress_AS",
-                        "value": 0.4
+                        "value": 0.45
                     },
                     {
                         "name": "NumMarks",
@@ -17007,7 +17011,7 @@
         "trait_id": "TFT17_Stargazer_Medallion",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "星の観測者たちは、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>メダル</TFTStargazer><br><br><row>(@MinUnits@) 強化マスにいる味方が@Medallion_DA@%のダメージ増加効果を獲得し、味方の★3ユニット1体ごとに効果量が@Medallion_IncreasePer3Star@%増加する。</row><br><br>(現在のボーナス:&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Medallion_Increase@% %i:scaleDA%)<br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
+        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>メダル</TFTStargazer><br><br><row>(@MinUnits@) 強化マスにいる味方が@Medallion_DA@%のダメージ増加効果を獲得し、味方の★3ユニット1体ごとに効果量が@Medallion_IncreasePer3Star@%増加する。</row><br><br>(現在のボーナス:&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Medallion_Increase@% %i:scaleDA%)<br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17017,7 +17021,7 @@
                     },
                     {
                         "name": "Medallion_IncreasePer3Star",
-                        "value": 8.0
+                        "value": 6.5
                     },
                     {
                         "name": "Medallion_Resists_Teamwide",
@@ -17049,7 +17053,7 @@
         "trait_id": "TFT17_Stargazer_Mountain",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "星の観測者たちは、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>山</TFTStargazer><br><br>対人戦を@Mountain_RoundsPerEmblem@回行うたびに、「星の観測者の紋章」を1つ獲得する。強化マスにいる「星の観測者」は、さまざまなボーナスを獲得する。<br><br>(残り戦闘数:&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Mountain_CombatsRemaining@)<br><br><row>(@MinUnits@) 体力が@Mountain_Health*100@%増加</row><br><row>(@MinUnits@) 攻撃力と魔力が@Mountain_ADAP*100@%増加</row><br><row>(@MinUnits@) 物理防御と魔法防御が@Mountain_Resists@増加</row><br><row>(@MinUnits@) 攻撃速度が@Mountain_AS*100@%増加</row><br><row>(@MinUnits@) 耐久力が@Mountain_DR*100@%増加</row><br><row>(@MinUnits@) その他のすべてのボーナスが@Mountain_StatIncrease*100@%増加</row><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
+        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>山</TFTStargazer><br><br>対人戦を@Mountain_RoundsPerEmblem@回行うたびに、「星の観測者の紋章」を1つ獲得する。強化マスにいる「星の観測者」は、さまざまなボーナスを獲得する。<br><br>(残り戦闘数:&nbsp;@TFTUnitProperty.trait:TFT17_Stargazer_Mountain_CombatsRemaining@)<br><br><row>(@MinUnits@) 体力が@Mountain_Health*100@%増加</row><br><row>(@MinUnits@) 攻撃力と魔力が@Mountain_ADAP*100@%増加</row><br><row>(@MinUnits@) 物理防御と魔法防御が@Mountain_Resists@増加</row><br><row>(@MinUnits@) 攻撃速度が@Mountain_AS*100@%増加</row><br><row>(@MinUnits@) 耐久力が@Mountain_DR*100@%増加</row><br><row>(@MinUnits@) その他のすべてのボーナスが@Mountain_StatIncrease*100@%増加</row><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17225,7 +17229,7 @@
                     },
                     {
                         "name": "Mountain_DR",
-                        "value": 0.08
+                        "value": 0.06
                     },
                     {
                         "name": "Mountain_Health",
@@ -17261,7 +17265,7 @@
                     },
                     {
                         "name": "Mountain_DR",
-                        "value": 0.08
+                        "value": 0.06
                     },
                     {
                         "name": "Mountain_Health",
@@ -17273,7 +17277,7 @@
                     },
                     {
                         "name": "Mountain_StatIncrease",
-                        "value": 0.2
+                        "value": 0.1
                     }
                 ],
                 "min_units": 8,
@@ -17288,7 +17292,7 @@
         "trait_id": "TFT17_Stargazer_Serpent",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "星の観測者たちは、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>蛇</TFTStargazer><br><br>強化マスにいる味方は耐久力が@Serpent_DR_Teamwide*100@%増加する。強化マスにいる「星の観測者」は増加量がさらに増え、敵を毒状態にする。毒状態の敵は、受けたダメージの一部を魔法ダメージとして@Serpent_Duration@秒間受け続ける。<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%、 @Serpent_Poison*100@%の毒ダメージ</expandRow><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
+        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>ヘビ</TFTStargazer><br><br>強化マスにいる味方は耐久力が@Serpent_DR_Teamwide*100@%増加する。強化マスにいる「星の観測者」は増加量がさらに増え、敵を毒状態にする。毒状態の敵は、受けたダメージの一部を魔法ダメージとして@Serpent_Duration@秒間受け続ける。<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%、 @Serpent_Poison*100@%の毒ダメージ</expandRow><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17312,7 +17316,7 @@
                     },
                     {
                         "name": "Serpent_Poison",
-                        "value": 0.3
+                        "value": 0.25
                     }
                 ],
                 "min_units": 3,
@@ -17328,7 +17332,7 @@
                     },
                     {
                         "name": "Serpent_Poison",
-                        "value": 0.5
+                        "value": 0.4
                     }
                 ],
                 "min_units": 5,
@@ -17344,7 +17348,7 @@
                     },
                     {
                         "name": "Serpent_Poison",
-                        "value": 0.7
+                        "value": 0.6
                     }
                 ],
                 "min_units": 7,
@@ -17358,7 +17362,7 @@
         "trait_id": "TFT17_Stargazer_Shield",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "星の観測者たちは、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>祭壇</TFTStargazer><br><br><row>(@MinUnits@) いずれかのチャンピオンが倒されると、そのユニットは生贄として祭壇に捧げられる。強化マスにいる味方は体力が@Shield_Health_Teamwide@%、攻撃速度が@Shield_AS_Teamwide@%増加する。<br><br>生贄を@Shield_NumDeaths@回捧げると、強化マスにいる「星の観測者」は@Shield_CashoutHP@%の%i:scaleHealth%および@Shield_CashoutAS@%の%i:scaleAS%を追加で獲得する<br><br>生贄: (@TFTUnitProperty.trait:TFT17_Stargazer_Shield_Deaths@ / @Shield_NumDeaths@)</row><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
+        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>祭壇</TFTStargazer><br><br><row>(@MinUnits@) いずれかのチャンピオンが倒されると、そのユニットは生贄として祭壇に捧げられる。強化マスにいる味方は体力が@Shield_Health_Teamwide@%、攻撃速度が@Shield_AS_Teamwide@%増加する。<br><br>生贄を@Shield_NumDeaths@回捧げると、強化マスにいる「星の観測者」は@Shield_CashoutHP@%の%i:scaleHealth%および@Shield_CashoutAS@%の%i:scaleAS%を追加で獲得する<br><br>生贄: (@TFTUnitProperty.trait:TFT17_Stargazer_Shield_Deaths@ / @Shield_NumDeaths@)</row><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -17448,7 +17452,7 @@
                     },
                     {
                         "name": "Wolf_Health",
-                        "value": 0.05
+                        "value": 0.08
                     }
                 ],
                 "min_units": 4,
@@ -17468,7 +17472,7 @@
                     },
                     {
                         "name": "Wolf_Health",
-                        "value": 0.1
+                        "value": 0.15
                     }
                 ],
                 "min_units": 5,
@@ -17488,7 +17492,7 @@
                     },
                     {
                         "name": "Wolf_Health",
-                        "value": 0.15
+                        "value": 0.22
                     }
                 ],
                 "min_units": 6,
@@ -17592,7 +17596,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.18
+                        "value": 0.25
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17612,7 +17616,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 0.18
+                        "value": 0.25
                     },
                     {
                         "name": "RerollXPMultiplier",
@@ -17641,7 +17645,7 @@
                 "constants": [
                     {
                         "name": "ADAP1",
-                        "value": 8.0
+                        "value": 12.0
                     }
                 ],
                 "min_units": 1,

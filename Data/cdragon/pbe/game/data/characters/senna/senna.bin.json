@@ -298,8 +298,67 @@
                         0.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAPRatio",
+                    "values": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldAPRatio",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "DamageAPRatio",
+                            "values": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "ShieldAPRatio",
+                            "values": [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "{f9c2333e}": {
                 "{a110bc47}": {
                     "value": [
@@ -322,8 +381,8 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.699999988079071,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "DamageAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
@@ -341,8 +400,8 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.5,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "ShieldAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
                             "mBuffName": "{e88568f8}",
@@ -1451,8 +1510,41 @@
                         150.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSAPRatio",
+                    "values": [
+                        0.0005000000237487257,
+                        0.0005000000237487257,
+                        0.0005000000237487257,
+                        0.0005000000237487257,
+                        0.0005000000237487257,
+                        0.0005000000237487257,
+                        0.0005000000237487257
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "MSAPRatio",
+                            "values": [
+                                0.000699999975040555,
+                                0.000699999975040555,
+                                0.000699999975040555,
+                                0.000699999975040555,
+                                0.000699999975040555,
+                                0.000699999975040555,
+                                0.000699999975040555
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "TotalMS": {
                     "mFormulaParts": [
@@ -1894,8 +1986,54 @@
                         2.25
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAPRatio",
+                    "values": [
+                        0.0010000000474974513,
+                        0.0010000000474974513,
+                        0.0010000000474974513,
+                        0.0010000000474974513,
+                        0.0010000000474974513,
+                        0.0010000000474974513,
+                        0.0010000000474974513
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "HealAPRatio",
+                            "values": [
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "SlowAPRatio",
+                            "values": [
+                                0.001500000013038516,
+                                0.001500000013038516,
+                                0.001500000013038516,
+                                0.001500000013038516,
+                                0.001500000013038516,
+                                0.001500000013038516,
+                                0.001500000013038516
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mFormulaParts": [
@@ -1938,8 +2076,8 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.0010000000474974513,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "SlowAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
