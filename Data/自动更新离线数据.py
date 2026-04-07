@@ -564,20 +564,51 @@ while True:
                 if not name in os.listdir(localdir):
                     update = added = True
                 else:
-                    with open(os.path.join(localdir, name), "r", encoding = "utf-8") as fp:
+                    with open(file_path, "r", encoding = "utf-8") as fp:
                         dst: str = fp.read()
                     if src != dst:
                         update = True
                 if mode == "1" and update or mode == "2": #当选择全局扫描时，只更新有变化的文档；当选择根据修改时间更新时，如果网页修改时间超前，那么无论文件内容是否发生变化，都重新保存一次，便于后续按照修改时间更新（When the user selects Global Scan, the program updates the changed files. When the user selects Updating according to modification time, if the web modification time of a file succeeds to the local midification time of that, then save the web content to local, no matter whether the web file is same as the local file in terms of content）
-                    with open(os.path.join(localdir, name), "w", encoding = "utf-8") as fp:
+                    with open(file_path, "w", encoding = "utf-8") as fp:
                         fp.write(src)
                 if update:
                     if added:
-                        logPrint("已添加文件（Added file）：%s" %(os.path.join(localdir, name)), print_time = True)
+                        logPrint("已添加文件（Added file）： %s" %(file_path), print_time = True)
                         added_files.append(urljoin(url, name))
                     else:
-                        logPrint("已更新文件（Updated file）：%s" %(os.path.join(localdir, name)), print_time = True)
+                        logPrint("已更新文件（Updated file）： %s" %(file_path), print_time = True)
                         updated_files.append(urljoin(url, name))
+                file_size: int = os.path.getsize(file_path)
+                if os.path.splitext(name)[1] == ".json" and file_size > 80 * 1024 * 1024: #当本地的json文件大小大于80 MB时，对文件按照对象类型进行拆分，以便Git比对文件变化（When the local file is larger than 80 MiB, split the file into different object types, so that Git can compare the file change）
+                    src_data: dict[str, Any] = json.loads(src)
+                    if "__linked" in src_data and all("__type" in value for (key, value) in src_data.items() if key != "__linked"): #只拆分二进制描述文件（Only split binary description files）
+                        objectType_data: dict[str, dict[str, dict[str, Any]]] = {}
+                        for (key, value) in src_data.items():
+                            if key != "__linked":
+                                objectType_data[value["__type"]] = value
+                        #下面分对象类型逐个比对本地文件（Next, compare local files based on object types one by one）
+                        for (key, value) in objectType_data.items():
+                            update_split: bool = False
+                            added_split: bool = False
+                            split_file_name: str = os.path.splitext(name)[0] + "." + key + os.path.splitext(name)[1]
+                            split_file_path: str = os.path.join(localdir, split_file_name).replace("\\", "/")
+                            if split_file_path in files_to_delete:
+                                files_to_delete.remove(split_file_path)
+                            src_split: str = json.dumps(value, indent = 4, ensure_ascii = False)
+                            if not split_file_name in os.listdir(localdir):
+                                update_split = added_split = True
+                            else:
+                                with open(split_file_path, "r", encoding = "utf-8") as fp:
+                                    dst_split: str = fp.read()
+                                if src_split != dst_split:
+                                    update_split = True
+                            if update_split:
+                                with open(split_file_path, "w", encoding = "utf-8") as fp:
+                                    fp.write(src_split)
+                                if added_split:
+                                    logPrint("已添加文件（Added file）： %s" %(split_file_path), print_time = True)
+                                else:
+                                    logPrint("已更新文件（Updated file）： %s" %(split_file_path), print_time = True)
         if updated_files:
             logPrint("已更新以下%d个文件：\nUpdated the following %d file(s):" %(len(updated_files), len(updated_files)), write_time = False)
             for file in updated_files:
