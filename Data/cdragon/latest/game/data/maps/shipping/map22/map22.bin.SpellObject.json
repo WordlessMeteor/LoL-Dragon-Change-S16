@@ -1,0 +1,89 @@
+{
+    "ObjectName": "TFT_Augment_ShippingRoute_HexgateMissile",
+    "mScriptName": "TFT_Augment_ShippingRoute_HexgateMissile",
+    "mSpell": {
+        "flags": 4194308,
+        "mAffectsTypeFlags": 8191,
+        "mAffectsStatusFlags": 248,
+        "mAnimationName": "",
+        "{11704a2b}": 0.0,
+        "{f26881a0}": 0.0,
+        "cooldownTime": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ],
+        "mCantCancelWhileWindingUp": true,
+        "mIgnoreRangeCheck": true,
+        "castRange": [
+            25000.0,
+            25000.0,
+            25000.0,
+            25000.0,
+            25000.0,
+            25000.0,
+            25000.0
+        ],
+        "castConeDistance": 100.0,
+        "mMissileSpec": {
+            "movementComponent": {
+                "mTargetHeightAugment": 100.0,
+                "mOffsetInitialTargetHeight": 100.0,
+                "mStartBoneName": "Buffbone_cstm_PortalFX",
+                "mTravelTime": 0.75,
+                "__type": "FixedTimeMovement"
+            },
+            "verticalFacing": {
+                "__type": "VeritcalFacingMatchVelocity"
+            },
+            "__type": "MissileSpecification"
+        },
+        "mCastType": 3,
+        "missileSpeed": 2000.0,
+        "mHitEffectOrientType": 2,
+        "bHaveHitBone": true,
+        "mHitBoneName": "Buffbone_cstm_PortalFX",
+        "mFloatVarsDecimals": [
+            0,
+            0,
+            0,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+        ],
+        "selectionPriority": 2,
+        "mTargetingTypeData": {
+            "{0fb5bbd7}": true,
+            "__type": "Target"
+        },
+        "mCastingBreaksStealth": true,
+        "mClientData": {
+            "mTooltipData": {
+                "mObjectName": "TFT_Augment_ShippingRoute_HexgateMissile",
+                "mFormat": "{fffee0e7}",
+                "__type": "TooltipInstanceSpell"
+            },
+            "__type": "SpellDataResourceClient"
+        },
+        "__type": "SpellDataResource"
+    },
+    "mBuff": {
+        "mDescription": "game_buff_tooltip_NullLance",
+        "__type": "BuffData"
+    },
+    "__type": "SpellObject"
+}

@@ -1070,5 +1070,10 @@
 					</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-04-07 13-49-30</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>Program debug: Introduce divided TFT bin files</td>
+		</tr>
 	</tbody>
 </table>

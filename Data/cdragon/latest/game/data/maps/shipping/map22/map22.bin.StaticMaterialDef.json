@@ -1,0 +1,63 @@
+{
+    "name": "Characters/PetChibiYasuo/Themes/Dragonmancer/Root/Materials/YasuoBadge",
+    "samplerValues": [
+        {
+            "TextureName": "Diffuse_Texture",
+            "texturePath": "ASSETS/Characters/PetChibiYasuo/Themes/Dragonmancer/PetChibiYasuo_Dragonmancer_Props_TX_CM.tex",
+            "addressU": 1,
+            "addressV": 1,
+            "addressW": 1,
+            "__type": "StaticMaterialShaderSamplerDef"
+        }
+    ],
+    "paramValues": [
+        {
+            "name": "PitchFactor",
+            "__type": "StaticMaterialShaderParamDef"
+        },
+        {
+            "name": "BoneInfo",
+            "value": [
+                73.0,
+                -224.8000030517578,
+                5.360000133514404,
+                2.0
+            ],
+            "__type": "StaticMaterialShaderParamDef"
+        }
+    ],
+    "shaderMacros": {
+        "NUM_BLEND_WEIGHTS": "4"
+    },
+    "techniques": [
+        {
+            "name": "normal",
+            "passes": [
+                {
+                    "shader": "Shaders/SkinnedMesh/BillBoardForSkinningMesh",
+                    "blendEnable": true,
+                    "cullEnable": false,
+                    "srcColorBlendFactor": 6,
+                    "srcAlphaBlendFactor": 6,
+                    "dstColorBlendFactor": 7,
+                    "dstAlphaBlendFactor": 7,
+                    "writeMask": 15,
+                    "__type": "StaticMaterialPassDef"
+                }
+            ],
+            "__type": "StaticMaterialTechniqueDef"
+        }
+    ],
+    "childTechniques": [
+        {
+            "name": "transition",
+            "parentName": "normal",
+            "shaderMacros": {
+                "TRANSITION": "1"
+            },
+            "__type": "StaticMaterialChildTechniqueDef"
+        }
+    ],
+    "{e251b20a}": false,
+    "__type": "StaticMaterialDef"
+}
