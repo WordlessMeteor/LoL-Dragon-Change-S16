@@ -578,9 +578,15 @@ while True:
                     else:
                         logPrint("已更新文件（Updated file）： %s" %(file_path), print_time = True)
                         updated_files.append(urljoin(url, name))
+            #下面处理大文件。注意，一定是先把本地文件更新好，再去检查大文件（Large files are handled here. Note that big file checking must be performed after the local files are updated）
+            #这样会导致在按照修改时间进行更新时，即使文件没有更新，程序也会读取一次该文件。这是没有办法的事情，因为要读取该文件来确定其有哪些对象类型，进而确定其子文件是否应当都保留（In this case, when the program updates data resources according to modification time, even if the file isn't updated, this program still reads this file. There's no way to avoid this, for this file must be read to determine the object types, then further judge whether each sub-file should be reserved or deleted）
+            for i in range(numFile_to_check):
+                name: str = table["file"][i]
+                file_path: str = os.path.join(localdir, name).replace("\\", "/")
                 file_size: int = os.path.getsize(file_path)
-                if os.path.splitext(name)[1] == ".json" and file_size > 80 * 1024 * 1024: #当本地的json文件大小大于80 MB时，对文件按照对象类型进行拆分，以便Git比对文件变化（When the local file is larger than 80 MiB, split the file into different object types, so that Git can compare the file change）
-                    src_data: dict[str, Any] = json.loads(src)
+                if not file_path in files_to_delete and os.path.splitext(name)[1] == ".json" and file_size > 80 * 1024 * 1024: #当本地的json文件大小大于80 MB，且这个json文件没有被标记为待删除时，对文件按照对象类型进行拆分，以便Git比对文件变化（When the local file is larger than 80 MiB, and this file isn't marked as to be deleted, split the file into different object types, so that Git can compare the file change）
+                    with open(file_path, "r", encoding = "utf-8") as fp:
+                        src_data = json.load(fp)
                     if "__linked" in src_data and all("__type" in value for (key, value) in src_data.items() if key != "__linked"): #只拆分二进制描述文件（Only split binary description files）
                         objectType_data: dict[str, dict[str, dict[str, Any]]] = {}
                         for (key, value) in src_data.items():
@@ -592,7 +598,7 @@ while True:
                             added_split: bool = False
                             split_file_name: str = os.path.splitext(name)[0] + "." + key + os.path.splitext(name)[1]
                             split_file_path: str = os.path.join(localdir, split_file_name).replace("\\", "/")
-                            if split_file_path in files_to_delete:
+                            if split_file_path in files_to_delete: #如果原始文件存在且可以拆分出来子文件，那么将子文件从待删除文件列表中移除（If the original file exists and can be generated from the original file, then remove this file from the files to be deleted）
                                 files_to_delete.remove(split_file_path)
                             src_split: str = json.dumps(value, indent = 4, ensure_ascii = False)
                             if not split_file_name in os.listdir(localdir):
