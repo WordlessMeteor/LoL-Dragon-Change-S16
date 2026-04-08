@@ -16,8 +16,8 @@
                         "mShow": true,
                         "__type": "IdleParticlesVisibilityEventData"
                     },
-                    "{332255d1}": {
-                        "mEffectKey": "{332255d1}",
+                    "StarNemesis_Goldmine_Away_Star_Spawn": {
+                        "mEffectKey": "StarNemesis_Goldmine_Away_Star_Spawn",
                         "mParticleEventDataPairList": [
                             {
                                 "__type": "ParticleEventDataPair"
@@ -25,9 +25,9 @@
                         ],
                         "__type": "ParticleEventData"
                     },
-                    "{8cec96b4}": {
+                    "StarNemesis_Goldmine_Away_Star_Spawn_02": {
                         "mStartFrame": 10.0,
-                        "mEffectKey": "{8cec96b4}",
+                        "mEffectKey": "StarNemesis_Goldmine_Away_Star_Spawn_02",
                         "mParticleEventDataPairList": [
                             {
                                 "__type": "ParticleEventDataPair"
@@ -47,8 +47,8 @@
                 "mFlags": 2,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{6da68a3c}": {
-                        "mEffectKey": "{6da68a3c}",
+                    "StarNemesis_Goldmine_Away_Star_Idle": {
+                        "mEffectKey": "StarNemesis_Goldmine_Away_Star_Idle",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "GoldMineB",
@@ -76,8 +76,8 @@
                         ],
                         "__type": "SubmeshVisibilityEventData"
                     },
-                    "{c7f7a3f8}": {
-                        "mEffectKey": "{c7f7a3f8}",
+                    "StarNemesis_Goldmine_Away_Star_Death": {
+                        "mEffectKey": "StarNemesis_Goldmine_Away_Star_Death",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{ac490916}",
@@ -88,8 +88,8 @@
                         "mIsKillEvent": false,
                         "__type": "ParticleEventData"
                     },
-                    "{04dd58c7}": {
-                        "mEffectKey": "{04dd58c7}",
+                    "StarNemesis_Goldmine_Away_Star_Death_02": {
+                        "mEffectKey": "StarNemesis_Goldmine_Away_Star_Death_02",
                         "mParticleEventDataPairList": [
                             {
                                 "__type": "ParticleEventDataPair"
@@ -134,8 +134,8 @@
                         "mIsKillEvent": false,
                         "__type": "ParticleEventData"
                     },
-                    "{6da68a3c}": {
-                        "mEffectKey": "{6da68a3c}",
+                    "StarNemesis_Goldmine_Away_Star_Idle": {
+                        "mEffectKey": "StarNemesis_Goldmine_Away_Star_Idle",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "GoldMineB",
@@ -211,8 +211,8 @@
                         "mIsKillEvent": false,
                         "__type": "SoundEventData"
                     },
-                    "{5f161aea}": {
-                        "mEffectKey": "{5f161aea}",
+                    "StarNemesis_Goldmine_Away_Star_Click": {
+                        "mEffectKey": "StarNemesis_Goldmine_Away_Star_Click",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{ac490916}",
@@ -241,6 +241,21 @@
                 },
                 "mTrueConditionClipName": "Idle_Off1",
                 "mFalseConditionClipName": "{f318e52f}",
+                "__type": "ConditionBoolClipData"
+            },
+            "Win": {
+                "Updater": {
+                    "driver": {
+                        "mAnimationNames": [
+                            "{f318e52f}",
+                            "Idle_Off1"
+                        ],
+                        "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mTrueConditionClipName": "Idle_Off1",
+                "mFalseConditionClipName": "{bac7a329}",
                 "__type": "ConditionBoolClipData"
             }
         },

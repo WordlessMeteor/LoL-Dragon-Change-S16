@@ -11049,23 +11049,24 @@
                     const r = e && "string" == typeof e.okText && e.okText.length > 0,
                         i = e && e.dismissible,
                         s = e && e.dismissibleType,
-                        l = e && e.onClose,
-                        d = function(e, t) {
+                        l = e && e.closeButton,
+                        d = e && e.onClose,
+                        c = function(e, t) {
                             let n = !0;
                             e && !1 === e[t] && (n = !1);
                             return n
                         }(e, "enterEnabled");
                     if (!1 === (r || i)) throw new Error("either okText or dismissible is required");
                     t.append(p.template().innerHTML);
-                    const c = t.find("lol-uikit-dialog-frame.dialog-frame");
-                    if (r) {
+                    const A = t.find("lol-uikit-dialog-frame.dialog-frame");
+                    if (e && void 0 !== e.orientation && (0, o.default)(A).attr("orientation", e.orientation), r) {
                         const r = a.default.dialogButtonGroupSingleButton(e.okText);
-                        c.append(r), n = t.find("lol-uikit-flat-button.button-ok"), (e.primaryButton || void 0 === e.primaryButton) && n.attr({
+                        A.append(r), n = t.find("lol-uikit-flat-button.button-ok"), (e.primaryButton || void 0 === e.primaryButton) && n.attr({
                             primary: !0
                         })
                     }
-                    i && (0, o.default)(c).attr("close-button", ""), s && (0, o.default)(c).attr("dismissable-type", s), p._appendContents(t, e);
-                    return p._createModalObj(t, c, i, r, n, d, s, l)
+                    i && !1 !== l && (0, o.default)(A).attr("close-button", ""), s && !1 !== l && (0, o.default)(A).attr("dismissable-type", s), p._appendContents(t, e);
+                    return p._createModalObj(t, A, i, r, n, c, s, d)
                 }
                 static _appendContents(e, t) {
                     let n = t.contents ? t.contents : "";

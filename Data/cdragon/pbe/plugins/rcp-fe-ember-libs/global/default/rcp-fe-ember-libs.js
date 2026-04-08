@@ -44391,6 +44391,8 @@
                         enterEnabled: this.get("enterEnabled"),
                         primaryButton: this.get("primaryButton"),
                         okText: this.get("okText"),
+                        closeButton: this.get("closeButton"),
+                        orientation: this.get("orientation"),
                         onClose: this.get("onClose")
                     }
                 },

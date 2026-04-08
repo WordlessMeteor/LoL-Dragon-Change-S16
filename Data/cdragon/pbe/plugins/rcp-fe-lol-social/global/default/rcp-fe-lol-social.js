@@ -16543,9 +16543,11 @@
                 }
             }
             n(382);
-            var l = r.Ember.Component.extend(a.default, {
+            const l = 28;
+            var c = r.Ember.Component.extend(a.default, {
                 classNames: ["lol-social-roster", "social-ember-fade-in"],
                 scrollTop: 0,
+                currentDragGroupPositionIdx: 0,
                 clashService: r.Ember.inject.service("clash"),
                 conversationsService: r.Ember.inject.service("conversations"),
                 dragStateService: r.Ember.inject.service("drag-state"),
@@ -16589,7 +16591,7 @@
                         if (e.isGroup) t.push({
                             groupOrFriend: e,
                             width: 212,
-                            height: 28
+                            height: l
                         });
                         else {
                             const n = !e.groupModel.group.collapsed;
@@ -16603,18 +16605,17 @@
                 })),
                 groupPositions: r.Ember.computed("rosterModel", "shouldHideFriendsAndMetaGroups", (function() {
                     if (!this.get("shouldHideFriendsAndMetaGroups")) return [];
-                    const e = this.rosterTopOffset || 116,
-                        t = this.get("rosterModel"),
-                        n = [];
-                    for (const r of t) {
+                    const e = this.get("rosterModel"),
+                        t = [];
+                    for (const n of e) {
                         const {
-                            isGroup: t,
-                            group: o,
-                            scrollPosition: i
-                        } = r;
-                        t && !o.isMetaGroup && n.push(i + e + 14)
+                            isGroup: e,
+                            group: r,
+                            scrollPosition: o
+                        } = n;
+                        e && !r.isMetaGroup && t.push(o + 14)
                     }
-                    return n
+                    return t
                 })),
                 unreadConversationsPositions: r.Ember.computed("conversationsService.conversations.[]", "rosterModel", "settingsService.playerSettings", (function() {
                     const e = this.get("settingsService.playerSettings");
@@ -16656,20 +16657,20 @@
                     return -1 !== this.get("unreadBelowPosition")
                 })),
                 didInsertElement() {
-                    this._super(...arguments), this.rosterElement = document?.getElementsByClassName("lol-social-roster")?.[0], this.rosterElement ? this.rosterTopOffset = this.rosterElement.getBoundingClientRect().top : r.logger.warning("couldn't find roster elements on insertion, using default pixel calculations")
+                    this._super(...arguments), this.rosterElement = document?.getElementsByClassName("lol-social-roster")?.[0]
                 },
                 onDragOver: function(e) {
                     const {
                         clientY: t
                     } = e, n = this.get("groupPositions"), r = document.getElementsByClassName("roster-drop-marker")?.[0];
                     if (!r) return;
-                    const o = this.rosterTopOffset + 14 + 3;
-                    for (const e of n)
-                        if (t < e) {
-                            const t = e - o;
-                            return void(r.style.top = `${t}px`)
-                        } const i = n.at(-1) - o + 28;
-                    r.style.top = `${i}px`
+                    const o = (this.rosterElement?.getBoundingClientRect().top || 116) + l + 17;
+                    for (const [e, i] of n.entries())
+                        if (t < i + o) {
+                            const t = i - 17;
+                            return r.style.top = `${t}px`, void this.set("currentDragGroupPositionIdx", e)
+                        } const i = n.at(-1) + 17 - 6;
+                    r.style.top = `${i}px`, this.set("currentDragGroupPositionIdx", n.length)
                 },
                 onDrop: function(e) {
                     const t = e.dataTransfer.getData(o.DRAG_DROP_MIME_TYPES.ROSTER_GROUP);
@@ -16685,12 +16686,8 @@
                     }
                     const {
                         id: i
-                    } = n, {
-                        clientY: a
-                    } = e, s = this.get("friendGroupsService"), l = this.get("groupPositions");
-                    for (let e = 0; e < l.length; ++e)
-                        if (a < l[e]) return void s.moveGroup(i, e);
-                    s.moveGroup(i, l.length - 1)
+                    } = n, a = this.get("friendGroupsService"), s = this.get("currentDragGroupPositionIdx");
+                    a.moveGroup(i, s)
                 },
                 _generateRosterModel(e, t, n) {
                     if (!e || !t) return [];
@@ -16743,16 +16740,16 @@
                     return t.forEach(((t, i) => {
                         const a = e.get(i),
                             s = a.isMetaGroup,
-                            l = {
+                            c = {
                                 isGroup: !0,
                                 group: a,
                                 scrollPosition: r
                             };
-                        n && s || (r += 28, o.push(l)), o.sort(((e, t) => e.priority - t.priority)), n || t.forEach((e => {
+                        n && s || (r += l, o.push(c)), o.sort(((e, t) => e.priority - t.priority)), n || t.forEach((e => {
                             const t = {
                                 isGroup: !1,
                                 friend: e,
-                                groupModel: l,
+                                groupModel: c,
                                 scrollPosition: r
                             };
                             r += 48, o.push(t)
@@ -16771,7 +16768,7 @@
                     }
                 }
             });
-            t.default = l
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -19416,9 +19413,10 @@
                 moveGroup(e, t) {
                     const n = this.get("friendGroups"),
                         r = n.findIndex((t => t.id === e));
-                    if (r === t) return;
-                    const o = n.splice(r, 1)[0];
-                    n.splice(t, 0, o), this.set("friendGroups", n), this.saveGroupOrder()
+                    if (r === t || r === t - 1) return;
+                    const o = n.splice(r, 1)[0],
+                        i = t > r ? t - 1 : t;
+                    n.splice(i, 0, o), this.set("friendGroups", n), this.saveGroupOrder()
                 },
                 saveGroupOrder() {
                     const e = this.get("friendGroups");

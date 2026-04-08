@@ -22054,11 +22054,10 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.10000000149011612,
+                    "constantValue": 0.6000000238418579,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.30000001192092896,
-                "lifetime": 2.0,
+                "lifetime": 1.0,
                 "emitterName": "Trail_BackGround14",
                 "primitive": {
                     "mTrail": {
@@ -22077,6 +22076,44 @@
                     "__type": "VfxPrimitiveCameraTrail"
                 },
                 "blendMode": 4,
+                "birthColor": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
                 "Color": {
                     "constantValue": [
                         0.5160143375396729,
@@ -24027,7 +24064,6 @@
                     "constantValue": 0.4000000059604645,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.10000000149011612,
                 "lifetime": 1.0,
                 "emitterName": "trailBacker",
                 "EmitterPosition": {
@@ -24261,7 +24297,6 @@
                     "constantValue": 0.4000000059604645,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.10000000149011612,
                 "lifetime": 5.0,
                 "emitterName": "trailCore",
                 "EmitterPosition": {

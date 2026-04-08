@@ -16,8 +16,8 @@
                         "mShow": true,
                         "__type": "IdleParticlesVisibilityEventData"
                     },
-                    "{5cde2f4e}": {
-                        "mEffectKey": "{5cde2f4e}",
+                    "StarNemesis_Goldmine_Home_Star_Spawn": {
+                        "mEffectKey": "StarNemesis_Goldmine_Home_Star_Spawn",
                         "mParticleEventDataPairList": [
                             {
                                 "__type": "ParticleEventDataPair"
@@ -25,8 +25,8 @@
                         ],
                         "__type": "ParticleEventData"
                     },
-                    "{eb61b6d3}": {
-                        "mEffectKey": "{eb61b6d3}",
+                    "StarNemesis_Goldmine_Home_Star_Idle_FadeIn": {
+                        "mEffectKey": "StarNemesis_Goldmine_Home_Star_Idle_FadeIn",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{d0532ce0}",
@@ -37,8 +37,8 @@
                         "mIsKillEvent": false,
                         "__type": "ParticleEventData"
                     },
-                    "{1d093181}": {
-                        "mEffectKey": "{1d093181}",
+                    "StarNemesis_Goldmine_Home_Star_Idle": {
+                        "mEffectKey": "StarNemesis_Goldmine_Home_Star_Idle",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{d0532ce0}",
@@ -59,8 +59,8 @@
                 "mFlags": 2,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{1d093181}": {
-                        "mEffectKey": "{1d093181}",
+                    "StarNemesis_Goldmine_Home_Star_Idle": {
+                        "mEffectKey": "StarNemesis_Goldmine_Home_Star_Idle",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{d0532ce0}",
@@ -80,8 +80,8 @@
             "{f318e52f}": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{0d5fbebf}": {
-                        "mEffectKey": "{0d5fbebf}",
+                    "StarNemesis_Goldmine_Home_Star_Death": {
+                        "mEffectKey": "StarNemesis_Goldmine_Home_Star_Death",
                         "mParticleEventDataPairList": [
                             {
                                 "__type": "ParticleEventDataPair"
@@ -90,8 +90,8 @@
                         "mIsKillEvent": false,
                         "__type": "ParticleEventData"
                     },
-                    "{3c282b5a}": {
-                        "mEffectKey": "{3c282b5a}",
+                    "StarNemesis_Goldmine_Home_Star_Death_FadeOut": {
+                        "mEffectKey": "StarNemesis_Goldmine_Home_Star_Death_FadeOut",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "Goldmine",
@@ -143,8 +143,8 @@
                         "mIsKillEvent": false,
                         "__type": "ParticleEventData"
                     },
-                    "{1d093181}": {
-                        "mEffectKey": "{1d093181}",
+                    "StarNemesis_Goldmine_Home_Star_Idle": {
+                        "mEffectKey": "StarNemesis_Goldmine_Home_Star_Idle",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{d0532ce0}",
@@ -209,8 +209,8 @@
             "{bac7a329}": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{26dd541d}": {
-                        "mEffectKey": "{26dd541d}",
+                    "StarNemesis_Goldmine_Home_Star_Click": {
+                        "mEffectKey": "StarNemesis_Goldmine_Home_Star_Click",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{d0532ce0}",
@@ -245,6 +245,21 @@
                 },
                 "mTrueConditionClipName": "Idle_Off1",
                 "mFalseConditionClipName": "{f318e52f}",
+                "__type": "ConditionBoolClipData"
+            },
+            "Win": {
+                "Updater": {
+                    "driver": {
+                        "mAnimationNames": [
+                            "{f318e52f}",
+                            "Idle_Off1"
+                        ],
+                        "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mTrueConditionClipName": "Idle_Off1",
+                "mFalseConditionClipName": "{bac7a329}",
                 "__type": "ConditionBoolClipData"
             }
         },

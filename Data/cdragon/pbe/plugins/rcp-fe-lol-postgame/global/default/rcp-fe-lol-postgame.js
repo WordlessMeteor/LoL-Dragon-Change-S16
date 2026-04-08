@@ -464,7 +464,8 @@
                     PostgameSecondaryProgressionComponent: C.default,
                     PostgamePartyStatusComponent: M.default,
                     ArrowFooterComponent: mn,
-                    HextechLoadingAnimationComponent: cn,
+                    ButtonMaskIconComponent: cn,
+                    HextechLoadingAnimationComponent: dn,
                     GenericButtonComponent: Qe.default,
                     StrawberryPostgameAchievementsComponent: Fe.StrawberryPostgameAchievementsComponent,
                     StrawberryPostgameRootComponent: je.default,
@@ -501,17 +502,17 @@
                     SeasonPassProgressionComponent: Et.default,
                     SeasonPassErrorStateComponent: vt.default,
                     ScoreboardSpellComponent: kt.default,
-                    PostgameReportModal: un,
-                    GameIdClipboardCopyComponent: dn,
-                    PlayerNameComponent: pn,
-                    ChallengeCardHeaderComponent: gn,
-                    ChallengeCardComponent: hn,
-                    ChallengeItemFooterComponent: fn,
-                    ChallengeItemTooltipComponent: bn,
-                    ChallengeItemComponent: _n,
-                    EternalsItemTooltipComponent: yn,
-                    EternalsItemComponent: En,
-                    IdentityCustomizerTokenComponent: kn,
+                    PostgameReportModal: gn,
+                    GameIdClipboardCopyComponent: pn,
+                    PlayerNameComponent: un,
+                    ChallengeCardHeaderComponent: hn,
+                    ChallengeCardComponent: fn,
+                    ChallengeItemFooterComponent: bn,
+                    ChallengeItemTooltipComponent: _n,
+                    ChallengeItemComponent: yn,
+                    EternalsItemTooltipComponent: En,
+                    EternalsItemComponent: vn,
+                    IdentityCustomizerTokenComponent: Pn,
                     GradeDisplayComponent: s.SharedChampionMasteryComponents.GradeDisplayComponent,
                     MasteryTooltipComponent: s.SharedChampionMasteryComponents.MasteryTooltipComponent,
                     MilestoneTooltipComponent: s.SharedChampionMasteryComponents.MilestoneTooltipComponent,
@@ -532,16 +533,16 @@
                     HonorService: $.default,
                     ChallengesService: Q.default,
                     PerksService: z.default,
-                    GameDataService: vn,
-                    RiotclientService: Sn,
-                    SummonerService: xn,
+                    GameDataService: Sn,
+                    RiotclientService: xn,
+                    SummonerService: kn,
                     PlayerActionsService: se.default,
                     RemedyService: J.default,
                     ChampionMasteryService: Z.default,
                     SkillTreeService: ae.default,
                     EventHubService: ee.default,
                     ObjectivesService: te.default,
-                    RankedAssetsService: Pn,
+                    RankedAssetsService: Tn,
                     RenderTelemetrySenderComponent: s.default.SharedEmberComponents.RenderTelemetrySenderComponent,
                     TEMPLATES: {
                         application: le.default,
@@ -630,6 +631,7 @@
                     "components/tft-promethium-progression": Ge.default,
                     "components/tft-promethium-progression-banner-spine": Ue.default
                 }), !1;
+                0;
                 s.ApplicationInjector.setFactoryDefinition(e), s.emberApplicationFactory.setFactoryDefinition(a.POSTGAME_EMBER_APP_NAME, e, {
                     EMBER_CLI_COMPAT: !0
                 }), s.ProgressionComponentHelper.addInternalProgressionComponent("postgame-scoreboard-progression-ranked", 10, !0, !1), s.ProgressionComponentHelper.addInternalProgressionComponent("postgame-scoreboard-progression-rated", 15, !1, !1), s.ProgressionComponentHelper.addInternalProgressionComponent("postgame-scoreboard-progression-ranked-rewards", 20, !0, !1), s.ProgressionComponentHelper.addInternalProgressionComponent("postgame-scoreboard-progression-mastery-meter", 30, !0, !1), s.ProgressionComponentHelper.addInternalProgressionComponent("postgame-scoreboard-progression-xp-meter", 40, !0, !1), s.ProgressionComponentHelper.addInternalProgressionComponent("postgame-scoreboard-progression-honor-notification", 60, !1, !0), s.emberApplicationFactory.setFactoryDefinition({
@@ -842,24 +844,25 @@
             }
             const {
                 ArrowFooterComponent: mn,
-                HextechLoadingAnimationComponent: cn,
-                GameIdClipboardCopyComponent: dn,
-                PlayerNameComponent: pn,
-                PostgameReportModal: un
+                ButtonMaskIconComponent: cn,
+                HextechLoadingAnimationComponent: dn,
+                GameIdClipboardCopyComponent: pn,
+                PlayerNameComponent: un,
+                PostgameReportModal: gn
             } = s.SharedComponents.getSharedEmberComponents(), {
-                ChallengeCardHeaderComponent: gn,
-                ChallengeCardComponent: hn,
-                ChallengeItemFooterComponent: fn,
-                ChallengeItemTooltipComponent: bn,
-                ChallengeItemComponent: _n,
-                EternalsItemTooltipComponent: yn,
-                EternalsItemComponent: En,
-                GameDataService: vn,
-                RiotclientService: Sn,
-                SummonerService: xn,
-                IdentityCustomizerTokenComponent: kn
+                ChallengeCardHeaderComponent: hn,
+                ChallengeCardComponent: fn,
+                ChallengeItemFooterComponent: bn,
+                ChallengeItemTooltipComponent: _n,
+                ChallengeItemComponent: yn,
+                EternalsItemTooltipComponent: En,
+                EternalsItemComponent: vn,
+                GameDataService: Sn,
+                RiotclientService: xn,
+                SummonerService: kn,
+                IdentityCustomizerTokenComponent: Pn
             } = s.SharedComponents.getApi_SharedChallengesComponents(), {
-                RankedAssetsService: Pn
+                RankedAssetsService: Tn
             } = s.SharedComponents.getApi_SharedRankedComponents()
         }, (e, t, n) => {
             "use strict";
@@ -913,7 +916,12 @@
                 gameclientPostgame: s.Ember.inject.service(),
                 honor: s.Ember.inject.service(),
                 backgroundImgPath: s.Ember.computed.alias("gameflow.backgroundImgPath"),
-                backgroundImgPathDark: s.Ember.computed.alias("gameflow.backgroundImgPathDark"),
+                backgroundImgPathDark: s.Ember.computed("gameflow.backgroundImgPathDark", "gameflow.gameMode", (function() {
+                    return this.get("gameflow.backgroundImgPathDark") || ""
+                })),
+                postgameComponent: s.Ember.computed("gameflow.gameMode", (function() {
+                    return "postgame-root"
+                })),
                 showPostgameV2: s.Ember.computed.not("gameflow.isTFT"),
                 haveGameClientStatsBlock: s.Ember.computed.bool("gameclientPostgame.gameClientStats"),
                 isTFTReadyToShow: s.Ember.computed.and("gameflow.isTFT", "haveGameClientStatsBlock"),
@@ -2446,6 +2454,7 @@
             var s = n(1),
                 a = s.Ember.Component.extend({
                     classNames: ["postgame-player-item"],
+                    classNameBindings: ["alternate"],
                     attributeBindings: ["style"],
                     postgame: s.Ember.inject.service(),
                     itemData: s.Ember.computed("itemId", "postgame.itemsMap", (function() {
@@ -5897,8 +5906,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "NiYHYiCP",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-postgame\\\\src\\\\app\\\\templates\\\\postgame.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["isPostgameReady"]]],null,22,17]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","skip-waiting-for-ranked-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"skipWaitingForRanked"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","postgame_skip_waiting_for_ranked"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["render-timer"],null,[["renderAfterMs","buttonRenderedName"],[["get",["skipWaitingForRankedWaitMs"]],"skipWaitingForRanked"]],0],["text","      "]],"locals":[]},{"statements":[["block",["if"],[["get",["isWaitingForRanked"]]],null,1]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","skip-waiting-for-missions-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"skipWaitingForMissions"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","postgame_skip_waiting_for_missions"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["render-timer"],null,[["renderAfterMs","buttonRenderedName"],[["get",["skipWaitingForMissionsWaitMs"]],"skipWaitingForMissions"]],3]],"locals":[]},{"statements":[["block",["if"],[["get",["isWaitingForMissions"]]],null,4,2]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","skip-waiting-for-challenges-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"skipWaitingForChallenges"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","postgame_skip_waiting_for_challenges"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["render-timer"],null,[["renderAfterMs","buttonRenderedName"],[["get",["skipWaitingForChallengesWaitMs"]],"skipWaitingForChallenges"]],6]],"locals":[]},{"statements":[["block",["if"],[["get",["isWaitingForChallenges"]]],null,7,5]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","skip-waiting-for-honor-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"skipWaitingForHonor"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","postgame_skip_waiting_for_honor"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["render-timer"],null,[["renderAfterMs","buttonRenderedName"],[["get",["skipWaitingForHonorWaitMs"]],"skipWaitingForHonor"]],9]],"locals":[]},{"statements":[["block",["if"],[["get",["isWaitingForHonor"]]],null,10,8]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","skip-waiting-for-stats-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"skipWaitingForStats"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","postgame_skip_waiting_for_stats"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["render-timer"],null,[["renderAfterMs","buttonRenderedName"],[["get",["skipWaitingForStatsWaitMs"]],"skipWaitingForStats"]],12]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","postgame-waiting-for-stats-container"],["flush-element"],["text","\\n    "],["append",["unknown",["hextech-loading-animation"]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","postgame-skip-waiting-for-stats-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isWaitingForStats"]]],null,13,11],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["extEmberModel","isPostgameShowing"]]],null,14]],"locals":[]},{"statements":[["text","  "],["append",["unknown",["honor-voting-ceremony"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isHonorShowing"]]],null,16,15]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","postgame-background-image"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["backgroundImgPath"]],")"]]],["flush-element"],["close-element"],["text","\\n    "],["append",["unknown",["postgame-common"]],false],["text","\\n  "]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","postgame-background-image"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["backgroundImgPathDark"]],")"]]],["flush-element"],["close-element"],["text","\\n    "],["append",["unknown",["postgame-root"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showPostgameV2"]]],null,19,18]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","postgame-background-image"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["backgroundImgPathDark"]],")"]]],["flush-element"],["close-element"],["text","\\n    "],["append",["unknown",["strawberry-postgame-root"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["gameflow","isStrawberry"]]],null,21,20]],"locals":[]}],"hasPartials":false}',
+                id: "mq7nslOe",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-postgame\\\\src\\\\app\\\\templates\\\\postgame.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["isPostgameReady"]]],null,22,17]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","skip-waiting-for-ranked-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"skipWaitingForRanked"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","postgame_skip_waiting_for_ranked"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["render-timer"],null,[["renderAfterMs","buttonRenderedName"],[["get",["skipWaitingForRankedWaitMs"]],"skipWaitingForRanked"]],0],["text","      "]],"locals":[]},{"statements":[["block",["if"],[["get",["isWaitingForRanked"]]],null,1]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","skip-waiting-for-missions-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"skipWaitingForMissions"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","postgame_skip_waiting_for_missions"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["render-timer"],null,[["renderAfterMs","buttonRenderedName"],[["get",["skipWaitingForMissionsWaitMs"]],"skipWaitingForMissions"]],3]],"locals":[]},{"statements":[["block",["if"],[["get",["isWaitingForMissions"]]],null,4,2]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","skip-waiting-for-challenges-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"skipWaitingForChallenges"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","postgame_skip_waiting_for_challenges"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["render-timer"],null,[["renderAfterMs","buttonRenderedName"],[["get",["skipWaitingForChallengesWaitMs"]],"skipWaitingForChallenges"]],6]],"locals":[]},{"statements":[["block",["if"],[["get",["isWaitingForChallenges"]]],null,7,5]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","skip-waiting-for-honor-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"skipWaitingForHonor"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","postgame_skip_waiting_for_honor"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["render-timer"],null,[["renderAfterMs","buttonRenderedName"],[["get",["skipWaitingForHonorWaitMs"]],"skipWaitingForHonor"]],9]],"locals":[]},{"statements":[["block",["if"],[["get",["isWaitingForHonor"]]],null,10,8]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","skip-waiting-for-stats-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"skipWaitingForStats"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","postgame_skip_waiting_for_stats"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["render-timer"],null,[["renderAfterMs","buttonRenderedName"],[["get",["skipWaitingForStatsWaitMs"]],"skipWaitingForStats"]],12]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","postgame-waiting-for-stats-container"],["flush-element"],["text","\\n    "],["append",["unknown",["hextech-loading-animation"]],false],["text","\\n    "],["open-element","div",[]],["static-attr","class","postgame-skip-waiting-for-stats-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isWaitingForStats"]]],null,13,11],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["extEmberModel","isPostgameShowing"]]],null,14]],"locals":[]},{"statements":[["text","  "],["append",["unknown",["honor-voting-ceremony"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isHonorShowing"]]],null,16,15]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","postgame-background-image"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["backgroundImgPath"]],")"]]],["flush-element"],["close-element"],["text","\\n    "],["append",["unknown",["postgame-common"]],false],["text","\\n  "]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","postgame-background-image"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["backgroundImgPathDark"]],")"]]],["flush-element"],["close-element"],["text","\\n    "],["append",["helper",["component"],[["get",["postgameComponent"]]],null],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showPostgameV2"]]],null,19,18]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","postgame-background-image"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["backgroundImgPathDark"]],")"]]],["flush-element"],["close-element"],["text","\\n    "],["append",["unknown",["strawberry-postgame-root"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["gameflow","isStrawberry"]]],null,21,20]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -7247,7 +7256,7 @@
                         })))
                     },
                     handleTabSelected(e) {
-                        e?.value && (this.get("selectedTab") !== e.value && this._selectTab(e.value), e.value === d && this._stopCountdown())
+                        e && (this.get("selectedTab") !== e && this._selectTab(e), e === d && this._stopCountdown())
                     },
                     displayAdvancedDetails: function() {
                         const e = () => this.set("isDetailsTabOpen", !1);
@@ -7296,7 +7305,7 @@
                         const t = this.get("onSelect");
                         if (t) {
                             const n = this.get("tabs");
-                            n && e >= 0 && e < n.length && t(n[e])
+                            n && e >= 0 && e < n.length && t(n[e]?.value)
                         }
                     }
                 }
@@ -10175,7 +10184,7 @@
             var s = n(1),
                 a = s.Ember.Component.extend({
                     classNames: ["scoreboard-spell-component"],
-                    classNameBindings: ["isSmall"],
+                    classNameBindings: ["isSmall", "isLarge"],
                     postgame: s.Ember.inject.service(),
                     spellData: s.Ember.computed("spellId", "postgame.summonerSpells", (function() {
                         return (this.get("postgame.summonerSpells") || []).find((e => e.id === this.get("spellId")))

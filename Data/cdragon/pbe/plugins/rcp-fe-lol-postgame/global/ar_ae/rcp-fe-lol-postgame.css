@@ -2366,6 +2366,15 @@ lol-uikit-content-block.postgame-tft-piece-tooltip {
     border-right: thin solid #3c3c41
 }
 
+.postgame-player-item.alternate {
+    background-size: contain;
+    border: 1px solid #7d7d7d;
+    box-shadow: none;
+    box-sizing: border-box;
+    height: 26px;
+    width: 26px
+}
+
 .postgame-player-item-icon {
     height: 100%;
     width: 100%
@@ -9023,6 +9032,7 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 
 .scoreboard-stat-switcher-component .scoreboard-stat-switcher-arrow {
     background-color: #a09b8c;
+    cursor: pointer;
     height: 20px;
     -webkit-mask-image: url(/fe/lol-postgame/scoreboard-stat-switcher-arrow.svg);
     -webkit-mask-position: center;
@@ -10227,6 +10237,25 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
     outline-offset: -1px;
     transition: none;
     width: 12px
+}
+
+.scoreboard-spell-component.is-large,
+.scoreboard-spell-component.is-large .postgame-player-spell-icon-container {
+    align-items: center;
+    display: flex;
+    height: 28px;
+    justify-content: center;
+    width: 28px
+}
+
+.scoreboard-spell-component.is-large .postgame-player-spell-icon-container {
+    background-color: #5b5a56;
+    transition: none
+}
+
+.scoreboard-spell-component.is-large .postgame-player-spell-icon-container .postgame-player-spell-icon {
+    height: 28px;
+    width: 28px
 }
 
 .postgame-background-image {
