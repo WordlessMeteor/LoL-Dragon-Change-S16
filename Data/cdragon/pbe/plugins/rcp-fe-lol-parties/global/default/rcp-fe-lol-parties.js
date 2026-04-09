@@ -167,7 +167,7 @@
                 acceptGameInvite(e) {
                     const t = e.invitationId;
                     return this._binding.post(`/lol-lobby/v2/received-invitations/${t}/accept`).then((() => {
-                        y.default.gameInviteAccept(), this.showParty(), this._gameInvite.gameConfig && "TFT" === this._gameInvite.gameConfig.gameMode && i.Navigation.sendTFTScreenLoadTelemetryEvent({
+                        y.default.gameInviteAccept(), this.showParty(), "TFT" === e?.gameConfig?.gameMode && i.Navigation.sendTFTScreenLoadTelemetryEvent({
                             path: "/rcp-fe-lol-parties/root-component/parties-root tft-lobby",
                             screen: "game-lobby",
                             subScreen: "TFT-game-lobby"

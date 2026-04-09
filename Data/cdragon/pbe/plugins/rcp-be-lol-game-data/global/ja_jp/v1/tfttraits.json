@@ -15230,7 +15230,7 @@
         "trait_id": "TFT17_Astronaut",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Astronaut.TFT_Set17.png",
-        "tooltip_text": "ミィプルはミィプを引き寄せ、ミィプらしくスキルを強化する。また、体力が増加する。<br><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%, @BonusHealth@ %i:scaleHealth%.ベンチに「クローンスロット」を1つ作成する。クローンが完了すると、配置したチャンピオンの★1コピーとゴールドを獲得する。</row><br><row>(@MinUnits@) @Meeps@%i:set14AmpIcon%、@BonusHealth@%i:scaleHealth%。4体のミィプロードを召喚！</row><br><br><rules>クローン時間＝チャンピオンのコスト</rules>",
+        "tooltip_text": "ミィプルはミィプたちを引き寄せる。ミィプたちのやり方でミィプルのスキルが強化され、さらに体力が増加する。<br><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%、 @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%、 @BonusHealth@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Meeps@ %i:set14AmpIcon%、 @BonusHealth@ %i:scaleHealth%。ベンチに「クローンスロット」を1つ作成する。クローンが完了すると、配置したチャンピオンの★1コピーとゴールドを獲得する。</row><br><row>(@MinUnits@) @Meeps@%i:set14AmpIcon%、@BonusHealth@%i:scaleHealth%。4体のミィプロードを召喚！</row><br><br><rules>クローン時間＝チャンピオンのコスト</rules>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15303,7 +15303,7 @@
         "trait_id": "TFT17_BlitzcrankUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_PartyAnimal.TFT_Set17.png",
-        "tooltip_text": "各戦闘で1回のみ、体力が@HealthThreshold*100@%未満になると対象指定不可状態になり、毎秒最大体力の@PercentHealthHeal*100@%を回復する。体力が最大まで回復するか、他の味方がいなくなると、戦闘に復帰する。最大まで回復すると、戦闘終了まで「<font color='#F39B9B'>ザ</font><font color='#F3D59B'>・</font><font color='#9BF39B'>グ</font><font color='#9BF3D5'>ル</font><font color='#9BD5F3'>ー</font><font color='#9B9BF3'>ヴ</font>」に入り、「パーティー クラッシャー」の自動効果による電撃の発射速度が4倍になる。",
+        "tooltip_text": "各戦闘で1回のみ、体力が@HealthThreshold*100@%未満になると対象指定不可状態になり、毎秒最大体力の@PercentHealthHeal*100@%を回復する。<br><br>体力が最大まで回復するか、他の味方がいなくなると、戦闘に復帰する。<br><br>最大まで回復すると、戦闘終了まで「<font color='#F39B9B'>ザ</font><font color='#F3D59B'>・</font><font color='#9BF39B'>グ</font><font color='#9BF3D5'>ル</font><font color='#9BD5F3'>ー</font><font color='#9B9BF3'>ヴ</font>」に入り、「パーティー クラッシャー」の自動効果による電撃の発射速度が4倍になる。",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16175,8 +16175,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 3,
-                "style_name": "kSilver"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -16907,7 +16907,7 @@
                 "constants": [
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.15
+                        "value": 0.18
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16927,7 +16927,7 @@
                     },
                     {
                         "name": "Fountain_ManaRegen",
-                        "value": 4.0
+                        "value": 5.0
                     }
                 ],
                 "min_units": 5,
@@ -17292,13 +17292,13 @@
         "trait_id": "TFT17_Stargazer_Serpent",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>ヘビ</TFTStargazer><br><br>強化マスにいる味方は耐久力が@Serpent_DR_Teamwide*100@%増加する。強化マスにいる「星の観測者」は増加量がさらに増え、敵を毒状態にする。毒状態の敵は、受けたダメージの一部を魔法ダメージとして@Serpent_Duration@秒間受け続ける。<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%、 @Serpent_Poison*100@%の毒ダメージ</expandRow><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
+        "tooltip_text": "「星の観測者」は、試合ごとに異なる星座を描き出す。この試合: <TFTStargazer>ヘビ</TFTStargazer><br><br>強化マスにいる味方は耐久力が@Serpent_DR_Teamwide*100@%増加する。強化マスにいる「星の観測者」は増加量がさらに増え、敵を毒状態にする。毒状態の敵は、受けたダメージの一部を魔法ダメージとして@Serpent_Duration@秒間受け続ける。<br><br><expandRow>(@MinUnits@) @Serpent_DR*100@% %i:scaleDR%、@Serpent_Poison*100@%の毒ダメージ</expandRow><br><rules><br>プレイヤーレベルが上がるにつれ、さらに多くのマスが解放される</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Serpent_DR_Teamwide",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "Serpent_Duration",
@@ -17312,7 +17312,7 @@
                 "constants": [
                     {
                         "name": "Serpent_DR",
-                        "value": 0.07
+                        "value": 0.05
                     },
                     {
                         "name": "Serpent_Poison",
@@ -17328,7 +17328,7 @@
                 "constants": [
                     {
                         "name": "Serpent_DR",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Serpent_Poison",
@@ -17344,7 +17344,7 @@
                 "constants": [
                     {
                         "name": "Serpent_DR",
-                        "value": 0.17
+                        "value": 0.15
                     },
                     {
                         "name": "Serpent_Poison",
@@ -17368,7 +17368,7 @@
                 "constants": [
                     {
                         "name": "Shield_AS_Teamwide",
-                        "value": 10.0
+                        "value": 8.0
                     },
                     {
                         "name": "Shield_Health_Teamwide",
@@ -17386,7 +17386,7 @@
                 "constants": [
                     {
                         "name": "Shield_CashoutAS",
-                        "value": 25.0
+                        "value": 18.0
                     },
                     {
                         "name": "Shield_CashoutHP",
@@ -17624,7 +17624,7 @@
                     },
                     {
                         "name": "TimebreakerAdditionalAS",
-                        "value": 0.5
+                        "value": 0.4
                     }
                 ],
                 "min_units": 4,

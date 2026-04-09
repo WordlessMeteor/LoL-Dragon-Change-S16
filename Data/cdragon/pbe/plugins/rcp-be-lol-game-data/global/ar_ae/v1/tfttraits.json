@@ -15303,7 +15303,7 @@
         "trait_id": "TFT17_BlitzcrankUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_PartyAnimal.TFT_Set17.png",
-        "tooltip_text": "مرة واحدة لكل قتال، بعد انخفاض الصحة دون @HealthThreshold*100@%، يصبح غير قابل للاستهداف ويستعيد @PercentHealthHeal*100@% من الصحة القصوى كل ثانية. عند بلوغ الصحة الكاملة، أو عندما لا يبقى حلفاء آخرون، يعود إلى القتال. إذا تم علاج بليتزكرانك بالكامل، يدخل في <font color='#F39B9B'>حـ</font><font color='#F3D59B'>ا</font><font color='#D5F39B'>لـ</font><font color='#9BF39B'>ة</font> <font color='#9BF3D5'>ا</font><font color='#9BD5F3'>لـ</font><font color='#9B9BF3'>ر</font><font color='#D59BF3'>قـ</font><font color='#F39BD5'>ص</font> لبقية القتال ويطلق صواعق تأثير مخرب الحفلات الكامن بأربع أضعاف السرعة.",
+        "tooltip_text": "مرة واحدة لكل قتال، بعد انخفاض الصحة دون @HealthThreshold*100@%، يصبح غير قابل للاستهداف ويستعيد @PercentHealthHeal*100@% من الصحة القصوى كل ثانية. عند بلوغ الصحة الكاملة، أو عندما لا يبقى حلفاء آخرون، يعود إلى القتال. إذا تم علاج بليتزكرانك بالكامل، يدخل في <font color='#D59BF3'>حالة الرقص</font> لبقية القتال ويطلق صواعق تأثير مخرب الحفلات الكامن بأربع أضعاف السرعة.",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16045,7 +16045,7 @@
         "trait_id": "TFT17_Primordian",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Primordian.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) يؤدي إلحاق الضرر إلى توليد أفواج صغيرة بحسب مستوى نجوم وحدات البرايمورديان.</row><br><row>(@MinUnits@) يتولد المزيد من الأفواج الصغيرة! في كل دور، تكسب بطلًا عشوائيًا بتكلفة 1 أو 2. </row><br><br><rules>يسهم @DamageTakenPercentModifier*100@% من الضرر المتلقى في الضرر الملحق.</rules>",
+        "tooltip_text": "<row>(@MinUnits@) يؤدي إلحاق الضرر إلى توليد أفواج صغيرة بحسب مستوى نجوم وحدات البرايمورديان الفريدة.</row><br><row>(@MinUnits@) يتولد @PercentMoreSwarmlings@% أكثر من الأفواج الصغيرة! بعد كل معركة لاعبين، تكسب بطلًا عشوائيًا بتكلفة 1 أو 2. </row><br><br><rules>يسهم @DamageTakenPercentModifier*100@% من الضرر المتلقى في الضرر الملحق.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16175,8 +16175,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 3,
-                "style_name": "kSilver"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -16468,7 +16468,7 @@
         "trait_id": "TFT17_SpaceGroove",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_SpaceGroove.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@) يمكن لراقصي الفضاء الدخول في <font color='#F39B9B'>حـ</font><font color='#F3D59B'>ا</font><font color='#D5F39B'>لـ</font><font color='#9BF39B'>ة</font> <font color='#9BF3D5'>ا</font><font color='#9BD5F3'>لـ</font><font color='#9B9BF3'>ر</font><font color='#D59BF3'>قـ</font><font color='#F39BD5'>ص</font>. حين يكونون في تلك الحالة، يكسبون سرعة هجوم وتجدد صحة قصوى، تزداد المقادير لكل راقص فضاء في فريقك.</row><br><row>(@MinUnits@) يبدأ جميع راقصي الفضاء القتال في <font color='#F39B9B'>حـ</font><font color='#F3D59B'>ا</font><font color='#D5F39B'>لـ</font><font color='#9BF39B'>ة</font> <font color='#9BF3D5'>ا</font><font color='#9BD5F3'>لـ</font><font color='#9B9BF3'>ر</font><font color='#D59BF3'>قـ</font><font color='#F39BD5'>ص</font> لمدة @StartOfCombatDuration@ث.</row><br><row>(@MinUnits@) كل ثانية تمر في <font color='#F39B9B'>حـ</font><font color='#F3D59B'>ا</font><font color='#D5F39B'>لـ</font><font color='#9BF39B'>ة</font> <font color='#9BF3D5'>ا</font><font color='#9BD5F3'>لـ</font><font color='#9B9BF3'>ر</font><font color='#D59BF3'>قـ</font><font color='#F39BD5'>ص</font> تمنح @ADAPPerSecond@% ضرر هجوم وقوة قدرة متكدسين.</row><br><row>(@MinUnits@) تزيد هذه التأثيرات بنسبة @EffectBonus@%!</row><br><row>(@MinUnits@) <font color='#F39B9B'>ف</font><font color='#F3D59B'>ل</font><font color='#D5F39B'>ت</font><font color='#9BF39B'>د</font><font color='#9BF3D5'>خ</font><font color='#9BD5F3'>ل</font> <font color='#9B9BF3'>ح</font><font color='#D59BF3'>ا</font><font color='#F39BD5'>ل</font><font color='#F39B9B'>ة</font> <font color='#F3D59B'>ا</font><font color='#D5F39B'>ل</font><font color='#9BF39B'>ر</font><font color='#9BF3D5'>ق</font><font color='#9BD5F3'>ص</font><font color='#9B9BF3'>!</font></row><br><br><font color='#F39B9B'>حـ</font><font color='#F3D59B'>ا</font><font color='#D5F39B'>لـ</font><font color='#9BF39B'>ة</font> <font color='#9BF3D5'>ا</font><font color='#9BD5F3'>لـ</font><font color='#9B9BF3'>ر</font><font color='#D59BF3'>قـ</font><font color='#F39BD5'>ص</font>: @TFTUnitProperty.:TFT17_SpaceGroove_AS*100@% %i:scaleAS%، @TFTUnitProperty.:TFT17_SpaceGroove_HealthRegen*100@% %i:scaleHPRegen%",
+        "tooltip_text": "<row>(@MinUnits@) يمكن لراقصي الفضاء الدخول في <font color='#D59BF3'>حالة الرقص</font>. حين يكونون في تلك الحالة، يكسبون سرعة هجوم وتجدد صحة قصوى، تزداد المقادير لكل راقص فضاء في فريقك.</row><br><row>(@MinUnits@) يبدأ جميع راقصي الفضاء القتال في <font color='#D59BF3'>حالة الرقص</font> لمدة @StartOfCombatDuration@ث.</row><br><row>(@MinUnits@) كل ثانية تمر في <font color='#D59BF3'>حالة الرقص</font> تمنح @ADAPPerSecond@% ضرر هجوم وقوة قدرة متكدسين.</row><br><row>(@MinUnits@) تزيد هذه التأثيرات بنسبة @EffectBonus@%!</row><br><row>(@MinUnits@) <font color='#D59BF3'>فلتدخل حالة الرقص!</font></row><br><br><font color='#D59BF3'>حالة الرقص</font>: @TFTUnitProperty.:TFT17_SpaceGroove_AS*100@% %i:scaleAS%، @TFTUnitProperty.:TFT17_SpaceGroove_HealthRegen*100@% %i:scaleHPRegen%",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -16907,7 +16907,7 @@
                 "constants": [
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.15
+                        "value": 0.18
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16927,7 +16927,7 @@
                     },
                     {
                         "name": "Fountain_ManaRegen",
-                        "value": 4.0
+                        "value": 5.0
                     }
                 ],
                 "min_units": 5,
@@ -17298,7 +17298,7 @@
                 "constants": [
                     {
                         "name": "Serpent_DR_Teamwide",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "Serpent_Duration",
@@ -17312,7 +17312,7 @@
                 "constants": [
                     {
                         "name": "Serpent_DR",
-                        "value": 0.07
+                        "value": 0.05
                     },
                     {
                         "name": "Serpent_Poison",
@@ -17328,7 +17328,7 @@
                 "constants": [
                     {
                         "name": "Serpent_DR",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Serpent_Poison",
@@ -17344,7 +17344,7 @@
                 "constants": [
                     {
                         "name": "Serpent_DR",
-                        "value": 0.17
+                        "value": 0.15
                     },
                     {
                         "name": "Serpent_Poison",
@@ -17368,7 +17368,7 @@
                 "constants": [
                     {
                         "name": "Shield_AS_Teamwide",
-                        "value": 10.0
+                        "value": 8.0
                     },
                     {
                         "name": "Shield_Health_Teamwide",
@@ -17386,7 +17386,7 @@
                 "constants": [
                     {
                         "name": "Shield_CashoutAS",
-                        "value": 25.0
+                        "value": 18.0
                     },
                     {
                         "name": "Shield_CashoutHP",
@@ -17624,7 +17624,7 @@
                     },
                     {
                         "name": "TimebreakerAdditionalAS",
-                        "value": 0.5
+                        "value": 0.4
                     }
                 ],
                 "min_units": 4,

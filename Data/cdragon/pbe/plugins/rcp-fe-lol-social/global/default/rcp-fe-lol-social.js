@@ -15410,7 +15410,7 @@
                     n = Math.floor(t / 60),
                     r = t % 60;
                 return n + ":" + (r < 10 ? "0" : "") + r
-            }, t.userAvailability = t.queueType = void 0;
+            }, t.queueType = void 0;
             t.queueType = {
                 PRACTICE_GAME: "PRACTICE_GAME",
                 NONE: "NONE",
@@ -15418,9 +15418,6 @@
                 BATTLE_TRAINING: "BATTLE_TRAINING",
                 TUTORIAL: "TUTORIAL",
                 RANKED_SOLO_5x5: "RANKED_SOLO_5x5"
-            };
-            t.userAvailability = {
-                OFFLINE: "offline"
             }
         }, (e, t) => {
             "use strict";
@@ -15554,8 +15551,8 @@
             var r, o = n(1),
                 i = n(351),
                 a = n(354),
-                s = n(355),
-                l = n(359),
+                s = n(359),
+                l = n(356),
                 c = (r = n(325)) && r.__esModule ? r : {
                     default: r
                 };
@@ -15606,24 +15603,27 @@
                 summonerDataReady: o.Ember.computed.or("remoteProduct", "profileIconsIdLookup"),
                 remoteProduct: o.Ember.computed.alias("friendInfo.remoteProduct"),
                 remotePlatform: o.Ember.computed.alias("friendInfo.remotePlatform"),
-                availability: o.Ember.computed("friendInfo.availability", "isDiscordOnline", (function() {
-                    const e = this.get("friendInfo.availability") || s.userAvailability.OFFLINE;
-                    return this.get("isDiscordOnline") ? "online" : e
+                availability: o.Ember.computed("discordOnlineStatus", "friendInfo.availability", "friendInfo.relationshipOnRiot", "isLeagueOffline", (function() {
+                    const e = this.get("friendInfo.availability"),
+                        t = this.get("friendInfo.relationshipOnRiot"),
+                        n = this.get("discordOnlineStatus"),
+                        r = this.get("isLeagueOffline");
+                    return t !== l.SOCIAL_RELATIONSHIP_TYPES.FRIEND || r ? n || l.AVAILABILITY.OFFLINE : e
                 })),
                 discordOnlineStatus: o.Ember.computed.alias("friendInfo.discordOnlineStatus"),
                 discordId: o.Ember.computed.alias("friendInfo.discordId"),
                 isDiscordOnline: o.Ember.computed("discordOnlineStatus", (function() {
                     const e = this.get("discordOnlineStatus");
-                    return "online" === e || "chat" === e
+                    return e === l.AVAILABILITY.ONLINE || e === l.AVAILABILITY.CHAT
                 })),
                 isLeagueOffline: o.Ember.computed("friendInfo", (function() {
                     const e = this.get("friendInfo.availability");
-                    return !e || e === s.userAvailability.OFFLINE
+                    return !e || e === l.AVAILABILITY.OFFLINE
                 })),
                 noSummonerId: o.Ember.computed.not("summonerId"),
                 isOffline: o.Ember.computed("availability", (function() {
                     const e = this.get("availability");
-                    return !e || e === s.userAvailability.OFFLINE
+                    return !e || e === l.AVAILABILITY.OFFLINE
                 })),
                 gntOnlyAndOffline: o.Ember.computed.and("noSummonerId", "isOffline"),
                 rootClasses: o.Ember.computed("direction", "regaliaEnabled", "regaliaLoaded", (function() {
@@ -15729,8 +15729,8 @@
                         o = Boolean(this.get("remotePlatform")),
                         i = Boolean(!this.get("friendInfo.lol.totalChallengeScore")),
                         a = Boolean(r || o || i),
-                        s = Boolean(r || o);
-                    e && a && (0, l.makeCachedRequest)(t, (e => e && this.set("playerChallengeSummary", e))), e && s && (0, l.makeCachedRequest)(n, (e => e && this.set("playerRankedSummary", e)))
+                        l = Boolean(r || o);
+                    e && a && (0, s.makeCachedRequest)(t, (e => e && this.set("playerChallengeSummary", e))), e && l && (0, s.makeCachedRequest)(n, (e => e && this.set("playerRankedSummary", e)))
                 },
                 regaliaReadyCallback(e) {
                     this.set("regaliaLoaded", !0)

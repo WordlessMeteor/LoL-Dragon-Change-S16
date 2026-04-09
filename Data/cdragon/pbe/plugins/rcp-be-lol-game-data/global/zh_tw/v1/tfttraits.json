@@ -15516,7 +15516,7 @@
         "trait_id": "TFT17_FlexTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Voyager.TFT_Set17.png",
-        "tooltip_text": "戰鬥開始：坦克和鬥士獲得持續@ShieldDuration@秒的護盾。其他友軍獲得傷害增幅。<br><br>星際旅人獲得雙倍增益。<br><br><expandRow>(@MinUnits@)@ShieldHP@護盾，@BonusDA*100@%%i:scaleDA%</expandRow><br>",
+        "tooltip_text": "戰鬥開始：坦克獲得持續@ShieldDuration@秒的護盾。其他友軍獲得傷害增幅。<br><br>星際旅人獲得雙倍增益。<br><br><expandRow>(@MinUnits@)@ShieldHP@護盾，@BonusDA*100@%%i:scaleDA%</expandRow><br>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15731,11 +15731,11 @@
         ]
     },
     {
-        "display_name": "降神師",
+        "display_name": "降靈師",
         "trait_id": "TFT17_ManaTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Channeler.TFT_Set17.png",
-        "tooltip_text": "天賦：降神師從所有來源獲得@InnateManaGain*100@%額外魔力。<br><br>我方隊伍獲得魔力回復，降神師獲得更多。<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ %i:TFTManaRegen% | @ChannelerManaRegen@ %i:TFTManaRegen%</expandRow><br><br>",
+        "tooltip_text": "天賦：降靈師從所有來源獲得@InnateManaGain*100@%額外魔力。<br><br>我方隊伍獲得魔力回復，降神師獲得更多。<br><br><expandRow>(@MinUnits@) @TeamManaRegen@ %i:TFTManaRegen% | @ChannelerManaRegen@ %i:TFTManaRegen%</expandRow><br><br>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -15969,7 +15969,7 @@
         "trait_id": "TFT17_MissFortuneUndeterminedTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_MissFortuneUndetermindedTrait.TFT_Set17.png",
-        "tooltip_text": "部署好運姐時，可以選擇降神師模式、極速快手模式，或復刻師模式。好運姐會根據所選模式獲得獨特技能及對應的特性。",
+        "tooltip_text": "部署好運姐時，可以選擇降靈師模式、極速快手模式，或復刻師模式。好運姐會根據所選模式獲得獨特技能及對應的特性。",
         "innate_trait_sets": [],
         "conditional_trait_sets": []
     },
@@ -15978,7 +15978,7 @@
         "trait_id": "TFT17_MissFortuneUniqueTrait",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_GunGoddess.TFT_Set17.png",
-        "tooltip_text": "部署好運姐時，可以選擇降神師模式、極速快手模式，或復刻師模式。好運姐會根據所選模式獲得獨特技能及對應的特性。",
+        "tooltip_text": "部署好運姐時，可以選擇降靈師模式、極速快手模式，或復刻師模式。好運姐會根據所選模式獲得獨特技能及對應的特性。",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -16045,7 +16045,7 @@
         "trait_id": "TFT17_Primordian",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Primordian.TFT_Set17.png",
-        "tooltip_text": "<row>(@MinUnits@)造成傷害時，根據遠古霸者星級召喚獸群。</row><br><row>(@MinUnits@)召喚更多獸群！每回合隨機獲得1個1費或2費英雄。</row><br><br><rules>所受傷害的@DamageTakenPercentModifier*100@%會計為召喚獸群所需傷害。</rules>",
+        "tooltip_text": "<row>(@MinUnits@)造成傷害時，根據專屬遠古霸者星級召喚獸群。</row><br><row>(@MinUnits@)額外召喚@PercentMoreSwarmlings@%獸群！每次玩家戰鬥結束後，隨機獲得1個1費或2費英雄。</row><br><br><rules>所受傷害的@DamageTakenPercentModifier*100@%會計為召喚獸群所需傷害。</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -16175,8 +16175,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 3,
-                "style_name": "kSilver"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -16907,7 +16907,7 @@
                 "constants": [
                     {
                         "name": "Fountain_HealPercent",
-                        "value": 0.15
+                        "value": 0.18
                     },
                     {
                         "name": "Fountain_ManaRegen",
@@ -16927,7 +16927,7 @@
                     },
                     {
                         "name": "Fountain_ManaRegen",
-                        "value": 4.0
+                        "value": 5.0
                     }
                 ],
                 "min_units": 5,
@@ -17298,7 +17298,7 @@
                 "constants": [
                     {
                         "name": "Serpent_DR_Teamwide",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "Serpent_Duration",
@@ -17312,7 +17312,7 @@
                 "constants": [
                     {
                         "name": "Serpent_DR",
-                        "value": 0.07
+                        "value": 0.05
                     },
                     {
                         "name": "Serpent_Poison",
@@ -17328,7 +17328,7 @@
                 "constants": [
                     {
                         "name": "Serpent_DR",
-                        "value": 0.12
+                        "value": 0.1
                     },
                     {
                         "name": "Serpent_Poison",
@@ -17344,7 +17344,7 @@
                 "constants": [
                     {
                         "name": "Serpent_DR",
-                        "value": 0.17
+                        "value": 0.15
                     },
                     {
                         "name": "Serpent_Poison",
@@ -17368,7 +17368,7 @@
                 "constants": [
                     {
                         "name": "Shield_AS_Teamwide",
-                        "value": 10.0
+                        "value": 8.0
                     },
                     {
                         "name": "Shield_Health_Teamwide",
@@ -17386,7 +17386,7 @@
                 "constants": [
                     {
                         "name": "Shield_CashoutAS",
-                        "value": 25.0
+                        "value": 18.0
                     },
                     {
                         "name": "Shield_CashoutHP",
@@ -17624,7 +17624,7 @@
                     },
                     {
                         "name": "TimebreakerAdditionalAS",
-                        "value": 0.5
+                        "value": 0.4
                     }
                 ],
                 "min_units": 4,

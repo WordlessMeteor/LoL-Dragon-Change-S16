@@ -903,6 +903,10 @@
                                                     {
                                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_CameraControl_CycleAllies",
                                                         "EventName": "[GameEvents]evtCycleAllies",
+                                                        "Filter": {
+                                                            "ToggleName": "KeybindingsInputPorting",
+                                                            "__type": "OptionItemFilter_FeatureToggle"
+                                                        },
                                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                                     },
                                                     {
@@ -943,6 +947,10 @@
                                                     {
                                                         "LabelTraKey": "PORO_ELEPHANT_Options_Scout_Ahead_Mode_Toggle",
                                                         "EventName": "[GameEvents]evtFreeDynamicCameraToggle",
+                                                        "Filter": {
+                                                            "ToggleName": "KeybindingsInputPorting",
+                                                            "__type": "OptionItemFilter_FeatureToggle"
+                                                        },
                                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                                     }
                                                 ],
@@ -1415,143 +1423,9 @@
                                     },
                                     {
                                         "Filter": {
-                                            "Mutator": "PracticeToolOptionsMenuHotkeys",
-                                            "__type": "OptionItemFilter_Mutator"
+                                            "ToggleName": "KeybindingsInputPorting",
+                                            "__type": "OptionItemFilter_FeatureToggle"
                                         },
-                                        "template": "{d80144ac}",
-                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_label",
-                                        "items": [
-                                            {
-                                                "template": "{29aabdcc}",
-                                                "Header": {
-                                                    "Column1LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set1_label",
-                                                    "Column2LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set2_label",
-                                                    "__type": "OptionItemSecondaryHotkeys2Column_Header"
-                                                },
-                                                "{349ad6a6}": true,
-                                                "{098f86e0}": [
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_FastForward30sec",
-                                                        "EventName": "[GameEvents]evtPracticeToolIncGameClock",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AddGold",
-                                                        "EventName": "[GameEvents]evtPracticeToolIncGold",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_LeveIUp",
-                                                        "EventName": "[GameEvents]evtPracticeToolIncLevel",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_LockXPLevel",
-                                                        "EventName": "[GameEvents]evtPracticeToolLockLevel",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshCooldowns",
-                                                        "EventName": "[GameEvents]evtPracticeToolResetCooldown",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ResetGame",
-                                                        "EventName": "[GameEvents]evtPracticeToolResetGame",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshHP",
-                                                        "EventName": "[GameEvents]evtPracticeToolResetHP",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshMana",
-                                                        "EventName": "[GameEvents]evtPracticeToolResetPAR",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_Revive",
-                                                        "EventName": "[GameEvents]evtPracticeToolRevive",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnAlliedDummy",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnAlliedTargetDummy",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnEnemyDummy",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnEnemyTargetDummy",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ClearTargetDummies",
-                                                        "EventName": "[GameEvents]evtPracticeToolRemoveTargetDummy",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnCloudDrake",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnDragonAir",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnElderDrake",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnDragonElder",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnInfernalDrake",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnDragonFire",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnMountainDrake",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnDragonEarth",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnOceanDrake",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnDragonOcean",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnJungleCamps",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnJungle",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnJunglePlants",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnJunglePlants",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_TeleportToCursor",
-                                                        "EventName": "[GameEvents]evtPracticeToolTeleport",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleMinionSpawn",
-                                                        "EventName": "[GameEvents]evtPracticeToolToggleMinions",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleTowerFire",
-                                                        "EventName": "[GameEvents]evtPracticeToolToggleTurrets",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleTowerInvincibility",
-                                                        "EventName": "[GameEvents]evtPracticeToolTurretInv",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    }
-                                                ],
-                                                "__type": "OptionItemSecondaryHotkeys2Column"
-                                            }
-                                        ],
-                                        "__type": "{fbecf8da}"
-                                    },
-                                    {
                                         "template": "{d80144ac}",
                                         "LabelTraKey": "Options_Hotkeys_Cursor_Label",
                                         "items": [
@@ -2668,6 +2542,151 @@
                                     {
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_FirstPersonCamera_YawRight",
                                         "EventName": "[GameEvents]evtFPSYawRight",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    }
+                                ],
+                                "__type": "OptionItemSecondaryHotkeys2Column"
+                            }
+                        ],
+                        "__type": "OptionItemGroup"
+                    }
+                ],
+                "__type": "OptionItemGroup"
+            },
+            {
+                "Filter": {
+                    "Mutator": "PracticeToolOptionsMenuHotkeys",
+                    "__type": "OptionItemFilter_Mutator"
+                },
+                "template": "{3cd8d5b2}",
+                "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_label",
+                "items": [
+                    {
+                        "template": "{b5e1975a}",
+                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_label",
+                        "items": [
+                            {
+                                "template": "{29aabdcc}",
+                                "Header": {
+                                    "Column1LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set1_label",
+                                    "Column2LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set2_label",
+                                    "__type": "OptionItemSecondaryHotkeys2Column_Header"
+                                },
+                                "{349ad6a6}": true,
+                                "{098f86e0}": [
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_FastForward30sec",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolIncGameClock",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AddGold",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolIncGold",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_LeveIUp",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolIncLevel",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_LockXPLevel",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolLockLevel",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshCooldowns",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolResetCooldown",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ResetGame",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolResetGame",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshHP",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolResetHP",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshMana",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolResetPAR",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_Revive",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolRevive",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnAlliedDummy",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnAlliedTargetDummy",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnEnemyDummy",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnEnemyTargetDummy",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ClearTargetDummies",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolRemoveTargetDummy",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnCloudDrake",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnDragonAir",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnElderDrake",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnDragonElder",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnInfernalDrake",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnDragonFire",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnMountainDrake",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnDragonEarth",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnOceanDrake",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnDragonOcean",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnJungleCamps",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnJungle",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnJunglePlants",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnJunglePlants",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_TeleportToCursor",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolTeleport",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleMinionSpawn",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolToggleMinions",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleTowerFire",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolToggleTurrets",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleTowerInvincibility",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolTurretInv",
                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                     }
                                 ],
@@ -6434,144 +6453,6 @@
                                             }
                                         ],
                                         "__type": "{fbecf8da}"
-                                    },
-                                    {
-                                        "Filter": {
-                                            "Mutator": "PracticeToolOptionsMenuHotkeys",
-                                            "__type": "OptionItemFilter_Mutator"
-                                        },
-                                        "template": "{d80144ac}",
-                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_label",
-                                        "items": [
-                                            {
-                                                "template": "{29aabdcc}",
-                                                "Header": {
-                                                    "Column1LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set1_label",
-                                                    "Column2LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set2_label",
-                                                    "__type": "OptionItemSecondaryHotkeys2Column_Header"
-                                                },
-                                                "{349ad6a6}": true,
-                                                "{098f86e0}": [
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_FastForward30sec",
-                                                        "EventName": "[WASD]PracticeToolIncGameClock",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AddGold",
-                                                        "EventName": "[WASD]PracticeToolIncGold",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_LeveIUp",
-                                                        "EventName": "[WASD]PracticeToolIncLevel",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_LockXPLevel",
-                                                        "EventName": "[WASD]PracticeToolLockLevel",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshCooldowns",
-                                                        "EventName": "[WASD]PracticeToolResetCooldown",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ResetGame",
-                                                        "EventName": "[WASD]PracticeToolResetGame",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshHP",
-                                                        "EventName": "[WASD]PracticeToolResetHP",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshMana",
-                                                        "EventName": "[WASD]PracticeToolResetPAR",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_Revive",
-                                                        "EventName": "[WASD]PracticeToolRevive",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnAlliedDummy",
-                                                        "EventName": "[WASD]PracticeToolSpawnAlliedTargetDummy",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnEnemyDummy",
-                                                        "EventName": "[WASD]PracticeToolSpawnEnemyTargetDummy",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ClearTargetDummies",
-                                                        "EventName": "[WASD]PracticeToolRemoveTargetDummy",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnCloudDrake",
-                                                        "EventName": "[WASD]PracticeToolSpawnDragonAir",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnElderDrake",
-                                                        "EventName": "[WASD]PracticeToolSpawnDragonElder",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnInfernalDrake",
-                                                        "EventName": "[WASD]PracticeToolSpawnDragonFire",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnMountainDrake",
-                                                        "EventName": "[WASD]PracticeToolSpawnDragonEarth",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnOceanDrake",
-                                                        "EventName": "[WASD]PracticeToolSpawnDragonOcean",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnJungleCamps",
-                                                        "EventName": "[WASD]PracticeToolSpawnJungle",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnJunglePlants",
-                                                        "EventName": "[WASD]PracticeToolSpawnJunglePlants",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_TeleportToCursor",
-                                                        "EventName": "[WASD]PracticeToolTeleport",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleMinionSpawn",
-                                                        "EventName": "[WASD]PracticeToolToggleMinions",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleTowerFire",
-                                                        "EventName": "[WASD]PracticeToolToggleTurrets",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleTowerInvincibility",
-                                                        "EventName": "[WASD]PracticeToolTurretInv",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    }
-                                                ],
-                                                "__type": "OptionItemSecondaryHotkeys2Column"
-                                            }
-                                        ],
-                                        "__type": "{fbecf8da}"
                                     }
                                 ],
                                 "{43bf01e1}": false,
@@ -7876,144 +7757,6 @@
                                                     {
                                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_ItemShop_SwitchShopTabs",
                                                         "EventName": "[ShopEvents]evtShopSwitchTabs",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    }
-                                                ],
-                                                "__type": "OptionItemSecondaryHotkeys2Column"
-                                            }
-                                        ],
-                                        "__type": "{fbecf8da}"
-                                    },
-                                    {
-                                        "Filter": {
-                                            "Mutator": "PracticeToolOptionsMenuHotkeys",
-                                            "__type": "OptionItemFilter_Mutator"
-                                        },
-                                        "template": "{d80144ac}",
-                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_label",
-                                        "items": [
-                                            {
-                                                "template": "{29aabdcc}",
-                                                "Header": {
-                                                    "Column1LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set1_label",
-                                                    "Column2LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set2_label",
-                                                    "__type": "OptionItemSecondaryHotkeys2Column_Header"
-                                                },
-                                                "{349ad6a6}": true,
-                                                "{098f86e0}": [
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_FastForward30sec",
-                                                        "EventName": "[GameEvents]evtPracticeToolIncGameClock",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AddGold",
-                                                        "EventName": "[GameEvents]evtPracticeToolIncGold",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_LeveIUp",
-                                                        "EventName": "[GameEvents]evtPracticeToolIncLevel",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_LockXPLevel",
-                                                        "EventName": "[GameEvents]evtPracticeToolLockLevel",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshCooldowns",
-                                                        "EventName": "[GameEvents]evtPracticeToolResetCooldown",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ResetGame",
-                                                        "EventName": "[GameEvents]evtPracticeToolResetGame",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshHP",
-                                                        "EventName": "[GameEvents]evtPracticeToolResetHP",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshMana",
-                                                        "EventName": "[GameEvents]evtPracticeToolResetPAR",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_Revive",
-                                                        "EventName": "[GameEvents]evtPracticeToolRevive",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnAlliedDummy",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnAlliedTargetDummy",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnEnemyDummy",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnEnemyTargetDummy",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ClearTargetDummies",
-                                                        "EventName": "[GameEvents]evtPracticeToolRemoveTargetDummy",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnCloudDrake",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnDragonAir",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnElderDrake",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnDragonElder",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnInfernalDrake",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnDragonFire",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnMountainDrake",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnDragonEarth",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnOceanDrake",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnDragonOcean",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnJungleCamps",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnJungle",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnJunglePlants",
-                                                        "EventName": "[GameEvents]evtPracticeToolSpawnJunglePlants",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_TeleportToCursor",
-                                                        "EventName": "[GameEvents]evtPracticeToolTeleport",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleMinionSpawn",
-                                                        "EventName": "[GameEvents]evtPracticeToolToggleMinions",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleTowerFire",
-                                                        "EventName": "[GameEvents]evtPracticeToolToggleTurrets",
-                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleTowerInvincibility",
-                                                        "EventName": "[GameEvents]evtPracticeToolTurretInv",
                                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                                     }
                                                 ],
@@ -9392,6 +9135,284 @@
                     }
                 ],
                 "__type": "OptionItemGroup"
+            },
+            {
+                "Filter": {
+                    "Mutator": "PracticeToolOptionsMenuHotkeys",
+                    "__type": "OptionItemFilter_Mutator"
+                },
+                "template": "{3cd8d5b2}",
+                "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_label",
+                "items": [
+                    {
+                        "template": "{b5e1975a}",
+                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_label",
+                        "items": [
+                            {
+                                "Filter": {
+                                    "__type": "{d4737a04}"
+                                },
+                                "template": "{29aabdcc}",
+                                "Header": {
+                                    "Column1LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set1_label",
+                                    "Column2LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set2_label",
+                                    "__type": "OptionItemSecondaryHotkeys2Column_Header"
+                                },
+                                "{349ad6a6}": true,
+                                "{098f86e0}": [
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_FastForward30sec",
+                                        "EventName": "[WASD]PracticeToolIncGameClock",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AddGold",
+                                        "EventName": "[WASD]PracticeToolIncGold",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_LeveIUp",
+                                        "EventName": "[WASD]PracticeToolIncLevel",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_LockXPLevel",
+                                        "EventName": "[WASD]PracticeToolLockLevel",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshCooldowns",
+                                        "EventName": "[WASD]PracticeToolResetCooldown",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ResetGame",
+                                        "EventName": "[WASD]PracticeToolResetGame",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshHP",
+                                        "EventName": "[WASD]PracticeToolResetHP",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshMana",
+                                        "EventName": "[WASD]PracticeToolResetPAR",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_Revive",
+                                        "EventName": "[WASD]PracticeToolRevive",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnAlliedDummy",
+                                        "EventName": "[WASD]PracticeToolSpawnAlliedTargetDummy",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnEnemyDummy",
+                                        "EventName": "[WASD]PracticeToolSpawnEnemyTargetDummy",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ClearTargetDummies",
+                                        "EventName": "[WASD]PracticeToolRemoveTargetDummy",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnCloudDrake",
+                                        "EventName": "[WASD]PracticeToolSpawnDragonAir",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnElderDrake",
+                                        "EventName": "[WASD]PracticeToolSpawnDragonElder",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnInfernalDrake",
+                                        "EventName": "[WASD]PracticeToolSpawnDragonFire",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnMountainDrake",
+                                        "EventName": "[WASD]PracticeToolSpawnDragonEarth",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnOceanDrake",
+                                        "EventName": "[WASD]PracticeToolSpawnDragonOcean",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnJungleCamps",
+                                        "EventName": "[WASD]PracticeToolSpawnJungle",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnJunglePlants",
+                                        "EventName": "[WASD]PracticeToolSpawnJunglePlants",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_TeleportToCursor",
+                                        "EventName": "[WASD]PracticeToolTeleport",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleMinionSpawn",
+                                        "EventName": "[WASD]PracticeToolToggleMinions",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleTowerFire",
+                                        "EventName": "[WASD]PracticeToolToggleTurrets",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleTowerInvincibility",
+                                        "EventName": "[WASD]PracticeToolTurretInv",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    }
+                                ],
+                                "__type": "OptionItemSecondaryHotkeys2Column"
+                            },
+                            {
+                                "Filter": {
+                                    "__type": "{ef2cc9a6}"
+                                },
+                                "template": "{29aabdcc}",
+                                "Header": {
+                                    "Column1LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set1_label",
+                                    "Column2LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set2_label",
+                                    "__type": "OptionItemSecondaryHotkeys2Column_Header"
+                                },
+                                "{349ad6a6}": true,
+                                "{098f86e0}": [
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_FastForward30sec",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolIncGameClock",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AddGold",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolIncGold",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_LeveIUp",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolIncLevel",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_LockXPLevel",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolLockLevel",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshCooldowns",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolResetCooldown",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ResetGame",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolResetGame",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshHP",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolResetHP",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_AutorefreshMana",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolResetPAR",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_Revive",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolRevive",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnAlliedDummy",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnAlliedTargetDummy",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnEnemyDummy",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnEnemyTargetDummy",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ClearTargetDummies",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolRemoveTargetDummy",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnCloudDrake",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnDragonAir",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnElderDrake",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnDragonElder",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnInfernalDrake",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnDragonFire",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnMountainDrake",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnDragonEarth",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnOceanDrake",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnDragonOcean",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnJungleCamps",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnJungle",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_SpawnJunglePlants",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolSpawnJunglePlants",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_TeleportToCursor",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolTeleport",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleMinionSpawn",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolToggleMinions",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleTowerFire",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolToggleTurrets",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_PracticeTool_ToggleTowerInvincibility",
+                                        "EventName": "[PracticeToolEvents]evtPracticeToolTurretInv",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    }
+                                ],
+                                "__type": "OptionItemSecondaryHotkeys2Column"
+                            }
+                        ],
+                        "__type": "OptionItemGroup"
+                    }
+                ],
+                "__type": "OptionItemGroup"
             }
         ],
         "__type": "OptionsTab"
@@ -10692,15 +10713,15 @@
         "mOutputStrings": {
             "Brief": "Template_Item_Brief",
             "TooltipInventory": "Template_Item_TooltipInventory_NoPrice",
-            "TooltipShop": "Template_Item_TooltipShop_NoPrice",
+            "TooltipShop": "Template_Item_TooltipShop",
             "ExternalDescription": "Template_Item_ExternalDescription",
             "Colloquialism": "Template_Item_Colloquialism",
             "DisplayName": "Template_Item_DisplayName",
             "Description": "Template_Item_Description",
             "TooltipInventoryWithExtendedBehaviorHint": "Template_Item_TooltipInventoryWithExtendedBehaviorHintNoPrice",
             "TooltipInventoryExtended": "Template_Item_TooltipInventoryExtendedNoPrice",
-            "TooltipShopWithExtendedBehaviorHint": "Template_Item_TooltipShopWithExtendedBehaviorHintNoPrice",
-            "TooltipShopExtended": "Template_Item_TooltipShopExtendedNoPrice"
+            "TooltipShopWithExtendedBehaviorHint": "Template_Item_TooltipShopWithExtendedBehaviorHint",
+            "TooltipShopExtended": "Template_Item_TooltipShopExtended"
         },
         "__type": "TooltipFormat"
     },

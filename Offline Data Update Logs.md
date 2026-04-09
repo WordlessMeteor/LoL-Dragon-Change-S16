@@ -1075,5 +1075,31 @@
 			<td style="text-align:center;">CDragon: 5/1/1</td>
 			<td>Program debug: Introduce divided TFT bin files</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-04-08 12-50-39</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>PBE: 16.8.761.9394 -> 16.8.762.5082</li>
+					</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-04-08 16-48-43</td>
+			<td style="text-align:center;">CDragon: 5/2/1</td>
+			<td>Program debug: Fix large file update issue</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-04-09 13-53-32</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Latest: Within-patch change</li>
+						<li>PBE: 16.8.762.5082 -> 16.8.763.0776</li>
+					</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>

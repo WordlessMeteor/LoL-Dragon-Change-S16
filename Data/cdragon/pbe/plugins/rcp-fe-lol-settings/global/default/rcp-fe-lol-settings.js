@@ -1204,14 +1204,14 @@
                 property: "displayLegacyPatchNumbers",
                 scope: "account",
                 defaultValue: !1
-            }, _ = {
+            }, g = {
                 model: "generalSettings",
                 namespace: "lol-general",
                 schemaVersion: 1,
                 property: "uploadCrashReports",
                 scope: "account",
                 defaultValue: !0
-            }, g = {
+            }, _ = {
                 model: "videoSettings",
                 namespace: "video",
                 schemaVersion: 1,
@@ -1260,11 +1260,11 @@
                 persistenceService: o.Ember.inject.service("persistence"),
                 gameRepairEnabled: o.Ember.computed.alias("persistenceService.gameRepairEnabled"),
                 vanguardSystemCheckModalEnabled: o.Ember.computed.alias("persistenceService.vanguardSystemCheckModalEnabled"),
-                computedSizeInfos: o.Ember.computed("validWindowSizes", g.property, (function() {
+                computedSizeInfos: o.Ember.computed("validWindowSizes", _.property, (function() {
                     const e = [],
                         t = this.get("validWindowSizes");
                     if (t) {
-                        const n = this.get(g.property);
+                        const n = this.get(_.property);
                         t.forEach((t => {
                             const a = `${t.width} x ${t.height}`,
                                 o = t.scale === n,
@@ -1288,12 +1288,12 @@
                 honeyfruit: o.Ember.inject.service("honeyfruit"),
                 isVngPublisherSettingsVisible: o.Ember.computed.alias("honeyfruit.vngPublisherSettings.visible"),
                 init() {
-                    this._super(...arguments), "TENCENT" === window.RIOT.CONSTANTS.regionLocale.region?.toUpperCase() && (_.defaultValue = !1, f.defaultValue = !0), this.bindSetting(u), this.bindSetting(d), this.bindSetting(m), this.bindSetting(p), this.bindSetting(f), this.bindSetting(_), this.bindSetting(g), this.bindSetting(h), o.WindowManager.getValidWindowSizes().then((e => {
+                    this._super(...arguments), "TENCENT" === window.RIOT.CONSTANTS.regionLocale.region?.toUpperCase() && (g.defaultValue = !1, f.defaultValue = !0), this.bindSetting(u), this.bindSetting(d), this.bindSetting(m), this.bindSetting(p), this.bindSetting(f), this.bindSetting(g), this.bindSetting(_), this.bindSetting(h), o.WindowManager.getValidWindowSizes().then((e => {
                         this.set("validWindowSizes", e)
                     }))
                 },
                 resetToDefault: function() {
-                    this.set("isProfilePrivate", r.setting === c.PRIVATE), this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(m.property, m.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(h.property, h.defaultValue)
+                    this.set("isProfilePrivate", r.setting === c.PRIVATE), this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(m.property, m.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(h.property, h.defaultValue)
                 },
                 actions: {
                     reload: function() {
@@ -1301,7 +1301,7 @@
                     },
                     selectWindowSize: function(e) {
                         const t = parseFloat(e);
-                        this.changeSetting(g.property, t)
+                        this.changeSetting(_.property, t)
                     },
                     selectPublishingLocale: function(e) {
                         this.changeSetting(h.property, e)
@@ -1443,7 +1443,7 @@
             }), Object.defineProperty(t, "VANGUARD_STATES", {
                 enumerable: !0,
                 get: function() {
-                    return _.default
+                    return g.default
                 }
             }), Object.defineProperty(t, "getGameKeyFromGameMode", {
                 enumerable: !0,
@@ -1451,21 +1451,21 @@
                     return i.getGameKeyFromGameMode
                 }
             });
-            var a = g(n(42)),
-                o = g(n(43)),
+            var a = _(n(42)),
+                o = _(n(43)),
                 i = n(44),
-                s = g(n(45)),
-                r = g(n(46)),
-                l = g(n(57)),
-                c = g(n(58)),
-                u = g(n(59)),
-                d = g(n(60)),
-                m = g(n(61)),
-                p = g(n(62)),
-                f = g(n(63)),
-                _ = g(n(64));
+                s = _(n(45)),
+                r = _(n(46)),
+                l = _(n(57)),
+                c = _(n(58)),
+                u = _(n(59)),
+                d = _(n(60)),
+                m = _(n(61)),
+                p = _(n(62)),
+                f = _(n(63)),
+                g = _(n(64));
 
-            function g(e) {
+            function _(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -1747,8 +1747,8 @@
                 m = [i],
                 p = [s, r],
                 f = [l, c],
-                _ = [...p, ...f],
-                g = [...d, ...p],
+                g = [...p, ...f],
+                _ = [...d, ...p],
                 h = [...f, ...m];
             var E = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
@@ -1763,10 +1763,10 @@
                 RANKED_SR_QUEUE_TYPES: u,
                 RANKED_TFT_QUEUE_TYPES: p,
                 RATED_TFT_QUEUE_TYPES: f,
-                RANKED_AND_RATED_TFT_QUEUE_TYPES: _,
-                ALL_RANKED_QUEUE_TYPES: g,
+                RANKED_AND_RATED_TFT_QUEUE_TYPES: g,
+                ALL_RANKED_QUEUE_TYPES: _,
                 ALL_RATED_QUEUE_TYPES: h,
-                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...g, ...h]
+                ALL_RANKED_AND_RATED_QUEUE_TYPES: [..._, ...h]
             };
             t.default = E
         }, (e, t) => {
@@ -2082,50 +2082,50 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                CENSORED_IMG_MARK: () => g.CENSORED_IMG_MARK,
-                CENSORED_STRING_MARK: () => g.CENSORED_STRING_MARK,
+                CENSORED_IMG_MARK: () => _.CENSORED_IMG_MARK,
+                CENSORED_STRING_MARK: () => _.CENSORED_STRING_MARK,
                 DEFAULT_PROGRAMMATIC_ACTION_NAME_ATTRIBUTE: () => u.DEFAULT_PROGRAMMATIC_ACTION_NAME_ATTRIBUTE,
-                FORM_PRIVATE_TAG_NAMES: () => g.FORM_PRIVATE_TAG_NAMES,
+                FORM_PRIVATE_TAG_NAMES: () => _.FORM_PRIVATE_TAG_NAMES,
                 LifeCycle: () => i.LifeCycle,
-                MAX_ATTRIBUTE_VALUE_CHAR_LENGTH: () => _.MAX_ATTRIBUTE_VALUE_CHAR_LENGTH,
-                NodePrivacyLevel: () => g.NodePrivacyLevel,
-                PRIVACY_ATTR_NAME: () => g.PRIVACY_ATTR_NAME,
-                PRIVACY_ATTR_VALUE_ALLOW: () => g.PRIVACY_ATTR_VALUE_ALLOW,
-                PRIVACY_ATTR_VALUE_HIDDEN: () => g.PRIVACY_ATTR_VALUE_HIDDEN,
-                PRIVACY_ATTR_VALUE_MASK: () => g.PRIVACY_ATTR_VALUE_MASK,
-                PRIVACY_ATTR_VALUE_MASK_USER_INPUT: () => g.PRIVACY_ATTR_VALUE_MASK_USER_INPUT,
-                PRIVACY_CLASS_PREFIX: () => g.PRIVACY_CLASS_PREFIX,
+                MAX_ATTRIBUTE_VALUE_CHAR_LENGTH: () => g.MAX_ATTRIBUTE_VALUE_CHAR_LENGTH,
+                NodePrivacyLevel: () => _.NodePrivacyLevel,
+                PRIVACY_ATTR_NAME: () => _.PRIVACY_ATTR_NAME,
+                PRIVACY_ATTR_VALUE_ALLOW: () => _.PRIVACY_ATTR_VALUE_ALLOW,
+                PRIVACY_ATTR_VALUE_HIDDEN: () => _.PRIVACY_ATTR_VALUE_HIDDEN,
+                PRIVACY_ATTR_VALUE_MASK: () => _.PRIVACY_ATTR_VALUE_MASK,
+                PRIVACY_ATTR_VALUE_MASK_USER_INPUT: () => _.PRIVACY_ATTR_VALUE_MASK_USER_INPUT,
+                PRIVACY_CLASS_PREFIX: () => _.PRIVACY_CLASS_PREFIX,
                 STABLE_ATTRIBUTES: () => d.STABLE_ATTRIBUTES,
                 WeakSet: () => p.WeakSet,
-                censorText: () => g.censorText,
+                censorText: () => _.censorText,
                 cssEscape: () => p.cssEscape,
                 elementMatches: () => p.elementMatches,
                 forEachChildNodes: () => m.forEachChildNodes,
                 getClassList: () => p.getClassList,
                 getMutationObserverConstructor: () => r.getMutationObserverConstructor,
-                getNodePrivacyLevel: () => g.getNodePrivacyLevel,
-                getNodeSelfPrivacyLevel: () => g.getNodeSelfPrivacyLevel,
+                getNodePrivacyLevel: () => _.getNodePrivacyLevel,
+                getNodeSelfPrivacyLevel: () => _.getNodeSelfPrivacyLevel,
                 getParentElement: () => p.getParentElement,
                 getParentNode: () => m.getParentNode,
-                getPrivacySelector: () => g.getPrivacySelector,
+                getPrivacySelector: () => _.getPrivacySelector,
                 getScrollX: () => c.getScrollX,
                 getScrollY: () => c.getScrollY,
                 getSessionReplayUrl: () => f.getSessionReplayUrl,
-                getTextContent: () => g.getTextContent,
+                getTextContent: () => _.getTextContent,
                 getViewportDimension: () => l.getViewportDimension,
                 hasChildNodes: () => m.hasChildNodes,
                 initViewportObservable: () => l.initViewportObservable,
                 isCommentNode: () => m.isCommentNode,
                 isElementNode: () => m.isElementNode,
-                isLongDataUrl: () => _.isLongDataUrl,
+                isLongDataUrl: () => g.isLongDataUrl,
                 isNodeShadowHost: () => m.isNodeShadowHost,
                 isNodeShadowRoot: () => m.isNodeShadowRoot,
                 isTextNode: () => m.isTextNode,
                 makeRumPublicApi: () => a.makeRumPublicApi,
-                reducePrivacyLevel: () => g.reducePrivacyLevel,
-                sanitizeDataUrl: () => _.sanitizeDataUrl,
-                shouldIgnoreElement: () => g.shouldIgnoreElement,
-                shouldMaskNode: () => g.shouldMaskNode,
+                reducePrivacyLevel: () => _.reducePrivacyLevel,
+                sanitizeDataUrl: () => g.sanitizeDataUrl,
+                shouldIgnoreElement: () => _.shouldIgnoreElement,
+                shouldMaskNode: () => _.shouldMaskNode,
                 startRum: () => o.startRum,
                 startViewHistory: () => s.startViewHistory
             });
@@ -2141,8 +2141,8 @@
                 m = n(164),
                 p = n(161),
                 f = n(218),
-                _ = n(149),
-                g = n(163)
+                g = n(149),
+                _ = n(163)
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
@@ -2160,8 +2160,8 @@
                 m = n(123),
                 p = n(125),
                 f = n(72),
-                _ = n(135),
-                g = n(82),
+                g = n(135),
+                _ = n(82),
                 h = n(126),
                 E = n(70),
                 v = n(71),
@@ -2185,7 +2185,7 @@
                             return n.createDeflateEncoder(a, o, e)
                         } : r.createIdentityEncoder, I, A);
                         return t.onRumStart(l.lifeCycle, a, l.session, l.viewHistory, o), L = function(e, t) {
-                            return (0, g.assign)({
+                            return (0, _.assign)({
                                 init: function(e) {
                                     (0, h.displayAlreadyInitializedError)("DD_RUM", e)
                                 },
@@ -2276,7 +2276,7 @@
                             L.addTiming((0, p.sanitize)(e), t)
                         })),
                         setUser: (0, l.monitor)((function(e) {
-                            (0, _.checkUser)(e) && N.setContext((0, _.sanitizeUser)(e)), (0, c.addTelemetryUsage)({
+                            (0, g.checkUser)(e) && N.setContext((0, g.sanitizeUser)(e)), (0, c.addTelemetryUsage)({
                                 feature: "set-user"
                             })
                         })),
@@ -2284,7 +2284,7 @@
                             return N.getContext()
                         })),
                         setUserProperty: (0, l.monitor)((function(e, t) {
-                            var n, a = (0, _.sanitizeUser)((n = {}, n[e] = t, n))[e];
+                            var n, a = (0, g.sanitizeUser)((n = {}, n[e] = t, n))[e];
                             N.setContextProperty(e, a), (0, c.addTelemetryUsage)({
                                 feature: "set-user"
                             })
@@ -2466,14 +2466,14 @@
                 clocksNow: () => E,
                 clocksOrigin: () => v,
                 currentDrift: () => p,
-                dateNow: () => _,
+                dateNow: () => g,
                 elapsed: () => S,
                 getRelativeTime: () => T,
                 getTimeStamp: () => b,
                 looksLikeRelativeTime: () => N,
                 relativeNow: () => h,
                 relativeToClocks: () => u,
-                timeStampNow: () => g,
+                timeStampNow: () => _,
                 timeStampToClocks: () => d,
                 toServerDuration: () => f
             });
@@ -2499,24 +2499,24 @@
             }
 
             function m(e) {
-                var t = _() - performance.now();
+                var t = g() - performance.now();
                 return t > I() ? Math.round(y(t, e)) : b(e)
             }
 
             function p() {
-                return Math.round(_() - y(I(), performance.now()))
+                return Math.round(g() - y(I(), performance.now()))
             }
 
             function f(e) {
                 return (0, o.isNumber)(e) ? (0, o.round)(1e6 * e, 0) : e
             }
 
-            function _() {
+            function g() {
                 return (new Date).getTime()
             }
 
-            function g() {
-                return _()
+            function _() {
+                return g()
             }
 
             function h() {
@@ -2526,7 +2526,7 @@
             function E() {
                 return {
                     relative: h(),
-                    timeStamp: g()
+                    timeStamp: _()
                 }
             }
 
@@ -2705,8 +2705,8 @@
                 m = n(72),
                 p = n(82),
                 f = n(78),
-                _ = n(71),
-                g = n(113);
+                g = n(71),
+                _ = n(113);
 
             function h(e, t, n, h, E) {
                 var v, S, y, T, b = e.ignoreInitIfSyntheticsWillInjectRum,
@@ -2749,7 +2749,7 @@
                 };
                 return {
                     init: function(e, t) {
-                        e ? ((0, u.initFeatureFlags)(e.enableExperimentalFeatures), y = e, b && (0, d.willSyntheticsInjectRum)() || ((0, g.callPluginsMethod)(e.betaPlugins, "onInit", {
+                        e ? ((0, u.initFeatureFlags)(e.enableExperimentalFeatures), y = e, b && (0, d.willSyntheticsInjectRum)() || ((0, _.callPluginsMethod)(e.betaPlugins, "onInit", {
                             initConfiguration: e,
                             publicApi: t
                         }), e.remoteConfigurationId && (0, u.isExperimentalFeatureEnabled)(u.ExperimentalFeature.REMOTE_CONFIGURATION) ? (0, f.fetchAndApplyRemoteConfiguration)(e, L) : L(e))) : r.display.error("Missing configuration")
@@ -2805,10 +2805,10 @@
                         }))
                     },
                     startDurationVital: function(e, t) {
-                        return (0, _.startDurationVital)(h, e, t)
+                        return (0, g.startDurationVital)(h, e, t)
                     },
                     stopDurationVital: function(e, t) {
-                        (0, _.stopDurationVital)(k, h, e, t)
+                        (0, g.stopDurationVital)(k, h, e, t)
                     },
                     addDurationVital: k
                 }
@@ -2930,7 +2930,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 clearTracingIfNeeded: () => u,
-                createTraceIdentifier: () => _,
+                createTraceIdentifier: () => g,
                 getCrypto: () => f,
                 isTracingOption: () => c,
                 isTracingSupported: () => p,
@@ -2990,7 +2990,7 @@
                         return (0, o.matchList)([e.match], t.url, !0)
                     }));
                     if (f)
-                        if (t.traceSampled = !(0, r.isNumber)(e.traceSampleRate) || (0, r.performDraw)(e.traceSampleRate), t.traceSampled || e.traceContextInjection === l.TraceContextInjection.ALL) t.traceId = _(), t.spanId = _(), a((i = t.traceId, c = t.spanId, u = t.traceSampled, d = f.propagatorTypes, m = {}, d.forEach((function(e) {
+                        if (t.traceSampled = !(0, r.isNumber)(e.traceSampleRate) || (0, r.performDraw)(e.traceSampleRate), t.traceSampled || e.traceContextInjection === l.TraceContextInjection.ALL) t.traceId = g(), t.spanId = g(), a((i = t.traceId, c = t.spanId, u = t.traceSampled, d = f.propagatorTypes, m = {}, d.forEach((function(e) {
                             switch (e) {
                                 case "datadog":
                                     (0, s.assign)(m, {
@@ -3029,7 +3029,7 @@
                 return window.crypto || window.msCrypto
             }
 
-            function _() {
+            function g() {
                 var e = new Uint8Array(8);
 
                 function t(t) {
@@ -3227,7 +3227,7 @@
             n.r(t), n.d(t, {
                 DefaultPrivacyLevel: () => p,
                 TraceContextInjection: () => f,
-                isSampleRate: () => g,
+                isSampleRate: () => _,
                 serializeConfiguration: () => E,
                 validateAndBuildConfiguration: () => h
             });
@@ -3251,18 +3251,18 @@
                     SAMPLED: "sampled"
                 };
 
-            function _(e, t) {
+            function g(e, t) {
                 return null == e || "string" == typeof e || (o.display.error("".concat(t, " must be defined as a string")), !1)
             }
 
-            function g(e, t) {
+            function _(e, t) {
                 return !(void 0 !== e && !(0, s.isPercentage)(e)) || (o.display.error("".concat(t, " Sample Rate should be a number between 0 and 100")), !1)
             }
 
             function h(e) {
                 var t, n, s, p, f;
                 if (e && e.clientToken) {
-                    if ((!(h = e.site) || "string" != typeof h || /(datadog|ddog|datad0g|dd0g)/.test(h) || (o.display.error("Site should be a valid Datadog site. ".concat(o.MORE_DETAILS, " ").concat(o.DOCS_ORIGIN, "/getting_started/site/.")), 0)) && g(e.sessionSampleRate, "Session") && g(e.telemetrySampleRate, "Telemetry") && g(e.telemetryConfigurationSampleRate, "Telemetry Configuration") && g(e.telemetryUsageSampleRate, "Telemetry Usage") && _(e.version, "Version") && _(e.env, "Env") && _(e.service, "Service")) {
+                    if ((!(h = e.site) || "string" != typeof h || /(datadog|ddog|datad0g|dd0g)/.test(h) || (o.display.error("Site should be a valid Datadog site. ".concat(o.MORE_DETAILS, " ").concat(o.DOCS_ORIGIN, "/getting_started/site/.")), 0)) && _(e.sessionSampleRate, "Session") && _(e.telemetrySampleRate, "Telemetry") && _(e.telemetryConfigurationSampleRate, "Telemetry Configuration") && _(e.telemetryUsageSampleRate, "Telemetry Usage") && g(e.version, "Version") && g(e.env, "Env") && g(e.service, "Service")) {
                         var h;
                         if (void 0 === e.trackingConsent || (0, l.objectHasValue)(d.TrackingConsent, e.trackingConsent)) return (0, c.assign)({
                             beforeSend: e.beforeSend && (0, a.catchUserErrors)(e.beforeSend, "beforeSend threw an error:"),
@@ -3397,7 +3397,7 @@
             n.r(t), n.d(t, {
                 STORAGE_POLL_DELAY: () => p,
                 selectSessionStoreStrategyType: () => f,
-                startSessionStore: () => _
+                startSessionStore: () => g
             });
             var a = n(98),
                 o = n(87),
@@ -3416,9 +3416,9 @@
                 return !t && e.allowFallbackToLocalStorage && (t = (0, d.selectLocalStorageStrategy)()), t
             }
 
-            function _(e, t, n) {
-                var f, _ = new o.Observable,
-                    g = new o.Observable,
+            function g(e, t, n) {
+                var f, g = new o.Observable,
+                    _ = new o.Observable,
                     h = new o.Observable,
                     E = "Cookie" === e.type ? (0, c.initCookieStrategy)(e.cookieOptions) : (0, d.initLocalStorageStrategy)(),
                     v = E.expireSession,
@@ -3447,7 +3447,7 @@
                             },
                             after: function(e) {
                                 (0, u.isSessionStarted)(e) && !A() && function(e) {
-                                    f = e, _.notify()
+                                    f = e, g.notify()
                                 }(e), f = e
                             }
                         }, E)
@@ -3461,7 +3461,7 @@
                     }(e) ? (h.notify({
                         previousState: f,
                         newState: e
-                    }), f = e) : (f = (0, u.getExpiredSessionState)(), g.notify())), e
+                    }), f = e) : (f = (0, u.getExpiredSessionState)(), _.notify())), e
                 }
 
                 function I() {
@@ -3490,8 +3490,8 @@
                     getSession: function() {
                         return f
                     },
-                    renewObservable: _,
-                    expireObservable: g,
+                    renewObservable: g,
+                    expireObservable: _,
                     sessionStateUpdateObservable: h,
                     restartSession: I,
                     expire: function() {
@@ -3698,8 +3698,8 @@
                 isSessionInExpiredState: () => p,
                 isSessionInNotStartedState: () => d,
                 isSessionStarted: () => m,
-                toSessionState: () => g,
-                toSessionString: () => _
+                toSessionState: () => _,
+                toSessionString: () => g
             });
             var a = n(84),
                 o = n(82),
@@ -3732,7 +3732,7 @@
                 e.expire = String((0, i.dateNow)() + s.SESSION_EXPIRATION_DELAY)
             }
 
-            function _(e) {
+            function g(e) {
                 return (0, o.objectEntries)(e).map((function(e) {
                     var t = e[0],
                         n = e[1];
@@ -3740,7 +3740,7 @@
                 })).join(l)
             }
 
-            function g(e) {
+            function _(e) {
                 var t = {};
                 return function(e) {
                     return !!e && (-1 !== e.indexOf(l) || r.test(e))
@@ -3971,12 +3971,12 @@
                 var l = t.isLockEnabled,
                     d = t.persistSession,
                     f = t.expireSession,
-                    _ = function(e) {
+                    g = function(e) {
                         return d((0, s.assign)({}, e, {
                             lock: h
                         }))
                     },
-                    g = function() {
+                    _ = function() {
                         var e = t.retrieveSession(),
                             n = e.lock;
                         return e.lock && delete e.lock, {
@@ -3987,16 +3987,16 @@
                 if (a || (a = e), e === a)
                     if (l && n >= c) p(t);
                     else {
-                        var h, E = g();
+                        var h, E = _();
                         if (l) {
                             if (E.lock) return void m(e, t, n);
-                            if (h = (0, i.generateUUID)(), _(E.session), (E = g()).lock !== h) return void m(e, t, n)
+                            if (h = (0, i.generateUUID)(), g(E.session), (E = _()).lock !== h) return void m(e, t, n)
                         }
                         var v = e.process(E.session);
-                        if (l && (E = g()).lock !== h) m(e, t, n);
+                        if (l && (E = _()).lock !== h) m(e, t, n);
                         else {
-                            if (v && ((0, r.isSessionInExpiredState)(v) ? f() : ((0, r.expandSessionState)(v), l ? _(v) : d(v))), l && (!v || !(0, r.isSessionInExpiredState)(v))) {
-                                if ((E = g()).lock !== h) return void m(e, t, n);
+                            if (v && ((0, r.isSessionInExpiredState)(v) ? f() : ((0, r.expandSessionState)(v), l ? g(v) : d(v))), l && (!v || !(0, r.isSessionInExpiredState)(v))) {
+                                if ((E = _()).lock !== h) return void m(e, t, n);
                                 d(E.session), v = E.session
                             }
                             null === (o = e.after) || void 0 === o || o.call(e, v || E.session), p(t)
@@ -4496,8 +4496,8 @@
                 m = n(82),
                 p = n(73),
                 f = n(110),
-                _ = n(74),
-                g = n(122),
+                g = n(74),
+                _ = n(122),
                 h = n(120),
                 E = n(114),
                 v = n(118),
@@ -4514,16 +4514,16 @@
                 var n, a, o = new l.Observable,
                     i = new Set,
                     r = !(0, m.includes)(y, t.site) && (0, p.performDraw)(t.telemetrySampleRate),
-                    g = ((n = {})[v.TelemetryType.log] = r, n[v.TelemetryType.configuration] = r && (0, p.performDraw)(t.telemetryConfigurationSampleRate), n[v.TelemetryType.usage] = r && (0, p.performDraw)(t.telemetryUsageSampleRate), n),
+                    _ = ((n = {})[v.TelemetryType.log] = r, n[v.TelemetryType.configuration] = r && (0, p.performDraw)(t.telemetryConfigurationSampleRate), n[v.TelemetryType.usage] = r && (0, p.performDraw)(t.telemetryUsageSampleRate), n),
                     E = {
                         is_local_file: "file:" === window.location.protocol,
                         is_worker: "WorkerGlobalScope" in self
                     };
                 return b = function(n) {
                     var r = (0, f.jsonStringify)(n);
-                    if (g[n.type] && i.size < t.maxTelemetryEventsPerPage && !i.has(r)) {
+                    if (_[n.type] && i.size < t.maxTelemetryEventsPerPage && !i.has(r)) {
                         var l = function(e, t, n) {
-                            return (0, _.combine)({
+                            return (0, g.combine)({
                                 type: "telemetry",
                                 date: (0, c.timeStampNow)(),
                                 service: e,
@@ -4532,7 +4532,7 @@
                                 _dd: {
                                     format_version: 2
                                 },
-                                telemetry: (0, _.combine)(t, {
+                                telemetry: (0, g.combine)(t, {
                                     runtime_env: n,
                                     connectivity: (0, h.getConnectivity)(),
                                     sdk_setup: "npm"
@@ -4605,7 +4605,7 @@
 
             function R(e) {
                 if (e instanceof Error) {
-                    var t = (0, g.computeStackTrace)(e);
+                    var t = (0, _.computeStackTrace)(e);
                     return {
                         error: {
                             kind: t.name,
@@ -4709,7 +4709,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 computeStackTrace: () => i,
-                computeStackTraceFromOnErrorMessage: () => _
+                computeStackTraceFromOnErrorMessage: () => g
             });
             var a = n(82),
                 o = "?";
@@ -4790,7 +4790,7 @@
                 }
             }
 
-            function _(e, t, n, a) {
+            function g(e, t, n, a) {
                 var o = [{
                         url: t,
                         column: a,
@@ -4798,7 +4798,7 @@
                     }],
                     i = function(e) {
                         var t, n, a;
-                        "[object String]" === {}.toString.call(e) && (n = (t = g.exec(e))[1], a = t[2]);
+                        "[object String]" === {}.toString.call(e) && (n = (t = _.exec(e))[1], a = t[2]);
                         return {
                             name: n,
                             message: a
@@ -4810,7 +4810,7 @@
                     stack: o
                 }
             }
-            var g = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?([\s\S]*)$/
+            var _ = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?([\s\S]*)$/
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
@@ -4873,10 +4873,10 @@
                     m = e.source,
                     p = e.handling,
                     f = n instanceof Error,
-                    _ = function(e, t, n, i) {
+                    g = function(e, t, n, i) {
                         return (null == e ? void 0 : e.message) && (null == e ? void 0 : e.name) ? e.message : t ? "Empty message" : "".concat(n, " ").concat((0, o.jsonStringify)((0, a.sanitize)(i)))
                     }(t, f, u, n),
-                    g = function(e, t) {
+                    _ = function(e, t) {
                         if (void 0 === t) return !1;
                         if (e) return !0;
                         return t.stack.length > 0 && (t.stack.length > 1 || void 0 !== t.stack[0].url)
@@ -4889,8 +4889,8 @@
                     handlingStack: i,
                     originalError: n,
                     type: t ? t.name : void 0,
-                    message: _,
-                    stack: g,
+                    message: g,
+                    stack: _,
                     causes: h,
                     fingerprint: c(n)
                 }
@@ -4941,24 +4941,24 @@
                     f = p ? p.length : 0;
                 if (!(f > t)) {
                     for (; o.length > 0 && f < t;) {
-                        var _ = o.shift(),
-                            g = 0;
-                        if (Array.isArray(_.source))
-                            for (var h = 0; h < _.source.length; h++) {
-                                if (f += void 0 !== (E = u(_.source[h], _.path, h, o, c)) ? JSON.stringify(E).length : 4, f += g, g = 1, f > t) {
+                        var g = o.shift(),
+                            _ = 0;
+                        if (Array.isArray(g.source))
+                            for (var h = 0; h < g.source.length; h++) {
+                                if (f += void 0 !== (E = u(g.source[h], g.path, h, o, c)) ? JSON.stringify(E).length : 4, f += _, _ = 1, f > t) {
                                     d(t, "truncated", e);
                                     break
                                 }
-                                _.target[h] = E
+                                g.target[h] = E
                             } else
-                                for (var h in _.source)
-                                    if (Object.prototype.hasOwnProperty.call(_.source, h)) {
+                                for (var h in g.source)
+                                    if (Object.prototype.hasOwnProperty.call(g.source, h)) {
                                         var E;
-                                        if (void 0 !== (E = u(_.source[h], _.path, h, o, c)) && (f += JSON.stringify(E).length + g + h.length + l, g = 1), f > t) {
+                                        if (void 0 !== (E = u(g.source[h], g.path, h, o, c)) && (f += JSON.stringify(E).length + _ + h.length + l, _ = 1), f > t) {
                                             d(t, "truncated", e);
                                             break
                                         }
-                                        _.target[h] = E
+                                        g.target[h] = E
                                     }
                     }
                     return n(), a(), m
@@ -5043,7 +5043,7 @@
                                 var m = void 0 !== d ? String(d).toUpperCase() : "GET",
                                     p = s instanceof Request ? s.url : (0, c.normalizeUrl)(String(s)),
                                     f = (0, l.clocksNow)(),
-                                    _ = {
+                                    g = {
                                         state: "start",
                                         init: u,
                                         input: s,
@@ -5052,7 +5052,7 @@
                                         url: p,
                                         handlingStack: o
                                     };
-                                t.notify(_), n[0] = _.input, n[1] = _.init, a((function(e) {
+                                t.notify(g), n[0] = g.input, n[1] = g.init, a((function(e) {
                                     return function(e, t, n) {
                                         var a = n;
 
@@ -5074,7 +5074,7 @@
                                                 error: e
                                             })
                                         })))
-                                    }(t, e, _)
+                                    }(t, e, g)
                                 }))
                             }(t, e)
                         }), {
@@ -5439,8 +5439,8 @@
                 m = n(146),
                 p = n(148),
                 f = n(153),
-                _ = n(169),
-                g = n(175),
+                g = n(169),
+                _ = n(175),
                 h = n(176),
                 E = n(182),
                 v = n(200),
@@ -5536,8 +5536,8 @@
                         var ae = (0, x.startLongAnimationFrameCollection)(O, e).stop;
                         k.push(ae)
                     }
-                } else(0, g.startLongTaskCollection)(O, e);
-                var oe = (0, _.startErrorCollection)(O, e, F, D).addError;
+                } else(0, _.startLongTaskCollection)(O, e);
+                var oe = (0, g.startErrorCollection)(O, e, F, D).addError;
                 (0, p.startRequestCollection)(O, e, K);
                 var ie = (0, L.startVitalCollection)(O, F, C),
                     se = (0, u.startInternalContext)(e.applicationId, K, Y, z, j);
@@ -5572,16 +5572,16 @@
                 var u = (0, m.startViewHistory)(e),
                     d = (0, T.startUrlContexts)(e, i, n),
                     p = (0, f.startActionCollection)(e, s, t, o),
-                    _ = p.addAction,
-                    g = p.actionContexts,
+                    g = p.addAction,
+                    _ = p.actionContexts,
                     h = (0, C.startDisplayContext)(t),
                     E = (0, k.startCiVisibilityContext)(t);
-                return (0, c.startRumAssembly)(t, e, a, u, d, g, h, E, r, l), {
+                return (0, c.startRumAssembly)(t, e, a, u, d, _, h, E, r, l), {
                     viewHistory: u,
                     pageStateHistory: o,
                     urlContexts: d,
-                    addAction: _,
-                    actionContexts: g,
+                    addAction: g,
+                    actionContexts: _,
                     stop: function() {
                         E.stop(), h.stop(), d.stop(), u.stop(), o.stop()
                     }
@@ -5643,8 +5643,8 @@
                 m = n(84),
                 p = n(83),
                 f = n(139),
-                _ = n(140),
-                g = {
+                g = n(140),
+                _ = {
                     "view.name": "string",
                     "view.url": "string",
                     "view.referrer": "string"
@@ -5659,24 +5659,24 @@
 
             function v(e, t, n, v, S, y, T, b, N, I) {
                 var A, C;
-                (A = {}).view = (0, o.assign)({}, h, g), A.error = (0, o.assign)({
+                (A = {}).view = (0, o.assign)({}, h, _), A.error = (0, o.assign)({
                     "error.message": "string",
                     "error.stack": "string",
                     "error.resource.url": "string",
                     "error.fingerprint": "string"
-                }, h, g, E), A.resource = (0, o.assign)({
+                }, h, _, E), A.resource = (0, o.assign)({
                     "resource.url": "string"
                 }, (0, i.isExperimentalFeatureEnabled)(i.ExperimentalFeature.WRITABLE_RESOURCE_GRAPHQL) ? {
                     "resource.graphql": "object"
-                } : {}, h, g, E), A.action = (0, o.assign)({
+                } : {}, h, _, E), A.action = (0, o.assign)({
                     "action.target.name": "string"
-                }, h, g, E), A.long_task = (0, o.assign)({}, h, g), A.vital = (0, o.assign)({}, h, g), a = A;
+                }, h, _, E), A.long_task = (0, o.assign)({}, h, _), A.vital = (0, o.assign)({}, h, _), a = A;
                 var L = ((C = {}).error = (0, s.createEventRateLimiter)("error", e.eventRateLimiterThreshold, I), C.action = (0, s.createEventRateLimiter)("action", e.eventRateLimiterThreshold, I), C.vital = (0, s.createEventRateLimiter)("vital", e.eventRateLimiterThreshold, I), C),
                     k = (0, f.getSyntheticsContext)();
                 t.subscribe(11, (function(o) {
                     var i, s = o.startTime,
                         f = o.rawRumEvent,
-                        g = o.domainContext,
+                        _ = o.domainContext,
                         h = o.savedCommonContext,
                         E = o.customerContext,
                         I = v.findView(s),
@@ -5725,7 +5725,7 @@
                             function(e, t, n, o) {
                                 var i;
                                 if (t) {
-                                    var s = (0, _.limitModification)(e, a[e.type], (function(e) {
+                                    var s = (0, g.limitModification)(e, a[e.type], (function(e) {
                                         return t(e, n)
                                     }));
                                     if (!1 === s && "view" !== e.type) return !1;
@@ -5733,7 +5733,7 @@
                                 }
                                 var r = null === (i = o[e.type]) || void 0 === i ? void 0 : i.isLimitReached();
                                 return !r
-                            }(R, e.beforeSend, g, L) && ((0, m.isEmptyObject)(R.context) && delete R.context, t.notify(12, R))
+                            }(R, e.beforeSend, _, L) && ((0, m.isEmptyObject)(R.context) && delete R.context, t.notify(12, R))
                     }
                 }))
             }
@@ -6136,8 +6136,8 @@
                 computeResourceEntryProtocol: () => E,
                 computeResourceEntrySize: () => v,
                 computeResourceEntryType: () => u,
-                hasValidResourceEntryDuration: () => _,
-                hasValidResourceEntryTimings: () => g,
+                hasValidResourceEntryDuration: () => g,
+                hasValidResourceEntryTimings: () => _,
                 isAllowedRequestUrl: () => S,
                 isLongDataUrl: () => b,
                 isResourceEntryRequestType: () => m,
@@ -6209,7 +6209,7 @@
             }
 
             function f(e) {
-                if (g(e)) {
+                if (_(e)) {
                     var t = e.startTime,
                         n = e.fetchStart,
                         a = e.redirectStart,
@@ -6229,11 +6229,11 @@
                 }
             }
 
-            function _(e) {
+            function g(e) {
                 return e.duration >= 0
             }
 
-            function g(e) {
+            function _(e) {
                 var t = d(e.startTime, e.fetchStart, e.domainLookupStart, e.domainLookupEnd, e.connectStart, e.connectEnd, e.requestStart, e.responseStart, e.responseEnd),
                     n = ! function(e) {
                         return e.redirectEnd > e.startTime
@@ -6314,13 +6314,13 @@
                                             a.readyState === XMLHttpRequest.DONE && f()
                                         })).stop,
                                         f = function() {
-                                            if (_(), p(), !m) {
+                                            if (g(), p(), !m) {
                                                 m = !0;
                                                 var e = r;
                                                 e.state = "complete", e.duration = (0, s.elapsed)(d.startClocks.timeStamp, (0, s.timeStampNow)()), e.status = a.status, n.notify((0, l.shallowClone)(e))
                                             }
                                         },
-                                        _ = (0, c.addEventListener)(t, a, "loadend", f).stop;
+                                        g = (0, c.addEventListener)(t, a, "loadend", f).stop;
                                     n.notify(d)
                                 }(n, e, t)
                             }), {
@@ -6518,8 +6518,8 @@
                 m = n(165),
                 p = n(162),
                 f = n(166),
-                _ = n(167),
-                g = n(168),
+                g = n(167),
+                _ = n(168),
                 h = 5 * a.ONE_MINUTE;
 
             function E(e, t, n) {
@@ -6538,7 +6538,7 @@
                             var i = function(e, t, n) {
                                     var a = e.target.getBoundingClientRect(),
                                         o = (0, u.getSelectorFromElement)(e.target, n.actionNameAttribute);
-                                    o && (0, g.updateInteractionSelector)(e.timeStamp, o);
+                                    o && (0, _.updateInteractionSelector)(e.timeStamp, o);
                                     return {
                                         type: "click",
                                         target: {
@@ -6571,11 +6571,11 @@
                             var d, m = v(t, a, l, s, r);
                             i(m);
                             var p = null === (d = null == s ? void 0 : s.target) || void 0 === d ? void 0 : d.selector;
-                            p && (0, g.updateInteractionSelector)(r.timeStamp, p);
+                            p && (0, _.updateInteractionSelector)(r.timeStamp, p);
                             var f = (0, c.waitPageActivityEnd)(t, n, e, (function(e) {
                                     e.hadActivity && e.end < m.startClocks.timeStamp ? m.discard() : e.hadActivity ? m.stop(e.end) : u() ? m.stop(m.startClocks.timeStamp) : m.stop()
-                                }), g.CLICK_ACTION_MAX_DURATION).stop,
-                                _ = t.subscribe(4, (function(e) {
+                                }), _.CLICK_ACTION_MAX_DURATION).stop,
+                                g = t.subscribe(4, (function(e) {
                                     var t = e.endClocks;
                                     m.stop(t.timeStamp)
                                 })),
@@ -6583,9 +6583,9 @@
                                     m.stop()
                                 }));
                             m.stopObservable.subscribe((function() {
-                                _.unsubscribe(), f(), h.unsubscribe()
+                                g.unsubscribe(), f(), h.unsubscribe()
                             }))
-                        }(n, e, t, s, r, _, l, o, i, u)
+                        }(n, e, t, s, r, g, l, o, i, u)
                     }
                 }).stop;
                 return {
@@ -6599,7 +6599,7 @@
                     }
                 };
 
-                function _(e) {
+                function g(e) {
                     if (!a || !a.tryAppend(e)) {
                         var t = e.clone();
                         a = (0, m.createClickChain)(e, (function(e) {
@@ -6623,12 +6623,12 @@
                             return void 0 !== e.action && (Array.isArray(e.action.id) ? (0, r.includes)(e.action.id, d) : e.action.id === d)
                         }
                     }),
-                    _ = 0,
-                    g = [],
+                    g = 0,
+                    _ = [],
                     h = new i.Observable;
 
                 function E(e) {
-                    0 === _ && (_ = 1, (u = e) ? p.close((0, a.getRelativeTime)(u)) : p.remove(), f.stop(), h.notify())
+                    0 === g && (g = 1, (u = e) ? p.close((0, a.getRelativeTime)(u)) : p.remove(), f.stop(), h.notify())
                 }
                 return {
                     event: c,
@@ -6642,17 +6642,17 @@
                     },
                     getUserActivity: n,
                     addFrustration: function(e) {
-                        g.push(e)
+                        _.push(e)
                     },
                     startClocks: m,
                     isStopped: function() {
-                        return 1 === _ || 2 === _
+                        return 1 === g || 2 === g
                     },
                     clone: function() {
                         return v(e, t, n, o, c)
                     },
                     validate: function(t) {
-                        if (E(), 1 === _) {
+                        if (E(), 1 === g) {
                             var n = f.eventCounts,
                                 i = n.resourceCount,
                                 s = n.errorCount,
@@ -6662,7 +6662,7 @@
                                     duration: u && (0, a.elapsed)(m.timeStamp, u),
                                     startClocks: m,
                                     id: d,
-                                    frustrationTypes: g,
+                                    frustrationTypes: _,
                                     counts: {
                                         resourceCount: i,
                                         errorCount: s,
@@ -6671,17 +6671,17 @@
                                     events: null != t ? t : [c],
                                     event: c
                                 }, o);
-                            e.notify(0, p), _ = 2
+                            e.notify(0, p), g = 2
                         }
                     },
                     discard: function() {
-                        E(), _ = 2
+                        E(), g = 2
                     }
                 }
             }
 
             function S(e, t) {
-                (0, _.computeFrustration)(e, t).isRage ? (e.forEach((function(e) {
+                (0, g.computeFrustration)(e, t).isRage ? (e.forEach((function(e) {
                     return e.discard()
                 })), t.stop((0, a.timeStampNow)()), t.validate(e.map((function(e) {
                     return e.event
@@ -6798,12 +6798,12 @@
                         type: c.RumPerformanceEntryType.RESOURCE
                     }).subscribe((function(e) {
                         e.some((function(e) {
-                            return !_(n, e.name)
+                            return !g(n, e.name)
                         })) && d()
                     })), e.subscribe(6, (function(e) {
-                        _(n, e.url) || (void 0 === o && (o = e.requestIndex), s += 1, d())
+                        g(n, e.url) || (void 0 === o && (o = e.requestIndex), s += 1, d())
                     })), e.subscribe(7, (function(e) {
-                        _(n, e.url) || void 0 === o || e.requestIndex < o || (s -= 1, d())
+                        g(n, e.url) || void 0 === o || e.requestIndex < o || (s -= 1, d())
                     })));
                     var r, u = (r = d, (0, l.instrumentMethod)(window, "open", r)).stop;
                     return function() {
@@ -6820,7 +6820,7 @@
                 }))
             }
 
-            function _(e, t) {
+            function g(e, t) {
                 return (0, r.matchList)(e.excludedActivityUrls, t)
             }
         }, (e, t, n) => {
@@ -6851,14 +6851,14 @@
                                 }(e);
                                 t.length > 0 && n.notify(t)
                             },
-                            _ = !0,
-                            g = new PerformanceObserver((0, s.monitor)((function(e) {
-                                _ ? i = (0, r.setTimeout)((function() {
+                            g = !0,
+                            _ = new PerformanceObserver((0, s.monitor)((function(e) {
+                                g ? i = (0, r.setTimeout)((function() {
                                     return f(e.getEntries())
                                 })) : f(e.getEntries())
                             })));
                         try {
-                            g.observe(t)
+                            _.observe(t)
                         } catch (e) {
                             var h = [a.RESOURCE, a.NAVIGATION, a.LONG_TASK, a.PAINT];
                             if ((0, l.includes)(h, t.type)) {
@@ -6866,7 +6866,7 @@
                                     return f(performance.getEntriesByType(t.type))
                                 })));
                                 try {
-                                    g.observe({
+                                    _.observe({
                                         entryTypes: [t.type]
                                     })
                                 } catch (e) {
@@ -6874,7 +6874,7 @@
                                 }
                             }
                         }
-                        return _ = !1,
+                        return g = !1,
                             function(e) {
                                 !o && void 0 !== window.performance && "getEntries" in performance && "addEventListener" in performance && (o = (0, c.addEventListener)(e, performance, "resourcetimingbufferfull", (function() {
                                     performance.clearResourceTimings()
@@ -6883,7 +6883,7 @@
                                 f([e])
                             })).stop),
                             function() {
-                                g.disconnect(), m && m(), (0, r.clearTimeout)(i)
+                                _.disconnect(), m && m(), (0, r.clearTimeout)(i)
                             }
                     }
                 }))
@@ -6950,7 +6950,7 @@
                 STABLE_ATTRIBUTES: () => i,
                 getSelectorFromElement: () => l,
                 isSelectorUniqueAmongSiblings: () => f,
-                supportScopeSelector: () => g
+                supportScopeSelector: () => _
             });
             var a, o = n(161),
                 i = [n(162).DEFAULT_PROGRAMMATIC_ACTION_NAME_ATTRIBUTE, "data-testid", "data-test", "data-qa", "data-cy", "data-test-id", "data-qa-id", "data-testing", "data-component", "data-element", "data-source-file"],
@@ -6975,7 +6975,7 @@
                     for (var n, a = e; a && "HTML" !== a.nodeName;) {
                         var i = m(a, s, p, t, n);
                         if (i) return i;
-                        n = m(a, r, f, t, n) || _(d(a), n), a = (0, o.getParentElement)(a)
+                        n = m(a, r, f, t, n) || g(d(a), n), a = (0, o.getParentElement)(a)
                     }
                     return n
                 }
@@ -7005,12 +7005,12 @@
             function m(e, t, n, a, o) {
                 for (var i = 0, s = t; i < s.length; i++) {
                     var r = (0, s[i])(e, a);
-                    if (r && n(e, r, o)) return _(r, o)
+                    if (r && n(e, r, o)) return g(r, o)
                 }
             }
 
             function p(e, t, n) {
-                return 1 === e.ownerDocument.querySelectorAll(_(t, n)).length
+                return 1 === e.ownerDocument.querySelectorAll(g(t, n)).length
             }
 
             function f(e, t, n) {
@@ -7019,7 +7019,7 @@
                     return (0, o.elementMatches)(e, t)
                 };
                 else {
-                    var i = g() ? _("".concat(t, ":scope"), n) : _(t, n);
+                    var i = _() ? g("".concat(t, ":scope"), n) : g(t, n);
                     a = function(e) {
                         return null !== e.querySelector(i)
                     }
@@ -7031,11 +7031,11 @@
                 return !0
             }
 
-            function _(e, t) {
+            function g(e, t) {
                 return t ? "".concat(e, ">").concat(t) : e
             }
 
-            function g() {
+            function _() {
                 if (void 0 === a) try {
                     document.querySelector(":scope"), a = !0
                 } catch (e) {
@@ -7111,7 +7111,7 @@
                 var a = t.enablePrivacyForActionName,
                     o = t.actionNameAttribute,
                     i = d(e, l) || o && d(e, o);
-                return n === r.NodePrivacyLevel.MASK ? i || c : i || h(e, o, f, a) || h(e, o, _, a) || ""
+                return n === r.NodePrivacyLevel.MASK ? i || c : i || h(e, o, f, a) || h(e, o, g, a) || ""
             }
 
             function d(e, t) {
@@ -7174,13 +7174,13 @@
                 }, function(e, t) {
                     if ("options" in e && e.options.length > 0) return S(e.options[0], t)
                 }],
-                _ = [function(e, t, n) {
+                g = [function(e, t, n) {
                     return S(e, t, n)
                 }],
-                g = 10;
+                _ = 10;
 
             function h(e, t, n, a) {
-                for (var o = e, i = 0; i <= g && o && "BODY" !== o.nodeName && "HTML" !== o.nodeName && "HEAD" !== o.nodeName;) {
+                for (var o = e, i = 0; i <= _ && o && "BODY" !== o.nodeName && "HTML" !== o.nodeName && "HEAD" !== o.nodeName;) {
                     for (var r = 0, l = n; r < l.length; r++) {
                         var c = (0, l[r])(o, t, a);
                         if ("string" == typeof c) {
@@ -7224,7 +7224,7 @@
             n.r(t), n.d(t, {
                 CENSORED_IMG_MARK: () => f,
                 CENSORED_STRING_MARK: () => p,
-                FORM_PRIVATE_TAG_NAMES: () => _,
+                FORM_PRIVATE_TAG_NAMES: () => g,
                 NodePrivacyLevel: () => s,
                 PRIVACY_ATTR_NAME: () => r,
                 PRIVACY_ATTR_VALUE_ALLOW: () => l,
@@ -7233,7 +7233,7 @@
                 PRIVACY_ATTR_VALUE_MASK_USER_INPUT: () => u,
                 PRIVACY_CLASS_PREFIX: () => m,
                 censorText: () => y,
-                getNodePrivacyLevel: () => g,
+                getNodePrivacyLevel: () => _,
                 getNodeSelfPrivacyLevel: () => E,
                 getPrivacySelector: () => N,
                 getTextContent: () => T,
@@ -7259,7 +7259,7 @@
                 m = "dd-privacy-",
                 p = "***",
                 f = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
-                _ = {
+                g = {
                     INPUT: !0,
                     OUTPUT: !0,
                     TEXTAREA: !0,
@@ -7269,10 +7269,10 @@
                     OPTGROUP: !0
                 };
 
-            function g(e, t, n) {
+            function _(e, t, n) {
                 if (n && n.has(e)) return n.get(e);
                 var a = (0, o.getParentNode)(e),
-                    i = a ? g(a, t, n) : t,
+                    i = a ? _(a, t, n) : t,
                     s = h(E(e), i);
                 return n && n.set(e, s), s
             }
@@ -7332,7 +7332,7 @@
                     case "submit":
                         return !1
                 }
-                return !!_[t.tagName]
+                return !!g[t.tagName]
             }
             var y = function(e) {
                 return e.replace(/\S/g, "x")
@@ -7694,8 +7694,8 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                initConsoleObservable: () => _,
-                resetConsoleObservable: () => g
+                initConsoleObservable: () => g,
+                resetConsoleObservable: () => _
             });
             var a = n(124),
                 o = n(87),
@@ -7710,7 +7710,7 @@
                 p = n(72),
                 f = {};
 
-            function _(e) {
+            function g(e) {
                 var t = e.map((function(e) {
                     return f[e] || (f[e] = function(e) {
                         return new o.Observable((function(t) {
@@ -7718,7 +7718,7 @@
                             return i.globalConsole[e] = function() {
                                     for (var o = [], f = 0; f < arguments.length; f++) o[f] = arguments[f];
                                     n.apply(console, o);
-                                    var _ = (0, m.createHandlingStack)();
+                                    var g = (0, m.createHandlingStack)();
                                     (0, s.callMonitored)((function() {
                                         t.notify(function(e, t, n) {
                                             var o, s = e.map((function(e) {
@@ -7749,7 +7749,7 @@
                                                 error: o,
                                                 handlingStack: n
                                             }
-                                        }(o, e, _))
+                                        }(o, e, g))
                                     }))
                                 },
                                 function() {
@@ -7761,7 +7761,7 @@
                 return o.mergeObservables.apply(void 0, t)
             }
 
-            function g() {
+            function _() {
                 f = {}
             }
         }, (e, t, n) => {
@@ -8001,13 +8001,13 @@
                                     _dd: {
                                         span_id: e.spanId.toDecimalString(),
                                         trace_id: e.traceId.toDecimalString(),
-                                        rule_psr: g(t)
+                                        rule_psr: _(t)
                                     }
                                 }
                             }(e, t);
                         if (!t.trackResources && !l) return;
                         var c = "xhr" === e.type ? "xhr" : "fetch",
-                            m = s ? _(s) : void 0,
+                            m = s ? g(s) : void 0,
                             p = function(e, t, n) {
                                 return e.wasInPageStateDuringPeriod("frozen", t.relative, n) ? void 0 : (0, a.toServerDuration)(n)
                             }(n, r, e.duration),
@@ -8075,13 +8075,13 @@
                             _dd: {
                                 trace_id: e.traceId,
                                 span_id: (0, c.createTraceIdentifier)().toDecimalString(),
-                                rule_psr: g(t)
+                                rule_psr: _(t)
                             }
                         }
                     }(e, t);
                 if (t.trackResources || s) {
                     var r, l = (0, d.computeResourceEntryType)(e),
-                        u = _(e),
+                        u = g(e),
                         m = (0, o.combine)({
                             date: n.timeStamp,
                             resource: {
@@ -8106,7 +8106,7 @@
                 }
             }
 
-            function _(e) {
+            function g(e) {
                 var t = e.renderBlockingStatus;
                 return {
                     resource: (0, s.assign)({
@@ -8116,7 +8116,7 @@
                 }
             }
 
-            function g(e) {
+            function _(e) {
                 return (0, r.isNumber)(e.traceSampleRate) ? e.traceSampleRate / 100 : void 0
             }
         }, (e, t, n) => {
@@ -8311,7 +8311,7 @@
             function r(e, t, n, r, l, c, u, d, m) {
                 return e.subscribe(3, (function(n) {
                     return e.notify(11, function(e, t, n, s, r) {
-                        var l, c, u, d, m, p, f, _, g, h, E, v, S, y, T, b, N = s.getReplayStats(e.id),
+                        var l, c, u, d, m, p, f, g, _, h, E, v, S, y, T, b, N = s.getReplayStats(e.id),
                             I = n.findFeatureFlagEvaluations(e.startClocks.relative),
                             A = r.findAll(e.startClocks.relative, e.duration),
                             C = {
@@ -8343,8 +8343,8 @@
                                         count: e.eventCounts.errorCount
                                     },
                                     first_contentful_paint: (0, a.toServerDuration)(e.initialViewMetrics.firstContentfulPaint),
-                                    first_input_delay: (0, a.toServerDuration)(null === (_ = e.initialViewMetrics.firstInput) || void 0 === _ ? void 0 : _.delay),
-                                    first_input_time: (0, a.toServerDuration)(null === (g = e.initialViewMetrics.firstInput) || void 0 === g ? void 0 : g.time),
+                                    first_input_delay: (0, a.toServerDuration)(null === (g = e.initialViewMetrics.firstInput) || void 0 === g ? void 0 : g.delay),
+                                    first_input_time: (0, a.toServerDuration)(null === (_ = e.initialViewMetrics.firstInput) || void 0 === _ ? void 0 : _.time),
                                     first_input_target_selector: null === (h = e.initialViewMetrics.firstInput) || void 0 === h ? void 0 : h.targetSelector,
                                     interaction_to_next_paint: (0, a.toServerDuration)(null === (E = e.commonViewMetrics.interactionToNextPaint) || void 0 === E ? void 0 : E.value),
                                     interaction_to_next_paint_time: (0, a.toServerDuration)(null === (v = e.commonViewMetrics.interactionToNextPaint) || void 0 === v ? void 0 : v.time),
@@ -8396,8 +8396,8 @@
             "use strict";
             n.r(t), n.d(t, {
                 KEEP_TRACKING_AFTER_VIEW_DELAY: () => h,
-                SESSION_KEEP_ALIVE_INTERVAL: () => g,
-                THROTTLE_VIEW_UPDATE_PERIOD: () => _,
+                SESSION_KEEP_ALIVE_INTERVAL: () => _,
+                THROTTLE_VIEW_UPDATE_PERIOD: () => g,
                 trackViews: () => E
             });
             var a = n(72),
@@ -8412,8 +8412,8 @@
                 m = n(184),
                 p = n(185),
                 f = n(191),
-                _ = 3e3,
-                g = 5 * a.ONE_MINUTE,
+                g = 3e3,
+                _ = 5 * a.ONE_MINUTE,
                 h = 5 * a.ONE_MINUTE;
 
             function E(e, t, n, E, S, y, T) {
@@ -8440,7 +8440,7 @@
                             context: I
                         };
                         e.notify(1, R), e.notify(2, R);
-                        var w = (0, c.throttle)(X, _, {
+                        var w = (0, c.throttle)(X, g, {
                                 leading: !1
                             }),
                             D = w.throttled,
@@ -8460,7 +8460,7 @@
                             z = (0, m.trackViewEventCounts)(e, A, D),
                             W = z.stop,
                             q = z.eventCounts,
-                            $ = (0, u.setInterval)(X, g);
+                            $ = (0, u.setInterval)(X, _);
 
                         function X() {
                             P(), k += 1;
@@ -8808,19 +8808,19 @@
                     f = (0, s.trackScrollMetrics)(n, c, (function(e) {
                         u.scroll = e
                     })).stop,
-                    _ = (0, a.trackCumulativeLayoutShift)(n, c.relative, (function(e) {
+                    g = (0, a.trackCumulativeLayoutShift)(n, c.relative, (function(e) {
                         u.cumulativeLayoutShift = e, r()
                     })).stop,
-                    g = (0, o.trackInteractionToNextPaint)(n, c.relative, l),
-                    h = g.stop,
-                    E = g.getInteractionToNextPaint;
+                    _ = (0, o.trackInteractionToNextPaint)(n, c.relative, l),
+                    h = _.stop,
+                    E = _.getInteractionToNextPaint;
                 return {
                     stop: function() {
-                        m(), _(), f()
+                        m(), g(), f()
                     },
                     stopINPTracking: h,
                     setLoadEvent: p,
-                    setViewEnd: g.setViewEnd,
+                    setViewEnd: _.setViewEnd,
                     getCommonViewMetrics: function() {
                         return u.interactionToNextPaint = E(), u
                     }
@@ -8849,10 +8849,10 @@
                 n({
                     value: 0
                 });
-                var _, g, h, E, v = (h = 0, E = 0, {
+                var g, _, h, E, v = (h = 0, E = 0, {
                         update: function(e) {
                             var t;
-                            return void 0 === _ || e.startTime - g >= p || e.startTime - _ >= m ? (_ = g = e.startTime, E = h = e.value, t = !0) : (h += e.value, g = e.startTime, (t = e.value > E) && (E = e.value)), {
+                            return void 0 === g || e.startTime - _ >= p || e.startTime - g >= m ? (g = _ = e.startTime, E = h = e.value, t = !0) : (h += e.value, _ = e.startTime, (t = e.value > E) && (E = e.value)), {
                                 cumulatedValue: h,
                                 isMaxValue: t
                             }
@@ -8866,17 +8866,17 @@
                             var p = m[l];
                             if (!(p.hadRecentInput || p.startTime < t)) {
                                 var f = v.update(p),
-                                    _ = f.cumulatedValue;
+                                    g = f.cumulatedValue;
                                 if (f.isMaxValue) {
-                                    var g = d(p.sources);
-                                    s = g ? new WeakRef(g) : void 0, r = (0, o.elapsed)(t, p.startTime)
+                                    var _ = d(p.sources);
+                                    s = _ ? new WeakRef(_) : void 0, r = (0, o.elapsed)(t, p.startTime)
                                 }
-                                if (_ > u) {
-                                    u = _;
-                                    g = null == s ? void 0 : s.deref();
+                                if (g > u) {
+                                    u = g;
+                                    _ = null == s ? void 0 : s.deref();
                                     n({
                                         value: (0, i.round)(u, 4),
-                                        targetSelector: g && (0, c.getSelectorFromElement)(g, e.actionNameAttribute),
+                                        targetSelector: _ && (0, c.getSelectorFromElement)(_, e.actionNameAttribute),
                                         time: r
                                     })
                                 }
@@ -8926,9 +8926,9 @@
                     setViewEnd: o.noop,
                     stop: o.noop
                 };
-                var c, m, _ = p(n),
-                    g = _.getViewInteractionCount,
-                    h = _.stopViewInteractionCount,
+                var c, m, g = p(n),
+                    _ = g.getViewInteractionCount,
+                    h = g.stopViewInteractionCount,
                     E = 1 / 0,
                     v = function(e) {
                         var t = [];
@@ -8950,7 +8950,7 @@
                                 return t[n]
                             }
                         }
-                    }(g),
+                    }(_),
                     S = -1;
 
                 function y(n) {
@@ -8976,7 +8976,7 @@
                             value: Math.min(S, d),
                             targetSelector: c,
                             time: m
-                        } : g() ? {
+                        } : _() ? {
                             value: 0
                         } : void 0
                     },
@@ -9341,29 +9341,29 @@
             function p(e, t, n, l) {
                 var p = new a.Observable,
                     f = new a.Observable,
-                    _ = (0, c.startSessionStore)(e.sessionStoreStrategyType, t, n);
+                    g = (0, c.startSessionStore)(e.sessionStoreStrategyType, t, n);
                 m.push((function() {
-                    return _.stop()
+                    return g.stop()
                 }));
-                var g = (0, o.createValueHistory)({
+                var _ = (0, o.createValueHistory)({
                     expireDelay: d
                 });
 
                 function h() {
                     return {
-                        id: _.getSession().id,
-                        trackingType: _.getSession()[t],
-                        isReplayForced: !!_.getSession().forcedReplay
+                        id: g.getSession().id,
+                        trackingType: g.getSession()[t],
+                        isReplayForced: !!g.getSession().forcedReplay
                     }
                 }
                 return m.push((function() {
-                        return g.stop()
-                    })), _.renewObservable.subscribe((function() {
-                        g.add(h(), (0, i.relativeNow)()), p.notify()
-                    })), _.expireObservable.subscribe((function() {
-                        f.notify(), g.closeActive((0, i.relativeNow)())
-                    })), _.expandOrRenewSession(), g.add(h(), (0, i.clocksOrigin)().relative), l.observable.subscribe((function() {
-                        l.isGranted() ? _.expandOrRenewSession() : _.expire()
+                        return _.stop()
+                    })), g.renewObservable.subscribe((function() {
+                        _.add(h(), (0, i.relativeNow)()), p.notify()
+                    })), g.expireObservable.subscribe((function() {
+                        f.notify(), _.closeActive((0, i.relativeNow)())
+                    })), g.expandOrRenewSession(), _.add(h(), (0, i.clocksOrigin)().relative), l.observable.subscribe((function() {
+                        l.isGranted() ? g.expandOrRenewSession() : g.expire()
                     })),
                     function(e, t) {
                         var n = (0, s.addEventListeners)(e, window, ["click", "touchstart", "keydown", "scroll"], t, {
@@ -9372,7 +9372,7 @@
                         }).stop;
                         m.push(n)
                     }(e, (function() {
-                        l.isGranted() && _.expandOrRenewSession()
+                        l.isGranted() && g.expandOrRenewSession()
                     })),
                     function(e, t) {
                         var n = function() {
@@ -9385,7 +9385,7 @@
                             (0, r.clearInterval)(o)
                         }))
                     }(e, (function() {
-                        return _.expandSession()
+                        return g.expandSession()
                     })),
                     function(e, t) {
                         var n = (0, s.addEventListener)(e, window, "resume", t, {
@@ -9393,16 +9393,16 @@
                         }).stop;
                         m.push(n)
                     }(e, (function() {
-                        return _.restartSession()
+                        return g.restartSession()
                     })), {
                         findSession: function(e, t) {
-                            return g.find(e, t)
+                            return _.find(e, t)
                         },
                         renewObservable: p,
                         expireObservable: f,
-                        sessionStateUpdateObservable: _.sessionStateUpdateObservable,
-                        expire: _.expire,
-                        updateSessionState: _.updateSessionState
+                        sessionStateUpdateObservable: g.sessionStateUpdateObservable,
+                        expire: g.expire,
+                        updateSessionState: g.updateSessionState
                     }
             }
 
@@ -9657,9 +9657,9 @@
                 m = o.ONE_SECOND;
 
             function p(e, t, n, a, o) {
-                0 === t.transportStatus && 0 === t.queuedPayloads.size() && t.bandwidthMonitor.canHandle(e) ? _(e, t, n, {
+                0 === t.transportStatus && 0 === t.queuedPayloads.size() && t.bandwidthMonitor.canHandle(e) ? g(e, t, n, {
                     onSuccess: function() {
-                        return g(0, t, n, a, o)
+                        return _(0, t, n, a, o)
                     },
                     onFailure: function() {
                         t.queuedPayloads.enqueue(e), f(t, n, a, o)
@@ -9669,9 +9669,9 @@
 
             function f(e, t, n, o) {
                 2 === e.transportStatus && (0, a.setTimeout)((function() {
-                    _(e.queuedPayloads.first(), e, t, {
+                    g(e.queuedPayloads.first(), e, t, {
                         onSuccess: function() {
-                            e.queuedPayloads.dequeue(), e.currentBackoffTime = m, g(1, e, t, n, o)
+                            e.queuedPayloads.dequeue(), e.currentBackoffTime = m, _(1, e, t, n, o)
                         },
                         onFailure: function() {
                             e.currentBackoffTime = Math.min(d, 2 * e.currentBackoffTime), f(e, t, n, o)
@@ -9680,7 +9680,7 @@
                 }), e.currentBackoffTime)
             }
 
-            function _(e, t, n, a) {
+            function g(e, t, n, a) {
                 var o = a.onSuccess,
                     i = a.onFailure;
                 t.bandwidthMonitor.add(e), n(e, (function(n) {
@@ -9693,7 +9693,7 @@
                 }))
             }
 
-            function g(e, t, n, a, s) {
+            function _(e, t, n, a, s) {
                 0 === e && t.queuedPayloads.isFull() && !t.queueFullReported && (s({
                     message: "Reached max ".concat(a, " events size queued for upload: ").concat(u / i.ONE_MEBI_BYTE, "MiB"),
                     source: r.ErrorSource.AGENT,
@@ -9779,7 +9779,7 @@
                     if (0 !== p) {
                         var t = p,
                             n = m;
-                        p = 0, m = 0, _(), d.notify({
+                        p = 0, m = 0, g(), d.notify({
                             reason: e,
                             messagesCount: t,
                             bytesCount: n
@@ -9787,7 +9787,7 @@
                     }
                 }
 
-                function _() {
+                function g() {
                     (0, o.clearTimeout)(t), t = void 0
                 }
                 return {
@@ -9804,7 +9804,7 @@
                         void 0 === e && (e = 0), m += e, p >= n ? f("messages_limit") : m >= i && f("bytes_limit")
                     },
                     notifyAfterRemoveMessage: function(e) {
-                        m -= e, 0 === (p -= 1) && _()
+                        m -= e, 0 === (p -= 1) && g()
                     }
                 }
             }
@@ -9972,28 +9972,28 @@
                 d = 10 * s.ONE_SECOND;
 
             function m(e, t, n, s, u) {
-                t.enabled && (0, r.performDraw)(e.customerDataTelemetrySampleRate) && (g(), h(), n.subscribe(12, (function(e) {
+                t.enabled && (0, r.performDraw)(e.customerDataTelemetrySampleRate) && (_(), h(), n.subscribe(12, (function(e) {
                     i = !0, f(o.globalContextBytes, s.getOrCreateTracker(2).getBytesCount()), f(o.userContextBytes, s.getOrCreateTracker(1).getBytesCount()), f(o.featureFlagBytes, (0, l.includes)(["view", "error"], e.type) ? s.getOrCreateTracker(0).getBytesCount() : 0)
                 })), u.subscribe((function(e) {
                     var t = e.bytesCount,
                         n = e.messagesCount;
-                    i && (a.batchCount += 1, f(a.batchBytesCount, t), f(a.batchMessagesCount, n), _(a.globalContextBytes, o.globalContextBytes), _(a.userContextBytes, o.userContextBytes), _(a.featureFlagBytes, o.featureFlagBytes), h())
+                    i && (a.batchCount += 1, f(a.batchBytesCount, t), f(a.batchMessagesCount, n), g(a.globalContextBytes, o.globalContextBytes), g(a.userContextBytes, o.userContextBytes), g(a.featureFlagBytes, o.featureFlagBytes), h())
                 })), (0, c.setInterval)(p, d))
             }
 
             function p() {
-                0 !== a.batchCount && ((0, u.addTelemetryDebug)("Customer data measures", a), g())
+                0 !== a.batchCount && ((0, u.addTelemetryDebug)("Customer data measures", a), _())
             }
 
             function f(e, t) {
                 e.sum += t, e.min = Math.min(e.min, t), e.max = Math.max(e.max, t)
             }
 
-            function _(e, t) {
+            function g(e, t) {
                 e.sum += t.sum, e.min = Math.min(e.min, t.min), e.max = Math.max(e.max, t.max)
             }
 
-            function g() {
+            function _() {
                 a = {
                     batchCount: 0,
                     batchBytesCount: {
@@ -10330,16 +10330,16 @@
                     }));
                 if ((0, i.canUseEventBridge)()) m = (0, l.startRecordBridge)(c).addRecord;
                 else {
-                    var _ = (0, r.startSegmentCollection)(e, t, n, c, f, u);
-                    m = _.addRecord, p.push(_.stop)
+                    var g = (0, r.startSegmentCollection)(e, t, n, c, f, u);
+                    m = g.addRecord, p.push(g.stop)
                 }
-                var g = (0, s.record)({
+                var _ = (0, s.record)({
                     emit: m,
                     configuration: t,
                     lifeCycle: e,
                     viewHistory: c
                 }).stop;
-                return p.push(g), {
+                return p.push(_), {
                     stop: function() {
                         p.forEach((function(e) {
                             return e()
@@ -10385,19 +10385,19 @@
                     },
                     m = (0, s.createElementsScrollPositions)(),
                     p = (0, r.initShadowRootsController)(n, d, m),
-                    f = (0, l.startFullSnapshots)(m, p, u, n, _, (function(e) {
+                    f = (0, l.startFullSnapshots)(m, p, u, n, g, (function(e) {
                         return e.forEach((function(e) {
                             return d(e)
                         }))
                     })).stop;
 
-                function _() {
+                function g() {
                     p.flush(), h.flush()
                 }
-                var g = (0, c.initRecordIds)(),
+                var _ = (0, c.initRecordIds)(),
                     h = (0, i.trackMutation)(d, n, p, document),
-                    E = [h, (0, i.trackMove)(n, d), (0, i.trackMouseInteraction)(n, d, g), (0, i.trackScroll)(n, d, m, document), (0, i.trackViewportResize)(n, d), (0, i.trackInput)(n, d), (0, i.trackMediaInteraction)(n, d), (0, i.trackStyleSheet)(d), (0, i.trackFocus)(n, d), (0, i.trackVisualViewportResize)(n, d), (0, i.trackFrustration)(u, d, g), (0, i.trackViewEnd)(u, (function(e) {
-                        _(), d(e)
+                    E = [h, (0, i.trackMove)(n, d), (0, i.trackMouseInteraction)(n, d, _), (0, i.trackScroll)(n, d, m, document), (0, i.trackViewportResize)(n, d), (0, i.trackInput)(n, d), (0, i.trackMediaInteraction)(n, d), (0, i.trackStyleSheet)(d), (0, i.trackFocus)(n, d), (0, i.trackVisualViewportResize)(n, d), (0, i.trackFrustration)(u, d, _), (0, i.trackViewEnd)(u, (function(e) {
+                        g(), d(e)
                     }))];
                 return {
                     stop: function() {
@@ -10405,7 +10405,7 @@
                             return e.stop()
                         })), f()
                     },
-                    flushMutations: _,
+                    flushMutations: g,
                     shadowRootsController: p
                 }
             }
@@ -10580,7 +10580,7 @@
                 getSerializedNodeId: () => l,
                 getValidTagName: () => h,
                 hasSerializedNode: () => s,
-                makeUrlAbsolute: () => _,
+                makeUrlAbsolute: () => g,
                 nodeAndAncestorsHaveSerializedNode: () => r,
                 setSerializedNodeId: () => c,
                 switchToAbsoluteUrl: () => f
@@ -10629,22 +10629,22 @@
                     var r = a || i || s;
                     if (!t || !r || m.test(r) || p.test(r)) return e;
                     var l = n || o || "";
-                    return "url(".concat(l).concat(_(r, t)).concat(l, ")")
+                    return "url(".concat(l).concat(g(r, t)).concat(l, ")")
                 }))
             }
 
-            function _(e, t) {
+            function g(e, t) {
                 try {
                     return (0, a.buildUrl)(e, t).href
                 } catch (t) {
                     return e
                 }
             }
-            var g = /[^a-z1-6-_]/;
+            var _ = /[^a-z1-6-_]/;
 
             function h(e) {
                 var t = e.toLowerCase().trim();
-                return g.test(t) ? "div" : t
+                return _.test(t) ? "div" : t
             }
 
             function E(e, t) {
@@ -10711,20 +10711,20 @@
                                 if (u === a.NodePrivacyLevel.HIDDEN) {
                                     var p = e.getBoundingClientRect(),
                                         f = p.width,
-                                        _ = p.height;
+                                        g = p.height;
                                     return {
                                         type: i.NodeType.Element,
                                         tagName: r,
                                         attributes: (n = {
                                             rr_width: "".concat(f, "px"),
-                                            rr_height: "".concat(_, "px")
+                                            rr_height: "".concat(g, "px")
                                         }, n[a.PRIVACY_ATTR_NAME] = a.PRIVACY_ATTR_VALUE_HIDDEN, n),
                                         childNodes: [],
                                         isSVG: c
                                     }
                                 }
                                 if (u === a.NodePrivacyLevel.IGNORE) return;
-                                var g = (0, l.serializeAttributes)(e, u, t),
+                                var _ = (0, l.serializeAttributes)(e, u, t),
                                     h = [];
                                 if ((0, a.hasChildNodes)(e) && "style" !== r) {
                                     h = m(e, t.parentNodePrivacyLevel === u && t.ignoreWhiteSpace === ("head" === r) ? t : (0, o.assign)({}, t, {
@@ -10735,7 +10735,7 @@
                                 return {
                                     type: i.NodeType.Element,
                                     tagName: r,
-                                    attributes: g,
+                                    attributes: _,
                                     childNodes: h,
                                     isSVG: c
                                 }
@@ -10890,16 +10890,16 @@
                     void 0 !== f && (r.value = f)
                 }
                 if ("option" === c && t === a.NodePrivacyLevel.ALLOW) {
-                    var _ = e;
-                    _.selected && (r.selected = _.selected)
+                    var g = e;
+                    g.selected && (r.selected = g.selected)
                 }
                 if ("link" === c) {
-                    var g, h = Array.from(u.styleSheets).find((function(t) {
+                    var _, h = Array.from(u.styleSheets).find((function(t) {
                         return t.href === e.href
                     }));
-                    (g = l(h)) && h && (r._cssText = g)
+                    (_ = l(h)) && h && (r._cssText = _)
                 }
-                "style" === c && e.sheet && ((g = l(e.sheet)) && (r._cssText = g));
+                "style" === c && e.sheet && ((_ = l(e.sheet)) && (r._cssText = _));
                 var E, v, S = e;
                 if ("input" !== c || "radio" !== S.type && "checkbox" !== S.type || (t === a.NodePrivacyLevel.ALLOW ? r.checked = !!S.checked : (0, a.shouldMaskNode)(S, t) && delete r.checked), "audio" === c || "video" === c) {
                     var y = e;
@@ -11061,19 +11061,19 @@
                     var i = (0, c.getEventTarget)(a);
                     if ((0, s.getNodePrivacyLevel)(i, e.defaultPrivacyLevel) !== s.NodePrivacyLevel.HIDDEN && (0, u.hasSerializedNode)(i)) {
                         var p, f = (0, u.getSerializedNodeId)(i),
-                            _ = m[a.type];
-                        if (_ !== r.MouseInteractionType.Blur && _ !== r.MouseInteractionType.Focus) {
-                            var g = (0, d.tryToComputeCoordinates)(a);
-                            if (!g) return;
+                            g = m[a.type];
+                        if (g !== r.MouseInteractionType.Blur && g !== r.MouseInteractionType.Focus) {
+                            var _ = (0, d.tryToComputeCoordinates)(a);
+                            if (!_) return;
                             p = {
                                 id: f,
-                                type: _,
-                                x: g.x,
-                                y: g.y
+                                type: g,
+                                x: _.x,
+                                y: _.y
                             }
                         } else p = {
                             id: f,
-                            type: _
+                            type: g
                         };
                         var h = (0, o.assign)({
                             id: n.getIdForEvent(a)
@@ -11121,13 +11121,13 @@
                     }), u),
                     p = m.throttled,
                     f = m.cancel,
-                    _ = (0, o.addEventListener)(e, d, "scroll", p, {
+                    g = (0, o.addEventListener)(e, d, "scroll", p, {
                         capture: !0,
                         passive: !0
                     }).stop;
                 return {
                     stop: function() {
-                        _(), f()
+                        g(), f()
                     }
                 }
             }
@@ -11385,15 +11385,15 @@
                 void 0 === n && (n = document);
                 var m, p = e.defaultPrivacyLevel,
                     f = new WeakMap,
-                    _ = n !== document,
-                    g = (0, a.addEventListeners)(e, n, _ ? ["change"] : ["input", "change"], (function(e) {
+                    g = n !== document,
+                    _ = (0, a.addEventListeners)(e, n, g ? ["change"] : ["input", "change"], (function(e) {
                         var t = (0, c.getEventTarget)(e);
                         (t instanceof HTMLInputElement || t instanceof HTMLTextAreaElement || t instanceof HTMLSelectElement) && E(t)
                     }), {
                         capture: !0,
                         passive: !0
                     }).stop;
-                if (_) m = i.noop;
+                if (g) m = i.noop;
                 else {
                     var h = [(0, o.instrumentSetter)(HTMLInputElement.prototype, "value", E), (0, o.instrumentSetter)(HTMLInputElement.prototype, "checked", E), (0, o.instrumentSetter)(HTMLSelectElement.prototype, "value", E), (0, o.instrumentSetter)(HTMLTextAreaElement.prototype, "value", E), (0, o.instrumentSetter)(HTMLSelectElement.prototype, "selectedIndex", E)];
                     m = function() {
@@ -11404,7 +11404,7 @@
                 }
                 return {
                     stop: function() {
-                        m(), g()
+                        m(), _()
                     }
                 };
 
@@ -11488,8 +11488,8 @@
                                     }
                                     var m = Array.from(o);
                                     d(m);
-                                    for (var p = new Set, f = [], _ = 0, g = m; _ < g.length; _++) {
-                                        var h = g[_];
+                                    for (var p = new Set, f = [], g = 0, _ = m; g < _.length; g++) {
+                                        var h = _[g];
                                         if (!T(h)) {
                                             var E = (0, i.getNodePrivacyLevel)(h.parentNode, t.defaultPrivacyLevel, a);
                                             if (E !== i.NodePrivacyLevel.HIDDEN && E !== i.NodePrivacyLevel.IGNORE) {
@@ -11541,8 +11541,8 @@
                                 })), n, a, o),
                                 p = u.adds,
                                 f = u.removes,
-                                _ = u.hasBeenSerialized,
-                                g = function(e, t, n) {
+                                g = u.hasBeenSerialized,
+                                _ = function(e, t, n) {
                                     for (var a, o = [], s = new Set, l = e.filter((function(e) {
                                             return !s.has(e.target) && (s.add(e.target), !0)
                                         })), c = 0, u = l; c < u.length; c++) {
@@ -11557,7 +11557,7 @@
                                     }
                                     return o
                                 }(l.filter((function(e) {
-                                    return "characterData" === e.type && !_(e.target)
+                                    return "characterData" === e.type && !g(e.target)
                                 })), n, o),
                                 h = function(e, t, n) {
                                     for (var a = [], o = new Map, s = e.filter((function(e) {
@@ -11570,32 +11570,32 @@
                                                 p = (0, r.serializeAttribute)(d.target, m, d.attributeName, t),
                                                 f = void 0;
                                             if ("value" === d.attributeName) {
-                                                var _ = (0, r.getElementInputValue)(d.target, m);
-                                                if (void 0 === _) continue;
-                                                f = _
+                                                var g = (0, r.getElementInputValue)(d.target, m);
+                                                if (void 0 === g) continue;
+                                                f = g
                                             } else f = "string" == typeof p ? p : null;
-                                            var g = l.get(d.target);
-                                            g || (g = {
+                                            var _ = l.get(d.target);
+                                            _ || (_ = {
                                                 id: (0, r.getSerializedNodeId)(d.target),
                                                 attributes: {}
-                                            }, a.push(g), l.set(d.target, g)), g.attributes[d.attributeName] = f
+                                            }, a.push(_), l.set(d.target, _)), _.attributes[d.attributeName] = f
                                         }
                                     }
                                     return a
                                 }(l.filter((function(e) {
-                                    return "attributes" === e.type && !_(e.target)
+                                    return "attributes" === e.type && !g(e.target)
                                 })), n, o);
-                            if (!(g.length || h.length || f.length || p.length)) return;
+                            if (!(_.length || h.length || f.length || p.length)) return;
                             t((0, c.assembleIncrementalSnapshot)(s.IncrementalSource.Mutation, {
                                 adds: p,
                                 removes: f,
-                                texts: g,
+                                texts: _,
                                 attributes: h
                             }))
-                        }(a.concat(_.takeRecords()), e, t, n)
+                        }(a.concat(g.takeRecords()), e, t, n)
                     })),
-                    _ = new p((0, o.monitor)(f.addMutations));
-                return _.observe(u, {
+                    g = new p((0, o.monitor)(f.addMutations));
+                return g.observe(u, {
                     attributeOldValue: !0,
                     attributes: !0,
                     characterData: !0,
@@ -11604,7 +11604,7 @@
                     subtree: !0
                 }), {
                     stop: function() {
-                        _.disconnect(), f.stop()
+                        g.disconnect(), f.stop()
                     },
                     flush: function() {
                         f.flush()
@@ -12040,7 +12040,7 @@
                         return p()
                     },
                     onRumStart: function(a, o, r, u, f) {
-                        var _;
+                        var g;
                         o.startSessionReplayRecordingManually && (n = {
                             status: 0
                         }), a.subscribe(8, (function() {
@@ -12057,9 +12057,9 @@
                                 status: 2
                             }, (0, s.runOnReadyState)(o, "interactive", (function() {
                                 if (2 === n.status) {
-                                    var i = (_ || (f || (f = (0, c.startDeflateWorker)(o, "Datadog Session Replay", (function() {
+                                    var i = (g || (f || (f = (0, c.startDeflateWorker)(o, "Datadog Session Replay", (function() {
                                         m()
-                                    }), t)), f && (_ = (0, c.createDeflateEncoder)(o, f, 1))), _);
+                                    }), t)), f && (g = (0, c.createDeflateEncoder)(o, f, 1))), g);
                                     if (i) {
                                         var s = e(a, o, r, u, i).stop;
                                         n = {
@@ -12217,7 +12217,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 INITIALIZATION_TIME_OUT_DELAY: () => c,
-                doStartDeflateWorker: () => _,
+                doStartDeflateWorker: () => g,
                 getDeflateWorkerStatus: () => f,
                 resetDeflateWorkerState: () => p,
                 startDeflateWorker: () => m
@@ -12238,7 +12238,7 @@
             };
 
             function m(e, t, n, a) {
-                switch (void 0 === a && (a = u), 0 === d.status && _(e, t, a), d.status) {
+                switch (void 0 === a && (a = u), 0 === d.status && g(e, t, a), d.status) {
                     case 1:
                         return d.initializationFailureCallbacks.push(n), d.worker;
                     case 3:
@@ -12256,16 +12256,16 @@
                 return d.status
             }
 
-            function _(e, t, n) {
+            function g(e, t, n) {
                 void 0 === n && (n = u);
                 try {
                     var a = n(e),
                         r = (0, o.addEventListener)(e, a, "error", (function(n) {
-                            g(e, t, n)
+                            _(e, t, n)
                         })).stop,
                         l = (0, o.addEventListener)(e, a, "message", (function(n) {
                             var a, o = n.data;
-                            "errored" === o.type ? g(e, t, o.error, o.streamId) : "initialized" === o.type && (a = o.version, 1 === d.status && (d = {
+                            "errored" === o.type ? _(e, t, o.error, o.streamId) : "initialized" === o.type && (a = o.version, 1 === d.status && (d = {
                                 status: 3,
                                 worker: d.worker,
                                 stop: d.stop,
@@ -12292,11 +12292,11 @@
                         initializationFailureCallbacks: []
                     }
                 } catch (n) {
-                    g(e, t, n)
+                    _(e, t, n)
                 }
             }
 
-            function g(e, t, n, a) {
+            function _(e, t, n, a) {
                 if (1 === d.status || 0 === d.status) {
                     if (s.display.error("".concat(t, " failed to start: an error occurred while creating the Worker:"), n), n instanceof Event || n instanceof Error && (i = n.message, (0, l.includes)(i, "Content Security Policy") || (0, l.includes)(i, "requires 'TrustedScriptURL'"))) {
                         var o = void 0;
@@ -12389,7 +12389,7 @@
                     scope: "local",
                     defaultValue: !0
                 },
-                _ = {
+                g = {
                     model: "soundSettings",
                     namespace: "lol-audio",
                     schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
@@ -12397,7 +12397,7 @@
                     scope: "local",
                     defaultValue: 100
                 },
-                g = {
+                _ = {
                     model: "soundSettings",
                     namespace: "lol-audio",
                     schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
@@ -12449,20 +12449,20 @@
                         value: e
                     })
                 })),
-                musicVolumeLabel: o.Ember.computed(_.property, (function() {
-                    const e = Number.isInteger(this.get(_.property)) ? this.get(_.property) : _.defaultValue;
+                musicVolumeLabel: o.Ember.computed(g.property, (function() {
+                    const e = Number.isInteger(this.get(g.property)) ? this.get(g.property) : g.defaultValue;
                     return this.get("tra").formatString("lol_settings_sound_music_volume_label", {
                         value: e
                     })
                 })),
                 persistenceService: o.Ember.inject.service("persistence"),
                 init() {
-                    this._super(...arguments), this.bindSetting(r), this.bindSetting(l), this.bindSetting(c), this.bindSetting(u), this.bindSetting(d), this.bindSetting(m), this.bindSetting(p), this.bindSetting(f), this.bindSetting(_), this.bindSetting(g), this.bindSetting(h), this.bindSetting(E), this.bindSetting(v);
+                    this._super(...arguments), this.bindSetting(r), this.bindSetting(l), this.bindSetting(c), this.bindSetting(u), this.bindSetting(d), this.bindSetting(m), this.bindSetting(p), this.bindSetting(f), this.bindSetting(g), this.bindSetting(_), this.bindSetting(h), this.bindSetting(E), this.bindSetting(v);
                     const e = this.get("currentSchemaVersion");
                     Number.isInteger(e) && e < s.LOL_SOUND_SCHEMA_VERSION && this.resetToDefault()
                 },
                 resetToDefault: function() {
-                    this.changeSetting(r.property, r.defaultValue), this.changeSetting(l.property, l.defaultValue), this.changeSetting(c.property, c.defaultValue), this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(m.property, m.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(h.property, h.defaultValue), this.changeSetting(E.property, E.defaultValue), this.changeSetting(v.property, v.defaultValue)
+                    this.changeSetting(r.property, r.defaultValue), this.changeSetting(l.property, l.defaultValue), this.changeSetting(c.property, c.defaultValue), this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(m.property, m.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(h.property, h.defaultValue), this.changeSetting(E.property, E.defaultValue), this.changeSetting(v.property, v.defaultValue)
                 },
                 onSaveSetting: function(e, t) {
                     if (e === c.property) {
@@ -12547,14 +12547,14 @@
                     scope: "local",
                     defaultValue: 65
                 },
-                _ = {
+                g = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
                     property: "pushToTalkKey",
                     scope: "account"
                 },
-                g = {
+                _ = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -12615,13 +12615,13 @@
                     })
                 })),
                 init() {
-                    this._super(...arguments), this.bindSetting(s), this.bindSetting(r), this.bindSetting(l), this.bindSetting(c), this.bindSetting(u), this.bindSetting(p), this.bindSetting(f), this.bindSetting(_), this.bindSetting(g)
+                    this._super(...arguments), this.bindSetting(s), this.bindSetting(r), this.bindSetting(l), this.bindSetting(c), this.bindSetting(u), this.bindSetting(p), this.bindSetting(f), this.bindSetting(g), this.bindSetting(_)
                 },
                 willDestroy() {
                     this._super(...arguments)
                 },
                 resetToDefault: function() {
-                    this.changeSetting(s.property, s.defaultValue), this.changeSetting(r.property, r.defaultValue), this.changeSetting(l.property, l.defaultValue), this.changeSetting(c.property, c.defaultValue), this.changeSetting(u.property, u.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(g.property, g.defaultValue)
+                    this.changeSetting(s.property, s.defaultValue), this.changeSetting(r.property, r.defaultValue), this.changeSetting(l.property, l.defaultValue), this.changeSetting(c.property, c.defaultValue), this.changeSetting(u.property, u.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(_.property, _.defaultValue)
                 },
                 _showPTTPermissionsModal() {
                     this.changeSetting(p.property, d);
@@ -12639,10 +12639,10 @@
                 },
                 actions: {
                     selectPushToTalkKey: function(e) {
-                        this.changeSetting(_.property, e)
+                        this.changeSetting(g.property, e)
                     },
                     selectPushToTalkTeamKey: function(e) {
-                        this.changeSetting(g.property, e)
+                        this.changeSetting(_.property, e)
                     },
                     selectInputMode: function(e) {
                         this.changeSetting(p.property, e), e === m && this.get("voiceService").isPushToTalkAvailable(!0).then((e => {
@@ -14708,6 +14708,7 @@
                     key: void 0,
                     onChange: void 0,
                     label: void 0,
+                    voiceType: void 0,
                     _tempSaveValue: void 0,
                     _keybindDiv: void 0,
                     _unbindButton: void 0,
@@ -14728,6 +14729,10 @@
                     })),
                     displayKey: a.Ember.computed("key", (function() {
                         return this._fromSavedToDisplay(this.get("key")) || ""
+                    })),
+                    voiceTypeIconClass: a.Ember.computed("voiceType", (function() {
+                        const e = this.get("voiceType");
+                        return "party" === e ? "lol-settings-voice-ptt-party-icon" : "team" === e ? "lol-settings-voice-ptt-team-icon" : ""
                     })),
                     _getPrimaryMainKeyDisplay(e) {
                         if (!e) return "";
@@ -15640,8 +15645,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "jXVk1sik",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\voice.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\voice.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-party-join"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_party_join_title"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoin"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","autoJoin",["helper",["mut"],[["get",["autoJoin"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoin"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n        "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_party_auto_join"]]],null],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,7],["text","    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","muteOnConnect"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","muteOnConnect",["helper",["mut"],[["get",["muteOnConnect"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","muteOnConnect"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_party_connect_mute"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_input_title"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row input-mode-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-label"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","voice_settings_input_device_label"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","lol-uikit-framed-dropdown",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["captureDevices"]]],null,6],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-parties-mic-test-button",[]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-volume-label"],["flush-element"],["text","\\n        "],["append",["unknown",["inputVolumeLabel"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-input-volume-slider"],["flush-element"],["text","\\n        "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["inputVolume",["get",["inputVolume"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-mode"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_input_mode_title"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-radio-input",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["inputModes"]]],null,5],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isInputModeVoice"]]],null,4,2],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n        "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label"],[["get",["pushToTalkKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkKey"],null],"voice_settings_ptt_label"]]],false],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,0],["text","      "],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isInputModePushToTalk"]]],null,1]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n        "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label"]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity-label"],["flush-element"],["text","\\n          "],["append",["unknown",["inputModeVoiceSensitivityLabel"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voice-sensitivity-slider-wrapper"],["flush-element"],["text","\\n          "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["vadSensitivity",["get",["vadSensitivity"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,3]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","class","lol-settings-voice-input-mode-option"],["dynamic-attr","selected",["unknown",["inputMode","selected"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectInputMode",["get",["inputMode","name"]]],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["inputMode","label"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["inputMode"]},{"statements":[["text","            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["deviceInfo","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectCaptureDevice",["get",["deviceInfo","handle"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["deviceInfo","name"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["deviceInfo"]},{"statements":[["text","      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row indented"],["static-attr","for","teamVoiceEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","teamVoiceEnabled",["helper",["mut"],[["get",["teamVoiceEnabled"]]],null],["get",["isTeamVoiceDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","teamVoiceEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n              "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_team_voice_enabled"]]],null],false],["text","\\n          "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "KWDw9x/V",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\voice.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\voice.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-party-join"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_party_join_title"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoin"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","autoJoin",["helper",["mut"],[["get",["autoJoin"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoin"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n        "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_party_auto_join"]]],null],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,7],["text","    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","muteOnConnect"],["flush-element"],["text","\\n      "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","muteOnConnect",["helper",["mut"],[["get",["muteOnConnect"]]],null]]]],false],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","muteOnConnect"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_party_connect_mute"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_input_title"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row input-mode-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-label"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","voice_settings_input_device_label"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","lol-uikit-framed-dropdown",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["captureDevices"]]],null,6],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-parties-mic-test-button",[]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-volume-label"],["flush-element"],["text","\\n        "],["append",["unknown",["inputVolumeLabel"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-input-volume-slider"],["flush-element"],["text","\\n        "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["inputVolume",["get",["inputVolume"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-mode"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_input_mode_title"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-radio-input",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["inputModes"]]],null,5],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isInputModeVoice"]]],null,4,2],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label","team"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n        "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkKey"],null],"voice_settings_ptt_label","party"]]],false],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,0],["text","      "],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["isInputModePushToTalk"]]],null,1]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n        "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label","team"]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity-label"],["flush-element"],["text","\\n          "],["append",["unknown",["inputModeVoiceSensitivityLabel"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","voice-sensitivity-slider-wrapper"],["flush-element"],["text","\\n          "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["vadSensitivity",["get",["vadSensitivity"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,3]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","class","lol-settings-voice-input-mode-option"],["dynamic-attr","selected",["unknown",["inputMode","selected"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectInputMode",["get",["inputMode","name"]]],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["inputMode","label"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["inputMode"]},{"statements":[["text","            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["deviceInfo","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectCaptureDevice",["get",["deviceInfo","handle"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["deviceInfo","name"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["deviceInfo"]},{"statements":[["text","      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row indented"],["static-attr","for","teamVoiceEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","teamVoiceEnabled",["helper",["mut"],[["get",["teamVoiceEnabled"]]],null],["get",["isTeamVoiceDisabled"]]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","teamVoiceEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n              "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_team_voice_enabled"]]],null],false],["text","\\n          "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -15801,8 +15806,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "VkgsWUjC",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\push-to-talk-key.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\push-to-talk-key.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openModal"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-label"],["flush-element"],["text","\\n    "],["append",["unknown",["pushToTalkKeyLabel"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-icon"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-modifier"],["flush-element"],["text","\\n      "],["append",["unknown",["pushToTalkKeyModifier"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-key"],["dynamic-attr","style",["concat",["font-size: ",["unknown",["pushToTalkKeyFontSize"]],";"]]],["flush-element"],["text","\\n      "],["append",["unknown",["pushToTalkKey"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-speaker-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-speaker"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["block",["if"],[["get",["displayKey"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["text","\\n        "],["append",["unknown",["displayKey"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],0]],"locals":[]}],"hasPartials":false}',
+                id: "z8Rct9vC",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\push-to-talk-key.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v3\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\push-to-talk-key.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openModal"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-label"],["flush-element"],["text","\\n        "],["append",["unknown",["pushToTalkKeyLabel"]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isUnbound"]]],null,3,2],["close-element"],["text","\\n"],["block",["if"],[["get",["displayKey"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["text","\\n                "],["append",["unknown",["displayKey"]],false],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipPosition"],["left"]],0]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-icon"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-modifier"],["flush-element"],["text","\\n                "],["append",["unknown",["pushToTalkKeyModifier"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-key"],["dynamic-attr","style",["concat",["font-size: ",["unknown",["pushToTalkKeyFontSize"]],";"]]],["flush-element"],["text","\\n                "],["append",["unknown",["pushToTalkKey"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-speaker-wrapper"],["flush-element"],["text","\\n                "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-settings-voice-ptt-voice-type-icon ",["unknown",["voiceTypeIconClass"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-speaker"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-unbound"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-unbound-square"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-ptt-unbound-text"],["flush-element"],["append",["unknown",["setKeybindText"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
