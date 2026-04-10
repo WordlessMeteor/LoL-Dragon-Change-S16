@@ -504,8 +504,8 @@ while True:
                         local_date: str = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime(local_timestamp))
                         table_content["file"].append(name)
                         table_content["size"].append("")
-                        table_content["web_date"].append(0)
-                        table_content["web_timestamp"].append("")
+                        table_content["web_date"].append("")
+                        table_content["web_timestamp"].append(0)
                         table_content["local_date"].append(local_date)
                         table_content["local_timestamp"].append(local_timestamp)
                         files_to_delete.append(os.path.join(localdir, name).replace("\\", "/")) #与全局扫描不同，这里是直接从空列表开始逐个追加本地路径（What's different from Global Scan is local path is successively appended to the list of files to delete）
