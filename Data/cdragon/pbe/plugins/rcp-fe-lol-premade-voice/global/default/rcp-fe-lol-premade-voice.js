@@ -526,7 +526,7 @@
                             n = this._settings.pttKey,
                             r = !n || "[<Unbound>]" === n,
                             a = r ? "" : n.replace(/^\[|\]$/g, "");
-                        e.setAttribute("keybind", t ? a : ""), e.setAttribute("unbound-text", t && r ? i.tra.get("parties_comm_panel_set_keybind") : "")
+                        e.setAttribute("keybind", this._teamVoicePluginEnabled && t ? a : ""), e.setAttribute("unbound-text", this._teamVoicePluginEnabled && t && r ? i.tra.get("parties_comm_panel_set_keybind") : "")
                     }
                     const t = this.shadowRoot.querySelector(this._selectors.teamPttIndicator);
                     if (t) {
